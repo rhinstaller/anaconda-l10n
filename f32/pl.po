@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Red Hat, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # Bartosz Sapijaszko <bartosz@sapek.net>, 2002
 # dcantrel <dcantrell@redhat.com>, 2011
@@ -29,7 +29,7 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2020-03-17 14:21+0100\n"
-"PO-Revision-Date: 2020-03-04 17:41+0000\n"
+"PO-Revision-Date: 2020-03-20 11:38+0000\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <https://translate.fedoraproject.org/projects/anaconda/"
 "f32/pl/>\n"
@@ -39,7 +39,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 3.11.2\n"
+"X-Generator: Weblate 3.11.3\n"
 
 #: pyanaconda/ui/categories/system.py:28
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:458
@@ -2428,19 +2428,15 @@ msgid "No network devices available"
 msgstr "Brak dostępnych urządzeń sieciowych"
 
 #: pyanaconda/storage/fsset.py:390
-#, fuzzy, python-brace-format
-#| msgid ""
-#| "There is an entry in your /etc/fstab file that contains an invalid or "
-#| "incorrect file system type:\n"
-#| "\n"
+#, python-brace-format
 msgid ""
 "There is an entry in your /etc/fstab file that contains an invalid or "
 "incorrect file system type. The file says that {detected_type} at "
 "{mount_point} is {fstab_type}."
 msgstr ""
 "Jeden z wpisów w pliku /etc/fstab zawiera nieprawidłowy lub niepoprawny typ "
-"systemu plików:\n"
-"\n"
+"systemu plików. Według pliku {detected_type} w {mount_point} jest typu "
+"{fstab_type}."
 
 #: pyanaconda/storage/root.py:130
 #, python-format
@@ -2776,22 +2772,13 @@ msgstr ""
 "odmontować i spróbować ponownie."
 
 #: pyanaconda/storage/checker.py:447
-#, fuzzy
-#| msgid ""
-#| "You selected disk %(selected)s, which contains devices that also use "
-#| "unselected disk %(unselected)s. You must select or de-select these disks "
-#| "as a set."
-#| msgid_plural ""
-#| "You selected disk %(selected)s, which contains devices that also use "
-#| "unselected disks %(unselected)s. You must select or de-select these disks "
-#| "as a set."
 msgid ""
 "Selected disks {} contain volume group '{}' that also uses further "
 "unselected disks. You must select or de-select all these disks as a set."
 msgstr ""
-"Wybrano dysk %(selected)s, który zawiera urządzenia używające także "
-"niewybranego dysku %(unselected)s. Należy wybrać lub usunąć wybór tych "
-"dysków jako zestaw."
+"Wybrane dyski {} zawierają grupę woluminów „{}”, która używa także innych, "
+"niewybranych dysków. Należy wybrać lub usunąć wybór tych wszystkich dysków "
+"jako zestaw."
 
 #: pyanaconda/startup_utils.py:79
 #, python-format
@@ -3448,19 +3435,16 @@ msgstr ""
 "\tchroot %(mountpoint)s\n"
 
 #: pyanaconda/rescue.py:442
-#, fuzzy, python-brace-format
-#| msgid ""
-#| "An error occurred trying to mount some or all of your system.  Some of it "
-#| "may be mounted under %s\n"
-#| "\n"
+#, python-brace-format
 msgid ""
 "An error occurred trying to mount some or all of your system: {message}\n"
 "\n"
 "Some of it may be mounted under {path}."
 msgstr ""
-"Wystąpił błąd podczas próby montowania części lub całości systemu. Część "
-"systemu może być zamontowana w katalogu %s.\n"
+"Wystąpił błąd podczas próby montowania części lub całości systemu: {message}"
 "\n"
+"\n"
+"Część systemu może być zamontowana w katalogu {path}."
 
 #: pyanaconda/rescue.py:451
 msgid "Rebooting."
@@ -3489,24 +3473,12 @@ msgid "The following installations were discovered on your system."
 msgstr "Na komputerze wykryto następujące instalacje."
 
 #: pyanaconda/errors.py:112
-#, fuzzy
-#| msgid "Error checking storage configuration"
 msgid "An error occurred while activating your storage configuration."
 msgstr ""
-"Błąd podczas sprawdzania konfiguracji urządzeń do przechowywania danych"
+"Wystąpił błąd podczas aktywowania konfiguracji urządzeń do przechowywania "
+"danych."
 
 #: pyanaconda/errors.py:119
-#, fuzzy
-#| msgid ""
-#| "There is a problem with your existing storage configuration: "
-#| "%(errortxt)s\n"
-#| "\n"
-#| "You must resolve this matter before the installation can proceed. There "
-#| "is a shell available for use which you can access by pressing ctrl-alt-f1 "
-#| "and then ctrl-b 2.\n"
-#| "\n"
-#| "Once you have resolved the issue you can retry the storage scan. If you "
-#| "do not fix it you will have to exit the installer."
 msgid ""
 "There is a problem with your existing storage configuration.You must resolve "
 "this matter before the installation can proceed. There is a shell available "
@@ -3516,10 +3488,8 @@ msgid ""
 "not fix it you will have to exit the installer."
 msgstr ""
 "Wystąpił problem z istniejącą konfiguracją urządzeń do przechowywania "
-"danych: %(errortxt)s\n"
-"\n"
-"Należy go rozwiązać przed kontynuowaniem instalacji. Dostępna jest powłoka "
-"po naciśnięciu klawiszy Ctrl-Alt-F1, a następnie Ctrl-B 2.\n"
+"danych. Należy go rozwiązać przed kontynuowaniem instalacji. Dostępna jest "
+"powłoka po naciśnięciu klawiszy Ctrl-Alt-F1, a następnie Ctrl-B 2.\n"
 "\n"
 "Po rozwiązaniu problemu można ponowić skanowanie urządzeń do przechowywania "
 "danych. Jeśli nie zostanie on rozwiązany, to będzie trzeba zakończyć "
@@ -4001,23 +3971,21 @@ msgid "GRUB2 encrypted password must be in grub.pbkdf2 format."
 msgstr "Zaszyfrowane hasło GRUB2 musi być w formacie „grub.pbkdf2”."
 
 #: pyanaconda/modules/storage/installation.py:80
-#, fuzzy
-#| msgid "An error occurred while resizing the device %s."
 msgid "An error occurred while resizing the device {}: {}"
-msgstr "Błąd podczas zmieniania rozmiaru urządzenia %s."
+msgstr "Błąd podczas zmieniania rozmiaru urządzenia {}: {}"
 
 #: pyanaconda/modules/storage/installation.py:131
 msgid "Gathering entropy 100%"
-msgstr ""
+msgstr "Zbieranie entropii 100%"
 
 #: pyanaconda/modules/storage/installation.py:135
 msgid "Gathering entropy (time ran out)"
-msgstr ""
+msgstr "Zbieranie entropii (czas się skończył)"
 
 #: pyanaconda/modules/storage/installation.py:138
 #, python-brace-format
 msgid "Gathering entropy {percents}% (remaining time {time})"
-msgstr ""
+msgstr "Zbieranie entropii {percents}% (pozostały czas: {time})"
 
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:64
 #, python-format
