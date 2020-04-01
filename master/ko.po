@@ -30,7 +30,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2020-03-17 13:57+0100\n"
+"POT-Creation-Date: 2020-03-31 17:15+0200\n"
 "PO-Revision-Date: 2020-03-10 05:38+0000\n"
 "Last-Translator: Ji-Hyeon Gim <potatogim@potatogim.net>\n"
 "Language-Team: Korean <https://translate.fedoraproject.org/projects/anaconda/"
@@ -43,7 +43,7 @@ msgstr ""
 "X-Generator: Weblate 3.11.2\n"
 
 #: pyanaconda/ui/categories/system.py:28
-#: pyanaconda/ui/gui/spokes/lib/accordion.py:448
+#: pyanaconda/ui/gui/spokes/lib/accordion.py:454
 msgid "SYSTEM"
 msgstr "시스템"
 
@@ -127,6 +127,83 @@ msgstr "부트로더를 설치하지 않음 (_D)"
 msgctxt "GUI|Selected Disks Dialog"
 msgid "_Set as Boot Device"
 msgstr "부트 장치로 설정(_S)"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:53
+msgid "Preserve"
+msgstr "저장 "
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:54
+msgid "Shrink"
+msgstr "축소 "
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:55
+msgid "Delete"
+msgstr "삭제 "
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:96
+#, python-format
+msgid "Installation requires a total of <b>%s</b> for system data."
+msgstr "설치에는 총 <b>%s</b> 시스템 데이터 용."
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:128
+msgid "This device contains the installation source."
+msgstr "이 장치에는 설치 소스가 들어 있습니다. "
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:148
+msgid ""
+"You can remove existing file systems you no longer need to free up space for "
+"this installation.  Removing a file system will permanently delete all of "
+"the data it contains."
+msgstr ""
+"설치를 위한 공간 확보를 위해 필요하지 않은 파일시스템을 삭제할 수 있습니다. "
+"파일시스템을 삭제하면 그 안에 포함된 모든 데이터도 같이 삭제됩니다."
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:155
+msgid ""
+"There is also free space available in pre-existing file systems.  While it's "
+"risky and we recommend you back up your data first, you can recover that "
+"free disk space and make it available for this installation below."
+msgstr ""
+"기존 파일 시스템에 사용 가능한 여유 공간이 있습니다. 먼저 데이터를 백업해 두"
+"실 것을 권장합니다. 여유 디스크 공간을 확보하여 아래의 설치에 사용할 수 있습"
+"니다."
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:236
+#, python-format
+msgid "%(freeSize)s of %(devSize)s"
+msgstr "%(freeSize)s / %(devSize)s"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:246
+msgid "Not resizeable"
+msgstr "크기를 변경할 수 없음 "
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:281
+msgid "Free space"
+msgstr "여유공간"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:306
+#, python-format
+msgid "<b>%(count)s disk; %(size)s reclaimable space</b> (in file systems)"
+msgid_plural ""
+"<b>%(count)s disks; %(size)s reclaimable space</b> (in file systems)"
+msgstr[0] "<b>%(count)s 디스크; %(size)s 재생 가능 공간</b> (파일 시스템에서)"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:317
+#, python-format
+msgid "Total selected space to reclaim: <b>%s</b>"
+msgstr "확보할 선택 공간 합계: <b>%s</b>"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:546
+#: pyanaconda/ui/gui/spokes/lib/resize.py:551
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:267
+msgctxt "GUI|Reclaim Dialog"
+msgid "Delete _all"
+msgstr "모두 삭제(_A)"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:548
+msgctxt "GUI|Reclaim Dialog"
+msgid "Preserve _all"
+msgstr "모두 저장 (_A)"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:49
 #, python-format
@@ -222,88 +299,11 @@ msgstr "이미 사용 중인 이름입니다."
 msgid "No disks selected."
 msgstr "디스크가 선택되지 않았음."
 
-#: pyanaconda/ui/gui/spokes/lib/resize.py:53
-msgid "Preserve"
-msgstr "저장 "
-
-#: pyanaconda/ui/gui/spokes/lib/resize.py:54
-msgid "Shrink"
-msgstr "축소 "
-
-#: pyanaconda/ui/gui/spokes/lib/resize.py:55
-msgid "Delete"
-msgstr "삭제 "
-
-#: pyanaconda/ui/gui/spokes/lib/resize.py:96
-#, python-format
-msgid "Installation requires a total of <b>%s</b> for system data."
-msgstr "설치에는 총 <b>%s</b> 시스템 데이터 용."
-
-#: pyanaconda/ui/gui/spokes/lib/resize.py:128
-msgid "This device contains the installation source."
-msgstr "이 장치에는 설치 소스가 들어 있습니다. "
-
-#: pyanaconda/ui/gui/spokes/lib/resize.py:148
-msgid ""
-"You can remove existing file systems you no longer need to free up space for "
-"this installation.  Removing a file system will permanently delete all of "
-"the data it contains."
-msgstr ""
-"설치를 위한 공간 확보를 위해 필요하지 않은 파일시스템을 삭제할 수 있습니다. "
-"파일시스템을 삭제하면 그 안에 포함된 모든 데이터도 같이 삭제됩니다."
-
-#: pyanaconda/ui/gui/spokes/lib/resize.py:155
-msgid ""
-"There is also free space available in pre-existing file systems.  While it's "
-"risky and we recommend you back up your data first, you can recover that "
-"free disk space and make it available for this installation below."
-msgstr ""
-"기존 파일 시스템에 사용 가능한 여유 공간이 있습니다. 먼저 데이터를 백업해 두"
-"실 것을 권장합니다. 여유 디스크 공간을 확보하여 아래의 설치에 사용할 수 있습"
-"니다."
-
-#: pyanaconda/ui/gui/spokes/lib/resize.py:236
-#, python-format
-msgid "%(freeSize)s of %(devSize)s"
-msgstr "%(freeSize)s / %(devSize)s"
-
-#: pyanaconda/ui/gui/spokes/lib/resize.py:246
-msgid "Not resizeable"
-msgstr "크기를 변경할 수 없음 "
-
-#: pyanaconda/ui/gui/spokes/lib/resize.py:281
-msgid "Free space"
-msgstr "여유공간"
-
-#: pyanaconda/ui/gui/spokes/lib/resize.py:306
-#, python-format
-msgid "<b>%(count)s disk; %(size)s reclaimable space</b> (in file systems)"
-msgid_plural ""
-"<b>%(count)s disks; %(size)s reclaimable space</b> (in file systems)"
-msgstr[0] "<b>%(count)s 디스크; %(size)s 재생 가능 공간</b> (파일 시스템에서)"
-
-#: pyanaconda/ui/gui/spokes/lib/resize.py:317
-#, python-format
-msgid "Total selected space to reclaim: <b>%s</b>"
-msgstr "확보할 선택 공간 합계: <b>%s</b>"
-
-#: pyanaconda/ui/gui/spokes/lib/resize.py:546
-#: pyanaconda/ui/gui/spokes/lib/resize.py:551
-#: pyanaconda/ui/gui/spokes/lib/resize.glade:267
-msgctxt "GUI|Reclaim Dialog"
-msgid "Delete _all"
-msgstr "모두 삭제(_A)"
-
-#: pyanaconda/ui/gui/spokes/lib/resize.py:548
-msgctxt "GUI|Reclaim Dialog"
-msgid "Preserve _all"
-msgstr "모두 저장 (_A)"
-
-#: pyanaconda/ui/gui/spokes/lib/accordion.py:439
+#: pyanaconda/ui/gui/spokes/lib/accordion.py:445
 msgid "DATA"
 msgstr "데이터"
 
-#: pyanaconda/ui/gui/spokes/lib/accordion.py:484
+#: pyanaconda/ui/gui/spokes/lib/accordion.py:490
 #, python-format
 msgid ""
 "You haven't created any mount points for your %(product)s %(version)s "
@@ -312,16 +312,16 @@ msgstr ""
 "마운트 지점을 만들지 않았습니다. %(product)s %(version)s 설치가 아직 완료되"
 "지 않았습니다. 할 수있는 일 :"
 
-#: pyanaconda/ui/gui/spokes/lib/accordion.py:494
+#: pyanaconda/ui/gui/spokes/lib/accordion.py:500
 msgctxt "GUI|Custom Partitioning|Autopart Page"
 msgid "_Click here to create them automatically."
 msgstr "여기를 클릭하여 자동으로 생성합니다. (_C)"
 
-#: pyanaconda/ui/gui/spokes/lib/accordion.py:520
+#: pyanaconda/ui/gui/spokes/lib/accordion.py:526
 msgid "Create new mount points by clicking the '+' button."
 msgstr "'+' 버튼을 클릭하여 새 마운트 지점을 생성합니다."
 
-#: pyanaconda/ui/gui/spokes/lib/accordion.py:528
+#: pyanaconda/ui/gui/spokes/lib/accordion.py:534
 msgid ""
 "Or, assign new mount points to existing partitions after selecting them "
 "below."
@@ -329,10 +329,214 @@ msgstr ""
 "또는 다음에서 기존의 파티션을 선택하고 해당 파티션에 새 마운트 지점을 할당합"
 "니다. "
 
-#: pyanaconda/ui/gui/spokes/lib/accordion.py:533
+#: pyanaconda/ui/gui/spokes/lib/accordion.py:539
 msgctxt "GUI|Custom Partitioning|Autopart Page"
 msgid "_New mount points will use the following partitioning scheme:"
 msgstr "새로운 마운트 지점은 다음과 같은 파티션 설정 계획은 사용합니다(_N):"
+
+#: pyanaconda/ui/gui/spokes/storage.py:103
+msgid "Please wait... software metadata still loading."
+msgstr "잠시만 기다려 주십시오... 소프트웨어 메타데이터가 아직 로딩 중입니다."
+
+#: pyanaconda/ui/gui/spokes/storage.py:106
+#, python-format
+msgid ""
+"Your current <b>%(product)s</b> software selection requires <b>%(total)s</b> "
+"of available space, including <b>%(software)s</b> for software and <b>"
+"%(swap)s</b> for swap space."
+msgstr ""
+"현재 <b>%(product)s</b> 소프트웨어 선택시 요구 사항 <b>%(total)s</b> 사용 가"
+"능한 공간의 <b>%(software)s</b> 소프트웨어 및 <b>%(swap)s</b> 스왑 공간."
+
+#: pyanaconda/ui/gui/spokes/storage.py:115
+#, python-format
+msgid ""
+"Your current <a href=\"\" title=\"%(tooltip)s\"><b>%(product)s</b> software "
+"selection</a> requires <b>%(total)s</b> of available space, including <b>"
+"%(software)s</b> for software and <b>%(swap)s</b> for swap space."
+msgstr ""
+"현재 <a href=\"\" title=\"%(tooltip)s\"><b>%(product)s</b> 소프트웨어 선택</"
+"a> 요구하다 <b>%(total)s</b> 사용 가능한 공간의 <b>%(software)s</b> 소프트웨"
+"어 및 <b>%(swap)s</b> 스왑 공간."
+
+#: pyanaconda/ui/gui/spokes/storage.py:166
+#, python-format
+msgid "%s The disks you've selected have the following amounts of free space:"
+msgstr "%s 선택한 디스크의 여유 공간은 다음과 같습니다."
+
+#: pyanaconda/ui/gui/spokes/storage.py:176
+#, python-format
+msgid ""
+"<b>You don't have enough space available to install %s</b>.  You can shrink "
+"or remove existing partitions via our guided reclaim space tool, or you can "
+"adjust your partitions on your own in the custom partitioning interface."
+msgstr ""
+"<b>%s를 설치하기에는 공간이 부족합니다</b>. 영역 재생 도구에서 기존 파티션을 "
+"축소 또는 제거할 수 있습니다. 또는 사용자 정의 파티션 설정 인터페이스에서 직"
+"접 파티션을 조정할 수 있습니다. "
+
+#: pyanaconda/ui/gui/spokes/storage.py:200
+#, python-format
+msgid ""
+"  You don't have enough space available to install <b>%(product)s</b>, even "
+"if you used all of the free space available on the selected disks."
+msgstr ""
+"  설치할 공간이 충분하지 않습니다. <b>%(product)s</b>, 선택한 디스크에서 사"
+"용 가능한 여유 공간을 모두 사용한 경우에도 마찬가지입니다."
+
+#: pyanaconda/ui/gui/spokes/storage.py:212
+#, python-format
+msgid ""
+"<b>You don't have enough space available to install %(productName)s</b>, "
+"even if you used all of the free space available on the selected disks.  You "
+"could add more disks for additional space, modify your software selection to "
+"install a smaller version of <b>%(productName)s</b>, or quit the installer."
+msgstr ""
+"<b>설치할 공간이 충분하지 않습니다. %(productName)s</b>, 선택한 디스크에서 사"
+"용 가능한 여유 공간을 모두 사용한 경우에도 마찬가지입니다. 추가 공간을 위해 "
+"더 많은 디스크를 추가하고 소프트웨어 선택을 수정하여 <b>%(productName)s</b>, "
+"또는 설치 프로그램을 종료하십시오."
+
+#: pyanaconda/ui/gui/spokes/storage.py:238
+msgctxt "GUI|Spoke"
+msgid "Installation _Destination"
+msgstr "설치 _ 목적지"
+
+#: pyanaconda/ui/gui/spokes/storage.py:346
+msgid ""
+"Partitioning method changed - planned storage configuration changes will be "
+"cancelled."
+msgstr "파티션 방법 변경됨 - 계획된 스토리지 구성 변경 사항이 취소됩니다."
+
+#: pyanaconda/ui/gui/spokes/storage.py:420
+#: pyanaconda/ui/tui/spokes/installation_source.py:136
+#: pyanaconda/ui/tui/spokes/software_selection.py:159
+#: pyanaconda/ui/tui/spokes/storage.py:123
+msgid "Processing..."
+msgstr "처리 중..."
+
+#: pyanaconda/ui/gui/spokes/storage.py:422
+#: pyanaconda/ui/tui/spokes/storage.py:125
+msgid "Kickstart insufficient"
+msgstr "킥 스타트 부족"
+
+#: pyanaconda/ui/gui/spokes/storage.py:424
+#: pyanaconda/ui/tui/spokes/storage.py:127
+msgid "No disks selected"
+msgstr "선택한 디스크가 없음"
+
+#: pyanaconda/ui/gui/spokes/storage.py:426
+#: pyanaconda/ui/tui/spokes/storage.py:129
+msgid "Error checking storage configuration"
+msgstr "스토리지 설정 확인 중 오류 발생"
+
+#: pyanaconda/ui/gui/spokes/storage.py:428
+#: pyanaconda/ui/tui/spokes/storage.py:131
+msgid "Warning checking storage configuration"
+msgstr "스토리지 설정 확인 시 경고 "
+
+#: pyanaconda/ui/gui/spokes/storage.py:430
+#: pyanaconda/ui/tui/spokes/storage.py:133
+msgid "Automatic partitioning selected"
+msgstr "자동 파티션 설정 선택"
+
+#: pyanaconda/ui/gui/spokes/storage.py:432
+#: pyanaconda/ui/tui/spokes/storage.py:135
+msgid "Custom partitioning selected"
+msgstr "사용자 지정 파티션 설정 선택"
+
+#: pyanaconda/ui/gui/spokes/storage.py:553
+msgid ""
+"Error checking storage configuration.  <a href=\"\">Click for details.</a>"
+msgstr ""
+"저장소 구성을 검사하는 중 오류가 발생했습니다.  <a href=\"\">자세한 내용을 보"
+"려면 클릭하십시오.</a>"
+
+#: pyanaconda/ui/gui/spokes/storage.py:557
+msgid ""
+"Warning checking storage configuration.  <a href=\"\">Click for details.</a>"
+msgstr ""
+"저장소 구성을 확인하는 경고.  <a href=\"\">자세한 내용을 보려면 클릭하십시오."
+"</a>"
+
+#: pyanaconda/ui/gui/spokes/storage.py:588
+#, python-brace-format
+msgid ""
+"FCP device {hba_id}\n"
+"WWPN {wwpn}\n"
+"LUN {lun}"
+msgstr ""
+"FCP 장치 {hba_id}\n"
+"WWPN {wwpn}\n"
+"LUN {lun}"
+
+#: pyanaconda/ui/gui/spokes/storage.py:594
+#, python-brace-format
+msgid "NVDIMM device {namespace}"
+msgstr "NVDIMM 장치 {namespace}"
+
+#: pyanaconda/ui/gui/spokes/storage.py:608
+msgid "{} free"
+msgstr "{} 남음"
+
+#: pyanaconda/ui/gui/spokes/storage.py:710
+msgid ""
+"You have chosen to skip boot loader installation. Your system may not be "
+"bootable."
+msgstr ""
+"부트 로더 설치를 건너 뛰도록 선택했습니다. 시스템이 부팅 가능하지 않을 수 있"
+"습니다."
+
+#: pyanaconda/ui/gui/spokes/storage.py:888
+msgid "There was a problem with your disk selection. Click here for details."
+msgstr ""
+"디스크 선택에서 문제가 발생하였습니다. 자세한 내용은 여기를 클릭하십시오."
+
+#: pyanaconda/ui/gui/spokes/storage.py:993
+msgid ""
+"The following errors were encountered when checking your disk selection. You "
+"can modify your selection or quit the installer."
+msgstr ""
+"디스크 설정을 확인하는 동안 다음과 같은 오류가 발생했습니다. 설정을 변경하거"
+"나 설치 프로그램을 종료하십시오. "
+
+#: pyanaconda/ui/gui/spokes/storage.py:998
+#: pyanaconda/ui/gui/spokes/storage.py:1019
+msgctxt "GUI|Storage|Error Dialog"
+msgid "_Quit"
+msgstr "종료(_Q)"
+
+#: pyanaconda/ui/gui/spokes/storage.py:999
+msgctxt "GUI|Storage|Error Dialog"
+msgid "_Modify Disk Selection"
+msgstr "디스크 선택 변경(_M)"
+
+#: pyanaconda/ui/gui/spokes/storage.py:1014
+msgid ""
+"The following errors were encountered when checking your storage "
+"configuration.  You can modify your storage layout or quit the installer."
+msgstr ""
+"스토리지 설정을 확인하는 동안 다음과 같은 오류가 발생했습니다. 스토리지 레이"
+"아웃을 변경하거나 설치 프로그램을 종료하십시오. "
+
+#: pyanaconda/ui/gui/spokes/storage.py:1020
+msgctxt "GUI|Storage|Error Dialog"
+msgid "_Modify Storage Layout"
+msgstr "스토리지 레이아웃 수정(_M)"
+
+#: pyanaconda/ui/gui/spokes/storage.py:1034
+msgid ""
+"The following warnings were encountered when checking your storage "
+"configuration.  These are not fatal, but you may wish to make changes to "
+"your storage layout."
+msgstr ""
+"스토리지 설정을 확인할 때 다음과 같은 경고가 발생했습니다. 치명적이지 않지만 "
+"스토리지 레이아웃을 변경하실 수 있습니다. "
+
+#: pyanaconda/ui/gui/spokes/storage.py:1039
+msgctxt "GUI|Storage|Warning Dialog"
+msgid "_OK"
+msgstr "_OK"
 
 #: pyanaconda/ui/gui/spokes/root_password.py:55
 msgctxt "GUI|Spoke"
@@ -397,15 +601,239 @@ msgstr ""
 "%s가 성공적으로 설치되어 사용할 준비가 되었습니다!\n"
 "이어서 애플리케이션을 종료하고 사용하세요!"
 
+#: pyanaconda/ui/gui/spokes/custom_storage.py:100
+#: pyanaconda/ui/gui/spokes/custom_storage.glade:87
+msgid "MANUAL PARTITIONING"
+msgstr "수동으로 파티션 설정 "
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:272
+#, python-format
+msgctxt "GUI|Custom Partitioning"
+msgid "%d _storage device selected"
+msgid_plural "%d _storage devices selected"
+msgstr[0] "%d _ 저장 장치가 선택되었습니다."
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:344
+#, python-format
+msgid "%(items_selected)s of %(items_total)s mount points in %(page_name)s"
+msgstr "%(items_selected)s 의 %(items_total)s 마운트 지점 %(page_name)s"
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:371
+#, python-format
+msgid ""
+"Please select a single mount point to edit properties.\n"
+"\n"
+"You have currently selected:\n"
+"%s"
+msgstr ""
+"속성을 편집하려면 단일 탑재 지점을 선택하십시오. 현재 다음을 선택하셨습니"
+"다 :\n"
+"%s"
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:376
+#, python-format
+msgid ""
+"When you create mount points for your %(name)s %(version)s installation, "
+"you'll be able to view their details here."
+msgstr ""
+"마운트 지점을 만들 때 %(name)s %(version)s 설치가 완료되면 여기에서 세부 정보"
+"를 볼 수 있습니다."
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:452
+#: pyanaconda/ui/gui/spokes/custom_storage.py:484
+#: pyanaconda/ui/gui/spokes/network.py:247 pyanaconda/network.py:462
+msgid "Unknown"
+msgstr "알 수 없음"
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:584
+#: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade:178
+msgid "Device reconfiguration failed."
+msgstr "장치 재구성에 실패했습니다."
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:731
+msgid "No disks assigned"
+msgstr "디스크가 선택되어 있지 않습니다"
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:745
+msgctxt "GUI|Custom Partitioning|Devices"
+msgid " and {} other"
+msgid_plural " and {} others"
+msgstr[0] " 과 나머지 {}"
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:792
+msgid "The container is encrypted."
+msgstr "컨테이너가 암호화되어있습니다."
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:821
+msgid ""
+"The space available to this mount point can be changed by modifying the "
+"volume below."
+msgstr ""
+"다음 볼륨을 수정하여 마운트 지점의 사용 가능한 용량을 변경할 수 있습니다."
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:826
+msgid "This file system may not be resized."
+msgstr "이 파일 시스템은 크기 조정할 수 없습니다."
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:919
+msgid ""
+"Error checking storage configuration. <a href=\"\">Click for details</a> or "
+"press Done again to continue."
+msgstr ""
+"저장소 구성을 검사하는 중 오류가 발생했습니다. <a href=\"\">자세한 내용을 보"
+"려면 클릭하십시오.</a> 계속하려면 완료를 누르세요."
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:923
+msgid ""
+"Warning checking storage configuration. <a href=\"\">Click for details</a> "
+"or press Done again to continue."
+msgstr ""
+"저장소 구성을 확인하는 경고. <a href=\"\">자세한 내용을 보려면 클릭하십시오."
+"</a> 계속하려면 완료를 누릅니다."
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1003
+msgid "Failed to add new device."
+msgstr "새 장치를 추가하지 못했습니다."
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1060
+msgid "Device removal request failed."
+msgstr "장치 제거 요청이 실패했습니다."
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1194
+msgid "No disks selected. Keeping previous disk set."
+msgstr "디스크가 선택되어 있지 않습니다. 이전 디스크 설정을 유지합니다."
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1272
+msgid "({} free)"
+msgstr "({} 남음)"
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1459
+msgid "Automatic partitioning failed."
+msgstr "자동 파티션 구성이 실패했습니다."
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1751
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1755
+#: pyanaconda/ui/gui/spokes/installation_source.py:96
+msgid " <a href=\"\">Click for details.</a>"
+msgstr " <a href=\"\">자세한 내용을 보려면 클릭하십시오.</a>"
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1764
+#: pyanaconda/ui/gui/spokes/blivet_gui.py:318
+msgid ""
+"Continuing with this action will reset all your partitioning selections to "
+"their current on-disk state."
+msgstr ""
+"이 작업을 계속 진행하실 경우 현재 디스크에 있는 상태로 모든 파티션 설정이 초"
+"기화됩니다."
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1775
+#: pyanaconda/ui/gui/spokes/blivet_gui.py:326
+msgctxt "GUI|Custom Partitioning|Reset Dialog"
+msgid "_Reset selections"
+msgstr "설정 초기화(_R)"
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1777
+#: pyanaconda/ui/gui/spokes/blivet_gui.py:327
+msgctxt "GUI|Custom Partitioning|Reset Dialog"
+msgid "_Preserve current selections"
+msgstr "현재 설정 보존(_P)"
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1854
+msgid "Failed to unlock encrypted block device."
+msgstr "암호화된 블록 장치를 해제하지 못했습니다."
+
+#: pyanaconda/ui/gui/spokes/datetime_spoke.py:422
+msgctxt "GUI|Spoke"
+msgid "_Time & Date"
+msgstr "_ 시간 및 날짜"
+
+#: pyanaconda/ui/gui/spokes/datetime_spoke.py:559
+msgid "Restoring hardware time..."
+msgstr "하드웨어 시간 복구 중..."
+
+#: pyanaconda/ui/gui/spokes/datetime_spoke.py:573
+#: pyanaconda/ui/gui/spokes/datetime_spoke.py:579
+#: pyanaconda/ui/tui/spokes/time_spoke.py:202
+#, python-format
+msgid "%s timezone"
+msgstr "%s 시간대"
+
+#: pyanaconda/ui/gui/spokes/datetime_spoke.py:575
+msgid "Invalid timezone"
+msgstr "잘못된 시간대"
+
+#: pyanaconda/ui/gui/spokes/datetime_spoke.py:581
+#: pyanaconda/ui/gui/spokes/installation_source.py:682
+#: pyanaconda/ui/gui/spokes/software_selection.py:316
+#: pyanaconda/ui/gui/spokes/software_selection.py:321
+#: pyanaconda/ui/tui/spokes/installation_source.py:125
+#: pyanaconda/ui/tui/spokes/software_selection.py:171
+msgid "Nothing selected"
+msgstr "아무것도 선택되지 않음"
+
+#: pyanaconda/ui/gui/spokes/datetime_spoke.py:749
+#: pyanaconda/ui/gui/spokes/datetime_spoke.py:763
+#: pyanaconda/ui/gui/spokes/datetime_spoke.py:949
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:749
+msgid "PM"
+msgstr "PM"
+
+#: pyanaconda/ui/gui/spokes/datetime_spoke.py:751
+#: pyanaconda/ui/gui/spokes/datetime_spoke.py:760
+#: pyanaconda/ui/gui/spokes/datetime_spoke.py:948
+#: pyanaconda/ui/gui/spokes/datetime_spoke.py:951
+msgid "AM"
+msgstr "AM"
+
+#: pyanaconda/ui/gui/spokes/datetime_spoke.py:1118
+msgid "You need to set up networking first if you want to use NTP"
+msgstr "NTP를 사용하려면 먼저 네트워크를 설정해야 합니다"
+
+#: pyanaconda/ui/gui/spokes/datetime_spoke.py:1122
+msgid "You have no working NTP server configured"
+msgstr "작동할 수 있는 NTP 서버 설정이 없습니다"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.py:510
+msgctxt "GUI|Spoke"
+msgid "_Installation Destination"
+msgstr "_ 설치 목적지"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.py:627
+msgctxt "GUI|Installation Destination|Filter"
+msgid "{} _storage device selected"
+msgid_plural "{} _storage devices selected"
+msgstr[0] "{} 스토리지(_s) 장치가 선택됐습니다"
+
+#: pyanaconda/ui/gui/spokes/user.py:67
+msgid "Invalid group name."
+msgstr "그룹 이름이 잘못되었습니다."
+
+#: pyanaconda/ui/gui/spokes/user.py:231
+msgctxt "GUI|Spoke"
+msgid "_User Creation"
+msgstr "_User Creation"
+
+#: pyanaconda/ui/gui/spokes/user.py:354
+msgid "The password was set by kickstart."
+msgstr "암호가 킥스타트로 설정되었습니다."
+
+#: pyanaconda/ui/gui/spokes/user.py:444 pyanaconda/ui/tui/spokes/user.py:227
+msgid "No user will be created"
+msgstr "어떤 사용자도 생성되지 않습니다 "
+
+#: pyanaconda/ui/gui/spokes/user.py:446 pyanaconda/ui/tui/spokes/user.py:231
+#, python-format
+msgid "Administrator %s will be created"
+msgstr "관리자 %s가 생성됩니다 "
+
+#: pyanaconda/ui/gui/spokes/user.py:448 pyanaconda/ui/tui/spokes/user.py:233
+#, python-format
+msgid "User %s will be created"
+msgstr "사용자 %s가 생성됩니다 "
+
 #: pyanaconda/ui/gui/spokes/installation_source.py:65
 msgid "Setting up installation source..."
 msgstr "설치 소스를 설정 중..."
-
-#: pyanaconda/ui/gui/spokes/installation_source.py:96
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1747
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1751
-msgid " <a href=\"\">Click for details.</a>"
-msgstr " <a href=\"\">자세한 내용을 보려면 클릭하십시오.</a>"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:108
 msgid "Invalid proxy URL"
@@ -482,15 +910,6 @@ msgstr "HDD에서 설치를 설정하는 중 오류가 발생했습니다."
 #: pyanaconda/ui/gui/spokes/installation_source.glade:775
 msgid "Closest mirror"
 msgstr "최근 미러"
-
-#: pyanaconda/ui/gui/spokes/installation_source.py:682
-#: pyanaconda/ui/gui/spokes/datetime_spoke.py:581
-#: pyanaconda/ui/gui/spokes/software_selection.py:316
-#: pyanaconda/ui/gui/spokes/software_selection.py:321
-#: pyanaconda/ui/tui/spokes/installation_source.py:125
-#: pyanaconda/ui/tui/spokes/software_selection.py:171
-msgid "Nothing selected"
-msgstr "아무것도 선택되지 않음"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:829
 msgid "Failed to set up installation source; check the repo url."
@@ -592,47 +1011,35 @@ msgstr "잘못된 리포지터리 이름"
 msgid "Repository name conflicts with internal repository name."
 msgstr "리포지터리 이름이 내부 리포지터리 이름과 충돌합니다. "
 
-#: pyanaconda/ui/gui/spokes/datetime_spoke.py:422
-msgctxt "GUI|Spoke"
-msgid "_Time & Date"
-msgstr "_ 시간 및 날짜"
-
-#: pyanaconda/ui/gui/spokes/datetime_spoke.py:559
-msgid "Restoring hardware time..."
-msgstr "하드웨어 시간 복구 중..."
-
-#: pyanaconda/ui/gui/spokes/datetime_spoke.py:573
-#: pyanaconda/ui/gui/spokes/datetime_spoke.py:579
-#: pyanaconda/ui/tui/spokes/time_spoke.py:202
+#: pyanaconda/ui/gui/spokes/keyboard.py:50
 #, python-format
-msgid "%s timezone"
-msgstr "%s 시간대"
+msgid "%s to switch layouts."
+msgstr "%s 레이아웃 전환 "
 
-#: pyanaconda/ui/gui/spokes/datetime_spoke.py:575
-msgid "Invalid timezone"
-msgstr "잘못된 시간대"
+#: pyanaconda/ui/gui/spokes/keyboard.py:279
+msgctxt "GUI|Spoke"
+msgid "_Keyboard"
+msgstr "_Keyboard"
 
-#: pyanaconda/ui/gui/spokes/datetime_spoke.py:749
-#: pyanaconda/ui/gui/spokes/datetime_spoke.py:763
-#: pyanaconda/ui/gui/spokes/datetime_spoke.py:949
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:749
-msgid "PM"
-msgstr "PM"
+#: pyanaconda/ui/gui/spokes/keyboard.py:377
+msgid "Testing layouts configuration not available."
+msgstr "레이아웃 설정 테스트를 실행할 수 없습니다."
 
-#: pyanaconda/ui/gui/spokes/datetime_spoke.py:751
-#: pyanaconda/ui/gui/spokes/datetime_spoke.py:760
-#: pyanaconda/ui/gui/spokes/datetime_spoke.py:948
-#: pyanaconda/ui/gui/spokes/datetime_spoke.py:951
-msgid "AM"
-msgstr "AM"
+#: pyanaconda/ui/gui/spokes/keyboard.py:385
+msgid "Getting list of layouts..."
+msgstr "레이아웃 목록을 가져오는 중..."
 
-#: pyanaconda/ui/gui/spokes/datetime_spoke.py:1118
-msgid "You need to set up networking first if you want to use NTP"
-msgstr "NTP를 사용하려면 먼저 네트워크를 설정해야 합니다"
+#: pyanaconda/ui/gui/spokes/keyboard.py:439
+msgid ""
+"Keyboard layouts are not supported when using VNC.\n"
+"However the settings will be used after the installation."
+msgstr ""
+"VNC 사용 시 키보드 레이아웃이 지원되지 않습니다.\n"
+"설치 후 키보드 레이아웃 설정을 사용할 수 있습니다."
 
-#: pyanaconda/ui/gui/spokes/datetime_spoke.py:1122
-msgid "You have no working NTP server configured"
-msgstr "작동할 수 있는 NTP 서버 설정이 없습니다"
+#: pyanaconda/ui/gui/spokes/keyboard.py:449
+msgid "Layout switching not configured."
+msgstr "레이아웃 전환은 설정되어 있지 않습니다."
 
 #: pyanaconda/ui/gui/spokes/network.py:81
 msgid "Status unknown (missing)"
@@ -682,12 +1089,6 @@ msgstr "연결 해제 중"
 #: pyanaconda/ui/gui/spokes/network.py:112
 msgid "Connection failed"
 msgstr "연결 실패"
-
-#: pyanaconda/ui/gui/spokes/network.py:247
-#: pyanaconda/ui/gui/spokes/custom_storage.py:452
-#: pyanaconda/ui/gui/spokes/custom_storage.py:484 pyanaconda/network.py:462
-msgid "Unknown"
-msgstr "알 수 없음"
 
 #: pyanaconda/ui/gui/spokes/network.py:248
 msgid "Ethernet"
@@ -827,343 +1228,10 @@ msgstr "_ 네트워크 및 호스트 이름"
 msgid "Host name is not valid: %s"
 msgstr "호스트 이름이 유효하지 않습니다. %s"
 
-#: pyanaconda/ui/gui/spokes/storage.py:104
-msgid "Please wait... software metadata still loading."
-msgstr "잠시만 기다려 주십시오... 소프트웨어 메타데이터가 아직 로딩 중입니다."
-
-#: pyanaconda/ui/gui/spokes/storage.py:107
-#, python-format
-msgid ""
-"Your current <b>%(product)s</b> software selection requires <b>%(total)s</b> "
-"of available space, including <b>%(software)s</b> for software and <b>"
-"%(swap)s</b> for swap space."
-msgstr ""
-"현재 <b>%(product)s</b> 소프트웨어 선택시 요구 사항 <b>%(total)s</b> 사용 가"
-"능한 공간의 <b>%(software)s</b> 소프트웨어 및 <b>%(swap)s</b> 스왑 공간."
-
-#: pyanaconda/ui/gui/spokes/storage.py:116
-#, python-format
-msgid ""
-"Your current <a href=\"\" title=\"%(tooltip)s\"><b>%(product)s</b> software "
-"selection</a> requires <b>%(total)s</b> of available space, including <b>"
-"%(software)s</b> for software and <b>%(swap)s</b> for swap space."
-msgstr ""
-"현재 <a href=\"\" title=\"%(tooltip)s\"><b>%(product)s</b> 소프트웨어 선택</"
-"a> 요구하다 <b>%(total)s</b> 사용 가능한 공간의 <b>%(software)s</b> 소프트웨"
-"어 및 <b>%(swap)s</b> 스왑 공간."
-
-#: pyanaconda/ui/gui/spokes/storage.py:167
-#, python-format
-msgid "%s The disks you've selected have the following amounts of free space:"
-msgstr "%s 선택한 디스크의 여유 공간은 다음과 같습니다."
-
-#: pyanaconda/ui/gui/spokes/storage.py:177
-#, python-format
-msgid ""
-"<b>You don't have enough space available to install %s</b>.  You can shrink "
-"or remove existing partitions via our guided reclaim space tool, or you can "
-"adjust your partitions on your own in the custom partitioning interface."
-msgstr ""
-"<b>%s를 설치하기에는 공간이 부족합니다</b>. 영역 재생 도구에서 기존 파티션을 "
-"축소 또는 제거할 수 있습니다. 또는 사용자 정의 파티션 설정 인터페이스에서 직"
-"접 파티션을 조정할 수 있습니다. "
-
-#: pyanaconda/ui/gui/spokes/storage.py:201
-#, python-format
-msgid ""
-"  You don't have enough space available to install <b>%(product)s</b>, even "
-"if you used all of the free space available on the selected disks."
-msgstr ""
-"  설치할 공간이 충분하지 않습니다. <b>%(product)s</b>, 선택한 디스크에서 사"
-"용 가능한 여유 공간을 모두 사용한 경우에도 마찬가지입니다."
-
-#: pyanaconda/ui/gui/spokes/storage.py:213
-#, python-format
-msgid ""
-"<b>You don't have enough space available to install %(productName)s</b>, "
-"even if you used all of the free space available on the selected disks.  You "
-"could add more disks for additional space, modify your software selection to "
-"install a smaller version of <b>%(productName)s</b>, or quit the installer."
-msgstr ""
-"<b>설치할 공간이 충분하지 않습니다. %(productName)s</b>, 선택한 디스크에서 사"
-"용 가능한 여유 공간을 모두 사용한 경우에도 마찬가지입니다. 추가 공간을 위해 "
-"더 많은 디스크를 추가하고 소프트웨어 선택을 수정하여 <b>%(productName)s</b>, "
-"또는 설치 프로그램을 종료하십시오."
-
-#: pyanaconda/ui/gui/spokes/storage.py:239
-msgctxt "GUI|Spoke"
-msgid "Installation _Destination"
-msgstr "설치 _ 목적지"
-
-#: pyanaconda/ui/gui/spokes/storage.py:347
-msgid ""
-"Partitioning method changed - planned storage configuration changes will be "
-"cancelled."
-msgstr "파티션 방법 변경됨 - 계획된 스토리지 구성 변경 사항이 취소됩니다."
-
-#: pyanaconda/ui/gui/spokes/storage.py:415
-#: pyanaconda/ui/tui/spokes/installation_source.py:136
-#: pyanaconda/ui/tui/spokes/storage.py:123
-#: pyanaconda/ui/tui/spokes/software_selection.py:159
-msgid "Processing..."
-msgstr "처리 중..."
-
-#: pyanaconda/ui/gui/spokes/storage.py:417
-#: pyanaconda/ui/tui/spokes/storage.py:125
-msgid "Kickstart insufficient"
-msgstr "킥 스타트 부족"
-
-#: pyanaconda/ui/gui/spokes/storage.py:419
-#: pyanaconda/ui/tui/spokes/storage.py:127
-msgid "No disks selected"
-msgstr "선택한 디스크가 없음"
-
-#: pyanaconda/ui/gui/spokes/storage.py:421
-#: pyanaconda/ui/tui/spokes/storage.py:129
-msgid "Error checking storage configuration"
-msgstr "스토리지 설정 확인 중 오류 발생"
-
-#: pyanaconda/ui/gui/spokes/storage.py:423
-#: pyanaconda/ui/tui/spokes/storage.py:131
-msgid "Warning checking storage configuration"
-msgstr "스토리지 설정 확인 시 경고 "
-
-#: pyanaconda/ui/gui/spokes/storage.py:425
-#: pyanaconda/ui/tui/spokes/storage.py:133
-msgid "Automatic partitioning selected"
-msgstr "자동 파티션 설정 선택"
-
-#: pyanaconda/ui/gui/spokes/storage.py:427
-#: pyanaconda/ui/tui/spokes/storage.py:135
-msgid "Custom partitioning selected"
-msgstr "사용자 지정 파티션 설정 선택"
-
-#: pyanaconda/ui/gui/spokes/storage.py:548
-msgid ""
-"Error checking storage configuration.  <a href=\"\">Click for details.</a>"
-msgstr ""
-"저장소 구성을 검사하는 중 오류가 발생했습니다.  <a href=\"\">자세한 내용을 보"
-"려면 클릭하십시오.</a>"
-
-#: pyanaconda/ui/gui/spokes/storage.py:552
-msgid ""
-"Warning checking storage configuration.  <a href=\"\">Click for details.</a>"
-msgstr ""
-"저장소 구성을 확인하는 경고.  <a href=\"\">자세한 내용을 보려면 클릭하십시오."
-"</a>"
-
-#: pyanaconda/ui/gui/spokes/storage.py:583
-#, python-brace-format
-msgid ""
-"FCP device {hba_id}\n"
-"WWPN {wwpn}\n"
-"LUN {lun}"
-msgstr ""
-"FCP 장치 {hba_id}\n"
-"WWPN {wwpn}\n"
-"LUN {lun}"
-
-#: pyanaconda/ui/gui/spokes/storage.py:589
-#, python-brace-format
-msgid "NVDIMM device {namespace}"
-msgstr "NVDIMM 장치 {namespace}"
-
-#: pyanaconda/ui/gui/spokes/storage.py:603
-msgid "{} free"
-msgstr "{} 남음"
-
-#: pyanaconda/ui/gui/spokes/storage.py:705
-msgid ""
-"You have chosen to skip boot loader installation. Your system may not be "
-"bootable."
-msgstr ""
-"부트 로더 설치를 건너 뛰도록 선택했습니다. 시스템이 부팅 가능하지 않을 수 있"
-"습니다."
-
-#: pyanaconda/ui/gui/spokes/storage.py:883
-msgid "There was a problem with your disk selection. Click here for details."
-msgstr ""
-"디스크 선택에서 문제가 발생하였습니다. 자세한 내용은 여기를 클릭하십시오."
-
-#: pyanaconda/ui/gui/spokes/storage.py:988
-msgid ""
-"The following errors were encountered when checking your disk selection. You "
-"can modify your selection or quit the installer."
-msgstr ""
-"디스크 설정을 확인하는 동안 다음과 같은 오류가 발생했습니다. 설정을 변경하거"
-"나 설치 프로그램을 종료하십시오. "
-
-#: pyanaconda/ui/gui/spokes/storage.py:993
-#: pyanaconda/ui/gui/spokes/storage.py:1014
-msgctxt "GUI|Storage|Error Dialog"
-msgid "_Quit"
-msgstr "종료(_Q)"
-
-#: pyanaconda/ui/gui/spokes/storage.py:994
-msgctxt "GUI|Storage|Error Dialog"
-msgid "_Modify Disk Selection"
-msgstr "디스크 선택 변경(_M)"
-
-#: pyanaconda/ui/gui/spokes/storage.py:1009
-msgid ""
-"The following errors were encountered when checking your storage "
-"configuration.  You can modify your storage layout or quit the installer."
-msgstr ""
-"스토리지 설정을 확인하는 동안 다음과 같은 오류가 발생했습니다. 스토리지 레이"
-"아웃을 변경하거나 설치 프로그램을 종료하십시오. "
-
-#: pyanaconda/ui/gui/spokes/storage.py:1015
-msgctxt "GUI|Storage|Error Dialog"
-msgid "_Modify Storage Layout"
-msgstr "스토리지 레이아웃 수정(_M)"
-
-#: pyanaconda/ui/gui/spokes/storage.py:1029
-msgid ""
-"The following warnings were encountered when checking your storage "
-"configuration.  These are not fatal, but you may wish to make changes to "
-"your storage layout."
-msgstr ""
-"스토리지 설정을 확인할 때 다음과 같은 경고가 발생했습니다. 치명적이지 않지만 "
-"스토리지 레이아웃을 변경하실 수 있습니다. "
-
-#: pyanaconda/ui/gui/spokes/storage.py:1034
-msgctxt "GUI|Storage|Warning Dialog"
-msgid "_OK"
-msgstr "_OK"
-
 #: pyanaconda/ui/gui/spokes/welcome.py:243
 #, python-format
 msgid "WELCOME TO %(name)s %(version)s."
 msgstr "에 오신 것을 환영합니다 %(name)s %(version)s."
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:100
-#: pyanaconda/ui/gui/spokes/custom_storage.glade:87
-msgid "MANUAL PARTITIONING"
-msgstr "수동으로 파티션 설정 "
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:272
-#, python-format
-msgctxt "GUI|Custom Partitioning"
-msgid "%d _storage device selected"
-msgid_plural "%d _storage devices selected"
-msgstr[0] "%d _ 저장 장치가 선택되었습니다."
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:344
-#, python-format
-msgid "%(items_selected)s of %(items_total)s mount points in %(page_name)s"
-msgstr "%(items_selected)s 의 %(items_total)s 마운트 지점 %(page_name)s"
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:371
-#, python-format
-msgid ""
-"Please select a single mount point to edit properties.\n"
-"\n"
-"You have currently selected:\n"
-"%s"
-msgstr ""
-"속성을 편집하려면 단일 탑재 지점을 선택하십시오. 현재 다음을 선택하셨습니"
-"다 :\n"
-"%s"
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:376
-#, python-format
-msgid ""
-"When you create mount points for your %(name)s %(version)s installation, "
-"you'll be able to view their details here."
-msgstr ""
-"마운트 지점을 만들 때 %(name)s %(version)s 설치가 완료되면 여기에서 세부 정보"
-"를 볼 수 있습니다."
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:580
-#: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade:178
-msgid "Device reconfiguration failed."
-msgstr "장치 재구성에 실패했습니다."
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:727
-msgid "No disks assigned"
-msgstr "디스크가 선택되어 있지 않습니다"
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:741
-msgctxt "GUI|Custom Partitioning|Devices"
-msgid " and {} other"
-msgid_plural " and {} others"
-msgstr[0] " 과 나머지 {}"
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:788
-msgid "The container is encrypted."
-msgstr "컨테이너가 암호화되어있습니다."
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:817
-msgid ""
-"The space available to this mount point can be changed by modifying the "
-"volume below."
-msgstr ""
-"다음 볼륨을 수정하여 마운트 지점의 사용 가능한 용량을 변경할 수 있습니다."
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:822
-msgid "This file system may not be resized."
-msgstr "이 파일 시스템은 크기 조정할 수 없습니다."
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:915
-msgid ""
-"Error checking storage configuration. <a href=\"\">Click for details</a> or "
-"press Done again to continue."
-msgstr ""
-"저장소 구성을 검사하는 중 오류가 발생했습니다. <a href=\"\">자세한 내용을 보"
-"려면 클릭하십시오.</a> 계속하려면 완료를 누르세요."
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:919
-msgid ""
-"Warning checking storage configuration. <a href=\"\">Click for details</a> "
-"or press Done again to continue."
-msgstr ""
-"저장소 구성을 확인하는 경고. <a href=\"\">자세한 내용을 보려면 클릭하십시오."
-"</a> 계속하려면 완료를 누릅니다."
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:999
-msgid "Failed to add new device."
-msgstr "새 장치를 추가하지 못했습니다."
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1056
-msgid "Device removal request failed."
-msgstr "장치 제거 요청이 실패했습니다."
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1190
-msgid "No disks selected. Keeping previous disk set."
-msgstr "디스크가 선택되어 있지 않습니다. 이전 디스크 설정을 유지합니다."
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1268
-msgid "({} free)"
-msgstr "({} 남음)"
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1455
-msgid "Automatic partitioning failed."
-msgstr "자동 파티션 구성이 실패했습니다."
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1760
-#: pyanaconda/ui/gui/spokes/blivet_gui.py:318
-msgid ""
-"Continuing with this action will reset all your partitioning selections to "
-"their current on-disk state."
-msgstr ""
-"이 작업을 계속 진행하실 경우 현재 디스크에 있는 상태로 모든 파티션 설정이 초"
-"기화됩니다."
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1771
-#: pyanaconda/ui/gui/spokes/blivet_gui.py:326
-msgctxt "GUI|Custom Partitioning|Reset Dialog"
-msgid "_Reset selections"
-msgstr "설정 초기화(_R)"
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1773
-#: pyanaconda/ui/gui/spokes/blivet_gui.py:327
-msgctxt "GUI|Custom Partitioning|Reset Dialog"
-msgid "_Preserve current selections"
-msgstr "현재 설정 보존(_P)"
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1850
-msgid "Failed to unlock encrypted block device."
-msgstr "암호화된 블록 장치를 해제하지 못했습니다."
 
 #: pyanaconda/ui/gui/spokes/blivet_gui.py:99
 msgctxt "GUI|Spoke"
@@ -1185,74 +1253,6 @@ msgid ""
 msgstr ""
 "저장소 구성을 확인하는 경고.  <a href=\"\">자세한 내용을 보려면 클릭하십시오."
 "</a> 계속하려면 Done (완료)을 누릅니다."
-
-#: pyanaconda/ui/gui/spokes/keyboard.py:50
-#, python-format
-msgid "%s to switch layouts."
-msgstr "%s 레이아웃 전환 "
-
-#: pyanaconda/ui/gui/spokes/keyboard.py:279
-msgctxt "GUI|Spoke"
-msgid "_Keyboard"
-msgstr "_Keyboard"
-
-#: pyanaconda/ui/gui/spokes/keyboard.py:377
-msgid "Testing layouts configuration not available."
-msgstr "레이아웃 설정 테스트를 실행할 수 없습니다."
-
-#: pyanaconda/ui/gui/spokes/keyboard.py:385
-msgid "Getting list of layouts..."
-msgstr "레이아웃 목록을 가져오는 중..."
-
-#: pyanaconda/ui/gui/spokes/keyboard.py:439
-msgid ""
-"Keyboard layouts are not supported when using VNC.\n"
-"However the settings will be used after the installation."
-msgstr ""
-"VNC 사용 시 키보드 레이아웃이 지원되지 않습니다.\n"
-"설치 후 키보드 레이아웃 설정을 사용할 수 있습니다."
-
-#: pyanaconda/ui/gui/spokes/keyboard.py:449
-msgid "Layout switching not configured."
-msgstr "레이아웃 전환은 설정되어 있지 않습니다."
-
-#: pyanaconda/ui/gui/spokes/user.py:67
-msgid "Invalid group name."
-msgstr "그룹 이름이 잘못되었습니다."
-
-#: pyanaconda/ui/gui/spokes/user.py:231
-msgctxt "GUI|Spoke"
-msgid "_User Creation"
-msgstr "_User Creation"
-
-#: pyanaconda/ui/gui/spokes/user.py:354
-msgid "The password was set by kickstart."
-msgstr "암호가 킥스타트로 설정되었습니다."
-
-#: pyanaconda/ui/gui/spokes/user.py:444 pyanaconda/ui/tui/spokes/user.py:227
-msgid "No user will be created"
-msgstr "어떤 사용자도 생성되지 않습니다 "
-
-#: pyanaconda/ui/gui/spokes/user.py:446 pyanaconda/ui/tui/spokes/user.py:231
-#, python-format
-msgid "Administrator %s will be created"
-msgstr "관리자 %s가 생성됩니다 "
-
-#: pyanaconda/ui/gui/spokes/user.py:448 pyanaconda/ui/tui/spokes/user.py:233
-#, python-format
-msgid "User %s will be created"
-msgstr "사용자 %s가 생성됩니다 "
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.py:510
-msgctxt "GUI|Spoke"
-msgid "_Installation Destination"
-msgstr "_ 설치 목적지"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.py:620
-msgctxt "GUI|Installation Destination|Filter"
-msgid "{} _storage device selected"
-msgid_plural "{} _storage devices selected"
-msgstr[0] "{} 스토리지(_s) 장치가 선택됐습니다"
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:64
 msgctxt "GUI|Spoke"
@@ -1420,11 +1420,11 @@ msgstr "설치를 시작하다."
 #: pyanaconda/ui/tui/hubs/summary.py:160
 #: pyanaconda/ui/tui/spokes/installation_source.py:498
 #: pyanaconda/ui/tui/spokes/network.py:565
-#: pyanaconda/ui/tui/spokes/storage.py:254
-#: pyanaconda/ui/tui/spokes/storage.py:512
-#: pyanaconda/ui/tui/spokes/storage.py:584
-#: pyanaconda/ui/tui/spokes/storage.py:652
 #: pyanaconda/ui/tui/spokes/software_selection.py:252
+#: pyanaconda/ui/tui/spokes/storage.py:254
+#: pyanaconda/ui/tui/spokes/storage.py:519
+#: pyanaconda/ui/tui/spokes/storage.py:591
+#: pyanaconda/ui/tui/spokes/storage.py:659
 msgctxt "TUI|Spoke Navigation"
 msgid "c"
 msgstr "c"
@@ -1822,6 +1822,104 @@ msgstr "NTP 서버 주소를 입력하고 Enter 키를 누릅니다. %s"
 msgid "Select an NTP server to remove"
 msgstr "삭제할 NTP 서버 선택"
 
+#: pyanaconda/ui/tui/spokes/software_selection.py:54
+msgid "Software selection"
+msgstr "소프트웨어 선택 "
+
+#: pyanaconda/ui/tui/spokes/software_selection.py:198
+msgid "Installation source needs to be set up first."
+msgstr "설치 소스를 먼저 설정해야 합니다."
+
+#: pyanaconda/ui/tui/spokes/software_selection.py:222
+msgid "Base environment"
+msgstr "기본 환경 "
+
+#: pyanaconda/ui/tui/spokes/software_selection.py:232
+#, fuzzy
+#| msgid "Add-ons for selected environment"
+msgid "Additional software for selected environment"
+msgstr "선택한 환경을위한 부가 기능"
+
+#: pyanaconda/ui/tui/spokes/software_selection.py:234
+#, fuzzy
+#| msgid "No add-ons to select."
+msgid "No additional software to select."
+msgstr "선택할 부가 기능이 없습니다."
+
+#: pyanaconda/ui/tui/spokes/shell_spoke.py:41
+msgid "Shell"
+msgstr "쉘"
+
+#: pyanaconda/ui/tui/spokes/shell_spoke.py:55
+msgid "Start shell"
+msgstr "쉘 시작"
+
+#: pyanaconda/ui/tui/spokes/shell_spoke.py:63
+msgid "Exit the shell to continue"
+msgstr "계속 진행하기 위해 쉘을 종료합니다"
+
+#: pyanaconda/ui/tui/spokes/user.py:39
+msgid "Full name can't contain the ':' character"
+msgstr "이름에 ':' 을 사용할 수 없습니다"
+
+#: pyanaconda/ui/tui/spokes/user.py:73
+msgid "User creation"
+msgstr "사용자 생성"
+
+#: pyanaconda/ui/tui/spokes/user.py:126
+msgid "Create user"
+msgstr "사용자 만들기"
+
+#: pyanaconda/ui/tui/spokes/user.py:130
+msgid "Full name"
+msgstr "성명"
+
+#: pyanaconda/ui/tui/spokes/user.py:133
+msgid "User name"
+msgstr "사용자 이름 "
+
+#: pyanaconda/ui/tui/spokes/user.py:136
+msgid "Use password"
+msgstr "암호 사용"
+
+#: pyanaconda/ui/tui/spokes/user.py:148
+msgid "Administrator"
+msgstr "관리자"
+
+#: pyanaconda/ui/tui/spokes/user.py:152
+msgid "Groups"
+msgstr "그룹"
+
+#: pyanaconda/ui/tui/spokes/user.py:229
+msgid "You must set a password"
+msgstr "암호를 입력해 주십시오"
+
+#: pyanaconda/ui/tui/spokes/user.py:247
+#, python-format
+msgid ""
+"Invalid user name: %(name)s.\n"
+"%(error_message)s"
+msgstr ""
+"잘못된 사용자 이름: %(name)s.\n"
+"%(error_message)s"
+
+#: pyanaconda/ui/tui/spokes/installation_progress.py:51
+msgid "Progress"
+msgstr "진행 상황 "
+
+#: pyanaconda/ui/tui/spokes/installation_progress.py:134
+msgid "Installation complete"
+msgstr "설치 완료"
+
+#: pyanaconda/ui/tui/spokes/installation_progress.py:136
+msgid "Use of this product is subject to the license agreement found at:"
+msgstr "이 제품의 사용은 다음에서 찾을 수있는 사용권 계약의 적용을받습니다."
+
+#: pyanaconda/ui/tui/spokes/installation_progress.py:147
+#, python-format
+msgid "Installation complete. Press %s to quit"
+msgstr "설치 완료. 프레스 %s 종료합니다"
+
 #: pyanaconda/ui/tui/spokes/storage.py:61
 msgid "Use All Space"
 msgstr "모든 공간 사용"
@@ -1881,15 +1979,15 @@ msgstr ""
 "암호화하려는 모든 장치에 대해 기본 LUKS 암호를 입력하십시오. 두 번 입력해야합"
 "니다."
 
-#: pyanaconda/ui/tui/spokes/storage.py:416
+#: pyanaconda/ui/tui/spokes/storage.py:423
 msgid "Partitioning Options"
 msgstr "파티션 옵션"
 
-#: pyanaconda/ui/tui/spokes/storage.py:453
+#: pyanaconda/ui/tui/spokes/storage.py:460
 msgid "Manually assign mount points"
 msgstr "수동으로 마운트 지점 할당"
 
-#: pyanaconda/ui/tui/spokes/storage.py:460
+#: pyanaconda/ui/tui/spokes/storage.py:467
 msgid ""
 "Installation requires partitioning of your hard drive. Select what space to "
 "use for the install target or manually assign mount points."
@@ -1897,23 +1995,23 @@ msgstr ""
 "설치를하려면 하드 드라이브를 파티션해야합니다. 설치 대상에 사용할 공간을 선택"
 "하거나 수동으로 마운트 지점을 지정하십시오."
 
-#: pyanaconda/ui/tui/spokes/storage.py:505
+#: pyanaconda/ui/tui/spokes/storage.py:512
 msgid "Reverting previous configuration. This may take a moment..."
 msgstr "이전 구성 되돌리기. 이것은 잠시 걸릴 수 있습니다 ..."
 
-#: pyanaconda/ui/tui/spokes/storage.py:537
+#: pyanaconda/ui/tui/spokes/storage.py:544
 msgid "Partition Scheme Options"
 msgstr "파티션 스키마 옵션 "
 
-#: pyanaconda/ui/tui/spokes/storage.py:573
+#: pyanaconda/ui/tui/spokes/storage.py:580
 msgid "Select a partition scheme configuration."
 msgstr "파티션 스키마 설정을 선택합니다."
 
-#: pyanaconda/ui/tui/spokes/storage.py:605
+#: pyanaconda/ui/tui/spokes/storage.py:612
 msgid "Assign mount points"
 msgstr "마운트 지점 할당"
 
-#: pyanaconda/ui/tui/spokes/storage.py:625
+#: pyanaconda/ui/tui/spokes/storage.py:632
 msgid ""
 "Choose device from above to assign mount point and set format.\n"
 "Formats marked with * are new formats meaning ALL DATA on the original "
@@ -1923,161 +2021,67 @@ msgstr ""
 "된 형식은 새로운 형식이므로 원래 형식의 모든 데이터가 손실됩니다!"
 
 #. TRANSLATORS: 's' to rescan devices
-#: pyanaconda/ui/tui/spokes/storage.py:637
-#: pyanaconda/ui/tui/spokes/storage.py:647
+#: pyanaconda/ui/tui/spokes/storage.py:644
+#: pyanaconda/ui/tui/spokes/storage.py:654
 msgctxt "TUI|Spoke Navigation|Partitioning"
 msgid "s"
 msgstr "초"
 
-#: pyanaconda/ui/tui/spokes/storage.py:637
+#: pyanaconda/ui/tui/spokes/storage.py:644
 msgid "rescan devices"
 msgstr "기기 재검색"
 
-#: pyanaconda/ui/tui/spokes/storage.py:709
+#: pyanaconda/ui/tui/spokes/storage.py:716
 msgid ""
 "Warning: This will revert all changes done so far.\n"
 "Do you want to proceed?\n"
 msgstr ""
 "경고 : 지금까지 수행 된 모든 변경 사항을 되돌립니다. 진행 하시겠습니까?\n"
 
-#: pyanaconda/ui/tui/spokes/storage.py:718
+#: pyanaconda/ui/tui/spokes/storage.py:725
 msgid "Scanning disks. This may take a moment..."
 msgstr "디스크 검사 중. 이것은 잠시 걸릴 수 있습니다 ..."
 
-#: pyanaconda/ui/tui/spokes/storage.py:732
+#: pyanaconda/ui/tui/spokes/storage.py:739
 #, python-format
 msgid "Configure device: %s"
 msgstr "장치 구성 : %s"
 
-#: pyanaconda/ui/tui/spokes/storage.py:752
+#: pyanaconda/ui/tui/spokes/storage.py:759
 msgid "Choose from above to assign mount point and/or set format."
 msgstr "마운트 지점 및 / 또는 형식을 지정하려면 위에서 선택하십시오."
 
-#: pyanaconda/ui/tui/spokes/storage.py:768
+#: pyanaconda/ui/tui/spokes/storage.py:775
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:177
 msgid "Mount point"
 msgstr "마운트 지점"
 
-#: pyanaconda/ui/tui/spokes/storage.py:775
-#: pyanaconda/ui/tui/spokes/storage.py:780
-#: pyanaconda/ui/tui/spokes/storage.py:812
+#: pyanaconda/ui/tui/spokes/storage.py:782
+#: pyanaconda/ui/tui/spokes/storage.py:787
+#: pyanaconda/ui/tui/spokes/storage.py:819
 msgid "none"
 msgstr "없음"
 
-#: pyanaconda/ui/tui/spokes/storage.py:798
+#: pyanaconda/ui/tui/spokes/storage.py:805
 msgid "Invalid mount point given"
 msgstr "지정된 마운트 포인트가 잘못되었습니다."
 
-#: pyanaconda/ui/tui/spokes/storage.py:811
+#: pyanaconda/ui/tui/spokes/storage.py:818
 msgid "Format"
 msgstr "포멧"
 
-#: pyanaconda/ui/tui/spokes/storage.py:821
+#: pyanaconda/ui/tui/spokes/storage.py:828
 msgid "Invalid or unsupported format given"
 msgstr "유효하지 않거나 지원되지 않는 형식"
 
-#: pyanaconda/ui/tui/spokes/storage.py:823
+#: pyanaconda/ui/tui/spokes/storage.py:830
 #, python-format
 msgid "Supported formats: %s"
 msgstr "지원되는 형식 : %s"
 
-#: pyanaconda/ui/tui/spokes/storage.py:840
+#: pyanaconda/ui/tui/spokes/storage.py:847
 msgid "Reformat"
 msgstr "재 포맷"
-
-#: pyanaconda/ui/tui/spokes/shell_spoke.py:41
-msgid "Shell"
-msgstr "쉘"
-
-#: pyanaconda/ui/tui/spokes/shell_spoke.py:55
-msgid "Start shell"
-msgstr "쉘 시작"
-
-#: pyanaconda/ui/tui/spokes/shell_spoke.py:63
-msgid "Exit the shell to continue"
-msgstr "계속 진행하기 위해 쉘을 종료합니다"
-
-#: pyanaconda/ui/tui/spokes/user.py:39
-msgid "Full name can't contain the ':' character"
-msgstr "이름에 ':' 을 사용할 수 없습니다"
-
-#: pyanaconda/ui/tui/spokes/user.py:73
-msgid "User creation"
-msgstr "사용자 생성"
-
-#: pyanaconda/ui/tui/spokes/user.py:126
-msgid "Create user"
-msgstr "사용자 만들기"
-
-#: pyanaconda/ui/tui/spokes/user.py:130
-msgid "Full name"
-msgstr "성명"
-
-#: pyanaconda/ui/tui/spokes/user.py:133
-msgid "User name"
-msgstr "사용자 이름 "
-
-#: pyanaconda/ui/tui/spokes/user.py:136
-msgid "Use password"
-msgstr "암호 사용"
-
-#: pyanaconda/ui/tui/spokes/user.py:148
-msgid "Administrator"
-msgstr "관리자"
-
-#: pyanaconda/ui/tui/spokes/user.py:152
-msgid "Groups"
-msgstr "그룹"
-
-#: pyanaconda/ui/tui/spokes/user.py:229
-msgid "You must set a password"
-msgstr "암호를 입력해 주십시오"
-
-#: pyanaconda/ui/tui/spokes/user.py:247
-#, python-format
-msgid ""
-"Invalid user name: %(name)s.\n"
-"%(error_message)s"
-msgstr ""
-"잘못된 사용자 이름: %(name)s.\n"
-"%(error_message)s"
-
-#: pyanaconda/ui/tui/spokes/software_selection.py:54
-msgid "Software selection"
-msgstr "소프트웨어 선택 "
-
-#: pyanaconda/ui/tui/spokes/software_selection.py:198
-msgid "Installation source needs to be set up first."
-msgstr "설치 소스를 먼저 설정해야 합니다."
-
-#: pyanaconda/ui/tui/spokes/software_selection.py:222
-msgid "Base environment"
-msgstr "기본 환경 "
-
-#: pyanaconda/ui/tui/spokes/software_selection.py:232
-msgid "Add-ons for selected environment"
-msgstr "선택한 환경을위한 부가 기능"
-
-#: pyanaconda/ui/tui/spokes/software_selection.py:234
-msgid "No add-ons to select."
-msgstr "선택할 부가 기능이 없습니다."
-
-#: pyanaconda/ui/tui/spokes/installation_progress.py:51
-msgid "Progress"
-msgstr "진행 상황 "
-
-#: pyanaconda/ui/tui/spokes/installation_progress.py:134
-msgid "Installation complete"
-msgstr "설치 완료"
-
-#: pyanaconda/ui/tui/spokes/installation_progress.py:136
-msgid "Use of this product is subject to the license agreement found at:"
-msgstr "이 제품의 사용은 다음에서 찾을 수있는 사용권 계약의 적용을받습니다."
-
-#: pyanaconda/ui/tui/spokes/installation_progress.py:147
-#, python-format
-msgid "Installation complete. Press %s to quit"
-msgstr "설치 완료. 프레스 %s 종료합니다"
 
 #: pyanaconda/ui/tui/tuiobject.py:142
 #, python-format
@@ -2104,6 +2108,105 @@ msgstr ""
 #: pyanaconda/bootloader/execution.py:183
 msgid "Requested boot drive \"{}\" doesn't exist or cannot be used."
 msgstr "요청한 부팅 드라이브 \"{}\"이 (가) 없거나 사용할 수 없습니다."
+
+#: pyanaconda/bootloader/base.py:161
+msgid "/boot file system"
+msgstr "/boot 파일 시스템"
+
+#: pyanaconda/bootloader/base.py:310
+#, python-format
+msgid ""
+"RAID sets that contain '%(desc)s' must have one of the following raid "
+"levels: %(raid_level)s."
+msgstr ""
+"'%(desc)s'을(를) 포함하는 RAID 세트는 한 개의 다음과 같은 RAID레벨이 있어야 "
+"합니다:%(raid_level)s."
+
+#: pyanaconda/bootloader/base.py:318
+#, python-format
+msgid ""
+"RAID sets that contain '%(desc)s' must have one of the following metadata "
+"versions: %(metadata_versions)s."
+msgstr ""
+"'%(desc)s'을(를) 포함하는 RAID 세트는 한 개의 다음과 같은 메타 데이터 버전이 "
+"있어야 합니다:%(metadata_versions)s."
+
+#: pyanaconda/bootloader/base.py:326
+#, python-format
+msgid ""
+"RAID sets that contain '%(desc)s' must have one of the following device "
+"types: %(types)s."
+msgstr ""
+"'%(desc)s'을(를) 포함하는 RAID 세트는 한 개의 다음과 같은 장치 유형이 있어야 "
+"합니다:%(types)s."
+
+#: pyanaconda/bootloader/base.py:342
+#, python-format
+msgid "%(name)s must have one of the following disklabel types: %(types)s."
+msgstr ""
+"%(name)s은(는) 한 개의 다음의 디스크 레이블 유형이 있어야 합니다: %(types)s."
+
+#: pyanaconda/bootloader/base.py:354
+#, python-format
+msgid "%(desc)s cannot be of type %(type)s."
+msgstr "%(desc)s은(는) %(type)s 유형이 될 수 없습니다."
+
+#: pyanaconda/bootloader/base.py:360
+#, python-format
+msgid "%(desc)s must be mounted on one of %(mountpoints)s."
+msgstr "%(desc)s은(는)%(mountpoints)s 중 하나에 마운트되어야 합니다."
+
+#: pyanaconda/bootloader/base.py:372
+#, python-format
+msgid "%(desc)s must be between %(min)d and %(max)d MB in size"
+msgstr "%(desc)s의 크기는 %(min)d MB 와 %(max)d MB 사이여야 합니다."
+
+#: pyanaconda/bootloader/base.py:378
+#, python-format
+msgid "%(desc)s must not be smaller than %(min)dMB."
+msgstr "%(desc)s은(는) %(min)dMB 보다 작을 수 없습니다."
+
+#: pyanaconda/bootloader/base.py:387
+#, python-format
+msgid "%(desc)s must not be larger than %(max)dMB."
+msgstr "%(desc)s은(는)  %(max)dMB보다 클 수 없습니다."
+
+#: pyanaconda/bootloader/base.py:405
+#, python-format
+msgid "%(desc)s must be within the first %(max_end)s of the disk."
+msgstr "%(desc)s은(는)디스크의 첫번째 %(max_end)s에 있어야 합니다."
+
+#: pyanaconda/bootloader/base.py:415
+#, python-format
+msgid "%s must be on a primary partition."
+msgstr "%s은(는)첫 번째 파티션에 지정해야 합니다."
+
+#: pyanaconda/bootloader/base.py:500
+msgid ""
+"Boot loader stage1 device cannot be on an iSCSI disk which is not configured "
+"in iBFT."
+msgstr ""
+"부트 로더 stage1 장치는 iBFT에서 구성되지 않은 iSCSI 디스크에있을 수 없습니"
+"다."
+
+#: pyanaconda/bootloader/base.py:557 pyanaconda/bootloader/base.py:671
+#, python-format
+msgid "%s cannot be on an encrypted block device."
+msgstr "%s은(는) 암호화된 블록 장치에 지정할 수 없습니다."
+
+#: pyanaconda/bootloader/base.py:623
+#, python-format
+msgid ""
+"%(bootloader_stage2_description)s cannot be on an iSCSI disk which is not "
+"configured in iBFT."
+msgstr ""
+"%(bootloader_stage2_description)s iBFT에서 구성되지 않은 iSCSI 디스크에있을 "
+"수 없습니다."
+
+#: pyanaconda/bootloader/base.py:630
+#, python-format
+msgid "%(desc)s cannot be of type %(type)s"
+msgstr "%(desc)s은(는) %(type)s 유형이 될 수 없습니다"
 
 #: pyanaconda/bootloader/grub2.py:487
 #, python-format
@@ -2135,105 +2238,6 @@ msgstr ""
 "멀티 디스크 어레이에  부트로더 stage2 장치 %(stage2dev)s은(는) 있지만 부트로"
 "더 stage1 장치 %(stage1dev)s은(는) 없습니다. Stage 1 부트로더만 단일 드라이브"
 "에 설치됩니다."
-
-#: pyanaconda/bootloader/base.py:149
-msgid "/boot file system"
-msgstr "/boot 파일 시스템"
-
-#: pyanaconda/bootloader/base.py:298
-#, python-format
-msgid ""
-"RAID sets that contain '%(desc)s' must have one of the following raid "
-"levels: %(raid_level)s."
-msgstr ""
-"'%(desc)s'을(를) 포함하는 RAID 세트는 한 개의 다음과 같은 RAID레벨이 있어야 "
-"합니다:%(raid_level)s."
-
-#: pyanaconda/bootloader/base.py:306
-#, python-format
-msgid ""
-"RAID sets that contain '%(desc)s' must have one of the following metadata "
-"versions: %(metadata_versions)s."
-msgstr ""
-"'%(desc)s'을(를) 포함하는 RAID 세트는 한 개의 다음과 같은 메타 데이터 버전이 "
-"있어야 합니다:%(metadata_versions)s."
-
-#: pyanaconda/bootloader/base.py:314
-#, python-format
-msgid ""
-"RAID sets that contain '%(desc)s' must have one of the following device "
-"types: %(types)s."
-msgstr ""
-"'%(desc)s'을(를) 포함하는 RAID 세트는 한 개의 다음과 같은 장치 유형이 있어야 "
-"합니다:%(types)s."
-
-#: pyanaconda/bootloader/base.py:330
-#, python-format
-msgid "%(name)s must have one of the following disklabel types: %(types)s."
-msgstr ""
-"%(name)s은(는) 한 개의 다음의 디스크 레이블 유형이 있어야 합니다: %(types)s."
-
-#: pyanaconda/bootloader/base.py:342
-#, python-format
-msgid "%(desc)s cannot be of type %(type)s."
-msgstr "%(desc)s은(는) %(type)s 유형이 될 수 없습니다."
-
-#: pyanaconda/bootloader/base.py:348
-#, python-format
-msgid "%(desc)s must be mounted on one of %(mountpoints)s."
-msgstr "%(desc)s은(는)%(mountpoints)s 중 하나에 마운트되어야 합니다."
-
-#: pyanaconda/bootloader/base.py:360
-#, python-format
-msgid "%(desc)s must be between %(min)d and %(max)d MB in size"
-msgstr "%(desc)s의 크기는 %(min)d MB 와 %(max)d MB 사이여야 합니다."
-
-#: pyanaconda/bootloader/base.py:366
-#, python-format
-msgid "%(desc)s must not be smaller than %(min)dMB."
-msgstr "%(desc)s은(는) %(min)dMB 보다 작을 수 없습니다."
-
-#: pyanaconda/bootloader/base.py:375
-#, python-format
-msgid "%(desc)s must not be larger than %(max)dMB."
-msgstr "%(desc)s은(는)  %(max)dMB보다 클 수 없습니다."
-
-#: pyanaconda/bootloader/base.py:393
-#, python-format
-msgid "%(desc)s must be within the first %(max_end)s of the disk."
-msgstr "%(desc)s은(는)디스크의 첫번째 %(max_end)s에 있어야 합니다."
-
-#: pyanaconda/bootloader/base.py:403
-#, python-format
-msgid "%s must be on a primary partition."
-msgstr "%s은(는)첫 번째 파티션에 지정해야 합니다."
-
-#: pyanaconda/bootloader/base.py:488
-msgid ""
-"Boot loader stage1 device cannot be on an iSCSI disk which is not configured "
-"in iBFT."
-msgstr ""
-"부트 로더 stage1 장치는 iBFT에서 구성되지 않은 iSCSI 디스크에있을 수 없습니"
-"다."
-
-#: pyanaconda/bootloader/base.py:545 pyanaconda/bootloader/base.py:659
-#, python-format
-msgid "%s cannot be on an encrypted block device."
-msgstr "%s은(는) 암호화된 블록 장치에 지정할 수 없습니다."
-
-#: pyanaconda/bootloader/base.py:611
-#, python-format
-msgid ""
-"%(bootloader_stage2_description)s cannot be on an iSCSI disk which is not "
-"configured in iBFT."
-msgstr ""
-"%(bootloader_stage2_description)s iBFT에서 구성되지 않은 iSCSI 디스크에있을 "
-"수 없습니다."
-
-#: pyanaconda/bootloader/base.py:618
-#, python-format
-msgid "%(desc)s cannot be of type %(type)s"
-msgstr "%(desc)s은(는) %(type)s 유형이 될 수 없습니다"
 
 #: pyanaconda/input_checking.py:539
 msgid "Full name cannot contain colon characters"
@@ -2316,6 +2320,68 @@ msgstr "연결되지 않음"
 msgid "No network devices available"
 msgstr "사용 가능한 네트워크 장치가 없음"
 
+#: pyanaconda/storage/fsset.py:390
+#, fuzzy, python-brace-format
+#| msgid ""
+#| "There is an entry in your /etc/fstab file that contains an invalid or "
+#| "incorrect file system type:\n"
+#| "\n"
+msgid ""
+"There is an entry in your /etc/fstab file that contains an invalid or "
+"incorrect file system type. The file says that {detected_type} at "
+"{mount_point} is {fstab_type}."
+msgstr ""
+" /etc/fstab 파일 항목에 유효하지 않거나 잘못된 파일 시스템 유형이 들어 있습니"
+"다:\n"
+" \n"
+
+#: pyanaconda/storage/utils.py:137
+#, python-format
+msgid "Escrow certificate %s requires the network."
+msgstr "에스크로 인증서 %s에 네트워크가 필요합니다. "
+
+#: pyanaconda/storage/utils.py:145
+#, python-format
+msgid ""
+"SSL error while downloading the escrow certificate:\n"
+"\n"
+"%s"
+msgstr ""
+"escrow 인증서 다운로드 중 SSL오류가 발생했습니다:\n"
+"\n"
+"%s"
+
+#: pyanaconda/storage/utils.py:147
+#, python-format
+msgid ""
+"The following error was encountered while downloading the escrow "
+"certificate:\n"
+"\n"
+"%s"
+msgstr ""
+"escrow 인증서 다운로드 하는 중 다음과 같은 오류가 발생했습니다:\n"
+"\n"
+"%s"
+
+#: pyanaconda/storage/utils.py:219
+msgid "The selected disk {} is not recognized."
+msgstr ""
+
+#: pyanaconda/storage/utils.py:229
+#, python-format
+msgid ""
+"You selected disk %(selected)s, which contains devices that also use "
+"unselected disk %(unselected)s. You must select or de-select these disks as "
+"a set."
+msgid_plural ""
+"You selected disk %(selected)s, which contains devices that also use "
+"unselected disks %(unselected)s. You must select or de-select these disks as "
+"a set."
+msgstr[0] ""
+"디스크를 선택했습니다. %(selected)s, 선택되지 않은 디스크를 사용하는 장치가 "
+"포함되어 있습니다. %(unselected)s. 이 디스크를 세트로 선택하거나 선택 취소하"
+"십시오."
+
 #: pyanaconda/storage/root.py:130
 #, python-format
 msgid "Linux on %s"
@@ -2334,21 +2400,6 @@ msgstr "%(product)s %(version)s ...에 대한 %(arch)s"
 #, python-format
 msgid "%(product)s Linux %(version)s for %(arch)s"
 msgstr "%(product)s 리눅스 %(version)s ...에 대한 %(arch)s"
-
-#: pyanaconda/storage/fsset.py:390
-#, fuzzy, python-brace-format
-#| msgid ""
-#| "There is an entry in your /etc/fstab file that contains an invalid or "
-#| "incorrect file system type:\n"
-#| "\n"
-msgid ""
-"There is an entry in your /etc/fstab file that contains an invalid or "
-"incorrect file system type. The file says that {detected_type} at "
-"{mount_point} is {fstab_type}."
-msgstr ""
-" /etc/fstab 파일 항목에 유효하지 않거나 잘못된 파일 시스템 유형이 들어 있습니"
-"다:\n"
-" \n"
 
 #: pyanaconda/storage/checker.py:51
 #, python-format
@@ -2547,49 +2598,6 @@ msgstr ""
 "포함되어 있습니다. %(unselected)s. 이 디스크를 세트로 선택하거나 선택 취소하"
 "십시오."
 
-#: pyanaconda/storage/utils.py:137
-#, python-format
-msgid "Escrow certificate %s requires the network."
-msgstr "에스크로 인증서 %s에 네트워크가 필요합니다. "
-
-#: pyanaconda/storage/utils.py:145
-#, python-format
-msgid ""
-"SSL error while downloading the escrow certificate:\n"
-"\n"
-"%s"
-msgstr ""
-"escrow 인증서 다운로드 중 SSL오류가 발생했습니다:\n"
-"\n"
-"%s"
-
-#: pyanaconda/storage/utils.py:147
-#, python-format
-msgid ""
-"The following error was encountered while downloading the escrow "
-"certificate:\n"
-"\n"
-"%s"
-msgstr ""
-"escrow 인증서 다운로드 하는 중 다음과 같은 오류가 발생했습니다:\n"
-"\n"
-"%s"
-
-#: pyanaconda/storage/utils.py:224
-#, python-format
-msgid ""
-"You selected disk %(selected)s, which contains devices that also use "
-"unselected disk %(unselected)s. You must select or de-select these disks as "
-"a set."
-msgid_plural ""
-"You selected disk %(selected)s, which contains devices that also use "
-"unselected disks %(unselected)s. You must select or de-select these disks as "
-"a set."
-msgstr[0] ""
-"디스크를 선택했습니다. %(selected)s, 선택되지 않은 디스크를 사용하는 장치가 "
-"포함되어 있습니다. %(unselected)s. 이 디스크를 세트로 선택하거나 선택 취소하"
-"십시오."
-
 #: pyanaconda/startup_utils.py:79
 #, python-format
 msgid ""
@@ -2657,6 +2665,65 @@ msgstr "설치를 시작하기 위해 ssh install@%s를 실행하세요."
 msgid "Please ssh install@HOSTNAME to continue installation."
 msgstr "설치를 계속하려면 @HOSTNAME을 설치하십시오."
 
+#: pyanaconda/payload/flatpak.py:205
+#, python-format
+msgid "Installing %(flatpak_name)s"
+msgstr "%(flatpak_name)s 설치 중"
+
+#: pyanaconda/payload/dnf/download_progress.py:55
+#, python-format
+msgid ""
+"Downloading %(total_files)s RPMs, %(downloaded)s / %(total_size)s "
+"(%(percent)d%%) done."
+msgstr ""
+"다운로드 중 %(total_files)s RPM, %(downloaded)s / %(total_size)s (%(percent)d"
+"%%)가 완료되었습니다."
+
+#: pyanaconda/payload/dnf/payload.py:1004
+msgid "Starting package installation process"
+msgstr "패키지 설치 프로세스 시작 중"
+
+#: pyanaconda/payload/dnf/payload.py:1026
+msgid "Downloading packages"
+msgstr "패키지 다운로드중"
+
+#: pyanaconda/payload/dnf/payload.py:1039
+msgid "Preparing transaction from installation source"
+msgstr "설치 소스에서 트랜잭션을 준비하고 있습니다 "
+
+#: pyanaconda/payload/dnf/payload.py:1052
+#, python-format
+msgid "Installing %s"
+msgstr "%s 설치중"
+
+#: pyanaconda/payload/dnf/payload.py:1055
+#, python-format
+msgid "Configuring %s"
+msgstr "구성 %s"
+
+#: pyanaconda/payload/dnf/payload.py:1058
+#, python-format
+msgid "Verifying %s"
+msgstr "확인 중 %s"
+
+#: pyanaconda/payload/dnf/payload.py:1063 pyanaconda/payload/livepayload.py:205
+#: pyanaconda/installation.py:337
+msgid "Performing post-installation setup tasks"
+msgstr "설치 후 설정 작업 수행 중 "
+
+#: pyanaconda/payload/livepayload.py:104 pyanaconda/payload/livepayload.py:126
+msgid "Installing software"
+msgstr "소프트웨어 설치 중"
+
+#: pyanaconda/payload/livepayload.py:279 pyanaconda/payload/livepayload.py:288
+#, python-format
+msgid "Downloading %(url)s (%(pct)d%%)"
+msgstr "다운로드 중 %(url)s (%(pct)d%%)"
+
+#: pyanaconda/payload/livepayload.py:440
+msgid "Checking image checksum"
+msgstr "이미지 체크섬 확인 중 "
+
 #: pyanaconda/payload/manager.py:75
 msgid "Failed to set up installation source"
 msgstr "설치 소스 설정에 실패했습니다 "
@@ -2664,11 +2731,6 @@ msgstr "설치 소스 설정에 실패했습니다 "
 #: pyanaconda/payload/manager.py:76
 msgid "Error downloading package metadata"
 msgstr "패키지 메타데이트를 다운로드하는 도중 오류 발생 "
-
-#: pyanaconda/payload/flatpak.py:205
-#, python-format
-msgid "Installing %(flatpak_name)s"
-msgstr "%(flatpak_name)s 설치 중"
 
 #: pyanaconda/payload/rpmostreepayload.py:127
 #, python-format
@@ -2711,175 +2773,64 @@ msgstr "flatpak 작업의 설치 후처리"
 msgid "Flatpak installation has finished"
 msgstr "Flatpak 설치를 마쳤습니다"
 
-#: pyanaconda/payload/dnfpayload.py:246
+#: pyanaconda/exception.py:109
 #, python-format
 msgid ""
-"Downloading %(total_files)s RPMs, %(downloaded)s / %(total_size)s "
-"(%(percent)d%%) done."
+"The installation was stopped due to what seems to be a problem with your "
+"hardware. The exact error message is:\n"
+"\n"
+"%s.\n"
+"\n"
+" The installer will now terminate."
 msgstr ""
-"다운로드 중 %(total_files)s RPM, %(downloaded)s / %(total_size)s (%(percent)d"
-"%%)가 완료되었습니다."
+"하드웨어에 문제가 있어 설치가 중지되었습니다. 정확한 오류 메세지는 다음과 같"
+"습니다:\n"
+"\n"
+"%s.\n"
+"\n"
+"설치 프로그램을 종료합니다. "
 
-#: pyanaconda/payload/dnfpayload.py:1017
-msgid "Starting package installation process"
-msgstr "패키지 설치 프로세스 시작 중"
+#: pyanaconda/exception.py:113
+msgid "Hardware error occurred"
+msgstr "하드웨어 오류가 발생하였습니다"
 
-#: pyanaconda/payload/dnfpayload.py:1038
-msgid "Downloading packages"
-msgstr "패키지 다운로드중"
-
-#: pyanaconda/payload/dnfpayload.py:1051
-msgid "Preparing transaction from installation source"
-msgstr "설치 소스에서 트랜잭션을 준비하고 있습니다 "
-
-#: pyanaconda/payload/dnfpayload.py:1064
-#, python-format
-msgid "Installing %s"
-msgstr "%s 설치중"
-
-#: pyanaconda/payload/dnfpayload.py:1067
-#, python-format
-msgid "Configuring %s"
-msgstr "구성 %s"
-
-#: pyanaconda/payload/dnfpayload.py:1070
-#, python-format
-msgid "Verifying %s"
-msgstr "확인 중 %s"
-
-#: pyanaconda/payload/dnfpayload.py:1075 pyanaconda/payload/livepayload.py:205
-#: pyanaconda/installation.py:337
-msgid "Performing post-installation setup tasks"
-msgstr "설치 후 설정 작업 수행 중 "
-
-#: pyanaconda/payload/livepayload.py:104 pyanaconda/payload/livepayload.py:126
-msgid "Installing software"
-msgstr "소프트웨어 설치 중"
-
-#: pyanaconda/payload/livepayload.py:279 pyanaconda/payload/livepayload.py:288
-#, python-format
-msgid "Downloading %(url)s (%(pct)d%%)"
-msgstr "다운로드 중 %(url)s (%(pct)d%%)"
-
-#: pyanaconda/payload/livepayload.py:440
-msgid "Checking image checksum"
-msgstr "이미지 체크섬 확인 중 "
-
-#: pyanaconda/rescue.py:272
-msgid "Unable to find /bin/bash to execute!  Not starting shell."
-msgstr "실행할 /bin/bash 를 찾을 수 없습니다! 쉘을 시작할 수 없습니다."
-
-#: pyanaconda/rescue.py:289
-msgid "Rescue"
-msgstr "복구"
-
-#: pyanaconda/rescue.py:296
+#: pyanaconda/exception.py:170
 #, python-format
 msgid ""
-"The rescue environment will now attempt to find your Linux installation and "
-"mount it under the directory : %s.  You can then make any changes required "
-"to your system.  Choose '1' to proceed with this step.\n"
-"You can choose to mount your file systems read-only instead of read-write by "
-"choosing '2'.\n"
-"If for some reason this process does not work choose '3' to skip directly to "
-"a shell.\n"
 "\n"
+"The installation was stopped due to an error which occurred while running in "
+"non-interactive cmdline mode. Since there cannot be any questions in cmdline "
+"mode, edit your kickstart file and retry installation. \n"
+"The exact error message is: \n"
+"\n"
+"%s. \n"
+"\n"
+"The installer will now terminate."
 msgstr ""
-"이제 구조 환경에서 Linux 설치를 찾아 디렉토리 아래에 마운트하려고 시도합니"
-"다. %s. 그런 다음 시스템에 필요한 변경을 수행 할 수 있습니다. 이 단계를 진행"
-"하려면 '1'을 선택하십시오. '2'를 선택하여 읽기 / 쓰기 대신 파일 시스템을 읽"
-"기 전용으로 마운트하도록 선택할 수 있습니다. 어떤 이유로이 프로세스가 작동하"
-"지 않으면 쉘에 직접 건너 뛰려면 '3'을 선택하십시오.\n"
 "\n"
+"비 대화식 cmdline 모드에서 실행하는 동안 발생한 오류로 인해 설치가 중단되었습"
+"니다. cmdline 모드에서는 질문이 없기 때문에 킥 스타트 파일을 편집하고 설치를 "
+"다시 시도하십시오. 정확한 오류 메시지는 다음과 같습니다.%s. 이제 설치 프로그"
+"램이 종료됩니다."
 
-#: pyanaconda/rescue.py:308
-msgid "Continue"
-msgstr "진행 "
-
-#: pyanaconda/rescue.py:309
-msgid "Read-only mount"
-msgstr "읽기 전용 마운트"
-
-#: pyanaconda/rescue.py:310
-msgid "Skip to shell"
-msgstr "쉘로 건너뛰기"
-
-#: pyanaconda/rescue.py:311
-msgid "Quit (Reboot)"
-msgstr "종료 (재부팅)"
-
-#: pyanaconda/rescue.py:408
-msgid "Rescue Shell"
-msgstr "구조 껍질"
-
-#: pyanaconda/rescue.py:418
-#, python-format
-msgid "Run %s to unmount the system when you are finished."
-msgstr "완료 시 시스템을 마운트 해제하기 위해 %s을(를) 실행합니다."
-
-#: pyanaconda/rescue.py:419
-msgid ""
-"When finished, please exit from the shell and your system will reboot.\n"
-msgstr "작업 완료 후 쉘을 종료하면 시스템이 재부팅됩니다.\n"
-
-#: pyanaconda/rescue.py:430
+#: pyanaconda/exception.py:178
 #, python-format
 msgid ""
-"Your system has been mounted under %(mountpoint)s.\n"
 "\n"
-"If you would like to make the root of your system the root of the active "
-"system, run the command:\n"
+"Running in cmdline mode, no interactive debugging allowed.\n"
+"The exact error message is: \n"
 "\n"
-"\tchroot %(mountpoint)s\n"
+"%s.\n"
 "\n"
+"The installer will now terminate."
 msgstr ""
-"시스템이 %(mountpoint)s에 마운트되었습니다. \n"
 "\n"
-"시스템의 root를 활성 시스템의 root로 만들려면 다음 명령을 실행하십시오. :\n"
+"명령행 모드에서 실행중이며, 대화형 디버깅은 지원되지 않습니다.\n"
+"정확한 오류 메세지는 다음과 같습니다:\n"
 "\n"
-"\tchroot %(mountpoint)s\n"
+"%s.\n"
 "\n"
-
-#: pyanaconda/rescue.py:442
-#, fuzzy, python-brace-format
-#| msgid ""
-#| "An error occurred trying to mount some or all of your system.  Some of it "
-#| "may be mounted under %s\n"
-#| "\n"
-msgid ""
-"An error occurred trying to mount some or all of your system: {message}\n"
-"\n"
-"Some of it may be mounted under {path}."
-msgstr ""
-"시스템의 일부 또는 전체를 마운트하는 중 오류가 발생했습니다. 일부는 아래에 마"
-"운트 될 수 있습니다. %s\n"
-"\n"
-
-#: pyanaconda/rescue.py:451
-msgid "Rebooting."
-msgstr "다시 부팅 중입니다."
-
-#: pyanaconda/rescue.py:454
-#, python-format
-msgid "You don't have any Linux partitions. %s\n"
-msgstr "Linux 파티션이 없습니다. %s\n"
-
-#: pyanaconda/rescue.py:460
-msgid "Not mounting the system.\n"
-msgstr "시스템을 장착하지 않았습니다.\n"
-
-#: pyanaconda/rescue.py:474
-#, python-format
-msgid "Please press %s to get a shell"
-msgstr "제발 %s 껍질을 얻기 위해"
-
-#: pyanaconda/rescue.py:491
-msgid "Root Selection"
-msgstr "Root 선택"
-
-#: pyanaconda/rescue.py:517
-msgid "The following installations were discovered on your system."
-msgstr "시스템에서 다음과 같은 설치가 발견되었습니다."
+"설치 프로그램을 종료합니다."
 
 #: pyanaconda/vnc.py:79
 #, python-format
@@ -3050,64 +3001,66 @@ msgstr ""
 msgid "Running pre-installation scripts"
 msgstr "설치 전 스크립트 실행 중"
 
-#: pyanaconda/exception.py:109
-#, python-format
-msgid ""
-"The installation was stopped due to what seems to be a problem with your "
-"hardware. The exact error message is:\n"
-"\n"
-"%s.\n"
-"\n"
-" The installer will now terminate."
-msgstr ""
-"하드웨어에 문제가 있어 설치가 중지되었습니다. 정확한 오류 메세지는 다음과 같"
-"습니다:\n"
-"\n"
-"%s.\n"
-"\n"
-"설치 프로그램을 종료합니다. "
+#: pyanaconda/installation.py:82
+msgid "Configuring installed system"
+msgstr "설치된 시스템 설정 중 "
 
-#: pyanaconda/exception.py:113
-msgid "Hardware error occurred"
-msgstr "하드웨어 오류가 발생하였습니다"
+#: pyanaconda/installation.py:114
+msgid "Writing network configuration"
+msgstr "네트워크 설정 작성  중"
 
-#: pyanaconda/exception.py:170
-#, python-format
-msgid ""
-"\n"
-"The installation was stopped due to an error which occurred while running in "
-"non-interactive cmdline mode. Since there cannot be any questions in cmdline "
-"mode, edit your kickstart file and retry installation. \n"
-"The exact error message is: \n"
-"\n"
-"%s. \n"
-"\n"
-"The installer will now terminate."
-msgstr ""
-"\n"
-"비 대화식 cmdline 모드에서 실행하는 동안 발생한 오류로 인해 설치가 중단되었습"
-"니다. cmdline 모드에서는 질문이 없기 때문에 킥 스타트 파일을 편집하고 설치를 "
-"다시 시도하십시오. 정확한 오류 메시지는 다음과 같습니다.%s. 이제 설치 프로그"
-"램이 종료됩니다."
+#: pyanaconda/installation.py:120
+msgid "Creating users"
+msgstr "사용자 생성 중"
 
-#: pyanaconda/exception.py:178
+#: pyanaconda/installation.py:127
+msgid "Configuring addons"
+msgstr "애드온 설정 중"
+
+#: pyanaconda/installation.py:143
+msgid "Generating initramfs"
+msgstr "initramfs 생성 중"
+
+#: pyanaconda/installation.py:164
+msgid "Running post-installation scripts"
+msgstr "설치 후 스크립트 실행 중 "
+
+#: pyanaconda/installation.py:170
+msgid "Setting up kexec"
+msgstr "kexec 설정"
+
+#: pyanaconda/installation.py:175
+msgid "Storing configuration files and kickstarts"
+msgstr "구성 파일 및 킥 스타트 저장"
+
+#: pyanaconda/installation.py:219
 #, python-format
-msgid ""
-"\n"
-"Running in cmdline mode, no interactive debugging allowed.\n"
-"The exact error message is: \n"
-"\n"
-"%s.\n"
-"\n"
-"The installer will now terminate."
-msgstr ""
-"\n"
-"명령행 모드에서 실행중이며, 대화형 디버깅은 지원되지 않습니다.\n"
-"정확한 오류 메세지는 다음과 같습니다:\n"
-"\n"
-"%s.\n"
-"\n"
-"설치 프로그램을 종료합니다."
+msgid "Waiting for %s threads to finish"
+msgstr "%s 스레드 완료 대기 중 "
+
+#: pyanaconda/installation.py:232
+msgid "Setting up the installation environment"
+msgstr "설치 환경 구성 "
+
+#: pyanaconda/installation.py:249 pyanaconda/installation.py:317
+msgid "Configuring storage"
+msgstr "저장소 구성"
+
+#: pyanaconda/installation.py:266
+msgid "Running pre-installation tasks"
+msgstr "사전 설치 작업 실행"
+
+#: pyanaconda/installation.py:311
+msgid "Installing."
+msgstr "설치 중."
+
+#: pyanaconda/installation.py:324
+msgid "Installing boot loader"
+msgstr "부트로더 설치 중"
+
+#: pyanaconda/installation.py:345
+msgid "Creating snapshots"
+msgstr "스냅 샷 생성하기"
 
 #: pyanaconda/platform.py:52
 msgid "boot loader device"
@@ -3202,11 +3155,6 @@ msgstr ""
 msgid "You must include at least one MBR-formatted disk as an install target."
 msgstr "하나 이상의 MBR 형식의 디스크를 설치 대상으로 포함해야합니다."
 
-#: pyanaconda/product.py:56
-#, python-format
-msgid "%(productName)s %(productVersion)s INSTALLATION"
-msgstr "%(productName)s %(productVersion)s 설치 "
-
 #: pyanaconda/pwpolicy.py:146
 #, python-format
 msgid "policy name required for %s"
@@ -3216,6 +3164,127 @@ msgstr "필요한 정책 이름 %s"
 #, python-format
 msgid "A %(command)s with the name %(policyName)s has already been defined."
 msgstr "에이 %(command)s 이름이 적힌 %(policyName)s 이미 정의되었습니다."
+
+#: pyanaconda/rescue.py:272
+msgid "Unable to find /bin/bash to execute!  Not starting shell."
+msgstr "실행할 /bin/bash 를 찾을 수 없습니다! 쉘을 시작할 수 없습니다."
+
+#: pyanaconda/rescue.py:289
+msgid "Rescue"
+msgstr "복구"
+
+#: pyanaconda/rescue.py:296
+#, python-format
+msgid ""
+"The rescue environment will now attempt to find your Linux installation and "
+"mount it under the directory : %s.  You can then make any changes required "
+"to your system.  Choose '1' to proceed with this step.\n"
+"You can choose to mount your file systems read-only instead of read-write by "
+"choosing '2'.\n"
+"If for some reason this process does not work choose '3' to skip directly to "
+"a shell.\n"
+"\n"
+msgstr ""
+"이제 구조 환경에서 Linux 설치를 찾아 디렉토리 아래에 마운트하려고 시도합니"
+"다. %s. 그런 다음 시스템에 필요한 변경을 수행 할 수 있습니다. 이 단계를 진행"
+"하려면 '1'을 선택하십시오. '2'를 선택하여 읽기 / 쓰기 대신 파일 시스템을 읽"
+"기 전용으로 마운트하도록 선택할 수 있습니다. 어떤 이유로이 프로세스가 작동하"
+"지 않으면 쉘에 직접 건너 뛰려면 '3'을 선택하십시오.\n"
+"\n"
+
+#: pyanaconda/rescue.py:308
+msgid "Continue"
+msgstr "진행 "
+
+#: pyanaconda/rescue.py:309
+msgid "Read-only mount"
+msgstr "읽기 전용 마운트"
+
+#: pyanaconda/rescue.py:310
+msgid "Skip to shell"
+msgstr "쉘로 건너뛰기"
+
+#: pyanaconda/rescue.py:311
+msgid "Quit (Reboot)"
+msgstr "종료 (재부팅)"
+
+#: pyanaconda/rescue.py:408
+msgid "Rescue Shell"
+msgstr "구조 껍질"
+
+#: pyanaconda/rescue.py:418
+#, python-format
+msgid "Run %s to unmount the system when you are finished."
+msgstr "완료 시 시스템을 마운트 해제하기 위해 %s을(를) 실행합니다."
+
+#: pyanaconda/rescue.py:419
+msgid ""
+"When finished, please exit from the shell and your system will reboot.\n"
+msgstr "작업 완료 후 쉘을 종료하면 시스템이 재부팅됩니다.\n"
+
+#: pyanaconda/rescue.py:430
+#, python-format
+msgid ""
+"Your system has been mounted under %(mountpoint)s.\n"
+"\n"
+"If you would like to make the root of your system the root of the active "
+"system, run the command:\n"
+"\n"
+"\tchroot %(mountpoint)s\n"
+"\n"
+msgstr ""
+"시스템이 %(mountpoint)s에 마운트되었습니다. \n"
+"\n"
+"시스템의 root를 활성 시스템의 root로 만들려면 다음 명령을 실행하십시오. :\n"
+"\n"
+"\tchroot %(mountpoint)s\n"
+"\n"
+
+#: pyanaconda/rescue.py:442
+#, fuzzy, python-brace-format
+#| msgid ""
+#| "An error occurred trying to mount some or all of your system.  Some of it "
+#| "may be mounted under %s\n"
+#| "\n"
+msgid ""
+"An error occurred trying to mount some or all of your system: {message}\n"
+"\n"
+"Some of it may be mounted under {path}."
+msgstr ""
+"시스템의 일부 또는 전체를 마운트하는 중 오류가 발생했습니다. 일부는 아래에 마"
+"운트 될 수 있습니다. %s\n"
+"\n"
+
+#: pyanaconda/rescue.py:451
+msgid "Rebooting."
+msgstr "다시 부팅 중입니다."
+
+#: pyanaconda/rescue.py:454
+#, python-format
+msgid "You don't have any Linux partitions. %s\n"
+msgstr "Linux 파티션이 없습니다. %s\n"
+
+#: pyanaconda/rescue.py:460
+msgid "Not mounting the system.\n"
+msgstr "시스템을 장착하지 않았습니다.\n"
+
+#: pyanaconda/rescue.py:474
+#, python-format
+msgid "Please press %s to get a shell"
+msgstr "제발 %s 껍질을 얻기 위해"
+
+#: pyanaconda/rescue.py:491
+msgid "Root Selection"
+msgstr "Root 선택"
+
+#: pyanaconda/rescue.py:517
+msgid "The following installations were discovered on your system."
+msgstr "시스템에서 다음과 같은 설치가 발견되었습니다."
+
+#: pyanaconda/product.py:69
+#, python-format
+msgid "%(productName)s %(productVersion)s INSTALLATION"
+msgstr "%(productName)s %(productVersion)s 설치 "
 
 #: pyanaconda/errors.py:112
 #, fuzzy
@@ -3406,82 +3475,6 @@ msgstr "%addon 항목의 이름이 없습니다."
 #: pyanaconda/core/kickstart/addon.py:138
 msgid "Unknown name of the %addon section."
 msgstr "%addon 항목의 이름을 알 수 없습니다."
-
-#: pyanaconda/core/storage.py:70
-msgid "Unsupported"
-msgstr "지원되지 않음"
-
-#: pyanaconda/core/storage.py:71 pyanaconda/core/storage.py:82
-msgid "LVM"
-msgstr "LVM"
-
-#: pyanaconda/core/storage.py:72
-msgid "RAID"
-msgstr "RAID"
-
-#: pyanaconda/core/storage.py:73 pyanaconda/core/storage.py:80
-msgid "Standard Partition"
-msgstr "표준 파티션 "
-
-#: pyanaconda/core/storage.py:74 pyanaconda/core/storage.py:81
-msgid "Btrfs"
-msgstr "Btrfs"
-
-#: pyanaconda/core/storage.py:75 pyanaconda/core/storage.py:83
-msgid "LVM Thin Provisioning"
-msgstr "LVM 씬 프로비저닝"
-
-#: pyanaconda/core/storage.py:76 pyanaconda/ui/gui/spokes/lib/resize.glade:150
-msgid "Disk"
-msgstr "디스크 "
-
-#: pyanaconda/core/storage.py:94
-msgid ""
-"The 'swap' area on your computer is used by the operating\n"
-"system when running low on memory."
-msgstr ""
-"사용중인 컴퓨터가 메모리 부족 상태에서 실행되고 있을 경우\n"
-"운영 체제는 'swap'영역을 사용합니다."
-
-#: pyanaconda/core/storage.py:96
-msgid ""
-"The 'boot' area on your computer is where files needed\n"
-"to start the operating system are stored."
-msgstr ""
-"사용중인 컴퓨터의 'boot' 영역에는 운영 체제 시작에 필요한 파일이\n"
-"저장되어 있습니다."
-
-#: pyanaconda/core/storage.py:98
-msgid ""
-"The 'root' area on your computer is where core system\n"
-"files and applications are stored."
-msgstr ""
-"사용중인 컴퓨터의 'root' 영역에는 코어 시스템 파일 및 애플리케이션이\n"
-"저장되어 있습니다. "
-
-#: pyanaconda/core/storage.py:100
-msgid ""
-"The 'home' area on your computer is where all your personal\n"
-"data is stored."
-msgstr ""
-"사용중인 컴퓨터의 'home' 영역에는 사용자의 모든 개인 정보 데이터가\n"
-"저장되어 있습니다."
-
-#: pyanaconda/core/storage.py:102
-msgid ""
-"The BIOS boot partition is required to enable booting\n"
-"from GPT-partitioned disks on BIOS hardware."
-msgstr ""
-"BIOS 부트 파티션은 BIOS 하드웨어에 있는 GPT 파티션 디스트에서\n"
-"부팅 가능해야 합니다."
-
-#: pyanaconda/core/storage.py:104
-msgid ""
-"The PReP boot partition is required as part of the\n"
-"boot loader configuration on some PPC platforms."
-msgstr ""
-"일부 PPC 플랫폼에서 부트로더 설정의 일부분으로 \n"
-"PReP 부트 파티션이 필요합니다."
 
 #: pyanaconda/core/constants.py:92
 msgid "Start VNC"
@@ -3698,15 +3691,91 @@ msgstr "이름은 33 자보다 짧아야합니다."
 msgid "Name '%s' is invalid."
 msgstr "이름 '%s' 유효하지 않다."
 
-#: pyanaconda/core/util.py:747
+#: pyanaconda/core/storage.py:70
+msgid "Unsupported"
+msgstr "지원되지 않음"
+
+#: pyanaconda/core/storage.py:71 pyanaconda/core/storage.py:82
+msgid "LVM"
+msgstr "LVM"
+
+#: pyanaconda/core/storage.py:72
+msgid "RAID"
+msgstr "RAID"
+
+#: pyanaconda/core/storage.py:73 pyanaconda/core/storage.py:80
+msgid "Standard Partition"
+msgstr "표준 파티션 "
+
+#: pyanaconda/core/storage.py:74 pyanaconda/core/storage.py:81
+msgid "Btrfs"
+msgstr "Btrfs"
+
+#: pyanaconda/core/storage.py:75 pyanaconda/core/storage.py:83
+msgid "LVM Thin Provisioning"
+msgstr "LVM 씬 프로비저닝"
+
+#: pyanaconda/core/storage.py:76 pyanaconda/ui/gui/spokes/lib/resize.glade:150
+msgid "Disk"
+msgstr "디스크 "
+
+#: pyanaconda/core/storage.py:94
+msgid ""
+"The 'swap' area on your computer is used by the operating\n"
+"system when running low on memory."
+msgstr ""
+"사용중인 컴퓨터가 메모리 부족 상태에서 실행되고 있을 경우\n"
+"운영 체제는 'swap'영역을 사용합니다."
+
+#: pyanaconda/core/storage.py:96
+msgid ""
+"The 'boot' area on your computer is where files needed\n"
+"to start the operating system are stored."
+msgstr ""
+"사용중인 컴퓨터의 'boot' 영역에는 운영 체제 시작에 필요한 파일이\n"
+"저장되어 있습니다."
+
+#: pyanaconda/core/storage.py:98
+msgid ""
+"The 'root' area on your computer is where core system\n"
+"files and applications are stored."
+msgstr ""
+"사용중인 컴퓨터의 'root' 영역에는 코어 시스템 파일 및 애플리케이션이\n"
+"저장되어 있습니다. "
+
+#: pyanaconda/core/storage.py:100
+msgid ""
+"The 'home' area on your computer is where all your personal\n"
+"data is stored."
+msgstr ""
+"사용중인 컴퓨터의 'home' 영역에는 사용자의 모든 개인 정보 데이터가\n"
+"저장되어 있습니다."
+
+#: pyanaconda/core/storage.py:102
+msgid ""
+"The BIOS boot partition is required to enable booting\n"
+"from GPT-partitioned disks on BIOS hardware."
+msgstr ""
+"BIOS 부트 파티션은 BIOS 하드웨어에 있는 GPT 파티션 디스트에서\n"
+"부팅 가능해야 합니다."
+
+#: pyanaconda/core/storage.py:104
+msgid ""
+"The PReP boot partition is required as part of the\n"
+"boot loader configuration on some PPC platforms."
+msgstr ""
+"일부 PPC 플랫폼에서 부트로더 설정의 일부분으로 \n"
+"PReP 부트 파티션이 필요합니다."
+
+#: pyanaconda/core/util.py:753
 msgid "No host url"
 msgstr "호스트 url 없음"
 
-#: pyanaconda/core/util.py:768
+#: pyanaconda/core/util.py:774
 msgid "malformed URL, cannot parse it."
 msgstr "잘못된 URL, 파싱할 수 없습니다."
 
-#: pyanaconda/core/util.py:784
+#: pyanaconda/core/util.py:790
 msgid "URL has no host component"
 msgstr "URL에 호스트 구성 요소가 없음"
 
@@ -4214,67 +4283,6 @@ msgstr "{container_name} 상의 {device_name}"
 msgid "The %packages --ignorebroken feature is not supported on your product!"
 msgstr "패키지의 --ignorebroken 기능은 제품 상에서 지원되지 않습니다!"
 
-#: pyanaconda/installation.py:82
-msgid "Configuring installed system"
-msgstr "설치된 시스템 설정 중 "
-
-#: pyanaconda/installation.py:114
-msgid "Writing network configuration"
-msgstr "네트워크 설정 작성  중"
-
-#: pyanaconda/installation.py:120
-msgid "Creating users"
-msgstr "사용자 생성 중"
-
-#: pyanaconda/installation.py:127
-msgid "Configuring addons"
-msgstr "애드온 설정 중"
-
-#: pyanaconda/installation.py:143
-msgid "Generating initramfs"
-msgstr "initramfs 생성 중"
-
-#: pyanaconda/installation.py:164
-msgid "Running post-installation scripts"
-msgstr "설치 후 스크립트 실행 중 "
-
-#: pyanaconda/installation.py:170
-msgid "Setting up kexec"
-msgstr "kexec 설정"
-
-#: pyanaconda/installation.py:175
-msgid "Storing configuration files and kickstarts"
-msgstr "구성 파일 및 킥 스타트 저장"
-
-#: pyanaconda/installation.py:219
-#, python-format
-msgid "Waiting for %s threads to finish"
-msgstr "%s 스레드 완료 대기 중 "
-
-#: pyanaconda/installation.py:232
-msgid "Setting up the installation environment"
-msgstr "설치 환경 구성 "
-
-#: pyanaconda/installation.py:249 pyanaconda/installation.py:317
-msgid "Configuring storage"
-msgstr "저장소 구성"
-
-#: pyanaconda/installation.py:266
-msgid "Running pre-installation tasks"
-msgstr "사전 설치 작업 실행"
-
-#: pyanaconda/installation.py:311
-msgid "Installing."
-msgstr "설치 중."
-
-#: pyanaconda/installation.py:324
-msgid "Installing boot loader"
-msgstr "부트로더 설치 중"
-
-#: pyanaconda/installation.py:345
-msgid "Creating snapshots"
-msgstr "스냅 샷 생성하기"
-
 #: anaconda.py:381
 msgid "Unable to create PID file"
 msgstr "PID 파일을 생성할 수 없습니다"
@@ -4685,14 +4693,18 @@ msgid "Node login failed."
 msgstr "노드 로그인에 실패했습니다."
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:1084
+#, fuzzy
+#| msgid ""
+#| "The following error occurred logging into the selected iSCSI node.  "
+#| "Please double check your authorization information and try again"
 msgid ""
 "The following error occurred logging into the selected iSCSI node.  Please "
-"double check your authorization information and try again"
+"double check your authorization information and try again."
 msgstr ""
 "선택한 iSCSI 노드로 로그인하는 도중 다음과 같은 오류가 발생했습니다. 인증 정"
 "보를 다시 확인하시고 다시 시도해 보십시오 "
 
-#: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:1107
+#: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:1108
 msgctxt "GUI|Advanced Storage|iSCSI|Login|Retry"
 msgid "Retry _Log In"
 msgstr "로그인 재시도(_L)"
@@ -4902,10 +4914,107 @@ msgstr "계속 진행(_C)"
 msgid "Unsupported Hardware"
 msgstr "지원되지 않는 하드웨어"
 
-#: pyanaconda/ui/gui/spokes/lib/detailederror.glade:25
-msgid "An unknown error occurred during installation.  Details are below."
-msgstr ""
-"설치 도중 알 수 없는 오류가 발생했습니다. 자세한 내용은 아래와 같습니다."
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:53
+msgctxt "GUI|Reclaim Dialog"
+msgid "_Cancel"
+msgstr "취소(_C) "
+
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:68
+msgctxt "GUI|Reclaim Dialog"
+msgid "_Reclaim space"
+msgstr "공간 확보(_R)"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:101
+msgid "RECLAIM DISK SPACE"
+msgstr "디스크 공간 확보 "
+
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:118
+msgid "Description goes here."
+msgstr "설명 "
+
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:161
+#: pyanaconda/ui/gui/spokes/lib/cart.glade:131
+#: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:238
+#: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:735
+#: pyanaconda/ui/gui/spokes/installation_source.glade:1021
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:386
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1438
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1761
+msgid "Name"
+msgstr "이름 "
+
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:172
+msgid "File System"
+msgstr "파일 시스템"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:183
+msgid "Reclaimable Space"
+msgstr "확보 가능한 공간 "
+
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:219
+msgctxt "GUI|Reclaim Dialog"
+msgid "_Preserve"
+msgstr "보존 (_P)"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:235
+msgctxt "GUI|Reclaim Dialog"
+msgid "_Delete"
+msgstr "삭제(_D)"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:251
+msgctxt "GUI|Reclaim Dialog"
+msgid "_Shrink"
+msgstr "축소(_S) "
+
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:365
+msgid "Reclaim"
+msgstr "개심"
+
+#: pyanaconda/ui/gui/spokes/lib/cart.glade:24
+#: pyanaconda/ui/gui/spokes/lib/cart.glade:76
+msgid "SELECTED DISKS"
+msgstr "선택한 디스크"
+
+#: pyanaconda/ui/gui/spokes/lib/cart.glade:41
+msgctxt "GUI|Selected Disks Dialog"
+msgid "_Close"
+msgstr "종료(_C) "
+
+#: pyanaconda/ui/gui/spokes/lib/cart.glade:104
+msgid "Boot"
+msgstr "부팅 "
+
+#: pyanaconda/ui/gui/spokes/lib/cart.glade:118
+#: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:220
+#: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:722
+msgid "Description"
+msgstr "설명"
+
+#: pyanaconda/ui/gui/spokes/lib/cart.glade:143
+#: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:251
+#: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:748
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:414
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:814
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1148
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1466
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1789
+msgid "Capacity"
+msgstr "용량"
+
+#: pyanaconda/ui/gui/spokes/lib/cart.glade:156
+#: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:264
+#: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:761
+msgid "Free"
+msgstr "여유공간"
+
+#: pyanaconda/ui/gui/spokes/lib/cart.glade:197
+msgctxt "GUI|Selected Disks Dialog"
+msgid "_Remove"
+msgstr "제거(_R)"
+
+#: pyanaconda/ui/gui/spokes/lib/cart.glade:224
+msgid "Disk summary goes here"
+msgstr "디스크 요약은 여기에 있습니다"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:21
 msgctxt "GUI|Custom Partitioning|Confirm Delete Dialog"
@@ -4934,40 +5043,6 @@ msgstr "마운트 지점 설정 "
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:189
 msgid "Select one or more disks this device may reside on."
 msgstr "이 장치가 존재하는 하나 이상의 디스크를 선택합니다."
-
-#: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:220
-#: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:722
-#: pyanaconda/ui/gui/spokes/lib/cart.glade:118
-msgid "Description"
-msgstr "설명"
-
-#: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:238
-#: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:735
-#: pyanaconda/ui/gui/spokes/lib/resize.glade:161
-#: pyanaconda/ui/gui/spokes/lib/cart.glade:131
-#: pyanaconda/ui/gui/spokes/installation_source.glade:1021
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:386
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1438
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1761
-msgid "Name"
-msgstr "이름 "
-
-#: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:251
-#: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:748
-#: pyanaconda/ui/gui/spokes/lib/cart.glade:143
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:414
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:814
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1148
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1466
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1789
-msgid "Capacity"
-msgstr "용량"
-
-#: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:264
-#: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:761
-#: pyanaconda/ui/gui/spokes/lib/cart.glade:156
-msgid "Free"
-msgstr "여유공간"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:324
 msgctxt "GUI|Custom Partitioning|Add Dialog"
@@ -5101,73 +5176,10 @@ msgstr "가능한 크게"
 msgid "Fixed"
 msgstr "고정 크기"
 
-#: pyanaconda/ui/gui/spokes/lib/resize.glade:53
-msgctxt "GUI|Reclaim Dialog"
-msgid "_Cancel"
-msgstr "취소(_C) "
-
-#: pyanaconda/ui/gui/spokes/lib/resize.glade:68
-msgctxt "GUI|Reclaim Dialog"
-msgid "_Reclaim space"
-msgstr "공간 확보(_R)"
-
-#: pyanaconda/ui/gui/spokes/lib/resize.glade:101
-msgid "RECLAIM DISK SPACE"
-msgstr "디스크 공간 확보 "
-
-#: pyanaconda/ui/gui/spokes/lib/resize.glade:118
-msgid "Description goes here."
-msgstr "설명 "
-
-#: pyanaconda/ui/gui/spokes/lib/resize.glade:172
-msgid "File System"
-msgstr "파일 시스템"
-
-#: pyanaconda/ui/gui/spokes/lib/resize.glade:183
-msgid "Reclaimable Space"
-msgstr "확보 가능한 공간 "
-
-#: pyanaconda/ui/gui/spokes/lib/resize.glade:219
-msgctxt "GUI|Reclaim Dialog"
-msgid "_Preserve"
-msgstr "보존 (_P)"
-
-#: pyanaconda/ui/gui/spokes/lib/resize.glade:235
-msgctxt "GUI|Reclaim Dialog"
-msgid "_Delete"
-msgstr "삭제(_D)"
-
-#: pyanaconda/ui/gui/spokes/lib/resize.glade:251
-msgctxt "GUI|Reclaim Dialog"
-msgid "_Shrink"
-msgstr "축소(_S) "
-
-#: pyanaconda/ui/gui/spokes/lib/resize.glade:365
-msgid "Reclaim"
-msgstr "개심"
-
-#: pyanaconda/ui/gui/spokes/lib/cart.glade:24
-#: pyanaconda/ui/gui/spokes/lib/cart.glade:76
-msgid "SELECTED DISKS"
-msgstr "선택한 디스크"
-
-#: pyanaconda/ui/gui/spokes/lib/cart.glade:41
-msgctxt "GUI|Selected Disks Dialog"
-msgid "_Close"
-msgstr "종료(_C) "
-
-#: pyanaconda/ui/gui/spokes/lib/cart.glade:104
-msgid "Boot"
-msgstr "부팅 "
-
-#: pyanaconda/ui/gui/spokes/lib/cart.glade:197
-msgctxt "GUI|Selected Disks Dialog"
-msgid "_Remove"
-msgstr "제거(_R)"
-
-#: pyanaconda/ui/gui/spokes/lib/cart.glade:224
-msgid "Disk summary goes here"
-msgstr "디스크 요약은 여기에 있습니다"
+#: pyanaconda/ui/gui/spokes/lib/detailederror.glade:25
+msgid "An unknown error occurred during installation.  Details are below."
+msgstr ""
+"설치 도중 알 수 없는 오류가 발생했습니다. 자세한 내용은 아래와 같습니다."
 
 #: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:8
 msgid "UNFORMATTED DASDS"
@@ -5484,7 +5496,9 @@ msgid "Base Environment"
 msgstr "기본 환경 "
 
 #: pyanaconda/ui/gui/spokes/software_selection.glade:84
-msgid "Add-Ons for Selected Environment"
+#, fuzzy
+#| msgid "Add-Ons for Selected Environment"
+msgid "Additional software for Selected Environment"
 msgstr "선택한 환경의 기능 "
 
 #: pyanaconda/ui/gui/spokes/network.glade:35
@@ -6895,15 +6909,15 @@ msgstr "하드 드라이브에 설치를 시작합니다"
 #~ msgstr "후 %d 분, 사용 가능한 엔트로피의 양에 관계없이 설치가 계속됩니다"
 
 #~ msgid ""
-#~ "Available entropy: %(av_entr)s, Required entropy: %(req_entr)s [%(pct)d "
-#~ "%%] (%(rem)d %(min)s remaining)"
+#~ "Available entropy: %(av_entr)s, Required entropy: %(req_entr)s [%(pct)d %"
+#~ "%] (%(rem)d %(min)s remaining)"
 #~ msgstr ""
 #~ "사용 가능한 엔트로피 : %(av_entr)s, 필요한 엔트로피 : %(req_entr)s "
 #~ "[%(pct)d %%] (%(rem)d %(min)s 나머지)"
 
 #~ msgid ""
-#~ "Available entropy: %(av_entr)s, Required entropy: %(req_entr)s [%(pct)d "
-#~ "%%]"
+#~ "Available entropy: %(av_entr)s, Required entropy: %(req_entr)s [%(pct)d %"
+#~ "%]"
 #~ msgstr ""
 #~ "사용 가능한 엔트로피 : %(av_entr)s, 필요한 엔트로피 : %(req_entr)s "
 #~ "[%(pct)d %%]"
