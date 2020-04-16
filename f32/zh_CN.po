@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Red Hat, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # Christopher Meng <cickumqt@gmail.com>, 2012-2013
 # clumens <clumens@redhat.com>, 2011
@@ -38,7 +38,7 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2020-03-17 14:21+0100\n"
-"PO-Revision-Date: 2020-03-17 16:39+0000\n"
+"PO-Revision-Date: 2020-04-17 08:40+0000\n"
 "Last-Translator: Tian Shixiong <tiansworld@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://translate.fedoraproject.org/"
 "projects/anaconda/f32/zh_CN/>\n"
@@ -47,7 +47,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.11.3\n"
+"X-Generator: Weblate 4.0.1\n"
 
 #: pyanaconda/ui/categories/system.py:28
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:458
@@ -2322,18 +2322,14 @@ msgid "No network devices available"
 msgstr "没有可用的网络设备。"
 
 #: pyanaconda/storage/fsset.py:390
-#, fuzzy, python-brace-format
-#| msgid ""
-#| "There is an entry in your /etc/fstab file that contains an invalid or "
-#| "incorrect file system type:\n"
-#| "\n"
+#, python-brace-format
 msgid ""
 "There is an entry in your /etc/fstab file that contains an invalid or "
 "incorrect file system type. The file says that {detected_type} at "
 "{mount_point} is {fstab_type}."
 msgstr ""
-"您的 /etc/fstab 文件中有一项存在无效或不正确的文件系统类型：\n"
-"\n"
+"您的 /etc/fstab 文件中有一项存在无效或不正确的文件系统类型。文件记录显示位于 {mount_point} 的 {detected_type} "
+"为 {fstab_type}。"
 
 #: pyanaconda/storage/root.py:130
 #, python-format
@@ -2636,21 +2632,10 @@ msgid ""
 msgstr "当前挂载了 %s，它不能用于安装。请卸载并重试。 "
 
 #: pyanaconda/storage/checker.py:447
-#, fuzzy
-#| msgid ""
-#| "You selected disk %(selected)s, which contains devices that also use "
-#| "unselected disk %(unselected)s. You must select or de-select these disks "
-#| "as a set."
-#| msgid_plural ""
-#| "You selected disk %(selected)s, which contains devices that also use "
-#| "unselected disks %(unselected)s. You must select or de-select these disks "
-#| "as a set."
 msgid ""
 "Selected disks {} contain volume group '{}' that also uses further "
 "unselected disks. You must select or de-select all these disks as a set."
-msgstr ""
-"您所选择的磁盘 %(selected)s 中包括有一些设备，而这些设备还使用了您未选择的磁"
-"盘 %(unselected)s。您必须将这些磁盘作为一个整体进行选择或者取消选择它们。"
+msgstr "所选择的磁盘 {} 中包括卷组 \"{}\"，该卷组也使用了尚未选择的磁盘。您必须将这些磁盘作为一个集合来选择或者取消选择它们。"
 
 #: pyanaconda/startup_utils.py:79
 #, python-format
@@ -3274,19 +3259,15 @@ msgstr ""
 "\tchroot %(mountpoint)s\n"
 
 #: pyanaconda/rescue.py:442
-#, fuzzy, python-brace-format
-#| msgid ""
-#| "An error occurred trying to mount some or all of your system.  Some of it "
-#| "may be mounted under %s\n"
-#| "\n"
+#, python-brace-format
 msgid ""
 "An error occurred trying to mount some or all of your system: {message}\n"
 "\n"
 "Some of it may be mounted under {path}."
 msgstr ""
-"尝试挂载系统中的某些或全部文件系统时出错。某些文件系统可能已经被挂载到 "
-"%s 。\n"
+"尝试挂载系统中的某些或全部文件系统时出错：{message}\n"
 "\n"
+"某些文件系统可能已经被挂载到 {path}。"
 
 #: pyanaconda/rescue.py:451
 msgid "Rebooting."
@@ -3315,23 +3296,10 @@ msgid "The following installations were discovered on your system."
 msgstr "在系统中找到以下安装："
 
 #: pyanaconda/errors.py:112
-#, fuzzy
-#| msgid "Error checking storage configuration"
 msgid "An error occurred while activating your storage configuration."
-msgstr "检查存储配置出错"
+msgstr "激活您的存储配置时出现错误。"
 
 #: pyanaconda/errors.py:119
-#, fuzzy
-#| msgid ""
-#| "There is a problem with your existing storage configuration: "
-#| "%(errortxt)s\n"
-#| "\n"
-#| "You must resolve this matter before the installation can proceed. There "
-#| "is a shell available for use which you can access by pressing ctrl-alt-f1 "
-#| "and then ctrl-b 2.\n"
-#| "\n"
-#| "Once you have resolved the issue you can retry the storage scan. If you "
-#| "do not fix it you will have to exit the installer."
 msgid ""
 "There is a problem with your existing storage configuration.You must resolve "
 "this matter before the installation can proceed. There is a shell available "
@@ -3340,10 +3308,7 @@ msgid ""
 "Once you have resolved the issue you can retry the storage scan. If you do "
 "not fix it you will have to exit the installer."
 msgstr ""
-"现有存储配置存在问题： %(errortxt)s\n"
-"\n"
-"必须在安装前解决该问题。可按 ctrl-alt-f1 组合键，然后按 ctrl-b 2 打开 shell "
-"进行修改。\n"
+"现有存储配置存在问题。您必须在安装前解决该问题。可按 ctrl-alt-f1 组合键，然后按 ctrl-b 2 打开 shell 进行修改。\n"
 "\n"
 "问题解决后，请再次尝试扫描存储。如果问题没有解决，则只能退出安装程序。"
 
@@ -3794,10 +3759,8 @@ msgid "GRUB2 encrypted password must be in grub.pbkdf2 format."
 msgstr "GRUB2 加密的密码需要是 grub.pbkdf2 格式。"
 
 #: pyanaconda/modules/storage/installation.py:80
-#, fuzzy
-#| msgid "An error occurred while resizing the device %s."
 msgid "An error occurred while resizing the device {}: {}"
-msgstr "调整设备 %s 大小时发生错误。"
+msgstr "调整设备 {}: {} 大小时发生错误"
 
 #: pyanaconda/modules/storage/installation.py:131
 msgid "Gathering entropy 100%"
@@ -3830,7 +3793,7 @@ msgstr "设备 '%s' 没有格式化"
 
 #: pyanaconda/modules/storage/partitioning/automatic/utils.py:128
 msgid "No usable disks selected."
-msgstr ""
+msgstr "未选择可用磁盘。"
 
 #: pyanaconda/modules/storage/partitioning/automatic/utils.py:131
 msgid "Not enough free space on selected disks."
