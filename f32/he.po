@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2020-03-17 14:21+0100\n"
-"PO-Revision-Date: 2020-04-17 08:40+0000\n"
+"PO-Revision-Date: 2020-04-22 09:30+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://translate.fedoraproject.org/projects/anaconda/"
 "f32/he/>\n"
@@ -1917,7 +1917,7 @@ msgstr ""
 
 #: pyanaconda/ui/tui/spokes/storage.py:505
 msgid "Reverting previous configuration. This may take a moment..."
-msgstr "Reverting previous configuration. This may take a moment..."
+msgstr "החזרה להגדרות קודמות. עשוי לארוך רגע קט…"
 
 #: pyanaconda/ui/tui/spokes/storage.py:537
 msgid "Partition Scheme Options"
@@ -3165,6 +3165,7 @@ msgid ""
 "You must include an Apple Bootstrap Partition on an Apple Partition Map-"
 "formatted disk."
 msgstr ""
+"עליך לכלול מחיצת Apple Bootstrap בכונן שמפורמט לפי מיפוי מחיצות של Apple."
 
 #: pyanaconda/platform.py:230
 msgid "You must include at least one disk as an install target."
@@ -3430,6 +3431,10 @@ msgid ""
 "\n"
 "%(exception)s"
 msgstr ""
+"צוינו מספר תזרימים למודול יחיד. זו שגיאה משמעותית וההתקנה תבוטל. פרטי השגיאה "
+"הם:\n"
+"\n"
+"%(exception)s"
 
 #: pyanaconda/errors.py:222
 #, python-format
@@ -3736,7 +3741,7 @@ msgstr "הכונן „{}” שסופק לפקודה clearpart לא קיים."
 
 #: pyanaconda/modules/storage/kickstart.py:98
 msgid "Device \"{}\" given in clearpart device list does not exist."
-msgstr ""
+msgstr "ההתקן „{}” שסופק ברשימת ההתקנים של clearpart לא קיים."
 
 #: pyanaconda/modules/storage/kickstart.py:117
 #: pyanaconda/modules/storage/kickstart.py:122
@@ -3777,7 +3782,7 @@ msgstr ""
 
 #: pyanaconda/modules/storage/bootloader/bootloader.py:160
 msgid "GRUB2 does not support installation to a partition."
-msgstr "GRUB2 does not support installation to a partition."
+msgstr "GRUB2 אינו תומך בהתקנה למחיצה."
 
 #: pyanaconda/modules/storage/bootloader/bootloader.py:167
 msgid "GRUB2 encrypted password must be in grub.pbkdf2 format."
@@ -3814,7 +3819,7 @@ msgstr ""
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:79
 #, python-format
 msgid "No format on device '%s'"
-msgstr ""
+msgstr "ההתקן ‚%s’ לא פורמט"
 
 #: pyanaconda/modules/storage/partitioning/automatic/utils.py:128
 msgid "No usable disks selected."
@@ -3983,18 +3988,18 @@ msgid ""
 "volgroup --noformat and volgroup --useexisting must also use the --name= "
 "option."
 msgstr ""
-"volgroup --noformat and volgroup --useexisting must also use the --name= "
-"option."
+"volgroup --noformat ו־volgroup --useexisting חייבות להשתמש גם באפשרות "
+"‎--name=‎."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:814
 #, python-format
 msgid "Volume group \"%s\" given in volgroup command does not exist."
-msgstr "Volume group \"%s\" given in volgroup command does not exist."
+msgstr "קבוצת הכרכים „%s” שסופקה לפקודה volgroup אינה קיימת."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:819
 #, python-format
 msgid "The volume group name \"%s\" is already in use."
-msgstr "The volume group name \"%s\" is already in use."
+msgstr "השם לקבוצת הכרכים „%s” כבר נמצא בשימוש."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:923
 #, python-format
@@ -4002,8 +4007,7 @@ msgid ""
 "No volume group exists with the name \"%s\".  Specify volume groups before "
 "logical volumes."
 msgstr ""
-"No volume group exists with the name \"%s\".  Specify volume groups before "
-"logical volumes."
+"לא קיימת קבוצת כרכים בשם „%s”.  נא לציין קבוצות כרכים לפני כרכים לוגיים."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:932
 msgid "Cache PVs must belong to the same VG as the cached LV"
@@ -4020,13 +4024,13 @@ msgstr ""
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:950
 msgid "logvol --noformat must also use the --name= option."
-msgstr "logvol --noformat must also use the --name= option."
+msgstr "logvol --noformat חייב גם להשתמש באפשרות ‎--name=‎."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:957
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1034
 #, python-format
 msgid "Logical volume \"%s\" given in logvol command does not exist."
-msgstr "Logical volume \"%s\" given in logvol command does not exist."
+msgstr "הכרך הלוגי „%s” שצוין בפקודה logvol אינו קיים."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:997
 #, python-format
@@ -4034,8 +4038,7 @@ msgid ""
 "Logical volume name \"%(logvol)s\" is already in use in volume group "
 "\"%(volgroup)s\"."
 msgstr ""
-"Logical volume name \"%(logvol)s\" is already in use in volume group "
-"\"%(volgroup)s\"."
+"שם הכרך הלוגי „%(logvol)s” כבר נמצא בשימוש בקבוצת הכרכים „%(volgroup)s”."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1004
 #, python-format
@@ -4043,8 +4046,8 @@ msgid ""
 "Logical volume size \"%(logvolSize)s\" must be larger than the volume group "
 "extent size of \"%(extentSize)s\"."
 msgstr ""
-"Logical volume size \"%(logvolSize)s\" must be larger than the volume group "
-"extent size of \"%(extentSize)s\"."
+"גודל הכרך הלוגי „%(logvolSize)s” חייב להיות גדול מהיקף גודל קבוצת הכרכים על "
+"סך „%(extentSize)s”."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1223
 #, python-format
@@ -4071,7 +4074,7 @@ msgstr ""
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1274
 #, python-format
 msgid "Btrfs volume \"%s\" specified with --useexisting does not exist."
-msgstr "Btrfs volume \"%s\" specified with --useexisting does not exist."
+msgstr "כרך ה־Btrfs‏ „%s” שצוין דרך ‎--useexisting לא קיים."
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:205
 #, python-brace-format
@@ -6226,7 +6229,7 @@ msgctxt "GUI|Software Source"
 msgid ""
 "Install the _default versions provided by the installation source (above) "
 "only"
-msgstr ""
+msgstr "התקנת גרסאות _בררת המחדל שמסופקות על ידי מקור ההתקנה (להלן) בלבד"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:967
 msgid "Additional repositories"
