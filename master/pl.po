@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Red Hat, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # Bartosz Sapijaszko <bartosz@sapek.net>, 2002
 # dcantrel <dcantrell@redhat.com>, 2011
@@ -29,7 +29,7 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2020-04-21 20:40+0200\n"
-"PO-Revision-Date: 2020-04-10 11:49+0000\n"
+"PO-Revision-Date: 2020-04-25 11:30+0000\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <https://translate.fedoraproject.org/projects/anaconda/"
 "master/pl/>\n"
@@ -39,7 +39,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 3.11.3\n"
+"X-Generator: Weblate 4.0.1\n"
 
 #: pyanaconda/ui/categories/system.py:28
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:453
@@ -2428,10 +2428,9 @@ msgid "You must create a new file system on the root device."
 msgstr "Należy utworzyć nowy system plików na głównym urządzeniu."
 
 #: pyanaconda/storage/checker.py:65
-#, fuzzy, python-format
-#| msgid "{fs} must be on a device of type {type}"
+#, python-format
 msgid "Your root partition must be on a device of type: %s."
-msgstr "{fs} musi być na urządzeniu typu {type}"
+msgstr "Główna partycja musi być na urządzeniu typu: %s."
 
 #: pyanaconda/storage/checker.py:92
 msgid ""
@@ -2468,14 +2467,9 @@ msgstr ""
 "zwykłej instalacji systemu %(productName)s."
 
 #: pyanaconda/storage/checker.py:145
-#, fuzzy, python-format
-#| msgid ""
-#| "Your %(mount)s partition is less than %(size)s which is lower than "
-#| "recommended for a normal %(productName)s install."
+#, python-format
 msgid "Your %(mount)s partition size is lower than required %(size)s."
-msgstr ""
-"Partycja %(mount)s ma mniej niż %(size)s, czyli mniej niż jest zalecane do "
-"zwykłej instalacji systemu %(productName)s."
+msgstr "Rozmiar partycji %(mount)s jest mniejszy niż wymagane %(size)s."
 
 #: pyanaconda/storage/checker.py:165
 #, python-format
@@ -2566,10 +2560,9 @@ msgstr ""
 "w systemie plików /."
 
 #: pyanaconda/storage/checker.py:327
-#, fuzzy, python-format
-#| msgid "%s must be on a primary partition."
+#, python-format
 msgid "Your %s must be on a separate partition or LV."
-msgstr "%s musi znajdować się na partycji podstawowej."
+msgstr "%s musi znajdować się na odzielnej partycji lub woluminie logicznym."
 
 #: pyanaconda/storage/checker.py:344
 #, python-format
@@ -3381,10 +3374,8 @@ msgstr ""
 "Część systemu może być zamontowana w katalogu {path}."
 
 #: pyanaconda/rescue.py:454
-#, fuzzy
-#| msgid "You don't have any Linux partitions. %s\n"
 msgid "You don't have any Linux partitions.\n"
-msgstr "Brak partycji systemu Linux. %s\n"
+msgstr "Brak partycji systemu Linux.\n"
 
 #: pyanaconda/rescue.py:460
 msgid "Not mounting the system.\n"
@@ -3947,10 +3938,8 @@ msgstr ""
 "Typ systemu plików „{}” podany w poleceniu autopart jest nieprawidłowy."
 
 #: pyanaconda/modules/storage/kickstart.py:81
-#, fuzzy
-#| msgid "The \"%s\" file system type is not supported."
 msgid "Btrfs file system is not supported."
-msgstr "Typ systemu plików „%s” nie jest obsługiwany."
+msgstr "Systemu plików Btrfs nie jest obsługiwany."
 
 #: pyanaconda/modules/storage/kickstart.py:104
 msgid ""
@@ -5085,10 +5074,8 @@ msgstr "Nieobsługiwany sprzęt"
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:24
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:77
-#, fuzzy
-#| msgid "SELECTED DISKS"
 msgid "SELECTED DISKS AND BOOT LOADER"
-msgstr "WYBRANE DYSKI"
+msgstr "WYBRANE DYSKI I PROGRAM STARTOWY"
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:43
 msgctxt "GUI|Selected Disks Dialog"
@@ -5096,10 +5083,8 @@ msgid "_Close"
 msgstr "Za_mknij"
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:94
-#, fuzzy
-#| msgid "Selected Device"
 msgid "Selected disks"
-msgstr "Wybrane urządzenie"
+msgstr "Wybrane dyski"
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:123
 msgid "Boot"
@@ -5145,10 +5130,8 @@ msgid "_Remove"
 msgstr "_Usuń"
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:249
-#, fuzzy
-#| msgid "Security"
 msgid "Secure Boot"
-msgstr "Zabezpieczenia"
+msgstr "Secure Boot"
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:265
 msgid ""
@@ -5157,20 +5140,23 @@ msgid ""
 "supported on IBM z14 and earlier models, therefore choose to disable it if "
 "you intend to boot the installed system on such models."
 msgstr ""
+"Oprogramowanie sprzętowe sprawdzi integralność jądra Linux podczas "
+"uruchamiania, jeśli funkcja Secure Boot jest włączona i skonfigurowana na "
+"komputerze. Funkcja Secure Boot nie jest obsługiwana na IBM z14 i "
+"wcześniejszych modelach, więc należy wybrać jej wyłączenie, jeśli "
+"zainstalowany system ma być uruchamiany na takich modelach."
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:283
 msgid "Enabled if supported by the installing machine"
-msgstr ""
+msgstr "Włączone, jeśli obsługiwane przez komputer instalujący"
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:284
 msgid "Enabled unconditionally"
-msgstr ""
+msgstr "Włączone bezwarunkowo"
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:285
-#, fuzzy
-#| msgid "Enabled"
 msgid "Disabled"
-msgstr "Włączone"
+msgstr "Wyłączone"
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:306
 msgid "Disk summary goes here"
