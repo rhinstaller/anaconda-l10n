@@ -56,7 +56,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2020-05-27 10:48+0200\n"
+"POT-Creation-Date: 2020-05-29 16:55+0200\n"
 "PO-Revision-Date: 2020-01-14 11:41+0000\n"
 "Last-Translator: Ludek Janda <ljanda@redhat.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -162,7 +162,7 @@ msgid "Installing boot loader"
 msgstr "ブートローダーをインストール中"
 
 #: pyanaconda/installation.py:352 pyanaconda/payload/live/payload_base.py:159
-#: pyanaconda/payload/dnf/payload.py:1331
+#: pyanaconda/payload/dnf/payload.py:1401
 msgid "Performing post-installation setup tasks"
 msgstr "インストール後セットアップ作業を実行中"
 
@@ -1622,7 +1622,7 @@ msgstr "%s がありません。ファイアウォールの設定ができませ
 
 #: pyanaconda/modules/subscription/runtime.py:257
 #: pyanaconda/modules/subscription/runtime.py:303
-#: pyanaconda/ui/gui/spokes/subscription.py:961
+#: pyanaconda/ui/gui/spokes/subscription.py:963
 msgid "Registration failed."
 msgstr "登録に失敗しました。"
 
@@ -1659,7 +1659,7 @@ msgstr ""
 msgid "Red Hat CDN"
 msgstr "Red Hat CDN"
 
-#: pyanaconda/modules/payloads/source/nfs/nfs.py:60
+#: pyanaconda/modules/payloads/source/nfs/nfs.py:73
 #, fuzzy
 #| msgid "NFS server %s"
 msgid "NFS server {}"
@@ -1699,11 +1699,14 @@ msgstr ""
 "すが、このマシンには %(total_ram)s MB しかありません。\n"
 
 #: pyanaconda/startup_utils.py:79
-#, python-format
+#, fuzzy, python-format
+#| msgid ""
+#| "The %(product_name)s graphical installer requires %(needed_ram)s MB of "
+#| "memory, but you only have %(total_ram)s MB\n"
+#| "."
 msgid ""
 "The %(product_name)s graphical installer requires %(needed_ram)s MB of "
-"memory, but you only have %(total_ram)s MB\n"
-"."
+"memory, but you only have %(total_ram)s MB.\n"
 msgstr ""
 "%(product_name)s グラフィカルインストーラーには %(needed_ram)s MB のメモリー"
 "が必要ですが、%(total_ram)s MB しかありません。\n"
@@ -1785,7 +1788,7 @@ msgstr "以下の強制スポークが完了していません:"
 msgid "to begin installation"
 msgstr "インストールを開始"
 
-#: pyanaconda/ui/tui/hubs/summary.py:150 pyanaconda/ui/tui/hubs/__init__.py:137
+#: pyanaconda/ui/tui/hubs/summary.py:150 pyanaconda/ui/tui/hubs/__init__.py:135
 msgid "Please complete all spokes before continuing"
 msgstr "すべてのスポークを完了してから継続してください。"
 
@@ -1802,21 +1805,21 @@ msgctxt "TUI|Spoke Navigation"
 msgid "c"
 msgstr "c"
 
-#: pyanaconda/ui/tui/hubs/__init__.py:54
+#: pyanaconda/ui/tui/hubs/__init__.py:52
 msgid "Default HUB title"
 msgstr "デフォルトのハブタイトル"
 
-#: pyanaconda/ui/tui/hubs/__init__.py:162
+#: pyanaconda/ui/tui/hubs/__init__.py:158
 #, python-format
 msgid "to enter the %(spoke_title)s spoke"
 msgstr "%(spoke_title)s スポークに入る"
 
-#: pyanaconda/ui/tui/tuiobject.py:142
+#: pyanaconda/ui/tui/tuiobject.py:144
 #, python-format
 msgid "Enter a new value for '%(title)s' and press %(enter)s"
 msgstr "'%(title)s' に新しい値を入力して %(enter)s を押します"
 
-#: pyanaconda/ui/tui/tuiobject.py:271
+#: pyanaconda/ui/tui/tuiobject.py:273
 msgid ""
 "\n"
 "Would you like to use it anyway?"
@@ -1829,7 +1832,7 @@ msgid "Installation source"
 msgstr "インストールソース"
 
 #: pyanaconda/ui/tui/spokes/installation_source.py:108
-#: pyanaconda/ui/gui/spokes/installation_source.py:636
+#: pyanaconda/ui/gui/spokes/installation_source.py:635
 msgid "Error setting up software source"
 msgstr "ソフトウェアソースの設定でエラー"
 
@@ -1842,7 +1845,7 @@ msgstr "処理中..."
 
 #: pyanaconda/ui/tui/spokes/installation_source.py:112
 #: pyanaconda/ui/tui/spokes/software_selection.py:170
-#: pyanaconda/ui/gui/spokes/installation_source.py:638
+#: pyanaconda/ui/gui/spokes/installation_source.py:637
 #: pyanaconda/ui/gui/spokes/software_selection.py:316
 #: pyanaconda/ui/gui/spokes/software_selection.py:321
 #: pyanaconda/ui/gui/spokes/datetime_spoke.py:581
@@ -2117,11 +2120,11 @@ msgstr "デバイス %s の設定"
 msgid "Configuration not saved: netmask missing in static configuration"
 msgstr "設定を保存できません。静的設定にネットマスクがありません。"
 
-#: pyanaconda/ui/tui/spokes/__init__.py:57
+#: pyanaconda/ui/tui/spokes/__init__.py:53
 msgid "Default spoke title"
 msgstr "デフォルトのスポークタイトル"
 
-#: pyanaconda/ui/tui/spokes/__init__.py:61
+#: pyanaconda/ui/tui/spokes/__init__.py:57
 msgid "testing status..."
 msgstr "状態をテスト中..."
 
@@ -2178,7 +2181,7 @@ msgid "Disabled. Set password to enable root account."
 msgstr "無効。rootアカウントのパスワードを設定する。"
 
 #: pyanaconda/ui/tui/spokes/root_password.py:77
-#: pyanaconda/ui/gui/spokes/root_password.py:180
+#: pyanaconda/ui/gui/spokes/root_password.py:181
 msgid "Root account is disabled."
 msgstr "root アカウントは無効になっています"
 
@@ -2634,22 +2637,22 @@ msgid ""
 msgstr ""
 "このアイコンの付いた項目の設定を済ませてから、次のステップへ進んでください。"
 
-#: pyanaconda/ui/gui/__init__.py:415 widgets/src/BaseWindow.c:151
+#: pyanaconda/ui/gui/__init__.py:416 widgets/src/BaseWindow.c:151
 msgid "Help!"
 msgstr "ヘルプ"
 
-#: pyanaconda/ui/gui/__init__.py:915
+#: pyanaconda/ui/gui/__init__.py:916
 #: pyanaconda/ui/gui/spokes/lib/detailederror.py:58
 msgctxt "GUI|Detailed Error Dialog"
 msgid "_Quit"
 msgstr "終了(_Q)"
 
-#: pyanaconda/ui/gui/__init__.py:931
+#: pyanaconda/ui/gui/__init__.py:932
 msgctxt "GUI|Yes No Dialog"
 msgid "_No"
 msgstr "いいえ(_N)"
 
-#: pyanaconda/ui/gui/__init__.py:932
+#: pyanaconda/ui/gui/__init__.py:933
 msgctxt "GUI|Yes No Dialog"
 msgid "_Yes"
 msgstr "はい(_Y)"
@@ -2661,7 +2664,7 @@ msgstr "Red Hat に接続 (_C)"
 
 #: pyanaconda/ui/gui/spokes/subscription.py:205
 #: pyanaconda/ui/gui/spokes/subscription.py:219
-#: pyanaconda/core/constants.py:239
+#: pyanaconda/core/constants.py:235
 msgid "Password set."
 msgstr "パスワードの指定"
 
@@ -2669,221 +2672,221 @@ msgstr "パスワードの指定"
 msgid "Activation key set."
 msgstr "アクティベーションキーセット。"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:953
+#: pyanaconda/ui/gui/spokes/subscription.py:955
 msgid "Unregistering..."
 msgstr "登録解除中..."
 
-#: pyanaconda/ui/gui/spokes/subscription.py:955
+#: pyanaconda/ui/gui/spokes/subscription.py:957
 msgid "Registering..."
 msgstr "登録中..."
 
-#: pyanaconda/ui/gui/spokes/subscription.py:957
+#: pyanaconda/ui/gui/spokes/subscription.py:959
 msgid "Attaching subscription..."
 msgstr "サブスクリプションを割り当て中..."
 
-#: pyanaconda/ui/gui/spokes/subscription.py:959
+#: pyanaconda/ui/gui/spokes/subscription.py:961
 msgid "Subscription attached."
 msgstr "サブスクリプションが割り当てられました。"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:963
+#: pyanaconda/ui/gui/spokes/subscription.py:965
 msgid "Registered."
 msgstr "登録済み。"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:965
+#: pyanaconda/ui/gui/spokes/subscription.py:967
 msgid "Not registered."
 msgstr "未登録。"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:993
+#: pyanaconda/ui/gui/spokes/subscription.py:995
 msgid "Registered with account {}"
 msgstr "アカウント {} に登録済み"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:997
+#: pyanaconda/ui/gui/spokes/subscription.py:999
 msgid "Registered with organization {}"
 msgstr "組織 {} に登録済み"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:1005
+#: pyanaconda/ui/gui/spokes/subscription.py:1007
 msgid "Role: {}"
 msgstr "ロール: {}"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:1009
+#: pyanaconda/ui/gui/spokes/subscription.py:1011
 msgid "SLA: {}"
 msgstr "SLA: {}"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:1013
+#: pyanaconda/ui/gui/spokes/subscription.py:1015
 #, fuzzy
 #| msgid "Usage"
 msgid "Usage: {}"
 msgstr "使用方法"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:1021
+#: pyanaconda/ui/gui/spokes/subscription.py:1023
 msgid "Connected to Red Hat Insights"
 msgstr "Red Hat Insights に接続済みです"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:1023
+#: pyanaconda/ui/gui/spokes/subscription.py:1025
 msgid "Not connected to Red Hat Insights"
 msgstr "Red Hat Insights に接続されていません"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:1034
+#: pyanaconda/ui/gui/spokes/subscription.py:1036
 msgid "No subscriptions are attached to the system"
 msgstr "システムに割り当てられたサブスクリプションはありません"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:1036
+#: pyanaconda/ui/gui/spokes/subscription.py:1038
 msgid "1 subscription attached to the system"
 msgstr "システムにサブスクリプションが 1 つ割り当てられています"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:1038
+#: pyanaconda/ui/gui/spokes/subscription.py:1040
 msgid "{} subscriptions attached to the system"
 msgstr "システムにサブスクリプションが {} 割り当てられています"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:1079
+#: pyanaconda/ui/gui/spokes/subscription.py:1081
 msgid "Please enable network access before connecting to Red Hat."
 msgstr "Red Hat に接続する前に、ネットワークアクセスを有効にしてください。"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:69
+#: pyanaconda/ui/gui/spokes/installation_source.py:68
 msgid "Setting up installation source..."
 msgstr "インストールソースをセットアップ中..."
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:96
+#: pyanaconda/ui/gui/spokes/installation_source.py:95
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1757
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1761
 msgid " <a href=\"\">Click for details.</a>"
 msgstr " <a href=\"\">クリックすると詳細を表示します。</a>"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:108
+#: pyanaconda/ui/gui/spokes/installation_source.py:107
 msgid "Invalid proxy URL"
 msgstr "無効なプロキシー URL です。"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:113
+#: pyanaconda/ui/gui/spokes/installation_source.py:112
 #, python-format
 msgid "Invalid proxy protocol: %s"
 msgstr "無効なプロキシープロトコル: %s"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:119
+#: pyanaconda/ui/gui/spokes/installation_source.py:118
 msgid "Extra characters in proxy URL"
 msgstr "プロキシー URL に追加の文字があります"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:124
+#: pyanaconda/ui/gui/spokes/installation_source.py:123
 msgid "Proxy authentication data duplicated"
 msgstr "プロキシー 認証データが重複しています"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:266
+#: pyanaconda/ui/gui/spokes/installation_source.py:265
 msgid "This media is good to install from."
 msgstr "このメディアは、以下からのインストールに適切です。"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:268
+#: pyanaconda/ui/gui/spokes/installation_source.py:267
 msgid "This media is not good to install from."
 msgstr "このメディアは、以下からのインストールに不適切です。"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:410
+#: pyanaconda/ui/gui/spokes/installation_source.py:409
 msgctxt "GUI|Spoke"
 msgid "_Installation Source"
 msgstr "インストールソース(_I)"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:557
+#: pyanaconda/ui/gui/spokes/installation_source.py:556
 msgid "Failed to set up installation source; check the repo url"
 msgstr ""
 "インストールソースの設定に失敗しました。リポジトリーの URL を確認してくださ"
 "い。"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:630
+#: pyanaconda/ui/gui/spokes/installation_source.py:629
 #: pyanaconda/ui/gui/spokes/software_selection.py:223
 msgid "Checking software dependencies..."
 msgstr "ソフトウェアの依存関係をチェック中..."
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:634
+#: pyanaconda/ui/gui/spokes/installation_source.py:633
 msgid "Error setting up base repository"
 msgstr "ベースリポジトリーのセットアップ中にエラー"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:789
+#: pyanaconda/ui/gui/spokes/installation_source.py:788
 msgid ""
 "Failed to set up installation source; check the repo url and proxy settings."
 msgstr ""
 "インストールソースのセットアップに失敗しました。リポジトリーの URL とプロキ"
 "シー設定を確認してください。"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:866
+#: pyanaconda/ui/gui/spokes/installation_source.py:865
 #, python-format
 msgid "Device: %s"
 msgstr "デバイス: %s"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:867
+#: pyanaconda/ui/gui/spokes/installation_source.py:866
 #, python-format
 msgid "Label: %s"
 msgstr "ラベル: %s"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1020
+#: pyanaconda/ui/gui/spokes/installation_source.py:1016
 msgid "You need to configure the network to use a network installation source."
 msgstr ""
 "ネットワーク上のインストールソースを利用するにはネットワークの設定が必要で"
 "す。"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1106
+#: pyanaconda/ui/gui/spokes/installation_source.py:1102
 #, python-format
 msgid "Repository %s has empty url"
 msgstr "リポジトリー %s の URL が空です"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1108
+#: pyanaconda/ui/gui/spokes/installation_source.py:1104
 msgid "URL is empty"
 msgstr "URL が空です。"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1113
+#: pyanaconda/ui/gui/spokes/installation_source.py:1109
 #, python-format
 msgid "Repository %s has invalid url"
 msgstr "リポジトリー %s の URLが不正です"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1115
+#: pyanaconda/ui/gui/spokes/installation_source.py:1111
 msgid "Invalid URL"
 msgstr "無効な URL です。"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1122
+#: pyanaconda/ui/gui/spokes/installation_source.py:1118
 #, python-format
 msgid "Repository %s does not match selected protocol"
 msgstr "リポジトリー %s が選択したプロトコルと一致しません"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1124
+#: pyanaconda/ui/gui/spokes/installation_source.py:1120
 msgid "Protocol in URL does not match selected protocol"
 msgstr "URL のプロトコルが選択されたプロトコルと一致しません"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1128
+#: pyanaconda/ui/gui/spokes/installation_source.py:1124
 #, python-format
 msgid "Repository %s has empty NFS server"
 msgstr "リポジトリー %s の NFS サーバーが空です"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1130
+#: pyanaconda/ui/gui/spokes/installation_source.py:1126
 msgid "NFS server is empty"
 msgstr "NFS サーバーが空です"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1138
+#: pyanaconda/ui/gui/spokes/installation_source.py:1134
 #, python-format
 msgid "Repository %s has invalid host name"
 msgstr "リポジトリー %s に不正なホスト名があります"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1140
+#: pyanaconda/ui/gui/spokes/installation_source.py:1136
 msgid "Invalid host name"
 msgstr "無効なホスト名です"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1144
+#: pyanaconda/ui/gui/spokes/installation_source.py:1140
 #, python-format
 msgid "Repository %s required remote directory"
 msgstr "リポジトリー %s にはリモートディレクトリーが必要です"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1146
+#: pyanaconda/ui/gui/spokes/installation_source.py:1142
 msgid "Remote directory is required"
 msgstr "リモートディレクトリーは必須です。"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1167
+#: pyanaconda/ui/gui/spokes/installation_source.py:1163
 msgid "Duplicate repository names."
 msgstr "リポジトリー名が重複しています。"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1175
+#: pyanaconda/ui/gui/spokes/installation_source.py:1171
 msgid "Empty repository name"
 msgstr "リポジトリー名が空です。"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1178
+#: pyanaconda/ui/gui/spokes/installation_source.py:1174
 msgid "Invalid repository name"
 msgstr "無効なリポジトリー名です。"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1183
+#: pyanaconda/ui/gui/spokes/installation_source.py:1179
 msgid "Repository name conflicts with internal repository name."
 msgstr "リポジトリー名が内部のリポジトリー名と競合しています。"
 
@@ -3024,7 +3027,7 @@ msgid "Automatic partitioning failed."
 msgstr "自動パーティション設定が選択されました"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1770
-#: pyanaconda/ui/gui/spokes/blivet_gui.py:322
+#: pyanaconda/ui/gui/spokes/blivet_gui.py:320
 msgid ""
 "Continuing with this action will reset all your partitioning selections to "
 "their current on-disk state."
@@ -3033,13 +3036,13 @@ msgstr ""
 "す。"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1781
-#: pyanaconda/ui/gui/spokes/blivet_gui.py:330
+#: pyanaconda/ui/gui/spokes/blivet_gui.py:328
 msgctxt "GUI|Custom Partitioning|Reset Dialog"
 msgid "_Reset selections"
 msgstr "選択をリセットする(_R)"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1783
-#: pyanaconda/ui/gui/spokes/blivet_gui.py:331
+#: pyanaconda/ui/gui/spokes/blivet_gui.py:329
 msgctxt "GUI|Custom Partitioning|Reset Dialog"
 msgid "_Preserve current selections"
 msgstr "現在の選択を保持する(_P)"
@@ -3275,26 +3278,26 @@ msgctxt "GUI|Spoke"
 msgid "_Network & Host Name"
 msgstr "ネットワークとホスト名(_N)"
 
-#: pyanaconda/ui/gui/spokes/root_password.py:55
+#: pyanaconda/ui/gui/spokes/root_password.py:56
 msgctxt "GUI|Spoke"
 msgid "_Root Password"
 msgstr "root パスワード(_R):"
 
-#: pyanaconda/ui/gui/spokes/root_password.py:129
+#: pyanaconda/ui/gui/spokes/root_password.py:130
 #, fuzzy
 #| msgid "Root password is not set"
 msgid "Root password has been set."
 msgstr "root パスワードが設定されていません"
 
-#: pyanaconda/ui/gui/spokes/root_password.py:178
+#: pyanaconda/ui/gui/spokes/root_password.py:179
 msgid "Disabled, set password to enable."
 msgstr "無効。パスワードを有効に設定する。"
 
-#: pyanaconda/ui/gui/spokes/root_password.py:183
+#: pyanaconda/ui/gui/spokes/root_password.py:184
 msgid "Root password is set"
 msgstr "root パスワードは設定されています"
 
-#: pyanaconda/ui/gui/spokes/root_password.py:185
+#: pyanaconda/ui/gui/spokes/root_password.py:186
 msgid "Root password is not set"
 msgstr "root パスワードが設定されていません"
 
@@ -3402,7 +3405,7 @@ msgctxt "GUI|Spoke"
 msgid "_Blivet-GUI Partitioning"
 msgstr "Blivet-GUI パーティショニング"
 
-#: pyanaconda/ui/gui/spokes/blivet_gui.py:253
+#: pyanaconda/ui/gui/spokes/blivet_gui.py:251
 msgid ""
 "Error checking storage configuration.  <a href=\"\">Click for details</a> or "
 "press Done again to continue."
@@ -3410,7 +3413,7 @@ msgstr ""
 "ストレージ設定の確認中にエラーが発生しました。<a href=\"\">クリックして詳細を"
 "表示する</a> か、完了を再度押して続行します。"
 
-#: pyanaconda/ui/gui/spokes/blivet_gui.py:255
+#: pyanaconda/ui/gui/spokes/blivet_gui.py:253
 msgid ""
 "Warning checking storage configuration.  <a href=\"\">Click for details</a> "
 "or press Done again to continue."
@@ -4179,19 +4182,19 @@ msgstr ""
 "一部の PPC プラットフォームでは、ブートローダー設定に\n"
 "PReP ブートパーティションが必要です。"
 
-#: pyanaconda/core/constants.py:91
+#: pyanaconda/core/constants.py:87
 msgid "Start VNC"
 msgstr "VNC を起動する"
 
-#: pyanaconda/core/constants.py:92
+#: pyanaconda/core/constants.py:88
 msgid "Use text mode"
 msgstr "テキストモードを使用する"
 
-#: pyanaconda/core/constants.py:95
+#: pyanaconda/core/constants.py:91
 msgid "Do you really want to quit?"
 msgstr "終了してもよろしいですか?"
 
-#: pyanaconda/core/constants.py:160
+#: pyanaconda/core/constants.py:156
 #, fuzzy
 #| msgid ""
 #| "Support for this hardware has been removed in this major release. Please "
@@ -4203,7 +4206,7 @@ msgstr ""
 "今回のメジャーリリースでは、このハードウェアはサポート対象外となりました。リ"
 "リースノートの削除された機能のセクションを確認してください。"
 
-#: pyanaconda/core/constants.py:165
+#: pyanaconda/core/constants.py:161
 msgid ""
 "This hardware (or a combination thereof) is not supported by Red Hat. For "
 "more information on supported hardware, please refer to http://www.redhat."
@@ -4213,7 +4216,7 @@ msgstr ""
 "ん。サポート対象のハードウェアの詳細については、http：//www.redhat.com/"
 "hardware を参照してください。"
 
-#: pyanaconda/core/constants.py:171
+#: pyanaconda/core/constants.py:167
 msgid ""
 "No disks detected.  Please shut down the computer, connect at least one "
 "disk, and restart to complete installation."
@@ -4221,13 +4224,13 @@ msgstr ""
 "ディスクが検出されません。コンピューターをシャットダウンして 1 つ以上のディス"
 "クに接続し、再開するとインストールが完了できます。"
 
-#: pyanaconda/core/constants.py:176
+#: pyanaconda/core/constants.py:172
 msgid "No disks selected; please select at least one disk to install to."
 msgstr ""
 "ディスクが選択されていません。インストール先として少なくともディスクを 1 つ選"
 "択してください。"
 
-#: pyanaconda/core/constants.py:181
+#: pyanaconda/core/constants.py:177
 msgid ""
 "Simultaneous Multithreading (SMT) technology can provide performance "
 "improvements for certain workloads, but introduces several publicly "
@@ -4242,7 +4245,7 @@ msgstr ""
 "る可能性があります。SMT を有効にしておく場合は、https://red.ht/rhel-smt の"
 "アーティクルで、潜在的なリスクとこれらリスクの軽減方法を確認してください。"
 
-#: pyanaconda/core/constants.py:191
+#: pyanaconda/core/constants.py:187
 msgid ""
 "Simultaneous Multithreading (SMT) may improve performance for certain "
 "workloads, but introduces several publicly disclosed security issues. You "
@@ -4256,59 +4259,59 @@ msgstr ""
 "があります。潜在的なリスクとこれらリスクの軽減方法については、https://red.ht/"
 "rhel-smt のアーティクルを参照してください。"
 
-#: pyanaconda/core/constants.py:207
+#: pyanaconda/core/constants.py:203
 msgid "The password is empty."
 msgstr "パスワードが入力されていません。"
 
-#: pyanaconda/core/constants.py:208
+#: pyanaconda/core/constants.py:204
 msgid "The passphrase is empty."
 msgstr "パスフレーズが入力されていません。"
 
-#: pyanaconda/core/constants.py:211
+#: pyanaconda/core/constants.py:207
 msgid "The passwords do not match."
 msgstr "パスワードが一致しません。"
 
-#: pyanaconda/core/constants.py:212
+#: pyanaconda/core/constants.py:208
 msgid "The passphrases do not match."
 msgstr "パスフレーズが一致しません。"
 
-#: pyanaconda/core/constants.py:215
+#: pyanaconda/core/constants.py:211
 msgid "The passwords you entered were different. Please try again."
 msgstr "入力したパスワードが異なっています。もう一度やり直してください。"
 
-#: pyanaconda/core/constants.py:216
+#: pyanaconda/core/constants.py:212
 msgid "The passphrases you entered were different. Please try again."
 msgstr "入力したパスフレーズが異なっています。もう一度やり直してください。"
 
-#: pyanaconda/core/constants.py:222
+#: pyanaconda/core/constants.py:218
 msgid "The password is too short"
 msgstr "このパスワードは短すぎます。"
 
-#: pyanaconda/core/constants.py:223
+#: pyanaconda/core/constants.py:219
 msgid "The passphrase is too short"
 msgstr "このパスフレーズは短すぎます。"
 
-#: pyanaconda/core/constants.py:226
+#: pyanaconda/core/constants.py:222
 msgid "The password you have provided is weak."
 msgstr "入力されたパスワードでは弱すぎます"
 
-#: pyanaconda/core/constants.py:227
+#: pyanaconda/core/constants.py:223
 msgid "The passphrase you have provided is weak."
 msgstr "入力されたパスフレーズでは弱すぎます"
 
-#: pyanaconda/core/constants.py:230
+#: pyanaconda/core/constants.py:226
 msgid "The password you have provided is weak:"
 msgstr "入力されたパスワードでは弱すぎます:"
 
-#: pyanaconda/core/constants.py:231
+#: pyanaconda/core/constants.py:227
 msgid "The passphrase you have provided is weak:"
 msgstr "入力されたパスフレーズでは弱すぎます:"
 
-#: pyanaconda/core/constants.py:233
+#: pyanaconda/core/constants.py:229
 msgid "Press <b>Done</b> again to use the password anyway."
 msgstr "<b>完了</b> を再度押してこのパスワードを使用します。"
 
-#: pyanaconda/core/constants.py:235
+#: pyanaconda/core/constants.py:231
 msgid ""
 "The password you have provided contains non-ASCII characters. You may not be "
 "able to switch between keyboard layouts when typing it."
@@ -4316,7 +4319,7 @@ msgstr ""
 "入力したパスワードに ASCII 以外の文字が含まれています。入力する際、キーボード"
 "レイアウトの切り替えができない場合があります。"
 
-#: pyanaconda/core/constants.py:236
+#: pyanaconda/core/constants.py:232
 msgid ""
 "The passphrase you have provided contains non-ASCII characters. You may not "
 "be able to switch between keyboard layouts when typing it."
@@ -4324,60 +4327,60 @@ msgstr ""
 "入力した パスフレーズに ASCII 以外の文字が含まれています。入力する際、キー"
 "ボードレイアウトの切り替えができない場合があります。"
 
-#: pyanaconda/core/constants.py:238
+#: pyanaconda/core/constants.py:234
 msgid "You will have to press <b>Done</b> twice to confirm it."
 msgstr "確認する場合は、<b>完了</b> を 2 回押す必要があります。"
 
-#: pyanaconda/core/constants.py:243
+#: pyanaconda/core/constants.py:239
 msgid "Empty"
 msgstr "未入力"
 
-#: pyanaconda/core/constants.py:244
+#: pyanaconda/core/constants.py:240
 msgid "Too short"
 msgstr "短かすぎます"
 
-#: pyanaconda/core/constants.py:245
+#: pyanaconda/core/constants.py:241
 #: pyanaconda/ui/gui/spokes/lib/passphrase.glade:182
 msgid "Weak"
 msgstr "脆弱"
 
-#: pyanaconda/core/constants.py:246
+#: pyanaconda/core/constants.py:242
 msgid "Fair"
 msgstr "普通"
 
-#: pyanaconda/core/constants.py:247
+#: pyanaconda/core/constants.py:243
 msgid "Good"
 msgstr "良好"
 
-#: pyanaconda/core/constants.py:248
+#: pyanaconda/core/constants.py:244
 msgid "Strong"
 msgstr "強力"
 
-#: pyanaconda/core/constants.py:251
+#: pyanaconda/core/constants.py:247
 msgid "Hide password."
 msgstr "パスワードを隠す"
 
-#: pyanaconda/core/constants.py:252
+#: pyanaconda/core/constants.py:248
 msgid "Show password."
 msgstr "パスワードを表示"
 
-#: pyanaconda/core/constants.py:300
+#: pyanaconda/core/constants.py:296
 msgid "Probing storage..."
 msgstr "ストレージを検出中..."
 
-#: pyanaconda/core/constants.py:301
+#: pyanaconda/core/constants.py:297
 msgid "Testing availability..."
 msgstr "入手可能かテストしています..."
 
-#: pyanaconda/core/constants.py:302
+#: pyanaconda/core/constants.py:298
 msgid "Downloading package metadata..."
 msgstr "パッケージメタデータをダウンロード中..."
 
-#: pyanaconda/core/constants.py:303
+#: pyanaconda/core/constants.py:299
 msgid "Downloading group metadata..."
 msgstr "グループメタデータをダウンロード中..."
 
-#: pyanaconda/core/constants.py:306
+#: pyanaconda/core/constants.py:302
 msgid "Anaconda Installer"
 msgstr "Anaconda インストーラー"
 
@@ -4750,29 +4753,29 @@ msgstr ""
 "%(total_files)s RPM のダウンロード中、%(downloaded)s / %(total_size)s "
 "(%(percent)d%%) 完了。"
 
-#: pyanaconda/payload/dnf/payload.py:1274
+#: pyanaconda/payload/dnf/payload.py:1344
 msgid "Starting package installation process"
 msgstr "パッケージインストールプロセスを開始しています"
 
-#: pyanaconda/payload/dnf/payload.py:1294
+#: pyanaconda/payload/dnf/payload.py:1364
 msgid "Downloading packages"
 msgstr "パッケージのダウンロード中"
 
-#: pyanaconda/payload/dnf/payload.py:1307
+#: pyanaconda/payload/dnf/payload.py:1377
 msgid "Preparing transaction from installation source"
 msgstr "インストールソースからのトランザクションを準備中"
 
-#: pyanaconda/payload/dnf/payload.py:1320
+#: pyanaconda/payload/dnf/payload.py:1390
 #, python-format
 msgid "Installing %s"
 msgstr "%s のインストール中"
 
-#: pyanaconda/payload/dnf/payload.py:1323
+#: pyanaconda/payload/dnf/payload.py:1393
 #, python-format
 msgid "Configuring %s"
 msgstr "%s の設定中"
 
-#: pyanaconda/payload/dnf/payload.py:1326
+#: pyanaconda/payload/dnf/payload.py:1396
 #, python-format
 msgid "Verifying %s"
 msgstr "%s を検証中"
