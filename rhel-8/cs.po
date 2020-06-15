@@ -28,16 +28,16 @@
 # František Zatloukal <Zatloukal.Frantisek@gmail.com>, 2016. #zanata
 # Marek Suchánek <m.suchanek.2@gmail.com>, 2016. #zanata
 # Zdenek <chmelarz@gmail.com>, 2016. #zanata
-# Daniel Rusek <mail@asciiwolf.com>, 2017. #zanata
+# Daniel Rusek <mail@asciiwolf.com>, 2017. #zanata, 2020.
 # Josef Hruška <hrusjos@gmail.com>, 2017. #zanata
 # Marek Suchánek <m.suchanek.2@gmail.com>, 2017. #zanata
 # Zdenek <chmelarz@gmail.com>, 2017. #zanata
-# Daniel Rusek <mail@asciiwolf.com>, 2018. #zanata
+# Daniel Rusek <mail@asciiwolf.com>, 2018. #zanata, 2020.
 # Jiri Konecny <jkonecny@redhat.com>, 2018. #zanata
 # Josef Hruška <hrusjos@gmail.com>, 2018. #zanata
 # Tomáš Kratochvíl <kratochvil.tomas.dev@gmail.com>, 2018. #zanata
 # Zdenek <chmelarz@gmail.com>, 2018. #zanata
-# Daniel Rusek <mail@asciiwolf.com>, 2019. #zanata
+# Daniel Rusek <mail@asciiwolf.com>, 2019. #zanata, 2020.
 # Jiří Konečný <jkonecny@redhat.com>, 2020.
 # Anonymous <noreply@weblate.org>, 2020.
 msgid ""
@@ -45,8 +45,8 @@ msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2020-05-29 16:55+0200\n"
-"PO-Revision-Date: 2020-06-05 01:32+0000\n"
-"Last-Translator: Jiří Konečný <jkonecny@redhat.com>\n"
+"PO-Revision-Date: 2020-06-16 12:24+0000\n"
+"Last-Translator: Daniel Rusek <mail@asciiwolf.com>\n"
 "Language-Team: Czech <https://translate.fedoraproject.org/projects/anaconda/"
 "rhel-8/cs/>\n"
 "Language: cs\n"
@@ -75,10 +75,9 @@ msgid "Executing %s addon"
 msgstr "Spouštění doplňku %s"
 
 #: pyanaconda/addons.py:113
-#, fuzzy, python-format
-#| msgid "Executing %s addon"
+#, python-format
 msgid "Setting up %s addon"
-msgstr "Spouštění doplňku %s"
+msgstr "Nastavování doplňku %s"
 
 #: pyanaconda/input_checking.py:539
 msgid "Full name cannot contain colon characters"
@@ -86,7 +85,7 @@ msgstr "Celé jméno nesmí obsahovat znaky dvojtečky"
 
 #: pyanaconda/installation.py:86
 msgid "Configuring Red Hat subscription"
-msgstr ""
+msgstr "Nastavování Red Hat subscription"
 
 #: pyanaconda/installation.py:93
 msgid "Configuring installed system"
@@ -502,7 +501,7 @@ msgstr "Získávání entropie (došel čas)"
 #: pyanaconda/modules/storage/installation.py:146
 #, python-brace-format
 msgid "Gathering entropy {percents}% (remaining time {time})"
-msgstr ""
+msgstr "Shromažďování entropie {percents}% (zbývající čas {time})"
 
 #: pyanaconda/modules/storage/checker/utils.py:54
 #, python-format
@@ -521,7 +520,7 @@ msgstr "Musíte vytvořit souborový systém na zařízení / (root)."
 #: pyanaconda/modules/storage/checker/utils.py:65
 #, python-format
 msgid "Your root partition must be on a device of type: %s."
-msgstr ""
+msgstr "Je třeba, aby kořenový oddíl byl na zařízení typu %s."
 
 #: pyanaconda/modules/storage/checker/utils.py:92
 msgid ""
@@ -546,7 +545,7 @@ msgstr ""
 #, python-format
 msgid ""
 "It is recommended to create a new file system on your %(mount)s partition."
-msgstr ""
+msgstr "Nejlépe bude, vytvořit na oddílu %(mount)s úplně nový souborový systém."
 
 #: pyanaconda/modules/storage/checker/utils.py:137
 #, python-format
@@ -560,7 +559,7 @@ msgstr ""
 #: pyanaconda/modules/storage/checker/utils.py:145
 #, python-format
 msgid "Your %(mount)s partition size is lower than required %(size)s."
-msgstr ""
+msgstr "Oddíl %(mount)s je menší než požadovaná velikost %(size)s."
 
 #: pyanaconda/modules/storage/checker/utils.py:165
 #, python-format
@@ -650,7 +649,7 @@ msgstr ""
 #: pyanaconda/modules/storage/checker/utils.py:327
 #, python-format
 msgid "Your %s must be on a separate partition or LV."
-msgstr ""
+msgstr "Je třeba, aby %s bylo na samostatném oddílu nebo LV."
 
 #: pyanaconda/modules/storage/checker/utils.py:344
 #, python-format
@@ -663,6 +662,9 @@ msgid ""
 "without an encryption key specified for this device. Please, rescan the "
 "storage."
 msgstr ""
+"Existující odemčené LUKS zařízení {} nelze pro instalaci použít, pokud není "
+"zadán klíč k jeho šifrování. Proveďte opětovný sken zařízení pro ukládání "
+"dat."
 
 #: pyanaconda/modules/storage/checker/utils.py:390
 #, python-format
@@ -692,21 +694,12 @@ msgstr ""
 "zkuste to prosím znovu."
 
 #: pyanaconda/modules/storage/checker/utils.py:474
-#, fuzzy
-#| msgid ""
-#| "You selected disk %(selected)s, which contains devices that also use "
-#| "unselected disk %(unselected)s. You must select or de-select these disks "
-#| "as a set."
-#| msgid_plural ""
-#| "You selected disk %(selected)s, which contains devices that also use "
-#| "unselected disks %(unselected)s. You must select or de-select these disks "
-#| "as a set."
 msgid ""
 "Selected disks {} contain volume group '{}' that also uses further "
 "unselected disks. You must select or de-select all these disks as a set."
 msgstr ""
-"Vybraný disk %(selected)s obsahuje zařízení, které využívá také nevybraný "
-"disk %(unselected)s. Pro pokračování je nutné mít oba tyto disky buď "
+"Vybrané jednotky {} obsahují skupinu svazků '{}', která využívá také další "
+"nevybrané jednotky. Pro pokračování je nutné mít všechny tyto jednotky buď "
 "vybrané, nebo nevybrané."
 
 #: pyanaconda/modules/storage/devicetree/utils.py:68
@@ -738,47 +731,39 @@ msgstr ""
 "%s"
 
 #: pyanaconda/modules/storage/devicetree/fsset.py:390
-#, fuzzy, python-brace-format
-#| msgid ""
-#| "There is an entry in your /etc/fstab file that contains an invalid or "
-#| "incorrect file system type:\n"
-#| "\n"
+#, python-brace-format
 msgid ""
 "There is an entry in your /etc/fstab file that contains an invalid or "
 "incorrect file system type. The file says that {detected_type} at "
 "{mount_point} is {fstab_type}."
 msgstr ""
 "Ve svém souboru /etc/fstab máte záznam, který obsahuje neplatný nebo "
-"nekorektní typ systému souborů:\n"
-"\n"
+"nesprávný typ souborového systému. Soubor tvrdí že {detected_type} na "
+"{mount_point} je {fstab_type}."
 
 #: pyanaconda/modules/storage/devicetree/root.py:339
 msgid "Unknown Linux"
 msgstr "Neznámý Linux"
 
 #: pyanaconda/modules/storage/devicetree/root.py:342
-#, fuzzy, python-brace-format
-#| msgid "%(product)s %(version)s for %(arch)s"
+#, python-brace-format
 msgid "{product} {version} for {arch}"
-msgstr "%(product)s %(version)s pro %(arch)s"
+msgstr "{product} {version} pro {arch}"
 
 #: pyanaconda/modules/storage/devicetree/root.py:344
-#, fuzzy, python-brace-format
-#| msgid "%(product)s Linux %(version)s for %(arch)s"
+#, python-brace-format
 msgid "{product} Linux {version} for {arch}"
-msgstr "%(product)s Linux %(version)s pro %(arch)s"
+msgstr "{product} Linux {version} pro {arch}"
 
 #: pyanaconda/modules/storage/devicetree/viewer.py:303
-#, fuzzy, python-brace-format
-#| msgid "%(description)s (%(deviceName)s)"
+#, python-brace-format
 msgid "{device_description} ({device_name})"
-msgstr "%(description)s (%(deviceName)s)"
+msgstr "{device_description} ({device_name})"
 
 #: pyanaconda/modules/storage/devicetree/viewer.py:309
-#, fuzzy, python-brace-format
-#| msgid "%(deviceName)s on %(container)s"
+#, python-brace-format
 msgid "{device_name} on {container_name}"
-msgstr "%(deviceName)s na %(container)s"
+msgstr "{device_name} na {container_name}"
 
 #: pyanaconda/modules/storage/kickstart.py:65
 msgid "File system type \"{}\" given in autopart command is invalid."
@@ -811,22 +796,17 @@ msgid "Disk \"{}\" given in ignoredisk command does not exist."
 msgstr "Disk \"{}\" zadaný v příkazu ignoredisk neexistuje."
 
 #: pyanaconda/modules/storage/kickstart.py:149
-#, fuzzy
-#| msgid "NIC \"%s\" given in fcoe command does not exist."
 msgid "NIC \"{}\" given in fcoe command does not exist."
-msgstr "NIC \"%s\" zadaná v příkazu fcoe neexistuje."
+msgstr "Síťové rozhraní „{}“ zadané v příkazu fcoe neexistuje."
 
 #: pyanaconda/modules/storage/kickstart.py:174
-#, fuzzy, python-brace-format
-#| msgid ""
-#| "Network interface \"%(nic)s\" required by iSCSI \"%(iscsiTarget)s\" "
-#| "target is not up."
+#, python-brace-format
 msgid ""
 "Network interface \"{nic}\" required by iSCSI \"{iscsi_target}\" target is "
 "not up."
 msgstr ""
-"Síťové rozhraní \"%(nic)s\" vyžadované cílem iSCSI \"%(iscsiTarget)s\" není "
-"připojeno."
+"Síťové rozhraní \"{nic}\" požadované iSCSI cílem \"{iscsi_target}\" není "
+"připraveno."
 
 #: pyanaconda/modules/storage/kickstart.py:190
 msgid ""
@@ -838,27 +818,23 @@ msgstr ""
 
 #: pyanaconda/modules/storage/kickstart.py:228
 #: pyanaconda/modules/storage/kickstart.py:240
-#, fuzzy
-#| msgid "Disk \"%s\" given in nvdimm command does not exist."
 msgid "Namespace \"{}\" given in nvdimm command was not found."
-msgstr "Disk \"%s\" uvedený v příkazu nvdimm neexistuje."
+msgstr "Obor názvů „{}“ zadaný v příkazu nvdimm nebyl nalezen."
 
 #: pyanaconda/modules/storage/kickstart.py:245
-#, fuzzy
-#| msgid "Disk \"%s\" given in nvdimm command does not exist."
 msgid "Disk \"{}\" given in nvdimm command does not exist."
-msgstr "Disk \"%s\" uvedený v příkazu nvdimm neexistuje."
+msgstr "Jednotka „{}“ zadaná v příkazu nvdimm neexistuje."
 
 #: pyanaconda/modules/storage/kickstart.py:258
 msgid ""
 "Incorrectly specified origin of the snapshot. Use format \"VolGroup/LV-name\""
 msgstr ""
-"Nesprávně zadaný původ obrazu. Použijte formát \"Jméno skupiny oddílu/"
-"logického svazku\""
+"Nesprávně zadaný původ zachyceného stavu. Použijte formát "
+"„SkupinaSvazků/NázevLogickéhoSvazku“"
 
 #: pyanaconda/modules/storage/disk_selection/utils.py:36
 msgid "The selected disk {} is not recognized."
-msgstr ""
+msgstr "Vybraná jednotka {} nebyla rozpoznána."
 
 #: pyanaconda/modules/storage/disk_selection/utils.py:46
 #, python-format
@@ -1102,41 +1078,33 @@ msgstr ""
 "velikost extentu svazku, která je \"%(extentSize)s\"."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1228
-#, fuzzy, python-format
-#| msgid ""
-#| "RAID device \"%(device)s\" has a format of \"%(format)s\", but should "
-#| "have a format of \"mdmember\"."
+#, python-format
 msgid ""
 "Btrfs partition \"%(device)s\" has a format of \"%(format)s\", but should "
 "have a format of \"btrfs\"."
 msgstr ""
-"RAID zařízení \"%(device)s\" má formát \"%(format)s\", ale mělo by mít "
-"formát \"mdmember\"."
+"Oddíl Btrfs „%(device)s“ má formát „%(format)s“, ale měl by mít formát "
+"„btrfs“."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1236
-#, fuzzy, python-format
-#| msgid ""
-#| "Tried to use undefined partition \"%s\" in Volume Group specification"
+#, python-format
 msgid "Tried to use undefined partition \"%s\" in Btrfs volume specification."
-msgstr "Pokud o užití nedefinovaného oddílu \"%s\" ve specifikaci svazku."
+msgstr ""
+"Pokus o použití nedefinovaného oddílu „%s“ ve specifikaci logického disku "
+"Btrfs."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1251
-#, fuzzy
-#| msgid ""
-#| "Volume group \"%s\" defined without any physical volumes.  Either specify "
-#| "physical volumes or use --useexisting."
 msgid ""
 "Btrfs volume defined without any member devices.  Either specify member "
 "devices or use --useexisting."
 msgstr ""
-"Svazek \"%s\" definovaný bez jakýchkoliv fyzických oddílů. Buď určete "
-"fyzické oddíly nebo použijte --useexisting."
+"Logický disk Btrfs definovaný bez jakéhokoliv členského zařízení. Buď uveďte "
+"členská zařízení, nebo použijte --useexisting."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1279
-#, fuzzy, python-format
-#| msgid "RAID volume \"%s\" specified with --useexisting does not exist."
+#, python-format
 msgid "Btrfs volume \"%s\" specified with --useexisting does not exist."
-msgstr "RAID oddíl \"%s\" uvedený s --useexisting neexistuje."
+msgstr "Logický disk Btrfs „%s“ zadaný s volbou --useexisting neexistuje."
 
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:64
 #, python-format
@@ -1156,10 +1124,9 @@ msgid "No format on device '%s'"
 msgstr "Žádný formát na zařízení '%s'"
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:213
-#, fuzzy, python-brace-format
-#| msgid "New %(name)s %(version)s Installation"
+#, python-brace-format
 msgid "New {name} {version} Installation"
-msgstr "Nová instalace %(name)s %(version)s"
+msgstr "Nová instalace {name} {version}"
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:289
 msgid "Cannot set label on file system."
@@ -1183,10 +1150,8 @@ msgid "That mount point is invalid. Try something else?"
 msgstr "Tento přípojný bod je neplatný. Zkusit nějaký jiný?"
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:340
-#, fuzzy
-#| msgid "Invalid container name"
 msgid "Invalid container name."
-msgstr "Neplatný název kontejneru"
+msgstr "Neplatný název kontejneru."
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:343
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:595
@@ -1194,62 +1159,45 @@ msgid "Name is already in use."
 msgstr "Název je již používán."
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:368
-#, fuzzy, python-brace-format
-#| msgid ""
-#| "The RAID level you have selected (%(level)s) requires more disks "
-#| "(%(min)d) than you currently have selected (%(count)d)."
+#, python-brace-format
 msgid ""
 "The RAID level you have selected ({level}) requires more disks ({min}) than "
 "you currently have selected ({count})."
 msgstr ""
-"Vybraný typ RAID (%(level)s) vyžaduje více disků (%(min)d), než máte "
-"označeno (%(count)d)."
+"Zvolená úroveň RAID ({level}) vyžaduje více disků ({min}), než je vybráno "
+"({count})."
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:410
-#, fuzzy
-#| msgid "Please enter a valid mount point."
 msgid "Please enter a mount point."
-msgstr "Prosím vložte platný přípojný bod."
+msgstr "Zadejte přípojný bod."
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:423
-#, fuzzy, python-brace-format
-#| msgid ""
-#| "/boot/efi must be on a device of type %(oneFsType)s or %(anotherFsType)s"
+#, python-brace-format
 msgid "/boot/efi must be on a device of type {type} or {another}"
-msgstr ""
-"/boot/efi musí být na zařízení typu %(oneFsType)s nebo %(anotherFsType)s"
+msgstr "Je třeba, aby /boot/efi bylo zařízení typu {type} nebo {another}"
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:430
-#, fuzzy, python-brace-format
-#| msgid "%(fs)s must be on a device of type %(type)s"
+#, python-brace-format
 msgid "{fs} must be on a device of type {type}"
-msgstr "%(fs)s musí být na zařízení typu %(type)s"
+msgstr "Je třeba, aby {fs} bylo na zařízení typu {type}"
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:436
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:439
-#, fuzzy
-#| msgid "%s cannot be encrypted"
 msgid "{} cannot be encrypted"
-msgstr "%s nelze šifrovat"
+msgstr "{} nelze šifrovat"
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:446
-#, fuzzy
-#| msgid "Device does not support RAID level selection %s."
 msgid "Device does not support RAID level selection {}."
-msgstr "Zařízení nepodporuje volbu úrovně RAID %s."
+msgstr "Zařízení nepodporuje volbu úrovně RAID {}."
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:1197
-#, fuzzy, python-format
-#| msgid ""
-#| "This Software RAID array is missing %(missingMembers)d of "
-#| "%(totalMembers)d member partitions. You can remove it or select a "
-#| "different device."
+#, python-format
 msgid ""
 "This Software RAID array is missing %(missing)d of %(total)d member "
 "partitions. You can remove it or select a different device."
 msgstr ""
-"Tomuto softwarovému poli RAID schází %(missingMembers)d z %(totalMembers)d "
-"příslušejících oddílů. Můžete jej odstranit nebo zvolit jiné zařízení."
+"Tomuto softwarovému RAID poli schází %(missing)d z %(total)d oddílů, ze "
+"kterých se skládá. Můžete ho odstranit nebo zvolit jiné zařízení."
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:1204
 #, python-format
@@ -1270,10 +1218,8 @@ msgstr ""
 "označit jiné zařízení."
 
 #: pyanaconda/modules/storage/partitioning/automatic/utils.py:162
-#, fuzzy
-#| msgid "No usable disks selected"
 msgid "No usable disks selected."
-msgstr "Nebyly nalezeny žádné použitelné disky."
+msgstr "Nebyly vybrány žádné použitelné jednotky."
 
 #: pyanaconda/modules/storage/partitioning/automatic/utils.py:165
 msgid "Not enough free space on selected disks."
@@ -1508,12 +1454,8 @@ msgstr ""
 "Apple."
 
 #: pyanaconda/modules/storage/platform.py:230
-#, fuzzy
-#| msgid ""
-#| "You must include at least one MBR-formatted disk as an install target."
 msgid "You must include at least one disk as an install target."
-msgstr ""
-"Jako cíl instalace musíte uvést alespoň jeden disk naformátovaný jako MBR."
+msgstr "Jako cíl instalace je třeba uvést alespoň jeden disk."
 
 #: pyanaconda/modules/storage/platform.py:240
 msgid "DASD"
@@ -1568,42 +1510,38 @@ msgstr "Registrace se nezdařila."
 
 #: pyanaconda/modules/subscription/runtime.py:334
 msgid "Unregistration failed."
-msgstr ""
+msgstr "Zrušení registrace se nezdařilo."
 
 #: pyanaconda/modules/subscription/runtime.py:374
 msgid "Failed to attach subscription."
-msgstr ""
+msgstr "Selhalo připojení subscription."
 
 #: pyanaconda/modules/subscription/runtime.py:441
 msgid "product name unknown"
-msgstr ""
+msgstr "neznámý název produktu"
 
 #: pyanaconda/modules/subscription/runtime.py:448
 #: pyanaconda/modules/subscription/runtime.py:455
 #: pyanaconda/modules/subscription/runtime.py:468
 #: pyanaconda/modules/subscription/runtime.py:476
 msgid "unknown"
-msgstr ""
+msgstr "neznámé"
 
 #: pyanaconda/modules/subscription/runtime.py:461
-#, fuzzy
-#| msgid "Unavailable"
 msgid "not available"
-msgstr "Nedostupné"
+msgstr "není dostupné"
 
 #: pyanaconda/modules/payloads/source/harddrive/harddrive.py:95
 msgid "The --biospart parameter of harddrive command is not supported!"
-msgstr ""
+msgstr "Parametr --biospart příkazu pevného disku není podporován!"
 
 #: pyanaconda/modules/payloads/source/cdn/cdn.py:47
 msgid "Red Hat CDN"
-msgstr ""
+msgstr "Red Hat CDN"
 
 #: pyanaconda/modules/payloads/source/nfs/nfs.py:73
-#, fuzzy
-#| msgid "NFS server %s"
 msgid "NFS server {}"
-msgstr "NFS server %s"
+msgstr "NFS server {}"
 
 #: pyanaconda/modules/payloads/source/cdrom/cdrom.py:57
 msgid "Local media"
@@ -1611,7 +1549,7 @@ msgstr "Místní média"
 
 #: pyanaconda/modules/payloads/source/live_os/live_os.py:59
 msgid "Live OS"
-msgstr ""
+msgstr "Živý OS"
 
 #: pyanaconda/modules/payloads/source/closest_mirror/closest_mirror.py:45
 #: pyanaconda/ui/tui/spokes/installation_source.py:132
@@ -1620,10 +1558,8 @@ msgid "Closest mirror"
 msgstr "Nejbližší zrcadlo"
 
 #: pyanaconda/modules/payloads/source/repo_files/repo_files.py:54
-#, fuzzy
-#| msgid "Additional repositories"
 msgid "Local repositories"
-msgstr "Přídavné repozitáře"
+msgstr "Místní repozitáře"
 
 #: pyanaconda/modules/payloads/source/hmc/hmc.py:53
 msgid "Local media via SE/HMC"
@@ -1639,18 +1575,14 @@ msgstr ""
 "na tomto počítači je k dispozici jen %(total_ram)s MB.\n"
 
 #: pyanaconda/startup_utils.py:79
-#, fuzzy, python-format
-#| msgid ""
-#| "The %(product_name)s graphical installer requires %(needed_ram)s MB of "
-#| "memory, but you only have %(total_ram)s MB\n"
-#| "."
+#, python-format
 msgid ""
 "The %(product_name)s graphical installer requires %(needed_ram)s MB of "
 "memory, but you only have %(total_ram)s MB.\n"
 msgstr ""
-"%(product_name)s vyžaduje pro svou instalaci %(needed_ram)s MB paměti, ale "
-"na tomto počítači je k dispozici jen %(total_ram)s MB.\n"
-"."
+"%(product_name)s potřebuje pro svůj grafický instalátor %(needed_ram)s MB "
+"operační paměti, ale na tomto počítači je k dispozici pouze %(total_ram)s MB."
+"\n"
 
 #: pyanaconda/startup_utils.py:82
 msgid ""
@@ -1971,10 +1903,8 @@ msgid " IPv6 Address: %(addr)s/%(prefix)d\n"
 msgstr "IPv6 adresa: %(addr)s/%(prefix)d\n"
 
 #: pyanaconda/ui/tui/spokes/network.py:312
-#, fuzzy
-#| msgid "Testing layouts configuration not available."
 msgid "Network configuration is not available."
-msgstr "Testovací konfigurace rozložení není dostupná."
+msgstr "Nastavení sítě není k dispozici."
 
 #: pyanaconda/ui/tui/spokes/network.py:318
 #, python-format
@@ -2568,7 +2498,6 @@ msgstr ""
 "ale možná budete chtít upravit nastavení kernelu."
 
 #: pyanaconda/ui/gui/hubs/summary.py:107
-#, fuzzy
 msgctxt "GUI|Summary|Warning Dialog"
 msgid "_OK"
 msgstr "_OK"
@@ -2670,19 +2599,19 @@ msgstr "Nepřipojeno k Red Hat Insights"
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1036
 msgid "No subscriptions are attached to the system"
-msgstr ""
+msgstr "Žádné subscriptions nejsou připojeny k systému"
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1038
 msgid "1 subscription attached to the system"
-msgstr ""
+msgstr "1 subscription je připojena k systému"
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1040
 msgid "{} subscriptions attached to the system"
-msgstr ""
+msgstr "{} subscriptions je připojeno k systému"
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1081
 msgid "Please enable network access before connecting to Red Hat."
-msgstr ""
+msgstr "Před připojením k Red Hatu prosím povolte přístup k síti."
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:68
 msgid "Setting up installation source..."
@@ -2890,16 +2819,12 @@ msgid "No disks assigned"
 msgstr "Nepřiřazeny žádné disky"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:759
-#, fuzzy
-#| msgctxt "GUI|Custom Partitioning|Devices"
-#| msgid " and %d other"
-#| msgid_plural " and %d others"
 msgctxt "GUI|Custom Partitioning|Devices"
 msgid " and {} other"
 msgid_plural " and {} others"
-msgstr[0] "a %d další"
-msgstr[1] "a %d další"
-msgstr[2] "a %d dalších"
+msgstr[0] " a {} další"
+msgstr[1] " a {} další"
+msgstr[2] " a {} dalších"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:803
 msgid "The container is encrypted."
@@ -2918,54 +2843,40 @@ msgid "This file system may not be resized."
 msgstr "Tento souborový systém nepodporuje změnu velikosti."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:930
-#, fuzzy
-#| msgid ""
-#| "Error checking storage configuration.  <a href=\"\">Click for details</a> "
-#| "or press Done again to continue."
 msgid ""
 "Error checking storage configuration. <a href=\"\">Click for details</a> or "
 "press Done again to continue."
 msgstr ""
-"Chyba při kontrole nastavení úložiště. <a href=\"\">Klikněte pro více "
-"informací</a> nebo klikněte znovu na Hotovo pro pokračování."
+"Chyba při kontrole uspořádání úložiště. <a href=\"\">Podrobnosti obdržíte "
+"kliknutím sem</a> nebo pokračujte dalším kliknutím na Hotovo."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:934
-#, fuzzy
-#| msgid ""
-#| "Warning checking storage configuration.  <a href=\"\">Click for details</"
-#| "a> or press Done again to continue."
 msgid ""
 "Warning checking storage configuration. <a href=\"\">Click for details</a> "
 "or press Done again to continue."
 msgstr ""
-"Chyba při kontrole nastavení úložiště. <a href=\"\">Klikněte pro více "
-"informací</a> nebo klikněte znovu na Hotovo pro pokračování."
+"Varování při kontrole uspořádání úložiště. <a href=\"\">Podrobnosti obdržíte "
+"kliknutím sem</a> nebo pokračujte dalším kliknutím na Hotovo."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1018
 msgid "Failed to add new device."
-msgstr ""
+msgstr "Přidání nového zařízení se nezdařilo."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1076
-#, fuzzy
-#| msgid "Device reconfiguration failed."
 msgid "Device removal request failed."
-msgstr "Rekonfigurace zařízení byla neúspěšná."
+msgstr "Odebrání zařízení se nezdařilo."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1210
 msgid "No disks selected. Keeping previous disk set."
 msgstr "Nebyly vybrány žádné disky. Zachování předchozí skupiny disků."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1289
-#, fuzzy
-#| msgid "(%s free)"
 msgid "({} free)"
-msgstr "(%s volný)"
+msgstr "({} volné)"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1470
-#, fuzzy
-#| msgid "Automatic partitioning selected"
 msgid "Automatic partitioning failed."
-msgstr "Vybráno automatické rozdělení"
+msgstr "Automatické rozdělení skončilo chybou."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1770
 #: pyanaconda/ui/gui/spokes/blivet_gui.py:320
@@ -2989,25 +2900,19 @@ msgid "_Preserve current selections"
 msgstr "_Zachovat provedené volby"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1864
-#, fuzzy
-#| msgid "%s cannot be on an encrypted block device."
 msgid "Failed to unlock encrypted block device."
-msgstr "%s nemůže být na šifrovaném zařízení."
+msgstr "Odemčení šifrovaného blokového zařízení se nezdařilo."
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.py:158
-#, fuzzy, python-format
-#| msgid ""
-#| "The following nodes were discovered using the iSCSI initiator <b>"
-#| "%(initiatorName)s</b> using the target IP address <b>%(targetAddress)s</"
-#| "b>.  Please select which nodes you wish to log into:"
+#, python-format
 msgid ""
 "The following nodes were discovered using the iSCSI initiator <b>"
 "%(initiatorName)s</b> using the portal IP address <b>%(portalAddress)s</b>.  "
 "Please select which nodes you wish to log into:"
 msgstr ""
-"Následující uzly byly nalezeny při vyhledávání iniciátoru iSCSI <b>"
-"%(initiatorName)s</b> za použití cílové IP adresy <b>%(targetAddress)s</b>. "
-"Prosím vyberte uzel na který se chcete přihlásit:"
+"Prostřednictvím iSCSI iniciátoru <b>%(initiatorName)s</b> a IP adresy "
+"portálu <b>%(portalAddress)s</b> byly nalezeny následující uzly. Vyberte, ke "
+"kterým z nich se chcete přihlásit:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.py:82
 msgctxt "GUI|Advanced Storage|NVDIM"
@@ -3024,16 +2929,12 @@ msgid "_Installation Destination"
 msgstr "Cíl _instalace"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.py:627
-#, fuzzy
-#| msgctxt "GUI|Installation Destination|Filter"
-#| msgid "%d _storage device selected"
-#| msgid_plural "%d _storage devices selected"
 msgctxt "GUI|Installation Destination|Filter"
 msgid "{} _storage device selected"
 msgid_plural "{} _storage devices selected"
-msgstr[0] "%d _zařízení pro ukládání dat vybráno"
-msgstr[1] "%d _zařízení pro ukládání dat vybrána"
-msgstr[2] "%d _zařízení pro ukládání dat vybráno"
+msgstr[0] "vybráno jedno _zařízení pro ukládání dat"
+msgstr[1] "vybrána {} _zařízení pro ukládání dat"
+msgstr[2] "vybráno {} _zařízení pro ukládání dat"
 
 #: pyanaconda/ui/gui/spokes/user.py:67
 msgid "Invalid group name."
@@ -3227,10 +3128,8 @@ msgid "_Root Password"
 msgstr "_Heslo správce"
 
 #: pyanaconda/ui/gui/spokes/root_password.py:130
-#, fuzzy
-#| msgid "Root password is not set"
 msgid "Root password has been set."
-msgstr "Heslo správce není nastaveno"
+msgstr "Heslo správce (root) bylo nastaveno."
 
 #: pyanaconda/ui/gui/spokes/root_password.py:179
 msgid "Disabled, set password to enable."
@@ -3255,44 +3154,32 @@ msgstr ""
 "Použití tohoto produktu je podmíněno licenční smlouvou, již lze nalézt na %s"
 
 #: pyanaconda/ui/gui/spokes/installation_progress.py:144
-#, fuzzy
-#| msgctxt "GUI|Progress"
-#| msgid "_Reboot"
 msgctxt "GUI|Progress"
 msgid "_Reboot System"
-msgstr "_Restartovat"
+msgstr "_Restartovat systém"
 
 #: pyanaconda/ui/gui/spokes/installation_progress.py:146
-#, fuzzy
-#| msgctxt "GUI|Summary"
-#| msgid "_Begin Installation"
 msgctxt "GUI|Progress"
 msgid "_Finish Installation"
-msgstr "_Spustit instalaci"
+msgstr "_Dokončit instalaci"
 
 #: pyanaconda/ui/gui/spokes/installation_progress.py:154
-#, fuzzy, python-format
-#| msgid ""
-#| "%s is now successfully installed and ready for you to use!\n"
-#| "Go ahead and reboot to start using it!"
+#, python-format
 msgid ""
 "%s is now successfully installed and ready for you to use!\n"
 "Go ahead and reboot your system to start using it!"
 msgstr ""
-"%s je nyní úspěšně nainstalována na vašem systému a připravena k použití!\n"
-"Jen dál! Restartujte počítač a začněte ji používat."
+"Systém %s je nyní úspěšně nainstalován a připraven k použití!\n"
+"Pokračujte restartováním počítače a začněte ho používat."
 
 #: pyanaconda/ui/gui/spokes/installation_progress.py:159
-#, fuzzy, python-format
-#| msgid ""
-#| "%s is now successfully installed and ready for you to use!\n"
-#| "Go ahead and reboot to start using it!"
+#, python-format
 msgid ""
 "%s is now successfully installed and ready for you to use!\n"
 "Go ahead and quit the application to start using it!"
 msgstr ""
-"%s je nyní úspěšně nainstalována na vašem systému a připravena k použití!\n"
-"Jen dál! Restartujte počítač a začněte ji používat."
+"Systém %s je nyní úspěšně nainstalován a připraven k použití!\n"
+"Pokračuje ukončením aplikace a začněte ho používat."
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:64
 msgctxt "GUI|Spoke"
@@ -3469,10 +3356,8 @@ msgid "NVDIMM device {namespace}"
 msgstr "NVDIMM zařízení {namespace}"
 
 #: pyanaconda/ui/gui/spokes/storage.py:608
-#, fuzzy
-#| msgid "%s free"
 msgid "{} free"
-msgstr "volné místo %s"
+msgstr "{} volné"
 
 #: pyanaconda/ui/gui/spokes/storage.py:710
 msgid ""
@@ -3662,12 +3547,9 @@ msgid "Do _not show this dialog for other selected file systems."
 msgstr "_Nezobrazovat tento dialog pro ostatní vybrané souborové systémy."
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:338
-#, fuzzy
-#| msgctxt "GUI|Custom Partitioning|Confirm Delete Dialog"
-#| msgid "Delete _all file systems which are only used by %s."
 msgctxt "GUI|Custom Partitioning|Confirm Delete Dialog"
 msgid "Delete _all file systems which are only used by {}."
-msgstr "Smazat _všechny souborové systémy, které jsou použity pouze %s."
+msgstr "Sm_azat všechny souborové systémy, které jsou použity pouze {}."
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:359
 msgid ""
@@ -3894,7 +3776,7 @@ msgstr "NASTAVENÍ UŽIVATELŮ"
 
 #: pyanaconda/ui/lib/subscription.py:249
 msgid "Registration failed due to insufficient credentials."
-msgstr ""
+msgstr "Registrace selhala z důvodu nedostatečných pověření."
 
 #: pyanaconda/ui/lib/format_dasd.py:107
 msgid "Nothing to format"
@@ -3909,55 +3791,36 @@ msgid "Probing storage"
 msgstr "Zkoumání úložných zařízení"
 
 #: pyanaconda/ui/lib/space.py:103
-#, fuzzy
-#| msgid ""
-#| "Not enough space in file systems for the current software selection. An "
-#| "additional %s is needed."
 msgid ""
 "Not enough space in file systems for the current software selection. An "
 "additional {} is needed."
 msgstr ""
-"Nedostatek prostoru v souborových systémech na současný výběr programů. Je "
-"potřeba ještě %s."
+"Nedostatek místa na souborových systémech pro stávající výběr programů. Je "
+"zapotřebí ještě dalších {}."
 
 #: pyanaconda/ui/lib/space.py:106
-#, fuzzy
-#| msgid ""
-#| "Not enough space in file systems for the current software selection. An "
-#| "additional %s is needed."
 msgid "Not enough space in file systems for the current software selection."
-msgstr ""
-"Nedostatek prostoru v souborových systémech na současný výběr programů. Je "
-"potřeba ještě %s."
+msgstr "Nedostatek místa na souborových systémech pro stávající výběr programů."
 
 #: pyanaconda/ui/lib/storage.py:209
-#, fuzzy, python-brace-format
-#| msgid "%(count)d disk selected; %(capacity)s capacity; %(free)s free"
-#| msgid_plural ""
-#| "%(count)d disks selected; %(capacity)s capacity; %(free)s free"
+#, python-brace-format
 msgid "{count} disk selected; {capacity} capacity; {free} free"
 msgid_plural "{count} disks selected; {capacity} capacity; {free} free"
-msgstr[0] "označen %(count)d disk; kapacita %(capacity)s; volné místo %(free)s"
-msgstr[1] ""
-"označeno %(count)d disků; kapacita %(capacity)s; volné místo %(free)s"
-msgstr[2] ""
-"označeno %(count)d disků; kapacita %(capacity)s; volné místo %(free)s"
+msgstr[0] "{count} vybraná jednotka; kapacita {capacity}; {free} volného místa"
+msgstr[1] "{count} vybrané jednotky; kapacita {capacity}; {free} volného místa"
+msgstr[2] "{count} vybraných jednotek; kapacita {capacity}; {free} volného místa"
 
 #: pyanaconda/ui/lib/storage.py:283
 msgid "Saving storage configuration..."
 msgstr "Ukládání konfigurace úložišť..."
 
 #: pyanaconda/ui/lib/storage.py:288
-#, fuzzy
-#| msgid "Failed to save storage configuration..."
 msgid "Failed to save storage configuration"
-msgstr "Ukládání konfigurace úložiště se nezdařilo..."
+msgstr "Uložení uspořádání úložiště se nezdařilo"
 
 #: pyanaconda/ui/lib/storage.py:293
-#, fuzzy
-#| msgid "Failed to save storage configuration..."
 msgid "Failed to save boot loader configuration"
-msgstr "Ukládání konfigurace úložiště se nezdařilo..."
+msgstr "Uložení uspořádání zavaděče systému se nezdařilo"
 
 #: pyanaconda/ui/lib/storage.py:297
 msgid "Checking storage configuration..."
@@ -3965,11 +3828,11 @@ msgstr "Kontrola konfigurace úložiště..."
 
 #: pyanaconda/core/kickstart/addon.py:128
 msgid "Missing name of the %addon section."
-msgstr ""
+msgstr "Chybí název sekce %addon"
 
 #: pyanaconda/core/kickstart/addon.py:138
 msgid "Unknown name of the %addon section."
-msgstr ""
+msgstr "Neznámý název sekce %addon."
 
 #: pyanaconda/core/users.py:66
 #, python-format
@@ -4116,16 +3979,12 @@ msgid "Do you really want to quit?"
 msgstr "Opravdu chcete skončit?"
 
 #: pyanaconda/core/constants.py:156
-#, fuzzy
-#| msgid ""
-#| "Support for this hardware has been removed in this major release. Please "
-#| "check the removed functionality section of the release notes."
 msgid ""
 "Support for this hardware has been removed in this major OS release. Please "
 "check theremoved functionality section of the release notes."
 msgstr ""
-"Podpora pro tento hardware byla odebrána v tomto hlavním vydání. Viz sekce "
-"odebraných funkcionalit v poznámkách k vydání."
+"Podpora pro tento hardware byla v tomto hlavním vydání operačního systému "
+"odebrána. Viz sekce odebraných funkcí v poznámkách k vydání."
 
 #: pyanaconda/core/constants.py:161
 msgid ""
@@ -4379,7 +4238,7 @@ msgstr "Jméno počítače musí být dlouhé nejvýše 255 znaků."
 
 #: pyanaconda/network.py:116
 msgid "Local host name must not end with period '.'."
-msgstr ""
+msgstr "Místní název stroje nemůže končit na „.“ (tečka)"
 
 #: pyanaconda/network.py:119
 msgid ""
@@ -4392,10 +4251,8 @@ msgstr ""
 "'-'."
 
 #: pyanaconda/network.py:465
-#, fuzzy
-#| msgid "Unavailable"
 msgid "Status not available"
-msgstr "Nedostupné"
+msgstr "Stav není k dispozici"
 
 #: pyanaconda/network.py:470
 msgid "Connecting..."
@@ -4590,10 +4447,9 @@ msgid "A %(command)s with the name %(policyName)s has already been defined."
 msgstr "Příkaz %(command)s s názvem %(policyName)s je již definován."
 
 #: pyanaconda/payload/flatpak.py:205
-#, fuzzy, python-format
-#| msgid "Installing software"
+#, python-format
 msgid "Installing %(flatpak_name)s"
-msgstr "Instalace software"
+msgstr "Instalace %(flatpak_name)s"
 
 #: pyanaconda/payload/rpmostreepayload.py:133
 #, python-format
@@ -4625,22 +4481,16 @@ msgid "Deployment complete: %s"
 msgstr "Nasazení dokončeno: %s"
 
 #: pyanaconda/payload/rpmostreepayload.py:510
-#, fuzzy
-#| msgid "Starting package installation process"
 msgid "Starting Flatpak installation"
-msgstr "Spouštění procesu instalace balíků"
+msgstr "Spouštění instalace Flatpak balíčků"
 
 #: pyanaconda/payload/rpmostreepayload.py:527
-#, fuzzy
-#| msgid "Performing post-installation setup tasks"
 msgid "Post-installation flatpak tasks"
-msgstr "Provádění poinstalačních úkonů"
+msgstr "Provádění poinstalačních úkonů u flatpak balíčků"
 
 #: pyanaconda/payload/rpmostreepayload.py:533
-#, fuzzy
-#| msgid "Starting package installation process"
 msgid "Flatpak installation has finished"
-msgstr "Spouštění procesu instalace balíků"
+msgstr "Instalace Flatpak balíčků byla dokončena"
 
 #: pyanaconda/payload/live/download_progress.py:57
 #: pyanaconda/payload/live/download_progress.py:66
@@ -5572,11 +5422,11 @@ msgstr "O minutu méně"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:733
 msgid "AM/PM Up"
-msgstr "odp./dop."
+msgstr "odp./dop. předchozí"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:769
 msgid "AM/PM Down"
-msgstr "odp./dop."
+msgstr "odp./dop. následující"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:820
 msgctxt "GUI|Date and Time"
@@ -5627,11 +5477,11 @@ msgstr ""
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:184
 msgid "Lock root account"
-msgstr ""
+msgstr "Uzamknout účet uživatele root"
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:200
 msgid "Allow root SSH login with password"
-msgstr ""
+msgstr "Povolit přihlášení účtem root přes SSH za použití hesla"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:29
 msgctxt "GUI|Software Source|ISO Chooser Dialog"
@@ -5790,21 +5640,16 @@ msgstr "Aktualizace"
 #: pyanaconda/ui/gui/spokes/installation_source.glade:922
 msgctxt "GUI|Software Source"
 msgid "Install the _latest available software updates"
-msgstr ""
+msgstr "Nainsta_lovat nejnovější dostupné aktualizace softwaru"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:939
-#, fuzzy
-#| msgctxt "GUI|Software Source"
-#| msgid ""
-#| "Don't install the latest available software _updates. Install the default "
-#| "versions provided by the installation source above."
 msgctxt "GUI|Software Source"
 msgid ""
 "Install the _default versions provided by the installation source (above) "
 "only"
 msgstr ""
-"Vynechat instalaci nejnovějších akt_ualizací softwaru. Nainstalovat výchozí "
-"verze balíčků poskytované výše uvedeným instalačním zdrojem."
+"Nainstalovat pouze _výchozí verze, které poskytuje (výše uvedený) zdroj "
+"instalace"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:967
 msgid "Additional repositories"
@@ -6075,16 +5920,12 @@ msgid "Node login failed."
 msgstr "Přihlášení k uzlu selhalo."
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:1084
-#, fuzzy
-#| msgid ""
-#| "The following error occurred logging into the selected iSCSI node.  "
-#| "Please double check your authorization information and try again"
 msgid ""
 "The following error occurred logging into the selected iSCSI node.  Please "
 "double check your authorization information and try again."
 msgstr ""
-"Následující chyba nastala při prihlašování k uzlu iSCSI. Prosím zkontrolujte "
-"pečlivě autentizační informace a zkuste to znovu."
+"Při přihlašování se k iSCSI uzlu došlo k následující chybě.  Pečlivě "
+"překontrolujte přihlašovací údaje a zkuste to znovu."
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:1108
 msgctxt "GUI|Advanced Storage|iSCSI|Login|Retry"
@@ -6290,10 +6131,8 @@ msgstr "Přidaný DASD disk lze nalézt v \"Lokálních standardních discích.\
 
 #: pyanaconda/ui/gui/spokes/installation_progress.glade:8
 #: pyanaconda/ui/gui/spokes/installation_progress.glade:164
-#, fuzzy
-#| msgid "INSTALLATION SOURCE"
 msgid "INSTALLATION PROGRESS"
-msgstr "ZDROJ INSTALACE"
+msgstr "PRŮBĚH INSTALACE"
 
 #: pyanaconda/ui/gui/spokes/installation_progress.glade:75
 msgid "Preparing to install"
@@ -6841,33 +6680,33 @@ msgstr "Možnosti rozložení"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:8
 msgid "CONNECT TO RED HAT"
-msgstr ""
+msgstr "PŘIPOJENÍ K RED HATU"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:100
 msgctxt "GUI|Subscription|Authentication|Account"
 msgid "_Account"
-msgstr ""
+msgstr "_Účet"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:117
 msgctxt "GUI|Subscription|Authetication|Activation Key"
 msgid "Activation _Key"
-msgstr ""
+msgstr "Aktivační _klíč"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:227
 msgid "Organization"
-msgstr ""
+msgstr "Organizace"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:239
 msgid "Activation Key"
-msgstr ""
+msgstr "Aktivační klíč"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:263
 msgid "key1,key2,..."
-msgstr ""
+msgstr "klíč1,klíč2,..."
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:284
 msgid "Purpose"
-msgstr ""
+msgstr "Účel"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:310
 msgid "Usage"
@@ -6879,76 +6718,76 @@ msgstr "Role"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:334
 msgid "SLA"
-msgstr ""
+msgstr "SLA"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:384
 msgctxt "GUI|Subscription|Set System Purpose"
 msgid "Set System Purpose"
-msgstr ""
+msgstr "Nastavit účel systému"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:401
 #: pyanaconda/ui/gui/spokes/subscription.glade:851
 msgid "Insights"
-msgstr ""
+msgstr "Insights"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:414
 msgctxt "GUI|Subscription|Red Hat Insights"
 msgid "Connect to Red Hat _Insights"
-msgstr ""
+msgstr "Připojit k Red Hat _Insights"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:455
 msgid "Custom base URL"
-msgstr ""
+msgstr "Vlastní základní adresa URL"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:503
 msgid "Custom server URL"
-msgstr ""
+msgstr "Vlastní adresa URL serveru"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:517
 msgid "Use HTTP proxy"
-msgstr ""
+msgstr "Použít HTTP proxy"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:544
 msgid "Location"
-msgstr ""
+msgstr "Umístění"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:580
 msgid "hostname:port"
-msgstr ""
+msgstr "hostitel:port"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:649
 msgid "Options"
-msgstr ""
+msgstr "Volby"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:672
 msgid "The system is currently not registered."
-msgstr ""
+msgstr "Tento systém není aktuálně registrován."
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:685
 msgctxt "GUI|Subscription|Register"
 msgid "_Register"
-msgstr ""
+msgstr "_Registrovat"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:731
 msgid "The system has been properly subscribed"
-msgstr ""
+msgstr "Systém byl úspěšně zaregistrován"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:745
 msgctxt "GUI|Subscription|Unregister"
 msgid "_Unregister"
-msgstr ""
+msgstr "_Zrušit registraci"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:781
 msgid "Method"
-msgstr ""
+msgstr "Metoda"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:798
 msgid "System Purpose"
-msgstr ""
+msgstr "Účel systému"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:913
 msgid "No subscriptions have been attached to the system"
-msgstr ""
+msgstr "Žádné subscriptions nebyly připojeny k systému"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:988
 msgid "SYSTEM PURPOSE"
@@ -7275,9 +7114,6 @@ msgid "_Name:"
 msgstr "_Název:"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:795
-#, fuzzy
-#| msgctxt "GUI|Custom Partitioning|Configure"
-#| msgid "LUKS Version:"
 msgid "LUKS Version:"
 msgstr "Verze LUKS:"
 
@@ -7362,7 +7198,7 @@ msgstr "Zařízení"
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:24
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:77
 msgid "SELECTED DISKS AND BOOT LOADER"
-msgstr ""
+msgstr "VYBRANÉ JEDNOTKY A ZAVADĚČ SYSTÉMU"
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:43
 msgctxt "GUI|Selected Disks Dialog"
@@ -7371,7 +7207,7 @@ msgstr "_Zavřít"
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:94
 msgid "Selected disks"
-msgstr ""
+msgstr "Vybrané jednotky"
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:123
 msgid "Boot"
@@ -7384,7 +7220,7 @@ msgstr "_Odebrat"
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:249
 msgid "Secure Boot"
-msgstr ""
+msgstr "Secure Boot"
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:265
 msgid ""
@@ -7393,18 +7229,22 @@ msgid ""
 "supported on IBM z14 and earlier models, therefore choose to disable it if "
 "you intend to boot the installed system on such models."
 msgstr ""
+"Firmware ověří integritu Linux kernelu během zavádění systému v případě, že "
+"je Secure Boot povolen a nastaven na tomto počítači. Secure Boot není "
+"podporován na IBM z14 a dřívějších modelech, proto vyberte jeho zakázání, "
+"pokud máte v úmyslu zavádění nainstalovaného systému na těchto modelech."
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:283
 msgid "Enabled if supported by the installing machine"
-msgstr ""
+msgstr "Povolen, pokud je podporován instalovaným počítačem"
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:284
 msgid "Enabled unconditionally"
-msgstr ""
+msgstr "Povolen bezpodmínečně"
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:285
 msgid "Disabled"
-msgstr ""
+msgstr "Zakázán"
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:306
 msgid "Disk summary goes here"
@@ -7424,10 +7264,8 @@ msgstr "Instalovat Live CD na pevný disk"
 
 #. TRANSLATORS: Icon name, probably should not be translated
 #: data/liveinst/liveinst.desktop:11
-#, fuzzy
-#| msgid "Anaconda Installer"
 msgid "org.fedoraproject.AnacondaInstaller"
-msgstr "Instalátor Anaconda"
+msgstr ""
 
 #: data/liveinst/gnome/rhel-welcome.desktop:3
 #: data/liveinst/gnome/rhel-welcome.js:62
