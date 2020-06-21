@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2020-06-15 16:57+0200\n"
-"PO-Revision-Date: 2020-06-18 13:40+0000\n"
+"PO-Revision-Date: 2020-06-25 00:40+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://translate.fedoraproject.org/projects/anaconda/"
 "rhel-8/he/>\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 4.0.4\n"
+"X-Generator: Weblate 4.1.1\n"
 
 #: anaconda.py:382
 msgid "Unable to create PID file"
@@ -46,10 +46,9 @@ msgid "Executing %s addon"
 msgstr "מפעיל תוסף %s"
 
 #: pyanaconda/addons.py:113
-#, fuzzy, python-format
-#| msgid "Executing %s addon"
+#, python-format
 msgid "Setting up %s addon"
-msgstr "מפעיל תוסף %s"
+msgstr "התוספת %s מוגדרת"
 
 #: pyanaconda/input_checking.py:539
 msgid "Full name cannot contain colon characters"
@@ -127,7 +126,7 @@ msgstr "מבצע משימות הכנה לאחר התקנה"
 
 #: pyanaconda/installation.py:363
 msgid "Creating snapshots"
-msgstr ""
+msgstr "נוצרות תמונות מצב"
 
 #: pyanaconda/display.py:291
 msgid "Graphical installation is not available. Starting text mode."
@@ -154,10 +153,8 @@ msgstr ""
 "installation or continue with a text mode installation?"
 
 #: pyanaconda/errors.py:112
-#, fuzzy
-#| msgid "Error checking storage configuration"
 msgid "An error occurred while activating your storage configuration."
-msgstr "שגיאה בבדיקת הגדרות תצורת האחסון"
+msgstr "אירעה שגיאה בעת הפעלת תצורת האחסון שלך."
 
 #: pyanaconda/errors.py:119
 msgid ""
@@ -244,11 +241,11 @@ msgstr ""
 msgid ""
 "Some packages, groups or modules are broken, the installation will be "
 "aborted."
-msgstr ""
+msgstr "חלק מהחבילות, הקבוצות או המודולים פגומים, ההתקנה תבוטל."
 
 #: pyanaconda/errors.py:199
 msgid "Would you like to ignore this and continue with installation?"
-msgstr ""
+msgstr "להתעלם מזה ולהמשיך בהתקנה?"
 
 #: pyanaconda/errors.py:206
 #, python-format
@@ -259,6 +256,10 @@ msgid ""
 "\n"
 "%(exception)s"
 msgstr ""
+"לא צוין תזרים למודול בלי תזרים בררת מחדל. זאת שגיאה משמעותית ותכנית ההתקנה "
+"תבוטל. פרטי השגיאה הזאת הם:\n"
+"\n"
+"%(exception)s"
 
 #: pyanaconda/errors.py:214
 #, python-format
@@ -268,6 +269,10 @@ msgid ""
 "\n"
 "%(exception)s"
 msgstr ""
+"צוינו מספר תזרימים למודול יחיד. זו שגיאה משמעותית וההתקנה תבוטל. פרטי השגיאה "
+"הם:\n"
+"\n"
+"%(exception)s"
 
 #: pyanaconda/errors.py:222
 #, python-format
@@ -290,17 +295,12 @@ msgid ""
 msgstr "השגיאה הבאה אירעה במהלך ההתקנה.  זו שגיאה חמורה וההתקנה תסתיים."
 
 #: pyanaconda/errors.py:238
-#, fuzzy
-#| msgid ""
-#| "The following software marked for installation has errors.  This is "
-#| "likely caused by an error with\n"
-#| "your installation source."
 msgid ""
 "The following software marked for installation has errors.\n"
 "This is likely caused by an error with your installation source."
 msgstr ""
-"לתכנה הבאה שסומנה להתקנה קיימות שגיאות.  ככל הנראה הדבר נגרם כתוצאה משגיאה "
-"במקור ההתקנה."
+"בתכניות הבאות שסומנו להתקנה יש שגיאות.\n"
+"כנראה שזה קרה עקב שגיאה במקור ההתקנה שלך."
 
 #: pyanaconda/errors.py:246
 msgid ""
@@ -308,8 +308,8 @@ msgid ""
 "will not be bootable. Would you like to ignore this and continue with "
 "installation?"
 msgstr ""
-"אירעה שגיאה במהלך התקנת מנהל האתחול.  המערכת תהיה בלתי ניתנת לאתחול. האם "
-"להתעלם מכך ולהמשיך בהתקנה?"
+"אירעה שגיאה במהלך התקנת מנהל האתחול. המערכת תהיה בלתי ניתנת לאתחול. להתעלם "
+"מכך ולהמשיך בהתקנה?"
 
 #: pyanaconda/errors.py:258
 #, python-format
@@ -409,27 +409,28 @@ msgid ""
 "\tchroot %(mountpoint)s\n"
 "\n"
 msgstr ""
+"המערכת שלך עוגנה תחת %(mountpoint)s.\n"
+"\n"
+"אם ברצונך להפוך את שורש המערכת שלך לשורש המערכת הפעילה, עליך להריץ את "
+"ההפקודה:\n"
+"\n"
+"\tchroot %(mountpoint)s\n"
+"\n"
 
 #: pyanaconda/rescue.py:442
-#, fuzzy, python-brace-format
-#| msgid ""
-#| "An error occurred trying to mount some or all of your system.  Some of it "
-#| "may be mounted under %s\n"
-#| "\n"
+#, python-brace-format
 msgid ""
 "An error occurred trying to mount some or all of your system: {message}\n"
 "\n"
 "Some of it may be mounted under {path}."
 msgstr ""
-"An error occurred trying to mount some or all of your system.  Some of it "
-"may be mounted under %s\n"
+"אירעה שגיאה בעת הניסיון לעגן חלק או את כל מערכות הקבצים שלך: {message}\n"
 "\n"
+"יתכן שחלק מהן עוגנו תחת {path}."
 
 #: pyanaconda/rescue.py:454
-#, fuzzy
-#| msgid "You don't have any Linux partitions. %s\n"
 msgid "You don't have any Linux partitions.\n"
-msgstr "You don't have any Linux partitions. %s\n"
+msgstr "אין לך מחיצות לינוקס כלשהן.\n"
 
 #: pyanaconda/rescue.py:460
 msgid "Not mounting the system.\n"
@@ -446,26 +447,24 @@ msgstr "Root Selection"
 
 #: pyanaconda/rescue.py:517
 msgid "The following installations were discovered on your system."
-msgstr ""
+msgstr "ההתקנות הבאות התגלו במערכת שלך."
 
 #: pyanaconda/modules/storage/installation.py:88
-#, fuzzy
-#| msgid "An error occurred while resizing the device %s."
 msgid "An error occurred while resizing the device {}: {}"
-msgstr "אירעה שגיאה במהלך שינוי גודל ההתקן %s."
+msgstr "אירעה שגיאה במהלך שינוי גודל ההתקן {}:‏ {}"
 
 #: pyanaconda/modules/storage/installation.py:139
 msgid "Gathering entropy 100%"
-msgstr ""
+msgstr "נאספים נתוני אקראיות 100%"
 
 #: pyanaconda/modules/storage/installation.py:143
 msgid "Gathering entropy (time ran out)"
-msgstr ""
+msgstr "נאספים נתוני אקראיות (נגמר הזמן)"
 
 #: pyanaconda/modules/storage/installation.py:146
 #, python-brace-format
 msgid "Gathering entropy {percents}% (remaining time {time})"
-msgstr ""
+msgstr "נאספים נתוני אקראיות {percents}% (הזמן שנותר {time})"
 
 #: pyanaconda/modules/storage/checker/utils.py:54
 #, python-format
@@ -482,7 +481,7 @@ msgstr "יש ליצור מערכת קבצים חדשה על התקן השורש.
 #: pyanaconda/modules/storage/checker/utils.py:65
 #, python-format
 msgid "Your root partition must be on a device of type: %s."
-msgstr ""
+msgstr "מחיצת העל (root) שלך חייבת להיות על התקן מסוג: %s."
 
 #: pyanaconda/modules/storage/checker/utils.py:92
 msgid ""
@@ -499,12 +498,14 @@ msgid ""
 "The LDL DASD disk {name} ({busid}) cannot be used for the installation. "
 "Please format it."
 msgstr ""
+"לא ניתן להשתמש בכונן ההחסן בגישה ישירה בפריסת כונני לינוקס {name} ({busid}) "
+"להתקנה. נא לפרמט אותו."
 
 #: pyanaconda/modules/storage/checker/utils.py:121
 #, python-format
 msgid ""
 "It is recommended to create a new file system on your %(mount)s partition."
-msgstr ""
+msgstr "מומלץ ליצור מערכת קבצים חדשה על מחיצת %(mount)s שלך."
 
 #: pyanaconda/modules/storage/checker/utils.py:137
 #, python-format
@@ -518,7 +519,7 @@ msgstr ""
 #: pyanaconda/modules/storage/checker/utils.py:145
 #, python-format
 msgid "Your %(mount)s partition size is lower than required %(size)s."
-msgstr ""
+msgstr "גודל המחיצה שלך %(mount)s קטן מהנדרש %(size)s."
 
 #: pyanaconda/modules/storage/checker/utils.py:165
 #, python-format
@@ -526,7 +527,7 @@ msgid ""
 "Your %(mount)s partition is too small for %(format)s formatting (allowable "
 "size is %(minSize)s to %(maxSize)s)"
 msgstr ""
-"המחיצה %(mount)s קטנה מדי עבור אתחול %(format)s (גודל אפשרי  %(minSize)s עד "
+"המחיצה %(mount)s קטנה מדי עבור אתחול %(format)s (גודל אפשרי %(minSize)s עד "
 "%(maxSize)s)"
 
 #: pyanaconda/modules/storage/checker/utils.py:171
@@ -535,7 +536,7 @@ msgid ""
 "Your %(mount)s partition is too large for %(format)s formatting (allowable "
 "size is %(minSize)s to %(maxSize)s)"
 msgstr ""
-"המחיצה %(mount)s גדולה מדי עבור אתחול %(format)s (גודל אפשרי  %(minSize)s עד "
+"המחיצה %(mount)s גדולה מדי עבור אתחול %(format)s (גודל אפשרי %(minSize)s עד "
 "%(maxSize)s)"
 
 #: pyanaconda/modules/storage/checker/utils.py:189
@@ -592,7 +593,7 @@ msgstr ""
 "לפחות לאחד מהתקני ההחלפה אין מזהה ייחודי אוניברסלי (UUID), הנפוץ באזורי "
 "החלפה הנוצרים על ידי גרסאות קודמות של mkswap. להתקנים אלו ניתן לפנות על ידי "
 "נתיב התקן בתוך /etc/fstab, שאינו רצוי במיוחד משום שנתיבי ההתקנים עלולים "
-"להשתנות תחת שלל נסיבות."
+"להשתנות תחת שלל נסיבות. "
 
 #: pyanaconda/modules/storage/checker/utils.py:311
 #, python-format
@@ -603,7 +604,7 @@ msgstr "נקודת עיגון זו אינה חוקית. על התיקייה %s �
 #: pyanaconda/modules/storage/checker/utils.py:327
 #, python-format
 msgid "Your %s must be on a separate partition or LV."
-msgstr ""
+msgstr "המיפוי %s שלך חייב להיות על מחיצה או כרך לוגי נפרדים."
 
 #: pyanaconda/modules/storage/checker/utils.py:344
 #, python-format
@@ -616,6 +617,8 @@ msgid ""
 "without an encryption key specified for this device. Please, rescan the "
 "storage."
 msgstr ""
+"התקן ה־LUKS הקיים שנעילתו שוחררה {} לא יכול לשמש לטובת ההתקנה ללא ציון מפתח "
+"ההתקנה עבור ההתקן הזה. נא לסרוק את האחסון מחדש."
 
 #: pyanaconda/modules/storage/checker/utils.py:390
 #, python-format
@@ -630,6 +633,8 @@ msgid ""
 "The available memory is less than %(size)s which can be too small for LUKS2 "
 "format. It may fail."
 msgstr ""
+"הזיכרון הזמין קטן מ־%(size)s שעלולים להיות קטנים מדי עבור תצורת LUKS2. היא "
+"עלולה להיכשל."
 
 #: pyanaconda/modules/storage/checker/utils.py:439
 #, python-format
@@ -640,21 +645,12 @@ msgstr ""
 "%s מעוגנת כעת ואינה יכולה להיות בשימוש עבור ההתקנה. נא להתירה ולנסות שוב."
 
 #: pyanaconda/modules/storage/checker/utils.py:474
-#, fuzzy
-#| msgid ""
-#| "You selected disk %(selected)s, which contains devices that also use "
-#| "unselected disk %(unselected)s. You must select or de-select these disks "
-#| "as a set."
-#| msgid_plural ""
-#| "You selected disk %(selected)s, which contains devices that also use "
-#| "unselected disks %(unselected)s. You must select or de-select these disks "
-#| "as a set."
 msgid ""
 "Selected disks {} contain volume group '{}' that also uses further "
 "unselected disks. You must select or de-select all these disks as a set."
 msgstr ""
-"נבחר הכונן %(selected)s, המכיל התקנים המשמשים גם את הכונן שלא נבחר "
-"%(unselected)s. יש לבחור או לבטל את בחירתם של כוננים אלו כקבוצה."
+"הכוננים הנבחרים {} מכילים את קבוצת הכרכים ‚{}’ שמשתמשת בכוננים נוספים שלא "
+"נבחרו. יש לבחור או לבטל את בחירת כל הכוננים האלה כמקשה אחת."
 
 #: pyanaconda/modules/storage/devicetree/utils.py:68
 #, python-format
@@ -685,17 +681,14 @@ msgstr ""
 "%s"
 
 #: pyanaconda/modules/storage/devicetree/fsset.py:390
-#, fuzzy, python-brace-format
-#| msgid ""
-#| "There is an entry in your /etc/fstab file that contains an invalid or "
-#| "incorrect file system type:\n"
-#| "\n"
+#, python-brace-format
 msgid ""
 "There is an entry in your /etc/fstab file that contains an invalid or "
 "incorrect file system type. The file says that {detected_type} at "
 "{mount_point} is {fstab_type}."
 msgstr ""
-"קיימת שורה בקובץ /etc/fstab המכילה סוג מערכת קבצים לא חוקי או לא מוכר:\n"
+"קיימת שורה בקובץ ‎/etc/fstab המכילה סוג מערכת קבצים לא חוקי או לא מוכר. "
+"הקובץ טוען כי {detected_type} תחת {mount_point} הוא {fstab_type}."
 
 #: pyanaconda/modules/storage/devicetree/root.py:339
 msgid "Unknown Linux"
@@ -712,61 +705,53 @@ msgid "{product} Linux {version} for {arch}"
 msgstr "{product} לינוקס {version} עבור {arch}"
 
 #: pyanaconda/modules/storage/devicetree/viewer.py:303
-#, fuzzy, python-brace-format
-#| msgid "%(description)s (%(deviceName)s)"
+#, python-brace-format
 msgid "{device_description} ({device_name})"
-msgstr "%(description)s (%(deviceName)s)"
+msgstr "{device_description} ({device_name})"
 
 #: pyanaconda/modules/storage/devicetree/viewer.py:309
-#, fuzzy, python-brace-format
-#| msgid "%(deviceName)s on %(container)s"
+#, python-brace-format
 msgid "{device_name} on {container_name}"
-msgstr "%(deviceName)s ב־%(container)s"
+msgstr "{device_name} על גבי {container_name}"
 
 #: pyanaconda/modules/storage/kickstart.py:65
 msgid "File system type \"{}\" given in autopart command is invalid."
-msgstr ""
+msgstr "סוג מערכת הקבצים „{}” שסופק לפקודת ה־autopart שגוי."
 
 #: pyanaconda/modules/storage/kickstart.py:81
 msgid "Btrfs file system is not supported."
-msgstr ""
+msgstr "מערכת הקבצים Btrfs אינה נתמכת."
 
 #: pyanaconda/modules/storage/kickstart.py:104
 msgid ""
 "Disklabel \"{}\" given in clearpart command is not supported on this "
 "platform."
-msgstr ""
+msgstr "תווית הכונן „{}” שסופקה לפקודה clearpart אינה נתמכת בפלטפורמה זו."
 
 #: pyanaconda/modules/storage/kickstart.py:110
 msgid "Disk \"{}\" given in clearpart command does not exist."
-msgstr ""
+msgstr "הכונן „{}” שסופק לפקודה clearpart לא קיים."
 
 #: pyanaconda/modules/storage/kickstart.py:115
 msgid "Device \"{}\" given in clearpart device list does not exist."
-msgstr ""
+msgstr "ההתקן „{}” שסופק ברשימת ההתקנים של clearpart לא קיים."
 
 #: pyanaconda/modules/storage/kickstart.py:134
 #: pyanaconda/modules/storage/kickstart.py:139
 msgid "Disk \"{}\" given in ignoredisk command does not exist."
-msgstr ""
+msgstr "הכונן „{}” שסופק לפקודה ignoredisk לא קיים."
 
 #: pyanaconda/modules/storage/kickstart.py:149
-#, fuzzy
-#| msgid "NIC \"%s\" given in fcoe command does not exist."
 msgid "NIC \"{}\" given in fcoe command does not exist."
-msgstr "NIC \"%s\" given in fcoe command does not exist."
+msgstr "מתאם הרשת „{}” שסופק לפקודה fcoe לא קיים."
 
 #: pyanaconda/modules/storage/kickstart.py:174
-#, fuzzy, python-brace-format
-#| msgid ""
-#| "Network interface \"%(nic)s\" required by iSCSI \"%(iscsiTarget)s\" "
-#| "target is not up."
+#, python-brace-format
 msgid ""
 "Network interface \"{nic}\" required by iSCSI \"{iscsi_target}\" target is "
 "not up."
 msgstr ""
-"Network interface \"%(nic)s\" required by iSCSI \"%(iscsiTarget)s\" target "
-"is not up."
+"מתאם הרשת „{nic}” שנדרש על ידי יעד ה־iSCSI‏ „{iscsi_target}” אינו מוגדר."
 
 #: pyanaconda/modules/storage/kickstart.py:190
 msgid ""
@@ -778,25 +763,21 @@ msgstr ""
 
 #: pyanaconda/modules/storage/kickstart.py:228
 #: pyanaconda/modules/storage/kickstart.py:240
-#, fuzzy
-#| msgid "RAID device  \"%s\" given in raid command does not exist."
 msgid "Namespace \"{}\" given in nvdimm command was not found."
-msgstr "RAID device  \"%s\" given in raid command does not exist."
+msgstr "מרחב השם „{}” שסופק לפקודה nvdimm לא נמצא."
 
 #: pyanaconda/modules/storage/kickstart.py:245
-#, fuzzy
-#| msgid "Disk \"%s\" given in part command does not exist."
 msgid "Disk \"{}\" given in nvdimm command does not exist."
-msgstr "Disk \"%s\" given in part command does not exist."
+msgstr "הכונן „{}” שסופק לפקודה nvdimm לא קיים."
 
 #: pyanaconda/modules/storage/kickstart.py:258
 msgid ""
 "Incorrectly specified origin of the snapshot. Use format \"VolGroup/LV-name\""
-msgstr ""
+msgstr "מקור תמונת המצב לא צוין כראוי. יש להשתמש בצורה „VolGroup/LV-name”"
 
 #: pyanaconda/modules/storage/disk_selection/utils.py:36
 msgid "The selected disk {} is not recognized."
-msgstr ""
+msgstr "הכונן הנבחר {} לא מזוהה."
 
 #: pyanaconda/modules/storage/disk_selection/utils.py:46
 #, python-format
@@ -1034,41 +1015,31 @@ msgstr ""
 "extent size of \"%(extentSize)s\"."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1228
-#, fuzzy, python-format
-#| msgid ""
-#| "RAID device \"%(device)s\" has a format of \"%(format)s\", but should "
-#| "have a format of \"mdmember\"."
+#, python-format
 msgid ""
 "Btrfs partition \"%(device)s\" has a format of \"%(format)s\", but should "
 "have a format of \"btrfs\"."
 msgstr ""
-"RAID device \"%(device)s\" has a format of \"%(format)s\", but should have a "
-"format of \"mdmember\"."
+"מחיצת ה־Btrfs‏ \"%(device)s\" מפורמטת בתור „%(format)s”, אך עליה להיות "
+"מפורמטת בתור „btrfs”."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1236
-#, fuzzy, python-format
-#| msgid ""
-#| "Tried to use undefined partition \"%s\" in Volume Group specification"
+#, python-format
 msgid "Tried to use undefined partition \"%s\" in Btrfs volume specification."
-msgstr "Tried to use undefined partition \"%s\" in Volume Group specification"
+msgstr "התבצע ניסיון להשתמש במחיצה הבלתי מוגדרת „%s” במפרט כרך Btrfs."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1251
-#, fuzzy
-#| msgid ""
-#| "Volume group \"%s\" defined without any physical volumes.  Either specify "
-#| "physical volumes or use --useexisting."
 msgid ""
 "Btrfs volume defined without any member devices.  Either specify member "
 "devices or use --useexisting."
 msgstr ""
-"Volume group \"%s\" defined without any physical volumes.  Either specify "
-"physical volumes or use --useexisting."
+"כרך ה־Btrfs הוגדר ללא התקנים חברים.  יש לציין התקנים חברים או להשתמש "
+"ב־‎--useexisting."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1279
-#, fuzzy, python-format
-#| msgid "RAID volume \"%s\" specified with --useexisting does not exist."
+#, python-format
 msgid "Btrfs volume \"%s\" specified with --useexisting does not exist."
-msgstr "RAID volume \"%s\" specified with --useexisting does not exist."
+msgstr "כרך ה־Btrfs‏ „%s” שצוין דרך ‎--useexisting לא קיים."
 
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:64
 #, python-format
@@ -1079,18 +1050,17 @@ msgstr "ההקן שצוין אינו ידוע או שגוי ‚%s’"
 #, python-format
 msgid ""
 "Unknown or invalid format '%(format)s' specified for device '%(device)s'"
-msgstr ""
+msgstr "צוין סוג פרמוט לא ידוע או שגוי ‚%(format)s’ להתקן ‚%(device)s’"
 
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:79
 #, python-format
 msgid "No format on device '%s'"
-msgstr ""
+msgstr "ההתקן ‚%s’ לא פורמט"
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:213
-#, fuzzy, python-brace-format
-#| msgid "New %(name)s %(version)s Installation"
+#, python-brace-format
 msgid "New {name} {version} Installation"
-msgstr "התקנת %(name)s %(version)s חדשה"
+msgstr "התקנה חדשה של {name} {version}"
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:289
 msgid "Cannot set label on file system."
@@ -1114,10 +1084,8 @@ msgid "That mount point is invalid. Try something else?"
 msgstr "נקודת עיגון זו אינה תקפה. לנסות דבר אחר?"
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:340
-#, fuzzy
-#| msgid "Invalid container name"
 msgid "Invalid container name."
-msgstr "שם מכולה לא תקף"
+msgstr "שם המכולה שגוי."
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:343
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:595
@@ -1182,10 +1150,8 @@ msgid ""
 msgstr "להתקן %(type)s זה חסרים התקני איברים. ניתן להסירו או לבחור בהתקן אחר."
 
 #: pyanaconda/modules/storage/partitioning/automatic/utils.py:162
-#, fuzzy
-#| msgid "No usable disks selected"
 msgid "No usable disks selected."
-msgstr " לא נבחרו כוננים הניתנים לשימוש"
+msgstr "לא נבחרו כוננים שמישים."
 
 #: pyanaconda/modules/storage/partitioning/automatic/utils.py:165
 msgid "Not enough free space on selected disks."
@@ -1277,6 +1243,7 @@ msgid ""
 "Boot loader stage1 device cannot be on an iSCSI disk which is not configured "
 "in iBFT."
 msgstr ""
+"התקן שלב 1 של מנהל האתחול לא יכול להיות על כונן iSCSI שאינו מוגדר ב־iBFT."
 
 #: pyanaconda/modules/storage/bootloader/base.py:558
 #: pyanaconda/modules/storage/bootloader/base.py:672
@@ -1290,6 +1257,8 @@ msgid ""
 "%(bootloader_stage2_description)s cannot be on an iSCSI disk which is not "
 "configured in iBFT."
 msgstr ""
+"%(bootloader_stage2_description)s לא יכול להיות על כונן iSCSI שאינו מוגדר "
+"ב־iBFT."
 
 #: pyanaconda/modules/storage/bootloader/base.py:631
 #, python-format
@@ -1302,8 +1271,8 @@ msgid ""
 "%(deviceName)s may not have enough space for grub2 to embed core.img when "
 "using the %(fsType)s file system on %(deviceType)s"
 msgstr ""
-"ייתכן ול־%(deviceName)s אין מספיק מקום עבור grub2 לשילוב core.img בשימוש "
-"במערכת קבצים  %(fsType)s על גבי %(deviceType)s "
+"ייתכן של־%(deviceName)s אין מספיק מקום עבור grub2 לשילוב core.img בשימוש "
+"במערכת קבצים %(fsType)s על גבי %(deviceType)s"
 
 #: pyanaconda/modules/storage/bootloader/grub2.py:526
 #, python-format
@@ -1313,7 +1282,7 @@ msgid ""
 "could render the system unbootable."
 msgstr ""
 "התקן תכנית האתחול שלב 2 %(stage2dev)s נמצא על גבי מערך רב־כוננים, אולם התקן "
-"תכנית האתחול שלב 1  %(stage1dev)s אינו. כשל בכונן %(stage2dev)s עלול לגרום "
+"תכנית האתחול שלב 1 %(stage1dev)s אינו. כשל בכונן %(stage2dev)s עלול לגרום "
 "לכך שלא תהיה אפשרות לאתחל את המערכת."
 
 #: pyanaconda/modules/storage/bootloader/grub2.py:533
@@ -1324,8 +1293,8 @@ msgid ""
 "boot loader will only be installed to a single drive."
 msgstr ""
 "התקן תכנית האתחול שלב 2 %(stage2dev)s נמצא על גבי מערך רב־כוננים, אולם התקן "
-"תכנית האתחול שלב 1  %(stage1dev)s אינו חלק ממערך זה. תכנית האתחול שלב 1 "
-"תותקן על גבי כונן יחיד בלבד."
+"תכנית האתחול שלב 1 %(stage1dev)s אינו חלק ממערך זה. תכנית האתחול שלב 1 תותקן "
+"על גבי כונן יחיד בלבד."
 
 #: pyanaconda/modules/storage/bootloader/execution.py:185
 msgid "No match found for given boot drive \"{}\"."
@@ -1333,7 +1302,7 @@ msgstr "לא נמצאה התאמה לכונן האתחול הנבחר „{}”."
 
 #: pyanaconda/modules/storage/bootloader/execution.py:189
 msgid "More than one match found for given boot drive \"{}\"."
-msgstr "נמצאה יותר מהתאמה אחת לכונן  האתחול הנבחר „{}”."
+msgstr "נמצאה יותר מהתאמה אחת לכונן האתחול הנבחר „{}”."
 
 #: pyanaconda/modules/storage/bootloader/execution.py:193
 msgid "Requested boot drive \"{}\" doesn't exist or cannot be used."
@@ -1341,7 +1310,7 @@ msgstr "כונן האתחול המבוקש „{}” לא קיים או שלא נ
 
 #: pyanaconda/modules/storage/platform.py:52
 msgid "boot loader device"
-msgstr ""
+msgstr "התקן מנהל האתחול"
 
 #: pyanaconda/modules/storage/platform.py:54
 msgid "RAID Device"
@@ -1361,7 +1330,7 @@ msgstr "רשומת אתחול ראשית"
 msgid ""
 "You must include at least one MBR- or GPT-formatted disk as an install "
 "target."
-msgstr ""
+msgstr "עליך לכלול לפחות כונן אחד שמפורמט לפי MBR או GPT כיעד התקנה."
 
 #: pyanaconda/modules/storage/platform.py:146
 msgid "EFI System Partition"
@@ -1372,16 +1341,20 @@ msgid ""
 "For a UEFI installation, you must include an EFI System Partition on a GPT-"
 "formatted disk, mounted at /boot/efi."
 msgstr ""
+"להתקנת UEFI, עליך לכלול מחיצת מערכת EFI על כונן שמפורמט בתצורת GPT ומעוגן "
+"תחת ‎/boot/efi."
 
 #: pyanaconda/modules/storage/platform.py:166
 msgid "Apple EFI Boot Partition"
-msgstr ""
+msgstr "מחיצת אתחול EFI של Apple"
 
 #: pyanaconda/modules/storage/platform.py:169
 msgid ""
 "For a UEFI installation, you must include a Linux HFS+ ESP on a GPT-"
 "formatted disk, mounted at /boot/efi."
 msgstr ""
+"להתקנת UEFI, עליך לכלול ESP בתצורת Linux HFS+‎ על כונן שמפורמט בתצורת GPT "
+"ומעוגן תחת ‎/boot/efi."
 
 #: pyanaconda/modules/storage/platform.py:201
 msgid "PReP Boot Partition"
@@ -1392,16 +1365,19 @@ msgid ""
 "You must include a PReP Boot Partition within the first 4GiB of an MBR- or "
 "GPT-formatted disk."
 msgstr ""
+"עליך לכלול מחיצת אתחול מסוג PReP בתוך 4 הגיגה בתים הראשונים של כונן שמפורמט "
+"בתצורת MBR או GPT."
 
 #: pyanaconda/modules/storage/platform.py:215
 msgid "Apple Bootstrap Partition"
-msgstr ""
+msgstr "מחיצת Bootstrap של Apple"
 
 #: pyanaconda/modules/storage/platform.py:218
 msgid ""
 "You must include an Apple Bootstrap Partition on an Apple Partition Map-"
 "formatted disk."
 msgstr ""
+"עליך לכלול מחיצת Apple Bootstrap בכונן שמפורמט לפי מיפוי מחיצות של Apple."
 
 #: pyanaconda/modules/storage/platform.py:230
 #, fuzzy
@@ -1411,7 +1387,7 @@ msgstr "לא נבחרו כוננים; נא לבחור כונן אחד לפחות
 
 #: pyanaconda/modules/storage/platform.py:240
 msgid "DASD"
-msgstr ""
+msgstr "החסן בגישה ישירה (DASD)"
 
 #: pyanaconda/modules/storage/platform.py:242
 msgid "zFCP"
@@ -1421,16 +1397,16 @@ msgstr "zFCP"
 msgid ""
 "You must include at least one MBR- or DASD-formatted disk as an install "
 "target."
-msgstr ""
+msgstr "עליך לכלול לפחות כונן אחד בתצורת MBR או DASD כיעד התקנה."
 
 #: pyanaconda/modules/storage/platform.py:261
 msgid "You must include at least one MBR-formatted disk as an install target."
-msgstr ""
+msgstr "עליך לכלול לפחות כונן אחד בתצורת MBR כיעד התקנה."
 
 #: pyanaconda/modules/storage/snapshot/device.py:43
 #, python-format
 msgid "Snapshot: origin \"%s\" doesn't exists!"
-msgstr ""
+msgstr "תמונת מצב: המקור „%s” לא קיים!"
 
 #: pyanaconda/modules/storage/snapshot/device.py:47
 #, python-format
@@ -1512,7 +1488,7 @@ msgstr "מאגרים מקומיים"
 
 #: pyanaconda/modules/payloads/source/hmc/hmc.py:53
 msgid "Local media via SE/HMC"
-msgstr ""
+msgstr "מדיה מקומית דרך SE/HMC"
 
 #: pyanaconda/startup_utils.py:77
 #, python-format
@@ -1552,15 +1528,15 @@ msgid ""
 "\n"
 " from a root terminal."
 msgstr ""
-"ניתן לנסות תכנית התקנה במצב טקסט באמצעות הפקודה:\n"
+" ניתן לנסות תכנית התקנה במצב טקסט באמצעות הפקודה:\n"
 "\n"
-"'/usr/bin/liveinst -T'\n"
+"‎'/usr/bin/liveinst -T'‎\n"
 "\n"
-"ממסוף מנהל מערכת."
+" ממסוף מנהל מערכת."
 
 #: pyanaconda/startup_utils.py:87
 msgid " Starting text mode."
-msgstr "מתחיל מצב טקסט."
+msgstr " מצב טקסט מופעל."
 
 #: pyanaconda/startup_utils.py:124
 msgid "The installation cannot continue and the system will be rebooted"
@@ -1690,7 +1666,7 @@ msgstr "Network"
 
 #: pyanaconda/ui/tui/spokes/installation_source.py:153
 msgid "SE/HMC"
-msgstr ""
+msgstr "SE/HMC (רכיבי תמיכה/מסוף ניהול חומרה)"
 
 #: pyanaconda/ui/tui/spokes/installation_source.py:231
 #: pyanaconda/ui/tui/spokes/installation_source.py:296
@@ -2021,11 +1997,11 @@ msgstr "Progress"
 
 #: pyanaconda/ui/tui/spokes/installation_progress.py:133
 msgid "Installation complete"
-msgstr ""
+msgstr "ההתקנה הושלמה"
 
 #: pyanaconda/ui/tui/spokes/installation_progress.py:135
 msgid "Use of this product is subject to the license agreement found at:"
-msgstr ""
+msgstr "השימוש במוצר זה כפוף להסכמתך לרישיון שנמצא תחת:"
 
 #: pyanaconda/ui/tui/spokes/installation_progress.py:146
 #, python-format
@@ -2066,11 +2042,11 @@ msgstr "Base environment"
 
 #: pyanaconda/ui/tui/spokes/software_selection.py:231
 msgid "Additional software for selected environment"
-msgstr ""
+msgstr "תכנה נוספת לסביבה הנבחרת"
 
 #: pyanaconda/ui/tui/spokes/software_selection.py:233
 msgid "No additional software to select."
-msgstr ""
+msgstr "אין תכנה נוספת לבחירה."
 
 #: pyanaconda/ui/tui/spokes/unsupported_hardware.py:38
 #: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:68
@@ -2134,6 +2110,10 @@ msgid ""
 "unformatted. Unformatted DASDs cannot be used during installation.\n"
 "\n"
 msgstr ""
+"התקני ההחסן בגישה ישירה שלא פורמטו או בתצורת פריסת כונני לינוקס הבאים התגלו "
+"במערכת שלך. ניתן לבחור לפרמט אותם כעת עם dasdfmt או לבטל כדי להשאיר אותם לא "
+"מפורמטים. לא ניתן להשתמש בהחסני גישה ישירה שלא פורמטו במהלך ההתקנה.\n"
+"\n"
 
 #: pyanaconda/ui/tui/spokes/storage.py:312
 msgid ""
@@ -2153,13 +2133,15 @@ msgstr "פעולה זו עלולה לארוך זמן מה."
 
 #: pyanaconda/ui/tui/spokes/storage.py:337
 msgid "Passphrase"
-msgstr ""
+msgstr "מילת צופן"
 
 #: pyanaconda/ui/tui/spokes/storage.py:338
 msgid ""
 "Please provide a default LUKS passphrase for all devices you want to "
 "encrypt. You will have to type it twice."
 msgstr ""
+"נא לספק מילת צופן ל־LUKS כבררת מחדל עבור כל המכשירים שברצונך להצפין. יהיה "
+"עליך להקליד אותה פעמיים."
 
 #: pyanaconda/ui/tui/spokes/storage.py:423
 msgid "Partitioning Options"
@@ -2269,7 +2251,7 @@ msgstr "Reformat"
 
 #: pyanaconda/ui/tui/spokes/kernel_warning.py:35
 msgid "Warning: Processor has Simultaneous Multithreading (SMT) enabled"
-msgstr ""
+msgstr "אזהרה: ריבוי תהליכים בו־זמנית (SMT) מופעל במעבד"
 
 #: pyanaconda/ui/tui/spokes/language_support.py:51
 msgid "Language settings"
@@ -2421,6 +2403,8 @@ msgid ""
 "Warning: Processor has Simultaneous Multithreading (SMT) enabled.  <a href="
 "\"\">Click for details.</a>"
 msgstr ""
+"אזהרה: ריבוי תהליכים בו־זמנית (SMT) מופעל במעבד.  <a href=\"\">ללחוץ כאן "
+"לפרטים נוספים.</a>"
 
 #: pyanaconda/ui/gui/hubs/summary.py:99
 msgid ""
@@ -2428,6 +2412,8 @@ msgid ""
 "configuration. These are not fatal, but you may wish to make changes to your "
 "kernel config."
 msgstr ""
+"המערכת נתקלה באזהרות הבאות בעת בדיקת הגדרות תצורת הליבה. אלו אינן חמורות, אך "
+"יתכן ותעדיפו לשנות את הגדרות הליבה."
 
 #: pyanaconda/ui/gui/hubs/summary.py:107
 msgctxt "GUI|Summary|Warning Dialog"
@@ -2438,7 +2424,7 @@ msgstr "_אישור"
 msgid ""
 "Please complete items marked with this icon before continuing to the next "
 "step."
-msgstr "יש להשלים פריטים המסומנים באמצעות צלמית זו לפני המעבר לשלב הבא"
+msgstr "יש להשלים פריטים המסומנים בסימן זה לפני המעבר לשלב הבא."
 
 #: pyanaconda/ui/gui/__init__.py:416 widgets/src/BaseWindow.c:151
 msgid "Help!"
@@ -2581,7 +2567,7 @@ msgstr "מדיה זו אינה מתאימה להתקנה."
 #: pyanaconda/ui/gui/spokes/installation_source.py:409
 msgctxt "GUI|Spoke"
 msgid "_Installation Source"
-msgstr ""
+msgstr "_מקור התקנה"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:556
 msgid "Failed to set up installation source; check the repo url"
@@ -2740,22 +2726,18 @@ msgstr "לא ידוע"
 #: pyanaconda/ui/gui/spokes/custom_storage.py:597
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade:178
 msgid "Device reconfiguration failed."
-msgstr ""
+msgstr "הגדרת ההתקן מחדש נכשלה."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:745
 msgid "No disks assigned"
 msgstr "לא הוקצו כוננים"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:759
-#, fuzzy
-#| msgctxt "GUI|Custom Partitioning|Devices"
-#| msgid " and %d other"
-#| msgid_plural " and %d others"
 msgctxt "GUI|Custom Partitioning|Devices"
 msgid " and {} other"
 msgid_plural " and {} others"
-msgstr[0] "ו־%d נוסף"
-msgstr[1] "ו־%d נוספים"
+msgstr[0] " ו־{} נוסף"
+msgstr[1] " ו־{} נוספים"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:803
 msgid "The container is encrypted."
@@ -2772,32 +2754,24 @@ msgid "This file system may not be resized."
 msgstr "לא ניתן לשנות את גודל מערכת קבצים זו."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:930
-#, fuzzy
-#| msgid ""
-#| "Error checking storage configuration.  <a href=\"\">Click for details</a> "
-#| "or press Done again to continue."
 msgid ""
 "Error checking storage configuration. <a href=\"\">Click for details</a> or "
 "press Done again to continue."
 msgstr ""
-"שגיאה בבדיקת הגדרות תצורת האחסון.  <a href=\"\">יש ללחוץ לפרטים</a> או ללחוץ "
-"על בוצע שוב על מנת להמשיך."
+"אירעה שגיאה בבדיקת הגדרות האחסון. ניתן <a href=\"\">ללחוץ כאן לפרטים</a> או "
+"ללחוץ על סיום שוב כדי להמשיך."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:934
-#, fuzzy
-#| msgid ""
-#| "Warning checking storage configuration.  <a href=\"\">Click for details</"
-#| "a> or press Done again to continue."
 msgid ""
 "Warning checking storage configuration. <a href=\"\">Click for details</a> "
 "or press Done again to continue."
 msgstr ""
-"אזהרה בבדיקת הגדרות תצורת האחסון.  <a href=\"\">יש ללחוץ לפרטים</a> או ללחוץ "
-"על בוצע שוב על מנת להמשיך."
+"התגלתה אזהרה בבדיקת הגדרות האחסון. ניתן <a href=\"\">ללחוץ כאן לפרטים</a> או "
+"ללחוץ על סיום שוב כדי להמשיך."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1018
 msgid "Failed to add new device."
-msgstr ""
+msgstr "הוספת התקן חדש נכשלה."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1076
 #, fuzzy
@@ -2847,18 +2821,15 @@ msgid "Failed to unlock encrypted block device."
 msgstr "%s אינו יכול להיות על התקן בלוקים מוצפן."
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.py:158
-#, fuzzy, python-format
-#| msgid ""
-#| "The following nodes were discovered using the iSCSI initiator <b>"
-#| "%(initiatorName)s</b> using the target IP address <b>%(targetAddress)s</"
-#| "b>.  Please select which nodes you wish to log into:"
+#, python-format
 msgid ""
 "The following nodes were discovered using the iSCSI initiator <b>"
 "%(initiatorName)s</b> using the portal IP address <b>%(portalAddress)s</b>.  "
 "Please select which nodes you wish to log into:"
 msgstr ""
-"יזם iSCSI <b>%(initiatorName)s</b>  גילה את הצמתים הבאים באמצעות כתובת ה־IP "
-"של המטרה <b>%(targetAddress)s</b>.  נא לבחור לאילו צמתים להתחבר:"
+"המפרקים הבאים התגלו בעזרת מפעיל ה־iSCSI‏ <b>%(initiatorName)s</b> בעזרת "
+"כתובת ה־IP של שער הגישה <b>%(portalAddress)s</b>. נא לבחור לאילו מפרקים "
+"מעניין אותך להתחבר:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.py:82
 msgctxt "GUI|Advanced Storage|NVDIM"
@@ -2872,18 +2843,14 @@ msgstr "סריקת הכוננים מחדש הסתיימה."
 #: pyanaconda/ui/gui/spokes/advanced_storage.py:510
 msgctxt "GUI|Spoke"
 msgid "_Installation Destination"
-msgstr ""
+msgstr "_יעד התקנה"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.py:627
-#, fuzzy
-#| msgctxt "GUI|Installation Destination|Filter"
-#| msgid "%d _storage device selected"
-#| msgid_plural "%d _storage devices selected"
 msgctxt "GUI|Installation Destination|Filter"
 msgid "{} _storage device selected"
 msgid_plural "{} _storage devices selected"
-msgstr[0] "נבחר התקן א_חסון %d"
-msgstr[1] "נבחרו %d התקני א_חסון"
+msgstr[0] "התקן _אחסון נבחר"
+msgstr[1] "{} התקני _אחסון נבחרו"
 
 #: pyanaconda/ui/gui/spokes/user.py:68
 msgid "Invalid group name."
@@ -2892,7 +2859,7 @@ msgstr "שם קבוצה לא חוקי."
 #: pyanaconda/ui/gui/spokes/user.py:232
 msgctxt "GUI|Spoke"
 msgid "_User Creation"
-msgstr ""
+msgstr "י_צירת משתמש"
 
 #: pyanaconda/ui/gui/spokes/user.py:355
 msgid "The password was set by kickstart."
@@ -3056,11 +3023,11 @@ msgstr "_מפתח:"
 
 #: pyanaconda/ui/gui/spokes/network.py:1355
 msgid "User name: "
-msgstr "שם משתמש:"
+msgstr "שם משתמש: "
 
 #: pyanaconda/ui/gui/spokes/network.py:1366
 msgid "Identity: "
-msgstr "זהות:"
+msgstr "זהות: "
 
 #: pyanaconda/ui/gui/spokes/network.py:1371
 msgid "Private key password: "
@@ -3069,12 +3036,12 @@ msgstr "ססמת מפתח פרטי: "
 #: pyanaconda/ui/gui/spokes/network.py:1432
 msgctxt "GUI|Spoke"
 msgid "_Network & Host Name"
-msgstr ""
+msgstr "_רשת ושם מארח"
 
 #: pyanaconda/ui/gui/spokes/root_password.py:56
 msgctxt "GUI|Spoke"
 msgid "_Root Password"
-msgstr ""
+msgstr "ססמת מ_נהל המערכת"
 
 #: pyanaconda/ui/gui/spokes/root_password.py:130
 #, fuzzy
@@ -3101,7 +3068,7 @@ msgstr "הושלם!"
 #: pyanaconda/ui/gui/spokes/installation_progress.py:119
 #, python-format
 msgid "Use of this product is subject to the license agreement found at %s"
-msgstr ""
+msgstr "השימוש במוצר זה כפוף להסכם הרישוי שנמצא תחת %s"
 
 #: pyanaconda/ui/gui/spokes/installation_progress.py:144
 #, fuzzy
@@ -3120,33 +3087,27 @@ msgid "_Finish Installation"
 msgstr "_התחלת ההתקנה"
 
 #: pyanaconda/ui/gui/spokes/installation_progress.py:154
-#, fuzzy, python-format
-#| msgid ""
-#| "%s is now successfully installed and ready for you to use!\n"
-#| "Go ahead and reboot to start using it!"
+#, python-format
 msgid ""
 "%s is now successfully installed and ready for you to use!\n"
 "Go ahead and reboot your system to start using it!"
 msgstr ""
 "התקנת %s במערכת הסתיימה בהצלחה ומוכנה כעת לשימוש!\n"
-"יש להפעיל מחדש את המערכת על מנת להתחיל בשימוש"
+"יש להפעיל את המערכת מחדש כדי להתחיל בשימוש!"
 
 #: pyanaconda/ui/gui/spokes/installation_progress.py:159
-#, fuzzy, python-format
-#| msgid ""
-#| "%s is now successfully installed and ready for you to use!\n"
-#| "Go ahead and reboot to start using it!"
+#, python-format
 msgid ""
 "%s is now successfully installed and ready for you to use!\n"
 "Go ahead and quit the application to start using it!"
 msgstr ""
 "התקנת %s במערכת הסתיימה בהצלחה ומוכנה כעת לשימוש!\n"
-"יש להפעיל מחדש את המערכת על מנת להתחיל בשימוש"
+"יש לצאת מהיישום כדי להתחיל להשתמש בזה!"
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:64
 msgctxt "GUI|Spoke"
 msgid "_Software Selection"
-msgstr ""
+msgstr "_בחירת תכנה"
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:228
 msgid "Error checking software dependencies"
@@ -3296,25 +3257,20 @@ msgid ""
 msgstr "אזהרה בבדיקת הגדרות תצורת האחסון.  <a href=\"\">יש ללחוץ לפרטים.</a>"
 
 #: pyanaconda/ui/gui/spokes/storage.py:588
-#, fuzzy, python-brace-format
-#| msgid ""
-#| "FCP device %(hba_id)s\n"
-#| "WWPN %(wwpn)s\n"
-#| "LUN %(lun)s"
+#, python-brace-format
 msgid ""
 "FCP device {hba_id}\n"
 "WWPN {wwpn}\n"
 "LUN {lun}"
 msgstr ""
-"התקן FCP%(hba_id)s\n"
-"WWPN %(wwpn)s\n"
-"LUN %(lun)s"
+"התקן FCP‏ {hba_id}\n"
+"WWPN {wwpn}\n"
+"LUN {lun}"
 
 #: pyanaconda/ui/gui/spokes/storage.py:594
-#, fuzzy, python-brace-format
-#| msgid "NVDIMM device %(namespace)s"
+#, python-brace-format
 msgid "NVDIMM device {namespace}"
-msgstr "התקן NVDIMM %(namespace)s"
+msgstr "התקן NVDIMM‏ {namespace}"
 
 #: pyanaconda/ui/gui/spokes/storage.py:608
 #, fuzzy
@@ -3443,7 +3399,7 @@ msgstr ""
 
 #: pyanaconda/ui/gui/spokes/keyboard.py:449
 msgid "Layout switching not configured."
-msgstr " לא הוגדרה תצורת החלפת פריסה."
+msgstr "לא הוגדרה החלפת פריסות."
 
 #: pyanaconda/ui/gui/spokes/language_support.py:63
 msgctxt "GUI|Spoke"
@@ -3481,7 +3437,7 @@ msgstr "קבוצת כרכים"
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:61
 msgctxt "GUI|Custom Partitioning|Configure|Devices"
 msgid "_Volume Group:"
-msgstr "_קבוצת כרכים"
+msgstr "_קבוצת כרכים:"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:63
 msgid "Volume"
@@ -3617,7 +3573,7 @@ msgstr "ליצור נקודות עיגון חדשות על ידי לחיצה ע�
 msgid ""
 "Or, assign new mount points to existing partitions after selecting them "
 "below."
-msgstr " או, להקצות נקודות עיגון חדשות למחיצות קיימות לאחר בחירתן להלן."
+msgstr "או, להקצות נקודות עיגון חדשות למחיצות קיימות לאחר בחירתן להלן."
 
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:538
 msgctxt "GUI|Custom Partitioning|Autopart Page"
@@ -3773,14 +3729,11 @@ msgid "Not enough space in file systems for the current software selection."
 msgstr "אין מספיק מקום במערכת הקבצים עבור התוכנות שנבחרו. נדרשים %s נוספים."
 
 #: pyanaconda/ui/lib/storage.py:209
-#, fuzzy, python-brace-format
-#| msgid "%(count)d disk selected; %(capacity)s capacity; %(free)s free"
-#| msgid_plural ""
-#| "%(count)d disks selected; %(capacity)s capacity; %(free)s free"
+#, python-brace-format
 msgid "{count} disk selected; {capacity} capacity; {free} free"
 msgid_plural "{count} disks selected; {capacity} capacity; {free} free"
-msgstr[0] "כונן %(count)d נבחר; %(capacity)s קיבולת; %(free)s פנוי"
-msgstr[1] "%(count)d כוננים נבחרו; %(capacity)s קיבולת; %(free)s פנוי"
+msgstr[0] "כונן אחד נבחר; {capacity} נפח; {free} פנוי"
+msgstr[1] "{count} כוננים נבחרו; {capacity} נפח; {free} פנוי"
 
 #: pyanaconda/ui/lib/storage.py:283
 msgid "Saving storage configuration..."
@@ -3897,7 +3850,8 @@ msgid ""
 "The 'swap' area on your computer is used by the operating\n"
 "system when running low on memory."
 msgstr ""
-"'swap' (החלפה) הוא התחום במחשב בו מערכת ההפעלה משתמשת בעת מחסור בזיכרון."
+"שטח ה־‚swap’ (החלפה) הוא התחום במחשב בו מערכת ההפעלה\n"
+"משתמשת בעת מחסור בזיכרון."
 
 #: pyanaconda/core/storage.py:110
 msgid ""
@@ -3928,15 +3882,16 @@ msgid ""
 "The BIOS boot partition is required to enable booting\n"
 "from GPT-partitioned disks on BIOS hardware."
 msgstr ""
-"מחיצת אתחול BIOS נדרשת לאפשור אתחול מכוננים עם חלוקת מחיצות GPT על גבי חמרת "
-"BIOS."
+"מחיצת אתחול BIOS נדרשת לאפשור אתחול מכוננים עם\n"
+"חלוקת מחיצות GPT על גבי חומרת BIOS."
 
 #: pyanaconda/core/storage.py:118
 msgid ""
 "The PReP boot partition is required as part of the\n"
 "boot loader configuration on some PPC platforms."
 msgstr ""
-"מחיצת אתחול PReP נדרשת כחלק מהגדרות תצורת מנהל האתחול במספר פלטפורמות PPC."
+"מחיצת אתחול PReP נדרשת כחלק מהגדרות תצורת\n"
+"מנהל האתחול במספר פלטפורמות PPC."
 
 #: pyanaconda/core/constants.py:87
 msgid "Start VNC"
@@ -4390,10 +4345,9 @@ msgid "A %(command)s with the name %(policyName)s has already been defined."
 msgstr "%(command)s עם השם %(policyName)s כבר מוגדרת."
 
 #: pyanaconda/payload/flatpak.py:205
-#, fuzzy, python-format
-#| msgid "Installing software"
+#, python-format
 msgid "Installing %(flatpak_name)s"
-msgstr "מתקין תכנה"
+msgstr "%(flatpak_name)s מותקן"
 
 #: pyanaconda/payload/rpmostreepayload.py:133
 #, python-format
@@ -4890,7 +4844,7 @@ msgstr "ה_צפנה"
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:698
 msgctxt "GUI|Custom Partitioning|Configure"
 msgid "File S_ystem:"
-msgstr "מ_ערכת קבצים"
+msgstr "מ_ערכת קבצים:"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:741
 msgctxt "GUI|Custom Partitioning|Configure"
@@ -4900,7 +4854,7 @@ msgstr "את_חול מחדש"
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:796
 msgctxt "GUI|Custom Partitioning|Configure"
 msgid "_Volume Group:"
-msgstr "_קבוצת כרכים"
+msgstr "_קבוצת כרכים:"
 
 #. check_accelerators: configureButton
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:849
@@ -5308,7 +5262,7 @@ msgstr "שעה ותאריך"
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:374
 msgctxt "GUI|Date and Time"
 msgid "_Region:"
-msgstr "_אזור"
+msgstr "_אזור:"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:404
 msgid "Region"
@@ -5478,7 +5432,7 @@ msgstr "_שימוש באימות"
 #: pyanaconda/ui/gui/spokes/installation_source.glade:375
 msgctxt "GUI|Software Source|Proxy Dialog"
 msgid "User _name:"
-msgstr "_שם משתמש"
+msgstr "_שם משתמש:"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:392
 msgctxt "GUI|Software Source|Proxy Dialog"
@@ -5520,7 +5474,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/installation_source.glade:635
 msgctxt "GUI|Software Source"
 msgid "_ISO file:"
-msgstr "קובץ _ISO"
+msgstr "קו_בץ ISO:"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:663
 msgctxt "GUI|Software Source"
@@ -5551,7 +5505,7 @@ msgstr "סוג כתובת:"
 #: pyanaconda/ui/gui/spokes/installation_source.glade:830
 #: pyanaconda/ui/gui/spokes/installation_source.glade:1280
 msgid "repository URL"
-msgstr "כתובת מאגר:"
+msgstr "כתובת מאגר"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:831
 #: pyanaconda/ui/gui/spokes/installation_source.glade:1281
@@ -5668,7 +5622,7 @@ msgstr "פרוטוקול עבור כתובות מאגר."
 #: pyanaconda/ui/gui/spokes/installation_source.glade:1213
 msgctxt "GUI|Software Source"
 msgid "Pro_xy URL:"
-msgstr "כתובת מ_תווך"
+msgstr "כתובת מ_תווך:"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:1230
 msgctxt "GUI|Software Source"
@@ -6144,7 +6098,7 @@ msgid ""
 "parentheses. "
 msgstr ""
 "ניתן להזין כאן רשימה מופרדת בפסיקים של שמות קבוצות ומזהי קבוצות. קבוצות "
-"שאינן קיימות כרגע יווצרו; יש לציין את מזהה הקבוצה (GID) שלהן בסוגריים."
+"שאינן קיימות כרגע יווצרו; יש לציין את מזהה הקבוצה (GID) שלהן בסוגריים. "
 
 #: pyanaconda/ui/gui/spokes/user.glade:10
 #: pyanaconda/ui/gui/spokes/user.glade:339
@@ -7192,7 +7146,7 @@ msgstr "תכנית ההתקנה Anaconda"
 #: data/liveinst/gnome/rhel-welcome.desktop:3
 #: data/liveinst/gnome/rhel-welcome.js:62
 msgid "Welcome to Red Hat Enterprise Linux"
-msgstr ""
+msgstr "ברוך בואך ל־Red Hat Enterprise Linux"
 
 #: data/liveinst/liveinst-setup.desktop:4
 msgid "Liveinst Setup"
@@ -7200,7 +7154,7 @@ msgstr "הכנת Liveinst"
 
 #: data/liveinst/gnome/rhel-welcome.js:91
 msgid "Try RHEL"
-msgstr ""
+msgstr "התנסות ב־RHEL"
 
 #: data/liveinst/gnome/rhel-welcome.js:107
 msgid ""
