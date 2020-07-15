@@ -62,13 +62,14 @@
 # Álvaro <sincorchetes@gmail.com>, 2020. #zanata
 # Radek Vykydal <rvykydal@redhat.com>, 2020.
 # Alberto Rodriguez Sanchez <hotgalan@gmail.com>, 2020.
+# Adolfo Jayme Barrientos <fitoschido@gmail.com>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2020-07-08 15:40+0200\n"
-"PO-Revision-Date: 2020-06-25 00:40+0000\n"
-"Last-Translator: Alberto Rodriguez Sanchez <hotgalan@gmail.com>\n"
+"PO-Revision-Date: 2020-07-16 21:34+0000\n"
+"Last-Translator: Adolfo Jayme Barrientos <fitoschido@gmail.com>\n"
 "Language-Team: Spanish <https://translate.fedoraproject.org/projects/"
 "anaconda/rhel-8/es/>\n"
 "Language: es\n"
@@ -207,9 +208,7 @@ msgstr ""
 
 #: pyanaconda/errors.py:112
 msgid "An error occurred while activating your storage configuration."
-msgstr ""
-"Ha ocurrido un  error mientras se activaba su configuración de "
-"almacenamiento."
+msgstr "Se produjo un error al activar su configuración de almacenamiento."
 
 #: pyanaconda/errors.py:119
 msgid ""
@@ -841,16 +840,13 @@ msgid "NIC \"{}\" given in fcoe command does not exist."
 msgstr "El NIC \"{}\" dado en el comando fcoe no existe."
 
 #: pyanaconda/modules/storage/kickstart.py:174
-#, fuzzy, python-brace-format
-#| msgid ""
-#| "Network interface \"%(nic)s\" required by iSCSI \"%(iscsiTarget)s\" "
-#| "target is not up."
+#, python-brace-format
 msgid ""
 "Network interface \"{nic}\" required by iSCSI \"{iscsi_target}\" target is "
 "not up."
 msgstr ""
-"La interfaz de red \"%(nic)s\" requerida por el destino iSCSI "
-"\"%(iscsiTarget)s\" no está activada."
+"La interfaz de red «{nic}», requerida por el objetivo iSCSI «{iscsi_target}»"
+", no está en servicio."
 
 #: pyanaconda/modules/storage/kickstart.py:190
 msgid ""
@@ -862,16 +858,12 @@ msgstr ""
 
 #: pyanaconda/modules/storage/kickstart.py:228
 #: pyanaconda/modules/storage/kickstart.py:240
-#, fuzzy
-#| msgid "Disk \"%s\" given in nvdimm command does not exist."
 msgid "Namespace \"{}\" given in nvdimm command was not found."
-msgstr "El disco \"%s\" indicado en el comando nvdimm no existe."
+msgstr "No se encontró el espacio de nombres «{}» dado en la orden nvdimm."
 
 #: pyanaconda/modules/storage/kickstart.py:245
-#, fuzzy
-#| msgid "Disk \"%s\" given in nvdimm command does not exist."
 msgid "Disk \"{}\" given in nvdimm command does not exist."
-msgstr "El disco \"%s\" indicado en el comando nvdimm no existe."
+msgstr "No existe el disco «{}» dado en la orden nvdimm."
 
 #: pyanaconda/modules/storage/kickstart.py:258
 msgid ""
@@ -882,7 +874,7 @@ msgstr ""
 
 #: pyanaconda/modules/storage/disk_selection/utils.py:36
 msgid "The selected disk {} is not recognized."
-msgstr ""
+msgstr "No se reconoce el disco seleccionado, {}."
 
 #: pyanaconda/modules/storage/disk_selection/utils.py:46
 #, python-format
@@ -1108,7 +1100,7 @@ msgstr "logvol --noformat debe usar también la opción --name= ."
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1035
 #, python-format
 msgid "Logical volume \"%s\" given in logvol command does not exist."
-msgstr "El volúmen lógico \"%s\" dado en el comando logvol no existe."
+msgstr "No existe el volumen lógico «%s» dado en la orden logvol."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:998
 #, python-format
@@ -1129,25 +1121,20 @@ msgstr ""
 "tamaño de extensión \"%(extentSize)s\" del grupo de volúmn."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1228
-#, fuzzy, python-format
-#| msgid ""
-#| "RAID device \"%(device)s\" has a format of \"%(format)s\", but should "
-#| "have a format of \"mdmember\"."
+#, python-format
 msgid ""
 "Btrfs partition \"%(device)s\" has a format of \"%(format)s\", but should "
 "have a format of \"btrfs\"."
 msgstr ""
-"El dispositivo RAID \"%(device)s\" tiene el formato \"%(format)s\", pero "
-"debería tener el formato \"mdmember\"."
+"La partición Btrfs «%(device)s» tiene como formato «%(format)s», pero este "
+"debería ser «btrfs»."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1236
-#, fuzzy, python-format
-#| msgid ""
-#| "Tried to use undefined partition \"%s\" in Volume Group specification"
+#, python-format
 msgid "Tried to use undefined partition \"%s\" in Btrfs volume specification."
 msgstr ""
-"Se intentó usar una partición indefinida \"%s\" en la especificación de "
-"Grupo de Volúmen"
+"Se intentó utilizar la partición indefinida «%s» en la especificación de "
+"volúmenes de Btrfs."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1251
 #, fuzzy
@@ -1170,20 +1157,20 @@ msgstr "El volúmen RAID \"%s\" especiicado en --useexisting no existe."
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:64
 #, python-format
 msgid "Unknown or invalid device '%s' specified"
-msgstr "Dispositivo desconocido: '%s'"
+msgstr "Se especificó un dispositivo desconocido o no válido, «%s»"
 
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:72
 #, python-format
 msgid ""
 "Unknown or invalid format '%(format)s' specified for device '%(device)s'"
 msgstr ""
-"El formato '%(format)s' indicado para el dispositivo '%(device)s' no es "
-"válido"
+"El formato «%(format)s», especificado para el dispositivo «%(device)s», se "
+"desconoce o no es válido."
 
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:79
 #, python-format
 msgid "No format on device '%s'"
-msgstr "Falta el formato para el dispositivo '%s'"
+msgstr "El dispositivo «%s» no tiene ningún formato"
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:213
 #, fuzzy, python-brace-format
@@ -1201,7 +1188,7 @@ msgstr "El formato de la etiqueta no es permitida para el sistema de ficheros."
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:307
 msgid "That mount point is already in use. Try something else?"
-msgstr "Ese punto de montaje ya está en uso.  ¿Quiere intentar algo más?"
+msgstr "Ya se utiliza ese punto de montaje. ¿Quiere intentar algo más?"
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:310
 msgid "Please enter a valid mount point."
@@ -1300,8 +1287,8 @@ msgid ""
 "This %(type)s device is missing member devices. You can remove it or select "
 "a different device."
 msgstr ""
-"Este dispositivo %(type)s no puede ser modificado directamente. Retírelo o "
-"seleccione un dispositivo  diferente."
+"A este dispositivo %(type)s le faltan dispositivos miembros. Puede retirarlo "
+"o seleccionar uno diferente."
 
 #: pyanaconda/modules/storage/partitioning/automatic/utils.py:162
 #, fuzzy
@@ -1638,7 +1625,7 @@ msgstr ""
 
 #: pyanaconda/modules/payloads/source/cdn/cdn.py:47
 msgid "Red Hat CDN"
-msgstr "Red Hat CDN"
+msgstr "CDN de Red Hat"
 
 #: pyanaconda/modules/payloads/source/nfs/nfs.py:73
 #, fuzzy
@@ -2294,10 +2281,9 @@ msgid ""
 "unformatted. Unformatted DASDs cannot be used during installation.\n"
 "\n"
 msgstr ""
-"Se han detectado los siguientes DASD sin formato o con formato LDL en su "
-"sistema. Puede darles formato ahora con dasdfmt o cancelar para dejarlos "
-"como están.  Los DASD no se pueden utilizar sin formato durante la "
-"instalación .\n"
+"Se detectaron en el sistema los siguientes DASD sin formatear o LDL. Puede "
+"optar por formatearlos ahora con dasdfmt o cancelar para dejarlos sin "
+"formatear. No es posible utilizar DASD sin formatear en la instalación.\n"
 "\n"
 
 #: pyanaconda/ui/tui/spokes/storage.py:312
@@ -2427,12 +2413,12 @@ msgstr "Formato"
 
 #: pyanaconda/ui/tui/spokes/storage.py:831
 msgid "Invalid or unsupported format given"
-msgstr "El formato indicado no es válido"
+msgstr "Se proporcionó un formato no válido o no admitido"
 
 #: pyanaconda/ui/tui/spokes/storage.py:833
 #, python-format
 msgid "Supported formats: %s"
-msgstr "Formatos aceptados: %s"
+msgstr "Formatos admitidos: %s"
 
 #: pyanaconda/ui/tui/spokes/storage.py:850
 msgid "Reformat"
@@ -2595,8 +2581,8 @@ msgid ""
 "Warning: Processor has Simultaneous Multithreading (SMT) enabled.  <a href="
 "\"\">Click for details.</a>"
 msgstr ""
-"Advertencia: El procesador tiene habilitada la función de Multithreading "
-"simultáneo (SMT). <a href=\"\">Haga clic para más detalles.</a>"
+"Atención: el procesador tiene activados los subprocesos simultáneos (SMT). "
+"<a href=\"\">Pulse aquí para obtener detalles.</a>"
 
 #: pyanaconda/ui/gui/hubs/summary.py:99
 msgid ""
@@ -2604,9 +2590,9 @@ msgid ""
 "configuration. These are not fatal, but you may wish to make changes to your "
 "kernel config."
 msgstr ""
-"Las siguientes advertencias se encontraron al comprobar la configuración de "
-"su kernel: no son fatales, pero puede que desee realizar cambios en la "
-"configuración de su kernel."
+"Se han generado los avisos siguientes al comprobar la configuración del "
+"núcleo. No son graves, pero puede que quiera efectuar cambios en su "
+"configuración de núcleo."
 
 #: pyanaconda/ui/gui/hubs/summary.py:107
 msgctxt "GUI|Summary|Warning Dialog"
@@ -2618,8 +2604,8 @@ msgid ""
 "Please complete items marked with this icon before continuing to the next "
 "step."
 msgstr ""
-" Complete los elementos marcados con este icono antes de continuar con el "
-"siguiente paso."
+"Complete los elementos marcados con este icono antes de continuar con el "
+"próximo paso."
 
 #: pyanaconda/ui/gui/__init__.py:416 widgets/src/BaseWindow.c:151
 msgid "Help!"
@@ -3039,19 +3025,15 @@ msgid "Failed to unlock encrypted block device."
 msgstr "%s no puede estar en un dispositivo de bloques cifrado."
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.py:158
-#, fuzzy, python-format
-#| msgid ""
-#| "The following nodes were discovered using the iSCSI initiator <b>"
-#| "%(initiatorName)s</b> using the target IP address <b>%(targetAddress)s</"
-#| "b>.  Please select which nodes you wish to log into:"
+#, python-format
 msgid ""
 "The following nodes were discovered using the iSCSI initiator <b>"
 "%(initiatorName)s</b> using the portal IP address <b>%(portalAddress)s</b>.  "
 "Please select which nodes you wish to log into:"
 msgstr ""
-"Se descubrieron los siguientes nodos con el iniciador iSCSI <b>"
-"%(initiatorName)s</b> usando la dirección IP objetivo <b>%(targetAddress)s</"
-"b>. Seleccione a qué nodos quiere acceder:"
+"Se descubrieron los nodos siguientes con el iniciador iSCSI "
+"<b>%(initiatorName)s</b> a través de la dirección IP de portal "
+"<b>%(portalAddress)s</b>. Seleccione los nodos a los que quiere acceder:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.py:82
 msgctxt "GUI|Advanced Storage|NVDIM"
@@ -3424,7 +3406,7 @@ msgstr ""
 
 #: pyanaconda/ui/gui/spokes/storage.py:103
 msgid "Please wait... software metadata still loading."
-msgstr "Espere, los metadatos de software todavía se están cargando."
+msgstr "Aguarde… los metadatos de software todavía se están cargando."
 
 #: pyanaconda/ui/gui/spokes/storage.py:106
 #, python-format
@@ -3444,10 +3426,10 @@ msgid ""
 "selection</a> requires <b>%(total)s</b> of available space, including <b>"
 "%(software)s</b> for software and <b>%(swap)s</b> for swap space."
 msgstr ""
-"Tu actual <a href=\"\" title=\"%(tooltip)s\"><b>%(product)s</b> selección de "
-"software</a> requiere \n"
-"<b>%(total)s</b>  de espacio disponible, incluyendo <b>%(software)s</b> para "
-"el software y <b>%(swap)s</b> para el espacio de intercambio."
+"La <a href=\"\" title=\"%(tooltip)s\">selección de software actual de "
+"<b>%(product)s</b></a> requiere <b>%(total)s</b> de espacio libre, incluidos "
+"<b>%(software)s</b> para el software y <b>%(swap)s</b> para el área de "
+"intercambio."
 
 #: pyanaconda/ui/gui/spokes/storage.py:166
 #, python-format
@@ -3736,12 +3718,9 @@ msgid "Do _not show this dialog for other selected file systems."
 msgstr "_No pedir confirmación para otros sistemas de archivo seleccionados."
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:338
-#, fuzzy
-#| msgctxt "GUI|Custom Partitioning|Confirm Delete Dialog"
-#| msgid "Delete _all file systems which are only used by %s."
 msgctxt "GUI|Custom Partitioning|Confirm Delete Dialog"
 msgid "Delete _all file systems which are only used by {}."
-msgstr "Borrar _todos los sistemas de archivos que sólo usa %s."
+msgstr "Eliminar _todos los sistemas de archivos que utiliza solo {}."
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:359
 #, fuzzy
@@ -3848,7 +3827,7 @@ msgstr "_Pulse aquí para crearlas automáticamente."
 
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:525
 msgid "Create new mount points by clicking the '+' button."
-msgstr "Crear nuevos puntos de montaje pulsando el botón ‘+’."
+msgstr "Cree puntos de montaje nuevos con el botón «+»."
 
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:533
 msgid ""
@@ -4225,9 +4204,9 @@ msgid ""
 "more information on supported hardware, please refer to http://www.redhat."
 "com/hardware."
 msgstr ""
-"Este hardware (o una combinación del mismo) no está soportado por Red Hat.  "
-"Para mayor información sobre hardware con soporte, por favor consulte http://"
-"www.redhat.com/hardware."
+"Red Hat no admite este hardware (o combinación de hardware). Para obtener "
+"más información sobre el hardware admitido, visite http://www.redhat.com/"
+"hardware."
 
 #: pyanaconda/core/constants.py:168
 msgid ""
@@ -5873,7 +5852,7 @@ msgstr "Lista de espejos"
 #: pyanaconda/ui/gui/spokes/installation_source.glade:851
 #: pyanaconda/ui/gui/spokes/installation_source.glade:1301
 msgid "metalink"
-msgstr "metalink"
+msgstr "metaenlace"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:878
 msgctxt "GUI|Software Source"
@@ -6147,7 +6126,7 @@ msgstr "_Nombre de Usuario CHAP:"
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:811
 msgctxt "GUI|Advanced Storage|iSCSI|Login|CHAP"
 msgid "CHAP _Password:"
-msgstr "_Password CHAP:"
+msgstr "Contraseña CHA_P:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:923
 msgctxt "GUI|Advanced Storage|iSCSI|Login|Reverse CHAP"
@@ -6157,7 +6136,7 @@ msgstr "_Nombre de Usuario CHAP:"
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:937
 msgctxt "GUI|Advanced Storage|iSCSI|Login|Reverse CHAP"
 msgid "CHAP _Password:"
-msgstr "_Password CHAP:"
+msgstr "Contraseña CHA_P:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:951
 msgctxt "GUI|Advanced Storage|iSCSI|Login|Reverse CHAP"
@@ -7105,7 +7084,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:8
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:71
 msgid "RESCAN DISKS"
-msgstr "REESCANEAR DISCOS"
+msgstr "REANALIZAR DISCOS"
 
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:25
 msgctxt "GUI|Refresh Dialog|Rescan"
@@ -7535,10 +7514,8 @@ msgstr "Instalar el CD vivo en su disco duro"
 
 #. TRANSLATORS: Icon name, probably should not be translated
 #: data/liveinst/liveinst.desktop:11
-#, fuzzy
-#| msgid "Anaconda Installer"
 msgid "org.fedoraproject.AnacondaInstaller"
-msgstr "Instalador Anaconda"
+msgstr "org.fedoraproject.AnacondaInstaller"
 
 #: data/liveinst/gnome/rhel-welcome.desktop:3
 #: data/liveinst/gnome/rhel-welcome.js:62
