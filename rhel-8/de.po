@@ -46,13 +46,14 @@
 # Wolfgang Stoeggl <c72578@yahoo.de>, 2020.
 # Radek Vykydal <rvykydal@redhat.com>, 2020.
 # Matthias Kruk <matthias.kruk@miraclelinux.com>, 2020.
+# Mike FABIAN <mfabian@redhat.com>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2020-08-12 17:12+0200\n"
-"PO-Revision-Date: 2020-07-29 16:29+0000\n"
-"Last-Translator: Matthias Kruk <matthias.kruk@miraclelinux.com>\n"
+"PO-Revision-Date: 2020-08-21 10:29+0000\n"
+"Last-Translator: Mike FABIAN <mfabian@redhat.com>\n"
 "Language-Team: German <https://translate.fedoraproject.org/projects/anaconda/"
 "rhel-8/de/>\n"
 "Language: de\n"
@@ -81,10 +82,9 @@ msgid "Executing %s addon"
 msgstr "%s Addon ausführen"
 
 #: pyanaconda/addons.py:113
-#, fuzzy, python-format
-#| msgid "Executing %s addon"
+#, python-format
 msgid "Setting up %s addon"
-msgstr "%s Addon ausführen"
+msgstr "Konfiguration des Addons %s"
 
 #: pyanaconda/input_checking.py:539
 msgid "Full name cannot contain colon characters"
@@ -193,17 +193,6 @@ msgid "An error occurred while activating your storage configuration."
 msgstr "Fehler beim Überprüfen der Speichermedien-Konfiguration."
 
 #: pyanaconda/errors.py:119
-#, fuzzy
-#| msgid ""
-#| "There is a problem with your existing storage configuration: "
-#| "%(errortxt)s\n"
-#| "\n"
-#| "You must resolve this matter before the installation can proceed. There "
-#| "is a shell available for use which you can access by pressing ctrl-alt-f1 "
-#| "and then ctrl-b 2.\n"
-#| "\n"
-#| "Once you have resolved the issue you can retry the storage scan. If you "
-#| "do not fix it you will have to exit the installer."
 msgid ""
 "There is a problem with your existing storage configuration. You must "
 "resolve this matter before the installation can proceed. There is a shell "
@@ -213,11 +202,10 @@ msgid ""
 "Once you have resolved the issue you can retry the storage scan. If you do "
 "not fix it you will have to exit the installer."
 msgstr ""
-"Mit der bestehenden Speicherkonfiguration besteht ein Problem: %(errortxt)s\n"
-"\n"
-"Um mit der Installation fortzufahren, muss dies behoben werden. Dazu steht "
-"eine Shell zur Verfügung, die über die Tastenkombination ctrl-alt-f1 und "
-"dann ctrl-b 2 ausgeführt werden kann.\n"
+"Mit der bestehenden Speicherkonfiguration besteht ein Problem. Um mit der "
+"Installation fortzufahren, muss dies behoben werden. Dazu steht eine Shell "
+"zur Verfügung, die über die Tastenkombination ctrl-alt-f1 und dann ctrl-b 2 "
+"ausgeführt werden kann.\n"
 "\n"
 "Sobald das Problem behoben ist, kann der Speicher-Scan erneut ausgeführt "
 "werden. Andernfalls muss das Installationsprogramm beendet werden."
@@ -348,7 +336,6 @@ msgstr ""
 "auf. Hierbei handelt es sich um einen schwerwiegenden Fehler und die "
 "Installation wird abgebrochen. Sehen Sie nachfolgend die Details dieses "
 "Fehlers:\n"
-"\n"
 "\n"
 "%(details)s"
 
@@ -522,10 +509,8 @@ msgid "The following installations were discovered on your system."
 msgstr ""
 
 #: pyanaconda/modules/storage/installation.py:88
-#, fuzzy
-#| msgid "An error occurred while resizing the device %s."
 msgid "An error occurred while resizing the device {}: {}"
-msgstr "Beim Ändern der Größe des Geräts %s trat ein Fehler auf."
+msgstr "Fehler beim Ändern der Größe des Geräts {}: {}"
 
 #: pyanaconda/modules/storage/installation.py:139
 msgid "Gathering entropy 100%"
@@ -613,7 +598,7 @@ msgid ""
 "Your %(mount)s partition is too large for %(format)s formatting (allowable "
 "size is %(minSize)s to %(maxSize)s)"
 msgstr ""
-"Ihre  %(mount)s-Partition ist zu groß für %(format)s Formatierung (erlaubte "
+"Ihre %(mount)s-Partition ist zu groß für %(format)s Formatierung (erlaubte "
 "Größe ist %(minSize)s MB bis zu %(maxSize)s MB)"
 
 #: pyanaconda/modules/storage/checker/utils.py:189
@@ -676,7 +661,7 @@ msgstr ""
 "Mindestens ein Swap-Medium weist keine UUID auf. Dies ist normal für Swap-"
 "Bereiche, die mit älteren Versionen von mkswap erstellt wurden. Diese Geräte "
 "werden durch den Gerätepfad in /etc/fstab referenziert, was nicht ideal ist, "
-"da Gerätepfade sich aus verschiedenen Gründen ändern könnten."
+"da Gerätepfade sich aus verschiedenen Gründen ändern könnten. "
 
 #: pyanaconda/modules/storage/checker/utils.py:311
 #, python-format
@@ -736,9 +721,9 @@ msgid ""
 "Selected disks {} contain volume group '{}' that also uses further "
 "unselected disks. You must select or de-select all these disks as a set."
 msgstr ""
-"Das ausgewählte Speichermedium %(selected)s enthält das Medium "
-"%(unselected)s, welches nicht ausgewählt ist  Medien müssen gemeinsam als "
-"Set ausgewählt werden."
+"Das ausgewählte Speichermedium %(selected)s enthält das Medium %(unselected)"
+"s, welches nicht ausgewählt ist Medien müssen gemeinsam als Set ausgewählt "
+"werden."
 
 #: pyanaconda/modules/storage/devicetree/utils.py:68
 #, python-format
@@ -885,15 +870,15 @@ msgstr "Datenträger \"%s\"Nvdimm-Befehl ist nicht vorhanden."
 msgid ""
 "Incorrectly specified origin of the snapshot. Use format \"VolGroup/LV-name\""
 msgstr ""
-"Falsch angegebener Ursprung des Snapshots Verwenden Sie das Format "
-"\"VolGroup / LV-name\""
+"Falsch angegebener Ursprung des Snapshots. Verwenden Sie das Format "
+"\"VolGroup/LV-name\""
 
 #: pyanaconda/modules/storage/disk_selection/utils.py:36
 msgid "The selected disk {} is not recognized."
 msgstr ""
 
 #: pyanaconda/modules/storage/disk_selection/utils.py:46
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "You selected disk %(selected)s, which contains devices that also use "
 "unselected disk %(unselected)s. You must select or de-select these disks as "
@@ -903,10 +888,13 @@ msgid_plural ""
 "unselected disks %(unselected)s. You must select or de-select these disks as "
 "a set."
 msgstr[0] ""
-"Das ausgewählte Speichermedium %(selected)s enthält das Medium "
-"%(unselected)s, welches nicht ausgewählt ist  Medien müssen gemeinsam als "
-"Set ausgewählt werden."
+"Das ausgewählte Speichermedium %(selected)s enthält das Medium %(unselected)"
+"s, welches nicht ausgewählt ist Medien müssen gemeinsam als Set ausgewählt "
+"werden."
 msgstr[1] ""
+"Das ausgewählte Speichermedium %(selected)s enthält die Medien %(unselected)"
+"s, welche nicht ausgewählt sind Medien müssen gemeinsam als Set ausgewählt "
+"werden."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:161
 #, python-format
@@ -1010,7 +998,7 @@ msgid ""
 "format of \"mdmember\"."
 msgstr ""
 "»%(device)s«-RAID-Speichermedium hat das Format »%(format)s«, sollte "
-"hingegen das Format  »mdmember« aufweisen."
+"hingegen das Format »mdmember« aufweisen."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:598
 #, python-format
@@ -1037,7 +1025,7 @@ msgid ""
 "have a format of \"lvmpv\"."
 msgstr ""
 "Das physikalische »%(device)s«-Speichermedium hat das Format »%(format)s«, "
-"sollte hingegen das Format  »lvmpv« aufweisen."
+"sollte hingegen das Format »lvmpv« aufweisen."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:774
 #, python-format
@@ -1082,7 +1070,7 @@ msgstr "Die im volgroup-Befehl angegebene »%s«-Volume-Gruppe existiert nicht."
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:820
 #, python-format
 msgid "The volume group name \"%s\" is already in use."
-msgstr "Der Name der Volume-Gruppe  »%s ist bereits in Verwendung."
+msgstr "Der Name der Volume-Gruppe »%s ist bereits in Verwendung."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:934
 #, python-format
@@ -1103,7 +1091,7 @@ msgid ""
 "No thin pool exists with the name \"%s\". Specify thin pools before thin "
 "volumes."
 msgstr ""
-"Es existiert kein Thin-Pool mit dem Namen  »%s«. Thin-Pools müssen vor Thin-"
+"Es existiert kein Thin-Pool mit dem Namen »%s«. Thin-Pools müssen vor Thin-"
 "Volumes definiert werden."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:961
@@ -1193,10 +1181,9 @@ msgid "No format on device '%s'"
 msgstr "Kein Format auf dem Gerät%s\""
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:213
-#, fuzzy, python-brace-format
-#| msgid "New %(name)s %(version)s Installation"
+#, python-brace-format
 msgid "New {name} {version} Installation"
-msgstr "Neue %(name)s %(version)s Installation"
+msgstr "Neue {name} {version} Installation"
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:289
 msgid "Cannot set label on file system."
@@ -1213,7 +1200,7 @@ msgstr ""
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:310
 msgid "Please enter a valid mount point."
-msgstr "Bitte einen gültigen Einhängepunkt angeben"
+msgstr "Bitte einen gültigen Einhängepunkt angeben."
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:313
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:325
@@ -1354,7 +1341,7 @@ msgid ""
 "RAID sets that contain '%(desc)s' must have one of the following metadata "
 "versions: %(metadata_versions)s."
 msgstr ""
-"RAID-Sets, die '%(desc)s'  enthalten, müssen eine der folgenden Metadaten-"
+"RAID-Sets, die '%(desc)s' enthalten, müssen eine der folgenden Metadaten-"
 "Versionen haben: %(metadata_versions)s."
 
 #: pyanaconda/modules/storage/bootloader/base.py:327
@@ -1729,7 +1716,7 @@ msgid ""
 "\n"
 " from a root terminal."
 msgstr ""
-"Versuchen Sie den Textmodus-Installer auszuführen:\n"
+" Versuchen Sie den Textmodus-Installer auszuführen:\n"
 "\n"
 "'/usr/bin/liveinst -T'\n"
 "\n"
@@ -1737,7 +1724,7 @@ msgstr ""
 
 #: pyanaconda/startup_utils.py:87
 msgid " Starting text mode."
-msgstr "Text-Modus wird gestartet."
+msgstr " Text-Modus wird gestartet."
 
 #: pyanaconda/startup_utils.py:124
 msgid "The installation cannot continue and the system will be rebooted"
@@ -2156,11 +2143,11 @@ msgstr ""
 #: pyanaconda/ui/tui/spokes/askvnc.py:148
 #: pyanaconda/ui/gui/spokes/network.py:1361
 msgid "Password: "
-msgstr "Passwort:"
+msgstr "Passwort: "
 
 #: pyanaconda/ui/tui/spokes/askvnc.py:149
 msgid "Password (confirm): "
-msgstr "Passwort (Bestätigung):"
+msgstr "Passwort (Bestätigung): "
 
 #: pyanaconda/ui/tui/spokes/askvnc.py:152
 msgid "Passwords do not match!"
@@ -2253,7 +2240,7 @@ msgstr "Basisumgebung"
 
 #: pyanaconda/ui/tui/spokes/software_selection.py:231
 msgid "Additional software for selected environment"
-msgstr ""
+msgstr "Zusätzliche Software für die ausgewählte Umgebung"
 
 #: pyanaconda/ui/tui/spokes/software_selection.py:233
 msgid "No additional software to select."
@@ -2946,8 +2933,7 @@ msgid ""
 "you'll be able to view their details here."
 msgstr ""
 "Falls Sie Anschluss-Punkte für Ihre %(name)s %(version)s Installation "
-"erstellen,\n"
-"sehen Sie hier die Einzelheiten."
+"erstellen, sehen Sie hier die Einzelheiten."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:447
 #: pyanaconda/ui/gui/spokes/custom_storage.py:490
@@ -2989,16 +2975,12 @@ msgid "This file system may not be resized."
 msgstr "Das Dateisystem kann in seiner Größe nicht angepasst werden."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:927
-#, fuzzy
-#| msgid ""
-#| "Error checking storage configuration.  <a href=\"\">Click for details</a> "
-#| "or press Done again to continue."
 msgid ""
 "Error checking storage configuration. <a href=\"\">Click for details</a> or "
 "press Done again to continue."
 msgstr ""
-"Fehler beim Überprüfen der Speicherkonfiguration. <a href=\"\">Mausklick für "
-"weitere Informationen</a> oder klicken Sie erneut auf Fertig um fortzufahren."
+"Fehler beim Überprüfen der Speicherkonfiguration. <a href=\"\">Click for "
+"details</a> or press Done again to continue."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:931
 msgid ""
@@ -3265,11 +3247,11 @@ msgstr "Benutzername: "
 
 #: pyanaconda/ui/gui/spokes/network.py:1367
 msgid "Identity: "
-msgstr "Identität:"
+msgstr "Identität: "
 
 #: pyanaconda/ui/gui/spokes/network.py:1372
 msgid "Private key password: "
-msgstr "Privates Schlüsselpasswort:"
+msgstr "Privates Schlüsselpasswort: "
 
 #: pyanaconda/ui/gui/spokes/network.py:1433
 msgctxt "GUI|Spoke"
@@ -3360,10 +3342,8 @@ msgstr "Ungültige Umgebung in Kickstart definiert"
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:330
 #: pyanaconda/ui/gui/spokes/software_selection.py:335
-#, fuzzy
-#| msgid "Error checking software selection"
 msgid "Please confirm software selection"
-msgstr "Fehler beim Überprüfen der Software-Auswahl"
+msgstr "Bitte überprüfen Sie die Software-Auswahl"
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:340
 msgid "Selected environment is not valid"
@@ -3587,8 +3567,8 @@ msgid ""
 "configuration.  You can modify your storage layout or quit the installer."
 msgstr ""
 "Während der Überprüfung Ihrer Speicherkonfiguration sind folgende Fehler "
-"aufgetreten. Sie können die Speicherkonfiguration ändern\n"
-"oder das Installationsprogramm beenden."
+"aufgetreten. Sie können die Speicherkonfiguration ändern oder das "
+"Installationsprogramm beenden."
 
 #: pyanaconda/ui/gui/spokes/storage.py:1020
 msgctxt "GUI|Storage|Error Dialog"
@@ -3730,12 +3710,12 @@ msgstr "_Volume:"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:205
 msgid "container"
-msgstr "container"
+msgstr "Container"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:206
 msgctxt "GUI|Custom Partitioning|Configure|Devices"
 msgid "container"
-msgstr "container"
+msgstr "Container"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:332
 msgctxt "GUI|Custom Partitioning|Confirm Delete Dialog"
@@ -4820,14 +4800,14 @@ msgstr "VORAB-RELEASE/ TESTVERSION"
 #, c-format
 msgid "Current layout: '%s'. Click to switch to the next layout."
 msgstr ""
-"Aktuelle Tastaturbelegung:  »%s«. Klicken Sie, um zur nächsten Belegung zu "
+"Aktuelle Tastaturbelegung: »%s«. Klicken Sie, um zur nächsten Belegung zu "
 "wechseln."
 
 #: widgets/src/LayoutIndicator.c:34
 #, c-format
 msgid "Current layout: '%s'. Add more layouts to enable switching."
 msgstr ""
-"Aktuelle Tastaturbelegung:  »%s«. Mehr Belegungen hinzufügen, um  diese zu "
+"Aktuelle Tastaturbelegung: »%s«. Mehr Belegungen hinzufügen, um diese zu "
 "wechseln."
 
 #: widgets/src/MountpointSelector.c:84
@@ -6451,7 +6431,7 @@ msgstr "Beispiel:"
 
 #: pyanaconda/ui/gui/spokes/advanced_user.glade:315
 msgid "wheel, my-team (1245), project-x (29935)"
-msgstr "wheel, my-team (1245), project-x (29935)"
+msgstr "wheel, Mein-Team (1245), Projekt-X (29935)"
 
 #: pyanaconda/ui/gui/spokes/advanced_user.glade:348
 msgid "Tip:"
@@ -6465,7 +6445,7 @@ msgid ""
 msgstr ""
 "EIne CSV-Liste mit Gruppennamen und Gruppen-IDs kann hier eingefügt werden. "
 "Gruppen, die noch nicht existieren, werden erstellt; die jeweilige GID in "
-"Klammern angeben."
+"Klammern angeben. "
 
 #: pyanaconda/ui/gui/spokes/user.glade:10
 #: pyanaconda/ui/gui/spokes/user.glade:339
@@ -7576,7 +7556,7 @@ msgid ""
 "in the Activities Overview at any later time."
 msgstr ""
 "Sie können in der Aktivitäten-Übersicht zu einem beliebigen späteren "
-"Zeitpunkt »Auf Festplatte installieren«  wählen."
+"Zeitpunkt »Auf Festplatte installieren« wählen."
 
 #: data/liveinst/gnome/rhel-welcome.js:130
 msgid "Close"
