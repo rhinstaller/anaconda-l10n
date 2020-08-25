@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2020-08-12 17:12+0200\n"
+"POT-Creation-Date: 2020-08-24 12:39+0200\n"
 "PO-Revision-Date: 2020-08-21 10:29+0000\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <https://translate.fedoraproject.org/projects/"
@@ -510,17 +510,7 @@ msgstr "Вам слід створити нову файлову систему 
 msgid "Your root partition must be on a device of type: %s."
 msgstr "Кореневий розділ має перебувати на пристрої такого типу: %s."
 
-#: pyanaconda/modules/storage/checker/utils.py:92
-msgid ""
-"This platform requires /boot on a dedicated partition or logical volume. If "
-"you do not want a /boot volume, you must place / on a dedicated non-LVM "
-"partition."
-msgstr ""
-"Для цієї платформи потрібна тека /boot на окремому розділі або логічному "
-"томі. Якщо ви не бажаєте створювати том /boot, вам слід розташувати кореневу "
-"теку (/) на окремому розділі, який не є частиною LVM."
-
-#: pyanaconda/modules/storage/checker/utils.py:99
+#: pyanaconda/modules/storage/checker/utils.py:84
 #, python-brace-format
 msgid ""
 "The LDL DASD disk {name} ({busid}) cannot be used for the installation. "
@@ -529,14 +519,14 @@ msgstr ""
 "Диском DASDLDL {name} ({busid}) не можна скористатися для встановлення "
 "системи. Будь ласка, виконайте його форматування."
 
-#: pyanaconda/modules/storage/checker/utils.py:121
+#: pyanaconda/modules/storage/checker/utils.py:106
 #, python-format
 msgid ""
 "It is recommended to create a new file system on your %(mount)s partition."
 msgstr ""
 "Рекомендуємо створити нову файлову систему на вашому розділі %(mount)s."
 
-#: pyanaconda/modules/storage/checker/utils.py:137
+#: pyanaconda/modules/storage/checker/utils.py:122
 #, python-format
 msgid ""
 "Your %(mount)s partition is less than %(size)s which is lower than "
@@ -545,12 +535,12 @@ msgstr ""
 "Розмір розділу %(mount)s менший за %(size)s, що менше ніж рекомендовано для "
 "нормального встановлення %(productName)s."
 
-#: pyanaconda/modules/storage/checker/utils.py:145
+#: pyanaconda/modules/storage/checker/utils.py:130
 #, python-format
 msgid "Your %(mount)s partition size is lower than required %(size)s."
 msgstr "Розмір вашого розділу %(mount)s є меншим за обов'язкові %(size)s."
 
-#: pyanaconda/modules/storage/checker/utils.py:165
+#: pyanaconda/modules/storage/checker/utils.py:150
 #, python-format
 msgid ""
 "Your %(mount)s partition is too small for %(format)s formatting (allowable "
@@ -559,7 +549,7 @@ msgstr ""
 "Ваш розділ %(mount)s занадто малий для форматування для %(format)s (діапазон "
 "можливих розмірів: від %(minSize)s до %(maxSize)s)"
 
-#: pyanaconda/modules/storage/checker/utils.py:171
+#: pyanaconda/modules/storage/checker/utils.py:156
 #, python-format
 msgid ""
 "Your %(mount)s partition is too large for %(format)s formatting (allowable "
@@ -568,17 +558,17 @@ msgstr ""
 "Ваш розділ %(mount)s занадто великий для форматування для %(format)s "
 "(діапазон можливих розмірів: від %(minSize)s до %(maxSize)s)"
 
-#: pyanaconda/modules/storage/checker/utils.py:189
+#: pyanaconda/modules/storage/checker/utils.py:174
 msgid "No valid boot loader target device found. See below for details."
 msgstr ""
 "Не знайдено коректного пристрою призначення для завантажувача. Нижче "
 "наведено подробиці."
 
-#: pyanaconda/modules/storage/checker/utils.py:204
+#: pyanaconda/modules/storage/checker/utils.py:189
 msgid "You have not created a bootable partition."
 msgstr "Вами не створено завантажувального розділу."
 
-#: pyanaconda/modules/storage/checker/utils.py:239
+#: pyanaconda/modules/storage/checker/utils.py:224
 msgid ""
 "Your BIOS-based system needs a special partition to boot from a GPT disk "
 "label. To continue, please create a 1MiB 'biosboot' type partition."
@@ -587,7 +577,7 @@ msgstr ""
 "завантажування з мітки диска GPT. Щоб продовжити встановлення, будь ласка, "
 "створіть розділ типу «biosboot» розміром у 1 МіБ."
 
-#: pyanaconda/modules/storage/checker/utils.py:261
+#: pyanaconda/modules/storage/checker/utils.py:246
 #, python-format
 msgid ""
 "You have not specified a swap partition. %(requiredMem)s of memory is "
@@ -598,7 +588,7 @@ msgstr ""
 "без такого розділу рекомендовано %(requiredMem)s, маємо лише "
 "%(installedMem)s."
 
-#: pyanaconda/modules/storage/checker/utils.py:268
+#: pyanaconda/modules/storage/checker/utils.py:253
 #, python-format
 msgid ""
 "You have not specified a swap partition. %(requiredMem)s of memory is "
@@ -608,7 +598,7 @@ msgstr ""
 "Вами не було вказано розділу резервної пам’яті. Для продовження встановлення "
 "без такого розділу потрібно %(requiredMem)s, маємо лише %(installedMem)s."
 
-#: pyanaconda/modules/storage/checker/utils.py:274
+#: pyanaconda/modules/storage/checker/utils.py:259
 msgid ""
 "You have not specified a swap partition. Although not strictly required in "
 "all cases, it will significantly improve performance for most installations."
@@ -616,7 +606,7 @@ msgstr ""
 "Ви не вказали розділ резервної пам’яті. Хоча він не є обов'язковим для "
 "роботи, він може суттєво поліпшити швидкодію системи."
 
-#: pyanaconda/modules/storage/checker/utils.py:292
+#: pyanaconda/modules/storage/checker/utils.py:277
 msgid ""
 "At least one of your swap devices does not have a UUID, which is common in "
 "swap space created using older versions of mkswap. These devices will be "
@@ -629,7 +619,7 @@ msgstr ""
 "до пристрою у /etc/fstab, що не є ідеальним, оскільки шлях до такого "
 "пристрою може змінитися через певні обставини. "
 
-#: pyanaconda/modules/storage/checker/utils.py:311
+#: pyanaconda/modules/storage/checker/utils.py:296
 #, python-format
 msgid ""
 "This mount point is invalid. The %s directory must be on the / file system."
@@ -637,17 +627,17 @@ msgstr ""
 "Неправильна точка монтування. Каталог %s має розташовуватись у файловій "
 "системі /."
 
-#: pyanaconda/modules/storage/checker/utils.py:327
+#: pyanaconda/modules/storage/checker/utils.py:312
 #, python-format
 msgid "Your %s must be on a separate partition or LV."
 msgstr "Ваш %s має бути розташовано на окремому розділі або логічному томі."
 
-#: pyanaconda/modules/storage/checker/utils.py:344
+#: pyanaconda/modules/storage/checker/utils.py:329
 #, python-format
 msgid "The mount point %s must be on a linux file system."
 msgstr "Точка монтування \"%s\" має розташовуватись у файловій системі Linux."
 
-#: pyanaconda/modules/storage/checker/utils.py:369
+#: pyanaconda/modules/storage/checker/utils.py:354
 msgid ""
 "The existing unlocked LUKS device {} cannot be used for the installation "
 "without an encryption key specified for this device. Please, rescan the "
@@ -657,7 +647,7 @@ msgstr ""
 "встановлення без визначення ключа шифрування для цього пристрою. Будь ласка, "
 "виконайте повторне сканування сховища даних."
 
-#: pyanaconda/modules/storage/checker/utils.py:390
+#: pyanaconda/modules/storage/checker/utils.py:375
 #, python-format
 msgid ""
 "Encryption requested for LUKS device %s but no encryption key specified for "
@@ -666,7 +656,7 @@ msgstr ""
 "Надіслано запит щодо шифрування для пристрою LUKS %s, але не вказано ключа "
 "шифрування для цього пристрою."
 
-#: pyanaconda/modules/storage/checker/utils.py:412
+#: pyanaconda/modules/storage/checker/utils.py:397
 #, python-format
 msgid ""
 "The available memory is less than %(size)s which can be too small for LUKS2 "
@@ -675,7 +665,7 @@ msgstr ""
 "Обсяг доступної пам'яті не перевищує %(size)s. Цього може бути замало для "
 "формату LUKS2. Ймовірно, бажаним форматом не вдасться скористатися."
 
-#: pyanaconda/modules/storage/checker/utils.py:439
+#: pyanaconda/modules/storage/checker/utils.py:424
 #, python-format
 msgid ""
 "%s is currently mounted and cannot be used for the installation. Please "
@@ -684,7 +674,7 @@ msgstr ""
 "%s зараз змонтовано, ним не можна скористатися для встановлення. Будь ласка, "
 "скасуйте монтування цього диска, потім повторіть спробу."
 
-#: pyanaconda/modules/storage/checker/utils.py:474
+#: pyanaconda/modules/storage/checker/utils.py:459
 msgid ""
 "Selected disks {} contain volume group '{}' that also uses further "
 "unselected disks. You must select or de-select all these disks as a set."
@@ -7380,6 +7370,15 @@ msgstr "Закрити"
 #: ../data/liveinst/console.apps/liveinst.h:1
 msgid "Starting Install to Hard Drive"
 msgstr "Початок встановлення на жорсткий диск"
+
+#~ msgid ""
+#~ "This platform requires /boot on a dedicated partition or logical volume. "
+#~ "If you do not want a /boot volume, you must place / on a dedicated non-"
+#~ "LVM partition."
+#~ msgstr ""
+#~ "Для цієї платформи потрібна тека /boot на окремому розділі або логічному "
+#~ "томі. Якщо ви не бажаєте створювати том /boot, вам слід розташувати "
+#~ "кореневу теку (/) на окремому розділі, який не є частиною LVM."
 
 #~ msgid "Lock root account"
 #~ msgstr "Заблокувати обліковий запис root"

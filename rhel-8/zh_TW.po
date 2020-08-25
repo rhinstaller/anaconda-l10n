@@ -34,7 +34,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2020-08-12 17:12+0200\n"
+"POT-Creation-Date: 2020-08-24 12:39+0200\n"
 "PO-Revision-Date: 2020-07-26 13:18+0000\n"
 "Last-Translator: Yi-Jyun Pan <pan93412@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://translate.fedoraproject.org/"
@@ -496,29 +496,20 @@ msgstr "您必須在根基裝置上建立新的檔案系統。"
 msgid "Your root partition must be on a device of type: %s."
 msgstr "您的 root 分割區必須在以下類型的裝置上：%s。"
 
-#: pyanaconda/modules/storage/checker/utils.py:92
-msgid ""
-"This platform requires /boot on a dedicated partition or logical volume. If "
-"you do not want a /boot volume, you must place / on a dedicated non-LVM "
-"partition."
-msgstr ""
-"此平臺需要 /boot 有自己的獨立分割區或邏輯儲區。若您不想要有 /boot 儲區，您必"
-"須把 / 放到專用的非 LVM 分割區上。"
-
-#: pyanaconda/modules/storage/checker/utils.py:99
+#: pyanaconda/modules/storage/checker/utils.py:84
 #, python-brace-format
 msgid ""
 "The LDL DASD disk {name} ({busid}) cannot be used for the installation. "
 "Please format it."
 msgstr "此 LDL DASD 硬碟 {name} ({busid}) 不能用於安裝程序。請先格式化。"
 
-#: pyanaconda/modules/storage/checker/utils.py:121
+#: pyanaconda/modules/storage/checker/utils.py:106
 #, python-format
 msgid ""
 "It is recommended to create a new file system on your %(mount)s partition."
 msgstr "建議在 %(mount)s 分割區上建立新的檔案系統。"
 
-#: pyanaconda/modules/storage/checker/utils.py:137
+#: pyanaconda/modules/storage/checker/utils.py:122
 #, python-format
 msgid ""
 "Your %(mount)s partition is less than %(size)s which is lower than "
@@ -526,12 +517,12 @@ msgid ""
 msgstr ""
 "您的 %(mount)s 分割區小於 %(size)s，這低於正常 %(productName)s 安裝的建議值。"
 
-#: pyanaconda/modules/storage/checker/utils.py:145
+#: pyanaconda/modules/storage/checker/utils.py:130
 #, python-format
 msgid "Your %(mount)s partition size is lower than required %(size)s."
 msgstr "您的 %(mount)s 分割區大小小於所需的 %(size)s。"
 
-#: pyanaconda/modules/storage/checker/utils.py:165
+#: pyanaconda/modules/storage/checker/utils.py:150
 #, python-format
 msgid ""
 "Your %(mount)s partition is too small for %(format)s formatting (allowable "
@@ -540,7 +531,7 @@ msgstr ""
 "您的 %(mount)s 分割區太小以致於無法執行 %(format)s 格式化 (允許的大小介於 "
 "%(minSize)s MB 至 %(maxSize)s MB)"
 
-#: pyanaconda/modules/storage/checker/utils.py:171
+#: pyanaconda/modules/storage/checker/utils.py:156
 #, python-format
 msgid ""
 "Your %(mount)s partition is too large for %(format)s formatting (allowable "
@@ -549,15 +540,15 @@ msgstr ""
 "您的 %(mount)s 分割區太大以致於無法執行 %(format)s 格式化 (允許的大小介於 "
 "%(minSize)s MB 至 %(maxSize)s MB)"
 
-#: pyanaconda/modules/storage/checker/utils.py:189
+#: pyanaconda/modules/storage/checker/utils.py:174
 msgid "No valid boot loader target device found. See below for details."
 msgstr "找不到有效的開機載入器目標裝置。請查看下方得知詳情。"
 
-#: pyanaconda/modules/storage/checker/utils.py:204
+#: pyanaconda/modules/storage/checker/utils.py:189
 msgid "You have not created a bootable partition."
 msgstr "您還未建立一個可用來開機的分割區。"
 
-#: pyanaconda/modules/storage/checker/utils.py:239
+#: pyanaconda/modules/storage/checker/utils.py:224
 msgid ""
 "Your BIOS-based system needs a special partition to boot from a GPT disk "
 "label. To continue, please create a 1MiB 'biosboot' type partition."
@@ -565,7 +556,7 @@ msgstr ""
 "您的系統基於 BIOS，需要有特殊的分割區才能以 GPT 磁碟標籤模式開機。若要繼續，"
 "請建立一個 1MB 的「biosboot」類型分割區。"
 
-#: pyanaconda/modules/storage/checker/utils.py:261
+#: pyanaconda/modules/storage/checker/utils.py:246
 #, python-format
 msgid ""
 "You have not specified a swap partition. %(requiredMem)s of memory is "
@@ -575,7 +566,7 @@ msgstr ""
 "您尚未指定置換空間分割區。建議要有 %(requiredMem)s 的記憶體才能不用置換分割區"
 "就繼續安裝，但您只有 %(installedMem)s。"
 
-#: pyanaconda/modules/storage/checker/utils.py:268
+#: pyanaconda/modules/storage/checker/utils.py:253
 #, python-format
 msgid ""
 "You have not specified a swap partition. %(requiredMem)s of memory is "
@@ -585,7 +576,7 @@ msgstr ""
 "您尚未指定置換空間分割區。您需要有 %(requiredMem)s 的記憶體才能在沒有 swap 分"
 "割區的情況下繼續安裝，然而您僅有 %(installedMem)s。"
 
-#: pyanaconda/modules/storage/checker/utils.py:274
+#: pyanaconda/modules/storage/checker/utils.py:259
 msgid ""
 "You have not specified a swap partition. Although not strictly required in "
 "all cases, it will significantly improve performance for most installations."
@@ -593,7 +584,7 @@ msgstr ""
 "您尚未指定置換空間分割區。雖然並沒有強制規定一定要有，但對於大多數情況而言有"
 "的話將大幅改善安裝後的執行效能。"
 
-#: pyanaconda/modules/storage/checker/utils.py:292
+#: pyanaconda/modules/storage/checker/utils.py:277
 msgid ""
 "At least one of your swap devices does not have a UUID, which is common in "
 "swap space created using older versions of mkswap. These devices will be "
@@ -604,23 +595,23 @@ msgstr ""
 "些裝置會透過 /etc/fstab 內的裝置路徑做參照，但由於裝置路徑在許多情況下都可能"
 "會變動，因而不是理想作法。 "
 
-#: pyanaconda/modules/storage/checker/utils.py:311
+#: pyanaconda/modules/storage/checker/utils.py:296
 #, python-format
 msgid ""
 "This mount point is invalid. The %s directory must be on the / file system."
 msgstr "此掛載點無效。%s 目錄必須位於 / 檔案系統上。"
 
-#: pyanaconda/modules/storage/checker/utils.py:327
+#: pyanaconda/modules/storage/checker/utils.py:312
 #, python-format
 msgid "Your %s must be on a separate partition or LV."
 msgstr "您的 %s 必須在獨立的分割區或 LV 上。"
 
-#: pyanaconda/modules/storage/checker/utils.py:344
+#: pyanaconda/modules/storage/checker/utils.py:329
 #, python-format
 msgid "The mount point %s must be on a linux file system."
 msgstr "此掛載點 %s 必須位於 linux 檔案系統上。"
 
-#: pyanaconda/modules/storage/checker/utils.py:369
+#: pyanaconda/modules/storage/checker/utils.py:354
 msgid ""
 "The existing unlocked LUKS device {} cannot be used for the installation "
 "without an encryption key specified for this device. Please, rescan the "
@@ -629,14 +620,14 @@ msgstr ""
 "現存已解鎖 LUKS 裝置 {} 無法在沒有為此裝置指定加密金鑰的情況下使用。請重新掃"
 "描儲存區。"
 
-#: pyanaconda/modules/storage/checker/utils.py:390
+#: pyanaconda/modules/storage/checker/utils.py:375
 #, python-format
 msgid ""
 "Encryption requested for LUKS device %s but no encryption key specified for "
 "this device."
 msgstr "雖請求加密 LUKS 裝置 %s，但卻未指定加密金鑰給此裝置。"
 
-#: pyanaconda/modules/storage/checker/utils.py:412
+#: pyanaconda/modules/storage/checker/utils.py:397
 #, python-format
 msgid ""
 "The available memory is less than %(size)s which can be too small for LUKS2 "
@@ -644,14 +635,14 @@ msgid ""
 msgstr ""
 "可用記憶體大小小於 %(size)s，對於 LUKS2 格式來說可能過小。其可能發生問題。"
 
-#: pyanaconda/modules/storage/checker/utils.py:439
+#: pyanaconda/modules/storage/checker/utils.py:424
 #, python-format
 msgid ""
 "%s is currently mounted and cannot be used for the installation. Please "
 "unmount it and retry."
 msgstr "%s 目前已掛載並且無法用於安裝。請將之卸載並重試。"
 
-#: pyanaconda/modules/storage/checker/utils.py:474
+#: pyanaconda/modules/storage/checker/utils.py:459
 msgid ""
 "Selected disks {} contain volume group '{}' that also uses further "
 "unselected disks. You must select or de-select all these disks as a set."
@@ -7058,6 +7049,14 @@ msgstr "關閉"
 #: ../data/liveinst/console.apps/liveinst.h:1
 msgid "Starting Install to Hard Drive"
 msgstr "開始安裝到硬碟"
+
+#~ msgid ""
+#~ "This platform requires /boot on a dedicated partition or logical volume. "
+#~ "If you do not want a /boot volume, you must place / on a dedicated non-"
+#~ "LVM partition."
+#~ msgstr ""
+#~ "此平臺需要 /boot 有自己的獨立分割區或邏輯儲區。若您不想要有 /boot 儲區，您"
+#~ "必須把 / 放到專用的非 LVM 分割區上。"
 
 #~ msgid "Lock root account"
 #~ msgstr "鎖定 root 帳號"

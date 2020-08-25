@@ -51,7 +51,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2020-08-12 17:12+0200\n"
+"POT-Creation-Date: 2020-08-24 12:39+0200\n"
 "PO-Revision-Date: 2020-08-21 10:29+0000\n"
 "Last-Translator: Mike FABIAN <mfabian@redhat.com>\n"
 "Language-Team: German <https://translate.fedoraproject.org/projects/anaconda/"
@@ -544,17 +544,7 @@ msgstr "Auf dem Root-Medium muss ein neues Dateisystem erstellt werden."
 msgid "Your root partition must be on a device of type: %s."
 msgstr ""
 
-#: pyanaconda/modules/storage/checker/utils.py:92
-msgid ""
-"This platform requires /boot on a dedicated partition or logical volume. If "
-"you do not want a /boot volume, you must place / on a dedicated non-LVM "
-"partition."
-msgstr ""
-"Diese Plattform benötigt /boot auf einer dedizierten Partition oder auf "
-"einem logischen Medium. Falls kein /boot-Volume gewünscht wird, muss / auf "
-"einer dedizierten Nicht-LVM-Partition eingerichtet werden."
-
-#: pyanaconda/modules/storage/checker/utils.py:99
+#: pyanaconda/modules/storage/checker/utils.py:84
 #, python-brace-format
 msgid ""
 "The LDL DASD disk {name} ({busid}) cannot be used for the installation. "
@@ -563,13 +553,13 @@ msgstr ""
 "Die LDL DASD Festplatte {name} ({busid}) kann nicht für die Installation "
 "verwendet werden. Bitte formatieren Sie es."
 
-#: pyanaconda/modules/storage/checker/utils.py:121
+#: pyanaconda/modules/storage/checker/utils.py:106
 #, python-format
 msgid ""
 "It is recommended to create a new file system on your %(mount)s partition."
 msgstr ""
 
-#: pyanaconda/modules/storage/checker/utils.py:137
+#: pyanaconda/modules/storage/checker/utils.py:122
 #, python-format
 msgid ""
 "Your %(mount)s partition is less than %(size)s which is lower than "
@@ -578,12 +568,12 @@ msgstr ""
 "Ihre %(mount)s-Partition ist kleiner als %(size)s, dies ist weniger als die "
 "empfohlene Größe für eine normale %(productName)s Installation."
 
-#: pyanaconda/modules/storage/checker/utils.py:145
+#: pyanaconda/modules/storage/checker/utils.py:130
 #, python-format
 msgid "Your %(mount)s partition size is lower than required %(size)s."
 msgstr ""
 
-#: pyanaconda/modules/storage/checker/utils.py:165
+#: pyanaconda/modules/storage/checker/utils.py:150
 #, python-format
 msgid ""
 "Your %(mount)s partition is too small for %(format)s formatting (allowable "
@@ -592,7 +582,7 @@ msgstr ""
 "Ihre %(mount)s-Partition ist zu klein für %(format)s Formatierung (erlaubte "
 "Größe ist %(minSize)s MB bis zu %(maxSize)s MB)"
 
-#: pyanaconda/modules/storage/checker/utils.py:171
+#: pyanaconda/modules/storage/checker/utils.py:156
 #, python-format
 msgid ""
 "Your %(mount)s partition is too large for %(format)s formatting (allowable "
@@ -601,17 +591,17 @@ msgstr ""
 "Ihre %(mount)s-Partition ist zu groß für %(format)s Formatierung (erlaubte "
 "Größe ist %(minSize)s MB bis zu %(maxSize)s MB)"
 
-#: pyanaconda/modules/storage/checker/utils.py:189
+#: pyanaconda/modules/storage/checker/utils.py:174
 msgid "No valid boot loader target device found. See below for details."
 msgstr ""
 "Es wurde kein gültiges Bootloader-Medium gefunden. Weitere Informationen "
 "nachfolgend."
 
-#: pyanaconda/modules/storage/checker/utils.py:204
+#: pyanaconda/modules/storage/checker/utils.py:189
 msgid "You have not created a bootable partition."
 msgstr "Es wurde keine startfähige Partition erstellt."
 
-#: pyanaconda/modules/storage/checker/utils.py:239
+#: pyanaconda/modules/storage/checker/utils.py:224
 msgid ""
 "Your BIOS-based system needs a special partition to boot from a GPT disk "
 "label. To continue, please create a 1MiB 'biosboot' type partition."
@@ -620,7 +610,7 @@ msgstr ""
 "GPT-Disklabel starten zu können. Um fortfahren zu können, muss eine 1MiB "
 "'biosboot'-Partition erstellt werden."
 
-#: pyanaconda/modules/storage/checker/utils.py:261
+#: pyanaconda/modules/storage/checker/utils.py:246
 #, python-format
 msgid ""
 "You have not specified a swap partition. %(requiredMem)s of memory is "
@@ -631,7 +621,7 @@ msgstr ""
 "benötigt, um ohne Swap-Partition zu fortzufahren, es ist aber nur "
 "%(installedMem)s verfügbar."
 
-#: pyanaconda/modules/storage/checker/utils.py:268
+#: pyanaconda/modules/storage/checker/utils.py:253
 #, python-format
 msgid ""
 "You have not specified a swap partition. %(requiredMem)s of memory is "
@@ -642,7 +632,7 @@ msgstr ""
 "benötigt, um ohne Swap-Partition zu fortzufahren, es ist aber nur "
 "%(installedMem)s verfügbar."
 
-#: pyanaconda/modules/storage/checker/utils.py:274
+#: pyanaconda/modules/storage/checker/utils.py:259
 msgid ""
 "You have not specified a swap partition. Although not strictly required in "
 "all cases, it will significantly improve performance for most installations."
@@ -651,7 +641,7 @@ msgstr ""
 "vorausgesetzt wird, kann sich dadurch die Leistung für die meisten "
 "Installationen erheblich verbessern."
 
-#: pyanaconda/modules/storage/checker/utils.py:292
+#: pyanaconda/modules/storage/checker/utils.py:277
 msgid ""
 "At least one of your swap devices does not have a UUID, which is common in "
 "swap space created using older versions of mkswap. These devices will be "
@@ -663,7 +653,7 @@ msgstr ""
 "werden durch den Gerätepfad in /etc/fstab referenziert, was nicht ideal ist, "
 "da Gerätepfade sich aus verschiedenen Gründen ändern könnten. "
 
-#: pyanaconda/modules/storage/checker/utils.py:311
+#: pyanaconda/modules/storage/checker/utils.py:296
 #, python-format
 msgid ""
 "This mount point is invalid. The %s directory must be on the / file system."
@@ -671,24 +661,24 @@ msgstr ""
 "Dieser Einhängepunkt ist ungültig. Das %s-Verzeichnis muss sich auf dem / "
 "Dateisystem befinden."
 
-#: pyanaconda/modules/storage/checker/utils.py:327
+#: pyanaconda/modules/storage/checker/utils.py:312
 #, python-format
 msgid "Your %s must be on a separate partition or LV."
 msgstr ""
 
-#: pyanaconda/modules/storage/checker/utils.py:344
+#: pyanaconda/modules/storage/checker/utils.py:329
 #, python-format
 msgid "The mount point %s must be on a linux file system."
 msgstr "Der Einhängepunkt %s muss sich auf einem Linux-Dateisystem befinden."
 
-#: pyanaconda/modules/storage/checker/utils.py:369
+#: pyanaconda/modules/storage/checker/utils.py:354
 msgid ""
 "The existing unlocked LUKS device {} cannot be used for the installation "
 "without an encryption key specified for this device. Please, rescan the "
 "storage."
 msgstr ""
 
-#: pyanaconda/modules/storage/checker/utils.py:390
+#: pyanaconda/modules/storage/checker/utils.py:375
 #, python-format
 msgid ""
 "Encryption requested for LUKS device %s but no encryption key specified for "
@@ -697,7 +687,7 @@ msgstr ""
 "Verschlüsselung angefragt für LUKS-Medium %s, es wurden jedoch keine "
 "Schlüssel für dieses Medium festgelegt"
 
-#: pyanaconda/modules/storage/checker/utils.py:412
+#: pyanaconda/modules/storage/checker/utils.py:397
 #, python-format
 msgid ""
 "The available memory is less than %(size)s which can be too small for LUKS2 "
@@ -706,7 +696,7 @@ msgstr ""
 "Der verfügbare Speicher ist kleiner als %(size)s Das kann für das LUKS2-"
 "Format zu klein sein. Es kann fehlschlagen."
 
-#: pyanaconda/modules/storage/checker/utils.py:439
+#: pyanaconda/modules/storage/checker/utils.py:424
 #, python-format
 msgid ""
 "%s is currently mounted and cannot be used for the installation. Please "
@@ -715,7 +705,7 @@ msgstr ""
 "%s ist derzeit eingehängt und kann nicht für die Installation benutzt "
 "werden. Bitte aushängen und erneut versuchen."
 
-#: pyanaconda/modules/storage/checker/utils.py:474
+#: pyanaconda/modules/storage/checker/utils.py:459
 #, fuzzy
 msgid ""
 "Selected disks {} contain volume group '{}' that also uses further "
@@ -7565,6 +7555,15 @@ msgstr "Schließen"
 #: ../data/liveinst/console.apps/liveinst.h:1
 msgid "Starting Install to Hard Drive"
 msgstr "Installation auf die Festplatte wird gestartet"
+
+#~ msgid ""
+#~ "This platform requires /boot on a dedicated partition or logical volume. "
+#~ "If you do not want a /boot volume, you must place / on a dedicated non-"
+#~ "LVM partition."
+#~ msgstr ""
+#~ "Diese Plattform benötigt /boot auf einer dedizierten Partition oder auf "
+#~ "einem logischen Medium. Falls kein /boot-Volume gewünscht wird, muss / "
+#~ "auf einer dedizierten Nicht-LVM-Partition eingerichtet werden."
 
 #~ msgid "Joining realm: %s"
 #~ msgstr "Bereich beitreten: %s"
