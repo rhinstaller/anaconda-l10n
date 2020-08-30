@@ -22,7 +22,7 @@
 # Yulia <ypoyarko@redhat.com>, 2006,2008,2010
 # Yulia <yulia.poyarkova@redhat.com>, 2006,2008,2010,2012-2014
 # Yuri Khabarov <madb00blik@gmail.com>, 2011
-# Igor Gorbounov <igor.gorbounov@gmail.com>, 2015. #zanata
+# Igor Gorbounov <igor.gorbounov@gmail.com>, 2015. #zanata, 2020.
 # yuliya <ypoyarko@redhat.com>, 2015. #zanata
 # Ilyas B Arinov <arinov.ilyas@gmail.com>, 2016. #zanata
 # Terry Chuang <tchuang@redhat.com>, 2016. #zanata
@@ -32,17 +32,17 @@ msgstr ""
 "Project-Id-Version: anaconda 21.48.22.158\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2020-04-15 15:07+0200\n"
-"PO-Revision-Date: 2017-11-06 06:08-0500\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Russian (http://www.transifex.com/projects/p/anaconda/"
-"language/ru/)\n"
+"PO-Revision-Date: 2020-09-01 20:29+0000\n"
+"Last-Translator: Igor Gorbounov <igor.gorbounov@gmail.com>\n"
+"Language-Team: Russian <https://translate.fedoraproject.org/projects/"
+"anaconda/rhel-7/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Zanata 4.6.2\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.2.1\n"
 
 # translation auto-copied from project Anaconda, version master, document
 # anaconda
@@ -138,6 +138,8 @@ msgid ""
 "Boot loader stage1 device cannot be on an iSCSI disk which is not configured "
 "in iBFT."
 msgstr ""
+"Устройство для загрузчика stage1 не может находиться на диске iSCSI, не "
+"настроенном в iBFT."
 
 #: pyanaconda/bootloader.py:656 pyanaconda/bootloader.py:767
 #, python-format
@@ -150,6 +152,8 @@ msgid ""
 "%(bootloader_stage2_description)s cannot be on an iSCSI disk which is not "
 "configured in iBFT."
 msgstr ""
+"%(bootloader_stage2_description)s не может находиться на диске iSCSI, не "
+"настроенном в iBFT."
 
 # translation auto-copied from project Anaconda, version master, document
 # anaconda
@@ -212,6 +216,12 @@ msgid ""
 "red.ht/rhel-smt to understand your potential risks and learn about other "
 "ways to mitigate these risks."
 msgstr ""
+"Технология одновременной многопоточности (SMT) может обеспечить повышение "
+"производительности при определенных рабочих нагрузках, но привносит "
+"несколько известных проблем безопасности. Вы можете отключить SMT, что может "
+"повлиять на производительность. Если вы решите оставить SMT включенным, "
+"прочитайте https://red.ht/rhel-smt для понимания потенциальных рисков и "
+"чтобы узнать о других способах снижения этих рисков."
 
 #: pyanaconda/constants.py:150
 msgid ""
@@ -221,40 +231,45 @@ msgid ""
 "rhel-smt to understand potential risks and learn about ways to mitigate "
 "these risks."
 msgstr ""
+"Одновременная многопоточность (SMT) может увеличить производительность при "
+"определенных рабочих нагрузках, но привносит несколько известных проблем "
+"безопасности. Можно отключить SMT, что может повлиять на производительность. "
+"Прочитайте https://red.ht/rhel-smt для понимания потенциальных рисков и "
+"чтобы узнать о способах снижения этих рисков."
 
 #: pyanaconda/constants.py:158
 #, python-format
 msgid "The %(password)s is empty."
-msgstr ""
+msgstr "%(password)s пустой."
 
 #: pyanaconda/constants.py:159
 #, python-format
 msgid "The %(passwords)s do not match."
-msgstr ""
+msgstr "%(passwords)s не совпадают."
 
 #: pyanaconda/constants.py:160
 #, python-format
 msgid "The %(passwords)s you entered were different.  Please try again."
-msgstr ""
+msgstr "Введенные %(passwords)s различаются.  Попробуйте еще раз."
 
 #: pyanaconda/constants.py:163
 #, python-format
 msgid "The %(password)s is too short"
-msgstr ""
+msgstr "%(password)s слишком короткий"
 
 #: pyanaconda/constants.py:164
 #, python-format
 msgid "The %(password)s you have provided is weak."
-msgstr ""
+msgstr "Предложенный вами %(password)s ненадежен."
 
 #: pyanaconda/constants.py:165
 #, python-format
 msgid "The %(password)s you have provided is weak: %(error_message)s."
-msgstr ""
+msgstr "Предложенный вами %(password)s ненадежен: %(error_message)s."
 
 #: pyanaconda/constants.py:166
 msgid "Press Done again to use anyway."
-msgstr ""
+msgstr "Еще раз нажмите «Готово», чтобы все-таки использовать."
 
 #: pyanaconda/constants.py:167
 #, python-format
@@ -262,6 +277,8 @@ msgid ""
 "The %(password)s you have provided contains non-ASCII characters. You may "
 "not be able to switch between keyboard layouts when typing it."
 msgstr ""
+"%(password)s содержит символы, не входящие в набор ASCII. Функции "
+"переключения раскладки клавиатуры могут быть недоступны при его вводе."
 
 #: pyanaconda/constants.py:169
 msgid "You will have to press Done twice to confirm it."
@@ -269,7 +286,7 @@ msgstr "Для подтверждения необходимо дважды на
 
 #: pyanaconda/constants.py:170
 msgid "Press Done to continue."
-msgstr ""
+msgstr "Для продолжения нажмите «Готово»."
 
 #: pyanaconda/constants.py:173
 msgid "Empty"
@@ -277,7 +294,7 @@ msgstr "Пустой"
 
 #: pyanaconda/constants.py:174
 msgid "Too short"
-msgstr ""
+msgstr "Слишком короткий"
 
 #: pyanaconda/constants.py:175
 #: pyanaconda/ui/gui/spokes/lib/passphrase.glade.h:7
@@ -298,19 +315,19 @@ msgstr "Сложный"
 
 #: pyanaconda/constants.py:181
 msgid "password"
-msgstr ""
+msgstr "пароль"
 
 #: pyanaconda/constants.py:182
 msgid "passwords"
-msgstr ""
+msgstr "пароли"
 
 #: pyanaconda/constants.py:185
 msgid "passphrase"
-msgstr ""
+msgstr "парольная фраза"
 
 #: pyanaconda/constants.py:186
 msgid "passphrases"
-msgstr ""
+msgstr "парольные фразы"
 
 # translation auto-copied from project Anaconda, version master, document
 # anaconda
@@ -610,6 +627,16 @@ msgid ""
 "\n"
 "The installer will now terminate."
 msgstr ""
+"\n"
+"Установка была остановлена из-за ошибки, возникшей во время работы в "
+"неинтерактивном режиме командной строки. Поскольку в режиме командной строки "
+"не может быть никаких вопросов, отредактируйте файл kickstart и повторите "
+"установку.\n"
+"Точное сообщение об ошибке:\n"
+"\n"
+"%s.\n"
+"\n"
+"Установщик завершает работу."
 
 #: pyanaconda/exception.py:151
 #, python-format
@@ -661,7 +688,7 @@ msgstr "Выполняются послеустановочные скрипты
 
 #: pyanaconda/install.py:139
 msgid "Creating snapshots"
-msgstr ""
+msgstr "Создание снимков"
 
 #: pyanaconda/install.py:178
 #, python-format
@@ -919,32 +946,34 @@ msgstr "Файловая система «%s» не поддерживается
 #: pyanaconda/kickstart.py:1173
 #, python-format
 msgid "Unknown or invalid device '%s' specified"
-msgstr ""
+msgstr "Указано неизвестное или неверное устройство «%s»"
 
 #: pyanaconda/kickstart.py:1178
 #, python-format
 msgid ""
 "Unknown or invalid format '%(format)s' specified for device '%(device)s'"
 msgstr ""
+"Указан неизвестный или неправильный формат «%(format)s» для устройства "
+"«%(device)s»"
 
 #: pyanaconda/kickstart.py:1185
 #, python-format
 msgid "No format on device '%s'"
-msgstr ""
+msgstr "Устройство «%s» не форматировано"
 
 #: pyanaconda/kickstart.py:1223
 msgid "nvdimm: nvdimm plugin not available."
-msgstr ""
+msgstr "nvdimm: дополнение nvdimm не доступно."
 
 #: pyanaconda/kickstart.py:1229 pyanaconda/kickstart.py:1237
 #, python-format
 msgid "nvdimm: namespace %s not found."
-msgstr ""
+msgstr "nvdimm: пространство имен %s не найдено."
 
 #: pyanaconda/kickstart.py:1248
 #, python-format
 msgid "Disk \"%s\" given in nvdimm command does not exist."
-msgstr ""
+msgstr "Диск «%s», указанный в команде nvdimm, не существует."
 
 #: pyanaconda/kickstart.py:1256 pyanaconda/kickstart.py:1260
 #, python-format
@@ -1099,6 +1128,8 @@ msgstr "Имя группы томов «%s» уже используется."
 msgid ""
 "Incorrectly specified origin of the snapshot. Use format \"VolGroup/LV_name\""
 msgstr ""
+"Неверно задан источник моментального снимка. Используйте формат \"VolGroup"
+"/LV-name\""
 
 #: pyanaconda/kickstart.py:2135
 #, python-format
@@ -1106,11 +1137,13 @@ msgid ""
 "Snapshot: origin \"%(origin)s\" of snapshot \"%(name)s\" is not a valid thin "
 "LV device."
 msgstr ""
+"Моментальный снимок: источник «%(origin)s» снимка «%(name)s» не является "
+"допустимым устройством тонкого логического тома."
 
 #: pyanaconda/kickstart.py:2143
 #, python-format
 msgid "Snapshot %s already exists."
-msgstr ""
+msgstr "Снимок %s уже существует."
 
 #: pyanaconda/kickstart.py:2179
 msgid ""
@@ -1464,6 +1497,8 @@ msgid ""
 "Your root partition is less than %(size)s which is usually too small to "
 "install %(product)s."
 msgstr ""
+"Размер корневого раздела меньше %(size)s, что обычно слишком мало для "
+"установки %(product)s."
 
 #: pyanaconda/storage_utils.py:165
 #, python-format
@@ -1475,7 +1510,7 @@ msgstr "Не определен корневой раздел (/), обязат�
 #: pyanaconda/storage_utils.py:178
 #, python-format
 msgid "Your root partition must be on a device of type: %s."
-msgstr ""
+msgstr "Корневой раздел должен быть на устройстве типа: %s."
 
 #: pyanaconda/storage_utils.py:194
 #, python-format
@@ -1490,7 +1525,7 @@ msgstr ""
 #, python-format
 msgid ""
 "Your %(mount)s partition is less than %(size)s which is lower than required."
-msgstr ""
+msgstr "Раздел %(mount)s меньше %(size)s, что меньше требуемого размера."
 
 #: pyanaconda/storage_utils.py:220
 #, python-format
