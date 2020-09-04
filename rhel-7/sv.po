@@ -4,19 +4,19 @@
 #
 # Translators:
 # Dimitris Glezos <glezos@indifex.com>, 2011
-# Göran Uddeborg <goeran@uddeborg.se>, 2011,2014
+# Göran Uddeborg <goeran@uddeborg.se>, 2011,2014, 2020.
 # Klap Hest <jojje3000@hotmail.com>, 2013
 # fedoratrans <fedoratrans@gmail.com>, 2007
 # Ulrika <aurorauddeborg@gmail.com>, 2012
-# Göran Uddeborg <goeran@uddeborg.se>, 2015. #zanata
+# Göran Uddeborg <goeran@uddeborg.se>, 2015. #zanata, 2020.
 # Luna Jernberg <bittin@reimu.nl>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 21.48.22.158\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2020-04-15 15:07+0200\n"
-"PO-Revision-Date: 2020-08-21 10:29+0000\n"
-"Last-Translator: Luna Jernberg <bittin@reimu.nl>\n"
+"PO-Revision-Date: 2020-09-05 09:29+0000\n"
+"Last-Translator: Göran Uddeborg <goeran@uddeborg.se>\n"
 "Language-Team: Swedish <https://translate.fedoraproject.org/projects/"
 "anaconda/rhel-7/sv/>\n"
 "Language: sv\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.1.1\n"
+"X-Generator: Weblate 4.2.2\n"
 
 #: pyanaconda/bootloader.py:253
 msgid "/boot file system"
@@ -129,6 +129,9 @@ msgid ""
 "loader stage1 device %(stage1dev)s is not. A drive failure in %(stage2dev)s "
 "could render the system unbootable."
 msgstr ""
+"startprogrammets steg 2-enhet %(stage2dev)s är på en flerdisksvektor, men "
+"startprogrammets steg 1-enhet %(stage1dev)s är inte det. En trasig disk i "
+"%(stage2dev)s skulle kunna göra att systemet inte går att starta."
 
 #: pyanaconda/bootloader.py:1383
 #, python-format
@@ -138,7 +141,7 @@ msgid ""
 "boot loader will only be installed to a single drive."
 msgstr ""
 "startprogrammets steg 2-enhet %(stage2dev)s är på en flerdisksvektor, men "
-"startprogrammets steg 2-enhet %(stage1dev)s är inte det.  Steg 1 av "
+"startprogrammets steg 1-enhet %(stage1dev)s är inte det. Steg 1 av "
 "startprogrammet kommer endast installeras på en enda enhet."
 
 #: pyanaconda/bootloader.py:1676
@@ -169,10 +172,10 @@ msgid ""
 msgstr ""
 "Tekniken för samtidig multitrådning (Simultaneous Multithreading, SMT) kan "
 "ge prestandaförbättringar för vissa arbetslaster, men introducerar flera "
-"allmänt kända säkerhetsproblem.  Du har möjligheten att avaktivera SMT, "
-"vilken kan påverka prestandan.  Om du väljer att låta SMT vara aktiverat, "
-"läs https://red.ht/rhel-smt för att förstå de potentiella riskerna och få "
-"reda på andra sätt att begränsa dessa risker."
+"allmänt kända säkerhetsproblem. Du har möjligheten att avaktivera SMT, "
+"vilken kan påverka prestandan. Om du väljer att låta SMT vara aktiverat, läs "
+"https://red.ht/rhel-smt för att förstå de potentiella riskerna och få reda "
+"på andra sätt att begränsa dessa risker."
 
 #: pyanaconda/constants.py:150
 msgid ""
@@ -184,9 +187,9 @@ msgid ""
 msgstr ""
 "Samtidig multitrådning (Simultaneous Multithreading, SMT) kan förbättra "
 "prestandan för vissa arbetslaster, men introducerar flera allmänt kända "
-"säkerhetsproblem.  Du kan avaktivera SMT, vilken kan påverka prestandan.  "
-"Läs https://red.ht/rhel-smt för att förstå de potentiella riskerna och få "
-"reda på sätt att begränsa dessa risker."
+"säkerhetsproblem. Du kan avaktivera SMT, vilken kan påverka prestandan. Läs "
+"https://red.ht/rhel-smt för att förstå de potentiella riskerna och få reda "
+"på sätt att begränsa dessa risker."
 
 #: pyanaconda/constants.py:158
 #, python-format
@@ -398,6 +401,8 @@ msgid ""
 "The group '%s' is required for this installation. This group does not exist. "
 "This is a fatal error and installation will be aborted."
 msgstr ""
+"Gruppen ”%s” krävs för denna installation. Denna grupp finns inte. Detta är "
+"ett ödesdigert fel och installationen kommer avbrytas."
 
 #: pyanaconda/errors.py:210
 #, python-format
@@ -476,6 +481,8 @@ msgid ""
 "will not be bootable. Would you like to ignore this and continue with "
 "installation?"
 msgstr ""
+"Följande fel uppstod när startprogrammet installerades. Systemet kommer inte "
+"gå att starta. Vill du bortse från detta och fortsätta med installationen?"
 
 #: pyanaconda/errors.py:282
 #, python-format
@@ -509,8 +516,8 @@ msgid ""
 "\n"
 " The installer will now terminate."
 msgstr ""
-"Installationen avbröts på grund av vad som verkar vara ett problem med din "
-"hårdvara.  Det exakta felmeddelandet är:\n"
+"Installationen stoppades på grund av vad som verkar vara ett problem med din "
+"hårdvara. Det exakta felmeddelandet är:\n"
 "\n"
 "%s.\n"
 "\n"
@@ -533,6 +540,16 @@ msgid ""
 "\n"
 "The installer will now terminate."
 msgstr ""
+"\n"
+"Installationen stoppades på grund av ett fel som uppstod under körning i "
+"icke-interaktivt kommandoradsläge. Eftersom det inte kan ställas några "
+"frågor i kommandoradsläge får du redigera din kickstart-fil och försöka "
+"installationen på nytt.\n"
+"Det exakta felmeddelandet är:\n"
+"\n"
+"%s.\n"
+"\n"
+"Installeraren kommer nu att avsluta."
 
 #: pyanaconda/exception.py:151
 #, python-format
@@ -712,7 +729,7 @@ msgstr ""
 #: pyanaconda/kickstart.py:752
 #, python-format
 msgid "%s is missing. Cannot setup firewall."
-msgstr "%s saknas.  Kan inte sätta upp en brandvägg."
+msgstr "%s saknas. Kan inte sätta upp en brandvägg."
 
 #: pyanaconda/kickstart.py:807 pyanaconda/kickstart.py:818
 #, python-format
@@ -749,6 +766,7 @@ msgid ""
 "No thin pool exists with the name \"%s\". Specify thin pools before thin "
 "volumes."
 msgstr ""
+"Ingen tunn pool finns med namnet ”%s”. Ange tunna pooler före tunna volymer."
 
 #: pyanaconda/kickstart.py:956
 msgid "logvol --noformat must also use the --name= option."
@@ -1243,8 +1261,8 @@ msgid ""
 "The 'swap' area on your computer is used by the operating\n"
 "system when running low on memory."
 msgstr ""
-"Växlingsarean på din dator används av operativsystemet när det får ont om "
-"minne."
+"Växlingsarean på din dator används av operativsystemet\n"
+"när det får ont om minne."
 
 #: pyanaconda/storage_utils.py:74
 msgid ""
@@ -1334,7 +1352,7 @@ msgstr ""
 
 #: pyanaconda/storage_utils.py:245
 msgid "No valid boot loader target device found. See below for details."
-msgstr ""
+msgstr "Ingen målenhet för startprogram hittad. Se nedan för detaljer."
 
 #: pyanaconda/storage_utils.py:260
 msgid "You have not created a bootable partition."
@@ -1345,6 +1363,9 @@ msgid ""
 "Your BIOS-based system needs a special partition to boot from a GPT disk "
 "label. To continue, please create a 1MiB 'biosboot' type partition."
 msgstr ""
+"Ditt BIOS-baserade system behöver en speciell partition för att starta från "
+"en GPT-disketikett. För att fortsätta, skapa en 1 MiB partition av "
+"”biosboot”-typ."
 
 #: pyanaconda/storage_utils.py:316
 #, python-format
@@ -1353,12 +1374,18 @@ msgid ""
 "required to continue installation without a swap partition, but you only "
 "have %(installedMem)s."
 msgstr ""
+"Du har inte angivit en växlingspartition. %(requiredMem)s med minne behövs "
+"för att fortsätta installationen utan en växlingspartition, men du har bara "
+"%(installedMem)s."
 
 #: pyanaconda/storage_utils.py:322
 msgid ""
 "You have not specified a swap partition. Although not strictly required in "
 "all cases, it will significantly improve performance for most installations."
 msgstr ""
+"Du har inte angivit en växlingspartition. Även om det inte är strikt "
+"nödvändigt i alla lägen kommer det förbättra prestanda signifikant i de "
+"flesta installationer."
 
 #: pyanaconda/storage_utils.py:340
 msgid ""
@@ -1367,12 +1394,17 @@ msgid ""
 "referred to by device path in /etc/fstab, which is not ideal since device "
 "paths can change under a variety of circumstances. "
 msgstr ""
+"Åtminstone en av dina växlingsenheter har inte någon UUID, vilket är vanligt "
+"för växlingsutrymme skapat med äldre versioner av mkswap. Dessa enheter "
+"kommer refereras till med enhetens sökväg i /etc/fstab, vilket inte är "
+"idealiskt eftersom enheters sökvägar kan ändras under olika omständigheter. "
 
 #: pyanaconda/storage_utils.py:361
 #, python-format
 msgid ""
 "This mount point is invalid. The %s directory must be on the / file system."
 msgstr ""
+"Denna monteringspunkt är ogiltig. Katalogen %s måste vara på /-filsystemet."
 
 #: pyanaconda/storage_utils.py:377
 #, python-format
@@ -1701,6 +1733,13 @@ msgid_plural ""
 "unselected disks %(unselected)s. You must select or de-select these disks as "
 "a set."
 msgstr[0] ""
+"Du valde disken %(selected)s, som innehåller enheter som också som även "
+"använder den ej valda disken %(unselected)s. Du måste välja eller välja bort "
+"dessa diskar som en grupp."
+msgstr[1] ""
+"Du valde disken %(selected)s, som innehåller enheter som också som även "
+"använder de ej valda diskarna %(unselected)s. Du måste välja eller välja "
+"bort dessa diskar som en grupp."
 
 #: pyanaconda/ui/tui/hubs/summary.py:35
 msgid "Installation"
@@ -1853,7 +1892,7 @@ msgid ""
 "You will have to type it twice. Leave blank for no password"
 msgstr ""
 "Ange ett VNC-lösenord (måste vara sex till åtta tecken långt).\n"
-"Du kommer behöva skriva det två gånger.  Lämna tomt för inget lösenord"
+"Du kommer behöva skriva det två gånger. Lämna tomt för inget lösenord"
 
 #: pyanaconda/ui/tui/spokes/askvnc.py:150
 #: pyanaconda/ui/gui/spokes/network.py:1426
@@ -2070,7 +2109,7 @@ msgstr "Lösenordet är inte satt."
 
 #: pyanaconda/ui/tui/spokes/password.py:66
 msgid "Please select new root password. You will have to type it twice."
-msgstr "Välj ett nytt root-lösenord.  Du kommer behöva skriva det två gånger."
+msgstr "Välj ett nytt root-lösenord. Du kommer behöva skriva det två gånger."
 
 #: pyanaconda/ui/tui/spokes/storage.py:56
 msgid "Use All Space"
@@ -2145,6 +2184,10 @@ msgid ""
 "unformatted. Unformatted DASDs cannot be used during installation.\n"
 "\n"
 msgstr ""
+"Följande oformaterade eller LDL-DASD:er har hittats på ditt system. Du kan "
+"välja att formatera dem nu med dasdfmt eller avbryta för att lämna dem "
+"oformaterade. Oformaterade DASD:er kan inte användas under installationen.\n"
+"\n"
 
 #: pyanaconda/ui/tui/spokes/storage.py:351
 msgid ""
@@ -2660,8 +2703,8 @@ msgid ""
 "Warning: Processor has Simultaneous Multithreading (SMT) enabled.  <a href="
 "\"\">Click for details.</a>"
 msgstr ""
-"Varning: processorn har simultan multitrådning (SMT) aktiverad.  <a href="
-"\"\">Klicka för detaljer.</a>"
+"Varning: processorn har simultan multitrådning (SMT) aktiverad. <a href=\"\""
+">Klicka för detaljer.</a>"
 
 #: pyanaconda/ui/gui/hubs/summary.py:91
 msgid ""
@@ -2669,11 +2712,14 @@ msgid ""
 "configuration. These are not fatal, but you may wish to make changes to your "
 "kernel config."
 msgstr ""
+"Följande varningar upptäcktes vid kontroll av din kärnkonfiguration. Dessa "
+"är inte avgörande, men du kanske vill göra ändringar av din "
+"kärnkonfiguration."
 
 #: pyanaconda/ui/gui/hubs/summary.py:99
 msgctxt "GUI|Summary|Warning Dialog"
 msgid "_OK"
-msgstr ""
+msgstr "_OK"
 
 #: pyanaconda/ui/gui/spokes/custom.py:114
 #, python-format
@@ -2813,7 +2859,7 @@ msgstr ""
 
 #: pyanaconda/ui/gui/spokes/custom.py:1992
 msgid "No disks selected. Keeping previous disk set."
-msgstr ""
+msgstr "Inga diskar valda. Behåller tidigare diskuppsättning."
 
 #: pyanaconda/ui/gui/spokes/custom.py:2050
 msgid "No disks selected. Not saving changes."
@@ -2846,7 +2892,7 @@ msgid ""
 "This LVM Volume Group is missing %(missingPVs)d of %(totalPVs)d physical "
 "volumes. You can remove it or select a different device."
 msgstr ""
-"Denna LVM-volymgrupp saknar %(missingPVs)d av %(totalPVs)d fysiska volymer.  "
+"Denna LVM-volymgrupp saknar %(missingPVs)d av %(totalPVs)d fysiska volymer. "
 "Du kan ta bort den eller välja en annan enhet."
 
 #: pyanaconda/ui/gui/spokes/custom.py:2335
@@ -2889,7 +2935,7 @@ msgstr ""
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.py:530
 msgid "Restoring hardware time..."
-msgstr "Återställer håtdvarutiden …"
+msgstr "Återställer hårdvarutiden …"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.py:544
 msgid "Invalid timezone"
@@ -3230,15 +3276,15 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/source.py:96
 #, python-format
 msgid "Invalid proxy protocol: %s"
-msgstr ""
+msgstr "Felaktigt proxy-protokoll: %s"
 
 #: pyanaconda/ui/gui/spokes/source.py:102
 msgid "Extra characters in proxy URL"
-msgstr ""
+msgstr "Extra tecken i proxy-URL"
 
 #: pyanaconda/ui/gui/spokes/source.py:106
 msgid "Proxy authentication data duplicated"
-msgstr ""
+msgstr "Proxy-autentiseringsdata dubblerat"
 
 #: pyanaconda/ui/gui/spokes/source.py:244
 msgid "This media is good to install from."
@@ -3295,7 +3341,7 @@ msgstr ""
 
 #: pyanaconda/ui/gui/spokes/source.py:984
 msgid "URL is empty"
-msgstr ""
+msgstr "URL:en är tom"
 
 #: pyanaconda/ui/gui/spokes/source.py:988
 msgid "Invalid URL"
@@ -3303,7 +3349,7 @@ msgstr ""
 
 #: pyanaconda/ui/gui/spokes/source.py:1005
 msgid "Protocol in URL does not match selected protocol"
-msgstr ""
+msgstr "Protokollet i URL:en stämmer inte med det valda protokollet"
 
 #: pyanaconda/ui/gui/spokes/source.py:1008
 msgid "NFS server is empty"
@@ -3311,7 +3357,7 @@ msgstr ""
 
 #: pyanaconda/ui/gui/spokes/source.py:1015
 msgid "Invalid host name"
-msgstr ""
+msgstr "Felaktigt värdnamn"
 
 #: pyanaconda/ui/gui/spokes/source.py:1018
 msgid "Remote directory is required"
@@ -3323,11 +3369,11 @@ msgstr "Dubblerade förrådsnamn."
 
 #: pyanaconda/ui/gui/spokes/source.py:1046
 msgid "Empty repository name"
-msgstr ""
+msgstr "Tomt förrådsnamn"
 
 #: pyanaconda/ui/gui/spokes/source.py:1049
 msgid "Invalid repository name"
-msgstr ""
+msgstr "Felaktigt förrådsnamn"
 
 #: pyanaconda/ui/gui/spokes/source.py:1055
 msgid "Repository name conflicts with internal repository name."
@@ -3344,6 +3390,10 @@ msgid ""
 "selection</a> requires <b>%(total)s</b> of available space, including <b>"
 "%(software)s</b> for software and <b>%(swap)s</b> for swap space."
 msgstr ""
+"Ditt nuvarande val av programvara från <a href=\"\" title=\"%(tooltip)s\""
+"><b>%(product)s</b></a> behöver <b>%(total)s</b> tillgängligt utrymme, "
+"inklusive <b>%(software)s</b> för programvara och <b>%(swap)s</b> för "
+"växlingsutrymme."
 
 #: pyanaconda/ui/gui/spokes/storage.py:172
 #, python-format
@@ -3368,6 +3418,9 @@ msgid ""
 "  You don't have enough space available to install <b>%(product)s</b>, even "
 "if you used all of the free space available on the selected disks."
 msgstr ""
+"  Du har inte tillräckligt med utrymme tillgängligt för att installera "
+"<b>%(product)s</b>, även om du använde allt fritt utrymme som är "
+"tillgängligt på den valda disken."
 
 #: pyanaconda/ui/gui/spokes/storage.py:214
 #, python-format
@@ -3416,6 +3469,8 @@ msgstr ""
 msgid ""
 "Warning checking storage configuration.  <a href=\"\">Click for details.</a>"
 msgstr ""
+"Varning vid kontroll av lagringskonfigurationen.  <a href=\"\">Klicka för "
+"detaljer.</a>"
 
 # translation auto-copied from project Anaconda, version master, document
 # anaconda
@@ -3459,7 +3514,7 @@ msgstr ""
 
 #: pyanaconda/ui/gui/spokes/storage.py:914
 msgid "There was a problem with your disk selection. Click here for details."
-msgstr ""
+msgstr "Det blev ett problem med ditt diskval. Klicka här för detaljer."
 
 #: pyanaconda/ui/gui/spokes/storage.py:1089
 msgid "You'll be able to make space available during custom partitioning."
@@ -3471,17 +3526,19 @@ msgid ""
 "The following errors were encountered when checking your disk selection. You "
 "can modify your selection or quit the installer."
 msgstr ""
+"Följande fel uppstod vid kontroll av ditt diskval. Du kan ändra ditt val "
+"eller avsluta installeraren."
 
 #: pyanaconda/ui/gui/spokes/storage.py:1114
 #: pyanaconda/ui/gui/spokes/storage.py:1135
 msgctxt "GUI|Storage|Error Dialog"
 msgid "_Quit"
-msgstr ""
+msgstr "_Avsluta"
 
 #: pyanaconda/ui/gui/spokes/storage.py:1115
 msgctxt "GUI|Storage|Error Dialog"
 msgid "_Modify Disk Selection"
-msgstr ""
+msgstr "_Ändra diskval"
 
 #: pyanaconda/ui/gui/spokes/storage.py:1130
 msgid ""
@@ -3494,7 +3551,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/storage.py:1136
 msgctxt "GUI|Storage|Error Dialog"
 msgid "_Modify Storage Layout"
-msgstr ""
+msgstr "_Ändra lagringslayout"
 
 #: pyanaconda/ui/gui/spokes/storage.py:1150
 msgid ""
@@ -3552,7 +3609,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.py:85
 msgctxt "GUI|Advanced Storage|NVDIM"
 msgid "No device to be reconfigured selected."
-msgstr ""
+msgstr "Ingen enhetet att rekonfigureras vald."
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.py:160
 msgid "Rescanning disks finished."
@@ -3584,8 +3641,8 @@ msgid ""
 "Or, assign new mount points to existing partitions after selecting them "
 "below."
 msgstr ""
-"Eller, tilldela nya monteringspinkter till befintliga partitioner efter att "
-"välja dem nedan."
+"Eller, tilldela nya monteringspunkter till befintliga partitioner efter att "
+"ha valt dem nedan."
 
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:340
 msgid "_New mount points will use the following partitioning scheme:"
@@ -3610,7 +3667,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/lib/cart.glade.h:8
 msgctxt "GUI|Selected Disks Dialog"
 msgid "_Set as Boot Device"
-msgstr ""
+msgstr "_Sätt som startenhet"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:62
 #, python-format
@@ -3657,7 +3714,7 @@ msgstr "Ej tillåtet etikettsformat för filsystemet."
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:129
 msgid "That mount point is already in use. Try something else?"
-msgstr "Den monteringspunkten används redan.  Försök med något annat?"
+msgstr "Den monteringspunkten används redan. Försök med något annat?"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:131
 msgid "Please enter a valid mount point."
@@ -3666,7 +3723,7 @@ msgstr "Ange en giltig monteringspunkt."
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:133
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:145
 msgid "That mount point is invalid. Try something else?"
-msgstr "Den monteringspunkten är ogiltig.  Försök med något annat?"
+msgstr "Den monteringspunkten är ogiltig. Försök med något annat?"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:286
 msgid "container"
@@ -3704,7 +3761,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/lib/detailederror.py:59
 msgctxt "GUI|Detailed Error Dialog"
 msgid "_Quit"
-msgstr ""
+msgstr "_Avsluta"
 
 #: pyanaconda/ui/gui/spokes/lib/resize.py:58
 msgid "Preserve"
@@ -3756,10 +3813,10 @@ msgid ""
 "risky and we recommend you back up your data first, you can recover that "
 "free disk space and make it available for this installation below."
 msgstr ""
-"Det finns även fritt utrymme tillgänligt i redan befintliga filsystem.  Även "
-"om det har vissa risker och vi rekommenderar att du tar en säkerhetskopia "
-"först, kan du återvinna det fria utrymmet och göra det tillgänligt för denna "
-"installation nedan."
+"Det finns även fritt utrymme tillgängligt i redan befintliga filsystem.  "
+"Även om det har vissa risker och vi rekommenderar att du tar en "
+"säkerhetskopia först, kan du återvinna det fria utrymmet och göra det "
+"tillgängligt för denna installation nedan."
 
 #: pyanaconda/ui/gui/spokes/lib/resize.py:235
 #, python-format
@@ -3780,7 +3837,7 @@ msgstr "Totalt valt utrymme att återvinna: <b>%s</b>"
 #: pyanaconda/ui/gui/spokes/lib/resize.glade.h:13
 msgctxt "GUI|Reclaim Dialog"
 msgid "Delete _all"
-msgstr ""
+msgstr "Ta bort _alla"
 
 #: pyanaconda/ui/gui/spokes/lib/resize.py:459
 msgctxt "GUI|Reclaim Dialog"
@@ -3826,13 +3883,12 @@ msgstr "_Fortsätt"
 #: widgets/src/LayoutIndicator.c:33
 #, c-format
 msgid "Current layout: '%s'. Click to switch to the next layout."
-msgstr "Aktuell layout: ”%s”.  Klicka för att byta till nästa layout."
+msgstr "Aktuell layout: ”%s”. Klicka för att byta till nästa layout."
 
 #: widgets/src/LayoutIndicator.c:34
 #, c-format
 msgid "Current layout: '%s'. Add more layouts to enable switching."
-msgstr ""
-"Aktuell layout: ”%s”.  Lägg till fler layouter för att möjliggöra byten."
+msgstr "Aktuell layout: ”%s”. Lägg till fler layouter för att möjliggöra byten."
 
 #: pyanaconda/ui/gui/spokes/advanced_user.glade.h:1
 msgctxt "GUI|Advanced User"
@@ -3894,6 +3950,8 @@ msgid ""
 "Groups that do not already exist will be created; specify their GID in "
 "parentheses. "
 msgstr ""
+"Du kan mata in en kommaseparerad lista med gruppnamn och grupp-id:n här. "
+"Grupper som inte redan finns kommer skapas; ange deras GID i parenteser. "
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade.h:1
 msgctxt "GUI|Date and Time|NTP"
@@ -4682,8 +4740,8 @@ msgid ""
 "Changes here will only apply to the installed system. Use the desktop's tool "
 "to configure the keyboard for the installation process."
 msgstr ""
-"Ändringar här kommer bara gälla för det installerade systemet.  Använd "
-"skrivbordets verktyg för att konfigurerar tangentbord för "
+"Ändringar här kommer bara gälla för det installerade systemet. Använd "
+"skrivbordets verktyg för att konfigurera tangentbord för "
 "installationsprocessen."
 
 #: pyanaconda/ui/gui/spokes/keyboard.glade.h:4
@@ -4830,7 +4888,7 @@ msgstr "ROOT-LÖSENORD"
 #: pyanaconda/ui/gui/spokes/password.glade.h:2
 msgctxt "GUI|Password"
 msgid "_Root Password:"
-msgstr ""
+msgstr "_Rootlösenord:"
 
 #: pyanaconda/ui/gui/spokes/password.glade.h:3
 msgctxt "GUI|Password"
@@ -5354,8 +5412,8 @@ msgid ""
 "This device is encrypted and cannot be read without a valid passphrase. You "
 "may unlock it below."
 msgstr ""
-"Denna enhet är krypterad och kan inte läsas utan en giltig lösenfras.  Du "
-"kan låsa upp den nedan."
+"Denna enhet är krypterad och kan inte läsas utan en giltig lösenfras. Du kan "
+"låsa upp den nedan."
 
 #: pyanaconda/ui/gui/spokes/custom.glade.h:37
 msgctxt "GUI|Custom Partitioning|Encrypted"
@@ -5372,7 +5430,7 @@ msgid ""
 "This device cannot be edited directly. You can remove it or select a "
 "different device."
 msgstr ""
-"Denna enhet kan inte redigeras direkt.  Du kan ta bort den eller välja en "
+"Denna enhet kan inte redigeras direkt. Du kan ta bort den eller välja en "
 "annan enhet."
 
 #: pyanaconda/ui/gui/spokes/custom.glade.h:40
@@ -5616,7 +5674,7 @@ msgstr "Gränssnitt"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade.h:26
 msgid "Portal"
-msgstr ""
+msgstr "Portal"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade.h:27
 msgctxt "GUI|Advanced Storage|iSCSI|Login"
@@ -5702,7 +5760,7 @@ msgstr ""
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade.h:5
 msgid "Reconfiguring NVDIMM devices. This may take a moment..."
-msgstr ""
+msgstr "Omkonfigurerar NVDIMM-enheter. Detta kan ta ett tag …"
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade.h:6
 msgid "Device reconfiguration failed."
@@ -5963,6 +6021,9 @@ msgid ""
 "You can choose to format them now with dasdfmt or cancel to leave them "
 "unformatted. Unformatted DASDs cannot be used during installation."
 msgstr ""
+"Följande oformaterade eller LDL-DASD:er har hittats på ditt system. Du kan "
+"välja att formatera dem nu med dasdfmt eller avbryta för att lämna dem "
+"oformaterade. Oformaterade DASD:er kan inte användas under installationen."
 
 #: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade.h:5
 msgid "Unformatted DASDs Detected"
@@ -6045,7 +6106,7 @@ msgid ""
 "passphrase that you will use to access your data when you start your "
 "computer."
 msgstr ""
-"Du har valt att kryptera några av dina data.  Du kommer behöva skapa en "
+"Du har valt att kryptera några av dina data. Du kommer behöva skapa en "
 "lösenfras som du kommer använda för att komma åt dina data när du startar "
 "din dator."
 
@@ -6333,7 +6394,7 @@ msgstr "DISPLAY-variabeln är inte satt.  Startar textläge!"
 
 #: anaconda:672
 msgid "Graphical installation is not available. Starting text mode."
-msgstr "Grafisk installation är inte tillgänglig.  Startar textläge."
+msgstr "Grafisk installation är inte tillgänglig. Startar textläge."
 
 #: anaconda:680
 msgid ""
@@ -6341,8 +6402,8 @@ msgid ""
 "custom partitioning for full control over the disk layout. Would you like to "
 "use VNC mode instead?"
 msgstr ""
-"Textläge ger en begränsad mängd installationsalternativ.  Det erbjuder inte "
-"anpassa partitionering för full kontroll över disklayouten.  Vill du använda "
+"Textläge ger en begränsad mängd installationsalternativ. Det erbjuder inte "
+"anpassad partitionering för full kontroll över disklayouten. Vill du använda "
 "VNC-läge istället?"
 
 #: anaconda:776
