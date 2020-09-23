@@ -1,0 +1,34 @@
+name: Automate pot file creation
+on:
+  schedule:
+    - cron: 0 0 * * *
+  workflow_dispatch:
+
+jobs:
+  master-update-pot-file:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout anaconda
+        uses: actions/checkout@v2
+        with:
+          path: anaconda
+          repository: rhinstaller/anaconda
+          ref: master-adjust-for-po-push-automation
+      - name: Create pot file
+        uses: rhinstaller/anaconda-make-executor-action@v1-beta2
+        with:
+          make-command: pot-update-check
+          path: anaconda
+      - name: Checkout anaconda-l10n
+        uses: actions/checkout@v2
+        with:
+          path: anaconda-l10n
+      - name: Push new potfile
+        run: |
+          cp -v anaconda/po/anaconda.pot anaconda-l10n/master/
+          cd anaconda-l10n
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "update pot-file"
+          git push
