@@ -7,6 +7,8 @@ on:
 jobs:
   master-update-pot-file:
     strategy:
+      # only one job at once otherwise one job will push and second job will get conflict on remote
+      max-parallel: 1
       # update this matrix to support new Anaconda branches
       matrix:
         branch: [ master, f33 ]
