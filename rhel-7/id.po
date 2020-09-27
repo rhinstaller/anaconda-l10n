@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: anaconda 21.48.22.158\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2020-04-15 15:07+0200\n"
-"PO-Revision-Date: 2020-09-26 14:29+0000\n"
+"PO-Revision-Date: 2020-09-29 13:49+0000\n"
 "Last-Translator: Andika Triwidada <andika@gmail.com>\n"
 "Language-Team: Indonesian <https://translate.fedoraproject.org/projects/"
 "anaconda/rhel-7/id/>\n"
@@ -60,7 +60,7 @@ msgid ""
 "RAID sets that contain '%(desc)s' must have one of the following device "
 "types: %(types)s."
 msgstr ""
-"RAID set yang mengandung '%(desc)s' harus memiliki satu dari jenis perangkat "
+"Set RAID yang mengandung '%(desc)s' harus memiliki satu dari jenis peranti "
 "berikut: %(types)s."
 
 #: pyanaconda/bootloader.py:442
@@ -114,7 +114,7 @@ msgstr ""
 #: pyanaconda/bootloader.py:656 pyanaconda/bootloader.py:767
 #, python-format
 msgid "%s cannot be on an encrypted block device."
-msgstr "%s tidak dapat pada perangkat blok dienkripsi."
+msgstr "%s tidak boleh berada pada peranti blok terenkripsi."
 
 #: pyanaconda/bootloader.py:721
 #, python-format
@@ -122,6 +122,8 @@ msgid ""
 "%(bootloader_stage2_description)s cannot be on an iSCSI disk which is not "
 "configured in iBFT."
 msgstr ""
+"%(bootloader_stage2_description)s tidak bisa berada pada sebuah disk iSCSI "
+"yang tidak terkonfigurasi dalam iBFT."
 
 #: pyanaconda/bootloader.py:726
 #, python-format
@@ -156,13 +158,13 @@ msgid ""
 "%(deviceName)s may not have enough space for grub2 to embed core.img when "
 "using the %(fsType)s file system on %(deviceType)s"
 msgstr ""
-"%(deviceName)s mungkin tidak mempunyai ruang yang cukup buat grub2 untuk "
-"dilekatkan core.img saat menggunakan berkas sistem %(fsType)s pada "
+"%(deviceName)s mungkin tidak mempunyai ruang yang cukup bagi grub2 untuk "
+"melekatkan core.img saat menggunakan sistem berkas %(fsType)s pada "
 "%(deviceType)s"
 
 #: pyanaconda/constants.py:73
 msgid "Start VNC"
-msgstr "Menjalankan VNC"
+msgstr "Memulai VNC"
 
 #: pyanaconda/constants.py:74
 msgid "Use text mode"
@@ -177,6 +179,13 @@ msgid ""
 "red.ht/rhel-smt to understand your potential risks and learn about other "
 "ways to mitigate these risks."
 msgstr ""
+"Teknologi Simultaneous Multithreading (SMT) dapat memberikan peningkatan "
+"kinerja untuk beban kerja tertentu, tetapi memperkenalkan beberapa masalah "
+"keamanan yang diungkapkan secara publik. Anda memiliki opsi untuk "
+"menonaktifkan SMT, yang dapat memengaruhi kinerja. Jika Anda memilih untuk "
+"membiarkan SMT diaktifkan, harap baca https://red.ht/rhel-smt untuk memahami "
+"risiko potensial Anda dan pelajari tentang cara lain untuk mengurangi risiko "
+"ini."
 
 #: pyanaconda/constants.py:150
 msgid ""
@@ -247,7 +256,7 @@ msgstr "Kosong"
 
 #: pyanaconda/constants.py:174
 msgid "Too short"
-msgstr ""
+msgstr "Terlalu pendek"
 
 #: pyanaconda/constants.py:175
 #: pyanaconda/ui/gui/spokes/lib/passphrase.glade.h:7
@@ -364,8 +373,8 @@ msgstr ""
 "Ini mungkin berarti rusak pada saat transfer ke komputer ini.\n"
 "\n"
 "Dianjurkan agar Anda keluar dan membatalkan instalasi, tetapi Anda dapat "
-"memilih meneruskan jika Anda tau permasalah ini. Apakah Anda ingin terus "
-"menggunakan image ini?"
+"memilih meneruskan jika Anda pikir ini tidak benar. Apakah Anda ingin "
+"melanjutkan memakai image ini?"
 
 #: pyanaconda/errors.py:178
 msgid ""
@@ -374,8 +383,8 @@ msgid ""
 "\n"
 "Should I try again to locate the image?"
 msgstr ""
-"Penginstal mencoba memasang image instalasi, tetapi tidak dapat "
-"mendapatkannya di hard drive.\n"
+"Pemasang mencoba mengait image instalasi, tetapi tidak bisa menemukannya di "
+"hard disk.\n"
 "\n"
 "Haruskah saya coba lagi untuk mencari image?"
 
@@ -420,7 +429,7 @@ msgid ""
 "group and continue with installation?"
 msgstr ""
 "Anda telah menentukan bahwa grup '%s' harus dikeluarkan dari instalasi. Grup "
-"ini tidak ada. Apakah Anda ingin mengabaikan grup ini dan lanjutkan "
+"ini tidak ada. Apakah Anda ingin mengabaikan grup ini dan melanjutkan "
 "instalasi?"
 
 #: pyanaconda/errors.py:227
@@ -452,7 +461,7 @@ msgid ""
 "%(details)s"
 msgstr ""
 "Ada kesalahan menjalankan skrip kickstart pada baris %(lineno)s. Ini adalah "
-"kesalahan fatal dan instalasi akan dibatalkan. Rincian dari kesalahan ini:\n"
+"kesalahan fatal dan instalasi akan digugurkan. Rincian dari kesalahan ini:\n"
 "\n"
 "%(details)s"
 
@@ -461,8 +470,8 @@ msgid ""
 "The following error occurred while installing.  This is a fatal error and "
 "installation will be aborted."
 msgstr ""
-"Kesalahan berikut terjadi ketika pemasangan. Ini adalah kesalahan fatal dan "
-"instalasi akan dibatalkan."
+"Kesalahan berikut terjadi ketika memasang. Ini adalah kesalahan fatal dan "
+"instalasi akan digugurkan."
 
 #: pyanaconda/errors.py:261
 msgid ""
@@ -480,6 +489,8 @@ msgid ""
 "will not be bootable. Would you like to ignore this and continue with "
 "installation?"
 msgstr ""
+"Kesalahan berikut terjadi ketika memasang boot loader. Sistem tidak akan "
+"bisa di-boot. Apakah Anda hendak mengabaikan ini dan melanjutkan instalasi?"
 
 #: pyanaconda/errors.py:282
 #, python-format
@@ -501,7 +512,7 @@ msgstr ""
 #: pyanaconda/errors.py:290
 #, python-format
 msgid "Unable to encrypt password: unsupported algorithm %s"
-msgstr ""
+msgstr "Tidak bisa mengenkripsi sandi: algoritme %s tidak didukung"
 
 #: pyanaconda/exception.py:104
 #, python-format
@@ -522,7 +533,7 @@ msgstr ""
 
 #: pyanaconda/exception.py:108
 msgid "Hardware error occurred"
-msgstr ""
+msgstr "Terjadi kesalahan perangkat keras"
 
 #: pyanaconda/exception.py:143
 #, python-format
@@ -537,6 +548,15 @@ msgid ""
 "\n"
 "The installer will now terminate."
 msgstr ""
+"\n"
+"Instalasi dihentikan karena suatu kesalahan yang terjadi ketika berjalan "
+"dalam mode cmdline tidak interaktif. Karena tidak mungkin ada pertanyaan "
+"dalam mode cmdline, sunting berkas kickstart Anda dan coba lagi instalasi.\n"
+"Pesan kesalahan persisnya adalah:\n"
+"\n"
+"%s.\n"
+"\n"
+"Pemasang sekarang akan diakhiri."
 
 #: pyanaconda/exception.py:151
 #, python-format
@@ -549,6 +569,13 @@ msgid ""
 "\n"
 "The installer will now terminate."
 msgstr ""
+"\n"
+"Berjalan dalam mode cmdline, tidak diizinkan pengawakutuan interaktif.\n"
+"Pesan kesalahan persisnya adalah:\n"
+"\n"
+"%s.\n"
+"\n"
+"Pemasang kini akan diakhiri."
 
 #: pyanaconda/install.py:83
 msgid "Configuring installed system"
@@ -564,11 +591,11 @@ msgstr "Membuat pengguna"
 
 #: pyanaconda/install.py:108
 msgid "Configuring addons"
-msgstr "Konfigurasi tambahan"
+msgstr "Mengkonfigurasi tambahan"
 
 #: pyanaconda/install.py:111
 msgid "Generating initramfs"
-msgstr "Mengenerat initramfs"
+msgstr "Membuat initramfs"
 
 #: pyanaconda/install.py:115
 #, python-format
@@ -577,11 +604,11 @@ msgstr "Bergabung ke wilayah: %s"
 
 #: pyanaconda/install.py:118
 msgid "Running post-installation scripts"
-msgstr "Jalankan skrip pasca instalasi"
+msgstr "Menjalankan skrip pasca instalasi"
 
 #: pyanaconda/install.py:139
 msgid "Creating snapshots"
-msgstr ""
+msgstr "Membuat snapshot"
 
 #: pyanaconda/install.py:178
 #, python-format
@@ -602,7 +629,7 @@ msgstr "Menemukan wilayah untuk bergabung"
 
 #: pyanaconda/install.py:265
 msgid "Installing boot loader"
-msgstr ""
+msgstr "Memasang boot loader"
 
 #: pyanaconda/install.py:268 pyanaconda/packaging/livepayload.py:170
 #: pyanaconda/packaging/yumpayload.py:1555
@@ -634,7 +661,7 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
-"Kesalahan berikut ini ditemui saat men-download sertifikat escrow:\n"
+"Kesalahan berikut ini ditemui saat mengunduh sertifikat escrow:\n"
 "\n"
 "%s"
 
@@ -673,18 +700,22 @@ msgstr ""
 #, python-format
 msgid "Tried to use undefined partition \"%s\" in Btrfs volume specification."
 msgstr ""
+"Mencoba memakai partisi \"%s\" yang tidak terdefinisi dalam spesifikasi "
+"volume Btrfs."
 
 #: pyanaconda/kickstart.py:532
 msgid ""
 "Btrfs volume defined without any member devices.  Either specify member "
 "devices or use --useexisting."
 msgstr ""
+"Volume Btrfs didefinisikan tanpa peranti anggota. Nyatakan peranti anggota "
+"atau gunakan --useexisting."
 
 #: pyanaconda/kickstart.py:541 pyanaconda/kickstart.py:928
 #: pyanaconda/kickstart.py:1593
 #, python-format
 msgid "The mount point \"%s\" is not valid.  It must start with a /."
-msgstr "Mount point \"%s\" tidak valid. Harus dimulai dengan /."
+msgstr "Titik kait \"%s\" tidak valid. Harus dimulai dengan /."
 
 #: pyanaconda/kickstart.py:556
 #, python-format
@@ -738,6 +769,8 @@ msgid ""
 "iscsi --iface must be specified (binding used) either for all targets or for "
 "none"
 msgstr ""
+"iscsi --iface mesti dinyatakan (pengikatan dipakai) untuk semua target atau "
+"tidak satupun"
 
 #: pyanaconda/kickstart.py:934
 #, python-format
@@ -749,6 +782,7 @@ msgstr ""
 #: pyanaconda/kickstart.py:941
 msgid "Cache PVs must belong to the same VG as the cached LV"
 msgstr ""
+"PV singgahan mesti menjadi miliki VG yang sama dengan LV yang disinggahkan"
 
 #: pyanaconda/kickstart.py:948
 #, python-format
@@ -759,7 +793,7 @@ msgstr ""
 
 #: pyanaconda/kickstart.py:956
 msgid "logvol --noformat must also use the --name= option."
-msgstr ""
+msgstr "logvol --noformat juga harus memakai opsi --name=."
 
 #: pyanaconda/kickstart.py:961 pyanaconda/kickstart.py:1031
 #, python-format
@@ -771,7 +805,7 @@ msgstr ""
 #: pyanaconda/kickstart.py:1394 pyanaconda/kickstart.py:1477
 #, python-format
 msgid "Target size \"%(size)s\" for device \"%(device)s\" is invalid."
-msgstr "Ukuran target \"%(size)s\" untuk perangkat \"%(device)s\" tidak valid."
+msgstr "Ukuran target \"%(size)s\" untuk peranti \"%(device)s\" tidak valid."
 
 #: pyanaconda/kickstart.py:995
 #, python-format
@@ -793,6 +827,8 @@ msgid ""
 "Logical volume size \"%(logvolSize)s\" must be larger than the volume group "
 "extent size of \"%(extentSize)s\"."
 msgstr ""
+"Ukuran volume lojik \"%(logvolSize)s\" mesti lebih besar daripada ukuran "
+"extent grup volume \"%(extentSize)s\"."
 
 #: pyanaconda/kickstart.py:1009
 msgid "Percentage must be between 0 and 100."
@@ -802,12 +838,12 @@ msgstr ""
 #: pyanaconda/kickstart.py:1646
 #, python-format
 msgid "The \"%s\" file system type is not supported."
-msgstr ""
+msgstr "Tipe sistem berkas \"%s\" tidak didukung."
 
 #: pyanaconda/kickstart.py:1173
 #, python-format
 msgid "Unknown or invalid device '%s' specified"
-msgstr ""
+msgstr "Peranti '%s' yang dinyatakan tidak valid atau tidak dikenal"
 
 #: pyanaconda/kickstart.py:1178
 #, python-format
@@ -818,7 +854,7 @@ msgstr ""
 #: pyanaconda/kickstart.py:1185
 #, python-format
 msgid "No format on device '%s'"
-msgstr ""
+msgstr "Tidak ada format pada peranti '%s'"
 
 #: pyanaconda/kickstart.py:1223
 msgid "nvdimm: nvdimm plugin not available."
@@ -842,7 +878,7 @@ msgstr "Perintah kickstart %s saat ini tidak didukung."
 #: pyanaconda/kickstart.py:1285
 #, python-format
 msgid "No disk found for specified BIOS disk \"%s\"."
-msgstr "Tidak ada disk yang ditemukan untuk ditentukan BIOS disk \"%s\"."
+msgstr "Tidak ada disk yang ditemukan untuk disk BIOS \"%s\" yang dinyatakan."
 
 #: pyanaconda/kickstart.py:1320
 #, python-format
@@ -857,7 +893,7 @@ msgstr "Partisi PV \"%s\" didefinisikan beberapa kali."
 #: pyanaconda/kickstart.py:1342 pyanaconda/kickstart.py:1578
 #, python-format
 msgid "Btrfs partition \"%s\" is defined multiple times."
-msgstr ""
+msgstr "Partisi Btrfs \"%s\" didefinisikan beberapa kali."
 
 #: pyanaconda/kickstart.py:1362
 #, python-format
@@ -866,12 +902,12 @@ msgstr "Ukuran \"%s\" tidak valid."
 
 #: pyanaconda/kickstart.py:1369
 msgid "part --noformat must also use the --onpart option."
-msgstr "part --noformat harus juga memakai opsi --onpart."
+msgstr "part --noformat juga harus memakai opsi --onpart."
 
 #: pyanaconda/kickstart.py:1374 pyanaconda/kickstart.py:1468
 #, python-format
 msgid "Partition \"%s\" given in part command does not exist."
-msgstr "Partisi \"%s\" yang diberikan dalam perintah tidak ada."
+msgstr "Partisi \"%s\" yang diberikan dalam perintah part tidak ada."
 
 #: pyanaconda/kickstart.py:1428 pyanaconda/kickstart.py:1442
 #, python-format
@@ -881,7 +917,7 @@ msgstr "Disk \"%s\" yang diberikan dalam perintah part tidak ada."
 #: pyanaconda/kickstart.py:1431
 #, python-format
 msgid "Cannot install to unpartitionable device \"%s\"."
-msgstr "Tidak dapat memasang ke divais \"%s\" yg unpartitionable."
+msgstr "Tidak dapat memasang ke peranti \"%s\" yang tidak dapat dipartisi."
 
 #: pyanaconda/kickstart.py:1438
 #, python-format
@@ -895,12 +931,12 @@ msgstr "Ukuran maksimal \"%s\" tidak valid."
 
 #: pyanaconda/kickstart.py:1600
 msgid "raid --noformat must also use the --device option."
-msgstr "raid --noformat harus juga memakai opsi --device."
+msgstr "raid --noformat juga harus memakai opsi --device."
 
 #: pyanaconda/kickstart.py:1605
 #, python-format
 msgid "RAID device  \"%s\" given in raid command does not exist."
-msgstr "Perangkat RAID \"%s\" yang diberikan dalam perintah raid tidak ada."
+msgstr "Peranti RAID \"%s\" yang diberikan dalam perintah raid tidak ada."
 
 #: pyanaconda/kickstart.py:1628
 #, python-format
@@ -915,12 +951,13 @@ msgstr ""
 #, python-format
 msgid "Tried to use undefined partition \"%s\" in RAID specification."
 msgstr ""
-"Mencoba untuk menggunakan partisi undefined \"%s\" dalam spesifikasi RAID."
+"Mencoba untuk menggunakan partisi \"%s\" yang tidak terdefinisi dalam "
+"spesifikasi RAID."
 
 #: pyanaconda/kickstart.py:1667
 #, python-format
 msgid "RAID volume \"%s\" specified with --useexisting does not exist."
-msgstr "Volume RAID \"%s\" yang ditentukan dengan --useexisting tidak ada."
+msgstr "Volume RAID \"%s\" yang dinyatakan dengan --useexisting tidak ada."
 
 #: pyanaconda/kickstart.py:1676
 #, python-format
@@ -940,7 +977,8 @@ msgstr ""
 #, python-format
 msgid "Tried to use undefined partition \"%s\" in Volume Group specification"
 msgstr ""
-"Mencoba memakai partition undefined \"%s\" dalam spesifikasi Volume Group"
+"Mencoba memakai partisi \"%s\" yang tidak terdefinisi dalam spesifikasi "
+"Volume Group"
 
 #: pyanaconda/kickstart.py:1976
 #, python-format
@@ -948,6 +986,8 @@ msgid ""
 "Volume group \"%s\" defined without any physical volumes.  Either specify "
 "physical volumes or use --useexisting."
 msgstr ""
+"Grup volume \"%s\" didefinisikan tanpa volume fisik. Nyatakan volume fisik "
+"atau gunakan --useexisting."
 
 #: pyanaconda/kickstart.py:1986
 #, python-format
@@ -956,6 +996,9 @@ msgid ""
 "one of:\n"
 "%(validExtentSizes)s."
 msgstr ""
+"Grup volume diberi ukuran extent fisik \"%(extentSize)s\", tapi seharusnya "
+"satu dari:\n"
+"%(validExtentSizes)s."
 
 #: pyanaconda/kickstart.py:1993
 msgid ""
@@ -984,11 +1027,13 @@ msgid ""
 "Snapshot: origin \"%(origin)s\" of snapshot \"%(name)s\" is not a valid thin "
 "LV device."
 msgstr ""
+"Snapshot: asal \"%(origin)s\" dari snapshot \"%(name)s\" bukan perangkat "
+"thin LV yang valid."
 
 #: pyanaconda/kickstart.py:2143
 #, python-format
 msgid "Snapshot %s already exists."
-msgstr ""
+msgstr "Snapshot %s sudah ada."
 
 #: pyanaconda/kickstart.py:2179
 msgid ""
@@ -1004,7 +1049,7 @@ msgstr ""
 
 #: pyanaconda/network.py:113
 msgid "Host name must be 255 or fewer characters in length."
-msgstr ""
+msgstr "Panjang nama host mesti 255 karakter atau kurang."
 
 #: pyanaconda/network.py:116
 msgid ""
@@ -1012,6 +1057,9 @@ msgid ""
 "parts between periods must contain something and cannot start or end with "
 "'-'."
 msgstr ""
+"Nama host hanya boleh memuat karakter 'a-z', 'A-Z', '0-9', '-', atau '.', "
+"bagian-bagian antara titik mesti memuat sesuatu dan tidak boleh dimulai atau "
+"diakhiri dengan '-'."
 
 #: pyanaconda/network.py:1632 pyanaconda/ui/gui/spokes/custom.py:566
 #: pyanaconda/ui/gui/spokes/network.py:326
@@ -1025,7 +1073,7 @@ msgstr "Menghubungkan..."
 
 #: pyanaconda/network.py:1638
 msgid "Disconnecting..."
-msgstr "Memutuskan..."
+msgstr "Memutus..."
 
 #: pyanaconda/network.py:1660
 #, python-format
@@ -1035,7 +1083,7 @@ msgstr "Kabel (%(interface_name)s) terhubung"
 #: pyanaconda/network.py:1663
 #, python-format
 msgid "Wireless connected to %(access_point)s"
-msgstr "Wireless terhubung ke %(access_point)s"
+msgstr "Nirkabel terhubung ke %(access_point)s"
 
 #: pyanaconda/network.py:1666
 #, python-format
@@ -1050,7 +1098,7 @@ msgstr ""
 #: pyanaconda/network.py:1674
 #, python-format
 msgid "Bridge %(interface_name)s (%(list_of_slaves)s) connected"
-msgstr ""
+msgstr "Bridge %(interface_name)s (%(list_of_slaves)s) tersambung"
 
 #: pyanaconda/network.py:1684
 #, python-format
@@ -1064,11 +1112,11 @@ msgstr "Terhubung: %(list_of_interface_names)s"
 
 #: pyanaconda/network.py:1705
 msgid "Not connected"
-msgstr "Tak tersambung"
+msgstr "Tidak terhubung"
 
 #: pyanaconda/network.py:1708 pyanaconda/ui/gui/spokes/network.glade.h:45
 msgid "No network devices available"
-msgstr "Tidak ada divais jaringan yang tersedia"
+msgstr "Tidak ada peranti jaringan yang tersedia"
 
 #: pyanaconda/product.py:55
 #, python-format
@@ -1085,7 +1133,7 @@ msgstr "Instalasi %(name)s %(version)s baru"
 #: pyanaconda/pwpolicy.py:124
 #, python-format
 msgid "policy name required for %s"
-msgstr ""
+msgstr "nama kebijakan diperlukan untuk %s"
 
 #: pyanaconda/pwpolicy.py:133
 #, python-format
@@ -1103,7 +1151,7 @@ msgstr ""
 
 #: pyanaconda/rescue.py:78
 msgid "Unable to find /bin/bash to execute!  Not starting shell."
-msgstr ""
+msgstr "Tidak bisa temukan /bin/bash untuk dijalankan! Tidak memulai shell."
 
 #: pyanaconda/rescue.py:120
 msgid "Rescue"
@@ -1119,7 +1167,7 @@ msgstr ""
 
 #: pyanaconda/rescue.py:132
 msgid "Skip to shell"
-msgstr ""
+msgstr "Lewati ke shell"
 
 #: pyanaconda/rescue.py:146
 msgid "Please make a selection from the above:  "
@@ -2029,7 +2077,7 @@ msgstr "Alamat IPv4 atau %s untuk DHCP"
 
 #: pyanaconda/ui/tui/spokes/network.py:327
 msgid "IPv4 netmask"
-msgstr "IPv4 netmask"
+msgstr "Netmask IPv4"
 
 #: pyanaconda/ui/tui/spokes/network.py:328
 msgid "IPv4 gateway"
@@ -2166,6 +2214,11 @@ msgid ""
 "unformatted. Unformatted DASDs cannot be used during installation.\n"
 "\n"
 msgstr ""
+"DASD LDL atau yang tidak terformat berikut telah terdeteksi pada sistem "
+"Anda. Anda dapat memilih untuk memformat mereka sekarang dengan dasdfmt atau "
+"batal untuk membiarkan mereka tidak terformat. DASD yang tidak terformat "
+"tidak dapat dipakai selama instalasi.\n"
+"\n"
 
 #: pyanaconda/ui/tui/spokes/storage.py:351
 msgid ""
@@ -2198,7 +2251,7 @@ msgstr "Konfigurasi storage gagal: %s"
 #: pyanaconda/ui/tui/spokes/storage.py:501
 #: pyanaconda/ui/tui/spokes/storage.py:549
 msgid "Passphrase"
-msgstr "Passphrase"
+msgstr "Frasa sandi"
 
 #: pyanaconda/ui/tui/spokes/storage.py:543
 msgid "Please provide LUKS passphrase. You will have to type it twice."
@@ -2388,7 +2441,7 @@ msgstr "Media lokal"
 #: pyanaconda/ui/tui/spokes/source.py:122
 #: pyanaconda/ui/gui/spokes/source.py:575
 msgid "Local media via SE/HMC"
-msgstr ""
+msgstr "Media lokal via SE/HMC"
 
 #: pyanaconda/ui/tui/spokes/source.py:125
 #: pyanaconda/ui/tui/spokes/source.py:139
@@ -2629,7 +2682,7 @@ msgstr "_No"
 
 #: pyanaconda/ui/gui/__init__.py:889
 msgid "_Yes"
-msgstr "_Yes"
+msgstr "_Ya"
 
 #: pyanaconda/ui/gui/hubs/__init__.py:256
 msgid ""
@@ -2743,8 +2796,8 @@ msgid ""
 "When you create mount points for your %(name)s %(version)s installation, "
 "you'll be able to view their details here."
 msgstr ""
-"Ketika anda membuat mount point untuk instalasi %(name)s %(version)s , anda "
-"dapat melihat detail nya di sini."
+"Ketika Anda membuat titik kait untuk instalasi %(name)s %(version)s Anda , "
+"Anda dapat melihat rinciannya di sini."
 
 #: pyanaconda/ui/gui/spokes/custom.py:676
 #, python-format
@@ -3018,7 +3071,7 @@ msgstr "Unmanaged"
 #: pyanaconda/ui/gui/spokes/network.py:104
 #: pyanaconda/ui/gui/spokes/network.py:108
 msgid "Unavailable"
-msgstr "Unavailable"
+msgstr "Tidak tersedia"
 
 #: pyanaconda/ui/gui/spokes/network.py:106
 msgid "Firmware missing"
@@ -3058,7 +3111,7 @@ msgstr "Ethernet"
 
 #: pyanaconda/ui/gui/spokes/network.py:328
 msgid "Wireless"
-msgstr "Wireless"
+msgstr "Nirkabel"
 
 #: pyanaconda/ui/gui/spokes/network.py:329
 #: pyanaconda/ui/gui/spokes/network.glade.h:1
@@ -3150,7 +3203,7 @@ msgstr "_Sandi:"
 #: pyanaconda/ui/gui/spokes/network.py:1411
 msgctxt "GUI|Network|Secrets Dialog"
 msgid "_Key:"
-msgstr "_Key:"
+msgstr "_Kunci:"
 
 #: pyanaconda/ui/gui/spokes/network.py:1421
 msgid "User name: "
@@ -3497,6 +3550,8 @@ msgid ""
 "The following errors were encountered when checking your disk selection. You "
 "can modify your selection or quit the installer."
 msgstr ""
+"Kesalahan berikut ditemui ketika memeriksa pilihan disk Anda. Anda dapat "
+"mengubah pilihan Anda atau keluar dari pemasang."
 
 #: pyanaconda/ui/gui/spokes/storage.py:1114
 #: pyanaconda/ui/gui/spokes/storage.py:1135
@@ -3515,7 +3570,7 @@ msgid ""
 "configuration.  You can modify your storage layout or quit the installer."
 msgstr ""
 "Kesalahan berikut yang muncul ketika memeriksa konfigurasi penyimpanan Anda. "
-"Anda dapat mengubah tata letak penyimpanan atau keluar dari installer."
+"Anda dapat mengubah tata letak penyimpanan atau keluar dari pemasang."
 
 #: pyanaconda/ui/gui/spokes/storage.py:1136
 msgctxt "GUI|Storage|Error Dialog"
@@ -4324,6 +4379,8 @@ msgid ""
 "Please use the live desktop environment's tools for customizing your network "
 "configuration.  You can set the host name here."
 msgstr ""
+"Harap gunakan perkakas lingkungan desktop live untuk menggubah konfigurasi "
+"jaringan Anda. Anda dapat menata nama host di sini."
 
 #: pyanaconda/ui/gui/spokes/network.glade.h:11
 msgid "Slaves"
@@ -5979,6 +6036,10 @@ msgid ""
 "You can choose to format them now with dasdfmt or cancel to leave them "
 "unformatted. Unformatted DASDs cannot be used during installation."
 msgstr ""
+"DASD LDL atau yang tidak terformat berikut telah terdeteksi pada sistem "
+"Anda. Anda dapat memilih untuk memformat mereka sekarang dengan dasdfmt atau "
+"batal untuk membiarkan mereka tidak terformat. DASD yang tidak terformat "
+"tidak dapat dipakai selama instalasi."
 
 #: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade.h:5
 msgid "Unformatted DASDs Detected"
