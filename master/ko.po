@@ -31,7 +31,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2020-10-18 00:45+0000\n"
+"POT-Creation-Date: 2020-10-20 00:43+0000\n"
 "PO-Revision-Date: 2020-07-05 10:27+0000\n"
 "Last-Translator: Ludek Janda <ljanda@redhat.com>\n"
 "Language-Team: Korean <https://translate.fedoraproject.org/projects/anaconda/"
@@ -1417,16 +1417,7 @@ msgstr "설치에 필요한 루트 파티션 (/)을 정의하지 않았습니다
 msgid "Your root partition must be on a device of type: %s."
 msgstr "{fs}는 {type} 유형의 장치에 존재해야 합니다"
 
-#: pyanaconda/modules/storage/checker/utils.py:92
-msgid ""
-"This platform requires /boot on a dedicated partition or logical volume. If "
-"you do not want a /boot volume, you must place / on a dedicated non-LVM "
-"partition."
-msgstr ""
-"이 플랫폼은 전용 파티션이나 논리 볼륨에 / 부팅이 필요합니다. / 부트 볼륨을 원"
-"하지 않으면 전용 LVM이 아닌 파티션에 /를 두어야합니다."
-
-#: pyanaconda/modules/storage/checker/utils.py:99
+#: pyanaconda/modules/storage/checker/utils.py:84
 #, python-brace-format
 msgid ""
 "The LDL DASD disk {name} ({busid}) cannot be used for the installation. "
@@ -1435,13 +1426,13 @@ msgstr ""
 "LDL DASD 디스크 {name} ({busid})는 설치에 사용할 수 없습니다. 형식을 지정하십"
 "시오."
 
-#: pyanaconda/modules/storage/checker/utils.py:121
+#: pyanaconda/modules/storage/checker/utils.py:106
 #, python-format
 msgid ""
 "It is recommended to create a new file system on your %(mount)s partition."
 msgstr "%(mount)s 파티션에 새로운 파일 시스템을 작성하는 것이 좋습니다."
 
-#: pyanaconda/modules/storage/checker/utils.py:137
+#: pyanaconda/modules/storage/checker/utils.py:122
 #, python-format
 msgid ""
 "Your %(mount)s partition is less than %(size)s which is lower than "
@@ -1450,7 +1441,7 @@ msgstr ""
 "너의 %(mount)s 파티션이보다 작음 %(size)s 정상보다 낮은 경우 %(productName)s "
 "설치하십시오."
 
-#: pyanaconda/modules/storage/checker/utils.py:145
+#: pyanaconda/modules/storage/checker/utils.py:130
 #, fuzzy, python-format
 #| msgid ""
 #| "Your %(mount)s partition is less than %(size)s which is lower than "
@@ -1460,7 +1451,7 @@ msgstr ""
 "너의 %(mount)s 파티션이보다 작음 %(size)s 정상보다 낮은 경우 %(productName)s "
 "설치하십시오."
 
-#: pyanaconda/modules/storage/checker/utils.py:165
+#: pyanaconda/modules/storage/checker/utils.py:150
 #, python-format
 msgid ""
 "Your %(mount)s partition is too small for %(format)s formatting (allowable "
@@ -1469,7 +1460,7 @@ msgstr ""
 "너의 %(mount)s 파티션이 너무 작아서 %(format)s 형식 지정 (허용되는 크기는 "
 "%(minSize)s 에 %(maxSize)s)"
 
-#: pyanaconda/modules/storage/checker/utils.py:171
+#: pyanaconda/modules/storage/checker/utils.py:156
 #, python-format
 msgid ""
 "Your %(mount)s partition is too large for %(format)s formatting (allowable "
@@ -1478,17 +1469,17 @@ msgstr ""
 "너의 %(mount)s 파티션이 너무 커서 %(format)s 형식 지정 (허용되는 크기는 "
 "%(minSize)s 에 %(maxSize)s)"
 
-#: pyanaconda/modules/storage/checker/utils.py:189
+#: pyanaconda/modules/storage/checker/utils.py:174
 msgid "No valid boot loader target device found. See below for details."
 msgstr ""
 "부트로더 대상 장치 중 유효한 것이 없습니다. 자세한 내용은 아래에서 참조하십시"
 "오."
 
-#: pyanaconda/modules/storage/checker/utils.py:204
+#: pyanaconda/modules/storage/checker/utils.py:189
 msgid "You have not created a bootable partition."
 msgstr "부트 파티션을 생성하지 않으셨습니다."
 
-#: pyanaconda/modules/storage/checker/utils.py:239
+#: pyanaconda/modules/storage/checker/utils.py:224
 msgid ""
 "Your BIOS-based system needs a special partition to boot from a GPT disk "
 "label. To continue, please create a 1MiB 'biosboot' type partition."
@@ -1496,7 +1487,7 @@ msgstr ""
 "BIOS 기반 시스템은 GPT 디스크 레이블에서 부팅하기 위해 특정 파티션이 필요합니"
 "다. 계속 진행하려면 1MiB 'biosboot' 유형의 파티션을 생성하십시오."
 
-#: pyanaconda/modules/storage/checker/utils.py:261
+#: pyanaconda/modules/storage/checker/utils.py:246
 #, python-format
 msgid ""
 "You have not specified a swap partition. %(requiredMem)s of memory is "
@@ -1506,7 +1497,7 @@ msgstr ""
 "스왑 파티션을 지정하지 않았습니다. %(requiredMem)s 스왑 파티션없이 설치를 계"
 "속하려면 메모리를 권장합니다. %(installedMem)s."
 
-#: pyanaconda/modules/storage/checker/utils.py:268
+#: pyanaconda/modules/storage/checker/utils.py:253
 #, python-format
 msgid ""
 "You have not specified a swap partition. %(requiredMem)s of memory is "
@@ -1516,7 +1507,7 @@ msgstr ""
 "스왑 파티션을 지정하지 않았습니다. %(requiredMem)s 스왑 파티션없이 설치를 계"
 "속하려면 메모리가 필요하지만 %(installedMem)s."
 
-#: pyanaconda/modules/storage/checker/utils.py:274
+#: pyanaconda/modules/storage/checker/utils.py:259
 msgid ""
 "You have not specified a swap partition. Although not strictly required in "
 "all cases, it will significantly improve performance for most installations."
@@ -1524,7 +1515,7 @@ msgstr ""
 "스왑 파티션을 지정하지 않았습니다. 모든 경우에 엄격하게 요구되는 것은 아니지"
 "만 대부분의 설치에서 성능이 크게 향상됩니다."
 
-#: pyanaconda/modules/storage/checker/utils.py:292
+#: pyanaconda/modules/storage/checker/utils.py:277
 msgid ""
 "At least one of your swap devices does not have a UUID, which is common in "
 "swap space created using older versions of mkswap. These devices will be "
@@ -1536,7 +1527,7 @@ msgstr ""
 "에 의해 참조됩니다. 다양한 상황에 따라 장치 경로가 변경될 수 있기 때문에 권장"
 "하는 방법은 아닙니다."
 
-#: pyanaconda/modules/storage/checker/utils.py:311
+#: pyanaconda/modules/storage/checker/utils.py:296
 #, python-format
 msgid ""
 "This mount point is invalid. The %s directory must be on the / file system."
@@ -1544,18 +1535,18 @@ msgstr ""
 "이 마운트 포인트가 유효하지 않습니다. 그만큼 %s 디렉토리는 / 파일 시스템에 있"
 "어야합니다."
 
-#: pyanaconda/modules/storage/checker/utils.py:327
+#: pyanaconda/modules/storage/checker/utils.py:312
 #, fuzzy, python-format
 #| msgid "%s must be on a primary partition."
 msgid "Your %s must be on a separate partition or LV."
 msgstr "%s은(는)첫 번째 파티션에 지정해야 합니다."
 
-#: pyanaconda/modules/storage/checker/utils.py:344
+#: pyanaconda/modules/storage/checker/utils.py:329
 #, python-format
 msgid "The mount point %s must be on a linux file system."
 msgstr "마운트 지점 %s 리눅스 파일 시스템에 있어야합니다."
 
-#: pyanaconda/modules/storage/checker/utils.py:369
+#: pyanaconda/modules/storage/checker/utils.py:354
 msgid ""
 "The existing unlocked LUKS device {} cannot be used for the installation "
 "without an encryption key specified for this device. Please, rescan the "
@@ -1564,7 +1555,7 @@ msgstr ""
 "이미 존재하는 잠금 해제된 LUKS 장치인 {}은(는) 이 장치의 암호화 키가 없이 설"
 "치에 사용될 수 없습니다. 스토리지를 다시 스캔해주세요."
 
-#: pyanaconda/modules/storage/checker/utils.py:390
+#: pyanaconda/modules/storage/checker/utils.py:375
 #, python-format
 msgid ""
 "Encryption requested for LUKS device %s but no encryption key specified for "
@@ -1573,7 +1564,7 @@ msgstr ""
 "LUKS 장치에 암호화가 요청되었습니다. %s 이 장치에 지정된 암호화 키가 없습니"
 "다."
 
-#: pyanaconda/modules/storage/checker/utils.py:412
+#: pyanaconda/modules/storage/checker/utils.py:397
 #, python-format
 msgid ""
 "The available memory is less than %(size)s which can be too small for LUKS2 "
@@ -1582,7 +1573,7 @@ msgstr ""
 "사용 가능한 메모리가 미만입니다. %(size)s LUKS2 형식에는 너무 작을 수 있습니"
 "다. 실패 할 수 있습니다."
 
-#: pyanaconda/modules/storage/checker/utils.py:453
+#: pyanaconda/modules/storage/checker/utils.py:438
 #, python-format
 msgid ""
 "%s is currently mounted and cannot be used for the installation. Please "
@@ -1591,7 +1582,7 @@ msgstr ""
 "%s 현재 마운트되어 있으며 설치에 사용할 수 없습니다. 마운트를 해제하고 다시 "
 "시도하십시오."
 
-#: pyanaconda/modules/storage/checker/utils.py:488
+#: pyanaconda/modules/storage/checker/utils.py:473
 #, fuzzy
 #| msgid ""
 #| "You selected disk %(selected)s, which contains devices that also use "
@@ -7384,6 +7375,14 @@ msgstr "종료"
 #: ../data/liveinst/console.apps/liveinst.h:1
 msgid "Starting Install to Hard Drive"
 msgstr "하드 드라이브에 설치를 시작합니다"
+
+#~ msgid ""
+#~ "This platform requires /boot on a dedicated partition or logical volume. "
+#~ "If you do not want a /boot volume, you must place / on a dedicated non-"
+#~ "LVM partition."
+#~ msgstr ""
+#~ "이 플랫폼은 전용 파티션이나 논리 볼륨에 / 부팅이 필요합니다. / 부트 볼륨"
+#~ "을 원하지 않으면 전용 LVM이 아닌 파티션에 /를 두어야합니다."
 
 #~ msgctxt "GUI|Custom Partitioning"
 #~ msgid "_Reset All"

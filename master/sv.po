@@ -27,7 +27,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2020-10-18 00:45+0000\n"
+"POT-Creation-Date: 2020-10-20 00:43+0000\n"
 "PO-Revision-Date: 2020-10-19 00:15+0000\n"
 "Last-Translator: Göran Uddeborg <goeran@uddeborg.se>\n"
 "Language-Team: Swedish <https://translate.fedoraproject.org/projects/"
@@ -1412,17 +1412,7 @@ msgstr ""
 msgid "Your root partition must be on a device of type: %s."
 msgstr "Din root partition måste ligga på en enhet av typen: %s."
 
-#: pyanaconda/modules/storage/checker/utils.py:92
-msgid ""
-"This platform requires /boot on a dedicated partition or logical volume. If "
-"you do not want a /boot volume, you must place / on a dedicated non-LVM "
-"partition."
-msgstr ""
-"Din plattform behöver /boot på en dedikerad partition eller logisk volym. Om "
-"du inte vill ha en /boot-volym måste du placera / på en dedikerad annan "
-"partition än en LVM-partition."
-
-#: pyanaconda/modules/storage/checker/utils.py:99
+#: pyanaconda/modules/storage/checker/utils.py:84
 #, python-brace-format
 msgid ""
 "The LDL DASD disk {name} ({busid}) cannot be used for the installation. "
@@ -1431,14 +1421,14 @@ msgstr ""
 "LDL DASD-disken {name} ({busid}) kan inte användas till installationen. Den "
 "behöver formateras."
 
-#: pyanaconda/modules/storage/checker/utils.py:121
+#: pyanaconda/modules/storage/checker/utils.py:106
 #, python-format
 msgid ""
 "It is recommended to create a new file system on your %(mount)s partition."
 msgstr ""
 "Det rekommenderas att skapa ett nytt filsystem på din %(mount)s-partition."
 
-#: pyanaconda/modules/storage/checker/utils.py:137
+#: pyanaconda/modules/storage/checker/utils.py:122
 #, python-format
 msgid ""
 "Your %(mount)s partition is less than %(size)s which is lower than "
@@ -1447,13 +1437,13 @@ msgstr ""
 "Din %(mount)s-partition är mindre än %(size)s som är mindre än rekommenderat "
 "för en normal installation av %(productName)s."
 
-#: pyanaconda/modules/storage/checker/utils.py:145
+#: pyanaconda/modules/storage/checker/utils.py:130
 #, python-format
 msgid "Your %(mount)s partition size is lower than required %(size)s."
 msgstr ""
 "Storleken på din partition %(mount)s är mindre än de nödvändiga %(size)s."
 
-#: pyanaconda/modules/storage/checker/utils.py:165
+#: pyanaconda/modules/storage/checker/utils.py:150
 #, python-format
 msgid ""
 "Your %(mount)s partition is too small for %(format)s formatting (allowable "
@@ -1462,7 +1452,7 @@ msgstr ""
 "Din %(mount)s-partition är för liten för %(format)s-formatering (tillåtna "
 "storlekar är %(minSize)s till %(maxSize)s)"
 
-#: pyanaconda/modules/storage/checker/utils.py:171
+#: pyanaconda/modules/storage/checker/utils.py:156
 #, python-format
 msgid ""
 "Your %(mount)s partition is too large for %(format)s formatting (allowable "
@@ -1471,15 +1461,15 @@ msgstr ""
 "Din %(mount)s-partition är för stor för %(format)s-formatering (tillåtna "
 "storlekar är %(minSize)s till %(maxSize)s)"
 
-#: pyanaconda/modules/storage/checker/utils.py:189
+#: pyanaconda/modules/storage/checker/utils.py:174
 msgid "No valid boot loader target device found. See below for details."
 msgstr "Ingen målenhet för startprogram hittad. Se nedan för detaljer."
 
-#: pyanaconda/modules/storage/checker/utils.py:204
+#: pyanaconda/modules/storage/checker/utils.py:189
 msgid "You have not created a bootable partition."
 msgstr "Du har inte skapat en startbar partition."
 
-#: pyanaconda/modules/storage/checker/utils.py:239
+#: pyanaconda/modules/storage/checker/utils.py:224
 msgid ""
 "Your BIOS-based system needs a special partition to boot from a GPT disk "
 "label. To continue, please create a 1MiB 'biosboot' type partition."
@@ -1488,7 +1478,7 @@ msgstr ""
 "en GPT-disketikett. För att fortsätta, skapa en 1 MiB partition av "
 "”biosboot”-typ."
 
-#: pyanaconda/modules/storage/checker/utils.py:261
+#: pyanaconda/modules/storage/checker/utils.py:246
 #, python-format
 msgid ""
 "You have not specified a swap partition. %(requiredMem)s of memory is "
@@ -1499,7 +1489,7 @@ msgstr ""
 "rekommenderas för att fortsätta installationen utan en växlingspartition, "
 "men du har bara %(installedMem)s."
 
-#: pyanaconda/modules/storage/checker/utils.py:268
+#: pyanaconda/modules/storage/checker/utils.py:253
 #, python-format
 msgid ""
 "You have not specified a swap partition. %(requiredMem)s of memory is "
@@ -1510,7 +1500,7 @@ msgstr ""
 "för att fortsätta installationen utan en växlingspartition, men du har bara "
 "%(installedMem)s."
 
-#: pyanaconda/modules/storage/checker/utils.py:274
+#: pyanaconda/modules/storage/checker/utils.py:259
 msgid ""
 "You have not specified a swap partition. Although not strictly required in "
 "all cases, it will significantly improve performance for most installations."
@@ -1519,7 +1509,7 @@ msgstr ""
 "nödvändigt i alla lägen kommer det förbättra prestanda signifikant i de "
 "flesta installationer."
 
-#: pyanaconda/modules/storage/checker/utils.py:292
+#: pyanaconda/modules/storage/checker/utils.py:277
 msgid ""
 "At least one of your swap devices does not have a UUID, which is common in "
 "swap space created using older versions of mkswap. These devices will be "
@@ -1531,24 +1521,24 @@ msgstr ""
 "kommer refereras till med enhetens sökväg i /etc/fstab, vilket inte är "
 "idealiskt eftersom enheters sökvägar kan ändras under olika omständigheter. "
 
-#: pyanaconda/modules/storage/checker/utils.py:311
+#: pyanaconda/modules/storage/checker/utils.py:296
 #, python-format
 msgid ""
 "This mount point is invalid. The %s directory must be on the / file system."
 msgstr ""
 "Denna monteringspunkt är ogiltig. Katalogen %s måste vara på /-filsystemet."
 
-#: pyanaconda/modules/storage/checker/utils.py:327
+#: pyanaconda/modules/storage/checker/utils.py:312
 #, python-format
 msgid "Your %s must be on a separate partition or LV."
 msgstr "Din %s måste vara på en separat partition eller LV."
 
-#: pyanaconda/modules/storage/checker/utils.py:344
+#: pyanaconda/modules/storage/checker/utils.py:329
 #, python-format
 msgid "The mount point %s must be on a linux file system."
 msgstr "Monteringspunkten %s måste vara på ett linuxfilsystem."
 
-#: pyanaconda/modules/storage/checker/utils.py:369
+#: pyanaconda/modules/storage/checker/utils.py:354
 msgid ""
 "The existing unlocked LUKS device {} cannot be used for the installation "
 "without an encryption key specified for this device. Please, rescan the "
@@ -1557,7 +1547,7 @@ msgstr ""
 "Den befintliga olåsta LUKS-enheten {} kan inte användas för installationen "
 "utan att en krypteringsnyckel anges för denna enhet. Skanna om lagringen."
 
-#: pyanaconda/modules/storage/checker/utils.py:390
+#: pyanaconda/modules/storage/checker/utils.py:375
 #, python-format
 msgid ""
 "Encryption requested for LUKS device %s but no encryption key specified for "
@@ -1566,7 +1556,7 @@ msgstr ""
 "Kryptering begärd för LUKS-enheten %s men ingen krypteringsnyckel angiven "
 "för denna enhet."
 
-#: pyanaconda/modules/storage/checker/utils.py:412
+#: pyanaconda/modules/storage/checker/utils.py:397
 #, python-format
 msgid ""
 "The available memory is less than %(size)s which can be too small for LUKS2 "
@@ -1575,7 +1565,7 @@ msgstr ""
 "Det tillgängliga minnet är mindre än %(size)s vilket kan vara för lite för "
 "LUKS2-formatet. Det kan misslyckas."
 
-#: pyanaconda/modules/storage/checker/utils.py:453
+#: pyanaconda/modules/storage/checker/utils.py:438
 #, python-format
 msgid ""
 "%s is currently mounted and cannot be used for the installation. Please "
@@ -1584,7 +1574,7 @@ msgstr ""
 "%s är för närvarande monterat och kan inte användas till installationen. "
 "Avmontera det och försök igen."
 
-#: pyanaconda/modules/storage/checker/utils.py:488
+#: pyanaconda/modules/storage/checker/utils.py:473
 msgid ""
 "Selected disks {} contain volume group '{}' that also uses further "
 "unselected disks. You must select or de-select all these disks as a set."
@@ -7352,6 +7342,15 @@ msgstr "Stäng"
 #: ../data/liveinst/console.apps/liveinst.h:1
 msgid "Starting Install to Hard Drive"
 msgstr "Påbörjar installation på hårddisk"
+
+#~ msgid ""
+#~ "This platform requires /boot on a dedicated partition or logical volume. "
+#~ "If you do not want a /boot volume, you must place / on a dedicated non-"
+#~ "LVM partition."
+#~ msgstr ""
+#~ "Din plattform behöver /boot på en dedikerad partition eller logisk volym. "
+#~ "Om du inte vill ha en /boot-volym måste du placera / på en dedikerad "
+#~ "annan partition än en LVM-partition."
 
 #~ msgctxt "GUI|Custom Partitioning"
 #~ msgid "_Reset All"
