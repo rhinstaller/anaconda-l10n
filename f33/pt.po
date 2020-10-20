@@ -32,7 +32,7 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2020-10-18 00:47+0000\n"
-"PO-Revision-Date: 2020-10-19 00:15+0000\n"
+"PO-Revision-Date: 2020-10-20 10:57+0000\n"
 "Last-Translator: Juliano de Souza Camargo <julianosc@protonmail.com>\n"
 "Language-Team: Portuguese <https://translate.fedoraproject.org/projects/"
 "anaconda/f33/pt/>\n"
@@ -1288,6 +1288,9 @@ msgid ""
 "incorrect file system type. The file says that {detected_type} at "
 "{mount_point} is {fstab_type}."
 msgstr ""
+"Existe uma entrada em seu ficheiro /etc/fstab que contém um tipo de sistema "
+"de ficheiros inválido ou incorreto. O ficheiro diz que {detected_type} em "
+"{mount_point} é {fstab_type}."
 
 #: pyanaconda/modules/storage/snapshot/device.py:43
 #, python-format
@@ -1523,6 +1526,9 @@ msgid ""
 "You have not specified a swap partition. Although not strictly required in "
 "all cases, it will significantly improve performance for most installations."
 msgstr ""
+"Não especificou uma partição swap. Embora não seja necessária em todos os "
+"casos, sua utilização aumenta significativamente o desempenho na maioria das "
+"instalações."
 
 #: pyanaconda/modules/storage/checker/utils.py:292
 msgid ""
@@ -1531,12 +1537,18 @@ msgid ""
 "referred to by device path in /etc/fstab, which is not ideal since device "
 "paths can change under a variety of circumstances. "
 msgstr ""
+"Ao menos um de seus dispositivos não possui um UUID, que é comum em espaço "
+"swap criado usando versões antigas do mkswap. Estes dispositivos serão "
+"referidos pelo caminho do dispositivo em /etc/fstab, que não é ideal já que "
+"caminhos de dispositivo podem mudar sob uma variedade de circunstâncias. "
 
 #: pyanaconda/modules/storage/checker/utils.py:311
 #, python-format
 msgid ""
 "This mount point is invalid. The %s directory must be on the / file system."
 msgstr ""
+"Ponto de montagem inválido. O diretório %s deve estar no sistema de "
+"ficheiros / ."
 
 #: pyanaconda/modules/storage/checker/utils.py:327
 #, python-format
@@ -1546,7 +1558,7 @@ msgstr "%s deve estar numa partição separada ou LV."
 #: pyanaconda/modules/storage/checker/utils.py:344
 #, python-format
 msgid "The mount point %s must be on a linux file system."
-msgstr ""
+msgstr "O ponto de montagem %s deve estar num sistema de ficheiros Linux."
 
 #: pyanaconda/modules/storage/checker/utils.py:369
 msgid ""
@@ -1554,6 +1566,9 @@ msgid ""
 "without an encryption key specified for this device. Please, rescan the "
 "storage."
 msgstr ""
+"O dispositivo LUKS desbloqueado existente {} não pode ser usado para a "
+"instalação sem uma chave de cifrar específica a este dispositivo. Por favor, "
+"atualize o armazenamento."
 
 #: pyanaconda/modules/storage/checker/utils.py:390
 #, python-format
@@ -1561,6 +1576,8 @@ msgid ""
 "Encryption requested for LUKS device %s but no encryption key specified for "
 "this device."
 msgstr ""
+"Cifragem requisitada pelo dispositivo LUKS %s, entretanto não há chave para "
+"cifrá-lo."
 
 #: pyanaconda/modules/storage/checker/utils.py:412
 #, python-format
@@ -1568,6 +1585,8 @@ msgid ""
 "The available memory is less than %(size)s which can be too small for LUKS2 "
 "format. It may fail."
 msgstr ""
+"A memória disponível é menor que %(size)s a qual pode ser demasiado pequena "
+"para o formato LUKS2. Pode falhar."
 
 #: pyanaconda/modules/storage/checker/utils.py:453
 #, python-format
@@ -1575,12 +1594,17 @@ msgid ""
 "%s is currently mounted and cannot be used for the installation. Please "
 "unmount it and retry."
 msgstr ""
+"%s está montado e não poderá ser usado na instalação. Por favor, desmonte-o "
+"e tente novamente."
 
 #: pyanaconda/modules/storage/checker/utils.py:488
 msgid ""
 "Selected disks {} contain volume group '{}' that also uses further "
 "unselected disks. You must select or de-select all these disks as a set."
 msgstr ""
+"Os discos selecionados {} contém um grupo de volumes '{}' que também utiliza "
+"discos desselecionados. Deve selecionar ou deixar de selecionar todos estes "
+"discos como um conjunto."
 
 #: pyanaconda/modules/storage/disk_selection/utils.py:36
 msgid "The selected disk {} is not recognized."
@@ -1597,6 +1621,13 @@ msgid_plural ""
 "unselected disks %(unselected)s. You must select or de-select these disks as "
 "a set."
 msgstr[0] ""
+"Selecionou o disco %(selected)s, que contém dispositivos que usam também o "
+"disco desselecionado %(unselected)s. Deve selecionar ou desselecionar os "
+"discos em conjunto."
+msgstr[1] ""
+"Selecionou o disco %(selected)s, que contém dispositivos que usam também "
+"discos desselecionados %(unselected)s. Deve selecionar ou desselecionar os "
+"discos em conjunto."
 
 #: pyanaconda/modules/storage/installation.py:88
 msgid "An error occurred while resizing the device {}: {}"
@@ -1604,16 +1635,16 @@ msgstr "Ocorreu um erro durante o redimensionamento do dispositivo {}: {}"
 
 #: pyanaconda/modules/storage/installation.py:139
 msgid "Gathering entropy 100%"
-msgstr ""
+msgstr "A acumular 100% de entropia"
 
 #: pyanaconda/modules/storage/installation.py:143
 msgid "Gathering entropy (time ran out)"
-msgstr ""
+msgstr "A acumular entropia (expirou o tempo)"
 
 #: pyanaconda/modules/storage/installation.py:146
 #, python-brace-format
 msgid "Gathering entropy {percents}% (remaining time {time})"
-msgstr ""
+msgstr "A acumular entropia, {percents}% (tempo restante {time})"
 
 #: pyanaconda/modules/timezone/timezone.py:100
 msgid "Invalid time source."
@@ -1643,7 +1674,7 @@ msgstr "Instalação local"
 
 #: pyanaconda/modules/payloads/source/live_os/live_os.py:59
 msgid "Live OS"
-msgstr ""
+msgstr "“Live” de SO"
 
 #: pyanaconda/modules/payloads/source/repo_files/repo_files.py:54
 msgid "Local repositories"
@@ -1692,6 +1723,8 @@ msgid ""
 "\n"
 "Some warnings occurred during reading the kickstart file:"
 msgstr ""
+"\n"
+"Alguns avisos surgiram durante a leitura do ficheiro kickstart:"
 
 #: pyanaconda/kickstart.py:549
 #, python-format
@@ -1702,6 +1735,11 @@ msgid ""
 "\n"
 "The installer will now terminate."
 msgstr ""
+"\n"
+"Um erro ocorreu durante a leitura do ficheiro kickstart\n"
+"%s\n"
+"\n"
+"O instalador não continuará."
 
 #: pyanaconda/kickstart.py:593 pyanaconda/installation.py:275
 msgid "Running pre-installation scripts"
@@ -2861,7 +2899,7 @@ msgstr "Erro ao verificar a seleção do programa"
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:311
 msgid "Red Hat CDN requires registration."
-msgstr ""
+msgstr "O CDN da Red Hat requer registo."
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:314
 #: pyanaconda/ui/tui/spokes/software_selection.py:160
@@ -3922,7 +3960,7 @@ msgstr[1] "A desistir da ligação ao fim de %d tentativas!\n"
 
 #: pyanaconda/vnc.py:199
 msgid "Attempting to start vncconfig"
-msgstr ""
+msgstr "A tentar iniciar o vncconfig"
 
 #: pyanaconda/vnc.py:212
 #, python-format
@@ -3936,6 +3974,9 @@ msgid ""
 "install. Switch to the shell (Ctrl-B 2) and run 'ip addr' to find the IP-"
 "ADDRESS."
 msgstr ""
+"Por favor, ligue seu cliente vnc manualmente ao ENDEREÇO-IP:%s para iniciar "
+"a instalação. Alterne para a consola (Ctrl-B 2) e execute 'ip addr' para "
+"encontrar o ENDEREÇO-IP."
 
 #: pyanaconda/vnc.py:219
 msgid "Starting VNC..."
@@ -3972,6 +4013,12 @@ msgid ""
 "if you would like to secure the server.\n"
 "\n"
 msgstr ""
+"\n"
+"\n"
+"ATENÇÃO!!! O servidor VNC está em execução SEM PALAVRA-PASSE!\n"
+"Pode usar a opção de arranque vncpassword=PALAVRA-PASSE\n"
+"se deseja proteger o servidor.\n"
+"\n"
 
 #: pyanaconda/vnc.py:269
 msgid ""
@@ -4002,6 +4049,8 @@ msgid ""
 "VNC password must be six to eight characters long.\n"
 "Please enter a new one, or leave blank for no password."
 msgstr ""
+"A palavra-passe VNC deve  ter entre 6 e 8 caracteres.\n"
+"Por favor, digite uma nova palavra-passe ou deixe-a em branco para nenhuma."
 
 #: pyanaconda/display.py:291
 msgid "Graphical installation is not available. Starting text mode."
@@ -4013,6 +4062,9 @@ msgid ""
 "custom partitioning for full control over the disk layout. Would you like to "
 "use VNC mode instead?"
 msgstr ""
+"O modo texto oferece um conjunto limitado de opções de instalação. Ele não "
+"oferece particionamento personalizado para um controle total da disposição "
+"do disco. Deseja utilizar o modo VNC antes?"
 
 #: pyanaconda/display.py:328
 msgid ""
@@ -4040,6 +4092,8 @@ msgid ""
 "Downloading %(total_files)s RPMs, %(downloaded)s / %(total_size)s "
 "(%(percent)d%%) done."
 msgstr ""
+"A transferir %(total_files)s RPMs, %(downloaded)s / %(total_size)s "
+"(%(percent)d%%) completado."
 
 #: pyanaconda/payload/dnf/payload.py:1349
 msgid "Starting package installation process"
@@ -4047,7 +4101,7 @@ msgstr "A iniciar processo de instalação de pacotes"
 
 #: pyanaconda/payload/dnf/payload.py:1369
 msgid "Downloading packages"
-msgstr ""
+msgstr "A transferir pacotes"
 
 #: pyanaconda/payload/dnf/payload.py:1382
 msgid "Preparing transaction from installation source"
@@ -4056,30 +4110,30 @@ msgstr "A preparar transacção a partir das fontes de instalação"
 #: pyanaconda/payload/dnf/payload.py:1395
 #, python-format
 msgid "Installing %s"
-msgstr ""
+msgstr "A instalar %s"
 
 #: pyanaconda/payload/dnf/payload.py:1398
 #, python-format
 msgid "Configuring %s"
-msgstr ""
+msgstr "A configurar %s"
 
 #: pyanaconda/payload/dnf/payload.py:1401
 #, python-format
 msgid "Verifying %s"
-msgstr ""
+msgstr "A verificar %s"
 
 #: pyanaconda/payload/dnf/payload.py:1406
 #: pyanaconda/payload/live/payload_base.py:159 pyanaconda/installation.py:350
 msgid "Performing post-installation setup tasks"
-msgstr ""
+msgstr "A executar tarefas de configuração pós-instalação"
 
 #: pyanaconda/payload/manager.py:75
 msgid "Failed to set up installation source"
-msgstr ""
+msgstr "Falha ao configurar a fonte de instalação"
 
 #: pyanaconda/payload/manager.py:76
 msgid "Error downloading package metadata"
-msgstr ""
+msgstr "Erro ao transferir metadados do pacote"
 
 #: pyanaconda/payload/flatpak.py:205
 #, python-format
@@ -4089,31 +4143,31 @@ msgstr "A instalar %(flatpak_name)s"
 #: pyanaconda/payload/rpmostreepayload.py:106
 #, python-format
 msgid "Receiving objects: %(percent)d%% (%(fetched)d/%(requested)d) %(bytes)s"
-msgstr ""
+msgstr "A receber objetos: %(percent)d%% (%(fetched)d/%(requested)d) %(bytes)s"
 
 #: pyanaconda/payload/rpmostreepayload.py:112
 msgid "Writing objects"
-msgstr ""
+msgstr "A escrever objetos"
 
 #: pyanaconda/payload/rpmostreepayload.py:203
 #, python-format
 msgid "Starting pull of %(branchName)s from %(source)s"
-msgstr ""
+msgstr "A iniciar a obtenção da %(branchName)s do %(source)s"
 
 #: pyanaconda/payload/rpmostreepayload.py:233
 #, python-format
 msgid "Preparing deployment of %s"
-msgstr ""
+msgstr "A preparar a instalação de %s"
 
 #: pyanaconda/payload/rpmostreepayload.py:253
 #, python-format
 msgid "Deployment starting: %s"
-msgstr ""
+msgstr "A iniciar a instalação: %s"
 
 #: pyanaconda/payload/rpmostreepayload.py:256
 #, python-format
 msgid "Deployment complete: %s"
-msgstr ""
+msgstr "Instalação completa: %s"
 
 #: pyanaconda/payload/rpmostreepayload.py:483
 msgid "Starting Flatpak installation"
@@ -4129,7 +4183,7 @@ msgstr "A instalação de \"flatpack\" terminou"
 
 #: pyanaconda/payload/live/payload_liveimg.py:212
 msgid "Checking image checksum"
-msgstr ""
+msgstr "A verificar a integridade da imagem"
 
 #: pyanaconda/payload/live/payload_liveos.py:96
 #: pyanaconda/payload/live/payload_base.py:80
@@ -4140,7 +4194,7 @@ msgstr "A instalar software"
 #: pyanaconda/payload/live/download_progress.py:66
 #, python-format
 msgid "Downloading %(url)s (%(pct)d%%)"
-msgstr ""
+msgstr "A transferir %(url)s (%(pct)d%%)"
 
 #: pyanaconda/installation.py:87
 msgid "Configuring Red Hat subscription"
@@ -4176,12 +4230,12 @@ msgstr "Configurar kexec"
 
 #: pyanaconda/installation.py:191
 msgid "Storing configuration files and kickstarts"
-msgstr ""
+msgstr "A armazenar ficheiros de configuração e kickstarts"
 
 #: pyanaconda/installation.py:235
 #, python-format
 msgid "Waiting for %s threads to finish"
-msgstr ""
+msgstr "A esperar por %s tarefas terminarem"
 
 #: pyanaconda/installation.py:248
 msgid "Setting up the installation environment"
@@ -4290,6 +4344,14 @@ msgid ""
 "Once you have resolved the issue you can retry the storage scan. If you do "
 "not fix it you will have to exit the installer."
 msgstr ""
+"Há um problema com sua configuração de armazenamento existente ou suas "
+"definições iniciais, a exemplo, um ficheiro de kickstart. Deve resolver este "
+"problema antes que a instalação possa prosseguir. Há uma consola disponível "
+"para uso, que pode aceder ao pressionar ctrl-alt-f1 e, em seguida, ctrl-b 2."
+"\n"
+"\n"
+"Depois de ter resolvido o problema, pode repetir a verificação de "
+"armazenamento. Se não corrigi-lo, terá de terminar o instalador."
 
 #: pyanaconda/errors.py:128
 msgctxt "GUI|Storage Detailed Error Dialog"
@@ -4446,6 +4508,8 @@ msgid ""
 "%(product_name)s requires %(needed_ram)s MB of memory to install, but you "
 "only have %(total_ram)s MB on this machine.\n"
 msgstr ""
+"%(product_name)s requer %(needed_ram)s MB de memória para a instalação, mas "
+"tem apenas %(total_ram)s MB nesta máquina.\n"
 
 #: pyanaconda/startup_utils.py:78
 #, python-format
@@ -4453,6 +4517,8 @@ msgid ""
 "The %(product_name)s graphical installer requires %(needed_ram)s MB of "
 "memory, but you only have %(total_ram)s MB.\n"
 msgstr ""
+"O instalador gráfico %(product_name)s requer %(needed_ram)s MB de memória, "
+"mas seu sistema dispõe só de %(total_ram)s MB.\n"
 
 #: pyanaconda/startup_utils.py:81
 msgid ""
@@ -4490,7 +4556,7 @@ msgstr "A instalação não pode continuar e o sistema será reiniciado"
 
 #: pyanaconda/startup_utils.py:124
 msgid "Press ENTER to continue"
-msgstr ""
+msgstr "Premir ENTER para continuar"
 
 #: pyanaconda/startup_utils.py:239
 #, python-format
@@ -4499,15 +4565,15 @@ msgstr "Execute ssh install@%s para iniciar a instalação."
 
 #: pyanaconda/startup_utils.py:241
 msgid "Please ssh install@HOSTNAME to continue installation."
-msgstr ""
+msgstr "Por favor, execute ssh install@MÁQUINA para continuar a instalação."
 
 #: widgets/src/BaseWindow.c:147
 msgid "DISTRIBUTION INSTALLATION"
-msgstr ""
+msgstr "INSTALAÇÃO DA DISTRIBUIÇÃO"
 
 #: widgets/src/BaseWindow.c:148
 msgid "SPOKE NAME"
-msgstr ""
+msgstr "NOME DO ELEMENTO"
 
 #: widgets/src/BaseWindow.c:149
 msgid "PRE-RELEASE / TESTING"
@@ -4543,12 +4609,12 @@ msgstr "Novo Seletor"
 #: widgets/src/LayoutIndicator.c:33
 #, c-format
 msgid "Current layout: '%s'. Click to switch to the next layout."
-msgstr ""
+msgstr "Disposição atual: '%s'. Clicar para trocar pela seguinte."
 
 #: widgets/src/LayoutIndicator.c:34
 #, c-format
 msgid "Current layout: '%s'. Add more layouts to enable switching."
-msgstr ""
+msgstr "Disposição atual: '%s'. Adicionar mais disposições para ativar a troca."
 
 #: widgets/src/MountpointSelector.c:84
 msgid "0 GB"
@@ -5037,7 +5103,7 @@ msgstr "Exemplo:"
 
 #: pyanaconda/ui/gui/spokes/advanced_user.glade:315
 msgid "wheel, my-team (1245), project-x (29935)"
-msgstr ""
+msgstr "wheel, my-team (1245), project-x (29935)"
 
 #: pyanaconda/ui/gui/spokes/advanced_user.glade:348
 msgid "Tip:"
@@ -5049,6 +5115,8 @@ msgid ""
 "Groups that do not already exist will be created; specify their GID in "
 "parentheses. "
 msgstr ""
+"Pode inserir aqui uma lista separada por vírgula de nomes e IDs de grupo. Os "
+"grupos que não existem serão criados; especificar a GID deles em parênteses. "
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:24
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:77
@@ -5096,14 +5164,18 @@ msgid ""
 "supported on IBM z14 and earlier models, therefore choose to disable it if "
 "you intend to boot the installed system on such models."
 msgstr ""
+"O firmware verificará a integridade do kernel Linux durante o arranque, se o "
+"Arranque Seguro estiver ativado e configurado na máquina. O Arranque Seguro "
+"não é suportado no IBM z14 e nos modelos anteriores; portanto, opte por "
+"desativá-lo se deseja arrancar o sistema instalado nesses modelos."
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:283
 msgid "Enabled if supported by the installing machine"
-msgstr ""
+msgstr "Habilitado se houver suporte pela máquina instalada"
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:284
 msgid "Enabled unconditionally"
-msgstr ""
+msgstr "Habilitado incondicionalmente"
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:285
 msgid "Disabled"
@@ -5116,6 +5188,7 @@ msgstr "Resumo do disco aqui"
 #: pyanaconda/ui/gui/spokes/lib/detailederror.glade:25
 msgid "An unknown error occurred during installation.  Details are below."
 msgstr ""
+"Um erro desconhecido ocorreu durante a instalação.  Detalhes estão abaixo."
 
 #: pyanaconda/ui/gui/spokes/lib/resize.glade:53
 msgctxt "GUI|Reclaim Dialog"
@@ -5188,6 +5261,7 @@ msgid ""
 "Here we'll describe how much space is needed for the current software "
 "selection."
 msgstr ""
+"Cá indicaremos quanto espaço é necessário para a seleção de software atual."
 
 #: pyanaconda/ui/gui/spokes/lib/storage_dialogs.glade:122
 #: pyanaconda/ui/gui/spokes/lib/storage_dialogs.glade:339
@@ -5266,6 +5340,8 @@ msgid ""
 "passphrase that you will use to access your data when you start your "
 "computer."
 msgstr ""
+"Escolheu por cifrar alguns de seus dados. Precisará criar uma frase-passe "
+"que utilizará para aceder a seus dados quando iniciar seu computador."
 
 #: pyanaconda/ui/gui/spokes/lib/passphrase.glade:102
 msgctxt "GUI|Passphrase Dialog"
@@ -5282,6 +5358,8 @@ msgid ""
 "Warning: You won't be able to switch between keyboard layouts (from the "
 "default one) when you decrypt your disks after install."
 msgstr ""
+"Aviso: não poderá trocar a disposição de teclado (diferente da predefinição) "
+"quando tiver que decifrar seus discos após a instalação."
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:21
 msgctxt "GUI|Custom Partitioning|Confirm Delete Dialog"
@@ -5309,7 +5387,7 @@ msgstr "CONFIGURAR PONTO DE MONTAGEM"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:189
 msgid "Select one or more disks this device may reside on."
-msgstr ""
+msgstr "Selecionar um ou mais discos em que este dispositivo pode residir."
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:324
 msgctxt "GUI|Custom Partitioning|Add Dialog"
@@ -5340,6 +5418,8 @@ msgid ""
 "More customization options are available\n"
 "after creating the mount point below."
 msgstr ""
+"Mais opções de personalização estarão disponíveis\n"
+"após a criação do ponto de montagem abaixo."
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:461
 msgid ""
@@ -5405,6 +5485,7 @@ msgstr "CONFIGURAR CONTENTOR"
 msgid ""
 "Please create a name for this container and select at least one disk below."
 msgstr ""
+"Criar um nome para este contentor e selecionar ao menos um dos discos abaixo."
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:676
 msgctxt "GUI|Custom Partitioning|Container Dialog"
@@ -5464,38 +5545,46 @@ msgid ""
 "You can remove or insert additional disks at this time and press 'Rescan "
 "Disks' below for the changes to take effect."
 msgstr ""
+"Pode remover ou inserir discos adicionais e carregar 'Atualizar Discos' "
+"abaixo para que as mudanças tenham efeito."
 
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:118
 msgid ""
 "<b>Warning:</b> All storage changes made using the installer will be lost "
 "when you press 'Rescan Disks'."
 msgstr ""
+"<b>Aviso:</b> todas as mudanças de armazenamento feitas no instalador serão "
+"perdidas ao carregar 'Atualizar Discos'."
 
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:143
 msgctxt "GUI|Refresh Dialog|Rescan"
 msgid "_Rescan Disks"
-msgstr ""
+msgstr "_Atualizar Discos"
 
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:176
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:212
 msgid "Scanning disks.  This may take a moment..."
-msgstr ""
+msgstr "A atualizar discos.  Pode levar um tempo..."
 
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:223
 msgid ""
 "You may <a href=\"\">go back to the main menu</a> to complete other\n"
 "installation options while this scan completes."
 msgstr ""
+"Pode <a href=\"\"> voltar ao menu principal</a> para completar outras\n"
+"opções de instalação enquanto estiver em atualização."
 
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:254
 msgid "Disk rescan complete."
-msgstr ""
+msgstr "Atualização de discos completa."
 
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:269
 msgid ""
 "Pressing 'OK' below will take you to the disk selection screen where you "
 "will need to re-select your disks."
 msgstr ""
+"Ao carregar 'Aceitar' abaixo, será levado à tela de seleção de discos, onde "
+"precisará selecionar seus discos novamente."
 
 #: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:8
 msgid "UNFORMATTED DASDS"
@@ -5517,6 +5606,9 @@ msgid ""
 "You can choose to format them now with dasdfmt or cancel to leave them "
 "unformatted. Unformatted DASDs cannot be used during installation."
 msgstr ""
+"Os seguintes DASDs sem formato ou LDL foram detetados em seu sistema. Pode "
+"optar por dar-lhes formato agora com dasdfmt ou cancelar e deixá-los sem "
+"formato. DASDs sem formato não podem ser usados na instalação."
 
 #: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:86
 msgid "Unformatted DASDs Detected"
@@ -5527,6 +5619,8 @@ msgid ""
 "<b>Warning</b>: All storage changes made using the installer will be lost "
 "when you choose to format."
 msgstr ""
+"<b>Aviso</b>: todas as modificações de armazenamento feitas no instalador "
+"serão perdidas quando escolher dar formato."
 
 #: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:160
 msgctxt "GUI|DAD Format Dialog"
@@ -5538,10 +5632,12 @@ msgid ""
 "This may take a moment. You may <a href=\"\">go back to the main menu</a> to "
 "complete other installation options while formatting completes."
 msgstr ""
+"Isto pode demorar um pouco. Pode <a href=\"\">voltar ao menu principal</a> "
+"para completar outras opções de instalação enquanto estiver em formatação."
 
 #: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:248
 msgid "Disk formatting complete."
-msgstr ""
+msgstr "Formatação de disco completa."
 
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:25
 msgid "SUMMARY OF CHANGES"
@@ -5562,6 +5658,8 @@ msgid ""
 "Your customizations will result in the following changes taking effect after "
 "you return to the main menu and begin installation:"
 msgstr ""
+"Sua personalização resultará nas seguintes mudanças, que serão efetuadas "
+"assim que retornar ao menu principal e iniciar a instalação:"
 
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:118
 msgid "Order"
@@ -5599,6 +5697,17 @@ msgid ""
 "If you do not understand or accept the risks, then please exit this program "
 "by selecting \"I want to exit\" which will reboot your system."
 msgstr ""
+"Aviso: este é um software de pré-lançamento destinado a fins de "
+"desenvolvimento e teste. *Não* use este software para qualquer trabalho "
+"crítico ou para ambientes de produção.\n"
+"\n"
+"Ao clicar em \"Desejo prosseguir\", entende e aceita os riscos associados ao "
+"software de pré-lançamento, que pretende usá-lo a fins de teste e "
+"desenvolvimento e está disposto a relatar quaisquer bugs ou problemas para "
+"aprimorar este trabalho.\n"
+"\n"
+"Se não entender ou aceitar os riscos, saia deste programa ao selecionar "
+"\"Desejo sair\", que o sistema reiniciará."
 
 #: pyanaconda/ui/gui/spokes/welcome.glade:130
 msgid "Beta Warn"
@@ -5859,10 +5968,12 @@ msgid ""
 "Please use the live desktop environment's tools for customizing your network "
 "configuration.  You can set the host name here."
 msgstr ""
+"Por favor, utilizar as ferramentas do ambiente de trabalho “live” para "
+"personalizar sua configuração de rede . Pode definir a máquina aqui."
 
 #: pyanaconda/ui/gui/spokes/network.glade:417
 msgid "Slaves"
-msgstr ""
+msgstr "Subordinados"
 
 #: pyanaconda/ui/gui/spokes/network.glade:441
 #: pyanaconda/ui/gui/spokes/network.glade:840
@@ -5889,11 +6000,11 @@ msgstr "Endereço do Hardware"
 
 #: pyanaconda/ui/gui/spokes/network.glade:604
 msgid "Parent"
-msgstr ""
+msgstr "Pai"
 
 #: pyanaconda/ui/gui/spokes/network.glade:616
 msgid "VLAN ID"
-msgstr ""
+msgstr "VLAN ID"
 
 #: pyanaconda/ui/gui/spokes/network.glade:664
 msgctxt "GUI|Network|Wired"
@@ -5999,7 +6110,7 @@ msgstr "Proxy _FTP"
 #: pyanaconda/ui/gui/spokes/network.glade:1914
 msgctxt "GUI|Network|Proxy"
 msgid "_Socks Host"
-msgstr ""
+msgstr "_Nó Socks"
 
 #: pyanaconda/ui/gui/spokes/network.glade:2104
 msgid "Network Config Box"
@@ -6017,25 +6128,25 @@ msgstr "Modo avião"
 
 #: pyanaconda/ui/gui/spokes/network.glade:2173
 msgid "More Network Config Box"
-msgstr ""
+msgstr "Caixa de configuração adicional de rede"
 
 #: pyanaconda/ui/gui/spokes/network.glade:2193
 msgctxt "GUI|Network"
 msgid "_Host Name:"
-msgstr ""
+msgstr "_Máquina:"
 
 #: pyanaconda/ui/gui/spokes/network.glade:2222
 msgctxt "GUI|Network|Hostname"
 msgid "_Apply"
-msgstr ""
+msgstr "_Aplicar"
 
 #: pyanaconda/ui/gui/spokes/network.glade:2226
 msgid "Set as current system host name."
-msgstr ""
+msgstr "Definir como máquina do sistema atual."
 
 #: pyanaconda/ui/gui/spokes/network.glade:2241
 msgid "Current host name:"
-msgstr ""
+msgstr "Máquina atual:"
 
 #: pyanaconda/ui/gui/spokes/network.glade:2293
 msgid "NETWORK CONFIGURATION"
@@ -6047,185 +6158,202 @@ msgid ""
 "make software\n"
 "updates available for you."
 msgstr ""
+"Precisaremos de acesso à rede para buscar informação acerca de sua "
+"localização e para \n"
+"tornar disponíveis as atualizações de software."
 
 #: pyanaconda/ui/gui/spokes/network.glade:2382
 msgctxt "GUI|Network|Authentication Dialog"
 msgid "_Cancel"
-msgstr ""
+msgstr "_Cancelar"
 
 #: pyanaconda/ui/gui/spokes/network.glade:2397
 msgctxt "GUI|Network|Authentication Dialog"
 msgid "C_onnect"
-msgstr ""
+msgstr "Li_gar"
 
 #: pyanaconda/ui/gui/spokes/network.glade:2469
 msgid ""
 "Passwords or encryption keys are required to access\n"
 "the wireless network"
 msgstr ""
+"Palavra-passe ou chave de cifragem são requeridas para aceder\n"
+"à rede sem fio"
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:22
 msgctxt "GUI|Advanced Storage|DASD|Configure"
 msgid "_Cancel"
-msgstr ""
+msgstr "_Cancelar"
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:36
 msgctxt "GUI|Advanced Storage|DASD|Configure"
 msgid "_OK"
-msgstr ""
+msgstr "_Aceitar"
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:67
 msgid "ADD DASD STORAGE TARGET"
-msgstr ""
+msgstr "ADICIONAR ALVO DE ARMAZENAMENTO DASD"
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:90
 msgid "To use DASD disks, you must provide the device number."
-msgstr ""
+msgstr "Para usar discos DASD, deve fornecer o número de dispositivo."
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:117
 msgctxt "GUI|Advanced Storage|DASD|Configure"
 msgid "_Device number:"
-msgstr ""
+msgstr "Número de _dispositivo:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:136
 msgctxt "GUI|Advanced Storage|DASD|Configure"
 msgid "_Start Discovery"
-msgstr ""
+msgstr "_Iniciar procura"
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:173
 msgid "Discovering DASD devices.  This may take a moment..."
-msgstr ""
+msgstr "A procurar dispositivos DASD . Pode demorar um pouco..."
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:212
 #: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:253
 msgid "Device discovery failed."
-msgstr ""
+msgstr "A procura de dispositivo falhou."
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:227
 msgid ""
 "The following error occurred discovering DASD devices.  Please double check "
 "your configuration information and try again."
 msgstr ""
+"Ocorreu o seguinte erro na procura de dispositivos DASD . Por favor, "
+"verificar a informação de configuração e tentar novamente."
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:250
 msgctxt "GUI|Advanced Storage|DASD|Configure"
 msgid "_Retry Discovery"
-msgstr ""
+msgstr "_Tornar a procurar"
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:307
 #: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:346
 msgid "Device discovery succeeded."
-msgstr ""
+msgstr "Sucesso na procura de dispositivo."
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:324
 msgid "The added DASD can be found under \"Local Standard Disks.\""
-msgstr ""
+msgstr "O DASD adicionado pode ser encontrado em \"Discos Padrões Locais\""
 
 #: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:82
 msgid "ADD zFCP STORAGE TARGET"
-msgstr ""
+msgstr "ADICIONAR ALVO DE ARMAZENAMENTO zFCP"
 
 #: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:105
 msgid ""
 "To use zFCP disks, you must provide the device number, WWPN, and LUN "
 "configured for the device."
 msgstr ""
+"Para usar discos zFCP,  deve especificar um número de dispositivo, WWPN, e "
+"LUN configurado para o dispositivo."
 
 #: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:132
 msgctxt "GUI|Advanced Storage|zFCP|Device Number"
 msgid "_Device number:"
-msgstr ""
+msgstr "Número de _dispositivo:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:159
 msgid "WWPN:"
-msgstr ""
+msgstr "WWPN:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:177
 msgctxt "GUI|Advanced Storage|zFCP|Start Discovery"
 msgid "_Start Discovery"
-msgstr ""
+msgstr "_Iniciar procura"
 
 #: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:214
 msgid "Discovering zFCP devices.  This may take a moment..."
-msgstr ""
+msgstr "A procurar dispositivos zFCP.  Pode demorar um pouco..."
 
 #: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:268
 msgid ""
 "The following error occurred discovering zFCP devices.  Please double check "
 "your configuration information and try again."
 msgstr ""
+"Ocorreu o seguinte erro na procura por dispositivos zFCP. Por favor, "
+"verificar a informação de configuração e tentar novamente."
 
 #: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:291
 msgctxt "GUI|Advanced Storage|zFCP|Retry Discovery"
 msgid "_Retry Discovery"
-msgstr ""
+msgstr "_Tonar a procurar"
 
 #: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:373
 msgid "LUN:"
-msgstr ""
+msgstr "LUN:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade:23
 msgctxt "GUI|Advanced Storage|NVDIMM|Reconfigure"
 msgid "_Cancel"
-msgstr ""
+msgstr "_Cancelar"
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade:70
 msgid ""
 "The following NVDIMM devices selected from the list will be reconfigured to "
 "sector mode:"
 msgstr ""
+"os seguintes dispositivos NVDIMM selecionados na lista serão reconfigurados "
+"para o modo setor:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade:85
 msgctxt "GUI|Advanced Storage|NVDIMM|Reconfigure"
 msgid "_Sector size:"
-msgstr ""
+msgstr "_Tamanho do setor:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade:103
 msgctxt "GUI|Advanced Storage|NVDIMM|Reconfigure"
 msgid "Start _Reconfiguration"
-msgstr ""
+msgstr "Iniciar_reconfiguração"
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade:139
 msgid "Reconfiguring NVDIMM devices. This may take a moment..."
-msgstr ""
+msgstr "A reconfigurar dispositivos NVDIMM. Pode levar um tempo..."
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade:205
 msgid "The following error occurred reconfiguring NVDIMM devices:"
-msgstr ""
+msgstr "Ocorreu o seguinte erro ao reconfigurar dispositivos NVDIMM:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade:252
 msgid "Devices reconfiguration succeeded."
-msgstr ""
+msgstr "Dispositivos reconfigurados com sucesso."
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade:278
 msgid ""
 "Rescanning disks after reconfiguration.\n"
 "This may take a moment ..."
 msgstr ""
+"A atualizar discos após reconfiguração.\n"
+"Pode levar um tempo..."
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade:334
 msgid "Warning: Existing data on reconfigured devices will be lost."
-msgstr ""
+msgstr "Aviso: dados existentes num dispositivo reconfigurado serão perdidos."
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:40
 msgctxt "GUI|Advanced Storage|iSCSI|Configure"
 msgid "_Cancel"
-msgstr ""
+msgstr "_Cancelar"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:54
 msgctxt "GUI|Advanced Storage|iSCSI|Configure"
 msgid "_OK"
-msgstr ""
+msgstr "_Aceitar"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:85
 msgid "ADD iSCSI STORAGE TARGET"
-msgstr ""
+msgstr "ADICIONAR ALVO DE ARMAZENAMENTO iSCSI"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:114
 msgid ""
 "To use iSCSI disks, you must provide the address of your iSCSI target and "
 "the iSCSI initiator name you've configured for your host."
 msgstr ""
+"Para usar discos iSCSI, precisa fornecer o endereço de seu alvo iSCSI e o "
+"nome do iniciador iSCSI que configurou para sua máquina."
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:142
 msgctxt "GUI|Advanced Storage|iSCSI|Configure"
@@ -6240,91 +6368,95 @@ msgstr "Nome do Iniciador iSCSI:"
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:187
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:760
 msgid "No credentials (discovery authentication disabled)"
-msgstr ""
+msgstr "Sem credenciais (autenticação por descoberta desativada)"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:188
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:761
 msgid "CHAP pair"
-msgstr ""
+msgstr "Par CHAP"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:189
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:762
 msgid "CHAP pair and a reverse pair"
-msgstr ""
+msgstr "Par CHAP e par reverso"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:203
 msgctxt "GUI|Advanced Storage|iSCSI|Configure"
 msgid "_Discovery Authentication Type:"
-msgstr ""
+msgstr "_Descobrir tipo de autenticação:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:218
 msgid ""
 "<span size=\"small\"><b>Example:</b> iqn.2012-09.com.example:diskarrays-sn-"
 "a8675309</span>"
 msgstr ""
+"<span size=\"small\"><b>Exemplo:</b> iqn.2012-09.com.example:diskarrays-"
+"sn-a8675309</span>"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:263
 msgctxt "GUI|Advanced Storage|iSCSI|Configure|CHAP"
 msgid "CHAP _User name:"
-msgstr ""
+msgstr "Nome de _utilizador CHAP:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:277
 msgctxt "GUI|Advanced Storage|iSCSI|Configure|CHAP"
 msgid "CHAP _Password:"
-msgstr ""
+msgstr "_Palavra-chave CHAP:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:389
 msgctxt "GUI|Advanced Storage|iSCSI|Configure|Reverse CHAP"
 msgid "CHAP _User name:"
-msgstr ""
+msgstr "Nome de _utilizador CHAP:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:403
 msgctxt "GUI|Advanced Storage|iSCSI|Configure|Reverse CHAP"
 msgid "CHAP _Password:"
-msgstr ""
+msgstr "_Palavra-chave CHAP:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:417
 msgctxt "GUI|Advanced Storage|iSCSI|Configure|Reverse CHAP"
 msgid "Reverse CHAP User _name:"
-msgstr ""
+msgstr "_Nome de utilizador CHAP reverso:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:431
 msgctxt "GUI|Advanced Storage|iSCSI|Configure|Reverse CHAP"
 msgid "Reverse CHAP Pass_word:"
-msgstr ""
+msgstr "_Palavra-chave CHAP reverso:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:465
 msgctxt "GUI|Advanced Storage|iSCSI|Configure|Start"
 msgid "_Start Discovery"
-msgstr ""
+msgstr "_Iniciar procura"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:502
 msgid "Discovering iSCSI targets.  This may take a moment..."
-msgstr ""
+msgstr "A procurar alvos iSCSI. Pode levar um tempo..."
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:541
 msgid "Discovery login rejected."
-msgstr ""
+msgstr "Autenticação de procura rejeitada."
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:556
 msgid ""
 "The following error occurred discovering iSCSI targets.  Please double check "
 "your authorization information and try again."
 msgstr ""
+"Ocorreu o seguinte erro na procura por alvos iSCSI. Por favor, verificar "
+"novamente sua informação de autorização e tentar novamente."
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:579
 msgctxt "GUI|Advanced Storage|iSCSI|Configure|Retry"
 msgid "_Retry Discovery"
-msgstr ""
+msgstr "_Tornar a procurar"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:619
 msgctxt "GUI|Advanced Storage|iSCSI|Configure"
 msgid "_Bind targets to network interfaces This may take a moment..."
-msgstr ""
+msgstr "_A ajustar interfaces de rede. Pode levar um tempo..."
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:695
 msgid "Node Name"
-msgstr ""
+msgstr "Nome do nó"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:706
 msgid "Interface"
@@ -6332,46 +6464,46 @@ msgstr "Interface"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:717
 msgid "Portal"
-msgstr ""
+msgstr "Portal"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:745
 msgctxt "GUI|Advanced Storage|iSCSI|Login"
 msgid "_Node Login Authentication Type:"
-msgstr ""
+msgstr "_Tipo de autenticação de inicio de sessão do nó:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:763
 msgid "Use the credentials from discovery"
-msgstr ""
+msgstr "Usar as credenciais da procura"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:797
 msgctxt "GUI|Advanced Storage|iSCSI|Login|CHAP"
 msgid "CHAP _User name:"
-msgstr ""
+msgstr "Nome de _utilizador CHAP:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:811
 msgctxt "GUI|Advanced Storage|iSCSI|Login|CHAP"
 msgid "CHAP _Password:"
-msgstr ""
+msgstr "_Palavra-passe CHAP:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:923
 msgctxt "GUI|Advanced Storage|iSCSI|Login|Reverse CHAP"
 msgid "CHAP _User name:"
-msgstr ""
+msgstr "Nome de _utilizador CHAP:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:937
 msgctxt "GUI|Advanced Storage|iSCSI|Login|Reverse CHAP"
 msgid "CHAP _Password:"
-msgstr ""
+msgstr "_Palavra-passe CHAP:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:951
 msgctxt "GUI|Advanced Storage|iSCSI|Login|Reverse CHAP"
 msgid "_Reverse CHAP User name:"
-msgstr ""
+msgstr "_Nome de utilizador CHAP reverso:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:965
 msgctxt "GUI|Advanced Storage|iSCSI|Login|Reverse CHAP"
 msgid "Reverse CHAP Pass_word:"
-msgstr ""
+msgstr "_Palavra-passe CHAP reverso:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:1014
 msgctxt "GUI|Advanced Storage|iSCSI|Login|Login"
@@ -6380,13 +6512,15 @@ msgstr "_Aceder"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:1069
 msgid "Node login failed."
-msgstr ""
+msgstr "Autenticação de nó falhou."
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:1084
 msgid ""
 "The following error occurred logging into the selected iSCSI node.  Please "
 "double check your authorization information and try again."
 msgstr ""
+"Ocorreu o seguinte erro no registo de nó iSCSI. Por favor, verificar "
+"novamente sua credencial e voltar a tentar."
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:1108
 msgctxt "GUI|Advanced Storage|iSCSI|Login|Retry"
@@ -6402,6 +6536,8 @@ msgstr "_Cancelar"
 msgid ""
 "Please select the network interface which is connected to your FCoE switch."
 msgstr ""
+"Por favor, selecionar a interface de rede que está ligada ao seu comutador "
+"FCoE."
 
 #: pyanaconda/ui/gui/spokes/advstorage/fcoe.glade:70
 msgctxt "GUI|Advanced Storage|FCoE"
@@ -6416,7 +6552,7 @@ msgstr "Utilizar _DCB"
 #: pyanaconda/ui/gui/spokes/advstorage/fcoe.glade:108
 msgctxt "GUI|Advanced Storage|FCoE"
 msgid "Use auto _VLAN"
-msgstr ""
+msgstr "Usar auto _VLAN"
 
 #: pyanaconda/ui/gui/spokes/advstorage/fcoe.glade:144
 msgctxt "GUI|Advanced Storage|FCoE"
@@ -6432,6 +6568,8 @@ msgid ""
 "The following error occurred while attempting to add an FCoE SAN.  Please "
 "check your configuration and try again"
 msgstr ""
+"Ocorreu o seguinte erro ao tentar adicionar um SAN FCoE. Por favor, "
+"verificar sua configuração e tentar novamente"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:112
 msgctxt "GUI|Date and Time|NTP"
@@ -6445,7 +6583,7 @@ msgstr "_Aceitar"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:151
 msgid "Add and mark for usage NTP servers"
-msgstr ""
+msgstr "Adicionar e marcar servidores NTP para uso."
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:173
 msgid "New NTP Server"
@@ -6457,15 +6595,15 @@ msgstr "Adicionar servidor NTP"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:212
 msgid "This URL refers to a pool of NTP servers"
-msgstr ""
+msgstr "Este URL refere-se a um conjunto de servidores NTP"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:227
 msgid "Server supports Network Time Security (NTS) authentication"
-msgstr ""
+msgstr "O servidor suporta autenticação Network Time Security (NTS)"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:275
 msgid "Pool"
-msgstr ""
+msgstr "Conjunto"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:301
 msgid "Working"
@@ -6643,6 +6781,8 @@ msgid ""
 "Changes here will only apply to the installed system. Use the desktop's tool "
 "to configure the keyboard for the installation process."
 msgstr ""
+"Estas alterações só serão aplicadas no sistema instalado. Use as ferramentas "
+"da área de trabalho para configurar o teclado para o processo de instalação."
 
 #: pyanaconda/ui/gui/spokes/keyboard.glade:167
 msgid "Selected Layouts"
@@ -6888,12 +7028,12 @@ msgstr "_Aceitar"
 #: pyanaconda/ui/gui/spokes/installation_source.glade:267
 msgctxt "GUI|Software Source|Proxy Dialog"
 msgid "_Enable HTTP Proxy"
-msgstr ""
+msgstr "_Ativar o intermediador HTTP"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:299
 msgctxt "GUI|Software Source|Proxy Dialog"
 msgid "_Proxy Host:"
-msgstr ""
+msgstr "_Máquina intermediária:"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:316
 msgid "<span size=\"small\"><b>Example:</b> squid.mysite.org:3128</span>"
@@ -7129,7 +7269,7 @@ msgstr "_Iniciar a Instalação"
 
 #: pyanaconda/ui/gui/hubs/summary.glade:128
 msgid "We won't touch your disks until you click 'Begin Installation'."
-msgstr ""
+msgstr "Não alteraremos seus discos até que carregue 'Iniciar Instalação'."
 
 #: data/liveinst/liveinst-setup.desktop:4
 msgid "Liveinst Setup"
