@@ -33,13 +33,15 @@
 # José Lemos Neto <lemosjosex@protonmail.com>, 2020.
 # Adolfo Jayme Barrientos <fitoschido@gmail.com>, 2020.
 # Gustavo Costa <gusta@null.net>, 2020.
+# Henrique Roberto Gattermann Mittelstaedt <henrique.roberto97@gmail.com>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 21.48.22.158\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2020-04-15 15:07+0200\n"
-"PO-Revision-Date: 2020-10-08 15:30+0000\n"
-"Last-Translator: Gustavo Costa <gusta@null.net>\n"
+"PO-Revision-Date: 2020-11-29 01:35+0000\n"
+"Last-Translator: Henrique Roberto Gattermann Mittelstaedt <henrique."
+"roberto97@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://translate.fedoraproject.org/"
 "projects/anaconda/rhel-7/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -47,7 +49,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.2.2\n"
+"X-Generator: Weblate 4.3.2\n"
 
 #: pyanaconda/bootloader.py:253
 msgid "/boot file system"
@@ -142,6 +144,8 @@ msgid ""
 "Boot loader stage1 device cannot be on an iSCSI disk which is not configured "
 "in iBFT."
 msgstr ""
+"O dispositivo carregador de boot de estágio 1 não pode ser um disco iSCI que "
+"não está configurado como IBFT."
 
 #: pyanaconda/bootloader.py:656 pyanaconda/bootloader.py:767
 #, python-format
@@ -154,6 +158,8 @@ msgid ""
 "%(bootloader_stage2_description)s cannot be on an iSCSI disk which is not "
 "configured in iBFT."
 msgstr ""
+"%(bootloader_stage2_description)s não pode estar em um disco iSCI que não "
+"esta configurado como iBFT."
 
 # translation auto-copied from project Anaconda, version master, document
 # anaconda
@@ -212,6 +218,12 @@ msgid ""
 "red.ht/rhel-smt to understand your potential risks and learn about other "
 "ways to mitigate these risks."
 msgstr ""
+"A tecnologia Simultaneous Multithreading (SMT) pode fornecer aprimoramentos "
+"de desempenho para determinadas cargas de trabalho, mas apresenta vários "
+"problemas de segurança divulgados publicamente. Você tem a opção de "
+"desativar o SMT, o que pode afetar o desempenho. Se você optar por deixar o "
+"SMT ativado, leia https://red.ht/rhel-smt para entender seus riscos "
+"potenciais e aprender sobre outras maneiras de mitigar esses riscos."
 
 #: pyanaconda/constants.py:150
 msgid ""
@@ -221,6 +233,11 @@ msgid ""
 "rhel-smt to understand potential risks and learn about ways to mitigate "
 "these risks."
 msgstr ""
+"A tecnologia Simultaneous Multithreading (SMT) pode melhorar o desempenho de "
+"determinadas cargas de trabalho, mas apresenta vários problemas de segurança "
+"divulgados publicamente. Você pode desativar o SMT, o que pode afetar o "
+"desempenho. Leia https://red.ht/rhel-smt para entender os riscos potenciais "
+"e aprender sobre maneiras de mitigar esses riscos."
 
 #: pyanaconda/constants.py:158
 #, python-format
@@ -308,11 +325,11 @@ msgstr "senhas"
 
 #: pyanaconda/constants.py:185
 msgid "passphrase"
-msgstr ""
+msgstr "senha"
 
 #: pyanaconda/constants.py:186
 msgid "passphrases"
-msgstr ""
+msgstr "senhas"
 
 # translation auto-copied from project Anaconda, version master, document
 # anaconda
@@ -418,8 +435,8 @@ msgstr ""
 "significar que ela foi corrompida ao ser transferida para este computador.\n"
 "\n"
 "É recomendável que você saia e interrompa a sua instalação, mas você pode "
-"optar por continuar, caso considere que isto é um engano. Quer continuar "
-"usando esta imagem?"
+"optar por continuar, caso considere que isto é um engano. Gostaria de "
+"continuar usando esta imagem?"
 
 # translation auto-copied from project Anaconda, version master, document
 # anaconda
@@ -431,9 +448,9 @@ msgid ""
 "Should I try again to locate the image?"
 msgstr ""
 "O instalador tentou montar a imagem de instalação, mas não consegue encontrá-"
-"la no disco rígido.\n"
+"la no disco rígido. \n"
 "\n"
-"Devo tentar localizar a imagem novamente?"
+"Devo tentar novamente para localizar a imagem?"
 
 # translation auto-copied from project Anaconda, version master, document
 # anaconda
@@ -611,6 +628,16 @@ msgid ""
 "\n"
 "The installer will now terminate."
 msgstr ""
+"\n"
+"A instalação parou por causa de um erro que ocorreu enquanto rodava em modo "
+"linha de comando não-interativo. Já que não podem ter perguntas no modo "
+"linha de comando, edite seu arquivo inicial e tente a instalação novamente. "
+"\n"
+"A mensagem exata de erro é: \n"
+"\n"
+"%s. \n"
+"\n"
+"O instalador será fechado."
 
 #: pyanaconda/exception.py:151
 #, python-format
@@ -1096,6 +1123,8 @@ msgstr "O nome do grupo de volumes \"%s\" já está em uso."
 msgid ""
 "Incorrectly specified origin of the snapshot. Use format \"VolGroup/LV_name\""
 msgstr ""
+"Origem do snapshot especificada incorretamente. Use o formato \"VolGroup/"
+"LV_name\""
 
 #: pyanaconda/kickstart.py:2135
 #, python-format
@@ -1103,11 +1132,13 @@ msgid ""
 "Snapshot: origin \"%(origin)s\" of snapshot \"%(name)s\" is not a valid thin "
 "LV device."
 msgstr ""
+"Snapshot: a origem \"%(origin)s\" do snapshot \"%(name)s\" não é um "
+"dispositivo LV válido."
 
 #: pyanaconda/kickstart.py:2143
 #, python-format
 msgid "Snapshot %s already exists."
-msgstr ""
+msgstr "Snapshot %s já existe."
 
 #: pyanaconda/kickstart.py:2179
 msgid ""
@@ -1207,7 +1238,7 @@ msgstr "Novo %(name)s %(version)s instalação"
 #: pyanaconda/pwpolicy.py:124
 #, python-format
 msgid "policy name required for %s"
-msgstr "nome da política exigido para %s"
+msgstr "nome da política necessário para %s"
 
 #: pyanaconda/pwpolicy.py:133
 #, python-format
@@ -1450,6 +1481,8 @@ msgid ""
 "Your root partition is less than %(size)s which is usually too small to "
 "install %(product)s."
 msgstr ""
+"Sua partição root é menor que %(size)s geralmente sendo muito pequena para "
+"instalar %(product)s."
 
 #: pyanaconda/storage_utils.py:165
 #, python-format
@@ -1463,7 +1496,7 @@ msgstr ""
 #: pyanaconda/storage_utils.py:178
 #, python-format
 msgid "Your root partition must be on a device of type: %s."
-msgstr ""
+msgstr "Sua partição raiz deve estar em um dispositivo do tipo: %s."
 
 #: pyanaconda/storage_utils.py:194
 #, python-format
@@ -1479,6 +1512,7 @@ msgstr ""
 msgid ""
 "Your %(mount)s partition is less than %(size)s which is lower than required."
 msgstr ""
+"Sua partição %(mount)s é menor que %(size)s, que é menor que o necessário."
 
 #: pyanaconda/storage_utils.py:220
 #, python-format
@@ -1524,12 +1558,18 @@ msgid ""
 "required to continue installation without a swap partition, but you only "
 "have %(installedMem)s."
 msgstr ""
+"Você não especificou uma partição de troca (swap). %(requiredMem)s de "
+"memória é requerido para continuar a instalação sem uma partição swap, mas "
+"você só possui %(installedMem)s."
 
 #: pyanaconda/storage_utils.py:322
 msgid ""
 "You have not specified a swap partition. Although not strictly required in "
 "all cases, it will significantly improve performance for most installations."
 msgstr ""
+"Você não especificou uma partição swap. Embora não seja necessária em todos "
+"os casos, a sua utilização aumenta significativamente o desempenho da "
+"maioria das instalações."
 
 #: pyanaconda/storage_utils.py:340
 msgid ""
@@ -1549,11 +1589,13 @@ msgstr ""
 msgid ""
 "This mount point is invalid. The %s directory must be on the / file system."
 msgstr ""
+"Ponto de montagem inválido. O diretório %s deve estar no sistema de arquivos "
+"/ ."
 
 #: pyanaconda/storage_utils.py:377
 #, python-format
 msgid "Your %s must be on a separate partition or LV."
-msgstr ""
+msgstr "Seu %s deve estar em uma partição separada ou LV."
 
 #: pyanaconda/storage_utils.py:394
 #, python-format
@@ -2058,7 +2100,7 @@ msgstr ""
 #: pyanaconda/ui/tui/spokes/askvnc.py:150
 #: pyanaconda/ui/gui/spokes/network.py:1426
 msgid "Password: "
-msgstr "Senha:"
+msgstr "Senha: "
 
 #: pyanaconda/ui/tui/spokes/askvnc.py:151
 msgid "Password (confirm): "
@@ -2078,7 +2120,7 @@ msgstr "A senha não pode ter mais que 8 caracteres."
 
 #: pyanaconda/ui/tui/spokes/kernel_warning.py:36
 msgid "Warning: Processor has Simultaneous Multithreading (SMT) enabled"
-msgstr ""
+msgstr "Aviso: Processador tem Simultaneous Multithreading (SMT) ativado"
 
 #: pyanaconda/ui/tui/spokes/langsupport.py:39
 msgid "Language settings"
@@ -2266,7 +2308,7 @@ msgstr "Senha está definida."
 
 #: pyanaconda/ui/tui/spokes/password.py:59
 msgid "Root account is disabled."
-msgstr "Conta de root está desabilitada."
+msgstr "Conta root está desabilitada."
 
 #: pyanaconda/ui/tui/spokes/password.py:61
 msgid "Password is not set."
@@ -2395,7 +2437,7 @@ msgstr "Frase-senha"
 
 #: pyanaconda/ui/tui/spokes/storage.py:543
 msgid "Please provide LUKS passphrase. You will have to type it twice."
-msgstr ""
+msgstr "Por favor, forneça a senha do LUKS. Você terá que digitá-la duas vezes."
 
 #: pyanaconda/ui/tui/spokes/storage.py:570
 msgid "Autopartitioning Options"
@@ -2629,7 +2671,7 @@ msgstr "Rede"
 
 #: pyanaconda/ui/tui/spokes/source.py:166
 msgid "SE/HMC"
-msgstr ""
+msgstr "SE/HMC"
 
 #: pyanaconda/ui/tui/spokes/source.py:171
 msgid "Choose an installation source type."
@@ -2844,8 +2886,8 @@ msgid ""
 "Please complete items marked with this icon before continuing to the next "
 "step."
 msgstr ""
-"Por favor complete os itens marcados com esse ícone antes de seguir para o "
-"próximo passo."
+"Por favor, complete os itens marcados com esse ícone antes de continuar para "
+"o próximo passo."
 
 #: pyanaconda/ui/gui/hubs/progress.py:116
 msgid "Complete!"
@@ -2854,7 +2896,7 @@ msgstr "Completo!"
 #: pyanaconda/ui/gui/hubs/progress.py:144
 #, python-format
 msgid "Use of this product is subject to the license agreement found at %s"
-msgstr "O uso deste produto está sujeito ao acordo de licença encontrado no %s"
+msgstr "O uso deste produto está sujeito ao acordo de licença encontrado em %s"
 
 #: pyanaconda/ui/gui/hubs/progress.py:220
 #, python-format
@@ -2896,6 +2938,8 @@ msgid ""
 "Warning: Processor has Simultaneous Multithreading (SMT) enabled.  <a href="
 "\"\">Click for details.</a>"
 msgstr ""
+"Aviso: o processador tem o Multithreading Simultâneo (SMT) habilitado. <a "
+"href=\"\">Clique para mais detalhes.</a>"
 
 #: pyanaconda/ui/gui/hubs/summary.py:91
 msgid ""
@@ -2903,11 +2947,14 @@ msgid ""
 "configuration. These are not fatal, but you may wish to make changes to your "
 "kernel config."
 msgstr ""
+"Os seguintes avisos foram encontrados ao verificar sua configuração do "
+"kernel. Estes não são fatais, mas você pode querer fazer alterações em sua "
+"configuração do kernel."
 
 #: pyanaconda/ui/gui/hubs/summary.py:99
 msgctxt "GUI|Summary|Warning Dialog"
 msgid "_OK"
-msgstr ""
+msgstr "_OK"
 
 #: pyanaconda/ui/gui/spokes/custom.py:114
 #, python-format
@@ -2943,8 +2990,8 @@ msgstr "PARTICIONAMENTO MANUAL"
 msgctxt "GUI|Custom Partitioning"
 msgid "%d _storage device selected"
 msgid_plural "%d _storage devices selected"
-msgstr[0] "%d_dispositivo de armazenamento selecionado"
-msgstr[1] "%d_dispositivos de armazenamento selecionados"
+msgstr[0] "%d dispositivo de _armazenamento selecionado"
+msgstr[1] "%d dispositivos de _armazenamento selecionados"
 
 # translation auto-copied from project Anaconda, version master, document
 # anaconda
@@ -3008,7 +3055,7 @@ msgstr "O nome especificado %s já está em uso."
 
 #: pyanaconda/ui/gui/spokes/custom.py:1397
 msgid "No disks assigned"
-msgstr "Nenhum disco atribuído"
+msgstr "Nenhum disco marcado"
 
 #: pyanaconda/ui/gui/spokes/custom.py:1403
 #, python-format
@@ -3130,8 +3177,8 @@ msgid ""
 "Continuing with this action will reset all your partitioning selections to "
 "their current on-disk state."
 msgstr ""
-"A continuação desta ação restaurará todas as suas seleções de "
-"particionamento para o estado em disco atual delas."
+"Continuar com esta ação irá reiniciar todas as suas seleções de "
+"particionamento para o estado atual delas em disco."
 
 #: pyanaconda/ui/gui/spokes/custom.py:2598
 msgid "_Reset selections"
@@ -3155,7 +3202,7 @@ msgstr "DATA & _HORÁRIO"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.py:530
 msgid "Restoring hardware time..."
-msgstr "Recuperando tempo de hardware..."
+msgstr "Restaurando horário de hardware..."
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.py:544
 msgid "Invalid timezone"
@@ -3187,11 +3234,11 @@ msgstr "Você não possui nenhum servidor NTP em execução configurado"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.py:1072
 msgid "NTP service failed to start."
-msgstr ""
+msgstr "O serviço NTP falhou ao iniciar."
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.py:1075
 msgid "NTP service failed to stop."
-msgstr ""
+msgstr "O serviço NTP falhou ao parar."
 
 #: pyanaconda/ui/gui/spokes/filter.py:576
 msgctxt "GUI|Spoke"
@@ -3222,19 +3269,19 @@ msgstr "Os testes de configuração de layouts não estão disponíveis."
 
 #: pyanaconda/ui/gui/spokes/keyboard.py:382
 msgid "Getting list of layouts..."
-msgstr "Obtendo a lista de layouts..."
+msgstr "Obtendo lista de layouts..."
 
 #: pyanaconda/ui/gui/spokes/keyboard.py:435
 msgid ""
 "Keyboard layouts are not supported when using VNC.\n"
 "However the settings will be used after the installation."
 msgstr ""
-"Layouts de teclado não são suportados quando utilizando o VNC.\n"
-"Entretanto, as definições serão usadas após a instalação."
+"Layouts de teclado não são suportados quando utiliza-se o VNC.\n"
+"Entretanto, as definições serão utilizadas após a instalação."
 
 #: pyanaconda/ui/gui/spokes/keyboard.py:445
 msgid "Layout switching not configured."
-msgstr "Alteração do layout não configurado."
+msgstr "Alteração de layout não configurada."
 
 #: pyanaconda/ui/gui/spokes/langsupport.py:57
 msgctxt "GUI|Spoke"
@@ -3316,7 +3363,7 @@ msgstr "Equipe"
 #: pyanaconda/ui/gui/spokes/network.py:332
 #: pyanaconda/ui/gui/spokes/network.glade.h:2
 msgid "Bridge"
-msgstr "Bridge"
+msgstr "Ponte"
 
 #. TRANSLATORS: ethernet cable is unplugged
 #: pyanaconda/ui/gui/spokes/network.py:821
@@ -3377,7 +3424,7 @@ msgid ""
 "Passwords or encryption keys are required to access\n"
 "the wireless network '%(network_id)s'."
 msgstr ""
-"Senha ou chaves de criptografia são necesárias para acessar\n"
+"Senhas ou chaves de criptografia são necessárias para acessar\n"
 "a rede sem fio '%(network_id)s'."
 
 #: pyanaconda/ui/gui/spokes/network.py:1403
@@ -3392,7 +3439,7 @@ msgstr "_Chave:"
 
 #: pyanaconda/ui/gui/spokes/network.py:1421
 msgid "User name: "
-msgstr "Nome de usuário: "
+msgstr "Nome de Usuário: "
 
 #: pyanaconda/ui/gui/spokes/network.py:1432
 msgid "Identity: "
@@ -3419,7 +3466,7 @@ msgstr "A senha foi definida."
 
 #: pyanaconda/ui/gui/spokes/password.py:117
 msgid "Root password is set"
-msgstr "Senha de root está definida"
+msgstr "Senha root definida"
 
 #: pyanaconda/ui/gui/spokes/password.py:119
 msgid "Root account is disabled"
@@ -3544,7 +3591,7 @@ msgstr "Erro ao configurar o arquivo ISO"
 
 #: pyanaconda/ui/gui/spokes/source.py:700
 msgid "Testing availability..."
-msgstr ""
+msgstr "Testando disponibilidade..."
 
 #: pyanaconda/ui/gui/spokes/source.py:718
 msgid ""
@@ -3566,11 +3613,12 @@ msgstr "Rótulo: %s"
 #: pyanaconda/ui/gui/spokes/source.py:921
 msgid "You need to configure the network to use a network installation source."
 msgstr ""
-"Você precisa configurar a rede para usar uma fonte de instalação da rede."
+"Você precisa configurar a rede para usar a instalação a partir de uma fonte "
+"na rede."
 
 #: pyanaconda/ui/gui/spokes/source.py:984
 msgid "URL is empty"
-msgstr "O URL está vazio"
+msgstr "URL está vazio"
 
 #: pyanaconda/ui/gui/spokes/source.py:988
 msgid "Invalid URL"
@@ -3582,15 +3630,15 @@ msgstr "Protocolo no URL não coincide com o protocolo escolhido"
 
 #: pyanaconda/ui/gui/spokes/source.py:1008
 msgid "NFS server is empty"
-msgstr "O servidor NFS está vazio"
+msgstr "Servidor NFS está vazio"
 
 #: pyanaconda/ui/gui/spokes/source.py:1015
 msgid "Invalid host name"
-msgstr "Nome do host inválido"
+msgstr "Nome de host inválido"
 
 #: pyanaconda/ui/gui/spokes/source.py:1018
 msgid "Remote directory is required"
-msgstr "O diretório remoto é necessário"
+msgstr "Diretório remoto é necessário"
 
 #: pyanaconda/ui/gui/spokes/source.py:1039
 msgid "Duplicate repository names."
@@ -3606,12 +3654,12 @@ msgstr "Nome de repositório inválido"
 
 #: pyanaconda/ui/gui/spokes/source.py:1055
 msgid "Repository name conflicts with internal repository name."
-msgstr "Conflito do nome do repositório com nome do repositório interno."
+msgstr "Conflito do nome do repositório com nome de repositório interno."
 
 #: pyanaconda/ui/gui/spokes/storage.py:121
 msgid "Please wait... software metadata still loading."
 msgstr ""
-"Por favor espere... os metadados do software continuam sendo carregados."
+"Por favor, aguarde... os metadados do software continuam sendo carregados."
 
 #: pyanaconda/ui/gui/spokes/storage.py:122
 #, python-format
@@ -3649,8 +3697,8 @@ msgid ""
 "  You don't have enough space available to install <b>%(product)s</b>, even "
 "if you used all of the free space available on the selected disks."
 msgstr ""
-"Seu sistema não tem espaço disponível para  instalar <b>%(product)s</b>, "
-"mesmo que você use o espaço restante, não será suficiente."
+"  Seu sistema não tem espaço disponível para instalar <b>%(product)s</b>, "
+"ainda que seja usado todo o espaço livre disponível nos discos selecionados."
 
 # translation auto-copied from project Anaconda, version master, document
 # anaconda
@@ -3690,7 +3738,7 @@ msgstr "Falha ao salvar a configuração de armazenamento..."
 #: pyanaconda/ui/gui/spokes/storage.py:751
 #: pyanaconda/ui/gui/spokes/storage.py:770
 msgid "Formatting DASDs"
-msgstr "Formatação do DASDs"
+msgstr "Formatando DASDs"
 
 #: pyanaconda/ui/gui/spokes/storage.py:590
 msgid ""
@@ -3720,7 +3768,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/storage.py:640
 #, python-format
 msgid "NVDIMM device %(namespace)s"
-msgstr ""
+msgstr "Dispositivo NVDIMM %(namespace)s"
 
 #: pyanaconda/ui/gui/spokes/storage.py:649
 #, python-format
@@ -3748,8 +3796,7 @@ msgstr ""
 
 #: pyanaconda/ui/gui/spokes/storage.py:914
 msgid "There was a problem with your disk selection. Click here for details."
-msgstr ""
-"Houve um problema com a sua seleção de discos. Clique aqui para detalhes."
+msgstr "Houve um problema com sua seleção de discos. Clique aqui para detalhes."
 
 #: pyanaconda/ui/gui/spokes/storage.py:1089
 msgid "You'll be able to make space available during custom partitioning."
@@ -3762,7 +3809,7 @@ msgid ""
 "The following errors were encountered when checking your disk selection. You "
 "can modify your selection or quit the installer."
 msgstr ""
-"Os seguintes erros foram encontrados ao checar a seleção de discos.  Você "
+"Os seguintes erros foram encontrados ao verificar a seleção de discos. Você "
 "pode modificar sua seleção ou sair do instalador."
 
 #: pyanaconda/ui/gui/spokes/storage.py:1114
@@ -3781,8 +3828,8 @@ msgid ""
 "The following errors were encountered when checking your storage "
 "configuration.  You can modify your storage layout or quit the installer."
 msgstr ""
-"Os seguintes erros foram encontrados enquanto se checava sua configuração de "
-"armazenamento.  Você pode modificar seu layout de armazenamento ou sair do "
+"Os seguintes erros foram encontrados ao verificar sua configuração de "
+"armazenamento. Você pode modificar seu layout de armazenamento ou sair do "
 "instalador."
 
 #: pyanaconda/ui/gui/spokes/storage.py:1136
@@ -3796,8 +3843,8 @@ msgid ""
 "configuration.  These are not fatal, but you may wish to make changes to "
 "your storage layout."
 msgstr ""
-"Os seguintes erros foram encontrados enquanto se checava sua configuração de "
-"armazenamento.  Eles não são fatais, mas você pode desejar realizar algumas "
+"Os seguintes avisos foram encontrados ao verificar sua configuração de "
+"armazenamento. Eles não são fatais, mas você pode querer realizar algumas "
 "mudanças em seu layout de armazenamento."
 
 #: pyanaconda/ui/gui/spokes/storage.py:1154
@@ -3832,7 +3879,7 @@ msgstr "Nome de Usuário inválido"
 #: pyanaconda/ui/gui/spokes/welcome.py:224
 #, python-format
 msgid "WELCOME TO %(name)s %(version)s."
-msgstr "SEJA BEM VINDO AO %(name)s %(version)s."
+msgstr "SEJA BEM-VINDO(A) AO %(name)s %(version)s."
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.py:275
 #, python-format
@@ -3849,11 +3896,11 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.py:85
 msgctxt "GUI|Advanced Storage|NVDIM"
 msgid "No device to be reconfigured selected."
-msgstr ""
+msgstr "Nenhum dispositivo para ser reconfigurado foi selecionado."
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.py:160
 msgid "Rescanning disks finished."
-msgstr ""
+msgstr "Varredura dos discos finalizada."
 
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:171
 msgid "DATA"
@@ -3883,7 +3930,7 @@ msgid ""
 "Or, assign new mount points to existing partitions after selecting them "
 "below."
 msgstr ""
-"Ou, assinalar novos pontos de montagem para partições existentes após "
+"Ou, atribuir novos pontos de montagem para partições existentes após "
 "selecioná-las abaixo."
 
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:340
@@ -3909,13 +3956,13 @@ msgstr[1] ""
 #: pyanaconda/ui/gui/spokes/lib/cart.py:193
 msgctxt "GUI|Selected Disks Dialog"
 msgid "_Do not install boot loader"
-msgstr "_Não instalar carregador de inicialização"
+msgstr "_Não instalar gerenciador de inicialização"
 
 #: pyanaconda/ui/gui/spokes/lib/cart.py:196
 #: pyanaconda/ui/gui/spokes/lib/cart.glade.h:8
 msgctxt "GUI|Selected Disks Dialog"
 msgid "_Set as Boot Device"
-msgstr "_Definir como Dispositivo de Inicialização"
+msgstr "_Definir como dispositivo de inicialização"
 
 # translation auto-copied from project Anaconda, version master, document
 # anaconda
@@ -3978,13 +4025,13 @@ msgstr "O ponto de montagem é inválido. Tentar algo diferente?"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:286
 msgid "container"
-msgstr "container"
+msgstr "contêiner"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:358
 #, python-format
 msgctxt "GUI|Custom Partitioning|Confirm Delete Dialog"
 msgid "Delete _all file systems which are only used by %s."
-msgstr ""
+msgstr "Excluir _todos os sistemas de arquivos que são usado apenas por %s."
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:368
 #, python-format
@@ -4056,9 +4103,9 @@ msgid ""
 "this installation.  Removing a file system will permanently delete all of "
 "the data it contains."
 msgstr ""
-"Você pode remover os sistemas de arquivos existentes que você não precisa "
-"mais para liberar espaço para esta instalação. A remoção de um sistema de "
-"arquivos apagará permanentemente todos os dados nele contidos."
+"Você pode remover os sistemas de arquivos existentes que não precisa mais "
+"para liberar espaço para esta instalação. A remoção de um sistema de "
+"arquivos irá apagar permanentemente todos os dados nele contidos."
 
 #: pyanaconda/ui/gui/spokes/lib/resize.py:225
 msgid ""
@@ -4067,8 +4114,8 @@ msgid ""
 "free disk space and make it available for this installation below."
 msgstr ""
 "Há também espaço livre disponível em sistemas de arquivos pré-existentes. "
-"Embora seja arriscado e recomendamos que você faça o backup dos dados "
-"primeiro, você pode recuperar esse espaço livre de disco e torná-lo "
+"Embora seja arriscado e recomendamos que você faça backup dos dados "
+"primeiro, você pode recuperar esse espaço livre em disco e torná-lo "
 "disponível para esta instalação abaixo."
 
 #: pyanaconda/ui/gui/spokes/lib/resize.py:235
@@ -4077,9 +4124,11 @@ msgid "<b>%(count)s disk; %(size)s reclaimable space</b> (in file systems)"
 msgid_plural ""
 "<b>%(count)s disks; %(size)s reclaimable space</b> (in file systems)"
 msgstr[0] ""
-"<b>%(count)s disk; %(size)s espaço recuperável</b> (nos sistemas de arquivo)"
+"<b>%(count)s disco; %(size)s de espaço recuperável</b> (nos sistemas de "
+"arquivos)"
 msgstr[1] ""
-"<b>%(count)s disk; %(size)s espaço recuperável</b> (nos sistemas de arquivo)"
+"<b>%(count)s discos; %(size)s de espaço recuperável</b> (nos sistemas de "
+"arquivos)"
 
 #: pyanaconda/ui/gui/spokes/lib/resize.py:242
 #, python-format
@@ -4091,12 +4140,12 @@ msgstr "Espaço total selecionado para recuperação: <b>%s</b>"
 #: pyanaconda/ui/gui/spokes/lib/resize.glade.h:13
 msgctxt "GUI|Reclaim Dialog"
 msgid "Delete _all"
-msgstr "Apagar_tudo"
+msgstr "Apagar _todos"
 
 #: pyanaconda/ui/gui/spokes/lib/resize.py:459
 msgctxt "GUI|Reclaim Dialog"
 msgid "Preserve _all"
-msgstr "Preservar_tudo"
+msgstr "Preservar _todos"
 
 #: widgets/src/BaseWindow.c:153
 msgid "DISTRIBUTION INSTALLATION"
@@ -4412,11 +4461,11 @@ msgstr "Fabricante"
 
 #: pyanaconda/ui/gui/spokes/filter.glade.h:20
 msgid "Namespace"
-msgstr ""
+msgstr "Espaço para nome"
 
 #: pyanaconda/ui/gui/spokes/filter.glade.h:21
 msgid "Mode"
-msgstr ""
+msgstr "Modo"
 
 #: pyanaconda/ui/gui/spokes/filter.glade.h:22
 msgctxt "GUI|Installation Destination|Filter"
@@ -4488,30 +4537,30 @@ msgstr "_Outros Dispositivos SAN"
 #: pyanaconda/ui/gui/spokes/filter.glade.h:36
 msgctxt "GUI|Installation Destination|Filter|NVDIMM Devices"
 msgid "Filter B_y:"
-msgstr ""
+msgstr "Filtro B_y:"
 
 #: pyanaconda/ui/gui/spokes/filter.glade.h:37
 msgctxt "GUI|Installation Destination|Filter|NVDIMM Devices|Mode"
 msgid "Show Only Devices in Mo_de:"
-msgstr ""
+msgstr "Exibir Apenas Dispositivos em Mo_do:"
 
 #: pyanaconda/ui/gui/spokes/filter.glade.h:38
 msgid "Sector"
-msgstr ""
+msgstr "Setor"
 
 #: pyanaconda/ui/gui/spokes/filter.glade.h:39
 msgid "Memory"
-msgstr ""
+msgstr "Memória"
 
 #: pyanaconda/ui/gui/spokes/filter.glade.h:40
 msgctxt "GUI|Installation Destination|Filter|NVDIMM Devices|Namespace"
 msgid "Names_pace:"
-msgstr ""
+msgstr "Espaçode_nome:"
 
 #: pyanaconda/ui/gui/spokes/filter.glade.h:41
 msgctxt "GUI|Installation Destination|Filter"
 msgid "_NVDIMM Devices"
-msgstr ""
+msgstr "Dispositivos _NVDIMM"
 
 #: pyanaconda/ui/gui/spokes/filter.glade.h:42
 msgctxt "GUI|Installation Destination|Filter|zSeries"
@@ -4574,12 +4623,12 @@ msgstr "Adicionar FCo_E SAN..."
 #: pyanaconda/ui/gui/spokes/filter.glade.h:54
 msgctxt "GUI|Installation Destination|Filter"
 msgid "Recon_figure NVDIMM..."
-msgstr ""
+msgstr "Recon_figurar NVDIMM..."
 
 #: pyanaconda/ui/gui/spokes/filter.glade.h:55
 msgctxt "GUI|Installation Destination|Filter"
 msgid "_Refresh List"
-msgstr ""
+msgstr "_Atualizar Lista"
 
 #: pyanaconda/ui/gui/spokes/network.glade.h:5
 msgid "Add device"
@@ -5260,7 +5309,7 @@ msgstr "_Verificar"
 #: pyanaconda/ui/gui/spokes/source.glade.h:20
 msgctxt "GUI|Software Source"
 msgid "Installation media via SE/_HMC"
-msgstr ""
+msgstr "Mídia de instalação via SE/_HMC"
 
 #: pyanaconda/ui/gui/spokes/source.glade.h:21
 msgctxt "GUI|Software Source"
@@ -6011,49 +6060,53 @@ msgstr "Tentar novamente _Login"
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade.h:1
 msgctxt "GUI|Advanced Storage|NVDIMM|Reconfigure"
 msgid "_Cancel"
-msgstr ""
+msgstr "_Cancelar"
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade.h:2
 msgid ""
 "The following NVDIMM devices selected from the list will be reconfigured to "
 "sector mode:"
 msgstr ""
+"Os seguintes dispositivos NVDIMM selecionados da lista serão reconfigurados "
+"para o modo setor:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade.h:3
 msgctxt "GUI|Advanced Storage|NVDIMM|Reconfigure"
 msgid "_Sector size:"
-msgstr ""
+msgstr "Tamanho do _Setor:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade.h:4
 msgctxt "GUI|Advanced Storage|NVDIMM|Reconfigure"
 msgid "Start _Reconfiguration"
-msgstr ""
+msgstr "Começar_Reconfiguração"
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade.h:5
 msgid "Reconfiguring NVDIMM devices. This may take a moment..."
-msgstr ""
+msgstr "Reconfigurando dispositivos NVDIMM. Isso pode levar um tempo..."
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade.h:6
 msgid "Device reconfiguration failed."
-msgstr ""
+msgstr "Reconfiguração dos dispositivos falhou."
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade.h:7
 msgid "The following error occurred reconfiguring NVDIMM devices:"
-msgstr ""
+msgstr "Ocorreu o seguinte erro ao reconfigurar os dispositivos NVDIMM:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade.h:8
 msgid "Devices reconfiguration succeeded."
-msgstr ""
+msgstr "Dispositivos reconfigurados com sucesso."
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade.h:9
 msgid ""
 "Rescanning disks after reconfiguration.\n"
 "This may take a moment ..."
 msgstr ""
+"Escaneando discos após reconfiguração.\n"
+"Isso pode levar um tempo..."
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade.h:11
 msgid "Warning: Existing data on reconfigured devices will be lost."
-msgstr ""
+msgstr "Aviso: Dados existentes em um dispositivo reconfigurado serão perdidos."
 
 #: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade.h:1
 msgid "ADD zFCP STORAGE TARGET"
