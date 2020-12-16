@@ -47,13 +47,14 @@
 # Radek Vykydal <rvykydal@redhat.com>, 2020.
 # Matthias Kruk <matthias.kruk@miraclelinux.com>, 2020.
 # Mike FABIAN <mfabian@redhat.com>, 2020.
+# Mark E. Fuller <mark.e.fuller@gmx.de>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2020-12-16 00:40+0000\n"
-"PO-Revision-Date: 2020-12-13 13:35+0000\n"
-"Last-Translator: Fabian Affolter <mail@fabian-affolter.ch>\n"
+"PO-Revision-Date: 2020-12-17 03:33+0000\n"
+"Last-Translator: Mark E. Fuller <mark.e.fuller@gmx.de>\n"
 "Language-Team: German <https://translate.fedoraproject.org/projects/anaconda/"
 "master/de/>\n"
 "Language: de\n"
@@ -158,8 +159,8 @@ msgstr "Keine Speichermedien zugeordnet"
 msgctxt "GUI|Custom Partitioning|Devices"
 msgid " and {} other"
 msgid_plural " and {} others"
-msgstr[0] " und {} weiteres"
-msgstr[1] " und {} weitere"
+msgstr[0] " und %d weiteres"
+msgstr[1] " und %d weitere"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:799
 msgid "The container is encrypted."
@@ -854,12 +855,12 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:375
 msgid ""
 "Are you sure you want to delete all of the data on {}, including subvolumes?"
-msgstr "Sind Sie sicher, alle Daten auf {} zu löschen, inklusive Subvolumes ?"
+msgstr "Sind Sie sicher, alle Daten auf {} zu löschen, inklusive Subvolumes?"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:380
 msgid ""
 "Are you sure you want to delete all of the data on {}, including snapshots?"
-msgstr "Sind Sie sicher, alle Daten auf {} zu löschen, inklusive Subvolumes ?"
+msgstr "Sind Sie sicher, alle Daten auf {} zu löschen, inklusive Subvolumes?"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:383
 msgid "Are you sure you want to delete all of the data on {}?"
@@ -868,7 +869,7 @@ msgstr "Sind Sie sicher, dass Sie alle Daten auf {} löschen möchten?"
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:605
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:343
 msgid "Name is already in use."
-msgstr "Name wird bereits benutzt."
+msgstr "Der gewählte Name wird bereits benutzt."
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:708
 msgid "No disks selected."
@@ -1383,13 +1384,13 @@ msgid "_Finish Installation"
 msgstr "_Installation abschließen"
 
 #: pyanaconda/ui/gui/spokes/installation_progress.py:154
-#, python-format
+#, fuzzy, python-format
 msgid ""
 "%s is now successfully installed and ready for you to use!\n"
 "Go ahead and reboot your system to start using it!"
 msgstr ""
-"%s wurde erfolgreich installiert und ist bereit zur Verwendung.\n"
-"Legen Sie los und machen Sie einen Neustart, um es zu verwenden!"
+"%s ist jetzt erfolgreich installiert und steht für Sie bereit! \n"
+"Nach einem Neustart können Sie beginnen!"
 
 #: pyanaconda/ui/gui/spokes/installation_progress.py:159
 #, python-format
@@ -2133,8 +2134,9 @@ msgid " IPv6 Address: %(addr)s/%(prefix)d\n"
 msgstr " IPv6 Adresse: %(addr)s/%(prefix)d\n"
 
 #: pyanaconda/ui/tui/spokes/network.py:317
+#, fuzzy
 msgid "Network configuration is not available."
-msgstr "Die Netzwerk-Konfiguration ist nicht verfügbar."
+msgstr "Die Konfiguration des Netzwerks steht nicht zur Verfügung."
 
 #: pyanaconda/ui/tui/spokes/network.py:323
 #, python-format
@@ -2303,8 +2305,8 @@ msgstr "Überprüfen des Speichermediums"
 #, python-brace-format
 msgid "{count} disk selected; {capacity} capacity; {free} free"
 msgid_plural "{count} disks selected; {capacity} capacity; {free} free"
-msgstr[0] "{count} Disk ausgewählt; {capacity} Kapazität; {free} verfügbar"
-msgstr[1] "{count} Disks ausgewählt; {capacity} Kapazität; {free} verfügbar"
+msgstr[0] "{count} Disk ausgewählt; {capacity} Kapazität;  {free} verfügbar"
+msgstr[1] "{count} Disks ausgewählt; {capacity} Kapazität;  {free} verfügbar"
 
 #: pyanaconda/ui/lib/storage.py:283
 msgid "Saving storage configuration..."
@@ -2334,7 +2336,7 @@ msgstr ""
 msgid "Not enough space in file systems for the current software selection."
 msgstr ""
 "Für die derzeitige Softwareauswahl steht nicht genügend Speicherplatz zur "
-"Verfügung."
+"Verfügung. Zusätzlich werden {} benötigt."
 
 #: pyanaconda/ui/lib/subscription.py:287
 msgid "Registration failed due to insufficient credentials."
@@ -3097,6 +3099,7 @@ msgstr ""
 "mit '-' beginnen oder schließen."
 
 #: pyanaconda/network.py:448
+#, fuzzy
 msgid "Status not available"
 msgstr "Status nicht verfügbar"
 
@@ -3304,13 +3307,14 @@ msgid "Do you really want to quit?"
 msgstr "Möchten Sie wirklich beenden?"
 
 #: pyanaconda/core/constants.py:156
+#, fuzzy
 msgid ""
 "Support for this hardware has been removed in this major OS release. Please "
 "check theremoved functionality section of the release notes."
 msgstr ""
-"Die Unterstützung für diese Hardware wurde in dieser Betriebssystem-"
-"Hauptversion entfernt. Bitte überprüfen Sie den Abschnitt mit den entfernten "
-"Funktionen der Versionshinweise."
+"Die Unterstützung für diese Hardware wurde in dieser Hauptversion des "
+"Betriebssystems entfernt. Bitte überprüfen Sie den Abschnitt mit den "
+"entfernten Funktionen der Versionshinweise."
 
 #: pyanaconda/core/constants.py:161
 msgid ""
@@ -3676,7 +3680,7 @@ msgstr "zFCP"
 #: pyanaconda/modules/storage/platform.py:80
 #: pyanaconda/modules/storage/platform.py:386
 msgid "You must include at least one disk as an install target."
-msgstr "Sie müssen mindestens eine Festplatte als Installationsziel angeben."
+msgstr "Sie müssen mindestens einen Datenträger als Installationsziel angeben."
 
 #: pyanaconda/modules/storage/platform.py:154
 msgid ""
@@ -4000,14 +4004,14 @@ msgid ""
 "Btrfs volume defined without any member devices.  Either specify member "
 "devices or use --useexisting."
 msgstr ""
-"Btrfs-Volume ohne Member-Geräte definiert. Member-Geräte definieren oder --"
-"useexisting benutzen."
+"Volume-Gruppe \"{}\" ohne physikalische Speichermedien definiert. "
+"Physikalische Speichermedien definieren oder --useexisting benutzen."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1290
-#, python-format
+#, fuzzy, python-format
 msgid "Btrfs volume \"%s\" specified with --useexisting does not exist."
 msgstr ""
-"Der mit --useexisting definierte »%s«-Btrfs-Datenträger ist nicht vorhanden."
+"Btrfs-Speichermedium \"{}\" mit --useexisting angegeben existiert nicht."
 
 #: pyanaconda/modules/storage/partitioning/automatic/utils.py:165
 msgid "No usable disks selected."
@@ -4624,12 +4628,14 @@ msgstr ""
 
 #: pyanaconda/modules/storage/kickstart.py:228
 #: pyanaconda/modules/storage/kickstart.py:240
+#, fuzzy
 msgid "Namespace \"{}\" given in nvdimm command was not found."
-msgstr "Namespace \"{}\" im nvdimm-Befehl wurde nicht gefunden."
+msgstr "Datenträger \"{}\" Nvdimm-Befehl ist nicht vorhanden."
 
 #: pyanaconda/modules/storage/kickstart.py:245
+#, fuzzy
 msgid "Disk \"{}\" given in nvdimm command does not exist."
-msgstr "Datenträger \"{}\" im nvdimm-Befehl ist nicht vorhanden."
+msgstr "Datenträger \"{}\" Nvdimm-Befehl ist nicht vorhanden."
 
 #: pyanaconda/modules/storage/kickstart.py:258
 msgid ""
