@@ -65,16 +65,15 @@
 # José Lemos Neto <lemosjosex@protonmail.com>, 2020.
 # Radek Vykydal <rvykydal@redhat.com>, 2020.
 # Adolfo Jayme Barrientos <fitoschido@gmail.com>, 2020.
-# Gustavo Costa <gusta@null.net>, 2020.
+# Gustavo Costa <gusta@null.net>, 2020, 2021.
 # Henrique Roberto Gattermann Mittelstaedt <henrique.roberto97@gmail.com>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2020-09-22 14:54+0200\n"
-"PO-Revision-Date: 2020-11-29 01:35+0000\n"
-"Last-Translator: Henrique Roberto Gattermann Mittelstaedt <henrique."
-"roberto97@gmail.com>\n"
+"PO-Revision-Date: 2021-01-15 16:36+0000\n"
+"Last-Translator: Gustavo Costa <gusta@null.net>\n"
 "Language-Team: Portuguese (Brazil) <https://translate.fedoraproject.org/"
 "projects/anaconda/rhel-8/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -82,7 +81,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.3.2\n"
+"X-Generator: Weblate 4.4.2\n"
 
 #: anaconda.py:377
 msgid "Unable to create PID file"
@@ -174,7 +173,7 @@ msgstr "Instalando."
 
 #: pyanaconda/installation.py:336
 msgid "Installing boot loader"
-msgstr "Instalando o carregador de boot"
+msgstr "Instalando o carregador de incialização"
 
 #: pyanaconda/installation.py:349 pyanaconda/payload/live/payload_base.py:159
 #: pyanaconda/payload/dnf/payload.py:1411
@@ -375,8 +374,8 @@ msgid ""
 "will not be bootable. Would you like to ignore this and continue with "
 "installation?"
 msgstr ""
-"Ocorreu um erro durante a instalação do carregador de boot. O sistema não "
-"será inicializado. Quer ignorar isso e seguir com a instalação?"
+"Ocorreu um erro durante a instalação do carregador de incialização. O "
+"sistema não será inicializado. Quer ignorar isso e seguir com a instalação?"
 
 #: pyanaconda/errors.py:258
 #, python-format
@@ -604,7 +603,8 @@ msgstr ""
 #: pyanaconda/modules/storage/checker/utils.py:174
 msgid "No valid boot loader target device found. See below for details."
 msgstr ""
-"Não há dispositivo alvo para o carregador de boot. veja os detalhes abaixo."
+"Nenhum dispositivo de destino de carregador de inicialização válido "
+"encontrado. veja os detalhes abaixo."
 
 #: pyanaconda/modules/storage/checker/utils.py:189
 msgid "You have not created a bootable partition."
@@ -1155,7 +1155,7 @@ msgstr "Nenhum formato no dispositivo '%s'"
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:213
 #, python-brace-format
 msgid "New {name} {version} Installation"
-msgstr "Nova instalação de {name} {version}"
+msgstr "Nova instalação do {name} {version}"
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:289
 msgid "Cannot set label on file system."
@@ -1345,8 +1345,8 @@ msgid ""
 "Boot loader stage1 device cannot be on an iSCSI disk which is not configured "
 "in iBFT."
 msgstr ""
-"O dispositivo carregador de boot de estágio 1 não pode ser um disco iSCI que "
-"não está configurado como IBFT."
+"O dispositivo stage1 do carregador de inicialização não pode estar em um "
+"disco iSCSI que não esteja configurado no iBFT."
 
 #: pyanaconda/modules/storage/bootloader/base.py:558
 #: pyanaconda/modules/storage/bootloader/base.py:672
@@ -1360,8 +1360,8 @@ msgid ""
 "%(bootloader_stage2_description)s cannot be on an iSCSI disk which is not "
 "configured in iBFT."
 msgstr ""
-"%(bootloader_stage2_description)s não pode estar em um disco iSCI que não "
-"esta configurado como iBFT."
+"%(bootloader_stage2_description)s não pode estar em um disco iSCSI que não "
+"esteja configurado no iBFT."
 
 #: pyanaconda/modules/storage/bootloader/base.py:631
 #, python-format
@@ -1384,10 +1384,10 @@ msgid ""
 "loader stage1 device %(stage1dev)s is not. A drive failure in %(stage2dev)s "
 "could render the system unbootable."
 msgstr ""
-"O dispositivo %(stage2dev)s do carregador de inicialização stage2 está em "
-"uma matriz de vários discos, mas o dispositivo %(stage1dev)s do carregador "
-"de inicialização stage1 não está. Uma falha de unidade em %(stage2dev)s pode "
-"tornar o sistema não inicializável."
+"O dispositivo %(stage2dev)s do stage2 do carregador de inicialização está em "
+"uma matriz de vários discos, mas o dispositivo %(stage1dev)s do stage1 do "
+"carregador de inicialização não está. Uma falha de unidade em %(stage2dev)s "
+"pode tornar o sistema não inicializável."
 
 #: pyanaconda/modules/storage/bootloader/grub2.py:533
 #, python-format
@@ -1396,10 +1396,10 @@ msgid ""
 "loader stage1 device %(stage1dev)s is not part of this array. The stage1 "
 "boot loader will only be installed to a single drive."
 msgstr ""
-"dispositivo carregador do boot estágio 2 %(stage2dev)s é um array de multi "
-"discos,mas o dispositivo de estágio 1 %(stage1dev)s não é parte deste  "
-"array. O caregador de boot do estágio 1, só será instalado para um drive "
-"único."
+"dispositivo carregador do boot de estágio 2 %(stage2dev)s é um arranjo de "
+"vários discos, mas o carregador de boot de estágio 1 %(stage1dev)s não é "
+"parte deste arranjo. O carregador de boot do estágio 1 só será instalado "
+"para uma única unidade."
 
 #: pyanaconda/modules/storage/bootloader/execution.py:185
 msgid "No match found for given boot drive \"{}\"."
@@ -1610,7 +1610,6 @@ msgid ""
 msgstr ""
 "%(product_name)s requer %(needed_ram)s MB de memória para a instalação, mas "
 "você tem apenas %(total_ram)s MB nessa máquina.\n"
-"\n"
 
 #: pyanaconda/startup_utils.py:79
 #, python-format
@@ -1627,7 +1626,7 @@ msgid ""
 "Press [Enter] to reboot your system.\n"
 msgstr ""
 "\n"
-"Aperte  [Enter] para reiniciar o seu sistema.\n"
+"Aperte [Enter] para reiniciar o seu sistema.\n"
 
 #: pyanaconda/startup_utils.py:84
 msgid "Not enough RAM"
@@ -1653,7 +1652,7 @@ msgstr " Iniciando o modo texto."
 
 #: pyanaconda/startup_utils.py:124
 msgid "The installation cannot continue and the system will be rebooted"
-msgstr "A instalação não pode continuar e o sistema será reiniciado"
+msgstr "A instalação não pode continuar e o sistema será reinicializado"
 
 #: pyanaconda/startup_utils.py:125
 msgid "Press ENTER to continue"
@@ -1849,7 +1848,7 @@ msgstr "Nome completo"
 #: pyanaconda/ui/gui/spokes/subscription.glade:156
 #: pyanaconda/ui/gui/spokes/subscription.glade:556
 msgid "User name"
-msgstr "Nome do usuário"
+msgstr "Nome de usuário"
 
 #: pyanaconda/ui/tui/spokes/user.py:136
 msgid "Use password"
@@ -1901,7 +1900,7 @@ msgstr ""
 
 #: pyanaconda/ui/tui/spokes/network.py:51
 msgid "Bad format of the IP address"
-msgstr "Formato não correto para  o endereço IP"
+msgstr "Formato incorreto do endereço IP"
 
 #: pyanaconda/ui/tui/spokes/network.py:52
 msgid "Bad format of the netmask"
@@ -1925,8 +1924,7 @@ msgstr "(%(interface_name)s) com fios conectada\n"
 #, python-format
 msgid " IPv4 Address: %(addr)s Netmask: %(netmask)s Gateway: %(gateway)s\n"
 msgstr ""
-" Enderaço IPv4: %(addr)s Netmask: %(netmask)s Gateway: %(gateway)s\n"
-"\n"
+" Enderaço IPv4: %(addr)s Máscara de rede: %(netmask)s Gateway: %(gateway)s\n"
 
 #: pyanaconda/ui/tui/spokes/network.py:292
 #, python-format
@@ -1974,7 +1972,7 @@ msgstr "Configurar dispositivo %s"
 #: pyanaconda/ui/gui/spokes/network.py:1669
 #, python-format
 msgid "Host name is not valid: %s"
-msgstr " O nome de host  não é  valido: %s"
+msgstr "O nome de host não é valido: %s"
 
 #: pyanaconda/ui/tui/spokes/network.py:442
 msgid "Device configuration"
@@ -1987,11 +1985,11 @@ msgstr "Endereço IPv4 ou %s para DHCP"
 
 #: pyanaconda/ui/tui/spokes/network.py:468
 msgid "IPv4 netmask"
-msgstr "IPv4 netmask"
+msgstr "Máscara de rede IPv4"
 
 #: pyanaconda/ui/tui/spokes/network.py:471
 msgid "IPv4 gateway"
-msgstr "IPv4 gateway"
+msgstr "Gateway IPv4"
 
 #: pyanaconda/ui/tui/spokes/network.py:474
 #, python-format
@@ -2064,7 +2062,7 @@ msgstr "Senha: "
 
 #: pyanaconda/ui/tui/spokes/askvnc.py:149
 msgid "Password (confirm): "
-msgstr "Senha (confirmar):"
+msgstr "Senha (confirmar): "
 
 #: pyanaconda/ui/tui/spokes/askvnc.py:152
 msgid "Passwords do not match!"
@@ -2080,11 +2078,11 @@ msgstr "A senha não pode ter mais que 8 caracteres."
 
 #: pyanaconda/ui/tui/spokes/root_password.py:43
 msgid "Root password"
-msgstr "Senha Root"
+msgstr "Senha root"
 
 #: pyanaconda/ui/tui/spokes/root_password.py:78
 msgid "Disabled. Set password to enable root account."
-msgstr "Desativado, Definir uma Senha de root para Ativar"
+msgstr "Desativada. Defina uma senha para ativar a conta root."
 
 #: pyanaconda/ui/tui/spokes/root_password.py:80
 #: pyanaconda/ui/gui/spokes/root_password.py:154
@@ -2101,9 +2099,7 @@ msgstr "A senha não foi determinada."
 
 #: pyanaconda/ui/tui/spokes/root_password.py:90
 msgid "Please select new root password. You will have to type it twice."
-msgstr ""
-"Por favor, selecione a nova senha de root. Você terá que digitá-la duas "
-"vezes."
+msgstr "Selecione uma nova senha de root. Você terá que digitá-la duas vezes."
 
 #: pyanaconda/ui/tui/spokes/installation_progress.py:50
 msgid "Progress"
@@ -2139,7 +2135,7 @@ msgstr "Fonte de Instalação não configurada"
 #: pyanaconda/ui/tui/spokes/software_selection.py:162
 #: pyanaconda/ui/gui/spokes/software_selection.py:317
 msgid "Source changed - please verify"
-msgstr "As fontes foram alteradas - por favor, verifique"
+msgstr "Fonte alterada - por favor, verifique"
 
 #: pyanaconda/ui/tui/spokes/software_selection.py:169
 #: pyanaconda/ui/gui/spokes/software_selection.py:324
@@ -2148,7 +2144,7 @@ msgstr "Software personalizado selecionado"
 
 #: pyanaconda/ui/tui/spokes/software_selection.py:197
 msgid "Installation source needs to be set up first."
-msgstr "Fonte de instalação deve ser definido em primeiro lugar."
+msgstr "A fonte de instalação precisa ser configurada primeiro."
 
 #: pyanaconda/ui/tui/spokes/software_selection.py:221
 msgid "Base environment"
@@ -2165,7 +2161,7 @@ msgstr "Nenhum software adicional para selecionar."
 #: pyanaconda/ui/tui/spokes/unsupported_hardware.py:38
 #: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:68
 msgid "Unsupported Hardware Detected"
-msgstr "Hardware não-suportado detectado"
+msgstr "Hardware não suportado detectado"
 
 #: pyanaconda/ui/tui/spokes/storage.py:61
 msgid "Use All Space"
@@ -2335,7 +2331,7 @@ msgstr "Escolha acima para atribuir um ponto de montagem e/ou formatar."
 #: pyanaconda/ui/tui/spokes/storage.py:778
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:177
 msgid "Mount point"
-msgstr "Ponto de Montagem"
+msgstr "Ponto de montagem"
 
 #: pyanaconda/ui/tui/spokes/storage.py:785
 #: pyanaconda/ui/tui/spokes/storage.py:790
@@ -2370,11 +2366,11 @@ msgstr "Aviso: Processador tem Simultaneous Multithreading (SMT) ativado"
 
 #: pyanaconda/ui/tui/spokes/language_support.py:51
 msgid "Language settings"
-msgstr "Ajuste de idioma"
+msgstr "Configurações de linguagem"
 
 #: pyanaconda/ui/tui/spokes/language_support.py:85
 msgid "Language is not set."
-msgstr "Idioma não-selecionado."
+msgstr "O idioma não está definido."
 
 #: pyanaconda/ui/tui/spokes/language_support.py:97
 msgid "Available locales"
@@ -2382,7 +2378,7 @@ msgstr "Locais disponíveis"
 
 #: pyanaconda/ui/tui/spokes/language_support.py:102
 msgid "Available languages"
-msgstr "Liguagens disponíveis"
+msgstr "Idiomas disponíveis"
 
 #. TRANSLATORS: 'b' to go back
 #: pyanaconda/ui/tui/spokes/language_support.py:126
@@ -2433,7 +2429,7 @@ msgstr "não definido"
 #: pyanaconda/ui/tui/spokes/time_spoke.py:219
 #, python-format
 msgid "Timezone: %s\n"
-msgstr "Fuso Horário: %s\n"
+msgstr "Fuso horário: %s\n"
 
 #: pyanaconda/ui/tui/spokes/time_spoke.py:225
 #: pyanaconda/ui/tui/spokes/time_spoke.py:390
@@ -2811,8 +2807,8 @@ msgstr "PARTICIONAMENTO MANUAL"
 msgctxt "GUI|Custom Partitioning"
 msgid "%d _storage device selected"
 msgid_plural "%d _storage devices selected"
-msgstr[0] "%d dispositivo de _armazenamento selecionado"
-msgstr[1] "%d dispositivos de _armazenamento selecionados"
+msgstr[0] "%d_dispositivo de armazenamento selecionado"
+msgstr[1] "%d_dispositivos de armazenamento selecionados"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:338
 #, python-format
@@ -3688,13 +3684,13 @@ msgid ""
 "You haven't created any mount points for your %(product)s %(version)s "
 "installation yet.  You can:"
 msgstr ""
-"Você ainda não criou quaisquer pontos de montagem para sua instalação do "
-"%(product)s %(version)s ainda.  Você pode:"
+"Você ainda não criou nenhum ponto de montagem para sua instalação do "
+"%(product)s %(version)s.  Você pode:"
 
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:499
 msgctxt "GUI|Custom Partitioning|Autopart Page"
 msgid "_Click here to create them automatically."
-msgstr "_Clique aqui para criá-las automaticamente."
+msgstr "_Clicar aqui para criá-los automaticamente."
 
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:525
 msgid "Create new mount points by clicking the '+' button."
@@ -3716,7 +3712,7 @@ msgstr "_Novo ponto de montagem usarão o esquema de particionamento seguinte:"
 #: pyanaconda/ui/gui/spokes/lib/cart.py:193
 msgctxt "GUI|Selected Disks Dialog"
 msgid "_Do not install boot loader"
-msgstr "_Não instalar gerenciador de inicialização"
+msgstr "_Não instalar carregador de inicialização"
 
 #: pyanaconda/ui/gui/spokes/lib/cart.py:198
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:200
@@ -3964,7 +3960,7 @@ msgstr "RAID"
 
 #: pyanaconda/core/storage.py:87 pyanaconda/core/storage.py:94
 msgid "Standard Partition"
-msgstr "Partição Padrão"
+msgstr "Partição padrão"
 
 #: pyanaconda/core/storage.py:88 pyanaconda/core/storage.py:95
 msgid "Btrfs"
@@ -3972,7 +3968,7 @@ msgstr "Btrfs"
 
 #: pyanaconda/core/storage.py:89 pyanaconda/core/storage.py:97
 msgid "LVM Thin Provisioning"
-msgstr "Provisionamento Leve LVM"
+msgstr "Provisionamento LVM fino"
 
 #: pyanaconda/core/storage.py:90 pyanaconda/ui/gui/spokes/lib/resize.glade:150
 msgid "Disk"
@@ -4023,8 +4019,8 @@ msgid ""
 "The PReP boot partition is required as part of the\n"
 "boot loader configuration on some PPC platforms."
 msgstr ""
-"Uma partição de boot PReP é necessária como\n"
-"parte do carregador de boot em algumas plataformas PPC."
+"Uma partição de incialização PReP é necessária como parte do\n"
+"carregador de inicialização em algumas plataformas PPC."
 
 #: pyanaconda/core/constants.py:88
 msgid "Start VNC"
@@ -4516,12 +4512,11 @@ msgstr "Instalando %(flatpak_name)s"
 #: pyanaconda/payload/rpmostreepayload.py:133
 #, python-format
 msgid "Receiving objects: %(percent)d%% (%(fetched)d/%(requested)d) %(bytes)s"
-msgstr ""
-"Recebendo objetos: %(percent)d %% (%(fetched)d /%(requested)d) %(bytes)s"
+msgstr "Recebendo objetos: %(percent)d%% (%(fetched)d/%(requested)d) %(bytes)s"
 
 #: pyanaconda/payload/rpmostreepayload.py:139
 msgid "Writing objects"
-msgstr "Escrevendo Objetos"
+msgstr "Escrevendo objetos"
 
 #: pyanaconda/payload/rpmostreepayload.py:238
 #, python-format
@@ -4553,7 +4548,7 @@ msgstr "Tarefas pós-instalação flatpak"
 
 #: pyanaconda/payload/rpmostreepayload.py:533
 msgid "Flatpak installation has finished"
-msgstr "A instalação do flatpak foi finalizada"
+msgstr "A instalação do Flatpak foi finalizada"
 
 #: pyanaconda/payload/live/download_progress.py:57
 #: pyanaconda/payload/live/download_progress.py:66
@@ -4711,12 +4706,11 @@ msgstr "_Sair"
 #: pyanaconda/ui/gui/hubs/summary.glade:97
 msgctxt "GUI|Summary"
 msgid "_Begin Installation"
-msgstr "_Iniciar a Instalação"
+msgstr "_Iniciar a instalação"
 
 #: pyanaconda/ui/gui/hubs/summary.glade:128
 msgid "We won't touch your disks until you click 'Begin Installation'."
-msgstr ""
-"Nós não tocaremos em seus discos até você apertar 'Iniciar Instalação'."
+msgstr "Não tocaremos em seus discos até você clicar em 'Iniciar a instalação'."
 
 #: pyanaconda/ui/gui/spokes/storage.glade:27
 msgctxt "GUI|Storage|Need Space Dialog"
@@ -4789,24 +4783,24 @@ msgstr "Não há espaço"
 #: pyanaconda/ui/gui/spokes/storage.glade:1136
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:67
 msgid "INSTALLATION DESTINATION"
-msgstr "DESTINAÇÃO DA INSTALAÇÃO"
+msgstr "DESTINO DA INSTALAÇÃO"
 
 #: pyanaconda/ui/gui/spokes/storage.glade:512
 msgid "Device Selection"
-msgstr "Seleção de Dispositivo"
+msgstr "Seleção de dispositivo"
 
 #: pyanaconda/ui/gui/spokes/storage.glade:531
 msgid ""
 "Select the device(s) you'd like to install to.  They will be left untouched "
 "until you click on the main menu's \"Begin Installation\" button."
 msgstr ""
-"Selecione os dispositivos nos quais você gostaria de fazer a instalação.  "
-"Eles permanecerão intactos até que você clique no botão do menu principal "
-"\"Iniciar Instalação\"."
+"Selecione o(s) dispositivo(s) no(s) qual(is) você gostaria de fazer a "
+"instalação.  Eles permanecerão intactos até que você clique no botão "
+"\"Iniciar a instalação\" do menu principal."
 
 #: pyanaconda/ui/gui/spokes/storage.glade:550
 msgid "Local Standard Disks"
-msgstr "Discos Padrão Locais "
+msgstr "Discos padrão locais"
 
 #: pyanaconda/ui/gui/spokes/storage.glade:614
 #: pyanaconda/ui/gui/spokes/storage.glade:754
@@ -4815,7 +4809,7 @@ msgstr "Os discos não selecionados aqui não serão tocados."
 
 #: pyanaconda/ui/gui/spokes/storage.glade:633
 msgid "Specialized & Network Disks"
-msgstr "Discos especializados & de Rede"
+msgstr "Discos especializados e de rede"
 
 #: pyanaconda/ui/gui/spokes/storage.glade:704
 msgctxt "GUI|Storage"
@@ -4828,7 +4822,7 @@ msgstr "Adicionar disco especializado"
 
 #: pyanaconda/ui/gui/spokes/storage.glade:781
 msgid "Storage Configuration"
-msgstr "Configuração de Armazenamento"
+msgstr "Configuração de armazenamento"
 
 #: pyanaconda/ui/gui/spokes/storage.glade:801
 msgctxt "GUI|Storage"
@@ -4852,7 +4846,7 @@ msgstr "Eu gostaria de _adiconar espaço disponível no disco."
 
 #: pyanaconda/ui/gui/spokes/storage.glade:901
 msgid "Encryption"
-msgstr "Criptografando"
+msgstr "Criptografia"
 
 #: pyanaconda/ui/gui/spokes/storage.glade:931
 msgctxt "GUI|Storage"
@@ -4874,7 +4868,7 @@ msgstr "resumo"
 #: pyanaconda/ui/gui/spokes/storage.glade:1061
 msgctxt "GUI|Storage"
 msgid "_Full disk summary and boot loader..."
-msgstr "_Resumo completo do disco  e gerenciador de inicialização..."
+msgstr "_Resumo completo do disco e carregador de incialização..."
 
 #: pyanaconda/ui/gui/spokes/storage.glade:1100
 msgctxt "GUI|Storage"
@@ -4973,7 +4967,7 @@ msgstr "Ponto de montagem"
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:400
 msgctxt "GUI|Custom Partitioning|Configure|Devices"
 msgid "Desired _Capacity:"
-msgstr "_Capacidade Desejada:"
+msgstr "_Capacidade desejada:"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:451
 msgctxt "GUI|Custom Partitioning|Configure|Devices"
@@ -5045,8 +5039,8 @@ msgid ""
 "Note:  The settings you make on this screen will not be applied until you "
 "click on the main menu's 'Begin Installation' button."
 msgstr ""
-"Nota: As configurações feitas nesta tela não serão aplicadas até que você "
-"clique no botão do menu principal ' Iniciar Instalação ' ."
+"Nota:  as configurações feitas nesta tela não serão aplicadas até que você "
+"clique no botão 'Iniciar a instalação' do menu principal."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:1129
 msgid ""
@@ -5090,7 +5084,7 @@ msgstr "_Redefinir Todos"
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:136
 msgctxt "GUI|Installation Destination|Filter|Search"
 msgid "Search _By:"
-msgstr "Procura_Por:"
+msgstr "Procurar _por:"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:153
 msgid "Port / Target / LUN #"
@@ -5208,12 +5202,12 @@ msgstr "Busca_r"
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:578
 msgctxt "GUI|Installation Destination|Filter|Multipath"
 msgid "Filter _By:"
-msgstr "Filtrar _Por:"
+msgstr "Filtrar _por:"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:635
 msgctxt "GUI|Installation Destination|Filter|Multipath|Vendor"
 msgid "Show Only _Devices From:"
-msgstr "Exibir apenas _Dispositivos de:"
+msgstr "Exibir apenas _dispositivos de:"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:676
 msgctxt "GUI|Installation Destination|Filter|Multipath|Interconnect"
@@ -5232,12 +5226,12 @@ msgstr "Caminhos"
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:886
 msgctxt "GUI|Installation Destination|Filter"
 msgid "_Multipath Devices"
-msgstr "_Dispositivos do Multipath"
+msgstr "_Dispositivos multipath"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:912
 msgctxt "GUI|Installation Destination|Filter|Other"
 msgid "Filter _By:"
-msgstr "Filtrar _Por:"
+msgstr "Filtrar _por:"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:931
 msgid "ID"
@@ -5265,12 +5259,12 @@ msgstr "Identificador"
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1206
 msgctxt "GUI|Installation Destination|Filter"
 msgid "_Other SAN Devices"
-msgstr "_Outros Dispositivos SAN"
+msgstr "_Outros dispositivos SAN"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1232
 msgctxt "GUI|Installation Destination|Filter|NVDIMM Devices"
 msgid "Filter B_y:"
-msgstr "Filtro B_y:"
+msgstr "Filtrar po_r:"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1288
 msgctxt "GUI|Installation Destination|Filter|NVDIMM Devices|Mode"
@@ -5367,7 +5361,7 @@ msgstr "Refresh _List"
 
 #: pyanaconda/ui/gui/spokes/software_selection.glade:10
 msgid "SOFTWARE SELECTION"
-msgstr "SELEÇÃO DE SOFTWARE"
+msgstr "SELEÇÃO DE PROGRAMA"
 
 #: pyanaconda/ui/gui/spokes/software_selection.glade:66
 msgid "Base Environment"
@@ -5389,7 +5383,7 @@ msgstr "_OK"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:147
 msgid "Add and mark for usage NTP servers"
-msgstr "Adiciona e marca para uso servidores NTP"
+msgstr "Adicionar e marcar servidores NTP para uso"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:169
 msgid "New NTP Server"
@@ -6187,7 +6181,7 @@ msgstr "_Tentar Novamente a Descoberta"
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:324
 msgid "The added DASD can be found under \"Local Standard Disks.\""
-msgstr "O DASD adicionado pode ser encontrado em \"Discos Padrões Locais\" "
+msgstr "O DASD adicionado pode ser encontrado em \"Discos padrão locais\""
 
 #: pyanaconda/ui/gui/spokes/installation_progress.glade:8
 #: pyanaconda/ui/gui/spokes/installation_progress.glade:164
@@ -6628,15 +6622,15 @@ msgstr "BEM-VINDO"
 #: pyanaconda/ui/gui/spokes/keyboard.glade:15
 #: pyanaconda/ui/gui/spokes/keyboard.glade:388
 msgid "KEYBOARD LAYOUT"
-msgstr "LAYOUT DO TECLADO"
+msgstr "LAYOUT DE TECLADO"
 
 #: pyanaconda/ui/gui/spokes/keyboard.glade:56
 msgid ""
 "Which keyboard layouts would you like to use on this system?  You may move "
 "any layout to the top of the list to select it as the default."
 msgstr ""
-"Quais layouts de teclado você deseja usar no seu sistema? Você deve mover "
-"qualquer layout para a parte superior da lista para selecioná-lo como padrão."
+"Quais layouts de teclado você deseja usar no seu sistema?  Você pode mover "
+"qualquer layout para o topo da lista para selecioná-lo como padrão."
 
 #: pyanaconda/ui/gui/spokes/keyboard.glade:96
 msgid ""
@@ -6734,7 +6728,7 @@ msgstr "OPÇÕES DE ALTERAÇÃO DE LAYOUT"
 msgid ""
 "Which combination(s) would you prefer for switching between keyboard layouts?"
 msgstr ""
-"Qual(is) combinação(ões) você deseja para alteração entre os layouts do "
+"Qual(is) combinação(ões) você deseja para alternar entre os layouts de "
 "teclado?"
 
 #: pyanaconda/ui/gui/spokes/keyboard.glade:751
@@ -6895,8 +6889,8 @@ msgid ""
 "Warning: You won't be able to switch between keyboard layouts (from the "
 "default one) when you decrypt your disks after install."
 msgstr ""
-"Aviso: Você não poderá trocar o layout de teclado para outro diferente do "
-"padrão quando você descriptografar seus discos após a instalação."
+"Atenção: você não poderá alternar o layout de teclado (do padrão) quando "
+"você descriptografar seus discos após a instalação."
 
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:8
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:71
@@ -7118,7 +7112,7 @@ msgstr "_Adicionar um ponto de montagem"
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:373
 msgctxt "GUI|Custom Partitioning|Add Dialog"
 msgid "Desired _Capacity:"
-msgstr "_Capacidade Desejada:"
+msgstr "_Capacidade desejada:"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:390
 msgctxt "GUI|Custom Partitioning|Add Dialog"
@@ -7264,7 +7258,7 @@ msgstr "Dispositivo"
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:24
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:77
 msgid "SELECTED DISKS AND BOOT LOADER"
-msgstr "DISCOS SELECIONADOS E CARREGADOR DE BOOT"
+msgstr "DISCOS SELECIONADOS E CARREGADOR DE INICIALIZAÇÃO"
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:43
 msgctxt "GUI|Selected Disks Dialog"
