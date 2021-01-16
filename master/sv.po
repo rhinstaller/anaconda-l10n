@@ -27,7 +27,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2021-01-15 01:14+0000\n"
+"POT-Creation-Date: 2021-01-16 01:15+0000\n"
 "PO-Revision-Date: 2020-12-16 08:27+0000\n"
 "Last-Translator: Luna Jernberg <bittin@reimu.nl>\n"
 "Language-Team: Swedish <https://translate.fedoraproject.org/projects/"
@@ -100,7 +100,7 @@ msgstr "Sätter upp installationsmiljön"
 msgid "Configuring storage"
 msgstr "Konfigurerar lagring"
 
-#: pyanaconda/installation.py:271 pyanaconda/kickstart.py:568
+#: pyanaconda/installation.py:271 pyanaconda/kickstart.py:566
 msgid "Running pre-installation scripts"
 msgstr "Kör förinstallationsskript"
 
@@ -134,6 +134,41 @@ msgstr "%s saknas. Kan inte sätta upp en brandvägg."
 msgid "The %packages --ignorebroken feature is not supported on your product!"
 msgstr "Funktionen %packages --ignorebroken stödjs inte med din produkt!"
 
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:390
+#, fuzzy
+#| msgid "Deployment starting: %s"
+msgid "Deployment starting: {}"
+msgstr "Utplacering startar: %s"
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:412
+#, fuzzy
+#| msgid "Deployment complete: %s"
+msgid "Deployment complete: {}"
+msgstr "Utplaceringen fullbordad: %s"
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:443
+#, fuzzy, python-brace-format
+#| msgid "Starting pull of %(branchName)s from %(source)s"
+msgid "Starting pull of {branch_name} from {source}"
+msgstr "Börjar dra in %(branchName)s från %(source)s"
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:478
+#, fuzzy
+#| msgid "Preparing deployment of %s"
+msgid "Preparing deployment of {}"
+msgstr "Förbereder utplacering av %s"
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:506
+#, fuzzy, python-brace-format
+#| msgid ""
+#| "Receiving objects: %(percent)d%% (%(fetched)d/%(requested)d) %(bytes)s"
+msgid "Receiving objects: {percent}% ({fetched}/{requested}) {bytes}"
+msgstr "Tar emot objekter: %(percent)d%% (%(fetched)d/%(requested)d) %(bytes)s"
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:512
+msgid "Writing objects"
+msgstr "Skriver objekt"
+
 #: pyanaconda/modules/payloads/source/repo_files/repo_files.py:53
 msgid "Local repositories"
 msgstr "Lokala förråd"
@@ -155,7 +190,7 @@ msgid "Red Hat CDN"
 msgstr "Red Hat CDN"
 
 #: pyanaconda/modules/payloads/source/closest_mirror/closest_mirror.py:45
-#: pyanaconda/ui/tui/spokes/installation_source.py:135
+#: pyanaconda/ui/tui/spokes/installation_source.py:138
 #: pyanaconda/ui/gui/spokes/installation_source.glade:794
 msgid "Closest mirror"
 msgstr "Närmaste spegel"
@@ -1284,68 +1319,68 @@ msgstr ""
 "Ogiltig användarnamn%(name)s.\n"
 "%(error_message)s"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:59
+#: pyanaconda/ui/tui/spokes/software_selection.py:62
 msgid "Software selection"
 msgstr "Programval"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:147
-#: pyanaconda/ui/gui/spokes/software_selection.py:260
+#: pyanaconda/ui/tui/spokes/software_selection.py:150
+#: pyanaconda/ui/gui/spokes/software_selection.py:263
 msgid "Error checking software selection"
 msgstr "Fel vid kontroll av programval"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:149
+#: pyanaconda/ui/tui/spokes/software_selection.py:152
 #: pyanaconda/ui/tui/spokes/storage.py:124
-#: pyanaconda/ui/tui/spokes/installation_source.py:113
+#: pyanaconda/ui/tui/spokes/installation_source.py:116
 #: pyanaconda/ui/gui/spokes/storage.py:266
 msgid "Processing..."
 msgstr "Bearbetar …"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:151
-#: pyanaconda/ui/gui/spokes/software_selection.py:273
+#: pyanaconda/ui/tui/spokes/software_selection.py:154
+#: pyanaconda/ui/gui/spokes/software_selection.py:276
 msgid "Installation source not set up"
 msgstr "Installationskällan är inte uppsatt"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:153
-#: pyanaconda/ui/gui/spokes/software_selection.py:276
+#: pyanaconda/ui/tui/spokes/software_selection.py:156
+#: pyanaconda/ui/gui/spokes/software_selection.py:279
 msgid "Source changed - please verify"
 msgstr "Källan ändrad- var god bekräfta"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:159
-#: pyanaconda/ui/gui/spokes/software_selection.py:283
+#: pyanaconda/ui/tui/spokes/software_selection.py:162
+#: pyanaconda/ui/gui/spokes/software_selection.py:286
 msgid "Custom software selected"
 msgstr "Anpassat val av program"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:160
-#: pyanaconda/ui/tui/spokes/installation_source.py:115
+#: pyanaconda/ui/tui/spokes/software_selection.py:163
+#: pyanaconda/ui/tui/spokes/installation_source.py:118
 #: pyanaconda/ui/gui/spokes/datetime_spoke.py:557
-#: pyanaconda/ui/gui/spokes/installation_source.py:680
+#: pyanaconda/ui/gui/spokes/installation_source.py:683
 msgid "Nothing selected"
 msgstr "Inget valt"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:199
+#: pyanaconda/ui/tui/spokes/software_selection.py:202
 msgid "Installation source needs to be set up first."
 msgstr "Installationskällan behöver konfigureras först."
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:223
+#: pyanaconda/ui/tui/spokes/software_selection.py:226
 msgid "Base environment"
 msgstr "Basmiljö"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:233
+#: pyanaconda/ui/tui/spokes/software_selection.py:236
 msgid "Additional software for selected environment"
 msgstr "Ytterligare programvara för den valda miljön"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:235
+#: pyanaconda/ui/tui/spokes/software_selection.py:238
 msgid "No additional software to select."
 msgstr "Ingen ytterligare programvara att välja."
 
 #. TRANSLATORS: 'c' to continue
-#: pyanaconda/ui/tui/spokes/software_selection.py:252
+#: pyanaconda/ui/tui/spokes/software_selection.py:255
 #: pyanaconda/ui/tui/spokes/storage.py:255
 #: pyanaconda/ui/tui/spokes/storage.py:531
 #: pyanaconda/ui/tui/spokes/storage.py:603
 #: pyanaconda/ui/tui/spokes/storage.py:671
 #: pyanaconda/ui/tui/spokes/network.py:571
-#: pyanaconda/ui/tui/spokes/installation_source.py:480
+#: pyanaconda/ui/tui/spokes/installation_source.py:483
 #: pyanaconda/ui/tui/hubs/summary.py:158
 msgctxt "TUI|Spoke Navigation"
 msgid "c"
@@ -1818,69 +1853,69 @@ msgstr "Konfigurerar enheten %s."
 msgid "Configuration not saved: netmask missing in static configuration"
 msgstr "Konfiguration sparades inte: nätmask saknas i statisk konfiguration"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:78
+#: pyanaconda/ui/tui/spokes/installation_source.py:81
 msgid "Installation source"
 msgstr "Installationskälla"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:111
-#: pyanaconda/ui/gui/spokes/installation_source.py:678
+#: pyanaconda/ui/tui/spokes/installation_source.py:114
+#: pyanaconda/ui/gui/spokes/installation_source.py:681
 msgid "Error setting up software source"
 msgstr "Fel när programkälla sattes upp"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:150
+#: pyanaconda/ui/tui/spokes/installation_source.py:153
 msgid "Choose an installation source type."
 msgstr "Välj en typ av installationskälla."
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:151
+#: pyanaconda/ui/tui/spokes/installation_source.py:154
 msgid "CD/DVD"
 msgstr "CD/DVD"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:152
+#: pyanaconda/ui/tui/spokes/installation_source.py:155
 msgid "local ISO file"
 msgstr "lokal ISO fil"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:153
+#: pyanaconda/ui/tui/spokes/installation_source.py:156
 msgid "Network"
 msgstr "Nätverk"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:156
+#: pyanaconda/ui/tui/spokes/installation_source.py:159
 msgid "SE/HMC"
 msgstr "SE/HMC"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:234
-#: pyanaconda/ui/tui/spokes/installation_source.py:299
+#: pyanaconda/ui/tui/spokes/installation_source.py:237
+#: pyanaconda/ui/tui/spokes/installation_source.py:302
 msgid "Specify Repo Options"
 msgstr "Ange förrådsalternativ"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:258
+#: pyanaconda/ui/tui/spokes/installation_source.py:261
 msgid "Repo URL"
 msgstr "Förråds-URL"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:322
+#: pyanaconda/ui/tui/spokes/installation_source.py:325
 msgid "SERVER:/PATH"
 msgstr "SERVER:/SÖKVÄG"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:326
+#: pyanaconda/ui/tui/spokes/installation_source.py:329
 msgid "NFS mount options"
 msgstr "NFS-monteringsflaggor"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:336
+#: pyanaconda/ui/tui/spokes/installation_source.py:339
 msgid "Server must be specified as SERVER:/PATH"
 msgstr "Servern måste anges som SERVER:/SÖKVÄG"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:380
+#: pyanaconda/ui/tui/spokes/installation_source.py:383
 msgid "Select device containing the ISO file"
 msgstr "Välj enhet som innehåller ISO-filen"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:423
+#: pyanaconda/ui/tui/spokes/installation_source.py:426
 msgid "No mountable devices found"
 msgstr "Inga monterbara enheter funna"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:452
+#: pyanaconda/ui/tui/spokes/installation_source.py:455
 msgid "Select an ISO to use as install source"
 msgstr "Välj en ISO att använda som installationskälla"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:468
+#: pyanaconda/ui/tui/spokes/installation_source.py:471
 msgid "No *.iso files found in device root folder"
 msgstr "Inga *.iso-filer funna i enhetens rotkatalog"
 
@@ -2070,39 +2105,39 @@ msgctxt "GUI|Spoke"
 msgid "_Software Selection"
 msgstr "_Programval"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:205
-#: pyanaconda/ui/gui/spokes/installation_source.py:672
+#: pyanaconda/ui/gui/spokes/software_selection.py:208
+#: pyanaconda/ui/gui/spokes/installation_source.py:675
 msgid "Checking software dependencies..."
 msgstr "Kontrollerar beroenden mellan programvara …"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:210
+#: pyanaconda/ui/gui/spokes/software_selection.py:213
 msgid "Error checking software dependencies"
 msgstr "Fel vid kontroll av programvaruberoenden"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:270
+#: pyanaconda/ui/gui/spokes/software_selection.py:273
 msgid "Red Hat CDN requires registration."
 msgstr "Red Hat CDN kräver registrering."
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:286
+#: pyanaconda/ui/gui/spokes/software_selection.py:289
 msgid "Invalid environment specified in kickstart"
 msgstr "Felaktig miljö angiven i kickstart"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:289
-#: pyanaconda/ui/gui/spokes/software_selection.py:294
+#: pyanaconda/ui/gui/spokes/software_selection.py:292
+#: pyanaconda/ui/gui/spokes/software_selection.py:297
 msgid "Please confirm software selection"
 msgstr "Bekräfta programval"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:299
+#: pyanaconda/ui/gui/spokes/software_selection.py:302
 msgid "Selected environment is not valid"
 msgstr "Den valda miljön är inte giltig"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:472
+#: pyanaconda/ui/gui/spokes/software_selection.py:475
 msgid ""
 "Error checking software dependencies.  <a href=\"\">Click for details.</a>"
 msgstr ""
 "Fel vid kontroll av programberoenden.  <a href=\"\">Klicka för detaljer.</a>"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:592
+#: pyanaconda/ui/gui/spokes/software_selection.py:595
 msgid ""
 "The software marked for installation has the following errors.  This is "
 "likely caused by an error with your installation source.  You can quit the "
@@ -2112,17 +2147,17 @@ msgstr ""
 "orsakas sannolikt av ett fel hos din installationskälla.  Du kan avsluta "
 "installeraren, byta programvarukälla eller ändra dina programvaruval."
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:598
+#: pyanaconda/ui/gui/spokes/software_selection.py:601
 msgctxt "GUI|Software Selection|Error Dialog"
 msgid "_Quit"
 msgstr "_Avsluta"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:599
+#: pyanaconda/ui/gui/spokes/software_selection.py:602
 msgctxt "GUI|Software Selection|Error Dialog"
 msgid "_Modify Software Source"
 msgstr "_Ändra programvarukälla"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:600
+#: pyanaconda/ui/gui/spokes/software_selection.py:603
 msgctxt "GUI|Software Selection|Error Dialog"
 msgid "Modify _Selections"
 msgstr "Ändra _val"
@@ -3177,104 +3212,104 @@ msgctxt "GUI|Spoke"
 msgid "_Installation Source"
 msgstr "_Installationskälla"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:568
+#: pyanaconda/ui/gui/spokes/installation_source.py:571
 msgid "Failed to set up installation source; check the repo url"
 msgstr ""
 "Misslyckades att sätta upp installationskälla; kontrollera förråds-url:en"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:676
+#: pyanaconda/ui/gui/spokes/installation_source.py:679
 msgid "Error setting up base repository"
 msgstr "Fel när basförråd sattes upp"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:833
+#: pyanaconda/ui/gui/spokes/installation_source.py:836
 msgid ""
 "Failed to set up installation source; check the repo url and proxy settings."
 msgstr ""
 "Misslyckades att sätta upp installationskällan; kontrollera förråds-url:en "
 "och proxy-inställningarna."
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:915
+#: pyanaconda/ui/gui/spokes/installation_source.py:918
 #, python-format
 msgid "Device: %s"
 msgstr "Enhet: %s"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:916
+#: pyanaconda/ui/gui/spokes/installation_source.py:919
 #, python-format
 msgid "Label: %s"
 msgstr "Etikett: %s"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1068
+#: pyanaconda/ui/gui/spokes/installation_source.py:1071
 msgid "You need to configure the network to use a network installation source."
 msgstr ""
 "Du måste konfigurera nätverket för att använda en nätverksinstallationskälla."
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1150
+#: pyanaconda/ui/gui/spokes/installation_source.py:1153
 #, python-format
 msgid "Repository %s has empty url"
 msgstr "Förrådet %s har en tom url"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1152
+#: pyanaconda/ui/gui/spokes/installation_source.py:1155
 msgid "URL is empty"
 msgstr "URL:en är tom"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1157
+#: pyanaconda/ui/gui/spokes/installation_source.py:1160
 #, python-format
 msgid "Repository %s has invalid url"
 msgstr "Förrådet %s har en felaktig url"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1159
+#: pyanaconda/ui/gui/spokes/installation_source.py:1162
 msgid "Invalid URL"
 msgstr "Ogiltig URL"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1166
+#: pyanaconda/ui/gui/spokes/installation_source.py:1169
 #, python-format
 msgid "Repository %s does not match selected protocol"
 msgstr "Förrådet %s stämmer inte med det valda protokollet"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1168
+#: pyanaconda/ui/gui/spokes/installation_source.py:1171
 msgid "Protocol in URL does not match selected protocol"
 msgstr "Protokollet i URL:en stämmer inte med det valda protokollet"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1172
+#: pyanaconda/ui/gui/spokes/installation_source.py:1175
 #, python-format
 msgid "Repository %s has empty NFS server"
 msgstr "Förrådet %s har en tom NFS-server"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1174
+#: pyanaconda/ui/gui/spokes/installation_source.py:1177
 msgid "NFS server is empty"
 msgstr "NFS-servern är tom"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1182
+#: pyanaconda/ui/gui/spokes/installation_source.py:1185
 #, python-format
 msgid "Repository %s has invalid host name"
 msgstr "Förrådet %s har ett felaktigt värdnamn"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1184
+#: pyanaconda/ui/gui/spokes/installation_source.py:1187
 msgid "Invalid host name"
 msgstr "Felaktigt värdnamn"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1188
+#: pyanaconda/ui/gui/spokes/installation_source.py:1191
 #, python-format
 msgid "Repository %s required remote directory"
 msgstr "Förrådet %s behöver en fjärrkatalog"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1190
+#: pyanaconda/ui/gui/spokes/installation_source.py:1193
 msgid "Remote directory is required"
 msgstr "Fjärrkatalog behövs"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1211
+#: pyanaconda/ui/gui/spokes/installation_source.py:1214
 msgid "Duplicate repository names."
 msgstr "Dubblerade förrådsnamn."
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1219
+#: pyanaconda/ui/gui/spokes/installation_source.py:1222
 msgid "Empty repository name"
 msgstr "Tomt förrådsnamn"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1222
+#: pyanaconda/ui/gui/spokes/installation_source.py:1225
 msgid "Invalid repository name"
 msgstr "Felaktigt förrådsnamn"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1227
+#: pyanaconda/ui/gui/spokes/installation_source.py:1230
 msgid "Repository name conflicts with internal repository name."
 msgstr "Förrådsnamn står i konflikt med interna förrådsnamn."
 
@@ -3825,7 +3860,7 @@ msgstr ""
 "\n"
 "Installeraren kom nu avsluta."
 
-#: pyanaconda/kickstart.py:519
+#: pyanaconda/kickstart.py:509
 msgid ""
 "\n"
 "Some warnings occurred during reading the kickstart file:"
@@ -3833,7 +3868,7 @@ msgstr ""
 "\n"
 "Några varningar uppstod när kickstart-filen lästes:"
 
-#: pyanaconda/kickstart.py:524
+#: pyanaconda/kickstart.py:522
 #, python-format
 msgid ""
 "\n"
@@ -3912,44 +3947,15 @@ msgstr "Installerar program"
 msgid "Checking image checksum"
 msgstr "Kontrollerar avbildens kontrollsumma"
 
-#: pyanaconda/payload/rpmostreepayload.py:127
-#, python-format
-msgid "Receiving objects: %(percent)d%% (%(fetched)d/%(requested)d) %(bytes)s"
-msgstr "Tar emot objekter: %(percent)d%% (%(fetched)d/%(requested)d) %(bytes)s"
-
-#: pyanaconda/payload/rpmostreepayload.py:133
-msgid "Writing objects"
-msgstr "Skriver objekt"
-
-#: pyanaconda/payload/rpmostreepayload.py:224
-#, python-format
-msgid "Starting pull of %(branchName)s from %(source)s"
-msgstr "Börjar dra in %(branchName)s från %(source)s"
-
-#: pyanaconda/payload/rpmostreepayload.py:249
-#, python-format
-msgid "Preparing deployment of %s"
-msgstr "Förbereder utplacering av %s"
-
-#: pyanaconda/payload/rpmostreepayload.py:269
-#, python-format
-msgid "Deployment starting: %s"
-msgstr "Utplacering startar: %s"
-
-#: pyanaconda/payload/rpmostreepayload.py:272
-#, python-format
-msgid "Deployment complete: %s"
-msgstr "Utplaceringen fullbordad: %s"
-
-#: pyanaconda/payload/rpmostreepayload.py:491
+#: pyanaconda/payload/rpmostreepayload.py:239
 msgid "Starting Flatpak installation"
 msgstr "Startar Flatpak-installationen"
 
-#: pyanaconda/payload/rpmostreepayload.py:503
+#: pyanaconda/payload/rpmostreepayload.py:251
 msgid "Post-installation flatpak tasks"
 msgstr "Uppgifter efter installation av flatpak"
 
-#: pyanaconda/payload/rpmostreepayload.py:509
+#: pyanaconda/payload/rpmostreepayload.py:257
 msgid "Flatpak installation has finished"
 msgstr "Flatpak-installationen har avslutats"
 

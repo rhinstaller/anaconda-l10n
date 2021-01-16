@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2021-01-15 01:14+0000\n"
+"POT-Creation-Date: 2021-01-16 01:15+0000\n"
 "PO-Revision-Date: 2016-04-23 06:18+0000\n"
 "Last-Translator: Anxhela Hyseni <anxhela.hyseni1996@gmail.com>\n"
 "Language-Team: Albanian (http://www.transifex.com/projects/p/anaconda/"
@@ -87,7 +87,7 @@ msgstr "Duke përgatitur ambjentin e instalimit"
 msgid "Configuring storage"
 msgstr ""
 
-#: pyanaconda/installation.py:271 pyanaconda/kickstart.py:568
+#: pyanaconda/installation.py:271 pyanaconda/kickstart.py:566
 msgid "Running pre-installation scripts"
 msgstr "Po ekzekutohen skriptet e para-instalimit"
 
@@ -121,6 +121,39 @@ msgstr "%s mungon. Nuk mund të fillohet firewall."
 msgid "The %packages --ignorebroken feature is not supported on your product!"
 msgstr ""
 
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:390
+#, fuzzy
+#| msgid "Deployment starting: %s"
+msgid "Deployment starting: {}"
+msgstr "Shpërndarja filloi: %s"
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:412
+#, fuzzy
+#| msgid "Deployment complete: %s"
+msgid "Deployment complete: {}"
+msgstr "Shpërndarja përfundoi: %s"
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:443
+#, fuzzy, python-brace-format
+#| msgid "Starting pull of %(branchName)s from %(source)s"
+msgid "Starting pull of {branch_name} from {source}"
+msgstr "Duke nisur tërheqjen e %(branchName)s nga %(source)s"
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:478
+#, fuzzy
+#| msgid "Preparing deployment of %s"
+msgid "Preparing deployment of {}"
+msgstr "Duke përgatitur shpërndarjen e %s"
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:506
+#, python-brace-format
+msgid "Receiving objects: {percent}% ({fetched}/{requested}) {bytes}"
+msgstr ""
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:512
+msgid "Writing objects"
+msgstr ""
+
 #: pyanaconda/modules/payloads/source/repo_files/repo_files.py:53
 #, fuzzy
 #| msgid "Additional repositories"
@@ -144,7 +177,7 @@ msgid "Red Hat CDN"
 msgstr ""
 
 #: pyanaconda/modules/payloads/source/closest_mirror/closest_mirror.py:45
-#: pyanaconda/ui/tui/spokes/installation_source.py:135
+#: pyanaconda/ui/tui/spokes/installation_source.py:138
 #: pyanaconda/ui/gui/spokes/installation_source.glade:794
 msgid "Closest mirror"
 msgstr "Nyja më e afërt"
@@ -1271,72 +1304,72 @@ msgid ""
 "%(error_message)s"
 msgstr ""
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:59
+#: pyanaconda/ui/tui/spokes/software_selection.py:62
 msgid "Software selection"
 msgstr "Përzgjedhja e programit"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:147
-#: pyanaconda/ui/gui/spokes/software_selection.py:260
+#: pyanaconda/ui/tui/spokes/software_selection.py:150
+#: pyanaconda/ui/gui/spokes/software_selection.py:263
 msgid "Error checking software selection"
 msgstr "Gabim gjatë përzgjedhjes së programit"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:149
+#: pyanaconda/ui/tui/spokes/software_selection.py:152
 #: pyanaconda/ui/tui/spokes/storage.py:124
-#: pyanaconda/ui/tui/spokes/installation_source.py:113
+#: pyanaconda/ui/tui/spokes/installation_source.py:116
 #: pyanaconda/ui/gui/spokes/storage.py:266
 msgid "Processing..."
 msgstr "Në përpunim..."
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:151
-#: pyanaconda/ui/gui/spokes/software_selection.py:273
+#: pyanaconda/ui/tui/spokes/software_selection.py:154
+#: pyanaconda/ui/gui/spokes/software_selection.py:276
 msgid "Installation source not set up"
 msgstr "Burimi i instalimit nuk është i vendosur"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:153
-#: pyanaconda/ui/gui/spokes/software_selection.py:276
+#: pyanaconda/ui/tui/spokes/software_selection.py:156
+#: pyanaconda/ui/gui/spokes/software_selection.py:279
 msgid "Source changed - please verify"
 msgstr "Burimi u ndryshua - ju lutem verifikojeni"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:159
-#: pyanaconda/ui/gui/spokes/software_selection.py:283
+#: pyanaconda/ui/tui/spokes/software_selection.py:162
+#: pyanaconda/ui/gui/spokes/software_selection.py:286
 msgid "Custom software selected"
 msgstr "Program i modifikuar i selektuar"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:160
-#: pyanaconda/ui/tui/spokes/installation_source.py:115
+#: pyanaconda/ui/tui/spokes/software_selection.py:163
+#: pyanaconda/ui/tui/spokes/installation_source.py:118
 #: pyanaconda/ui/gui/spokes/datetime_spoke.py:557
-#: pyanaconda/ui/gui/spokes/installation_source.py:680
+#: pyanaconda/ui/gui/spokes/installation_source.py:683
 msgid "Nothing selected"
 msgstr "Asgjë e zgjedhur"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:199
+#: pyanaconda/ui/tui/spokes/software_selection.py:202
 msgid "Installation source needs to be set up first."
 msgstr "Burimi i instalimit në fillim duhet të jetë i përgatitur."
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:223
+#: pyanaconda/ui/tui/spokes/software_selection.py:226
 msgid "Base environment"
 msgstr "Mjedisi Bazë"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:233
+#: pyanaconda/ui/tui/spokes/software_selection.py:236
 #, fuzzy
 #| msgid "Add-Ons for Selected Environment"
 msgid "Additional software for selected environment"
 msgstr "Shtesa për Mjedisin e Selektuar"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:235
+#: pyanaconda/ui/tui/spokes/software_selection.py:238
 #, fuzzy
 #| msgid "Custom software selected"
 msgid "No additional software to select."
 msgstr "Program i modifikuar i selektuar"
 
 #. TRANSLATORS: 'c' to continue
-#: pyanaconda/ui/tui/spokes/software_selection.py:252
+#: pyanaconda/ui/tui/spokes/software_selection.py:255
 #: pyanaconda/ui/tui/spokes/storage.py:255
 #: pyanaconda/ui/tui/spokes/storage.py:531
 #: pyanaconda/ui/tui/spokes/storage.py:603
 #: pyanaconda/ui/tui/spokes/storage.py:671
 #: pyanaconda/ui/tui/spokes/network.py:571
-#: pyanaconda/ui/tui/spokes/installation_source.py:480
+#: pyanaconda/ui/tui/spokes/installation_source.py:483
 #: pyanaconda/ui/tui/hubs/summary.py:158
 msgctxt "TUI|Spoke Navigation"
 msgid "c"
@@ -1792,69 +1825,69 @@ msgstr "Duke konfiguruar pajisjen %s."
 msgid "Configuration not saved: netmask missing in static configuration"
 msgstr ""
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:78
+#: pyanaconda/ui/tui/spokes/installation_source.py:81
 msgid "Installation source"
 msgstr "Burimi i instalimit"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:111
-#: pyanaconda/ui/gui/spokes/installation_source.py:678
+#: pyanaconda/ui/tui/spokes/installation_source.py:114
+#: pyanaconda/ui/gui/spokes/installation_source.py:681
 msgid "Error setting up software source"
 msgstr "Gabim gjatë vendosjes së burimit të programit"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:150
+#: pyanaconda/ui/tui/spokes/installation_source.py:153
 msgid "Choose an installation source type."
 msgstr "Zgjidhni një tip të burimit instaluesit."
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:151
+#: pyanaconda/ui/tui/spokes/installation_source.py:154
 msgid "CD/DVD"
 msgstr "CD/DVD"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:152
+#: pyanaconda/ui/tui/spokes/installation_source.py:155
 msgid "local ISO file"
 msgstr "Skedar lokal ISO"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:153
+#: pyanaconda/ui/tui/spokes/installation_source.py:156
 msgid "Network"
 msgstr "Rrjet"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:156
+#: pyanaconda/ui/tui/spokes/installation_source.py:159
 msgid "SE/HMC"
 msgstr ""
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:234
-#: pyanaconda/ui/tui/spokes/installation_source.py:299
+#: pyanaconda/ui/tui/spokes/installation_source.py:237
+#: pyanaconda/ui/tui/spokes/installation_source.py:302
 msgid "Specify Repo Options"
 msgstr "Specifikoni alternativat e Repo"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:258
+#: pyanaconda/ui/tui/spokes/installation_source.py:261
 msgid "Repo URL"
 msgstr "URL e Repo"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:322
+#: pyanaconda/ui/tui/spokes/installation_source.py:325
 msgid "SERVER:/PATH"
 msgstr ""
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:326
+#: pyanaconda/ui/tui/spokes/installation_source.py:329
 msgid "NFS mount options"
 msgstr "Mundësimet e montimit NFS"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:336
+#: pyanaconda/ui/tui/spokes/installation_source.py:339
 msgid "Server must be specified as SERVER:/PATH"
 msgstr ""
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:380
+#: pyanaconda/ui/tui/spokes/installation_source.py:383
 msgid "Select device containing the ISO file"
 msgstr "Zgjidhni pajisjen e cila përmban skedarin ISO"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:423
+#: pyanaconda/ui/tui/spokes/installation_source.py:426
 msgid "No mountable devices found"
 msgstr "Nuk u gjetën pajisje të montueshme"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:452
+#: pyanaconda/ui/tui/spokes/installation_source.py:455
 msgid "Select an ISO to use as install source"
 msgstr "Zgjidhni një ISO për ta përdorur si burim instalimi"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:468
+#: pyanaconda/ui/tui/spokes/installation_source.py:471
 msgid "No *.iso files found in device root folder"
 msgstr "Nuk u gjetën skedarë *.iso në dosjen root të pajisjes"
 
@@ -2042,42 +2075,42 @@ msgctxt "GUI|Spoke"
 msgid "_Software Selection"
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:205
-#: pyanaconda/ui/gui/spokes/installation_source.py:672
+#: pyanaconda/ui/gui/spokes/software_selection.py:208
+#: pyanaconda/ui/gui/spokes/installation_source.py:675
 msgid "Checking software dependencies..."
 msgstr "Duke kontrolluar varësitë e programeve..."
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:210
+#: pyanaconda/ui/gui/spokes/software_selection.py:213
 msgid "Error checking software dependencies"
 msgstr "Gabim gjatë kontrollit të varësive të programeve"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:270
+#: pyanaconda/ui/gui/spokes/software_selection.py:273
 msgid "Red Hat CDN requires registration."
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:286
+#: pyanaconda/ui/gui/spokes/software_selection.py:289
 msgid "Invalid environment specified in kickstart"
 msgstr "Mjedise jo të vlefshme të specifikuara në \"kickstart\""
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:289
-#: pyanaconda/ui/gui/spokes/software_selection.py:294
+#: pyanaconda/ui/gui/spokes/software_selection.py:292
+#: pyanaconda/ui/gui/spokes/software_selection.py:297
 #, fuzzy
 #| msgid "Error checking software selection"
 msgid "Please confirm software selection"
 msgstr "Gabim gjatë përzgjedhjes së programit"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:299
+#: pyanaconda/ui/gui/spokes/software_selection.py:302
 msgid "Selected environment is not valid"
 msgstr "Mjediset e përzgjedhura nuk janë të vlefshme"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:472
+#: pyanaconda/ui/gui/spokes/software_selection.py:475
 msgid ""
 "Error checking software dependencies.  <a href=\"\">Click for details.</a>"
 msgstr ""
 "Gabim gjatë kontrollit të varësive të programeve.  <a href=\"\">Klikoni për "
 "detaje.</a>"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:592
+#: pyanaconda/ui/gui/spokes/software_selection.py:595
 msgid ""
 "The software marked for installation has the following errors.  This is "
 "likely caused by an error with your installation source.  You can quit the "
@@ -2088,17 +2121,17 @@ msgstr ""
 "instaluesi, të ndërroni burimin e programit, ose të ndryshoni zgjedhjet "
 "tuaja të programeve."
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:598
+#: pyanaconda/ui/gui/spokes/software_selection.py:601
 msgctxt "GUI|Software Selection|Error Dialog"
 msgid "_Quit"
 msgstr "_Dil"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:599
+#: pyanaconda/ui/gui/spokes/software_selection.py:602
 msgctxt "GUI|Software Selection|Error Dialog"
 msgid "_Modify Software Source"
 msgstr "_Modifikoni  Burimin e Programit "
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:600
+#: pyanaconda/ui/gui/spokes/software_selection.py:603
 msgctxt "GUI|Software Selection|Error Dialog"
 msgid "Modify _Selections"
 msgstr "Modifikoni _Zgjedhjet"
@@ -3190,104 +3223,104 @@ msgctxt "GUI|Spoke"
 msgid "_Installation Source"
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:568
+#: pyanaconda/ui/gui/spokes/installation_source.py:571
 msgid "Failed to set up installation source; check the repo url"
 msgstr "Dështoi vendosja e burimit të instalimit; kontrolloni url e depos"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:676
+#: pyanaconda/ui/gui/spokes/installation_source.py:679
 msgid "Error setting up base repository"
 msgstr "Gabim gjatë vendosjes së depos bazë"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:833
+#: pyanaconda/ui/gui/spokes/installation_source.py:836
 msgid ""
 "Failed to set up installation source; check the repo url and proxy settings."
 msgstr ""
 "Dështoi vendosja e burimit të instalimit; kontrolloni url e depos dhe "
 "rregullimet e autorizuara."
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:915
+#: pyanaconda/ui/gui/spokes/installation_source.py:918
 #, python-format
 msgid "Device: %s"
 msgstr "Pajisja: %s"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:916
+#: pyanaconda/ui/gui/spokes/installation_source.py:919
 #, python-format
 msgid "Label: %s"
 msgstr "Emërtimi: %s"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1068
+#: pyanaconda/ui/gui/spokes/installation_source.py:1071
 msgid "You need to configure the network to use a network installation source."
 msgstr ""
 "Ju duhet të konfiguroni rrjetin për të përdorur një burim instalimi nga "
 "rrjeti."
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1150
+#: pyanaconda/ui/gui/spokes/installation_source.py:1153
 #, python-format
 msgid "Repository %s has empty url"
 msgstr "Depoja %s ka url boshe"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1152
+#: pyanaconda/ui/gui/spokes/installation_source.py:1155
 msgid "URL is empty"
 msgstr "URL-ja është boshe"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1157
+#: pyanaconda/ui/gui/spokes/installation_source.py:1160
 #, python-format
 msgid "Repository %s has invalid url"
 msgstr "Depoja %s ka url të pavlefshme"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1159
+#: pyanaconda/ui/gui/spokes/installation_source.py:1162
 msgid "Invalid URL"
 msgstr "URL e pavlefshme"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1166
+#: pyanaconda/ui/gui/spokes/installation_source.py:1169
 #, python-format
 msgid "Repository %s does not match selected protocol"
 msgstr "Depoja %s nuk përshtatet me protokollin e zgjedhur"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1168
+#: pyanaconda/ui/gui/spokes/installation_source.py:1171
 msgid "Protocol in URL does not match selected protocol"
 msgstr "Protokolli në URL nuk përshtatet me protokollin e zgjedhur"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1172
+#: pyanaconda/ui/gui/spokes/installation_source.py:1175
 #, python-format
 msgid "Repository %s has empty NFS server"
 msgstr "Depoja %s ka server NFS bosh"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1174
+#: pyanaconda/ui/gui/spokes/installation_source.py:1177
 msgid "NFS server is empty"
 msgstr "Serveri NFS është bosh"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1182
+#: pyanaconda/ui/gui/spokes/installation_source.py:1185
 #, python-format
 msgid "Repository %s has invalid host name"
 msgstr "Depja %s ka emër host-i të pavlefshëm"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1184
+#: pyanaconda/ui/gui/spokes/installation_source.py:1187
 msgid "Invalid host name"
 msgstr "Emër host- i pavlefshëm"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1188
+#: pyanaconda/ui/gui/spokes/installation_source.py:1191
 #, python-format
 msgid "Repository %s required remote directory"
 msgstr "Depoja %s kërkoi vendndodhje të jashtme"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1190
+#: pyanaconda/ui/gui/spokes/installation_source.py:1193
 msgid "Remote directory is required"
 msgstr "Kërkohet vendndodhje e jashtme"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1211
+#: pyanaconda/ui/gui/spokes/installation_source.py:1214
 msgid "Duplicate repository names."
 msgstr "Klononi emrat e depove."
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1219
+#: pyanaconda/ui/gui/spokes/installation_source.py:1222
 msgid "Empty repository name"
 msgstr "Emër bosh depoje"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1222
+#: pyanaconda/ui/gui/spokes/installation_source.py:1225
 msgid "Invalid repository name"
 msgstr "Emër i pavlefshëm depoje"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1227
+#: pyanaconda/ui/gui/spokes/installation_source.py:1230
 msgid "Repository name conflicts with internal repository name."
 msgstr "Emri i depos konflikton me emrin e depos së brendshme."
 
@@ -3818,13 +3851,13 @@ msgstr ""
 "\n"
 "Instaluesi do të përfundojë tani."
 
-#: pyanaconda/kickstart.py:519
+#: pyanaconda/kickstart.py:509
 msgid ""
 "\n"
 "Some warnings occurred during reading the kickstart file:"
 msgstr ""
 
-#: pyanaconda/kickstart.py:524
+#: pyanaconda/kickstart.py:522
 #, python-format
 msgid ""
 "\n"
@@ -3898,44 +3931,15 @@ msgstr "Duke instaluar programin"
 msgid "Checking image checksum"
 msgstr "Duke kontrolluar kodin unik të imazhit"
 
-#: pyanaconda/payload/rpmostreepayload.py:127
-#, python-format
-msgid "Receiving objects: %(percent)d%% (%(fetched)d/%(requested)d) %(bytes)s"
-msgstr ""
-
-#: pyanaconda/payload/rpmostreepayload.py:133
-msgid "Writing objects"
-msgstr ""
-
-#: pyanaconda/payload/rpmostreepayload.py:224
-#, python-format
-msgid "Starting pull of %(branchName)s from %(source)s"
-msgstr "Duke nisur tërheqjen e %(branchName)s nga %(source)s"
-
-#: pyanaconda/payload/rpmostreepayload.py:249
-#, python-format
-msgid "Preparing deployment of %s"
-msgstr "Duke përgatitur shpërndarjen e %s"
-
-#: pyanaconda/payload/rpmostreepayload.py:269
-#, python-format
-msgid "Deployment starting: %s"
-msgstr "Shpërndarja filloi: %s"
-
-#: pyanaconda/payload/rpmostreepayload.py:272
-#, python-format
-msgid "Deployment complete: %s"
-msgstr "Shpërndarja përfundoi: %s"
-
-#: pyanaconda/payload/rpmostreepayload.py:491
+#: pyanaconda/payload/rpmostreepayload.py:239
 msgid "Starting Flatpak installation"
 msgstr ""
 
-#: pyanaconda/payload/rpmostreepayload.py:503
+#: pyanaconda/payload/rpmostreepayload.py:251
 msgid "Post-installation flatpak tasks"
 msgstr ""
 
-#: pyanaconda/payload/rpmostreepayload.py:509
+#: pyanaconda/payload/rpmostreepayload.py:257
 msgid "Flatpak installation has finished"
 msgstr ""
 

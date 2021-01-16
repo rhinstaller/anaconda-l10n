@@ -44,7 +44,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2021-01-15 01:14+0000\n"
+"POT-Creation-Date: 2021-01-16 01:15+0000\n"
 "PO-Revision-Date: 2020-06-30 11:53+0000\n"
 "Last-Translator: Josef Hruska <hrusjos@gmail.com>\n"
 "Language-Team: Czech <https://translate.fedoraproject.org/projects/anaconda/"
@@ -117,7 +117,7 @@ msgstr "Nastavování instalačního prostředí"
 msgid "Configuring storage"
 msgstr "Nastavování úložiště"
 
-#: pyanaconda/installation.py:271 pyanaconda/kickstart.py:568
+#: pyanaconda/installation.py:271 pyanaconda/kickstart.py:566
 msgid "Running pre-installation scripts"
 msgstr "Spouštění předinstalačních skriptů"
 
@@ -151,6 +151,41 @@ msgstr "%s chybí. Není možné nastavit bránu firewall."
 msgid "The %packages --ignorebroken feature is not supported on your product!"
 msgstr "Tento produkt nepodporuje vlastnost %packages --ignorebroken!"
 
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:390
+#, fuzzy
+#| msgid "Deployment starting: %s"
+msgid "Deployment starting: {}"
+msgstr "Nasazování zahájeno: %s"
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:412
+#, fuzzy
+#| msgid "Deployment complete: %s"
+msgid "Deployment complete: {}"
+msgstr "Nasazení dokončeno: %s"
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:443
+#, fuzzy, python-brace-format
+#| msgid "Starting pull of %(branchName)s from %(source)s"
+msgid "Starting pull of {branch_name} from {source}"
+msgstr "Zahájení stahování %(branchName)s z %(source)s"
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:478
+#, fuzzy
+#| msgid "Preparing deployment of %s"
+msgid "Preparing deployment of {}"
+msgstr "Příprava nasazení %s"
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:506
+#, fuzzy, python-brace-format
+#| msgid ""
+#| "Receiving objects: %(percent)d%% (%(fetched)d/%(requested)d) %(bytes)s"
+msgid "Receiving objects: {percent}% ({fetched}/{requested}) {bytes}"
+msgstr "Získávání objektů: %(percent)d%% (%(fetched)d/%(requested)d) %(bytes)s"
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:512
+msgid "Writing objects"
+msgstr "Zapisování objektů"
+
 #: pyanaconda/modules/payloads/source/repo_files/repo_files.py:53
 msgid "Local repositories"
 msgstr "Místní repozitáře"
@@ -172,7 +207,7 @@ msgid "Red Hat CDN"
 msgstr "Red Hat CDN"
 
 #: pyanaconda/modules/payloads/source/closest_mirror/closest_mirror.py:45
-#: pyanaconda/ui/tui/spokes/installation_source.py:135
+#: pyanaconda/ui/tui/spokes/installation_source.py:138
 #: pyanaconda/ui/gui/spokes/installation_source.glade:794
 msgid "Closest mirror"
 msgstr "Nejbližší zrcadlo"
@@ -1315,68 +1350,68 @@ msgstr ""
 "Neplatné uživatelské jméno: %(name)s.\n"
 "%(error_message)s"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:59
+#: pyanaconda/ui/tui/spokes/software_selection.py:62
 msgid "Software selection"
 msgstr "Výběr softwaru"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:147
-#: pyanaconda/ui/gui/spokes/software_selection.py:260
+#: pyanaconda/ui/tui/spokes/software_selection.py:150
+#: pyanaconda/ui/gui/spokes/software_selection.py:263
 msgid "Error checking software selection"
 msgstr "Chyba při kontrole výběru softwaru"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:149
+#: pyanaconda/ui/tui/spokes/software_selection.py:152
 #: pyanaconda/ui/tui/spokes/storage.py:124
-#: pyanaconda/ui/tui/spokes/installation_source.py:113
+#: pyanaconda/ui/tui/spokes/installation_source.py:116
 #: pyanaconda/ui/gui/spokes/storage.py:266
 msgid "Processing..."
 msgstr "Zpracovávání…"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:151
-#: pyanaconda/ui/gui/spokes/software_selection.py:273
+#: pyanaconda/ui/tui/spokes/software_selection.py:154
+#: pyanaconda/ui/gui/spokes/software_selection.py:276
 msgid "Installation source not set up"
 msgstr "Instalační zdroj není nastaven"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:153
-#: pyanaconda/ui/gui/spokes/software_selection.py:276
+#: pyanaconda/ui/tui/spokes/software_selection.py:156
+#: pyanaconda/ui/gui/spokes/software_selection.py:279
 msgid "Source changed - please verify"
 msgstr "Zdroj byl změněn – ověřte"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:159
-#: pyanaconda/ui/gui/spokes/software_selection.py:283
+#: pyanaconda/ui/tui/spokes/software_selection.py:162
+#: pyanaconda/ui/gui/spokes/software_selection.py:286
 msgid "Custom software selected"
 msgstr "Uživatelem určený výběr software"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:160
-#: pyanaconda/ui/tui/spokes/installation_source.py:115
+#: pyanaconda/ui/tui/spokes/software_selection.py:163
+#: pyanaconda/ui/tui/spokes/installation_source.py:118
 #: pyanaconda/ui/gui/spokes/datetime_spoke.py:557
-#: pyanaconda/ui/gui/spokes/installation_source.py:680
+#: pyanaconda/ui/gui/spokes/installation_source.py:683
 msgid "Nothing selected"
 msgstr "Nic neoznačeno"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:199
+#: pyanaconda/ui/tui/spokes/software_selection.py:202
 msgid "Installation source needs to be set up first."
 msgstr "Instalační zdroj je třeba nejprve nastavit."
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:223
+#: pyanaconda/ui/tui/spokes/software_selection.py:226
 msgid "Base environment"
 msgstr "Základní prostředí"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:233
+#: pyanaconda/ui/tui/spokes/software_selection.py:236
 msgid "Additional software for selected environment"
 msgstr "Doplňkový software pro vybrané prostředí"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:235
+#: pyanaconda/ui/tui/spokes/software_selection.py:238
 msgid "No additional software to select."
 msgstr "Žádný doplňkový software k dispozici."
 
 #. TRANSLATORS: 'c' to continue
-#: pyanaconda/ui/tui/spokes/software_selection.py:252
+#: pyanaconda/ui/tui/spokes/software_selection.py:255
 #: pyanaconda/ui/tui/spokes/storage.py:255
 #: pyanaconda/ui/tui/spokes/storage.py:531
 #: pyanaconda/ui/tui/spokes/storage.py:603
 #: pyanaconda/ui/tui/spokes/storage.py:671
 #: pyanaconda/ui/tui/spokes/network.py:571
-#: pyanaconda/ui/tui/spokes/installation_source.py:480
+#: pyanaconda/ui/tui/spokes/installation_source.py:483
 #: pyanaconda/ui/tui/hubs/summary.py:158
 msgctxt "TUI|Spoke Navigation"
 msgid "c"
@@ -1855,69 +1890,69 @@ msgstr "Nastavuje se zařízení %s."
 msgid "Configuration not saved: netmask missing in static configuration"
 msgstr "Nastavení nebyla uložena: ve statickém nastavení chybí maska sítě"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:78
+#: pyanaconda/ui/tui/spokes/installation_source.py:81
 msgid "Installation source"
 msgstr "Instalační zdroj"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:111
-#: pyanaconda/ui/gui/spokes/installation_source.py:678
+#: pyanaconda/ui/tui/spokes/installation_source.py:114
+#: pyanaconda/ui/gui/spokes/installation_source.py:681
 msgid "Error setting up software source"
 msgstr "Chyba při nastavování zdroje software"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:150
+#: pyanaconda/ui/tui/spokes/installation_source.py:153
 msgid "Choose an installation source type."
 msgstr "Vyberte typ instalačního zdroje."
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:151
+#: pyanaconda/ui/tui/spokes/installation_source.py:154
 msgid "CD/DVD"
 msgstr "CD/DVD"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:152
+#: pyanaconda/ui/tui/spokes/installation_source.py:155
 msgid "local ISO file"
 msgstr "místní ISO soubor"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:153
+#: pyanaconda/ui/tui/spokes/installation_source.py:156
 msgid "Network"
 msgstr "Síť"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:156
+#: pyanaconda/ui/tui/spokes/installation_source.py:159
 msgid "SE/HMC"
 msgstr "SE/HMC"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:234
-#: pyanaconda/ui/tui/spokes/installation_source.py:299
+#: pyanaconda/ui/tui/spokes/installation_source.py:237
+#: pyanaconda/ui/tui/spokes/installation_source.py:302
 msgid "Specify Repo Options"
 msgstr "Zadejte předvolby repozitáře"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:258
+#: pyanaconda/ui/tui/spokes/installation_source.py:261
 msgid "Repo URL"
 msgstr "URL adresa repozitáře"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:322
+#: pyanaconda/ui/tui/spokes/installation_source.py:325
 msgid "SERVER:/PATH"
 msgstr "SERVER:/POPIS_UMISTENI"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:326
+#: pyanaconda/ui/tui/spokes/installation_source.py:329
 msgid "NFS mount options"
 msgstr "Možnosti připojení NFS"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:336
+#: pyanaconda/ui/tui/spokes/installation_source.py:339
 msgid "Server must be specified as SERVER:/PATH"
 msgstr "Je třeba, aby server byl zadán jako SERVER:/POPIS_UMISTENI"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:380
+#: pyanaconda/ui/tui/spokes/installation_source.py:383
 msgid "Select device containing the ISO file"
 msgstr "Vyberte zařízení obsahující ISO soubor"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:423
+#: pyanaconda/ui/tui/spokes/installation_source.py:426
 msgid "No mountable devices found"
 msgstr "Nenalezena žádná připojitelná (mount) zařízení"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:452
+#: pyanaconda/ui/tui/spokes/installation_source.py:455
 msgid "Select an ISO to use as install source"
 msgstr "Vyberte ISO soubor, který použít jako instalační zdroj"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:468
+#: pyanaconda/ui/tui/spokes/installation_source.py:471
 msgid "No *.iso files found in device root folder"
 msgstr "V kořenové složce zařízení nenalezeny žádné *.iso soubory"
 
@@ -2107,42 +2142,42 @@ msgctxt "GUI|Spoke"
 msgid "_Software Selection"
 msgstr "Výběr _softwaru"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:205
-#: pyanaconda/ui/gui/spokes/installation_source.py:672
+#: pyanaconda/ui/gui/spokes/software_selection.py:208
+#: pyanaconda/ui/gui/spokes/installation_source.py:675
 msgid "Checking software dependencies..."
 msgstr "Zjišťování závislostí software…"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:210
+#: pyanaconda/ui/gui/spokes/software_selection.py:213
 msgid "Error checking software dependencies"
 msgstr "Chyba při zjišťování závislostí software"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:270
+#: pyanaconda/ui/gui/spokes/software_selection.py:273
 msgid "Red Hat CDN requires registration."
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:286
+#: pyanaconda/ui/gui/spokes/software_selection.py:289
 msgid "Invalid environment specified in kickstart"
 msgstr "V kickstart souboru zadáno neplatné prostředí"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:289
-#: pyanaconda/ui/gui/spokes/software_selection.py:294
+#: pyanaconda/ui/gui/spokes/software_selection.py:292
+#: pyanaconda/ui/gui/spokes/software_selection.py:297
 #, fuzzy
 #| msgid "Error checking software selection"
 msgid "Please confirm software selection"
 msgstr "Chyba při kontrole výběru softwaru"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:299
+#: pyanaconda/ui/gui/spokes/software_selection.py:302
 msgid "Selected environment is not valid"
 msgstr "Vybrané prostředí není platné."
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:472
+#: pyanaconda/ui/gui/spokes/software_selection.py:475
 msgid ""
 "Error checking software dependencies.  <a href=\"\">Click for details.</a>"
 msgstr ""
 "Chyba při zjišťování závislostí software. <a href=\"\">Podrobnosti obdržíte "
 "kliknutím sem.</a>"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:592
+#: pyanaconda/ui/gui/spokes/software_selection.py:595
 msgid ""
 "The software marked for installation has the following errors.  This is "
 "likely caused by an error with your installation source.  You can quit the "
@@ -2152,17 +2187,17 @@ msgstr ""
 "nejspíše způsobeno chybou vybraného instalačního zdroje. Můžete ukončit "
 "instalátor, změnit zdroj software nebo změnit jeho výběr."
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:598
+#: pyanaconda/ui/gui/spokes/software_selection.py:601
 msgctxt "GUI|Software Selection|Error Dialog"
 msgid "_Quit"
 msgstr "_Ukončit"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:599
+#: pyanaconda/ui/gui/spokes/software_selection.py:602
 msgctxt "GUI|Software Selection|Error Dialog"
 msgid "_Modify Software Source"
 msgstr "_Upravit zdroj softwaru"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:600
+#: pyanaconda/ui/gui/spokes/software_selection.py:603
 msgctxt "GUI|Software Selection|Error Dialog"
 msgid "Modify _Selections"
 msgstr "Upravit _výběr softwaru"
@@ -3211,103 +3246,103 @@ msgctxt "GUI|Spoke"
 msgid "_Installation Source"
 msgstr "_Instalační zdroj"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:568
+#: pyanaconda/ui/gui/spokes/installation_source.py:571
 msgid "Failed to set up installation source; check the repo url"
 msgstr ""
 "Instalační zdroj se nepodařilo nastavit – zkontrolujte URL adresu repozitáře"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:676
+#: pyanaconda/ui/gui/spokes/installation_source.py:679
 msgid "Error setting up base repository"
 msgstr "Chyba při nastavování základního repozitáře"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:833
+#: pyanaconda/ui/gui/spokes/installation_source.py:836
 msgid ""
 "Failed to set up installation source; check the repo url and proxy settings."
 msgstr ""
 "Instalační zdroj se nepodařilo nastavit – zkontrolujte URL adresu repozitáře "
 "a nastavení proxy."
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:915
+#: pyanaconda/ui/gui/spokes/installation_source.py:918
 #, python-format
 msgid "Device: %s"
 msgstr "Zařízení: %s"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:916
+#: pyanaconda/ui/gui/spokes/installation_source.py:919
 #, python-format
 msgid "Label: %s"
 msgstr "Štítek: %s"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1068
+#: pyanaconda/ui/gui/spokes/installation_source.py:1071
 msgid "You need to configure the network to use a network installation source."
 msgstr "Pro použití síťového instalačního zdroje je nutné nastavit síť."
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1150
+#: pyanaconda/ui/gui/spokes/installation_source.py:1153
 #, python-format
 msgid "Repository %s has empty url"
 msgstr "Repozitář %s nemá vyplněnou URL adresu"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1152
+#: pyanaconda/ui/gui/spokes/installation_source.py:1155
 msgid "URL is empty"
 msgstr "URL adresa je prázdná"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1157
+#: pyanaconda/ui/gui/spokes/installation_source.py:1160
 #, python-format
 msgid "Repository %s has invalid url"
 msgstr "Repozitář %s nemá vyplněnou platnou URL adresu"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1159
+#: pyanaconda/ui/gui/spokes/installation_source.py:1162
 msgid "Invalid URL"
 msgstr "Neplatná URL adresu"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1166
+#: pyanaconda/ui/gui/spokes/installation_source.py:1169
 #, python-format
 msgid "Repository %s does not match selected protocol"
 msgstr "Protokol repozitáře %s neodpovídá zvolenému protokolu"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1168
+#: pyanaconda/ui/gui/spokes/installation_source.py:1171
 msgid "Protocol in URL does not match selected protocol"
 msgstr "Protokol v URL adrese neodpovídá zvolenému protokolu"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1172
+#: pyanaconda/ui/gui/spokes/installation_source.py:1175
 #, python-format
 msgid "Repository %s has empty NFS server"
 msgstr "Repozitář %s nemá vyplněný NFS server"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1174
+#: pyanaconda/ui/gui/spokes/installation_source.py:1177
 msgid "NFS server is empty"
 msgstr "Kolonka pro NFS server není vyplněná"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1182
+#: pyanaconda/ui/gui/spokes/installation_source.py:1185
 #, python-format
 msgid "Repository %s has invalid host name"
 msgstr "Adresa repozitáře %s obsahuje neplatný název hostitele."
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1184
+#: pyanaconda/ui/gui/spokes/installation_source.py:1187
 msgid "Invalid host name"
 msgstr "Neplatný název stroje"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1188
+#: pyanaconda/ui/gui/spokes/installation_source.py:1191
 #, python-format
 msgid "Repository %s required remote directory"
 msgstr "Repozitář %s vyžadoval adresář na protějšku"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1190
+#: pyanaconda/ui/gui/spokes/installation_source.py:1193
 msgid "Remote directory is required"
 msgstr "Je vyžadován adresář na protějšku"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1211
+#: pyanaconda/ui/gui/spokes/installation_source.py:1214
 msgid "Duplicate repository names."
 msgstr "Duplicitní názvy repozitářů."
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1219
+#: pyanaconda/ui/gui/spokes/installation_source.py:1222
 msgid "Empty repository name"
 msgstr "Nevyplněn název repozitáře"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1222
+#: pyanaconda/ui/gui/spokes/installation_source.py:1225
 msgid "Invalid repository name"
 msgstr "Neplatný název repozitáře"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1227
+#: pyanaconda/ui/gui/spokes/installation_source.py:1230
 msgid "Repository name conflicts with internal repository name."
 msgstr "Název repozitáře je v konfliktu s názvem interního repozitáře."
 
@@ -3864,7 +3899,7 @@ msgstr ""
 "\n"
 "Instalátor nyní bude ukončen."
 
-#: pyanaconda/kickstart.py:519
+#: pyanaconda/kickstart.py:509
 msgid ""
 "\n"
 "Some warnings occurred during reading the kickstart file:"
@@ -3872,7 +3907,7 @@ msgstr ""
 "\n"
 "Během průběhu čtení kickstart souboru došlo k několika varováním:"
 
-#: pyanaconda/kickstart.py:524
+#: pyanaconda/kickstart.py:522
 #, python-format
 msgid ""
 "\n"
@@ -3951,44 +3986,15 @@ msgstr "Instalace software"
 msgid "Checking image checksum"
 msgstr "Ověřování kontrolního součtu obrazu"
 
-#: pyanaconda/payload/rpmostreepayload.py:127
-#, python-format
-msgid "Receiving objects: %(percent)d%% (%(fetched)d/%(requested)d) %(bytes)s"
-msgstr "Získávání objektů: %(percent)d%% (%(fetched)d/%(requested)d) %(bytes)s"
-
-#: pyanaconda/payload/rpmostreepayload.py:133
-msgid "Writing objects"
-msgstr "Zapisování objektů"
-
-#: pyanaconda/payload/rpmostreepayload.py:224
-#, python-format
-msgid "Starting pull of %(branchName)s from %(source)s"
-msgstr "Zahájení stahování %(branchName)s z %(source)s"
-
-#: pyanaconda/payload/rpmostreepayload.py:249
-#, python-format
-msgid "Preparing deployment of %s"
-msgstr "Příprava nasazení %s"
-
-#: pyanaconda/payload/rpmostreepayload.py:269
-#, python-format
-msgid "Deployment starting: %s"
-msgstr "Nasazování zahájeno: %s"
-
-#: pyanaconda/payload/rpmostreepayload.py:272
-#, python-format
-msgid "Deployment complete: %s"
-msgstr "Nasazení dokončeno: %s"
-
-#: pyanaconda/payload/rpmostreepayload.py:491
+#: pyanaconda/payload/rpmostreepayload.py:239
 msgid "Starting Flatpak installation"
 msgstr "Spouštění instalace Flatpak balíčků"
 
-#: pyanaconda/payload/rpmostreepayload.py:503
+#: pyanaconda/payload/rpmostreepayload.py:251
 msgid "Post-installation flatpak tasks"
 msgstr "Provádění poinstalačních úkonů u flatpak balíčků"
 
-#: pyanaconda/payload/rpmostreepayload.py:509
+#: pyanaconda/payload/rpmostreepayload.py:257
 msgid "Flatpak installation has finished"
 msgstr "Instalace Flatpak balíčků byla dokončena"
 

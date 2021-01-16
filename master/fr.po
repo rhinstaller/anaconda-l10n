@@ -54,7 +54,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2021-01-15 01:14+0000\n"
+"POT-Creation-Date: 2021-01-16 01:15+0000\n"
 "PO-Revision-Date: 2021-01-15 16:36+0000\n"
 "Last-Translator: Julien Humbert <julroy67@gmail.com>\n"
 "Language-Team: French <https://translate.fedoraproject.org/projects/anaconda/"
@@ -127,7 +127,7 @@ msgstr "Configuration de l’environnement d’installation"
 msgid "Configuring storage"
 msgstr "Configuration du stockage"
 
-#: pyanaconda/installation.py:271 pyanaconda/kickstart.py:568
+#: pyanaconda/installation.py:271 pyanaconda/kickstart.py:566
 msgid "Running pre-installation scripts"
 msgstr "Exécution des scripts de pré-installation"
 
@@ -163,6 +163,42 @@ msgstr ""
 "La fonctionnalité %packages --ignorebroken n’est pas prise en charge par "
 "votre produit !"
 
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:390
+#, fuzzy
+#| msgid "Deployment starting: %s"
+msgid "Deployment starting: {}"
+msgstr "Début du déploiement : %s"
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:412
+#, fuzzy
+#| msgid "Deployment complete: %s"
+msgid "Deployment complete: {}"
+msgstr "Déploiement achevé : %s"
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:443
+#, fuzzy, python-brace-format
+#| msgid "Starting pull of %(branchName)s from %(source)s"
+msgid "Starting pull of {branch_name} from {source}"
+msgstr "Déploiement de %(branchName)s depuis %(source)s"
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:478
+#, fuzzy
+#| msgid "Preparing deployment of %s"
+msgid "Preparing deployment of {}"
+msgstr "Préparation de déploiement de %s"
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:506
+#, fuzzy, python-brace-format
+#| msgid ""
+#| "Receiving objects: %(percent)d%% (%(fetched)d/%(requested)d) %(bytes)s"
+msgid "Receiving objects: {percent}% ({fetched}/{requested}) {bytes}"
+msgstr ""
+"Objets récepteurs : %(percent)d%% (%(fetched)d/%(requested)d) %(bytes)s"
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:512
+msgid "Writing objects"
+msgstr "Ecriture d’objets"
+
 #: pyanaconda/modules/payloads/source/repo_files/repo_files.py:53
 msgid "Local repositories"
 msgstr "Dépôts locaux"
@@ -184,7 +220,7 @@ msgid "Red Hat CDN"
 msgstr "CDN Red Hat"
 
 #: pyanaconda/modules/payloads/source/closest_mirror/closest_mirror.py:45
-#: pyanaconda/ui/tui/spokes/installation_source.py:135
+#: pyanaconda/ui/tui/spokes/installation_source.py:138
 #: pyanaconda/ui/gui/spokes/installation_source.glade:794
 msgid "Closest mirror"
 msgstr "Miroir le plus proche"
@@ -1347,68 +1383,68 @@ msgstr ""
 "Nom d’utilisateur %(name)s invalide.\n"
 "%(error_message)s"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:59
+#: pyanaconda/ui/tui/spokes/software_selection.py:62
 msgid "Software selection"
 msgstr "Sélection des logiciels"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:147
-#: pyanaconda/ui/gui/spokes/software_selection.py:260
+#: pyanaconda/ui/tui/spokes/software_selection.py:150
+#: pyanaconda/ui/gui/spokes/software_selection.py:263
 msgid "Error checking software selection"
 msgstr "Erreur lors de la vérification de la sélection des logiciels"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:149
+#: pyanaconda/ui/tui/spokes/software_selection.py:152
 #: pyanaconda/ui/tui/spokes/storage.py:124
-#: pyanaconda/ui/tui/spokes/installation_source.py:113
+#: pyanaconda/ui/tui/spokes/installation_source.py:116
 #: pyanaconda/ui/gui/spokes/storage.py:266
 msgid "Processing..."
 msgstr "Traitement..."
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:151
-#: pyanaconda/ui/gui/spokes/software_selection.py:273
+#: pyanaconda/ui/tui/spokes/software_selection.py:154
+#: pyanaconda/ui/gui/spokes/software_selection.py:276
 msgid "Installation source not set up"
 msgstr "La source d’installation n’est pas définie"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:153
-#: pyanaconda/ui/gui/spokes/software_selection.py:276
+#: pyanaconda/ui/tui/spokes/software_selection.py:156
+#: pyanaconda/ui/gui/spokes/software_selection.py:279
 msgid "Source changed - please verify"
 msgstr "La source a été modifiée - veuillez la contrôler"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:159
-#: pyanaconda/ui/gui/spokes/software_selection.py:283
+#: pyanaconda/ui/tui/spokes/software_selection.py:162
+#: pyanaconda/ui/gui/spokes/software_selection.py:286
 msgid "Custom software selected"
 msgstr "Logiciels personnalisés sélectionnés"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:160
-#: pyanaconda/ui/tui/spokes/installation_source.py:115
+#: pyanaconda/ui/tui/spokes/software_selection.py:163
+#: pyanaconda/ui/tui/spokes/installation_source.py:118
 #: pyanaconda/ui/gui/spokes/datetime_spoke.py:557
-#: pyanaconda/ui/gui/spokes/installation_source.py:680
+#: pyanaconda/ui/gui/spokes/installation_source.py:683
 msgid "Nothing selected"
 msgstr "Rien de sélectionné"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:199
+#: pyanaconda/ui/tui/spokes/software_selection.py:202
 msgid "Installation source needs to be set up first."
 msgstr "Vous devez définir la source d’installation en premier."
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:223
+#: pyanaconda/ui/tui/spokes/software_selection.py:226
 msgid "Base environment"
 msgstr "Environnement de base"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:233
+#: pyanaconda/ui/tui/spokes/software_selection.py:236
 msgid "Additional software for selected environment"
 msgstr "Logiciels supplémentaires pour l’environnement sélectionné"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:235
+#: pyanaconda/ui/tui/spokes/software_selection.py:238
 msgid "No additional software to select."
 msgstr "Aucun logiciel supplémentaire sélectionnable."
 
 #. TRANSLATORS: 'c' to continue
-#: pyanaconda/ui/tui/spokes/software_selection.py:252
+#: pyanaconda/ui/tui/spokes/software_selection.py:255
 #: pyanaconda/ui/tui/spokes/storage.py:255
 #: pyanaconda/ui/tui/spokes/storage.py:531
 #: pyanaconda/ui/tui/spokes/storage.py:603
 #: pyanaconda/ui/tui/spokes/storage.py:671
 #: pyanaconda/ui/tui/spokes/network.py:571
-#: pyanaconda/ui/tui/spokes/installation_source.py:480
+#: pyanaconda/ui/tui/spokes/installation_source.py:483
 #: pyanaconda/ui/tui/hubs/summary.py:158
 msgctxt "TUI|Spoke Navigation"
 msgid "c"
@@ -1895,69 +1931,69 @@ msgstr ""
 "La configuration n’est pas enregistrée : pas de masque de réseau dans la "
 "configuration statique"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:78
+#: pyanaconda/ui/tui/spokes/installation_source.py:81
 msgid "Installation source"
 msgstr "Source d’installation"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:111
-#: pyanaconda/ui/gui/spokes/installation_source.py:678
+#: pyanaconda/ui/tui/spokes/installation_source.py:114
+#: pyanaconda/ui/gui/spokes/installation_source.py:681
 msgid "Error setting up software source"
 msgstr "Erreur de configuration de la source des logiciels"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:150
+#: pyanaconda/ui/tui/spokes/installation_source.py:153
 msgid "Choose an installation source type."
 msgstr "Choisissez le type de la source d’installation."
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:151
+#: pyanaconda/ui/tui/spokes/installation_source.py:154
 msgid "CD/DVD"
 msgstr "CD/DVD"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:152
+#: pyanaconda/ui/tui/spokes/installation_source.py:155
 msgid "local ISO file"
 msgstr "fichier ISO local"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:153
+#: pyanaconda/ui/tui/spokes/installation_source.py:156
 msgid "Network"
 msgstr "Réseau"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:156
+#: pyanaconda/ui/tui/spokes/installation_source.py:159
 msgid "SE/HMC"
 msgstr "SE/HMC"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:234
-#: pyanaconda/ui/tui/spokes/installation_source.py:299
+#: pyanaconda/ui/tui/spokes/installation_source.py:237
+#: pyanaconda/ui/tui/spokes/installation_source.py:302
 msgid "Specify Repo Options"
 msgstr "Définir les options du dépôt"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:258
+#: pyanaconda/ui/tui/spokes/installation_source.py:261
 msgid "Repo URL"
 msgstr "URL du dépôt"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:322
+#: pyanaconda/ui/tui/spokes/installation_source.py:325
 msgid "SERVER:/PATH"
 msgstr "SERVER:/PATH"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:326
+#: pyanaconda/ui/tui/spokes/installation_source.py:329
 msgid "NFS mount options"
 msgstr "Options de montage NFS"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:336
+#: pyanaconda/ui/tui/spokes/installation_source.py:339
 msgid "Server must be specified as SERVER:/PATH"
 msgstr "Le serveur doit être renseigné sous la forme SERVEUR:/CHEMIN"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:380
+#: pyanaconda/ui/tui/spokes/installation_source.py:383
 msgid "Select device containing the ISO file"
 msgstr "Sélectionnez un périphérique contenant le fichier ISO"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:423
+#: pyanaconda/ui/tui/spokes/installation_source.py:426
 msgid "No mountable devices found"
 msgstr "Impossible de trouver un périphérique à monter"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:452
+#: pyanaconda/ui/tui/spokes/installation_source.py:455
 msgid "Select an ISO to use as install source"
 msgstr "Sélectionnez une image ISO à utiliser comme source d’installation"
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:468
+#: pyanaconda/ui/tui/spokes/installation_source.py:471
 msgid "No *.iso files found in device root folder"
 msgstr "Pas de fichier *.iso dans le répertoire racine"
 
@@ -2155,40 +2191,40 @@ msgctxt "GUI|Spoke"
 msgid "_Software Selection"
 msgstr "_Sélection Logiciel"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:205
-#: pyanaconda/ui/gui/spokes/installation_source.py:672
+#: pyanaconda/ui/gui/spokes/software_selection.py:208
+#: pyanaconda/ui/gui/spokes/installation_source.py:675
 msgid "Checking software dependencies..."
 msgstr "Vérification des dépendances du logiciel..."
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:210
+#: pyanaconda/ui/gui/spokes/software_selection.py:213
 msgid "Error checking software dependencies"
 msgstr "Erreur lors de la vérification des dépendances du logiciel"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:270
+#: pyanaconda/ui/gui/spokes/software_selection.py:273
 msgid "Red Hat CDN requires registration."
 msgstr "Le CDN de Red Hat nécessite une inscription."
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:286
+#: pyanaconda/ui/gui/spokes/software_selection.py:289
 msgid "Invalid environment specified in kickstart"
 msgstr "Environnement invalide indiqué dans le fichier kickstart"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:289
-#: pyanaconda/ui/gui/spokes/software_selection.py:294
+#: pyanaconda/ui/gui/spokes/software_selection.py:292
+#: pyanaconda/ui/gui/spokes/software_selection.py:297
 msgid "Please confirm software selection"
 msgstr "Veuillez confirmer la sélection de logiciels"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:299
+#: pyanaconda/ui/gui/spokes/software_selection.py:302
 msgid "Selected environment is not valid"
 msgstr "L’environnement sélectionné est invalide"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:472
+#: pyanaconda/ui/gui/spokes/software_selection.py:475
 msgid ""
 "Error checking software dependencies.  <a href=\"\">Click for details.</a>"
 msgstr ""
 "Erreur lors de la vérification des dépendances. <a href=\"\">Cliquez pour "
 "plus de détails.</a>"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:592
+#: pyanaconda/ui/gui/spokes/software_selection.py:595
 msgid ""
 "The software marked for installation has the following errors.  This is "
 "likely caused by an error with your installation source.  You can quit the "
@@ -2199,17 +2235,17 @@ msgstr ""
 "quitter l’installateur, modifier votre source d’installation ou modifier "
 "votre sélection de logiciels."
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:598
+#: pyanaconda/ui/gui/spokes/software_selection.py:601
 msgctxt "GUI|Software Selection|Error Dialog"
 msgid "_Quit"
 msgstr "_Quitter"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:599
+#: pyanaconda/ui/gui/spokes/software_selection.py:602
 msgctxt "GUI|Software Selection|Error Dialog"
 msgid "_Modify Software Source"
 msgstr "_Modifier la source des logiciels"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:600
+#: pyanaconda/ui/gui/spokes/software_selection.py:603
 msgctxt "GUI|Software Selection|Error Dialog"
 msgid "Modify _Selections"
 msgstr "Modifier la _selection"
@@ -3289,106 +3325,106 @@ msgctxt "GUI|Spoke"
 msgid "_Installation Source"
 msgstr "_Source d’installation"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:568
+#: pyanaconda/ui/gui/spokes/installation_source.py:571
 msgid "Failed to set up installation source; check the repo url"
 msgstr ""
 "Échec de la mise en place de la source d’installation ; vérifier l’url du "
 "dépôt"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:676
+#: pyanaconda/ui/gui/spokes/installation_source.py:679
 msgid "Error setting up base repository"
 msgstr "Erreur lors de la configuration du dépôt de base"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:833
+#: pyanaconda/ui/gui/spokes/installation_source.py:836
 msgid ""
 "Failed to set up installation source; check the repo url and proxy settings."
 msgstr ""
 "Échec de la mise en place de la source d’installation ; vérifier l’adresse "
 "du dépôt et les paramètres du proxy."
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:915
+#: pyanaconda/ui/gui/spokes/installation_source.py:918
 #, python-format
 msgid "Device: %s"
 msgstr "Périphérique : %s"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:916
+#: pyanaconda/ui/gui/spokes/installation_source.py:919
 #, python-format
 msgid "Label: %s"
 msgstr "Étiquette : %s"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1068
+#: pyanaconda/ui/gui/spokes/installation_source.py:1071
 msgid "You need to configure the network to use a network installation source."
 msgstr ""
 "Vous devez configurer le réseau pour utiliser une source d’installation "
 "réseau."
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1150
+#: pyanaconda/ui/gui/spokes/installation_source.py:1153
 #, python-format
 msgid "Repository %s has empty url"
 msgstr "Le dépôt %s a une url vide"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1152
+#: pyanaconda/ui/gui/spokes/installation_source.py:1155
 msgid "URL is empty"
 msgstr "L’URL est vide"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1157
+#: pyanaconda/ui/gui/spokes/installation_source.py:1160
 #, python-format
 msgid "Repository %s has invalid url"
 msgstr "Le dépôt %s a une url non valide"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1159
+#: pyanaconda/ui/gui/spokes/installation_source.py:1162
 msgid "Invalid URL"
 msgstr "L’URL n’est pas valide"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1166
+#: pyanaconda/ui/gui/spokes/installation_source.py:1169
 #, python-format
 msgid "Repository %s does not match selected protocol"
 msgstr "Le dépôt %s ne correspond pas au protocole sélectionné"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1168
+#: pyanaconda/ui/gui/spokes/installation_source.py:1171
 msgid "Protocol in URL does not match selected protocol"
 msgstr "Le protocole dans l’URL ne correspond pas au protocole sélectionné"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1172
+#: pyanaconda/ui/gui/spokes/installation_source.py:1175
 #, python-format
 msgid "Repository %s has empty NFS server"
 msgstr "Le dépôt %s a un serveur NFS vide"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1174
+#: pyanaconda/ui/gui/spokes/installation_source.py:1177
 msgid "NFS server is empty"
 msgstr "Le serveur NFS est vide"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1182
+#: pyanaconda/ui/gui/spokes/installation_source.py:1185
 #, python-format
 msgid "Repository %s has invalid host name"
 msgstr "Le dépôt %s a un nom d’hôte non valide"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1184
+#: pyanaconda/ui/gui/spokes/installation_source.py:1187
 msgid "Invalid host name"
 msgstr "Nom d’hôte non valide"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1188
+#: pyanaconda/ui/gui/spokes/installation_source.py:1191
 #, python-format
 msgid "Repository %s required remote directory"
 msgstr "Le dépôt %s nécessite un répertoire distant"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1190
+#: pyanaconda/ui/gui/spokes/installation_source.py:1193
 msgid "Remote directory is required"
 msgstr "Un répertoire distant est nécessaire"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1211
+#: pyanaconda/ui/gui/spokes/installation_source.py:1214
 msgid "Duplicate repository names."
 msgstr "Noms de dépôt en double."
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1219
+#: pyanaconda/ui/gui/spokes/installation_source.py:1222
 msgid "Empty repository name"
 msgstr "Nom de dépôt vide"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1222
+#: pyanaconda/ui/gui/spokes/installation_source.py:1225
 msgid "Invalid repository name"
 msgstr "Nom de dépôt invalide"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1227
+#: pyanaconda/ui/gui/spokes/installation_source.py:1230
 msgid "Repository name conflicts with internal repository name."
 msgstr "Le nom du dépôt entre en conflit avec celui qui est fourni."
 
@@ -3954,7 +3990,7 @@ msgstr ""
 "\n"
 "Le programme d’installation va maintenant s’arrêter."
 
-#: pyanaconda/kickstart.py:519
+#: pyanaconda/kickstart.py:509
 msgid ""
 "\n"
 "Some warnings occurred during reading the kickstart file:"
@@ -3963,7 +3999,7 @@ msgstr ""
 "Les avertissements suivants ont eu lieu durant la lecture du fichier "
 "kickstart :"
 
-#: pyanaconda/kickstart.py:524
+#: pyanaconda/kickstart.py:522
 #, python-format
 msgid ""
 "\n"
@@ -4042,45 +4078,15 @@ msgstr "Installation du logiciel"
 msgid "Checking image checksum"
 msgstr "Vérification de la somme de contrôle de l’image"
 
-#: pyanaconda/payload/rpmostreepayload.py:127
-#, python-format
-msgid "Receiving objects: %(percent)d%% (%(fetched)d/%(requested)d) %(bytes)s"
-msgstr ""
-"Objets récepteurs : %(percent)d%% (%(fetched)d/%(requested)d) %(bytes)s"
-
-#: pyanaconda/payload/rpmostreepayload.py:133
-msgid "Writing objects"
-msgstr "Ecriture d’objets"
-
-#: pyanaconda/payload/rpmostreepayload.py:224
-#, python-format
-msgid "Starting pull of %(branchName)s from %(source)s"
-msgstr "Déploiement de %(branchName)s depuis %(source)s"
-
-#: pyanaconda/payload/rpmostreepayload.py:249
-#, python-format
-msgid "Preparing deployment of %s"
-msgstr "Préparation de déploiement de %s"
-
-#: pyanaconda/payload/rpmostreepayload.py:269
-#, python-format
-msgid "Deployment starting: %s"
-msgstr "Début du déploiement : %s"
-
-#: pyanaconda/payload/rpmostreepayload.py:272
-#, python-format
-msgid "Deployment complete: %s"
-msgstr "Déploiement achevé : %s"
-
-#: pyanaconda/payload/rpmostreepayload.py:491
+#: pyanaconda/payload/rpmostreepayload.py:239
 msgid "Starting Flatpak installation"
 msgstr "Démarrage de l’installation de Flatpak"
 
-#: pyanaconda/payload/rpmostreepayload.py:503
+#: pyanaconda/payload/rpmostreepayload.py:251
 msgid "Post-installation flatpak tasks"
 msgstr "Tâches Flatpak de post-installation"
 
-#: pyanaconda/payload/rpmostreepayload.py:509
+#: pyanaconda/payload/rpmostreepayload.py:257
 msgid "Flatpak installation has finished"
 msgstr "L’installation de Flatpak est terminée"
 
