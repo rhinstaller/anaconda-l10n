@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2021-01-11 19:38+0100\n"
-"PO-Revision-Date: 2021-01-15 16:36+0000\n"
+"PO-Revision-Date: 2021-01-20 14:36+0000\n"
 "Last-Translator: Tautvydas Žukauskas <tautzuk@tutanota.com>\n"
 "Language-Team: Lithuanian <https://translate.fedoraproject.org/projects/"
 "anaconda/rhel-8/lt/>\n"
@@ -422,15 +422,15 @@ msgstr "Vietinės saugyklos"
 
 #: pyanaconda/modules/storage/bootloader/execution.py:185
 msgid "No match found for given boot drive \"{}\"."
-msgstr ""
+msgstr "Nerasta atitikmenų pateiktam įkėlimo diskui „{}“."
 
 #: pyanaconda/modules/storage/bootloader/execution.py:189
 msgid "More than one match found for given boot drive \"{}\"."
-msgstr ""
+msgstr "Daugiau nei vienas atitikmuo rastas pateiktam įkėlimo diskui „{}“."
 
 #: pyanaconda/modules/storage/bootloader/execution.py:193
 msgid "Requested boot drive \"{}\" doesn't exist or cannot be used."
-msgstr ""
+msgstr "Prašomo įkėlimo disko „{}“ nėra arba jo negalima naudoti."
 
 #: pyanaconda/modules/storage/bootloader/base.py:162
 msgid "/boot file system"
@@ -508,6 +508,8 @@ msgid ""
 "Boot loader stage1 device cannot be on an iSCSI disk which is not configured "
 "in iBFT."
 msgstr ""
+"Įkėlimo pirmosios pakopos įrenginys negali būti iSCSI diskas, kuris "
+"nesukonfigūruotas iBFT."
 
 #: pyanaconda/modules/storage/bootloader/base.py:558
 #: pyanaconda/modules/storage/bootloader/base.py:672
@@ -521,6 +523,8 @@ msgid ""
 "%(bootloader_stage2_description)s cannot be on an iSCSI disk which is not "
 "configured in iBFT."
 msgstr ""
+"%(bootloader_stage2_description)s negali būti iSCSI diske, kuris "
+"nesukonfigūruotas iBFT."
 
 #: pyanaconda/modules/storage/bootloader/base.py:631
 #, python-format
@@ -533,7 +537,7 @@ msgstr "GRUB2 nepalaiko diegimo į skirsnį."
 
 #: pyanaconda/modules/storage/bootloader/bootloader.py:178
 msgid "GRUB2 encrypted password must be in grub.pbkdf2 format."
-msgstr ""
+msgstr "GRUB2 šifruotas slaptažodis turi būti grub.pbkdf2 formato."
 
 #: pyanaconda/modules/storage/bootloader/grub2.py:487
 #, python-format
@@ -594,7 +598,7 @@ msgstr ""
 #, python-format
 msgid ""
 "It is recommended to create a new file system on your %(mount)s partition."
-msgstr ""
+msgstr "Rekomenduojama sukurti naują failų sistemą jūsų %(mount)s skaidinyje."
 
 #: pyanaconda/modules/storage/checker/utils.py:122
 #, python-format
@@ -711,6 +715,8 @@ msgid ""
 "without an encryption key specified for this device. Please, rescan the "
 "storage."
 msgstr ""
+"Esamas neatrakintas LUKS įrenginys {} negali būti naudojamas diegimui be "
+"šifravimo rakto, nurodyto šiam įrenginiui. Iš naujo perskaitykite saugyklą."
 
 #: pyanaconda/modules/storage/checker/utils.py:375
 #, python-format
@@ -727,6 +733,8 @@ msgid ""
 "The available memory is less than %(size)s which can be too small for LUKS2 "
 "format. It may fail."
 msgstr ""
+"Prieinamos atminties yra mažiau nei %(size)s, to gali būti per mažai LUKS2 "
+"formatui. Gali nepavykti."
 
 #: pyanaconda/modules/storage/checker/utils.py:424
 #, python-format
@@ -1105,10 +1113,9 @@ msgid "Btrfs volume \"%s\" specified with --useexisting does not exist."
 msgstr "Nėra RAID tomo „%s“ nurodyto su --useexisting."
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:213
-#, fuzzy, python-brace-format
-#| msgid "New %(name)s %(version)s Installation"
+#, python-brace-format
 msgid "New {name} {version} Installation"
-msgstr "Naujas %(name)s %(version)s diegimas"
+msgstr "Naujas {name} {version} diegimas"
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:289
 msgid "Cannot set label on file system."
@@ -1132,10 +1139,8 @@ msgid "That mount point is invalid. Try something else?"
 msgstr "Šis prijungimo taškas yra netinkamas. Mėginsite kitą?"
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:340
-#, fuzzy
-#| msgid "Invalid container name"
 msgid "Invalid container name."
-msgstr "Netinkamas konteinerio pavadinimas"
+msgstr "Netinkamas konteinerio pavadinimas."
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:343
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:595
@@ -1143,62 +1148,45 @@ msgid "Name is already in use."
 msgstr "Pavadinimas jau naudojamas."
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:368
-#, fuzzy, python-brace-format
-#| msgid ""
-#| "The RAID level you have selected (%(level)s) requires more disks "
-#| "(%(min)d) than you currently have selected (%(count)d)."
+#, python-brace-format
 msgid ""
 "The RAID level you have selected ({level}) requires more disks ({min}) than "
 "you currently have selected ({count})."
 msgstr ""
-"Jūsų pasirinktas RAID lygis (%(level)s) reikalauja daugiau diskų (%(min)d) "
-"nei šiuo metu esate pasirinkęs (%(count)d)."
+"Jūsų pasirinktas RAID lygmuo ({level}) reikalauja daugiau diskų ({min}) nei "
+"šiuo metu pasirinkote ({count})."
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:410
-#, fuzzy
-#| msgid "Please enter a valid mount point."
 msgid "Please enter a mount point."
-msgstr "Įveskite tinkamą prijungimo tašką."
+msgstr "Pasirinkite prijungimo tašką."
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:423
-#, fuzzy, python-brace-format
-#| msgid ""
-#| "/boot/efi must be on a device of type %(oneFsType)s or %(anotherFsType)s"
+#, python-brace-format
 msgid "/boot/efi must be on a device of type {type} or {another}"
-msgstr ""
-"/boot/efi turi būti %(oneFsType)s arba %(anotherFsType)s tipo įrenginyje"
+msgstr "/boot/efi turi būti {type} tipo įrenginyje arba {another}"
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:430
-#, fuzzy, python-brace-format
-#| msgid "%(fs)s must be on a device of type %(type)s"
+#, python-brace-format
 msgid "{fs} must be on a device of type {type}"
-msgstr "%(fs)s turi būti %(type)s tipo įrenginyje"
+msgstr "{fs} turi būti {type} tipo įrenginyje"
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:436
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:439
-#, fuzzy
-#| msgid "%s cannot be encrypted"
 msgid "{} cannot be encrypted"
-msgstr "%s negali būti šifruotas"
+msgstr "{} negali būti šifruota"
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:446
-#, fuzzy
-#| msgid "Device does not support RAID level selection %s."
 msgid "Device does not support RAID level selection {}."
-msgstr "Įrenginys nepalaiko RAID lygio pasirinkimo %s."
+msgstr "Įrenginys nepalaiko RAID lygmens pasirinkimo {}."
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:1197
-#, fuzzy, python-format
-#| msgid ""
-#| "This Software RAID array is missing %(missingMembers)d of "
-#| "%(totalMembers)d member partitions. You can remove it or select a "
-#| "different device."
+#, python-format
 msgid ""
 "This Software RAID array is missing %(missing)d of %(total)d member "
 "partitions. You can remove it or select a different device."
 msgstr ""
-"Šiam programiniam RAID masyvui trūksta %(missingMembers)d skirsnių iš "
-"%(totalMembers)d narių. Galite jį pašalinti arba pasirinkti kitą įrenginį."
+"Programiniam RAID masyvui trūksta %(missing)d iš %(total)d skaidinių narių. "
+"Galite jį pašalinti arba pasirinkti kitą įrenginį."
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:1204
 #, python-format
@@ -1274,7 +1262,7 @@ msgstr "Gaunama entropija {percents}% (likęs laikas: {time})"
 
 #: pyanaconda/modules/storage/kickstart.py:65
 msgid "File system type \"{}\" given in autopart command is invalid."
-msgstr ""
+msgstr "autopart komandoje pateiktas failų sistemos tipas „{}“ yra netinkamas."
 
 #: pyanaconda/modules/storage/kickstart.py:81
 msgid "Btrfs file system is not supported."
@@ -1285,36 +1273,33 @@ msgid ""
 "Disklabel \"{}\" given in clearpart command is not supported on this "
 "platform."
 msgstr ""
+"clearpart komandoje pateiktas disko užrašas „{}“ yra nepalaikomas šioje "
+"platformoje."
 
 #: pyanaconda/modules/storage/kickstart.py:110
 msgid "Disk \"{}\" given in clearpart command does not exist."
-msgstr ""
+msgstr "clearpart komandoje pateikto disko „{}“ nėra."
 
 #: pyanaconda/modules/storage/kickstart.py:115
 msgid "Device \"{}\" given in clearpart device list does not exist."
-msgstr ""
+msgstr "clearpart įrenginių sąraše pateikto įrenginio „{}“ nėra."
 
 #: pyanaconda/modules/storage/kickstart.py:134
 #: pyanaconda/modules/storage/kickstart.py:139
 msgid "Disk \"{}\" given in ignoredisk command does not exist."
-msgstr ""
+msgstr "ignoredisk komandoje pateikto disko „{}“ nėra."
 
 #: pyanaconda/modules/storage/kickstart.py:149
-#, fuzzy
-#| msgid "NIC \"%s\" given in fcoe command does not exist."
 msgid "NIC \"{}\" given in fcoe command does not exist."
-msgstr "Nėra NIC „%s“, pateikto fcoe komandoje."
+msgstr "fcoe komandoje pateikto NIC „{}“ nėra."
 
 #: pyanaconda/modules/storage/kickstart.py:174
-#, fuzzy, python-brace-format
-#| msgid ""
-#| "Network interface \"%(nic)s\" required by iSCSI \"%(iscsiTarget)s\" "
-#| "target is not up."
+#, python-brace-format
 msgid ""
 "Network interface \"{nic}\" required by iSCSI \"{iscsi_target}\" target is "
 "not up."
 msgstr ""
-"Tinklo sąsaja „%(nic)s“, kurios reikia iSCSI „%(iscsiTarget)s) paskirtyje, "
+"Tinklo sąsaja „{nic}“, kurios reikia iSCSI „{iscsi_target}“ paskirčiai, "
 "neveikia."
 
 #: pyanaconda/modules/storage/kickstart.py:190
@@ -1327,16 +1312,12 @@ msgstr ""
 
 #: pyanaconda/modules/storage/kickstart.py:228
 #: pyanaconda/modules/storage/kickstart.py:240
-#, fuzzy
-#| msgid "RAID device  \"%s\" given in raid command does not exist."
 msgid "Namespace \"{}\" given in nvdimm command was not found."
-msgstr "Nėra RAID įrenginio „%s“, nurodyto raid komandoje."
+msgstr "nvdimm komandoje pateikta vardų sritis „{}“ nerasta."
 
 #: pyanaconda/modules/storage/kickstart.py:245
-#, fuzzy
-#| msgid "Disk \"%s\" given in part command does not exist."
 msgid "Disk \"{}\" given in nvdimm command does not exist."
-msgstr "Nėra part komandoje nurodyti disko „%s“."
+msgstr "nvdimm komandoje pateikto disko „{}“ nėra."
 
 #: pyanaconda/modules/storage/kickstart.py:258
 msgid ""
@@ -1392,6 +1373,8 @@ msgid ""
 "For a UEFI installation, you must include a Linux HFS+ ESP on a GPT-"
 "formatted disk, mounted at /boot/efi."
 msgstr ""
+"UEFI diegimui turite įtraukti Linux HFS+ ESP GPT formatuotami diske, "
+"prijungtame /boot/efi."
 
 #: pyanaconda/modules/storage/platform.py:201
 msgid "PReP Boot Partition"
@@ -1418,11 +1401,8 @@ msgstr ""
 "žemėlapio formato diską."
 
 #: pyanaconda/modules/storage/platform.py:230
-#, fuzzy
-#| msgid ""
-#| "You must include at least one MBR-formatted disk as an install target."
 msgid "You must include at least one disk as an install target."
-msgstr "Turite įtraukti bent vieną MBR- formato diską kaip diegimo paskirtį."
+msgstr "Turite įtraukti vent vieną diską kaip diegimo paskirtį."
 
 #: pyanaconda/modules/storage/platform.py:240
 msgid "DASD"
@@ -1759,28 +1739,24 @@ msgid "_OK"
 msgstr "_Gerai"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.py:158
-#, fuzzy, python-format
-#| msgid ""
-#| "The following nodes were discovered using the iSCSI initiator <b>"
-#| "%(initiatorName)s</b> using the target IP address <b>%(targetAddress)s</"
-#| "b>.  Please select which nodes you wish to log into:"
+#, python-format
 msgid ""
 "The following nodes were discovered using the iSCSI initiator <b>"
 "%(initiatorName)s</b> using the portal IP address <b>%(portalAddress)s</b>.  "
 "Please select which nodes you wish to log into:"
 msgstr ""
-"Šios viršūnės buvo aptiktos naudojant iSCSI iniciatorių <b>"
-"%(initiatorName)s</b> naudojant paskirties IP adresą <b>%(targetAddress)s</"
-"b>.  Pasirinkite viršūnes, prie kurių norite prisijungti."
+"Šios viršūnės buvo aptiktos naudojant iSCSI iniciatorių "
+"<b>%(initiatorName)s</b> bei portalo IP adresą <b>%(portalAddress)s</b>.  "
+"Pasirinkite, prie kurių viršūnių norite prisijungti:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.py:82
 msgctxt "GUI|Advanced Storage|NVDIM"
 msgid "No device to be reconfigured selected."
-msgstr ""
+msgstr "Nepasirinkta įrenginių perkonfigūravimui."
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.py:174
 msgid "Rescanning disks finished."
-msgstr ""
+msgstr "Diskai perskaityti iš naujo."
 
 #: pyanaconda/ui/gui/spokes/lib/cart.py:193
 msgctxt "GUI|Selected Disks Dialog"
@@ -2109,7 +2085,7 @@ msgstr[2] "Pasirinkta %d _saugyklos įrenginių"
 #: pyanaconda/ui/gui/spokes/blivet_gui.py:103
 msgctxt "GUI|Spoke"
 msgid "_Blivet-GUI Partitioning"
-msgstr ""
+msgstr "_Blivet grafinis skaidymas"
 
 #: pyanaconda/ui/gui/spokes/blivet_gui.py:251
 msgid ""
@@ -2290,7 +2266,7 @@ msgstr "%s negali būti šifruotas blokinis įrenginys."
 #: pyanaconda/ui/gui/spokes/datetime_spoke.py:422
 msgctxt "GUI|Spoke"
 msgid "_Time & Date"
-msgstr ""
+msgstr "_Laikas ir data"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.py:559
 msgid "Restoring hardware time..."
@@ -2561,7 +2537,7 @@ msgstr "Išdėstymų keitimas nesukonfigūruotas."
 #: pyanaconda/ui/gui/spokes/language_support.py:63
 msgctxt "GUI|Spoke"
 msgid "_Language Support"
-msgstr ""
+msgstr "_Kalbos palaikymas"
 
 #: pyanaconda/ui/gui/spokes/network.py:80
 msgid "Status unknown (missing)"
@@ -2740,7 +2716,7 @@ msgstr "Root slaptažodis nenustatytas"
 #: pyanaconda/ui/gui/spokes/software_selection.py:68
 msgctxt "GUI|Spoke"
 msgid "_Software Selection"
-msgstr ""
+msgstr "_Programinės įrangos pasirinkimas"
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:232
 msgid "Error checking software dependencies"
@@ -2883,7 +2859,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/storage.py:238
 msgctxt "GUI|Spoke"
 msgid "Installation _Destination"
-msgstr ""
+msgstr "Diegimo _paskirtis"
 
 #: pyanaconda/ui/gui/spokes/storage.py:346
 msgid ""
@@ -2969,6 +2945,8 @@ msgid ""
 "You have chosen to skip boot loader installation. Your system may not be "
 "bootable."
 msgstr ""
+"Jūs pasirinkote praleisti įkėliklio diegimą. Jūsų sistema gali būti "
+"nepaleidžiama."
 
 #: pyanaconda/ui/gui/spokes/storage.py:889
 msgid "There was a problem with your disk selection. Click here for details."
@@ -3105,7 +3083,7 @@ msgstr "Netinkamas grupės pavadinimas."
 #: pyanaconda/ui/gui/spokes/user.py:231
 msgctxt "GUI|Spoke"
 msgid "_User Creation"
-msgstr ""
+msgstr "_Naudotojo kūrimas"
 
 #: pyanaconda/ui/gui/spokes/user.py:354
 msgid "The password was set by kickstart."
@@ -3326,11 +3304,11 @@ msgstr "Eiga"
 
 #: pyanaconda/ui/tui/spokes/installation_progress.py:133
 msgid "Installation complete"
-msgstr ""
+msgstr "Diegimas baigtas"
 
 #: pyanaconda/ui/tui/spokes/installation_progress.py:135
 msgid "Use of this product is subject to the license agreement found at:"
-msgstr ""
+msgstr "Šiam produktui galioja licencija, kurią rasite:"
 
 #: pyanaconda/ui/tui/spokes/installation_progress.py:146
 #, python-format
@@ -3468,10 +3446,8 @@ msgid " IPv6 Address: %(addr)s/%(prefix)d\n"
 msgstr " IPv6 adresas: %(addr)s/%(prefix)d\n"
 
 #: pyanaconda/ui/tui/spokes/network.py:312
-#, fuzzy
-#| msgid "Testing layouts configuration not available."
 msgid "Network configuration is not available."
-msgstr "Neprieinamas išdėstymų konfigūracijos testavimas."
+msgstr "Tinklo konfigūracija neprieinama."
 
 #: pyanaconda/ui/tui/spokes/network.py:318
 #, python-format
@@ -3946,7 +3922,7 @@ msgid ""
 "Would you like to use it anyway?"
 msgstr ""
 "\n"
-"Ar norite vis tiek jį naudoti?"
+"Ar vistiek norite jį naudoti?"
 
 #: pyanaconda/vnc.py:79
 #, python-format
