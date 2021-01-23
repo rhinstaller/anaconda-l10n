@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2021-01-11 19:38+0100\n"
-"PO-Revision-Date: 2021-01-20 14:36+0000\n"
+"PO-Revision-Date: 2021-01-25 23:38+0000\n"
 "Last-Translator: Tautvydas Žukauskas <tautzuk@tutanota.com>\n"
 "Language-Team: Lithuanian <https://translate.fedoraproject.org/projects/"
 "anaconda/rhel-8/lt/>\n"
@@ -35,18 +35,17 @@ msgid "Executing %s addon"
 msgstr "Vykdomas priedas %s"
 
 #: pyanaconda/addons.py:113
-#, fuzzy, python-format
-#| msgid "Executing %s addon"
+#, python-format
 msgid "Setting up %s addon"
-msgstr "Vykdomas priedas %s"
+msgstr "Nustatomas %s priedas"
 
 #: pyanaconda/core/kickstart/addon.py:128
 msgid "Missing name of the %addon section."
-msgstr ""
+msgstr "Trūksta %addon pasirinkimo pavadinimo."
 
 #: pyanaconda/core/kickstart/addon.py:138
 msgid "Unknown name of the %addon section."
-msgstr ""
+msgstr "Nežinomas %addon pasirinkimo pavadinimas."
 
 #: pyanaconda/core/payload.py:131
 msgid "No host url"
@@ -77,6 +76,8 @@ msgid ""
 "Support for this hardware has been removed in this major OS release. Please "
 "check theremoved functionality section of the release notes."
 msgstr ""
+"Šios aparatinės įrangos palaikymas buvo pašalintas šiame OS leidime. "
+"Žiūrėkite pašalinto funkcionalumą skiltį leidimo naujienose."
 
 #: pyanaconda/core/constants.py:163
 msgid ""
@@ -84,6 +85,9 @@ msgid ""
 "more information on supported hardware, please refer to http://www.redhat."
 "com/hardware."
 msgstr ""
+"Aparatinė įranga (ar jos kombinacija) nepalaikoma Red Hat. Daugiau "
+"informacijos apie palaikomą aparatinę įrangą rasite adresu http://www.redhat."
+"com/hardware."
 
 #: pyanaconda/core/constants.py:169
 msgid ""
@@ -259,7 +263,7 @@ msgstr "Anaconda diegyklė"
 
 #: pyanaconda/core/storage.py:84
 msgid "Unsupported"
-msgstr ""
+msgstr "Nepalaikoma"
 
 #: pyanaconda/core/storage.py:85 pyanaconda/core/storage.py:96
 msgid "LVM"
@@ -593,6 +597,8 @@ msgid ""
 "The LDL DASD disk {name} ({busid}) cannot be used for the installation. "
 "Please format it."
 msgstr ""
+"LDL DASD diskas {name} ({busid}) negali būti naudojamas diegimui. "
+"Performatuokite jį."
 
 #: pyanaconda/modules/storage/checker/utils.py:106
 #, python-format
@@ -844,10 +850,8 @@ msgstr[2] ""
 "kaip nustatyta."
 
 #: pyanaconda/modules/storage/partitioning/automatic/utils.py:165
-#, fuzzy
-#| msgid "No usable disks selected"
 msgid "No usable disks selected."
-msgstr "Nepasirinkta galimų diskų"
+msgstr "Nepasirinkta naudojamų diskų."
 
 #: pyanaconda/modules/storage/partitioning/automatic/utils.py:168
 msgid "Not enough free space on selected disks."
@@ -1076,41 +1080,31 @@ msgstr ""
 "plėtinio dydžio „%(extentSize)s“."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1238
-#, fuzzy, python-format
-#| msgid ""
-#| "RAID device \"%(device)s\" has a format of \"%(format)s\", but should "
-#| "have a format of \"mdmember\"."
+#, python-format
 msgid ""
 "Btrfs partition \"%(device)s\" has a format of \"%(format)s\", but should "
 "have a format of \"btrfs\"."
 msgstr ""
-"RAID įrenginys „%(device)s“ yra „%(format)s“ formato, bet turi būti "
-"„mdmember“ formato."
+"Btrfs skirsnis \"%(device)s\" yra \"%(format)s\" formato, bet turėtų būti "
+"\"btrfs\" formato."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1246
-#, fuzzy, python-format
-#| msgid ""
-#| "Tried to use undefined partition \"%s\" in Volume Group specification"
+#, python-format
 msgid "Tried to use undefined partition \"%s\" in Btrfs volume specification."
-msgstr "Bandyta naudoti neapibrėžtą skirsnį „%s“ tomų grupės specifikacijoje"
+msgstr "Bandyta naudoti neapibrėžtą skirsnį \"%s\" Btrfs tomo specifikacijoje."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1261
-#, fuzzy
-#| msgid ""
-#| "Volume group \"%s\" defined without any physical volumes.  Either specify "
-#| "physical volumes or use --useexisting."
 msgid ""
 "Btrfs volume defined without any member devices.  Either specify member "
 "devices or use --useexisting."
 msgstr ""
-"Tomų grupė „%s“ apibrėžta be fizinių tomų.  Nurodykite fizinius tomus arba "
-"naudokite --useexisting."
+"Btrfs tomas apibrėžtas be įrenginių narių.  Nurodykite įrenginius narius "
+"arba naudokite --useexisting."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1289
-#, fuzzy, python-format
-#| msgid "RAID volume \"%s\" specified with --useexisting does not exist."
+#, python-format
 msgid "Btrfs volume \"%s\" specified with --useexisting does not exist."
-msgstr "Nėra RAID tomo „%s“ nurodyto su --useexisting."
+msgstr "Btrfs tomas \"%s\" nurodytas su --useexisting neegzistuoja."
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:213
 #, python-brace-format
@@ -1681,7 +1675,7 @@ msgstr "Šaknies pasirinkimas"
 
 #: pyanaconda/rescue.py:517
 msgid "The following installations were discovered on your system."
-msgstr ""
+msgstr "Šios įdiegtys buvo aptiktos jūsų sistemoje."
 
 #: pyanaconda/ui/categories/__init__.py:41
 msgid "DEFAULT TITLE"
@@ -1797,12 +1791,12 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/lib/network_secret_agent.py:196
 msgctxt "GUI|Network|Secrets Dialog"
 msgid "_Password:"
-msgstr "Sla_ptažodis:"
+msgstr "_Slaptažodis:"
 
 #: pyanaconda/ui/gui/spokes/lib/network_secret_agent.py:206
 msgctxt "GUI|Network|Secrets Dialog"
 msgid "_Key:"
-msgstr "Ra_ktas:"
+msgstr "_Raktas:"
 
 #: pyanaconda/ui/gui/spokes/lib/network_secret_agent.py:218
 msgid "User name: "
@@ -2068,19 +2062,15 @@ msgstr "Išlaikyti _viską"
 #: pyanaconda/ui/gui/spokes/advanced_storage.py:510
 msgctxt "GUI|Spoke"
 msgid "_Installation Destination"
-msgstr ""
+msgstr "_Diegimo paskirtis"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.py:627
-#, fuzzy
-#| msgctxt "GUI|Installation Destination|Filter"
-#| msgid "%d _storage device selected"
-#| msgid_plural "%d _storage devices selected"
 msgctxt "GUI|Installation Destination|Filter"
 msgid "{} _storage device selected"
 msgid_plural "{} _storage devices selected"
-msgstr[0] "Pasirinktas %d _saugyklos įrenginys"
-msgstr[1] "Pasirinkti %d _saugyklos įrenginiai"
-msgstr[2] "Pasirinkta %d _saugyklos įrenginių"
+msgstr[0] "Pasirinktas {} _saugyklos įrenginys"
+msgstr[1] "Pasirinkti {} _saugyklos įrenginiai"
+msgstr[2] "Pasirinkta {} _saugyklos įrenginių"
 
 #: pyanaconda/ui/gui/spokes/blivet_gui.py:103
 msgctxt "GUI|Spoke"
@@ -2175,7 +2165,7 @@ msgstr "Nežinoma"
 #: pyanaconda/ui/gui/spokes/custom_storage.py:594
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade:178
 msgid "Device reconfiguration failed."
-msgstr ""
+msgstr "Nepavyko perkonfigūruoti įrenginio."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:742
 msgid "No disks assigned"
@@ -2204,38 +2194,28 @@ msgid "This file system may not be resized."
 msgstr "Failų sistemos dydis negali būti keičiamas."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:927
-#, fuzzy
-#| msgid ""
-#| "Error checking storage configuration.  <a href=\"\">Click for details</a> "
-#| "or press Done again to continue."
 msgid ""
 "Error checking storage configuration. <a href=\"\">Click for details</a> or "
 "press Done again to continue."
 msgstr ""
-"Klaida tikrinant saugyklos konfigūraciją.  <a href=\"\">Spauskite detalesnei "
-"informacijai</a> arba spauskite Atlikta tęsimui."
+"Klaida tikrinant saugyklos konfigūraciją. <a href=\"\">Spauskite detalesnei "
+"informacijai</a> arba spauskite Atlikta dar kartą ir tęskite."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:931
-#, fuzzy
-#| msgid ""
-#| "Warning checking storage configuration.  <a href=\"\">Click for details</"
-#| "a> or press Done again to continue."
 msgid ""
 "Warning checking storage configuration. <a href=\"\">Click for details</a> "
 "or press Done again to continue."
 msgstr ""
-"Įspėjimas tikrinant saugyklos konfigūraciją.  <a href=\"\">Spauskite "
-"detalesnei informacijai</a> arba spauskite Atlikta dar kartą tęsimui."
+"Įspėjimas tikrinant saugyklos konfigūraciją. <a href=\"\">Spauskite "
+"detalesnei informacijai</a> arba spauskite Atlikta dar kartą ir tęskite."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1013
 msgid "Failed to add new device."
-msgstr ""
+msgstr "Nepavyko pridėti naujo įrenginio."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1071
-#, fuzzy
-#| msgid "Device discovery failed."
 msgid "Device removal request failed."
-msgstr "Įrenginio aptikti nepavyko."
+msgstr "Įrenginio pašalinimo užklausa nepavyko."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1205
 msgid "No disks selected. Keeping previous disk set."
@@ -2246,10 +2226,8 @@ msgid "({} free)"
 msgstr "({} laisva)"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1465
-#, fuzzy
-#| msgid "Automatic partitioning selected"
 msgid "Automatic partitioning failed."
-msgstr "Pasirinktas automatinis skaidymas skirsniais"
+msgstr "Automatinis skaidymas nepavyko."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1752
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1756
@@ -2258,10 +2236,8 @@ msgid " <a href=\"\">Click for details.</a>"
 msgstr " <a href=\"\">Spauskite detalesnei informacijai.</a>"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1864
-#, fuzzy
-#| msgid "%s cannot be on an encrypted block device."
 msgid "Failed to unlock encrypted block device."
-msgstr "%s negali būti šifruotas blokinis įrenginys."
+msgstr "Nepavyko atrakinti šifruoto įrenginio."
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.py:422
 msgctxt "GUI|Spoke"
@@ -2319,47 +2295,35 @@ msgstr "Užbaigta!"
 #: pyanaconda/ui/gui/spokes/installation_progress.py:120
 #, python-format
 msgid "Use of this product is subject to the license agreement found at %s"
-msgstr ""
+msgstr "Šio produkto naudojimui galioja licencija, kurią rasite %s"
 
 #: pyanaconda/ui/gui/spokes/installation_progress.py:145
-#, fuzzy
-#| msgctxt "GUI|Progress"
-#| msgid "_Reboot"
 msgctxt "GUI|Progress"
 msgid "_Reboot System"
-msgstr "_Paleisti iš naujo"
+msgstr "_Restartuoti sistemą"
 
 #: pyanaconda/ui/gui/spokes/installation_progress.py:147
-#, fuzzy
-#| msgctxt "GUI|Summary"
-#| msgid "_Begin Installation"
 msgctxt "GUI|Progress"
 msgid "_Finish Installation"
-msgstr "_Pradėti diegimą"
+msgstr "_Baigti diegimą"
 
 #: pyanaconda/ui/gui/spokes/installation_progress.py:155
-#, fuzzy, python-format
-#| msgid ""
-#| "%s is now successfully installed and ready for you to use!\n"
-#| "Go ahead and reboot to start using it!"
+#, python-format
 msgid ""
 "%s is now successfully installed and ready for you to use!\n"
 "Go ahead and reboot your system to start using it!"
 msgstr ""
-"%s dabar sėkmingai įdiegta ir paruošta naudojimui!\n"
-"Perleiskite ir pradėkite ją naudoti!"
+"%s sėkmingai įdiegta ir paruošta naudojimui!\n"
+"Perleiskite savo sistemą ir pradėkite naudotis!"
 
 #: pyanaconda/ui/gui/spokes/installation_progress.py:160
-#, fuzzy, python-format
-#| msgid ""
-#| "%s is now successfully installed and ready for you to use!\n"
-#| "Go ahead and reboot to start using it!"
+#, python-format
 msgid ""
 "%s is now successfully installed and ready for you to use!\n"
 "Go ahead and quit the application to start using it!"
 msgstr ""
-"%s dabar sėkmingai įdiegta ir paruošta naudojimui!\n"
-"Perleiskite ir pradėkite ją naudoti!"
+"%s sėkmingai įdiegta ir paruošta naudojimui!\n"
+"Išjunkite programą pradėkite naudotis!"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:71
 msgid "Setting up installation source..."
@@ -2393,7 +2357,7 @@ msgstr "Laikmena yra netinkama diegimui."
 #: pyanaconda/ui/gui/spokes/installation_source.py:412
 msgctxt "GUI|Spoke"
 msgid "_Installation Source"
-msgstr ""
+msgstr "_Diegimo šaltinis"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:567
 msgid "Failed to set up installation source; check the repo url"
@@ -2512,7 +2476,7 @@ msgstr "%s išdėstymams keisti."
 #: pyanaconda/ui/gui/spokes/keyboard.py:279
 msgctxt "GUI|Spoke"
 msgid "_Keyboard"
-msgstr ""
+msgstr "_Klaviatūra"
 
 #: pyanaconda/ui/gui/spokes/keyboard.py:377
 msgid "Testing layouts configuration not available."
@@ -2674,7 +2638,7 @@ msgstr "Joks"
 #: pyanaconda/ui/gui/spokes/network.py:1442
 msgctxt "GUI|Spoke"
 msgid "_Network & Host Name"
-msgstr ""
+msgstr "_Tinklas ir kompiuterio pavadinimas"
 
 #: pyanaconda/ui/gui/spokes/network.py:1546
 #: pyanaconda/ui/gui/spokes/network.py:1565
@@ -2688,17 +2652,15 @@ msgstr "Serverio pavadinimas netinkamas: %s"
 #: pyanaconda/ui/gui/spokes/root_password.py:55
 msgctxt "GUI|Spoke"
 msgid "_Root Password"
-msgstr ""
+msgstr "_Root slaptažodis"
 
 #: pyanaconda/ui/gui/spokes/root_password.py:120
-#, fuzzy
-#| msgid "Root password is not set"
 msgid "Root password has been set."
-msgstr "Root slaptažodis nenustatytas"
+msgstr "Root slaptažodis nustatytas."
 
 #: pyanaconda/ui/gui/spokes/root_password.py:152
 msgid "Disabled, set password to enable."
-msgstr ""
+msgstr "Išjungta, įjungimui nustatykite slaptažodį."
 
 #: pyanaconda/ui/gui/spokes/root_password.py:154
 #: pyanaconda/ui/tui/spokes/root_password.py:80
@@ -3135,37 +3097,26 @@ msgid "Probing storage"
 msgstr "Skaitoma saugyklos"
 
 #: pyanaconda/ui/lib/space.py:103
-#, fuzzy
-#| msgid ""
-#| "Not enough space in file systems for the current software selection. An "
-#| "additional %s is needed."
 msgid ""
 "Not enough space in file systems for the current software selection. An "
 "additional {} is needed."
 msgstr ""
 "Nepakanka vietos failų sistemose dabartiniam programinės įrangos "
-"pasirinkimui. Reikia papildomai %s."
+"pasirinkimui. Reikia papildomai {}."
 
 #: pyanaconda/ui/lib/space.py:106
-#, fuzzy
-#| msgid ""
-#| "Not enough space in file systems for the current software selection. An "
-#| "additional %s is needed."
 msgid "Not enough space in file systems for the current software selection."
 msgstr ""
 "Nepakanka vietos failų sistemose dabartiniam programinės įrangos "
-"pasirinkimui. Reikia papildomai %s."
+"pasirinkimui."
 
 #: pyanaconda/ui/lib/storage.py:209
-#, fuzzy, python-brace-format
-#| msgid "%(count)d disk selected; %(capacity)s capacity; %(free)s free"
-#| msgid_plural ""
-#| "%(count)d disks selected; %(capacity)s capacity; %(free)s free"
+#, python-brace-format
 msgid "{count} disk selected; {capacity} capacity; {free} free"
 msgid_plural "{count} disks selected; {capacity} capacity; {free} free"
-msgstr[0] "Pasirinktas %(count)d diskas; talpa %(capacity)s; laisva %(free)s"
-msgstr[1] "Pasirinkti %(count)d diskai; talpa %(capacity)s; laisva %(free)s"
-msgstr[2] "Pasirinkta %(count)d diskų; talpa %(capacity)s; laisva %(free)s"
+msgstr[0] "Pasirinktas {count} diskas; talpa {capacity}; laisvos vietos {free}"
+msgstr[1] "Pasirinkti {count} diskai; talpa {capacity}; laisvos vietos {free}"
+msgstr[2] "Pasirinkta {count} diskų; talpa {capacity}; laisvos vietos {free}"
 
 #: pyanaconda/ui/lib/storage.py:283
 msgid "Saving storage configuration..."
@@ -4078,17 +4029,6 @@ msgid "An error occurred while activating your storage configuration."
 msgstr "Kilo klaida aktyvinant jūsų saugyklos konfigūraciją."
 
 #: pyanaconda/errors.py:119
-#, fuzzy
-#| msgid ""
-#| "There is a problem with your existing storage configuration: "
-#| "%(errortxt)s\n"
-#| "\n"
-#| "You must resolve this matter before the installation can proceed. There "
-#| "is a shell available for use which you can access by pressing ctrl-alt-f1 "
-#| "and then ctrl-b 2.\n"
-#| "\n"
-#| "Once you have resolved the issue you can retry the storage scan. If you "
-#| "do not fix it you will have to exit the installer."
 msgid ""
 "There is a problem with your existing storage configuration or your initial "
 "settings, for example a kickstart file. You must resolve this matter before "
@@ -4098,10 +4038,10 @@ msgid ""
 "Once you have resolved the issue you can retry the storage scan. If you do "
 "not fix it you will have to exit the installer."
 msgstr ""
-"Yra problema su jūsų dabartinę saugyklos konfigūracija: %(errortxt)s\n"
-"\n"
-"Turite ją išspręsti prieš pradedant diegimą. Galima naudoti terminalą, kurį "
-"pasieksite paspaudę vald+alt+f1, o tuomet vald+b 2.\n"
+"Yra problema su jūsų dabartinę saugyklos konfigūracija arba jūsų pradiniais "
+"nustatymais, pavyzdžiui kickstart failu. Turite ją išspręsti, kad būtų "
+"galima tęsti diegimą. Yra prieinamas apvalkalas, kurį galite pasiekti "
+"paspaudę vald-alt-f1 ir tuomet vald-b 2.\n"
 "\n"
 "Išsprendę problemą galite iš naujo bandyti saugyklos skaitymą. Jei nenorite "
 "taisyti, teks išeiti iš diegyklės."
@@ -4178,10 +4118,11 @@ msgid ""
 "Some packages, groups or modules are broken, the installation will be "
 "aborted."
 msgstr ""
+"Kai kurie paketai, grupės ar moduliai yra sugadinti, diegimas bus nutrauktas."
 
 #: pyanaconda/errors.py:199
 msgid "Would you like to ignore this and continue with installation?"
-msgstr ""
+msgstr "Ar norite nepaisyti ir tęsti diegimą?"
 
 #: pyanaconda/errors.py:206
 #, python-format
@@ -4229,18 +4170,12 @@ msgstr ""
 "nutrauktas."
 
 #: pyanaconda/errors.py:238
-#, fuzzy
-#| msgid ""
-#| "The following software marked for installation has errors.  This is "
-#| "likely caused by an error with\n"
-#| "your installation source."
 msgid ""
 "The following software marked for installation has errors.\n"
 "This is likely caused by an error with your installation source."
 msgstr ""
-"Šį diegimui pažymėta programinė įranga turi klaidų.  Tai greičiausiai yra su "
-"jūsų diegimo šaltiniu\n"
-"susijusi klaida."
+"Toliau išvardinta diegimui pasirinktas programinė įranga turi klaidų.\n"
+"Tai greičiausiai yra klaida, susijusi su jūsų diegimo šaltiniu."
 
 #: pyanaconda/errors.py:246
 msgid ""
@@ -4290,6 +4225,15 @@ msgid ""
 "\n"
 "The installer will now terminate."
 msgstr ""
+"\n"
+"Diegimas sustabdytas dėl klaidos, kuri kilo vykdant neinteraktyvioje komandų "
+"eilutės veiksenoje. Kadangi komandų eilutės veiksenoje negali būti jokių "
+"klausimų, redaguokite savo kickstart failą bandykite vėl.\n"
+"Tikslus pranešimas apie klaidą:\n"
+"\n"
+"%s.\n"
+"\n"
+"Diegimas bus nutrauktas."
 
 #: pyanaconda/exception.py:182
 #, python-format
@@ -4412,7 +4356,7 @@ msgstr "Serverio pavadinimas turi būti iki 255 simbolių ilgio imtinai."
 
 #: pyanaconda/network.py:116
 msgid "Local host name must not end with period '.'."
-msgstr ""
+msgstr "Vietinio kompiuterio pavadinimas negali baigtis tašku."
 
 #: pyanaconda/network.py:119
 msgid ""
@@ -4425,10 +4369,8 @@ msgstr ""
 "„-“."
 
 #: pyanaconda/network.py:468
-#, fuzzy
-#| msgid "Unavailable"
 msgid "Status not available"
-msgstr "Neprieinama"
+msgstr "Būsena nepasiekiama"
 
 #: pyanaconda/network.py:473
 msgid "Connecting..."
@@ -4779,13 +4721,13 @@ msgstr "Tiekėjas"
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1249
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1424
 msgid "Namespace"
-msgstr ""
+msgstr "Vardų sritis"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:526
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1250
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1452
 msgid "Mode"
-msgstr ""
+msgstr "Veiksena"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:553
 msgctxt "GUI|Installation Destination|Filter"
@@ -4857,20 +4799,20 @@ msgstr "_Kiti SAN įrenginiai"
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1232
 msgctxt "GUI|Installation Destination|Filter|NVDIMM Devices"
 msgid "Filter B_y:"
-msgstr ""
+msgstr "_Filtruoti pagal:"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1288
 msgctxt "GUI|Installation Destination|Filter|NVDIMM Devices|Mode"
 msgid "Show Only Devices in _Mode:"
-msgstr ""
+msgstr "Rodyti tik šios _veiksenos įrenginius:"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1305
 msgid "Sector"
-msgstr ""
+msgstr "Sektorius"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1306
 msgid "Memory"
-msgstr ""
+msgstr "Atmintis"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1333
 msgctxt "GUI|Installation Destination|Filter|NVDIMM Devices|Namespace"
@@ -4880,7 +4822,7 @@ msgstr "_Vardų sritis:"
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1496
 msgctxt "GUI|Installation Destination|Filter"
 msgid "_NVDIMM Devices"
-msgstr ""
+msgstr "_NVDIMM įrenginiai"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1522
 msgctxt "GUI|Installation Destination|Filter|zSeries"
@@ -4945,7 +4887,7 @@ msgstr "Pridėti FCo_E SAN..."
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1944
 msgctxt "GUI|Installation Destination|Filter"
 msgid "Reconfigure _NVDIMM..."
-msgstr ""
+msgstr "Perkonfigūruoti _NVDIMM..."
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1959
 msgctxt "GUI|Installation Destination|Filter"
@@ -5036,7 +4978,7 @@ msgstr "Norėdami naudoti DASD diskus, turite pateikti įrenginio numerį."
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:117
 msgctxt "GUI|Advanced Storage|DASD|Configure"
 msgid "_Device number:"
-msgstr "Į_renginio numeris:"
+msgstr "_Įrenginio numeris:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:136
 msgctxt "GUI|Advanced Storage|DASD|Configure"
@@ -5184,7 +5126,7 @@ msgstr "CHAP _naudotojo vardas:"
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:277
 msgctxt "GUI|Advanced Storage|iSCSI|Configure|CHAP"
 msgid "CHAP _Password:"
-msgstr "CHAP sla_ptažodis:"
+msgstr "CHAP _slaptažodis:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:389
 msgctxt "GUI|Advanced Storage|iSCSI|Configure|Reverse CHAP"
@@ -5194,17 +5136,17 @@ msgstr "CHAP _Naudotojo vardas:"
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:403
 msgctxt "GUI|Advanced Storage|iSCSI|Configure|Reverse CHAP"
 msgid "CHAP _Password:"
-msgstr "CHAP sla_ptažodis:"
+msgstr "CHAP _slaptažodis:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:417
 msgctxt "GUI|Advanced Storage|iSCSI|Configure|Reverse CHAP"
 msgid "Reverse CHAP User _name:"
-msgstr "Atgalinis CHAP na_udotojo vardas:"
+msgstr "Atgalinis CHAP naudotojo _vardas:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:431
 msgctxt "GUI|Advanced Storage|iSCSI|Configure|Reverse CHAP"
 msgid "Reverse CHAP Pass_word:"
-msgstr "Atgalinis CHAP _slaptažodis:"
+msgstr "Atgalinis CHAP slapta_žodis:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:465
 msgctxt "GUI|Advanced Storage|iSCSI|Configure|Start"
@@ -5266,7 +5208,7 @@ msgstr "CHAP _naudotojo vardas:"
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:811
 msgctxt "GUI|Advanced Storage|iSCSI|Login|CHAP"
 msgid "CHAP _Password:"
-msgstr "CHAP sla_ptažodis:"
+msgstr "CHAP _slaptažodis:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:923
 msgctxt "GUI|Advanced Storage|iSCSI|Login|Reverse CHAP"
@@ -5276,7 +5218,7 @@ msgstr "CHAP _naudotojo vardas:"
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:937
 msgctxt "GUI|Advanced Storage|iSCSI|Login|Reverse CHAP"
 msgid "CHAP _Password:"
-msgstr "CHAP sla_ptažodis:"
+msgstr "CHAP _slaptažodis:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:951
 msgctxt "GUI|Advanced Storage|iSCSI|Login|Reverse CHAP"
@@ -5286,7 +5228,7 @@ msgstr "_Atgalinis CHAP naudotojo vardas:"
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:965
 msgctxt "GUI|Advanced Storage|iSCSI|Login|Reverse CHAP"
 msgid "Reverse CHAP Pass_word:"
-msgstr "At_galinis CHAP slaptažodis:"
+msgstr "Atgalinis CHAP slapta_žodis:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:1014
 msgctxt "GUI|Advanced Storage|iSCSI|Login|Login"
@@ -5313,45 +5255,50 @@ msgstr "_Bandyti prisijungti dar kartą"
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade:23
 msgctxt "GUI|Advanced Storage|NVDIMM|Reconfigure"
 msgid "_Cancel"
-msgstr ""
+msgstr "_Atsisakyti"
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade:70
 msgid ""
 "The following NVDIMM devices selected from the list will be reconfigured to "
 "sector mode:"
 msgstr ""
+"Šie NVDIMM įrenginiai, pasirinkti sąraše, bus perkonfigūruoti į sektoriaus "
+"veikseną:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade:85
 msgctxt "GUI|Advanced Storage|NVDIMM|Reconfigure"
 msgid "_Sector size:"
-msgstr ""
+msgstr "_Sektoriaus dydis:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade:103
 msgctxt "GUI|Advanced Storage|NVDIMM|Reconfigure"
 msgid "Start _Reconfiguration"
-msgstr ""
+msgstr "Pradėti pe_rkonfigūravimą"
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade:139
 msgid "Reconfiguring NVDIMM devices. This may take a moment..."
-msgstr ""
+msgstr "Perkonfigūruojami NVDIMM įrenginiai. Tai gali užtrukti..."
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade:205
 msgid "The following error occurred reconfiguring NVDIMM devices:"
-msgstr ""
+msgstr "Kilo ši klaida perkonfigūruojant NVDIMM įrenginius:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade:252
 msgid "Devices reconfiguration succeeded."
-msgstr ""
+msgstr "Įrenginiai sėkmingai perkonfigūruoti."
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade:278
 msgid ""
 "Rescanning disks after reconfiguration.\n"
 "This may take a moment ..."
 msgstr ""
+"Iš naujo perskaitomi įrenginiai po perkonfigūravimo.\n"
+"Tai gali užtrukti..."
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade:334
 msgid "Warning: Existing data on reconfigured devices will be lost."
 msgstr ""
+"Įspėjimas: esami duomenys perkonfigūruojamuose įrenginiuose bus prarasti."
 
 #: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:82
 msgid "ADD zFCP STORAGE TARGET"
@@ -5416,10 +5363,8 @@ msgstr "_Atstatyti viską"
 
 #: pyanaconda/ui/gui/spokes/installation_progress.glade:8
 #: pyanaconda/ui/gui/spokes/installation_progress.glade:164
-#, fuzzy
-#| msgid "INSTALLATION SOURCE"
 msgid "INSTALLATION PROGRESS"
-msgstr "DIEGIMO ŠALTINIS"
+msgstr "DIEGIMO EIGA"
 
 #: pyanaconda/ui/gui/spokes/installation_progress.glade:75
 msgid "Preparing to install"
@@ -5967,10 +5912,8 @@ msgstr "_Pasirinkite įrenginio tipą pridėjimui"
 
 #: pyanaconda/ui/gui/spokes/network.glade:153
 #: pyanaconda/ui/gui/spokes/network.glade:286
-#, fuzzy
-#| msgid "Network"
 msgid "Wi-Fi Networks"
-msgstr "Tinklas"
+msgstr "Bevieliai Tinklai"
 
 #: pyanaconda/ui/gui/spokes/network.glade:170
 #, fuzzy
@@ -5981,17 +5924,13 @@ msgid "_Cancel"
 msgstr "_Atsisakyti"
 
 #: pyanaconda/ui/gui/spokes/network.glade:184
-#, fuzzy
-#| msgid "Configure NTP"
 msgctxt "GUI|Network|Wireless|Configure"
 msgid "C_onfigure"
-msgstr "Konfigūruoti NTP"
+msgstr "K_onfigūruoti"
 
 #: pyanaconda/ui/gui/spokes/network.glade:207
-#, fuzzy
-#| msgid "Writing network configuration"
 msgid "Select a network to configure"
-msgstr "Rašoma tinklo konfigūracija"
+msgstr "Pasirinkti tinklą konfigūracijai"
 
 #: pyanaconda/ui/gui/spokes/network.glade:303
 #, fuzzy
@@ -6002,18 +5941,13 @@ msgid "_Cancel"
 msgstr "_Atsisakyti"
 
 #: pyanaconda/ui/gui/spokes/network.glade:317
-#, fuzzy
-#| msgctxt "GUI|Network|Authentication Dialog"
-#| msgid "C_onnect"
 msgctxt "GUI|Network|Wireless|Select Network Dialog"
 msgid "C_onnect"
-msgstr "Prisi_jungti"
+msgstr "Pri_sijungti"
 
 #: pyanaconda/ui/gui/spokes/network.glade:340
-#, fuzzy
-#| msgid "Select all"
 msgid "Select a network"
-msgstr "Žymėti viską"
+msgstr "Pasirinkti tinklą"
 
 #: pyanaconda/ui/gui/spokes/network.glade:376
 msgid "NETWORK CONFIGURATION"
@@ -6097,7 +6031,7 @@ msgstr "Saugos raktas"
 
 #: pyanaconda/ui/gui/spokes/network.glade:1300
 msgid "My ssid"
-msgstr ""
+msgstr "Mano ssid"
 
 #: pyanaconda/ui/gui/spokes/network.glade:1354
 msgctxt "GUI|Network|Wireless"
@@ -6115,12 +6049,9 @@ msgid "_Configure..."
 msgstr "_Konfigūruoti..."
 
 #: pyanaconda/ui/gui/spokes/network.glade:1405
-#, fuzzy
-#| msgctxt "GUI|Software Source"
-#| msgid "_On the network:"
 msgctxt "GUI|Network|Wireless"
 msgid "_Select network"
-msgstr "_Tinkle:"
+msgstr "_Pasirinkti tinklą"
 
 #: pyanaconda/ui/gui/spokes/network.glade:1523
 msgid "IMEI"
@@ -6350,7 +6281,7 @@ msgstr "Noriu _išeiti."
 #: pyanaconda/ui/gui/spokes/welcome.glade:37
 msgctxt "GUI|Welcome|Beta Warn Dialog"
 msgid "I want to _proceed."
-msgstr "Noriu tęsti."
+msgstr "Noriu _tęsti."
 
 #: pyanaconda/ui/gui/spokes/welcome.glade:68
 msgid "This is unstable, pre-release software."
@@ -6485,7 +6416,7 @@ msgstr "Ši_fruoti"
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:698
 msgctxt "GUI|Custom Partitioning|Configure"
 msgid "File S_ystem:"
-msgstr "Failų _sistema:"
+msgstr "Failų s_istema:"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:741
 msgctxt "GUI|Custom Partitioning|Configure"
@@ -6511,7 +6442,7 @@ msgstr "RA_ID lygis:"
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:938
 msgctxt "GUI|Custom Partitioning|Configure"
 msgid "LUKS Version:"
-msgstr ""
+msgstr "LUKS versija:"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:1009
 msgctxt "GUI|Custom Partitioning|Configure|Devices"
@@ -6542,7 +6473,7 @@ msgstr "Sla_ptafrazė:"
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:1179
 msgctxt "GUI|Custom Partitioning|Encrypted"
 msgid "_Unlock"
-msgstr "At_rakinti"
+msgstr "_Atrakinti"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:1274
 msgid ""
@@ -6854,21 +6785,14 @@ msgstr "Atnaujinimai"
 #: pyanaconda/ui/gui/spokes/installation_source.glade:941
 msgctxt "GUI|Software Source"
 msgid "Install the _latest available software updates"
-msgstr ""
+msgstr "Įdiegti _naujausius programinės įrangos atnaujinimus"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:958
-#, fuzzy
-#| msgctxt "GUI|Software Source"
-#| msgid ""
-#| "Don't install the latest available software _updates. Install the default "
-#| "versions provided by the installation source above."
 msgctxt "GUI|Software Source"
 msgid ""
 "Install the _default versions provided by the installation source (above) "
 "only"
-msgstr ""
-"Neįdiegti naujausių programinės įrangos at_naujinimų. Įdiegti numatytąsias "
-"versijas iš diegimo šaltinio."
+msgstr "Įdiegti tik _diegimo šaltinio (aukščiau) pateiktas numatytas versijas"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:986
 msgid "Additional repositories"
