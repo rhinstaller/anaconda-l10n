@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2021-01-30 00:42+0000\n"
+"POT-Creation-Date: 2021-02-05 00:35+0000\n"
 "PO-Revision-Date: 2020-03-17 16:38+0000\n"
 "Last-Translator: Марко Костић (Marko Kostić) <marko.m.kostic@gmail.com>\n"
 "Language-Team: Serbian <https://translate.fedoraproject.org/projects/"
@@ -552,19 +552,19 @@ msgstr "Сакриј лозинку."
 msgid "Show password."
 msgstr "Прикажи лозинку."
 
-#: pyanaconda/core/constants.py:295
+#: pyanaconda/core/constants.py:300
 msgid "Probing storage..."
 msgstr "Тестирам складиште..."
 
-#: pyanaconda/core/constants.py:296
+#: pyanaconda/core/constants.py:301
 msgid "Downloading package metadata..."
 msgstr "Преузимам информације о пакетима..."
 
-#: pyanaconda/core/constants.py:297
+#: pyanaconda/core/constants.py:302
 msgid "Downloading group metadata..."
 msgstr "Преузимам информације о групама..."
 
-#: pyanaconda/core/constants.py:300
+#: pyanaconda/core/constants.py:305
 msgid "Anaconda Installer"
 msgstr "Anaconda инсталатер"
 
@@ -802,15 +802,22 @@ msgstr ""
 "Следећа грешка се појавила током инсталирања boot loader-а. Систем се неће "
 "моћи покренути. Да ли желите да игноришете ово и наставите са инсталацијом?"
 
-#: pyanaconda/pwpolicy.py:146
+#: pyanaconda/pwpolicy.py:195
 #, python-format
 msgid "policy name required for %s"
 msgstr "име полисе неопходно за %s"
 
-#: pyanaconda/pwpolicy.py:155
+#: pyanaconda/pwpolicy.py:204
 #, python-format
 msgid "A %(command)s with the name %(policyName)s has already been defined."
 msgstr "%(command)s са именом %(policyName)s је већ дефинисана."
+
+#: pyanaconda/pwpolicy.py:238
+msgid ""
+"The pwpolicy command has been deprecated. It may be removed from future "
+"releases, which will result in a fatal error when it is encountered. Please "
+"modify your kickstart file to remove this command."
+msgstr ""
 
 #: pyanaconda/rescue.py:272
 msgid "Unable to find /bin/bash to execute!  Not starting shell."
@@ -2083,7 +2090,7 @@ msgstr "Припремам окружење инсталације"
 msgid "Configuring storage"
 msgstr "Подешавам складиште"
 
-#: pyanaconda/installation.py:279 pyanaconda/kickstart.py:566
+#: pyanaconda/installation.py:279 pyanaconda/kickstart.py:574
 msgid "Running pre-installation scripts"
 msgstr "Извршавам скрипте пре инсталације"
 
@@ -2750,7 +2757,7 @@ msgid "Failed to set up installation source; check the repo url"
 msgstr "Неуспешно успостављање извора инсталације; проверите URL ризнице"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:675
-#: pyanaconda/ui/gui/spokes/software_selection.py:208
+#: pyanaconda/ui/gui/spokes/software_selection.py:209
 msgid "Checking software dependencies..."
 msgstr "Проверавам програмске зависности..."
 
@@ -2766,7 +2773,7 @@ msgstr "Грешка при постављању програмског изво
 #: pyanaconda/ui/gui/spokes/installation_source.py:683
 #: pyanaconda/ui/gui/spokes/datetime_spoke.py:566
 #: pyanaconda/ui/tui/spokes/installation_source.py:118
-#: pyanaconda/ui/tui/spokes/software_selection.py:163
+#: pyanaconda/ui/tui/spokes/software_selection.py:172
 msgid "Nothing selected"
 msgstr "Ништа није означено"
 
@@ -2898,7 +2905,7 @@ msgid "Disabled, set password to enable."
 msgstr "Онемогућено, постави лозинку за омогућавање."
 
 #: pyanaconda/ui/gui/spokes/root_password.py:185
-#: pyanaconda/ui/tui/spokes/root_password.py:81
+#: pyanaconda/ui/tui/spokes/root_password.py:82
 msgid "Root account is disabled."
 msgstr "Root налог је онемогућен."
 
@@ -3293,16 +3300,16 @@ msgstr "Стварање _корисника"
 msgid "The password was set by kickstart."
 msgstr "Лозинка је постављена од стране kickstart-a."
 
-#: pyanaconda/ui/gui/spokes/user.py:454 pyanaconda/ui/tui/spokes/user.py:232
+#: pyanaconda/ui/gui/spokes/user.py:454 pyanaconda/ui/tui/spokes/user.py:233
 msgid "No user will be created"
 msgstr "Ниједан корисник неће бити направљен"
 
-#: pyanaconda/ui/gui/spokes/user.py:456 pyanaconda/ui/tui/spokes/user.py:236
+#: pyanaconda/ui/gui/spokes/user.py:456 pyanaconda/ui/tui/spokes/user.py:237
 #, python-format
 msgid "Administrator %s will be created"
 msgstr "Администратор %s ће бити направљен"
 
-#: pyanaconda/ui/gui/spokes/user.py:458 pyanaconda/ui/tui/spokes/user.py:238
+#: pyanaconda/ui/gui/spokes/user.py:458 pyanaconda/ui/tui/spokes/user.py:239
 #, python-format
 msgid "User %s will be created"
 msgstr "Корисник %s ће бити направљен"
@@ -3323,7 +3330,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/storage.py:269
 #: pyanaconda/ui/tui/spokes/installation_source.py:116
 #: pyanaconda/ui/tui/spokes/storage.py:127
-#: pyanaconda/ui/tui/spokes/software_selection.py:152
+#: pyanaconda/ui/tui/spokes/software_selection.py:161
 msgid "Processing..."
 msgstr "Обрађујем..."
 
@@ -3457,62 +3464,62 @@ msgctxt "GUI|Storage|Warning Dialog"
 msgid "_OK"
 msgstr "_У реду"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:68
+#: pyanaconda/ui/gui/spokes/software_selection.py:69
 msgctxt "GUI|Spoke"
 msgid "_Software Selection"
 msgstr "Одабир про_грама"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:213
+#: pyanaconda/ui/gui/spokes/software_selection.py:214
 msgid "Error checking software dependencies"
 msgstr "Грешка при провери програмских зависности"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:263
-#: pyanaconda/ui/tui/spokes/software_selection.py:150
+#: pyanaconda/ui/gui/spokes/software_selection.py:267
+#: pyanaconda/ui/tui/spokes/software_selection.py:159
 msgid "Error checking software selection"
 msgstr "Грешка при провери одабира програма"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:273
+#: pyanaconda/ui/gui/spokes/software_selection.py:277
 msgid "Red Hat CDN requires registration."
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:276
-#: pyanaconda/ui/tui/spokes/software_selection.py:154
+#: pyanaconda/ui/gui/spokes/software_selection.py:280
+#: pyanaconda/ui/tui/spokes/software_selection.py:163
 msgid "Installation source not set up"
 msgstr "Инсталациони извор није постављен"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:279
-#: pyanaconda/ui/tui/spokes/software_selection.py:156
+#: pyanaconda/ui/gui/spokes/software_selection.py:283
+#: pyanaconda/ui/tui/spokes/software_selection.py:165
 msgid "Source changed - please verify"
 msgstr "Извор промењен - молим проверите"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:286
-#: pyanaconda/ui/tui/spokes/software_selection.py:162
+#: pyanaconda/ui/gui/spokes/software_selection.py:290
+#: pyanaconda/ui/tui/spokes/software_selection.py:171
 msgid "Custom software selected"
 msgstr "Одређени програми изабрани"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:289
+#: pyanaconda/ui/gui/spokes/software_selection.py:293
 msgid "Invalid environment specified in kickstart"
 msgstr "Неисправно окружење назначено у kickstart-у"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:292
-#: pyanaconda/ui/gui/spokes/software_selection.py:297
+#: pyanaconda/ui/gui/spokes/software_selection.py:296
+#: pyanaconda/ui/gui/spokes/software_selection.py:301
 #, fuzzy
 #| msgid "Error checking software selection"
 msgid "Please confirm software selection"
 msgstr "Грешка при провери одабира програма"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:302
+#: pyanaconda/ui/gui/spokes/software_selection.py:306
 msgid "Selected environment is not valid"
 msgstr "Одабрано окружење није исправно"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:475
+#: pyanaconda/ui/gui/spokes/software_selection.py:491
 msgid ""
 "Error checking software dependencies.  <a href=\"\">Click for details.</a>"
 msgstr ""
 "Грешка при провери програмских зависности. <a href=\"\">Кликните за детаље.</"
 "a>"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:595
+#: pyanaconda/ui/gui/spokes/software_selection.py:611
 msgid ""
 "The software marked for installation has the following errors.  This is "
 "likely caused by an error with your installation source.  You can quit the "
@@ -3522,17 +3529,17 @@ msgstr ""
 "узроковано грешком у извору ваше инсталације. Можете изаћи из инсталатера, "
 "променити извор програма или променити избор програма."
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:601
+#: pyanaconda/ui/gui/spokes/software_selection.py:617
 msgctxt "GUI|Software Selection|Error Dialog"
 msgid "_Quit"
 msgstr "_Излаз"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:602
+#: pyanaconda/ui/gui/spokes/software_selection.py:618
 msgctxt "GUI|Software Selection|Error Dialog"
 msgid "_Modify Software Source"
 msgstr "_Променити извор програма"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:603
+#: pyanaconda/ui/gui/spokes/software_selection.py:619
 msgctxt "GUI|Software Selection|Error Dialog"
 msgid "Modify _Selections"
 msgstr "_Променити избор"
@@ -3868,7 +3875,7 @@ msgstr "Нема *.iso датотека пронађених на кореном
 #: pyanaconda/ui/tui/spokes/storage.py:534
 #: pyanaconda/ui/tui/spokes/storage.py:606
 #: pyanaconda/ui/tui/spokes/storage.py:674
-#: pyanaconda/ui/tui/spokes/software_selection.py:255
+#: pyanaconda/ui/tui/spokes/software_selection.py:264
 #: pyanaconda/ui/tui/hubs/summary.py:158
 msgctxt "TUI|Spoke Navigation"
 msgid "c"
@@ -3912,28 +3919,28 @@ msgstr "Лозинка мора имати најмање шест знаков�
 msgid "The password cannot be more than eight characters long."
 msgstr "Лозинка не сме бити дужа од осам карактера."
 
-#: pyanaconda/ui/tui/spokes/root_password.py:51
+#: pyanaconda/ui/tui/spokes/root_password.py:53
 msgid "Root password"
 msgstr "Root лозинка"
 
-#: pyanaconda/ui/tui/spokes/root_password.py:79
+#: pyanaconda/ui/tui/spokes/root_password.py:80
 msgid "Disabled. Set password to enable root account."
 msgstr "Онемогућено. Поставите лозинку да бисте омогућили рут налог."
 
-#: pyanaconda/ui/tui/spokes/root_password.py:84
+#: pyanaconda/ui/tui/spokes/root_password.py:85
 msgid "Password is set."
 msgstr "Лозинка је постављена."
 
-#: pyanaconda/ui/tui/spokes/root_password.py:86
+#: pyanaconda/ui/tui/spokes/root_password.py:87
 msgid "Password is not set."
 msgstr "Лозинка није постављена."
 
-#: pyanaconda/ui/tui/spokes/root_password.py:91
+#: pyanaconda/ui/tui/spokes/root_password.py:92
 msgid "Please select new root password. You will have to type it twice."
 msgstr "Молим изаберите нову root лозинку. Мораћете да је упишете два пута."
 
-#: pyanaconda/ui/tui/spokes/root_password.py:97
-#: pyanaconda/ui/tui/spokes/user.py:145
+#: pyanaconda/ui/tui/spokes/root_password.py:99
+#: pyanaconda/ui/tui/spokes/user.py:144
 #: pyanaconda/ui/gui/spokes/subscription.glade:181
 #: pyanaconda/ui/gui/spokes/subscription.glade:568
 #: pyanaconda/ui/gui/spokes/root_password.glade:87
@@ -4080,37 +4087,37 @@ msgstr "Име и презиме не могу садржати знак „:“
 msgid "User creation"
 msgstr "Прављење корисника"
 
-#: pyanaconda/ui/tui/spokes/user.py:131
+#: pyanaconda/ui/tui/spokes/user.py:129
 msgid "Create user"
 msgstr "Направи корисника"
 
-#: pyanaconda/ui/tui/spokes/user.py:135
+#: pyanaconda/ui/tui/spokes/user.py:133
 msgid "Full name"
 msgstr "Име и презиме"
 
-#: pyanaconda/ui/tui/spokes/user.py:138
+#: pyanaconda/ui/tui/spokes/user.py:136
 #: pyanaconda/ui/gui/spokes/subscription.glade:156
 #: pyanaconda/ui/gui/spokes/subscription.glade:556
 msgid "User name"
 msgstr "Корисничко име"
 
-#: pyanaconda/ui/tui/spokes/user.py:141
+#: pyanaconda/ui/tui/spokes/user.py:139
 msgid "Use password"
 msgstr "Користи лозинку"
 
-#: pyanaconda/ui/tui/spokes/user.py:153
+#: pyanaconda/ui/tui/spokes/user.py:154
 msgid "Administrator"
 msgstr "Администратор"
 
-#: pyanaconda/ui/tui/spokes/user.py:157
+#: pyanaconda/ui/tui/spokes/user.py:158
 msgid "Groups"
 msgstr "Групе"
 
-#: pyanaconda/ui/tui/spokes/user.py:234
+#: pyanaconda/ui/tui/spokes/user.py:235
 msgid "You must set a password"
 msgstr "Морате поставити лозинку"
 
-#: pyanaconda/ui/tui/spokes/user.py:252
+#: pyanaconda/ui/tui/spokes/user.py:253
 #, python-format
 msgid ""
 "Invalid user name: %(name)s.\n"
@@ -4291,21 +4298,21 @@ msgstr "Поново форматирај"
 msgid "Software selection"
 msgstr "Избор програма"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:202
+#: pyanaconda/ui/tui/spokes/software_selection.py:211
 msgid "Installation source needs to be set up first."
 msgstr "Инсталациони извор мора прво бити постављен."
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:226
+#: pyanaconda/ui/tui/spokes/software_selection.py:235
 msgid "Base environment"
 msgstr "Основно окружење"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:236
+#: pyanaconda/ui/tui/spokes/software_selection.py:245
 #, fuzzy
 #| msgid "Add-ons for selected environment"
 msgid "Additional software for selected environment"
 msgstr "Додаци за одабрано окружење"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:238
+#: pyanaconda/ui/tui/spokes/software_selection.py:247
 #, fuzzy
 #| msgid "No add-ons to select."
 msgid "No additional software to select."
@@ -4370,7 +4377,7 @@ msgstr "ПРОГРАМИ"
 msgid "USER SETTINGS"
 msgstr "ПОДЕШАВАЊА КОРИСНИКА"
 
-#: pyanaconda/input_checking.py:539
+#: pyanaconda/input_checking.py:548
 msgid "Full name cannot contain colon characters"
 msgstr "Име и презиме не смеју садржати две тачке"
 
@@ -4476,7 +4483,15 @@ msgstr "Нема доступних мрежних уређаја"
 msgid "%(productName)s %(productVersion)s INSTALLATION"
 msgstr "%(productName)s %(productVersion)s ИНСТАЛАЦИЈА"
 
-#: pyanaconda/kickstart.py:509
+#: pyanaconda/kickstart.py:299
+#, python-format
+msgid ""
+"The %%anaconda section has been deprecated. It may be removed from future "
+"releases, which will result in a fatal error when it is encountered. Please "
+"modify your kickstart file to remove this section."
+msgstr ""
+
+#: pyanaconda/kickstart.py:517
 msgid ""
 "\n"
 "Some warnings occurred during reading the kickstart file:"
@@ -4484,7 +4499,7 @@ msgstr ""
 "\n"
 "Појавила су се нека упозорења приликом читања кикстарт датотеке:"
 
-#: pyanaconda/kickstart.py:522
+#: pyanaconda/kickstart.py:530
 #, python-format
 msgid ""
 "\n"

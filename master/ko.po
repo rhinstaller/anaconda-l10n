@@ -31,7 +31,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2021-01-30 00:42+0000\n"
+"POT-Creation-Date: 2021-02-05 00:35+0000\n"
 "PO-Revision-Date: 2020-07-05 10:27+0000\n"
 "Last-Translator: Ludek Janda <ljanda@redhat.com>\n"
 "Language-Team: Korean <https://translate.fedoraproject.org/projects/anaconda/"
@@ -589,19 +589,19 @@ msgstr "암호 숨기기."
 msgid "Show password."
 msgstr "암호 표시."
 
-#: pyanaconda/core/constants.py:295
+#: pyanaconda/core/constants.py:300
 msgid "Probing storage..."
 msgstr "스토리지 탐색 중..."
 
-#: pyanaconda/core/constants.py:296
+#: pyanaconda/core/constants.py:301
 msgid "Downloading package metadata..."
 msgstr "패키지 메타데이터 다운로드 중..."
 
-#: pyanaconda/core/constants.py:297
+#: pyanaconda/core/constants.py:302
 msgid "Downloading group metadata..."
 msgstr "그룹 메타데이터 다운로드 중..."
 
-#: pyanaconda/core/constants.py:300
+#: pyanaconda/core/constants.py:305
 msgid "Anaconda Installer"
 msgstr "아나콘다 설치 프로그램"
 
@@ -860,15 +860,22 @@ msgstr ""
 "부트로더를 설치하는 도중 다음과 같은 오류가 발생하였습니다. 시스템은 부팅할 "
 "수 없게 됩니다. 이를 무시하고 설치를 진행할까요?"
 
-#: pyanaconda/pwpolicy.py:146
+#: pyanaconda/pwpolicy.py:195
 #, python-format
 msgid "policy name required for %s"
 msgstr "필요한 정책 이름 %s"
 
-#: pyanaconda/pwpolicy.py:155
+#: pyanaconda/pwpolicy.py:204
 #, python-format
 msgid "A %(command)s with the name %(policyName)s has already been defined."
 msgstr "에이 %(command)s 이름이 적힌 %(policyName)s 이미 정의되었습니다."
+
+#: pyanaconda/pwpolicy.py:238
+msgid ""
+"The pwpolicy command has been deprecated. It may be removed from future "
+"releases, which will result in a fatal error when it is encountered. Please "
+"modify your kickstart file to remove this command."
+msgstr ""
 
 #: pyanaconda/rescue.py:272
 msgid "Unable to find /bin/bash to execute!  Not starting shell."
@@ -2171,7 +2178,7 @@ msgstr "설치 환경 구성 "
 msgid "Configuring storage"
 msgstr "저장소 구성"
 
-#: pyanaconda/installation.py:279 pyanaconda/kickstart.py:566
+#: pyanaconda/installation.py:279 pyanaconda/kickstart.py:574
 msgid "Running pre-installation scripts"
 msgstr "설치 전 스크립트 실행 중"
 
@@ -2804,7 +2811,7 @@ msgid "Failed to set up installation source; check the repo url"
 msgstr "설치 소스 설정에 실패했습니다; 리포지터리 url을 확인합니다 "
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:675
-#: pyanaconda/ui/gui/spokes/software_selection.py:208
+#: pyanaconda/ui/gui/spokes/software_selection.py:209
 msgid "Checking software dependencies..."
 msgstr "소프트웨어 종속성을 확인 중..."
 
@@ -2820,7 +2827,7 @@ msgstr "소프트웨어 소스 설정 오류"
 #: pyanaconda/ui/gui/spokes/installation_source.py:683
 #: pyanaconda/ui/gui/spokes/datetime_spoke.py:566
 #: pyanaconda/ui/tui/spokes/installation_source.py:118
-#: pyanaconda/ui/tui/spokes/software_selection.py:163
+#: pyanaconda/ui/tui/spokes/software_selection.py:172
 msgid "Nothing selected"
 msgstr "아무것도 선택되지 않음"
 
@@ -2952,7 +2959,7 @@ msgid "Disabled, set password to enable."
 msgstr "비활성화하려면 활성화 할 암호를 설정하십시오."
 
 #: pyanaconda/ui/gui/spokes/root_password.py:185
-#: pyanaconda/ui/tui/spokes/root_password.py:81
+#: pyanaconda/ui/tui/spokes/root_password.py:82
 msgid "Root account is disabled."
 msgstr "Root 계정이 비활성화되어 있습니다."
 
@@ -3338,16 +3345,16 @@ msgstr "사용자 생성(_U)"
 msgid "The password was set by kickstart."
 msgstr "암호가 킥스타트로 설정되었습니다."
 
-#: pyanaconda/ui/gui/spokes/user.py:454 pyanaconda/ui/tui/spokes/user.py:232
+#: pyanaconda/ui/gui/spokes/user.py:454 pyanaconda/ui/tui/spokes/user.py:233
 msgid "No user will be created"
 msgstr "어떤 사용자도 생성되지 않습니다 "
 
-#: pyanaconda/ui/gui/spokes/user.py:456 pyanaconda/ui/tui/spokes/user.py:236
+#: pyanaconda/ui/gui/spokes/user.py:456 pyanaconda/ui/tui/spokes/user.py:237
 #, python-format
 msgid "Administrator %s will be created"
 msgstr "관리자 %s가 생성됩니다 "
 
-#: pyanaconda/ui/gui/spokes/user.py:458 pyanaconda/ui/tui/spokes/user.py:238
+#: pyanaconda/ui/gui/spokes/user.py:458 pyanaconda/ui/tui/spokes/user.py:239
 #, python-format
 msgid "User %s will be created"
 msgstr "사용자 %s가 생성됩니다 "
@@ -3366,7 +3373,7 @@ msgstr "파티션 방법 변경됨 - 계획된 스토리지 구성 변경 사항
 #: pyanaconda/ui/gui/spokes/storage.py:269
 #: pyanaconda/ui/tui/spokes/installation_source.py:116
 #: pyanaconda/ui/tui/spokes/storage.py:127
-#: pyanaconda/ui/tui/spokes/software_selection.py:152
+#: pyanaconda/ui/tui/spokes/software_selection.py:161
 msgid "Processing..."
 msgstr "처리 중..."
 
@@ -3493,62 +3500,62 @@ msgctxt "GUI|Storage|Warning Dialog"
 msgid "_OK"
 msgstr "_OK"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:68
+#: pyanaconda/ui/gui/spokes/software_selection.py:69
 msgctxt "GUI|Spoke"
 msgid "_Software Selection"
 msgstr "_ 소프트웨어 선택"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:213
+#: pyanaconda/ui/gui/spokes/software_selection.py:214
 msgid "Error checking software dependencies"
 msgstr "소프트웨어 종속성 확인 중 오류 발생"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:263
-#: pyanaconda/ui/tui/spokes/software_selection.py:150
+#: pyanaconda/ui/gui/spokes/software_selection.py:267
+#: pyanaconda/ui/tui/spokes/software_selection.py:159
 msgid "Error checking software selection"
 msgstr "소프트웨어 선택 확인 중 오류 발생"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:273
+#: pyanaconda/ui/gui/spokes/software_selection.py:277
 msgid "Red Hat CDN requires registration."
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:276
-#: pyanaconda/ui/tui/spokes/software_selection.py:154
+#: pyanaconda/ui/gui/spokes/software_selection.py:280
+#: pyanaconda/ui/tui/spokes/software_selection.py:163
 msgid "Installation source not set up"
 msgstr "설치 소스가 설정되지 않음"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:279
-#: pyanaconda/ui/tui/spokes/software_selection.py:156
+#: pyanaconda/ui/gui/spokes/software_selection.py:283
+#: pyanaconda/ui/tui/spokes/software_selection.py:165
 msgid "Source changed - please verify"
 msgstr "소스가 변경되었습니다 - 확인해 보십시오 "
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:286
-#: pyanaconda/ui/tui/spokes/software_selection.py:162
+#: pyanaconda/ui/gui/spokes/software_selection.py:290
+#: pyanaconda/ui/tui/spokes/software_selection.py:171
 msgid "Custom software selected"
 msgstr "사용자 지정 소프트웨어가 선택됨"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:289
+#: pyanaconda/ui/gui/spokes/software_selection.py:293
 msgid "Invalid environment specified in kickstart"
 msgstr "킥스타트에 지정된 잘못된 환경"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:292
-#: pyanaconda/ui/gui/spokes/software_selection.py:297
+#: pyanaconda/ui/gui/spokes/software_selection.py:296
+#: pyanaconda/ui/gui/spokes/software_selection.py:301
 #, fuzzy
 #| msgid "Error checking software selection"
 msgid "Please confirm software selection"
 msgstr "소프트웨어 선택 확인 중 오류 발생"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:302
+#: pyanaconda/ui/gui/spokes/software_selection.py:306
 msgid "Selected environment is not valid"
 msgstr "선택한 환경이 올바르지 않습니다"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:475
+#: pyanaconda/ui/gui/spokes/software_selection.py:491
 msgid ""
 "Error checking software dependencies.  <a href=\"\">Click for details.</a>"
 msgstr ""
 "소프트웨어 종속성을 확인하는 중 오류가 발생했습니다.  <a href=\"\">자세한 내"
 "용을 보려면 클릭하십시오.</a>"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:595
+#: pyanaconda/ui/gui/spokes/software_selection.py:611
 msgid ""
 "The software marked for installation has the following errors.  This is "
 "likely caused by an error with your installation source.  You can quit the "
@@ -3558,17 +3565,17 @@ msgstr ""
 "문제가 있을 수 있습니다. 소프트웨어 소스 또는 소프트웨어 선택을 변경하거나 설"
 "치 프로그램을 종료할 수 있습니다."
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:601
+#: pyanaconda/ui/gui/spokes/software_selection.py:617
 msgctxt "GUI|Software Selection|Error Dialog"
 msgid "_Quit"
 msgstr "종료(_Q)"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:602
+#: pyanaconda/ui/gui/spokes/software_selection.py:618
 msgctxt "GUI|Software Selection|Error Dialog"
 msgid "_Modify Software Source"
 msgstr "소프트웨어 소스 수정(_M)"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:603
+#: pyanaconda/ui/gui/spokes/software_selection.py:619
 msgctxt "GUI|Software Selection|Error Dialog"
 msgid "Modify _Selections"
 msgstr "선택 수정 (_S)"
@@ -3883,7 +3890,7 @@ msgstr "장치 root 폴더에서 *.iso 파일을 찾을 수 없음 "
 #: pyanaconda/ui/tui/spokes/storage.py:534
 #: pyanaconda/ui/tui/spokes/storage.py:606
 #: pyanaconda/ui/tui/spokes/storage.py:674
-#: pyanaconda/ui/tui/spokes/software_selection.py:255
+#: pyanaconda/ui/tui/spokes/software_selection.py:264
 #: pyanaconda/ui/tui/hubs/summary.py:158
 msgctxt "TUI|Spoke Navigation"
 msgid "c"
@@ -3927,28 +3934,28 @@ msgstr "암호는 최소 6자 이상이어야 합니다."
 msgid "The password cannot be more than eight characters long."
 msgstr "암호는 8자 이상으로 지정할 수 없습니다."
 
-#: pyanaconda/ui/tui/spokes/root_password.py:51
+#: pyanaconda/ui/tui/spokes/root_password.py:53
 msgid "Root password"
 msgstr "Root 암호"
 
-#: pyanaconda/ui/tui/spokes/root_password.py:79
+#: pyanaconda/ui/tui/spokes/root_password.py:80
 msgid "Disabled. Set password to enable root account."
 msgstr "사용할 수 없습니다. 루트 계정을 사용하려면 암호를 설정하십시오."
 
-#: pyanaconda/ui/tui/spokes/root_password.py:84
+#: pyanaconda/ui/tui/spokes/root_password.py:85
 msgid "Password is set."
 msgstr "암호가 설정되어 있습니다."
 
-#: pyanaconda/ui/tui/spokes/root_password.py:86
+#: pyanaconda/ui/tui/spokes/root_password.py:87
 msgid "Password is not set."
 msgstr "암호가 설정되어 있지 않습니다."
 
-#: pyanaconda/ui/tui/spokes/root_password.py:91
+#: pyanaconda/ui/tui/spokes/root_password.py:92
 msgid "Please select new root password. You will have to type it twice."
 msgstr "새 root 암호를 선택해 주십시오. 두 번 입력하셔야 합니다."
 
-#: pyanaconda/ui/tui/spokes/root_password.py:97
-#: pyanaconda/ui/tui/spokes/user.py:145
+#: pyanaconda/ui/tui/spokes/root_password.py:99
+#: pyanaconda/ui/tui/spokes/user.py:144
 #: pyanaconda/ui/gui/spokes/subscription.glade:181
 #: pyanaconda/ui/gui/spokes/subscription.glade:568
 #: pyanaconda/ui/gui/spokes/root_password.glade:87
@@ -4093,37 +4100,37 @@ msgstr "이름에 ':' 을 사용할 수 없습니다"
 msgid "User creation"
 msgstr "사용자 생성"
 
-#: pyanaconda/ui/tui/spokes/user.py:131
+#: pyanaconda/ui/tui/spokes/user.py:129
 msgid "Create user"
 msgstr "사용자 만들기"
 
-#: pyanaconda/ui/tui/spokes/user.py:135
+#: pyanaconda/ui/tui/spokes/user.py:133
 msgid "Full name"
 msgstr "성명"
 
-#: pyanaconda/ui/tui/spokes/user.py:138
+#: pyanaconda/ui/tui/spokes/user.py:136
 #: pyanaconda/ui/gui/spokes/subscription.glade:156
 #: pyanaconda/ui/gui/spokes/subscription.glade:556
 msgid "User name"
 msgstr "사용자 이름 "
 
-#: pyanaconda/ui/tui/spokes/user.py:141
+#: pyanaconda/ui/tui/spokes/user.py:139
 msgid "Use password"
 msgstr "암호 사용"
 
-#: pyanaconda/ui/tui/spokes/user.py:153
+#: pyanaconda/ui/tui/spokes/user.py:154
 msgid "Administrator"
 msgstr "관리자"
 
-#: pyanaconda/ui/tui/spokes/user.py:157
+#: pyanaconda/ui/tui/spokes/user.py:158
 msgid "Groups"
 msgstr "그룹"
 
-#: pyanaconda/ui/tui/spokes/user.py:234
+#: pyanaconda/ui/tui/spokes/user.py:235
 msgid "You must set a password"
 msgstr "암호를 입력해 주십시오"
 
-#: pyanaconda/ui/tui/spokes/user.py:252
+#: pyanaconda/ui/tui/spokes/user.py:253
 #, python-format
 msgid ""
 "Invalid user name: %(name)s.\n"
@@ -4299,21 +4306,21 @@ msgstr "재 포맷"
 msgid "Software selection"
 msgstr "소프트웨어 선택 "
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:202
+#: pyanaconda/ui/tui/spokes/software_selection.py:211
 msgid "Installation source needs to be set up first."
 msgstr "설치 소스를 먼저 설정해야 합니다."
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:226
+#: pyanaconda/ui/tui/spokes/software_selection.py:235
 msgid "Base environment"
 msgstr "기본 환경 "
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:236
+#: pyanaconda/ui/tui/spokes/software_selection.py:245
 #, fuzzy
 #| msgid "Add-ons for selected environment"
 msgid "Additional software for selected environment"
 msgstr "선택한 환경을위한 부가 기능"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:238
+#: pyanaconda/ui/tui/spokes/software_selection.py:247
 #, fuzzy
 #| msgid "No add-ons to select."
 msgid "No additional software to select."
@@ -4377,7 +4384,7 @@ msgstr "소프트웨어"
 msgid "USER SETTINGS"
 msgstr "사용자 설정 "
 
-#: pyanaconda/input_checking.py:539
+#: pyanaconda/input_checking.py:548
 msgid "Full name cannot contain colon characters"
 msgstr "이름에 콜론을 사용할 수 없습니다"
 
@@ -4483,7 +4490,15 @@ msgstr "사용 가능한 네트워크 장치가 없음"
 msgid "%(productName)s %(productVersion)s INSTALLATION"
 msgstr "%(productName)s %(productVersion)s 설치 "
 
-#: pyanaconda/kickstart.py:509
+#: pyanaconda/kickstart.py:299
+#, python-format
+msgid ""
+"The %%anaconda section has been deprecated. It may be removed from future "
+"releases, which will result in a fatal error when it is encountered. Please "
+"modify your kickstart file to remove this section."
+msgstr ""
+
+#: pyanaconda/kickstart.py:517
 msgid ""
 "\n"
 "Some warnings occurred during reading the kickstart file:"
@@ -4491,7 +4506,7 @@ msgstr ""
 "\n"
 "킥 스타트 파일을 읽는 중 몇 가지 경고가 발생했습니다 :"
 
-#: pyanaconda/kickstart.py:522
+#: pyanaconda/kickstart.py:530
 #, python-format
 msgid ""
 "\n"

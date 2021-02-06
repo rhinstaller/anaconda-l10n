@@ -26,7 +26,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2021-01-30 00:42+0000\n"
+"POT-Creation-Date: 2021-02-05 00:35+0000\n"
 "PO-Revision-Date: 2020-10-25 10:15+0000\n"
 "Last-Translator: Joan Sanchis i Muñoz <joansanchis@pm.me>\n"
 "Language-Team: Catalan <https://translate.fedoraproject.org/projects/"
@@ -589,19 +589,19 @@ msgstr "Oculta la contrasenya."
 msgid "Show password."
 msgstr "Mostra la contrasenya."
 
-#: pyanaconda/core/constants.py:295
+#: pyanaconda/core/constants.py:300
 msgid "Probing storage..."
 msgstr "Sondeig de l'emmagatzematge..."
 
-#: pyanaconda/core/constants.py:296
+#: pyanaconda/core/constants.py:301
 msgid "Downloading package metadata..."
 msgstr "S'estan baixant les metadades del paquet..."
 
-#: pyanaconda/core/constants.py:297
+#: pyanaconda/core/constants.py:302
 msgid "Downloading group metadata..."
 msgstr "S'estan baixant les metadades del grup..."
 
-#: pyanaconda/core/constants.py:300
+#: pyanaconda/core/constants.py:305
 msgid "Anaconda Installer"
 msgstr "Instal·lador Anaconda"
 
@@ -852,15 +852,22 @@ msgstr ""
 "es podrà arrencar el sistema. Voleu ignorar-ho i continuar amb la "
 "instal·lació?"
 
-#: pyanaconda/pwpolicy.py:146
+#: pyanaconda/pwpolicy.py:195
 #, python-format
 msgid "policy name required for %s"
 msgstr "nom de la política requerida per %s"
 
-#: pyanaconda/pwpolicy.py:155
+#: pyanaconda/pwpolicy.py:204
 #, python-format
 msgid "A %(command)s with the name %(policyName)s has already been defined."
 msgstr "S'ha definit un %(command)s anomenat %(policyName)s."
+
+#: pyanaconda/pwpolicy.py:238
+msgid ""
+"The pwpolicy command has been deprecated. It may be removed from future "
+"releases, which will result in a fatal error when it is encountered. Please "
+"modify your kickstart file to remove this command."
+msgstr ""
 
 #: pyanaconda/rescue.py:272
 msgid "Unable to find /bin/bash to execute!  Not starting shell."
@@ -2174,7 +2181,7 @@ msgstr "S'està preparant l'entorn d'instal·lació"
 msgid "Configuring storage"
 msgstr "S'està configurant l'emmagatzematge"
 
-#: pyanaconda/installation.py:279 pyanaconda/kickstart.py:566
+#: pyanaconda/installation.py:279 pyanaconda/kickstart.py:574
 msgid "Running pre-installation scripts"
 msgstr "S'estan executant els scripts de pre-instal·lació"
 
@@ -2829,7 +2836,7 @@ msgstr ""
 "del dipòsit"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:675
-#: pyanaconda/ui/gui/spokes/software_selection.py:208
+#: pyanaconda/ui/gui/spokes/software_selection.py:209
 msgid "Checking software dependencies..."
 msgstr "S'estan revisant les dependències del programari..."
 
@@ -2845,7 +2852,7 @@ msgstr "S'ha produït un error en preparar l'origen de la instal·lació"
 #: pyanaconda/ui/gui/spokes/installation_source.py:683
 #: pyanaconda/ui/gui/spokes/datetime_spoke.py:566
 #: pyanaconda/ui/tui/spokes/installation_source.py:118
-#: pyanaconda/ui/tui/spokes/software_selection.py:163
+#: pyanaconda/ui/tui/spokes/software_selection.py:172
 msgid "Nothing selected"
 msgstr "No hi ha res seleccionat"
 
@@ -2978,7 +2985,7 @@ msgid "Disabled, set password to enable."
 msgstr "Inhabilitat, establiu la contrasenya per habilitar-ho."
 
 #: pyanaconda/ui/gui/spokes/root_password.py:185
-#: pyanaconda/ui/tui/spokes/root_password.py:81
+#: pyanaconda/ui/tui/spokes/root_password.py:82
 msgid "Root account is disabled."
 msgstr "El compte de root està inhabilitat."
 
@@ -3369,16 +3376,16 @@ msgstr "Creació d'_usuari"
 msgid "The password was set by kickstart."
 msgstr "La contrasenya va ser establerta per kickstart."
 
-#: pyanaconda/ui/gui/spokes/user.py:454 pyanaconda/ui/tui/spokes/user.py:232
+#: pyanaconda/ui/gui/spokes/user.py:454 pyanaconda/ui/tui/spokes/user.py:233
 msgid "No user will be created"
 msgstr "No es crearà cap usuari"
 
-#: pyanaconda/ui/gui/spokes/user.py:456 pyanaconda/ui/tui/spokes/user.py:236
+#: pyanaconda/ui/gui/spokes/user.py:456 pyanaconda/ui/tui/spokes/user.py:237
 #, python-format
 msgid "Administrator %s will be created"
 msgstr "Es crearà l'administrador %s"
 
-#: pyanaconda/ui/gui/spokes/user.py:458 pyanaconda/ui/tui/spokes/user.py:238
+#: pyanaconda/ui/gui/spokes/user.py:458 pyanaconda/ui/tui/spokes/user.py:239
 #, python-format
 msgid "User %s will be created"
 msgstr "Es crearà l'usuari %s"
@@ -3399,7 +3406,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/storage.py:269
 #: pyanaconda/ui/tui/spokes/installation_source.py:116
 #: pyanaconda/ui/tui/spokes/storage.py:127
-#: pyanaconda/ui/tui/spokes/software_selection.py:152
+#: pyanaconda/ui/tui/spokes/software_selection.py:161
 msgid "Processing..."
 msgstr "S'està processant..."
 
@@ -3529,62 +3536,62 @@ msgctxt "GUI|Storage|Warning Dialog"
 msgid "_OK"
 msgstr "D'ac_ord"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:68
+#: pyanaconda/ui/gui/spokes/software_selection.py:69
 msgctxt "GUI|Spoke"
 msgid "_Software Selection"
 msgstr "_Selecció de programari"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:213
+#: pyanaconda/ui/gui/spokes/software_selection.py:214
 msgid "Error checking software dependencies"
 msgstr "S'ha produït un error en la revisió de les dependències del programari"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:263
-#: pyanaconda/ui/tui/spokes/software_selection.py:150
+#: pyanaconda/ui/gui/spokes/software_selection.py:267
+#: pyanaconda/ui/tui/spokes/software_selection.py:159
 msgid "Error checking software selection"
 msgstr "S'ha produït un error en la selecció del programari"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:273
+#: pyanaconda/ui/gui/spokes/software_selection.py:277
 msgid "Red Hat CDN requires registration."
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:276
-#: pyanaconda/ui/tui/spokes/software_selection.py:154
+#: pyanaconda/ui/gui/spokes/software_selection.py:280
+#: pyanaconda/ui/tui/spokes/software_selection.py:163
 msgid "Installation source not set up"
 msgstr "L'origen de la instal·lació no està configurat"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:279
-#: pyanaconda/ui/tui/spokes/software_selection.py:156
+#: pyanaconda/ui/gui/spokes/software_selection.py:283
+#: pyanaconda/ui/tui/spokes/software_selection.py:165
 msgid "Source changed - please verify"
 msgstr "S'ha canviat l'origen de la instal·lació - si us plau, verifica"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:286
-#: pyanaconda/ui/tui/spokes/software_selection.py:162
+#: pyanaconda/ui/gui/spokes/software_selection.py:290
+#: pyanaconda/ui/tui/spokes/software_selection.py:171
 msgid "Custom software selected"
 msgstr "Selecció personalitzada de programari"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:289
+#: pyanaconda/ui/gui/spokes/software_selection.py:293
 msgid "Invalid environment specified in kickstart"
 msgstr "Hi ha especificat un entorn no vàlid al kickstart"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:292
-#: pyanaconda/ui/gui/spokes/software_selection.py:297
+#: pyanaconda/ui/gui/spokes/software_selection.py:296
+#: pyanaconda/ui/gui/spokes/software_selection.py:301
 #, fuzzy
 #| msgid "Error checking software selection"
 msgid "Please confirm software selection"
 msgstr "S'ha produït un error en la selecció del programari"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:302
+#: pyanaconda/ui/gui/spokes/software_selection.py:306
 msgid "Selected environment is not valid"
 msgstr "L'entorn seleccionat no és vàlid"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:475
+#: pyanaconda/ui/gui/spokes/software_selection.py:491
 msgid ""
 "Error checking software dependencies.  <a href=\"\">Click for details.</a>"
 msgstr ""
 "S'ha produït un error en comprovar les dependències del programari. <a href="
 "\"\">Feu clic per als detalls.</a>"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:595
+#: pyanaconda/ui/gui/spokes/software_selection.py:611
 msgid ""
 "The software marked for installation has the following errors.  This is "
 "likely caused by an error with your installation source.  You can quit the "
@@ -3595,17 +3602,17 @@ msgstr ""
 "del programa d'instal·lació, canviar el vostre origen de programari, o "
 "canviar les vostres seleccions de programari."
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:601
+#: pyanaconda/ui/gui/spokes/software_selection.py:617
 msgctxt "GUI|Software Selection|Error Dialog"
 msgid "_Quit"
 msgstr "_Surt"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:602
+#: pyanaconda/ui/gui/spokes/software_selection.py:618
 msgctxt "GUI|Software Selection|Error Dialog"
 msgid "_Modify Software Source"
 msgstr "_Modifica l'origen de la instal·lació"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:603
+#: pyanaconda/ui/gui/spokes/software_selection.py:619
 msgctxt "GUI|Software Selection|Error Dialog"
 msgid "Modify _Selections"
 msgstr "Modifica les _seleccions"
@@ -3927,7 +3934,7 @@ msgstr ""
 #: pyanaconda/ui/tui/spokes/storage.py:534
 #: pyanaconda/ui/tui/spokes/storage.py:606
 #: pyanaconda/ui/tui/spokes/storage.py:674
-#: pyanaconda/ui/tui/spokes/software_selection.py:255
+#: pyanaconda/ui/tui/spokes/software_selection.py:264
 #: pyanaconda/ui/tui/hubs/summary.py:158
 msgctxt "TUI|Spoke Navigation"
 msgid "c"
@@ -3971,29 +3978,29 @@ msgstr "La contrasenya ha de tenir almenys sis caràcters."
 msgid "The password cannot be more than eight characters long."
 msgstr "La contrasenya no pot contenir més de vuit caràcters."
 
-#: pyanaconda/ui/tui/spokes/root_password.py:51
+#: pyanaconda/ui/tui/spokes/root_password.py:53
 msgid "Root password"
 msgstr "Contrasenya de root"
 
-#: pyanaconda/ui/tui/spokes/root_password.py:79
+#: pyanaconda/ui/tui/spokes/root_password.py:80
 msgid "Disabled. Set password to enable root account."
 msgstr "Inhabilitat. Establiu la contrasenya per habilitar el compte de root."
 
-#: pyanaconda/ui/tui/spokes/root_password.py:84
+#: pyanaconda/ui/tui/spokes/root_password.py:85
 msgid "Password is set."
 msgstr "S'ha definit la contrasenya."
 
-#: pyanaconda/ui/tui/spokes/root_password.py:86
+#: pyanaconda/ui/tui/spokes/root_password.py:87
 msgid "Password is not set."
 msgstr "No s'ha definit la contrasenya."
 
-#: pyanaconda/ui/tui/spokes/root_password.py:91
+#: pyanaconda/ui/tui/spokes/root_password.py:92
 msgid "Please select new root password. You will have to type it twice."
 msgstr ""
 "Definiu una nova contrasenya de root. L'haureu d'escriure dues vegades."
 
-#: pyanaconda/ui/tui/spokes/root_password.py:97
-#: pyanaconda/ui/tui/spokes/user.py:145
+#: pyanaconda/ui/tui/spokes/root_password.py:99
+#: pyanaconda/ui/tui/spokes/user.py:144
 #: pyanaconda/ui/gui/spokes/subscription.glade:181
 #: pyanaconda/ui/gui/spokes/subscription.glade:568
 #: pyanaconda/ui/gui/spokes/root_password.glade:87
@@ -4142,37 +4149,37 @@ msgstr "El nom complet no pot contenir el caràcter ':'"
 msgid "User creation"
 msgstr "Creació d'usuari"
 
-#: pyanaconda/ui/tui/spokes/user.py:131
+#: pyanaconda/ui/tui/spokes/user.py:129
 msgid "Create user"
 msgstr "Crea un usuari"
 
-#: pyanaconda/ui/tui/spokes/user.py:135
+#: pyanaconda/ui/tui/spokes/user.py:133
 msgid "Full name"
 msgstr "Nom complet"
 
-#: pyanaconda/ui/tui/spokes/user.py:138
+#: pyanaconda/ui/tui/spokes/user.py:136
 #: pyanaconda/ui/gui/spokes/subscription.glade:156
 #: pyanaconda/ui/gui/spokes/subscription.glade:556
 msgid "User name"
 msgstr "Nom d'usuari"
 
-#: pyanaconda/ui/tui/spokes/user.py:141
+#: pyanaconda/ui/tui/spokes/user.py:139
 msgid "Use password"
 msgstr "Utilitza una contrasenya"
 
-#: pyanaconda/ui/tui/spokes/user.py:153
+#: pyanaconda/ui/tui/spokes/user.py:154
 msgid "Administrator"
 msgstr "Administrador"
 
-#: pyanaconda/ui/tui/spokes/user.py:157
+#: pyanaconda/ui/tui/spokes/user.py:158
 msgid "Groups"
 msgstr "Grups"
 
-#: pyanaconda/ui/tui/spokes/user.py:234
+#: pyanaconda/ui/tui/spokes/user.py:235
 msgid "You must set a password"
 msgstr "Heu d'establir una contrasenya"
 
-#: pyanaconda/ui/tui/spokes/user.py:252
+#: pyanaconda/ui/tui/spokes/user.py:253
 #, python-format
 msgid ""
 "Invalid user name: %(name)s.\n"
@@ -4353,19 +4360,19 @@ msgstr "Torna a formatar"
 msgid "Software selection"
 msgstr "Selecció de programari"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:202
+#: pyanaconda/ui/tui/spokes/software_selection.py:211
 msgid "Installation source needs to be set up first."
 msgstr "Primer s'ha de configurar l'origen de la instal·lació."
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:226
+#: pyanaconda/ui/tui/spokes/software_selection.py:235
 msgid "Base environment"
 msgstr "Entorn base"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:236
+#: pyanaconda/ui/tui/spokes/software_selection.py:245
 msgid "Additional software for selected environment"
 msgstr "Programari addicional per a l'entorn seleccionat"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:238
+#: pyanaconda/ui/tui/spokes/software_selection.py:247
 msgid "No additional software to select."
 msgstr "No hi ha cap programari addicional per seleccionar."
 
@@ -4429,7 +4436,7 @@ msgstr "PROGRAMARI"
 msgid "USER SETTINGS"
 msgstr "AJUSTS D'USUARI"
 
-#: pyanaconda/input_checking.py:539
+#: pyanaconda/input_checking.py:548
 msgid "Full name cannot contain colon characters"
 msgstr "El nom complet no pot contenir el caràcter dos punts"
 
@@ -4537,7 +4544,15 @@ msgstr "No hi ha cap dispositiu de xarxa disponible"
 msgid "%(productName)s %(productVersion)s INSTALLATION"
 msgstr "INSTAL·LACIÓ DE %(productName)s %(productVersion)s"
 
-#: pyanaconda/kickstart.py:509
+#: pyanaconda/kickstart.py:299
+#, python-format
+msgid ""
+"The %%anaconda section has been deprecated. It may be removed from future "
+"releases, which will result in a fatal error when it is encountered. Please "
+"modify your kickstart file to remove this section."
+msgstr ""
+
+#: pyanaconda/kickstart.py:517
 msgid ""
 "\n"
 "Some warnings occurred during reading the kickstart file:"
@@ -4545,7 +4560,7 @@ msgstr ""
 "\n"
 "S'han produït algunes advertències mentre es llegia el fitxer kickstart:"
 
-#: pyanaconda/kickstart.py:522
+#: pyanaconda/kickstart.py:530
 #, python-format
 msgid ""
 "\n"
