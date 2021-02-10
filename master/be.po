@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2021-02-08 00:35+0000\n"
+"POT-Creation-Date: 2021-02-10 00:34+0000\n"
 "PO-Revision-Date: 2020-08-22 15:29+0000\n"
 "Last-Translator: Viktar Siarheichyk <viktar_siarheichyk@epam.com>\n"
 "Language-Team: Belarusian <https://translate.fedoraproject.org/projects/"
@@ -261,18 +261,6 @@ msgstr "Загрузка %(url)s (%(pct)d%%)"
 msgid "Performing post-installation setup tasks"
 msgstr "Выконваюцца задачы наладкі пасля інсталяцыі"
 
-#: pyanaconda/payload/rpmostreepayload.py:239
-msgid "Starting Flatpak installation"
-msgstr ""
-
-#: pyanaconda/payload/rpmostreepayload.py:251
-msgid "Post-installation flatpak tasks"
-msgstr ""
-
-#: pyanaconda/payload/rpmostreepayload.py:257
-msgid "Flatpak installation has finished"
-msgstr ""
-
 #: pyanaconda/payload/manager.py:75
 msgid "Failed to set up installation source"
 msgstr "Не атрымалася наладзіць крыніцу інсталяцыі"
@@ -280,11 +268,6 @@ msgstr "Не атрымалася наладзіць крыніцу інстал
 #: pyanaconda/payload/manager.py:76
 msgid "Error downloading package metadata"
 msgstr "Памылка падчас загрузкі метаданых пакетаў"
-
-#: pyanaconda/payload/flatpak.py:205
-#, python-format
-msgid "Installing %(flatpak_name)s"
-msgstr ""
 
 #: pyanaconda/payload/dnf/download_progress.py:55
 #, python-format
@@ -740,13 +723,13 @@ msgstr ""
 "Раздзел запуску PReP патрабуецца як частка канфігурацыі пачатковай загрузкі "
 "на некаторых платформах PPC."
 
-#: pyanaconda/errors.py:118
+#: pyanaconda/errors.py:121
 #, fuzzy
 #| msgid "Error checking storage configuration"
 msgid "An error occurred while activating your storage configuration."
 msgstr "Правяраючы канфігурацыю сховішча, знайшлі памылку"
 
-#: pyanaconda/errors.py:125
+#: pyanaconda/errors.py:128
 #, fuzzy
 #| msgid ""
 #| "There is a problem with your existing storage configuration: "
@@ -776,17 +759,17 @@ msgstr ""
 "Як толькі вы вырашыце гэтую праблему, вы можаце перасканаваць сховішча. Калі "
 "не выправіце яе, вам давядзецца выйсці з інсталятара."
 
-#: pyanaconda/errors.py:134
+#: pyanaconda/errors.py:137
 msgctxt "GUI|Storage Detailed Error Dialog"
 msgid "_Exit Installer"
 msgstr "_Закончыць інсталяцыю"
 
-#: pyanaconda/errors.py:135
+#: pyanaconda/errors.py:138
 msgctxt "GUI|Storage Detailed Error Dialog"
 msgid "_Retry"
 msgstr "_Паўтарыць"
 
-#: pyanaconda/errors.py:152
+#: pyanaconda/errors.py:155
 msgid ""
 "Some packages, groups or modules are broken, the installation will be "
 "aborted."
@@ -794,11 +777,11 @@ msgstr ""
 "Некаторыя пакеты, групы альбо модулі пашкоджаныя, інсталяцыя будзе "
 "перарваная."
 
-#: pyanaconda/errors.py:158
+#: pyanaconda/errors.py:161
 msgid "Would you like to ignore this and continue with installation?"
 msgstr "Ігнараваць і працягнуць інсталяцыю?"
 
-#: pyanaconda/errors.py:165
+#: pyanaconda/errors.py:168
 #, python-format
 msgid ""
 "There was an error running the kickstart script at line %(lineno)s.  This is "
@@ -813,7 +796,7 @@ msgstr ""
 "\n"
 "%(details)s"
 
-#: pyanaconda/errors.py:173
+#: pyanaconda/errors.py:176
 #, fuzzy
 #| msgid ""
 #| "The following error occurred while installing.  This is a fatal error and "
@@ -825,7 +808,7 @@ msgstr ""
 "Наступная памылка здарылася падчас інсталяцыі. фатальная памылка, і "
 "інсталяцыя будзе перарваная."
 
-#: pyanaconda/errors.py:181
+#: pyanaconda/errors.py:184
 #, fuzzy
 #| msgid ""
 #| "The following error occurred while installing.  This is a fatal error and "
@@ -837,17 +820,33 @@ msgstr ""
 "Наступная памылка здарылася падчас інсталяцыі. фатальная памылка, і "
 "інсталяцыя будзе перарваная."
 
-#: pyanaconda/errors.py:189
+#: pyanaconda/errors.py:192
 msgid ""
 "The following software marked for installation has errors.\n"
 "This is likely caused by an error with your installation source."
 msgstr ""
 
-#: pyanaconda/errors.py:197
+#: pyanaconda/errors.py:200
 msgid ""
 "The following error occurred while installing the boot loader. The system "
 "will not be bootable. Would you like to ignore this and continue with "
 "installation?"
+msgstr ""
+"Падчас інсталяцыі пачатковай праграмы адбылася наступная памылка. Сістэма не "
+"зможа запусціцца. Ігнараваць гэта і працягваць інсталяцыю?"
+
+#: pyanaconda/errors.py:212
+#, fuzzy, python-brace-format
+#| msgid ""
+#| "The following error occurred while installing the boot loader. The system "
+#| "will not be bootable. Would you like to ignore this and continue with "
+#| "installation?"
+msgid ""
+"The following error occurred during the installation:\n"
+"\n"
+"{details}\n"
+"\n"
+"Would you like to ignore this and continue with installation?"
 msgstr ""
 "Падчас інсталяцыі пачатковай праграмы адбылася наступная памылка. Сістэма не "
 "зможа запусціцца. Ігнараваць гэта і працягваць інсталяцыю?"
@@ -1028,6 +1027,18 @@ msgstr "Недасяжнае"
 msgid "%s is missing. Cannot setup firewall."
 msgstr "%s адсутнічае. Наладзіць firewall немагчыма."
 
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:40
+msgid "Starting Flatpak installation"
+msgstr ""
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:52
+msgid "Post-installation flatpak tasks"
+msgstr ""
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:58
+msgid "Flatpak installation has finished"
+msgstr ""
+
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:390
 #, fuzzy
 #| msgid "Deployment starting: %s"
@@ -1063,6 +1074,11 @@ msgstr ""
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:512
 msgid "Writing objects"
 msgstr "Запіс аб'ектаў"
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_manager.py:205
+#, python-format
+msgid "Installing %(flatpak_name)s"
+msgstr ""
 
 #: pyanaconda/modules/payloads/source/live_image/live_image.py:55
 msgid "Live image"
@@ -4618,11 +4634,11 @@ msgstr ""
 "\n"
 "Інсталятар зараз спыніцца."
 
-#: anaconda.py:376
+#: anaconda.py:379
 msgid "Unable to create PID file"
 msgstr "Не атрымалася стварыць PID-файл"
 
-#: anaconda.py:377
+#: anaconda.py:380
 #, python-format
 msgid ""
 "Anaconda is unable to create %s because the file already exists. Anaconda is "

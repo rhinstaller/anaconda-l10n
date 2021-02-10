@@ -45,7 +45,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2021-02-08 00:35+0000\n"
+"POT-Creation-Date: 2021-02-10 00:34+0000\n"
 "PO-Revision-Date: 2021-01-18 21:36+0000\n"
 "Last-Translator: Igor Gorbounov <igor.gorbounov@gmail.com>\n"
 "Language-Team: Russian <https://translate.fedoraproject.org/projects/"
@@ -293,18 +293,6 @@ msgstr "Загрузка %(url)s (%(pct)d%%)"
 msgid "Performing post-installation setup tasks"
 msgstr "Выполняется настройка после установки"
 
-#: pyanaconda/payload/rpmostreepayload.py:239
-msgid "Starting Flatpak installation"
-msgstr "Запуск установки Flatpak"
-
-#: pyanaconda/payload/rpmostreepayload.py:251
-msgid "Post-installation flatpak tasks"
-msgstr "Послеустановочные задачи Flatpak"
-
-#: pyanaconda/payload/rpmostreepayload.py:257
-msgid "Flatpak installation has finished"
-msgstr "Установка Flatpak завершена"
-
 #: pyanaconda/payload/manager.py:75
 msgid "Failed to set up installation source"
 msgstr "Не удалось настроить источник установки"
@@ -312,11 +300,6 @@ msgstr "Не удалось настроить источник установк
 #: pyanaconda/payload/manager.py:76
 msgid "Error downloading package metadata"
 msgstr "Ошибка загрузки метаданных пакета"
-
-#: pyanaconda/payload/flatpak.py:205
-#, python-format
-msgid "Installing %(flatpak_name)s"
-msgstr "Установка %(flatpak_name)s"
 
 #: pyanaconda/payload/dnf/download_progress.py:55
 #, python-format
@@ -775,11 +758,11 @@ msgstr ""
 "На некоторых платформах PPC требуется раздел PReP\n"
 "как часть конфигурации загрузчика."
 
-#: pyanaconda/errors.py:118
+#: pyanaconda/errors.py:121
 msgid "An error occurred while activating your storage configuration."
 msgstr "Ошибка при активации устройств хранения."
 
-#: pyanaconda/errors.py:125
+#: pyanaconda/errors.py:128
 msgid ""
 "There is a problem with your existing storage configuration or your initial "
 "settings, for example a kickstart file. You must resolve this matter before "
@@ -797,28 +780,28 @@ msgstr ""
 "После устранения проблемы можно запустить сканирование накопителя заново. "
 "Если проблема не будет исправлена, установку придется отменить."
 
-#: pyanaconda/errors.py:134
+#: pyanaconda/errors.py:137
 msgctxt "GUI|Storage Detailed Error Dialog"
 msgid "_Exit Installer"
 msgstr "В_ыход из установки"
 
-#: pyanaconda/errors.py:135
+#: pyanaconda/errors.py:138
 msgctxt "GUI|Storage Detailed Error Dialog"
 msgid "_Retry"
 msgstr "_Повторить"
 
-#: pyanaconda/errors.py:152
+#: pyanaconda/errors.py:155
 msgid ""
 "Some packages, groups or modules are broken, the installation will be "
 "aborted."
 msgstr ""
 "Некоторые пакеты, группы или модули повреждены, установка будет прервана."
 
-#: pyanaconda/errors.py:158
+#: pyanaconda/errors.py:161
 msgid "Would you like to ignore this and continue with installation?"
 msgstr "Хотите игнорировать это и продолжить установку?"
 
-#: pyanaconda/errors.py:165
+#: pyanaconda/errors.py:168
 #, python-format
 msgid ""
 "There was an error running the kickstart script at line %(lineno)s.  This is "
@@ -833,7 +816,7 @@ msgstr ""
 "\n"
 "%(details)s"
 
-#: pyanaconda/errors.py:173
+#: pyanaconda/errors.py:176
 msgid ""
 "The following error occurred while setting up the payload. This is a fatal "
 "error and installation will be aborted."
@@ -841,7 +824,7 @@ msgstr ""
 "Следующая ошибка произошла во время настройки полезных данных. Это "
 "неустранимая ошибка, и установка будет прервана."
 
-#: pyanaconda/errors.py:181
+#: pyanaconda/errors.py:184
 msgid ""
 "The following error occurred while installing the payload. This is a fatal "
 "error and installation will be aborted."
@@ -849,7 +832,7 @@ msgstr ""
 "Следующая ошибка произошла во время установки полезных данных. Это "
 "неустранимая ошибка, и установка будет прервана."
 
-#: pyanaconda/errors.py:189
+#: pyanaconda/errors.py:192
 msgid ""
 "The following software marked for installation has errors.\n"
 "This is likely caused by an error with your installation source."
@@ -858,11 +841,27 @@ msgstr ""
 "ошибки.\n"
 "Вероятно, это вызвано ошибкой в источнике установки."
 
-#: pyanaconda/errors.py:197
+#: pyanaconda/errors.py:200
 msgid ""
 "The following error occurred while installing the boot loader. The system "
 "will not be bootable. Would you like to ignore this and continue with "
 "installation?"
+msgstr ""
+"Произошла следующая ошибка при установке загрузчика. Загрузка системы будет "
+"невозможна. Игнорировать и продолжить установку?"
+
+#: pyanaconda/errors.py:212
+#, fuzzy, python-brace-format
+#| msgid ""
+#| "The following error occurred while installing the boot loader. The system "
+#| "will not be bootable. Would you like to ignore this and continue with "
+#| "installation?"
+msgid ""
+"The following error occurred during the installation:\n"
+"\n"
+"{details}\n"
+"\n"
+"Would you like to ignore this and continue with installation?"
 msgstr ""
 "Произошла следующая ошибка при установке загрузчика. Загрузка системы будет "
 "невозможна. Игнорировать и продолжить установку?"
@@ -1029,6 +1028,18 @@ msgstr "недоступно"
 msgid "%s is missing. Cannot setup firewall."
 msgstr "Нет %s. Настройка сетевого экрана невозможна."
 
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:40
+msgid "Starting Flatpak installation"
+msgstr "Запуск установки Flatpak"
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:52
+msgid "Post-installation flatpak tasks"
+msgstr "Послеустановочные задачи Flatpak"
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:58
+msgid "Flatpak installation has finished"
+msgstr "Установка Flatpak завершена"
+
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:390
 msgid "Deployment starting: {}"
 msgstr "Начинается развёртывание: {}"
@@ -1055,6 +1066,11 @@ msgstr "Получение объектов: {percent}% ({fetched}/{requested}) 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:512
 msgid "Writing objects"
 msgstr "Запись объектов"
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_manager.py:205
+#, python-format
+msgid "Installing %(flatpak_name)s"
+msgstr "Установка %(flatpak_name)s"
 
 #: pyanaconda/modules/payloads/source/live_image/live_image.py:55
 msgid "Live image"
@@ -4516,11 +4532,11 @@ msgstr ""
 "\n"
 "Теперь установка будет прекращена."
 
-#: anaconda.py:376
+#: anaconda.py:379
 msgid "Unable to create PID file"
 msgstr "Не удалось создать PID-файл"
 
-#: anaconda.py:377
+#: anaconda.py:380
 #, python-format
 msgid ""
 "Anaconda is unable to create %s because the file already exists. Anaconda is "

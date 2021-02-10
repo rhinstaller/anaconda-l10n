@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2021-02-08 00:35+0000\n"
+"POT-Creation-Date: 2021-02-10 00:34+0000\n"
 "PO-Revision-Date: 2020-09-19 14:29+0000\n"
 "Last-Translator: Tomislav Krznar <tomislav.krznar@gmail.com>\n"
 "Language-Team: Croatian <https://translate.fedoraproject.org/projects/"
@@ -249,18 +249,6 @@ msgstr "Preuzimanje %(url)s (%(pct)d%%)"
 msgid "Performing post-installation setup tasks"
 msgstr "Izvršavanje poslije-instalacijskih zadataka"
 
-#: pyanaconda/payload/rpmostreepayload.py:239
-msgid "Starting Flatpak installation"
-msgstr ""
-
-#: pyanaconda/payload/rpmostreepayload.py:251
-msgid "Post-installation flatpak tasks"
-msgstr ""
-
-#: pyanaconda/payload/rpmostreepayload.py:257
-msgid "Flatpak installation has finished"
-msgstr ""
-
 #: pyanaconda/payload/manager.py:75
 msgid "Failed to set up installation source"
 msgstr "Greška prilikom postavljanja instalacijskog izvora"
@@ -268,11 +256,6 @@ msgstr "Greška prilikom postavljanja instalacijskog izvora"
 #: pyanaconda/payload/manager.py:76
 msgid "Error downloading package metadata"
 msgstr "Greška prilikom preuzimanja paketnih meta-podataka"
-
-#: pyanaconda/payload/flatpak.py:205
-#, python-format
-msgid "Installing %(flatpak_name)s"
-msgstr ""
 
 #: pyanaconda/payload/dnf/download_progress.py:55
 #, python-format
@@ -718,11 +701,11 @@ msgstr ""
 "PReP boot particija potrebna kao dio konfiguracije\n"
 "programa za učitavanje operacijskog sustava na nekim PPC platformama."
 
-#: pyanaconda/errors.py:118
+#: pyanaconda/errors.py:121
 msgid "An error occurred while activating your storage configuration."
 msgstr "Greška prilikom aktivacije postavki uređaja za pohranu podataka."
 
-#: pyanaconda/errors.py:125
+#: pyanaconda/errors.py:128
 #, fuzzy
 #| msgid ""
 #| "There is a problem with your existing storage configuration. You must "
@@ -748,27 +731,27 @@ msgstr ""
 "Kada riješite problem, možete ponovno pokrenuti skeniranje spremišta. Ako ne "
 "riješite problem, morat ćete izaći iz instalacijskog programa."
 
-#: pyanaconda/errors.py:134
+#: pyanaconda/errors.py:137
 msgctxt "GUI|Storage Detailed Error Dialog"
 msgid "_Exit Installer"
 msgstr "_Izlaz iz instalacije"
 
-#: pyanaconda/errors.py:135
+#: pyanaconda/errors.py:138
 msgctxt "GUI|Storage Detailed Error Dialog"
 msgid "_Retry"
 msgstr "_Ponovi"
 
-#: pyanaconda/errors.py:152
+#: pyanaconda/errors.py:155
 msgid ""
 "Some packages, groups or modules are broken, the installation will be "
 "aborted."
 msgstr ""
 
-#: pyanaconda/errors.py:158
+#: pyanaconda/errors.py:161
 msgid "Would you like to ignore this and continue with installation?"
 msgstr ""
 
-#: pyanaconda/errors.py:165
+#: pyanaconda/errors.py:168
 #, python-format
 msgid ""
 "There was an error running the kickstart script at line %(lineno)s.  This is "
@@ -783,7 +766,7 @@ msgstr ""
 "\n"
 "%(details)s"
 
-#: pyanaconda/errors.py:173
+#: pyanaconda/errors.py:176
 #, fuzzy
 #| msgid ""
 #| "The following error occurred while installing.  This is a fatal error and "
@@ -795,7 +778,7 @@ msgstr ""
 "Došlo je do sljedeće greške prilikom instalacije. Ovo je kobra greška i "
 "instalacija će biti prekinuta."
 
-#: pyanaconda/errors.py:181
+#: pyanaconda/errors.py:184
 #, fuzzy
 #| msgid ""
 #| "The following error occurred while installing.  This is a fatal error and "
@@ -807,17 +790,34 @@ msgstr ""
 "Došlo je do sljedeće greške prilikom instalacije. Ovo je kobra greška i "
 "instalacija će biti prekinuta."
 
-#: pyanaconda/errors.py:189
+#: pyanaconda/errors.py:192
 msgid ""
 "The following software marked for installation has errors.\n"
 "This is likely caused by an error with your installation source."
 msgstr ""
 
-#: pyanaconda/errors.py:197
+#: pyanaconda/errors.py:200
 msgid ""
 "The following error occurred while installing the boot loader. The system "
 "will not be bootable. Would you like to ignore this and continue with "
 "installation?"
+msgstr ""
+"Došlo je do greške prilikom instaliranja programa za učitavanje operacijskog "
+"sustava. Neće biti moguće pokrenuti sustav. Da li želite ignorirati ovu "
+"poruku i nastaviti s instalacijom?"
+
+#: pyanaconda/errors.py:212
+#, fuzzy, python-brace-format
+#| msgid ""
+#| "The following error occurred while installing the boot loader. The system "
+#| "will not be bootable. Would you like to ignore this and continue with "
+#| "installation?"
+msgid ""
+"The following error occurred during the installation:\n"
+"\n"
+"{details}\n"
+"\n"
+"Would you like to ignore this and continue with installation?"
 msgstr ""
 "Došlo je do greške prilikom instaliranja programa za učitavanje operacijskog "
 "sustava. Neće biti moguće pokrenuti sustav. Da li želite ignorirati ovu "
@@ -980,6 +980,18 @@ msgstr "nedostupan"
 msgid "%s is missing. Cannot setup firewall."
 msgstr "%s nedostaje. Podešavanje vatrodiza nemoguće."
 
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:40
+msgid "Starting Flatpak installation"
+msgstr ""
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:52
+msgid "Post-installation flatpak tasks"
+msgstr ""
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:58
+msgid "Flatpak installation has finished"
+msgstr ""
+
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:390
 #, fuzzy
 #| msgid "Deployment starting: %s"
@@ -1011,6 +1023,11 @@ msgstr ""
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:512
 msgid "Writing objects"
+msgstr ""
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_manager.py:205
+#, python-format
+msgid "Installing %(flatpak_name)s"
 msgstr ""
 
 #: pyanaconda/modules/payloads/source/live_image/live_image.py:55
@@ -4407,11 +4424,11 @@ msgid ""
 "The installer will now terminate."
 msgstr ""
 
-#: anaconda.py:376
+#: anaconda.py:379
 msgid "Unable to create PID file"
 msgstr "Nemoguće izraditi PID datoteku"
 
-#: anaconda.py:377
+#: anaconda.py:380
 #, python-format
 msgid ""
 "Anaconda is unable to create %s because the file already exists. Anaconda is "

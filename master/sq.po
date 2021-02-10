@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2021-02-08 00:35+0000\n"
+"POT-Creation-Date: 2021-02-10 00:34+0000\n"
 "PO-Revision-Date: 2016-04-23 06:18+0000\n"
 "Last-Translator: Anxhela Hyseni <anxhela.hyseni1996@gmail.com>\n"
 "Language-Team: Albanian (http://www.transifex.com/projects/p/anaconda/"
@@ -236,18 +236,6 @@ msgstr "Duke shkarkuar %(url)s (%(pct)d%%)"
 msgid "Performing post-installation setup tasks"
 msgstr "Duke ekzekutuar detyrat e post-instalimit"
 
-#: pyanaconda/payload/rpmostreepayload.py:239
-msgid "Starting Flatpak installation"
-msgstr ""
-
-#: pyanaconda/payload/rpmostreepayload.py:251
-msgid "Post-installation flatpak tasks"
-msgstr ""
-
-#: pyanaconda/payload/rpmostreepayload.py:257
-msgid "Flatpak installation has finished"
-msgstr ""
-
 #: pyanaconda/payload/manager.py:75
 msgid "Failed to set up installation source"
 msgstr "Dështoi vendosja e burimit të instaluesit"
@@ -255,11 +243,6 @@ msgstr "Dështoi vendosja e burimit të instaluesit"
 #: pyanaconda/payload/manager.py:76
 msgid "Error downloading package metadata"
 msgstr "Gabim gjatë shkarkimit të paketave  të të dhënave meta "
-
-#: pyanaconda/payload/flatpak.py:205
-#, python-format
-msgid "Installing %(flatpak_name)s"
-msgstr ""
 
 #: pyanaconda/payload/dnf/download_progress.py:55
 #, python-format
@@ -701,13 +684,13 @@ msgstr ""
 "Ndarja e ndezjes PReP nevojitet si pjesë e\n"
 "konfiguracionit të mundësuesit të ndezjes në disa platforma PPC."
 
-#: pyanaconda/errors.py:118
+#: pyanaconda/errors.py:121
 #, fuzzy
 #| msgid "Error checking storage configuration"
 msgid "An error occurred while activating your storage configuration."
 msgstr "Gabim gjatë kontrollit të konfigurimit të memories "
 
-#: pyanaconda/errors.py:125
+#: pyanaconda/errors.py:128
 #, fuzzy
 #| msgid ""
 #| "There is a problem with your existing storage configuration: "
@@ -737,27 +720,27 @@ msgstr ""
 "Sapo ta keni zgjidhur këtë problem ju mund të riprovoni skanimin e memorjes."
 "Nëse ju nuk do e rregulloni këtë problem do ju duhet të dilni nga instaluesi."
 
-#: pyanaconda/errors.py:134
+#: pyanaconda/errors.py:137
 msgctxt "GUI|Storage Detailed Error Dialog"
 msgid "_Exit Installer"
 msgstr "_Dil nga Instaluesi"
 
-#: pyanaconda/errors.py:135
+#: pyanaconda/errors.py:138
 msgctxt "GUI|Storage Detailed Error Dialog"
 msgid "_Retry"
 msgstr "_Riprovo"
 
-#: pyanaconda/errors.py:152
+#: pyanaconda/errors.py:155
 msgid ""
 "Some packages, groups or modules are broken, the installation will be "
 "aborted."
 msgstr ""
 
-#: pyanaconda/errors.py:158
+#: pyanaconda/errors.py:161
 msgid "Would you like to ignore this and continue with installation?"
 msgstr ""
 
-#: pyanaconda/errors.py:165
+#: pyanaconda/errors.py:168
 #, python-format
 msgid ""
 "There was an error running the kickstart script at line %(lineno)s.  This is "
@@ -772,7 +755,7 @@ msgstr ""
 "\n"
 "%(details)s"
 
-#: pyanaconda/errors.py:173
+#: pyanaconda/errors.py:176
 #, fuzzy
 #| msgid ""
 #| "The following error occurred while installing.  This is a fatal error and "
@@ -784,7 +767,7 @@ msgstr ""
 "Gabimi në vazhdim ndodhi gjatë instalimit. Ky është një gabim fatal dhe "
 "instalimi do të braktiset."
 
-#: pyanaconda/errors.py:181
+#: pyanaconda/errors.py:184
 #, fuzzy
 #| msgid ""
 #| "The following error occurred while installing.  This is a fatal error and "
@@ -796,17 +779,34 @@ msgstr ""
 "Gabimi në vazhdim ndodhi gjatë instalimit. Ky është një gabim fatal dhe "
 "instalimi do të braktiset."
 
-#: pyanaconda/errors.py:189
+#: pyanaconda/errors.py:192
 msgid ""
 "The following software marked for installation has errors.\n"
 "This is likely caused by an error with your installation source."
 msgstr ""
 
-#: pyanaconda/errors.py:197
+#: pyanaconda/errors.py:200
 msgid ""
 "The following error occurred while installing the boot loader. The system "
 "will not be bootable. Would you like to ignore this and continue with "
 "installation?"
+msgstr ""
+"Gabimi i mëposhtëm ndodhi gjatë instalimit të ngarkuesit të nisjes. Sistemi "
+"nuk do të mund të ndizet. Do të donit ta injoronit këtë dhe të vazhdoni me "
+"instalimin?"
+
+#: pyanaconda/errors.py:212
+#, fuzzy, python-brace-format
+#| msgid ""
+#| "The following error occurred while installing the boot loader. The system "
+#| "will not be bootable. Would you like to ignore this and continue with "
+#| "installation?"
+msgid ""
+"The following error occurred during the installation:\n"
+"\n"
+"{details}\n"
+"\n"
+"Would you like to ignore this and continue with installation?"
 msgstr ""
 "Gabimi i mëposhtëm ndodhi gjatë instalimit të ngarkuesit të nisjes. Sistemi "
 "nuk do të mund të ndizet. Do të donit ta injoronit këtë dhe të vazhdoni me "
@@ -980,6 +980,18 @@ msgstr "E padisponueshme"
 msgid "%s is missing. Cannot setup firewall."
 msgstr "%s mungon. Nuk mund të fillohet firewall."
 
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:40
+msgid "Starting Flatpak installation"
+msgstr ""
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:52
+msgid "Post-installation flatpak tasks"
+msgstr ""
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:58
+msgid "Flatpak installation has finished"
+msgstr ""
+
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:390
 #, fuzzy
 #| msgid "Deployment starting: %s"
@@ -1011,6 +1023,11 @@ msgstr ""
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:512
 msgid "Writing objects"
+msgstr ""
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_manager.py:205
+#, python-format
+msgid "Installing %(flatpak_name)s"
 msgstr ""
 
 #: pyanaconda/modules/payloads/source/live_image/live_image.py:55
@@ -4481,11 +4498,11 @@ msgid ""
 "The installer will now terminate."
 msgstr ""
 
-#: anaconda.py:376
+#: anaconda.py:379
 msgid "Unable to create PID file"
 msgstr "E pamundur të krijohet skedari PID"
 
-#: anaconda.py:377
+#: anaconda.py:380
 #, python-format
 msgid ""
 "Anaconda is unable to create %s because the file already exists. Anaconda is "

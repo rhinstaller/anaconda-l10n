@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2021-02-08 00:35+0000\n"
+"POT-Creation-Date: 2021-02-10 00:34+0000\n"
 "PO-Revision-Date: 2020-09-08 13:29+0000\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <https://translate.fedoraproject.org/projects/anaconda/"
@@ -254,18 +254,6 @@ msgstr "Жүктелуде %(url)s (%(pct)d%%)"
 msgid "Performing post-installation setup tasks"
 msgstr "Орнатудан кейінгі тапсырмаларды орындау"
 
-#: pyanaconda/payload/rpmostreepayload.py:239
-msgid "Starting Flatpak installation"
-msgstr "Flatpak орнатуын іске қосу"
-
-#: pyanaconda/payload/rpmostreepayload.py:251
-msgid "Post-installation flatpak tasks"
-msgstr "Flatpak орнатудан кейінгі тапсырмалары"
-
-#: pyanaconda/payload/rpmostreepayload.py:257
-msgid "Flatpak installation has finished"
-msgstr "Flatpak орнатуы аяқталды"
-
 #: pyanaconda/payload/manager.py:75
 msgid "Failed to set up installation source"
 msgstr "Орнатудың қайнар көзін баптау сәтсіз"
@@ -273,11 +261,6 @@ msgstr "Орнатудың қайнар көзін баптау сәтсіз"
 #: pyanaconda/payload/manager.py:76
 msgid "Error downloading package metadata"
 msgstr "Десте метаақпаратын жүктеп алу сәтсіз"
-
-#: pyanaconda/payload/flatpak.py:205
-#, python-format
-msgid "Installing %(flatpak_name)s"
-msgstr "%(flatpak_name)s орнатылуда"
 
 #: pyanaconda/payload/dnf/download_progress.py:55
 #, python-format
@@ -736,11 +719,11 @@ msgstr ""
 "Кейбір PPC жүйелерінде жүктеуші баптауларының бөлігі\n"
 "ретінде PReP жүктелу бөлімі керек."
 
-#: pyanaconda/errors.py:118
+#: pyanaconda/errors.py:121
 msgid "An error occurred while activating your storage configuration."
 msgstr "Сақтау құрылғылары баптауларын белсендіру кезінде қате орын алды."
 
-#: pyanaconda/errors.py:125
+#: pyanaconda/errors.py:128
 #, fuzzy
 #| msgid ""
 #| "There is a problem with your existing storage configuration. You must "
@@ -766,28 +749,28 @@ msgstr ""
 "Мәселені шешкеннен кейін, сақтау құрылғыларын қайтала сканерлеуге болады. "
 "Ал, ол шешілмесе, орнатқыш жұмысы аяқталады."
 
-#: pyanaconda/errors.py:134
+#: pyanaconda/errors.py:137
 msgctxt "GUI|Storage Detailed Error Dialog"
 msgid "_Exit Installer"
 msgstr "Орнатқы_штан шығу"
 
-#: pyanaconda/errors.py:135
+#: pyanaconda/errors.py:138
 msgctxt "GUI|Storage Detailed Error Dialog"
 msgid "_Retry"
 msgstr "Қа_йталау"
 
-#: pyanaconda/errors.py:152
+#: pyanaconda/errors.py:155
 msgid ""
 "Some packages, groups or modules are broken, the installation will be "
 "aborted."
 msgstr ""
 "Кейбір дестелер, топтар немесе модульдер зақымдалған, орнату тоқтатылады."
 
-#: pyanaconda/errors.py:158
+#: pyanaconda/errors.py:161
 msgid "Would you like to ignore this and continue with installation?"
 msgstr "Бұны елемей, орнатуды жалғастырғыңыз келе ме?"
 
-#: pyanaconda/errors.py:165
+#: pyanaconda/errors.py:168
 #, python-format
 msgid ""
 "There was an error running the kickstart script at line %(lineno)s.  This is "
@@ -801,7 +784,7 @@ msgstr ""
 "\n"
 "%(details)s"
 
-#: pyanaconda/errors.py:173
+#: pyanaconda/errors.py:176
 #, fuzzy
 #| msgid ""
 #| "The following error occurred while installing.  This is a fatal error and "
@@ -812,7 +795,7 @@ msgid ""
 msgstr ""
 "Келесі қате орнату кезінде алынды. Бұл қатаң қате, сондықтан орнату үзіледі."
 
-#: pyanaconda/errors.py:181
+#: pyanaconda/errors.py:184
 #, fuzzy
 #| msgid ""
 #| "The following error occurred while installing.  This is a fatal error and "
@@ -823,7 +806,7 @@ msgid ""
 msgstr ""
 "Келесі қате орнату кезінде алынды. Бұл қатаң қате, сондықтан орнату үзіледі."
 
-#: pyanaconda/errors.py:189
+#: pyanaconda/errors.py:192
 msgid ""
 "The following software marked for installation has errors.\n"
 "This is likely caused by an error with your installation source."
@@ -831,11 +814,27 @@ msgstr ""
 "Орнату үшін белгіленген келесі бағд. қамтамада қателер бар.\n"
 "Бұл орнатудың қайнар көзіндегі қатеге ұқсайды."
 
-#: pyanaconda/errors.py:197
+#: pyanaconda/errors.py:200
 msgid ""
 "The following error occurred while installing the boot loader. The system "
 "will not be bootable. Would you like to ignore this and continue with "
 "installation?"
+msgstr ""
+"Жүктеушіні орнату кезінде келесі қате орын алды. Жүйе жүктелмейді. Бұны "
+"елемей, орнатуды жалғастыруды қалайсыз ба?"
+
+#: pyanaconda/errors.py:212
+#, fuzzy, python-brace-format
+#| msgid ""
+#| "The following error occurred while installing the boot loader. The system "
+#| "will not be bootable. Would you like to ignore this and continue with "
+#| "installation?"
+msgid ""
+"The following error occurred during the installation:\n"
+"\n"
+"{details}\n"
+"\n"
+"Would you like to ignore this and continue with installation?"
 msgstr ""
 "Жүктеушіні орнату кезінде келесі қате орын алды. Жүйе жүктелмейді. Бұны "
 "елемей, орнатуды жалғастыруды қалайсыз ба?"
@@ -1003,6 +1002,18 @@ msgstr "қолжетімсіз"
 msgid "%s is missing. Cannot setup firewall."
 msgstr "%s жоқ болып тұр. Файрволды баптау мүмкін емес."
 
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:40
+msgid "Starting Flatpak installation"
+msgstr "Flatpak орнатуын іске қосу"
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:52
+msgid "Post-installation flatpak tasks"
+msgstr "Flatpak орнатудан кейінгі тапсырмалары"
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:58
+msgid "Flatpak installation has finished"
+msgstr "Flatpak орнатуы аяқталды"
+
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:390
 #, fuzzy
 #| msgid "Deployment starting: %s"
@@ -1037,6 +1048,11 @@ msgstr "Объекттерді алу: %(percent)d%% (%(fetched)d/%(requested)d)
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:512
 msgid "Writing objects"
 msgstr "Объекттерді жазу"
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_manager.py:205
+#, python-format
+msgid "Installing %(flatpak_name)s"
+msgstr "%(flatpak_name)s орнатылуда"
 
 #: pyanaconda/modules/payloads/source/live_image/live_image.py:55
 msgid "Live image"
@@ -4468,11 +4484,11 @@ msgstr ""
 "\n"
 "Орнатқыш өз жұмысын аяқтайды."
 
-#: anaconda.py:376
+#: anaconda.py:379
 msgid "Unable to create PID file"
 msgstr "PID файлын жасау мүмкін емес"
 
-#: anaconda.py:377
+#: anaconda.py:380
 #, python-format
 msgid ""
 "Anaconda is unable to create %s because the file already exists. Anaconda is "

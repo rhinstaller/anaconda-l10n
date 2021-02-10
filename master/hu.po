@@ -31,7 +31,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2021-02-08 00:35+0000\n"
+"POT-Creation-Date: 2021-02-10 00:34+0000\n"
 "PO-Revision-Date: 2020-11-15 14:35+0000\n"
 "Last-Translator: Balázs Meskó <meskobalazs@mailbox.org>\n"
 "Language-Team: Hungarian <https://translate.fedoraproject.org/projects/"
@@ -276,18 +276,6 @@ msgstr "Letöltés: %(url)s (%(pct)d%%)"
 msgid "Performing post-installation setup tasks"
 msgstr "Telepítést záró beállítási feladatok végrehajtása"
 
-#: pyanaconda/payload/rpmostreepayload.py:239
-msgid "Starting Flatpak installation"
-msgstr "Flatpak telepítés indítása"
-
-#: pyanaconda/payload/rpmostreepayload.py:251
-msgid "Post-installation flatpak tasks"
-msgstr "Telepítés után flatpak feladatok"
-
-#: pyanaconda/payload/rpmostreepayload.py:257
-msgid "Flatpak installation has finished"
-msgstr "A flatpak telepítés befejeződött"
-
 #: pyanaconda/payload/manager.py:75
 msgid "Failed to set up installation source"
 msgstr "Telepítési forrás beállítása sikertelen"
@@ -295,11 +283,6 @@ msgstr "Telepítési forrás beállítása sikertelen"
 #: pyanaconda/payload/manager.py:76
 msgid "Error downloading package metadata"
 msgstr "Hiba a csomag metaadatainak letöltésekor"
-
-#: pyanaconda/payload/flatpak.py:205
-#, python-format
-msgid "Installing %(flatpak_name)s"
-msgstr "A(z) %(flatpak_name)s telepítése"
 
 #: pyanaconda/payload/dnf/download_progress.py:55
 #, python-format
@@ -763,11 +746,11 @@ msgstr ""
 "A PReP indítópartíció szükséges a rendszerbetöltő\n"
 "beállításához egyes PPC platformokon."
 
-#: pyanaconda/errors.py:118
+#: pyanaconda/errors.py:121
 msgid "An error occurred while activating your storage configuration."
 msgstr "Hiba történt a tároló-összeállítás aktiválásakor."
 
-#: pyanaconda/errors.py:125
+#: pyanaconda/errors.py:128
 msgid ""
 "There is a problem with your existing storage configuration or your initial "
 "settings, for example a kickstart file. You must resolve this matter before "
@@ -785,28 +768,28 @@ msgstr ""
 "Ha sikerült megoldania a problémát, újraindíthatja a tárolófelderítést. Ha "
 "nem javítja ki, akkor ki kell lépnie a telepítőből."
 
-#: pyanaconda/errors.py:134
+#: pyanaconda/errors.py:137
 msgctxt "GUI|Storage Detailed Error Dialog"
 msgid "_Exit Installer"
 msgstr "_Kilépés a telepítőből"
 
-#: pyanaconda/errors.py:135
+#: pyanaconda/errors.py:138
 msgctxt "GUI|Storage Detailed Error Dialog"
 msgid "_Retry"
 msgstr "Újr_a"
 
-#: pyanaconda/errors.py:152
+#: pyanaconda/errors.py:155
 msgid ""
 "Some packages, groups or modules are broken, the installation will be "
 "aborted."
 msgstr ""
 "Egyes csomagok, csoportok vagy modulok töröttek, a telepítés megszakad."
 
-#: pyanaconda/errors.py:158
+#: pyanaconda/errors.py:161
 msgid "Would you like to ignore this and continue with installation?"
 msgstr "Szeretné figyelmen kívül hagyni, és folytatni a telepítést?"
 
-#: pyanaconda/errors.py:165
+#: pyanaconda/errors.py:168
 #, python-format
 msgid ""
 "There was an error running the kickstart script at line %(lineno)s.  This is "
@@ -820,7 +803,7 @@ msgstr ""
 "\n"
 "%(details)s"
 
-#: pyanaconda/errors.py:173
+#: pyanaconda/errors.py:176
 #, fuzzy
 #| msgid ""
 #| "The following error occurred while installing.  This is a fatal error and "
@@ -832,7 +815,7 @@ msgstr ""
 "A következő hiba történt a telepítés közben. Ez egy végzetes hiba, és a "
 "telepítés megszakad."
 
-#: pyanaconda/errors.py:181
+#: pyanaconda/errors.py:184
 #, fuzzy
 #| msgid ""
 #| "The following error occurred while installing.  This is a fatal error and "
@@ -844,7 +827,7 @@ msgstr ""
 "A következő hiba történt a telepítés közben. Ez egy végzetes hiba, és a "
 "telepítés megszakad."
 
-#: pyanaconda/errors.py:189
+#: pyanaconda/errors.py:192
 msgid ""
 "The following software marked for installation has errors.\n"
 "This is likely caused by an error with your installation source."
@@ -852,11 +835,28 @@ msgstr ""
 "A következő telepítésre jelölt szoftver hibás.\n"
 "Ezt valószínűleg a telepítési forrás hibája okozza."
 
-#: pyanaconda/errors.py:197
+#: pyanaconda/errors.py:200
 msgid ""
 "The following error occurred while installing the boot loader. The system "
 "will not be bootable. Would you like to ignore this and continue with "
 "installation?"
+msgstr ""
+"Az alábbi hiba történt a rendszerindító telepítése közben. A rendszer nem "
+"lesz indítható. Szeretné ezt figyelmen kívül hagyni, és folytatni a "
+"telepítést?"
+
+#: pyanaconda/errors.py:212
+#, fuzzy, python-brace-format
+#| msgid ""
+#| "The following error occurred while installing the boot loader. The system "
+#| "will not be bootable. Would you like to ignore this and continue with "
+#| "installation?"
+msgid ""
+"The following error occurred during the installation:\n"
+"\n"
+"{details}\n"
+"\n"
+"Would you like to ignore this and continue with installation?"
 msgstr ""
 "Az alábbi hiba történt a rendszerindító telepítése közben. A rendszer nem "
 "lesz indítható. Szeretné ezt figyelmen kívül hagyni, és folytatni a "
@@ -1025,6 +1025,18 @@ msgstr "nem érhető el"
 msgid "%s is missing. Cannot setup firewall."
 msgstr "A(z) „%s” hiányzik. A tűzfal nem állítható be."
 
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:40
+msgid "Starting Flatpak installation"
+msgstr "Flatpak telepítés indítása"
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:52
+msgid "Post-installation flatpak tasks"
+msgstr "Telepítés után flatpak feladatok"
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:58
+msgid "Flatpak installation has finished"
+msgstr "A flatpak telepítés befejeződött"
+
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:390
 #, fuzzy
 #| msgid "Deployment starting: %s"
@@ -1060,6 +1072,11 @@ msgstr ""
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:512
 msgid "Writing objects"
 msgstr "Objektumok írása"
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_manager.py:205
+#, python-format
+msgid "Installing %(flatpak_name)s"
+msgstr "A(z) %(flatpak_name)s telepítése"
 
 #: pyanaconda/modules/payloads/source/live_image/live_image.py:55
 msgid "Live image"
@@ -4514,11 +4531,11 @@ msgstr ""
 "\n"
 "A telepítő most leáll."
 
-#: anaconda.py:376
+#: anaconda.py:379
 msgid "Unable to create PID file"
 msgstr "PID fájl létrehozása nem lehetséges"
 
-#: anaconda.py:377
+#: anaconda.py:380
 #, python-format
 msgid ""
 "Anaconda is unable to create %s because the file already exists. Anaconda is "

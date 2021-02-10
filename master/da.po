@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2021-02-08 00:35+0000\n"
+"POT-Creation-Date: 2021-02-10 00:34+0000\n"
 "PO-Revision-Date: 2020-12-31 06:36+0000\n"
 "Last-Translator: scootergrisen <scootergrisen@gmail.com>\n"
 "Language-Team: Danish <https://translate.fedoraproject.org/projects/anaconda/"
@@ -263,18 +263,6 @@ msgstr "Downloader %(url)s (%(pct)d%%)"
 msgid "Performing post-installation setup tasks"
 msgstr "Udfører efter-installations opsætningsopgaver"
 
-#: pyanaconda/payload/rpmostreepayload.py:239
-msgid "Starting Flatpak installation"
-msgstr "Starter Flatpak-installation"
-
-#: pyanaconda/payload/rpmostreepayload.py:251
-msgid "Post-installation flatpak tasks"
-msgstr "Efter-installations flatpak-opgaver"
-
-#: pyanaconda/payload/rpmostreepayload.py:257
-msgid "Flatpak installation has finished"
-msgstr "Flatpak-installation er færdig"
-
 #: pyanaconda/payload/manager.py:75
 msgid "Failed to set up installation source"
 msgstr "Kunne ikke indstille installationskilde"
@@ -282,11 +270,6 @@ msgstr "Kunne ikke indstille installationskilde"
 #: pyanaconda/payload/manager.py:76
 msgid "Error downloading package metadata"
 msgstr "Fejl under download af pakke-metadata"
-
-#: pyanaconda/payload/flatpak.py:205
-#, python-format
-msgid "Installing %(flatpak_name)s"
-msgstr "Installerer %(flatpak_name)s"
 
 #: pyanaconda/payload/dnf/download_progress.py:55
 #, python-format
@@ -743,11 +726,11 @@ msgstr ""
 "PReP-opstartspartitionen kræves som del af\n"
 "opstartsindlæserkonfigurationen på nogle PPC-platforme."
 
-#: pyanaconda/errors.py:118
+#: pyanaconda/errors.py:121
 msgid "An error occurred while activating your storage configuration."
 msgstr "Der opstod en fejl under aktivering af din lagerkonfiguration."
 
-#: pyanaconda/errors.py:125
+#: pyanaconda/errors.py:128
 msgid ""
 "There is a problem with your existing storage configuration or your initial "
 "settings, for example a kickstart file. You must resolve this matter before "
@@ -765,28 +748,28 @@ msgstr ""
 "Når du har løst problemet kan du prøve at skanne lageret igen. Hvis du ikke "
 "kan rette det så skal du forlade installationsprogrammet."
 
-#: pyanaconda/errors.py:134
+#: pyanaconda/errors.py:137
 msgctxt "GUI|Storage Detailed Error Dialog"
 msgid "_Exit Installer"
 msgstr "_Forlad installationsprogram"
 
-#: pyanaconda/errors.py:135
+#: pyanaconda/errors.py:138
 msgctxt "GUI|Storage Detailed Error Dialog"
 msgid "_Retry"
 msgstr "_Prøv igen"
 
-#: pyanaconda/errors.py:152
+#: pyanaconda/errors.py:155
 msgid ""
 "Some packages, groups or modules are broken, the installation will be "
 "aborted."
 msgstr ""
 "Nogle pakker, grupper eller moduler er ødelagte - installationen afbrydes."
 
-#: pyanaconda/errors.py:158
+#: pyanaconda/errors.py:161
 msgid "Would you like to ignore this and continue with installation?"
 msgstr "Vil du ignorere det og fortsætte installationen?"
 
-#: pyanaconda/errors.py:165
+#: pyanaconda/errors.py:168
 #, python-format
 msgid ""
 "There was an error running the kickstart script at line %(lineno)s.  This is "
@@ -800,7 +783,7 @@ msgstr ""
 "\n"
 "%(details)s"
 
-#: pyanaconda/errors.py:173
+#: pyanaconda/errors.py:176
 #, fuzzy
 #| msgid ""
 #| "The following error occurred while installing.  This is a fatal error and "
@@ -812,7 +795,7 @@ msgstr ""
 "Følgende fejl opstod under installationen. Det er en fatal fejl og "
 "installationen afbrydes."
 
-#: pyanaconda/errors.py:181
+#: pyanaconda/errors.py:184
 #, fuzzy
 #| msgid ""
 #| "The following error occurred while installing.  This is a fatal error and "
@@ -824,7 +807,7 @@ msgstr ""
 "Følgende fejl opstod under installationen. Det er en fatal fejl og "
 "installationen afbrydes."
 
-#: pyanaconda/errors.py:189
+#: pyanaconda/errors.py:192
 msgid ""
 "The following software marked for installation has errors.\n"
 "This is likely caused by an error with your installation source."
@@ -832,11 +815,27 @@ msgstr ""
 "Følgende software, som er markeret til installation, har fejl.\n"
 "Det er sandsynligvis på grund af en fejl med din installationskilde."
 
-#: pyanaconda/errors.py:197
+#: pyanaconda/errors.py:200
 msgid ""
 "The following error occurred while installing the boot loader. The system "
 "will not be bootable. Would you like to ignore this and continue with "
 "installation?"
+msgstr ""
+"Følgende fejl opstod under installation af opstartsindlæseren. Systemet vil "
+"ikke kunne starte op. Vil du ignorere det og fortsætte med installationen?"
+
+#: pyanaconda/errors.py:212
+#, fuzzy, python-brace-format
+#| msgid ""
+#| "The following error occurred while installing the boot loader. The system "
+#| "will not be bootable. Would you like to ignore this and continue with "
+#| "installation?"
+msgid ""
+"The following error occurred during the installation:\n"
+"\n"
+"{details}\n"
+"\n"
+"Would you like to ignore this and continue with installation?"
 msgstr ""
 "Følgende fejl opstod under installation af opstartsindlæseren. Systemet vil "
 "ikke kunne starte op. Vil du ignorere det og fortsætte med installationen?"
@@ -1004,6 +1003,18 @@ msgstr "utilgængelig"
 msgid "%s is missing. Cannot setup firewall."
 msgstr "%s mangler. Kan ikke opsætte firewall."
 
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:40
+msgid "Starting Flatpak installation"
+msgstr "Starter Flatpak-installation"
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:52
+msgid "Post-installation flatpak tasks"
+msgstr "Efter-installations flatpak-opgaver"
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:58
+msgid "Flatpak installation has finished"
+msgstr "Flatpak-installation er færdig"
+
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:390
 #, fuzzy
 #| msgid "Deployment starting: %s"
@@ -1038,6 +1049,11 @@ msgstr "Modtager objekter: %(percent)d%% (%(fetched)d/%(requested)d) %(bytes)s"
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:512
 msgid "Writing objects"
 msgstr "Skriver objekter"
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_manager.py:205
+#, python-format
+msgid "Installing %(flatpak_name)s"
+msgstr "Installerer %(flatpak_name)s"
 
 #: pyanaconda/modules/payloads/source/live_image/live_image.py:55
 msgid "Live image"
@@ -4482,11 +4498,11 @@ msgstr ""
 "\n"
 "Installationsprogrammet vil nu afslutte."
 
-#: anaconda.py:376
+#: anaconda.py:379
 msgid "Unable to create PID file"
 msgstr "Kunne ikke oprette PID-fil"
 
-#: anaconda.py:377
+#: anaconda.py:380
 #, python-format
 msgid ""
 "Anaconda is unable to create %s because the file already exists. Anaconda is "

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2021-02-08 00:35+0000\n"
+"POT-Creation-Date: 2021-02-10 00:34+0000\n"
 "PO-Revision-Date: 2015-11-01 06:00+0000\n"
 "Last-Translator: Nisa Ban <bandnisa@gmail.com>\n"
 "Language-Team: Khmer\n"
@@ -219,18 +219,6 @@ msgstr "ទាញយក %(url)s (%(pct)d%%)"
 msgid "Performing post-installation setup tasks"
 msgstr "សម្តែងមុខងារការតំឡើង post-installation "
 
-#: pyanaconda/payload/rpmostreepayload.py:239
-msgid "Starting Flatpak installation"
-msgstr ""
-
-#: pyanaconda/payload/rpmostreepayload.py:251
-msgid "Post-installation flatpak tasks"
-msgstr ""
-
-#: pyanaconda/payload/rpmostreepayload.py:257
-msgid "Flatpak installation has finished"
-msgstr ""
-
 #: pyanaconda/payload/manager.py:75
 msgid "Failed to set up installation source"
 msgstr "បរាជ័យក្នុងការបញ្ចូលប្រភពទិន្នន័យការតំឡើង"
@@ -238,11 +226,6 @@ msgstr "បរាជ័យក្នុងការបញ្ចូលប្រភ
 #: pyanaconda/payload/manager.py:76
 msgid "Error downloading package metadata"
 msgstr "កំហុសក្នុងការទាញយកកញ្ចប់ metadata"
-
-#: pyanaconda/payload/flatpak.py:205
-#, python-format
-msgid "Installing %(flatpak_name)s"
-msgstr ""
 
 #: pyanaconda/payload/dnf/download_progress.py:55
 #, python-format
@@ -667,13 +650,13 @@ msgstr ""
 "PReP boot partition គឺត្រូវការ ដោយជាផ្នែកនៃការកំណត់រចនាសម្ព័ន្ធ\n"
 "boot loader លើ PPC platforms ខ្លះ។"
 
-#: pyanaconda/errors.py:118
+#: pyanaconda/errors.py:121
 #, fuzzy
 #| msgid "Error checking storage configuration"
 msgid "An error occurred while activating your storage configuration."
 msgstr "ឆែកមើលការផ្ទុករបស់ការកំណត់រចនាសម្ព័ន្ធមានកំហុស"
 
-#: pyanaconda/errors.py:125
+#: pyanaconda/errors.py:128
 #, fuzzy
 #| msgid ""
 #| "There is a problem with your existing storage configuration: "
@@ -702,27 +685,27 @@ msgstr ""
 "ពេលអ្នកដោះស្រាយបានហើយ អ្នកអាចធ្វើម្តងទៀតជាមួយនឹង។ បើអ្នកមិនជួសជុលវាបានទេ "
 "អ្នកនឹងត្រូវតែចាកចេញការតំឡើង។"
 
-#: pyanaconda/errors.py:134
+#: pyanaconda/errors.py:137
 msgctxt "GUI|Storage Detailed Error Dialog"
 msgid "_Exit Installer"
 msgstr "_ចាកចេញ ការតំឡើង"
 
-#: pyanaconda/errors.py:135
+#: pyanaconda/errors.py:138
 msgctxt "GUI|Storage Detailed Error Dialog"
 msgid "_Retry"
 msgstr "_ធ្វើម្តងទៀត"
 
-#: pyanaconda/errors.py:152
+#: pyanaconda/errors.py:155
 msgid ""
 "Some packages, groups or modules are broken, the installation will be "
 "aborted."
 msgstr ""
 
-#: pyanaconda/errors.py:158
+#: pyanaconda/errors.py:161
 msgid "Would you like to ignore this and continue with installation?"
 msgstr ""
 
-#: pyanaconda/errors.py:165
+#: pyanaconda/errors.py:168
 #, python-format
 msgid ""
 "There was an error running the kickstart script at line %(lineno)s.  This is "
@@ -736,7 +719,7 @@ msgstr ""
 "\n"
 "%(details)s"
 
-#: pyanaconda/errors.py:173
+#: pyanaconda/errors.py:176
 #, fuzzy
 #| msgid ""
 #| "The following error occurred while installing.  This is a fatal error and "
@@ -747,7 +730,7 @@ msgid ""
 msgstr ""
 "កំហុសដែលមាននេះកើតឡើងកំពុងធ្វើការតំឡើង។  នេះជាកំហុសដ៏ធ្ងន់ធ្ងរមួយ​ហើយការតំឡើងនឹងត្រូវបញ្ឈប់។"
 
-#: pyanaconda/errors.py:181
+#: pyanaconda/errors.py:184
 #, fuzzy
 #| msgid ""
 #| "The following error occurred while installing.  This is a fatal error and "
@@ -758,17 +741,33 @@ msgid ""
 msgstr ""
 "កំហុសដែលមាននេះកើតឡើងកំពុងធ្វើការតំឡើង។  នេះជាកំហុសដ៏ធ្ងន់ធ្ងរមួយ​ហើយការតំឡើងនឹងត្រូវបញ្ឈប់។"
 
-#: pyanaconda/errors.py:189
+#: pyanaconda/errors.py:192
 msgid ""
 "The following software marked for installation has errors.\n"
 "This is likely caused by an error with your installation source."
 msgstr ""
 
-#: pyanaconda/errors.py:197
+#: pyanaconda/errors.py:200
 msgid ""
 "The following error occurred while installing the boot loader. The system "
 "will not be bootable. Would you like to ignore this and continue with "
 "installation?"
+msgstr ""
+"កំហុសដែលមាននេះកើតឡើងកំឡុងពេលតំឡើង boot loader។ ប្រព័ន្ធមិនអាច boot។ "
+"តើអ្នកចង់បដិសេធហើយបន្តការតំឡើងទេ?"
+
+#: pyanaconda/errors.py:212
+#, fuzzy, python-brace-format
+#| msgid ""
+#| "The following error occurred while installing the boot loader. The system "
+#| "will not be bootable. Would you like to ignore this and continue with "
+#| "installation?"
+msgid ""
+"The following error occurred during the installation:\n"
+"\n"
+"{details}\n"
+"\n"
+"Would you like to ignore this and continue with installation?"
 msgstr ""
 "កំហុសដែលមាននេះកើតឡើងកំឡុងពេលតំឡើង boot loader។ ប្រព័ន្ធមិនអាច boot។ "
 "តើអ្នកចង់បដិសេធហើយបន្តការតំឡើងទេ?"
@@ -935,6 +934,18 @@ msgstr ""
 msgid "%s is missing. Cannot setup firewall."
 msgstr "%s បានបាត់បង់។ មិនអាចតំឡើង firewall។"
 
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:40
+msgid "Starting Flatpak installation"
+msgstr ""
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:52
+msgid "Post-installation flatpak tasks"
+msgstr ""
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:58
+msgid "Flatpak installation has finished"
+msgstr ""
+
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:390
 #, fuzzy
 #| msgid "Deployment starting: %s"
@@ -966,6 +977,11 @@ msgstr ""
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:512
 msgid "Writing objects"
+msgstr ""
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_manager.py:205
+#, python-format
+msgid "Installing %(flatpak_name)s"
 msgstr ""
 
 #: pyanaconda/modules/payloads/source/live_image/live_image.py:55
@@ -4232,11 +4248,11 @@ msgid ""
 "The installer will now terminate."
 msgstr ""
 
-#: anaconda.py:376
+#: anaconda.py:379
 msgid "Unable to create PID file"
 msgstr ""
 
-#: anaconda.py:377
+#: anaconda.py:380
 #, python-format
 msgid ""
 "Anaconda is unable to create %s because the file already exists. Anaconda is "

@@ -39,7 +39,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2021-02-08 00:35+0000\n"
+"POT-Creation-Date: 2021-02-10 00:34+0000\n"
 "PO-Revision-Date: 2021-01-23 04:37+0000\n"
 "Last-Translator: Tian Shixiong <tiansworld@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://translate.fedoraproject.org/"
@@ -276,18 +276,6 @@ msgstr "正在下载 %(url)s (%(pct)d%%)"
 msgid "Performing post-installation setup tasks"
 msgstr "正在执行安装后设置"
 
-#: pyanaconda/payload/rpmostreepayload.py:239
-msgid "Starting Flatpak installation"
-msgstr "开始 Flatpak 安装"
-
-#: pyanaconda/payload/rpmostreepayload.py:251
-msgid "Post-installation flatpak tasks"
-msgstr "安装后 flatpak 任务"
-
-#: pyanaconda/payload/rpmostreepayload.py:257
-msgid "Flatpak installation has finished"
-msgstr "Flatpak 安装已完成"
-
 #: pyanaconda/payload/manager.py:75
 msgid "Failed to set up installation source"
 msgstr "设置安装源失败"
@@ -295,11 +283,6 @@ msgstr "设置安装源失败"
 #: pyanaconda/payload/manager.py:76
 msgid "Error downloading package metadata"
 msgstr "下载软件包元数据时出错"
-
-#: pyanaconda/payload/flatpak.py:205
-#, python-format
-msgid "Installing %(flatpak_name)s"
-msgstr "正在安装 %(flatpak_name)s"
 
 #: pyanaconda/payload/dnf/download_progress.py:55
 #, python-format
@@ -741,11 +724,11 @@ msgstr ""
 "在某些 PPC 平台中的引导程序配置中，\n"
 "需要 PReP 引导分区。"
 
-#: pyanaconda/errors.py:118
+#: pyanaconda/errors.py:121
 msgid "An error occurred while activating your storage configuration."
 msgstr "激活您的存储配置时出现错误。"
 
-#: pyanaconda/errors.py:125
+#: pyanaconda/errors.py:128
 msgid ""
 "There is a problem with your existing storage configuration or your initial "
 "settings, for example a kickstart file. You must resolve this matter before "
@@ -760,27 +743,27 @@ msgstr ""
 "\n"
 "问题解决后，请再次尝试扫描存储。如果问题没有解决，则只能退出安装程序。"
 
-#: pyanaconda/errors.py:134
+#: pyanaconda/errors.py:137
 msgctxt "GUI|Storage Detailed Error Dialog"
 msgid "_Exit Installer"
 msgstr "退出安装程序(_E)"
 
-#: pyanaconda/errors.py:135
+#: pyanaconda/errors.py:138
 msgctxt "GUI|Storage Detailed Error Dialog"
 msgid "_Retry"
 msgstr "重试(_R)"
 
-#: pyanaconda/errors.py:152
+#: pyanaconda/errors.py:155
 msgid ""
 "Some packages, groups or modules are broken, the installation will be "
 "aborted."
 msgstr "一些软件包、组或模块已损坏，安装将被终止。"
 
-#: pyanaconda/errors.py:158
+#: pyanaconda/errors.py:161
 msgid "Would you like to ignore this and continue with installation?"
 msgstr "您确定要忽略这个以继续安装吗？"
 
-#: pyanaconda/errors.py:165
+#: pyanaconda/errors.py:168
 #, python-format
 msgid ""
 "There was an error running the kickstart script at line %(lineno)s.  This is "
@@ -794,7 +777,7 @@ msgstr ""
 "\n"
 "%(details)s"
 
-#: pyanaconda/errors.py:173
+#: pyanaconda/errors.py:176
 #, fuzzy
 #| msgid ""
 #| "The following error occurred while installing.  This is a fatal error and "
@@ -804,7 +787,7 @@ msgid ""
 "error and installation will be aborted."
 msgstr "安装时出现以下错误。这是个致命错误，安装将中止。"
 
-#: pyanaconda/errors.py:181
+#: pyanaconda/errors.py:184
 #, fuzzy
 #| msgid ""
 #| "The following error occurred while installing.  This is a fatal error and "
@@ -814,7 +797,7 @@ msgid ""
 "error and installation will be aborted."
 msgstr "安装时出现以下错误。这是个致命错误，安装将中止。"
 
-#: pyanaconda/errors.py:189
+#: pyanaconda/errors.py:192
 msgid ""
 "The following software marked for installation has errors.\n"
 "This is likely caused by an error with your installation source."
@@ -822,11 +805,26 @@ msgstr ""
 "以下被标记为待安装的软件存在错误。\n"
 "这很可能是安装源存在错误造成的。"
 
-#: pyanaconda/errors.py:197
+#: pyanaconda/errors.py:200
 msgid ""
 "The following error occurred while installing the boot loader. The system "
 "will not be bootable. Would you like to ignore this and continue with "
 "installation?"
+msgstr ""
+"安装引导装载程序时发生以下错误。系统将无法引导。要忽略该错误并继续安装吗？"
+
+#: pyanaconda/errors.py:212
+#, fuzzy, python-brace-format
+#| msgid ""
+#| "The following error occurred while installing the boot loader. The system "
+#| "will not be bootable. Would you like to ignore this and continue with "
+#| "installation?"
+msgid ""
+"The following error occurred during the installation:\n"
+"\n"
+"{details}\n"
+"\n"
+"Would you like to ignore this and continue with installation?"
 msgstr ""
 "安装引导装载程序时发生以下错误。系统将无法引导。要忽略该错误并继续安装吗？"
 
@@ -987,6 +985,18 @@ msgstr "不可用"
 msgid "%s is missing. Cannot setup firewall."
 msgstr "%s 缺失。无法设置防火墙。"
 
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:40
+msgid "Starting Flatpak installation"
+msgstr "开始 Flatpak 安装"
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:52
+msgid "Post-installation flatpak tasks"
+msgstr "安装后 flatpak 任务"
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:58
+msgid "Flatpak installation has finished"
+msgstr "Flatpak 安装已完成"
+
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:390
 msgid "Deployment starting: {}"
 msgstr "部署正在开始：{}"
@@ -1012,6 +1022,11 @@ msgstr "接收项：{percent}% ({fetched}/{requested}) {bytes}"
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:512
 msgid "Writing objects"
 msgstr "写对象"
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_manager.py:205
+#, python-format
+msgid "Installing %(flatpak_name)s"
+msgstr "正在安装 %(flatpak_name)s"
 
 #: pyanaconda/modules/payloads/source/live_image/live_image.py:55
 msgid "Live image"
@@ -4310,11 +4325,11 @@ msgstr ""
 "\n"
 "安装程序将终止。"
 
-#: anaconda.py:376
+#: anaconda.py:379
 msgid "Unable to create PID file"
 msgstr "无法创建 PID 文件"
 
-#: anaconda.py:377
+#: anaconda.py:380
 #, python-format
 msgid ""
 "Anaconda is unable to create %s because the file already exists. Anaconda is "

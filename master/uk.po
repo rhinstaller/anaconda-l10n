@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2021-02-08 00:35+0000\n"
+"POT-Creation-Date: 2021-02-10 00:34+0000\n"
 "PO-Revision-Date: 2021-02-07 13:40+0000\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <https://translate.fedoraproject.org/projects/"
@@ -272,18 +272,6 @@ msgstr "Отримуємо %(url)s (%(pct)d%%)"
 msgid "Performing post-installation setup tasks"
 msgstr "Виконуємо завдання з налаштовування після встановлення"
 
-#: pyanaconda/payload/rpmostreepayload.py:239
-msgid "Starting Flatpak installation"
-msgstr "Починаємо встановлення Flatpak"
-
-#: pyanaconda/payload/rpmostreepayload.py:251
-msgid "Post-installation flatpak tasks"
-msgstr "Виконуємо завдання після встановлення flatpak"
-
-#: pyanaconda/payload/rpmostreepayload.py:257
-msgid "Flatpak installation has finished"
-msgstr "Встановлення flatpak завершено"
-
 #: pyanaconda/payload/manager.py:75
 msgid "Failed to set up installation source"
 msgstr "Не вдалося налаштувати джерело для встановлення"
@@ -291,11 +279,6 @@ msgstr "Не вдалося налаштувати джерело для вст�
 #: pyanaconda/payload/manager.py:76
 msgid "Error downloading package metadata"
 msgstr "Помилка під час отримання метаданих пакунків"
-
-#: pyanaconda/payload/flatpak.py:205
-#, python-format
-msgid "Installing %(flatpak_name)s"
-msgstr "Встановлюємо %(flatpak_name)s"
 
 #: pyanaconda/payload/dnf/download_progress.py:55
 #, python-format
@@ -759,12 +742,12 @@ msgstr ""
 "На деяких платформах PPC частиною налаштовування завантажувача\n"
 "є створення розділу завантаження PReP."
 
-#: pyanaconda/errors.py:118
+#: pyanaconda/errors.py:121
 msgid "An error occurred while activating your storage configuration."
 msgstr ""
 "Помилка під час спроби задіяти ваші налаштування сховищ зберігання даних."
 
-#: pyanaconda/errors.py:125
+#: pyanaconda/errors.py:128
 msgid ""
 "There is a problem with your existing storage configuration or your initial "
 "settings, for example a kickstart file. You must resolve this matter before "
@@ -784,17 +767,17 @@ msgstr ""
 "Якщо проблему не вдасться усунути, доведеться завершити роботу засобу "
 "встановлення системи."
 
-#: pyanaconda/errors.py:134
+#: pyanaconda/errors.py:137
 msgctxt "GUI|Storage Detailed Error Dialog"
 msgid "_Exit Installer"
 msgstr "_Перервати встановлення"
 
-#: pyanaconda/errors.py:135
+#: pyanaconda/errors.py:138
 msgctxt "GUI|Storage Detailed Error Dialog"
 msgid "_Retry"
 msgstr "П_овторити"
 
-#: pyanaconda/errors.py:152
+#: pyanaconda/errors.py:155
 msgid ""
 "Some packages, groups or modules are broken, the installation will be "
 "aborted."
@@ -802,11 +785,11 @@ msgstr ""
 "Виявлено пошкодження деяких пакунків, груп або модулів. Встановлення буде "
 "перервано."
 
-#: pyanaconda/errors.py:158
+#: pyanaconda/errors.py:161
 msgid "Would you like to ignore this and continue with installation?"
 msgstr "Хочете проігнорувати це і продовжити встановлення?"
 
-#: pyanaconda/errors.py:165
+#: pyanaconda/errors.py:168
 #, python-format
 msgid ""
 "There was an error running the kickstart script at line %(lineno)s.  This is "
@@ -821,7 +804,7 @@ msgstr ""
 "\n"
 "%(details)s"
 
-#: pyanaconda/errors.py:173
+#: pyanaconda/errors.py:176
 msgid ""
 "The following error occurred while setting up the payload. This is a fatal "
 "error and installation will be aborted."
@@ -829,7 +812,7 @@ msgstr ""
 "Під час спроби налаштовування вмісту сталася вказана нижче помилка. Ця "
 "помилка є критичною, тому встановлення буде перервано."
 
-#: pyanaconda/errors.py:181
+#: pyanaconda/errors.py:184
 msgid ""
 "The following error occurred while installing the payload. This is a fatal "
 "error and installation will be aborted."
@@ -837,7 +820,7 @@ msgstr ""
 "Під час спроби встановлення вмісту сталася вказана нижче помилка. Ця помилка "
 "є критичною, тому встановлення буде перервано."
 
-#: pyanaconda/errors.py:189
+#: pyanaconda/errors.py:192
 msgid ""
 "The following software marked for installation has errors.\n"
 "This is likely caused by an error with your installation source."
@@ -846,11 +829,28 @@ msgstr ""
 "виявлено помилки.\n"
 "Ймовірно, причиною цього є помилка на носії для встановлення."
 
-#: pyanaconda/errors.py:197
+#: pyanaconda/errors.py:200
 msgid ""
 "The following error occurred while installing the boot loader. The system "
 "will not be bootable. Would you like to ignore this and continue with "
 "installation?"
+msgstr ""
+"Під час встановлення завантажувача сталася помилка, подробиці якої наведено "
+"нижче. Система не зможе завантажуватися. Хочете проігнорувати цю помилку і "
+"продовжити встановлення?"
+
+#: pyanaconda/errors.py:212
+#, fuzzy, python-brace-format
+#| msgid ""
+#| "The following error occurred while installing the boot loader. The system "
+#| "will not be bootable. Would you like to ignore this and continue with "
+#| "installation?"
+msgid ""
+"The following error occurred during the installation:\n"
+"\n"
+"{details}\n"
+"\n"
+"Would you like to ignore this and continue with installation?"
 msgstr ""
 "Під час встановлення завантажувача сталася помилка, подробиці якої наведено "
 "нижче. Система не зможе завантажуватися. Хочете проігнорувати цю помилку і "
@@ -1024,6 +1024,18 @@ msgstr "не доступне"
 msgid "%s is missing. Cannot setup firewall."
 msgstr "Не знайдено %s. Налаштовування брандмауера неможливе."
 
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:40
+msgid "Starting Flatpak installation"
+msgstr "Починаємо встановлення Flatpak"
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:52
+msgid "Post-installation flatpak tasks"
+msgstr "Виконуємо завдання після встановлення flatpak"
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:58
+msgid "Flatpak installation has finished"
+msgstr "Встановлення flatpak завершено"
+
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:390
 msgid "Deployment starting: {}"
 msgstr "Початок розгортання: {}"
@@ -1049,6 +1061,11 @@ msgstr "Отримуємо об'єкти: {percent}% ({fetched} з {requested}) 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:512
 msgid "Writing objects"
 msgstr "Записуємо об'єкти"
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_manager.py:205
+#, python-format
+msgid "Installing %(flatpak_name)s"
+msgstr "Встановлюємо %(flatpak_name)s"
 
 #: pyanaconda/modules/payloads/source/live_image/live_image.py:55
 msgid "Live image"
@@ -4556,11 +4573,11 @@ msgstr ""
 "\n"
 "Зараз засіб встановлення припинить свою роботу."
 
-#: anaconda.py:376
+#: anaconda.py:379
 msgid "Unable to create PID file"
 msgstr "Не вдалося створити файл PID"
 
-#: anaconda.py:377
+#: anaconda.py:380
 #, python-format
 msgid ""
 "Anaconda is unable to create %s because the file already exists. Anaconda is "

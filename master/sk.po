@@ -24,7 +24,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2021-02-08 00:35+0000\n"
+"POT-Creation-Date: 2021-02-10 00:34+0000\n"
 "PO-Revision-Date: 2021-01-25 23:38+0000\n"
 "Last-Translator: Ondrej Sulek <feonsu@gmail.com>\n"
 "Language-Team: Slovak <https://translate.fedoraproject.org/projects/anaconda/"
@@ -268,18 +268,6 @@ msgstr "Preberá sa %(url)s (%(pct)d%%)"
 msgid "Performing post-installation setup tasks"
 msgstr "Vykonávajú sa poinštalačné úlohy inštalátora"
 
-#: pyanaconda/payload/rpmostreepayload.py:239
-msgid "Starting Flatpak installation"
-msgstr "Spúšťa sa inštalácia Flatpak"
-
-#: pyanaconda/payload/rpmostreepayload.py:251
-msgid "Post-installation flatpak tasks"
-msgstr "Poinštalačné úlohy flatpak"
-
-#: pyanaconda/payload/rpmostreepayload.py:257
-msgid "Flatpak installation has finished"
-msgstr "Inštalácia Flatpak bola dokončená"
-
 #: pyanaconda/payload/manager.py:75
 msgid "Failed to set up installation source"
 msgstr "Zlyhalo nastavenie zdroja inštalácie"
@@ -287,11 +275,6 @@ msgstr "Zlyhalo nastavenie zdroja inštalácie"
 #: pyanaconda/payload/manager.py:76
 msgid "Error downloading package metadata"
 msgstr "Chyba pri preberaní metaúdajov balíku"
-
-#: pyanaconda/payload/flatpak.py:205
-#, python-format
-msgid "Installing %(flatpak_name)s"
-msgstr "Inštaluje sa %(flatpak_name)s"
 
 #: pyanaconda/payload/dnf/download_progress.py:55
 #, python-format
@@ -749,11 +732,11 @@ msgstr ""
 "Zavádzací oddiel PReP je vyžadovaný ako súčasť konfigurácie zavádzača \n"
 "na niektorých platformách PPC."
 
-#: pyanaconda/errors.py:118
+#: pyanaconda/errors.py:121
 msgid "An error occurred while activating your storage configuration."
 msgstr "Pri aktivácii konfigurácie úložiska nastala chyba."
 
-#: pyanaconda/errors.py:125
+#: pyanaconda/errors.py:128
 msgid ""
 "There is a problem with your existing storage configuration or your initial "
 "settings, for example a kickstart file. You must resolve this matter before "
@@ -772,17 +755,17 @@ msgstr ""
 "Po vyriešení problému môžete preskenovať disky. Ak neodstránite problém, "
 "budete musieť ukončiť inštalátor."
 
-#: pyanaconda/errors.py:134
+#: pyanaconda/errors.py:137
 msgctxt "GUI|Storage Detailed Error Dialog"
 msgid "_Exit Installer"
 msgstr "_Ukončiť inštalátor"
 
-#: pyanaconda/errors.py:135
+#: pyanaconda/errors.py:138
 msgctxt "GUI|Storage Detailed Error Dialog"
 msgid "_Retry"
 msgstr "_Znovu"
 
-#: pyanaconda/errors.py:152
+#: pyanaconda/errors.py:155
 msgid ""
 "Some packages, groups or modules are broken, the installation will be "
 "aborted."
@@ -790,11 +773,11 @@ msgstr ""
 "Niektoré balíčky, skupiny alebo moduly sú pokazené, inštalácia bude "
 "prerušená:"
 
-#: pyanaconda/errors.py:158
+#: pyanaconda/errors.py:161
 msgid "Would you like to ignore this and continue with installation?"
 msgstr "Chcete toto upozornenie ignorovať a pokračovať v inštalácii?"
 
-#: pyanaconda/errors.py:165
+#: pyanaconda/errors.py:168
 #, python-format
 msgid ""
 "There was an error running the kickstart script at line %(lineno)s.  This is "
@@ -808,7 +791,7 @@ msgstr ""
 "\n"
 "%(details)s"
 
-#: pyanaconda/errors.py:173
+#: pyanaconda/errors.py:176
 msgid ""
 "The following error occurred while setting up the payload. This is a fatal "
 "error and installation will be aborted."
@@ -816,7 +799,7 @@ msgstr ""
 "Počas nastavovania údajovej časti sa vyskytla nasledovná chyba. Je to "
 "závažná chyba a inštalácia bude prerušená."
 
-#: pyanaconda/errors.py:181
+#: pyanaconda/errors.py:184
 msgid ""
 "The following error occurred while installing the payload. This is a fatal "
 "error and installation will be aborted."
@@ -824,7 +807,7 @@ msgstr ""
 "Počas inštalácie údajovej časti sa vyskytla nasledovná chyba. Je to závažná "
 "chyba a inštalácia bude prerušená."
 
-#: pyanaconda/errors.py:189
+#: pyanaconda/errors.py:192
 msgid ""
 "The following software marked for installation has errors.\n"
 "This is likely caused by an error with your installation source."
@@ -832,11 +815,27 @@ msgstr ""
 "Nasledovný softvér označený na inštaláciu obsahuje chyby. \n"
 "To je najčastejšie spôsobené chybou s vaším zdrojom inštalácie."
 
-#: pyanaconda/errors.py:197
+#: pyanaconda/errors.py:200
 msgid ""
 "The following error occurred while installing the boot loader. The system "
 "will not be bootable. Would you like to ignore this and continue with "
 "installation?"
+msgstr ""
+"Vyskytla sa nasledovná chyba počas inštalácie zavádzača. Systém nebude možné "
+"spustiť. Chcete túto chybu ignorovať a pokračovať v inštalácii?"
+
+#: pyanaconda/errors.py:212
+#, fuzzy, python-brace-format
+#| msgid ""
+#| "The following error occurred while installing the boot loader. The system "
+#| "will not be bootable. Would you like to ignore this and continue with "
+#| "installation?"
+msgid ""
+"The following error occurred during the installation:\n"
+"\n"
+"{details}\n"
+"\n"
+"Would you like to ignore this and continue with installation?"
 msgstr ""
 "Vyskytla sa nasledovná chyba počas inštalácie zavádzača. Systém nebude možné "
 "spustiť. Chcete túto chybu ignorovať a pokračovať v inštalácii?"
@@ -1003,6 +1002,18 @@ msgstr "nedostupné"
 msgid "%s is missing. Cannot setup firewall."
 msgstr "%s chýba. Nedá sa nastaviť firewall."
 
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:40
+msgid "Starting Flatpak installation"
+msgstr "Spúšťa sa inštalácia Flatpak"
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:52
+msgid "Post-installation flatpak tasks"
+msgstr "Poinštalačné úlohy flatpak"
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:58
+msgid "Flatpak installation has finished"
+msgstr "Inštalácia Flatpak bola dokončená"
+
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:390
 msgid "Deployment starting: {}"
 msgstr "Nasadenie spustené: {}"
@@ -1028,6 +1039,11 @@ msgstr "Prijímajú sa objekty: {percent}% ({fetched}/{requested}) {bytes}"
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:512
 msgid "Writing objects"
 msgstr "Zapisujú sa objekty"
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_manager.py:205
+#, python-format
+msgid "Installing %(flatpak_name)s"
+msgstr "Inštaluje sa %(flatpak_name)s"
 
 #: pyanaconda/modules/payloads/source/live_image/live_image.py:55
 msgid "Live image"
@@ -4490,11 +4506,11 @@ msgstr ""
 "\n"
 "Inštalátor sa teraz ukončí."
 
-#: anaconda.py:376
+#: anaconda.py:379
 msgid "Unable to create PID file"
 msgstr "Nie je možné vytvoriť súbor PID"
 
-#: anaconda.py:377
+#: anaconda.py:380
 #, python-format
 msgid ""
 "Anaconda is unable to create %s because the file already exists. Anaconda is "

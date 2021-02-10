@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2021-02-08 00:35+0000\n"
+"POT-Creation-Date: 2021-02-10 00:34+0000\n"
 "PO-Revision-Date: 2020-11-27 10:35+0000\n"
 "Last-Translator: Carmen Bianca Bakker <carmen@carmenbianca.eu>\n"
 "Language-Team: Esperanto <https://translate.fedoraproject.org/projects/"
@@ -228,18 +228,6 @@ msgstr "Elŝutante %(url)s (%(pct)d%%)"
 msgid "Performing post-installation setup tasks"
 msgstr "Plenumante post-instaladajn agordadajn taskojn"
 
-#: pyanaconda/payload/rpmostreepayload.py:239
-msgid "Starting Flatpak installation"
-msgstr ""
-
-#: pyanaconda/payload/rpmostreepayload.py:251
-msgid "Post-installation flatpak tasks"
-msgstr ""
-
-#: pyanaconda/payload/rpmostreepayload.py:257
-msgid "Flatpak installation has finished"
-msgstr ""
-
 #: pyanaconda/payload/manager.py:75
 msgid "Failed to set up installation source"
 msgstr "Malsukcesis agordi fonton de instalo"
@@ -247,11 +235,6 @@ msgstr "Malsukcesis agordi fonton de instalo"
 #: pyanaconda/payload/manager.py:76
 msgid "Error downloading package metadata"
 msgstr "Eraro dum elŝuto de pakaj metadatumoj"
-
-#: pyanaconda/payload/flatpak.py:205
-#, python-format
-msgid "Installing %(flatpak_name)s"
-msgstr ""
 
 #: pyanaconda/payload/dnf/download_progress.py:55
 #, python-format
@@ -700,13 +683,13 @@ msgstr ""
 "La PReP-praŝarga subdisko oni bezonas kiel parto de\n"
 "la praŝargila agordado sur kelkaj PPC-platformoj."
 
-#: pyanaconda/errors.py:118
+#: pyanaconda/errors.py:121
 #, fuzzy
 #| msgid "Error checking storage configuration"
 msgid "An error occurred while activating your storage configuration."
 msgstr "Eraro dum kontrolado de konserveja agordado"
 
-#: pyanaconda/errors.py:125
+#: pyanaconda/errors.py:128
 #, fuzzy
 #| msgid ""
 #| "There is a problem with your existing storage configuration: "
@@ -735,27 +718,27 @@ msgstr ""
 "Kiam vi solvis la problemon, vi povas reprovi la konservejan skanadon. Se vi "
 "ne riparas ĝin vi devos ĉesigi la instalilon."
 
-#: pyanaconda/errors.py:134
+#: pyanaconda/errors.py:137
 msgctxt "GUI|Storage Detailed Error Dialog"
 msgid "_Exit Installer"
 msgstr "Ĉ_esigi instalilon"
 
-#: pyanaconda/errors.py:135
+#: pyanaconda/errors.py:138
 msgctxt "GUI|Storage Detailed Error Dialog"
 msgid "_Retry"
 msgstr "_Reprovi"
 
-#: pyanaconda/errors.py:152
+#: pyanaconda/errors.py:155
 msgid ""
 "Some packages, groups or modules are broken, the installation will be "
 "aborted."
 msgstr ""
 
-#: pyanaconda/errors.py:158
+#: pyanaconda/errors.py:161
 msgid "Would you like to ignore this and continue with installation?"
 msgstr ""
 
-#: pyanaconda/errors.py:165
+#: pyanaconda/errors.py:168
 #, python-format
 msgid ""
 "There was an error running the kickstart script at line %(lineno)s.  This is "
@@ -765,7 +748,7 @@ msgid ""
 "%(details)s"
 msgstr ""
 
-#: pyanaconda/errors.py:173
+#: pyanaconda/errors.py:176
 #, fuzzy
 #| msgid ""
 #| "The following errors occurred with your partitioning:\n"
@@ -783,7 +766,7 @@ msgstr ""
 "\n"
 "La instalado nun ĉesos."
 
-#: pyanaconda/errors.py:181
+#: pyanaconda/errors.py:184
 #, fuzzy
 #| msgid ""
 #| "The following errors occurred with your partitioning:\n"
@@ -801,17 +784,27 @@ msgstr ""
 "\n"
 "La instalado nun ĉesos."
 
-#: pyanaconda/errors.py:189
+#: pyanaconda/errors.py:192
 msgid ""
 "The following software marked for installation has errors.\n"
 "This is likely caused by an error with your installation source."
 msgstr ""
 
-#: pyanaconda/errors.py:197
+#: pyanaconda/errors.py:200
 msgid ""
 "The following error occurred while installing the boot loader. The system "
 "will not be bootable. Would you like to ignore this and continue with "
 "installation?"
+msgstr ""
+
+#: pyanaconda/errors.py:212
+#, python-brace-format
+msgid ""
+"The following error occurred during the installation:\n"
+"\n"
+"{details}\n"
+"\n"
+"Would you like to ignore this and continue with installation?"
 msgstr ""
 
 #: pyanaconda/pwpolicy.py:195
@@ -990,6 +983,18 @@ msgstr "Nedisponebla"
 msgid "%s is missing. Cannot setup firewall."
 msgstr "%s mankas. Ne povas agordi fajroŝirmilon."
 
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:40
+msgid "Starting Flatpak installation"
+msgstr ""
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:52
+msgid "Post-installation flatpak tasks"
+msgstr ""
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:58
+msgid "Flatpak installation has finished"
+msgstr ""
+
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:390
 #, fuzzy
 #| msgid "Deployment starting: %s"
@@ -1025,6 +1030,11 @@ msgstr ""
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:512
 msgid "Writing objects"
 msgstr "Skribante objektojn"
+
+#: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_manager.py:205
+#, python-format
+msgid "Installing %(flatpak_name)s"
+msgstr ""
 
 #: pyanaconda/modules/payloads/source/live_image/live_image.py:55
 msgid "Live image"
@@ -4476,12 +4486,12 @@ msgid ""
 "The installer will now terminate."
 msgstr ""
 
-#: anaconda.py:376
+#: anaconda.py:379
 #, fuzzy
 msgid "Unable to create PID file"
 msgstr "Ne eblas krei fontdosieron"
 
-#: anaconda.py:377
+#: anaconda.py:380
 #, python-format
 msgid ""
 "Anaconda is unable to create %s because the file already exists. Anaconda is "
