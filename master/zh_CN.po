@@ -40,7 +40,7 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2021-02-11 00:35+0000\n"
-"PO-Revision-Date: 2021-01-23 04:37+0000\n"
+"PO-Revision-Date: 2021-02-13 08:40+0000\n"
 "Last-Translator: Tian Shixiong <tiansworld@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://translate.fedoraproject.org/"
 "projects/anaconda/master/zh_CN/>\n"
@@ -81,7 +81,7 @@ msgstr "%(productName)s %(productVersion)s 安装"
 #: pyanaconda/vnc.py:148
 #, python-format
 msgid "%(productName)s %(productVersion)s installation on host %(name)s"
-msgstr "在主机 %(name)s 上安装 %(productName)s %(productVersion)s"
+msgstr "在主机 %(name)s 上安装%(productName)s %(productVersion)s"
 
 #: pyanaconda/vnc.py:167
 #, python-format
@@ -184,7 +184,7 @@ msgid ""
 msgstr ""
 "\n"
 "\n"
-"未知错误。正在中止。\n"
+"未知错误。正在中止。 \n"
 "\n"
 
 #: pyanaconda/vnc.py:293
@@ -258,7 +258,7 @@ msgstr ""
 
 #: pyanaconda/payload/live/payload_liveimg.py:208
 msgid "Checking image checksum"
-msgstr "正在检查镜像校验值"
+msgstr "正在校验镜像"
 
 #: pyanaconda/payload/live/payload_liveos.py:93
 #: pyanaconda/payload/live/payload_base.py:75
@@ -778,24 +778,16 @@ msgstr ""
 "%(details)s"
 
 #: pyanaconda/errors.py:176
-#, fuzzy
-#| msgid ""
-#| "The following error occurred while installing.  This is a fatal error and "
-#| "installation will be aborted."
 msgid ""
 "The following error occurred while setting up the payload. This is a fatal "
 "error and installation will be aborted."
-msgstr "安装时出现以下错误。这是个致命错误，安装将中止。"
+msgstr "设置负载时出现以下错误。这是个致命错误，安装将中止。"
 
 #: pyanaconda/errors.py:184
-#, fuzzy
-#| msgid ""
-#| "The following error occurred while installing.  This is a fatal error and "
-#| "installation will be aborted."
 msgid ""
 "The following error occurred while installing the payload. This is a fatal "
 "error and installation will be aborted."
-msgstr "安装时出现以下错误。这是个致命错误，安装将中止。"
+msgstr "设置负载时出现以下错误。这是个致命错误，安装将中止。"
 
 #: pyanaconda/errors.py:192
 msgid ""
@@ -814,11 +806,7 @@ msgstr ""
 "安装引导装载程序时发生以下错误。系统将无法引导。要忽略该错误并继续安装吗？"
 
 #: pyanaconda/errors.py:212
-#, fuzzy, python-brace-format
-#| msgid ""
-#| "The following error occurred while installing the boot loader. The system "
-#| "will not be bootable. Would you like to ignore this and continue with "
-#| "installation?"
+#, python-brace-format
 msgid ""
 "The following error occurred during the installation:\n"
 "\n"
@@ -826,7 +814,11 @@ msgid ""
 "\n"
 "Would you like to ignore this and continue with installation?"
 msgstr ""
-"安装引导装载程序时发生以下错误。系统将无法引导。要忽略该错误并继续安装吗？"
+"安装过程中发生以下错误。\n"
+"\n"
+"{details}\n"
+"\n"
+"要忽略该错误并继续安装吗？"
 
 #: pyanaconda/pwpolicy.py:195
 #, python-format
@@ -844,6 +836,7 @@ msgid ""
 "releases, which will result in a fatal error when it is encountered. Please "
 "modify your kickstart file to remove this command."
 msgstr ""
+"pwpolicy 命令已被弃用。安装过程中如遇此命令，则会导致致命错误，后续发行版本中会将其移除。请修改您的 kickstart 文件，将此命令从中删除。"
 
 #: pyanaconda/rescue.py:272
 msgid "Unable to find /bin/bash to execute!  Not starting shell."
@@ -963,7 +956,7 @@ msgstr "取消注册失败。"
 
 #: pyanaconda/modules/subscription/runtime.py:374
 msgid "Failed to attach subscription."
-msgstr "附加订阅失败。"
+msgstr "添加订阅失败。"
 
 #: pyanaconda/modules/subscription/runtime.py:441
 msgid "product name unknown"
@@ -4301,6 +4294,8 @@ msgid ""
 "releases, which will result in a fatal error when it is encountered. Please "
 "modify your kickstart file to remove this section."
 msgstr ""
+"%% anaconda 部分已弃用。安装过程中如遇此部分，则会导致致命错误，后续发行版本中会将其移除。请修改您的 kickstart "
+"文件，将此部分从中删除。"
 
 #: pyanaconda/kickstart.py:517
 msgid ""
