@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: anaconda 21.48.22.158\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2020-04-15 15:07+0200\n"
-"PO-Revision-Date: 2021-03-02 11:40+0000\n"
+"PO-Revision-Date: 2021-03-05 10:01+0000\n"
 "Last-Translator: Ricky Tigg <ricky.tigg@gmail.com>\n"
 "Language-Team: Finnish <https://translate.fedoraproject.org/projects/"
 "anaconda/rhel-7/fi/>\n"
@@ -62,8 +62,7 @@ msgstr ""
 #: pyanaconda/bootloader.py:442
 #, python-format
 msgid "%(name)s must have one of the following disklabel types: %(types)s."
-msgstr ""
-"%(name)s:n on oltava jokin seuraavista levytunnistetyypeistä: %(types)s."
+msgstr "%(name)s:n on oltava jokin seuraavista levynimiön tyypeistä: %(types)s."
 
 #: pyanaconda/bootloader.py:454
 #, python-format
@@ -79,7 +78,7 @@ msgstr ""
 #: pyanaconda/bootloader.py:472
 #, python-format
 msgid "%(desc)s must be between %(min)d and %(max)d MB in size"
-msgstr "%(desc)s:n sallittu koko on %(min)d – %(max)d Mt"
+msgstr "%(desc)s:n sallitun koon on oltava välillä %(min)d ja %(max)d Mt"
 
 #: pyanaconda/bootloader.py:478
 #, python-format
@@ -200,27 +199,27 @@ msgstr ""
 #: pyanaconda/constants.py:158
 #, python-format
 msgid "The %(password)s is empty."
-msgstr ""
+msgstr "%(password)s on tyhjä."
 
 #: pyanaconda/constants.py:159
 #, python-format
 msgid "The %(passwords)s do not match."
-msgstr ""
+msgstr "%(passwords)s eivät täsmää."
 
 #: pyanaconda/constants.py:160
 #, python-format
 msgid "The %(passwords)s you entered were different.  Please try again."
-msgstr ""
+msgstr "Kirjoittamasi %(passwords)s eivät olleet samoja. Yritä uudelleen."
 
 #: pyanaconda/constants.py:163
 #, python-format
 msgid "The %(password)s is too short"
-msgstr ""
+msgstr "%(password)s on liian lyhyt"
 
 #: pyanaconda/constants.py:164
 #, python-format
 msgid "The %(password)s you have provided is weak."
-msgstr ""
+msgstr "Antamasi %(password)s on heikko."
 
 #: pyanaconda/constants.py:165
 #, python-format
@@ -237,10 +236,12 @@ msgid ""
 "The %(password)s you have provided contains non-ASCII characters. You may "
 "not be able to switch between keyboard layouts when typing it."
 msgstr ""
+"Antamasi %(password)s sisältää merkkejä, jotka eivät ole ASCII:ta. Jos "
+"näppäimistöasettelua vaihdetaan, kirjautuminen ei ehkä onnistu."
 
 #: pyanaconda/constants.py:169
 msgid "You will have to press Done twice to confirm it."
-msgstr ""
+msgstr "Paina Valmis kahdesti vahvistaaksesi sen."
 
 #: pyanaconda/constants.py:170
 msgid "Press Done to continue."
@@ -275,7 +276,7 @@ msgstr "Vahva"
 
 #: pyanaconda/constants.py:181
 msgid "password"
-msgstr ""
+msgstr "salasana"
 
 #: pyanaconda/constants.py:182
 msgid "passwords"
@@ -283,11 +284,11 @@ msgstr ""
 
 #: pyanaconda/constants.py:185
 msgid "passphrase"
-msgstr ""
+msgstr "tunnuslause"
 
 #: pyanaconda/constants.py:186
 msgid "passphrases"
-msgstr ""
+msgstr "tunnuslauseet"
 
 #: pyanaconda/errors.py:109
 #, python-format
@@ -298,11 +299,16 @@ msgid ""
 "\n"
 "The installation will now terminate."
 msgstr ""
+"Seuraavat virheet tapahtuivat osioinnissa:\n"
+"\n"
+"%(errortxt)s\n"
+"\n"
+"Asennus keskeytyy."
 
 #: pyanaconda/errors.py:115
 #, python-format
 msgid "An error occurred while resizing the device %s."
-msgstr ""
+msgstr "Laitteen %s kokoa muuttaessa tapahtui virhe."
 
 #: pyanaconda/errors.py:124
 #, python-format
@@ -316,6 +322,13 @@ msgid ""
 "Once you have resolved the issue you can retry the storage scan. If you do "
 "not fix it you will have to exit the installer."
 msgstr ""
+"Olemassa olevassa tallennustilakokoonpanossa on ongelma %(errortxt)s\n"
+"\n"
+"Sinun on ratkaistava tämä asia, ennen kuin asennus voi jatkua. Käytettävissä "
+"on komentotulkki, johon pääset painamalla ctrl-alt-f1 ja sitten ctrl-b 2.\n"
+"\n"
+"Kun olet ratkaissut ongelman, voit yrittää tallennustarkistuksen uudelleen. "
+"Jos et korjaa sitä, sinun on poistuttava asennusohjelmasta."
 
 #: pyanaconda/errors.py:133 pyanaconda/ui/gui/main.glade.h:1
 msgid "_Exit Installer"
@@ -330,6 +343,8 @@ msgid ""
 "An error has occurred - no valid devices were found on which to create new "
 "file systems.  Please check your hardware for the cause of this problem."
 msgstr ""
+"Tapahtui virhe - ei löytynyt laitteita, joille voitaisiin luoda uusia "
+"tiedostojärjestelmiä. Tarkista laitteistosi ongelman syy."
 
 #: pyanaconda/errors.py:147
 #, python-format
@@ -348,6 +363,9 @@ msgid ""
 "incorrect file system type:\n"
 "\n"
 msgstr ""
+"/etc/fstab-tiedostossa on tietue, joka sisältää ei kelvollisen tai väärän "
+"tiedostojärjestelmän tyypin:\n"
+"\n"
 
 #: pyanaconda/errors.py:164
 #, python-format
@@ -427,6 +445,8 @@ msgid ""
 "The package '%s' is required for this installation. This package does not "
 "exist. This is a fatal error and installation will be aborted."
 msgstr ""
+"Paketti '%s' vaaditaan tätä asennusta varten. Tätä pakettia ei ole olemassa. "
+"Tämä on kohtalokas virhe ja asennus keskeytetään."
 
 # translation auto-copied from project Anaconda, version master, document
 # anaconda, author Ville Skyttä
@@ -468,6 +488,8 @@ msgid ""
 "caused by an error with\n"
 "your installation source."
 msgstr ""
+"Seuraavassa asennettavaksi merkityssä ohjelmistossa on virheitä.\n"
+"Tämä johtuu todennäköisesti asennuslähteen virheestä."
 
 #: pyanaconda/errors.py:269
 msgid ""
@@ -488,6 +510,12 @@ msgid ""
 "\n"
 "The installer will now terminate."
 msgstr ""
+"Asennus keskeytyi ongelmaan asennettaessa käynnistyslatainta. Virheviesti on:"
+"\n"
+"\n"
+"%s\n"
+"\n"
+" Asennusohjelma lopetetaan."
 
 #: pyanaconda/errors.py:290
 #, python-format
@@ -608,7 +636,7 @@ msgstr "Suoritetaan asennusta edeltäviä skriptejä"
 
 #: pyanaconda/install.py:221
 msgid "Discovering realm to join"
-msgstr ""
+msgstr "Etsitään toimialuetta, johon liittyä"
 
 # translation auto-copied from project Anaconda, version master, document
 # anaconda, author Ville Skyttä
@@ -621,7 +649,7 @@ msgstr "Asennetaan käynnistyslatain"
 #: pyanaconda/install.py:268 pyanaconda/packaging/livepayload.py:170
 #: pyanaconda/packaging/yumpayload.py:1555
 msgid "Performing post-installation setup tasks"
-msgstr "Tehdään asennuksen jälkeisiä asetuksia"
+msgstr "Suoritetaan asennuksen jälkeiset asennustehtävät"
 
 #: pyanaconda/iutil.py:789
 msgid "No host url"
@@ -648,15 +676,14 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
-"Vara-avainjärjestelmän (escrow) sertifikaattia ladattaessa tapahtui seuraava "
-"virhe:\n"
+"Väärennös-varmenteen lataamisen aikana tapahtui seuraava virhe:\n"
 "\n"
 "%s"
 
 #: pyanaconda/kickstart.py:273
 #, python-format
 msgid "%s is missing. Cannot setup authentication."
-msgstr ""
+msgstr "%s puuttuu. Todennusta ei voi määrittää."
 
 #: pyanaconda/kickstart.py:298
 #, python-format
@@ -670,12 +697,13 @@ msgstr "GRUB2 ei tue asentamista osioon."
 #: pyanaconda/kickstart.py:435
 #, python-format
 msgid "More than one match found for given boot drive \"%s\"."
-msgstr ""
+msgstr "Enemmän kuin yksi vastaavuus löytyi käynnistyslevylle \"%s\"."
 
 #: pyanaconda/kickstart.py:440
 #, python-format
 msgid "Requested boot drive \"%s\" doesn't exist or cannot be used."
 msgstr ""
+"Pyydettyä käynnistyslevyä \"%s\" ei ole olemassa tai sitä ei voida käyttää."
 
 #: pyanaconda/kickstart.py:514
 #, python-format
@@ -683,6 +711,8 @@ msgid ""
 "Btrfs partition \"%(device)s\" has a format of \"%(format)s\", but should "
 "have a format of \"Btrfs\"."
 msgstr ""
+"Btrfs-osio ”%(device)s” on ”%(format)s”-formaatissa, vaikka sen pitäisi olla "
+"”btrfs”-formaatissa."
 
 #: pyanaconda/kickstart.py:519
 #, python-format
@@ -702,7 +732,7 @@ msgstr ""
 #: pyanaconda/kickstart.py:1593
 #, python-format
 msgid "The mount point \"%s\" is not valid.  It must start with a /."
-msgstr "Liitoskohta ”%s” on kelvoton. Sen tulee alkaa \"/\":lla."
+msgstr "Liitoskohta ”%s” ei ole kelvollinen. Sen tulee alkaa \"/\":lla."
 
 #: pyanaconda/kickstart.py:556
 #, python-format
@@ -715,31 +745,33 @@ msgid ""
 "Disklabel \"%s\" given in clearpart command is not supported on this "
 "platform."
 msgstr ""
+"Komennossa 'clearpart' annettua levyn nimiöta \"%s\" ei tueta tällä "
+"alustalla."
 
 #: pyanaconda/kickstart.py:652
 #, python-format
 msgid "Disk \"%s\" given in clearpart command does not exist."
-msgstr ""
+msgstr "Komennossa 'clearpart' annettua levyä \"%s\" ei ole olemassa."
 
 #: pyanaconda/kickstart.py:665
 #, python-format
 msgid "Device \"%s\" given in clearpart device list does not exist."
-msgstr ""
+msgstr "Laitteessa clearpart annettua laitetta \"%s\" ei ole olemassa."
 
 #: pyanaconda/kickstart.py:692
 #, python-format
 msgid "NIC \"%s\" given in fcoe command does not exist."
-msgstr ""
+msgstr "NIC \"%s\", joka annettiin komennossa 'fcoe', ei ole olemassa."
 
 #: pyanaconda/kickstart.py:752
 #, python-format
 msgid "%s is missing. Cannot setup firewall."
-msgstr "%s puuttuu. Palomuurin asetuksia ei voi tehdä."
+msgstr "%s puuttuu. Palomuuria ei voi määrittää."
 
 #: pyanaconda/kickstart.py:807 pyanaconda/kickstart.py:818
 #, python-format
 msgid "Disk \"%s\" given in ignoredisk command does not exist."
-msgstr ""
+msgstr "Komennossa 'ignoredisk' määritettyä levyä \"%s\" ei ole olemassa."
 
 #: pyanaconda/kickstart.py:831
 #, python-format
@@ -747,6 +779,8 @@ msgid ""
 "Network interface \"%(nic)s\" required by iSCSI \"%(iscsiTarget)s\" target "
 "is not up."
 msgstr ""
+"ISCSI-kohteen \"%(iscsiTarget)s\" vaatima verkkoliitäntä \"%(nic)s\" ei ole "
+"päällä."
 
 #: pyanaconda/kickstart.py:841
 msgid ""
@@ -776,8 +810,8 @@ msgid ""
 "No thin pool exists with the name \"%s\". Specify thin pools before thin "
 "volumes."
 msgstr ""
-"Yhtään \"%s\"-nimistä ohutta varantoa ei ole. Määrittele ohuet varannot "
-"ennen ohuita taltioita."
+"Yhtään \"%s\"-nimistä ohutta varantoa ei ole olemassa. Määrittele ohuet "
+"varannot ennen ohuita taltioita."
 
 #: pyanaconda/kickstart.py:956
 msgid "logvol --noformat must also use the --name= option."
@@ -793,7 +827,7 @@ msgstr "Komennossa 'logvol' annettua loogista taltiota \"%s\"ei ole olemassa."
 #: pyanaconda/kickstart.py:1394 pyanaconda/kickstart.py:1477
 #, python-format
 msgid "Target size \"%(size)s\" for device \"%(device)s\" is invalid."
-msgstr "Kohdekoko ”%(size)s” laitteelle ”%(device)s” on kelvoton."
+msgstr "Kohdekoko ”%(size)s” laitteelle ”%(device)s” ei ole kelvollinen."
 
 #: pyanaconda/kickstart.py:995
 #, python-format
@@ -833,14 +867,14 @@ msgstr "\"%s\"-tiedostojärjestelmä ei ole tuettu."
 #: pyanaconda/kickstart.py:1173
 #, python-format
 msgid "Unknown or invalid device '%s' specified"
-msgstr "Tuntematon tai virheellinen laite '%s' määritetty"
+msgstr "Tuntematon tai ei kelvollinen laite '%s' määritetty"
 
 #: pyanaconda/kickstart.py:1178
 #, python-format
 msgid ""
 "Unknown or invalid format '%(format)s' specified for device '%(device)s'"
 msgstr ""
-"Laitteelle '%(device)s' määritetty tuntematon tai virheellinen muoto "
+"Laitteelle '%(device)s' määritetty tuntematon tai ei kelvollinen muoto "
 "'%(format)s'"
 
 #: pyanaconda/kickstart.py:1185
@@ -860,7 +894,7 @@ msgstr ""
 #: pyanaconda/kickstart.py:1248
 #, python-format
 msgid "Disk \"%s\" given in nvdimm command does not exist."
-msgstr ""
+msgstr "Komennossa 'ignoredisk' määritettyä levyä \"%s\" ei ole olemassa."
 
 #: pyanaconda/kickstart.py:1256 pyanaconda/kickstart.py:1260
 #, python-format
@@ -1002,7 +1036,7 @@ msgstr ""
 #, python-format
 msgid "Volume group \"%s\" given in volgroup command does not exist."
 msgstr ""
-"Taltioryhmää \"%s\", joka annettiin volgroup-komennossa, ei ole olemassa."
+"Taltioryhmää \"%s\", joka annettiin 'volgroup'-komennossa, ei ole olemassa."
 
 #: pyanaconda/kickstart.py:2001
 #, python-format
@@ -1013,6 +1047,8 @@ msgstr "Taltioryhmän nimi \"%s\" on jo käytössä."
 msgid ""
 "Incorrectly specified origin of the snapshot. Use format \"VolGroup/LV_name\""
 msgstr ""
+"Virheellisesti määritetty tilannevedoksen alkuperä. Käytä muotoa \"VolGroup"
+"/LV-name\""
 
 #: pyanaconda/kickstart.py:2135
 #, python-format
@@ -1048,9 +1084,9 @@ msgid ""
 "parts between periods must contain something and cannot start or end with "
 "'-'."
 msgstr ""
-"Isäntänimet voivat sisältää vain seuraavia merkkejä: 'a-z', 'A-Z', '0-9', "
-"'-', tai '.', pisteen molemmin puolin on oltava merkkejä eikä se saa alkaa "
-"tai päättyä '-':lla."
+"Isäntänimet voivat sisältää vain seuraavia merkkejä: 'a–z', 'A–Z', '0–9', '-"
+"', tai '.', pisteen molemmin puolin on oltava merkkejä eikä se saa alkaa tai "
+"päättyä '-':lla."
 
 #: pyanaconda/network.py:1632 pyanaconda/ui/gui/spokes/custom.py:566
 #: pyanaconda/ui/gui/spokes/network.py:326
@@ -1076,7 +1112,7 @@ msgstr "Langallinen (%(interface_name)s) yhdistetty"
 #: pyanaconda/network.py:1663
 #, python-format
 msgid "Wireless connected to %(access_point)s"
-msgstr "Langaton yhteys verkkoon %(access_point)s"
+msgstr "Langaton yhteys %(access_point)s:hen"
 
 #: pyanaconda/network.py:1666
 #, python-format
@@ -1111,7 +1147,7 @@ msgstr "Ei yhdistetty"
 
 #: pyanaconda/network.py:1708 pyanaconda/ui/gui/spokes/network.glade.h:45
 msgid "No network devices available"
-msgstr "Verkkolaitteita ei löytynyt"
+msgstr "Ei verkkolaitteita käytettävissä"
 
 #: pyanaconda/product.py:55
 #, python-format
@@ -1143,6 +1179,8 @@ msgstr "Kun olet valmis, irrota järjestelmä suorittamalla komento %s."
 #: pyanaconda/rescue.py:70
 msgid "When finished, please exit from the shell and your system will reboot."
 msgstr ""
+"Kun olet valmis, poistu komentotulkista ('exit':lla) ja järjestelmä "
+"käynnistyy uudelleen."
 
 #: pyanaconda/rescue.py:78
 msgid "Unable to find /bin/bash to execute!  Not starting shell."
@@ -1195,7 +1233,7 @@ msgstr "Juurihakemiston valinta"
 
 #: pyanaconda/rescue.py:284
 msgid "The following installations were discovered on your system.\n"
-msgstr ""
+msgstr "Seuraavat asennukset löydettiin järjestelmästäsi.\n"
 
 #: pyanaconda/rescue.py:296
 msgid ""
@@ -1244,11 +1282,17 @@ msgid ""
 "\n"
 "\tchroot %(mountpoint)s\n"
 msgstr ""
+"Järjestelmäsi on liitetty kohtaan %(mountpoint)s.\n"
+"\n"
+"Jos haluat tehdä järjestelmän juuresta aktiivisen järjestelmän juuren, "
+"suorita komento:\n"
+"\n"
+"'chroot %(mountpoint)s'\n"
 
 #: pyanaconda/rescue.py:397
 #, python-format
 msgid "Run %s to unmount the system when you are finished.\n"
-msgstr ""
+msgstr "Kun olet valmis, irrota järjestelmä suorittamalla komento '%s'.\n"
 
 #: pyanaconda/rescue.py:399
 #, python-format
@@ -1257,6 +1301,9 @@ msgid ""
 "may be mounted under %s\n"
 "\n"
 msgstr ""
+"Järjestelmää tai sen osia liitettäessä tapahtui virhe. Osa järjestelmästä on "
+"ehkä liitetty liitoskohtaan  %s.\n"
+"\n"
 
 #: pyanaconda/rescue.py:406
 msgid "You don't have any Linux partitions.  Rebooting.\n"
@@ -1415,7 +1462,7 @@ msgstr ""
 
 #: pyanaconda/storage_utils.py:260
 msgid "You have not created a bootable partition."
-msgstr "Käynnistysosiota ei ole luotu."
+msgstr "Eti ole luonut käynnistysosiota."
 
 #: pyanaconda/storage_utils.py:295
 msgid ""
@@ -1487,16 +1534,16 @@ msgstr "Käyttäjätunnus on varattu järjestelmälle: %s"
 
 #: pyanaconda/users.py:237
 msgid "User name cannot start with '-' character"
-msgstr ""
+msgstr "Nimi ei voi alkaa merkillä '-'"
 
 #: pyanaconda/users.py:246
 #, python-format
 msgid "User name cannot contain character: '%s'"
-msgstr ""
+msgstr "Käyttäjänimi ei voi sisältää merkkiä: '%s'"
 
 #: pyanaconda/users.py:249
 msgid "User name must be shorter than 33 characters"
-msgstr ""
+msgstr "Käyttäjänimi voi sisältää korkeintaan 32 merkkiä"
 
 #: pyanaconda/vnc.py:76
 #, python-format
@@ -1544,6 +1591,9 @@ msgid ""
 "install. Switch to the shell (Ctrl-B 2) and run 'ip addr' to find the <IP "
 "ADDRESS>."
 msgstr ""
+"Yhdistä VNC-asiakas manuaalisesti tähän <IP-OSOITE>:%s aloittaaksesi "
+"asennuksen. Vaihda komentotulkkiin (Ctrl-B 2) ja suorita 'ip addr' "
+"löytääksesi <IP-OSOITE>."
 
 #: pyanaconda/vnc.py:210
 msgid "Starting VNC..."
@@ -1655,7 +1705,7 @@ msgstr ""
 
 #: pyanaconda/packaging/yumpayload.py:1518
 msgid "Starting package installation process"
-msgstr "Aloitetaan asennus"
+msgstr "Aloitetaan paketin asennusprosessi"
 
 #: pyanaconda/packaging/yumpayload.py:1552
 msgid "Preparing transaction from installation source"
@@ -1720,6 +1770,8 @@ msgid ""
 "Not enough space in file systems for the current software selection. An "
 "additional %s is needed."
 msgstr ""
+"Tiedostojärjestelmillä ei ole riittävästi vapaata tilaa nykyiselle "
+"ohjelmistovalikoimalle. Tarvitaan vielä %s."
 
 #: pyanaconda/ui/lib/entropy.py:58
 msgid "The system needs more random data entropy"
@@ -1734,7 +1786,9 @@ msgstr "Entropiaa voidaan lisätä painelemalla satunnaisia näppäimiä"
 msgid ""
 "After %d minutes, the installation will continue regardless of the amount of "
 "available entropy"
-msgstr "%d minuutin jälkeen asennus jatkuu huolimatta entropian määrästä."
+msgstr ""
+"%d minuutin jälkeen asennus jatkuu huolimatta käytettävissä olevan entropian "
+"määrästä"
 
 #: pyanaconda/ui/lib/entropy.py:92
 #, python-format
@@ -1874,7 +1928,7 @@ msgstr "Salasana"
 
 #: pyanaconda/ui/tui/tuiobject.py:85
 msgid "Passphrase: "
-msgstr ""
+msgstr "Tunnuslause: "
 
 #: pyanaconda/ui/tui/tuiobject.py:111
 msgid "Question"
@@ -2059,7 +2113,7 @@ msgstr " IPv6-osoite: %(addr)s/%(prefix)d\n"
 #: pyanaconda/ui/tui/spokes/network.py:163
 #, python-format
 msgid "Host name: %s\n"
-msgstr ""
+msgstr "Isännän nimi: %s\n"
 
 #: pyanaconda/ui/tui/spokes/network.py:165
 #, python-format
@@ -2079,7 +2133,7 @@ msgstr "Määritä asetukset laitteelle %s"
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade.h:6
 #: pyanaconda/ui/gui/spokes/network.glade.h:51
 msgid "Host name"
-msgstr ""
+msgstr "Isännän nimi"
 
 #: pyanaconda/ui/tui/spokes/network.py:232
 msgid "Configuration not saved: netmask missing in static configuration"
@@ -2280,7 +2334,7 @@ msgstr "Luodaan päivitetyt tallennustilan asetukset"
 #: pyanaconda/ui/tui/spokes/storage.py:454
 #, python-format
 msgid "storage configuration failed: %s"
-msgstr ""
+msgstr "tallennustilan määritykset epäonnistuivat: %s"
 
 #: pyanaconda/ui/tui/spokes/storage.py:501
 #: pyanaconda/ui/tui/spokes/storage.py:549
@@ -2383,7 +2437,7 @@ msgstr "Käytettävissä olevat alueet"
 #: pyanaconda/ui/tui/spokes/time_spoke.py:345
 msgctxt "TUI|Spoke Navigation|Timezone Settings"
 msgid "b"
-msgstr ""
+msgstr "b"
 
 #: pyanaconda/ui/tui/spokes/time_spoke.py:369
 #, python-format
@@ -2429,7 +2483,7 @@ msgstr "Lisää NTP-palvelimen osoite"
 
 #: pyanaconda/ui/tui/spokes/time_spoke.py:473
 msgid "Enter an NTP server address and press enter\n"
-msgstr ""
+msgstr "Anna NTP-palvelimen osoite ja paina %s\n"
 
 #: pyanaconda/ui/tui/spokes/time_spoke.py:492
 msgid "Select an NTP server to remove"
@@ -2634,6 +2688,8 @@ msgid ""
 "Either a group name in the group list is invalid or groups are not separated "
 "by a comma"
 msgstr ""
+"Joko ryhmän nimi ryhmäluettelossa ei ole kelvollinen tai ryhmiä ei ole "
+"erotettu pilkulla"
 
 #: pyanaconda/ui/tui/spokes/user.py:155
 #, python-format
@@ -2772,6 +2828,9 @@ msgid ""
 "done.\n"
 "Finish it and then click the Finish configuration button please."
 msgstr ""
+"%s on nyt onnistuneesti asennettu, mutta joitakin asetuksia on vielä tehtävä."
+"\n"
+"Viimeistele asennus ja paina sitten Viimeistele asetukset -painiketta."
 
 #: pyanaconda/ui/gui/hubs/progress.py:236
 #, python-format
@@ -2779,6 +2838,8 @@ msgid ""
 "%s is now successfully installed and ready for you to use!\n"
 "Go ahead and reboot to start using it!"
 msgstr ""
+"%s on nyt asennettu ja käyttövalmis!\n"
+"Mene eteenpäin ja käynnistä uudelleen aloittaaksesi sen käytön!"
 
 #: pyanaconda/ui/gui/hubs/summary.py:81
 msgid ""
@@ -2852,11 +2913,13 @@ msgstr ""
 msgid ""
 "/boot/efi must be on a device of type %(oneFsType)s or %(anotherFsType)s"
 msgstr ""
+"/boot/efi:n on oltava laitteella, jonka tyyppi on joko %(oneFsType)s tai "
+"%(anotherFsType)s"
 
 #: pyanaconda/ui/gui/spokes/custom.py:680
 #, python-format
 msgid "%(fs)s must be on a device of type %(type)s"
-msgstr ""
+msgstr "%(fs)s:n on oltava laitteella tyyppiä %(type)s"
 
 #: pyanaconda/ui/gui/spokes/custom.py:683
 #: pyanaconda/ui/gui/spokes/custom.py:685
@@ -2871,15 +2934,15 @@ msgstr "Juurilaitteelle on luotava uusi tiedostojärjestelmä."
 #: pyanaconda/ui/gui/spokes/custom.py:692
 #, python-format
 msgid "Device does not support RAID level selection %s."
-msgstr ""
+msgstr "Laite ei tue RAID-tason valintaa %s."
 
 #: pyanaconda/ui/gui/spokes/custom.py:800
 msgid "Device resize request failed. <a href=\"\">Click for details.</a>"
-msgstr ""
+msgstr "Laitteen koon muuttaminen epäonnistui. <a href=\"\">Lisätietoja.</a>"
 
 #: pyanaconda/ui/gui/spokes/custom.py:873
 msgid "Device reformat request failed. <a href=\"\">Click for details.</a>"
-msgstr ""
+msgstr "Laitteen uudeleenalustaminen epäonnistui. <a href=\"\">Lisätietoja.</a>"
 
 #: pyanaconda/ui/gui/spokes/custom.py:1239
 #, python-format
@@ -2936,7 +2999,7 @@ msgstr ""
 
 #: pyanaconda/ui/gui/spokes/custom.py:1686
 msgid "Failed to add new device. <a href=\"\">Click for details.</a>"
-msgstr ""
+msgstr "Uuden laitteen lisääminen epäonnistui. <a href=\"\">Lisätietoja.</a>"
 
 #: pyanaconda/ui/gui/spokes/custom.py:1691
 msgid "Invalid partition size set. Use a valid integer."
@@ -2944,7 +3007,7 @@ msgstr "Virheellinen osion koko. Käytä kelvollista kokonaislukua."
 
 #: pyanaconda/ui/gui/spokes/custom.py:1802
 msgid "Device removal request failed. <a href=\"\">Click for details.</a>"
-msgstr ""
+msgstr "Laitteen poistamispyyntö epäonnistui. <a href=\"\">Lisätietoja.</a>"
 
 #: pyanaconda/ui/gui/spokes/custom.py:1992
 msgid "No disks selected. Keeping previous disk set."
@@ -2952,12 +3015,12 @@ msgstr "Ei levyjä valittu. Pidetään edellisen levyn asetukset."
 
 #: pyanaconda/ui/gui/spokes/custom.py:2050
 msgid "No disks selected. Not saving changes."
-msgstr ""
+msgstr "Levyjä ei ole valittu. Muutoksia ei tallenneta."
 
 #: pyanaconda/ui/gui/spokes/custom.py:2058
 #, python-format
 msgid "Volume Group name %s is already in use. Not saving changes."
-msgstr ""
+msgstr "Taltioryhmä %s on jo käytössä. Ei tallenneta muutoksia."
 
 #: pyanaconda/ui/gui/spokes/custom.py:2090
 #, python-format
@@ -2970,6 +3033,8 @@ msgid ""
 "This Software RAID array is missing %(missingMembers)d of %(totalMembers)d "
 "member partitions. You can remove it or select a different device."
 msgstr ""
+"Tästä RAID-ohjelmistoryhmästä puuttuu %(missingMembers)d jäsenosioista "
+"%(totalMembers)d. Voit poistaa sen tai valita toisen laitteen."
 
 #: pyanaconda/ui/gui/spokes/custom.py:2253
 #, python-format
@@ -2993,27 +3058,31 @@ msgstr "Valituilla levyillä ei ole riittävästi vapaata tilaa."
 #: pyanaconda/ui/gui/spokes/custom.py:2376
 msgid "Automatic partitioning failed. <a href=\"\">Click for details.</a>"
 msgstr ""
+"Automaattinen osiointi epäonnistui. <a href=\"\">Napsauta nähdäksesi "
+"lisätietoja.</a>"
 
 #: pyanaconda/ui/gui/spokes/custom.py:2590
 msgid ""
 "Continuing with this action will reset all your partitioning selections to "
 "their current on-disk state."
 msgstr ""
-"Jatkamalla tästä palautat kaikki osiointivalintasi nykyiseen levyllä olevaan "
-"tilaan."
+"Tämän toimen jatkaminen palauttaa kaikki osiointivalintasi nykyiseen "
+"levytilaan."
 
 #: pyanaconda/ui/gui/spokes/custom.py:2598
 msgid "_Reset selections"
-msgstr ""
+msgstr "_Nollaa valinnat"
 
 #: pyanaconda/ui/gui/spokes/custom.py:2598
 msgid "_Preserve current selections"
-msgstr ""
+msgstr "_Säilytä nykyiset valinnat"
 
 #: pyanaconda/ui/gui/spokes/custom.py:2677
 msgid ""
 "Failed to unlock encrypted block device. <a href=\"\">Click for details.</a>"
 msgstr ""
+"Salatun lohkolaitteen lukituksen avaaminen epäonnistui. <a href=\"\""
+">Lisätietoja.</a>"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.py:393
 msgctxt "GUI|Spoke"
@@ -3276,7 +3345,7 @@ msgstr "Yksityisen avaimen salasana: "
 #: pyanaconda/ui/gui/spokes/network.py:1493
 msgctxt "GUI|Spoke"
 msgid "_NETWORK & HOST NAME"
-msgstr ""
+msgstr "_VERKKO JA ISÄNTÄNIMI"
 
 #: pyanaconda/ui/gui/spokes/password.py:54
 msgctxt "GUI|Spoke"
@@ -3296,7 +3365,7 @@ msgstr "Pääkäyttäjän salasana on asetettu"
 
 #: pyanaconda/ui/gui/spokes/password.py:119
 msgid "Root account is disabled"
-msgstr "Pääkäyttäjän tunnus on kytketty pois käytöstä."
+msgstr "Rootin tili on kytketty pois käytöstä"
 
 #: pyanaconda/ui/gui/spokes/password.py:121
 msgid "Root password is not set"
@@ -3400,7 +3469,7 @@ msgstr "Tältä medialta ei kannata asentaa."
 #: pyanaconda/ui/gui/spokes/source.py:367
 msgctxt "GUI|Spoke"
 msgid "_INSTALLATION SOURCE"
-msgstr ""
+msgstr "_ASENNUSLÄHDE"
 
 # translation auto-copied from project Anaconda, version master, document
 # anaconda
@@ -3592,16 +3661,19 @@ msgid ""
 "WWPN %(wwpn)s\n"
 "LUN %(lun)s"
 msgstr ""
+"FCP-laite %(hba_id)s\n"
+"WWPN %(wwpn)s\n"
+"LUN %(lun)s"
 
 #: pyanaconda/ui/gui/spokes/storage.py:640
 #, python-format
 msgid "NVDIMM device %(namespace)s"
-msgstr ""
+msgstr "NVDIMM-laite %(namespace)s"
 
 #: pyanaconda/ui/gui/spokes/storage.py:649
 #, python-format
 msgid "%s free"
-msgstr ""
+msgstr "%s vapaana"
 
 #: pyanaconda/ui/gui/spokes/storage.py:699
 #, python-format
@@ -3614,6 +3686,8 @@ msgid ""
 "You have chosen to skip boot loader installation.  Your system may not be "
 "bootable."
 msgstr ""
+"Päätit ohittaa käynnistyslataajan asentamisen. Järjestelmäsi ei välttämättä "
+"ole käynnistettävissä."
 
 #: pyanaconda/ui/gui/spokes/storage.py:914
 msgid "There was a problem with your disk selection. Click here for details."
@@ -3674,7 +3748,7 @@ msgstr "_OK"
 #: pyanaconda/ui/gui/spokes/user.py:70
 #, python-format
 msgid "Invalid group name: %s"
-msgstr ""
+msgstr "Ei kelvollinen ryhmänimi.: %s"
 
 #: pyanaconda/ui/gui/spokes/user.py:213
 msgctxt "GUI|Spoke"
@@ -3708,6 +3782,9 @@ msgid ""
 "%(initiatorName)s</b> using the target IP address <b>%(targetAddress)s</b>.  "
 "Please select which nodes you wish to log into:"
 msgstr ""
+"Seuraavat solmut löydettiin käyttämällä iSCSI-initiaattoria "
+"<b>%(initiatorName)s</b> käyttämällä portaalin IP-osoitetta "
+"<b>%(targetAddress)s</b>. Valitse solmut, joihin haluat kirjautua:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.py:85
 msgctxt "GUI|Advanced Storage|NVDIM"
@@ -3733,7 +3810,7 @@ msgstr ""
 
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:302
 msgid "_Click here to create them automatically."
-msgstr ""
+msgstr "_Napsauttaa tästä luodaksesi ne automaattisesti."
 
 # translation auto-copied from project Anaconda, version master, document
 # anaconda
@@ -3751,7 +3828,7 @@ msgstr ""
 
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:340
 msgid "_New mount points will use the following partitioning scheme:"
-msgstr ""
+msgstr "_Uudet liitoskohdat käyttävät seuraavaa osiointimallia:"
 
 #: pyanaconda/ui/gui/spokes/lib/cart.py:134
 #, python-format
@@ -3780,6 +3857,8 @@ msgid ""
 "The RAID level you have selected (%(level)s) requires more disks (%(min)d) "
 "than you currently have selected (%(count)d)."
 msgstr ""
+"Valitsemasi RAID-taso (%(level)s) vaatii enemmän levyjä (%(min)d) kuin mitä "
+"olet tällä hetkellä valinnut (%(count)d)."
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:66
 #, python-format
@@ -3805,7 +3884,7 @@ msgstr "Taltio"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:112
 msgid "Cannot relabel already existing file system."
-msgstr "Olemassa olevan tiedostojärjestelmän nimeä ei voida muuttaa."
+msgstr "Olemassa olevan tiedostojärjestelmän nimiötä ei voida muuttaa."
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:117
 msgid "Cannot set label on file system."
@@ -3817,7 +3896,7 @@ msgstr "Tiedostojärjestelmän nimiö ei ole hyväksyttävässä muodossa."
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:129
 msgid "That mount point is already in use. Try something else?"
-msgstr "Liitoskohta on jo käytössä. Kokeillaanko jotain muuta?"
+msgstr "Tuo liitoskohta on jo käytössä. Kokeillaanko jotain muuta?"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:131
 msgid "Please enter a valid mount point."
@@ -3826,7 +3905,7 @@ msgstr "Anna kelvollinen liitoskohta."
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:133
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:145
 msgid "That mount point is invalid. Try something else?"
-msgstr "Liitoskohta on virheellinen. Kokeillaanko jotain muuta?"
+msgstr "Tuo liitoskohta ei ole kelvollinen. Kokeillaanko jotain muuta?"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:286
 msgid "container"
@@ -3836,7 +3915,7 @@ msgstr "kontti"
 #, python-format
 msgctxt "GUI|Custom Partitioning|Confirm Delete Dialog"
 msgid "Delete _all file systems which are only used by %s."
-msgstr ""
+msgstr "Poista _kaikki tiedostojärjestelmät, joita vain %s käyttää."
 
 # translation auto-copied from project Anaconda, version master, document
 # anaconda
@@ -3854,7 +3933,7 @@ msgstr ""
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:647
 msgid "Invalid container name"
-msgstr ""
+msgstr "Ei kelvollinen konttinimi"
 
 # translation auto-copied from project anaconda, version rhel6-branch,
 # document anaconda
@@ -4073,8 +4152,8 @@ msgid ""
 "Groups that do not already exist will be created; specify their GID in "
 "parentheses. "
 msgstr ""
-"Voit asettaa pilkuilla varustetun listan ryhmänimistä ja ryhmätunnisteista "
-"tässä. Ryhmät, joita ei ole olemassa, luodaan; määritä niiden "
+"Voit kirjoittaa tähän pilkuilla erotetun luettelon ryhmän nimistä ja "
+"ryhmätunnuksista. Ryhmät, joita ei ole olemassa, luodaan; määritä niiden "
 "ryhmätunnisteet (GID) lainausmerkkeihin.. "
 
 # translation auto-copied from project anaconda, version f23-branch, document
@@ -4386,7 +4465,7 @@ msgstr "_Suodatusperuste:"
 #: pyanaconda/ui/gui/spokes/filter.glade.h:37
 msgctxt "GUI|Installation Destination|Filter|NVDIMM Devices|Mode"
 msgid "Show Only Devices in Mo_de:"
-msgstr ""
+msgstr "Näytä vain laitteet, jotka ovat _tilassa:"
 
 #: pyanaconda/ui/gui/spokes/filter.glade.h:38
 msgid "Sector"
@@ -4399,7 +4478,7 @@ msgstr "Muisti"
 #: pyanaconda/ui/gui/spokes/filter.glade.h:40
 msgctxt "GUI|Installation Destination|Filter|NVDIMM Devices|Namespace"
 msgid "Names_pace:"
-msgstr ""
+msgstr "Nimi_avaruus:"
 
 #: pyanaconda/ui/gui/spokes/filter.glade.h:41
 msgctxt "GUI|Installation Destination|Filter"
@@ -4473,12 +4552,12 @@ msgstr "Lisää FCo_E SAN..."
 #: pyanaconda/ui/gui/spokes/filter.glade.h:54
 msgctxt "GUI|Installation Destination|Filter"
 msgid "Recon_figure NVDIMM..."
-msgstr ""
+msgstr "_Määritä uudelleen NVDIMM..."
 
 #: pyanaconda/ui/gui/spokes/filter.glade.h:55
 msgctxt "GUI|Installation Destination|Filter"
 msgid "_Refresh List"
-msgstr ""
+msgstr "_Päivitä luettelo"
 
 # translation auto-copied from project Anaconda, version master, document
 # anaconda
@@ -4694,11 +4773,11 @@ msgstr "Lisää verkkoasetusten laatikko"
 #: pyanaconda/ui/gui/spokes/network.glade.h:50
 msgctxt "GUI|Network"
 msgid "_Host name:"
-msgstr ""
+msgstr "_Isännän nimi:"
 
 #: pyanaconda/ui/gui/spokes/network.glade.h:52
 msgid "_Apply"
-msgstr ""
+msgstr "_Sovella"
 
 #: pyanaconda/ui/gui/spokes/network.glade.h:53
 msgid "Set as current system host name."
@@ -4760,7 +4839,7 @@ msgstr "Perusympäristö"
 
 #: pyanaconda/ui/gui/spokes/software.glade.h:3
 msgid "Add-Ons for Selected Environment"
-msgstr ""
+msgstr "Valitun ympäristön lisäosat"
 
 #: pyanaconda/ui/gui/spokes/storage.glade.h:1
 msgctxt "GUI|Storage|Need Space Dialog"
@@ -4889,7 +4968,7 @@ msgstr ""
 
 #: pyanaconda/ui/gui/spokes/storage.glade.h:27
 msgid "_Encrypt my data."
-msgstr ""
+msgstr "_Salaa tietoni."
 
 #: pyanaconda/ui/gui/spokes/storage.glade.h:28
 msgid "You'll set a passphrase next."
@@ -4897,7 +4976,7 @@ msgstr "Asetat seuraavaksi tunnuslauseen."
 
 #: pyanaconda/ui/gui/spokes/storage.glade.h:29
 msgid "I would like to _make additional space available."
-msgstr ""
+msgstr "_Haluan asettaa lisätilaa saataville."
 
 #: pyanaconda/ui/gui/spokes/storage.glade.h:30
 msgid "Storage Options"
@@ -5072,14 +5151,14 @@ msgstr "Valitse ylimääräinen kielituki asennettavaksi:"
 #: pyanaconda/ui/gui/spokes/langsupport.glade.h:3
 #: pyanaconda/ui/gui/spokes/welcome.glade.h:11
 msgid "nativeName"
-msgstr "nativeName"
+msgstr "syntyperäinenNimi"
 
 # translation auto-copied from project Anaconda, version master, document
 # anaconda
 #: pyanaconda/ui/gui/spokes/langsupport.glade.h:4
 #: pyanaconda/ui/gui/spokes/welcome.glade.h:12
 msgid "englishName"
-msgstr "englishName"
+msgstr "englanninkielinenNimi"
 
 #: pyanaconda/ui/gui/spokes/langsupport.glade.h:5
 #: pyanaconda/ui/gui/spokes/welcome.glade.h:13
@@ -5182,7 +5261,7 @@ msgstr "_Salli HTTP-välityspalvelin"
 #: pyanaconda/ui/gui/spokes/source.glade.h:9
 msgctxt "GUI|Software Source|Proxy Dialog"
 msgid "_Proxy Host"
-msgstr ""
+msgstr "_Välityspalvelimen isäntä"
 
 #: pyanaconda/ui/gui/spokes/source.glade.h:10
 msgid "<span size=\"small\"><b>Example:</b> squid.mysite.org:3128</span>"
@@ -5198,12 +5277,12 @@ msgstr "_Käytä todennusta"
 #: pyanaconda/ui/gui/spokes/source.glade.h:12
 msgctxt "GUI|Software Source|Proxy Dialog"
 msgid "User _name"
-msgstr ""
+msgstr "_Käyttäjänimi"
 
 #: pyanaconda/ui/gui/spokes/source.glade.h:13
 msgctxt "GUI|Software Source|Proxy Dialog"
 msgid "Pass_word"
-msgstr ""
+msgstr "_Salasana"
 
 #: pyanaconda/ui/gui/spokes/source.glade.h:14
 msgid "INSTALLATION SOURCE"
@@ -5299,6 +5378,8 @@ msgid ""
 "Don't install the latest available software _updates. Install the default "
 "versions provided by the installation source above."
 msgstr ""
+"Älä asenna viimeisimpiä ohjelmisto_päivityksiä. Asenna yllä olevan "
+"asennuslähteen tarjoamat oletusversiot."
 
 # translation auto-copied from project Anaconda, version master, document
 # anaconda
@@ -5424,6 +5505,17 @@ msgid ""
 "If you do not understand or accept the risks, then please exit this program "
 "by clicking \"I want to exit\" which will reboot your system."
 msgstr ""
+"Huomio: Tämä on esijulkaisu ohjelmistosta, ja se on tarkoitettu vain kehitys-"
+" ja testaustarkoituksiin. Älä käytä tätä ohjelmistoa missään kriittisessä "
+"tai tuotannossa olevassa ympäristössä. \n"
+"\n"
+"Napsauttamalla \"Haluan edetä\" ymmärrät ja hyväksyt esijulkaisuun liittyvät "
+"riskit, aiot käyttää ohjelmistoa vain kehitys- ja testaustarkoituksiin, ja "
+"että olet halukas ilmoittamaan mahdollisista ongelmista parantaaksesi tätä "
+"ohjelmistoa.\n"
+"\n"
+"Jos et ymmärrä tai hyväksy riskejä, poistu ohjelmasta napsauttamalla \"Haluan"
+" poistua\"; sen jälkeen järjestelmä käynnistyy uudelleen."
 
 #: pyanaconda/ui/gui/spokes/welcome.glade.h:9
 msgid "Beta Warn"
@@ -5501,16 +5593,18 @@ msgid ""
 "<b>Tip:</b> Keep your user name shorter than 32 characters and do not use "
 "spaces."
 msgstr ""
+"<b>Vinkki:</b> Pidä käyttäjätunnus alle 32 merkin pituisena, älä käytä "
+"välilyöntejä."
 
 #: pyanaconda/ui/gui/spokes/user.glade.h:11
 msgctxt "GUI|User"
 msgid "Require a password to use this account"
-msgstr ""
+msgstr "Vaadi salasana tämän tilin käyttämiseen"
 
 #: pyanaconda/ui/gui/spokes/user.glade.h:13
 msgctxt "GUI|User"
 msgid "Make this user administrator"
-msgstr ""
+msgstr "Tee käyttäjästä ylläpitäjä"
 
 #: pyanaconda/ui/gui/spokes/user.glade.h:14
 msgctxt "GUI|User"
@@ -5588,15 +5682,15 @@ msgstr "Laitteen kuvaus"
 
 #: pyanaconda/ui/gui/spokes/custom.glade.h:21
 msgid "Mount _Point:"
-msgstr ""
+msgstr "Liitos_kohta:"
 
 #: pyanaconda/ui/gui/spokes/custom.glade.h:22
 msgid "_Desired Capacity:"
-msgstr ""
+msgstr "Toivottu _kapasiteetti:"
 
 #: pyanaconda/ui/gui/spokes/custom.glade.h:23
 msgid "_Label:"
-msgstr ""
+msgstr "_Nimiö:"
 
 #: pyanaconda/ui/gui/spokes/custom.glade.h:24
 msgid "Device(s):"
@@ -5650,7 +5744,7 @@ msgstr "_RAID-taso:"
 
 #: pyanaconda/ui/gui/spokes/custom.glade.h:34
 msgid "_Update Settings"
-msgstr ""
+msgstr "_Päivitä asetukset"
 
 #: pyanaconda/ui/gui/spokes/custom.glade.h:35
 msgid ""
@@ -5761,7 +5855,7 @@ msgstr "Laitteen etsiminen onnistui."
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade.h:12
 msgid "The added DASD can be found under \"Local Standard Disks\"."
-msgstr ""
+msgstr "Lisätty DASD löytyy kohdasta \"Paikalliset vakiolevyt\"."
 
 # translation auto-copied from project anaconda, version f23-branch, document
 # po/anaconda
@@ -5929,7 +6023,7 @@ msgstr "_Yritä uudelleen etsintää"
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade.h:23
 msgctxt "GUI|Advanced Storage|iSCSI|Configure"
 msgid "_Bind targets to network interfaces. This may take a moment..."
-msgstr ""
+msgstr "_Sido kohteet verkkoliitäntöihin. Tämä voi viedä hetken ..."
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade.h:24
 msgid "Node Name"
@@ -5998,6 +6092,8 @@ msgid ""
 "The following error occurred logging into the selected iSCSI node.  Please "
 "double check your authorization information and try again"
 msgstr ""
+"Seuraava virhe tapahtui kirjautumalla valittuun iSCSI-solmuun. Tarkista "
+"valtuutustietosi ja yritä uudelleen"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade.h:38
 msgctxt "GUI|Advanced Storage|iSCSI|Login|Retry"
@@ -6189,7 +6285,7 @@ msgstr "_Lisää liitoskohta"
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade.h:13
 msgctxt "GUI|Custom Partitioning|Add Dialog"
 msgid "_Desired Capacity:"
-msgstr ""
+msgstr "Toivottu _kapasiteetti:"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade.h:14
 msgctxt "GUI|Custom Partitioning|Add Dialog"
@@ -6323,13 +6419,15 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade.h:7
 msgctxt "GUI|DASD Format Dialog"
 msgid "_Format with dasdfmt"
-msgstr ""
+msgstr "_Alusta dasdfmt:lla"
 
 #: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade.h:8
 msgid ""
 "You may <a href=\"\">go back to the main menu</a> to complete other\n"
 "installation options while formatting completes."
 msgstr ""
+"Voit <a href=\"\">palata takaisin päävalikkoon</a> täydentääksesi muita\n"
+"asennusvaihtoehdot, kun tämä alustus on valmis."
 
 #: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade.h:10
 msgid "Disk formatting complete."
@@ -6668,12 +6766,17 @@ msgid ""
 "memory, but you only have %(total_ram)s MB\n"
 "."
 msgstr ""
+"%(product_name)s:n graafinen asennus vaatii %(needed_ram)s Mt muistia, mutta "
+"tällä tietokoneella on vain %(total_ram)s Mt\n"
+"."
 
 #: anaconda:495
 msgid ""
 "\n"
 "Press <return> to reboot your system.\n"
 msgstr ""
+"\n"
+"Paina [Enter] käynnistääksesi järjestelmän uudelleen.\n"
 
 #: anaconda:497
 msgid "Not enough RAM"
