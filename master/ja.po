@@ -53,13 +53,14 @@
 # Ludek Janda <ljanda@redhat.com>, 2020. #zanata
 # Hajime Taira <htaira@pantora.net>, 2020.
 # Matthias Kruk <matthias.kruk@miraclelinux.com>, 2020.
+# Sundeep Anand <suanand@redhat.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2021-03-03 00:37+0000\n"
-"PO-Revision-Date: 2020-08-22 15:29+0000\n"
-"Last-Translator: Ludek Janda <ljanda@redhat.com>\n"
+"PO-Revision-Date: 2021-03-05 10:01+0000\n"
+"Last-Translator: Sundeep Anand <suanand@redhat.com>\n"
 "Language-Team: Japanese <https://translate.fedoraproject.org/projects/"
 "anaconda/master/ja/>\n"
 "Language: ja\n"
@@ -67,7 +68,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.2.1\n"
+"X-Generator: Weblate 4.4.2\n"
 
 #: anaconda.py:312
 msgid "Unable to create PID file"
@@ -79,9 +80,8 @@ msgid ""
 "Anaconda is unable to create %s because the file already exists. Anaconda is "
 "already running, or a previous instance of anaconda has crashed."
 msgstr ""
-"すでに %s が存在するため、Anaconda はこのファイルを作成できません。すでに "
-"Anaconda が実行中か、もしくは前回実行した Anaconda のプロセスがクラッシュした"
-"可能性があります。"
+"すでに %s が存在するため、Anaconda はこのファイルを作成できません。すでに Anaconda が実行中か、もしくは前回実行した "
+"Anaconda のインスタンスがクラッシュした可能性があります。"
 
 #: pyanaconda/payload/dnf/payload.py:855
 msgid "Starting package installation process"
@@ -103,7 +103,7 @@ msgstr "%s のインストール中"
 #: pyanaconda/payload/dnf/payload.py:899
 #, python-format
 msgid "Configuring %s"
-msgstr "%s の設定"
+msgstr "%s の設定中"
 
 #: pyanaconda/payload/dnf/payload.py:902
 #, python-format
@@ -121,8 +121,8 @@ msgid ""
 "Downloading %(total_files)s RPMs, %(downloaded)s / %(total_size)s "
 "(%(percent)d%%) done."
 msgstr ""
-"%(total_files)s RPM ダウンロード中、%(downloaded)s / %(total_size)s "
-"(%(percent)d%%) 完了。"
+"%(total_files)s RPM のダウンロード中、%(downloaded)s / %(total_size)s (%(percent)d%%) "
+"完了。"
 
 #: pyanaconda/payload/manager.py:75
 msgid "Failed to set up installation source"
@@ -159,7 +159,7 @@ msgstr "ホスト名は、255 文字か、それ以下の長さにする必要�
 
 #: pyanaconda/network.py:115
 msgid "Local host name must not end with period '.'."
-msgstr "ローカルホスト名は句読点'.'を末尾に使えません。"
+msgstr "ローカルホスト名には、ピリオド '.' を最後に付けることはできません。"
 
 #: pyanaconda/network.py:118
 msgid ""
@@ -179,7 +179,7 @@ msgstr "不明"
 
 #: pyanaconda/network.py:452
 msgid "Status not available"
-msgstr "ステータスは利用できません"
+msgstr "ステータスが利用できません"
 
 #: pyanaconda/network.py:457
 msgid "Connecting..."
@@ -217,8 +217,7 @@ msgstr "ブリッジ %(interface_name)s (%(list_of_slaves)s) が接続されま�
 #: pyanaconda/network.py:510
 #, python-format
 msgid "VLAN %(interface_name)s (%(parent_device)s, ID %(vlanid)s) connected"
-msgstr ""
-"VLAN %(interface_name)s (%(parent_device)s, ID %(vlanid)s) に接続しました"
+msgstr "VLAN %(interface_name)s (%(parent_device)s、ID %(vlanid)s) が接続されました"
 
 #: pyanaconda/network.py:529
 #, python-format
@@ -240,7 +239,7 @@ msgstr "無効なタイムソース。"
 #: pyanaconda/modules/network/firewall/installation.py:102
 #, python-format
 msgid "%s is missing. Cannot setup firewall."
-msgstr "%s がありません。ファイアーウォールの設定ができません。"
+msgstr "%s がありません。ファイアウォールの設定ができません。"
 
 #: pyanaconda/modules/storage/bootloader/grub2.py:486
 #, python-format
@@ -248,9 +247,8 @@ msgid ""
 "%(deviceName)s may not have enough space for grub2 to embed core.img when "
 "using the %(fsType)s file system on %(deviceType)s"
 msgstr ""
-"%(deviceName)s で %(fsType)s ファイルシステムを使用する場合、grub2 によって組"
-"み込まれる core.img 用の領域が %(deviceType)s には不足している可能性がありま"
-"す。"
+"%(deviceType)s の %(fsType)s ファイルシステムを使用する場合、grub2 によって組み込まれる core.img 用の領域が "
+"%(deviceName)s には不足している可能性があります。"
 
 #: pyanaconda/modules/storage/bootloader/grub2.py:525
 #, python-format
@@ -259,10 +257,8 @@ msgid ""
 "loader stage1 device %(stage1dev)s is not. A drive failure in %(stage2dev)s "
 "could render the system unbootable."
 msgstr ""
-"ブートローダー stage2 デバイス %(stage2dev)s は、複数ディスクアレイ上にありま"
-"すが、ブートローダー stage1 デバイス %(stage1dev)s はこのアレイ上にありませ"
-"ん。 %(stage2dev)s 上のドライブ障害により、システムが起動できない可能性があり"
-"ます。"
+"ブートローダー stage2 デバイス %(stage2dev)s は、複数ディスクアレイ上にありますが、ブートローダー stage1 デバイス "
+"%(stage1dev)s はこのアレイ上にありません。%(stage2dev)s 上のドライブ障害により、システムが起動できない可能性があります。"
 
 #: pyanaconda/modules/storage/bootloader/grub2.py:532
 #, python-format
@@ -352,9 +348,7 @@ msgstr "%s はプライマリパーティション上になければなりませ
 msgid ""
 "Boot loader stage1 device cannot be on an iSCSI disk which is not configured "
 "in iBFT."
-msgstr ""
-"ブートローダー stage2 デバイスは、iBFT 形式に設定されていない iSCSI ディスク"
-"にすることはできません。"
+msgstr "ブートローダー stage1 デバイスは、iBFT 形式に設定されていない iSCSI ディスク上に配置することはできません。"
 
 #: pyanaconda/modules/storage/bootloader/base.py:573
 #: pyanaconda/modules/storage/bootloader/base.py:689
@@ -417,7 +411,7 @@ msgstr "デバイス '%s' にフォーマットがありません"
 
 #: pyanaconda/modules/storage/partitioning/automatic/utils.py:165
 msgid "No usable disks selected."
-msgstr "利用可能なディスクが選択されていません。"
+msgstr "使用可能なディスクが選択されていません。"
 
 #: pyanaconda/modules/storage/partitioning/automatic/utils.py:168
 msgid "Not enough free space on selected disks."
@@ -430,7 +424,7 @@ msgstr "自動パーティション設定に十分に大きな空き領域がデ
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:213
 #, python-brace-format
 msgid "New {name} {version} Installation"
-msgstr "新しい {name} {version} インストール"
+msgstr "新規の {name} {version} のインストール"
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:289
 msgid "Cannot set label on file system."
@@ -460,7 +454,7 @@ msgstr "無効なコンテナー名です。"
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:343
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:612
 msgid "Name is already in use."
-msgstr "名前はすでに使用されています。"
+msgstr "名前はすでに使用中です。"
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:368
 #, python-brace-format
@@ -468,8 +462,7 @@ msgid ""
 "The RAID level you have selected ({level}) requires more disks ({min}) than "
 "you currently have selected ({count})."
 msgstr ""
-"選択したRAIDレベル ({level}) には現在選択している ({count}) 個のディスクでは"
-"足りず、追加で ({min}) 個が必要です。"
+"選択した ({level}) の RAID レベルには ({min}) 個以上のディスクが必要です。現在、({count}) 個しか選択していません。"
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:410
 msgid "Please enter a mount point."
@@ -478,13 +471,12 @@ msgstr "有効なマウントポイントを記入して下さい。"
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:423
 #, python-brace-format
 msgid "/boot/efi must be on a device of type {type} or {another}"
-msgstr ""
-"/boot/efi は {type} または {another} タイプのデバイス上である必要があります"
+msgstr "/boot/efi は、タイプ {type} または {another} のデバイスに配置してください。"
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:430
 #, python-brace-format
 msgid "{fs} must be on a device of type {type}"
-msgstr "{fs} は {type} タイプのデバイス上である必要があります"
+msgstr "{fs} は、タイプ {type} のデバイス上でなければなりません"
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:436
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:439
@@ -498,7 +490,7 @@ msgstr "新しいファイルシステムは、root デバイス上に作成す�
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:446
 msgid "Device does not support RAID level selection {}."
-msgstr "デバイスがRAIDレベル選択 {} をサポートしていません。"
+msgstr "デバイスは、RAID レベル選択 {} をサポートしていません。"
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:1244
 #, python-format
@@ -506,8 +498,8 @@ msgid ""
 "This Software RAID array is missing %(missing)d of %(total)d member "
 "partitions. You can remove it or select a different device."
 msgstr ""
-"このソフトウェアRAIDアレイは %(total)d メンバーパーティションで存在しない "
-"%(missing)d です。削除するか他のデバイスを選択できます。"
+"このソフトウェア RAID アレイには、%(total)d メンバーパーティションのうち %(missing)d "
+"メンバーパーティションが不足しています。削除するか別のデバイスを選択してください。"
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:1251
 #, python-format
@@ -515,18 +507,15 @@ msgid ""
 "This LVM Volume Group is missing %(missingPVs)d of %(totalPVs)d physical "
 "volumes. You can remove it or select a different device."
 msgstr ""
-"この LVM のボリュームグループには %(missingPVs)d 物理ボリュームのうち "
-"%(totalPVs)d  物理ボリュームが不足しています。削除するか別のデバイスを選択し"
-"てください。"
+"この LVM のボリュームグループには %(totalPVs)d 物理ボリュームのうち %(missingPVs)d "
+"物理ボリュームが不足しています。削除するか別のデバイスを選択してください。"
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:1255
 #, python-format
 msgid ""
 "This %(type)s device is missing member devices. You can remove it or select "
 "a different device."
-msgstr ""
-"この %(type)s デバイスは、メンバーデバイスにありません。これを取り外すか、別"
-"のデバイスを選択できます。"
+msgstr "この %(type)s デバイスには、メンバーデバイスがありません。削除するか、別のデバイスを選択できます。"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:162
 #, python-format
@@ -666,8 +655,7 @@ msgid ""
 "Volume group \"%s\" defined without any physical volumes.  Either specify "
 "physical volumes or use --useexisting."
 msgstr ""
-"ボリュームグループ \"%s\" は、物理ボリュームを定義しません。物理ボリュームを"
-"指定するか、 --useexisting を使用してください。"
+"ボリュームグループ \"%s\" は、物理ボリュームなしで定義されています。物理ボリュームを指定するか、 --useexisting を使用してください。"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:796
 #, python-format
@@ -676,9 +664,8 @@ msgid ""
 "one of:\n"
 "%(validExtentSizes)s."
 msgstr ""
-"ボリュームグループに物理拡張サイズ \"%(extentSize)s\" が指定されていますが、"
-"次のいずれかでなければなりません。\n"
-"%(validExtentSizes)s "
+"ボリュームグループに物理拡張サイズ \"%(extentSize)s\" が指定されていますが、次のいずれかでなければなりません。\n"
+"%(validExtentSizes)s"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:809
 msgid ""
@@ -691,7 +678,7 @@ msgstr ""
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:816
 #, python-format
 msgid "Volume group \"%s\" given in volgroup command does not exist."
-msgstr "volgroupコマンドで指定されたボリュームグループ\"%s\" は存在しません。"
+msgstr "volgroup コマンドで指定されたボリュームグループ \"%s\" は存在しません。"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:821
 #, python-format
@@ -756,26 +743,25 @@ msgid ""
 "Btrfs partition \"%(device)s\" has a format of \"%(format)s\", but should "
 "have a format of \"btrfs\"."
 msgstr ""
-"BTRFS パーティション \"%(device)s\" は \"%(format)s\" フォーマットですが、こ"
-"れは \"btrfs\" フォーマットであるべきです。 "
+"Btrfs パーティション “%(device)s” のフォーマットは “%(format)s” ですが、\"btrfs\" "
+"のフォーマットもあるはずです。"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1247
 #, python-format
 msgid "Tried to use undefined partition \"%s\" in Btrfs volume specification."
-msgstr "BTRFS ボリューム仕様の未定義パーティション \"%s\" の使用を試みました。"
+msgstr "Btrf ボリューム仕様の未定義パーティション \"%s\" の使用を試みました。"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1262
 msgid ""
 "Btrfs volume defined without any member devices.  Either specify member "
 "devices or use --useexisting."
 msgstr ""
-"BTRF ボリュームは、メンバーデバイスを定義しません。メンバーデバイスを指定する"
-"か、 --useexisting を使用してください。"
+"Btrfs ボリュームは、メンバーデバイスがない状態で定義されています。メンバーデバイスを指定するか --useexisting を指定します。"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1290
 #, python-format
 msgid "Btrfs volume \"%s\" specified with --useexisting does not exist."
-msgstr "--useexisting で指定されたBTRFS ボリューム \"%s\" は存在しません。"
+msgstr "--useexisting で指定された Btrfs ボリューム \"%s\" は存在しません。"
 
 #: pyanaconda/modules/storage/devicetree/viewer.py:303
 #, python-brace-format
@@ -845,14 +831,12 @@ msgstr "{product} Linux {version} - {arch} 版"
 msgid ""
 "You have not defined a root partition (/), which is required for "
 "installation of %s to continue."
-msgstr ""
-"root パーティション (/) が未定義です。%s をインストールするには root パーティ"
-"ションが必要です。"
+msgstr "root パーティション (/) が未定義です。%s のインストールを続行するには、root パーティションが必要です。"
 
 #: pyanaconda/modules/storage/checker/utils.py:65
 #, python-format
 msgid "Your root partition must be on a device of type: %s."
-msgstr "rootパーティションはタイプ: %s のデバイスである必要があります。"
+msgstr "ご使用の root パーティションは、タイプ: %s のデバイス上にある必要があります。"
 
 #: pyanaconda/modules/storage/checker/utils.py:84
 #, python-brace-format
@@ -867,9 +851,7 @@ msgstr ""
 #, python-format
 msgid ""
 "It is recommended to create a new file system on your %(mount)s partition."
-msgstr ""
-"新しいファイルシステムは %(mount)s パーティション上に作成するのが推奨されま"
-"す。"
+msgstr "%(mount)s パーティションに新しいファイルシステムを作成することをお勧めします。"
 
 #: pyanaconda/modules/storage/checker/utils.py:122
 #, python-format
@@ -877,13 +859,13 @@ msgid ""
 "Your %(mount)s partition is less than %(size)s which is lower than "
 "recommended for a normal %(productName)s install."
 msgstr ""
-"%(mount)s パーティションの容量が %(size)s 未満であり、通常の %(productName)s "
+"ご使用の %(mount)s パーティションの容量が %(size)s 未満であり、通常の %(productName)s "
 "のインストールで推奨される容量に達していません。"
 
 #: pyanaconda/modules/storage/checker/utils.py:130
 #, python-format
 msgid "Your %(mount)s partition size is lower than required %(size)s."
-msgstr "%(mount)s パーティションの容量が %(size)s 未満です。"
+msgstr "ご使用の %(mount)s パーティションサイズは、必要とされるサイズ %(size)s よりも小さいです。"
 
 #: pyanaconda/modules/storage/checker/utils.py:150
 #, python-format
@@ -891,8 +873,8 @@ msgid ""
 "Your %(mount)s partition is too small for %(format)s formatting (allowable "
 "size is %(minSize)s to %(maxSize)s)"
 msgstr ""
-"このシステムの %(mount)s パーティションは、%(format)s フォーマットには小さす"
-"ぎます (指定可能なサイズは %(minSize)s MB から %(maxSize)s MB です)。"
+"ご使用の %(mount)s パーティションは、%(format)s フォーマットするには小さすぎます (指定可能なサイズは %(minSize)s "
+"から %(maxSize)s です)"
 
 #: pyanaconda/modules/storage/checker/utils.py:156
 #, python-format
@@ -900,8 +882,8 @@ msgid ""
 "Your %(mount)s partition is too large for %(format)s formatting (allowable "
 "size is %(minSize)s to %(maxSize)s)"
 msgstr ""
-"このシステムの %(mount)s パーティションは、%(format)s フォーマットには大きす"
-"ぎます (指定可能なサイズは %(minSize)s MB から %(maxSize)s MB です)。"
+"ご使用の %(mount)s パーティションは、%(format)s フォーマットするには大きすぎます (指定可能なサイズは %(minSize)s "
+"から %(maxSize)s です)。"
 
 #: pyanaconda/modules/storage/checker/utils.py:174
 msgid "No valid boot loader target device found. See below for details."
@@ -977,7 +959,7 @@ msgstr ""
 #: pyanaconda/modules/storage/checker/utils.py:310
 #, python-format
 msgid "Your %s must be on a separate partition or LV."
-msgstr "%s は区切られたパーティションまたはLV上になければなりません。"
+msgstr "お使いの %s は、別のパーティションまたは LV 上にある必要があります。"
 
 #: pyanaconda/modules/storage/checker/utils.py:327
 #, python-format
@@ -990,9 +972,8 @@ msgid ""
 "without an encryption key specified for this device. Please, rescan the "
 "storage."
 msgstr ""
-"既存のロック解除されたLUKSデバイス {} は、このデバイスに指定された暗号キーな"
-"しでインストールに利用することはできません。ストレージを再スキャンしてくださ"
-"い。"
+"既存のロック解除されていないLUKSデバイス {} "
+"は、このデバイスに指定された暗号化キーがないとインストールに使用できません。ストレージを再スキャンしてください。"
 
 #: pyanaconda/modules/storage/checker/utils.py:373
 #, python-format
@@ -1008,9 +989,7 @@ msgstr ""
 msgid ""
 "The available memory is less than %(size)s which can be too small for LUKS2 "
 "format. It may fail."
-msgstr ""
-"使用可能なメモリは 利用可能なメモリーサイズは %(size)s 未満で、LUKS2 形式には"
-"小さ過ぎる可能性があります。失敗する可能性があります。"
+msgstr "利用可能なメモリーサイズは %(size)s 未満で、LUKS2 形式には小さ過ぎる可能性があります。失敗する可能性があります。"
 
 #: pyanaconda/modules/storage/checker/utils.py:436
 #, python-format
@@ -1026,9 +1005,8 @@ msgid ""
 "Selected disks {} contain volume group '{}' that also uses further "
 "unselected disks. You must select or de-select all these disks as a set."
 msgstr ""
-"選択されたディスク {} は他の選択されていないディスクも利用しているボリューム"
-"グループ '{}' を含んでいます。セットされている通りに選択または非選択をしなけ"
-"ればいけません。"
+"選択されたディスク {} には、さらに非選択のディスクも使用するボリュームグループ '{}' "
+"が含まれています。これらすべてのディスクは、セットとして選択または選択解除する必要があります。"
 
 #: pyanaconda/modules/storage/platform.py:41
 msgid "First sector of boot partition"
@@ -1127,7 +1105,7 @@ msgstr ""
 
 #: pyanaconda/modules/storage/disk_selection/utils.py:36
 msgid "The selected disk {} is not recognized."
-msgstr "選択されたディスク {} は認識されませんでした。"
+msgstr "選択されたディスク {} が認識されていません。"
 
 #: pyanaconda/modules/storage/disk_selection/utils.py:46
 #, python-format
@@ -1140,9 +1118,8 @@ msgid_plural ""
 "unselected disks %(unselected)s. You must select or de-select these disks as "
 "a set."
 msgstr[0] ""
-"ディスク %(selected)s を選択しました。これは選択されていないディスク "
-"%(unselected)s を使用するデバイスを含みます。セットされている通りに選択または"
-"非選択をしなければいけません。 "
+"ディスク %(selected)s を選択しました。これは選択されていないディスク %(unselected)s "
+"を使用するデバイスを含みます。これらのディスクはセットで選択または非選択をしなければいけません。"
 
 #: pyanaconda/modules/storage/installation.py:88
 msgid "An error occurred while resizing the device {}: {}"
@@ -1150,16 +1127,16 @@ msgstr "デバイス {}: {} をサイズ変更中にエラーが発生しまし�
 
 #: pyanaconda/modules/storage/installation.py:139
 msgid "Gathering entropy 100%"
-msgstr "エントロピーを収集中 100%"
+msgstr "エントロピーの収集 100%"
 
 #: pyanaconda/modules/storage/installation.py:143
 msgid "Gathering entropy (time ran out)"
-msgstr "エントロピーを収集中 (経過)"
+msgstr "エントロピーの収集 (時間切れ)"
 
 #: pyanaconda/modules/storage/installation.py:146
 #, python-brace-format
 msgid "Gathering entropy {percents}% (remaining time {time})"
-msgstr "エントロピーを収集中 {percents}% (残り時間 {time})"
+msgstr "エントロピーの収集 {percents}％ (残り時間 {time})"
 
 #: pyanaconda/modules/storage/kickstart.py:65
 msgid "File system type \"{}\" given in autopart command is invalid."
@@ -1193,29 +1170,25 @@ msgstr "ignoredisk コマンドで指定されたディスク \"{}\" は存在�
 
 #: pyanaconda/modules/storage/kickstart.py:149
 msgid "NIC \"{}\" given in fcoe command does not exist."
-msgstr "fcoeコマンドで見えるNIC \"{}\" は存在しません。"
+msgstr "fcoe コマンドで指定された NIC \"{}\" は存在しません。"
 
 #: pyanaconda/modules/storage/kickstart.py:174
 #, python-brace-format
 msgid ""
 "Network interface \"{nic}\" required by iSCSI \"{iscsi_target}\" target is "
 "not up."
-msgstr ""
-"iSCSI \"{iscsi_target}\" ターゲットに必要なネットワークインターフェース "
-"\"{nic}\" がアップしていません。"
+msgstr "iSCSI \"{iscsi_target}\" ターゲットに要求されるネットワークインターフェース \"{nic}\" が起動していません。"
 
 #: pyanaconda/modules/storage/kickstart.py:190
 msgid ""
 "iscsi --iface must be specified (binding used) either for all targets or for "
 "none"
-msgstr ""
-"iscsi --iface は、全ターゲットに指定するか (バインド使用)、どのターゲットにも"
-"指定しないのいずれかにしてください"
+msgstr "iscsi --iface は、すべてのターゲットに指定するか (バインド使用)、どのターゲットにも指定しないかのいずれかにしてください"
 
 #: pyanaconda/modules/storage/kickstart.py:228
 #: pyanaconda/modules/storage/kickstart.py:240
 msgid "Namespace \"{}\" given in nvdimm command was not found."
-msgstr "nvdimmコマンドで見える名前空間 \"{}\" が見つかりません。"
+msgstr "nvdimm コマンドで指定された名前空間 \"{}\" が見つかりませんでした。"
 
 #: pyanaconda/modules/storage/kickstart.py:245
 msgid "Disk \"{}\" given in nvdimm command does not exist."
@@ -1245,11 +1218,11 @@ msgstr ""
 #: pyanaconda/modules/storage/snapshot/device.py:53
 #, python-format
 msgid "Snapshot %s already exists."
-msgstr "スナップショット %s は既に存在します。"
+msgstr "スナップショット %s はすでに存在します。"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:40
 msgid "Starting Flatpak installation"
-msgstr "Flatpak インストールを開始中"
+msgstr "Flatpak のインストールを開始しています"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:52
 msgid "Post-installation flatpak tasks"
@@ -1257,7 +1230,7 @@ msgstr "インストール後の flatpak タスク"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:58
 msgid "Flatpak installation has finished"
-msgstr "Flatpak インストールが完了しました"
+msgstr "Flatpak のインストールが終了しました"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:390
 #, fuzzy
@@ -1298,7 +1271,7 @@ msgstr "オブジェクトの書き込み"
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_manager.py:205
 #, python-format
 msgid "Installing %(flatpak_name)s"
-msgstr "インストール中 %(flatpak_name)s"
+msgstr "%(flatpak_name)s のインストール中"
 
 #: pyanaconda/modules/payloads/source/live_os/live_os.py:59
 msgid "Live OS"
@@ -1396,13 +1369,11 @@ msgstr "カスタマイズ"
 msgid ""
 "Not enough space in file systems for the current software selection. An "
 "additional {} is needed."
-msgstr ""
-"現在のソフトウェア選択でファイルシステムに十分なスペースがありません。追加で "
-"{} 必要です。"
+msgstr "現在選択しているソフトウェア選択に対してファイルシステムの空き領域が不足しています。追加で {} 必要です。"
 
 #: pyanaconda/ui/lib/space.py:106
 msgid "Not enough space in file systems for the current software selection."
-msgstr "現在のソフトウェア選択でファイルシステムに十分なスペースがありません。"
+msgstr "現在のソフトウェアの選択には、ファイルシステムに空き容量が不足しています。"
 
 #: pyanaconda/ui/lib/subscription.py:287
 msgid "Registration failed due to insufficient credentials."
@@ -1424,7 +1395,7 @@ msgstr "ストレージの検出"
 #, python-brace-format
 msgid "{count} disk selected; {capacity} capacity; {free} free"
 msgid_plural "{count} disks selected; {capacity} capacity; {free} free"
-msgstr[0] "{count} 選択ディスク; {capacity} 容量; {free} 空き"
+msgstr[0] "選択されたディスク数 {count}、容量 {capacity}、空き領域 {free}"
 
 #: pyanaconda/ui/lib/storage.py:283
 msgid "Saving storage configuration..."
@@ -1454,8 +1425,7 @@ msgid ""
 "Warning: Processor has Simultaneous Multithreading (SMT) enabled.  <a href="
 "\"\">Click for details.</a>"
 msgstr ""
-"警告：プロセッサの同時マルチスレッディング(SMT)が有効です。<a href=\"\">ク"
-"リックすると詳細を表示します。</a>"
+"警告:プロセッサーで、同時マルチスレッディング (SMT) が有効になっています。<a href=\"\">こちらをクリックして詳細を表示します。</a>"
 
 #: pyanaconda/ui/gui/hubs/summary.py:99
 msgid ""
@@ -1479,7 +1449,7 @@ msgstr "ヘルプ"
 #: pyanaconda/ui/gui/spokes/lib/detailederror.py:58
 msgctxt "GUI|Detailed Error Dialog"
 msgid "_Quit"
-msgstr "退出(_Q)"
+msgstr "終了(_Q)"
 
 #: pyanaconda/ui/gui/__init__.py:831
 msgctxt "GUI|Yes No Dialog"
@@ -1644,7 +1614,7 @@ msgstr "root パスワード(_R):"
 
 #: pyanaconda/ui/gui/spokes/root_password.py:136
 msgid "Root password has been set."
-msgstr "rootパスワードが設定されています。"
+msgstr "ルートパスワードが設定されました。"
 
 #: pyanaconda/ui/gui/spokes/root_password.py:183
 msgid "Disabled, set password to enable."
@@ -1683,9 +1653,7 @@ msgstr "%(container_type)s の設定"
 msgid ""
 "Please create a name for this %(container_type)s and select at least one "
 "disk below."
-msgstr ""
-"この %(container_type)s の名前を作成し、少なくとも1つのディスクを次から選択し"
-"てください。"
+msgstr "この %(container_type)s の名前を作成し、少なくとも 1 つのディスクを次から選択してください。"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:53
 msgid ""
@@ -1754,12 +1722,12 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:382
 msgid ""
 "Are you sure you want to delete all of the data on {}, including subvolumes?"
-msgstr "サブボリュームを含む、 {} 上のすべてのデータを削除しますか？"
+msgstr "サブボリュームを含む、{} 上のすべてのデータを削除しますか?"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:387
 msgid ""
 "Are you sure you want to delete all of the data on {}, including snapshots?"
-msgstr "スナップショットを含む、 {} 上のすべてのデータを削除しますか？"
+msgstr "スナップショットを含む、{} 上のすべてのデータを削除しますか?"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:390
 msgid "Are you sure you want to delete all of the data on {}?"
@@ -1830,9 +1798,7 @@ msgstr "データ"
 msgid ""
 "You haven't created any mount points for your %(product)s %(version)s "
 "installation yet.  You can:"
-msgstr ""
-"%(product)s %(version)s をインストールするマウントポイントが作成されていませ"
-"ん。次を行うことができます。"
+msgstr "%(product)s %(version)s をインストールするマウントポイントがまだ作成されていません。次を行うことができます:"
 
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:479
 msgctxt "GUI|Custom Partitioning|Autopart Page"
@@ -1872,9 +1838,8 @@ msgid ""
 "of available space, including <b>%(software)s</b> for software and <b>"
 "%(swap)s</b> for swap space."
 msgstr ""
-"現在の <b>%(product)s</b>ソフトウェア選択にはソフトウェア領域に <b>"
-"%(total)s</b>、swap 領域に<b>%(software)s</b> を含め使用可能な領域が <b>"
-"%(swap)s</b> 必要になります。"
+"現在の <b>%(product)s</b>ソフトウェア選択には、ソフトウェア領域に <b>%(software)s</b>、swap 領域に "
+"<b>%(swap)s</b> を含む使用可能な領域が <b>%(total)s</b> 必要です。"
 
 #: pyanaconda/ui/gui/spokes/lib/storage_dialogs.py:81
 #, python-format
@@ -1883,9 +1848,9 @@ msgid ""
 "selection</a> requires <b>%(total)s</b> of available space, including <b>"
 "%(software)s</b> for software and <b>%(swap)s</b> for swap space."
 msgstr ""
-"あなたの現在の<a href=\"\" title=\"%(tooltip)s\"><b>%(product)s</b> ソフト"
-"ウェア選択</a>は、ソフトウェア <b>%(total)s</b> とスワップ領域 <b>"
-"%(software)s</b> を含めて入手可能な領域 <b>%(swap)s</b> が必要です。"
+"現在の <a href=\"\" title=\"%(tooltip)s\"><b>%(product)s</b> ソフトウェア選択 </a> には、"
+"ソフトウェア領域 <b>%(software)s</b> と swap 領域 <b>%(swap)s</b> を含む使用可能な領域が "
+"<b>%(total)s</b> 必要です。"
 
 #: pyanaconda/ui/gui/spokes/lib/storage_dialogs.py:132
 #, python-format
@@ -1899,10 +1864,8 @@ msgid ""
 "or remove existing partitions via our guided reclaim space tool, or you can "
 "adjust your partitions on your own in the custom partitioning interface."
 msgstr ""
-"<b>%s をインストールするには領域が不足しています</b>。領域再生用ツールで既存"
-"のパーティションの縮小または削除を行うことができます。ツールを使用しない場合"
-"は、カスタムのパーティション設定インターフェースで独自にパーティションの調整"
-"を行ってください。"
+"<b> ご使用のシステムで %s</b> をインストールするには、領域が不足しています。ガイド付き領域再利用ツールで既存のパーティションの縮小または削除を"
+"行うことができます。ツールを使用しない場合は、カスタムのパーティション設定インターフェースで独自にパーティションの調整を行ってください。"
 
 #: pyanaconda/ui/gui/spokes/lib/storage_dialogs.py:166
 #, python-format
@@ -1921,11 +1884,9 @@ msgid ""
 "could add more disks for additional space, modify your software selection to "
 "install a smaller version of <b>%(productName)s</b>, or quit the installer."
 msgstr ""
-"選択したディスクで利用できるすべての空き領域を使用しても、<b>%(productName)s "
-"のインストールには十分な領域</b> がありません。更に空き領域を確保するために他"
-"のディスクを追加するか、小さいバージョンの <b>%(productName)s</b> をインス"
-"トールするためにソフトウェア選択を修正するか、もしくはインストーラーから退出"
-"することができます。"
+"<b> 選択したディスクで利用できるすべての空き領域を使用しても、%(productName)s</b> "
+"のインストールには十分な領域がありません。さらに空き領域を確保するために他のディスクを追加するか、小さいバージョンの "
+"<b>%(productName)s</b> をインストールするためにソフトウェア選択を修正するか、もしくはインストーラーを終了することができます。"
 
 #: pyanaconda/ui/gui/spokes/lib/resize.py:54
 msgid "Preserve"
@@ -1946,7 +1907,7 @@ msgstr "インストールには、システムデータ用に合計 <b>%s</b> �
 
 #: pyanaconda/ui/gui/spokes/lib/resize.py:131
 msgid "This device contains the installation source."
-msgstr "インストールソースが含まれているデバイス"
+msgstr "インストールソースが含まれているデバイス。"
 
 #: pyanaconda/ui/gui/spokes/lib/resize.py:151
 msgid ""
@@ -2033,7 +1994,7 @@ msgstr "キー(_K):"
 
 #: pyanaconda/ui/gui/spokes/lib/network_secret_agent.py:218
 msgid "User name: "
-msgstr "ユーザー名:"
+msgstr "ユーザー名: "
 
 #: pyanaconda/ui/gui/spokes/lib/network_secret_agent.py:225
 #: pyanaconda/ui/tui/spokes/askvnc.py:147
@@ -2042,7 +2003,7 @@ msgstr "パスワード: "
 
 #: pyanaconda/ui/gui/spokes/lib/network_secret_agent.py:233
 msgid "Identity: "
-msgstr "識別:"
+msgstr "識別: "
 
 #: pyanaconda/ui/gui/spokes/lib/network_secret_agent.py:240
 msgid "Private key password: "
@@ -2064,9 +2025,8 @@ msgid ""
 "%(initiatorName)s</b> using the portal IP address <b>%(portalAddress)s</b>.  "
 "Please select which nodes you wish to log into:"
 msgstr ""
-"以下ノードが、ポータルIPアドレス <b>%(portalAddress)s</b> のiSCSIイニシエー"
-"ター<b>%(initiatorName)s</b>  により見つかりました。ログインしたいノードを選"
-"択してください :"
+"ポータル IP アドレス <b>%(portalAddress)s</b> を使用する iSCSI イニシエーター "
+"<b>%(initiatorName)s</b> を使用して、次のノードが検出されました。ログインしたいノードを選択してください:"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:72
 msgid "Setting up installation source..."
@@ -2080,20 +2040,20 @@ msgstr " <a href=\"\">クリックすると詳細を表示します。</a>"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:111
 msgid "Invalid proxy URL"
-msgstr "無効なプロキシ URL です。"
+msgstr "無効なプロキシー URL です。"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:116
 #, python-format
 msgid "Invalid proxy protocol: %s"
-msgstr "無効なプロキシプロトコル: %s"
+msgstr "無効なプロキシープロトコル: %s"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:122
 msgid "Extra characters in proxy URL"
-msgstr "プロキシURLに特殊文字があります"
+msgstr "プロキシー URL に追加の文字があります"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:127
 msgid "Proxy authentication data duplicated"
-msgstr "プロキシ認証データが重複しています"
+msgstr "プロキシー 認証データが重複しています"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:268
 msgid "This media is good to install from."
@@ -2138,9 +2098,7 @@ msgstr "何も選択されていません"
 #: pyanaconda/ui/gui/spokes/installation_source.py:836
 msgid ""
 "Failed to set up installation source; check the repo url and proxy settings."
-msgstr ""
-"インストールソースのセットアップに失敗しました。リポジトリーの URL とプロキシ"
-"設定を確認してください。"
+msgstr "インストールソースのセットアップに失敗しました。リポジトリーの URL とプロキシー設定を確認してください。"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:918
 #, python-format
@@ -2353,7 +2311,7 @@ msgstr "時刻と日付(_T)"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.py:544
 msgid "Restoring hardware time..."
-msgstr "ハードウェア時刻をリストア中..."
+msgstr "ハードウェア時刻を復元中..."
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.py:558
 #: pyanaconda/ui/gui/spokes/datetime_spoke.py:564
@@ -2395,17 +2353,17 @@ msgstr "完了しました!"
 #: pyanaconda/ui/gui/spokes/installation_progress.py:119
 #, python-format
 msgid "Use of this product is subject to the license agreement found at %s"
-msgstr "本製品の使用は、以下に定められている使用許諾契約の対象となります。 %s"
+msgstr "本製品の使用は、以下 %s に定められている使用許諾契約の対象となります。"
 
 #: pyanaconda/ui/gui/spokes/installation_progress.py:144
 msgctxt "GUI|Progress"
 msgid "_Reboot System"
-msgstr "システムを再起動(_R)"
+msgstr "システムの再起動(_R)"
 
 #: pyanaconda/ui/gui/spokes/installation_progress.py:146
 msgctxt "GUI|Progress"
 msgid "_Finish Installation"
-msgstr "終了(_F)"
+msgstr "インストールの終了(_F)"
 
 #: pyanaconda/ui/gui/spokes/installation_progress.py:154
 #, python-format
@@ -2414,7 +2372,7 @@ msgid ""
 "Go ahead and reboot your system to start using it!"
 msgstr ""
 "%s が正しくインストールされ、使用準備が整いました。\n"
-"使用開始するには再起動してください。"
+"使用開始するにはお使いのシステムを再起動してください。"
 
 #: pyanaconda/ui/gui/spokes/installation_progress.py:159
 #, python-format
@@ -2423,7 +2381,7 @@ msgid ""
 "Go ahead and quit the application to start using it!"
 msgstr ""
 "%s が正しくインストールされ、使用準備が整いました。\n"
-"使用開始するには退出してからシステムを再起動してください。"
+"使用開始するにはアプリケーションを終了してください。"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:100
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:87
@@ -2522,7 +2480,7 @@ msgstr "デバイスの削除要求に失敗しました。"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1212
 msgid "No disks selected. Keeping previous disk set."
-msgstr "ディスクが選択されていません"
+msgstr "ディスクが選択されていません。以前のディスクセットを保持します。"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1291
 msgid "({} free)"
@@ -2530,7 +2488,7 @@ msgstr "({} の空き)"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1473
 msgid "Automatic partitioning failed."
-msgstr "自動パーティションに失敗しました。"
+msgstr "自動パーティション分割に失敗しました。"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1585
 msgid ""
@@ -2561,7 +2519,7 @@ msgstr "現在の選択を保持する(_P)"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1901
 msgid "Failed to unlock encrypted block device."
-msgstr "暗号化ブロックデバイスのロック解除に失敗しました。"
+msgstr "暗号化されたブロックデバイスのロック解除に失敗しました。"
 
 #: pyanaconda/ui/gui/spokes/user.py:68
 msgid "Invalid group name."
@@ -2610,17 +2568,13 @@ msgstr "Blivet-GUI パーティショニング"
 msgid ""
 "Error checking storage configuration.  <a href=\"\">Click for details</a> or "
 "press Done again to continue."
-msgstr ""
-"デバイスの再フォーマット要求に失敗しました。<a href=\"\">クリックすると詳細を"
-"表示します</a>。"
+msgstr "ストレージ設定の確認中にエラーが発生しました。<a href=\"\">クリックして詳細を表示する</a> か、完了を再度押して続行します。"
 
 #: pyanaconda/ui/gui/spokes/blivet_gui.py:255
 msgid ""
 "Warning checking storage configuration.  <a href=\"\">Click for details</a> "
 "or press Done again to continue."
-msgstr ""
-"ストレージ設定の確認中に警告が出されました。<a href=\"\">クリックして詳細を表"
-"示させる</a> か、完了を再度押して続行します。"
+msgstr "ストレージ設定の確認中に警告が出されました。<a href=\"\">クリックして詳細を表示する</a> か、完了を再度押して続行します。"
 
 #: pyanaconda/ui/gui/spokes/welcome.py:269
 #, python-format
@@ -2643,7 +2597,7 @@ msgstr "ソフトウェアの選択をチェック中にエラー"
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:277
 msgid "Red Hat CDN requires registration."
-msgstr ""
+msgstr "Red Hat CDN には登録が必要です"
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:280
 #: pyanaconda/ui/tui/spokes/software_selection.py:164
@@ -2662,7 +2616,7 @@ msgstr "カスタムソフトウェアが選択されています"
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:293
 msgid "Invalid environment specified in kickstart"
-msgstr "kickstart で不正な環境が指定されています"
+msgstr "キックスタートで不正な環境が指定されています"
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:296
 #: pyanaconda/ui/gui/spokes/software_selection.py:301
@@ -2676,9 +2630,7 @@ msgstr "不正な環境が選択されています"
 #: pyanaconda/ui/gui/spokes/software_selection.py:491
 msgid ""
 "Error checking software dependencies.  <a href=\"\">Click for details.</a>"
-msgstr ""
-"ソフトウェア依存性チェックでエラーが起きました。 <a href=\"\">クリックすると"
-"詳細を表示します。</a>"
+msgstr "ソフトウェア依存性チェックでエラーが起きました。<a href=\"\">クリックすると詳細を表示します。</a>"
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:611
 msgid ""
@@ -2686,15 +2638,13 @@ msgid ""
 "likely caused by an error with your installation source.  You can quit the "
 "installer, change your software source, or change your software selections."
 msgstr ""
-"インストールがマークされたソフトウェアは以下エラーになりました。これはあなた"
-"のインストレーションソースのエラーによって起こったもののようです。インストー"
-"ラーから退出し、ソフトウェアソースを変更するか、ソフトウェア選択を変更するこ"
-"とができます。"
+"インストールがマークされたソフトウェアで、以下のエラーが発生しました。これは、ご使用のインストレーションソースのエラーが原因である可能性があります。インス"
+"トールを中断し、ソフトウェアソースを変更するか、ソフトウェア選択を変更することができます。"
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:617
 msgctxt "GUI|Software Selection|Error Dialog"
 msgid "_Quit"
-msgstr "退出(_Q)"
+msgstr "終了(_Q)"
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:618
 msgctxt "GUI|Software Selection|Error Dialog"
@@ -2788,7 +2738,7 @@ msgstr "NVDIMM デバイス {namespace}"
 
 #: pyanaconda/ui/gui/spokes/storage.py:457
 msgid "{} free"
-msgstr "{} 空き"
+msgstr "{} の空き"
 
 #: pyanaconda/ui/gui/spokes/storage.py:559
 msgid ""
@@ -2806,15 +2756,13 @@ msgstr "ディスク選択中に問題が発生。クリックすると詳細を
 msgid ""
 "The following errors were encountered when checking your disk selection. You "
 "can modify your selection or quit the installer."
-msgstr ""
-"ディスクの選択のチェック中に以下のエラーが発生しました。ディスクの選択を変更"
-"するかインストーラーから退出してください。"
+msgstr "ディスクの選択のチェック中に以下のエラーが発生しました。ディスクの選択を変更するかインストーラーを終了してください。"
 
 #: pyanaconda/ui/gui/spokes/storage.py:847
 #: pyanaconda/ui/gui/spokes/storage.py:868
 msgctxt "GUI|Storage|Error Dialog"
 msgid "_Quit"
-msgstr "退出(_Q)"
+msgstr "終了(_Q)"
 
 #: pyanaconda/ui/gui/spokes/storage.py:848
 msgctxt "GUI|Storage|Error Dialog"
@@ -2825,9 +2773,7 @@ msgstr "ディスクの選択を変更(_M)"
 msgid ""
 "The following errors were encountered when checking your storage "
 "configuration.  You can modify your storage layout or quit the installer."
-msgstr ""
-"ストレージ設定のチェック中に以下のエラーが発生しました。ストレージのレイアウ"
-"トを変更するか、インストーラーから退出してください。"
+msgstr "ストレージ設定の確認中に以下のエラーが発生しました。ストレージのレイアウトを変更するか、インストーラーを終了してください。"
 
 #: pyanaconda/ui/gui/spokes/storage.py:869
 msgctxt "GUI|Storage|Error Dialog"
@@ -2839,9 +2785,7 @@ msgid ""
 "The following warnings were encountered when checking your storage "
 "configuration.  These are not fatal, but you may wish to make changes to "
 "your storage layout."
-msgstr ""
-"ストレージ設定のチェック中に以下のような警告が発生しました。致命的ではありま"
-"せんが、ストレージのレイアウトを変更することができます。"
+msgstr "ストレージ設定の確認中に以下の警告が出されました。致命的ではありませんが、ストレージレイアウトの変更をお勧めします。"
 
 #: pyanaconda/ui/gui/spokes/storage.py:888
 msgctxt "GUI|Storage|Warning Dialog"
@@ -2895,7 +2839,7 @@ msgid ""
 "Would you like to use it anyway?"
 msgstr ""
 "\n"
-"それでも、このパスワードを使用しますか？"
+"それでも、このパスワードを使用しますか?"
 
 #: pyanaconda/ui/tui/spokes/network.py:49
 msgid "Bad format of the IP address"
@@ -2938,7 +2882,7 @@ msgstr " IPv6 アドレス: %(addr)s/%(prefix)d\n"
 
 #: pyanaconda/ui/tui/spokes/network.py:319
 msgid "Network configuration is not available."
-msgstr "ネットワークの設定は利用できません。"
+msgstr "ネットワーク設定は利用できません。"
 
 #: pyanaconda/ui/tui/spokes/network.py:325
 #, python-format
@@ -2972,7 +2916,7 @@ msgstr "デバイスの設定"
 #: pyanaconda/ui/tui/spokes/network.py:471
 #, python-format
 msgid "IPv4 address or %s for DHCP"
-msgstr "IPv4 アドレス もしくは %s に対する DHCP"
+msgstr "IPv4 アドレス もしくは %s (DHCP)"
 
 #: pyanaconda/ui/tui/spokes/network.py:475
 msgid "IPv4 netmask"
@@ -2988,8 +2932,7 @@ msgid ""
 "IPv6 address[/prefix] or %(auto)s for automatic, %(dhcp)s for DHCP, "
 "%(ignore)s to turn off"
 msgstr ""
-"IPv6 アドレス [/プレフィックス]、または  %(auto)s (自動取得)、%(dhcp)s "
-"(DHCP)、%(ignore)s (機能をオフ)"
+"IPv6 アドレス [/プレフィックス]、または %(auto)s (自動取得)、%(dhcp)s (DHCP)、%(ignore)s (機能をオフ)"
 
 #: pyanaconda/ui/tui/spokes/network.py:487
 msgid "IPv6 default gateway"
@@ -3035,8 +2978,7 @@ msgid ""
 "You will have to type it twice. Leave blank for no password"
 msgstr ""
 "VNC パスワードを入力してください (6 文字から 8 文字の長さ)。\n"
-"2 度入力する必要があります。パスワードを設定しない場合は空白のままにしておき"
-"ます。"
+"2 回入力する必要があります。パスワードを設定しない場合は空白のままにしておきます。"
 
 #: pyanaconda/ui/tui/spokes/askvnc.py:148
 msgid "Password (confirm): "
@@ -3044,7 +2986,7 @@ msgstr "パスワード(確定): "
 
 #: pyanaconda/ui/tui/spokes/askvnc.py:151
 msgid "Passwords do not match!"
-msgstr "パスワードが一致しません！"
+msgstr "パスワードが一致しません。"
 
 #: pyanaconda/ui/tui/spokes/askvnc.py:153
 msgid "The password must be at least six characters long."
@@ -3072,7 +3014,7 @@ msgstr "パスワードが設定されていません"
 
 #: pyanaconda/ui/tui/spokes/root_password.py:92
 msgid "Please select new root password. You will have to type it twice."
-msgstr "新しい root パスワードを選択してください。２度記入する必要があります。"
+msgstr "新しい root パスワードを選択してください。2 回入力する必要があります。"
 
 #: pyanaconda/ui/tui/spokes/root_password.py:99
 #: pyanaconda/ui/tui/spokes/user.py:144 pyanaconda/ui/gui/spokes/user.glade:175
@@ -3084,7 +3026,7 @@ msgstr "パスワード"
 
 #: pyanaconda/ui/tui/spokes/kernel_warning.py:35
 msgid "Warning: Processor has Simultaneous Multithreading (SMT) enabled"
-msgstr "警告：プロセッサの同時マルチスレッディング(SMT)が有効です"
+msgstr "警告:プロセッサーで、同時マルチスレッディング (SMT) が有効になっています"
 
 #: pyanaconda/ui/tui/spokes/__init__.py:57
 msgid "Default spoke title"
@@ -3243,9 +3185,7 @@ msgstr "使用できる地域"
 
 #: pyanaconda/ui/tui/spokes/time_spoke.py:298
 msgid "Please select the timezone. Use numbers or type names directly"
-msgstr ""
-"タイムゾーンを選択してください。\n"
-"番号かタイプ名を直接選択してください"
+msgstr "タイムゾーンを選択してください。番号かタイプ名を直接選択してください"
 
 #: pyanaconda/ui/tui/spokes/time_spoke.py:312
 msgid "NTP configuration"
@@ -3266,7 +3206,7 @@ msgstr "NTP サーバーアドレスの追加"
 #: pyanaconda/ui/tui/spokes/time_spoke.py:393
 #, python-format
 msgid "Enter an NTP server address and press %s"
-msgstr "NTP サーバーアドレスを入力して  %s を押します"
+msgstr "NTP サーバーアドレスを入力して %s を押します"
 
 #: pyanaconda/ui/tui/spokes/time_spoke.py:428
 msgid "Select an NTP server to remove"
@@ -3282,12 +3222,12 @@ msgstr "インストールの完了"
 
 #: pyanaconda/ui/tui/spokes/installation_progress.py:135
 msgid "Use of this product is subject to the license agreement found at:"
-msgstr "本製品の使用は、 以下に定められている使用許諾契約の対象となります"
+msgstr "本製品の使用は、以下に定められている使用許諾契約の対象となります:"
 
 #: pyanaconda/ui/tui/spokes/installation_progress.py:146
 #, python-format
 msgid "Installation complete. Press %s to quit"
-msgstr "インストールは完了しました。 %s を押して終了します"
+msgstr "インストールは完了しました。%s を押して終了します"
 
 #: pyanaconda/ui/tui/spokes/user.py:40
 msgid "Full name can't contain the ':' character"
@@ -3334,7 +3274,6 @@ msgid ""
 "%(error_message)s"
 msgstr ""
 "無効なユーザー名: %(name)s\n"
-"\n"
 "%(error_message)s"
 
 #: pyanaconda/ui/tui/spokes/software_selection.py:63
@@ -3351,11 +3290,11 @@ msgstr "ベース環境"
 
 #: pyanaconda/ui/tui/spokes/software_selection.py:246
 msgid "Additional software for selected environment"
-msgstr "選択された環境のための追加ソフトウェア"
+msgstr "選択した環境のその他のソフトウェア"
 
 #: pyanaconda/ui/tui/spokes/software_selection.py:248
 msgid "No additional software to select."
-msgstr "選択する追加ソフトウェアがありません。"
+msgstr "選択できる他のソフトウェアはありません。"
 
 #. TRANSLATORS: 's' to rescan devices
 #: pyanaconda/ui/tui/spokes/storage.py:62
@@ -3406,7 +3345,7 @@ msgid ""
 msgstr ""
 "警告: インストーラーを使って行った変更は初期化を選択すると失われます。\n"
 "\n"
-"dasdfmt の実行を行いますか？\n"
+"dasdfmt を実行しますか?\n"
 
 #: pyanaconda/ui/tui/spokes/storage.py:332
 msgid "This may take a moment."
@@ -3462,9 +3401,8 @@ msgid ""
 "Formats marked with * are new formats meaning ALL DATA on the original "
 "format WILL BE LOST!"
 msgstr ""
-"マウントポイントを指定するため、上記からデバイスを選択し、フォーマットを設定"
-"してください。* でマークされるフォーマットは、元々のフォーマットのすべての"
-"データが削除されることを意味しています。"
+"マウントポイントを指定するため、上記からデバイスを選択し、フォーマットを設定してください。\n"
+"* でマークされるフォーマットは新しいフォーマットで、元々のフォーマットのすべてのデータが削除されることを意味しています。"
 
 #: pyanaconda/ui/tui/spokes/storage.py:727
 msgid ""
@@ -3472,7 +3410,7 @@ msgid ""
 "Do you want to proceed?\n"
 msgstr ""
 "警告:すべての変更を元にもどします。\n"
-"続行しますか？\n"
+"続行しますか?\n"
 
 #: pyanaconda/ui/tui/spokes/storage.py:736
 msgid "Scanning disks. This may take a moment..."
@@ -3481,7 +3419,7 @@ msgstr "ディスクのスキャン中です。しばらくお待ちください
 #: pyanaconda/ui/tui/spokes/storage.py:750
 #, python-format
 msgid "Configure device: %s"
-msgstr "デバイス %s の設定"
+msgstr "デバイスの設定: %s"
 
 #: pyanaconda/ui/tui/spokes/storage.py:770
 msgid "Choose from above to assign mount point and/or set format."
@@ -3560,13 +3498,13 @@ msgid ""
 "The installer will now terminate."
 msgstr ""
 "\n"
-"インストール作業は非対話型コマンドラインモードでエラーが発生したため停止され"
-"ました。Kickstart ファイルを編集し、再度、インストールを試行してください。\n"
-"正確なエラーメッセージは次のとおりです：\n"
+"インストール作業は非対話型コマンドラインモードでエラーが発生したため停止されました。キックスタートファイルを編集し、再度インストールを試行してください。"
+"\n"
+"正確なエラーメッセージは次のとおりです:\n"
 "\n"
 "%s\n"
 "\n"
-" インストーラーを終了します。"
+"インストーラーを終了します。"
 
 #: pyanaconda/exception.py:185
 #, python-format
@@ -3585,22 +3523,13 @@ msgstr ""
 "\n"
 "%s\n"
 "\n"
-" インストーラーを終了します。"
+"インストーラーを終了します。"
 
 #: pyanaconda/errors.py:121
 msgid "An error occurred while activating your storage configuration."
 msgstr "ストレージ設定の有効化中にエラーが発生しました。"
 
 #: pyanaconda/errors.py:128
-#, fuzzy
-#| msgid ""
-#| "There is a problem with your existing storage configuration. You must "
-#| "resolve this matter before the installation can proceed. There is a shell "
-#| "available for use which you can access by pressing ctrl-alt-f1 and then "
-#| "ctrl-b 2.\n"
-#| "\n"
-#| "Once you have resolved the issue you can retry the storage scan. If you "
-#| "do not fix it you will have to exit the installer."
 msgid ""
 "There is a problem with your existing storage configuration or your initial "
 "settings, for example a kickstart file. You must resolve this matter before "
@@ -3610,12 +3539,10 @@ msgid ""
 "Once you have resolved the issue you can retry the storage scan. If you do "
 "not fix it you will have to exit the installer."
 msgstr ""
-"既存のストレージ設定に問題があります。インストールを行う前にこの問題を解決す"
-"る必要があります。ctrl-alt-f1 の後に ctrl-b 2 を押すとシェルにアクセスできま"
-"す。\n"
+"既存のストレージ設定または初期設定の構成に問題があります。インストールを行う前にこの問題を解決する必要があります。ctrl-alt-f1 の後に "
+"ctrl-b 2 を押すとシェルにアクセスできます。\n"
 "\n"
-"この問題を解決してからストレージスキャンを再試行してください。問題が解決でき"
-"ない場合は、インストーラーを終了しなければなりません。"
+"この問題を解決してからストレージスキャンを再試行してください。問題が解決できない場合は、インストーラーを終了しなければなりません。"
 
 #: pyanaconda/errors.py:137
 msgctxt "GUI|Storage Detailed Error Dialog"
@@ -3683,17 +3610,15 @@ msgid ""
 "The following software marked for installation has errors.\n"
 "This is likely caused by an error with your installation source."
 msgstr ""
-"以下インストール対象にマークされたソフトウェアでエラーが発生しました。\n"
-"インストールソースのエラーが原因のようです。"
+"インストール対象の以下のソフトウェアにエラーがあります。\n"
+"インストールソースでのエラーが原因となっている可能性が高いと思われます。"
 
 #: pyanaconda/errors.py:200
 msgid ""
 "The following error occurred while installing the boot loader. The system "
 "will not be bootable. Would you like to ignore this and continue with "
 "installation?"
-msgstr ""
-"ブートローダーのインストール中に以下のエラーが発生しました。システムを起動で"
-"きません。これを省略してインストールを続行しますか？"
+msgstr "ブートローダーのインストール中に以下のエラーが発生しました。システムを起動できません。これを省略してインストールを続行しますか?"
 
 #: pyanaconda/errors.py:212
 #, fuzzy, python-brace-format
@@ -3786,8 +3711,8 @@ msgid ""
 "%(product_name)s requires %(needed_ram)s MB of memory to install, but you "
 "only have %(total_ram)s MB on this machine.\n"
 msgstr ""
-"%(product_name)s をインストールするには最低 %(needed_ram)s MB のメモリーが必"
-"要ですが、このマシンには %(total_ram)s  MB しかありません。\n"
+"%(product_name)s をインストールするには %(needed_ram)s MB のメモリーが必要ですが、このマシンには "
+"%(total_ram)s MB しかありません。\n"
 
 #: pyanaconda/startup_utils.py:83
 #, python-format
@@ -3858,7 +3783,7 @@ msgstr "%s にポリシー名が必要です"
 #: pyanaconda/pwpolicy.py:204
 #, python-format
 msgid "A %(command)s with the name %(policyName)s has already been defined."
-msgstr "%(policyName)s という名前の %(command)s は既に定義されています。"
+msgstr "%(policyName)s という名前の %(command)s はすでに定義されています。"
 
 #: pyanaconda/pwpolicy.py:238
 msgid ""
@@ -3877,9 +3802,8 @@ msgid ""
 "custom partitioning for full control over the disk layout. Would you like to "
 "use VNC mode instead?"
 msgstr ""
-"テキストモードによるインストールは限定的なインストールオプションしか提供され"
-"ず、パーティション設定の細かなカスタマイズが行えません。代わりに VNC モード"
-"を 使用しますか？"
+"テキストモードによるインストールは限定的なインストールオプションしか提供されず、パーティション設定の細かなカスタマイズが行えません。代わりに VNC "
+"モードを 使用しますか?"
 
 #: pyanaconda/display.py:348
 msgid ""
@@ -3887,9 +3811,8 @@ msgid ""
 "connect to this computer from another computer and perform a graphical "
 "installation or continue with a text mode installation?"
 msgstr ""
-"マシンで X を起動できませんでした。VNC を起動して別のコンピューターからこのマ"
-"シンに接続しグラフィカルなインストールを行いますか、またはテキストモードのイ"
-"ンストールで続行しますか?"
+"ご使用の マシンで X を起動できませんでした。VNC "
+"を起動して別のコンピューターからこのマシンに接続しグラフィカルなインストールを行うか、またはテキストモードのインストールで続行しますか?"
 
 #: pyanaconda/vnc.py:79
 #, python-format
@@ -3927,9 +3850,7 @@ msgstr "vncconfig を開始しようとしています"
 #: pyanaconda/vnc.py:212
 #, python-format
 msgid "Please manually connect your vnc client to %s to begin the install."
-msgstr ""
-"インストールを開始するには、手動で、ご使用の vnc クライアントを %s に接続して"
-"ください。"
+msgstr "インストールを開始するには、手動でご使用の vnc クライアントを %s に接続してください。"
 
 #: pyanaconda/vnc.py:214
 #, python-format
@@ -4005,7 +3926,8 @@ msgid ""
 msgstr ""
 "\n"
 "\n"
-"不明なエラーが発生しました。作業を中断します。\n"
+"不明なエラーが発生しました。作業を中断します。 \n"
+"\n"
 
 #: pyanaconda/vnc.py:293
 msgid ""
@@ -4017,7 +3939,7 @@ msgstr ""
 
 #: pyanaconda/rescue.py:272
 msgid "Unable to find /bin/bash to execute!  Not starting shell."
-msgstr "/bin/bash が見つかりません。シェルを起動できません。"
+msgstr "実行する /bin/bash が見つかりません。シェルを起動できません。"
 
 #: pyanaconda/rescue.py:289
 msgid "Rescue"
@@ -4058,7 +3980,7 @@ msgstr "シェルへスキップ"
 
 #: pyanaconda/rescue.py:311
 msgid "Quit (Reboot)"
-msgstr "退出 (再起動)"
+msgstr "終了 (再起動)"
 
 #: pyanaconda/rescue.py:408
 msgid "Rescue Shell"
@@ -4086,11 +4008,12 @@ msgid ""
 "\tchroot %(mountpoint)s\n"
 "\n"
 msgstr ""
-"あなたのシステムは %(mountpoint)s 以下にマウントされています。\n"
+"お使いのシステムは %(mountpoint)s にマウントされています。\n"
 "\n"
-"あなたのシステムをroot環境にしたい場合は、次のコマンドを実行してください:\n"
+"お使いのシステムの root をアクティブなシステムの root にするには、次のコマンドを実行します。\n"
 "\n"
-"\tchroot %(mountpoint)s\n"
+"\\\tchroot %(mountpoint)s\n"
+"\n"
 
 #: pyanaconda/rescue.py:442
 #, python-brace-format
@@ -4167,7 +4090,7 @@ msgstr "テキストモードを使用する"
 
 #: pyanaconda/core/constants.py:89
 msgid "Do you really want to quit?"
-msgstr "本当に退出しますか？"
+msgstr "終了してもよろしいですか?"
 
 #: pyanaconda/core/constants.py:154
 #, fuzzy
@@ -4201,9 +4124,7 @@ msgstr ""
 
 #: pyanaconda/core/constants.py:170
 msgid "No disks selected; please select at least one disk to install to."
-msgstr ""
-"ディスクが選択されていません。インストール先として少なくともディスクを１つ選"
-"択してください。"
+msgstr "ディスクが選択されていません。インストール先として少なくともディスクを 1 つ選択してください。"
 
 #: pyanaconda/core/constants.py:175
 msgid ""
@@ -4214,11 +4135,10 @@ msgid ""
 "red.ht/rhel-smt to understand your potential risks and learn about other "
 "ways to mitigate these risks."
 msgstr ""
-"同期マルチスレッディング(SMT)テクノロジーは特定のワークロードでのパフォーマン"
-"ス向上が可能ですが、いくつかのセキュリティ問題が公に公開されています。SMTを向"
-"こうにするオプションもありますがパフォーマンスに影響します。SMTを有効にする場"
-"合、 https://red.ht/rhel-smt を読み、潜在リスクの理解と、これらリスクを軽減す"
-"る他の方法の学習をしてください。"
+"同時マルチスレッディング (SMT) "
+"技術を使用すると、特定のワークロードではパフォーマンスが改善されますが、公開済みのセキュリティー問題がもたらされます。SMT "
+"は無効にすることもできますが、その場合はパフォーマンスにマイナス影響が出る可能性があります。SMT を有効にしておく場合は、https://red.ht/"
+"rhel-smt のアーティクルで、潜在的なリスクとこれらリスクの軽減方法を確認してください。"
 
 #: pyanaconda/core/constants.py:185
 msgid ""
@@ -4228,11 +4148,9 @@ msgid ""
 "rhel-smt to understand potential risks and learn about ways to mitigate "
 "these risks."
 msgstr ""
-"同期マルチスレッディング(SMT)は特定のワークロードでのパフォーマンス向上が可能"
-"ですが、いくつかのセキュリティ問題が公に公開されています。SMTを向こうにするオ"
-"プションもありますがパフォーマンスに影響します。SMTを有効にする場合、 "
-"https://red.ht/rhel-smt を読み、潜在リスクの理解と、これらリスクを軽減する他"
-"の方法の学習をしてください。"
+"同時マルチスレッディング (SMT) を使用すると、特定のワークロードではパフォーマンスが改善されますが、公開済みのセキュリティー問題がもたらされます。"
+"SMT は無効にすることもできますが、その場合はパフォーマンスにマイナス影響が出る可能性があります。潜在的なリスクとこれらリスクの軽減方法については、ht"
+"tps://red.ht/rhel-smt のアーティクルを参照してください。"
 
 #: pyanaconda/core/constants.py:201
 msgid "The password is empty."
@@ -4304,7 +4222,7 @@ msgstr ""
 
 #: pyanaconda/core/constants.py:232
 msgid "You will have to press <b>Done</b> twice to confirm it."
-msgstr "確認する場合は、 <b>完了</b> を 2 回押す必要があります。"
+msgstr "確認する場合は、<b>完了</b> を 2 回押す必要があります。"
 
 #: pyanaconda/core/constants.py:237
 msgid "Empty"
@@ -4406,7 +4324,7 @@ msgstr "ユーザー名 '%s' は無効です"
 
 #: pyanaconda/core/kickstart/addon.py:128
 msgid "Missing name of the %addon section."
-msgstr "%addon セクションの名前がありません。"
+msgstr "%addonセクション名がありません。"
 
 #: pyanaconda/core/kickstart/addon.py:138
 msgid "Unknown name of the %addon section."
@@ -4445,7 +4363,7 @@ msgid ""
 "The 'swap' area on your computer is used by the operating\n"
 "system when running low on memory."
 msgstr ""
-"コンピューターのスワップ領域は、メモリー不足の状態になると\n"
+"ご使用の コンピューターの 'swap' 領域は、メモリー不足の状態になると\n"
 "オペレーティングシステムで使用されます。"
 
 #: pyanaconda/core/storage.py:110
@@ -4469,7 +4387,7 @@ msgid ""
 "The 'home' area on your computer is where all your personal\n"
 "data is stored."
 msgstr ""
-"コンピューターのホーム領域に、ユーザーの個人\n"
+"ご使用の コンピューターのホーム領域に、ユーザーの個人\n"
 "データをすべて保存しています。"
 
 #: pyanaconda/core/storage.py:116
@@ -4477,8 +4395,8 @@ msgid ""
 "The BIOS boot partition is required to enable booting\n"
 "from GPT-partitioned disks on BIOS hardware."
 msgstr ""
-"BIOS ハードウェア上で GPT パーティション設定したディスク からの起動を有効にす"
-"るには、BIOS のブートパーティションが必要です。"
+"BIOS ハードウェア上で GPT パーティション設定したディスク からの\n"
+"起動を有効にするには、BIOS のブートパーティションが必要です。"
 
 #: pyanaconda/core/storage.py:118
 msgid ""
@@ -4502,7 +4420,7 @@ msgid ""
 "Some warnings occurred during reading the kickstart file:"
 msgstr ""
 "\n"
-"kickstart ファイルの読み込み中にいくつかの警告が発生しました"
+"キックスタートファイルの読み込み中にいくつかの警告が発生しました:"
 
 #: pyanaconda/kickstart.py:522
 #, python-format
@@ -4514,7 +4432,7 @@ msgid ""
 "The installer will now terminate."
 msgstr ""
 "\n"
-"kickstart ファイルの読み込み中にエラーが発生しました:\n"
+"キックスタートファイルの読み込み中にエラーが発生しました:\n"
 "%s\n"
 "\n"
 "インストーラーを終了します。"
@@ -4534,7 +4452,7 @@ msgstr ""
 #: widgets/src/StandaloneWindow.c:52
 msgctxt "GUI|Standalone Navigation"
 msgid "_Quit"
-msgstr "退出(_Q)"
+msgstr "終了(_Q)"
 
 #: widgets/src/StandaloneWindow.c:53
 msgctxt "GUI|Standalone Navigation"
@@ -4561,7 +4479,7 @@ msgstr "現在のレイアウト: '%s'。クリックして次のレイアウト
 #: widgets/src/LayoutIndicator.c:34
 #, c-format
 msgid "Current layout: '%s'. Add more layouts to enable switching."
-msgstr "現在のレイアウト: '%s'。クリックして次のレイアウトに切り替えます。"
+msgstr "現在のレイアウト: '%s'。レイアウトを追加して切り替えを有効化します。"
 
 #: widgets/src/SpokeWindow.c:55
 msgctxt "GUI|Spoke Navigation"
@@ -4592,7 +4510,7 @@ msgstr "インストール概要"
 #: pyanaconda/ui/gui/hubs/summary.glade:81
 msgctxt "GUI|Summary"
 msgid "_Quit"
-msgstr "退出(_Q)"
+msgstr "終了(_Q)"
 
 #: pyanaconda/ui/gui/hubs/summary.glade:97
 msgctxt "GUI|Summary"
@@ -4615,7 +4533,7 @@ msgstr "エラー"
 #: pyanaconda/ui/gui/main.glade:94
 msgctxt "GUI|Main"
 msgid "_No"
-msgstr "いいえ (_N)"
+msgstr "いいえ(_N)"
 
 #: pyanaconda/ui/gui/main.glade:108
 msgctxt "GUI|Main"
@@ -4627,12 +4545,12 @@ msgid ""
 "Are you sure you wish to quit the\n"
 "installation process?"
 msgstr ""
-"インストールプロセスから退出しても\n"
-"よろしいですか？"
+"インストールプロセスを終了しても\n"
+"よろしいですか?"
 
 #: pyanaconda/ui/gui/main.glade:175
 msgid "Quit"
-msgstr "退出"
+msgstr "終了"
 
 #: pyanaconda/ui/gui/spokes/blivet_gui.glade:8
 msgid "BLIVET GUI PARTITIONING"
@@ -4810,7 +4728,7 @@ msgstr "更新(_R)"
 #: pyanaconda/ui/gui/spokes/installation_progress.glade:8
 #: pyanaconda/ui/gui/spokes/installation_progress.glade:164
 msgid "INSTALLATION PROGRESS"
-msgstr "インストールの進行状況"
+msgstr "インストールの進捗状況"
 
 #: pyanaconda/ui/gui/spokes/installation_progress.glade:75
 msgid "Preparing to install"
@@ -4883,9 +4801,7 @@ msgstr ""
 msgid ""
 "<b>Warning:</b> All storage changes made using the installer will be lost "
 "when you press 'Rescan Disks'."
-msgstr ""
-"<b>警告:</b> インストーラーを使って行った変更はすべて「ディスクの再スキャン」"
-"を押すと失われます。"
+msgstr "<b>警告:</b> インストーラーを使って行ったストレージの変更はすべて「ディスクの再スキャン」を押すと失われます。"
 
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:143
 msgctxt "GUI|Refresh Dialog|Rescan"
@@ -4926,7 +4842,7 @@ msgstr "キャンセルしてさらにディスクを追加(_C)"
 #: pyanaconda/ui/gui/spokes/lib/storage_dialogs.glade:45
 msgctxt "GUI|Storage|Need Space Dialog"
 msgid "_Reclaim space"
-msgstr "再利用(_R)"
+msgstr "領域の再利用(_R)"
 
 #: pyanaconda/ui/gui/spokes/lib/storage_dialogs.glade:79
 #: pyanaconda/ui/gui/spokes/lib/storage_dialogs.glade:297
@@ -4972,12 +4888,12 @@ msgstr "領域が必要です"
 #: pyanaconda/ui/gui/spokes/lib/storage_dialogs.glade:247
 msgctxt "GUI|Storage|No Space Dialog"
 msgid "_Quit installer"
-msgstr "インストーラーから退出(_Q)"
+msgstr "インストーラーの終了(_Q)"
 
 #: pyanaconda/ui/gui/spokes/lib/storage_dialogs.glade:263
 msgctxt "GUI|Storage|No Space Dialog"
 msgid "_Cancel"
-msgstr "取り消し (_C)"
+msgstr "取り消し(_C)"
 
 #: pyanaconda/ui/gui/spokes/lib/storage_dialogs.glade:437
 msgid "No Space"
@@ -5004,12 +4920,12 @@ msgid ""
 "the wireless network"
 msgstr ""
 "この無線 LAN にアクセスするには、パスワード\n"
-"もしくは暗号キーが必要です。"
+"もしくは暗号キーが必要です"
 
 #: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:23
 msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
 msgid "_Quit"
-msgstr "退出(_Q)"
+msgstr "終了(_Q)"
 
 #: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:37
 msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
@@ -5156,16 +5072,16 @@ msgid ""
 "More customization options are available\n"
 "after creating the mount point below."
 msgstr ""
-"以下にマウントポイントを作成した後に、他のカスタマイズオプションが利用できま"
-"す。"
+"以下にマウントポイントを作成した後に、\n"
+"他のカスタマイズオプションが利用できます。"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:461
 msgid ""
 "That mount point is already in\n"
 "use.  Try something else?"
 msgstr ""
-"そのマウントポイントは使用中です。\n"
-"他を試しますか？"
+"そのマウントポイントはすでに使用中です。\n"
+"他を試しますか?"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:485
 msgid "Enter size and unit."
@@ -5296,8 +5212,7 @@ msgstr "初期化されていない DASD が見つかりました。"
 msgid ""
 "<b>Warning</b>: All storage changes made using the installer will be lost "
 "when you choose to format."
-msgstr ""
-"<b>警告:</b> インストーラーを使って行った変更は初期化を選択すると失われます。"
+msgstr "<b>警告:</b> インストーラーを使って行ったストレージの変更はすべて、フォーマットを選択すると失われます。"
 
 #: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:160
 msgctxt "GUI|DAD Format Dialog"
@@ -5314,7 +5229,7 @@ msgstr ""
 
 #: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:248
 msgid "Disk formatting complete."
-msgstr "ディスクの初期化が完了しました。"
+msgstr "ディスクのフォーマットが完了しました。"
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:24
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:77
@@ -5350,14 +5265,12 @@ msgid ""
 "supported on IBM z14 and earlier models, therefore choose to disable it if "
 "you intend to boot the installed system on such models."
 msgstr ""
-"セキュアブートがマシンで有効化されて設定されている場合、ファームウェアはブー"
-"ト中にLinuxカーネルの整合性を検証します。セキュアブートはIBM z14とそれ以前の"
-"モデルではサポートされていないため、このようなモデルにインストールされたシス"
-"テムを起動するには無効を選択してください。"
+"マシンでセキュアブートが有効に設定されている場合、ファームウェアはブート中に Linux カーネルの整合性を検証します。セキュアブートは IBM z14 "
+"以前のモデルではサポートされていないため、これらのモデルでインストールされたシステムをブートする場合は、無効にすることを選択します。"
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:283
 msgid "Enabled if supported by the installing machine"
-msgstr "インストールするマシンでサポートされている場合は有効化"
+msgstr "インストールするマシンにサポートされている場合は有効化"
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:284
 msgid "Enabled unconditionally"
@@ -5379,7 +5292,7 @@ msgstr "取り消し(_C)"
 #: pyanaconda/ui/gui/spokes/lib/resize.glade:68
 msgctxt "GUI|Reclaim Dialog"
 msgid "_Reclaim space"
-msgstr "再利用(_R)"
+msgstr "領域の再利用(_R)"
 
 #: pyanaconda/ui/gui/spokes/lib/resize.glade:101
 msgid "RECLAIM DISK SPACE"
@@ -5414,7 +5327,7 @@ msgstr "縮小(_S)"
 
 #: pyanaconda/ui/gui/spokes/lib/resize.glade:365
 msgid "Reclaim"
-msgstr "取り戻す"
+msgstr "再利用"
 
 #: pyanaconda/ui/gui/spokes/keyboard.glade:15
 #: pyanaconda/ui/gui/spokes/keyboard.glade:388
@@ -5602,7 +5515,7 @@ msgstr "WWPN:"
 #: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:177
 msgctxt "GUI|Advanced Storage|zFCP|Start Discovery"
 msgid "_Start Discovery"
-msgstr "探索を開始(_S)"
+msgstr "検索を開始(_S)"
 
 #: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:214
 msgid "Discovering zFCP devices.  This may take a moment..."
@@ -5617,14 +5530,12 @@ msgstr "デバイスの検索に失敗しました。"
 msgid ""
 "The following error occurred discovering zFCP devices.  Please double check "
 "your configuration information and try again."
-msgstr ""
-"zFCP デバイスの探索中に、次のエラーが発生しました。設定情報をもう一度確認して"
-"からやり直してください。"
+msgstr "zFCP デバイスの検索中に、次のエラーが発生しました。設定情報を再度確認し、再試行してください。"
 
 #: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:291
 msgctxt "GUI|Advanced Storage|zFCP|Retry Discovery"
 msgid "_Retry Discovery"
-msgstr "探索を再試行(_R)"
+msgstr "検索を再試行(_R)"
 
 #: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:346
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:307
@@ -5714,7 +5625,7 @@ msgstr "iSCSIイニシエーター名(_I):"
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:187
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:760
 msgid "No credentials (discovery authentication disabled)"
-msgstr "証明書なし (探索認証が無効)"
+msgstr "証明書なし (検索認証が無効)"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:188
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:761
@@ -5729,7 +5640,7 @@ msgstr "CHAP 秘密鍵と逆順鍵"
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:203
 msgctxt "GUI|Advanced Storage|iSCSI|Configure"
 msgid "_Discovery Authentication Type:"
-msgstr "認証のタイプの探索(_D):"
+msgstr "検索認証のタイプ(_D):"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:218
 msgid ""
@@ -5772,28 +5683,26 @@ msgstr "逆順 CHAP パスワード(_W):"
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:465
 msgctxt "GUI|Advanced Storage|iSCSI|Configure|Start"
 msgid "_Start Discovery"
-msgstr "探索を開始(_S)"
+msgstr "検索を開始(_S)"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:502
 msgid "Discovering iSCSI targets.  This may take a moment..."
-msgstr "iSCSI ターゲットを探索中です。少々お待ちください..."
+msgstr "iSCSI ターゲットを検索中です。少々お待ちください..."
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:541
 msgid "Discovery login rejected."
-msgstr "ログインの探索が拒否されました。"
+msgstr "検索ログインが拒否されました。"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:556
 msgid ""
 "The following error occurred discovering iSCSI targets.  Please double check "
 "your authorization information and try again."
-msgstr ""
-"iSCSI ターゲットの探索中に、次のエラーが発生しました。認証情報を再度確認し、"
-"再試行してください。"
+msgstr "iSCSI ターゲットの検索中に、次のエラーが発生しました。認証情報を再度確認し、再試行してください。"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:579
 msgctxt "GUI|Advanced Storage|iSCSI|Configure|Retry"
 msgid "_Retry Discovery"
-msgstr "探索を再試行(_R)"
+msgstr "検索を再試行(_R)"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:619
 msgctxt "GUI|Advanced Storage|iSCSI|Configure"
@@ -5819,7 +5728,7 @@ msgstr "ノードのログイン認証のタイプ(_N):"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:763
 msgid "Use the credentials from discovery"
-msgstr "探索に証明書を使用"
+msgstr "検索の証明書を使用"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:797
 msgctxt "GUI|Advanced Storage|iSCSI|Login|CHAP"
@@ -5899,7 +5808,7 @@ msgstr "デバイス番号(_D):"
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:136
 msgctxt "GUI|Advanced Storage|DASD|Configure"
 msgid "_Start Discovery"
-msgstr "探索を開始(_S)"
+msgstr "検索を開始(_S)"
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:173
 msgid "Discovering DASD devices.  This may take a moment..."
@@ -5909,14 +5818,12 @@ msgstr "DASD デバイスを検索中です。少々お待ちください..."
 msgid ""
 "The following error occurred discovering DASD devices.  Please double check "
 "your configuration information and try again."
-msgstr ""
-"DASD デバイスの探索中に次のエラーが発生しました。設定情報をもう一度確認してか"
-"らやり直してください。"
+msgstr "DASD デバイスの検索中に次のエラーが発生しました。設定情報を再度確認し、再試行してください。"
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:250
 msgctxt "GUI|Advanced Storage|DASD|Configure"
 msgid "_Retry Discovery"
-msgstr "探索を再試行(_R)"
+msgstr "検索を再試行(_R)"
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:324
 msgid "The added DASD can be found under \"Local Standard Disks.\""
@@ -6117,53 +6024,36 @@ msgstr "追加するデバイスのタイプを選択する(_S)"
 
 #: pyanaconda/ui/gui/spokes/network.glade:153
 #: pyanaconda/ui/gui/spokes/network.glade:286
-#, fuzzy
-#| msgid "Network"
 msgid "Wi-Fi Networks"
-msgstr "ネットワーク"
+msgstr "Wi-Fi ネットワーク"
 
 #: pyanaconda/ui/gui/spokes/network.glade:170
-#, fuzzy
-#| msgctxt "GUI|Detailed Error Dialog"
-#| msgid "_Cancel"
 msgctxt "GUI|Network|Wireless|Configure"
 msgid "_Cancel"
-msgstr "取り消し(_C)"
+msgstr "取り消し (_C)"
 
 #: pyanaconda/ui/gui/spokes/network.glade:184
-#, fuzzy
-#| msgid "Configure NTP"
 msgctxt "GUI|Network|Wireless|Configure"
 msgid "C_onfigure"
-msgstr "NTP の設定"
+msgstr "設定(_C)"
 
 #: pyanaconda/ui/gui/spokes/network.glade:207
-#, fuzzy
-#| msgid "Writing network configuration"
 msgid "Select a network to configure"
-msgstr "ネットワーク設定を書き込み中"
+msgstr "設定するネットワークを選択する"
 
 #: pyanaconda/ui/gui/spokes/network.glade:303
-#, fuzzy
-#| msgctxt "GUI|Detailed Error Dialog"
-#| msgid "_Cancel"
 msgctxt "GUI|Network|Wireless|Select Network Dialog"
 msgid "_Cancel"
-msgstr "取り消し(_C)"
+msgstr "取り消し (_C)"
 
 #: pyanaconda/ui/gui/spokes/network.glade:317
-#, fuzzy
-#| msgctxt "GUI|Network|Authentication Dialog"
-#| msgid "C_onnect"
 msgctxt "GUI|Network|Wireless|Select Network Dialog"
 msgid "C_onnect"
 msgstr "接続(_O)"
 
 #: pyanaconda/ui/gui/spokes/network.glade:340
-#, fuzzy
-#| msgid "Select all"
 msgid "Select a network"
-msgstr "すべて選択"
+msgstr "ネットワークの選択"
 
 #: pyanaconda/ui/gui/spokes/network.glade:376
 msgid "NETWORK CONFIGURATION"
@@ -6174,9 +6064,7 @@ msgid ""
 "We'll need network access to fetch information about your location and to "
 "make software\n"
 "updates available for you."
-msgstr ""
-"ユーザーの位置情報の取得およびソフトウェア更新を取得可能にするためネットワー"
-"クアクセスが必要です。"
+msgstr "ユーザーの位置情報の取得およびソフトウェア更新を取得可能にするため、ネットワークアクセスが必要です。"
 
 #: pyanaconda/ui/gui/spokes/network.glade:450
 #: pyanaconda/ui/gui/spokes/network.glade:2593
@@ -6246,7 +6134,7 @@ msgstr "セキュリティーキー"
 
 #: pyanaconda/ui/gui/spokes/network.glade:1310
 msgid "My ssid"
-msgstr ""
+msgstr "自分の ssid"
 
 #: pyanaconda/ui/gui/spokes/network.glade:1364
 msgctxt "GUI|Network|Wireless"
@@ -6264,12 +6152,9 @@ msgid "_Configure..."
 msgstr "設定(_C)..."
 
 #: pyanaconda/ui/gui/spokes/network.glade:1415
-#, fuzzy
-#| msgctxt "GUI|Software Source"
-#| msgid "_On the network:"
 msgctxt "GUI|Network|Wireless"
 msgid "_Select network"
-msgstr "ネットワーク上(_O):"
+msgstr "ネットワークを選択(_S)"
 
 #: pyanaconda/ui/gui/spokes/network.glade:1533
 msgid "IMEI"
@@ -6318,17 +6203,17 @@ msgstr "設定の URL(_C)"
 #: pyanaconda/ui/gui/spokes/network.glade:2178
 msgctxt "GUI|Network|Proxy"
 msgid "HTTP _Proxy"
-msgstr "HTTP プロキシ(_P)"
+msgstr "HTTP プロキシー(_P)"
 
 #: pyanaconda/ui/gui/spokes/network.glade:2192
 msgctxt "GUI|Network|Proxy"
 msgid "H_TTPS Proxy"
-msgstr "HTTPS プロキシ(_T)"
+msgstr "HTTPS プロキシー(_T)"
 
 #: pyanaconda/ui/gui/spokes/network.glade:2206
 msgctxt "GUI|Network|Proxy"
 msgid "_FTP Proxy"
-msgstr "_FTP プロキシ(_F)"
+msgstr "FTP プロキシー(_F)"
 
 #: pyanaconda/ui/gui/spokes/network.glade:2220
 msgctxt "GUI|Network|Proxy"
@@ -6405,17 +6290,17 @@ msgstr "取り消し(_C)"
 #: pyanaconda/ui/gui/spokes/installation_source.glade:238
 msgctxt "GUI|Software Source|Proxy Dialog"
 msgid "_OK"
-msgstr "_OK"
+msgstr "OK(_O)"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:267
 msgctxt "GUI|Software Source|Proxy Dialog"
 msgid "_Enable HTTP Proxy"
-msgstr "HTTP プロキシを有効にする(_E)"
+msgstr "HTTP プロキシーを有効にする(_E)"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:299
 msgctxt "GUI|Software Source|Proxy Dialog"
 msgid "_Proxy Host:"
-msgstr "プロキシのホスト(_P):"
+msgstr "プロキシーのホスト(_P):"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:316
 msgid "<span size=\"small\"><b>Example:</b> squid.mysite.org:3128</span>"
@@ -6469,11 +6354,9 @@ msgid "Installation media via SE/_HMC"
 msgstr "SE/_HMC を用いたインストールメディア"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:635
-#, fuzzy
-#| msgid "Red Hat CDN"
 msgctxt "GUI|Software Source"
 msgid "Red Hat _CDN"
-msgstr "Red Hat CDN"
+msgstr "Red Hat _CDN"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:654
 msgctxt "GUI|Software Source"
@@ -6498,7 +6381,7 @@ msgstr "ネットワーク上(_O):"
 #: pyanaconda/ui/gui/spokes/installation_source.glade:817
 msgctxt "GUI|Software Source"
 msgid "_Proxy setup..."
-msgstr "プロキシの設定(_P)..."
+msgstr "プロキシーの設定(_P)..."
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:834
 #: pyanaconda/ui/gui/spokes/installation_source.glade:1314
@@ -6538,16 +6421,14 @@ msgstr "更新"
 #: pyanaconda/ui/gui/spokes/installation_source.glade:941
 msgctxt "GUI|Software Source"
 msgid "Install the _latest available software updates"
-msgstr "最新の利用可能なソフトウェアアップデートをインストール(_L)"
+msgstr "最新のソフトウェアアップデートをインストールする(_L)"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:958
 msgctxt "GUI|Software Source"
 msgid ""
 "Install the _default versions provided by the installation source (above) "
 "only"
-msgstr ""
-"上記インストールソースのみから提供されるデフォルトバージョンをインストール"
-"(_D)"
+msgstr "インストールソースが提供するデフォルトのバージョンのみをインストールしてください(_D)。"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:986
 msgid "Additional repositories"
@@ -6595,16 +6476,16 @@ msgstr "リポジトリーの URL、プロトコルなし"
 #: pyanaconda/ui/gui/spokes/installation_source.glade:1155
 #: pyanaconda/ui/gui/spokes/installation_source.glade:1156
 msgid "URL of proxy in the form of protocol://host:[port]"
-msgstr "protocol://host:[port] の形式によるプロキシの URL"
+msgstr "protocol://host:[port] の形式によるプロキシーの URL"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:1168
 #: pyanaconda/ui/gui/spokes/installation_source.glade:1169
 msgid "Optional proxy user name."
-msgstr "オプションのプロキシユーザー名です。"
+msgstr "オプションのプロキシーユーザー名です。"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:1181
 msgid "Optional proxy password."
-msgstr "オプションのプロキシパスワードです。"
+msgstr "オプションのプロキシーパスワードです。"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:1195
 msgctxt "GUI|Software Source"
@@ -6619,7 +6500,7 @@ msgstr "リポジトリー URL のプロトコルです。"
 #: pyanaconda/ui/gui/spokes/installation_source.glade:1232
 msgctxt "GUI|Software Source"
 msgid "Pro_xy URL:"
-msgstr "プロキシの URL(_X):"
+msgstr "プロキシーの URL(_X):"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:1249
 msgctxt "GUI|Software Source"
@@ -6727,9 +6608,8 @@ msgid ""
 "Groups that do not already exist will be created; specify their GID in "
 "parentheses. "
 msgstr ""
-"ここにグループ名とグループ ID の一覧をコンマ区切りで入力します。\n"
-"まだ存在していないグループは新規に作成されます。その GID を括弧で指定してくだ"
-"さい。"
+"ここにグループ名とグループ ID の一覧をコンマ区切りで入力します。まだ存在していないグループは新規に作成されます。その GID "
+"を括弧で指定してください。 "
 
 #: pyanaconda/ui/gui/spokes/software_selection.glade:10
 msgid "SOFTWARE SELECTION"
@@ -6741,7 +6621,7 @@ msgstr "ベース環境"
 
 #: pyanaconda/ui/gui/spokes/software_selection.glade:86
 msgid "Additional software for Selected Environment"
-msgstr "選択した環境の追加ソフトウェア"
+msgstr "選択した環境用のその他のソフトウェア"
 
 #: pyanaconda/ui/gui/spokes/welcome.glade:23
 msgctxt "GUI|Welcome|Beta Warn Dialog"
@@ -7030,7 +6910,7 @@ msgstr "分 +"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:723
 msgid "Minutes Down"
-msgstr "分 +"
+msgstr "分 -"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:767
 msgid "AM/PM Up"
@@ -7048,7 +6928,7 @@ msgstr "24 時間(_H)"
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:872
 msgctxt "GUI|Date and Time"
 msgid "_AM/PM"
-msgstr "_AM/PM(_A)"
+msgstr "AM/PM(_A)"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:931
 msgid "Set Date & Time"
@@ -7232,7 +7112,7 @@ msgstr "モード(_M) のデバイスのみを表示:"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1305
 msgid "Sector"
-msgstr "セクタ"
+msgstr "セクター"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1306
 msgid "Memory"
