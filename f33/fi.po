@@ -28,7 +28,7 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2021-02-15 00:44+0000\n"
-"PO-Revision-Date: 2021-03-02 11:40+0000\n"
+"PO-Revision-Date: 2021-03-05 10:01+0000\n"
 "Last-Translator: Ricky Tigg <ricky.tigg@gmail.com>\n"
 "Language-Team: Finnish <https://translate.fedoraproject.org/projects/"
 "anaconda/f33/fi/>\n"
@@ -54,7 +54,7 @@ msgstr ""
 
 #: pyanaconda/modules/timezone/timezone.py:100
 msgid "Invalid time source."
-msgstr "Virheellinen aikalähde."
+msgstr "Ei kelvollinen aikalähde."
 
 #: pyanaconda/modules/storage/kickstart.py:65
 msgid "File system type \"{}\" given in autopart command is invalid."
@@ -210,8 +210,7 @@ msgstr ""
 #: pyanaconda/modules/storage/bootloader/base.py:361
 #, python-format
 msgid "%(name)s must have one of the following disklabel types: %(types)s."
-msgstr ""
-"%(name)s:n on oltava jokin seuraavista levytunnistetyypeistä: %(types)s."
+msgstr "%(name)s:n on oltava jokin seuraavista levynimiön tyypeistä: %(types)s."
 
 #: pyanaconda/modules/storage/bootloader/base.py:373
 #, python-format
@@ -227,7 +226,7 @@ msgstr ""
 #: pyanaconda/modules/storage/bootloader/base.py:391
 #, python-format
 msgid "%(desc)s must be between %(min)d and %(max)d MB in size"
-msgstr "%(desc)s:n sallittu koko on %(min)d – %(max)d Mt"
+msgstr "%(desc)s:n sallitun koon on oltava välillä %(min)d ja %(max)d Mt"
 
 #: pyanaconda/modules/storage/bootloader/base.py:397
 #, python-format
@@ -388,7 +387,7 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
-"SSL-virhe ladattaessa vara-avainjärjestelmän (escrow) sertifikaattia:\n"
+"SSL-virhe väärennös-varmenteen lataamisen aikana:\n"
 "\n"
 "%s"
 
@@ -400,8 +399,7 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
-"Vara-avainjärjestelmän (escrow) sertifikaattia ladattaessa tapahtui seuraava "
-"virhe:\n"
+"Väärennös-varmenteen lataamisen aikana tapahtui seuraava virhe:\n"
 "\n"
 "%s"
 
@@ -436,8 +434,8 @@ msgid ""
 "incorrect file system type. The file says that {detected_type} at "
 "{mount_point} is {fstab_type}."
 msgstr ""
-"Tiedostossasi /etc/fstab on merkintä, joka sisältää virheellisen tai väärän "
-"tiedostojärjestelmän tyypin. Tiedoston mukaan {detected_type}:n "
+"Tiedostossasi /etc/fstab on merkintä, joka sisältää ei kelvollisen tai "
+"väärän tiedostojärjestelmän tyypin. Tiedoston mukaan {detected_type}:n "
 "{mount_point}:ssa on {fstab_type}."
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:213
@@ -455,7 +453,7 @@ msgstr "Tiedostojärjestelmän nimiö ei ole hyväksyttävässä muodossa."
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:307
 msgid "That mount point is already in use. Try something else?"
-msgstr "Liitoskohta on jo käytössä. Kokeillaanko jotain muuta?"
+msgstr "Tuo liitoskohta on jo käytössä. Kokeillaanko jotain muuta?"
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:310
 msgid "Please enter a valid mount point."
@@ -464,11 +462,11 @@ msgstr "Anna kelvollinen liitoskohta."
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:313
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:325
 msgid "That mount point is invalid. Try something else?"
-msgstr "Liitoskohta on virheellinen. Kokeillaanko jotain muuta?"
+msgstr "Tuo liitoskohta ei ole kelvollinen. Kokeillaanko jotain muuta?"
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:340
 msgid "Invalid container name."
-msgstr "Virheellinen konttinimi."
+msgstr "Ei kelvollinen konttinimi."
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:343
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:595
@@ -597,7 +595,7 @@ msgstr "Komennossa 'part' määritettyä osiota \"%s\" ei ole olemassa."
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1057
 #, python-format
 msgid "Target size \"%(size)s\" for device \"%(device)s\" is invalid."
-msgstr "Kohdekoko ”%(size)s” laitteelle ”%(device)s” on kelvoton."
+msgstr "Kohdekoko ”%(size)s” laitteelle ”%(device)s” ei ole kelvollinen."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:314
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:616
@@ -633,7 +631,7 @@ msgstr "Enimmäiskoko \"%s\" ei ole kelvollinen."
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1272
 #, python-format
 msgid "The mount point \"%s\" is not valid.  It must start with a /."
-msgstr "Liitoskohta ”%s” on kelvoton. Sen tulee alkaa \"/\":lla."
+msgstr "Liitoskohta ”%s” ei ole kelvollinen. Sen tulee alkaa \"/\":lla."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:559
 msgid "raid --noformat must also use the --device option."
@@ -716,7 +714,7 @@ msgstr ""
 #, python-format
 msgid "Volume group \"%s\" given in volgroup command does not exist."
 msgstr ""
-"Taltioryhmää \"%s\", joka annettiin volgroup-komennossa, ei ole olemassa."
+"Taltioryhmää \"%s\", joka annettiin 'volgroup'-komennossa, ei ole olemassa."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:820
 #, python-format
@@ -743,8 +741,8 @@ msgid ""
 "No thin pool exists with the name \"%s\". Specify thin pools before thin "
 "volumes."
 msgstr ""
-"Yhtään \"%s\"-nimistä ohutta varantoa ei ole. Määrittele ohuet varannot "
-"ennen ohuita taltioita."
+"Yhtään \"%s\"-nimistä ohutta varantoa ei ole olemassa. Määrittele ohuet "
+"varannot ennen ohuita taltioita."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:961
 msgid "logvol --noformat must also use the --name= option."
@@ -805,14 +803,14 @@ msgstr "Btrfs-taltio \"%s\" määritetty '--useexisting':lla ei ole olemassa."
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:64
 #, python-format
 msgid "Unknown or invalid device '%s' specified"
-msgstr "Tuntematon tai virheellinen laite '%s' määritetty"
+msgstr "Tuntematon tai ei kelvollinen laite '%s' määritetty"
 
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:72
 #, python-format
 msgid ""
 "Unknown or invalid format '%(format)s' specified for device '%(device)s'"
 msgstr ""
-"Laitteelle '%(device)s' määritetty tuntematon tai virheellinen muoto "
+"Laitteelle '%(device)s' määritetty tuntematon tai ei kelvollinen muoto "
 "'%(format)s'"
 
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:79
@@ -957,7 +955,7 @@ msgstr ""
 
 #: pyanaconda/modules/storage/checker/utils.py:204
 msgid "You have not created a bootable partition."
-msgstr "Käynnistysosiota ei ole luotu."
+msgstr "Eti ole luonut käynnistysosiota."
 
 #: pyanaconda/modules/storage/checker/utils.py:239
 msgid ""
@@ -1140,7 +1138,7 @@ msgstr "Ei käytettävissä"
 #: pyanaconda/modules/network/firewall/installation.py:102
 #, python-format
 msgid "%s is missing. Cannot setup firewall."
-msgstr "%s puuttuu. Palomuurin asetuksia ei voi tehdä."
+msgstr "%s puuttuu. Palomuuria ei voi määrittää."
 
 #: pyanaconda/pwpolicy.py:146
 #, python-format
@@ -1286,8 +1284,8 @@ msgid ""
 "Either a group name in the group list is invalid or groups are not separated "
 "by a comma."
 msgstr ""
-"Joko ryhmän nimi ryhmäluettelossa on virheellinen tai ryhmiä ei ole erotettu "
-"pilkulla."
+"Joko ryhmän nimi ryhmäluettelossa ei ole kelvollinen tai ryhmiä ei ole "
+"erotettu pilkulla."
 
 #: pyanaconda/core/users.py:122
 msgid "Name cannot start with '-' character."
@@ -2867,8 +2865,8 @@ msgid ""
 "Continuing with this action will reset all your partitioning selections to "
 "their current on-disk state."
 msgstr ""
-"Jatkamalla tästä palautat kaikki osiointivalintasi nykyiseen levyllä olevaan "
-"tilaan."
+"Tämän toimen jatkaminen palauttaa kaikki osiointivalintasi nykyiseen "
+"levytilaan."
 
 #: pyanaconda/ui/gui/spokes/blivet_gui.py:330
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1780
@@ -3846,7 +3844,7 @@ msgstr "Suoritetaan asennusta edeltäviä skriptejä"
 
 #: pyanaconda/payload/dnf/payload.py:1349
 msgid "Starting package installation process"
-msgstr "Aloitetaan asennus"
+msgstr "Aloitetaan paketin asennusprosessi"
 
 #: pyanaconda/payload/dnf/payload.py:1369
 msgid "Downloading packages"
@@ -3874,7 +3872,7 @@ msgstr "Vahvistetaan %s"
 #: pyanaconda/payload/dnf/payload.py:1406
 #: pyanaconda/payload/live/payload_base.py:159 pyanaconda/installation.py:350
 msgid "Performing post-installation setup tasks"
-msgstr "Tehdään asennuksen jälkeisiä asetuksia"
+msgstr "Suoritetaan asennuksen jälkeiset asennustehtävät"
 
 #: pyanaconda/payload/dnf/download_progress.py:55
 #, python-format
@@ -4186,13 +4184,13 @@ msgid ""
 "parts between periods must contain something and cannot start or end with "
 "'-'."
 msgstr ""
-"Isäntänimet voivat sisältää vain seuraavia merkkejä: 'a-z', 'A-Z', '0-9', "
-"'-', tai '.', pisteen molemmin puolin on oltava merkkejä eikä se saa alkaa "
-"tai päättyä '-':lla."
+"Isäntänimet voivat sisältää vain seuraavia merkkejä: 'a–z', 'A–Z', '0–9', '-"
+"', tai '.', pisteen molemmin puolin on oltava merkkejä eikä se saa alkaa tai "
+"päättyä '-':lla."
 
 #: pyanaconda/network.py:479
 msgid "Status not available"
-msgstr "Tilatieto ei ole saatavilla"
+msgstr "Tilatieto ei saatavilla"
 
 #: pyanaconda/network.py:484
 msgid "Connecting..."
@@ -4210,7 +4208,7 @@ msgstr "Langallinen (%(interface_name)s) yhdistetty"
 #: pyanaconda/network.py:520
 #, python-format
 msgid "Wireless connected to %(access_point)s"
-msgstr "Langaton yhteys verkkoon %(access_point)s"
+msgstr "Langaton yhteys %(access_point)s:hen"
 
 #: pyanaconda/network.py:523
 #, python-format
@@ -4243,7 +4241,7 @@ msgstr "Ei yhdistetty"
 
 #: pyanaconda/network.py:561 pyanaconda/ui/gui/spokes/network.glade:2061
 msgid "No network devices available"
-msgstr "Verkkolaitteita ei löytynyt"
+msgstr "Ei verkkolaitteita käytettävissä"
 
 #: pyanaconda/installation.py:87
 msgid "Configuring Red Hat subscription"
@@ -4665,8 +4663,8 @@ msgid ""
 "Groups that do not already exist will be created; specify their GID in "
 "parentheses. "
 msgstr ""
-"Voit asettaa pilkuilla varustetun listan ryhmänimistä ja ryhmätunnisteista "
-"tässä. Ryhmät, joita ei ole olemassa, luodaan; määritä niiden "
+"Voit kirjoittaa tähän pilkuilla erotetun luettelon ryhmän nimistä ja "
+"ryhmätunnuksista. Ryhmät, joita ei ole olemassa, luodaan; määritä niiden "
 "ryhmätunnisteet (GID) lainausmerkkeihin.. "
 
 #: pyanaconda/ui/gui/spokes/lib/passphrase.glade:23
@@ -7087,7 +7085,7 @@ msgstr "tietovaraston URL"
 #: pyanaconda/ui/gui/spokes/installation_source.glade:850
 #: pyanaconda/ui/gui/spokes/installation_source.glade:1300
 msgid "mirrorlist"
-msgstr "peililista"
+msgstr "peililuettelo"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:851
 #: pyanaconda/ui/gui/spokes/installation_source.glade:1301
