@@ -12,30 +12,31 @@ jobs:
       # update this matrix to support new Anaconda branches
       matrix:
         branch: [ master, f34 ]
+        include:
+          - branch: master
+            anaconda-branch: master
+          - branch: f34
+            anaconda-branch: f34-devel
 
     runs-on: ubuntu-latest
+    container:
+      image: docker://quay.io/rhinstaller/anaconda-ci:${{ matrix.anaconda-branch }}
     steps:
-      # run this step only for Rawhide
-      - name: Checkout Rawhide anaconda
+      - name: Checkout anaconda ${{ matrix.anaconda-branch }}
         uses: actions/checkout@v2
-        if: ${{ matrix.branch == 'master' }}
         with:
           path: anaconda
           repository: rhinstaller/anaconda
-          ref: ${{ matrix.branch }}
-      # run this step only for branched Fedora
-      - name: Checkout branched fedora anaconda
-        uses: actions/checkout@v2
-        if: ${{ startsWith(matrix.branch, 'f') }}
-        with:
-          path: anaconda
-          repository: rhinstaller/anaconda
-          ref: ${{ matrix.branch }}-devel
+          ref: ${{ matrix.anaconda-branch }}
       - name: Create pot file
-        uses: rhinstaller/anaconda-make-executor-action@v1-beta2
-        with:
-          make-command: pot-update-check
-          path: anaconda
+        run: |
+          echo "Creating pot file..."
+          pushd anaconda
+          ./autogen.sh
+          ./configure
+          make
+          make pot-update-check
+          popd
       - name: Checkout anaconda-l10n
         uses: actions/checkout@v2
         with:
