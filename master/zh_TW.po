@@ -32,7 +32,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2021-03-14 00:40+0000\n"
+"POT-Creation-Date: 2021-03-17 00:38+0000\n"
 "PO-Revision-Date: 2021-01-06 16:30+0000\n"
 "Last-Translator: Amy Iris Parker <enbyamy@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://translate.fedoraproject.org/"
@@ -2302,19 +2302,27 @@ msgstr "軟體庫 %s 需要有遠端目錄"
 msgid "Remote directory is required"
 msgstr "需要遠端目錄"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1214
+#: pyanaconda/ui/gui/spokes/installation_source.py:1196
+#, fuzzy
+#| msgid "Server must be specified as SERVER:/PATH"
+msgid ""
+"NFS server must be specified as \"SERVER:/PATH\". Only one colon is allowed "
+"in the url string."
+msgstr "伺服器的網址格式必須為 SERVER:/位置"
+
+#: pyanaconda/ui/gui/spokes/installation_source.py:1218
 msgid "Duplicate repository names."
 msgstr "重複的軟體庫名稱。"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1222
+#: pyanaconda/ui/gui/spokes/installation_source.py:1226
 msgid "Empty repository name"
 msgstr "空白軟體庫名稱"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1225
+#: pyanaconda/ui/gui/spokes/installation_source.py:1229
 msgid "Invalid repository name"
 msgstr "無效的軟體庫名稱"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1230
+#: pyanaconda/ui/gui/spokes/installation_source.py:1234
 msgid "Repository name conflicts with internal repository name."
 msgstr "軟體庫名稱與內部使用的軟體庫名稱相衝突。"
 
@@ -3605,7 +3613,7 @@ msgstr "Live OS"
 msgid "Flatpak"
 msgstr ""
 
-#: pyanaconda/modules/payloads/source/rpm_ostree/rpm_ostree.py:51
+#: pyanaconda/modules/payloads/source/rpm_ostree/rpm_ostree.py:53
 msgid "RPM OSTree"
 msgstr ""
 
@@ -3635,51 +3643,98 @@ msgid "Installing %(flatpak_name)s"
 msgstr "正在安裝 %(flatpak_name)s"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:41
-msgid "Starting Flatpak installation"
+#, fuzzy
+#| msgid "Starting Flatpak installation"
+msgid "Installing Flatpak applications"
 msgstr "正在啟動 Flatpak 安裝"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:48
-msgid "Post-installation flatpak tasks"
-msgstr "安裝後 flatpak 作業"
+#, fuzzy
+#| msgid "Performing post-installation setup tasks"
+msgid "Performing post-installation Flatpak tasks"
+msgstr "正在執行安裝後的設定工作"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:53
 msgid "Flatpak installation has finished"
 msgstr "Flatpak 安裝完成"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:422
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:471
 #, fuzzy
 #| msgid "Deployment starting: %s"
 msgid "Deployment starting: {}"
 msgstr "佈署開始：%s"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:444
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:493
 #, fuzzy
 #| msgid "Deployment complete: %s"
 msgid "Deployment complete: {}"
 msgstr "佈署完成：%s"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:475
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:528
 #, fuzzy, python-brace-format
 #| msgid "Starting pull of %(branchName)s from %(source)s"
 msgid "Starting pull of {branch_name} from {source}"
 msgstr "開始從 %(source)s 拉取 %(branchName)s"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:510
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:563
 #, fuzzy
 #| msgid "Preparing deployment of %s"
 msgid "Preparing deployment of {}"
 msgstr "正在準備佈署 %s"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:538
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:591
 #, fuzzy, python-brace-format
 #| msgid ""
 #| "Receiving objects: %(percent)d%% (%(fetched)d/%(requested)d) %(bytes)s"
 msgid "Receiving objects: {percent}% ({fetched}/{requested}) {bytes}"
 msgstr "接收物件中：%(percent)d%% (%(fetched)d/%(requested)d) %(bytes)s"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:544
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:597
 msgid "Writing objects"
 msgstr "寫入物件中"
+
+#: pyanaconda/modules/payloads/payload/dnf/download_progress.py:68
+#, fuzzy, python-brace-format
+#| msgid ""
+#| "Downloading %(total_files)s RPMs, %(downloaded)s / %(total_size)s "
+#| "(%(percent)d%%) done."
+msgid ""
+"Downloading {total_files} RPMs, {downloaded_size} / {total_size} "
+"({total_percent}%) done."
+msgstr ""
+"正在下載 %(total_files)s 個 RPM，已完成 %(downloaded)s / %(total_size)s "
+"(%(percent)d%%)。"
+
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:45
+#, fuzzy
+#| msgid "Installing %s"
+msgid "Installing {}"
+msgstr "正在安裝 %s"
+
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:47
+#, fuzzy
+#| msgid "Configuring %s"
+msgid "Configuring {}"
+msgstr "正在設定 %s"
+
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:49
+#, fuzzy
+#| msgid "Verifying %s"
+msgid "Verifying {}"
+msgstr "正在核驗 %s"
+
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:53
+#: pyanaconda/installation.py:327 pyanaconda/payload/live/payload_base.py:120
+msgid "Performing post-installation setup tasks"
+msgstr "正在執行安裝後的設定工作"
+
+#: pyanaconda/modules/payloads/payload/dnf/installation.py:106
+msgid "Downloading packages"
+msgstr "正在下載軟體包"
+
+#: pyanaconda/modules/payloads/payload/dnf/installation.py:127
+msgid "Preparing transaction from installation source"
+msgstr "正從安裝來源準備處理事項"
 
 #: pyanaconda/kickstart.py:299
 #, python-format
@@ -3776,11 +3831,6 @@ msgstr "安裝中。"
 #: pyanaconda/installation.py:313
 msgid "Installing boot loader"
 msgstr "正在安裝開機載入器"
-
-#: pyanaconda/installation.py:327 pyanaconda/payload/dnf/payload.py:920
-#: pyanaconda/payload/live/payload_base.py:120
-msgid "Performing post-installation setup tasks"
-msgstr "正在執行安裝後的設定工作"
 
 #: pyanaconda/installation.py:335
 msgid "Creating snapshots"
@@ -4136,41 +4186,9 @@ msgstr "設定安裝來源失敗"
 msgid "Error downloading package metadata"
 msgstr "下載套件 metadata 時發生錯誤"
 
-#: pyanaconda/payload/dnf/download_progress.py:55
-#, python-format
-msgid ""
-"Downloading %(total_files)s RPMs, %(downloaded)s / %(total_size)s "
-"(%(percent)d%%) done."
-msgstr ""
-"正在下載 %(total_files)s 個 RPM，已完成 %(downloaded)s / %(total_size)s "
-"(%(percent)d%%)。"
-
-#: pyanaconda/payload/dnf/payload.py:868
+#: pyanaconda/payload/dnf/payload.py:870
 msgid "Starting package installation process"
 msgstr "正開始軟體包安裝程序"
-
-#: pyanaconda/payload/dnf/payload.py:886
-msgid "Downloading packages"
-msgstr "正在下載軟體包"
-
-#: pyanaconda/payload/dnf/payload.py:896
-msgid "Preparing transaction from installation source"
-msgstr "正從安裝來源準備處理事項"
-
-#: pyanaconda/payload/dnf/payload.py:909
-#, python-format
-msgid "Installing %s"
-msgstr "正在安裝 %s"
-
-#: pyanaconda/payload/dnf/payload.py:912
-#, python-format
-msgid "Configuring %s"
-msgstr "正在設定 %s"
-
-#: pyanaconda/payload/dnf/payload.py:915
-#, python-format
-msgid "Verifying %s"
-msgstr "正在核驗 %s"
 
 #: pyanaconda/payload/live/payload_base.py:75
 #: pyanaconda/payload/live/payload_liveos.py:93
@@ -7105,6 +7123,9 @@ msgstr "關閉"
 #: ../data/liveinst/console.apps/liveinst.h:1
 msgid "Starting Install to Hard Drive"
 msgstr "開始安裝到硬碟"
+
+#~ msgid "Post-installation flatpak tasks"
+#~ msgstr "安裝後 flatpak 作業"
 
 #~ msgid "Slaves"
 #~ msgstr "從屬"

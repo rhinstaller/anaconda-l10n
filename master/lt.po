@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2021-03-14 00:40+0000\n"
+"POT-Creation-Date: 2021-03-17 00:38+0000\n"
 "PO-Revision-Date: 2021-01-25 23:38+0000\n"
 "Last-Translator: Tautvydas Žukauskas <tautzuk@tutanota.com>\n"
 "Language-Team: Lithuanian <https://translate.fedoraproject.org/projects/"
@@ -2368,19 +2368,27 @@ msgstr "Saugykla %s reikalauja nutolusio katalogo"
 msgid "Remote directory is required"
 msgstr "Būtinas nutolęs katalogas"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1214
+#: pyanaconda/ui/gui/spokes/installation_source.py:1196
+#, fuzzy
+#| msgid "Server must be specified as SERVER:/PATH"
+msgid ""
+"NFS server must be specified as \"SERVER:/PATH\". Only one colon is allowed "
+"in the url string."
+msgstr "Serverį reikia nurodyti formatu SERVERIS:/KELIAS"
+
+#: pyanaconda/ui/gui/spokes/installation_source.py:1218
 msgid "Duplicate repository names."
 msgstr "Dubliuoti saugyklų pavadinimai."
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1222
+#: pyanaconda/ui/gui/spokes/installation_source.py:1226
 msgid "Empty repository name"
 msgstr "Tuščias saugyklos pavadinimas"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1225
+#: pyanaconda/ui/gui/spokes/installation_source.py:1229
 msgid "Invalid repository name"
 msgstr "Netinkamas saugyklos pavadinimas"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1230
+#: pyanaconda/ui/gui/spokes/installation_source.py:1234
 msgid "Repository name conflicts with internal repository name."
 msgstr "Saugyklos pavadinimas konfliktuoja su vidiniu saugyklos pavadinimu."
 
@@ -3754,7 +3762,7 @@ msgstr "Tiesiogiai paleidžiama OS"
 msgid "Flatpak"
 msgstr ""
 
-#: pyanaconda/modules/payloads/source/rpm_ostree/rpm_ostree.py:51
+#: pyanaconda/modules/payloads/source/rpm_ostree/rpm_ostree.py:53
 msgid "RPM OSTree"
 msgstr "RPM OSmedis"
 
@@ -3784,42 +3792,89 @@ msgid "Installing %(flatpak_name)s"
 msgstr "Diegiama %(flatpak_name)s"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:41
-msgid "Starting Flatpak installation"
+#, fuzzy
+#| msgid "Starting Flatpak installation"
+msgid "Installing Flatpak applications"
 msgstr "Pradedamas Flatpak diegimas"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:48
-msgid "Post-installation flatpak tasks"
-msgstr "Po diegimo flatpak užduotys"
+#, fuzzy
+#| msgid "Performing post-installation setup tasks"
+msgid "Performing post-installation Flatpak tasks"
+msgstr "Vykdomos po-diegimo nustatymo užduotys"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:53
 msgid "Flatpak installation has finished"
 msgstr "Flatpak diegimas baigtas"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:422
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:471
 msgid "Deployment starting: {}"
 msgstr "Pradedamas patalpinimas: {}"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:444
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:493
 msgid "Deployment complete: {}"
 msgstr "Patalpinimas baigtas: {}"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:475
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:528
 #, python-brace-format
 msgid "Starting pull of {branch_name} from {source}"
 msgstr "Pradedamas {branch_name} gavimas iš {source}"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:510
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:563
 msgid "Preparing deployment of {}"
 msgstr "Ruošiamas {} patalpinimas"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:538
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:591
 #, python-brace-format
 msgid "Receiving objects: {percent}% ({fetched}/{requested}) {bytes}"
 msgstr "Gaunami objektai: {percent}% ({fetched}/{requested}) {bytes}"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:544
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:597
 msgid "Writing objects"
 msgstr "Rašomi objektai"
+
+#: pyanaconda/modules/payloads/payload/dnf/download_progress.py:68
+#, fuzzy, python-brace-format
+#| msgid ""
+#| "Downloading %(total_files)s RPMs, %(downloaded)s / %(total_size)s "
+#| "(%(percent)d%%) done."
+msgid ""
+"Downloading {total_files} RPMs, {downloaded_size} / {total_size} "
+"({total_percent}%) done."
+msgstr ""
+"Parsiunčiama %(total_files)s RPM, %(downloaded)s / %(total_size)s "
+"(%(percent)d%%)."
+
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:45
+#, fuzzy
+#| msgid "Installing %s"
+msgid "Installing {}"
+msgstr "Diegiama %s"
+
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:47
+#, fuzzy
+#| msgid "Configuring %s"
+msgid "Configuring {}"
+msgstr "Konfigūruojamas %s"
+
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:49
+#, fuzzy
+#| msgid "Verifying %s"
+msgid "Verifying {}"
+msgstr "Tikrinamas %s"
+
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:53
+#: pyanaconda/installation.py:327 pyanaconda/payload/live/payload_base.py:120
+msgid "Performing post-installation setup tasks"
+msgstr "Vykdomos po-diegimo nustatymo užduotys"
+
+#: pyanaconda/modules/payloads/payload/dnf/installation.py:106
+msgid "Downloading packages"
+msgstr "Parsiunčiami paketai"
+
+#: pyanaconda/modules/payloads/payload/dnf/installation.py:127
+msgid "Preparing transaction from installation source"
+msgstr "Ruošiama transakcija iš diegimo šaltinio"
 
 #: pyanaconda/kickstart.py:299
 #, python-format
@@ -3916,11 +3971,6 @@ msgstr "Diegiama."
 #: pyanaconda/installation.py:313
 msgid "Installing boot loader"
 msgstr "Diegiamas įkėliklis"
-
-#: pyanaconda/installation.py:327 pyanaconda/payload/dnf/payload.py:920
-#: pyanaconda/payload/live/payload_base.py:120
-msgid "Performing post-installation setup tasks"
-msgstr "Vykdomos po-diegimo nustatymo užduotys"
 
 #: pyanaconda/installation.py:335
 msgid "Creating snapshots"
@@ -4303,41 +4353,9 @@ msgstr "Nepavyko nustatyti diegimo šaltinio"
 msgid "Error downloading package metadata"
 msgstr "Klaida parsiunčiant paketo metaduomenis"
 
-#: pyanaconda/payload/dnf/download_progress.py:55
-#, python-format
-msgid ""
-"Downloading %(total_files)s RPMs, %(downloaded)s / %(total_size)s "
-"(%(percent)d%%) done."
-msgstr ""
-"Parsiunčiama %(total_files)s RPM, %(downloaded)s / %(total_size)s "
-"(%(percent)d%%)."
-
-#: pyanaconda/payload/dnf/payload.py:868
+#: pyanaconda/payload/dnf/payload.py:870
 msgid "Starting package installation process"
 msgstr "Pradedamas paketų diegimo procesas"
-
-#: pyanaconda/payload/dnf/payload.py:886
-msgid "Downloading packages"
-msgstr "Parsiunčiami paketai"
-
-#: pyanaconda/payload/dnf/payload.py:896
-msgid "Preparing transaction from installation source"
-msgstr "Ruošiama transakcija iš diegimo šaltinio"
-
-#: pyanaconda/payload/dnf/payload.py:909
-#, python-format
-msgid "Installing %s"
-msgstr "Diegiama %s"
-
-#: pyanaconda/payload/dnf/payload.py:912
-#, python-format
-msgid "Configuring %s"
-msgstr "Konfigūruojamas %s"
-
-#: pyanaconda/payload/dnf/payload.py:915
-#, python-format
-msgid "Verifying %s"
-msgstr "Tikrinamas %s"
 
 #: pyanaconda/payload/live/payload_base.py:75
 #: pyanaconda/payload/live/payload_liveos.py:93
@@ -7282,6 +7300,9 @@ msgstr "Užverti"
 #: ../data/liveinst/console.apps/liveinst.h:1
 msgid "Starting Install to Hard Drive"
 msgstr "Pradedama diegti į kietąjį diską"
+
+#~ msgid "Post-installation flatpak tasks"
+#~ msgstr "Po diegimo flatpak užduotys"
 
 #~ msgid "Slaves"
 #~ msgstr "Antriniai"

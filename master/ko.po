@@ -33,7 +33,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2021-03-14 00:40+0000\n"
+"POT-Creation-Date: 2021-03-17 00:38+0000\n"
 "PO-Revision-Date: 2021-03-17 06:51+0000\n"
 "Last-Translator: simmon <simmon@nplob.com>\n"
 "Language-Team: Korean <https://translate.fedoraproject.org/projects/anaconda/"
@@ -1651,8 +1651,8 @@ msgid ""
 "Warning checking storage configuration. <a href=\"\">Click for details</a> "
 "or press Done again to continue."
 msgstr ""
-"저장소 설정을 확인하는 경고가 발생했습니다. <a href=\"\">자세한 내용을 보려면 클릭하십시오.</a> 계속하려면 다시 실행을 "
-"누릅니다."
+"저장소 설정을 확인하는 경고가 발생했습니다. <a href=\"\">자세한 내용을 보려"
+"면 클릭하십시오.</a> 계속하려면 다시 실행을 누릅니다."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1020
 msgid "Failed to add new device."
@@ -2346,19 +2346,27 @@ msgstr "저장소 %s 필수 원격 디렉토리"
 msgid "Remote directory is required"
 msgstr "원격 디렉토리가 필요합니다"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1214
+#: pyanaconda/ui/gui/spokes/installation_source.py:1196
+#, fuzzy
+#| msgid "Server must be specified as SERVER:/PATH"
+msgid ""
+"NFS server must be specified as \"SERVER:/PATH\". Only one colon is allowed "
+"in the url string."
+msgstr "서버는 SERVER : / PATH로 지정해야합니다"
+
+#: pyanaconda/ui/gui/spokes/installation_source.py:1218
 msgid "Duplicate repository names."
 msgstr "저장소 이름이 중복되어 있습니다."
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1222
+#: pyanaconda/ui/gui/spokes/installation_source.py:1226
 msgid "Empty repository name"
 msgstr "저장소 이름이 비어있습니다"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1225
+#: pyanaconda/ui/gui/spokes/installation_source.py:1229
 msgid "Invalid repository name"
 msgstr "잘못된 저장소 이름"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1230
+#: pyanaconda/ui/gui/spokes/installation_source.py:1234
 msgid "Repository name conflicts with internal repository name."
 msgstr "저장소 이름이 내부 저장소 이름과 충돌합니다."
 
@@ -2602,10 +2610,13 @@ msgid ""
 "a shell.\n"
 "\n"
 msgstr ""
-"이제 구조 환경에서 Linux 설치를 찾아 디렉토리 아래에 적재하려고 시도합니다. %s. 그런 다음 시스템에 필요한 변경을 수행 할 수 "
-"있습니다. 이 단계를 진행하려면 '1'을 선택하십시오.\n"
-"'2'를 선택하여 읽기 / 쓰기 대신 파일 시스템을 읽기 전용으로 적재하도록 선택 할 수 있습니다.\n"
-"어떤 이유로 이 프로세스가 작동하지 않으면 쉘에 직접 건너 뛰려면 '3'을 선택하십시오.\n"
+"이제 구조 환경에서 Linux 설치를 찾아 디렉토리 아래에 적재하려고 시도합니다. "
+"%s. 그런 다음 시스템에 필요한 변경을 수행 할 수 있습니다. 이 단계를 진행하려"
+"면 '1'을 선택하십시오.\n"
+"'2'를 선택하여 읽기 / 쓰기 대신 파일 시스템을 읽기 전용으로 적재하도록 선택 "
+"할 수 있습니다.\n"
+"어떤 이유로 이 프로세스가 작동하지 않으면 쉘에 직접 건너 뛰려면 '3'을 선택하"
+"십시오.\n"
 "\n"
 
 #: pyanaconda/rescue.py:308
@@ -3705,7 +3716,7 @@ msgstr "실시간 OS"
 msgid "Flatpak"
 msgstr "플랫팩"
 
-#: pyanaconda/modules/payloads/source/rpm_ostree/rpm_ostree.py:51
+#: pyanaconda/modules/payloads/source/rpm_ostree/rpm_ostree.py:53
 msgid "RPM OSTree"
 msgstr "RPM OS트리"
 
@@ -3735,42 +3746,89 @@ msgid "Installing %(flatpak_name)s"
 msgstr "%(flatpak_name)s 설치중"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:41
-msgid "Starting Flatpak installation"
+#, fuzzy
+#| msgid "Starting Flatpak installation"
+msgid "Installing Flatpak applications"
 msgstr "Flatpak 설치 시작 중"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:48
-msgid "Post-installation flatpak tasks"
-msgstr "flatpak 작업의 설치 후처리"
+#, fuzzy
+#| msgid "Performing post-installation setup tasks"
+msgid "Performing post-installation Flatpak tasks"
+msgstr "설치 후 설정 작업 수행 중"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:53
 msgid "Flatpak installation has finished"
 msgstr "Flatpak 설치를 마쳤습니다"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:422
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:471
 msgid "Deployment starting: {}"
 msgstr "배포 시작 : {}"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:444
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:493
 msgid "Deployment complete: {}"
 msgstr "배포 완료: {}"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:475
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:528
 #, python-brace-format
 msgid "Starting pull of {branch_name} from {source}"
 msgstr "{source} 에서 {branch_name} 가져오기 시작"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:510
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:563
 msgid "Preparing deployment of {}"
 msgstr "배포 준비 중 {}"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:538
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:591
 #, python-brace-format
 msgid "Receiving objects: {percent}% ({fetched}/{requested}) {bytes}"
 msgstr "수신 대상 : {percent}% ({fetched}/{requested}) {bytes}"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:544
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:597
 msgid "Writing objects"
 msgstr "필기구"
+
+#: pyanaconda/modules/payloads/payload/dnf/download_progress.py:68
+#, fuzzy, python-brace-format
+#| msgid ""
+#| "Downloading %(total_files)s RPMs, %(downloaded)s / %(total_size)s "
+#| "(%(percent)d%%) done."
+msgid ""
+"Downloading {total_files} RPMs, {downloaded_size} / {total_size} "
+"({total_percent}%) done."
+msgstr ""
+"다운로드 중 %(total_files)s RPM, %(downloaded)s / %(total_size)s (%(percent)d"
+"%%)가 완료되었습니다."
+
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:45
+#, fuzzy
+#| msgid "Installing %s"
+msgid "Installing {}"
+msgstr "%s 설치중"
+
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:47
+#, fuzzy
+#| msgid "Configuring %s"
+msgid "Configuring {}"
+msgstr "구성 %s"
+
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:49
+#, fuzzy
+#| msgid "Verifying %s"
+msgid "Verifying {}"
+msgstr "확인 중 %s"
+
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:53
+#: pyanaconda/installation.py:327 pyanaconda/payload/live/payload_base.py:120
+msgid "Performing post-installation setup tasks"
+msgstr "설치 후 설정 작업 수행 중"
+
+#: pyanaconda/modules/payloads/payload/dnf/installation.py:106
+msgid "Downloading packages"
+msgstr "꾸러미 내려받는중"
+
+#: pyanaconda/modules/payloads/payload/dnf/installation.py:127
+msgid "Preparing transaction from installation source"
+msgstr "설치 소스에서 연결을 준비하고 있습니다"
 
 #: pyanaconda/kickstart.py:299
 #, python-format
@@ -3870,11 +3928,6 @@ msgstr "설치 중."
 #: pyanaconda/installation.py:313
 msgid "Installing boot loader"
 msgstr "부트로더 설치 중"
-
-#: pyanaconda/installation.py:327 pyanaconda/payload/dnf/payload.py:920
-#: pyanaconda/payload/live/payload_base.py:120
-msgid "Performing post-installation setup tasks"
-msgstr "설치 후 설정 작업 수행 중"
 
 #: pyanaconda/installation.py:335
 msgid "Creating snapshots"
@@ -4251,41 +4304,9 @@ msgstr "설치 소스 설정에 실패했습니다"
 msgid "Error downloading package metadata"
 msgstr "꾸러미 메타데이타를 내려받는 도중 오류 발생"
 
-#: pyanaconda/payload/dnf/download_progress.py:55
-#, python-format
-msgid ""
-"Downloading %(total_files)s RPMs, %(downloaded)s / %(total_size)s "
-"(%(percent)d%%) done."
-msgstr ""
-"다운로드 중 %(total_files)s RPM, %(downloaded)s / %(total_size)s (%(percent)d"
-"%%)가 완료되었습니다."
-
-#: pyanaconda/payload/dnf/payload.py:868
+#: pyanaconda/payload/dnf/payload.py:870
 msgid "Starting package installation process"
 msgstr "패키지 설치 프로세스 시작 중"
-
-#: pyanaconda/payload/dnf/payload.py:886
-msgid "Downloading packages"
-msgstr "꾸러미 내려받는중"
-
-#: pyanaconda/payload/dnf/payload.py:896
-msgid "Preparing transaction from installation source"
-msgstr "설치 소스에서 연결을 준비하고 있습니다"
-
-#: pyanaconda/payload/dnf/payload.py:909
-#, python-format
-msgid "Installing %s"
-msgstr "%s 설치중"
-
-#: pyanaconda/payload/dnf/payload.py:912
-#, python-format
-msgid "Configuring %s"
-msgstr "구성 %s"
-
-#: pyanaconda/payload/dnf/payload.py:915
-#, python-format
-msgid "Verifying %s"
-msgstr "확인 중 %s"
 
 #: pyanaconda/payload/live/payload_base.py:75
 #: pyanaconda/payload/live/payload_liveos.py:93
@@ -4761,13 +4782,16 @@ msgid ""
 "If you do not understand or accept the risks, then please exit this program "
 "by selecting \"I want to exit\" which will reboot your system."
 msgstr ""
-"주의 사항 :이 소프트웨어는 개발 및 테스트 목적으로 만 사전에 출시 된 소프트웨어입니다. 중요한 작업이나 프로덕션 환경에서는이 "
-"소프트웨어를 사용하지 * 마십시오. \n"
+"주의 사항 :이 소프트웨어는 개발 및 테스트 목적으로 만 사전에 출시 된 소프트웨"
+"어입니다. 중요한 작업이나 프로덕션 환경에서는이 소프트웨어를 사용하지 * 마십"
+"시오. \n"
 "\n"
-"\"진행하고 싶습니다\"를 클릭하면 시험판 및 개발 목적으로 만 사용하고이 작업을 향상시키기 위해 버그 또는 문제점을 기꺼이 보고하고자 "
-"하는 시험판 소프트웨어와 관련된 위험을 이해하고 수용합니다.\n"
+"\"진행하고 싶습니다\"를 클릭하면 시험판 및 개발 목적으로 만 사용하고이 작업"
+"을 향상시키기 위해 버그 또는 문제점을 기꺼이 보고하고자 하는 시험판 소프트웨"
+"어와 관련된 위험을 이해하고 수용합니다.\n"
 "\n"
-"위험을 이해하거나 수락하지 않으면 시스템을 재시작할 \"종료하겠습니다\"를 선택하여 이 프로그램을 종료하십시오."
+"위험을 이해하거나 수락하지 않으면 시스템을 재시작할 \"종료하겠습니다\"를 선택"
+"하여 이 프로그램을 종료하십시오."
 
 #: pyanaconda/ui/gui/spokes/welcome.glade:133
 msgid "Beta Warn"
@@ -7207,6 +7231,9 @@ msgstr "종료"
 #: ../data/liveinst/console.apps/liveinst.h:1
 msgid "Starting Install to Hard Drive"
 msgstr "하드 드라이브에 설치를 시작합니다"
+
+#~ msgid "Post-installation flatpak tasks"
+#~ msgstr "flatpak 작업의 설치 후처리"
 
 #~ msgid "Slaves"
 #~ msgstr "슬레이브 "

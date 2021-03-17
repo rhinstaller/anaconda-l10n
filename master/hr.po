@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2021-03-14 00:40+0000\n"
+"POT-Creation-Date: 2021-03-17 00:38+0000\n"
 "PO-Revision-Date: 2020-09-19 14:29+0000\n"
 "Last-Translator: Tomislav Krznar <tomislav.krznar@gmail.com>\n"
 "Language-Team: Croatian <https://translate.fedoraproject.org/projects/"
@@ -2347,19 +2347,25 @@ msgstr "Repozitorij %s zahtjevani udaljeni direktorij"
 msgid "Remote directory is required"
 msgstr "Udaljeni direktorij potreban"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1214
+#: pyanaconda/ui/gui/spokes/installation_source.py:1196
+msgid ""
+"NFS server must be specified as \"SERVER:/PATH\". Only one colon is allowed "
+"in the url string."
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/installation_source.py:1218
 msgid "Duplicate repository names."
 msgstr "Duplikat imena repozitorija."
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1222
+#: pyanaconda/ui/gui/spokes/installation_source.py:1226
 msgid "Empty repository name"
 msgstr "Prazno ime repozitorija"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1225
+#: pyanaconda/ui/gui/spokes/installation_source.py:1229
 msgid "Invalid repository name"
 msgstr "Neispavan naziv repozitorija"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1230
+#: pyanaconda/ui/gui/spokes/installation_source.py:1234
 msgid "Repository name conflicts with internal repository name."
 msgstr "Ime repozitorija u konflikstu s imenom internog repozitorija."
 
@@ -3690,7 +3696,7 @@ msgstr ""
 msgid "Flatpak"
 msgstr ""
 
-#: pyanaconda/modules/payloads/source/rpm_ostree/rpm_ostree.py:51
+#: pyanaconda/modules/payloads/source/rpm_ostree/rpm_ostree.py:53
 msgid "RPM OSTree"
 msgstr ""
 
@@ -3720,49 +3726,97 @@ msgid "Installing %(flatpak_name)s"
 msgstr ""
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:41
-msgid "Starting Flatpak installation"
-msgstr ""
+#, fuzzy
+#| msgid "Installation Destination"
+msgid "Installing Flatpak applications"
+msgstr "Instalacijsko odredište"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:48
-msgid "Post-installation flatpak tasks"
-msgstr ""
+#, fuzzy
+#| msgid "Performing post-installation setup tasks"
+msgid "Performing post-installation Flatpak tasks"
+msgstr "Izvršavanje poslije-instalacijskih zadataka"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:53
 msgid "Flatpak installation has finished"
 msgstr ""
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:422
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:471
 #, fuzzy
 #| msgid "Deployment starting: %s"
 msgid "Deployment starting: {}"
 msgstr "Implementiranje počinje: %s"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:444
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:493
 #, fuzzy
 #| msgid "Deployment complete: %s"
 msgid "Deployment complete: {}"
 msgstr "Implementiranje završeno: %s"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:475
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:528
 #, fuzzy, python-brace-format
 #| msgid "Starting pull of %(branchName)s from %(source)s"
 msgid "Starting pull of {branch_name} from {source}"
 msgstr "Počinje povlačenje %(branchName)s sa %(source)s"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:510
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:563
 #, fuzzy
 #| msgid "Preparing deployment of %s"
 msgid "Preparing deployment of {}"
 msgstr "Priprema implementiranja %s"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:538
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:591
 #, python-brace-format
 msgid "Receiving objects: {percent}% ({fetched}/{requested}) {bytes}"
 msgstr ""
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:544
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:597
 msgid "Writing objects"
 msgstr ""
+
+#: pyanaconda/modules/payloads/payload/dnf/download_progress.py:68
+#, fuzzy, python-brace-format
+#| msgid ""
+#| "Downloading %(total_files)s RPMs, %(downloaded)s / %(total_size)s "
+#| "(%(percent)d%%) done."
+msgid ""
+"Downloading {total_files} RPMs, {downloaded_size} / {total_size} "
+"({total_percent}%) done."
+msgstr ""
+"Preuzimanje %(total_files)s RPMa, %(downloaded)s / %(total_size)s "
+"(%(percent)d%%) preuzeto."
+
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:45
+#, fuzzy
+#| msgid "Installing %s"
+msgid "Installing {}"
+msgstr "Instalacija %s"
+
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:47
+#, fuzzy
+#| msgid "Configuring addons"
+msgid "Configuring {}"
+msgstr "Konfiguriranje dodataka"
+
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:49
+#, fuzzy
+#| msgctxt "GUI|Software Source"
+#| msgid "_Verify"
+msgid "Verifying {}"
+msgstr "_Potvrdi"
+
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:53
+#: pyanaconda/installation.py:327 pyanaconda/payload/live/payload_base.py:120
+msgid "Performing post-installation setup tasks"
+msgstr "Izvršavanje poslije-instalacijskih zadataka"
+
+#: pyanaconda/modules/payloads/payload/dnf/installation.py:106
+msgid "Downloading packages"
+msgstr "Dohvaćanje paketa"
+
+#: pyanaconda/modules/payloads/payload/dnf/installation.py:127
+msgid "Preparing transaction from installation source"
+msgstr "Priprema prijenosa s izvora instalacije"
 
 #: pyanaconda/kickstart.py:299
 #, python-format
@@ -3852,11 +3906,6 @@ msgstr ""
 #: pyanaconda/installation.py:313
 msgid "Installing boot loader"
 msgstr "Instaliranje programa za pokretanje"
-
-#: pyanaconda/installation.py:327 pyanaconda/payload/dnf/payload.py:920
-#: pyanaconda/payload/live/payload_base.py:120
-msgid "Performing post-installation setup tasks"
-msgstr "Izvršavanje poslije-instalacijskih zadataka"
 
 #: pyanaconda/installation.py:335
 msgid "Creating snapshots"
@@ -4226,41 +4275,9 @@ msgstr "Greška prilikom postavljanja instalacijskog izvora"
 msgid "Error downloading package metadata"
 msgstr "Greška prilikom preuzimanja paketnih meta-podataka"
 
-#: pyanaconda/payload/dnf/download_progress.py:55
-#, python-format
-msgid ""
-"Downloading %(total_files)s RPMs, %(downloaded)s / %(total_size)s "
-"(%(percent)d%%) done."
-msgstr ""
-"Preuzimanje %(total_files)s RPMa, %(downloaded)s / %(total_size)s "
-"(%(percent)d%%) preuzeto."
-
-#: pyanaconda/payload/dnf/payload.py:868
+#: pyanaconda/payload/dnf/payload.py:870
 msgid "Starting package installation process"
 msgstr "Pokretanje procesa instalacije paketa"
-
-#: pyanaconda/payload/dnf/payload.py:886
-msgid "Downloading packages"
-msgstr "Dohvaćanje paketa"
-
-#: pyanaconda/payload/dnf/payload.py:896
-msgid "Preparing transaction from installation source"
-msgstr "Priprema prijenosa s izvora instalacije"
-
-#: pyanaconda/payload/dnf/payload.py:909
-#, python-format
-msgid "Installing %s"
-msgstr "Instalacija %s"
-
-#: pyanaconda/payload/dnf/payload.py:912
-#, python-format
-msgid "Configuring %s"
-msgstr ""
-
-#: pyanaconda/payload/dnf/payload.py:915
-#, python-format
-msgid "Verifying %s"
-msgstr ""
 
 #: pyanaconda/payload/live/payload_base.py:75
 #: pyanaconda/payload/live/payload_liveos.py:93

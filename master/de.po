@@ -53,7 +53,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2021-03-14 00:40+0000\n"
+"POT-Creation-Date: 2021-03-17 00:38+0000\n"
 "PO-Revision-Date: 2021-01-30 17:40+0000\n"
 "Last-Translator: Christoph Karl <pampelmuse@gmx.at>\n"
 "Language-Team: German <https://translate.fedoraproject.org/projects/anaconda/"
@@ -2445,19 +2445,27 @@ msgstr "Paketquelle %s benötigt ein Netzwerk-Verzeichnis"
 msgid "Remote directory is required"
 msgstr "Entferntes Verzeichnis wird benötigt"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1214
+#: pyanaconda/ui/gui/spokes/installation_source.py:1196
+#, fuzzy
+#| msgid "Server must be specified as SERVER:/PATH"
+msgid ""
+"NFS server must be specified as \"SERVER:/PATH\". Only one colon is allowed "
+"in the url string."
+msgstr "Der Serverpfad muss in folgender Syntax angegeben werden SERVER:/PFAD"
+
+#: pyanaconda/ui/gui/spokes/installation_source.py:1218
 msgid "Duplicate repository names."
 msgstr "Doppelte Bezeichnung der Repositorys."
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1222
+#: pyanaconda/ui/gui/spokes/installation_source.py:1226
 msgid "Empty repository name"
 msgstr "Keine Bezeichnung der Datenquelle"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1225
+#: pyanaconda/ui/gui/spokes/installation_source.py:1229
 msgid "Invalid repository name"
 msgstr "Ungültiger Name der Datenquelle"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1230
+#: pyanaconda/ui/gui/spokes/installation_source.py:1234
 msgid "Repository name conflicts with internal repository name."
 msgstr ""
 "Name des Repositorys ist identisch mit dem Namen eines internen Repositorys."
@@ -3872,7 +3880,7 @@ msgstr "Live OS"
 msgid "Flatpak"
 msgstr ""
 
-#: pyanaconda/modules/payloads/source/rpm_ostree/rpm_ostree.py:51
+#: pyanaconda/modules/payloads/source/rpm_ostree/rpm_ostree.py:53
 msgid "RPM OSTree"
 msgstr "RPM OSTree"
 
@@ -3904,42 +3912,46 @@ msgid "Installing %(flatpak_name)s"
 msgstr "%(flatpak_name)s wird installiert"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:41
-msgid "Starting Flatpak installation"
+#, fuzzy
+#| msgid "Starting Flatpak installation"
+msgid "Installing Flatpak applications"
 msgstr "Starte Flatpak-Installation"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:48
-msgid "Post-installation flatpak tasks"
-msgstr "Fertigstellung der Flatpak-Installation"
+#, fuzzy
+#| msgid "Performing post-installation setup tasks"
+msgid "Performing post-installation Flatpak tasks"
+msgstr "Post-Installationsaufgaben werden durchgeführt"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:53
 msgid "Flatpak installation has finished"
 msgstr "Flatpak-Installation ist abgeschlossen"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:422
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:471
 #, fuzzy
 #| msgid "Deployment starting: %s"
 msgid "Deployment starting: {}"
 msgstr "Deployment startet: %s"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:444
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:493
 #, fuzzy
 #| msgid "Deployment complete: %s"
 msgid "Deployment complete: {}"
 msgstr "Deployment abgeschlossen: %s"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:475
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:528
 #, fuzzy, python-brace-format
 #| msgid "Starting pull of %(branchName)s from %(source)s"
 msgid "Starting pull of {branch_name} from {source}"
 msgstr "Beziehen von %(branchName)s aus %(source)s begonnen"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:510
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:563
 #, fuzzy
 #| msgid "Preparing deployment of %s"
 msgid "Preparing deployment of {}"
 msgstr "Deployment von %s wird vorbereitet"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:538
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:591
 #, fuzzy, python-brace-format
 #| msgid ""
 #| "Receiving objects: %(percent)d%% (%(fetched)d/%(requested)d) %(bytes)s"
@@ -3947,9 +3959,52 @@ msgid "Receiving objects: {percent}% ({fetched}/{requested}) {bytes}"
 msgstr ""
 "Empfangen von Objekten: %(percent)d %% (%(fetched)d /%(requested)d) %(bytes)s"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:544
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:597
 msgid "Writing objects"
 msgstr "Objekte schreiben"
+
+#: pyanaconda/modules/payloads/payload/dnf/download_progress.py:68
+#, fuzzy, python-brace-format
+#| msgid ""
+#| "Downloading %(total_files)s RPMs, %(downloaded)s / %(total_size)s "
+#| "(%(percent)d%%) done."
+msgid ""
+"Downloading {total_files} RPMs, {downloaded_size} / {total_size} "
+"({total_percent}%) done."
+msgstr ""
+"Herunterladen von %(total_files)s RPMs, %(downloaded)s / %(total_size)s "
+"(%(percent)d%%) erledigt."
+
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:45
+#, fuzzy
+#| msgid "Installing %s"
+msgid "Installing {}"
+msgstr "%s wird installiert"
+
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:47
+#, fuzzy
+#| msgid "Configuring %s"
+msgid "Configuring {}"
+msgstr "%s konfigurieren"
+
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:49
+#, fuzzy
+#| msgid "Verifying %s"
+msgid "Verifying {}"
+msgstr "%s überprüfen"
+
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:53
+#: pyanaconda/installation.py:327 pyanaconda/payload/live/payload_base.py:120
+msgid "Performing post-installation setup tasks"
+msgstr "Post-Installationsaufgaben werden durchgeführt"
+
+#: pyanaconda/modules/payloads/payload/dnf/installation.py:106
+msgid "Downloading packages"
+msgstr "Pakete werden heruntergeladen"
+
+#: pyanaconda/modules/payloads/payload/dnf/installation.py:127
+msgid "Preparing transaction from installation source"
+msgstr "Transaktion von der Installationsquelle wird vorbereitet"
 
 #: pyanaconda/kickstart.py:299
 #, python-format
@@ -4046,11 +4101,6 @@ msgstr "Installieren."
 #: pyanaconda/installation.py:313
 msgid "Installing boot loader"
 msgstr "Bootloader installieren"
-
-#: pyanaconda/installation.py:327 pyanaconda/payload/dnf/payload.py:920
-#: pyanaconda/payload/live/payload_base.py:120
-msgid "Performing post-installation setup tasks"
-msgstr "Post-Installationsaufgaben werden durchgeführt"
 
 #: pyanaconda/installation.py:335
 msgid "Creating snapshots"
@@ -4447,41 +4497,9 @@ msgstr "Einrichten der Installationsquelle fehlgeschlagen"
 msgid "Error downloading package metadata"
 msgstr "Fehler beim Herunterladen der Paket-Metadaten"
 
-#: pyanaconda/payload/dnf/download_progress.py:55
-#, python-format
-msgid ""
-"Downloading %(total_files)s RPMs, %(downloaded)s / %(total_size)s "
-"(%(percent)d%%) done."
-msgstr ""
-"Herunterladen von %(total_files)s RPMs, %(downloaded)s / %(total_size)s "
-"(%(percent)d%%) erledigt."
-
-#: pyanaconda/payload/dnf/payload.py:868
+#: pyanaconda/payload/dnf/payload.py:870
 msgid "Starting package installation process"
 msgstr "Paket-Installationsvorgang starten"
-
-#: pyanaconda/payload/dnf/payload.py:886
-msgid "Downloading packages"
-msgstr "Pakete werden heruntergeladen"
-
-#: pyanaconda/payload/dnf/payload.py:896
-msgid "Preparing transaction from installation source"
-msgstr "Transaktion von der Installationsquelle wird vorbereitet"
-
-#: pyanaconda/payload/dnf/payload.py:909
-#, python-format
-msgid "Installing %s"
-msgstr "%s wird installiert"
-
-#: pyanaconda/payload/dnf/payload.py:912
-#, python-format
-msgid "Configuring %s"
-msgstr "%s konfigurieren"
-
-#: pyanaconda/payload/dnf/payload.py:915
-#, python-format
-msgid "Verifying %s"
-msgstr "%s überprüfen"
 
 #: pyanaconda/payload/live/payload_base.py:75
 #: pyanaconda/payload/live/payload_liveos.py:93
@@ -7485,6 +7503,9 @@ msgstr "Schließen"
 #: ../data/liveinst/console.apps/liveinst.h:1
 msgid "Starting Install to Hard Drive"
 msgstr "Installation auf die Festplatte wird gestartet"
+
+#~ msgid "Post-installation flatpak tasks"
+#~ msgstr "Fertigstellung der Flatpak-Installation"
 
 #~ msgid "Slaves"
 #~ msgstr "Slaves"

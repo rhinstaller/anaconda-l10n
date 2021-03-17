@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2021-03-14 00:40+0000\n"
+"POT-Creation-Date: 2021-03-17 00:38+0000\n"
 "PO-Revision-Date: 2020-09-10 22:30+0000\n"
 "Last-Translator: Sayak Sarkar <sayak.bugsmith@gmail.com>\n"
 "Language-Team: Bengali (India) <https://translate.fedoraproject.org/projects/"
@@ -2326,19 +2326,25 @@ msgstr ""
 msgid "Remote directory is required"
 msgstr "রিমোট ডিরেক্টরি প্রয়োজনীয়"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1214
+#: pyanaconda/ui/gui/spokes/installation_source.py:1196
+msgid ""
+"NFS server must be specified as \"SERVER:/PATH\". Only one colon is allowed "
+"in the url string."
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/installation_source.py:1218
 msgid "Duplicate repository names."
 msgstr "সদৃশ সংগ্রহস্থল নাম।"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1222
+#: pyanaconda/ui/gui/spokes/installation_source.py:1226
 msgid "Empty repository name"
 msgstr "সংগ্রহস্থলের কোনো নাম দেওয়া হয়নি"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1225
+#: pyanaconda/ui/gui/spokes/installation_source.py:1229
 msgid "Invalid repository name"
 msgstr "সংগ্রহস্থলের নামটি অবৈধ"
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:1230
+#: pyanaconda/ui/gui/spokes/installation_source.py:1234
 msgid "Repository name conflicts with internal repository name."
 msgstr "সংগ্রহস্থলের নাম অভ্যন্তরীণ সংগ্রহস্থলের নামের সংগে সমস্যার সৃষ্টি করছে।"
 
@@ -3651,7 +3657,7 @@ msgstr ""
 msgid "Flatpak"
 msgstr ""
 
-#: pyanaconda/modules/payloads/source/rpm_ostree/rpm_ostree.py:51
+#: pyanaconda/modules/payloads/source/rpm_ostree/rpm_ostree.py:53
 msgid "RPM OSTree"
 msgstr ""
 
@@ -3685,49 +3691,97 @@ msgid "Installing %(flatpak_name)s"
 msgstr ""
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:41
-msgid "Starting Flatpak installation"
-msgstr ""
+#, fuzzy
+#| msgid "Installation Destination"
+msgid "Installing Flatpak applications"
+msgstr "ইনস্টলেশান গন্তব্য"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:48
-msgid "Post-installation flatpak tasks"
-msgstr ""
+#, fuzzy
+#| msgid "Performing post-installation setup tasks"
+msgid "Performing post-installation Flatpak tasks"
+msgstr "ইনস্টলেশান পরবর্তী সেট অাপ কাজ সম্পাদন করা হচ্ছে"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:53
 msgid "Flatpak installation has finished"
 msgstr ""
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:422
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:471
 #, fuzzy
 #| msgid "Deployment starting: %s"
 msgid "Deployment starting: {}"
 msgstr "ডিপ্লয়মেন্ট শুরু হচ্ছে: %s"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:444
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:493
 #, fuzzy
 #| msgid "Deployment complete: %s"
 msgid "Deployment complete: {}"
 msgstr "ডিপ্লয়মেন্ট সম্পূর্ণ: %s"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:475
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:528
 #, fuzzy, python-brace-format
 #| msgid "Starting pull of %(branchName)s from %(source)s"
 msgid "Starting pull of {branch_name} from {source}"
 msgstr "%(branchName)s এর প্রারম্ভিক পুল, %(source)s থেকে"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:510
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:563
 #, fuzzy
 #| msgid "Preparing deployment of %s"
 msgid "Preparing deployment of {}"
 msgstr "%s ডিপ্লয়মেন্টের প্রস্তুতি"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:538
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:591
 #, python-brace-format
 msgid "Receiving objects: {percent}% ({fetched}/{requested}) {bytes}"
 msgstr ""
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:544
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:597
 msgid "Writing objects"
 msgstr ""
+
+#: pyanaconda/modules/payloads/payload/dnf/download_progress.py:68
+#, fuzzy, python-brace-format
+#| msgid ""
+#| "Downloading %(total_files)s RPMs, %(downloaded)s / %(total_size)s "
+#| "(%(percent)d%%) done."
+msgid ""
+"Downloading {total_files} RPMs, {downloaded_size} / {total_size} "
+"({total_percent}%) done."
+msgstr ""
+"%(total_files)s RPMs ডাউনলোড করা হচ্ছে, %(downloaded)s / %(total_size)s "
+"(%(percent)d%%) সম্পন্ন হয়েছে।"
+
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:45
+#, fuzzy
+#| msgid "Installing %s"
+msgid "Installing {}"
+msgstr "%s ইনস্টল করা হচ্ছে"
+
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:47
+#, fuzzy
+#| msgid "Configuring addons"
+msgid "Configuring {}"
+msgstr "অ্যাড-অন কনফিগার করা হচ্ছে"
+
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:49
+#, fuzzy
+#| msgctxt "GUI|Software Source"
+#| msgid "_Verify"
+msgid "Verifying {}"
+msgstr "পরীক্ষা করুন (_V)"
+
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:53
+#: pyanaconda/installation.py:327 pyanaconda/payload/live/payload_base.py:120
+msgid "Performing post-installation setup tasks"
+msgstr "ইনস্টলেশান পরবর্তী সেট অাপ কাজ সম্পাদন করা হচ্ছে"
+
+#: pyanaconda/modules/payloads/payload/dnf/installation.py:106
+msgid "Downloading packages"
+msgstr "প্যাকেজগুলি ডাউনলোড করা হচ্ছে"
+
+#: pyanaconda/modules/payloads/payload/dnf/installation.py:127
+msgid "Preparing transaction from installation source"
+msgstr "ইনস্টলেশন উৎসস্থল থেকে তথ্য বিনিময়ের প্রস্তুতি চলছে"
 
 #: pyanaconda/kickstart.py:299
 #, python-format
@@ -3819,11 +3873,6 @@ msgstr ""
 #: pyanaconda/installation.py:313
 msgid "Installing boot loader"
 msgstr "বুট লোডার ইনস্টল হচ্ছে"
-
-#: pyanaconda/installation.py:327 pyanaconda/payload/dnf/payload.py:920
-#: pyanaconda/payload/live/payload_base.py:120
-msgid "Performing post-installation setup tasks"
-msgstr "ইনস্টলেশান পরবর্তী সেট অাপ কাজ সম্পাদন করা হচ্ছে"
 
 #: pyanaconda/installation.py:335
 msgid "Creating snapshots"
@@ -4182,41 +4231,9 @@ msgstr "ইনস্টলেশান সোর্স সেট অাপ ক�
 msgid "Error downloading package metadata"
 msgstr "প্যাকেজ মেটাডেটা ডাউনলোড করতে ত্রুটি"
 
-#: pyanaconda/payload/dnf/download_progress.py:55
-#, python-format
-msgid ""
-"Downloading %(total_files)s RPMs, %(downloaded)s / %(total_size)s "
-"(%(percent)d%%) done."
-msgstr ""
-"%(total_files)s RPMs ডাউনলোড করা হচ্ছে, %(downloaded)s / %(total_size)s "
-"(%(percent)d%%) সম্পন্ন হয়েছে।"
-
-#: pyanaconda/payload/dnf/payload.py:868
+#: pyanaconda/payload/dnf/payload.py:870
 msgid "Starting package installation process"
 msgstr "প্যাকেজ ইনস্টলেশান প্রক্রিয়া শুরু করা হচ্ছে"
-
-#: pyanaconda/payload/dnf/payload.py:886
-msgid "Downloading packages"
-msgstr "প্যাকেজগুলি ডাউনলোড করা হচ্ছে"
-
-#: pyanaconda/payload/dnf/payload.py:896
-msgid "Preparing transaction from installation source"
-msgstr "ইনস্টলেশন উৎসস্থল থেকে তথ্য বিনিময়ের প্রস্তুতি চলছে"
-
-#: pyanaconda/payload/dnf/payload.py:909
-#, python-format
-msgid "Installing %s"
-msgstr "%s ইনস্টল করা হচ্ছে"
-
-#: pyanaconda/payload/dnf/payload.py:912
-#, python-format
-msgid "Configuring %s"
-msgstr ""
-
-#: pyanaconda/payload/dnf/payload.py:915
-#, python-format
-msgid "Verifying %s"
-msgstr ""
 
 #: pyanaconda/payload/live/payload_base.py:75
 #: pyanaconda/payload/live/payload_liveos.py:93
