@@ -7,11 +7,11 @@
 # aurisc4 <aurisc4@gmail.com>, 2013
 # dcantrel <dcantrell@redhat.com>, 2011
 # Dimitris Glezos <glezos@indifex.com>, 2011
-# Aurimas Černius <aurisc4@gmail.com>, 2015. #zanata, 2020.
-# Aurimas Černius <aurisc4@gmail.com>, 2016. #zanata, 2020.
-# Aurimas Černius <aurisc4@gmail.com>, 2018. #zanata, 2020.
-# Aurimas Černius <aurisc4@gmail.com>, 2019. #zanata, 2020.
-# Aurimas Černius <aurisc4@gmail.com>, 2020. #zanata
+# Aurimas Černius <aurisc4@gmail.com>, 2015. #zanata, 2020, 2021.
+# Aurimas Černius <aurisc4@gmail.com>, 2016. #zanata, 2020, 2021.
+# Aurimas Černius <aurisc4@gmail.com>, 2018. #zanata, 2020, 2021.
+# Aurimas Černius <aurisc4@gmail.com>, 2019. #zanata, 2020, 2021.
+# Aurimas Černius <aurisc4@gmail.com>, 2020. #zanata, 2021.
 # Ernestas Kulik <ekulik@redhat.com>, 2020.
 # Tautvydas Žukauskas <tautzuk@tutanota.com>, 2021.
 msgid ""
@@ -19,8 +19,8 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2021-04-04 00:15+0000\n"
-"PO-Revision-Date: 2021-01-25 23:38+0000\n"
-"Last-Translator: Tautvydas Žukauskas <tautzuk@tutanota.com>\n"
+"PO-Revision-Date: 2021-04-07 05:02+0000\n"
+"Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
 "Language-Team: Lithuanian <https://translate.fedoraproject.org/projects/"
 "anaconda/master/lt/>\n"
 "Language: lt\n"
@@ -29,7 +29,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
 "%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 4.5.3\n"
 
 #: anaconda.py:312
 msgid "Unable to create PID file"
@@ -61,10 +61,8 @@ msgid "Host name cannot be None or an empty string."
 msgstr "Serverio pavadinimas negali būti None arba tuščia eilutė."
 
 #: pyanaconda/network.py:112
-#, fuzzy
-#| msgid "Host name must be 255 or fewer characters in length."
 msgid "Host name must be 64 or fewer characters in length."
-msgstr "Serverio pavadinimas turi būti iki 255 simbolių ilgio imtinai."
+msgstr "Serverio pavadinimas turi būti iki 64 simbolių ilgio imtinai."
 
 #: pyanaconda/network.py:115
 msgid "Local host name must not end with period '.'."
@@ -109,22 +107,19 @@ msgid "Wireless connected to %(access_point)s"
 msgstr "Prisijungta prie belaidžio %(access_point)s"
 
 #: pyanaconda/network.py:496
-#, fuzzy, python-format
-#| msgid "Bond %(interface_name)s (%(list_of_slaves)s) connected"
+#, python-format
 msgid "Bond %(interface_name)s (%(list_of_ports)s) connected"
-msgstr "Prisijungta prie bond %(interface_name)s (%(list_of_slaves)s)"
+msgstr "Prisijungta prie bond %(interface_name)s (%(list_of_ports)s)"
 
 #: pyanaconda/network.py:500
-#, fuzzy, python-format
-#| msgid "Team %(interface_name)s (%(list_of_slaves)s) connected"
+#, python-format
 msgid "Team %(interface_name)s (%(list_of_ports)s) connected"
-msgstr "Prisijungta prie Team %(interface_name)s (%(list_of_slaves)s)"
+msgstr "Prisijungta prie Team %(interface_name)s (%(list_of_ports)s)"
 
 #: pyanaconda/network.py:504
-#, fuzzy, python-format
-#| msgid "Bridge %(interface_name)s (%(list_of_slaves)s) connected"
+#, python-format
 msgid "Bridge %(interface_name)s (%(list_of_ports)s) connected"
-msgstr "Prisijungta prie Bridge %(interface_name)s (%(list_of_slaves)s)"
+msgstr "Prisijungta prie Bridge %(interface_name)s (%(list_of_ports)s)"
 
 #: pyanaconda/network.py:510
 #, python-format
@@ -363,22 +358,16 @@ msgid "Full name cannot contain colon characters"
 msgstr "Pilnas vardas negali turėti dvitaškių"
 
 #: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:45
-#, fuzzy
-#| msgid "Installing %s"
 msgid "Installing {}"
-msgstr "Diegiama %s"
+msgstr "Diegiama {}"
 
 #: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:47
-#, fuzzy
-#| msgid "Configuring %s"
 msgid "Configuring {}"
-msgstr "Konfigūruojamas %s"
+msgstr "Konfigūruojama {}"
 
 #: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:49
-#, fuzzy
-#| msgid "Verifying %s"
 msgid "Verifying {}"
-msgstr "Tikrinamas %s"
+msgstr "Tikrinama {}"
 
 #: pyanaconda/modules/payloads/payload/dnf/installation.py:171
 msgid "Downloading packages"
@@ -389,16 +378,13 @@ msgid "Preparing transaction from installation source"
 msgstr "Ruošiama transakcija iš diegimo šaltinio"
 
 #: pyanaconda/modules/payloads/payload/dnf/download_progress.py:68
-#, fuzzy, python-brace-format
-#| msgid ""
-#| "Downloading %(total_files)s RPMs, %(downloaded)s / %(total_size)s "
-#| "(%(percent)d%%) done."
+#, python-brace-format
 msgid ""
 "Downloading {total_files} RPMs, {downloaded_size} / {total_size} "
 "({total_percent}%) done."
 msgstr ""
-"Parsiunčiama %(total_files)s RPM, %(downloaded)s / %(total_size)s "
-"(%(percent)d%%)."
+"Atsisiunčiama %{total_files} RPM {downloaded_size}, atlikta %{total_size} / "
+"%{total_percent}."
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:499
 msgid "Deployment starting: {}"
@@ -432,16 +418,12 @@ msgid "Installing %(flatpak_name)s"
 msgstr "Diegiama %(flatpak_name)s"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:41
-#, fuzzy
-#| msgid "Starting Flatpak installation"
 msgid "Installing Flatpak applications"
-msgstr "Pradedamas Flatpak diegimas"
+msgstr "Diegiamos Flatpak programos"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:48
-#, fuzzy
-#| msgid "Performing post-installation setup tasks"
 msgid "Performing post-installation Flatpak tasks"
-msgstr "Vykdomos po-diegimo nustatymo užduotys"
+msgstr "Vykdomos Flatpak po-diegimo užduotys"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:53
 msgid "Flatpak installation has finished"
@@ -465,7 +447,7 @@ msgstr "Live vaizdas"
 
 #: pyanaconda/modules/payloads/source/flatpak/flatpak.py:49
 msgid "Flatpak"
-msgstr ""
+msgstr "Flatpak"
 
 #: pyanaconda/modules/payloads/source/cdn/cdn.py:47
 msgid "Red Hat CDN"
@@ -1764,6 +1746,9 @@ msgid ""
 "releases, which will result in a fatal error when it is encountered. Please "
 "modify your kickstart file to remove this section."
 msgstr ""
+"Skiltis %%anaconda yra pasenusi. Ji gali būti pašalinta būsimuose leidimuose "
+"ir dėl to kils lemtinga klaida. Pakeiskite savo kickstart failą ir "
+"pašalinkite šią skiltį."
 
 #: pyanaconda/kickstart.py:507
 msgid ""
@@ -1923,8 +1908,6 @@ msgstr ""
 
 #. TRANSLATORS: 'b' to go back to region list
 #: pyanaconda/ui/tui/spokes/time_spoke.py:47
-#, fuzzy
-#| msgid "back to region list"
 msgid "to go back to region list"
 msgstr "grįžti į regionų sąrašą"
 
@@ -2208,10 +2191,8 @@ msgstr "Nėra papildomos programinės įrangos."
 
 #. TRANSLATORS: 's' to rescan devices
 #: pyanaconda/ui/tui/spokes/storage.py:62
-#, fuzzy
-#| msgid "rescan devices"
 msgid "to rescan devices"
-msgstr "perskaityti įrenginius"
+msgstr "perskaityti įrenginius iš naujo"
 
 #: pyanaconda/ui/tui/spokes/storage.py:65
 msgid "Use All Space"
@@ -3400,7 +3381,7 @@ msgstr "_Nauji prijungimo taškai naudos šią skirsnių schemą:"
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:538
 msgctxt "GUI|Custom Partitioning|Autopart Page"
 msgid "_Automatically created mount points can be encrypted by default:"
-msgstr ""
+msgstr "_Automatiškai sukurti prijungimo taškai gali būti numatytai šifruojami:"
 
 #: pyanaconda/ui/gui/spokes/lib/network_secret_agent.py:180
 #: pyanaconda/ui/gui/spokes/lib/network_secret_agent.glade:95
@@ -3920,12 +3901,12 @@ msgid "Remote directory is required"
 msgstr "Būtinas nutolęs katalogas"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:1196
-#, fuzzy
-#| msgid "Server must be specified as SERVER:/PATH"
 msgid ""
 "NFS server must be specified as \"SERVER:/PATH\". Only one colon is allowed "
 "in the url string."
-msgstr "Serverį reikia nurodyti formatu SERVERIS:/KELIAS"
+msgstr ""
+"NFS Serverį reikia nurodyti formatu „SERVERIS:/KELIAS“. URL eilutėje "
+"leidžiamas tik vienas dvitaškis."
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:1218
 msgid "Duplicate repository names."
@@ -4130,10 +4111,6 @@ msgid "Do you really want to quit?"
 msgstr "Ar tikrai norite išeiti?"
 
 #: pyanaconda/core/constants.py:154
-#, fuzzy
-#| msgid ""
-#| "Support for this hardware has been removed in this major OS release. "
-#| "Please check theremoved functionality section of the release notes."
 msgid ""
 "Support for this hardware has been removed in this major OS release. Please "
 "check the removed functionality section of the release notes."
@@ -4460,11 +4437,7 @@ msgstr ""
 "norite nepaisyti šio pranešimo ir vis tiek tęsti diegimą?"
 
 #: pyanaconda/errors.py:213
-#, fuzzy, python-brace-format
-#| msgid ""
-#| "The following error occurred while installing the boot loader. The system "
-#| "will not be bootable. Would you like to ignore this and continue with "
-#| "installation?"
+#, python-brace-format
 msgid ""
 "The following error occurred during the installation:\n"
 "\n"
@@ -4472,8 +4445,11 @@ msgid ""
 "\n"
 "Would you like to ignore this and continue with installation?"
 msgstr ""
-"Diegian įkėliklį kilo žemiau nurodyta klaida. Sistema nebus įkeliama. Ar "
-"norite nepaisyti šio pranešimo ir vis tiek tęsti diegimą?"
+"Diegiant kilo žemiau nurodyta klaida:\n"
+"\n"
+"{details}\n"
+"\n"
+" Ar norite nepaisyti šio pranešimo ir vis tiek tęsti diegimą?"
 
 #: pyanaconda/pwpolicy.py:195
 #, python-format
@@ -4491,6 +4467,9 @@ msgid ""
 "releases, which will result in a fatal error when it is encountered. Please "
 "modify your kickstart file to remove this command."
 msgstr ""
+"Komanda pwpolicy yra pasenusi. Ji gali būti pašalinta ateities leidimuose, "
+"dėl ko kils lemtinga klaida ją aptikus. Pakeiskite savo kickstart failą ir "
+"pašalinkite šią komandą."
 
 #: widgets/src/StandaloneWindow.c:52
 msgctxt "GUI|Standalone Navigation"
@@ -5216,18 +5195,12 @@ msgid "NETWORK CONFIGURATION"
 msgstr "TINKLO KONFIGŪRACIJA"
 
 #: pyanaconda/ui/gui/spokes/network.glade:421
-#, fuzzy
-#| msgid ""
-#| "We'll need network access to fetch information about your location and to "
-#| "make software\n"
-#| "updates available for you."
 msgid ""
 "We'll need network access to fetch information about your location and to "
 "make software updates available for you."
 msgstr ""
 "Reikės tinklo prieigos informacijai apie jūsų vietą gauti ir programinės "
-"įrangos atnaujinimams\n"
-"padaryti prieinamiems."
+"įrangos atnaujinimams padaryti prieinamiems."
 
 #: pyanaconda/ui/gui/spokes/network.glade:449
 #: pyanaconda/ui/gui/spokes/network.glade:2592
@@ -5243,10 +5216,8 @@ msgstr ""
 "tinkinti.  Ten galite nustatyti serverio pavadinimą."
 
 #: pyanaconda/ui/gui/spokes/network.glade:701
-#, fuzzy
-#| msgid "Port"
 msgid "Ports"
-msgstr "Prievadas"
+msgstr "Prievadai"
 
 #: pyanaconda/ui/gui/spokes/network.glade:725
 #: pyanaconda/ui/gui/spokes/network.glade:1126
