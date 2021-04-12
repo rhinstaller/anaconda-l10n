@@ -9,14 +9,14 @@
 # fedoratrans <fedoratrans@gmail.com>, 2007
 # Ulrika <aurorauddeborg@gmail.com>, 2012
 # Göran Uddeborg <goeran@uddeborg.se>, 2015. #zanata, 2020, 2021.
-# Luna Jernberg <bittin@reimu.nl>, 2020.
+# Luna Jernberg <bittin@reimu.nl>, 2020, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 21.48.22.158\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2020-04-15 15:07+0200\n"
-"PO-Revision-Date: 2021-02-11 16:07+0000\n"
-"Last-Translator: Göran Uddeborg <goeran@uddeborg.se>\n"
+"PO-Revision-Date: 2021-04-12 16:48+0000\n"
+"Last-Translator: Luna Jernberg <bittin@reimu.nl>\n"
 "Language-Team: Swedish <https://translate.fedoraproject.org/projects/"
 "anaconda/rhel-7/sv/>\n"
 "Language: sv\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 4.5.3\n"
 
 #: pyanaconda/bootloader.py:253
 msgid "/boot file system"
@@ -45,6 +45,8 @@ msgid ""
 "RAID sets that contain '%(desc)s' must have one of the following metadata "
 "versions: %(metadata_versions)s."
 msgstr ""
+"RAID-uppsättningar som innehåller ”%(desc)s” måste ha en av följande "
+"metadataversioner: %(metadata_versions)s."
 
 #: pyanaconda/bootloader.py:426
 #, python-format
@@ -233,6 +235,8 @@ msgid ""
 "The %(password)s you have provided contains non-ASCII characters. You may "
 "not be able to switch between keyboard layouts when typing it."
 msgstr ""
+"%(password)s du har angett innehåller icke-ASCII-tecken. Du kan inte byta "
+"mellan tangentbordslayouter när du skriver det."
 
 #: pyanaconda/constants.py:169
 msgid "You will have to press Done twice to confirm it."
@@ -641,7 +645,7 @@ msgstr "felformad URL, kan inte tolka den."
 
 #: pyanaconda/iutil.py:826
 msgid "URL has no host component"
-msgstr ""
+msgstr "URL:en har ingen värdkomponent"
 
 #: pyanaconda/kickstart.py:191
 #, python-format
@@ -677,12 +681,12 @@ msgstr "GRUB2 stöder inte installation till en partition."
 #: pyanaconda/kickstart.py:435
 #, python-format
 msgid "More than one match found for given boot drive \"%s\"."
-msgstr ""
+msgstr "Mer än en matchning hittades för angiven startdisk \"%s\"."
 
 #: pyanaconda/kickstart.py:440
 #, python-format
 msgid "Requested boot drive \"%s\" doesn't exist or cannot be used."
-msgstr ""
+msgstr "Begärd startdisk \"%s\" finns inte eller kan inte användas."
 
 #: pyanaconda/kickstart.py:514
 #, python-format
@@ -690,6 +694,8 @@ msgid ""
 "Btrfs partition \"%(device)s\" has a format of \"%(format)s\", but should "
 "have a format of \"Btrfs\"."
 msgstr ""
+"Btrfs-partitionen ”%(device)s” har formatet ”%(format)s”, men skulle haft "
+"formatet ”btrfs”."
 
 #: pyanaconda/kickstart.py:519
 #, python-format
@@ -709,7 +715,7 @@ msgstr ""
 #: pyanaconda/kickstart.py:1593
 #, python-format
 msgid "The mount point \"%s\" is not valid.  It must start with a /."
-msgstr ""
+msgstr "Monteringspunkten ”%s” är inte giltig.  Den måste starta med ett /."
 
 #: pyanaconda/kickstart.py:556
 #, python-format
@@ -722,21 +728,23 @@ msgid ""
 "Disklabel \"%s\" given in clearpart command is not supported on this "
 "platform."
 msgstr ""
+"Disketiketten \"%s\" som är angivet i ett clearpart-kommando stödjs inte på "
+"denna plattform."
 
 #: pyanaconda/kickstart.py:652
 #, python-format
 msgid "Disk \"%s\" given in clearpart command does not exist."
-msgstr ""
+msgstr "Disken \"%s\" som är angivet i ett clearpart-kommando finns inte."
 
 #: pyanaconda/kickstart.py:665
 #, python-format
 msgid "Device \"%s\" given in clearpart device list does not exist."
-msgstr ""
+msgstr "Enheten \"%s\" som är angiven i en clearpart-enhetslista finns inte."
 
 #: pyanaconda/kickstart.py:692
 #, python-format
 msgid "NIC \"%s\" given in fcoe command does not exist."
-msgstr ""
+msgstr "NIC \"%s\" som är angiven i ett fcoe-kommando finns inte."
 
 #: pyanaconda/kickstart.py:752
 #, python-format
@@ -746,7 +754,7 @@ msgstr "%s saknas. Kan inte sätta upp en brandvägg."
 #: pyanaconda/kickstart.py:807 pyanaconda/kickstart.py:818
 #, python-format
 msgid "Disk \"%s\" given in ignoredisk command does not exist."
-msgstr ""
+msgstr "Disken \"%s\" given i ignoredisk-kommandot finns inte."
 
 #: pyanaconda/kickstart.py:831
 #, python-format
@@ -754,12 +762,16 @@ msgid ""
 "Network interface \"%(nic)s\" required by iSCSI \"%(iscsiTarget)s\" target "
 "is not up."
 msgstr ""
+"Nätverksgränssnittett \"%(nic)s\"som krävs av iSCSI-målet ”%(iscsiTarget)s” "
+"är inte uppe."
 
 #: pyanaconda/kickstart.py:841
 msgid ""
 "iscsi --iface must be specified (binding used) either for all targets or for "
 "none"
 msgstr ""
+"iscsi --iface måste anges (binding använt) antingen för alla mål eller inte "
+"för något"
 
 #: pyanaconda/kickstart.py:934
 #, python-format
@@ -767,10 +779,12 @@ msgid ""
 "No volume group exists with the name \"%s\".  Specify volume groups before "
 "logical volumes."
 msgstr ""
+"Ingen volymgrupp finns med namnet ”%s”.  Ange volymgrupper före logiska "
+"volymer."
 
 #: pyanaconda/kickstart.py:941
 msgid "Cache PVs must belong to the same VG as the cached LV"
-msgstr ""
+msgstr "Cache-PV:er måste höra till samma VG som den cachade LV:n"
 
 #: pyanaconda/kickstart.py:948
 #, python-format
@@ -782,19 +796,20 @@ msgstr ""
 
 #: pyanaconda/kickstart.py:956
 msgid "logvol --noformat must also use the --name= option."
-msgstr ""
+msgstr "logvol --noformat måste också använda flagga --name=."
 
 #: pyanaconda/kickstart.py:961 pyanaconda/kickstart.py:1031
 #, python-format
 msgid "Logical volume \"%s\" given in logvol command does not exist."
 msgstr ""
+"Den logiska volymen ”%s” som är angiven i ett logvol-kommando finns inte."
 
 #: pyanaconda/kickstart.py:972 pyanaconda/kickstart.py:981
 #: pyanaconda/kickstart.py:1041 pyanaconda/kickstart.py:1385
 #: pyanaconda/kickstart.py:1394 pyanaconda/kickstart.py:1477
 #, python-format
 msgid "Target size \"%(size)s\" for device \"%(device)s\" is invalid."
-msgstr ""
+msgstr "Målstorleken ”%(size)s” för enheten ”%(device)s” är felaktig."
 
 #: pyanaconda/kickstart.py:995
 #, python-format
@@ -802,6 +817,7 @@ msgid ""
 "Logical volume name \"%(logvol)s\" is already in use in volume group "
 "\"%(volgroup)s\"."
 msgstr ""
+"Den logiska volymen ”%(logvol)s” används redan i volymgruppen ”%(volgroup)s”."
 
 #: pyanaconda/kickstart.py:1002
 #, python-format
@@ -816,6 +832,8 @@ msgid ""
 "Logical volume size \"%(logvolSize)s\" must be larger than the volume group "
 "extent size of \"%(extentSize)s\"."
 msgstr ""
+"Den logiska volymen ”%(logvolSize)s” måste vara större än volymgruppens "
+"utsträckningsstorlek ”%(extentSize)s”."
 
 #: pyanaconda/kickstart.py:1009
 msgid "Percentage must be between 0 and 100."
@@ -851,12 +869,12 @@ msgstr ""
 #: pyanaconda/kickstart.py:1229 pyanaconda/kickstart.py:1237
 #, python-format
 msgid "nvdimm: namespace %s not found."
-msgstr ""
+msgstr "nvdimm: namnrymden %s finns inte."
 
 #: pyanaconda/kickstart.py:1248
 #, python-format
 msgid "Disk \"%s\" given in nvdimm command does not exist."
-msgstr ""
+msgstr "Disken ”%s” given i nvdimm-kommandot finns inte."
 
 #: pyanaconda/kickstart.py:1256 pyanaconda/kickstart.py:1260
 #, python-format
@@ -866,22 +884,22 @@ msgstr ""
 #: pyanaconda/kickstart.py:1285
 #, python-format
 msgid "No disk found for specified BIOS disk \"%s\"."
-msgstr ""
+msgstr "Ingen disk hittad för den angivna BIOS-disken ”%s”."
 
 #: pyanaconda/kickstart.py:1320
 #, python-format
 msgid "RAID partition \"%s\" is defined multiple times."
-msgstr ""
+msgstr "RAID-partitionen ”%s” är definierad flera gånger."
 
 #: pyanaconda/kickstart.py:1331 pyanaconda/kickstart.py:1568
 #, python-format
 msgid "PV partition \"%s\" is defined multiple times."
-msgstr ""
+msgstr "PV-partitionen ”%s” är definierad flera gånger."
 
 #: pyanaconda/kickstart.py:1342 pyanaconda/kickstart.py:1578
 #, python-format
 msgid "Btrfs partition \"%s\" is defined multiple times."
-msgstr ""
+msgstr "Btrfs-partitionen ”%s” är definierad flera gånger."
 
 #: pyanaconda/kickstart.py:1362
 #, python-format
@@ -890,41 +908,41 @@ msgstr "Storlek '%s' är ogiltig."
 
 #: pyanaconda/kickstart.py:1369
 msgid "part --noformat must also use the --onpart option."
-msgstr ""
+msgstr "part --noformat måste också använda flaggan --onpart."
 
 #: pyanaconda/kickstart.py:1374 pyanaconda/kickstart.py:1468
 #, python-format
 msgid "Partition \"%s\" given in part command does not exist."
-msgstr ""
+msgstr "Partitionen ”%s” som är angiven i ett part-kommando finns inte."
 
 #: pyanaconda/kickstart.py:1428 pyanaconda/kickstart.py:1442
 #, python-format
 msgid "Disk \"%s\" given in part command does not exist."
-msgstr ""
+msgstr "Disken \"%s\" given i part-kommandot finns inte."
 
 #: pyanaconda/kickstart.py:1431
 #, python-format
 msgid "Cannot install to unpartitionable device \"%s\"."
-msgstr ""
+msgstr "Kan inte installera till den ej partitionerbara enheten ”%s”."
 
 #: pyanaconda/kickstart.py:1438
 #, python-format
 msgid "Disk \"%s\" in part command is not partitioned."
-msgstr ""
+msgstr "Disken ”%s” i ett part-kommando är inte partitionerad."
 
 #: pyanaconda/kickstart.py:1451
 #, python-format
 msgid "The maximum size \"%s\" is invalid."
-msgstr ""
+msgstr "Den maximala storleken ”%s” är felaktig."
 
 #: pyanaconda/kickstart.py:1600
 msgid "raid --noformat must also use the --device option."
-msgstr ""
+msgstr "raid --noformat måste också använda flagga --device."
 
 #: pyanaconda/kickstart.py:1605
 #, python-format
 msgid "RAID device  \"%s\" given in raid command does not exist."
-msgstr ""
+msgstr "RAID-enheten ”%s” som är angiven i ett raid-kommando finns inte."
 
 #: pyanaconda/kickstart.py:1628
 #, python-format
@@ -932,21 +950,23 @@ msgid ""
 "RAID device \"%(device)s\" has a format of \"%(format)s\", but should have a "
 "format of \"mdmember\"."
 msgstr ""
+"RAID-enheten ”%(device)s” har formatet ”%(format)s”, men skulle ha formatet "
+"”mdmember”."
 
 #: pyanaconda/kickstart.py:1633
 #, python-format
 msgid "Tried to use undefined partition \"%s\" in RAID specification."
-msgstr ""
+msgstr "Försökte använda en odefinierad partition ”%s” i RAID-specifikationen."
 
 #: pyanaconda/kickstart.py:1667
 #, python-format
 msgid "RAID volume \"%s\" specified with --useexisting does not exist."
-msgstr ""
+msgstr "RAID-volymen ”%s” angiven med --useexisting finns inte."
 
 #: pyanaconda/kickstart.py:1676
 #, python-format
 msgid "The RAID volume name \"%s\" is already in use."
-msgstr ""
+msgstr "RAID-volymsnamnet ”%s” används redan."
 
 #: pyanaconda/kickstart.py:1965
 #, python-format
@@ -954,6 +974,8 @@ msgid ""
 "Physical volume \"%(device)s\" has a format of \"%(format)s\", but should "
 "have a format of \"lvmpv\"."
 msgstr ""
+"Den fysiska volymen ”%(device)s” har ett format av ”%(format)s”, men skulle "
+"ha ett format av ”lvmpv”."
 
 #: pyanaconda/kickstart.py:1970
 #, python-format
@@ -974,27 +996,34 @@ msgid ""
 "one of:\n"
 "%(validExtentSizes)s."
 msgstr ""
+"Volymgruppen har fått en fysisk utsträckningsstorlek på ”%(extentSize)s”, "
+"men måste vara en av:\n"
+"%(validExtentSizes)s."
 
 #: pyanaconda/kickstart.py:1993
 msgid ""
 "volgroup --noformat and volgroup --useexisting must also use the --name= "
 "option."
 msgstr ""
+"volgroup --noformat och volgroup --useexisting måste också använda flaggan "
+"--name=."
 
 #: pyanaconda/kickstart.py:1998
 #, python-format
 msgid "Volume group \"%s\" given in volgroup command does not exist."
-msgstr ""
+msgstr "Volymgruppen ”%s” angiven i ett volgroup-kommando finns inte."
 
 #: pyanaconda/kickstart.py:2001
 #, python-format
 msgid "The volume group name \"%s\" is already in use."
-msgstr ""
+msgstr "Volymgruppsnamnet ”%s” används redan."
 
 #: pyanaconda/kickstart.py:2124
 msgid ""
 "Incorrectly specified origin of the snapshot. Use format \"VolGroup/LV_name\""
 msgstr ""
+"Felaktigt angivet ursprung för ögonblicksbilden. Använd formatet ”VolGrupp/"
+"LV-namn”"
 
 #: pyanaconda/kickstart.py:2135
 #, python-format
@@ -1002,11 +1031,13 @@ msgid ""
 "Snapshot: origin \"%(origin)s\" of snapshot \"%(name)s\" is not a valid thin "
 "LV device."
 msgstr ""
+"Ögonblicksbild: ursprunget ”%(origin)s” till ögonblicksbilden ”%(name)s” är "
+"inte en giltig tunn LV-enhet."
 
 #: pyanaconda/kickstart.py:2143
 #, python-format
 msgid "Snapshot %s already exists."
-msgstr ""
+msgstr "Ögonblicksbilden ”%s” finns redan"
 
 #: pyanaconda/kickstart.py:2179
 msgid ""
@@ -1109,7 +1140,7 @@ msgstr "policy namn krävs för %s"
 #: pyanaconda/pwpolicy.py:133
 #, python-format
 msgid "A %(command)s with the name %(policyName)s has already been defined."
-msgstr ""
+msgstr "Ett %(command)s med namnet %(policyName)s har redan definierats."
 
 #: pyanaconda/rescue.py:67
 #, python-format
@@ -1122,7 +1153,7 @@ msgstr ""
 
 #: pyanaconda/rescue.py:78
 msgid "Unable to find /bin/bash to execute!  Not starting shell."
-msgstr ""
+msgstr "Kan inte hitta /bin/bash att köra!  Startar inget skal."
 
 #: pyanaconda/rescue.py:120
 msgid "Rescue"
@@ -1134,7 +1165,7 @@ msgstr "Fortsätt"
 
 #: pyanaconda/rescue.py:132
 msgid "Read-only mount"
-msgstr ""
+msgstr "Enbart läsbar montering"
 
 #: pyanaconda/rescue.py:132
 msgid "Skip to shell"
@@ -1142,7 +1173,7 @@ msgstr ""
 
 #: pyanaconda/rescue.py:146
 msgid "Please make a selection from the above:  "
-msgstr ""
+msgstr "Gör ett val från ovanstående:  "
 
 #: pyanaconda/rescue.py:151
 #, python-format
@@ -1159,11 +1190,11 @@ msgstr ""
 
 #: pyanaconda/rescue.py:267
 msgid "Root Selection"
-msgstr ""
+msgstr "Rotval"
 
 #: pyanaconda/rescue.py:284
 msgid "The following installations were discovered on your system.\n"
-msgstr ""
+msgstr "Följande installationer har upptäckts på ditt system.\n"
 
 #: pyanaconda/rescue.py:296
 msgid ""
@@ -1214,7 +1245,7 @@ msgstr ""
 #: pyanaconda/rescue.py:397
 #, python-format
 msgid "Run %s to unmount the system when you are finished.\n"
-msgstr ""
+msgstr "Kör %s för att avmontera systemet när du är klar.\n"
 
 #: pyanaconda/rescue.py:399
 #, python-format
@@ -1323,6 +1354,8 @@ msgid ""
 "Your root partition is less than %(size)s which is usually too small to "
 "install %(product)s."
 msgstr ""
+"Din rotpartition är mindre än %(size)s vilket vanligen är för litet för att "
+"installera %(product)s."
 
 #: pyanaconda/storage_utils.py:165
 #, python-format
@@ -1330,6 +1363,8 @@ msgid ""
 "You have not defined a root partition (/), which is required for "
 "installation of %s to continue."
 msgstr ""
+"Du har inte definierat någon rotpartition (/), vilket behövs för att "
+"installationen av %s skall kunna fortsätta."
 
 #: pyanaconda/storage_utils.py:178
 #, python-format
@@ -1355,6 +1390,8 @@ msgid ""
 "Your %(mount)s partition is too small for %(format)s formatting (allowable "
 "size is %(minSize)s to %(maxSize)s)"
 msgstr ""
+"Din %(mount)s-partition är för liten för %(format)s-formatering (tillåtna "
+"storlekar är %(minSize)s till %(maxSize)s)"
 
 #: pyanaconda/storage_utils.py:226
 #, python-format
@@ -1362,6 +1399,8 @@ msgid ""
 "Your %(mount)s partition is too large for %(format)s formatting (allowable "
 "size is %(minSize)s to %(maxSize)s)"
 msgstr ""
+"Din %(mount)s-partition är för stor för %(format)s-formatering (tillåtna "
+"storlekar är %(minSize)s till %(maxSize)s)"
 
 #: pyanaconda/storage_utils.py:245
 msgid "No valid boot loader target device found. See below for details."
@@ -1369,7 +1408,7 @@ msgstr "Ingen målenhet för startprogram hittad. Se nedan för detaljer."
 
 #: pyanaconda/storage_utils.py:260
 msgid "You have not created a bootable partition."
-msgstr ""
+msgstr "Du har inte skapat en startbar partition."
 
 #: pyanaconda/storage_utils.py:295
 msgid ""
@@ -1766,7 +1805,7 @@ msgstr "Startar automatisk installation"
 #: pyanaconda/ui/tui/hubs/summary.py:93
 #, python-format
 msgid "Enter '%s' to ignore the warning and attempt to install anyway."
-msgstr ""
+msgstr "Ange ”%s” för att strunta i varningen och försöka installera ändå."
 
 #. TRANSLATORS: 'b' to begin installation
 #: pyanaconda/ui/tui/hubs/summary.py:95 pyanaconda/ui/tui/hubs/summary.py:122
@@ -1847,7 +1886,7 @@ msgstr "Fråga"
 #: pyanaconda/ui/tui/tuiobject.py:134
 #, python-format
 msgid "Please respond '%(yes)s' or '%(no)s': "
-msgstr ""
+msgstr "Svara ”%(yes)s” eller ”%(no)s” "
 
 #. TRANSLATORS: 'yes' as positive reply
 #: pyanaconda/ui/tui/tuiobject.py:136 pyanaconda/ui/tui/tuiobject.py:143
@@ -2016,7 +2055,7 @@ msgstr "Värdnamn: %s\n"
 #: pyanaconda/ui/tui/spokes/network.py:165
 #, python-format
 msgid "Current host name: %s\n"
-msgstr ""
+msgstr "Aktuellt värdnamn: %s\n"
 
 #: pyanaconda/ui/tui/spokes/network.py:177
 msgid "Set host name"
@@ -2074,6 +2113,8 @@ msgid ""
 "IPv6 address[/prefix] or %(auto)s for automatic, %(dhcp)s for DHCP, "
 "%(ignore)s to turn off"
 msgstr ""
+"IPv6-adress[/prefix] eller %(auto)s för automatisk, %(dhcp)s för DHCP, "
+"%(ignore)s för att slå av"
 
 #: pyanaconda/ui/tui/spokes/network.py:332
 msgid "IPv6 default gateway"
@@ -2098,11 +2139,11 @@ msgstr "Konfigurerar enheten %s."
 
 #: pyanaconda/ui/tui/spokes/network.py:368
 msgid "Bad format of the IP address"
-msgstr ""
+msgstr "Felaktigt format på IP-adressen"
 
 #: pyanaconda/ui/tui/spokes/network.py:375
 msgid "Bad format of the netmask"
-msgstr ""
+msgstr "Felaktigt format på nätmasken"
 
 #: pyanaconda/ui/tui/spokes/password.py:32
 msgid "Root password"
@@ -2138,7 +2179,7 @@ msgstr "Använd ledigt utrymme"
 
 #: pyanaconda/ui/tui/spokes/storage.py:68
 msgid "Installation Destination"
-msgstr ""
+msgstr "Installationsmål"
 
 #: pyanaconda/ui/tui/spokes/storage.py:128
 #: pyanaconda/ui/gui/spokes/storage.py:439
@@ -2261,15 +2302,15 @@ msgstr "Välj en konfiguration för partitionsschema"
 
 #: pyanaconda/ui/tui/spokes/time_spoke.py:41
 msgid "status: working"
-msgstr ""
+msgstr "status: fungerar"
 
 #: pyanaconda/ui/tui/spokes/time_spoke.py:42
 msgid "status: not working"
-msgstr ""
+msgstr "status: fungerar inte"
 
 #: pyanaconda/ui/tui/spokes/time_spoke.py:43
 msgid "checking status"
-msgstr ""
+msgstr "kontrollerar status"
 
 #: pyanaconda/ui/tui/spokes/time_spoke.py:53
 msgid "Time settings"
@@ -2288,7 +2329,7 @@ msgstr "Tidszonen är inte satt."
 
 #: pyanaconda/ui/tui/spokes/time_spoke.py:201
 msgid "not set"
-msgstr ""
+msgstr "inte satt"
 
 #: pyanaconda/ui/tui/spokes/time_spoke.py:205
 #, python-format
@@ -2539,7 +2580,7 @@ msgstr ""
 
 #: pyanaconda/ui/tui/spokes/user.py:37
 msgid "User creation"
-msgstr ""
+msgstr "Skapande av användare"
 
 #: pyanaconda/ui/tui/spokes/user.py:124 pyanaconda/ui/gui/spokes/user.py:377
 msgid "No user will be created"
@@ -2561,13 +2602,15 @@ msgstr "Användaren %s kommer skapas"
 
 #: pyanaconda/ui/tui/spokes/user.py:140
 msgid "Full name can't contain the ':' character"
-msgstr ""
+msgstr "Det fullständiga namnet kan inte innehålla tecknet ”:”"
 
 #: pyanaconda/ui/tui/spokes/user.py:145
 msgid ""
 "Either a group name in the group list is invalid or groups are not separated "
 "by a comma"
 msgstr ""
+"Antingen är ett av gruppnamnen i grupplistan felaktigt eller så är grupperna "
+"inte separerade av kommatecken"
 
 #: pyanaconda/ui/tui/spokes/user.py:155
 #, python-format
@@ -2705,6 +2748,9 @@ msgid ""
 "done.\n"
 "Finish it and then click the Finish configuration button please."
 msgstr ""
+"%s är nu framgångsrikt installerat, men lite konfiguration behöver "
+"fortfarande göras.\n"
+"Avsluta den och klicka sedan på knappen Avsluta konfigurationen."
 
 #: pyanaconda/ui/gui/hubs/progress.py:236
 #, python-format
@@ -2712,6 +2758,8 @@ msgid ""
 "%s is now successfully installed and ready for you to use!\n"
 "Go ahead and reboot to start using it!"
 msgstr ""
+"%s är nu framgångsrikt installerat och klart att användas!\n"
+"Ta och starta om ditt system för att börja använda det!"
 
 #: pyanaconda/ui/gui/hubs/summary.py:81
 msgid ""
@@ -2749,12 +2797,16 @@ msgstr "Skapa eller välj %(container_type)s"
 #: pyanaconda/ui/gui/spokes/custom.py:117
 msgid "Device reconfiguration failed. <a href=\"\">Click for details.</a>"
 msgstr ""
+"Omkonfiguration av enheten misslyckades. <a href=\"\">Klicka för "
+"detaljer.</a>"
 
 #: pyanaconda/ui/gui/spokes/custom.py:119
 msgid ""
 "Storage configuration reset due to unrecoverable error. <a href=\"\">Click "
 "for details.</a>"
 msgstr ""
+"Lagringskonfigurationen återställd på grund av fel som inte gick att "
+"återhämta ifrån. <a href=\"\">Klicka för detaljer.</a>"
 
 #: pyanaconda/ui/gui/spokes/custom.py:143
 #: pyanaconda/ui/gui/spokes/custom.glade.h:12
@@ -2807,10 +2859,14 @@ msgstr "Enheten stödjer inte RAID-nivåval %s."
 #: pyanaconda/ui/gui/spokes/custom.py:800
 msgid "Device resize request failed. <a href=\"\">Click for details.</a>"
 msgstr ""
+"Ändring av storlek av enheten misslyckades. <a href=\"\">Klicka för "
+"detaljer.</a>"
 
 #: pyanaconda/ui/gui/spokes/custom.py:873
 msgid "Device reformat request failed. <a href=\"\">Click for details.</a>"
 msgstr ""
+"Omformateringen av enheten misslyckades. <a href=\"\">Klicka för "
+"detaljer.</a>"
 
 #: pyanaconda/ui/gui/spokes/custom.py:1239
 #, python-format
@@ -2850,12 +2906,16 @@ msgid ""
 "Error checking storage configuration.  <a href=\"\">Click for details</a> or "
 "press Done again to continue."
 msgstr ""
+"Fel vid kontroll av lagringskonfigurationen. <a href=\"\">Klicka för "
+"detaljer</a> eller tryck Klar igen för att fortsätta."
 
 #: pyanaconda/ui/gui/spokes/custom.py:1567
 msgid ""
 "Warning checking storage configuration.  <a href=\"\">Click for details</a> "
 "or press Done again to continue."
 msgstr ""
+"Varning vid kontroll av lagringskonfigurationen. <a href=\"\">Klicka för "
+"detaljer</a> eller tryck Klar igen för att fortsätta."
 
 #: pyanaconda/ui/gui/spokes/custom.py:1675
 #, python-format
@@ -2865,6 +2925,8 @@ msgstr "Lade till en ny %(type)s till den befintliga behållaren %(name)s."
 #: pyanaconda/ui/gui/spokes/custom.py:1686
 msgid "Failed to add new device. <a href=\"\">Click for details.</a>"
 msgstr ""
+"Misslyckades att lägga till en ny enhet. <a href=\"\">Klicka för "
+"detaljer.</a>"
 
 #: pyanaconda/ui/gui/spokes/custom.py:1691
 msgid "Invalid partition size set. Use a valid integer."
@@ -2873,6 +2935,8 @@ msgstr "Felaktigt partitionsstorlek satt.  Använd ett giltigt heltal."
 #: pyanaconda/ui/gui/spokes/custom.py:1802
 msgid "Device removal request failed. <a href=\"\">Click for details.</a>"
 msgstr ""
+"Begäran att ta bort enheten misslyckades.  <a href=\"\">Klicka för "
+"detaljer.</a>"
 
 #: pyanaconda/ui/gui/spokes/custom.py:1992
 msgid "No disks selected. Keeping previous disk set."
@@ -2880,7 +2944,7 @@ msgstr "Inga diskar valda. Behåller tidigare diskuppsättning."
 
 #: pyanaconda/ui/gui/spokes/custom.py:2050
 msgid "No disks selected. Not saving changes."
-msgstr ""
+msgstr "Inga diskar valda.  Sparar inte ändringar."
 
 #: pyanaconda/ui/gui/spokes/custom.py:2058
 #, python-format
@@ -2925,25 +2989,31 @@ msgstr "Inte tillräckligt med fritt utrymme på de valda diskarna."
 #: pyanaconda/ui/gui/spokes/custom.py:2376
 msgid "Automatic partitioning failed. <a href=\"\">Click for details.</a>"
 msgstr ""
+"Automatisk partitionering misslyckades.  <a href=\"\">Klicka för "
+"detaljer.</a>"
 
 #: pyanaconda/ui/gui/spokes/custom.py:2590
 msgid ""
 "Continuing with this action will reset all your partitioning selections to "
 "their current on-disk state."
 msgstr ""
+"Att fortsätta med denna åtgärd kommer återställa alla dina partitionsval "
+"till deras nuvarande status på disken."
 
 #: pyanaconda/ui/gui/spokes/custom.py:2598
 msgid "_Reset selections"
-msgstr ""
+msgstr "_Återställ val"
 
 #: pyanaconda/ui/gui/spokes/custom.py:2598
 msgid "_Preserve current selections"
-msgstr ""
+msgstr "_Bevara nuvarande val"
 
 #: pyanaconda/ui/gui/spokes/custom.py:2677
 msgid ""
 "Failed to unlock encrypted block device. <a href=\"\">Click for details.</a>"
 msgstr ""
+"Misslyckades att låsa upp en krypterad blockenhet.  <a href=\"\">Klicka för "
+"detaljer.</a>"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.py:393
 msgctxt "GUI|Spoke"
@@ -2991,7 +3061,7 @@ msgstr "NTP-tjänsten kunde inte stoppas."
 #: pyanaconda/ui/gui/spokes/filter.py:576
 msgctxt "GUI|Spoke"
 msgid "_INSTALLATION DESTINATION"
-msgstr ""
+msgstr "_INSTALLATIONSMÅL"
 
 #: pyanaconda/ui/gui/spokes/filter.py:711
 #, python-format
@@ -3016,13 +3086,15 @@ msgstr "Testning av layoutkonfigurationer är inte tillgängligt."
 
 #: pyanaconda/ui/gui/spokes/keyboard.py:382
 msgid "Getting list of layouts..."
-msgstr ""
+msgstr "Hämtar lista av layouter..."
 
 #: pyanaconda/ui/gui/spokes/keyboard.py:435
 msgid ""
 "Keyboard layouts are not supported when using VNC.\n"
 "However the settings will be used after the installation."
 msgstr ""
+"Tangenbordslayouter stödjs inte när VNC används.\n"
+"Inställningarna kommer däremot användas efter installationen."
 
 #: pyanaconda/ui/gui/spokes/keyboard.py:445
 msgid "Layout switching not configured."
@@ -3031,7 +3103,7 @@ msgstr "Byte av layout inte konfigurerat."
 #: pyanaconda/ui/gui/spokes/langsupport.py:57
 msgctxt "GUI|Spoke"
 msgid "_LANGUAGE SUPPORT"
-msgstr ""
+msgstr "_SPRÅKSTÖD"
 
 #: pyanaconda/ui/gui/spokes/network.py:96
 msgid "Status unknown (missing)"
@@ -3199,7 +3271,7 @@ msgstr "Privat nyckels lösenord: "
 #: pyanaconda/ui/gui/spokes/network.py:1493
 msgctxt "GUI|Spoke"
 msgid "_NETWORK & HOST NAME"
-msgstr ""
+msgstr "_NÄTVERK & VÄRDNAMN"
 
 #: pyanaconda/ui/gui/spokes/password.py:54
 msgctxt "GUI|Spoke"
@@ -3226,7 +3298,7 @@ msgstr "Root-lösenordet är inte satt"
 #: pyanaconda/ui/gui/spokes/software.py:56
 msgctxt "GUI|Spoke"
 msgid "_SOFTWARE SELECTION"
-msgstr ""
+msgstr "_VAL AV PROGRAM"
 
 #: pyanaconda/ui/gui/spokes/software.py:106
 #: pyanaconda/ui/gui/spokes/source.py:60
@@ -3248,17 +3320,18 @@ msgstr "Fel vid kontroll av programvaruberoenden"
 
 #: pyanaconda/ui/gui/spokes/software.py:291
 msgid "Invalid environment specified in kickstart"
-msgstr ""
+msgstr "Felaktig miljö angiven i kickstart"
 
 #: pyanaconda/ui/gui/spokes/software.py:300
 #: pyanaconda/ui/gui/spokes/software.py:307
 msgid "Selected environment is not valid"
-msgstr ""
+msgstr "Den valda miljön är inte giltig"
 
 #: pyanaconda/ui/gui/spokes/software.py:461
 msgid ""
 "Error checking software dependencies.  <a href=\"\">Click for details.</a>"
 msgstr ""
+"Fel vid kontroll av programberoenden.  <a href=\"\">Klicka för detaljer.</a>"
 
 #: pyanaconda/ui/gui/spokes/software.py:571
 msgid ""
@@ -3266,6 +3339,9 @@ msgid ""
 "likely caused by an error with your installation source.  You can quit the "
 "installer, change your software source, or change your software selections."
 msgstr ""
+"Programvaran som är markerad att installeras har följande fel.  Detta "
+"orsakas sannolikt av ett fel hos din installationskälla.  Du kan avsluta "
+"installeraren, byta programvarukälla eller ändra dina programvaruval."
 
 #: pyanaconda/ui/gui/spokes/software.py:576
 msgctxt "GUI|Software Selection|Error Dialog"
@@ -3280,7 +3356,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/software.py:578
 msgctxt "GUI|Software Selection|Error Dialog"
 msgid "Modify _Selections"
-msgstr ""
+msgstr "Ändra _val"
 
 #: pyanaconda/ui/gui/spokes/source.py:59
 msgid "Setting up installation source..."
@@ -3314,7 +3390,7 @@ msgstr "Detta medium fungerar inte att installera ifrån."
 #: pyanaconda/ui/gui/spokes/source.py:367
 msgctxt "GUI|Spoke"
 msgid "_INSTALLATION SOURCE"
-msgstr ""
+msgstr "_INSTALLATIONSKÄLLA"
 
 #: pyanaconda/ui/gui/spokes/source.py:490
 #: pyanaconda/ui/gui/spokes/source.py:716
@@ -3332,7 +3408,7 @@ msgstr "Fel när ISO-fil sattes upp"
 
 #: pyanaconda/ui/gui/spokes/source.py:700
 msgid "Testing availability..."
-msgstr ""
+msgstr "Testar tillgänglighet …"
 
 #: pyanaconda/ui/gui/spokes/source.py:718
 msgid ""
@@ -3370,7 +3446,7 @@ msgstr "Protokollet i URL:en stämmer inte med det valda protokollet"
 
 #: pyanaconda/ui/gui/spokes/source.py:1008
 msgid "NFS server is empty"
-msgstr ""
+msgstr "NFS-servern är tom"
 
 #: pyanaconda/ui/gui/spokes/source.py:1015
 msgid "Invalid host name"
@@ -3378,7 +3454,7 @@ msgstr "Felaktigt värdnamn"
 
 #: pyanaconda/ui/gui/spokes/source.py:1018
 msgid "Remote directory is required"
-msgstr ""
+msgstr "Fjärrkatalog behövs"
 
 #: pyanaconda/ui/gui/spokes/source.py:1039
 msgid "Duplicate repository names."
@@ -3455,7 +3531,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/storage.py:235
 msgctxt "GUI|Spoke"
 msgid "INSTALLATION _DESTINATION"
-msgstr ""
+msgstr "INSTALLATIONS _MÅL"
 
 #: pyanaconda/ui/gui/spokes/storage.py:359
 msgid "Saving storage configuration..."
@@ -3463,7 +3539,7 @@ msgstr "Sparar lagringskonfigurationen …"
 
 #: pyanaconda/ui/gui/spokes/storage.py:363
 msgid "Passphrase for autopart encryption not specified."
-msgstr ""
+msgstr "Lösenfrasen för autopart-kryptering inte angiven."
 
 #: pyanaconda/ui/gui/spokes/storage.py:372
 #: pyanaconda/ui/gui/spokes/storage.py:384
@@ -3480,6 +3556,8 @@ msgstr "Formaterar DASD:er"
 msgid ""
 "Error checking storage configuration.  <a href=\"\">Click for details.</a>"
 msgstr ""
+"Varning vid kontroll av lagringskonfigurationen.  <a href=\"\">Klicka för "
+"detaljer.</a>"
 
 #: pyanaconda/ui/gui/spokes/storage.py:593
 msgid ""
@@ -3629,7 +3707,7 @@ msgstr "Ingen enhetet att rekonfigureras vald."
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.py:160
 msgid "Rescanning disks finished."
-msgstr ""
+msgstr "Omsökning av diskar avslutad."
 
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:171
 msgid "DATA"
@@ -3677,7 +3755,7 @@ msgstr[0] ""
 #: pyanaconda/ui/gui/spokes/lib/cart.py:193
 msgctxt "GUI|Selected Disks Dialog"
 msgid "_Do not install boot loader"
-msgstr ""
+msgstr "_Installera inte något startprogram"
 
 #: pyanaconda/ui/gui/spokes/lib/cart.py:196
 #: pyanaconda/ui/gui/spokes/lib/cart.glade.h:8
@@ -3749,7 +3827,7 @@ msgstr "behållare"
 #, python-format
 msgctxt "GUI|Custom Partitioning|Confirm Delete Dialog"
 msgid "Delete _all file systems which are only used by %s."
-msgstr ""
+msgstr "Ta bort _alla filsystem som bara används av %s."
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:368
 #, python-format
@@ -3811,7 +3889,7 @@ msgstr "Går inte att ändra storlek"
 
 #: pyanaconda/ui/gui/spokes/lib/resize.py:197
 msgid "Free space"
-msgstr ""
+msgstr "Fritt utrymme"
 
 #: pyanaconda/ui/gui/spokes/lib/resize.py:219
 msgid ""
@@ -3858,7 +3936,7 @@ msgstr "Ta bort _alla"
 #: pyanaconda/ui/gui/spokes/lib/resize.py:459
 msgctxt "GUI|Reclaim Dialog"
 msgid "Preserve _all"
-msgstr ""
+msgstr "Bevara _alla"
 
 #: widgets/src/BaseWindow.c:153
 msgid "DISTRIBUTION INSTALLATION"
@@ -3933,12 +4011,12 @@ msgstr "Användar- och grupp-ID:n"
 #: pyanaconda/ui/gui/spokes/advanced_user.glade.h:6
 msgctxt "GUI|Advanced User"
 msgid "Specify a _user ID manually:"
-msgstr ""
+msgstr "Ange ett _användar-ID manuellt:"
 
 #: pyanaconda/ui/gui/spokes/advanced_user.glade.h:7
 msgctxt "GUI|Advanced User"
 msgid "Specify a _group ID manually:"
-msgstr ""
+msgstr "Ange ett _grupp-ID manuellt:"
 
 #: pyanaconda/ui/gui/spokes/advanced_user.glade.h:8
 msgid "Group Membership"
@@ -4050,27 +4128,27 @@ msgstr "Minuter"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade.h:21
 msgid "Hour Up"
-msgstr ""
+msgstr "Timme upp"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade.h:22
 msgid "Hour Down"
-msgstr ""
+msgstr "Timme ned"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade.h:23
 msgid "AM/PM Up"
-msgstr ""
+msgstr "fm/em upp"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade.h:24
 msgid "Minutes Up"
-msgstr ""
+msgstr "Minuter upp"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade.h:25
 msgid "AM/PM Down"
-msgstr ""
+msgstr "fm/em ned"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade.h:26
 msgid "Minutes Down"
-msgstr ""
+msgstr "Minuter ned"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade.h:28
 msgctxt "GUI|Date and Time"
@@ -4084,7 +4162,7 @@ msgstr "_AM/PM"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade.h:30
 msgid "Set Date & Time"
-msgstr ""
+msgstr "Sätt datum och tid"
 
 #: pyanaconda/ui/gui/spokes/filter.glade.h:1
 #: pyanaconda/ui/gui/spokes/storage.glade.h:14
@@ -4112,7 +4190,7 @@ msgstr "_Port:"
 #: pyanaconda/ui/gui/spokes/filter.glade.h:7
 msgctxt "GUI|Installation Destination|Filter|Search|Port Target LUN"
 msgid "_Target:"
-msgstr ""
+msgstr "_Mål:"
 
 #: pyanaconda/ui/gui/spokes/filter.glade.h:8
 msgctxt "GUI|Installation Destination|Filter|Search|Port Target LUN"
@@ -4174,11 +4252,11 @@ msgstr "Tillverkare"
 
 #: pyanaconda/ui/gui/spokes/filter.glade.h:20
 msgid "Namespace"
-msgstr ""
+msgstr "Namnrymd"
 
 #: pyanaconda/ui/gui/spokes/filter.glade.h:21
 msgid "Mode"
-msgstr ""
+msgstr "Läge"
 
 #: pyanaconda/ui/gui/spokes/filter.glade.h:22
 msgctxt "GUI|Installation Destination|Filter"
@@ -4188,7 +4266,7 @@ msgstr "Sö_k"
 #: pyanaconda/ui/gui/spokes/filter.glade.h:23
 msgctxt "GUI|Installation Destination|Filter|Multipath"
 msgid "Filter _By:"
-msgstr ""
+msgstr "Filtrera _efter:"
 
 #: pyanaconda/ui/gui/spokes/filter.glade.h:24
 msgctxt "GUI|Installation Destination|Filter|Multipath|Vendor"
@@ -4203,7 +4281,7 @@ msgstr "Visa endast _enheter med:"
 #: pyanaconda/ui/gui/spokes/filter.glade.h:26
 msgctxt "GUI|Installation Destination|Filter|Multipath|WWID"
 msgid "Show Only _Devices Containing:"
-msgstr ""
+msgstr "Visa endast _enheter som innehåller:"
 
 #: pyanaconda/ui/gui/spokes/filter.glade.h:27
 msgid "Paths"
@@ -4217,7 +4295,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/filter.glade.h:29
 msgctxt "GUI|Installation Destination|Filter|Other"
 msgid "Filter _By:"
-msgstr ""
+msgstr "Filtrera _efter:"
 
 #: pyanaconda/ui/gui/spokes/filter.glade.h:30
 msgid "ID"
@@ -4236,7 +4314,7 @@ msgstr "Visa endast _enheter med:"
 #: pyanaconda/ui/gui/spokes/filter.glade.h:33
 msgctxt "GUI|Installation Destination|Filter|Other|ID"
 msgid "Show Only _Devices Containing:"
-msgstr ""
+msgstr "Visa endast _enheter som innehåller:"
 
 #: pyanaconda/ui/gui/spokes/filter.glade.h:34
 msgid "Identifier"
@@ -4250,7 +4328,7 @@ msgstr "_Andra SAN Enheter"
 #: pyanaconda/ui/gui/spokes/filter.glade.h:36
 msgctxt "GUI|Installation Destination|Filter|NVDIMM Devices"
 msgid "Filter B_y:"
-msgstr ""
+msgstr "_Filtrera efter:"
 
 #: pyanaconda/ui/gui/spokes/filter.glade.h:37
 msgctxt "GUI|Installation Destination|Filter|NVDIMM Devices|Mode"
@@ -4259,7 +4337,7 @@ msgstr ""
 
 #: pyanaconda/ui/gui/spokes/filter.glade.h:38
 msgid "Sector"
-msgstr ""
+msgstr "Sektor"
 
 #: pyanaconda/ui/gui/spokes/filter.glade.h:39
 msgid "Memory"
@@ -4268,7 +4346,7 @@ msgstr "Minne"
 #: pyanaconda/ui/gui/spokes/filter.glade.h:40
 msgctxt "GUI|Installation Destination|Filter|NVDIMM Devices|Namespace"
 msgid "Names_pace:"
-msgstr ""
+msgstr "Namnr_ymd:"
 
 #: pyanaconda/ui/gui/spokes/filter.glade.h:41
 msgctxt "GUI|Installation Destination|Filter"
@@ -4278,7 +4356,7 @@ msgstr "_NVDIMM Enheter"
 #: pyanaconda/ui/gui/spokes/filter.glade.h:42
 msgctxt "GUI|Installation Destination|Filter|zSeries"
 msgid "Filter B_y:"
-msgstr ""
+msgstr "Filtrera E_fter:"
 
 #: pyanaconda/ui/gui/spokes/filter.glade.h:43
 msgid "CCW"
@@ -4326,7 +4404,7 @@ msgstr "Lägg till EC_KD DASD..."
 #: pyanaconda/ui/gui/spokes/filter.glade.h:52
 msgctxt "GUI|Installation Destination|Filter"
 msgid "Add _iSCSI Target..."
-msgstr ""
+msgstr "Lägg till _iSCSI-mål …"
 
 #: pyanaconda/ui/gui/spokes/filter.glade.h:53
 msgctxt "GUI|Installation Destination|Filter"
@@ -4336,12 +4414,12 @@ msgstr "Lägg till FCo_E SAN..."
 #: pyanaconda/ui/gui/spokes/filter.glade.h:54
 msgctxt "GUI|Installation Destination|Filter"
 msgid "Recon_figure NVDIMM..."
-msgstr ""
+msgstr "Omkonfigurera _NVDIMM …"
 
 #: pyanaconda/ui/gui/spokes/filter.glade.h:55
 msgctxt "GUI|Installation Destination|Filter"
 msgid "_Refresh List"
-msgstr ""
+msgstr "_Uppdatera listan"
 
 #: pyanaconda/ui/gui/spokes/network.glade.h:5
 msgid "Add device"
@@ -4360,7 +4438,7 @@ msgstr "_Lägg till"
 #: pyanaconda/ui/gui/spokes/network.glade.h:8
 msgctxt "GUI|Network|Add Device Dialog"
 msgid "_Select the type of device you wish to add"
-msgstr ""
+msgstr "_Välj enhetstypen du vill lägga till"
 
 #: pyanaconda/ui/gui/spokes/network.glade.h:9
 msgid "NETWORK & HOST NAME"
@@ -4431,12 +4509,12 @@ msgstr "Säkerhetsnyckel"
 #: pyanaconda/ui/gui/spokes/network.glade.h:26
 msgctxt "GUI|Network|Wireless"
 msgid "_Use as Hotspot..."
-msgstr ""
+msgstr "_Använd som hotspot …"
 
 #: pyanaconda/ui/gui/spokes/network.glade.h:27
 msgctxt "GUI|Network|Wireless"
 msgid "_Stop Hotspot..."
-msgstr ""
+msgstr "_Stoppa hotspot …"
 
 #: pyanaconda/ui/gui/spokes/network.glade.h:28
 msgctxt "GUI|Network|Wireless"
@@ -4510,25 +4588,25 @@ msgstr "_FTP Proxy"
 #: pyanaconda/ui/gui/spokes/network.glade.h:44
 msgctxt "GUI|Network|Proxy"
 msgid "_Socks Host"
-msgstr ""
+msgstr "_Socks-värd"
 
 #: pyanaconda/ui/gui/spokes/network.glade.h:46
 msgid "Network Config Box"
-msgstr ""
+msgstr "Nätverkskonfigurationsruta"
 
 #: pyanaconda/ui/gui/spokes/network.glade.h:47
 msgctxt "GUI|Network"
 msgid "Unloc_k"
-msgstr ""
+msgstr "Lås up_p"
 
 #: pyanaconda/ui/gui/spokes/network.glade.h:48
 msgctxt "GUI|Network"
 msgid "Airplane Mode"
-msgstr ""
+msgstr "Flygplansläge"
 
 #: pyanaconda/ui/gui/spokes/network.glade.h:49
 msgid "More Network Config Box"
-msgstr ""
+msgstr "Ruta med mer nätverkskonfiguration"
 
 #: pyanaconda/ui/gui/spokes/network.glade.h:50
 msgctxt "GUI|Network"
@@ -4541,11 +4619,11 @@ msgstr "_Verkställ"
 
 #: pyanaconda/ui/gui/spokes/network.glade.h:53
 msgid "Set as current system host name."
-msgstr ""
+msgstr "Ange som aktuellt värdnamn på systemet."
 
 #: pyanaconda/ui/gui/spokes/network.glade.h:54
 msgid "Current host name:"
-msgstr ""
+msgstr "Aktuellt värdnamn:"
 
 #: pyanaconda/ui/gui/spokes/network.glade.h:55
 msgid "NETWORK CONFIGURATION"
@@ -4603,7 +4681,7 @@ msgstr "Avbryt & _lägg till mer diskar"
 #: pyanaconda/ui/gui/spokes/storage.glade.h:2
 msgctxt "GUI|Storage|Need Space Dialog"
 msgid "_Reclaim space"
-msgstr ""
+msgstr "_Återvinn utrymme"
 
 #: pyanaconda/ui/gui/spokes/storage.glade.h:3
 msgid "INSTALLATION OPTIONS"
@@ -4641,12 +4719,12 @@ msgstr "Här kommer vi beskriva vilka dina alternativ är."
 
 #: pyanaconda/ui/gui/spokes/storage.glade.h:10
 msgid "Need Space"
-msgstr ""
+msgstr "Behöver utrymme"
 
 #: pyanaconda/ui/gui/spokes/storage.glade.h:11
 msgctxt "GUI|Storage|No Space Dialog"
 msgid "_Quit installer"
-msgstr ""
+msgstr "_Avsluta installationsprogrammet"
 
 #: pyanaconda/ui/gui/spokes/storage.glade.h:12
 msgctxt "GUI|Storage|No Space Dialog"
@@ -4655,7 +4733,7 @@ msgstr "_Avbryt"
 
 #: pyanaconda/ui/gui/spokes/storage.glade.h:13
 msgid "No Space"
-msgstr ""
+msgstr "Inget utrymme"
 
 #: pyanaconda/ui/gui/spokes/storage.glade.h:15
 msgid "Device Selection"
@@ -4688,7 +4766,7 @@ msgstr "_Lägg till en disk..."
 
 #: pyanaconda/ui/gui/spokes/storage.glade.h:21
 msgid "Add Specialized Disk"
-msgstr ""
+msgstr "Lägg till en specialiserad disk"
 
 #: pyanaconda/ui/gui/spokes/storage.glade.h:22
 msgid "Other Storage Options"
@@ -4716,7 +4794,7 @@ msgstr "_Kryptera mina data."
 
 #: pyanaconda/ui/gui/spokes/storage.glade.h:28
 msgid "You'll set a passphrase next."
-msgstr ""
+msgstr "Du kommer ange en lösenfras härnäst."
 
 #: pyanaconda/ui/gui/spokes/storage.glade.h:29
 msgid "I would like to _make additional space available."
@@ -4724,7 +4802,7 @@ msgstr "Jag vill _göra ytterligare utrymme tillgängligt."
 
 #: pyanaconda/ui/gui/spokes/storage.glade.h:30
 msgid "Storage Options"
-msgstr ""
+msgstr "Lagringsalternativ"
 
 #: pyanaconda/ui/gui/spokes/storage.glade.h:31
 msgid "summary"
@@ -4733,7 +4811,7 @@ msgstr "sammanfattning"
 #: pyanaconda/ui/gui/spokes/storage.glade.h:32
 msgctxt "GUI|Storage"
 msgid "_Full disk summary and boot loader..."
-msgstr ""
+msgstr "_Fullständig sammanfattning av diskar och startprogram …"
 
 #: pyanaconda/ui/gui/spokes/storage.glade.h:33
 msgctxt "GUI|Storage"
@@ -4767,37 +4845,37 @@ msgstr "namn"
 
 #: pyanaconda/ui/gui/spokes/keyboard.glade.h:5
 msgid "Selected Layouts"
-msgstr ""
+msgstr "Valda layouter"
 
 #: pyanaconda/ui/gui/spokes/keyboard.glade.h:6
 msgctxt "GUI|Keyboard Layout"
 msgid "_Add layout"
-msgstr ""
+msgstr "_Lägg till layout"
 
 #: pyanaconda/ui/gui/spokes/keyboard.glade.h:7
 msgctxt "GUI|Keyboard Layout"
 msgid "_Remove layout"
-msgstr ""
+msgstr "_Ta bort layout"
 
 #: pyanaconda/ui/gui/spokes/keyboard.glade.h:8
 msgctxt "GUI|Keyboard Layout"
 msgid "Move selected layout _up"
-msgstr ""
+msgstr "Flytta den valda layouten _uppåt"
 
 #: pyanaconda/ui/gui/spokes/keyboard.glade.h:9
 msgctxt "GUI|Keyboard Layout"
 msgid "Move selected layout _down"
-msgstr ""
+msgstr "Flytta den valda layouten _nedåt"
 
 #: pyanaconda/ui/gui/spokes/keyboard.glade.h:10
 msgctxt "GUI|Keyboard Layout"
 msgid "_Preview layout"
-msgstr ""
+msgstr "_Förhandsgranska layout"
 
 #: pyanaconda/ui/gui/spokes/keyboard.glade.h:11
 msgctxt "GUI|Keyboard Layout"
 msgid "_Test the layout configuration below:"
-msgstr ""
+msgstr "_Testa layoutkonfigurationen nedan:"
 
 #: pyanaconda/ui/gui/spokes/keyboard.glade.h:12
 msgid "Alt + Shift to switch layouts."
@@ -4828,11 +4906,11 @@ msgstr "Du kan lägga till en tangentbordslayout genom att välja den nedan:"
 
 #: pyanaconda/ui/gui/spokes/keyboard.glade.h:19
 msgid "Available Layouts"
-msgstr ""
+msgstr "Tillgängliga layouter"
 
 #: pyanaconda/ui/gui/spokes/keyboard.glade.h:20
 msgid "Add Layout"
-msgstr ""
+msgstr "Lägg till layout"
 
 #: pyanaconda/ui/gui/spokes/keyboard.glade.h:21
 msgctxt "GUI|Keyboard Layout|Switching Options"
@@ -4864,7 +4942,7 @@ msgstr "beskrivning"
 
 #: pyanaconda/ui/gui/spokes/keyboard.glade.h:27
 msgid "Layout Options"
-msgstr ""
+msgstr "Layoutalternativ"
 
 #: pyanaconda/ui/gui/spokes/langsupport.glade.h:1
 msgid "LANGUAGE SUPPORT"
@@ -4910,12 +4988,12 @@ msgstr "_Rootlösenord:"
 #: pyanaconda/ui/gui/spokes/password.glade.h:3
 msgctxt "GUI|Password"
 msgid "_Confirm:"
-msgstr ""
+msgstr "_Bekräfta:"
 
 #: pyanaconda/ui/gui/spokes/password.glade.h:5
 #: pyanaconda/ui/gui/spokes/user.glade.h:9
 msgid "Confirm Password"
-msgstr ""
+msgstr "Bekräfta lösenord"
 
 #: pyanaconda/ui/gui/spokes/password.glade.h:6
 #: pyanaconda/ui/gui/spokes/user.glade.h:12
@@ -4943,7 +5021,7 @@ msgstr "_Öppna"
 #: pyanaconda/ui/gui/spokes/source.glade.h:3
 msgctxt "GUI|Software Source|Media Check Dialog"
 msgid "_Done"
-msgstr ""
+msgstr "_Klar"
 
 #: pyanaconda/ui/gui/spokes/source.glade.h:4
 msgid "MEDIA VERIFICATION"
@@ -4971,7 +5049,7 @@ msgstr "_Aktivera HTTP Proxy"
 #: pyanaconda/ui/gui/spokes/source.glade.h:9
 msgctxt "GUI|Software Source|Proxy Dialog"
 msgid "_Proxy Host"
-msgstr ""
+msgstr "_Proxy-värd"
 
 #: pyanaconda/ui/gui/spokes/source.glade.h:10
 msgid "<span size=\"small\"><b>Example:</b> squid.mysite.org:3128</span>"
@@ -5003,7 +5081,7 @@ msgstr "Vilken installationskälla vill du använda?"
 #: pyanaconda/ui/gui/spokes/source.glade.h:16
 msgctxt "GUI|Software Source"
 msgid "_Auto-detected installation media:"
-msgstr ""
+msgstr "_Autodetekterat installationsmedium:"
 
 #: pyanaconda/ui/gui/spokes/source.glade.h:17
 msgid "Device:"
@@ -5041,12 +5119,12 @@ msgstr "_Välj en ISO"
 #: pyanaconda/ui/gui/spokes/source.glade.h:24
 msgctxt "GUI|Software Source"
 msgid "_On the network:"
-msgstr ""
+msgstr "_På nätverket:"
 
 #: pyanaconda/ui/gui/spokes/source.glade.h:26
 msgctxt "GUI|Software Source"
 msgid "_Proxy setup..."
-msgstr ""
+msgstr "_Proxyinställning …"
 
 #: pyanaconda/ui/gui/spokes/source.glade.h:27
 msgctxt "GUI|Software Source"
@@ -5056,7 +5134,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/source.glade.h:28
 msgctxt "GUI|Software Source"
 msgid "N_FS mount options:"
-msgstr ""
+msgstr "N_FS-monteringsflaggor"
 
 #: pyanaconda/ui/gui/spokes/source.glade.h:29
 msgid "This field is optional."
@@ -5072,6 +5150,8 @@ msgid ""
 "Don't install the latest available software _updates. Install the default "
 "versions provided by the installation source above."
 msgstr ""
+"Installera inte de senast tillgängliga program_uppdateringarna.  Installera "
+"standardversionen från installationskällan ovan."
 
 #: pyanaconda/ui/gui/spokes/source.glade.h:32
 msgid "Additional repositories"
@@ -5160,12 +5240,12 @@ msgstr "Namn på förrådet."
 #: pyanaconda/ui/gui/spokes/welcome.glade.h:1
 msgctxt "GUI|Welcome|Beta Warn Dialog"
 msgid "I want to _exit."
-msgstr ""
+msgstr "Jag vill _avsluta."
 
 #: pyanaconda/ui/gui/spokes/welcome.glade.h:2
 msgctxt "GUI|Welcome|Beta Warn Dialog"
 msgid "I want to _proceed."
-msgstr ""
+msgstr "Jag vill _fortsätta."
 
 #: pyanaconda/ui/gui/spokes/welcome.glade.h:3
 msgid "This is unstable, pre-release software."
@@ -5200,7 +5280,7 @@ msgstr ""
 
 #: pyanaconda/ui/gui/spokes/welcome.glade.h:9
 msgid "Beta Warn"
-msgstr ""
+msgstr "Betavarning"
 
 #: pyanaconda/ui/gui/spokes/welcome.glade.h:10
 msgid "What language would you like to use during the installation process?"
@@ -5243,7 +5323,7 @@ msgstr "SKAPA ANVÄNDARE"
 #: pyanaconda/ui/gui/spokes/user.glade.h:2
 msgctxt "GUI|User"
 msgid "_Full name"
-msgstr ""
+msgstr "_Fullständigt namn"
 
 #: pyanaconda/ui/gui/spokes/user.glade.h:3
 msgctxt "GUI|User"
@@ -5252,7 +5332,7 @@ msgstr "_Användar namn"
 
 #: pyanaconda/ui/gui/spokes/user.glade.h:4
 msgid "Full Name"
-msgstr ""
+msgstr "Fullständigt namn"
 
 #: pyanaconda/ui/gui/spokes/user.glade.h:6
 msgctxt "GUI|User"
@@ -5280,7 +5360,7 @@ msgstr "Kräv ett lösenord för att använda detta konto"
 #: pyanaconda/ui/gui/spokes/user.glade.h:13
 msgctxt "GUI|User"
 msgid "Make this user administrator"
-msgstr ""
+msgstr "_Gör denna användare till administratör"
 
 #: pyanaconda/ui/gui/spokes/user.glade.h:14
 msgctxt "GUI|User"
@@ -5395,7 +5475,7 @@ msgstr "Fil S_ystem:"
 #: pyanaconda/ui/gui/spokes/custom.glade.h:30
 msgctxt "GUI|Custom Partitioning|Configure"
 msgid "Ref_ormat"
-msgstr ""
+msgstr "For_matera om"
 
 #: pyanaconda/ui/gui/spokes/custom.glade.h:31
 msgctxt "GUI|Custom Partitioning|Configure"
@@ -5410,7 +5490,7 @@ msgstr "_Ändra..."
 #: pyanaconda/ui/gui/spokes/custom.glade.h:33
 msgctxt "GUI|Custom Partitioning|Configure"
 msgid "RA_ID Level:"
-msgstr ""
+msgstr "RA_ID-nivå:"
 
 #: pyanaconda/ui/gui/spokes/custom.glade.h:34
 msgid "_Update Settings"
@@ -5440,7 +5520,7 @@ msgstr "_Lösenfras:"
 #: pyanaconda/ui/gui/spokes/custom.glade.h:38
 msgctxt "GUI|Custom Partitioning|Encrypted"
 msgid "_Unlock"
-msgstr ""
+msgstr "_Lås upp"
 
 #: pyanaconda/ui/gui/spokes/custom.glade.h:39
 msgid ""
@@ -5461,7 +5541,7 @@ msgstr "TOTALT UTRYMME"
 #: pyanaconda/ui/gui/spokes/custom.glade.h:42
 msgctxt "GUI|Custom Partitioning"
 msgid "_Reset All"
-msgstr ""
+msgstr "_Återställ allt"
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade.h:1
 msgctxt "GUI|Advanced Storage|DASD|Configure"
@@ -5484,12 +5564,12 @@ msgstr "För att använda DASD-diskar måste du ange enhetsnumren."
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade.h:5
 msgctxt "GUI|Advanced Storage|DASD|Configure"
 msgid "_Device number:"
-msgstr ""
+msgstr "_Enhetsnummer:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade.h:6
 msgctxt "GUI|Advanced Storage|DASD|Configure"
 msgid "_Start Discovery"
-msgstr ""
+msgstr "_Starta sökandet"
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade.h:7
 msgid "Discovering DASD devices.  This may take a moment..."
@@ -5511,15 +5591,15 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade.h:10
 msgctxt "GUI|Advanced Storage|DASD|Configure"
 msgid "_Retry Discovery"
-msgstr ""
+msgstr "_Försök söka igen"
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade.h:11
 msgid "Device discovery succeeded."
-msgstr ""
+msgstr "Detektering av enheter lyckades."
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade.h:12
 msgid "The added DASD can be found under \"Local Standard Disks\"."
-msgstr ""
+msgstr "Den tillagda DASD:n finns under ”Lokala standarddiskar”."
 
 #: pyanaconda/ui/gui/spokes/advstorage/fcoe.glade.h:1
 msgctxt "GUI|Advanced Storage|FCoE"
@@ -5549,7 +5629,7 @@ msgstr "Använd auto _VLAN"
 #: pyanaconda/ui/gui/spokes/advstorage/fcoe.glade.h:6
 msgctxt "GUI|Advanced Storage|FCoE"
 msgid "_Add FCoE Disk(s)"
-msgstr ""
+msgstr "_Lägg till FCoE-disk(ar)"
 
 #: pyanaconda/ui/gui/spokes/advstorage/fcoe.glade.h:7
 msgid "Error adding FCoE SAN."
@@ -5588,12 +5668,12 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade.h:5
 msgctxt "GUI|Advanced Storage|iSCSI|Configure"
 msgid "_Target IP Address:"
-msgstr ""
+msgstr "_Mål-IP-adress:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade.h:6
 msgctxt "GUI|Advanced Storage|iSCSI|Configure"
 msgid "iSCSI _Initiator Name:"
-msgstr ""
+msgstr "iSCSI-_initierarnamn:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade.h:7
 msgid "No credentials (discovery authentication disabled)"
@@ -5610,7 +5690,7 @@ msgstr "CHAP par och ett omvänt par"
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade.h:10
 msgctxt "GUI|Advanced Storage|iSCSI|Configure"
 msgid "_Discovery Authentication Type:"
-msgstr ""
+msgstr "_Upptäck autentiseringstyp:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade.h:11
 msgid ""
@@ -5643,17 +5723,17 @@ msgstr "CHAP _Lösenord:"
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade.h:16
 msgctxt "GUI|Advanced Storage|iSCSI|Configure|Reverse CHAP"
 msgid "Reverse CHAP User _name:"
-msgstr ""
+msgstr "Omvänt CHAP-användar_namn:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade.h:17
 msgctxt "GUI|Advanced Storage|iSCSI|Configure|Reverse CHAP"
 msgid "Reverse CHAP Pass_word:"
-msgstr ""
+msgstr "Omvänt CHAP-lösen_ord:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade.h:18
 msgctxt "GUI|Advanced Storage|iSCSI|Configure|Start"
 msgid "_Start Discovery"
-msgstr ""
+msgstr "_Starta sökandet"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade.h:19
 msgid "Discovering iSCSI targets.  This may take a moment..."
@@ -5674,7 +5754,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade.h:22
 msgctxt "GUI|Advanced Storage|iSCSI|Configure|Retry"
 msgid "_Retry Discovery"
-msgstr ""
+msgstr "_Försök söka igen"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade.h:23
 msgctxt "GUI|Advanced Storage|iSCSI|Configure"
@@ -5696,7 +5776,7 @@ msgstr "Portal"
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade.h:27
 msgctxt "GUI|Advanced Storage|iSCSI|Login"
 msgid "_Node Login Authentication Type:"
-msgstr ""
+msgstr "Autentiseringtyper för _nodinloggning:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade.h:28
 msgid "Use the credentials from discovery"
@@ -5725,17 +5805,17 @@ msgstr "CHAP _Lösenord:"
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade.h:33
 msgctxt "GUI|Advanced Storage|iSCSI|Login|Reverse CHAP"
 msgid "_Reverse CHAP User name:"
-msgstr ""
+msgstr "_Omvänt CHAP-användarnamn:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade.h:34
 msgctxt "GUI|Advanced Storage|iSCSI|Login|Reverse CHAP"
 msgid "Reverse CHAP Pass_word:"
-msgstr ""
+msgstr "Omvänt CHAP-lösen_ord:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade.h:35
 msgctxt "GUI|Advanced Storage|iSCSI|Login|Login"
 msgid "_Log In"
-msgstr ""
+msgstr "_Logga in"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade.h:36
 msgid "Node login failed."
@@ -5752,7 +5832,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade.h:38
 msgctxt "GUI|Advanced Storage|iSCSI|Login|Retry"
 msgid "Retry _Log In"
-msgstr ""
+msgstr "Försök _logga in igen"
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade.h:1
 msgctxt "GUI|Advanced Storage|NVDIMM|Reconfigure"
@@ -5764,16 +5844,18 @@ msgid ""
 "The following NVDIMM devices selected from the list will be reconfigured to "
 "sector mode:"
 msgstr ""
+"De följande NVDIMM-enheterna valda från listan kommer konfigureras om till "
+"sektorläge:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade.h:3
 msgctxt "GUI|Advanced Storage|NVDIMM|Reconfigure"
 msgid "_Sector size:"
-msgstr ""
+msgstr "_Sektorstorlek:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade.h:4
 msgctxt "GUI|Advanced Storage|NVDIMM|Reconfigure"
 msgid "Start _Reconfiguration"
-msgstr ""
+msgstr "Starta _omkonfiguration"
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade.h:5
 msgid "Reconfiguring NVDIMM devices. This may take a moment..."
@@ -5781,25 +5863,28 @@ msgstr "Omkonfigurerar NVDIMM-enheter. Detta kan ta ett tag …"
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade.h:6
 msgid "Device reconfiguration failed."
-msgstr ""
+msgstr "Enhetsomkonfigureringen misslyckades."
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade.h:7
 msgid "The following error occurred reconfiguring NVDIMM devices:"
-msgstr ""
+msgstr "Följande fel uppstod vid omkonfigurering av NVDIMM-enheter:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade.h:8
 msgid "Devices reconfiguration succeeded."
-msgstr ""
+msgstr "Enhetsomkonfigureringen lyckades."
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade.h:9
 msgid ""
 "Rescanning disks after reconfiguration.\n"
 "This may take a moment ..."
 msgstr ""
+"Söker om diskar efter omkonfiguration.\n"
+"Detta kan ta en stund …"
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade.h:11
 msgid "Warning: Existing data on reconfigured devices will be lost."
 msgstr ""
+"Varning: befintliga data på omkonfigurerade enhter kommer att gå förlorade."
 
 # translation auto-copied from project Anaconda, version master, document
 # anaconda
@@ -5820,7 +5905,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade.h:3
 msgctxt "GUI|Advanced Storage|zFCP|Device Number"
 msgid "_Device number:"
-msgstr ""
+msgstr "_Enhetsnummer:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade.h:4
 msgid "WWPN:"
@@ -5829,7 +5914,7 @@ msgstr "WWPN:"
 #: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade.h:5
 msgctxt "GUI|Advanced Storage|zFCP|Start Discovery"
 msgid "_Start Discovery"
-msgstr ""
+msgstr "_Starta sökandet"
 
 # translation auto-copied from project Anaconda, version master, document
 # anaconda
@@ -5850,7 +5935,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade.h:9
 msgctxt "GUI|Advanced Storage|zFCP|Retry Discovery"
 msgid "_Retry Discovery"
-msgstr ""
+msgstr "_Försök söka igen"
 
 #: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade.h:10
 msgid "LUN:"
@@ -5896,7 +5981,7 @@ msgstr "_Avbryt"
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade.h:2
 msgctxt "GUI|Custom Partitioning|Confirm Delete Dialog"
 msgid "_Delete It"
-msgstr ""
+msgstr "_Ta bort den"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade.h:3
 msgctxt "GUI|Custom Partitioning|Configure Dialog"
@@ -5924,17 +6009,17 @@ msgstr "_Avbryt"
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade.h:12
 msgctxt "GUI|Custom Partitioning|Add Dialog"
 msgid "_Add mount point"
-msgstr ""
+msgstr "_Lägg till monteringspunkt"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade.h:13
 msgctxt "GUI|Custom Partitioning|Add Dialog"
 msgid "_Desired Capacity:"
-msgstr ""
+msgstr "Önskad _kapacitet:"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade.h:14
 msgctxt "GUI|Custom Partitioning|Add Dialog"
 msgid "Mount _Point:"
-msgstr ""
+msgstr "Monterings_punkt:"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade.h:15
 msgid "ADD A NEW MOUNT POINT"
@@ -6004,7 +6089,7 @@ msgstr "Ange ett giltigt namn."
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade.h:37
 msgctxt "GUI|Custom Partitioning|Container Dialog"
 msgid "Si_ze policy:"
-msgstr ""
+msgstr "Sto_rlekspolicy:"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade.h:38
 msgid "Automatic"
@@ -6135,7 +6220,7 @@ msgstr "_Lösenfras:"
 #: pyanaconda/ui/gui/spokes/lib/passphrase.glade.h:6
 msgctxt "GUI|Passphrase Dialog"
 msgid "Con_firm:"
-msgstr ""
+msgstr "B_ekräfta:"
 
 #: pyanaconda/ui/gui/spokes/lib/passphrase.glade.h:8
 msgid ""
@@ -6178,7 +6263,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade.h:6
 msgctxt "GUI|Refresh Dialog|Rescan"
 msgid "_Rescan Disks"
-msgstr ""
+msgstr "_Sök igenom diskar igen"
 
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade.h:7
 msgid "Scanning disks.  This may take a moment..."
@@ -6204,7 +6289,7 @@ msgstr "_Avbryt"
 #: pyanaconda/ui/gui/spokes/lib/resize.glade.h:2
 msgctxt "GUI|Reclaim Dialog"
 msgid "_Reclaim space"
-msgstr ""
+msgstr "_Återvinn utrymme"
 
 #: pyanaconda/ui/gui/spokes/lib/resize.glade.h:3
 msgid "RECLAIM DISK SPACE"
@@ -6230,7 +6315,7 @@ msgstr "Åtgärd"
 #: pyanaconda/ui/gui/spokes/lib/resize.glade.h:10
 msgctxt "GUI|Reclaim Dialog"
 msgid "_Preserve"
-msgstr ""
+msgstr "_Bevara"
 
 #: pyanaconda/ui/gui/spokes/lib/resize.glade.h:11
 msgctxt "GUI|Reclaim Dialog"
@@ -6240,7 +6325,7 @@ msgstr "_Ta bort"
 #: pyanaconda/ui/gui/spokes/lib/resize.glade.h:12
 msgctxt "GUI|Reclaim Dialog"
 msgid "_Shrink"
-msgstr ""
+msgstr "_Krymp"
 
 #: pyanaconda/ui/gui/spokes/lib/summary.glade.h:1
 msgid "SUMMARY OF CHANGES"
@@ -6249,18 +6334,20 @@ msgstr "SAMMANFATTNING AV ÄNDRINGAR"
 #: pyanaconda/ui/gui/spokes/lib/summary.glade.h:2
 msgctxt "GUI|Summary Dialog"
 msgid "_Cancel & Return to Custom Partitioning"
-msgstr ""
+msgstr "_Avbryt och återgå till anpassad partitionering"
 
 #: pyanaconda/ui/gui/spokes/lib/summary.glade.h:3
 msgctxt "GUI|Summary Dialog"
 msgid "_Accept Changes"
-msgstr ""
+msgstr "_Acceptera ändringar"
 
 #: pyanaconda/ui/gui/spokes/lib/summary.glade.h:4
 msgid ""
 "Your customizations will result in the following changes taking effect after "
 "you return to the main menu and begin installation:"
 msgstr ""
+"Dina anpassningar kommer resultera i att följande ändringar verkställs efter "
+"att du återgår till huvudmenyn och påbörjar installationen:"
 
 #: pyanaconda/ui/gui/spokes/lib/summary.glade.h:5
 msgid "Order"
@@ -6268,7 +6355,7 @@ msgstr "Sortera"
 
 #: pyanaconda/ui/gui/spokes/lib/summary.glade.h:8
 msgid "Device Name"
-msgstr ""
+msgstr "Enhetsnamn"
 
 #: pyanaconda/ui/gui/spokes/lib/summary.glade.h:9
 msgid "Mount point"
@@ -6370,6 +6457,8 @@ msgid ""
 "memory, but you only have %(total_ram)s MB\n"
 "."
 msgstr ""
+"Det grafiska installationsprogrammet för %(product_name)s behöver "
+"%(needed_ram)s MB minne, men du har bara %(total_ram)s MB."
 
 #: anaconda:495
 msgid ""
