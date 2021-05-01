@@ -27,7 +27,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2021-04-28 00:15+0000\n"
+"POT-Creation-Date: 2021-05-01 00:52+0000\n"
 "PO-Revision-Date: 2021-04-18 18:02+0000\n"
 "Last-Translator: Jan Kuparinen <copper_fin@hotmail.com>\n"
 "Language-Team: Finnish <https://translate.fedoraproject.org/projects/"
@@ -2082,7 +2082,7 @@ msgstr "Asennuslähteen määrittäminen epäonnistui"
 msgid "Error downloading package metadata"
 msgstr "Virhe ladattaessa pakettien metadataa"
 
-#: pyanaconda/payload/dnf/payload.py:778
+#: pyanaconda/payload/dnf/payload.py:671
 msgid "Starting package installation process"
 msgstr "Aloitetaan paketin asennusprosessi"
 
@@ -2354,6 +2354,7 @@ msgstr "Virhe asetettaessa ohjelmistolähdettä"
 #: pyanaconda/ui/tui/spokes/storage.py:136
 #: pyanaconda/ui/tui/spokes/software_selection.py:158
 #: pyanaconda/ui/gui/spokes/storage.py:272
+#: pyanaconda/ui/gui/spokes/software_selection.py:184
 msgid "Processing..."
 msgstr "Käsitellään…"
 
@@ -2707,17 +2708,17 @@ msgid "Software selection"
 msgstr "Ohjelmistovalinta"
 
 #: pyanaconda/ui/tui/spokes/software_selection.py:160
-#: pyanaconda/ui/gui/spokes/software_selection.py:273
+#: pyanaconda/ui/gui/spokes/software_selection.py:188
 msgid "Installation source not set up"
 msgstr "Ohjelmistolähdettä ei ole asetettu"
 
 #: pyanaconda/ui/tui/spokes/software_selection.py:162
-#: pyanaconda/ui/gui/spokes/software_selection.py:276
+#: pyanaconda/ui/gui/spokes/software_selection.py:190
 msgid "Source changed - please verify"
 msgstr "Lähde vaihtui – vahvista"
 
 #: pyanaconda/ui/tui/spokes/software_selection.py:164
-#: pyanaconda/ui/gui/spokes/software_selection.py:267
+#: pyanaconda/ui/gui/spokes/software_selection.py:192
 msgid "Error checking software selection"
 msgstr "Virhe tarkistettaessa ohjelmistovalintaa"
 
@@ -2979,23 +2980,18 @@ msgid "Checking storage configuration..."
 msgstr "Tarkistetaan tallennustilan määrityksiä..."
 
 #: pyanaconda/ui/lib/software.py:52
-#: pyanaconda/ui/gui/spokes/software_selection.py:283
 msgid "Custom software selected"
 msgstr "Mukautettuja ohjelmia on valittu"
 
 #: pyanaconda/ui/lib/software.py:55
-#: pyanaconda/ui/gui/spokes/software_selection.py:286
 msgid "Invalid environment specified in kickstart"
 msgstr "Virheellinen ympäristö määritetty kickstartissa"
 
 #: pyanaconda/ui/lib/software.py:59
-#: pyanaconda/ui/gui/spokes/software_selection.py:289
-#: pyanaconda/ui/gui/spokes/software_selection.py:294
 msgid "Please confirm software selection"
 msgstr "Tarkista ohjelmistovalinta"
 
 #: pyanaconda/ui/lib/software.py:64
-#: pyanaconda/ui/gui/spokes/software_selection.py:299
 msgid "Selected environment is not valid"
 msgstr "Valittu ympäristö ei ole kelvollinen"
 
@@ -3295,7 +3291,7 @@ msgid "Failed to set up installation source; check the repo url"
 msgstr "Asennuslähteen asetus epäonnistui. Tarkista osoite"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:675
-#: pyanaconda/ui/gui/spokes/software_selection.py:208
+#: pyanaconda/ui/gui/spokes/software_selection.py:311
 msgid "Checking software dependencies..."
 msgstr "Tarkistetaan ohjelmien riippuvuuksia..."
 
@@ -3983,27 +3979,23 @@ msgctxt "GUI|Detailed Error Dialog"
 msgid "_Cancel"
 msgstr "_Peru"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:63
+#: pyanaconda/ui/gui/spokes/software_selection.py:62
 msgctxt "GUI|Spoke"
 msgid "_Software Selection"
 msgstr "_Ohjelmistovalinnat"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:213
-msgid "Error checking software dependencies"
-msgstr "Virhe tarkistettaessa ohjelmien riippuvuuksia"
-
-#: pyanaconda/ui/gui/spokes/software_selection.py:270
+#: pyanaconda/ui/gui/spokes/software_selection.py:186
 msgid "Red Hat CDN requires registration."
 msgstr "Red Hat CDN vaatii rekisteröitymisen."
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:473
+#: pyanaconda/ui/gui/spokes/software_selection.py:229
 msgid ""
 "Error checking software dependencies.  <a href=\"\">Click for details.</a>"
 msgstr ""
 "Virhe tarkistaessa ohjelmiston riippuvuuksia.  <a href=\"\">Napsauta "
 "saadaksesi lisätietoja.</a>"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:593
+#: pyanaconda/ui/gui/spokes/software_selection.py:361
 msgid ""
 "The software marked for installation has the following errors.  This is "
 "likely caused by an error with your installation source.  You can quit the "
@@ -4013,17 +4005,17 @@ msgstr ""
 "todennäköisesti virhe asennuslähteessä. Voit sulkea asentajan, vaihtaa "
 "asennuslähdettä tai vaihtaa ohjelmistovalintojasi."
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:599
+#: pyanaconda/ui/gui/spokes/software_selection.py:368
 msgctxt "GUI|Software Selection|Error Dialog"
 msgid "_Quit"
 msgstr "_Lopeta"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:600
+#: pyanaconda/ui/gui/spokes/software_selection.py:369
 msgctxt "GUI|Software Selection|Error Dialog"
 msgid "_Modify Software Source"
 msgstr "_Muokkaa ohjelmistolähdettä"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:601
+#: pyanaconda/ui/gui/spokes/software_selection.py:370
 msgctxt "GUI|Software Selection|Error Dialog"
 msgid "Modify _Selections"
 msgstr "Muokkaa _valintoja"
@@ -7285,6 +7277,9 @@ msgstr "Sulje"
 #: ../data/liveinst/console.apps/liveinst.h:1
 msgid "Starting Install to Hard Drive"
 msgstr "Aloitetaan asennus kiintolevylle"
+
+#~ msgid "Error checking software dependencies"
+#~ msgstr "Virhe tarkistettaessa ohjelmien riippuvuuksia"
 
 #~ msgid "policy name required for %s"
 #~ msgstr "%s lle vaadittava käytännön nimi"

@@ -33,7 +33,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2021-04-28 00:15+0000\n"
+"POT-Creation-Date: 2021-05-01 00:52+0000\n"
 "PO-Revision-Date: 2021-04-22 07:02+0000\n"
 "Last-Translator: simmon <simmon@nplob.com>\n"
 "Language-Team: Korean <https://translate.fedoraproject.org/projects/anaconda/"
@@ -2049,7 +2049,7 @@ msgstr "설치 소스 설정에 실패했습니다"
 msgid "Error downloading package metadata"
 msgstr "꾸러미 메타자료를 내려받는 중 오류 발생"
 
-#: pyanaconda/payload/dnf/payload.py:778
+#: pyanaconda/payload/dnf/payload.py:671
 msgid "Starting package installation process"
 msgstr "꾸러미 설치 처리 시작 중"
 
@@ -2321,6 +2321,7 @@ msgstr "소프트웨어 소스 설정 오류"
 #: pyanaconda/ui/tui/spokes/storage.py:136
 #: pyanaconda/ui/tui/spokes/software_selection.py:158
 #: pyanaconda/ui/gui/spokes/storage.py:272
+#: pyanaconda/ui/gui/spokes/software_selection.py:184
 msgid "Processing..."
 msgstr "처리 중..."
 
@@ -2671,17 +2672,17 @@ msgid "Software selection"
 msgstr "소프트웨어 선택"
 
 #: pyanaconda/ui/tui/spokes/software_selection.py:160
-#: pyanaconda/ui/gui/spokes/software_selection.py:273
+#: pyanaconda/ui/gui/spokes/software_selection.py:188
 msgid "Installation source not set up"
 msgstr "설치 소스가 설정되지 않음"
 
 #: pyanaconda/ui/tui/spokes/software_selection.py:162
-#: pyanaconda/ui/gui/spokes/software_selection.py:276
+#: pyanaconda/ui/gui/spokes/software_selection.py:190
 msgid "Source changed - please verify"
 msgstr "소스가 변경됨 - 확인해 주세요"
 
 #: pyanaconda/ui/tui/spokes/software_selection.py:164
-#: pyanaconda/ui/gui/spokes/software_selection.py:267
+#: pyanaconda/ui/gui/spokes/software_selection.py:192
 msgid "Error checking software selection"
 msgstr "소프트웨어 선택 확인 중 오류"
 
@@ -2938,23 +2939,18 @@ msgid "Checking storage configuration..."
 msgstr "저장소 구성 확인 중..."
 
 #: pyanaconda/ui/lib/software.py:52
-#: pyanaconda/ui/gui/spokes/software_selection.py:283
 msgid "Custom software selected"
 msgstr "사용자 지정 소프트웨어 선택"
 
 #: pyanaconda/ui/lib/software.py:55
-#: pyanaconda/ui/gui/spokes/software_selection.py:286
 msgid "Invalid environment specified in kickstart"
 msgstr "킥스타트에 지정된 잘못된 환경"
 
 #: pyanaconda/ui/lib/software.py:59
-#: pyanaconda/ui/gui/spokes/software_selection.py:289
-#: pyanaconda/ui/gui/spokes/software_selection.py:294
 msgid "Please confirm software selection"
 msgstr "소프트웨어 선택을 확인 해 주세요"
 
 #: pyanaconda/ui/lib/software.py:64
-#: pyanaconda/ui/gui/spokes/software_selection.py:299
 msgid "Selected environment is not valid"
 msgstr "선택한 환경이 올바르지 않습니다"
 
@@ -3251,7 +3247,7 @@ msgid "Failed to set up installation source; check the repo url"
 msgstr "설치 소스 설정에 실패했습니다; 저장소 url을 확인합니다"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:675
-#: pyanaconda/ui/gui/spokes/software_selection.py:208
+#: pyanaconda/ui/gui/spokes/software_selection.py:311
 msgid "Checking software dependencies..."
 msgstr "소프트웨어 종속성을 확인 중..."
 
@@ -3919,27 +3915,23 @@ msgctxt "GUI|Detailed Error Dialog"
 msgid "_Cancel"
 msgstr "취소(_C)"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:63
+#: pyanaconda/ui/gui/spokes/software_selection.py:62
 msgctxt "GUI|Spoke"
 msgid "_Software Selection"
 msgstr "_ 소프트웨어 선택"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:213
-msgid "Error checking software dependencies"
-msgstr "소프트웨어 종속성 확인 중 오류 발생"
-
-#: pyanaconda/ui/gui/spokes/software_selection.py:270
+#: pyanaconda/ui/gui/spokes/software_selection.py:186
 msgid "Red Hat CDN requires registration."
 msgstr "Red Hat CDN은 등록이 필요합니다."
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:473
+#: pyanaconda/ui/gui/spokes/software_selection.py:229
 msgid ""
 "Error checking software dependencies.  <a href=\"\">Click for details.</a>"
 msgstr ""
 "소프트웨어 종속성을 확인하는 중 오류가 발생했습니다. <a href=\"\">자세한 내용"
 "을 보려면 눌러주세요.</a>"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:593
+#: pyanaconda/ui/gui/spokes/software_selection.py:361
 msgid ""
 "The software marked for installation has the following errors.  This is "
 "likely caused by an error with your installation source.  You can quit the "
@@ -3949,17 +3941,17 @@ msgstr ""
 "문제가 있을 수 있습니다. 소프트웨어 소스 또는 소프트웨어 선택을 변경하거나 설"
 "치 프로그램을 종료할 수 있습니다."
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:599
+#: pyanaconda/ui/gui/spokes/software_selection.py:368
 msgctxt "GUI|Software Selection|Error Dialog"
 msgid "_Quit"
 msgstr "종료(_Q)"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:600
+#: pyanaconda/ui/gui/spokes/software_selection.py:369
 msgctxt "GUI|Software Selection|Error Dialog"
 msgid "_Modify Software Source"
 msgstr "소프트웨어 소스 수정(_M)"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:601
+#: pyanaconda/ui/gui/spokes/software_selection.py:370
 msgctxt "GUI|Software Selection|Error Dialog"
 msgid "Modify _Selections"
 msgstr "선택 수정 (_S)"
@@ -7200,6 +7192,9 @@ msgstr "종료"
 #: ../data/liveinst/console.apps/liveinst.h:1
 msgid "Starting Install to Hard Drive"
 msgstr "하드 드라이브에 설치를 시작합니다"
+
+#~ msgid "Error checking software dependencies"
+#~ msgstr "소프트웨어 종속성 확인 중 오류 발생"
 
 #~ msgid "policy name required for %s"
 #~ msgstr "필요한 정책 이름 %s"
