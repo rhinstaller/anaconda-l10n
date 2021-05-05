@@ -63,13 +63,14 @@
 # Radek Vykydal <rvykydal@redhat.com>, 2020.
 # Alberto Rodriguez Sanchez <hotgalan@gmail.com>, 2020.
 # Adolfo Jayme Barrientos <fitoschido@gmail.com>, 2020.
+# robert schneider <robertschv@gmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2021-03-22 15:05+0100\n"
-"PO-Revision-Date: 2021-04-09 01:10+0000\n"
-"Last-Translator: Emilio Herrera <ehespinosa57@gmail.com>\n"
+"PO-Revision-Date: 2021-05-06 03:02+0000\n"
+"Last-Translator: robert schneider <robertschv@gmail.com>\n"
 "Language-Team: Spanish <https://translate.fedoraproject.org/projects/"
 "anaconda/rhel-8/es/>\n"
 "Language: es\n"
@@ -77,7 +78,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.5.3\n"
+"X-Generator: Weblate 4.6.1\n"
 
 #: anaconda.py:378
 msgid "Unable to create PID file"
@@ -212,15 +213,6 @@ msgstr ""
 "Ha ocurrido un error mientras se activaba su configuración de almacenamiento."
 
 #: pyanaconda/errors.py:119
-#, fuzzy
-#| msgid ""
-#| "There is a problem with your existing storage configuration. You must "
-#| "resolve this matter before the installation can proceed. There is a shell "
-#| "available for use which you can access by pressing ctrl-alt-f1 and then "
-#| "ctrl-b 2.\n"
-#| "\n"
-#| "Once you have resolved the issue you can retry the storage scan. If you "
-#| "do not fix it you will have to exit the installer."
 msgid ""
 "There is a problem with your existing storage configuration or your initial "
 "settings, for example a kickstart file. You must resolve this matter before "
@@ -230,11 +222,12 @@ msgid ""
 "Once you have resolved the issue you can retry the storage scan. If you do "
 "not fix it you will have to exit the installer."
 msgstr ""
-"Hay un problema en la configuración de almacenamiento actual. Debe "
-"solucionarlo antes de continuar con la instalación. Hay una consola que "
-"puede utilizar oprimiendo las teclas Ctrl-Alt-F1, y luego, Ctrl-B 2.\n"
+"Hay un problema en la configuración de almacenamiento actual o sus ajustes "
+"iniciales, por ejemplo un fichero kickstart. Debe solucionarlo antes de "
+"continuar con la instalación. Hay una consola que puede utilizar oprimiendo "
+"las teclas ctrl-alt-f1, y luego, ctrl-b 2.\n"
 "\n"
-"Cuando haya solucionado el problema puede reintentar el análisis de "
+"Cuando haya solucionado el problema puede reintentar el análisis del "
 "almacenamiento. Si no lo corrige, deberá salir del instalador."
 
 #: pyanaconda/errors.py:128
@@ -353,8 +346,8 @@ msgid ""
 "\n"
 "%(details)s"
 msgstr ""
-"Hay un error ejecutando el script kickstart en la línea %(lineno)s.  Esto es "
-"un error fatal y la instalación será abortada.  Los detalles de este error "
+"Hay un error ejecutando el script kickstart en la línea %(lineno)s. Esto es "
+"un error fatal y la instalación será abortada. Los detalles de este error "
 "son:\n"
 "\n"
 "%(details)s"
@@ -382,8 +375,8 @@ msgid ""
 "installation?"
 msgstr ""
 "El siguiente error ocurrió mientras se instalaba el gestor de arranque. El "
-"sistema no podrá arrancar. ¿Le gustaría ignorar este error y continuar con "
-"la instalación?"
+"sistema no se podrá arrancar. ¿Le gustaría ignorar esto y continuar con la "
+"instalación?"
 
 #: pyanaconda/errors.py:258
 #, python-format
@@ -775,7 +768,7 @@ msgid ""
 "{mount_point} is {fstab_type}."
 msgstr ""
 "Hay una entrada en su fichero /etc/fstab que contiene un tipo de sistema de "
-"archivos no válido o incorrecto: El fichero dice que {detected_type} es "
+"archivos no válido o incorrecto. El fichero dice que {detected_type} en "
 "{mount_point} es {fstab_type}."
 
 #: pyanaconda/modules/storage/devicetree/root.py:339
@@ -869,8 +862,8 @@ msgstr "No existe el disco «{}» dado en la orden nvdimm."
 msgid ""
 "Incorrectly specified origin of the snapshot. Use format \"VolGroup/LV-name\""
 msgstr ""
-"Origen de la instantánea incorrecto. Use el formato \"grupo_de_volumen/"
-"volumen_lógico\"."
+"Origen de la instantánea incorrecto. Use el formato \"GrupoDeVolumen/"
+"NombreDeVolumenLógico\""
 
 #: pyanaconda/modules/storage/disk_selection/utils.py:36
 msgid "The selected disk {} is not recognized."
@@ -1012,7 +1005,7 @@ msgstr "El volúmen RAID \"%s\" especiicado en --useexisting no existe."
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:650
 #, python-format
 msgid "The RAID volume name \"%s\" is already in use."
-msgstr "El nombre de volúmen RAID \"%s\" ya está en uso"
+msgstr "El nombre de volumen RAID \"%s\" ya está en uso."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:768
 #, python-format
@@ -1160,7 +1153,7 @@ msgid ""
 "Unknown or invalid format '%(format)s' specified for device '%(device)s'"
 msgstr ""
 "El formato «%(format)s», especificado para el dispositivo «%(device)s», se "
-"desconoce o no es válido."
+"desconoce o no es válido"
 
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:79
 #, python-format
@@ -2101,8 +2094,9 @@ msgid ""
 "Please provide VNC password (must be six to eight characters long).\n"
 "You will have to type it twice. Leave blank for no password"
 msgstr ""
-"Proporcione la contraseña de VNC (debe tener de seis a ocho caracteres).\n"
-"Deberá escribirla dos veces. Déjela en blanco para no definir la contraseña."
+"Por favor Proporcione la contraseña de VNC (debe tener de seis a ocho "
+"caracteres).\n"
+"Deberá escribirla dos veces. Déjela en blanco para no definir la contraseña"
 
 #: pyanaconda/ui/tui/spokes/askvnc.py:148
 #: pyanaconda/ui/gui/spokes/lib/network_secret_agent.py:225
@@ -2323,7 +2317,7 @@ msgstr ""
 
 #: pyanaconda/ui/tui/spokes/storage.py:520
 msgid "Reverting previous configuration. This may take a moment..."
-msgstr "Volviendo a la configuración anterior. Puede tardar un rato...|"
+msgstr "Volviendo a la configuración anterior. Puede tardar un rato..."
 
 #: pyanaconda/ui/tui/spokes/storage.py:552
 msgid "Partition Scheme Options"
@@ -3222,7 +3216,7 @@ msgstr "No se ha configurado la contraseña de administrador (root)"
 
 #: pyanaconda/ui/gui/spokes/installation_progress.py:98
 msgid "Complete!"
-msgstr "Completado."
+msgstr "¡Completado!"
 
 #: pyanaconda/ui/gui/spokes/installation_progress.py:120
 #, python-format
@@ -3805,7 +3799,7 @@ msgid ""
 "the wireless network '%(network_id)s'."
 msgstr ""
 "Se necesitan contraseñas o claves de cifrado para acceder\n"
-"a la red inalámbrica «%(network_id)s»"
+"a la red inalámbrica '%(network_id)s'."
 
 #: pyanaconda/ui/gui/spokes/lib/network_secret_agent.py:196
 msgctxt "GUI|Network|Secrets Dialog"
@@ -3944,7 +3938,7 @@ msgstr "Nada que formatear"
 
 #: pyanaconda/ui/lib/format_dasd.py:111
 msgid "Formatting DASDs"
-msgstr "Formateando los DASD."
+msgstr "Formateando los DASD"
 
 #: pyanaconda/ui/lib/format_dasd.py:115
 msgid "Probing storage"
@@ -4024,20 +4018,20 @@ msgstr ""
 
 #: pyanaconda/core/users.py:122
 msgid "Name cannot start with '-' character."
-msgstr "El nombre de usuario no puede comenzar con el carácter «-»"
+msgstr "El nombre no puede comenzar con el carácter '-'."
 
 #: pyanaconda/core/users.py:125
 #, python-format
 msgid "Name '%s' is not allowed."
-msgstr "No se permite el nombre «%s»"
+msgstr "No se permite el nombre '%s'."
 
 #: pyanaconda/core/users.py:128
 msgid "Fully numeric name is not allowed."
-msgstr "No se permite un nombre que sólo contenga números"
+msgstr "No se permite un nombre que solo contenga números."
 
 #: pyanaconda/core/users.py:132
 msgid "Name '$' is not allowed."
-msgstr "No se permite el nombre «$»"
+msgstr "No se permite el nombre '$'."
 
 #: pyanaconda/core/users.py:142
 #, python-format
@@ -4046,7 +4040,7 @@ msgstr "El nombre no puede contener el carácter: «%s»"
 
 #: pyanaconda/core/users.py:145
 msgid "Name must be shorter than 33 characters."
-msgstr "La longitud máxima del nombre de usuario es de 33 caracteres"
+msgstr "El nombre debe ser más corto que 33 caracteres."
 
 #: pyanaconda/core/users.py:149
 #, python-format
@@ -4059,7 +4053,7 @@ msgstr "Sin url del equipo"
 
 #: pyanaconda/core/payload.py:152
 msgid "malformed URL, cannot parse it."
-msgstr "El URL tiene un formato incorrecto y no puede analizarse."
+msgstr "URL malformada, no se puede analizar."
 
 #: pyanaconda/core/payload.py:168
 msgid "URL has no host component"
@@ -4087,7 +4081,7 @@ msgstr "Btrfs"
 
 #: pyanaconda/core/storage.py:89 pyanaconda/core/storage.py:97
 msgid "LVM Thin Provisioning"
-msgstr "Abastecimiento liviano LVM"
+msgstr "Abastecimiento Liviano LVM"
 
 #: pyanaconda/core/storage.py:90 pyanaconda/ui/gui/spokes/lib/resize.glade:150
 msgid "Disk"
@@ -4147,11 +4141,11 @@ msgstr "Iniciar VNC"
 
 #: pyanaconda/core/constants.py:89
 msgid "Use text mode"
-msgstr "Utilizar modo de texto"
+msgstr "Usar modo de texto"
 
 #: pyanaconda/core/constants.py:92
 msgid "Do you really want to quit?"
-msgstr "¿Realmente quiere salir?"
+msgstr "¿Realmente quieres salir?"
 
 #: pyanaconda/core/constants.py:158
 #, fuzzy
@@ -4171,9 +4165,9 @@ msgid ""
 "more information on supported hardware, please refer to http://www.redhat."
 "com/hardware."
 msgstr ""
-"Red Hat no admite este hardware (o combinación de hardware). Para obtener "
-"más información sobre el hardware admitido, visite http://www.redhat.com/"
-"hardware."
+"Este hardware (o una combinación de ellos) no está soportada por Red Hat. "
+"Para obtener más información sobre el hardware admitido, por favor visite "
+"http://www.redhat.com/hardware."
 
 #: pyanaconda/core/constants.py:169
 msgid ""
@@ -4196,12 +4190,12 @@ msgid ""
 "red.ht/rhel-smt to understand your potential risks and learn about other "
 "ways to mitigate these risks."
 msgstr ""
-"La tecnología de multihilo simultáneo (SMT) puede proporcionar mejoras de "
-"rendimiento para determinadas cargas de trabajo, pero introduce varios "
-"problemas de seguridad de divulgación pública. tiene la opción de "
-"deshabilitar SMT, lo que puede afectar al rendimiento. si decide dejar "
-"habilitado SMT, lea https://red.ht/rhel-smt para comprender sus posibles "
-"riesgos y conocer otras formas de mitigarlos."
+"La tecnología Simultaneous Multithreading (SMT) puede suministrar mejoras de "
+"rendimiento para ciertas cargas de trabajo, pero presenta varios problemas "
+"de seguridad divulgados públicamente. Usted tiene la opción de deshabilitar "
+"SMT, lo que puede impactar en el rendimiento. Si elige dejar SMT habilitado, "
+"por favor lea https://red.ht/rhel-smt para entender los riesgos potenciales "
+"y aprender sobre las distintas maneras de mitigar esos riesgos."
 
 #: pyanaconda/core/constants.py:189
 msgid ""
@@ -4211,10 +4205,11 @@ msgid ""
 "rhel-smt to understand potential risks and learn about ways to mitigate "
 "these risks."
 msgstr ""
-"El multihilo simultáneo (SMT) puede mejorar el rendimiento de determinadas "
-"cargas de trabajo, pero introduce varios problemas de seguridad de "
-"divulgación pública, por lo que puede desactivar el SMT, lo que puede "
-"afectar al rendimiento."
+"Simultaneous Multithreading (SMT) puede mejorar el rendimiento para ciertas "
+"cargas de trabajo, pero presenta varios problemas de seguridad divulgados "
+"públicamente. Usted puede deshabilitar SMT, lo que puede tener impacto en el "
+"rendimiento. Lea por favor https://red.ht/rhel-smt para entender los riesgos "
+"potenciales y conocer maneras de mitigar esos riesgos."
 
 #: pyanaconda/core/constants.py:205
 msgid "The password is empty."
@@ -4305,7 +4300,7 @@ msgstr "Débil"
 
 #: pyanaconda/core/constants.py:244
 msgid "Fair"
-msgstr "Suficiente"
+msgstr "Justo"
 
 #: pyanaconda/core/constants.py:245
 msgid "Good"
@@ -4503,7 +4498,7 @@ msgstr "Intentando conectarse con el cliente VNC en el equipo %s..."
 
 #: pyanaconda/vnc.py:181
 msgid "Connected!"
-msgstr "Conectado."
+msgstr "¡Conectado!"
 
 #: pyanaconda/vnc.py:184
 msgid "Will try to connect again in 15 seconds..."
@@ -4523,7 +4518,9 @@ msgstr "Tratando de iniciar vncconfig"
 #: pyanaconda/vnc.py:212
 #, python-format
 msgid "Please manually connect your vnc client to %s to begin the install."
-msgstr "Conecte manualmente su cliente VNC a %s para iniciar la instalación"
+msgstr ""
+"Por favor conecte manualmente su cliente VNC a %s para iniciar la "
+"instalación."
 
 #: pyanaconda/vnc.py:214
 #, python-format
@@ -4542,7 +4539,7 @@ msgstr "Iniciando VNC…"
 
 #: pyanaconda/vnc.py:256
 msgid "The VNC server is now running."
-msgstr "El servidor VNC ahora se está ejecutando"
+msgstr "El servidor VNC ahora se está ejecutando."
 
 #: pyanaconda/vnc.py:260
 msgid ""
@@ -5197,7 +5194,7 @@ msgid ""
 "different device."
 msgstr ""
 "Este dispositivo no puede ser modificado directamente. Retírelo o seleccione "
-"un dispositivo  diferente."
+"un dispositivo diferente."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:1422
 msgid "AVAILABLE SPACE"
@@ -5514,7 +5511,7 @@ msgstr "_Aceptar"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:147
 msgid "Add and mark for usage NTP servers"
-msgstr "Agregar servidores NTP y marcarlos para su uso."
+msgstr "Añadir y marcar servidores NTP para su uso"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:169
 msgid "New NTP Server"
@@ -5623,7 +5620,7 @@ msgstr "24 _horas"
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:838
 msgctxt "GUI|Date and Time"
 msgid "_AM/PM"
-msgstr "_a. m./p. m."
+msgstr "_AM/PM"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:897
 msgid "Set Date & Time"
@@ -5769,7 +5766,7 @@ msgstr "Archivo _ISO:"
 #: pyanaconda/ui/gui/spokes/installation_source.glade:682
 msgctxt "GUI|Software Source"
 msgid "D_evice:"
-msgstr "D_ispositivo"
+msgstr "D_ispositivo:"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:713
 msgctxt "GUI|Software Source"
@@ -5779,7 +5776,7 @@ msgstr "_Elija una ISO"
 #: pyanaconda/ui/gui/spokes/installation_source.glade:753
 msgctxt "GUI|Software Source"
 msgid "_On the network:"
-msgstr "_Sobre la red"
+msgstr "_Sobre la red:"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:817
 msgctxt "GUI|Software Source"
@@ -5921,7 +5918,7 @@ msgstr "N_ombre de usuario:"
 #: pyanaconda/ui/gui/spokes/installation_source.glade:1266
 msgctxt "GUI|Software Source"
 msgid "Pass_word:"
-msgstr "Contraseña:"
+msgstr "C_ontraseña:"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:1283
 #: pyanaconda/ui/gui/spokes/installation_source.glade:1284
@@ -6268,8 +6265,8 @@ msgid ""
 "The following error occurred while attempting to add an FCoE SAN.  Please "
 "check your configuration and try again"
 msgstr ""
-"El siguiente error ocurrió intentando añadir un SAN FCoE. Compruebe su "
-"configuración e inténtelo de nuevo."
+"El siguiente error ocurrió intentando añadir un FCoE SAN. Por favor "
+"compruebe su configuración e inténtelo de nuevo"
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:22
 msgctxt "GUI|Advanced Storage|DASD|Configure"
@@ -6318,7 +6315,7 @@ msgstr "_Reintentar Descubrimiento"
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:324
 msgid "The added DASD can be found under \"Local Standard Disks.\""
-msgstr "Puede encontrar el DASD añadido bajo \"Discos estándares locales\"."
+msgstr "El DASD añadido se puede encontrar en \"Local Standard Disks.\""
 
 #: pyanaconda/ui/gui/spokes/installation_progress.glade:8
 #: pyanaconda/ui/gui/spokes/installation_progress.glade:164
@@ -6379,7 +6376,7 @@ msgstr "Ejemplo:"
 
 #: pyanaconda/ui/gui/spokes/advanced_user.glade:315
 msgid "wheel, my-team (1245), project-x (29935)"
-msgstr "wheel, my-team (1245), project-x (29935)"
+msgstr "wheel, mi-equipo (1245), proyecto-x (29935)"
 
 #: pyanaconda/ui/gui/spokes/advanced_user.glade:348
 msgid "Tip:"
@@ -6417,7 +6414,7 @@ msgstr "Nombre completo"
 #: pyanaconda/ui/gui/spokes/user.glade:118
 #: pyanaconda/ui/gui/spokes/network.glade:1888
 msgid "User Name"
-msgstr "Nombre de usuario:"
+msgstr "Nombre de usuario"
 
 #: pyanaconda/ui/gui/spokes/user.glade:132
 msgctxt "GUI|User"
@@ -7055,7 +7052,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/lib/passphrase.glade:102
 msgctxt "GUI|Passphrase Dialog"
 msgid "_Passphrase:"
-msgstr "_Frase de Paso"
+msgstr "_Frase de Paso:"
 
 #: pyanaconda/ui/gui/spokes/lib/passphrase.glade:133
 msgctxt "GUI|Passphrase Dialog"
@@ -7099,7 +7096,7 @@ msgid ""
 "when you press 'Rescan Disks'."
 msgstr ""
 "<b>Advertencia:</b> Todos los cambios de almacenamiento hechos mediante el "
-"instalador se  perderán al presionar  «Reescanear discos»."
+"instalador se perderán al presionar «Re-escanear discos»."
 
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:143
 msgctxt "GUI|Refresh Dialog|Rescan"
@@ -7153,8 +7150,8 @@ msgid ""
 msgstr ""
 "Se han detectado los siguientes DASD sin formato o con formato LDL en su "
 "sistema. Puede darles formato ahora con dasdfmt o cancelar para dejarlos "
-"como están.  Los DASD no se pueden utilizar sin formato durante la "
-"instalación ."
+"como están. Los DASD no se pueden utilizar sin formato durante la "
+"instalación."
 
 #: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:86
 msgid "Unformatted DASDs Detected"
