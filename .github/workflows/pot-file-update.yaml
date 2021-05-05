@@ -11,16 +11,21 @@ jobs:
       max-parallel: 1
       # update this matrix to support new Anaconda branches
       matrix:
-        branch: [ master, f34 ]
+        branch: [ master, f34, rhel-9 ]
         include:
           - branch: master
             anaconda-branch: master
+            container-tag: master
           - branch: f34
             anaconda-branch: f34-devel
+            container-tag: f34-devel
+          - branch: rhel-9
+            anaconda-branch: rhel-9
+            container-tag: master
 
     runs-on: ubuntu-latest
     container:
-      image: docker://quay.io/rhinstaller/anaconda-ci:${{ matrix.anaconda-branch }}
+      image: docker://quay.io/rhinstaller/anaconda-ci:${{ matrix.container-tag }}
     steps:
       - name: Checkout anaconda ${{ matrix.anaconda-branch }}
         uses: actions/checkout@v2
