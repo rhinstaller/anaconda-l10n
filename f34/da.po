@@ -11,24 +11,24 @@
 # Kris Thomsen <mail@kristhomsen.dk>, 2009,2011-2012
 # Martin Willemoes Hansen <mwh@sysrq.dk>, 2004
 # Kris <mail@kristhomsen.dk>, 2015. #zanata
-# scootergrisen <scootergrisen@gmail.com>, 2017. #zanata, 2020.
-# scootergrisen <scootergrisen@gmail.com>, 2018. #zanata, 2020.
-# scootergrisen <scootergrisen@gmail.com>, 2019. #zanata, 2020.
+# scootergrisen <scootergrisen@gmail.com>, 2017. #zanata, 2020, 2021.
+# scootergrisen <scootergrisen@gmail.com>, 2018. #zanata, 2020, 2021.
+# scootergrisen <scootergrisen@gmail.com>, 2019. #zanata, 2020, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2021-05-30 01:49+0000\n"
-"PO-Revision-Date: 2020-12-31 06:36+0000\n"
+"PO-Revision-Date: 2021-06-02 17:03+0000\n"
 "Last-Translator: scootergrisen <scootergrisen@gmail.com>\n"
 "Language-Team: Danish <https://translate.fedoraproject.org/projects/anaconda/"
-"master/da/>\n"
+"f34/da/>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.4\n"
+"X-Generator: Weblate 4.6.2\n"
 
 #: pyanaconda/errors.py:121
 msgid "An error occurred while activating your storage configuration."
@@ -88,28 +88,20 @@ msgstr ""
 "%(details)s"
 
 #: pyanaconda/errors.py:176
-#, fuzzy
-#| msgid ""
-#| "The following error occurred while installing.  This is a fatal error and "
-#| "installation will be aborted."
 msgid ""
 "The following error occurred while setting up the payload. This is a fatal "
 "error and installation will be aborted."
 msgstr ""
-"Følgende fejl opstod under installationen. Det er en fatal fejl og "
+"Følgende fejl opstod under opsætning af nyttelasten. Det er en fatal fejl og "
 "installationen afbrydes."
 
 #: pyanaconda/errors.py:184
-#, fuzzy
-#| msgid ""
-#| "The following error occurred while installing.  This is a fatal error and "
-#| "installation will be aborted."
 msgid ""
 "The following error occurred while installing the payload. This is a fatal "
 "error and installation will be aborted."
 msgstr ""
-"Følgende fejl opstod under installationen. Det er en fatal fejl og "
-"installationen afbrydes."
+"Følgende fejl opstod under installation af nyttelasten. Det er en fatal fejl "
+"og installationen afbrydes."
 
 #: pyanaconda/errors.py:192
 msgid ""
@@ -129,11 +121,7 @@ msgstr ""
 "ikke kunne starte op. Vil du ignorere det og fortsætte med installationen?"
 
 #: pyanaconda/errors.py:212
-#, fuzzy, python-brace-format
-#| msgid ""
-#| "The following error occurred while installing the boot loader. The system "
-#| "will not be bootable. Would you like to ignore this and continue with "
-#| "installation?"
+#, python-brace-format
 msgid ""
 "The following error occurred during the installation:\n"
 "\n"
@@ -141,8 +129,11 @@ msgid ""
 "\n"
 "Would you like to ignore this and continue with installation?"
 msgstr ""
-"Følgende fejl opstod under installation af opstartsindlæseren. Systemet vil "
-"ikke kunne starte op. Vil du ignorere det og fortsætte med installationen?"
+"Følgende fejl opstod under installation.\n"
+"\n"
+"{details}\n"
+"\n"
+"Vil du ignorere det og fortsætte med installationen?"
 
 #: pyanaconda/modules/network/firewall/installation.py:102
 #, python-format
@@ -1200,35 +1191,26 @@ msgid "Flatpak installation has finished"
 msgstr "Flatpak-installation er færdig"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:390
-#, fuzzy
-#| msgid "Deployment starting: %s"
 msgid "Deployment starting: {}"
-msgstr "Udrulning starter: %s"
+msgstr "Udrulning starter: {}"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:412
-#, fuzzy
-#| msgid "Deployment complete: %s"
 msgid "Deployment complete: {}"
-msgstr "Udrulning udført: %s"
+msgstr "Udrulning udført: {}"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:443
-#, fuzzy, python-brace-format
-#| msgid "Starting pull of %(branchName)s from %(source)s"
+#, python-brace-format
 msgid "Starting pull of {branch_name} from {source}"
-msgstr "Starter hentning af %(branchName)s fra %(source)s"
+msgstr "Starter hentning af {branch_name} fra {source}"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:478
-#, fuzzy
-#| msgid "Preparing deployment of %s"
 msgid "Preparing deployment of {}"
-msgstr "Forbereder udrulning af %s"
+msgstr "Forbereder udrulning af {}"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:506
-#, fuzzy, python-brace-format
-#| msgid ""
-#| "Receiving objects: %(percent)d%% (%(fetched)d/%(requested)d) %(bytes)s"
+#, python-brace-format
 msgid "Receiving objects: {percent}% ({fetched}/{requested}) {bytes}"
-msgstr "Modtager objekter: %(percent)d%% (%(fetched)d/%(requested)d) %(bytes)s"
+msgstr "Modtager objekter: {percent}% ({fetched}/{requested}) {bytes}"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:512
 msgid "Writing objects"
@@ -1339,6 +1321,9 @@ msgid ""
 "releases, which will result in a fatal error when it is encountered. Please "
 "modify your kickstart file to remove this section."
 msgstr ""
+"Afsnittet %%anaconda er udgået. Det kan blive fjernet i fremtidige "
+"udgivelser, hvilket kan resultere i fatale fejl når det mødes. Rediger "
+"venligst din kickstartfil for at fjerne afsnittet."
 
 #: pyanaconda/kickstart.py:509
 msgid ""
@@ -1388,16 +1373,12 @@ msgid "Do you really want to quit?"
 msgstr "Vil du virkelig afslutte?"
 
 #: pyanaconda/core/constants.py:154
-#, fuzzy
-#| msgid ""
-#| "Support for this hardware has been removed in this major OS release. "
-#| "Please check theremoved functionality section of the release notes."
 msgid ""
 "Support for this hardware has been removed in this major OS release. Please "
 "check the removed functionality section of the release notes."
 msgstr ""
 "Understøttelse af hardwaren blev fjernet i denne større OS-udgivelse. Tjek "
-"venligst theremoved-funktionalitetssektionen i udgivelsesnoterne."
+"venligst det fjernede funktionalitetssektion i udgivelsesnoterne."
 
 #: pyanaconda/core/constants.py:159
 msgid ""
@@ -1654,10 +1635,8 @@ msgstr ""
 "opstartsindlæserkonfigurationen på nogle PPC-platforme."
 
 #: pyanaconda/core/users.py:50
-#, fuzzy
-#| msgid "Unable to encrypt password: unsupported algorithm %s"
 msgid "Unable to encrypt password: unsupported algorithm {}"
-msgstr "Kunne ikke kryptere adgangskode: ikke-understøttet algoritme %s"
+msgstr "Kunne ikke kryptere adgangskode: ikke-understøttet algoritme {}"
 
 #: pyanaconda/core/users.py:67
 #, python-format
@@ -1972,10 +1951,8 @@ msgid "Host name cannot be None or an empty string."
 msgstr "Værtsnavn kan ikke være None eller en tom tekst-streng."
 
 #: pyanaconda/network.py:112
-#, fuzzy
-#| msgid "Host name must be 255 or fewer characters in length."
 msgid "Host name must be 64 or fewer characters in length."
-msgstr "Værtsnavnet må være højst 255 tegn langt."
+msgstr "Værtsnavnet må være højst 64 tegn langt."
 
 #: pyanaconda/network.py:115
 msgid "Local host name must not end with period '.'."
@@ -2193,6 +2170,9 @@ msgid ""
 "releases, which will result in a fatal error when it is encountered. Please "
 "modify your kickstart file to remove this command."
 msgstr ""
+"Kommandoen pwpolicy er udgået. Den kan blive fjernet i fremtidige "
+"udgivelser, hvilket kan resultere i fatale fejl når den mødes. Rediger "
+"venligst din kickstartfil for at fjerne kommandoen."
 
 #: pyanaconda/ntp.py:49
 msgid "status: working"
@@ -3386,7 +3366,7 @@ msgstr "_Nye monteringspunkter vil bruge følgende partitioneringsskema:"
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:538
 msgctxt "GUI|Custom Partitioning|Autopart Page"
 msgid "_Automatically created mount points can be encrypted by default:"
-msgstr ""
+msgstr "_Automatisk oprettede monteringspunkter kan krypteres som standard:"
 
 #: pyanaconda/ui/gui/spokes/lib/network_secret_agent.py:180
 #: pyanaconda/ui/gui/spokes/lib/network_secret_agent.glade:95
@@ -4030,10 +4010,8 @@ msgstr ""
 
 #. TRANSLATORS: 's' to rescan devices
 #: pyanaconda/ui/tui/spokes/storage.py:62
-#, fuzzy
-#| msgid "rescan devices"
 msgid "to rescan devices"
-msgstr "skan enheder igen"
+msgstr "for at skanne enheder igen"
 
 #: pyanaconda/ui/tui/spokes/storage.py:65
 msgid "Use All Space"
@@ -4193,10 +4171,8 @@ msgstr "Genformatér"
 
 #. TRANSLATORS: 'b' to go back to region list
 #: pyanaconda/ui/tui/spokes/time_spoke.py:47
-#, fuzzy
-#| msgid "back to region list"
 msgid "to go back to region list"
-msgstr "tilbage til regionsliste"
+msgstr "for at gå tilbage til regionsliste"
 
 #: pyanaconda/ui/tui/spokes/time_spoke.py:67
 msgid "Time settings"
@@ -5514,7 +5490,7 @@ msgstr ""
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:485
 msgid "Enter size and unit."
-msgstr ""
+msgstr "Indtast størrelse og enhed."
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:548
 msgid "Single"
@@ -6375,9 +6351,6 @@ msgid "_Open"
 msgstr "_Åbn"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:95
-#, fuzzy
-#| msgctxt "GUI|Detailed Error Dialog"
-#| msgid "_Cancel"
 msgctxt "GUI|Software Source|Media Check Dialog"
 msgid "_Cancel"
 msgstr "_Annuller"
