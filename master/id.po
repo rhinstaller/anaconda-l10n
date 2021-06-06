@@ -25,13 +25,14 @@
 # Eko Cahyo Susanto <ekocahyo27@gmail.com>, 2020.
 # Anonymous <noreply@weblate.org>, 2020.
 # hadekha erfadila <hdkef11@gmail.com>, 2021.
+# Arman Arisman <arman.wu@gmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2021-06-04 01:42+0000\n"
-"PO-Revision-Date: 2021-05-29 14:02+0000\n"
-"Last-Translator: Andika Triwidada <andika@gmail.com>\n"
+"PO-Revision-Date: 2021-06-07 04:04+0000\n"
+"Last-Translator: Arman Arisman <arman.wu@gmail.com>\n"
 "Language-Team: Indonesian <https://translate.fedoraproject.org/projects/"
 "anaconda/master/id/>\n"
 "Language: id\n"
@@ -95,16 +96,16 @@ msgid ""
 "The following error occurred while setting up the payload. This is a fatal "
 "error and installation will be aborted."
 msgstr ""
-"Kesalahan berikut terjadi ketika menyiapkan payload. Ini adalah kesalahan "
-"fatal dan instalasi akan digugurkan."
+"Kesalahan berikut terjadi ketika memasang. Ini adalah kesalahan fatal dan "
+"instalasi akan digugurkan."
 
 #: pyanaconda/errors.py:158
 msgid ""
 "The following error occurred while installing the payload. This is a fatal "
 "error and installation will be aborted."
 msgstr ""
-"Kesalahan berikut terjadi ketika memasang payload. Ini adalah kesalahan "
-"fatal dan instalasi akan digugurkan."
+"Kesalahan berikut terjadi ketika memasang. Ini adalah kesalahan fatal dan "
+"instalasi akan digugurkan."
 
 #: pyanaconda/errors.py:166
 msgid ""
@@ -1202,11 +1203,11 @@ msgstr "Pemasangan Flatpak selesai"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:503
 msgid "Deployment starting: {}"
-msgstr "Penggelaran dimulai: {}"
+msgstr "Penggelaran dimulai: %s"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:525
 msgid "Deployment complete: {}"
-msgstr "Penggelaran selesai: {}"
+msgstr "Penggelaran selesai: %s"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:560
 #, python-brace-format
@@ -1215,7 +1216,7 @@ msgstr "Memulai pull {branch_name} dari {source}"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:595
 msgid "Preparing deployment of {}"
-msgstr "Bersiap menggelar {}"
+msgstr "Bersiap menggelar %s"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:623
 #, python-brace-format
@@ -1379,6 +1380,9 @@ msgid ""
 "which will result in a fatal error when it is encountered. Please modify "
 "your kickstart file to remove this section."
 msgstr ""
+"Bagian {} tidak digunakan lagi. Kemungkinan akan dihapus para rilis "
+"mendatang, yang akan mengakibatkan kesalahan fatal. Harap ubah file "
+"kickstart Anda untuk menghapus bagian ini."
 
 #: pyanaconda/kickstart.py:450
 msgid ""
@@ -1695,7 +1699,7 @@ msgstr ""
 
 #: pyanaconda/core/users.py:50
 msgid "Unable to encrypt password: unsupported algorithm {}"
-msgstr "Tidak bisa mengenkripsi kata sandi: algoritme {} tidak didukung"
+msgstr "Tidak bisa mengenkripsi sandi: algoritme %s tidak didukung"
 
 #: pyanaconda/core/users.py:67
 #, python-format
@@ -1969,11 +1973,11 @@ msgid ""
 "\n"
 " from a root terminal."
 msgstr ""
-" Coba penginstal mode teks dengan menjalankan:\n"
+" Coba instalasi mode teks dengan menjalankan:\n"
 "\n"
 "'/usr/bin/liveinst -T'\n"
 "\n"
-" dari terminal root."
+"dari terminal root."
 
 #: pyanaconda/startup_utils.py:91
 msgid " Starting text mode."
@@ -2538,12 +2542,16 @@ msgid ""
 "Repository %s has invalid NFS server, exactly one colon ':' must be present "
 "between host and directory"
 msgstr ""
+"Repositori %s memiliki server NFS yang tidak valid, satu titik dua ':' harus "
+"tepat ada di antara host dan direktori"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:1185
 msgid ""
 "Invalid NFS server, exactly one colon ':' must be present between host and "
 "directory"
 msgstr ""
+"Server NFS tidak valid, satu titik dua ':' harus tepat berada di antara host "
+"dan direktori"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:1194
 #, python-format
@@ -2710,9 +2718,6 @@ msgstr ""
 "untuk rincian.</a>"
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:236
-#, fuzzy
-#| msgid ""
-#| "Error checking software dependencies.  <a href=\"\">Click for details.</a>"
 msgid ""
 "Warning checking software dependencies.  <a href=\"\">Click for details.</a>"
 msgstr ""
@@ -2726,9 +2731,9 @@ msgid ""
 "installer, change your software source, or change your software selections."
 msgstr ""
 "Perangkat lunak berikut ditandai untuk instalasi memiliki kesalahan. Hal ini "
-"kemungkinan disebabkan oleh kesalahan dengan sumber instalasi Anda. Anda "
-"dapat keluar instalasi, mengubah sumber instalasi, atau mengubah perangkat "
-"lunak yang dipilih."
+"kemungkinan disebabkan oleh kesalahan dengan sumber instalasi yang "
+"digunakan. Anda dapat keluar instalasi, mengubah sumber instalasi, atau "
+"mengubah perangkat lunak yang dipilih."
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:386
 msgctxt "GUI|Software Selection|Error Dialog"
@@ -2746,25 +2751,16 @@ msgid "Modify _Selections"
 msgstr "Modifikasi _Pilihan"
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:411
-#, fuzzy
-#| msgid ""
-#| "The software marked for installation has the following errors.  This is "
-#| "likely caused by an error with your installation source.  You can quit "
-#| "the installer, change your software source, or change your software "
-#| "selections."
 msgid ""
 "The software marked for installation has the following warnings. These are "
 "not fatal, but you may wish to make changes to your software selections."
 msgstr ""
-"Perangkat lunak berikut ditandai untuk instalasi memiliki kesalahan. Hal ini "
-"kemungkinan disebabkan oleh kesalahan dengan sumber instalasi Anda. Anda "
-"dapat keluar instalasi, mengubah sumber instalasi, atau mengubah perangkat "
-"lunak yang dipilih."
+"Perangkat lunak berikut yang ditandai untuk instalasi memiliki kesalahan. "
+"Hal ini kemungkinan disebabkan oleh kesalahan dengan sumber instalasi yang "
+"digunakan. Anda dapat keluar instalasi, mengubah sumber instalasi, atau "
+"mengubah perangkat lunak yang dipilih."
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:417
-#, fuzzy
-#| msgctxt "GUI|Summary|Warning Dialog"
-#| msgid "_OK"
 msgctxt "GUI|Software Selection|Warning Dialog"
 msgid "_OK"
 msgstr "_OK"
@@ -2890,8 +2886,8 @@ msgid ""
 "The following errors were encountered when checking your disk selection. You "
 "can modify your selection or quit the installer."
 msgstr ""
-"Kesalahan berikut ditemui ketika memeriksa pilihan disk Anda. Anda dapat "
-"mengubah pilihan Anda atau keluar dari pemasang."
+"Kesalahan berikut ditemui ketika memeriksa pilihan disk. Anda dapat mengubah "
+"pilihan atau keluar dari installer."
 
 #: pyanaconda/ui/gui/spokes/storage.py:851
 #: pyanaconda/ui/gui/spokes/storage.py:872
@@ -2909,8 +2905,8 @@ msgid ""
 "The following errors were encountered when checking your storage "
 "configuration.  You can modify your storage layout or quit the installer."
 msgstr ""
-"Kesalahan berikut yang muncul ketika memeriksa konfigurasi penyimpanan Anda. "
-"Anda dapat mengubah tata letak penyimpanan atau keluar dari pemasang."
+"Kesalahan berikut yang muncul ketika memeriksa konfigurasi penyimpanan. Anda "
+"dapat mengubah tata letak penyimpanan atau keluar dari pemasang."
 
 #: pyanaconda/ui/gui/spokes/storage.py:873
 msgctxt "GUI|Storage|Error Dialog"
@@ -3398,12 +3394,9 @@ msgid "_New mount points will use the following partitioning scheme:"
 msgstr "Titik kait baru aka_n memakai skema pemartisian berikut:"
 
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:538
-#, fuzzy
-#| msgctxt "GUI|Custom Partitioning|Autopart Page"
-#| msgid "_Automatically created mount points can be encrypted by default:"
 msgctxt "GUI|Custom Partitioning|Autopart Page"
 msgid "_Encrypt automatically created mount points by default:"
-msgstr "Titik kait yang dibuat sec_ara otomatis secara baku dapat dienkripsi:"
+msgstr "_Titik kait yang dibuat secara otomatis secara baku dapat dienkripsi:"
 
 #: pyanaconda/ui/gui/spokes/lib/network_secret_agent.py:180
 #: pyanaconda/ui/gui/spokes/lib/network_secret_agent.glade:95
@@ -3632,8 +3625,8 @@ msgid ""
 "When you create mount points for your %(name)s %(version)s installation, "
 "you'll be able to view their details here."
 msgstr ""
-"Ketika Anda membuat titik kait untuk instalasi %(name)s %(version)s Anda, "
-"Anda akan dapat melihat rinciannya di sini."
+"Ketika Anda membuat titik kait untuk instalasi %(name)s %(version)s, Anda "
+"akan dapat melihat rinciannya di sini."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:601
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade:178
@@ -4090,10 +4083,10 @@ msgid ""
 "unformatted. Unformatted DASDs cannot be used during installation.\n"
 "\n"
 msgstr ""
-"DASD LDL atau yang tidak terformat berikut telah terdeteksi pada sistem "
-"Anda. Anda dapat memilih untuk memformat mereka sekarang dengan dasdfmt atau "
-"batal untuk membiarkan mereka tidak terformat. DASD yang tidak terformat "
-"tidak dapat dipakai selama instalasi.\n"
+"DASD LDL atau yang tidak terformat berikut telah terdeteksi pada sistem. "
+"Anda dapat memilih untuk memformat mereka sekarang dengan dasdfmt atau batal "
+"untuk membiarkan mereka tidak terformat. DASD yang tidak terformat tidak "
+"dapat dipakai selama instalasi.\n"
 "\n"
 
 #: pyanaconda/ui/tui/spokes/storage.py:327
@@ -4667,7 +4660,7 @@ msgstr "_Batal"
 #: pyanaconda/ui/gui/spokes/network.glade:317
 msgctxt "GUI|Network|Wireless|Select Network Dialog"
 msgid "C_onnect"
-msgstr "Hubungk_an"
+msgstr "K_oneksikan"
 
 #: pyanaconda/ui/gui/spokes/network.glade:340
 msgid "Select a network"
@@ -4696,11 +4689,9 @@ msgid ""
 "configuration.  You can set the host name here."
 msgstr ""
 "Harap gunakan perkakas lingkungan desktop live untuk menggubah konfigurasi "
-"jaringan Anda. Anda dapat menata nama host di sini."
+"jaringan. Anda dapat menata nama host di sini."
 
 #: pyanaconda/ui/gui/spokes/network.glade:701
-#, fuzzy
-#| msgid "Port"
 msgid "Ports"
 msgstr "Port"
 
@@ -5714,10 +5705,10 @@ msgid ""
 "You can choose to format them now with dasdfmt or cancel to leave them "
 "unformatted. Unformatted DASDs cannot be used during installation."
 msgstr ""
-"DASD LDL atau yang tidak terformat berikut telah terdeteksi pada sistem "
-"Anda. Anda dapat memilih untuk memformat mereka sekarang dengan dasdfmt atau "
-"batal untuk membiarkan mereka tidak terformat. DASD yang tidak terformat "
-"tidak dapat dipakai selama instalasi."
+"DASD LDL atau yang tidak terformat berikut telah terdeteksi pada sistem. "
+"Anda dapat memilih untuk memformat mereka sekarang dengan dasdfmt atau batal "
+"untuk membiarkan mereka tidak terformat. DASD yang tidak terformat tidak "
+"dapat dipakai selama instalasi."
 
 #: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:86
 msgid "Unformatted DASDs Detected"
@@ -5835,9 +5826,9 @@ msgid ""
 "passphrase that you will use to access your data when you start your "
 "computer."
 msgstr ""
-"Anda telah memilih untuk mengenkripsi sebagian data Anda. Anda akan perlu "
-"untuk membuat frasa sandi yang akan Anda gunakan untuk mengakses data Anda "
-"ketika Anda memulai komputer Anda."
+"Anda telah memilih untuk mengenkripsi sebagian data. Anda akan perlu untuk "
+"membuat frasa sandi yang akan digunakan untuk mengakses data ketika Anda "
+"menyalakan komputer."
 
 #: pyanaconda/ui/gui/spokes/lib/passphrase.glade:102
 msgctxt "GUI|Passphrase Dialog"
@@ -6809,7 +6800,7 @@ msgstr "Nama pengg_una CHAP:"
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:811
 msgctxt "GUI|Advanced Storage|iSCSI|Login|CHAP"
 msgid "CHAP _Password:"
-msgstr "Kata Sandi CHA_P:"
+msgstr "_Kata Sandi CHAP:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:923
 msgctxt "GUI|Advanced Storage|iSCSI|Login|Reverse CHAP"
