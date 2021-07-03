@@ -42,7 +42,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2021-03-22 15:05+0100\n"
+"POT-Creation-Date: 2021-07-02 14:00+0200\n"
 "PO-Revision-Date: 2021-07-03 10:04+0000\n"
 "Last-Translator: Charles Lee <lchopn@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://translate.fedoraproject.org/"
@@ -155,18 +155,20 @@ msgstr "正在执行安装后设置"
 msgid "Creating snapshots"
 msgstr "正在创建快照"
 
-#: pyanaconda/display.py:291
+#: pyanaconda/display.py:301
 msgid "Graphical installation is not available. Starting text mode."
 msgstr "无法使用图形化安装。正在启动文本模式。"
 
-#: pyanaconda/display.py:299
+#: pyanaconda/display.py:309
 msgid ""
 "Text mode provides a limited set of installation options. It does not offer "
 "custom partitioning for full control over the disk layout. Would you like to "
 "use VNC mode instead?"
-msgstr "文本模式的安装选项有限。该模式不提供可完全控制磁盘布局的自定义分区选项。您要使用 VNC 模式代替吗？"
+msgstr ""
+"文本模式的安装选项有限。该模式不提供可完全控制磁盘布局的自定义分区选项。您要"
+"使用 VNC 模式代替吗？"
 
-#: pyanaconda/display.py:328
+#: pyanaconda/display.py:352
 msgid ""
 "X was unable to start on your machine. Would you like to start VNC to "
 "connect to this computer from another computer and perform a graphical "
@@ -189,8 +191,9 @@ msgid ""
 "Once you have resolved the issue you can retry the storage scan. If you do "
 "not fix it you will have to exit the installer."
 msgstr ""
-"现有存储配置或您的初始化配置（例如 kickstart 文件）存在问题。您必须在安装继续前解决该问题。可按 ctrl-alt-f1 组合键，然后按 "
-"ctrl-b 2 打开 shell 进行修改。\n"
+"现有存储配置或您的初始化配置（例如 kickstart 文件）存在问题。您必须在安装继续"
+"前解决该问题。可按 ctrl-alt-f1 组合键，然后按 ctrl-b 2 打开 shell 进行修"
+"改。\n"
 "\n"
 "问题解决后，请再次尝试扫描存储。如果问题没有解决，则只能退出安装程序。"
 
@@ -337,6 +340,20 @@ msgstr ""
 msgid "Unable to encrypt password: unsupported algorithm %s"
 msgstr "无法加密密码：不支持的算法 %s"
 
+#: pyanaconda/errors.py:264
+#, fuzzy
+#| msgid ""
+#| "Failed to connect the system to Red Hat Insights.\n"
+#| "\n"
+#| "Would you like to ignore this and continue with installation?"
+msgid ""
+"An error occurred during Red Hat Insights configuration. Would you like to "
+"ignore this and continue with installation?"
+msgstr ""
+"无法将系统连接到 Red Hat Insights。\n"
+"\n"
+"您是否要忽略这一点并继续安装？"
+
 #: pyanaconda/kickstart.py:540
 msgid ""
 "\n"
@@ -380,7 +397,8 @@ msgid ""
 "a shell.\n"
 "\n"
 msgstr ""
-"救援环境现在将开始寻找您所安装的 Linux，并将它挂载到 %s 目录下。然后您便可以对系统进行必要的更改。如果您想开始执行这一步骤，请选择“1”。\n"
+"救援环境现在将开始寻找您所安装的 Linux，并将它挂载到 %s 目录下。然后您便可以"
+"对系统进行必要的更改。如果您想开始执行这一步骤，请选择“1”。\n"
 "还可以选择“2”将文件系统挂载成“只读”模式而不是“读写”模式。\n"
 "如果因某种原因导致此过程失败，可以选择“3”直接进入 shell。\n"
 "\n"
@@ -594,8 +612,9 @@ msgid ""
 "referred to by device path in /etc/fstab, which is not ideal since device "
 "paths can change under a variety of circumstances. "
 msgstr ""
-"您的 swap 设备中至少有一个没有 UUID，此问题常见于使用较早版本的 mkswap 创建的 swap 空间。这些设备将会通过它们在 /etc/"
-"fstab 中的设备路径而被引用。由于设备路径可能会在不同环境下发生变化，因此这不是个很理想的做法。 "
+"您的 swap 设备中至少有一个没有 UUID，此问题常见于使用较早版本的 mkswap 创建"
+"的 swap 空间。这些设备将会通过它们在 /etc/fstab 中的设备路径而被引用。由于设"
+"备路径可能会在不同环境下发生变化，因此这不是个很理想的做法。 "
 
 #: pyanaconda/modules/storage/checker/utils.py:296
 #, python-format
@@ -618,7 +637,9 @@ msgid ""
 "The existing unlocked LUKS device {} cannot be used for the installation "
 "without an encryption key specified for this device. Please, rescan the "
 "storage."
-msgstr "对于已有的未锁定 LUKS 设备 {}，如果未向该设备指定加密密钥，则此设备无法用于安装。请重新扫描存储设备。"
+msgstr ""
+"对于已有的未锁定 LUKS 设备 {}，如果未向该设备指定加密密钥，则此设备无法用于安"
+"装。请重新扫描存储设备。"
 
 #: pyanaconda/modules/storage/checker/utils.py:375
 #, python-format
@@ -963,7 +984,9 @@ msgstr "缓冲的物理卷必须跟缓冲的逻辑卷属于同一卷组"
 msgid ""
 "No thin pool exists with the name \"%s\". Specify thin pools before thin "
 "volumes."
-msgstr "名称为“%s”的瘦池（thin pool）不存在。在指定瘦卷（thin volume）之前先指定瘦池。"
+msgstr ""
+"名称为“%s”的瘦池（thin pool）不存在。在指定瘦卷（thin volume）之前先指定瘦"
+"池。"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:961
 msgid "logvol --noformat must also use the --name= option."
@@ -1096,7 +1119,7 @@ msgstr "{} 无法被加密"
 msgid "Device does not support RAID level selection {}."
 msgstr "设备不支持选择的 RAID 级别 {}。"
 
-#: pyanaconda/modules/storage/partitioning/interactive/utils.py:1197
+#: pyanaconda/modules/storage/partitioning/interactive/utils.py:1196
 #, python-format
 msgid ""
 "This Software RAID array is missing %(missing)d of %(total)d member "
@@ -1105,7 +1128,7 @@ msgstr ""
 "软 RAID 阵列的共 %(total)d 个成员分区中有 %(missing)d 个缺失。您可以将其移除"
 "或选择另外的设备。"
 
-#: pyanaconda/modules/storage/partitioning/interactive/utils.py:1204
+#: pyanaconda/modules/storage/partitioning/interactive/utils.py:1203
 #, python-format
 msgid ""
 "This LVM Volume Group is missing %(missingPVs)d of %(totalPVs)d physical "
@@ -1114,7 +1137,7 @@ msgstr ""
 "该 LVM 卷组的 %(totalPVs)d 个物理卷中有 %(missingPVs)d 个缺失。您可以将其移除"
 "或选择另外的设备。"
 
-#: pyanaconda/modules/storage/partitioning/interactive/utils.py:1208
+#: pyanaconda/modules/storage/partitioning/interactive/utils.py:1207
 #, python-format
 msgid ""
 "This %(type)s device is missing member devices. You can remove it or select "
@@ -1241,8 +1264,8 @@ msgid ""
 "%(deviceName)s may not have enough space for grub2 to embed core.img when "
 "using the %(fsType)s file system on %(deviceType)s"
 msgstr ""
-"当在 %(deviceType)s 上使用 %(fsType)s 文件系统时，%(deviceName)s 可能没有足够的空间让 grub2 嵌入 "
-"core.img"
+"当在 %(deviceType)s 上使用 %(fsType)s 文件系统时，%(deviceName)s 可能没有足够"
+"的空间让 grub2 嵌入 core.img"
 
 #: pyanaconda/modules/storage/bootloader/grub2.py:526
 #, python-format
@@ -1251,8 +1274,9 @@ msgid ""
 "loader stage1 device %(stage1dev)s is not. A drive failure in %(stage2dev)s "
 "could render the system unbootable."
 msgstr ""
-"引导装载程序第二阶段设备 %(stage2dev)s 位于多磁盘阵列中，而引导程装载程序第一阶段设备 %(stage1dev)s "
-"不在该阵列中。%(stage2dev)s 中的驱动器错误将可能造成系统无法启动。"
+"引导装载程序第二阶段设备 %(stage2dev)s 位于多磁盘阵列中，而引导程装载程序第一"
+"阶段设备 %(stage1dev)s 不在该阵列中。%(stage2dev)s 中的驱动器错误将可能造成系"
+"统无法启动。"
 
 #: pyanaconda/modules/storage/bootloader/grub2.py:533
 #, python-format
@@ -1261,8 +1285,9 @@ msgid ""
 "loader stage1 device %(stage1dev)s is not part of this array. The stage1 "
 "boot loader will only be installed to a single drive."
 msgstr ""
-"引导装载程序第二阶段设备 %(stage2dev)s 位于多磁盘阵列中，而引导装载程序第一阶段设备 %(stage1dev)s "
-"不是该阵列的一部分。第一阶段引导装载程序将只能安装到单独的磁盘中。"
+"引导装载程序第二阶段设备 %(stage2dev)s 位于多磁盘阵列中，而引导装载程序第一阶"
+"段设备 %(stage1dev)s 不是该阵列的一部分。第一阶段引导装载程序将只能安装到单独"
+"的磁盘中。"
 
 #: pyanaconda/modules/storage/bootloader/execution.py:185
 msgid "No match found for given boot drive \"{}\"."
@@ -1390,7 +1415,7 @@ msgstr "%s 缺失。无法设置防火墙。"
 
 #: pyanaconda/modules/subscription/runtime.py:257
 #: pyanaconda/modules/subscription/runtime.py:303
-#: pyanaconda/ui/gui/spokes/subscription.py:998
+#: pyanaconda/ui/gui/spokes/subscription.py:1009
 msgid "Registration failed."
 msgstr "注册失败。"
 
@@ -1402,18 +1427,18 @@ msgstr "反注册失败。"
 msgid "Failed to attach subscription."
 msgstr "附加订阅失败。"
 
-#: pyanaconda/modules/subscription/runtime.py:441
+#: pyanaconda/modules/subscription/runtime.py:448
 msgid "product name unknown"
 msgstr "产品名称未知"
 
-#: pyanaconda/modules/subscription/runtime.py:448
 #: pyanaconda/modules/subscription/runtime.py:455
-#: pyanaconda/modules/subscription/runtime.py:468
-#: pyanaconda/modules/subscription/runtime.py:476
+#: pyanaconda/modules/subscription/runtime.py:462
+#: pyanaconda/modules/subscription/runtime.py:475
+#: pyanaconda/modules/subscription/runtime.py:483
 msgid "unknown"
 msgstr "未知"
 
-#: pyanaconda/modules/subscription/runtime.py:461
+#: pyanaconda/modules/subscription/runtime.py:468
 msgid "not available"
 msgstr "不可用"
 
@@ -1525,39 +1550,39 @@ msgid "Starting automated install"
 msgstr "正在开始自动安装"
 
 #. TRANSLATORS: 'b' to begin installation
-#: pyanaconda/ui/tui/hubs/summary.py:106
+#: pyanaconda/ui/tui/hubs/summary.py:104
 #, python-format
 msgid "Enter '%s' to ignore the warning and attempt to install anyway."
 msgstr "输入 '%s' 以忽略警告并尝试安装。"
 
 #. TRANSLATORS: 'b' to begin installation
-#: pyanaconda/ui/tui/hubs/summary.py:108 pyanaconda/ui/tui/hubs/summary.py:135
-#: pyanaconda/ui/tui/hubs/summary.py:147
+#: pyanaconda/ui/tui/hubs/summary.py:106 pyanaconda/ui/tui/hubs/summary.py:133
+#: pyanaconda/ui/tui/hubs/summary.py:145
 msgctxt "TUI|Spoke Navigation"
 msgid "b"
 msgstr "b(开始)"
 
-#: pyanaconda/ui/tui/hubs/summary.py:117
+#: pyanaconda/ui/tui/hubs/summary.py:115
 msgid "The following mandatory spokes are not completed:"
 msgstr "以下必须的分部还没有完成："
 
-#: pyanaconda/ui/tui/hubs/summary.py:135
+#: pyanaconda/ui/tui/hubs/summary.py:133
 msgid "to begin installation"
 msgstr "开始安装"
 
-#: pyanaconda/ui/tui/hubs/summary.py:150 pyanaconda/ui/tui/hubs/__init__.py:135
+#: pyanaconda/ui/tui/hubs/summary.py:148 pyanaconda/ui/tui/hubs/__init__.py:135
 msgid "Please complete all spokes before continuing"
 msgstr "继续前请完成所有分部"
 
 #. TRANSLATORS: 'c' to continue
-#: pyanaconda/ui/tui/hubs/summary.py:160
+#: pyanaconda/ui/tui/hubs/summary.py:158
 #: pyanaconda/ui/tui/spokes/installation_source.py:477
-#: pyanaconda/ui/tui/spokes/network.py:566
+#: pyanaconda/ui/tui/spokes/network.py:571
 #: pyanaconda/ui/tui/spokes/software_selection.py:251
-#: pyanaconda/ui/tui/spokes/storage.py:254
-#: pyanaconda/ui/tui/spokes/storage.py:527
-#: pyanaconda/ui/tui/spokes/storage.py:599
-#: pyanaconda/ui/tui/spokes/storage.py:667
+#: pyanaconda/ui/tui/spokes/storage.py:259
+#: pyanaconda/ui/tui/spokes/storage.py:536
+#: pyanaconda/ui/tui/spokes/storage.py:608
+#: pyanaconda/ui/tui/spokes/storage.py:676
 msgctxt "TUI|Spoke Navigation"
 msgid "c"
 msgstr "继续"
@@ -1595,8 +1620,8 @@ msgstr "设置软件源时出错"
 
 #: pyanaconda/ui/tui/spokes/installation_source.py:110
 #: pyanaconda/ui/tui/spokes/software_selection.py:158
-#: pyanaconda/ui/tui/spokes/storage.py:123
-#: pyanaconda/ui/gui/spokes/storage.py:420
+#: pyanaconda/ui/tui/spokes/storage.py:128
+#: pyanaconda/ui/gui/spokes/storage.py:423
 msgid "Processing..."
 msgstr "正在处理..."
 
@@ -1754,65 +1779,65 @@ msgstr "IP 地址格式错误"
 msgid "Bad format of the netmask"
 msgstr "网络掩码格式错误"
 
-#: pyanaconda/ui/tui/spokes/network.py:207
+#: pyanaconda/ui/tui/spokes/network.py:212
 msgid "Network configuration"
 msgstr "网络配置"
 
-#: pyanaconda/ui/tui/spokes/network.py:269
+#: pyanaconda/ui/tui/spokes/network.py:274
 #, python-format
 msgid "Wired (%(interface_name)s) disconnected\n"
 msgstr "有线（%(interface_name)s）已断开\n"
 
-#: pyanaconda/ui/tui/spokes/network.py:274
+#: pyanaconda/ui/tui/spokes/network.py:279
 #, python-format
 msgid "Wired (%(interface_name)s) connected\n"
 msgstr "有线（%(interface_name)s）已连接\n"
 
-#: pyanaconda/ui/tui/spokes/network.py:290
+#: pyanaconda/ui/tui/spokes/network.py:295
 #, python-format
 msgid " IPv4 Address: %(addr)s Netmask: %(netmask)s Gateway: %(gateway)s\n"
 msgstr " IPv4 地址：%(addr)s 子网掩码：%(netmask)s 网关：%(gateway)s\n"
 
-#: pyanaconda/ui/tui/spokes/network.py:292
+#: pyanaconda/ui/tui/spokes/network.py:297
 #, python-format
 msgid " DNS: %s\n"
 msgstr " DNS：%s\n"
 
-#: pyanaconda/ui/tui/spokes/network.py:301
+#: pyanaconda/ui/tui/spokes/network.py:306
 #, python-format
 msgid " IPv6 Address: %(addr)s/%(prefix)d\n"
 msgstr " IPv6 地址：%(addr)s/%(prefix)d\n"
 
-#: pyanaconda/ui/tui/spokes/network.py:312
+#: pyanaconda/ui/tui/spokes/network.py:317
 msgid "Network configuration is not available."
 msgstr "网络配置不可用。"
 
-#: pyanaconda/ui/tui/spokes/network.py:318
+#: pyanaconda/ui/tui/spokes/network.py:323
 #, python-format
 msgid "Host Name: %s\n"
 msgstr "主机名：%s\n"
 
-#: pyanaconda/ui/tui/spokes/network.py:320
+#: pyanaconda/ui/tui/spokes/network.py:325
 #, python-format
 msgid "Current host name: %s\n"
 msgstr "当前主机名：%s\n"
 
-#: pyanaconda/ui/tui/spokes/network.py:327
+#: pyanaconda/ui/tui/spokes/network.py:332
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:239
 #: pyanaconda/ui/gui/spokes/network.glade:2506
 msgid "Host Name"
 msgstr "主机名"
 
-#: pyanaconda/ui/tui/spokes/network.py:328
+#: pyanaconda/ui/tui/spokes/network.py:333
 msgid "Set host name"
 msgstr "设置主机名"
 
-#: pyanaconda/ui/tui/spokes/network.py:332
+#: pyanaconda/ui/tui/spokes/network.py:337
 #, python-format
 msgid "Configure device %s"
 msgstr "配置设备 %s"
 
-#: pyanaconda/ui/tui/spokes/network.py:426
+#: pyanaconda/ui/tui/spokes/network.py:431
 #: pyanaconda/ui/gui/spokes/network.py:1567
 #: pyanaconda/ui/gui/spokes/network.py:1586
 #: pyanaconda/ui/gui/spokes/network.py:1682
@@ -1821,24 +1846,24 @@ msgstr "配置设备 %s"
 msgid "Host name is not valid: %s"
 msgstr "主机名无效：%s"
 
-#: pyanaconda/ui/tui/spokes/network.py:442
+#: pyanaconda/ui/tui/spokes/network.py:447
 msgid "Device configuration"
 msgstr "设备配置"
 
-#: pyanaconda/ui/tui/spokes/network.py:464
+#: pyanaconda/ui/tui/spokes/network.py:469
 #, python-format
 msgid "IPv4 address or %s for DHCP"
 msgstr "IPv4 地址或 %s 以启用 DHCP"
 
-#: pyanaconda/ui/tui/spokes/network.py:468
+#: pyanaconda/ui/tui/spokes/network.py:473
 msgid "IPv4 netmask"
 msgstr "IPv4 子网掩码"
 
-#: pyanaconda/ui/tui/spokes/network.py:471
+#: pyanaconda/ui/tui/spokes/network.py:476
 msgid "IPv4 gateway"
 msgstr "IPv4 网关"
 
-#: pyanaconda/ui/tui/spokes/network.py:474
+#: pyanaconda/ui/tui/spokes/network.py:479
 #, python-format
 msgid ""
 "IPv6 address[/prefix] or %(auto)s for automatic, %(dhcp)s for DHCP, "
@@ -1847,28 +1872,28 @@ msgstr ""
 "IPv6 地址[/prefix] 或 %(auto)s 以自动连接，%(dhcp)s 以使用 DHCP ，或者 "
 "%(ignore)s 以关闭"
 
-#: pyanaconda/ui/tui/spokes/network.py:480
+#: pyanaconda/ui/tui/spokes/network.py:485
 msgid "IPv6 default gateway"
 msgstr "IPv6 默认网关"
 
-#: pyanaconda/ui/tui/spokes/network.py:483
+#: pyanaconda/ui/tui/spokes/network.py:488
 msgid "Nameservers (comma separated)"
 msgstr "域名服务器(以逗号分隔)"
 
-#: pyanaconda/ui/tui/spokes/network.py:486
+#: pyanaconda/ui/tui/spokes/network.py:491
 msgid "Connect automatically after reboot"
 msgstr "重启后自动连接"
 
-#: pyanaconda/ui/tui/spokes/network.py:490
+#: pyanaconda/ui/tui/spokes/network.py:495
 msgid "Apply configuration in installer"
 msgstr "在安装程序中应用配置"
 
-#: pyanaconda/ui/tui/spokes/network.py:496
+#: pyanaconda/ui/tui/spokes/network.py:501
 #, python-format
 msgid "Configuring device %s."
 msgstr "配置设备 %s。"
 
-#: pyanaconda/ui/tui/spokes/network.py:568
+#: pyanaconda/ui/tui/spokes/network.py:573
 msgid "Configuration not saved: netmask missing in static configuration"
 msgstr "配置未保存：静态配置中缺少子网掩码"
 
@@ -2026,52 +2051,53 @@ msgstr "使用空闲空间"
 msgid "Installation Destination"
 msgstr "安装目标位置"
 
-#: pyanaconda/ui/tui/spokes/storage.py:125
-#: pyanaconda/ui/gui/spokes/storage.py:422
+#: pyanaconda/ui/tui/spokes/storage.py:130
+#: pyanaconda/ui/gui/spokes/storage.py:425
 msgid "Kickstart insufficient"
 msgstr "无法使用 Kickstart"
 
-#: pyanaconda/ui/tui/spokes/storage.py:127
-#: pyanaconda/ui/gui/spokes/storage.py:424
+#: pyanaconda/ui/tui/spokes/storage.py:132
+#: pyanaconda/ui/gui/spokes/storage.py:427
 msgid "No disks selected"
 msgstr "未选择任何磁盘"
 
-#: pyanaconda/ui/tui/spokes/storage.py:129
-#: pyanaconda/ui/gui/spokes/storage.py:426
+#: pyanaconda/ui/tui/spokes/storage.py:134
+#: pyanaconda/ui/gui/spokes/storage.py:429
 msgid "Error checking storage configuration"
 msgstr "检查存储配置出错"
 
-#: pyanaconda/ui/tui/spokes/storage.py:131
-#: pyanaconda/ui/gui/spokes/storage.py:428
+#: pyanaconda/ui/tui/spokes/storage.py:136
+#: pyanaconda/ui/gui/spokes/storage.py:431
 msgid "Warning checking storage configuration"
 msgstr "警告，正在检查存储配置"
 
-#: pyanaconda/ui/tui/spokes/storage.py:133
-#: pyanaconda/ui/gui/spokes/storage.py:430
+#: pyanaconda/ui/tui/spokes/storage.py:138
+#: pyanaconda/ui/gui/spokes/storage.py:433
 msgid "Automatic partitioning selected"
 msgstr "已选择自动分区"
 
-#: pyanaconda/ui/tui/spokes/storage.py:135
-#: pyanaconda/ui/gui/spokes/storage.py:432
+#: pyanaconda/ui/tui/spokes/storage.py:140
+#: pyanaconda/ui/gui/spokes/storage.py:435
 msgid "Custom partitioning selected"
 msgstr "已选择自定义分区"
 
-#: pyanaconda/ui/tui/spokes/storage.py:201
+#: pyanaconda/ui/tui/spokes/storage.py:206
 msgid "Select all"
 msgstr "选择全部"
 
-#: pyanaconda/ui/tui/spokes/storage.py:310
+#: pyanaconda/ui/tui/spokes/storage.py:315
 msgid ""
 "The following unformatted or LDL DASDs have been detected on your system. "
 "You can choose to format them now with dasdfmt or cancel to leave them "
 "unformatted. Unformatted DASDs cannot be used during installation.\n"
 "\n"
 msgstr ""
-"在您的系统中检测到以下未格式化的或 LDL DASD 设备。您现在可使用 dasdfmt 将其格式化或取消并保持其未格式化的状态。未格式化的 DASD "
-"设备不能在安装过程中使用。\n"
+"在您的系统中检测到以下未格式化的或 LDL DASD 设备。您现在可使用 dasdfmt 将其格"
+"式化或取消并保持其未格式化的状态。未格式化的 DASD 设备不能在安装过程中使"
+"用。\n"
 "\n"
 
-#: pyanaconda/ui/tui/spokes/storage.py:317
+#: pyanaconda/ui/tui/spokes/storage.py:322
 msgid ""
 "Warning: All storage changes made using the installer will be lost when you "
 "choose to format.\n"
@@ -2082,29 +2108,29 @@ msgstr ""
 "\n"
 "要执行 dasdfmt 吗？\n"
 
-#: pyanaconda/ui/tui/spokes/storage.py:326
+#: pyanaconda/ui/tui/spokes/storage.py:331
 msgid "This may take a moment."
 msgstr "这可能需要些时间。"
 
-#: pyanaconda/ui/tui/spokes/storage.py:342
+#: pyanaconda/ui/tui/spokes/storage.py:347
 msgid "Passphrase"
 msgstr "口令"
 
-#: pyanaconda/ui/tui/spokes/storage.py:343
+#: pyanaconda/ui/tui/spokes/storage.py:348
 msgid ""
 "Please provide a default LUKS passphrase for all devices you want to "
 "encrypt. You will have to type it twice."
 msgstr "请为需要加密的所有设备提供一个默认的 LUKS 密码口令。您将需要输入两次。"
 
-#: pyanaconda/ui/tui/spokes/storage.py:428
+#: pyanaconda/ui/tui/spokes/storage.py:437
 msgid "Partitioning Options"
 msgstr "分区选项"
 
-#: pyanaconda/ui/tui/spokes/storage.py:468
+#: pyanaconda/ui/tui/spokes/storage.py:477
 msgid "Manually assign mount points"
 msgstr "手动分配挂载点"
 
-#: pyanaconda/ui/tui/spokes/storage.py:475
+#: pyanaconda/ui/tui/spokes/storage.py:484
 msgid ""
 "Installation requires partitioning of your hard drive. Select what space to "
 "use for the install target or manually assign mount points."
@@ -2112,23 +2138,23 @@ msgstr ""
 "安装过程需要对您的硬盘进行分区。请选择要用于安装目标的磁盘空间，或者手动分配"
 "挂载点。"
 
-#: pyanaconda/ui/tui/spokes/storage.py:520
+#: pyanaconda/ui/tui/spokes/storage.py:529
 msgid "Reverting previous configuration. This may take a moment..."
 msgstr "回到上一次配置。可能会需要一定时间……"
 
-#: pyanaconda/ui/tui/spokes/storage.py:552
+#: pyanaconda/ui/tui/spokes/storage.py:561
 msgid "Partition Scheme Options"
 msgstr "分区方案选项"
 
-#: pyanaconda/ui/tui/spokes/storage.py:588
+#: pyanaconda/ui/tui/spokes/storage.py:597
 msgid "Select a partition scheme configuration."
 msgstr "选择一个分区方案配置。"
 
-#: pyanaconda/ui/tui/spokes/storage.py:620
+#: pyanaconda/ui/tui/spokes/storage.py:629
 msgid "Assign mount points"
 msgstr "分配挂载点"
 
-#: pyanaconda/ui/tui/spokes/storage.py:640
+#: pyanaconda/ui/tui/spokes/storage.py:649
 msgid ""
 "Choose device from above to assign mount point and set format.\n"
 "Formats marked with * are new formats meaning ALL DATA on the original "
@@ -2138,17 +2164,17 @@ msgstr ""
 "带有 * 的格式代表新格式，这表示原有格式上的所有数据都将丢失！"
 
 #. TRANSLATORS: 's' to rescan devices
-#: pyanaconda/ui/tui/spokes/storage.py:652
-#: pyanaconda/ui/tui/spokes/storage.py:662
+#: pyanaconda/ui/tui/spokes/storage.py:661
+#: pyanaconda/ui/tui/spokes/storage.py:671
 msgctxt "TUI|Spoke Navigation|Partitioning"
 msgid "s"
 msgstr "s"
 
-#: pyanaconda/ui/tui/spokes/storage.py:652
+#: pyanaconda/ui/tui/spokes/storage.py:661
 msgid "rescan devices"
 msgstr "重新扫描设备"
 
-#: pyanaconda/ui/tui/spokes/storage.py:724
+#: pyanaconda/ui/tui/spokes/storage.py:733
 msgid ""
 "Warning: This will revert all changes done so far.\n"
 "Do you want to proceed?\n"
@@ -2156,48 +2182,48 @@ msgstr ""
 "警告：此操作将取消截至当前的所有操作。\n"
 "您要继续吗？\n"
 
-#: pyanaconda/ui/tui/spokes/storage.py:733
+#: pyanaconda/ui/tui/spokes/storage.py:742
 msgid "Scanning disks. This may take a moment..."
 msgstr "正在扫描磁盘。这可能会需要一些时间……"
 
-#: pyanaconda/ui/tui/spokes/storage.py:747
+#: pyanaconda/ui/tui/spokes/storage.py:756
 #, python-format
 msgid "Configure device: %s"
 msgstr "配置设备：%s"
 
-#: pyanaconda/ui/tui/spokes/storage.py:767
+#: pyanaconda/ui/tui/spokes/storage.py:776
 msgid "Choose from above to assign mount point and/or set format."
 msgstr "从上方选择来分配挂载点并/或设定格式。"
 
-#: pyanaconda/ui/tui/spokes/storage.py:783
+#: pyanaconda/ui/tui/spokes/storage.py:792
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:177
 msgid "Mount point"
 msgstr "挂载点"
 
-#: pyanaconda/ui/tui/spokes/storage.py:790
-#: pyanaconda/ui/tui/spokes/storage.py:795
-#: pyanaconda/ui/tui/spokes/storage.py:827
+#: pyanaconda/ui/tui/spokes/storage.py:799
+#: pyanaconda/ui/tui/spokes/storage.py:804
+#: pyanaconda/ui/tui/spokes/storage.py:836
 msgid "none"
 msgstr "无"
 
-#: pyanaconda/ui/tui/spokes/storage.py:813
+#: pyanaconda/ui/tui/spokes/storage.py:822
 msgid "Invalid mount point given"
 msgstr "指定的挂载点无效"
 
-#: pyanaconda/ui/tui/spokes/storage.py:826
+#: pyanaconda/ui/tui/spokes/storage.py:835
 msgid "Format"
 msgstr "格式"
 
-#: pyanaconda/ui/tui/spokes/storage.py:836
+#: pyanaconda/ui/tui/spokes/storage.py:845
 msgid "Invalid or unsupported format given"
 msgstr "设置的格式无效或不受支持"
 
-#: pyanaconda/ui/tui/spokes/storage.py:838
+#: pyanaconda/ui/tui/spokes/storage.py:847
 #, python-format
 msgid "Supported formats: %s"
 msgstr "支持的格式：%s"
 
-#: pyanaconda/ui/tui/spokes/storage.py:855
+#: pyanaconda/ui/tui/spokes/storage.py:864
 msgid "Reformat"
 msgstr "重新格式化"
 
@@ -2371,28 +2397,28 @@ msgctxt "GUI|Summary|Warning Dialog"
 msgid "_OK"
 msgstr "好(_O)"
 
-#: pyanaconda/ui/gui/hubs/__init__.py:267
+#: pyanaconda/ui/gui/hubs/__init__.py:256
 msgid ""
 "Please complete items marked with this icon before continuing to the next "
 "step."
 msgstr "请先完成带有此图标标记的内容再进行下一步。"
 
-#: pyanaconda/ui/gui/__init__.py:435 widgets/src/BaseWindow.c:151
+#: pyanaconda/ui/gui/__init__.py:346 widgets/src/BaseWindow.c:151
 msgid "Help!"
 msgstr "帮助！"
 
-#: pyanaconda/ui/gui/__init__.py:945
+#: pyanaconda/ui/gui/__init__.py:835
 #: pyanaconda/ui/gui/spokes/lib/detailederror.py:58
 msgctxt "GUI|Detailed Error Dialog"
 msgid "_Quit"
 msgstr "退出(_Q)"
 
-#: pyanaconda/ui/gui/__init__.py:961
+#: pyanaconda/ui/gui/__init__.py:851
 msgctxt "GUI|Yes No Dialog"
 msgid "_No"
 msgstr "否(_N)"
 
-#: pyanaconda/ui/gui/__init__.py:962
+#: pyanaconda/ui/gui/__init__.py:852
 msgctxt "GUI|Yes No Dialog"
 msgid "_Yes"
 msgstr "是(_Y)"
@@ -2402,81 +2428,81 @@ msgctxt "GUI|Spoke"
 msgid "_Connect to Red Hat"
 msgstr "(_C)连接到红帽"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:216
-#: pyanaconda/ui/gui/spokes/subscription.py:230
-#: pyanaconda/core/constants.py:237
+#: pyanaconda/ui/gui/spokes/subscription.py:223
+#: pyanaconda/ui/gui/spokes/subscription.py:237
+#: pyanaconda/core/constants.py:238
 msgid "Password set."
 msgstr "密码已设置。"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:244
+#: pyanaconda/ui/gui/spokes/subscription.py:251
 msgid "Activation key set."
 msgstr "激活码集。"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:990
+#: pyanaconda/ui/gui/spokes/subscription.py:1001
 msgid "Unregistering..."
 msgstr "正在取消注册 ..."
 
-#: pyanaconda/ui/gui/spokes/subscription.py:992
+#: pyanaconda/ui/gui/spokes/subscription.py:1003
 msgid "Registering..."
 msgstr "正在注册 ..."
 
-#: pyanaconda/ui/gui/spokes/subscription.py:994
+#: pyanaconda/ui/gui/spokes/subscription.py:1005
 msgid "Attaching subscription..."
 msgstr "正在附加订阅 ..."
 
-#: pyanaconda/ui/gui/spokes/subscription.py:996
+#: pyanaconda/ui/gui/spokes/subscription.py:1007
 msgid "Subscription attached."
 msgstr "订阅已附加。"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:1000
+#: pyanaconda/ui/gui/spokes/subscription.py:1011
 msgid "Registered."
 msgstr "已注册。"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:1002
+#: pyanaconda/ui/gui/spokes/subscription.py:1013
 msgid "Not registered."
 msgstr "未注册。"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:1032
+#: pyanaconda/ui/gui/spokes/subscription.py:1043
 msgid "Registered with account {}"
 msgstr "已使用账户 {} 注册"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:1036
+#: pyanaconda/ui/gui/spokes/subscription.py:1047
 msgid "Registered with organization {}"
 msgstr "已使用组织 {} 注册"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:1044
+#: pyanaconda/ui/gui/spokes/subscription.py:1055
 msgid "Role: {}"
 msgstr "角色: {}"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:1048
+#: pyanaconda/ui/gui/spokes/subscription.py:1059
 msgid "SLA: {}"
 msgstr "SLA: {}"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:1052
+#: pyanaconda/ui/gui/spokes/subscription.py:1063
 msgid "Usage: {}"
 msgstr "用途: {}"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:1060
+#: pyanaconda/ui/gui/spokes/subscription.py:1071
 msgid "Connected to Red Hat Insights"
 msgstr "已连接至红帽 Insights"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:1062
+#: pyanaconda/ui/gui/spokes/subscription.py:1073
 msgid "Not connected to Red Hat Insights"
 msgstr "未连接至红帽 Insights"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:1073
+#: pyanaconda/ui/gui/spokes/subscription.py:1084
 msgid "No subscriptions are attached to the system"
 msgstr "系统没有已附加的订阅"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:1075
+#: pyanaconda/ui/gui/spokes/subscription.py:1086
 msgid "1 subscription attached to the system"
 msgstr "已附加一项订阅至此系统"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:1077
+#: pyanaconda/ui/gui/spokes/subscription.py:1088
 msgid "{} subscriptions attached to the system"
 msgstr "已附加 {} 项订阅至此系统"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:1118
+#: pyanaconda/ui/gui/spokes/subscription.py:1129
 msgid "Please enable network access before connecting to Red Hat."
 msgstr "在连接到红帽之前，请启用网络连接功能。"
 
@@ -2485,8 +2511,8 @@ msgid "Setting up installation source..."
 msgstr "正在设置安装源..."
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:98
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1752
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1756
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1764
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1768
 msgid " <a href=\"\">Click for details.</a>"
 msgstr " <a href=\"\">点击查看详情。</a>"
 
@@ -2632,20 +2658,20 @@ msgstr "欢迎使用 %(name)s %(version)s。"
 msgid "MANUAL PARTITIONING"
 msgstr "手动分区"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:271
+#: pyanaconda/ui/gui/spokes/custom_storage.py:273
 #, python-format
 msgctxt "GUI|Custom Partitioning"
 msgid "%d _storage device selected"
 msgid_plural "%d _storage devices selected"
 msgstr[0] "已选择 %d 个存储设备(_S)"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:338
+#: pyanaconda/ui/gui/spokes/custom_storage.py:344
 #, python-format
 msgid "%(items_selected)s of %(items_total)s mount points in %(page_name)s"
 msgstr ""
 "已选择 %(items_selected)s 个，共 %(items_total)s 个挂载点在 %(page_name)s"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:365
+#: pyanaconda/ui/gui/spokes/custom_storage.py:371
 #, python-format
 msgid ""
 "Please select a single mount point to edit properties.\n"
@@ -2658,7 +2684,7 @@ msgstr ""
 "您目前已选择：\n"
 "%s"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:370
+#: pyanaconda/ui/gui/spokes/custom_storage.py:376
 #, python-format
 msgid ""
 "When you create mount points for your %(name)s %(version)s installation, "
@@ -2666,95 +2692,95 @@ msgid ""
 msgstr ""
 "在您为 %(name)s %(version)s 安装创建挂载点后，您可在这里浏览它们的详细信息。"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:447
-#: pyanaconda/ui/gui/spokes/custom_storage.py:490
+#: pyanaconda/ui/gui/spokes/custom_storage.py:455
+#: pyanaconda/ui/gui/spokes/custom_storage.py:498
 #: pyanaconda/ui/gui/spokes/network.py:281 pyanaconda/network.py:469
 msgid "Unknown"
 msgstr "未知"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:594
+#: pyanaconda/ui/gui/spokes/custom_storage.py:602
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade:178
 msgid "Device reconfiguration failed."
 msgstr "重新配置设备失败。"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:742
+#: pyanaconda/ui/gui/spokes/custom_storage.py:750
 msgid "No disks assigned"
 msgstr "未分配磁盘"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:756
+#: pyanaconda/ui/gui/spokes/custom_storage.py:764
 msgctxt "GUI|Custom Partitioning|Devices"
 msgid " and {} other"
 msgid_plural " and {} others"
 msgstr[0] " 及 {} 个其他"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:800
+#: pyanaconda/ui/gui/spokes/custom_storage.py:808
 msgid "The container is encrypted."
 msgstr "该容器已加密。"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:829
+#: pyanaconda/ui/gui/spokes/custom_storage.py:837
 msgid ""
 "The space available to this mount point can be changed by modifying the "
 "volume below."
 msgstr "此挂载点的可用空间大小可通过修改下方的卷进行更改。"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:834
+#: pyanaconda/ui/gui/spokes/custom_storage.py:842
 msgid "This file system may not be resized."
 msgstr "该文件系统可能无法重新定义大小。"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:927
+#: pyanaconda/ui/gui/spokes/custom_storage.py:935
 msgid ""
 "Error checking storage configuration. <a href=\"\">Click for details</a> or "
 "press Done again to continue."
 msgstr ""
 "检查存储配置时出错。<a href=\"\">点击查看详情</a>或再次按完成按钮继续。"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:931
+#: pyanaconda/ui/gui/spokes/custom_storage.py:939
 msgid ""
 "Warning checking storage configuration. <a href=\"\">Click for details</a> "
 "or press Done again to continue."
 msgstr ""
 "检查存储配置时出现警告。<a href=\"\">点击查看详情</a>或再次按完成按钮继续。"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1013
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1021
 msgid "Failed to add new device."
 msgstr "添加新设备失败。"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1071
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1079
 msgid "Device removal request failed."
 msgstr "设备移除请求失败。"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1205
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1213
 msgid "No disks selected. Keeping previous disk set."
 msgstr "未选择磁盘。保留之前的磁盘选择。"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1284
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1292
 msgid "({} free)"
 msgstr "({} 可用)"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1465
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1474
 msgid "Automatic partitioning failed."
 msgstr "自动分区失败。"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1769
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1781
 #: pyanaconda/ui/gui/spokes/blivet_gui.py:320
 msgid ""
 "Continuing with this action will reset all your partitioning selections to "
 "their current on-disk state."
 msgstr "继续此步骤将会把您的分区方案重设为它们当前的状态。"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1780
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1792
 #: pyanaconda/ui/gui/spokes/blivet_gui.py:328
 msgctxt "GUI|Custom Partitioning|Reset Dialog"
 msgid "_Reset selections"
 msgstr "重设分区方案(_R)"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1782
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1794
 #: pyanaconda/ui/gui/spokes/blivet_gui.py:329
 msgctxt "GUI|Custom Partitioning|Reset Dialog"
 msgid "_Preserve current selections"
 msgstr "保留当前选项(_P)"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1864
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1876
 msgid "Failed to unlock encrypted block device."
 msgstr "解锁加密块设备失败。"
 
@@ -2765,8 +2791,8 @@ msgid ""
 "%(initiatorName)s</b> using the portal IP address <b>%(portalAddress)s</b>.  "
 "Please select which nodes you wish to log into:"
 msgstr ""
-"iSCSI 初始程序 <b>%(initiatorName)s</b> 使用门户 IP 地址 <b>%(portalAddress)s</b> "
-"时发现了以下节点。请选择您要登录的节点："
+"iSCSI 初始程序 <b>%(initiatorName)s</b> 使用门户 IP 地址 <b>"
+"%(portalAddress)s</b> 时发现了以下节点。请选择您要登录的节点："
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.py:82
 msgctxt "GUI|Advanced Storage|NVDIM"
@@ -3135,23 +3161,23 @@ msgctxt "GUI|Spoke"
 msgid "Installation _Destination"
 msgstr "安装目的地(_D)"
 
-#: pyanaconda/ui/gui/spokes/storage.py:346
+#: pyanaconda/ui/gui/spokes/storage.py:349
 msgid ""
 "Partitioning method changed - planned storage configuration changes will be "
 "cancelled."
 msgstr "分区模式已改变——已计划的存储配置改变将被取消。"
 
-#: pyanaconda/ui/gui/spokes/storage.py:553
+#: pyanaconda/ui/gui/spokes/storage.py:556
 msgid ""
 "Error checking storage configuration.  <a href=\"\">Click for details.</a>"
 msgstr "检查存储配置时出错。<a href=\"\">点击查看详情。</a>"
 
-#: pyanaconda/ui/gui/spokes/storage.py:557
+#: pyanaconda/ui/gui/spokes/storage.py:560
 msgid ""
 "Warning checking storage configuration.  <a href=\"\">Click for details.</a>"
 msgstr "检查存储设置时报警。<a href=\"\">点击查看详情。</a>"
 
-#: pyanaconda/ui/gui/spokes/storage.py:588
+#: pyanaconda/ui/gui/spokes/storage.py:591
 #, python-brace-format
 msgid ""
 "FCP device {hba_id}\n"
@@ -3162,54 +3188,54 @@ msgstr ""
 "WWPN {wwpn}\n"
 "LUN {lun}"
 
-#: pyanaconda/ui/gui/spokes/storage.py:594
+#: pyanaconda/ui/gui/spokes/storage.py:597
 #, python-brace-format
 msgid "NVDIMM device {namespace}"
 msgstr "NVDIMM 设备 {namespace}"
 
-#: pyanaconda/ui/gui/spokes/storage.py:608
+#: pyanaconda/ui/gui/spokes/storage.py:611
 msgid "{} free"
 msgstr "{} 空闲"
 
-#: pyanaconda/ui/gui/spokes/storage.py:710
+#: pyanaconda/ui/gui/spokes/storage.py:714
 msgid ""
 "You have chosen to skip boot loader installation. Your system may not be "
 "bootable."
 msgstr "您选择了跳过引导加载程序安装。系统可能无法引导。"
 
-#: pyanaconda/ui/gui/spokes/storage.py:889
+#: pyanaconda/ui/gui/spokes/storage.py:893
 msgid "There was a problem with your disk selection. Click here for details."
 msgstr "您的磁盘选择有问题。点击此处查看详情。"
 
-#: pyanaconda/ui/gui/spokes/storage.py:994
+#: pyanaconda/ui/gui/spokes/storage.py:998
 msgid ""
 "The following errors were encountered when checking your disk selection. You "
 "can modify your selection or quit the installer."
 msgstr "在检测您的磁盘选择时发生以下错误。 您可对选择进行修改或退出安装程序。"
 
-#: pyanaconda/ui/gui/spokes/storage.py:999
-#: pyanaconda/ui/gui/spokes/storage.py:1020
+#: pyanaconda/ui/gui/spokes/storage.py:1003
+#: pyanaconda/ui/gui/spokes/storage.py:1024
 msgctxt "GUI|Storage|Error Dialog"
 msgid "_Quit"
 msgstr "退出(_Q)"
 
-#: pyanaconda/ui/gui/spokes/storage.py:1000
+#: pyanaconda/ui/gui/spokes/storage.py:1004
 msgctxt "GUI|Storage|Error Dialog"
 msgid "_Modify Disk Selection"
 msgstr "修改磁盘选择(_M)"
 
-#: pyanaconda/ui/gui/spokes/storage.py:1015
+#: pyanaconda/ui/gui/spokes/storage.py:1019
 msgid ""
 "The following errors were encountered when checking your storage "
 "configuration.  You can modify your storage layout or quit the installer."
 msgstr "在检测您的存储配置时发生以下错误。 您可以修改存储方案或退出安装程序。"
 
-#: pyanaconda/ui/gui/spokes/storage.py:1021
+#: pyanaconda/ui/gui/spokes/storage.py:1025
 msgctxt "GUI|Storage|Error Dialog"
 msgid "_Modify Storage Layout"
 msgstr "修改存储布局(_M)"
 
-#: pyanaconda/ui/gui/spokes/storage.py:1035
+#: pyanaconda/ui/gui/spokes/storage.py:1039
 msgid ""
 "The following warnings were encountered when checking your storage "
 "configuration.  These are not fatal, but you may wish to make changes to "
@@ -3218,7 +3244,7 @@ msgstr ""
 "在检测您的存储配置时发生以下错误。虽然并不是致命错误，但您应该考虑修改存储方"
 "案。"
 
-#: pyanaconda/ui/gui/spokes/storage.py:1040
+#: pyanaconda/ui/gui/spokes/storage.py:1044
 msgctxt "GUI|Storage|Warning Dialog"
 msgid "_OK"
 msgstr "好(_O)"
@@ -3423,32 +3449,37 @@ msgstr "数据"
 msgid "SYSTEM"
 msgstr "系统"
 
-#: pyanaconda/ui/gui/spokes/lib/accordion.py:489
+#: pyanaconda/ui/gui/spokes/lib/accordion.py:490
 #, python-format
 msgid ""
 "You haven't created any mount points for your %(product)s %(version)s "
 "installation yet.  You can:"
 msgstr "您还没有为 %(product)s %(version)s 的安装创建任何挂载点。您可以："
 
-#: pyanaconda/ui/gui/spokes/lib/accordion.py:499
+#: pyanaconda/ui/gui/spokes/lib/accordion.py:500
 msgctxt "GUI|Custom Partitioning|Autopart Page"
 msgid "_Click here to create them automatically."
 msgstr "点击这里自动创建它们(_C)。"
 
-#: pyanaconda/ui/gui/spokes/lib/accordion.py:525
+#: pyanaconda/ui/gui/spokes/lib/accordion.py:526
 msgid "Create new mount points by clicking the '+' button."
 msgstr "通过点击“＋”按钮创建新挂载点。"
 
-#: pyanaconda/ui/gui/spokes/lib/accordion.py:533
+#: pyanaconda/ui/gui/spokes/lib/accordion.py:534
 msgid ""
 "Or, assign new mount points to existing partitions after selecting them "
 "below."
 msgstr "或者向下方选择的已有分区分配新挂载点。"
 
-#: pyanaconda/ui/gui/spokes/lib/accordion.py:538
+#: pyanaconda/ui/gui/spokes/lib/accordion.py:539
 msgctxt "GUI|Custom Partitioning|Autopart Page"
 msgid "_New mount points will use the following partitioning scheme:"
 msgstr "新挂载点将使用以下分区方案(_N)："
+
+#: pyanaconda/ui/gui/spokes/lib/accordion.py:559
+msgctxt "GUI|Custom Partitioning|Autopart Page"
+msgid "_Encrypt automatically created mount points by default:"
+msgstr ""
 
 #: pyanaconda/ui/gui/spokes/lib/cart.py:193
 msgctxt "GUI|Selected Disks Dialog"
@@ -3784,19 +3815,19 @@ msgstr ""
 "在某些 PPC 平台中的引导程序配置中，\n"
 "需要 PReP 引导分区。"
 
-#: pyanaconda/core/constants.py:88
+#: pyanaconda/core/constants.py:89
 msgid "Start VNC"
 msgstr "启动 VNC"
 
-#: pyanaconda/core/constants.py:89
+#: pyanaconda/core/constants.py:90
 msgid "Use text mode"
 msgstr "使用文本模式"
 
-#: pyanaconda/core/constants.py:92
+#: pyanaconda/core/constants.py:93
 msgid "Do you really want to quit?"
 msgstr "您确定要停止吗？"
 
-#: pyanaconda/core/constants.py:158
+#: pyanaconda/core/constants.py:159
 msgid ""
 "Support for this hardware has been removed in this major OS release. Please "
 "check theremoved functionality section of the release notes."
@@ -3804,7 +3835,7 @@ msgstr ""
 "此主发行版本中已删除对此硬件的支持。请查阅发行注记中“已删除功能”部分中的内"
 "容。"
 
-#: pyanaconda/core/constants.py:163
+#: pyanaconda/core/constants.py:164
 msgid ""
 "This hardware (or a combination thereof) is not supported by Red Hat. For "
 "more information on supported hardware, please refer to http://www.redhat."
@@ -3813,17 +3844,17 @@ msgstr ""
 "红帽尚不支持该硬件(或其组合)。欲了解受支持的硬件信息，请访问 http://www."
 "redhat.com/hardware。"
 
-#: pyanaconda/core/constants.py:169
+#: pyanaconda/core/constants.py:170
 msgid ""
 "No disks detected.  Please shut down the computer, connect at least one "
 "disk, and restart to complete installation."
 msgstr "没有检测到磁盘。请关闭计算机并至少连接一块磁盘后，重新启动进行安装。"
 
-#: pyanaconda/core/constants.py:174
+#: pyanaconda/core/constants.py:175
 msgid "No disks selected; please select at least one disk to install to."
 msgstr "尚未选择磁盘，要安装系统请至少选择一个磁盘。"
 
-#: pyanaconda/core/constants.py:179
+#: pyanaconda/core/constants.py:180
 msgid ""
 "Simultaneous Multithreading (SMT) technology can provide performance "
 "improvements for certain workloads, but introduces several publicly "
@@ -3832,10 +3863,12 @@ msgid ""
 "red.ht/rhel-smt to understand your potential risks and learn about other "
 "ways to mitigate these risks."
 msgstr ""
-"同步多线程（SMT）技术可以为某些工作负载提供性能改进，但也会引入几个已披露的安全问题。您可以选择禁用 SMT，但这可能会对性能造成一些影响。"
-"如果您选择启用 SMT，请参阅 https://red.ht/rhel-smt 以了解相关的潜在风险，以及如何缓解这些风险。"
+"同步多线程（SMT）技术可以为某些工作负载提供性能改进，但也会引入几个已披露的安"
+"全问题。您可以选择禁用 SMT，但这可能会对性能造成一些影响。如果您选择启用 "
+"SMT，请参阅 https://red.ht/rhel-smt 以了解相关的潜在风险，以及如何缓解这些风"
+"险。"
 
-#: pyanaconda/core/constants.py:189
+#: pyanaconda/core/constants.py:190
 msgid ""
 "Simultaneous Multithreading (SMT) may improve performance for certain "
 "workloads, but introduces several publicly disclosed security issues. You "
@@ -3843,107 +3876,108 @@ msgid ""
 "rhel-smt to understand potential risks and learn about ways to mitigate "
 "these risks."
 msgstr ""
-"同步多线程（SMT）技术可以为某些工作负载提供性能改进，但也会引入几个已披露的安全问题。您可以选择禁用 SMT，但这可能会对性能造成一些影响。请参阅 "
-"https://red.ht/rhel-smt 以了解相关的潜在风险，以及如何缓解这些风险。"
+"同步多线程（SMT）技术可以为某些工作负载提供性能改进，但也会引入几个已披露的安"
+"全问题。您可以选择禁用 SMT，但这可能会对性能造成一些影响。请参阅 https://red."
+"ht/rhel-smt 以了解相关的潜在风险，以及如何缓解这些风险。"
 
-#: pyanaconda/core/constants.py:205
+#: pyanaconda/core/constants.py:206
 msgid "The password is empty."
 msgstr "密码为空。"
 
-#: pyanaconda/core/constants.py:206
+#: pyanaconda/core/constants.py:207
 msgid "The passphrase is empty."
 msgstr "口令没有设定。"
 
-#: pyanaconda/core/constants.py:209
+#: pyanaconda/core/constants.py:210
 msgid "The passwords do not match."
 msgstr "密码不匹配。"
 
-#: pyanaconda/core/constants.py:210
+#: pyanaconda/core/constants.py:211
 msgid "The passphrases do not match."
 msgstr "口令前后不匹配。"
 
-#: pyanaconda/core/constants.py:213
+#: pyanaconda/core/constants.py:214
 msgid "The passwords you entered were different. Please try again."
 msgstr "您输入的密码不一致，请重试。"
 
-#: pyanaconda/core/constants.py:214
+#: pyanaconda/core/constants.py:215
 msgid "The passphrases you entered were different. Please try again."
 msgstr "您输入的口令不一致，请重试。"
 
-#: pyanaconda/core/constants.py:220
+#: pyanaconda/core/constants.py:221
 msgid "The password is too short"
 msgstr "密码长度太短"
 
-#: pyanaconda/core/constants.py:221
+#: pyanaconda/core/constants.py:222
 msgid "The passphrase is too short"
 msgstr "口令太短"
 
-#: pyanaconda/core/constants.py:224
+#: pyanaconda/core/constants.py:225
 msgid "The password you have provided is weak."
 msgstr "您给定的密码强度较弱。"
 
-#: pyanaconda/core/constants.py:225
+#: pyanaconda/core/constants.py:226
 msgid "The passphrase you have provided is weak."
 msgstr "您给定的口令强度较弱。"
 
-#: pyanaconda/core/constants.py:228
+#: pyanaconda/core/constants.py:229
 msgid "The password you have provided is weak:"
 msgstr "您提供的密码强度较弱："
 
-#: pyanaconda/core/constants.py:229
+#: pyanaconda/core/constants.py:230
 msgid "The passphrase you have provided is weak:"
 msgstr "您提供的口令强度较弱："
 
-#: pyanaconda/core/constants.py:231
+#: pyanaconda/core/constants.py:232
 msgid "Press <b>Done</b> again to use the password anyway."
 msgstr "再次按<b>完成</b>按钮以使用该密码。"
 
-#: pyanaconda/core/constants.py:233
+#: pyanaconda/core/constants.py:234
 msgid ""
 "The password you have provided contains non-ASCII characters. You may not be "
 "able to switch between keyboard layouts when typing it."
 msgstr "您设定的密码中包括非 ASCII 字符。在输入时您可能无法切换键盘布局。"
 
-#: pyanaconda/core/constants.py:234
+#: pyanaconda/core/constants.py:235
 msgid ""
 "The passphrase you have provided contains non-ASCII characters. You may not "
 "be able to switch between keyboard layouts when typing it."
 msgstr "您设定的口令中包括非 ASCII 字符。在输入时您可能无法切换键盘布局。"
 
-#: pyanaconda/core/constants.py:236
+#: pyanaconda/core/constants.py:237
 msgid "You will have to press <b>Done</b> twice to confirm it."
 msgstr "必须按两次<b>完成</b>按钮进行确认。"
 
-#: pyanaconda/core/constants.py:241
+#: pyanaconda/core/constants.py:242
 msgid "Empty"
 msgstr "空白"
 
-#: pyanaconda/core/constants.py:242
+#: pyanaconda/core/constants.py:243
 msgid "Too short"
 msgstr "过短"
 
-#: pyanaconda/core/constants.py:243
+#: pyanaconda/core/constants.py:244
 #: pyanaconda/ui/gui/spokes/lib/passphrase.glade:182
 msgid "Weak"
 msgstr "弱"
 
-#: pyanaconda/core/constants.py:244
+#: pyanaconda/core/constants.py:245
 msgid "Fair"
 msgstr "适中"
 
-#: pyanaconda/core/constants.py:245
+#: pyanaconda/core/constants.py:246
 msgid "Good"
 msgstr "好"
 
-#: pyanaconda/core/constants.py:246
+#: pyanaconda/core/constants.py:247
 msgid "Strong"
 msgstr "强"
 
-#: pyanaconda/core/constants.py:249
+#: pyanaconda/core/constants.py:250
 msgid "Hide password."
 msgstr "隐藏密码。"
 
-#: pyanaconda/core/constants.py:250
+#: pyanaconda/core/constants.py:251
 msgid "Show password."
 msgstr "显示密码。"
 
@@ -7040,11 +7074,6 @@ msgstr "安装"
 msgid "Install the live CD to your hard disk"
 msgstr "将 Live CD 安装到您的硬盘"
 
-#. TRANSLATORS: Icon name, probably should not be translated
-#: data/liveinst/liveinst.desktop:11
-msgid "org.fedoraproject.AnacondaInstaller"
-msgstr "org.fedoraproject.AnacondaInstaller"
-
 #: data/liveinst/gnome/rhel-welcome.desktop:3
 #: data/liveinst/gnome/rhel-welcome.js:62
 msgid "Welcome to Red Hat Enterprise Linux"
@@ -7083,6 +7112,9 @@ msgstr "关闭"
 #: ../data/liveinst/console.apps/liveinst.h:1
 msgid "Starting Install to Hard Drive"
 msgstr "开始安装到硬盘"
+
+#~ msgid "org.fedoraproject.AnacondaInstaller"
+#~ msgstr "org.fedoraproject.AnacondaInstaller"
 
 #~ msgctxt "GUI|Network|Wireless"
 #~ msgid "_Network Name"
@@ -7162,15 +7194,6 @@ msgstr "开始安装到硬盘"
 #~ "%s\n"
 #~ "\n"
 #~ "安装程序将终止。"
-
-#~ msgid ""
-#~ "Failed to connect the system to Red Hat Insights.\n"
-#~ "\n"
-#~ "Would you like to ignore this and continue with installation?"
-#~ msgstr ""
-#~ "无法将系统连接到 Red Hat Insights。\n"
-#~ "\n"
-#~ "您是否要忽略这一点并继续安装？"
 
 #~ msgid ""
 #~ "The insights-client utility needed to connect the system to Red Hat "

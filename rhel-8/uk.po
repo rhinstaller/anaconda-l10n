@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2021-03-22 15:05+0100\n"
+"POT-Creation-Date: 2021-07-02 14:00+0200\n"
 "PO-Revision-Date: 2021-04-12 16:48+0000\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <https://translate.fedoraproject.org/projects/"
@@ -135,11 +135,11 @@ msgstr "Виконуємо завдання з налаштовування пі
 msgid "Creating snapshots"
 msgstr "Створення знімків"
 
-#: pyanaconda/display.py:291
+#: pyanaconda/display.py:301
 msgid "Graphical installation is not available. Starting text mode."
 msgstr "Графічне встановлення неможливе. Запускається текстовий режим."
 
-#: pyanaconda/display.py:299
+#: pyanaconda/display.py:309
 msgid ""
 "Text mode provides a limited set of installation options. It does not offer "
 "custom partitioning for full control over the disk layout. Would you like to "
@@ -149,7 +149,7 @@ msgstr ""
 "не можна скористатися нетиповим поділом на розділи для створення довільного "
 "компонування систем на диску. Хочете натомість скористатися режимом VNC?"
 
-#: pyanaconda/display.py:328
+#: pyanaconda/display.py:352
 msgid ""
 "X was unable to start on your machine. Would you like to start VNC to "
 "connect to this computer from another computer and perform a graphical "
@@ -338,6 +338,20 @@ msgstr ""
 #, python-format
 msgid "Unable to encrypt password: unsupported algorithm %s"
 msgstr "Не вдалося зашифрувати пароль: непідтримуваний алгоритм %s"
+
+#: pyanaconda/errors.py:264
+#, fuzzy
+#| msgid ""
+#| "Failed to connect the system to Red Hat Insights.\n"
+#| "\n"
+#| "Would you like to ignore this and continue with installation?"
+msgid ""
+"An error occurred during Red Hat Insights configuration. Would you like to "
+"ignore this and continue with installation?"
+msgstr ""
+"Не вдалося з'єднати систему із Red Hat Insights.\n"
+"\n"
+"Хочете проігнорувати це і продовжити встановлення?"
 
 #: pyanaconda/kickstart.py:540
 msgid ""
@@ -1182,7 +1196,7 @@ msgstr "{} не може бути зашифровано"
 msgid "Device does not support RAID level selection {}."
 msgstr "Для пристрою не передбачено підтримки вибору рівня RAID {}."
 
-#: pyanaconda/modules/storage/partitioning/interactive/utils.py:1197
+#: pyanaconda/modules/storage/partitioning/interactive/utils.py:1196
 #, python-format
 msgid ""
 "This Software RAID array is missing %(missing)d of %(total)d member "
@@ -1191,7 +1205,7 @@ msgstr ""
 "У цьому програмному масиві RAID не вистачає %(missing)d з %(total)d "
 "складових розділів. Ви можете вилучити його або вказати інший пристрій."
 
-#: pyanaconda/modules/storage/partitioning/interactive/utils.py:1204
+#: pyanaconda/modules/storage/partitioning/interactive/utils.py:1203
 #, python-format
 msgid ""
 "This LVM Volume Group is missing %(missingPVs)d of %(totalPVs)d physical "
@@ -1200,7 +1214,7 @@ msgstr ""
 "У цій групі LVM не вистачає %(missingPVs)d з %(totalPVs)d фізичних томів. Ви "
 "можете вилучити його або вказати інший пристрій."
 
-#: pyanaconda/modules/storage/partitioning/interactive/utils.py:1208
+#: pyanaconda/modules/storage/partitioning/interactive/utils.py:1207
 #, python-format
 msgid ""
 "This %(type)s device is missing member devices. You can remove it or select "
@@ -1500,7 +1514,7 @@ msgstr "Не знайдено %s. Налаштовування брандмау�
 
 #: pyanaconda/modules/subscription/runtime.py:257
 #: pyanaconda/modules/subscription/runtime.py:303
-#: pyanaconda/ui/gui/spokes/subscription.py:998
+#: pyanaconda/ui/gui/spokes/subscription.py:1009
 msgid "Registration failed."
 msgstr "Не вдалося зареєструватися."
 
@@ -1512,18 +1526,18 @@ msgstr "Не вдалося скасувати реєстрацію."
 msgid "Failed to attach subscription."
 msgstr "Не вдалося долучити передплату."
 
-#: pyanaconda/modules/subscription/runtime.py:441
+#: pyanaconda/modules/subscription/runtime.py:448
 msgid "product name unknown"
 msgstr "невідома назва продукту"
 
-#: pyanaconda/modules/subscription/runtime.py:448
 #: pyanaconda/modules/subscription/runtime.py:455
-#: pyanaconda/modules/subscription/runtime.py:468
-#: pyanaconda/modules/subscription/runtime.py:476
+#: pyanaconda/modules/subscription/runtime.py:462
+#: pyanaconda/modules/subscription/runtime.py:475
+#: pyanaconda/modules/subscription/runtime.py:483
 msgid "unknown"
 msgstr "невідома"
 
-#: pyanaconda/modules/subscription/runtime.py:461
+#: pyanaconda/modules/subscription/runtime.py:468
 msgid "not available"
 msgstr "не доступне"
 
@@ -1637,7 +1651,7 @@ msgid "Starting automated install"
 msgstr "Розпочинаємо автоматичне встановлення"
 
 #. TRANSLATORS: 'b' to begin installation
-#: pyanaconda/ui/tui/hubs/summary.py:106
+#: pyanaconda/ui/tui/hubs/summary.py:104
 #, python-format
 msgid "Enter '%s' to ignore the warning and attempt to install anyway."
 msgstr ""
@@ -1645,33 +1659,33 @@ msgstr ""
 "встановити систему."
 
 #. TRANSLATORS: 'b' to begin installation
-#: pyanaconda/ui/tui/hubs/summary.py:108 pyanaconda/ui/tui/hubs/summary.py:135
-#: pyanaconda/ui/tui/hubs/summary.py:147
+#: pyanaconda/ui/tui/hubs/summary.py:106 pyanaconda/ui/tui/hubs/summary.py:133
+#: pyanaconda/ui/tui/hubs/summary.py:145
 msgctxt "TUI|Spoke Navigation"
 msgid "b"
 msgstr "b"
 
-#: pyanaconda/ui/tui/hubs/summary.py:117
+#: pyanaconda/ui/tui/hubs/summary.py:115
 msgid "The following mandatory spokes are not completed:"
 msgstr "Не завершено такі обов’язкові кроки:"
 
-#: pyanaconda/ui/tui/hubs/summary.py:135
+#: pyanaconda/ui/tui/hubs/summary.py:133
 msgid "to begin installation"
 msgstr "розпочати встановлення"
 
-#: pyanaconda/ui/tui/hubs/summary.py:150 pyanaconda/ui/tui/hubs/__init__.py:135
+#: pyanaconda/ui/tui/hubs/summary.py:148 pyanaconda/ui/tui/hubs/__init__.py:135
 msgid "Please complete all spokes before continuing"
 msgstr "Будь ласка, завершіть все, перш ніж продовжити"
 
 #. TRANSLATORS: 'c' to continue
-#: pyanaconda/ui/tui/hubs/summary.py:160
+#: pyanaconda/ui/tui/hubs/summary.py:158
 #: pyanaconda/ui/tui/spokes/installation_source.py:477
-#: pyanaconda/ui/tui/spokes/network.py:566
+#: pyanaconda/ui/tui/spokes/network.py:571
 #: pyanaconda/ui/tui/spokes/software_selection.py:251
-#: pyanaconda/ui/tui/spokes/storage.py:254
-#: pyanaconda/ui/tui/spokes/storage.py:527
-#: pyanaconda/ui/tui/spokes/storage.py:599
-#: pyanaconda/ui/tui/spokes/storage.py:667
+#: pyanaconda/ui/tui/spokes/storage.py:259
+#: pyanaconda/ui/tui/spokes/storage.py:536
+#: pyanaconda/ui/tui/spokes/storage.py:608
+#: pyanaconda/ui/tui/spokes/storage.py:676
 msgctxt "TUI|Spoke Navigation"
 msgid "c"
 msgstr "c"
@@ -1710,8 +1724,8 @@ msgstr "Помилка під час спроби налаштовування �
 
 #: pyanaconda/ui/tui/spokes/installation_source.py:110
 #: pyanaconda/ui/tui/spokes/software_selection.py:158
-#: pyanaconda/ui/tui/spokes/storage.py:123
-#: pyanaconda/ui/gui/spokes/storage.py:420
+#: pyanaconda/ui/tui/spokes/storage.py:128
+#: pyanaconda/ui/gui/spokes/storage.py:423
 msgid "Processing..."
 msgstr "Обробка…"
 
@@ -1869,65 +1883,65 @@ msgstr "Помилкове форматування IP-адреси"
 msgid "Bad format of the netmask"
 msgstr "Помилкове форматування маски мережі"
 
-#: pyanaconda/ui/tui/spokes/network.py:207
+#: pyanaconda/ui/tui/spokes/network.py:212
 msgid "Network configuration"
 msgstr "Налаштування мережі"
 
-#: pyanaconda/ui/tui/spokes/network.py:269
+#: pyanaconda/ui/tui/spokes/network.py:274
 #, python-format
 msgid "Wired (%(interface_name)s) disconnected\n"
 msgstr "Дротове з’єднання (%(interface_name)s) розірвано\n"
 
-#: pyanaconda/ui/tui/spokes/network.py:274
+#: pyanaconda/ui/tui/spokes/network.py:279
 #, python-format
 msgid "Wired (%(interface_name)s) connected\n"
 msgstr "Встановлено дротове з’єднання (%(interface_name)s)\n"
 
-#: pyanaconda/ui/tui/spokes/network.py:290
+#: pyanaconda/ui/tui/spokes/network.py:295
 #, python-format
 msgid " IPv4 Address: %(addr)s Netmask: %(netmask)s Gateway: %(gateway)s\n"
 msgstr " Адреса IPv4: %(addr)s Маска мережі: %(netmask)s Шлюз: %(gateway)s\n"
 
-#: pyanaconda/ui/tui/spokes/network.py:292
+#: pyanaconda/ui/tui/spokes/network.py:297
 #, python-format
 msgid " DNS: %s\n"
 msgstr " DNS: %s\n"
 
-#: pyanaconda/ui/tui/spokes/network.py:301
+#: pyanaconda/ui/tui/spokes/network.py:306
 #, python-format
 msgid " IPv6 Address: %(addr)s/%(prefix)d\n"
 msgstr " Адреса IPv6: %(addr)s/%(prefix)d\n"
 
-#: pyanaconda/ui/tui/spokes/network.py:312
+#: pyanaconda/ui/tui/spokes/network.py:317
 msgid "Network configuration is not available."
 msgstr "Налаштовування мережі є недоступним."
 
-#: pyanaconda/ui/tui/spokes/network.py:318
+#: pyanaconda/ui/tui/spokes/network.py:323
 #, python-format
 msgid "Host Name: %s\n"
 msgstr "Назва вузла: %s\n"
 
-#: pyanaconda/ui/tui/spokes/network.py:320
+#: pyanaconda/ui/tui/spokes/network.py:325
 #, python-format
 msgid "Current host name: %s\n"
 msgstr "Поточна назва вузла: %s\n"
 
-#: pyanaconda/ui/tui/spokes/network.py:327
+#: pyanaconda/ui/tui/spokes/network.py:332
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:239
 #: pyanaconda/ui/gui/spokes/network.glade:2506
 msgid "Host Name"
 msgstr "Назва вузла"
 
-#: pyanaconda/ui/tui/spokes/network.py:328
+#: pyanaconda/ui/tui/spokes/network.py:333
 msgid "Set host name"
 msgstr "Встановити назву вузла"
 
-#: pyanaconda/ui/tui/spokes/network.py:332
+#: pyanaconda/ui/tui/spokes/network.py:337
 #, python-format
 msgid "Configure device %s"
 msgstr "Налаштувати пристрій %s"
 
-#: pyanaconda/ui/tui/spokes/network.py:426
+#: pyanaconda/ui/tui/spokes/network.py:431
 #: pyanaconda/ui/gui/spokes/network.py:1567
 #: pyanaconda/ui/gui/spokes/network.py:1586
 #: pyanaconda/ui/gui/spokes/network.py:1682
@@ -1936,24 +1950,24 @@ msgstr "Налаштувати пристрій %s"
 msgid "Host name is not valid: %s"
 msgstr "Некоректна назва вузла: %s"
 
-#: pyanaconda/ui/tui/spokes/network.py:442
+#: pyanaconda/ui/tui/spokes/network.py:447
 msgid "Device configuration"
 msgstr "Налаштування пристрою"
 
-#: pyanaconda/ui/tui/spokes/network.py:464
+#: pyanaconda/ui/tui/spokes/network.py:469
 #, python-format
 msgid "IPv4 address or %s for DHCP"
 msgstr "Адреса IPv4 або %s для DHCP"
 
-#: pyanaconda/ui/tui/spokes/network.py:468
+#: pyanaconda/ui/tui/spokes/network.py:473
 msgid "IPv4 netmask"
 msgstr "Маска мережі IPv4"
 
-#: pyanaconda/ui/tui/spokes/network.py:471
+#: pyanaconda/ui/tui/spokes/network.py:476
 msgid "IPv4 gateway"
 msgstr "Шлюз IPv4"
 
-#: pyanaconda/ui/tui/spokes/network.py:474
+#: pyanaconda/ui/tui/spokes/network.py:479
 #, python-format
 msgid ""
 "IPv6 address[/prefix] or %(auto)s for automatic, %(dhcp)s for DHCP, "
@@ -1962,28 +1976,28 @@ msgstr ""
 "Адреса IPv6[/префікс] або %(auto)s для автоматичного визначення, %(dhcp)s "
 "для DHCP, %(ignore)s для вимикання"
 
-#: pyanaconda/ui/tui/spokes/network.py:480
+#: pyanaconda/ui/tui/spokes/network.py:485
 msgid "IPv6 default gateway"
 msgstr "Типовий шлюз IPv6"
 
-#: pyanaconda/ui/tui/spokes/network.py:483
+#: pyanaconda/ui/tui/spokes/network.py:488
 msgid "Nameservers (comma separated)"
 msgstr "Сервери назв (відокремлені комами)"
 
-#: pyanaconda/ui/tui/spokes/network.py:486
+#: pyanaconda/ui/tui/spokes/network.py:491
 msgid "Connect automatically after reboot"
 msgstr "Встановлювати з’єднання автоматично після перезавантаження"
 
-#: pyanaconda/ui/tui/spokes/network.py:490
+#: pyanaconda/ui/tui/spokes/network.py:495
 msgid "Apply configuration in installer"
 msgstr "Застосувати налаштування у засобі встановлення"
 
-#: pyanaconda/ui/tui/spokes/network.py:496
+#: pyanaconda/ui/tui/spokes/network.py:501
 #, python-format
 msgid "Configuring device %s."
 msgstr "Налаштовуємо пристрій %s."
 
-#: pyanaconda/ui/tui/spokes/network.py:568
+#: pyanaconda/ui/tui/spokes/network.py:573
 msgid "Configuration not saved: netmask missing in static configuration"
 msgstr ""
 "Налаштування не збережено: у статичних налаштуваннях не вказано маску мережі"
@@ -2146,41 +2160,41 @@ msgstr "Використати вільне місце"
 msgid "Installation Destination"
 msgstr "Місце встановлення"
 
-#: pyanaconda/ui/tui/spokes/storage.py:125
-#: pyanaconda/ui/gui/spokes/storage.py:422
+#: pyanaconda/ui/tui/spokes/storage.py:130
+#: pyanaconda/ui/gui/spokes/storage.py:425
 msgid "Kickstart insufficient"
 msgstr "Недостатньо даних Kickstart"
 
-#: pyanaconda/ui/tui/spokes/storage.py:127
-#: pyanaconda/ui/gui/spokes/storage.py:424
+#: pyanaconda/ui/tui/spokes/storage.py:132
+#: pyanaconda/ui/gui/spokes/storage.py:427
 msgid "No disks selected"
 msgstr "Не позначено жодного диска"
 
-#: pyanaconda/ui/tui/spokes/storage.py:129
-#: pyanaconda/ui/gui/spokes/storage.py:426
+#: pyanaconda/ui/tui/spokes/storage.py:134
+#: pyanaconda/ui/gui/spokes/storage.py:429
 msgid "Error checking storage configuration"
 msgstr "Помилка під час спроби перевірити налаштування носія"
 
-#: pyanaconda/ui/tui/spokes/storage.py:131
-#: pyanaconda/ui/gui/spokes/storage.py:428
+#: pyanaconda/ui/tui/spokes/storage.py:136
+#: pyanaconda/ui/gui/spokes/storage.py:431
 msgid "Warning checking storage configuration"
 msgstr "Попередження під час перевірки налаштувань носіїв даних"
 
-#: pyanaconda/ui/tui/spokes/storage.py:133
-#: pyanaconda/ui/gui/spokes/storage.py:430
+#: pyanaconda/ui/tui/spokes/storage.py:138
+#: pyanaconda/ui/gui/spokes/storage.py:433
 msgid "Automatic partitioning selected"
 msgstr "Визначено автоматичний розподіл на розділи"
 
-#: pyanaconda/ui/tui/spokes/storage.py:135
-#: pyanaconda/ui/gui/spokes/storage.py:432
+#: pyanaconda/ui/tui/spokes/storage.py:140
+#: pyanaconda/ui/gui/spokes/storage.py:435
 msgid "Custom partitioning selected"
 msgstr "Визначено нетиповий розподіл на розділи"
 
-#: pyanaconda/ui/tui/spokes/storage.py:201
+#: pyanaconda/ui/tui/spokes/storage.py:206
 msgid "Select all"
 msgstr "Позначити все"
 
-#: pyanaconda/ui/tui/spokes/storage.py:310
+#: pyanaconda/ui/tui/spokes/storage.py:315
 msgid ""
 "The following unformatted or LDL DASDs have been detected on your system. "
 "You can choose to format them now with dasdfmt or cancel to leave them "
@@ -2193,7 +2207,7 @@ msgstr ""
 "використати під час встановлення.\n"
 "\n"
 
-#: pyanaconda/ui/tui/spokes/storage.py:317
+#: pyanaconda/ui/tui/spokes/storage.py:322
 msgid ""
 "Warning: All storage changes made using the installer will be lost when you "
 "choose to format.\n"
@@ -2205,15 +2219,15 @@ msgstr ""
 "\n"
 "Продовжити і використати dasdfmt?\n"
 
-#: pyanaconda/ui/tui/spokes/storage.py:326
+#: pyanaconda/ui/tui/spokes/storage.py:331
 msgid "This may take a moment."
 msgstr "Зачекайте, будь ласка."
 
-#: pyanaconda/ui/tui/spokes/storage.py:342
+#: pyanaconda/ui/tui/spokes/storage.py:347
 msgid "Passphrase"
 msgstr "Пароль"
 
-#: pyanaconda/ui/tui/spokes/storage.py:343
+#: pyanaconda/ui/tui/spokes/storage.py:348
 msgid ""
 "Please provide a default LUKS passphrase for all devices you want to "
 "encrypt. You will have to type it twice."
@@ -2221,15 +2235,15 @@ msgstr ""
 "Будь ласка, надайте типовий пароль LUKS для усіх пристроїв, які ви хочете "
 "зашифрувати. Вам доведеться ввести пароль двічі."
 
-#: pyanaconda/ui/tui/spokes/storage.py:428
+#: pyanaconda/ui/tui/spokes/storage.py:437
 msgid "Partitioning Options"
 msgstr "Параметри розділів диска"
 
-#: pyanaconda/ui/tui/spokes/storage.py:468
+#: pyanaconda/ui/tui/spokes/storage.py:477
 msgid "Manually assign mount points"
 msgstr "Призначити точки монтування вручну"
 
-#: pyanaconda/ui/tui/spokes/storage.py:475
+#: pyanaconda/ui/tui/spokes/storage.py:484
 msgid ""
 "Installation requires partitioning of your hard drive. Select what space to "
 "use for the install target or manually assign mount points."
@@ -2237,23 +2251,23 @@ msgstr ""
 "Для встановлення потрібні розділи на жорсткому диску. Виберіть місце, куди "
 "буде встановлено систему або призначте точки монтування вручну."
 
-#: pyanaconda/ui/tui/spokes/storage.py:520
+#: pyanaconda/ui/tui/spokes/storage.py:529
 msgid "Reverting previous configuration. This may take a moment..."
 msgstr "Повертаємося до попередніх налаштувань. Зачекайте, будь ласка…"
 
-#: pyanaconda/ui/tui/spokes/storage.py:552
+#: pyanaconda/ui/tui/spokes/storage.py:561
 msgid "Partition Scheme Options"
 msgstr "Параметри схеми розділів"
 
-#: pyanaconda/ui/tui/spokes/storage.py:588
+#: pyanaconda/ui/tui/spokes/storage.py:597
 msgid "Select a partition scheme configuration."
 msgstr "Вкажіть параметри поділу на розділи."
 
-#: pyanaconda/ui/tui/spokes/storage.py:620
+#: pyanaconda/ui/tui/spokes/storage.py:629
 msgid "Assign mount points"
 msgstr "Призначити точки монтування"
 
-#: pyanaconda/ui/tui/spokes/storage.py:640
+#: pyanaconda/ui/tui/spokes/storage.py:649
 msgid ""
 "Choose device from above to assign mount point and set format.\n"
 "Formats marked with * are new formats meaning ALL DATA on the original "
@@ -2265,17 +2279,17 @@ msgstr ""
 "форматів призведе до ВТРАТИ УСІХ ДАНИХ у старому форматі!"
 
 #. TRANSLATORS: 's' to rescan devices
-#: pyanaconda/ui/tui/spokes/storage.py:652
-#: pyanaconda/ui/tui/spokes/storage.py:662
+#: pyanaconda/ui/tui/spokes/storage.py:661
+#: pyanaconda/ui/tui/spokes/storage.py:671
 msgctxt "TUI|Spoke Navigation|Partitioning"
 msgid "s"
 msgstr "s"
 
-#: pyanaconda/ui/tui/spokes/storage.py:652
+#: pyanaconda/ui/tui/spokes/storage.py:661
 msgid "rescan devices"
 msgstr "повторне сканування пристроїв"
 
-#: pyanaconda/ui/tui/spokes/storage.py:724
+#: pyanaconda/ui/tui/spokes/storage.py:733
 msgid ""
 "Warning: This will revert all changes done so far.\n"
 "Do you want to proceed?\n"
@@ -2284,50 +2298,50 @@ msgstr ""
 "змін.\n"
 "Ви хочете продовжити виконання дії?\n"
 
-#: pyanaconda/ui/tui/spokes/storage.py:733
+#: pyanaconda/ui/tui/spokes/storage.py:742
 msgid "Scanning disks. This may take a moment..."
 msgstr "Шукаємо диски. Зачекайте, будь ласка…"
 
-#: pyanaconda/ui/tui/spokes/storage.py:747
+#: pyanaconda/ui/tui/spokes/storage.py:756
 #, python-format
 msgid "Configure device: %s"
 msgstr "Налаштувати пристрій: %s"
 
-#: pyanaconda/ui/tui/spokes/storage.py:767
+#: pyanaconda/ui/tui/spokes/storage.py:776
 msgid "Choose from above to assign mount point and/or set format."
 msgstr ""
 "Виберіть один із наведених вище варіантів, щоб призначити точку монтування і/"
 "або встановити формат."
 
-#: pyanaconda/ui/tui/spokes/storage.py:783
+#: pyanaconda/ui/tui/spokes/storage.py:792
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:177
 msgid "Mount point"
 msgstr "Точка монтування"
 
-#: pyanaconda/ui/tui/spokes/storage.py:790
-#: pyanaconda/ui/tui/spokes/storage.py:795
-#: pyanaconda/ui/tui/spokes/storage.py:827
+#: pyanaconda/ui/tui/spokes/storage.py:799
+#: pyanaconda/ui/tui/spokes/storage.py:804
+#: pyanaconda/ui/tui/spokes/storage.py:836
 msgid "none"
 msgstr "немає"
 
-#: pyanaconda/ui/tui/spokes/storage.py:813
+#: pyanaconda/ui/tui/spokes/storage.py:822
 msgid "Invalid mount point given"
 msgstr "Вказано некоректну точку монтування"
 
-#: pyanaconda/ui/tui/spokes/storage.py:826
+#: pyanaconda/ui/tui/spokes/storage.py:835
 msgid "Format"
 msgstr "Форматувати"
 
-#: pyanaconda/ui/tui/spokes/storage.py:836
+#: pyanaconda/ui/tui/spokes/storage.py:845
 msgid "Invalid or unsupported format given"
 msgstr "Вказано некоректний або непідтримуваний формат"
 
-#: pyanaconda/ui/tui/spokes/storage.py:838
+#: pyanaconda/ui/tui/spokes/storage.py:847
 #, python-format
 msgid "Supported formats: %s"
 msgstr "Підтримувані формати: %s"
 
-#: pyanaconda/ui/tui/spokes/storage.py:855
+#: pyanaconda/ui/tui/spokes/storage.py:864
 msgid "Reformat"
 msgstr "Повторно форматувати"
 
@@ -2507,29 +2521,29 @@ msgctxt "GUI|Summary|Warning Dialog"
 msgid "_OK"
 msgstr "_Гаразд"
 
-#: pyanaconda/ui/gui/hubs/__init__.py:267
+#: pyanaconda/ui/gui/hubs/__init__.py:256
 msgid ""
 "Please complete items marked with this icon before continuing to the next "
 "step."
 msgstr ""
 "Будь ласка, заповніть пункти з цією піктограмою, перш ніж рухатися далі."
 
-#: pyanaconda/ui/gui/__init__.py:435 widgets/src/BaseWindow.c:151
+#: pyanaconda/ui/gui/__init__.py:346 widgets/src/BaseWindow.c:151
 msgid "Help!"
 msgstr "Допоможіть!"
 
-#: pyanaconda/ui/gui/__init__.py:945
+#: pyanaconda/ui/gui/__init__.py:835
 #: pyanaconda/ui/gui/spokes/lib/detailederror.py:58
 msgctxt "GUI|Detailed Error Dialog"
 msgid "_Quit"
 msgstr "Ви_йти"
 
-#: pyanaconda/ui/gui/__init__.py:961
+#: pyanaconda/ui/gui/__init__.py:851
 msgctxt "GUI|Yes No Dialog"
 msgid "_No"
 msgstr "_Ні"
 
-#: pyanaconda/ui/gui/__init__.py:962
+#: pyanaconda/ui/gui/__init__.py:852
 msgctxt "GUI|Yes No Dialog"
 msgid "_Yes"
 msgstr "_Так"
@@ -2539,81 +2553,81 @@ msgctxt "GUI|Spoke"
 msgid "_Connect to Red Hat"
 msgstr "З'_єднатися із Red Hat"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:216
-#: pyanaconda/ui/gui/spokes/subscription.py:230
-#: pyanaconda/core/constants.py:237
+#: pyanaconda/ui/gui/spokes/subscription.py:223
+#: pyanaconda/ui/gui/spokes/subscription.py:237
+#: pyanaconda/core/constants.py:238
 msgid "Password set."
 msgstr "Пароль встановлено."
 
-#: pyanaconda/ui/gui/spokes/subscription.py:244
+#: pyanaconda/ui/gui/spokes/subscription.py:251
 msgid "Activation key set."
 msgstr "Встановлено ключ активації."
 
-#: pyanaconda/ui/gui/spokes/subscription.py:990
+#: pyanaconda/ui/gui/spokes/subscription.py:1001
 msgid "Unregistering..."
 msgstr "Скасовуємо реєстрацію…"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:992
+#: pyanaconda/ui/gui/spokes/subscription.py:1003
 msgid "Registering..."
 msgstr "Реєструємося…"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:994
+#: pyanaconda/ui/gui/spokes/subscription.py:1005
 msgid "Attaching subscription..."
 msgstr "Долучаємо передплату…"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:996
+#: pyanaconda/ui/gui/spokes/subscription.py:1007
 msgid "Subscription attached."
 msgstr "Передплату долучено."
 
-#: pyanaconda/ui/gui/spokes/subscription.py:1000
+#: pyanaconda/ui/gui/spokes/subscription.py:1011
 msgid "Registered."
 msgstr "Зареєстровано."
 
-#: pyanaconda/ui/gui/spokes/subscription.py:1002
+#: pyanaconda/ui/gui/spokes/subscription.py:1013
 msgid "Not registered."
 msgstr "Не зареєстровано."
 
-#: pyanaconda/ui/gui/spokes/subscription.py:1032
+#: pyanaconda/ui/gui/spokes/subscription.py:1043
 msgid "Registered with account {}"
 msgstr "Зареєстровано із обліковим записом {}"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:1036
+#: pyanaconda/ui/gui/spokes/subscription.py:1047
 msgid "Registered with organization {}"
 msgstr "Зареєстровано для організації {}"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:1044
+#: pyanaconda/ui/gui/spokes/subscription.py:1055
 msgid "Role: {}"
 msgstr "Роль: {}"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:1048
+#: pyanaconda/ui/gui/spokes/subscription.py:1059
 msgid "SLA: {}"
 msgstr "SLA: {}"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:1052
+#: pyanaconda/ui/gui/spokes/subscription.py:1063
 msgid "Usage: {}"
 msgstr "Користування: {}"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:1060
+#: pyanaconda/ui/gui/spokes/subscription.py:1071
 msgid "Connected to Red Hat Insights"
 msgstr "З'єднано із Red Hat Insights"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:1062
+#: pyanaconda/ui/gui/spokes/subscription.py:1073
 msgid "Not connected to Red Hat Insights"
 msgstr "Не з'єднано із Red Hat Insights"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:1073
+#: pyanaconda/ui/gui/spokes/subscription.py:1084
 msgid "No subscriptions are attached to the system"
 msgstr "З системою не пов'язано жодних передплат"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:1075
+#: pyanaconda/ui/gui/spokes/subscription.py:1086
 msgid "1 subscription attached to the system"
 msgstr "З системою пов'язано 1 передплату"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:1077
+#: pyanaconda/ui/gui/spokes/subscription.py:1088
 msgid "{} subscriptions attached to the system"
 msgstr "З системою пов'язано {} передплат"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:1118
+#: pyanaconda/ui/gui/spokes/subscription.py:1129
 msgid "Please enable network access before connecting to Red Hat."
 msgstr ""
 "Будь ласка, увімкніть доступ до мережі, перш ніж з'єднуватися із Red Hat."
@@ -2623,8 +2637,8 @@ msgid "Setting up installation source..."
 msgstr "Налаштовування джерела для встановлення…"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:98
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1752
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1756
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1764
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1768
 msgid " <a href=\"\">Click for details.</a>"
 msgstr " <a href=\"\">Натисніть, щоб дізнатися більше.</a>"
 
@@ -2774,7 +2788,7 @@ msgstr "ВІТАЄМО У %(name)s %(version)s."
 msgid "MANUAL PARTITIONING"
 msgstr "РОЗПОДІЛ НА РОЗДІЛИ ВРУЧНУ"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:271
+#: pyanaconda/ui/gui/spokes/custom_storage.py:273
 #, python-format
 msgctxt "GUI|Custom Partitioning"
 msgid "%d _storage device selected"
@@ -2783,12 +2797,12 @@ msgstr[0] "позначено %d п_ристрій зберігання дани
 msgstr[1] "позначено %d п_ристрої зберігання даних"
 msgstr[2] "позначено %d п_ристрої зберігання даних"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:338
+#: pyanaconda/ui/gui/spokes/custom_storage.py:344
 #, python-format
 msgid "%(items_selected)s of %(items_total)s mount points in %(page_name)s"
 msgstr "%(items_selected)s з %(items_total)s точок монтування у %(page_name)s"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:365
+#: pyanaconda/ui/gui/spokes/custom_storage.py:371
 #, python-format
 msgid ""
 "Please select a single mount point to edit properties.\n"
@@ -2801,7 +2815,7 @@ msgstr ""
 "Зараз вибрано:\n"
 "%s"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:370
+#: pyanaconda/ui/gui/spokes/custom_storage.py:376
 #, python-format
 msgid ""
 "When you create mount points for your %(name)s %(version)s installation, "
@@ -2810,22 +2824,22 @@ msgstr ""
 "Після створення точок монтування для вашого встановлення %(name)s "
 "%(version)s, тут ви зможете переглянути їхні параметри."
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:447
-#: pyanaconda/ui/gui/spokes/custom_storage.py:490
+#: pyanaconda/ui/gui/spokes/custom_storage.py:455
+#: pyanaconda/ui/gui/spokes/custom_storage.py:498
 #: pyanaconda/ui/gui/spokes/network.py:281 pyanaconda/network.py:469
 msgid "Unknown"
 msgstr "Невідомо"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:594
+#: pyanaconda/ui/gui/spokes/custom_storage.py:602
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade:178
 msgid "Device reconfiguration failed."
 msgstr "Не вдалося переналаштувати пристрій."
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:742
+#: pyanaconda/ui/gui/spokes/custom_storage.py:750
 msgid "No disks assigned"
 msgstr "Не призначено жодних дисків"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:756
+#: pyanaconda/ui/gui/spokes/custom_storage.py:764
 msgctxt "GUI|Custom Partitioning|Devices"
 msgid " and {} other"
 msgid_plural " and {} others"
@@ -2833,11 +2847,11 @@ msgstr[0] " і ще {}"
 msgstr[1] " і ще {}"
 msgstr[2] " і ще {}"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:800
+#: pyanaconda/ui/gui/spokes/custom_storage.py:808
 msgid "The container is encrypted."
 msgstr "Контейнер зашифровано."
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:829
+#: pyanaconda/ui/gui/spokes/custom_storage.py:837
 msgid ""
 "The space available to this mount point can be changed by modifying the "
 "volume below."
@@ -2845,11 +2859,11 @@ msgstr ""
 "Об’єм пам’яті, доступний для цієї точки монтування, може бути змінено шляхом "
 "внесення змін до вказаного нижче тому."
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:834
+#: pyanaconda/ui/gui/spokes/custom_storage.py:842
 msgid "This file system may not be resized."
 msgstr "Змінювати розміри таких файлових систем не можна."
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:927
+#: pyanaconda/ui/gui/spokes/custom_storage.py:935
 msgid ""
 "Error checking storage configuration. <a href=\"\">Click for details</a> or "
 "press Done again to continue."
@@ -2858,7 +2872,7 @@ msgstr ""
 "щоб дізнатися більше</a>, або натисніть «Виконано» ще раз, щоб продовжити "
 "обробку."
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:931
+#: pyanaconda/ui/gui/spokes/custom_storage.py:939
 msgid ""
 "Warning checking storage configuration. <a href=\"\">Click for details</a> "
 "or press Done again to continue."
@@ -2867,27 +2881,27 @@ msgstr ""
 "\"\">Натисніть, щоб дізнатися більше</a>, або натисніть «Виконано» ще раз, "
 "щоб продовжити обробку."
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1013
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1021
 msgid "Failed to add new device."
 msgstr "Не вдалося додати новий пристрій."
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1071
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1079
 msgid "Device removal request failed."
 msgstr "Не вдалося виконати запит щодо вилучення пристрою."
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1205
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1213
 msgid "No disks selected. Keeping previous disk set."
 msgstr "Не вибрано жодного диска. Зберігаємо попередній набір дисків."
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1284
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1292
 msgid "({} free)"
 msgstr "(вільно: {})"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1465
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1474
 msgid "Automatic partitioning failed."
 msgstr "Не вдалося виконати автоматичний розподіл диска."
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1769
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1781
 #: pyanaconda/ui/gui/spokes/blivet_gui.py:320
 msgid ""
 "Continuing with this action will reset all your partitioning selections to "
@@ -2896,19 +2910,19 @@ msgstr ""
 "Якщо цю дію буде виконано, програма відновить поточний стан розподілу диска "
 "і відкине усі внесені вами зміни."
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1780
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1792
 #: pyanaconda/ui/gui/spokes/blivet_gui.py:328
 msgctxt "GUI|Custom Partitioning|Reset Dialog"
 msgid "_Reset selections"
 msgstr "С_кинути зміни"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1782
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1794
 #: pyanaconda/ui/gui/spokes/blivet_gui.py:329
 msgctxt "GUI|Custom Partitioning|Reset Dialog"
 msgid "_Preserve current selections"
 msgstr "_Зберегти поточний вибір"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1864
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1876
 msgid "Failed to unlock encrypted block device."
 msgstr "Не вдалося розблокувати зашифрований блоковий пристрій."
 
@@ -3311,7 +3325,7 @@ msgctxt "GUI|Spoke"
 msgid "Installation _Destination"
 msgstr "М_ісце встановлення"
 
-#: pyanaconda/ui/gui/spokes/storage.py:346
+#: pyanaconda/ui/gui/spokes/storage.py:349
 msgid ""
 "Partitioning method changed - planned storage configuration changes will be "
 "cancelled."
@@ -3319,21 +3333,21 @@ msgstr ""
 "Змінено метод поділу на розділи — заплановані зміни у налаштуваннях сховища "
 "даних буде скасовано."
 
-#: pyanaconda/ui/gui/spokes/storage.py:553
+#: pyanaconda/ui/gui/spokes/storage.py:556
 msgid ""
 "Error checking storage configuration.  <a href=\"\">Click for details.</a>"
 msgstr ""
 "Помилка під час спроби перевірити налаштування сховища даних. <a href="
 "\"\">Натисніть, щоб ознайомитися з подробицями.</a>"
 
-#: pyanaconda/ui/gui/spokes/storage.py:557
+#: pyanaconda/ui/gui/spokes/storage.py:560
 msgid ""
 "Warning checking storage configuration.  <a href=\"\">Click for details.</a>"
 msgstr ""
 "Попередження під час спроби перевірити налаштування сховища даних. <a href="
 "\"\">Натисніть, щоб ознайомитися з подробицями.</a>"
 
-#: pyanaconda/ui/gui/spokes/storage.py:588
+#: pyanaconda/ui/gui/spokes/storage.py:591
 #, python-brace-format
 msgid ""
 "FCP device {hba_id}\n"
@@ -3344,16 +3358,16 @@ msgstr ""
 "WWPN {wwpn}\n"
 "LUN {lun}"
 
-#: pyanaconda/ui/gui/spokes/storage.py:594
+#: pyanaconda/ui/gui/spokes/storage.py:597
 #, python-brace-format
 msgid "NVDIMM device {namespace}"
 msgstr "Пристрій NVDIMM {namespace}"
 
-#: pyanaconda/ui/gui/spokes/storage.py:608
+#: pyanaconda/ui/gui/spokes/storage.py:611
 msgid "{} free"
 msgstr "Вільно: {}"
 
-#: pyanaconda/ui/gui/spokes/storage.py:710
+#: pyanaconda/ui/gui/spokes/storage.py:714
 msgid ""
 "You have chosen to skip boot loader installation. Your system may not be "
 "bootable."
@@ -3361,11 +3375,11 @@ msgstr ""
 "Ви наказали засобу встановлення пропустити встановлення завантажувача. "
 "Ймовірно, ви не зможете завантажити вашу систему."
 
-#: pyanaconda/ui/gui/spokes/storage.py:889
+#: pyanaconda/ui/gui/spokes/storage.py:893
 msgid "There was a problem with your disk selection. Click here for details."
 msgstr "Ваш вибір дисків є проблемним. Натисніть тут, щоб дізнатися більше."
 
-#: pyanaconda/ui/gui/spokes/storage.py:994
+#: pyanaconda/ui/gui/spokes/storage.py:998
 msgid ""
 "The following errors were encountered when checking your disk selection. You "
 "can modify your selection or quit the installer."
@@ -3374,18 +3388,18 @@ msgstr ""
 "нижче помилки. Ви можете змінити вказані параметри або перервати роботу "
 "засобу встановлення."
 
-#: pyanaconda/ui/gui/spokes/storage.py:999
-#: pyanaconda/ui/gui/spokes/storage.py:1020
+#: pyanaconda/ui/gui/spokes/storage.py:1003
+#: pyanaconda/ui/gui/spokes/storage.py:1024
 msgctxt "GUI|Storage|Error Dialog"
 msgid "_Quit"
 msgstr "Ви_йти"
 
-#: pyanaconda/ui/gui/spokes/storage.py:1000
+#: pyanaconda/ui/gui/spokes/storage.py:1004
 msgctxt "GUI|Storage|Error Dialog"
 msgid "_Modify Disk Selection"
 msgstr "З_мінити вибрані диски"
 
-#: pyanaconda/ui/gui/spokes/storage.py:1015
+#: pyanaconda/ui/gui/spokes/storage.py:1019
 msgid ""
 "The following errors were encountered when checking your storage "
 "configuration.  You can modify your storage layout or quit the installer."
@@ -3394,12 +3408,12 @@ msgstr ""
 "Ви можете змінити компонування областей зберігання даних або завершити "
 "роботу програми для встановлення."
 
-#: pyanaconda/ui/gui/spokes/storage.py:1021
+#: pyanaconda/ui/gui/spokes/storage.py:1025
 msgctxt "GUI|Storage|Error Dialog"
 msgid "_Modify Storage Layout"
 msgstr "З_мінити компонування дисків"
 
-#: pyanaconda/ui/gui/spokes/storage.py:1035
+#: pyanaconda/ui/gui/spokes/storage.py:1039
 msgid ""
 "The following warnings were encountered when checking your storage "
 "configuration.  These are not fatal, but you may wish to make changes to "
@@ -3409,7 +3423,7 @@ msgstr ""
 "Ці помилки не є критичним, але, можливо, вам варто внести зміни до "
 "компонування носіїв даних."
 
-#: pyanaconda/ui/gui/spokes/storage.py:1040
+#: pyanaconda/ui/gui/spokes/storage.py:1044
 msgctxt "GUI|Storage|Warning Dialog"
 msgid "_OK"
 msgstr "_Гаразд"
@@ -3621,7 +3635,7 @@ msgstr "ДАНІ"
 msgid "SYSTEM"
 msgstr "СИСТЕМА"
 
-#: pyanaconda/ui/gui/spokes/lib/accordion.py:489
+#: pyanaconda/ui/gui/spokes/lib/accordion.py:490
 #, python-format
 msgid ""
 "You haven't created any mount points for your %(product)s %(version)s "
@@ -3630,16 +3644,16 @@ msgstr ""
 "Вами ще не створено жодних точок монтування для вашого встановлення "
 "%(product)s %(version)s. Варіанти ваших дій:"
 
-#: pyanaconda/ui/gui/spokes/lib/accordion.py:499
+#: pyanaconda/ui/gui/spokes/lib/accordion.py:500
 msgctxt "GUI|Custom Partitioning|Autopart Page"
 msgid "_Click here to create them automatically."
 msgstr "_Натисніть, щоб створення відбулося у автоматичному режимі."
 
-#: pyanaconda/ui/gui/spokes/lib/accordion.py:525
+#: pyanaconda/ui/gui/spokes/lib/accordion.py:526
 msgid "Create new mount points by clicking the '+' button."
 msgstr "Створіть нові точки монтування натисканням кнопки «+»."
 
-#: pyanaconda/ui/gui/spokes/lib/accordion.py:533
+#: pyanaconda/ui/gui/spokes/lib/accordion.py:534
 msgid ""
 "Or, assign new mount points to existing partitions after selecting them "
 "below."
@@ -3647,10 +3661,15 @@ msgstr ""
 "Або призначте нові точки монтування до вже створених розділів, вибравши їх "
 "зі списку, наведеного нижче."
 
-#: pyanaconda/ui/gui/spokes/lib/accordion.py:538
+#: pyanaconda/ui/gui/spokes/lib/accordion.py:539
 msgctxt "GUI|Custom Partitioning|Autopart Page"
 msgid "_New mount points will use the following partitioning scheme:"
 msgstr "_Новими точками монтування буде використано таку схему розподілу:"
+
+#: pyanaconda/ui/gui/spokes/lib/accordion.py:559
+msgctxt "GUI|Custom Partitioning|Autopart Page"
+msgid "_Encrypt automatically created mount points by default:"
+msgstr ""
 
 #: pyanaconda/ui/gui/spokes/lib/cart.py:193
 msgctxt "GUI|Selected Disks Dialog"
@@ -4002,19 +4021,19 @@ msgstr ""
 "На деяких платформах PPC частиною налаштовування завантажувача\n"
 "є створення розділу завантаження PReP."
 
-#: pyanaconda/core/constants.py:88
+#: pyanaconda/core/constants.py:89
 msgid "Start VNC"
 msgstr "Запускати VNC"
 
-#: pyanaconda/core/constants.py:89
+#: pyanaconda/core/constants.py:90
 msgid "Use text mode"
 msgstr "Використовувати текстовий режим"
 
-#: pyanaconda/core/constants.py:92
+#: pyanaconda/core/constants.py:93
 msgid "Do you really want to quit?"
 msgstr "Справді хочете вийти?"
 
-#: pyanaconda/core/constants.py:158
+#: pyanaconda/core/constants.py:159
 msgid ""
 "Support for this hardware has been removed in this major OS release. Please "
 "check theremoved functionality section of the release notes."
@@ -4023,7 +4042,7 @@ msgstr ""
 "обладнання. Будь ласка, ознайомтеся із розділом щодо вилучених "
 "функціональних можливостей у нотатках щодо випуску."
 
-#: pyanaconda/core/constants.py:163
+#: pyanaconda/core/constants.py:164
 msgid ""
 "This hardware (or a combination thereof) is not supported by Red Hat. For "
 "more information on supported hardware, please refer to http://www.redhat."
@@ -4033,7 +4052,7 @@ msgstr ""
 "відомості щодо підтримуваного обладнання можна знайти на сторінці http://www."
 "redhat.com/hardware."
 
-#: pyanaconda/core/constants.py:169
+#: pyanaconda/core/constants.py:170
 msgid ""
 "No disks detected.  Please shut down the computer, connect at least one "
 "disk, and restart to complete installation."
@@ -4041,13 +4060,13 @@ msgstr ""
 "Не виявлено дисків. Вимкніть комп’ютер, з’єднайте з ним принаймні один диск "
 "і знову увімкніть його, щоб завершити встановлення."
 
-#: pyanaconda/core/constants.py:174
+#: pyanaconda/core/constants.py:175
 msgid "No disks selected; please select at least one disk to install to."
 msgstr ""
 "Не позначено жодного диска, будь ласка, позначте принаймні один диск, на "
 "який слід встановити систему."
 
-#: pyanaconda/core/constants.py:179
+#: pyanaconda/core/constants.py:180
 msgid ""
 "Simultaneous Multithreading (SMT) technology can provide performance "
 "improvements for certain workloads, but introduces several publicly "
@@ -4064,7 +4083,7 @@ msgstr ""
 "потенційні проблеми та дізнатися про інші способи зменшення загрози від цих "
 "проблем."
 
-#: pyanaconda/core/constants.py:189
+#: pyanaconda/core/constants.py:190
 msgid ""
 "Simultaneous Multithreading (SMT) may improve performance for certain "
 "workloads, but introduces several publicly disclosed security issues. You "
@@ -4079,60 +4098,60 @@ msgstr ""
 "red.ht/rhel-smt , щоб краще розуміти потенційні проблеми та дізнатися про "
 "інші способи зменшення загрози від цих проблем."
 
-#: pyanaconda/core/constants.py:205
+#: pyanaconda/core/constants.py:206
 msgid "The password is empty."
 msgstr "Порожній пароль."
 
-#: pyanaconda/core/constants.py:206
+#: pyanaconda/core/constants.py:207
 msgid "The passphrase is empty."
 msgstr "Порожній пароль."
 
-#: pyanaconda/core/constants.py:209
+#: pyanaconda/core/constants.py:210
 msgid "The passwords do not match."
 msgstr "Паролі не збігаються."
 
-#: pyanaconda/core/constants.py:210
+#: pyanaconda/core/constants.py:211
 msgid "The passphrases do not match."
 msgstr "Паролі не збігаються."
 
-#: pyanaconda/core/constants.py:213
+#: pyanaconda/core/constants.py:214
 msgid "The passwords you entered were different. Please try again."
 msgstr "Введені вами паролі не збігаються. Повторіть спробу."
 
-#: pyanaconda/core/constants.py:214
+#: pyanaconda/core/constants.py:215
 msgid "The passphrases you entered were different. Please try again."
 msgstr "Введені паролі не збігаються. Спробуйте знову."
 
-#: pyanaconda/core/constants.py:220
+#: pyanaconda/core/constants.py:221
 msgid "The password is too short"
 msgstr "Пароль є закоротким"
 
-#: pyanaconda/core/constants.py:221
+#: pyanaconda/core/constants.py:222
 msgid "The passphrase is too short"
 msgstr "Пароль є закоротким"
 
-#: pyanaconda/core/constants.py:224
+#: pyanaconda/core/constants.py:225
 msgid "The password you have provided is weak."
 msgstr "Вами вказано надто простий пароль."
 
-#: pyanaconda/core/constants.py:225
+#: pyanaconda/core/constants.py:226
 msgid "The passphrase you have provided is weak."
 msgstr "Вказаний вами пароль є надто простим."
 
-#: pyanaconda/core/constants.py:228
+#: pyanaconda/core/constants.py:229
 msgid "The password you have provided is weak:"
 msgstr "Вами вказано надто простий пароль:"
 
-#: pyanaconda/core/constants.py:229
+#: pyanaconda/core/constants.py:230
 msgid "The passphrase you have provided is weak:"
 msgstr "Вказаний вами пароль є надто простим:"
 
-#: pyanaconda/core/constants.py:231
+#: pyanaconda/core/constants.py:232
 msgid "Press <b>Done</b> again to use the password anyway."
 msgstr ""
 "Натисніть <b>Виконано</b> ще раз, якщо слід використовувати саме цей пароль."
 
-#: pyanaconda/core/constants.py:233
+#: pyanaconda/core/constants.py:234
 msgid ""
 "The password you have provided contains non-ASCII characters. You may not be "
 "able to switch between keyboard layouts when typing it."
@@ -4140,7 +4159,7 @@ msgstr ""
 "Вказаний вами пароль містить символи, які не є символами ASCII. У вас може "
 "не бути можливості перемкнути розкладку клавіатури під час його введення."
 
-#: pyanaconda/core/constants.py:234
+#: pyanaconda/core/constants.py:235
 msgid ""
 "The passphrase you have provided contains non-ASCII characters. You may not "
 "be able to switch between keyboard layouts when typing it."
@@ -4148,40 +4167,40 @@ msgstr ""
 "Вказаний вами пароль містить символи, які не є символами ASCII. У вас може "
 "не бути можливості перемкнути розкладку клавіатури під час його введення."
 
-#: pyanaconda/core/constants.py:236
+#: pyanaconda/core/constants.py:237
 msgid "You will have to press <b>Done</b> twice to confirm it."
 msgstr "Щоб підтвердити його, вам слід натиснути кнопку <b>Виконано</b> двічі."
 
-#: pyanaconda/core/constants.py:241
+#: pyanaconda/core/constants.py:242
 msgid "Empty"
 msgstr "Порожній"
 
-#: pyanaconda/core/constants.py:242
+#: pyanaconda/core/constants.py:243
 msgid "Too short"
 msgstr "Занадто короткий"
 
-#: pyanaconda/core/constants.py:243
+#: pyanaconda/core/constants.py:244
 #: pyanaconda/ui/gui/spokes/lib/passphrase.glade:182
 msgid "Weak"
 msgstr "Простий"
 
-#: pyanaconda/core/constants.py:244
+#: pyanaconda/core/constants.py:245
 msgid "Fair"
 msgstr "Нормальний"
 
-#: pyanaconda/core/constants.py:245
+#: pyanaconda/core/constants.py:246
 msgid "Good"
 msgstr "Якісний"
 
-#: pyanaconda/core/constants.py:246
+#: pyanaconda/core/constants.py:247
 msgid "Strong"
 msgstr "Складний"
 
-#: pyanaconda/core/constants.py:249
+#: pyanaconda/core/constants.py:250
 msgid "Hide password."
 msgstr "Приховати пароль."
 
-#: pyanaconda/core/constants.py:250
+#: pyanaconda/core/constants.py:251
 msgid "Show password."
 msgstr "Показати пароль."
 
@@ -7365,11 +7384,6 @@ msgstr "Встановити"
 msgid "Install the live CD to your hard disk"
 msgstr "Встановити live CD на жорсткий диск"
 
-#. TRANSLATORS: Icon name, probably should not be translated
-#: data/liveinst/liveinst.desktop:11
-msgid "org.fedoraproject.AnacondaInstaller"
-msgstr "org.fedoraproject.AnacondaInstaller"
-
 #: data/liveinst/gnome/rhel-welcome.desktop:3
 #: data/liveinst/gnome/rhel-welcome.js:62
 msgid "Welcome to Red Hat Enterprise Linux"
@@ -7409,6 +7423,9 @@ msgstr "Закрити"
 #: ../data/liveinst/console.apps/liveinst.h:1
 msgid "Starting Install to Hard Drive"
 msgstr "Початок встановлення на жорсткий диск"
+
+#~ msgid "org.fedoraproject.AnacondaInstaller"
+#~ msgstr "org.fedoraproject.AnacondaInstaller"
 
 #~ msgctxt "GUI|Network|Wireless"
 #~ msgid "_Network Name"
@@ -7493,15 +7510,6 @@ msgstr "Початок встановлення на жорсткий диск"
 #~ "%s\n"
 #~ "\n"
 #~ "Зараз роботу засобу встановлення буде перервано."
-
-#~ msgid ""
-#~ "Failed to connect the system to Red Hat Insights.\n"
-#~ "\n"
-#~ "Would you like to ignore this and continue with installation?"
-#~ msgstr ""
-#~ "Не вдалося з'єднати систему із Red Hat Insights.\n"
-#~ "\n"
-#~ "Хочете проігнорувати це і продовжити встановлення?"
 
 #~ msgid ""
 #~ "The insights-client utility needed to connect the system to Red Hat "
