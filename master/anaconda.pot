@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 35.19\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2021-07-13 00:48+0000\n"
+"POT-Creation-Date: 2021-07-14 00:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1346,6 +1346,14 @@ msgstr ""
 msgid "Btrfs volume \"%s\" specified with --useexisting does not exist."
 msgstr ""
 
+#: pyanaconda/modules/storage/partitioning/interactive/change_device.py:87
+msgid "Failed to change a device."
+msgstr ""
+
+#: pyanaconda/modules/storage/partitioning/interactive/add_device.py:72
+msgid "Failed to add a device."
+msgstr ""
+
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:213
 #, python-brace-format
 msgid "New {name} {version} Installation"
@@ -1446,6 +1454,10 @@ msgstr ""
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:79
 #, python-format
 msgid "No format on device '%s'"
+msgstr ""
+
+#: pyanaconda/modules/storage/partitioning/base_partitioning.py:57
+msgid "Failed to proceed with the installation."
 msgstr ""
 
 #: pyanaconda/modules/storage/bootloader/bootloader.py:172
@@ -1690,6 +1702,28 @@ msgstr ""
 #: pyanaconda/modules/storage/devicetree/root.py:344
 #, python-brace-format
 msgid "{product} Linux {version} for {arch}"
+msgstr ""
+
+#: pyanaconda/modules/storage/constants.py:30
+msgid ""
+"Workarounds for manual installations:\n"
+"* Select only the disks with the same sector size during manual installation "
+"in graphical or text mode.\n"
+"* When disks with inconsistent sector size are selected for the "
+"installation, restrict each created LVM Volume Group to use Physical Volumes "
+"with the same sector size. This can only be done in graphical mode in the "
+"Custom partitioning spoke.\n"
+"\n"
+"Workarounds for kickstart installations:\n"
+"* Restrict what disks are used for the partitioning by specifying "
+"'ignoredisk --drives=..' or 'ignoredisk --only-use=..'.\n"
+"* Specify what disks should be used for each created LVM Physical Volume: "
+"partition pv.1 --ondisk=..'.\n"
+"\n"
+"General workarounds:\n"
+"* Plain partitioning scheme can be used instead of LVM.\n"
+"* Some drives support re-configuration of sector sizes, for example by "
+"running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 msgstr ""
 
 #: pyanaconda/modules/storage/installation.py:88
