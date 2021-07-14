@@ -58,7 +58,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2021-07-12 00:45+0000\n"
+"POT-Creation-Date: 2021-07-14 00:43+0000\n"
 "PO-Revision-Date: 2021-03-21 11:01+0000\n"
 "Last-Translator: Hajime Taira <htaira@pantora.net>\n"
 "Language-Team: Japanese <https://translate.fedoraproject.org/projects/"
@@ -82,11 +82,11 @@ msgstr "BAR"
 msgid "BAZ"
 msgstr "BAZ"
 
-#: anaconda.py:312
+#: anaconda.py:313
 msgid "Unable to create PID file"
 msgstr "PID ファイルを作成できません"
 
-#: anaconda.py:313
+#: anaconda.py:314
 #, python-format
 msgid ""
 "Anaconda is unable to create %s because the file already exists. Anaconda is "
@@ -96,7 +96,7 @@ msgstr ""
 "Anaconda が実行中か、もしくは前回実行した Anaconda のインスタンスがクラッシュ"
 "した可能性があります。"
 
-#: pyanaconda/product.py:61
+#: pyanaconda/product.py:59
 #, python-format
 msgid "%(productName)s %(productVersion)s INSTALLATION"
 msgstr "%(productName)s %(productVersion)s のインストール"
@@ -1635,6 +1635,18 @@ msgstr ""
 msgid "Btrfs volume \"%s\" specified with --useexisting does not exist."
 msgstr "--useexisting で指定された Btrfs ボリューム \"%s\" は存在しません。"
 
+#: pyanaconda/modules/storage/partitioning/interactive/change_device.py:87
+#, fuzzy
+#| msgid "Failed to add new device."
+msgid "Failed to change a device."
+msgstr "新しいデバイスの追加に失敗しました。"
+
+#: pyanaconda/modules/storage/partitioning/interactive/add_device.py:72
+#, fuzzy
+#| msgid "Failed to add new device."
+msgid "Failed to add a device."
+msgstr "新しいデバイスの追加に失敗しました。"
+
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:213
 #, python-brace-format
 msgid "New {name} {version} Installation"
@@ -1749,6 +1761,12 @@ msgstr ""
 #, python-format
 msgid "No format on device '%s'"
 msgstr "デバイス '%s' にフォーマットがありません"
+
+#: pyanaconda/modules/storage/partitioning/base_partitioning.py:57
+#, fuzzy
+#| msgid "Failed to set up installation source"
+msgid "Failed to proceed with the installation."
+msgstr "インストールソースの設定に失敗しました"
 
 #: pyanaconda/modules/storage/bootloader/bootloader.py:172
 msgid "GRUB2 does not support installation to a partition."
@@ -1993,12 +2011,12 @@ msgstr "{device_description} ({device_name})"
 msgid "{device_name} on {container_name}"
 msgstr "{container_name} 上の {device_name}"
 
-#: pyanaconda/modules/storage/devicetree/utils.py:77
+#: pyanaconda/modules/storage/devicetree/utils.py:79
 #, python-format
 msgid "Escrow certificate %s requires the network."
 msgstr "エスクロー証明書 %s にはネットワークが必要です。"
 
-#: pyanaconda/modules/storage/devicetree/utils.py:85
+#: pyanaconda/modules/storage/devicetree/utils.py:87
 #, python-format
 msgid ""
 "SSL error while downloading the escrow certificate:\n"
@@ -2009,7 +2027,7 @@ msgstr ""
 "\n"
 "%s"
 
-#: pyanaconda/modules/storage/devicetree/utils.py:88
+#: pyanaconda/modules/storage/devicetree/utils.py:90
 #, python-format
 msgid ""
 "The following error was encountered while downloading the escrow "
@@ -2034,6 +2052,28 @@ msgstr "{product} {version} - {arch} 版"
 #, python-brace-format
 msgid "{product} Linux {version} for {arch}"
 msgstr "{product} Linux {version} - {arch} 版"
+
+#: pyanaconda/modules/storage/constants.py:30
+msgid ""
+"Workarounds for manual installations:\n"
+"* Select only the disks with the same sector size during manual installation "
+"in graphical or text mode.\n"
+"* When disks with inconsistent sector size are selected for the "
+"installation, restrict each created LVM Volume Group to use Physical Volumes "
+"with the same sector size. This can only be done in graphical mode in the "
+"Custom partitioning spoke.\n"
+"\n"
+"Workarounds for kickstart installations:\n"
+"* Restrict what disks are used for the partitioning by specifying "
+"'ignoredisk --drives=..' or 'ignoredisk --only-use=..'.\n"
+"* Specify what disks should be used for each created LVM Physical Volume: "
+"partition pv.1 --ondisk=..'.\n"
+"\n"
+"General workarounds:\n"
+"* Plain partitioning scheme can be used instead of LVM.\n"
+"* Some drives support re-configuration of sector sizes, for example by "
+"running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
+msgstr ""
 
 #: pyanaconda/modules/storage/installation.py:88
 msgid "An error occurred while resizing the device {}: {}"

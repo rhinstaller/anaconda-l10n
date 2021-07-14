@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2021-07-12 00:45+0000\n"
+"POT-Creation-Date: 2021-07-14 00:43+0000\n"
 "PO-Revision-Date: 2015-01-05 12:52+0000\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Estonian (http://www.transifex.com/projects/p/anaconda/"
@@ -38,18 +38,18 @@ msgstr ""
 msgid "BAZ"
 msgstr ""
 
-#: anaconda.py:312
+#: anaconda.py:313
 msgid "Unable to create PID file"
 msgstr ""
 
-#: anaconda.py:313
+#: anaconda.py:314
 #, python-format
 msgid ""
 "Anaconda is unable to create %s because the file already exists. Anaconda is "
 "already running, or a previous instance of anaconda has crashed."
 msgstr ""
 
-#: pyanaconda/product.py:61
+#: pyanaconda/product.py:59
 #, python-format
 msgid "%(productName)s %(productVersion)s INSTALLATION"
 msgstr ""
@@ -1381,6 +1381,14 @@ msgstr ""
 msgid "Btrfs volume \"%s\" specified with --useexisting does not exist."
 msgstr ""
 
+#: pyanaconda/modules/storage/partitioning/interactive/change_device.py:87
+msgid "Failed to change a device."
+msgstr ""
+
+#: pyanaconda/modules/storage/partitioning/interactive/add_device.py:72
+msgid "Failed to add a device."
+msgstr ""
+
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:213
 #, python-brace-format
 msgid "New {name} {version} Installation"
@@ -1481,6 +1489,10 @@ msgstr ""
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:79
 #, python-format
 msgid "No format on device '%s'"
+msgstr ""
+
+#: pyanaconda/modules/storage/partitioning/base_partitioning.py:57
+msgid "Failed to proceed with the installation."
 msgstr ""
 
 #: pyanaconda/modules/storage/bootloader/bootloader.py:172
@@ -1693,12 +1705,12 @@ msgstr ""
 msgid "{device_name} on {container_name}"
 msgstr ""
 
-#: pyanaconda/modules/storage/devicetree/utils.py:77
+#: pyanaconda/modules/storage/devicetree/utils.py:79
 #, python-format
 msgid "Escrow certificate %s requires the network."
 msgstr ""
 
-#: pyanaconda/modules/storage/devicetree/utils.py:85
+#: pyanaconda/modules/storage/devicetree/utils.py:87
 #, python-format
 msgid ""
 "SSL error while downloading the escrow certificate:\n"
@@ -1706,7 +1718,7 @@ msgid ""
 "%s"
 msgstr ""
 
-#: pyanaconda/modules/storage/devicetree/utils.py:88
+#: pyanaconda/modules/storage/devicetree/utils.py:90
 #, python-format
 msgid ""
 "The following error was encountered while downloading the escrow "
@@ -1727,6 +1739,28 @@ msgstr ""
 #: pyanaconda/modules/storage/devicetree/root.py:344
 #, python-brace-format
 msgid "{product} Linux {version} for {arch}"
+msgstr ""
+
+#: pyanaconda/modules/storage/constants.py:30
+msgid ""
+"Workarounds for manual installations:\n"
+"* Select only the disks with the same sector size during manual installation "
+"in graphical or text mode.\n"
+"* When disks with inconsistent sector size are selected for the "
+"installation, restrict each created LVM Volume Group to use Physical Volumes "
+"with the same sector size. This can only be done in graphical mode in the "
+"Custom partitioning spoke.\n"
+"\n"
+"Workarounds for kickstart installations:\n"
+"* Restrict what disks are used for the partitioning by specifying "
+"'ignoredisk --drives=..' or 'ignoredisk --only-use=..'.\n"
+"* Specify what disks should be used for each created LVM Physical Volume: "
+"partition pv.1 --ondisk=..'.\n"
+"\n"
+"General workarounds:\n"
+"* Plain partitioning scheme can be used instead of LVM.\n"
+"* Some drives support re-configuration of sector sizes, for example by "
+"running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 msgstr ""
 
 #: pyanaconda/modules/storage/installation.py:88
