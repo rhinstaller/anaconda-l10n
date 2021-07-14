@@ -26,7 +26,7 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2021-07-14 00:43+0000\n"
-"PO-Revision-Date: 2021-06-30 14:46+0000\n"
+"PO-Revision-Date: 2021-07-15 16:04+0000\n"
 "Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
 "Language-Team: Turkish <https://translate.fedoraproject.org/projects/"
 "anaconda/master/tr/>\n"
@@ -35,7 +35,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n>1);\n"
-"X-Generator: Weblate 4.7\n"
+"X-Generator: Weblate 4.7.1\n"
 
 #: tests/unit_tests/pyanaconda_tests/ui/test_common_code.py:31
 msgid "FOO"
@@ -1562,16 +1562,12 @@ msgid "Btrfs volume \"%s\" specified with --useexisting does not exist."
 msgstr "--useexisting ile belirtilen \"%s\" Btrfs birimi yok."
 
 #: pyanaconda/modules/storage/partitioning/interactive/change_device.py:87
-#, fuzzy
-#| msgid "Failed to add new device."
 msgid "Failed to change a device."
-msgstr "Yeni aygıt eklenemedi."
+msgstr "Aygıt değiştirilemedi."
 
 #: pyanaconda/modules/storage/partitioning/interactive/add_device.py:72
-#, fuzzy
-#| msgid "Failed to add new device."
 msgid "Failed to add a device."
-msgstr "Yeni aygıt eklenemedi."
+msgstr "Aygıt eklenemedi."
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:213
 #, python-brace-format
@@ -1687,10 +1683,8 @@ msgid "No format on device '%s'"
 msgstr "'%s' aygıtında biçim yok"
 
 #: pyanaconda/modules/storage/partitioning/base_partitioning.py:57
-#, fuzzy
-#| msgid "Failed to set up installation source"
 msgid "Failed to proceed with the installation."
-msgstr "Kurulum kaynağı ayarlanamadı"
+msgstr "Kuruluma devam edilemedi."
 
 #: pyanaconda/modules/storage/bootloader/bootloader.py:172
 msgid "GRUB2 does not support installation to a partition."
@@ -1802,15 +1796,15 @@ msgstr "%(desc)s %(type)s türü olamaz"
 
 #: pyanaconda/modules/storage/bootloader/execution.py:145
 msgid "No match found for given boot drive \"{}\"."
-msgstr "Verilen önyükleme sürücüsü \"{}\" bulunamadı."
+msgstr "Verilen önyükleme diski \"{}\" bulunamadı."
 
 #: pyanaconda/modules/storage/bootloader/execution.py:149
 msgid "More than one match found for given boot drive \"{}\"."
-msgstr "Verilen önyükleme sürücüsü \"{}\" için birden çok eşleşme bulundu."
+msgstr "Verilen önyükleme diski \"{}\" için birden çok eşleşme bulundu."
 
 #: pyanaconda/modules/storage/bootloader/execution.py:153
 msgid "Requested boot drive \"{}\" doesn't exist or cannot be used."
-msgstr "İstenen önyükleme sürücüsü \"{}\" yok veya kullanılamaz."
+msgstr "İstenen önyükleme diski \"{}\" yok veya kullanılamaz."
 
 #: pyanaconda/modules/storage/bootloader/grub2.py:486
 #, python-format
@@ -1831,7 +1825,7 @@ msgid ""
 msgstr ""
 "önyükleyici stage2 aygıtı %(stage2dev)s çok diskli bir dizi üzerinde, ancak "
 "önyükleyici stage1 aygıtı %(stage1dev)s değil. %(stage2dev)s üzerindeki bir "
-"sürücü hatası, sistemi önyükleme yapamaz duruma getirebilir."
+"disk hatası, sistemi önyükleme yapamaz duruma getirebilir."
 
 #: pyanaconda/modules/storage/bootloader/grub2.py:532
 #, python-format
@@ -1842,7 +1836,7 @@ msgid ""
 msgstr ""
 "önyükleyici stage2 aygıtı %(stage2dev)s çok diskli bir dizi üzerinde, ancak "
 "önyükleyici stage1 aygıtı %(stage1dev)s bu dizinin parçası değil. stage1 "
-"önyükleyici sadece tek bir sürücüye kurulacaktır."
+"önyükleyici sadece tek bir diske kurulacaktır."
 
 #: pyanaconda/modules/storage/kickstart.py:65
 msgid "File system type \"{}\" given in autopart command is invalid."
@@ -1994,6 +1988,24 @@ msgid ""
 "* Some drives support re-configuration of sector sizes, for example by "
 "running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 msgstr ""
+"Elle kurulumlar için geçici çözümler:\n"
+"* Grafiksel veya metin modunda elle kurulum sırasında yalnızca aynı sektör "
+"boyutuna sahip diskleri seçin.\n"
+"* Kurulum için tutarsız sektör boyutuna sahip diskler seçildiğinde, "
+"oluşturulan her LVM Birim Grubunu aynı sektör boyutuna sahip Fiziksel "
+"Birimleri kullanacak şekilde kısıtlayın. Bu, yalnızca Özel bölümlendirme "
+"bölümünde grafiksel modda yapılabilir.\n"
+"\n"
+"Kickstart kurulumları için geçici çözümler:\n"
+"* 'ignoredisk --drives=..' veya 'ignoredisk --only-use=..' belirterek "
+"bölümlendirme için hangi disklerin kullanıldığını kısıtlayın.\n"
+"* Oluşturulan her LVM Fiziksel Birimi için hangi disklerin kullanılması "
+"gerektiğini belirtin: partition pv.1 --ondisk=..'.\n"
+"\n"
+"Genel geçici çözümler:\n"
+"* LVM yerine düz bölümlendirme şeması kullanılabilir.\n"
+"* Bazı diskler, örneğin 'hdparm --set-sector-size=<BOYUT> <AYGIT>' komutunu "
+"çalıştırarak sektör boyutlarının yeniden yapılandırılmasını destekler.\n"
 
 #: pyanaconda/modules/storage/installation.py:88
 msgid "An error occurred while resizing the device {}: {}"
@@ -2688,7 +2700,7 @@ msgid ""
 "Installation requires partitioning of your hard drive. Select what space to "
 "use for the install target or manually assign mount points."
 msgstr ""
-"Kurulum, sabit sürücünüzün bölümlendirilmesini gerektiriyor. Kurulum hedefi "
+"Kurulum, sabit diskinizin bölümlendirilmesini gerektiriyor. Kurulum hedefi "
 "için hangi alanın kullanılacağını seçin veya elle bağlama noktaları atayın."
 
 #: pyanaconda/ui/tui/spokes/storage.py:545
