@@ -32,7 +32,7 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2021-07-14 00:43+0000\n"
-"PO-Revision-Date: 2021-07-04 13:04+0000\n"
+"PO-Revision-Date: 2021-07-15 16:04+0000\n"
 "Last-Translator: Geert Warrink <geert.warrink@onsnet.nu>\n"
 "Language-Team: Dutch <https://translate.fedoraproject.org/projects/anaconda/"
 "master/nl/>\n"
@@ -1587,16 +1587,12 @@ msgid "Btrfs volume \"%s\" specified with --useexisting does not exist."
 msgstr "BTRFS-volume \"%s\" gespecificeerd met --useexisting bestaat niet."
 
 #: pyanaconda/modules/storage/partitioning/interactive/change_device.py:87
-#, fuzzy
-#| msgid "Failed to add new device."
 msgid "Failed to change a device."
-msgstr "Het toevoegen van een nieuw apparaat mislukte."
+msgstr "Het veranderen van een apparaat mislukte."
 
 #: pyanaconda/modules/storage/partitioning/interactive/add_device.py:72
-#, fuzzy
-#| msgid "Failed to add new device."
 msgid "Failed to add a device."
-msgstr "Het toevoegen van een nieuw apparaat mislukte."
+msgstr "Het toevoegen van een apparaat mislukte."
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:213
 #, python-brace-format
@@ -1712,10 +1708,8 @@ msgid "No format on device '%s'"
 msgstr "Geen formaat op apparaat '%s'"
 
 #: pyanaconda/modules/storage/partitioning/base_partitioning.py:57
-#, fuzzy
-#| msgid "Failed to set up installation source"
 msgid "Failed to proceed with the installation."
-msgstr "Instellen van installatiebron mislukte"
+msgstr "Verdergaan met de installatie mislukte."
 
 #: pyanaconda/modules/storage/bootloader/bootloader.py:172
 msgid "GRUB2 does not support installation to a partition."
@@ -2023,6 +2017,25 @@ msgid ""
 "* Some drives support re-configuration of sector sizes, for example by "
 "running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 msgstr ""
+"Tijdelijke oplossingen voor handmatige installaties:\n"
+"* Selecteer alleen de schijven met dezelfde sectorgrootte tijdens handmatige "
+"installatie in grafische of tekstmodus.\n"
+"* Wanneer schijven met een inconsistente sectorgrootte zijn geselecteerd "
+"voor de installatie, beperk dan elke aangemaakte LVM-volumegroep om fysieke "
+"volumes met dezelfde sectorgrootte te gebruiken. Dit kan alleen in de "
+"grafische modus in de Aangepaste partitioneringsspaak.\n"
+"\n"
+"Tijdelijke oplossingen voor kickstart-installaties:\n"
+"* Beperk welke schijven worden gebruikt voor het partitioneren door "
+"'ignoredisk --drives=..' of 'ignoredisk --only-use=..' op te geven.\n"
+"* Specificeer welke schijven moeten worden gebruikt voor elk gemaakt LVM "
+"Fysiek Volume: partitie pv.1 --ondisk=..'.\n"
+"\n"
+"Algemene oplossingen:\n"
+"* In plaats van LVM kan een eenvoudig partitioneringsschema worden gebruikt."
+"\n"
+"* Sommige schijven ondersteunen herconfiguratie van sectorgroottes, "
+"bijvoorbeeld door 'hdparm --set-sector-size=<SIZE> <DEVICE>' uit te voeren.\n"
 
 #: pyanaconda/modules/storage/installation.py:88
 msgid "An error occurred while resizing the device {}: {}"
