@@ -28,7 +28,7 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2021-07-14 00:43+0000\n"
-"PO-Revision-Date: 2021-07-08 12:33+0000\n"
+"PO-Revision-Date: 2021-07-15 16:04+0000\n"
 "Last-Translator: Jan Kuparinen <copper_fin@hotmail.com>\n"
 "Language-Team: Finnish <https://translate.fedoraproject.org/projects/"
 "anaconda/master/fi/>\n"
@@ -1566,16 +1566,12 @@ msgid "Btrfs volume \"%s\" specified with --useexisting does not exist."
 msgstr "Btrfs-taltio \"%s\" määritetty '--useexisting':lla ei ole olemassa."
 
 #: pyanaconda/modules/storage/partitioning/interactive/change_device.py:87
-#, fuzzy
-#| msgid "Failed to add new device."
 msgid "Failed to change a device."
-msgstr "Uuden laitteen lisääminen epäonnistui."
+msgstr "Laitteen vaihtaminen epäonnistui."
 
 #: pyanaconda/modules/storage/partitioning/interactive/add_device.py:72
-#, fuzzy
-#| msgid "Failed to add new device."
 msgid "Failed to add a device."
-msgstr "Uuden laitteen lisääminen epäonnistui."
+msgstr "Laitteen lisääminen epäonnistui."
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:213
 #, python-brace-format
@@ -1690,10 +1686,8 @@ msgid "No format on device '%s'"
 msgstr "Laitteessa '%s' ei ole alustaa"
 
 #: pyanaconda/modules/storage/partitioning/base_partitioning.py:57
-#, fuzzy
-#| msgid "Failed to set up installation source"
 msgid "Failed to proceed with the installation."
-msgstr "Asennuslähteen määrittäminen epäonnistui"
+msgstr "Asennuksen jatkaminen epäonnistui."
 
 #: pyanaconda/modules/storage/bootloader/bootloader.py:172
 msgid "GRUB2 does not support installation to a partition."
@@ -2000,6 +1994,24 @@ msgid ""
 "* Some drives support re-configuration of sector sizes, for example by "
 "running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 msgstr ""
+"Manuaalisten asennusten kiertotavat:\n"
+"* Valitse vain saman sektorikokoiset levyt manuaalisen asennuksen aikana "
+"graafisessa tai tekstitilassa.\n"
+"* Kun asennukseen valitaan levyt, joiden sektorikoko on epäjohdonmukainen, "
+"rajoita jokaista luotua LVM-volyymiryhmää käyttämään fyysisiä volyymeja "
+"samalla sektorikoolla. Tämä voidaan tehdä vain graafisessa tilassa "
+"mukautetussa osiointi osassa.\n"
+"\n"
+"Kiertotavat kickstart-asennuksiin:\n"
+"* Rajoita osioinnissa käytettäviä levyjä määrittämällä 'ignoredisk --drives "
+"= ..' tai 'ignoredisk --only-use = ..'.\n"
+"* Määritä, mitä levyjä tulisi käyttää jokaiselle luotulle fyysiselle LVM-"
+"levylle: partition pv.1 --ondisk = .. '.\n"
+"\n"
+"Yleiset kiertotavat:\n"
+"* Tavallista osiointijärjestelmää voidaan käyttää LVM: n sijaan.\n"
+"* Jotkut asemat tukevat sektorikokojen uudelleenmääritystä, esimerkiksi "
+"suorittamalla 'hdparm --set-sector-size=<SIZE> <DEVICE>.\n"
 
 #: pyanaconda/modules/storage/installation.py:88
 msgid "An error occurred while resizing the device {}: {}"
