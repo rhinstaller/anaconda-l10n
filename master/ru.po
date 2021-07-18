@@ -46,7 +46,7 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2021-07-16 00:46+0000\n"
-"PO-Revision-Date: 2021-07-07 10:04+0000\n"
+"PO-Revision-Date: 2021-07-20 10:04+0000\n"
 "Last-Translator: Igor Gorbounov <igor.gorbounov@gmail.com>\n"
 "Language-Team: Russian <https://translate.fedoraproject.org/projects/"
 "anaconda/master/ru/>\n"
@@ -1587,16 +1587,12 @@ msgstr ""
 "Том Btrfs «%s», заданный с помощью параметра --useexisting, не существует."
 
 #: pyanaconda/modules/storage/partitioning/interactive/change_device.py:87
-#, fuzzy
-#| msgid "Failed to add new device."
 msgid "Failed to change a device."
-msgstr "Не удалось добавить новое устройство."
+msgstr "Не удалось сменить устройство."
 
 #: pyanaconda/modules/storage/partitioning/interactive/add_device.py:72
-#, fuzzy
-#| msgid "Failed to add new device."
 msgid "Failed to add a device."
-msgstr "Не удалось добавить новое устройство."
+msgstr "Не удалось добавить устройство."
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:213
 #, python-brace-format
@@ -1712,10 +1708,8 @@ msgid "No format on device '%s'"
 msgstr "Устройство «%s» не форматировано"
 
 #: pyanaconda/modules/storage/partitioning/base_partitioning.py:57
-#, fuzzy
-#| msgid "Failed to set up installation source"
 msgid "Failed to proceed with the installation."
-msgstr "Не удалось настроить источник установки"
+msgstr "Не удалось продолжить установку."
 
 #: pyanaconda/modules/storage/bootloader/bootloader.py:172
 msgid "GRUB2 does not support installation to a partition."
@@ -2021,6 +2015,24 @@ msgid ""
 "* Some drives support re-configuration of sector sizes, for example by "
 "running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 msgstr ""
+"Обходные решения для ручной установки:\n"
+"* Выбирайте только диски с одинаковым размером сектора при ручной установке "
+"в графическом или текстовом режиме.\n"
+"* Если для установки выбраны диски с несовместимым размером сектора, "
+"ограничьте каждую созданную группу томов LVM использованием физических томов "
+"с одинаковым размером сектора. Это можно сделать только в графическом режиме "
+"при пользовательском разбиении разделов.\n"
+"\n"
+"Обходные решения для установок с kickstart-файла:\n"
+"* Ограничьте, какие диски будут использоваться для разбиения, указав «"
+"ignoredisk --drives = ..» или «ignoredisk --only-use = ..».\n"
+"* Укажите, какие диски следует использовать для каждого созданного "
+"физического тома LVM: partition pv.1 --ondisk=..'.\n"
+"\n"
+"Общие обходные решения:\n"
+"* Вместо LVM можно использовать простую схему разбиения.\n"
+"* Некоторые диски поддерживают изменение конфигурации размеров секторов, "
+"например, путем запуска «hdparm --set-sector-size=<SIZE> <DEVICE>».\n"
 
 #: pyanaconda/modules/storage/installation.py:88
 msgid "An error occurred while resizing the device {}: {}"
