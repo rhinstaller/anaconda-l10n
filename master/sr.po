@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2021-07-16 00:46+0000\n"
+"POT-Creation-Date: 2021-07-20 00:50+0000\n"
 "PO-Revision-Date: 2020-03-17 16:38+0000\n"
 "Last-Translator: Марко Костић (Marko Kostić) <marko.m.kostic@gmail.com>\n"
 "Language-Team: Serbian <https://translate.fedoraproject.org/projects/"
@@ -809,7 +809,7 @@ msgstr "Инсталирам покретачки програм"
 
 #: pyanaconda/installation.py:366
 #: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:53
-#: pyanaconda/payload/live/payload_base.py:133
+#: pyanaconda/payload/live/payload_base.py:118
 msgid "Performing post-installation setup tasks"
 msgstr "Извршавам задатке после инсталације"
 
@@ -979,6 +979,10 @@ msgstr "Преузимам пакете"
 #: pyanaconda/modules/payloads/payload/dnf/installation.py:242
 msgid "Preparing transaction from installation source"
 msgstr "Припремам трансакцију са извора инсталације"
+
+#: pyanaconda/modules/payloads/payload/live_image/installation.py:52
+msgid "Checking image checksum"
+msgstr "Проверавам интегритет инсталационе слике"
 
 #: pyanaconda/modules/subscription/runtime.py:257
 #: pyanaconda/modules/subscription/runtime.py:303
@@ -2244,8 +2248,8 @@ msgstr ""
 "Делови измећу тачака морају садржати нешто и не могу почињати или завршавати "
 "са '-'."
 
-#: pyanaconda/network.py:449 pyanaconda/ui/gui/spokes/custom_storage.py:454
-#: pyanaconda/ui/gui/spokes/custom_storage.py:497
+#: pyanaconda/network.py:449 pyanaconda/ui/gui/spokes/custom_storage.py:452
+#: pyanaconda/ui/gui/spokes/custom_storage.py:495
 #: pyanaconda/ui/gui/spokes/network.py:284
 msgid "Unknown"
 msgstr "Непознато"
@@ -2368,23 +2372,23 @@ msgstr[0] "{count} диск изабран; {capacity} капацитет; {free
 msgstr[1] "{count} диска изабрана; {capacity} капацитет; {free} слободно"
 msgstr[2] "{count} диска изабрана; {capacity} капацитет; {free} слободно"
 
-#: pyanaconda/ui/lib/storage.py:283
+#: pyanaconda/ui/lib/storage.py:285
 msgid "Saving storage configuration..."
 msgstr "Чувам подешавање складишта..."
 
-#: pyanaconda/ui/lib/storage.py:288
+#: pyanaconda/ui/lib/storage.py:290
 #, fuzzy
 #| msgid "Failed to save storage configuration..."
 msgid "Failed to save storage configuration"
 msgstr "Неуспешно чување подешавање складишта..."
 
-#: pyanaconda/ui/lib/storage.py:293
+#: pyanaconda/ui/lib/storage.py:295
 #, fuzzy
 #| msgid "Failed to save storage configuration..."
 msgid "Failed to save boot loader configuration"
 msgstr "Неуспешно чување подешавање складишта..."
 
-#: pyanaconda/ui/lib/storage.py:297
+#: pyanaconda/ui/lib/storage.py:299
 msgid "Checking storage configuration..."
 msgstr "Проверавам подешавање складишта..."
 
@@ -2595,38 +2599,38 @@ msgstr "Одредиште за инсталацију"
 #: pyanaconda/ui/tui/spokes/storage.py:136
 #: pyanaconda/ui/tui/spokes/software_selection.py:158
 #: pyanaconda/ui/tui/spokes/installation_source.py:117
-#: pyanaconda/ui/gui/spokes/storage.py:272
+#: pyanaconda/ui/gui/spokes/storage.py:278
 #: pyanaconda/ui/gui/spokes/software_selection.py:184
 msgid "Processing..."
 msgstr "Обрађујем..."
 
 #: pyanaconda/ui/tui/spokes/storage.py:138
-#: pyanaconda/ui/gui/spokes/storage.py:274
+#: pyanaconda/ui/gui/spokes/storage.py:280
 msgid "Kickstart insufficient"
 msgstr "Недовољан kickstart"
 
 #: pyanaconda/ui/tui/spokes/storage.py:140
-#: pyanaconda/ui/gui/spokes/storage.py:276
+#: pyanaconda/ui/gui/spokes/storage.py:282
 msgid "No disks selected"
 msgstr "Нема одабраних дискова"
 
 #: pyanaconda/ui/tui/spokes/storage.py:142
-#: pyanaconda/ui/gui/spokes/storage.py:278
+#: pyanaconda/ui/gui/spokes/storage.py:284
 msgid "Error checking storage configuration"
 msgstr "Грешка при провери подешавања складишта"
 
 #: pyanaconda/ui/tui/spokes/storage.py:144
-#: pyanaconda/ui/gui/spokes/storage.py:280
+#: pyanaconda/ui/gui/spokes/storage.py:286
 msgid "Warning checking storage configuration"
 msgstr "Упозорење при провери подешавања складишта"
 
 #: pyanaconda/ui/tui/spokes/storage.py:146
-#: pyanaconda/ui/gui/spokes/storage.py:282
+#: pyanaconda/ui/gui/spokes/storage.py:288
 msgid "Automatic partitioning selected"
 msgstr "Изабрано аутоматско партиционисање"
 
 #: pyanaconda/ui/tui/spokes/storage.py:148
-#: pyanaconda/ui/gui/spokes/storage.py:284
+#: pyanaconda/ui/gui/spokes/storage.py:290
 msgid "Custom partitioning selected"
 msgstr "Изабрано ручно партиционисање"
 
@@ -2675,15 +2679,15 @@ msgstr ""
 "Унесите подразумевану LUKS фразу за све уређаје које желите шифровати. "
 "Мораћете да је унесете два пута."
 
-#: pyanaconda/ui/tui/spokes/storage.py:449
+#: pyanaconda/ui/tui/spokes/storage.py:455
 msgid "Partitioning Options"
 msgstr "Опције партиционисања"
 
-#: pyanaconda/ui/tui/spokes/storage.py:493
+#: pyanaconda/ui/tui/spokes/storage.py:499
 msgid "Manually assign mount points"
 msgstr "Ручно додели тачке качења"
 
-#: pyanaconda/ui/tui/spokes/storage.py:500
+#: pyanaconda/ui/tui/spokes/storage.py:506
 msgid ""
 "Installation requires partitioning of your hard drive. Select what space to "
 "use for the install target or manually assign mount points."
@@ -2692,23 +2696,23 @@ msgstr ""
 "који желите користити за одредиште инсталације или ручно доделите тачке "
 "качења."
 
-#: pyanaconda/ui/tui/spokes/storage.py:545
+#: pyanaconda/ui/tui/spokes/storage.py:551
 msgid "Reverting previous configuration. This may take a moment..."
 msgstr "Враћам претходно подешавање. Ово може потрајати..."
 
-#: pyanaconda/ui/tui/spokes/storage.py:576
+#: pyanaconda/ui/tui/spokes/storage.py:582
 msgid "Partition Scheme Options"
 msgstr "Опције шема партиција"
 
-#: pyanaconda/ui/tui/spokes/storage.py:612
+#: pyanaconda/ui/tui/spokes/storage.py:618
 msgid "Select a partition scheme configuration."
 msgstr "Изаберите подешавање шеме партиција"
 
-#: pyanaconda/ui/tui/spokes/storage.py:643
+#: pyanaconda/ui/tui/spokes/storage.py:649
 msgid "Assign mount points"
 msgstr "Додели тачке кочења"
 
-#: pyanaconda/ui/tui/spokes/storage.py:663
+#: pyanaconda/ui/tui/spokes/storage.py:669
 msgid ""
 "Choose device from above to assign mount point and set format.\n"
 "Formats marked with * are new formats meaning ALL DATA on the original "
@@ -2718,7 +2722,7 @@ msgstr ""
 "Формати означени са знаком * су нови формати а то значи да ће СВИ ПОДАЦИ у "
 "изворном формату БИТИ ИЗГУБЉЕНИ!"
 
-#: pyanaconda/ui/tui/spokes/storage.py:742
+#: pyanaconda/ui/tui/spokes/storage.py:748
 msgid ""
 "Warning: This will revert all changes done so far.\n"
 "Do you want to proceed?\n"
@@ -2726,48 +2730,48 @@ msgstr ""
 "Упозорење: ово ће отказати све до сада направљене измене.\n"
 "Да ли желите да наставите?\n"
 
-#: pyanaconda/ui/tui/spokes/storage.py:751
+#: pyanaconda/ui/tui/spokes/storage.py:757
 msgid "Scanning disks. This may take a moment..."
 msgstr "Скенирам дискове. Ово може потрајати..."
 
-#: pyanaconda/ui/tui/spokes/storage.py:765
+#: pyanaconda/ui/tui/spokes/storage.py:771
 #, python-format
 msgid "Configure device: %s"
 msgstr "Подеси уређај: %s"
 
-#: pyanaconda/ui/tui/spokes/storage.py:785
+#: pyanaconda/ui/tui/spokes/storage.py:791
 msgid "Choose from above to assign mount point and/or set format."
 msgstr "Изабери изнад за додељивање тачке качења и/или постављање формата."
 
-#: pyanaconda/ui/tui/spokes/storage.py:801
+#: pyanaconda/ui/tui/spokes/storage.py:807
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:162
 msgid "Mount point"
 msgstr "Тачка монтирања"
 
-#: pyanaconda/ui/tui/spokes/storage.py:808
-#: pyanaconda/ui/tui/spokes/storage.py:813
-#: pyanaconda/ui/tui/spokes/storage.py:845
+#: pyanaconda/ui/tui/spokes/storage.py:814
+#: pyanaconda/ui/tui/spokes/storage.py:819
+#: pyanaconda/ui/tui/spokes/storage.py:851
 msgid "none"
 msgstr "ништа"
 
-#: pyanaconda/ui/tui/spokes/storage.py:831
+#: pyanaconda/ui/tui/spokes/storage.py:837
 msgid "Invalid mount point given"
 msgstr "Наведена неисправна тачка качења"
 
-#: pyanaconda/ui/tui/spokes/storage.py:844
+#: pyanaconda/ui/tui/spokes/storage.py:850
 msgid "Format"
 msgstr "Формат"
 
-#: pyanaconda/ui/tui/spokes/storage.py:854
+#: pyanaconda/ui/tui/spokes/storage.py:860
 msgid "Invalid or unsupported format given"
 msgstr "Наведен је неисправан или неподржан формат"
 
-#: pyanaconda/ui/tui/spokes/storage.py:856
+#: pyanaconda/ui/tui/spokes/storage.py:862
 #, python-format
 msgid "Supported formats: %s"
 msgstr "Подржани формати: %s"
 
-#: pyanaconda/ui/tui/spokes/storage.py:873
+#: pyanaconda/ui/tui/spokes/storage.py:879
 msgid "Reformat"
 msgstr "Поново форматирај"
 
@@ -3345,12 +3349,12 @@ msgstr "Морате прво подесити мрежу ако желите к
 msgid "You have no working NTP server configured"
 msgstr "Немате подешене NTP сервере који раде"
 
-#: pyanaconda/ui/gui/spokes/blivet_gui.py:103
+#: pyanaconda/ui/gui/spokes/blivet_gui.py:97
 msgctxt "GUI|Spoke"
 msgid "_Blivet-GUI Partitioning"
 msgstr "Графичко _Бливет партиционисање"
 
-#: pyanaconda/ui/gui/spokes/blivet_gui.py:253
+#: pyanaconda/ui/gui/spokes/blivet_gui.py:227
 msgid ""
 "Error checking storage configuration.  <a href=\"\">Click for details</a> or "
 "press Done again to continue."
@@ -3358,7 +3362,7 @@ msgstr ""
 "Грешка при провери подешавања складиштења.  <a href=\"\">Кликните за детаље."
 "</a> или кликните на Готово још једном да наставите."
 
-#: pyanaconda/ui/gui/spokes/blivet_gui.py:255
+#: pyanaconda/ui/gui/spokes/blivet_gui.py:229
 msgid ""
 "Warning checking storage configuration.  <a href=\"\">Click for details</a> "
 "or press Done again to continue."
@@ -3366,8 +3370,8 @@ msgstr ""
 "Упозорење при провери подешавања складиштења.  <a href=\"\">Кликните за "
 "детаље.</a> или кликните на Готово још једном да наставите."
 
-#: pyanaconda/ui/gui/spokes/blivet_gui.py:322
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1794
+#: pyanaconda/ui/gui/spokes/blivet_gui.py:296
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1772
 msgid ""
 "Continuing with this action will reset all your partitioning selections to "
 "their current on-disk state."
@@ -3375,14 +3379,14 @@ msgstr ""
 "Ова акција ће поништити ваш избор партиционисања и вратити тренутно стање са "
 "диска."
 
-#: pyanaconda/ui/gui/spokes/blivet_gui.py:330
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1805
+#: pyanaconda/ui/gui/spokes/blivet_gui.py:304
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1783
 msgctxt "GUI|Custom Partitioning|Reset Dialog"
 msgid "_Reset selections"
 msgstr "_Поништи избор"
 
-#: pyanaconda/ui/gui/spokes/blivet_gui.py:331
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1807
+#: pyanaconda/ui/gui/spokes/blivet_gui.py:305
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1785
 msgctxt "GUI|Custom Partitioning|Reset Dialog"
 msgid "_Preserve current selections"
 msgstr "_Сачувај тренутни избор"
@@ -3400,21 +3404,21 @@ msgstr ""
 "Начин партиционисања промењен, заказана подешавања складишта ће бити "
 "отказана."
 
-#: pyanaconda/ui/gui/spokes/storage.py:405
+#: pyanaconda/ui/gui/spokes/storage.py:411
 msgid ""
 "Error checking storage configuration.  <a href=\"\">Click for details.</a>"
 msgstr ""
 "Грешка при провери подешавања складиштења. <a href=\"\">Кликните за детаље.</"
 "a>"
 
-#: pyanaconda/ui/gui/spokes/storage.py:409
+#: pyanaconda/ui/gui/spokes/storage.py:415
 msgid ""
 "Warning checking storage configuration.  <a href=\"\">Click for details.</a>"
 msgstr ""
 "Упозорење при провери подешавања складиштења. <a href=\"\">Кликните за "
 "детаље.</a>"
 
-#: pyanaconda/ui/gui/spokes/storage.py:440
+#: pyanaconda/ui/gui/spokes/storage.py:446
 #, fuzzy, python-brace-format
 #| msgid ""
 #| "FCP device %(hba_id)s\n"
@@ -3429,19 +3433,19 @@ msgstr ""
 "WWPN %(wwpn)s\n"
 "LUN %(lun)s"
 
-#: pyanaconda/ui/gui/spokes/storage.py:446
+#: pyanaconda/ui/gui/spokes/storage.py:452
 #, fuzzy, python-brace-format
 #| msgid "NVDIMM device %(namespace)s"
 msgid "NVDIMM device {namespace}"
 msgstr "NVDIMM уређај %(namespace)s"
 
-#: pyanaconda/ui/gui/spokes/storage.py:460
+#: pyanaconda/ui/gui/spokes/storage.py:466
 #, fuzzy
 #| msgid "%s free"
 msgid "{} free"
 msgstr "%s слободно"
 
-#: pyanaconda/ui/gui/spokes/storage.py:563
+#: pyanaconda/ui/gui/spokes/storage.py:569
 msgid ""
 "You have chosen to skip boot loader installation. Your system may not be "
 "bootable."
@@ -3449,11 +3453,11 @@ msgstr ""
 "Одлучили сте да прескочите инсталирање подизача система. Можда неће бити "
 "могуће подизање вашег система."
 
-#: pyanaconda/ui/gui/spokes/storage.py:741
+#: pyanaconda/ui/gui/spokes/storage.py:747
 msgid "There was a problem with your disk selection. Click here for details."
 msgstr "Јавио се проблем са вашим одабиром дискова. Кликните овде за детаље."
 
-#: pyanaconda/ui/gui/spokes/storage.py:846
+#: pyanaconda/ui/gui/spokes/storage.py:852
 msgid ""
 "The following errors were encountered when checking your disk selection. You "
 "can modify your selection or quit the installer."
@@ -3461,18 +3465,18 @@ msgstr ""
 "Следеће грешке су уочене приликом провере ваших одабраних дискова. Можете "
 "изменити одабрано или изаћи из инсталатора."
 
-#: pyanaconda/ui/gui/spokes/storage.py:851
-#: pyanaconda/ui/gui/spokes/storage.py:872
+#: pyanaconda/ui/gui/spokes/storage.py:857
+#: pyanaconda/ui/gui/spokes/storage.py:878
 msgctxt "GUI|Storage|Error Dialog"
 msgid "_Quit"
 msgstr "_Излаз"
 
-#: pyanaconda/ui/gui/spokes/storage.py:852
+#: pyanaconda/ui/gui/spokes/storage.py:858
 msgctxt "GUI|Storage|Error Dialog"
 msgid "_Modify Disk Selection"
 msgstr "Из_мени одабране дискове"
 
-#: pyanaconda/ui/gui/spokes/storage.py:867
+#: pyanaconda/ui/gui/spokes/storage.py:873
 msgid ""
 "The following errors were encountered when checking your storage "
 "configuration.  You can modify your storage layout or quit the installer."
@@ -3480,12 +3484,12 @@ msgstr ""
 "Следеће грешке се се појавиле при провери вашег подешавања складишта. Можете "
 "изменити распоред вашег складишта или напустити инсталатер."
 
-#: pyanaconda/ui/gui/spokes/storage.py:873
+#: pyanaconda/ui/gui/spokes/storage.py:879
 msgctxt "GUI|Storage|Error Dialog"
 msgid "_Modify Storage Layout"
 msgstr "_Променити распоред складишта"
 
-#: pyanaconda/ui/gui/spokes/storage.py:887
+#: pyanaconda/ui/gui/spokes/storage.py:893
 msgid ""
 "The following warnings were encountered when checking your storage "
 "configuration.  These are not fatal, but you may wish to make changes to "
@@ -3495,7 +3499,7 @@ msgstr ""
 "нису фатална, али бисте можда желели да извршите неке промене на распореду "
 "вашег складишта."
 
-#: pyanaconda/ui/gui/spokes/storage.py:892
+#: pyanaconda/ui/gui/spokes/storage.py:898
 msgctxt "GUI|Storage|Warning Dialog"
 msgid "_OK"
 msgstr "_У реду"
@@ -3944,12 +3948,12 @@ msgstr "Root лозинка је постављена"
 msgid "Root password is not set"
 msgstr "Root лозинка није постављена"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:100
+#: pyanaconda/ui/gui/spokes/custom_storage.py:98
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:87
 msgid "MANUAL PARTITIONING"
 msgstr "РУЧНО ПАРТИЦИОНИСАЊЕ"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:274
+#: pyanaconda/ui/gui/spokes/custom_storage.py:272
 #, python-format
 msgctxt "GUI|Custom Partitioning"
 msgid "%d _storage device selected"
@@ -3958,13 +3962,13 @@ msgstr[0] "%d _складиштени уређај изабран"
 msgstr[1] "%d _складиштених уређаја изабрано"
 msgstr[2] "%d _складиштених уређаја изабрано"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:343
+#: pyanaconda/ui/gui/spokes/custom_storage.py:341
 #, python-format
 msgid "%(items_selected)s of %(items_total)s mount points in %(page_name)s"
 msgstr ""
 "%(items_selected)s од укупно %(items_total)s тачки качења у %(page_name)s"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:370
+#: pyanaconda/ui/gui/spokes/custom_storage.py:368
 #, python-format
 msgid ""
 "Please select a single mount point to edit properties.\n"
@@ -3977,7 +3981,7 @@ msgstr ""
 "Тренутно сте изабрали:\n"
 "%s"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:375
+#: pyanaconda/ui/gui/spokes/custom_storage.py:373
 #, python-format
 msgid ""
 "When you create mount points for your %(name)s %(version)s installation, "
@@ -3986,16 +3990,16 @@ msgstr ""
 "Када направите тачке монтирања за инсталацију ваше %(name)s %(version)s, "
 "видећете детаље овде."
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:601
+#: pyanaconda/ui/gui/spokes/custom_storage.py:599
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade:178
 msgid "Device reconfiguration failed."
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:749
+#: pyanaconda/ui/gui/spokes/custom_storage.py:747
 msgid "No disks assigned"
 msgstr "Нема додељених дискова"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:763
+#: pyanaconda/ui/gui/spokes/custom_storage.py:761
 #, fuzzy
 #| msgctxt "GUI|Custom Partitioning|Devices"
 #| msgid " and %d other"
@@ -4007,11 +4011,11 @@ msgstr[0] "и још %d"
 msgstr[1] "и још %d осталих"
 msgstr[2] "и још %d осталих"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:807
+#: pyanaconda/ui/gui/spokes/custom_storage.py:805
 msgid "The container is encrypted."
 msgstr "Контејнер је шифрован."
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:836
+#: pyanaconda/ui/gui/spokes/custom_storage.py:834
 msgid ""
 "The space available to this mount point can be changed by modifying the "
 "volume below."
@@ -4019,57 +4023,57 @@ msgstr ""
 "Простор доступан за ову тачку монтирања може да се промени изменом диска "
 "испод."
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:841
+#: pyanaconda/ui/gui/spokes/custom_storage.py:839
 msgid "This file system may not be resized."
 msgstr "Овом систему датотека се не може променити величина."
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:934
+#: pyanaconda/ui/gui/spokes/custom_storage.py:912
 msgid ""
 "Error checking storage configuration. <a href=\"\">Click for details</a> or "
 "press Done again to continue."
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:938
+#: pyanaconda/ui/gui/spokes/custom_storage.py:916
 msgid ""
 "Warning checking storage configuration. <a href=\"\">Click for details</a> "
 "or press Done again to continue."
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1020
+#: pyanaconda/ui/gui/spokes/custom_storage.py:998
 msgid "Failed to add new device."
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1078
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1056
 msgid "Device removal request failed."
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1212
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1190
 msgid "No disks selected. Keeping previous disk set."
 msgstr "Нема изабраних дискова. Задржавам претходни комплет дискова."
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1291
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1269
 #, fuzzy
 #| msgid "(%s free)"
 msgid "({} free)"
 msgstr "(%s слободно)"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1473
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1451
 msgid "Automatic partitioning failed."
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1585
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1563
 msgid ""
 "Invalid input. Specify the Desired Capacity in whole or decimal numbers, "
 "with an appropriate unit."
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1777
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1781
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1755
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1759
 #: pyanaconda/ui/gui/spokes/installation_source.py:99
 msgid " <a href=\"\">Click for details.</a>"
 msgstr " <a href=\"\">Кликните за детаље.</a>"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1901
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1879
 msgid "Failed to unlock encrypted block device."
 msgstr ""
 
@@ -4583,11 +4587,11 @@ msgstr "Неисправно име ризнице"
 msgid "Repository name conflicts with internal repository name."
 msgstr "Сукоб имена ризнице са унутрашњим именом ризнице."
 
-#: pyanaconda/payload/dnf/payload.py:537
+#: pyanaconda/payload/dnf/payload.py:533
 msgid "Starting package installation process"
 msgstr "Почињем поступак инсталације пакета"
 
-#: pyanaconda/payload/live/payload_base.py:73
+#: pyanaconda/payload/live/payload_base.py:74
 #: pyanaconda/payload/live/payload_liveos.py:93
 msgid "Installing software"
 msgstr "Инсталирам програме"
@@ -4597,10 +4601,6 @@ msgstr "Инсталирам програме"
 #, python-format
 msgid "Downloading %(url)s (%(pct)d%%)"
 msgstr "Преузимам %(url)s (%(pct)d%%)"
-
-#: pyanaconda/payload/live/payload_liveimg.py:209
-msgid "Checking image checksum"
-msgstr "Проверавам интегритет инсталационе слике"
 
 #: pyanaconda/payload/manager.py:75
 msgid "Failed to set up installation source"

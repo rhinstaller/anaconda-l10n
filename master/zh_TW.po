@@ -33,7 +33,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2021-07-16 00:46+0000\n"
+"POT-Creation-Date: 2021-07-20 00:50+0000\n"
 "PO-Revision-Date: 2021-03-27 05:01+0000\n"
 "Last-Translator: Enfong Cao <nelson22768384@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://translate.fedoraproject.org/"
@@ -813,7 +813,7 @@ msgstr "正在安裝開機載入器"
 
 #: pyanaconda/installation.py:366
 #: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:53
-#: pyanaconda/payload/live/payload_base.py:133
+#: pyanaconda/payload/live/payload_base.py:118
 msgid "Performing post-installation setup tasks"
 msgstr "正在執行安裝後的設定工作"
 
@@ -989,6 +989,10 @@ msgstr "正在下載軟體包"
 #: pyanaconda/modules/payloads/payload/dnf/installation.py:242
 msgid "Preparing transaction from installation source"
 msgstr "正從安裝來源準備處理事項"
+
+#: pyanaconda/modules/payloads/payload/live_image/installation.py:52
+msgid "Checking image checksum"
+msgstr "正在檢查映像檔校驗總和碼"
 
 #: pyanaconda/modules/subscription/runtime.py:257
 #: pyanaconda/modules/subscription/runtime.py:303
@@ -2200,8 +2204,8 @@ msgstr ""
 "主機名稱僅可以包含 'a-z'、'A-Z'、'0-9'、'-' 或 '.' 字元，兩個半形句點之間必須"
 "包含一些字元，但不能以 '-' 作為開頭或結尾。"
 
-#: pyanaconda/network.py:449 pyanaconda/ui/gui/spokes/custom_storage.py:454
-#: pyanaconda/ui/gui/spokes/custom_storage.py:497
+#: pyanaconda/network.py:449 pyanaconda/ui/gui/spokes/custom_storage.py:452
+#: pyanaconda/ui/gui/spokes/custom_storage.py:495
 #: pyanaconda/ui/gui/spokes/network.py:284
 msgid "Unknown"
 msgstr "未知"
@@ -2317,19 +2321,19 @@ msgid "{count} disk selected; {capacity} capacity; {free} free"
 msgid_plural "{count} disks selected; {capacity} capacity; {free} free"
 msgstr[0] "已選取 {count} 顆硬碟；空間：{capacity}；剩餘：{free}"
 
-#: pyanaconda/ui/lib/storage.py:283
+#: pyanaconda/ui/lib/storage.py:285
 msgid "Saving storage configuration..."
 msgstr "正在儲存儲存裝置組態..."
 
-#: pyanaconda/ui/lib/storage.py:288
+#: pyanaconda/ui/lib/storage.py:290
 msgid "Failed to save storage configuration"
 msgstr "無法寫入儲存裝置組態"
 
-#: pyanaconda/ui/lib/storage.py:293
+#: pyanaconda/ui/lib/storage.py:295
 msgid "Failed to save boot loader configuration"
 msgstr "無法寫入開機載入器設定"
 
-#: pyanaconda/ui/lib/storage.py:297
+#: pyanaconda/ui/lib/storage.py:299
 msgid "Checking storage configuration..."
 msgstr "正在檢查儲存組態..."
 
@@ -2539,38 +2543,38 @@ msgstr "安裝目的地"
 #: pyanaconda/ui/tui/spokes/storage.py:136
 #: pyanaconda/ui/tui/spokes/software_selection.py:158
 #: pyanaconda/ui/tui/spokes/installation_source.py:117
-#: pyanaconda/ui/gui/spokes/storage.py:272
+#: pyanaconda/ui/gui/spokes/storage.py:278
 #: pyanaconda/ui/gui/spokes/software_selection.py:184
 msgid "Processing..."
 msgstr "處理中..."
 
 #: pyanaconda/ui/tui/spokes/storage.py:138
-#: pyanaconda/ui/gui/spokes/storage.py:274
+#: pyanaconda/ui/gui/spokes/storage.py:280
 msgid "Kickstart insufficient"
 msgstr "Kickstart 不足"
 
 #: pyanaconda/ui/tui/spokes/storage.py:140
-#: pyanaconda/ui/gui/spokes/storage.py:276
+#: pyanaconda/ui/gui/spokes/storage.py:282
 msgid "No disks selected"
 msgstr "尚未選取磁碟"
 
 #: pyanaconda/ui/tui/spokes/storage.py:142
-#: pyanaconda/ui/gui/spokes/storage.py:278
+#: pyanaconda/ui/gui/spokes/storage.py:284
 msgid "Error checking storage configuration"
 msgstr "檢查儲存組態時發生錯誤"
 
 #: pyanaconda/ui/tui/spokes/storage.py:144
-#: pyanaconda/ui/gui/spokes/storage.py:280
+#: pyanaconda/ui/gui/spokes/storage.py:286
 msgid "Warning checking storage configuration"
 msgstr "檢查儲存組態時得到警告"
 
 #: pyanaconda/ui/tui/spokes/storage.py:146
-#: pyanaconda/ui/gui/spokes/storage.py:282
+#: pyanaconda/ui/gui/spokes/storage.py:288
 msgid "Automatic partitioning selected"
 msgstr "已選擇自動磁碟分割"
 
 #: pyanaconda/ui/tui/spokes/storage.py:148
-#: pyanaconda/ui/gui/spokes/storage.py:284
+#: pyanaconda/ui/gui/spokes/storage.py:290
 msgid "Custom partitioning selected"
 msgstr "已選擇自訂磁碟分割"
 
@@ -2613,37 +2617,37 @@ msgid ""
 "encrypt. You will have to type it twice."
 msgstr "請提供您想加密的裝置的預設 LUKS 密語。您將需要輸入兩次。"
 
-#: pyanaconda/ui/tui/spokes/storage.py:449
+#: pyanaconda/ui/tui/spokes/storage.py:455
 msgid "Partitioning Options"
 msgstr "分割區設定"
 
-#: pyanaconda/ui/tui/spokes/storage.py:493
+#: pyanaconda/ui/tui/spokes/storage.py:499
 msgid "Manually assign mount points"
 msgstr "手動指定掛載點"
 
-#: pyanaconda/ui/tui/spokes/storage.py:500
+#: pyanaconda/ui/tui/spokes/storage.py:506
 msgid ""
 "Installation requires partitioning of your hard drive. Select what space to "
 "use for the install target or manually assign mount points."
 msgstr "安裝需要您的磁碟已分過區。選擇想用於安裝的空間、或者是手動指定掛載點。"
 
-#: pyanaconda/ui/tui/spokes/storage.py:545
+#: pyanaconda/ui/tui/spokes/storage.py:551
 msgid "Reverting previous configuration. This may take a moment..."
 msgstr "放棄上次的設定。這需要一段時間…"
 
-#: pyanaconda/ui/tui/spokes/storage.py:576
+#: pyanaconda/ui/tui/spokes/storage.py:582
 msgid "Partition Scheme Options"
 msgstr "分割區規劃選項"
 
-#: pyanaconda/ui/tui/spokes/storage.py:612
+#: pyanaconda/ui/tui/spokes/storage.py:618
 msgid "Select a partition scheme configuration."
 msgstr "請選取分割區規劃組態。"
 
-#: pyanaconda/ui/tui/spokes/storage.py:643
+#: pyanaconda/ui/tui/spokes/storage.py:649
 msgid "Assign mount points"
 msgstr "指定掛載點"
 
-#: pyanaconda/ui/tui/spokes/storage.py:663
+#: pyanaconda/ui/tui/spokes/storage.py:669
 msgid ""
 "Choose device from above to assign mount point and set format.\n"
 "Formats marked with * are new formats meaning ALL DATA on the original "
@@ -2652,7 +2656,7 @@ msgstr ""
 "選擇以上的裝置以指定掛載點、並且設定格式。\n"
 "格式化以「*」標記為新格式，意味著在原始格式的所有檔案將會消失！！"
 
-#: pyanaconda/ui/tui/spokes/storage.py:742
+#: pyanaconda/ui/tui/spokes/storage.py:748
 msgid ""
 "Warning: This will revert all changes done so far.\n"
 "Do you want to proceed?\n"
@@ -2660,48 +2664,48 @@ msgstr ""
 "警告：這將會回復所有變更至很久以前，\n"
 "您確定要進行？\n"
 
-#: pyanaconda/ui/tui/spokes/storage.py:751
+#: pyanaconda/ui/tui/spokes/storage.py:757
 msgid "Scanning disks. This may take a moment..."
 msgstr "掃描磁碟中。這需要一段時間…"
 
-#: pyanaconda/ui/tui/spokes/storage.py:765
+#: pyanaconda/ui/tui/spokes/storage.py:771
 #, python-format
 msgid "Configure device: %s"
 msgstr "設定裝置：%s"
 
-#: pyanaconda/ui/tui/spokes/storage.py:785
+#: pyanaconda/ui/tui/spokes/storage.py:791
 msgid "Choose from above to assign mount point and/or set format."
 msgstr "從以上分配掛載點並設定格式。"
 
-#: pyanaconda/ui/tui/spokes/storage.py:801
+#: pyanaconda/ui/tui/spokes/storage.py:807
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:162
 msgid "Mount point"
 msgstr "掛載點"
 
-#: pyanaconda/ui/tui/spokes/storage.py:808
-#: pyanaconda/ui/tui/spokes/storage.py:813
-#: pyanaconda/ui/tui/spokes/storage.py:845
+#: pyanaconda/ui/tui/spokes/storage.py:814
+#: pyanaconda/ui/tui/spokes/storage.py:819
+#: pyanaconda/ui/tui/spokes/storage.py:851
 msgid "none"
 msgstr "無"
 
-#: pyanaconda/ui/tui/spokes/storage.py:831
+#: pyanaconda/ui/tui/spokes/storage.py:837
 msgid "Invalid mount point given"
 msgstr "提供了無效的掛載點"
 
-#: pyanaconda/ui/tui/spokes/storage.py:844
+#: pyanaconda/ui/tui/spokes/storage.py:850
 msgid "Format"
 msgstr "格式化"
 
-#: pyanaconda/ui/tui/spokes/storage.py:854
+#: pyanaconda/ui/tui/spokes/storage.py:860
 msgid "Invalid or unsupported format given"
 msgstr "提供了無效、或不支援的格式"
 
-#: pyanaconda/ui/tui/spokes/storage.py:856
+#: pyanaconda/ui/tui/spokes/storage.py:862
 #, python-format
 msgid "Supported formats: %s"
 msgstr "支援的格式：%s"
 
-#: pyanaconda/ui/tui/spokes/storage.py:873
+#: pyanaconda/ui/tui/spokes/storage.py:879
 msgid "Reformat"
 msgstr "重新格式化"
 
@@ -3252,12 +3256,12 @@ msgstr "若您希望使用 NTP 您需要先設定網路"
 msgid "You have no working NTP server configured"
 msgstr "您尚未設定運作中的 NTP 伺服器"
 
-#: pyanaconda/ui/gui/spokes/blivet_gui.py:103
+#: pyanaconda/ui/gui/spokes/blivet_gui.py:97
 msgctxt "GUI|Spoke"
 msgid "_Blivet-GUI Partitioning"
 msgstr "Blivet GUI 磁碟分割工具(_B)"
 
-#: pyanaconda/ui/gui/spokes/blivet_gui.py:253
+#: pyanaconda/ui/gui/spokes/blivet_gui.py:227
 msgid ""
 "Error checking storage configuration.  <a href=\"\">Click for details</a> or "
 "press Done again to continue."
@@ -3265,7 +3269,7 @@ msgstr ""
 "檢查儲存裝置組態時發生錯誤。<a href=\"\">請點按瞭解詳細資訊。</a>，或再次按下"
 "「完成」繼續。"
 
-#: pyanaconda/ui/gui/spokes/blivet_gui.py:255
+#: pyanaconda/ui/gui/spokes/blivet_gui.py:229
 msgid ""
 "Warning checking storage configuration.  <a href=\"\">Click for details</a> "
 "or press Done again to continue."
@@ -3273,21 +3277,21 @@ msgstr ""
 "檢查儲存裝置組態時得到警告。<a href=\"\">請點按瞭解詳細資訊。</a>，或是再次按"
 "下「完成」繼續。"
 
-#: pyanaconda/ui/gui/spokes/blivet_gui.py:322
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1794
+#: pyanaconda/ui/gui/spokes/blivet_gui.py:296
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1772
 msgid ""
 "Continuing with this action will reset all your partitioning selections to "
 "their current on-disk state."
 msgstr "繼續此動作會重設您所有的磁碟分割選取項目，而回復成目前的磁碟狀態。"
 
-#: pyanaconda/ui/gui/spokes/blivet_gui.py:330
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1805
+#: pyanaconda/ui/gui/spokes/blivet_gui.py:304
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1783
 msgctxt "GUI|Custom Partitioning|Reset Dialog"
 msgid "_Reset selections"
 msgstr "重設選取項目(_R)"
 
-#: pyanaconda/ui/gui/spokes/blivet_gui.py:331
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1807
+#: pyanaconda/ui/gui/spokes/blivet_gui.py:305
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1785
 msgctxt "GUI|Custom Partitioning|Reset Dialog"
 msgid "_Preserve current selections"
 msgstr "保留目前的選取項目(_P)"
@@ -3303,17 +3307,17 @@ msgid ""
 "cancelled."
 msgstr "已變更磁碟分割方式 - 將取消規劃好的儲存裝置組態變更。"
 
-#: pyanaconda/ui/gui/spokes/storage.py:405
+#: pyanaconda/ui/gui/spokes/storage.py:411
 msgid ""
 "Error checking storage configuration.  <a href=\"\">Click for details.</a>"
 msgstr "檢查儲存組態時發生錯誤。<a href=\"\">請點按瞭解詳細資訊。</a>"
 
-#: pyanaconda/ui/gui/spokes/storage.py:409
+#: pyanaconda/ui/gui/spokes/storage.py:415
 msgid ""
 "Warning checking storage configuration.  <a href=\"\">Click for details.</a>"
 msgstr "檢查儲存組態時得到警告。<a href=\"\">請點按瞭解詳細資訊。</a>"
 
-#: pyanaconda/ui/gui/spokes/storage.py:440
+#: pyanaconda/ui/gui/spokes/storage.py:446
 #, python-brace-format
 msgid ""
 "FCP device {hba_id}\n"
@@ -3324,56 +3328,56 @@ msgstr ""
 "WWPN {wwpn}\n"
 "LUN {lun}"
 
-#: pyanaconda/ui/gui/spokes/storage.py:446
+#: pyanaconda/ui/gui/spokes/storage.py:452
 #, python-brace-format
 msgid "NVDIMM device {namespace}"
 msgstr "NVDIMM 裝置 {namespace}"
 
-#: pyanaconda/ui/gui/spokes/storage.py:460
+#: pyanaconda/ui/gui/spokes/storage.py:466
 msgid "{} free"
 msgstr "{} 可用"
 
-#: pyanaconda/ui/gui/spokes/storage.py:563
+#: pyanaconda/ui/gui/spokes/storage.py:569
 msgid ""
 "You have chosen to skip boot loader installation. Your system may not be "
 "bootable."
 msgstr "如果您選擇跳過開機管理程式安裝，您的系統將無法開機。"
 
-#: pyanaconda/ui/gui/spokes/storage.py:741
+#: pyanaconda/ui/gui/spokes/storage.py:747
 msgid "There was a problem with your disk selection. Click here for details."
 msgstr "您的磁碟選取發生錯誤。請點按這裡查看詳細資訊。"
 
-#: pyanaconda/ui/gui/spokes/storage.py:846
+#: pyanaconda/ui/gui/spokes/storage.py:852
 msgid ""
 "The following errors were encountered when checking your disk selection. You "
 "can modify your selection or quit the installer."
 msgstr ""
 "檢查您的磁碟選取時遭遇下列錯誤。您可以修改您的選取項目，或是退出安裝程式。"
 
-#: pyanaconda/ui/gui/spokes/storage.py:851
-#: pyanaconda/ui/gui/spokes/storage.py:872
+#: pyanaconda/ui/gui/spokes/storage.py:857
+#: pyanaconda/ui/gui/spokes/storage.py:878
 msgctxt "GUI|Storage|Error Dialog"
 msgid "_Quit"
 msgstr "退出(_Q)"
 
-#: pyanaconda/ui/gui/spokes/storage.py:852
+#: pyanaconda/ui/gui/spokes/storage.py:858
 msgctxt "GUI|Storage|Error Dialog"
 msgid "_Modify Disk Selection"
 msgstr "修改磁碟選取(_M)"
 
-#: pyanaconda/ui/gui/spokes/storage.py:867
+#: pyanaconda/ui/gui/spokes/storage.py:873
 msgid ""
 "The following errors were encountered when checking your storage "
 "configuration.  You can modify your storage layout or quit the installer."
 msgstr ""
 "檢查您的儲存組態時遭遇以下錯誤。您可以修改您的儲存配置，或者退出安裝程式。"
 
-#: pyanaconda/ui/gui/spokes/storage.py:873
+#: pyanaconda/ui/gui/spokes/storage.py:879
 msgctxt "GUI|Storage|Error Dialog"
 msgid "_Modify Storage Layout"
 msgstr "修改儲存配置(_M)"
 
-#: pyanaconda/ui/gui/spokes/storage.py:887
+#: pyanaconda/ui/gui/spokes/storage.py:893
 msgid ""
 "The following warnings were encountered when checking your storage "
 "configuration.  These are not fatal, but you may wish to make changes to "
@@ -3381,7 +3385,7 @@ msgid ""
 msgstr ""
 "檢查您的儲存組態時遭遇以下警告。這些雖不嚴重，但您可能會想修改儲存布局。"
 
-#: pyanaconda/ui/gui/spokes/storage.py:892
+#: pyanaconda/ui/gui/spokes/storage.py:898
 msgctxt "GUI|Storage|Warning Dialog"
 msgid "_OK"
 msgstr "確定(_O)"
@@ -3781,24 +3785,24 @@ msgstr "Root 密碼已設定"
 msgid "Root password is not set"
 msgstr "尚未設定 root 密碼"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:100
+#: pyanaconda/ui/gui/spokes/custom_storage.py:98
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:87
 msgid "MANUAL PARTITIONING"
 msgstr "手動處理分割"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:274
+#: pyanaconda/ui/gui/spokes/custom_storage.py:272
 #, python-format
 msgctxt "GUI|Custom Partitioning"
 msgid "%d _storage device selected"
 msgid_plural "%d _storage devices selected"
 msgstr[0] "已選擇 %d 個儲存裝置(_S)"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:343
+#: pyanaconda/ui/gui/spokes/custom_storage.py:341
 #, python-format
 msgid "%(items_selected)s of %(items_total)s mount points in %(page_name)s"
 msgstr "%(items_selected)s / %(items_total)s 個掛載點，位於 %(page_name)s"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:370
+#: pyanaconda/ui/gui/spokes/custom_storage.py:368
 #, python-format
 msgid ""
 "Please select a single mount point to edit properties.\n"
@@ -3811,7 +3815,7 @@ msgstr ""
 "您目前選取的是：\n"
 "%s"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:375
+#: pyanaconda/ui/gui/spokes/custom_storage.py:373
 #, python-format
 msgid ""
 "When you create mount points for your %(name)s %(version)s installation, "
@@ -3819,36 +3823,36 @@ msgid ""
 msgstr ""
 "當您為您的 %(name)s %(version)s 安裝建立掛載點時，您可在此處檢視其詳細資料。"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:601
+#: pyanaconda/ui/gui/spokes/custom_storage.py:599
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade:178
 msgid "Device reconfiguration failed."
 msgstr "裝置重新設定失敗。"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:749
+#: pyanaconda/ui/gui/spokes/custom_storage.py:747
 msgid "No disks assigned"
 msgstr "尚未指派磁碟"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:763
+#: pyanaconda/ui/gui/spokes/custom_storage.py:761
 msgctxt "GUI|Custom Partitioning|Devices"
 msgid " and {} other"
 msgid_plural " and {} others"
 msgstr[0] " 與其他 {} 項"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:807
+#: pyanaconda/ui/gui/spokes/custom_storage.py:805
 msgid "The container is encrypted."
 msgstr "容器已加密。"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:836
+#: pyanaconda/ui/gui/spokes/custom_storage.py:834
 msgid ""
 "The space available to this mount point can be changed by modifying the "
 "volume below."
 msgstr "此掛載點所能使用的空間可透過下方儲區之修改來調整。"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:841
+#: pyanaconda/ui/gui/spokes/custom_storage.py:839
 msgid "This file system may not be resized."
 msgstr "此檔案系統不可重設大小。"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:934
+#: pyanaconda/ui/gui/spokes/custom_storage.py:912
 msgid ""
 "Error checking storage configuration. <a href=\"\">Click for details</a> or "
 "press Done again to continue."
@@ -3856,7 +3860,7 @@ msgstr ""
 "檢查儲存區設定時發生錯誤。<a href=\"\">按一下取得詳細資訊</a>，或再按一次「完"
 "成」繼續。"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:938
+#: pyanaconda/ui/gui/spokes/custom_storage.py:916
 msgid ""
 "Warning checking storage configuration. <a href=\"\">Click for details</a> "
 "or press Done again to continue."
@@ -3864,39 +3868,39 @@ msgstr ""
 "檢查儲存區設定時出現警告。<a href=\"\">按一下取得詳細資訊</a>，或再按一次「完"
 "成」繼續。"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1020
+#: pyanaconda/ui/gui/spokes/custom_storage.py:998
 msgid "Failed to add new device."
 msgstr "無法新增裝置。"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1078
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1056
 msgid "Device removal request failed."
 msgstr "移除裝置請求失敗。"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1212
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1190
 msgid "No disks selected. Keeping previous disk set."
 msgstr "尚未選取磁碟。保留先前磁碟設定。"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1291
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1269
 msgid "({} free)"
 msgstr "({} 可用)"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1473
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1451
 msgid "Automatic partitioning failed."
 msgstr "自動分區失敗。"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1585
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1563
 msgid ""
 "Invalid input. Specify the Desired Capacity in whole or decimal numbers, "
 "with an appropriate unit."
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1777
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1781
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1755
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1759
 #: pyanaconda/ui/gui/spokes/installation_source.py:99
 msgid " <a href=\"\">Click for details.</a>"
 msgstr " <a href=\"\">請點按瞭解詳細資訊。</a>"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1901
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1879
 msgid "Failed to unlock encrypted block device."
 msgstr "無法解鎖加密的區塊裝置。"
 
@@ -4387,11 +4391,11 @@ msgstr "無效的軟體庫名稱"
 msgid "Repository name conflicts with internal repository name."
 msgstr "軟體庫名稱與內部使用的軟體庫名稱相衝突。"
 
-#: pyanaconda/payload/dnf/payload.py:537
+#: pyanaconda/payload/dnf/payload.py:533
 msgid "Starting package installation process"
 msgstr "正開始軟體包安裝程序"
 
-#: pyanaconda/payload/live/payload_base.py:73
+#: pyanaconda/payload/live/payload_base.py:74
 #: pyanaconda/payload/live/payload_liveos.py:93
 msgid "Installing software"
 msgstr "正在安裝軟體"
@@ -4401,10 +4405,6 @@ msgstr "正在安裝軟體"
 #, python-format
 msgid "Downloading %(url)s (%(pct)d%%)"
 msgstr "正在下載 %(url)s (%(pct)d%%)"
-
-#: pyanaconda/payload/live/payload_liveimg.py:209
-msgid "Checking image checksum"
-msgstr "正在檢查映像檔校驗總和碼"
 
 #: pyanaconda/payload/manager.py:75
 msgid "Failed to set up installation source"
