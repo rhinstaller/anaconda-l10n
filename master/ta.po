@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2021-07-20 00:50+0000\n"
+"POT-Creation-Date: 2021-07-21 00:48+0000\n"
 "PO-Revision-Date: 2015-01-05 04:54+0000\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Tamil (http://www.transifex.com/projects/p/anaconda/language/"
@@ -775,7 +775,7 @@ msgstr "பூட் லோடரை நிறுவுகிறது"
 
 #: pyanaconda/installation.py:366
 #: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:53
-#: pyanaconda/payload/live/payload_base.py:118
+#: pyanaconda/payload/live/payload_base.py:74
 msgid "Performing post-installation setup tasks"
 msgstr "நிறுவலுக்குப் பிந்தைய அமைவுப் பணிகளை செய்கிறது"
 
@@ -948,6 +948,16 @@ msgstr "நிறுவும் மூலத்திலிருந்தா�
 #: pyanaconda/modules/payloads/payload/live_image/installation.py:52
 msgid "Checking image checksum"
 msgstr "பட செக்சம் -ஐ சரிபார்க்கிறது"
+
+#: pyanaconda/modules/payloads/payload/live_image/installation_progress.py:74
+msgid "Synchronizing writes to disk"
+msgstr ""
+
+#: pyanaconda/modules/payloads/payload/live_image/installation_progress.py:95
+#, fuzzy
+#| msgid "Installing software"
+msgid "Installing software {}%"
+msgstr "மென்பொருளை நிறுவுகிறது"
 
 #: pyanaconda/modules/subscription/runtime.py:257
 #: pyanaconda/modules/subscription/runtime.py:303
@@ -1245,164 +1255,161 @@ msgstr "தேர்ந்தெடுத்த வட்டுகளில் �
 msgid "No big enough free space on disks for automatic partitioning"
 msgstr ""
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:162
-#, python-format
-msgid "No disk found for specified BIOS disk \"%s\"."
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:161
+#, fuzzy
+#| msgid "No disk found for specified BIOS disk \"%s\"."
+msgid "No disk found for specified BIOS disk \"{}\"."
 msgstr "குறிப்பிட்ட \"%s\" எனும் BIOS வட்டுக்கு வட்டு எதுவும் இல்லை."
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:203
-#, python-format
-msgid "RAID partition \"%s\" is defined multiple times."
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:202
+#, fuzzy
+#| msgid "RAID partition \"%s\" is defined multiple times."
+msgid "RAID partition \"{}\" is defined multiple times."
 msgstr "\"%s\" எனும் RAID பகிர்வு பல முறை வரையறுக்கப்பட்டுள்ளது."
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:216
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:522
-#, python-format
-msgid "PV partition \"%s\" is defined multiple times."
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:214
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:484
+#, fuzzy
+#| msgid "PV partition \"%s\" is defined multiple times."
+msgid "PV partition \"{}\" is defined multiple times."
 msgstr "\"%s\" எனும் PV பகிர்வு பல முறை வரையறுக்கப்பட்டுள்ளது."
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:229
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:534
-#, python-format
-msgid "Btrfs partition \"%s\" is defined multiple times."
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:226
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:496
+#, fuzzy
+#| msgid "Btrfs partition \"%s\" is defined multiple times."
+msgid "Btrfs partition \"{}\" is defined multiple times."
 msgstr "\"%s\" எனும் Btrfs பகிர்வு பல முறை வரையறுக்கப்பட்டுள்ளது."
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:254
-#, python-format
-msgid "The size \"%s\" is invalid."
-msgstr "\"%s\" எனும் அளவு தவறானது."
-
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:263
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:252
 msgid "part --noformat must also use the --onpart option."
 msgstr "part --noformat கட்டளையானது --onpart விருப்பத்தையும் பயன்படுத்த வேண்டும்."
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:270
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:380
-#, python-format
-msgid "Partition \"%s\" given in part command does not exist."
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:257
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:352
+#, fuzzy
+#| msgid "Partition \"%s\" given in part command does not exist."
+msgid "Partition \"{}\" given in part command does not exist."
 msgstr "part கட்டளையில் கொடுக்கப்பட்ட \"%s\" எனும் பகிர்வு இல்லை."
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:283
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:294
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:391
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:982
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:993
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1058
-#, python-format
-msgid "Target size \"%(size)s\" for device \"%(device)s\" is invalid."
-msgstr "\"%(device)s\" சாதனத்திற்கு \"%(size)s\" எனும் இலக்கு அளவு தவறானது."
-
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:315
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:617
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1033
-#, python-format
-msgid "The \"%s\" file system type is not supported."
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:573
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:952
+#, fuzzy
+#| msgid "The \"%s\" file system type is not supported."
+msgid "The \"{}\" file system type is not supported."
 msgstr "\"%s\" கோப்பு முறைமை வகைக்கு ஆதரவு இல்லை."
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:331
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:350
-#, python-format
-msgid "Disk \"%s\" given in part command does not exist."
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:309
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:328
+#, fuzzy
+#| msgid "Disk \"%s\" given in part command does not exist."
+msgid "Disk \"{}\" given in part command does not exist."
 msgstr "part கட்டளையில் கொடுக்கப்பட்ட \"%s\" எனும் வட்டு இல்லை."
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:336
-#, python-format
-msgid "Cannot install to unpartitionable device \"%s\"."
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:314
+#, fuzzy
+#| msgid "Cannot install to unpartitionable device \"%s\"."
+msgid "Cannot install to unpartitionable device \"{}\"."
 msgstr "பிரிவாக்கம் செய்ய முடியாத \"%s\" எனும் சாதனத்திற்கு நிறுவ முடியாது."
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:344
-#, python-format
-msgid "Disk \"%s\" in part command is not partitioned."
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:322
+#, fuzzy
+#| msgid "Disk \"%s\" in part command is not partitioned."
+msgid "Disk \"{}\" in part command is not partitioned."
 msgstr "part கட்டளையில் உள்ள \"%s\" எனும் வட்டு பிரிவாக்கம் செய்யப்படவில்லை."
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:361
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1103
-#, python-format
-msgid "The maximum size \"%s\" is invalid."
-msgstr "\"%s\" எனும் அதிகபட்ச அளவு தவறானது."
-
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:551
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:927
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1273
-#, python-format
-msgid "The mount point \"%s\" is not valid.  It must start with a /."
-msgstr ""
-"\"%s\" என்ற மவுன்ட் புள்ளி செல்லுபடியானதல்ல. அது / எழுத்துக்குறியைக் கொண்டே துவங்க "
-"வேண்டும்."
-
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:560
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:518
 msgid "raid --noformat must also use the --device option."
 msgstr "raid --noformat கட்டளையானது --device விருப்பத்தையும் பயன்படுத்த வேண்டும்."
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:567
-#, python-format
-msgid "RAID device  \"%s\" given in raid command does not exist."
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:524
+#, fuzzy
+#| msgid "RAID device  \"%s\" given in raid command does not exist."
+msgid "RAID device  \"{}\" given in raid command does not exist."
 msgstr "raid கட்டளையில் கொடுக்கப்பட்ட \"%s\" எனும் RAID சாதனம் இல்லை."
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:592
-#, python-format
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:549
+#, fuzzy
+#| msgid ""
+#| "RAID device \"%(device)s\" has a format of \"%(format)s\", but should "
+#| "have a format of \"mdmember\"."
 msgid ""
-"RAID device \"%(device)s\" has a format of \"%(format)s\", but should have a "
-"format of \"mdmember\"."
+"RAID device \"{}\" has a format of \"{}\", but should have a format of "
+"\"mdmember\"."
 msgstr ""
 "\"%(device)s\" எனும் RAID சாதனம் \"%(format)s\" என்ற வடிவமைப்பைக் கொண்டுள்ளது, ஆனால் "
 "அது \"mdmember\" என்ற வடிவமைப்பைக் கொண்டிருக்க வேண்டும்."
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:599
-#, python-format
-msgid "Tried to use undefined partition \"%s\" in RAID specification."
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:555
+#, fuzzy
+#| msgid "Tried to use undefined partition \"%s\" in RAID specification."
+msgid "Tried to use undefined partition \"{}\" in RAID specification."
 msgstr ""
 "RAID விவரக்குறிப்பீட்டில் \"%s\" எனும் வரையறுக்கப்படாத பகிர்வைப் பயன்படுத்த "
 "முயற்சிக்கப்பட்டது."
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:640
-#, python-format
-msgid "RAID volume \"%s\" specified with --useexisting does not exist."
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:596
+#, fuzzy
+#| msgid "RAID volume \"%s\" specified with --useexisting does not exist."
+msgid "RAID volume \"{}\" specified with --useexisting does not exist."
 msgstr "--useexisting விருப்பத்துடன் குறிப்பிடப்பட்ட \"%s\" எனும் RAID தொகுதி இல்லை."
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:651
-#, python-format
-msgid "The RAID volume name \"%s\" is already in use."
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:607
+#, fuzzy
+#| msgid "The RAID volume name \"%s\" is already in use."
+msgid "The RAID volume name \"{}\" is already in use."
 msgstr "\"%s\" எனும் RAID தொகுதிப் பெயர் ஏற்கனவே பயனில் உள்ளது."
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:769
-#, python-format
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:721
+#, fuzzy
+#| msgid ""
+#| "Physical volume \"%(device)s\" has a format of \"%(format)s\", but should "
+#| "have a format of \"lvmpv\"."
 msgid ""
-"Physical volume \"%(device)s\" has a format of \"%(format)s\", but should "
-"have a format of \"lvmpv\"."
+"Physical volume \"{}\" has a format of \"{}\", but should have a format of "
+"\"lvmpv\"."
 msgstr ""
 "\"%(device)s\" எனும் இயல்நிலைத் தொகுதி \"%(format)s\" என்ற வடிவமைப்பைக் கொண்டுள்ளது, "
 "ஆனால் அது \"lvmpv\" என்ற வடிவமைப்பைக் கொண்டிருக்க வேண்டும்."
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:775
-#, python-format
-msgid "Tried to use undefined partition \"%s\" in Volume Group specification"
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:727
+#, fuzzy
+#| msgid ""
+#| "Tried to use undefined partition \"%s\" in Volume Group specification"
+msgid "Tried to use undefined partition \"{}\" in Volume Group specification"
 msgstr ""
 "தொகுதிக் குழு விவரக்குறிப்பீட்டில் \"%s\" எனும் வரையறுக்காத பகிர்வைப் பயன்படுத்த "
 "முயற்சித்தீர்கள்"
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:783
-#, python-format
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:735
+#, fuzzy
+#| msgid ""
+#| "Volume group \"%s\" defined without any physical volumes.  Either specify "
+#| "physical volumes or use --useexisting."
 msgid ""
-"Volume group \"%s\" defined without any physical volumes.  Either specify "
+"Volume group \"{}\" defined without any physical volumes. Either specify "
 "physical volumes or use --useexisting."
 msgstr ""
 "\"%s\" எனும் தொகுதிக் குழு இயல்நிலைத் தொகுதிகள் எதுவும் இல்லாமலே வரையறுக்கப்பட்டுள்ளது. "
 "இயல்நிலைத் தொகுதிகளைக் குறிப்பிடவும் அல்லது --useexisting எனும் விருப்பத்தைப் "
 "பயன்படுத்தவும்."
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:796
-#, python-format
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:747
+#, fuzzy
+#| msgid ""
+#| "Volume group given physical extent size of \"%(extentSize)s\", but must "
+#| "be one of:\n"
+#| "%(validExtentSizes)s."
 msgid ""
-"Volume group given physical extent size of \"%(extentSize)s\", but must be "
-"one of:\n"
-"%(validExtentSizes)s."
+"Volume group given physical extent size of \"{}\", but must be one of:\n"
+"{}."
 msgstr ""
 "தொகுதிக் குழுவுக்கு \"%(extentSize)s\" எனும் பிரிவகத் தொகுதி கொடுக்கப்பட்டுள்ளது, "
 "ஆனால் அது இவற்றில் ஒன்றாகவே இருக்க வேண்டும்:\n"
 "%(validExtentSizes)s."
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:809
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:755
 msgid ""
 "volgroup --noformat and volgroup --useexisting must also use the --name= "
 "option."
@@ -1410,95 +1417,146 @@ msgstr ""
 "volgroup --noformat மற்றும் volgroup --useexisting ஆகிய கட்டளைகள் --name= "
 "விருப்பத்தையும் கண்டிப்பாகப் பயன்படுத்த வேண்டும்."
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:816
-#, python-format
-msgid "Volume group \"%s\" given in volgroup command does not exist."
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:762
+#, fuzzy
+#| msgid "Volume group \"%s\" given in volgroup command does not exist."
+msgid "Volume group \"{}\" given in volgroup command does not exist."
 msgstr "volgroup கட்டளையில் கொடுக்கப்பட்ட \"%s\" எனும் தொகுதிக் குழு இல்லை."
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:821
-#, python-format
-msgid "The volume group name \"%s\" is already in use."
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:767
+#, fuzzy
+#| msgid "The volume group name \"%s\" is already in use."
+msgid "The volume group name \"{}\" is already in use."
 msgstr "\"%s\" எனும் தொகுதிக் குழுப் பெயர் ஏற்கனவே பயனில் உள்ளது."
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:935
-#, python-format
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:821
+msgid "/boot cannot be of type \"lvmlv\" on s390x"
+msgstr ""
+
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:851
+msgid "Size cannot be decided on from kickstart nor obtained from device."
+msgstr ""
+
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:867
+#, fuzzy
+#| msgid ""
+#| "No volume group exists with the name \"%s\".  Specify volume groups "
+#| "before logical volumes."
 msgid ""
-"No volume group exists with the name \"%s\".  Specify volume groups before "
+"No volume group exists with the name \"{}\". Specify volume groups before "
 "logical volumes."
 msgstr ""
 "\"%s\" எனும் பெயரில் தொகுதிக் குழு எதுவும் இல்லை.  தொகுதிக் குழுக்களை தருக்கத் "
 "தொகுதிகளுக்கு முன்பாகக் குறிப்பிடவும்."
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:944
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:876
 msgid "Cache PVs must belong to the same VG as the cached LV"
 msgstr ""
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:953
-#, python-format
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:884
+#, fuzzy
+#| msgid ""
+#| "No thin pool exists with the name \"%s\". Specify thin pools before thin "
+#| "volumes."
 msgid ""
-"No thin pool exists with the name \"%s\". Specify thin pools before thin "
+"No thin pool exists with the name \"{}\". Specify thin pools before thin "
 "volumes."
 msgstr ""
 "\"%s\" எனும் பெயரில் மெல்லிய தொகுப்பகம் எதுவும் இல்லை. மெல்லிய தொகுப்பகங்களை மெல்லிய "
 "தொகுதிகளுக்கு முன்பாகக் குறிப்பிடவும்."
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:962
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:893
 msgid "logvol --noformat must also use the --name= option."
 msgstr "logvol --noformat கட்டளையில் --name= விருப்பமும் பயன்படுத்தப்பட வேண்டும்."
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:969
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1046
-#, python-format
-msgid "Logical volume \"%s\" given in logvol command does not exist."
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:899
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:964
+#, fuzzy
+#| msgid "Logical volume \"%s\" given in logvol command does not exist."
+msgid "Logical volume \"{}\" given in logvol command does not exist."
 msgstr "logvol கட்டளையில் கொடுக்கப்பட்ட \"%s\" எனும் தருக்கத் தொகுதி இல்லை."
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1009
-#, python-format
-msgid ""
-"Logical volume name \"%(logvol)s\" is already in use in volume group "
-"\"%(volgroup)s\"."
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:931
+#, fuzzy
+#| msgid ""
+#| "Logical volume name \"%(logvol)s\" is already in use in volume group "
+#| "\"%(volgroup)s\"."
+msgid "Logical volume name \"{}\" is already in use in volume group \"{}\"."
 msgstr ""
 "\"%(logvol)s\" எனும் தருக்கத் தொகுதி பெயர் \"%(volgroup)s\" எனும் தொகுதிக் குழுவில் "
 "ஏற்கனவே பயனில் உள்ளது."
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1016
-#, python-format
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:937
+#, fuzzy
+#| msgid ""
+#| "Logical volume size \"%(logvolSize)s\" must be larger than the volume "
+#| "group extent size of \"%(extentSize)s\"."
 msgid ""
-"Logical volume size \"%(logvolSize)s\" must be larger than the volume group "
-"extent size of \"%(extentSize)s\"."
+"Logical volume size \"{}\" must be larger than the volume group extent size "
+"of \"{}\"."
 msgstr ""
 "\"%(logvolSize)s\" எனும் தருக்கத் தொகுதி அளவானது \"%(extentSize)s\" என்ற தொகுதிக் "
 "குழு சிற்றளவின் அளவை விடப் பெரியதாக இருக்க வேண்டும்."
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1239
-#, python-format
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1144
+#, fuzzy
+#| msgid ""
+#| "Btrfs partition \"%(device)s\" has a format of \"%(format)s\", but should "
+#| "have a format of \"btrfs\"."
 msgid ""
-"Btrfs partition \"%(device)s\" has a format of \"%(format)s\", but should "
-"have a format of \"btrfs\"."
+"Btrfs partition \"{}\" has a format of \"{}\", but should have a format of "
+"\"btrfs\"."
 msgstr ""
 "Btrfs பகிர்வு \"%(device)s\" ஆனது \"%(format)s\" எனும் வடிவமைப்பைக் கொண்டுள்ளது, "
 "ஆனால் அது \"btrfs\" எனும் வடிவமைக்கைக் கொண்டிருக்க வேண்டும்."
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1247
-#, python-format
-msgid "Tried to use undefined partition \"%s\" in Btrfs volume specification."
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1150
+#, fuzzy
+#| msgid ""
+#| "Tried to use undefined partition \"%s\" in Btrfs volume specification."
+msgid "Tried to use undefined partition \"{}\" in Btrfs volume specification."
 msgstr ""
 "Btrfs தொகுதி விவரக்குறிப்பீட்டில் \"%s\" எனும் வரையறுக்காத பகிர்வைப் பயன்படுத்த "
 "முயற்சித்தீர்கள்."
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1262
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1165
+#, fuzzy
+#| msgid ""
+#| "Btrfs volume defined without any member devices.  Either specify member "
+#| "devices or use --useexisting."
 msgid ""
-"Btrfs volume defined without any member devices.  Either specify member "
+"Btrfs volume defined without any member devices. Either specify member "
 "devices or use --useexisting."
 msgstr ""
 "உறுப்பு சாதனங்கள் எதுவும் இல்லாமலே Btrfs தொகுதி வரையறுக்கப்பட்டுள்ளது.  உறுப்பு "
 "சாதனங்களைக் குறிப்பிடவும் அல்லது --useexisting எனும் விருப்பத்தைப் பயன்படுத்தவும்."
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1290
-#, python-format
-msgid "Btrfs volume \"%s\" specified with --useexisting does not exist."
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1189
+#, fuzzy
+#| msgid "Btrfs volume \"%s\" specified with --useexisting does not exist."
+msgid "Btrfs volume \"{}\" specified with --useexisting does not exist."
 msgstr ""
 "--useexisting எனும் விருப்பத்துடன் குறிப்பிடப்பட்ட \"%s\" எனும் Btrfs தொகுதி இல்லை."
+
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1212
+#, fuzzy
+#| msgid "The size \"%s\" is invalid."
+msgid "The size \"{}\" is invalid."
+msgstr "\"%s\" எனும் அளவு தவறானது."
+
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1217
+#, fuzzy
+#| msgid "The mount point \"%s\" is not valid.  It must start with a /."
+msgid "The mount point \"{}\" is not valid. It must start with a /."
+msgstr ""
+"\"%s\" என்ற மவுன்ட் புள்ளி செல்லுபடியானதல்ல. அது / எழுத்துக்குறியைக் கொண்டே துவங்க "
+"வேண்டும்."
+
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1222
+#, fuzzy, python-brace-format
+#| msgid "Target size \"%(size)s\" for device \"%(device)s\" is invalid."
+msgid "Target size \"{size}\" for device \"{device}\" is invalid."
+msgstr "\"%(device)s\" சாதனத்திற்கு \"%(size)s\" எனும் இலக்கு அளவு தவறானது."
 
 #: pyanaconda/modules/storage/partitioning/interactive/change_device.py:87
 #, fuzzy
@@ -1600,23 +1658,19 @@ msgid ""
 "a different device."
 msgstr ""
 
-#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:64
-#, python-format
-msgid "Unknown or invalid device '%s' specified"
+#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:65
+msgid "Unknown or invalid device '{}' specified"
 msgstr ""
 
-#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:72
-#, python-format
-msgid ""
-"Unknown or invalid format '%(format)s' specified for device '%(device)s'"
+#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:74
+msgid "Unknown or invalid format '{}' specified for device '{}'"
 msgstr ""
 
-#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:79
-#, python-format
-msgid "No format on device '%s'"
+#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:81
+msgid "No format on device '{}'"
 msgstr ""
 
-#: pyanaconda/modules/storage/partitioning/base_partitioning.py:57
+#: pyanaconda/modules/storage/partitioning/base_partitioning.py:56
 #, fuzzy
 #| msgid "Failed to set up installation source"
 msgid "Failed to proceed with the installation."
@@ -1726,15 +1780,15 @@ msgstr ""
 msgid "%(desc)s cannot be of type %(type)s"
 msgstr "%(desc)s ஆனது %(type)s வகை கொண்டதாக இருக்க முடியாது"
 
-#: pyanaconda/modules/storage/bootloader/execution.py:145
+#: pyanaconda/modules/storage/bootloader/execution.py:144
 msgid "No match found for given boot drive \"{}\"."
 msgstr ""
 
-#: pyanaconda/modules/storage/bootloader/execution.py:149
+#: pyanaconda/modules/storage/bootloader/execution.py:148
 msgid "More than one match found for given boot drive \"{}\"."
 msgstr ""
 
-#: pyanaconda/modules/storage/bootloader/execution.py:153
+#: pyanaconda/modules/storage/bootloader/execution.py:152
 msgid "Requested boot drive \"{}\" doesn't exist or cannot be used."
 msgstr ""
 
@@ -1858,26 +1912,40 @@ msgstr "%(description)s (%(deviceName)s)"
 msgid "{device_name} on {container_name}"
 msgstr "%(container)s இல் %(deviceName)s"
 
-#: pyanaconda/modules/storage/devicetree/utils.py:79
-#, python-format
-msgid "Escrow certificate %s requires the network."
+#: pyanaconda/modules/storage/devicetree/utils.py:78
+#, fuzzy
+#| msgid "Escrow certificate %s requires the network."
+msgid "Escrow certificate {} requires the network."
 msgstr "Escrow சான்றிதழ் %s க்கு பிணையம் தேவை."
 
-#: pyanaconda/modules/storage/devicetree/utils.py:87
-#, python-format
+#: pyanaconda/modules/storage/devicetree/utils.py:88
+#, fuzzy
+#| msgid ""
+#| "The following error was encountered while downloading the escrow "
+#| "certificate:\n"
+#| "\n"
+#| "%s"
 msgid ""
 "SSL error while downloading the escrow certificate:\n"
 "\n"
-"%s"
+"{}"
 msgstr ""
+"என்ஸ்க்ரு சான்றிதழை பதிவிறக்கும் போது பின்வரும் பிழை ஏற்பட்டுள்ளது:\n"
+"\n"
+"%s"
 
-#: pyanaconda/modules/storage/devicetree/utils.py:90
-#, python-format
+#: pyanaconda/modules/storage/devicetree/utils.py:92
+#, fuzzy
+#| msgid ""
+#| "The following error was encountered while downloading the escrow "
+#| "certificate:\n"
+#| "\n"
+#| "%s"
 msgid ""
 "The following error was encountered while downloading the escrow "
 "certificate:\n"
 "\n"
-"%s"
+"{}"
 msgstr ""
 "என்ஸ்க்ரு சான்றிதழை பதிவிறக்கும் போது பின்வரும் பிழை ஏற்பட்டுள்ளது:\n"
 "\n"
@@ -1938,21 +2006,17 @@ msgstr ""
 msgid "Gathering entropy {percents}% (remaining time {time})"
 msgstr ""
 
-#: pyanaconda/modules/storage/snapshot/device.py:43
-#, python-format
-msgid "Snapshot: origin \"%s\" doesn't exist!"
+#: pyanaconda/modules/storage/snapshot/device.py:45
+msgid "Snapshot: origin \"{}\" doesn't exist!"
 msgstr ""
 
-#: pyanaconda/modules/storage/snapshot/device.py:47
-#, python-format
+#: pyanaconda/modules/storage/snapshot/device.py:50
 msgid ""
-"Snapshot: origin \"%(origin)s\" of snapshot \"%(name)s\" is not a valid thin "
-"LV device."
+"Snapshot: origin \"{}\" of snapshot \"{}\" is not a valid thin LV device."
 msgstr ""
 
-#: pyanaconda/modules/storage/snapshot/device.py:53
-#, python-format
-msgid "Snapshot %s already exists."
+#: pyanaconda/modules/storage/snapshot/device.py:56
+msgid "Snapshot {} already exists."
 msgstr ""
 
 #: pyanaconda/modules/storage/disk_selection/utils.py:36
@@ -4406,16 +4470,15 @@ msgstr "தொகுப்பதிவகப் பெயர் உள்ளம�
 msgid "Starting package installation process"
 msgstr "தொகுப்பு நிறுவல் செயலை துவக்குகிறது"
 
-#: pyanaconda/payload/live/payload_base.py:74
-#: pyanaconda/payload/live/payload_liveos.py:93
-msgid "Installing software"
-msgstr "மென்பொருளை நிறுவுகிறது"
-
-#: pyanaconda/payload/live/download_progress.py:57
 #: pyanaconda/payload/live/download_progress.py:66
+#: pyanaconda/payload/live/download_progress.py:75
 #, python-format
 msgid "Downloading %(url)s (%(pct)d%%)"
 msgstr "%(url)s ஐ பதிவிறக்குகிறது (%(pct)d%%)"
+
+#: pyanaconda/payload/live/payload_liveos.py:90
+msgid "Installing software"
+msgstr "மென்பொருளை நிறுவுகிறது"
 
 #: pyanaconda/payload/manager.py:75
 msgid "Failed to set up installation source"
@@ -7259,6 +7322,9 @@ msgstr "மூடு"
 #: ../data/liveinst/console.apps/liveinst.h:1
 msgid "Starting Install to Hard Drive"
 msgstr "வன் இயக்கியில் நிறுவல் துவங்குகிறது"
+
+#~ msgid "The maximum size \"%s\" is invalid."
+#~ msgstr "\"%s\" எனும் அதிகபட்ச அளவு தவறானது."
 
 #~ msgid "Error checking software dependencies"
 #~ msgstr "மென்பொருள் சார்புத்தொகுதிகளை சோதிப்பதில் பிழை"

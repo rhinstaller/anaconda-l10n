@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2021-07-20 00:50+0000\n"
+"POT-Creation-Date: 2021-07-21 00:48+0000\n"
 "PO-Revision-Date: 2015-01-05 04:40+0000\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Serbian (Latin) (http://www.transifex.com/projects/p/anaconda/"
@@ -729,7 +729,7 @@ msgstr ""
 
 #: pyanaconda/installation.py:366
 #: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:53
-#: pyanaconda/payload/live/payload_base.py:118
+#: pyanaconda/payload/live/payload_base.py:74
 msgid "Performing post-installation setup tasks"
 msgstr ""
 
@@ -877,6 +877,16 @@ msgstr "Pripremam transakciju sa izvora instalacije"
 #: pyanaconda/modules/payloads/payload/live_image/installation.py:52
 msgid "Checking image checksum"
 msgstr ""
+
+#: pyanaconda/modules/payloads/payload/live_image/installation_progress.py:74
+msgid "Synchronizing writes to disk"
+msgstr ""
+
+#: pyanaconda/modules/payloads/payload/live_image/installation_progress.py:95
+#, fuzzy
+#| msgid "Install"
+msgid "Installing software {}%"
+msgstr "Instaliraj"
 
 #: pyanaconda/modules/subscription/runtime.py:257
 #: pyanaconda/modules/subscription/runtime.py:303
@@ -1150,226 +1160,188 @@ msgstr ""
 msgid "No big enough free space on disks for automatic partitioning"
 msgstr ""
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:162
-#, python-format
-msgid "No disk found for specified BIOS disk \"%s\"."
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:161
+msgid "No disk found for specified BIOS disk \"{}\"."
 msgstr ""
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:203
-#, python-format
-msgid "RAID partition \"%s\" is defined multiple times."
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:202
+msgid "RAID partition \"{}\" is defined multiple times."
 msgstr ""
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:216
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:522
-#, python-format
-msgid "PV partition \"%s\" is defined multiple times."
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:214
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:484
+msgid "PV partition \"{}\" is defined multiple times."
 msgstr ""
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:229
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:534
-#, python-format
-msgid "Btrfs partition \"%s\" is defined multiple times."
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:226
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:496
+msgid "Btrfs partition \"{}\" is defined multiple times."
 msgstr ""
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:254
-#, python-format
-msgid "The size \"%s\" is invalid."
-msgstr ""
-
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:263
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:252
 msgid "part --noformat must also use the --onpart option."
 msgstr ""
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:270
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:380
-#, python-format
-msgid "Partition \"%s\" given in part command does not exist."
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:257
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:352
+msgid "Partition \"{}\" given in part command does not exist."
 msgstr ""
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:283
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:294
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:391
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:982
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:993
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1058
-#, python-format
-msgid "Target size \"%(size)s\" for device \"%(device)s\" is invalid."
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:573
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:952
+msgid "The \"{}\" file system type is not supported."
 msgstr ""
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:315
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:617
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1033
-#, python-format
-msgid "The \"%s\" file system type is not supported."
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:309
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:328
+msgid "Disk \"{}\" given in part command does not exist."
 msgstr ""
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:331
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:350
-#, python-format
-msgid "Disk \"%s\" given in part command does not exist."
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:314
+msgid "Cannot install to unpartitionable device \"{}\"."
 msgstr ""
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:336
-#, python-format
-msgid "Cannot install to unpartitionable device \"%s\"."
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:322
+msgid "Disk \"{}\" in part command is not partitioned."
 msgstr ""
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:344
-#, python-format
-msgid "Disk \"%s\" in part command is not partitioned."
-msgstr ""
-
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:361
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1103
-#, python-format
-msgid "The maximum size \"%s\" is invalid."
-msgstr ""
-
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:551
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:927
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1273
-#, python-format
-msgid "The mount point \"%s\" is not valid.  It must start with a /."
-msgstr ""
-
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:560
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:518
 msgid "raid --noformat must also use the --device option."
 msgstr ""
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:567
-#, python-format
-msgid "RAID device  \"%s\" given in raid command does not exist."
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:524
+msgid "RAID device  \"{}\" given in raid command does not exist."
 msgstr ""
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:592
-#, python-format
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:549
 msgid ""
-"RAID device \"%(device)s\" has a format of \"%(format)s\", but should have a "
-"format of \"mdmember\"."
+"RAID device \"{}\" has a format of \"{}\", but should have a format of "
+"\"mdmember\"."
 msgstr ""
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:599
-#, python-format
-msgid "Tried to use undefined partition \"%s\" in RAID specification."
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:555
+msgid "Tried to use undefined partition \"{}\" in RAID specification."
 msgstr ""
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:640
-#, python-format
-msgid "RAID volume \"%s\" specified with --useexisting does not exist."
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:596
+msgid "RAID volume \"{}\" specified with --useexisting does not exist."
 msgstr ""
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:651
-#, python-format
-msgid "The RAID volume name \"%s\" is already in use."
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:607
+msgid "The RAID volume name \"{}\" is already in use."
 msgstr ""
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:769
-#, python-format
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:721
 msgid ""
-"Physical volume \"%(device)s\" has a format of \"%(format)s\", but should "
-"have a format of \"lvmpv\"."
+"Physical volume \"{}\" has a format of \"{}\", but should have a format of "
+"\"lvmpv\"."
 msgstr ""
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:775
-#, python-format
-msgid "Tried to use undefined partition \"%s\" in Volume Group specification"
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:727
+msgid "Tried to use undefined partition \"{}\" in Volume Group specification"
 msgstr ""
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:783
-#, python-format
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:735
 msgid ""
-"Volume group \"%s\" defined without any physical volumes.  Either specify "
+"Volume group \"{}\" defined without any physical volumes. Either specify "
 "physical volumes or use --useexisting."
 msgstr ""
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:796
-#, python-format
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:747
 msgid ""
-"Volume group given physical extent size of \"%(extentSize)s\", but must be "
-"one of:\n"
-"%(validExtentSizes)s."
+"Volume group given physical extent size of \"{}\", but must be one of:\n"
+"{}."
 msgstr ""
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:809
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:755
 msgid ""
 "volgroup --noformat and volgroup --useexisting must also use the --name= "
 "option."
 msgstr ""
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:816
-#, python-format
-msgid "Volume group \"%s\" given in volgroup command does not exist."
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:762
+msgid "Volume group \"{}\" given in volgroup command does not exist."
+msgstr ""
+
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:767
+msgid "The volume group name \"{}\" is already in use."
 msgstr ""
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:821
-#, python-format
-msgid "The volume group name \"%s\" is already in use."
+msgid "/boot cannot be of type \"lvmlv\" on s390x"
 msgstr ""
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:935
-#, python-format
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:851
+msgid "Size cannot be decided on from kickstart nor obtained from device."
+msgstr ""
+
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:867
 msgid ""
-"No volume group exists with the name \"%s\".  Specify volume groups before "
+"No volume group exists with the name \"{}\". Specify volume groups before "
 "logical volumes."
 msgstr ""
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:944
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:876
 msgid "Cache PVs must belong to the same VG as the cached LV"
 msgstr ""
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:953
-#, python-format
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:884
 msgid ""
-"No thin pool exists with the name \"%s\". Specify thin pools before thin "
+"No thin pool exists with the name \"{}\". Specify thin pools before thin "
 "volumes."
 msgstr ""
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:962
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:893
 msgid "logvol --noformat must also use the --name= option."
 msgstr ""
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:969
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1046
-#, python-format
-msgid "Logical volume \"%s\" given in logvol command does not exist."
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:899
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:964
+msgid "Logical volume \"{}\" given in logvol command does not exist."
 msgstr ""
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1009
-#, python-format
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:931
+msgid "Logical volume name \"{}\" is already in use in volume group \"{}\"."
+msgstr ""
+
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:937
 msgid ""
-"Logical volume name \"%(logvol)s\" is already in use in volume group "
-"\"%(volgroup)s\"."
+"Logical volume size \"{}\" must be larger than the volume group extent size "
+"of \"{}\"."
 msgstr ""
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1016
-#, python-format
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1144
 msgid ""
-"Logical volume size \"%(logvolSize)s\" must be larger than the volume group "
-"extent size of \"%(extentSize)s\"."
+"Btrfs partition \"{}\" has a format of \"{}\", but should have a format of "
+"\"btrfs\"."
 msgstr ""
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1239
-#, python-format
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1150
+msgid "Tried to use undefined partition \"{}\" in Btrfs volume specification."
+msgstr ""
+
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1165
 msgid ""
-"Btrfs partition \"%(device)s\" has a format of \"%(format)s\", but should "
-"have a format of \"btrfs\"."
-msgstr ""
-
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1247
-#, python-format
-msgid "Tried to use undefined partition \"%s\" in Btrfs volume specification."
-msgstr ""
-
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1262
-msgid ""
-"Btrfs volume defined without any member devices.  Either specify member "
+"Btrfs volume defined without any member devices. Either specify member "
 "devices or use --useexisting."
 msgstr ""
 
-#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1290
-#, python-format
-msgid "Btrfs volume \"%s\" specified with --useexisting does not exist."
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1189
+msgid "Btrfs volume \"{}\" specified with --useexisting does not exist."
+msgstr ""
+
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1212
+msgid "The size \"{}\" is invalid."
+msgstr ""
+
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1217
+msgid "The mount point \"{}\" is not valid. It must start with a /."
+msgstr ""
+
+#: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1222
+#, python-brace-format
+msgid "Target size \"{size}\" for device \"{device}\" is invalid."
 msgstr ""
 
 #: pyanaconda/modules/storage/partitioning/interactive/change_device.py:87
@@ -1466,23 +1438,19 @@ msgid ""
 "a different device."
 msgstr ""
 
-#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:64
-#, python-format
-msgid "Unknown or invalid device '%s' specified"
+#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:65
+msgid "Unknown or invalid device '{}' specified"
 msgstr ""
 
-#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:72
-#, python-format
-msgid ""
-"Unknown or invalid format '%(format)s' specified for device '%(device)s'"
+#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:74
+msgid "Unknown or invalid format '{}' specified for device '{}'"
 msgstr ""
 
-#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:79
-#, python-format
-msgid "No format on device '%s'"
+#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:81
+msgid "No format on device '{}'"
 msgstr ""
 
-#: pyanaconda/modules/storage/partitioning/base_partitioning.py:57
+#: pyanaconda/modules/storage/partitioning/base_partitioning.py:56
 msgid "Failed to proceed with the installation."
 msgstr ""
 
@@ -1583,15 +1551,15 @@ msgstr ""
 msgid "%(desc)s cannot be of type %(type)s"
 msgstr ""
 
-#: pyanaconda/modules/storage/bootloader/execution.py:145
+#: pyanaconda/modules/storage/bootloader/execution.py:144
 msgid "No match found for given boot drive \"{}\"."
 msgstr ""
 
-#: pyanaconda/modules/storage/bootloader/execution.py:149
+#: pyanaconda/modules/storage/bootloader/execution.py:148
 msgid "More than one match found for given boot drive \"{}\"."
 msgstr ""
 
-#: pyanaconda/modules/storage/bootloader/execution.py:153
+#: pyanaconda/modules/storage/bootloader/execution.py:152
 msgid "Requested boot drive \"{}\" doesn't exist or cannot be used."
 msgstr ""
 
@@ -1694,26 +1662,23 @@ msgstr ""
 msgid "{device_name} on {container_name}"
 msgstr ""
 
-#: pyanaconda/modules/storage/devicetree/utils.py:79
-#, python-format
-msgid "Escrow certificate %s requires the network."
+#: pyanaconda/modules/storage/devicetree/utils.py:78
+msgid "Escrow certificate {} requires the network."
 msgstr ""
 
-#: pyanaconda/modules/storage/devicetree/utils.py:87
-#, python-format
+#: pyanaconda/modules/storage/devicetree/utils.py:88
 msgid ""
 "SSL error while downloading the escrow certificate:\n"
 "\n"
-"%s"
+"{}"
 msgstr ""
 
-#: pyanaconda/modules/storage/devicetree/utils.py:90
-#, python-format
+#: pyanaconda/modules/storage/devicetree/utils.py:92
 msgid ""
 "The following error was encountered while downloading the escrow "
 "certificate:\n"
 "\n"
-"%s"
+"{}"
 msgstr ""
 
 #: pyanaconda/modules/storage/devicetree/root.py:339
@@ -1769,21 +1734,17 @@ msgstr ""
 msgid "Gathering entropy {percents}% (remaining time {time})"
 msgstr ""
 
-#: pyanaconda/modules/storage/snapshot/device.py:43
-#, python-format
-msgid "Snapshot: origin \"%s\" doesn't exist!"
+#: pyanaconda/modules/storage/snapshot/device.py:45
+msgid "Snapshot: origin \"{}\" doesn't exist!"
 msgstr ""
 
-#: pyanaconda/modules/storage/snapshot/device.py:47
-#, python-format
+#: pyanaconda/modules/storage/snapshot/device.py:50
 msgid ""
-"Snapshot: origin \"%(origin)s\" of snapshot \"%(name)s\" is not a valid thin "
-"LV device."
+"Snapshot: origin \"{}\" of snapshot \"{}\" is not a valid thin LV device."
 msgstr ""
 
-#: pyanaconda/modules/storage/snapshot/device.py:53
-#, python-format
-msgid "Snapshot %s already exists."
+#: pyanaconda/modules/storage/snapshot/device.py:56
+msgid "Snapshot {} already exists."
 msgstr ""
 
 #: pyanaconda/modules/storage/disk_selection/utils.py:36
@@ -4067,15 +4028,14 @@ msgstr ""
 msgid "Starting package installation process"
 msgstr ""
 
-#: pyanaconda/payload/live/payload_base.py:74
-#: pyanaconda/payload/live/payload_liveos.py:93
-msgid "Installing software"
-msgstr ""
-
-#: pyanaconda/payload/live/download_progress.py:57
 #: pyanaconda/payload/live/download_progress.py:66
+#: pyanaconda/payload/live/download_progress.py:75
 #, python-format
 msgid "Downloading %(url)s (%(pct)d%%)"
+msgstr ""
+
+#: pyanaconda/payload/live/payload_liveos.py:90
+msgid "Installing software"
 msgstr ""
 
 #: pyanaconda/payload/manager.py:75
