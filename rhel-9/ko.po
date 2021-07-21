@@ -32,7 +32,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2021-07-20 00:53+0000\n"
+"POT-Creation-Date: 2021-07-21 00:51+0000\n"
 "PO-Revision-Date: 2021-07-10 19:04+0000\n"
 "Last-Translator: simmon <simmon@nplob.com>\n"
 "Language-Team: Korean <https://translate.fedoraproject.org/projects/anaconda/"
@@ -858,12 +858,12 @@ msgstr "설치 중."
 msgid "Installing boot loader"
 msgstr "부트로더 설치 중"
 
-#: pyanaconda/installation.py:327 pyanaconda/payload/dnf/payload.py:907
+#: pyanaconda/installation.py:337 pyanaconda/payload/dnf/payload.py:907
 #: pyanaconda/payload/live/payload_base.py:133
 msgid "Performing post-installation setup tasks"
 msgstr "설치 후 설정 작업 수행 중"
 
-#: pyanaconda/installation.py:335
+#: pyanaconda/installation.py:345
 msgid "Creating snapshots"
 msgstr "스냅 샷 생성하기"
 
@@ -1516,6 +1516,18 @@ msgstr ""
 msgid "Btrfs volume \"%s\" specified with --useexisting does not exist."
 msgstr "--useexisting으로 지정된 Btrfs 볼륨 \"%s\"이 존재하지 않습니다."
 
+#: pyanaconda/modules/storage/partitioning/interactive/change_device.py:87
+#, fuzzy
+#| msgid "Failed to add new device."
+msgid "Failed to change a device."
+msgstr "새 장치를 추가하지 못했습니다."
+
+#: pyanaconda/modules/storage/partitioning/interactive/add_device.py:72
+#, fuzzy
+#| msgid "Failed to add new device."
+msgid "Failed to add a device."
+msgstr "새 장치를 추가하지 못했습니다."
+
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:213
 #, python-brace-format
 msgid "New {name} {version} Installation"
@@ -1625,6 +1637,12 @@ msgstr "알 수 없거나 장치 '%(device)s'을 위해 지정된 잘못된 형�
 #, python-format
 msgid "No format on device '%s'"
 msgstr "장치 %s'에 형식이 없습니다"
+
+#: pyanaconda/modules/storage/partitioning/base_partitioning.py:57
+#, fuzzy
+#| msgid "Failed to set up installation source"
+msgid "Failed to proceed with the installation."
+msgstr "설치 소스 설정에 실패했습니다"
 
 #: pyanaconda/modules/storage/bootloader/bootloader.py:172
 msgid "GRUB2 does not support installation to a partition."
@@ -1902,6 +1920,28 @@ msgstr "{product}· {version} for {arch}"
 #, python-brace-format
 msgid "{product} Linux {version} for {arch}"
 msgstr "{product} Linux {version} for {arch}"
+
+#: pyanaconda/modules/storage/constants.py:30
+msgid ""
+"Workarounds for manual installations:\n"
+"* Select only the disks with the same sector size during manual installation "
+"in graphical or text mode.\n"
+"* When disks with inconsistent sector size are selected for the "
+"installation, restrict each created LVM Volume Group to use Physical Volumes "
+"with the same sector size. This can only be done in graphical mode in the "
+"Custom partitioning spoke.\n"
+"\n"
+"Workarounds for kickstart installations:\n"
+"* Restrict what disks are used for the partitioning by specifying "
+"'ignoredisk --drives=..' or 'ignoredisk --only-use=..'.\n"
+"* Specify what disks should be used for each created LVM Physical Volume: "
+"partition pv.1 --ondisk=..'.\n"
+"\n"
+"General workarounds:\n"
+"* Plain partitioning scheme can be used instead of LVM.\n"
+"* Some drives support re-configuration of sector sizes, for example by "
+"running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
+msgstr ""
 
 #: pyanaconda/modules/storage/installation.py:88
 msgid "An error occurred while resizing the device {}: {}"
