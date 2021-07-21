@@ -23,7 +23,7 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2021-07-21 00:51+0000\n"
-"PO-Revision-Date: 2021-06-30 14:46+0000\n"
+"PO-Revision-Date: 2021-07-22 15:59+0000\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <https://translate.fedoraproject.org/projects/"
 "anaconda/rhel-9/uk/>\n"
@@ -33,7 +33,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.7\n"
+"X-Generator: Weblate 4.7.2\n"
 
 #: tests/nosetests/pyanaconda_tests/ui/common_code_tests.py:31
 msgid "FOO"
@@ -1556,16 +1556,12 @@ msgstr ""
 "Тому Btrfs «%s», вказаного за допомогою параметра --useexisting, не існує."
 
 #: pyanaconda/modules/storage/partitioning/interactive/change_device.py:87
-#, fuzzy
-#| msgid "Failed to add new device."
 msgid "Failed to change a device."
-msgstr "Не вдалося додати новий пристрій."
+msgstr "Не вдалося змінити пристрій."
 
 #: pyanaconda/modules/storage/partitioning/interactive/add_device.py:72
-#, fuzzy
-#| msgid "Failed to add new device."
 msgid "Failed to add a device."
-msgstr "Не вдалося додати новий пристрій."
+msgstr "Не вдалося додати пристрій."
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:213
 #, python-brace-format
@@ -1680,10 +1676,8 @@ msgid "No format on device '%s'"
 msgstr "Пристрій «%s» не форматовано"
 
 #: pyanaconda/modules/storage/partitioning/base_partitioning.py:57
-#, fuzzy
-#| msgid "Failed to set up installation source"
 msgid "Failed to proceed with the installation."
-msgstr "Не вдалося налаштувати джерело для встановлення"
+msgstr "Не вдалося продовжити встановлення."
 
 #: pyanaconda/modules/storage/bootloader/bootloader.py:172
 msgid "GRUB2 does not support installation to a partition."
@@ -1990,6 +1984,25 @@ msgid ""
 "* Some drives support re-configuration of sector sizes, for example by "
 "running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 msgstr ""
+"Варіанти дій для встановлення вручну:\n"
+"* Вибирайте лише диски із однаковими розмірами секторів під час встановлення "
+"вручну у графічному або текстовому режимі.\n"
+"* Якщо для встановлення вибрано диски із несумісними розмірами секторів, "
+"обмежте усі створені групи томів LVM до використання фізичних томів із "
+"однаковим розміром секторів. Зробити це у графічному режим можна лише у "
+"розділі «Нетиповий поділ на диски».\n"
+"\n"
+"Варіанти дій для встановлення з kickstart:\n"
+"* Обмежте диски, які буде використано для поділу на розділи, вказавши «"
+"ignoredisk --drives=..» або «ignoredisk --only-use=..».\n"
+"* Вкажіть, які диски слід використати для кожного створеного фізичного тому "
+"LVM: partition pv.1 --ondisk=..'.\n"
+"\n"
+"Загальні варіанти дій:\n"
+"* Замість LVM можна використати просту схему поділу на розділи.\n"
+"* Для деяких дисків передбачено можливість зміни налаштувань розмірів "
+"секторів, наприклад, за допомогою команди «hdparm --set-sector-size=<РОЗМІР> "
+"<ПРИСТРІЙ>».\n"
 
 #: pyanaconda/modules/storage/installation.py:88
 msgid "An error occurred while resizing the device {}: {}"
