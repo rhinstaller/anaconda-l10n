@@ -26,7 +26,7 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2021-07-21 00:51+0000\n"
-"PO-Revision-Date: 2021-07-15 16:04+0000\n"
+"PO-Revision-Date: 2021-07-22 15:59+0000\n"
 "Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
 "Language-Team: Turkish <https://translate.fedoraproject.org/projects/"
 "anaconda/rhel-9/tr/>\n"
@@ -35,7 +35,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n>1);\n"
-"X-Generator: Weblate 4.7.1\n"
+"X-Generator: Weblate 4.7.2\n"
 
 #: tests/nosetests/pyanaconda_tests/ui/common_code_tests.py:31
 msgid "FOO"
@@ -1332,7 +1332,7 @@ msgstr "\"%(device)s\" aygıtı için \"%(size)s\" hedef boyutu geçersiz."
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1033
 #, python-format
 msgid "The \"%s\" file system type is not supported."
-msgstr "\"%s\" dosya sistem türü desteklenmiyor."
+msgstr "\"%s\" dosya sistemi türü desteklenmiyor."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:331
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:350
@@ -1361,7 +1361,8 @@ msgstr "\"%s\" azami boyut geçersiz."
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1273
 #, python-format
 msgid "The mount point \"%s\" is not valid.  It must start with a /."
-msgstr "Bağlantı noktası %s geçerli değil. / işaretiyle başlaması gerekiyor."
+msgstr ""
+"\"%s\" bağlantı noktası geçerli değil. / işaretiyle başlaması gerekiyor."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:560
 msgid "raid --noformat must also use the --device option."
@@ -1378,7 +1379,7 @@ msgid ""
 "RAID device \"%(device)s\" has a format of \"%(format)s\", but should have a "
 "format of \"mdmember\"."
 msgstr ""
-"RAID aygıtı \"%(device)s\", \"%(format)s\" biçiminde ancak \"mdmember\" "
+"\"%(device)s\" RAID aygıtı \"%(format)s\" biçiminde, ancak \"mdmember\" "
 "biçiminde olmalıdır."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:599
@@ -1403,7 +1404,7 @@ msgid ""
 "Physical volume \"%(device)s\" has a format of \"%(format)s\", but should "
 "have a format of \"lvmpv\"."
 msgstr ""
-"Fiziksel birim \"%(device)s\", \"%(format)s\" biçiminde ancak \"lvmpv\" "
+"\"%(device)s\" fiziksel birimi \"%(format)s\" biçiminde, ancak \"lvmpv\" "
 "biçiminde olmalıdır."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:775
@@ -1472,7 +1473,7 @@ msgid ""
 "No thin pool exists with the name \"%s\". Specify thin pools before thin "
 "volumes."
 msgstr ""
-"\"%s\" isminde bir ince havuz yok. İnce birimlerden önce ince havuzları "
+"\"%s\" adında bir ince havuz yok. İnce birimlerden önce ince havuzları "
 "belirtin."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:962
@@ -1509,7 +1510,7 @@ msgid ""
 "Btrfs partition \"%(device)s\" has a format of \"%(format)s\", but should "
 "have a format of \"btrfs\"."
 msgstr ""
-"Btrfs bölümü \"%(device)s\", \"%(format)s\" biçiminde ancak \"btrfs\" "
+"\"%(device)s\" Btrfs bölümü \"%(format)s\" biçiminde, ancak \"btrfs\" "
 "biçiminde olmalıdır."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1247
@@ -1533,16 +1534,12 @@ msgid "Btrfs volume \"%s\" specified with --useexisting does not exist."
 msgstr "--useexisting ile belirtilen \"%s\" Btrfs birimi yok."
 
 #: pyanaconda/modules/storage/partitioning/interactive/change_device.py:87
-#, fuzzy
-#| msgid "Failed to add new device."
 msgid "Failed to change a device."
-msgstr "Yeni aygıt eklenemedi."
+msgstr "Aygıt değiştirilemedi."
 
 #: pyanaconda/modules/storage/partitioning/interactive/add_device.py:72
-#, fuzzy
-#| msgid "Failed to add new device."
 msgid "Failed to add a device."
-msgstr "Yeni aygıt eklenemedi."
+msgstr "Aygıt eklenemedi."
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:213
 #, python-brace-format
@@ -1658,10 +1655,8 @@ msgid "No format on device '%s'"
 msgstr "'%s' aygıtında biçim yok"
 
 #: pyanaconda/modules/storage/partitioning/base_partitioning.py:57
-#, fuzzy
-#| msgid "Failed to set up installation source"
 msgid "Failed to proceed with the installation."
-msgstr "Kurulum kaynağı ayarlanamadı"
+msgstr "Kuruluma devam edilemedi."
 
 #: pyanaconda/modules/storage/bootloader/bootloader.py:172
 msgid "GRUB2 does not support installation to a partition."
@@ -1965,6 +1960,24 @@ msgid ""
 "* Some drives support re-configuration of sector sizes, for example by "
 "running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 msgstr ""
+"Elle kurulumlar için geçici çözümler:\n"
+"* Grafiksel veya metin modunda elle kurulum sırasında yalnızca aynı sektör "
+"boyutuna sahip diskleri seçin.\n"
+"* Kurulum için tutarsız sektör boyutuna sahip diskler seçildiğinde, "
+"oluşturulan her LVM Birim Grubunu aynı sektör boyutuna sahip Fiziksel "
+"Birimleri kullanacak şekilde kısıtlayın. Bu, yalnızca Özel bölümlendirme "
+"bölümünde grafiksel modda yapılabilir.\n"
+"\n"
+"Kickstart kurulumları için geçici çözümler:\n"
+"* 'ignoredisk --drives=..' veya 'ignoredisk --only-use=..' belirterek "
+"bölümlendirme için hangi disklerin kullanıldığını kısıtlayın.\n"
+"* Oluşturulan her LVM Fiziksel Birimi için hangi disklerin kullanılması "
+"gerektiğini belirtin: partition pv.1 --ondisk=..'.\n"
+"\n"
+"Genel geçici çözümler:\n"
+"* LVM yerine düz bölümlendirme şeması kullanılabilir.\n"
+"* Bazı diskler, örneğin 'hdparm --set-sector-size=<BOYUT> <AYGIT>' komutunu "
+"çalıştırarak sektör boyutlarının yeniden yapılandırılmasını destekler.\n"
 
 #: pyanaconda/modules/storage/installation.py:88
 msgid "An error occurred while resizing the device {}: {}"
