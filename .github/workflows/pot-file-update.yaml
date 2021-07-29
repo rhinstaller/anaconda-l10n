@@ -24,8 +24,6 @@ jobs:
             container-tag: master
 
     runs-on: ubuntu-latest
-    container:
-      image: docker://quay.io/rhinstaller/anaconda-ci:${{ matrix.container-tag }}
     steps:
       - name: Checkout anaconda ${{ matrix.anaconda-branch }}
         uses: actions/checkout@v2
@@ -35,13 +33,11 @@ jobs:
           ref: ${{ matrix.anaconda-branch }}
       - name: Create pot file
         run: |
-          echo "Creating pot file..."
-          pushd anaconda
-          ./autogen.sh
-          ./configure
-          make
-          make pot-update-check
-          popd
+          podman run --rm -v ./anaconda:/anaconda:Z --workdir /anaconda quay.io/rhinstaller/anaconda-ci:${{ matrix.container-tag }} sh -c " \
+          ./autogen.sh; \
+          ./configure; \
+          make; \
+          make pot-update-check"
       - name: Checkout anaconda-l10n
         uses: actions/checkout@v2
         with:
