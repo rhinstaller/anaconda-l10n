@@ -61,8 +61,8 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2021-07-29 15:11+0000\n"
-"PO-Revision-Date: 2021-05-06 03:02+0000\n"
-"Last-Translator: robert schneider <robertschv@gmail.com>\n"
+"PO-Revision-Date: 2021-08-06 11:04+0000\n"
+"Last-Translator: Emilio Herrera <ehespinosa57@gmail.com>\n"
 "Language-Team: Spanish <https://translate.fedoraproject.org/projects/"
 "anaconda/master/es/>\n"
 "Language: es\n"
@@ -70,7 +70,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.6.1\n"
+"X-Generator: Weblate 4.7.2\n"
 
 #: anaconda.py:316
 msgid "Unable to create PID file"
@@ -190,7 +190,7 @@ msgstr "No se pudo configurar el origen de instalación"
 
 #: pyanaconda/payload/manager.py:76
 msgid "Error downloading package metadata"
-msgstr "Error al descargar paquetes de metadatos"
+msgstr "Error al descargar metadatos de paquete"
 
 #: pyanaconda/vnc.py:79
 #, python-format
@@ -206,7 +206,7 @@ msgstr ""
 #: pyanaconda/vnc.py:167
 #, python-format
 msgid "Attempting to connect to vnc client on host %s..."
-msgstr "Intentando conectarse con el cliente VNC en el equipo %s..."
+msgstr "Intentando conectarse con el cliente vnc en el equipo %s..."
 
 #: pyanaconda/vnc.py:181
 msgid "Connected!"
@@ -220,7 +220,7 @@ msgstr "Se intentará conectarse nuevamente después de 15 segundos…"
 #, python-format
 msgid "Giving up attempting to connect after %d try!\n"
 msgid_plural "Giving up attempting to connect after %d tries!\n"
-msgstr[0] "¡Dejar de intentar conectarse luego de %d intento!\n"
+msgstr[0] "¡Dejar de intentar conectarse después de %d intento!\n"
 msgstr[1] "¡Dejar de intentar conectarse después de %d intentos!\n"
 
 #: pyanaconda/vnc.py:199
@@ -309,7 +309,7 @@ msgid ""
 msgstr ""
 "\n"
 "\n"
-"Error desconocido. Interrumpiendo. \n"
+"Error desconocido. Abortando. \n"
 "\n"
 
 #: pyanaconda/vnc.py:293
@@ -317,8 +317,8 @@ msgid ""
 "VNC password must be six to eight characters long.\n"
 "Please enter a new one, or leave blank for no password."
 msgstr ""
-"El password VNC debe tener de seis a ocho caracteres.\n"
-"Por favor introduzca uno nuevo, o déjelo en blanco para no tener password."
+"La contraseña VNC debe tener de seis a ocho caracteres.\n"
+"Por favor introduzca una nueva, o déjela en blanco para no tener contraseña."
 
 #: pyanaconda/modules/storage/snapshot/device.py:45
 #, fuzzy
@@ -358,13 +358,13 @@ msgid_plural ""
 "unselected disks %(unselected)s. You must select or de-select these disks as "
 "a set."
 msgstr[0] ""
-"Has elegido el disco %(selected)s, el cual contiene dispositivos que también "
-"usan el disco no seleccionado %(unselected)s. Debes elegir o remover estos "
+"Ha elegido el disco %(selected)s, el cual contiene dispositivos que también "
+"usan el disco no seleccionado %(unselected)s. Debe elegir o remover estos "
 "discos en conjunto."
 msgstr[1] ""
 "Has elegido el disco %(selected)s, el cual contiene dispositivos que también "
-"usan los discos no seleccionados %(unselected)s. Debes elegir o remover "
-"estos discos en conjunto."
+"usan los discos no seleccionados %(unselected)s. Debe elegir o remover estos "
+"discos en conjunto."
 
 #: pyanaconda/modules/storage/platform.py:41
 msgid "First sector of boot partition"
@@ -380,7 +380,7 @@ msgstr "Registro maestro de arranque (MBR)"
 
 #: pyanaconda/modules/storage/platform.py:44
 msgid "EFI System Partition"
-msgstr "Partición de sistema EFI"
+msgstr "Partición de Sistema EFI"
 
 #: pyanaconda/modules/storage/platform.py:45
 msgid "PReP Boot Partition"
@@ -518,11 +518,11 @@ msgstr ""
 #: pyanaconda/modules/storage/kickstart.py:228
 #: pyanaconda/modules/storage/kickstart.py:240
 msgid "Namespace \"{}\" given in nvdimm command was not found."
-msgstr "No se encontró el espacio de nombres «{}» dado en la orden nvdimm."
+msgstr "No se encontró el espacio de nombres «{}» dado en el comando nvdimm."
 
 #: pyanaconda/modules/storage/kickstart.py:245
 msgid "Disk \"{}\" given in nvdimm command does not exist."
-msgstr "No existe el disco «{}» dado en la orden nvdimm."
+msgstr "No existe el disco «{}» dado en el comando nvdimm."
 
 #: pyanaconda/modules/storage/kickstart.py:258
 msgid ""
@@ -552,6 +552,24 @@ msgid ""
 "* Some drives support re-configuration of sector sizes, for example by "
 "running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 msgstr ""
+"Soluciones alternativas para instalaciones manuales:\n"
+"* Seleccione sólo discos con el mismo tamaño de sector durante la "
+"instalación manual en modo gráfico o texto.\n"
+"* Cuando se seleccionan discos con tamaño de sector inconsistente para la "
+"instalación, restringir cada Grupo de Volumen LVM para usar Volúmenes "
+"Físicos con el mismo tamaño de sector. Esto sólo se puede hacer en el modo "
+"gráfico en el radio de partición Personalizado.\n"
+"\n"
+"Soluciones alternativas para instalaciones kickstart:\n"
+"* Restringir que disco se usan para el particionado especificando "
+"'ignoredisk --drives=..' o 'ignoredisk --only-use=..'.\n"
+"* Especificar que discos deberían ser usados para cada Volumen Físico LVM "
+"creado: partition pv.1 --ondisk=..'.\n"
+"\n"
+"Soluciones alternativas generales\n"
+"* Se puede usar un esquema de partición simple en lugar de LVM.\n"
+"* Algunos dispositivos soportan la reconfiguración de los tamaños de sector, "
+"ejecutando por ejemplo 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 
 #: pyanaconda/modules/storage/bootloader/base.py:184
 msgid "/boot file system"
@@ -680,7 +698,7 @@ msgid ""
 "%(deviceName)s may not have enough space for grub2 to embed core.img when "
 "using the %(fsType)s file system on %(deviceType)s"
 msgstr ""
-"%(deviceName)s puede no tener suficiente espacio para grub2 para integrar el "
+"%(deviceName)s puede no tener suficiente espacio para grub2 al integrar el "
 "core.img cuando utilice el sistema de archivos %(fsType)s sobre "
 "%(deviceType)s"
 
@@ -703,10 +721,10 @@ msgid ""
 "loader stage1 device %(stage1dev)s is not part of this array. The stage1 "
 "boot loader will only be installed to a single drive."
 msgstr ""
-"El dispositivo cargador de arranque stage2 %(stage2dev)s está en un arreglo "
-"multidisco, pero el dispositivo cargador de arranque stage1 %(stage1dev)s no "
-"es parte de este arreglo. El cargador de arranque stage1 solo será instalado "
-"en un dispositivo."
+"Un dispositivo gestor de arranque de fase 2 %(stage2dev)s está en un "
+"conjunto multidisco, pero un dispositivo gestor de arranque de fase 1 "
+"%(stage1dev)s no lo esta. El cargador de arranque de fase 1 sólo será "
+"instalado en un único dispositivo."
 
 #: pyanaconda/modules/storage/installation.py:88
 msgid "An error occurred while resizing the device {}: {}"
@@ -761,10 +779,8 @@ msgstr ""
 "automático"
 
 #: pyanaconda/modules/storage/partitioning/interactive/add_device.py:72
-#, fuzzy
-#| msgid "Failed to add new device."
 msgid "Failed to add a device."
-msgstr "Fallo al añadir nuevo dispositivo."
+msgstr "Fallo al añadir un dispositivo."
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:213
 #, python-brace-format
@@ -781,7 +797,7 @@ msgstr "El formato de la etiqueta no es permitida para el sistema de ficheros."
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:307
 msgid "That mount point is already in use. Try something else?"
-msgstr "Ya se utiliza ese punto de montaje. ¿Quiere intentar algo más?"
+msgstr "Ya se utiliza ese punto de montaje. ¿Intentar algo más?"
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:310
 msgid "Please enter a valid mount point."
@@ -790,11 +806,11 @@ msgstr "Favor ingresar un punto de montaje válido."
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:313
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:325
 msgid "That mount point is invalid. Try something else?"
-msgstr "Ese punto de montaje no es válido. ¿Quiere intentar algo más?"
+msgstr "Ese punto de montaje no es válido. ¿Intentar algo más?"
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:340
 msgid "Invalid container name."
-msgstr "Nombre no válido de contenedor."
+msgstr "Nombre de contenedor no válido."
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:343
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:612
@@ -854,7 +870,7 @@ msgid ""
 "This LVM Volume Group is missing %(missingPVs)d of %(totalPVs)d physical "
 "volumes. You can remove it or select a different device."
 msgstr ""
-"A este grupo de volúmenes LVM le faltan %(missingPVs)d de %(totalPVs)d "
+"A este Grupo de Volúmenes LVM le faltan %(missingPVs)d de %(totalPVs)d "
 "volúmenes físicos. Puede borrarlo o seleccionar un dispositivo diferente."
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:1253
@@ -867,10 +883,8 @@ msgstr ""
 "o seleccionar uno diferente."
 
 #: pyanaconda/modules/storage/partitioning/interactive/change_device.py:87
-#, fuzzy
-#| msgid "Failed to add new device."
 msgid "Failed to change a device."
-msgstr "Fallo al añadir nuevo dispositivo."
+msgstr "Fallo al cambiar un dispositivo."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:161
 #, fuzzy
@@ -1175,10 +1189,8 @@ msgstr ""
 "válido."
 
 #: pyanaconda/modules/storage/partitioning/base_partitioning.py:56
-#, fuzzy
-#| msgid "Failed to set up installation source"
 msgid "Failed to proceed with the installation."
-msgstr "No se pudo configurar el origen de instalación"
+msgstr "Fallo al llevar adelante la instalación."
 
 #: pyanaconda/modules/storage/devicetree/root.py:339
 msgid "Unknown Linux"
@@ -4692,22 +4704,12 @@ msgstr ""
 "¿Le gustaría ignorar esto y continuar con la instalación?"
 
 #: pyanaconda/errors.py:193
-#, fuzzy
-#| msgid ""
-#| "The following error occurred during the installation:\n"
-#| "\n"
-#| "{details}\n"
-#| "\n"
-#| "Would you like to ignore this and continue with installation?"
 msgid ""
 "An error occurred during Red Hat Insights configuration. Would you like to "
 "ignore this and continue with installation?"
 msgstr ""
-"Ha ocurrido el siguiente error durante la instalación:\n"
-"\n"
-"{details}\n"
-"\n"
-"¿Le gustaría ignorar esto y continuar con la instalación?"
+"Ha ocurrido un error durante la configuración de Red Hat Insights. ¿Desearía "
+"ignorar esto y continuar con la instalación?"
 
 #: pyanaconda/ntp.py:49
 msgid "status: working"
