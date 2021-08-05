@@ -28,8 +28,8 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2021-07-29 15:11+0000\n"
-"PO-Revision-Date: 2021-07-21 16:56+0000\n"
-"Last-Translator: Luna Jernberg <bittin@reimu.nl>\n"
+"PO-Revision-Date: 2021-08-06 11:04+0000\n"
+"Last-Translator: Göran Uddeborg <goeran@uddeborg.se>\n"
 "Language-Team: Swedish <https://translate.fedoraproject.org/projects/"
 "anaconda/master/sv/>\n"
 "Language: sv\n"
@@ -282,27 +282,19 @@ msgstr ""
 "Vänligen ange ett nytt, eller lämna blankt för inget lösenord."
 
 #: pyanaconda/modules/storage/snapshot/device.py:45
-#, fuzzy
-#| msgid "Snapshot: origin \"%s\" doesn't exist!"
 msgid "Snapshot: origin \"{}\" doesn't exist!"
-msgstr "Ögonblicksbild: ursprunget ”%s” finns inte!"
+msgstr "Ögonblicksbild: ursprunget ”{}” finns inte!"
 
 #: pyanaconda/modules/storage/snapshot/device.py:50
-#, fuzzy
-#| msgid ""
-#| "Snapshot: origin \"%(origin)s\" of snapshot \"%(name)s\" is not a valid "
-#| "thin LV device."
 msgid ""
 "Snapshot: origin \"{}\" of snapshot \"{}\" is not a valid thin LV device."
 msgstr ""
-"Ögonblicksbild: ursprunget ”%(origin)s” till ögonblicksbilden ”%(name)s” är "
-"inte en giltig tunn LV-enhet."
+"Ögonblicksbild: ursprunget ”{}” till ögonblicksbilden ”{}” är inte en giltig "
+"tunn LV-enhet."
 
 #: pyanaconda/modules/storage/snapshot/device.py:56
-#, fuzzy
-#| msgid "Snapshot %s already exists."
 msgid "Snapshot {} already exists."
-msgstr "Ögonblicksbilden ”%s” finns redan"
+msgstr "Ögonblicksbilden ”{}” finns redan."
 
 #: pyanaconda/modules/storage/disk_selection/utils.py:36
 msgid "The selected disk {} is not recognized."
@@ -508,6 +500,24 @@ msgid ""
 "* Some drives support re-configuration of sector sizes, for example by "
 "running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 msgstr ""
+"Sätt att gå runt för manuell installation:\n"
+"* Välj endast diskar med samma sektorstorlek under menuell installet i "
+"grafiskt läge eller textläge.\n"
+"* När diskar med inkonsistenta sektorstorlekar väljs till installationen, "
+"begränsa varje skapad LVM-volymgrupp till att använda fysiska volymer med "
+"samma sektorstorlek. Detta kan bara göras i grafiskt läge i ekern anpassad "
+"partitionering.\n"
+"\n"
+"Sätt att gå runt för kickstart-installation:\n"
+"* Begränsa vilka diskar som används för partitioneringen genom att ange ”"
+"ignoredisk --drives=…” eller ”ignoredisk --only-use=…”.\n"
+"* Ange vilka diskar som skall användas för varje skapad fysisk LVM-volym: "
+"partition pv.1 --ondisk=…”.\n"
+"\n"
+"Allmänna sätt att gå runt:\n"
+"* Enkelt partitioneringsschema kan användas istället för LVM.\n"
+"* Några diskar stödjer att man konfigurerar om sektorstorlekar, till exempel "
+"genom att köra ”hdparm --set-sector-size=<STORLEK> <ENHET>”.\n"
 
 #: pyanaconda/modules/storage/bootloader/base.py:184
 msgid "/boot file system"
@@ -677,24 +687,16 @@ msgid "Gathering entropy {percents}% (remaining time {time})"
 msgstr "Samlar entropi  {percents}% (tid kvar {time})"
 
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:65
-#, fuzzy
-#| msgid "Unknown or invalid device '%s' specified"
 msgid "Unknown or invalid device '{}' specified"
-msgstr "Okänd eller ogiltig enhet '%s' specificerad"
+msgstr "Okänd eller ogiltig enhet ”{}” angiven"
 
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:74
-#, fuzzy
-#| msgid ""
-#| "Unknown or invalid format '%(format)s' specified for device '%(device)s'"
 msgid "Unknown or invalid format '{}' specified for device '{}'"
-msgstr ""
-"Okänt eller ogiltigt format '%(format)s' specificerad för enhet '%(device)s'"
+msgstr "Okänt eller ogiltigt format ”{}” angivet för enheten ”{}”"
 
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:81
-#, fuzzy
-#| msgid "No format on device '%s'"
 msgid "No format on device '{}'"
-msgstr "Inget format på enhet '%s'"
+msgstr "Inget format på enheten ”{}”"
 
 #: pyanaconda/modules/storage/partitioning/automatic/utils.py:165
 msgid "No usable disks selected."
@@ -818,30 +820,22 @@ msgid "Failed to change a device."
 msgstr "Misslyckades att ändra en enhet."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:161
-#, fuzzy
-#| msgid "No disk found for specified BIOS disk \"%s\"."
 msgid "No disk found for specified BIOS disk \"{}\"."
-msgstr "Ingen disk hittad för den angivna BIOS-disken ”%s”."
+msgstr "Ingen disk hittad för den angivna BIOS-disken ”{}”."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:202
-#, fuzzy
-#| msgid "RAID partition \"%s\" is defined multiple times."
 msgid "RAID partition \"{}\" is defined multiple times."
-msgstr "RAID-partitionen ”%s” är definierad flera gånger."
+msgstr "RAID-partitionen ”{}” är definierad flera gånger."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:214
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:484
-#, fuzzy
-#| msgid "PV partition \"%s\" is defined multiple times."
 msgid "PV partition \"{}\" is defined multiple times."
-msgstr "PV-partitionen ”%s” är definierad flera gånger."
+msgstr "PV-partitionen ”{}” är definierad flera gånger."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:226
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:496
-#, fuzzy
-#| msgid "Btrfs partition \"%s\" is defined multiple times."
 msgid "Btrfs partition \"{}\" is defined multiple times."
-msgstr "Btrfs-partitionen ”%s” är definierad flera gånger."
+msgstr "Btrfs-partitionen ”{}” är definierad flera gånger."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:252
 msgid "part --noformat must also use the --onpart option."
@@ -849,71 +843,49 @@ msgstr "part --noformat måste också använda flaggan --onpart."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:257
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:352
-#, fuzzy
-#| msgid "Partition \"%s\" given in part command does not exist."
 msgid "Partition \"{}\" given in part command does not exist."
-msgstr "Partitionen ”%s” som är angiven i ett part-kommando finns inte."
+msgstr "Partitionen ”{}” som är angiven i ett part-kommando finns inte."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:294
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:573
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:952
-#, fuzzy
-#| msgid "The \"%s\" file system type is not supported."
 msgid "The \"{}\" file system type is not supported."
-msgstr "Filsystemstypen ”%s” stödjs inte."
+msgstr "Filsystemstypen ”{}” stödjs inte."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:309
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:328
-#, fuzzy
-#| msgid "Disk \"%s\" given in part command does not exist."
 msgid "Disk \"{}\" given in part command does not exist."
-msgstr "Disken \"%s\" given i part-kommandot finns inte."
+msgstr "Disken ”{}” angiven i ett part-kommando finns inte."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:314
-#, fuzzy
-#| msgid "Cannot install to unpartitionable device \"%s\"."
 msgid "Cannot install to unpartitionable device \"{}\"."
-msgstr "Kan inte installera till den ej partitionerbara enheten ”%s”."
+msgstr "Kan inte installera på den ej partitionerbara enheten ”¥}”."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:322
-#, fuzzy
-#| msgid "Disk \"%s\" in part command is not partitioned."
 msgid "Disk \"{}\" in part command is not partitioned."
-msgstr "Disken ”%s” i ett part-kommando är inte partitionerad."
+msgstr "Disken ”{}” i ett part-kommando är inte partitionerad."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:518
 msgid "raid --noformat must also use the --device option."
 msgstr "raid --noformat måste också använda flagga --device."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:524
-#, fuzzy
-#| msgid "RAID device  \"%s\" given in raid command does not exist."
 msgid "RAID device  \"{}\" given in raid command does not exist."
-msgstr "RAID-enheten ”%s” som är angiven i ett raid-kommando finns inte."
+msgstr "RAID-enheten ”{}” som är angiven i ett raid-kommando finns inte."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:549
-#, fuzzy
-#| msgid ""
-#| "RAID device \"%(device)s\" has a format of \"%(format)s\", but should "
-#| "have a format of \"mdmember\"."
 msgid ""
 "RAID device \"{}\" has a format of \"{}\", but should have a format of "
 "\"mdmember\"."
-msgstr ""
-"RAID-enheten ”%(device)s” har formatet ”%(format)s”, men skulle ha formatet "
-"”mdmember”."
+msgstr "RAID-enheten ”{}” har formatet ”{}”, men skulle ha formatet ”mdmember”."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:555
-#, fuzzy
-#| msgid "Tried to use undefined partition \"%s\" in RAID specification."
 msgid "Tried to use undefined partition \"{}\" in RAID specification."
-msgstr "Försökte använda en odefinierad partition ”%s” i RAID-specifikationen."
+msgstr "Försökte använda en odefinierad partition ”{}” i RAID-specifikationen."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:596
-#, fuzzy
-#| msgid "RAID volume \"%s\" specified with --useexisting does not exist."
 msgid "RAID volume \"{}\" specified with --useexisting does not exist."
-msgstr "RAID-volymen ”%s” angiven med --useexisting finns inte."
+msgstr "RAID-volymen ”{}” angiven med --useexisting finns inte."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:607
 #, fuzzy
@@ -993,7 +965,7 @@ msgstr ""
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:851
 msgid "Size cannot be decided on from kickstart nor obtained from device."
-msgstr ""
+msgstr "Storleken kan inte avgöras från kickstarten eller hämtas från enheten."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:867
 #, fuzzy
@@ -1106,16 +1078,13 @@ msgid "The mount point \"{}\" is not valid. It must start with a /."
 msgstr "Monteringspunkten ”%s” är inte giltig.  Den måste starta med ett /."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1222
-#, fuzzy, python-brace-format
-#| msgid "Target size \"%(size)s\" for device \"%(device)s\" is invalid."
+#, python-brace-format
 msgid "Target size \"{size}\" for device \"{device}\" is invalid."
-msgstr "Målstorleken ”%(size)s” för enheten ”%(device)s” är felaktig."
+msgstr "Målstorleken ”{size}” för enheten ”{device}” är felaktig."
 
 #: pyanaconda/modules/storage/partitioning/base_partitioning.py:56
-#, fuzzy
-#| msgid "Failed to set up installation source"
 msgid "Failed to proceed with the installation."
-msgstr "Misslyckades att sätta upp installationskälla"
+msgstr "Misslyckades gå vidare med installationen."
 
 #: pyanaconda/modules/storage/devicetree/root.py:339
 msgid "Unknown Linux"
@@ -1415,7 +1384,7 @@ msgstr "%s saknas. Kan inte sätta upp en brandvägg."
 
 #: pyanaconda/modules/payloads/payload/live_image/installation_progress.py:74
 msgid "Synchronizing writes to disk"
-msgstr ""
+msgstr "Synkroniserar skrivningar till disk"
 
 #: pyanaconda/modules/payloads/payload/live_image/installation_progress.py:95
 #, fuzzy
