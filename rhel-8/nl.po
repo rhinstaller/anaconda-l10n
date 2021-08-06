@@ -31,7 +31,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2021-07-02 14:00+0200\n"
+"POT-Creation-Date: 2021-08-04 08:39+0200\n"
 "PO-Revision-Date: 2021-07-04 13:04+0000\n"
 "Last-Translator: Geert Warrink <geert.warrink@onsnet.nu>\n"
 "Language-Team: Dutch <https://translate.fedoraproject.org/projects/anaconda/"
@@ -94,53 +94,53 @@ msgstr "Configureren addons"
 msgid "Generating initramfs"
 msgstr "Aanmaken initramfs"
 
-#: pyanaconda/installation.py:187
-msgid "Running post-installation scripts"
-msgstr "Uitvoeren post-installatie scripts"
-
-#: pyanaconda/installation.py:193
+#: pyanaconda/installation.py:189
 msgid "Setting up kexec"
 msgstr "Het instellen van kexec"
 
-#: pyanaconda/installation.py:198
+#: pyanaconda/installation.py:194
 msgid "Storing configuration files and kickstarts"
 msgstr "Configuratiebestanden en kickstarts opslaan"
 
-#: pyanaconda/installation.py:242
+#: pyanaconda/installation.py:213
+msgid "Running post-installation scripts"
+msgstr "Uitvoeren post-installatie scripts"
+
+#: pyanaconda/installation.py:249
 #, python-format
 msgid "Waiting for %s threads to finish"
 msgstr "Wachten totdat %s threads beëindigd zijn"
 
-#: pyanaconda/installation.py:255
+#: pyanaconda/installation.py:262
 msgid "Setting up the installation environment"
 msgstr "Opzetten van installatie-omgeving"
 
-#: pyanaconda/installation.py:272 pyanaconda/installation.py:338
+#: pyanaconda/installation.py:279 pyanaconda/installation.py:345
 msgid "Configuring storage"
 msgstr "Configuratie-opslag"
 
-#: pyanaconda/installation.py:282 pyanaconda/kickstart.py:597
+#: pyanaconda/installation.py:289 pyanaconda/kickstart.py:597
 msgid "Running pre-installation scripts"
 msgstr "Uitvoeren van pre-installatiescripts"
 
-#: pyanaconda/installation.py:289
+#: pyanaconda/installation.py:296
 msgid "Running pre-installation tasks"
 msgstr "Het uitvoeren van pre-installatietaken"
 
-#: pyanaconda/installation.py:332
+#: pyanaconda/installation.py:339
 msgid "Installing."
 msgstr "Bezig met installleren."
 
-#: pyanaconda/installation.py:345
+#: pyanaconda/installation.py:352
 msgid "Installing boot loader"
 msgstr "Installeren bootlader"
 
-#: pyanaconda/installation.py:358 pyanaconda/payload/live/payload_base.py:159
+#: pyanaconda/installation.py:365 pyanaconda/payload/live/payload_base.py:159
 #: pyanaconda/payload/dnf/payload.py:1417
 msgid "Performing post-installation setup tasks"
 msgstr "Uitvoeren post-installatie-insteltaken"
 
-#: pyanaconda/installation.py:366
+#: pyanaconda/installation.py:373
 msgid "Creating snapshots"
 msgstr "Snapshots aanmaken"
 
@@ -1109,6 +1109,12 @@ msgstr ""
 msgid "Btrfs volume \"%s\" specified with --useexisting does not exist."
 msgstr "BTRFS-volume \"%s\" gespecificeerd met --useexisting bestaat niet."
 
+#: pyanaconda/modules/storage/partitioning/base_partitioning.py:57
+#, fuzzy
+#| msgid "Failed to set up installation source"
+msgid "Failed to proceed with the installation."
+msgstr "Instellen van installatiebron mislukte"
+
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:64
 #, python-format
 msgid "Unknown or invalid device '%s' specified"
@@ -1221,6 +1227,18 @@ msgid ""
 msgstr ""
 "Dit %(type)s apparaat mist lidapparaten. Je kunt het verwijderen of een "
 "ander apparaat selecteren."
+
+#: pyanaconda/modules/storage/partitioning/interactive/change_device.py:87
+#, fuzzy
+#| msgid "Failed to add new device."
+msgid "Failed to change a device."
+msgstr "Het toevoegen van een nieuw apparaat mislukte."
+
+#: pyanaconda/modules/storage/partitioning/interactive/add_device.py:72
+#, fuzzy
+#| msgid "Failed to add new device."
+msgid "Failed to add a device."
+msgstr "Het toevoegen van een nieuw apparaat mislukte."
 
 #: pyanaconda/modules/storage/partitioning/automatic/utils.py:165
 msgid "No usable disks selected."
@@ -1389,6 +1407,28 @@ msgstr "Meer dan één match gevonden voor opgegeven opstartschijf \"{}\"."
 msgid "Requested boot drive \"{}\" doesn't exist or cannot be used."
 msgstr ""
 "Aangevraagde opstartschijf \"{}\" bestaat niet of kan niet gebruikt worden."
+
+#: pyanaconda/modules/storage/constants.py:30
+msgid ""
+"Workarounds for manual installations:\n"
+"* Select only the disks with the same sector size during manual installation "
+"in graphical or text mode.\n"
+"* When disks with inconsistent sector size are selected for the "
+"installation, restrict each created LVM Volume Group to use Physical Volumes "
+"with the same sector size. This can only be done in graphical mode in the "
+"Custom partitioning spoke.\n"
+"\n"
+"Workarounds for kickstart installations:\n"
+"* Restrict what disks are used for the partitioning by specifying "
+"'ignoredisk --drives=..' or 'ignoredisk --only-use=..'.\n"
+"* Specify what disks should be used for each created LVM Physical Volume: "
+"partition pv.1 --ondisk=..'.\n"
+"\n"
+"General workarounds:\n"
+"* Plain partitioning scheme can be used instead of LVM.\n"
+"* Some drives support re-configuration of sector sizes, for example by "
+"running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
+msgstr ""
 
 #: pyanaconda/modules/storage/platform.py:52
 msgid "boot loader device"

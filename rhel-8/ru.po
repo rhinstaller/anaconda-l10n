@@ -47,7 +47,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2021-07-02 14:00+0200\n"
+"POT-Creation-Date: 2021-08-04 08:39+0200\n"
 "PO-Revision-Date: 2021-07-07 10:04+0000\n"
 "Last-Translator: Igor Gorbounov <igor.gorbounov@gmail.com>\n"
 "Language-Team: Russian <https://translate.fedoraproject.org/projects/"
@@ -112,53 +112,53 @@ msgstr "Настройка дополнений"
 msgid "Generating initramfs"
 msgstr "Создание initramfs"
 
-#: pyanaconda/installation.py:187
-msgid "Running post-installation scripts"
-msgstr "Выполняются послеустановочные скрипты"
-
-#: pyanaconda/installation.py:193
+#: pyanaconda/installation.py:189
 msgid "Setting up kexec"
 msgstr "Настройка kexec"
 
-#: pyanaconda/installation.py:198
+#: pyanaconda/installation.py:194
 msgid "Storing configuration files and kickstarts"
 msgstr "Сохранение файлов конфигурации и кикстарта"
 
-#: pyanaconda/installation.py:242
+#: pyanaconda/installation.py:213
+msgid "Running post-installation scripts"
+msgstr "Выполняются послеустановочные скрипты"
+
+#: pyanaconda/installation.py:249
 #, python-format
 msgid "Waiting for %s threads to finish"
 msgstr "Ожидание завершения %s потоков"
 
-#: pyanaconda/installation.py:255
+#: pyanaconda/installation.py:262
 msgid "Setting up the installation environment"
 msgstr "Настройка среды установки"
 
-#: pyanaconda/installation.py:272 pyanaconda/installation.py:338
+#: pyanaconda/installation.py:279 pyanaconda/installation.py:345
 msgid "Configuring storage"
 msgstr "Настройка устройств хранения"
 
-#: pyanaconda/installation.py:282 pyanaconda/kickstart.py:597
+#: pyanaconda/installation.py:289 pyanaconda/kickstart.py:597
 msgid "Running pre-installation scripts"
 msgstr "Выполняются предустановочные сценарии"
 
-#: pyanaconda/installation.py:289
+#: pyanaconda/installation.py:296
 msgid "Running pre-installation tasks"
 msgstr "Выполняются предустановочные задачи"
 
-#: pyanaconda/installation.py:332
+#: pyanaconda/installation.py:339
 msgid "Installing."
 msgstr "Установка."
 
-#: pyanaconda/installation.py:345
+#: pyanaconda/installation.py:352
 msgid "Installing boot loader"
 msgstr "Установка загрузчика"
 
-#: pyanaconda/installation.py:358 pyanaconda/payload/live/payload_base.py:159
+#: pyanaconda/installation.py:365 pyanaconda/payload/live/payload_base.py:159
 #: pyanaconda/payload/dnf/payload.py:1417
 msgid "Performing post-installation setup tasks"
 msgstr "Выполняется настройка после установки"
 
-#: pyanaconda/installation.py:366
+#: pyanaconda/installation.py:373
 msgid "Creating snapshots"
 msgstr "Создание снимков"
 
@@ -1118,6 +1118,12 @@ msgid "Btrfs volume \"%s\" specified with --useexisting does not exist."
 msgstr ""
 "Том Btrfs «%s», заданный с помощью параметра --useexisting, не существует."
 
+#: pyanaconda/modules/storage/partitioning/base_partitioning.py:57
+#, fuzzy
+#| msgid "Failed to set up installation source"
+msgid "Failed to proceed with the installation."
+msgstr "Не удалось настроить источник установки"
+
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:64
 #, python-format
 msgid "Unknown or invalid device '%s' specified"
@@ -1230,6 +1236,18 @@ msgid ""
 msgstr ""
 "Устройство %(type)s не имеет составляющих элементов. Вы можете его удалить "
 "или выбрать другое устройство."
+
+#: pyanaconda/modules/storage/partitioning/interactive/change_device.py:87
+#, fuzzy
+#| msgid "Failed to add new device."
+msgid "Failed to change a device."
+msgstr "Не удалось добавить новое устройство."
+
+#: pyanaconda/modules/storage/partitioning/interactive/add_device.py:72
+#, fuzzy
+#| msgid "Failed to add new device."
+msgid "Failed to add a device."
+msgstr "Не удалось добавить новое устройство."
 
 #: pyanaconda/modules/storage/partitioning/automatic/utils.py:165
 msgid "No usable disks selected."
@@ -1394,6 +1412,28 @@ msgstr "Для загрузочного диска «{}» найдено нес�
 #: pyanaconda/modules/storage/bootloader/execution.py:193
 msgid "Requested boot drive \"{}\" doesn't exist or cannot be used."
 msgstr "Загрузочный диск «{}» не существует или его нельзя использовать."
+
+#: pyanaconda/modules/storage/constants.py:30
+msgid ""
+"Workarounds for manual installations:\n"
+"* Select only the disks with the same sector size during manual installation "
+"in graphical or text mode.\n"
+"* When disks with inconsistent sector size are selected for the "
+"installation, restrict each created LVM Volume Group to use Physical Volumes "
+"with the same sector size. This can only be done in graphical mode in the "
+"Custom partitioning spoke.\n"
+"\n"
+"Workarounds for kickstart installations:\n"
+"* Restrict what disks are used for the partitioning by specifying "
+"'ignoredisk --drives=..' or 'ignoredisk --only-use=..'.\n"
+"* Specify what disks should be used for each created LVM Physical Volume: "
+"partition pv.1 --ondisk=..'.\n"
+"\n"
+"General workarounds:\n"
+"* Plain partitioning scheme can be used instead of LVM.\n"
+"* Some drives support re-configuration of sector sizes, for example by "
+"running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
+msgstr ""
 
 #: pyanaconda/modules/storage/platform.py:52
 msgid "boot loader device"

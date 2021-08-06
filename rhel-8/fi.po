@@ -26,7 +26,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2021-07-02 14:00+0200\n"
+"POT-Creation-Date: 2021-08-04 08:39+0200\n"
 "PO-Revision-Date: 2021-07-08 12:33+0000\n"
 "Last-Translator: Jan Kuparinen <copper_fin@hotmail.com>\n"
 "Language-Team: Finnish <https://translate.fedoraproject.org/projects/"
@@ -89,53 +89,53 @@ msgstr "Tehdään lisäosien asetuksia"
 msgid "Generating initramfs"
 msgstr "Luodaan initramfs:ää"
 
-#: pyanaconda/installation.py:187
-msgid "Running post-installation scripts"
-msgstr "Suoritetaan asennuksen jälkeisiä skriptejä"
-
-#: pyanaconda/installation.py:193
+#: pyanaconda/installation.py:189
 msgid "Setting up kexec"
 msgstr "Asetetaan kexec"
 
-#: pyanaconda/installation.py:198
+#: pyanaconda/installation.py:194
 msgid "Storing configuration files and kickstarts"
 msgstr "Talletetaan määritystiedostoja ja kickstarteja"
 
-#: pyanaconda/installation.py:242
+#: pyanaconda/installation.py:213
+msgid "Running post-installation scripts"
+msgstr "Suoritetaan asennuksen jälkeisiä skriptejä"
+
+#: pyanaconda/installation.py:249
 #, python-format
 msgid "Waiting for %s threads to finish"
 msgstr "Odotetaan %s-säikeiden valmistumista"
 
-#: pyanaconda/installation.py:255
+#: pyanaconda/installation.py:262
 msgid "Setting up the installation environment"
 msgstr "Valmistellaan asennusta"
 
-#: pyanaconda/installation.py:272 pyanaconda/installation.py:338
+#: pyanaconda/installation.py:279 pyanaconda/installation.py:345
 msgid "Configuring storage"
 msgstr "Määritetään tallennustilaa"
 
-#: pyanaconda/installation.py:282 pyanaconda/kickstart.py:597
+#: pyanaconda/installation.py:289 pyanaconda/kickstart.py:597
 msgid "Running pre-installation scripts"
 msgstr "Suoritetaan asennusta edeltäviä skriptejä"
 
-#: pyanaconda/installation.py:289
+#: pyanaconda/installation.py:296
 msgid "Running pre-installation tasks"
 msgstr "Suoritetaan esiasennustehtäviä"
 
-#: pyanaconda/installation.py:332
+#: pyanaconda/installation.py:339
 msgid "Installing."
 msgstr "Asennetaan."
 
-#: pyanaconda/installation.py:345
+#: pyanaconda/installation.py:352
 msgid "Installing boot loader"
 msgstr "Asennetaan käynnistyslatain"
 
-#: pyanaconda/installation.py:358 pyanaconda/payload/live/payload_base.py:159
+#: pyanaconda/installation.py:365 pyanaconda/payload/live/payload_base.py:159
 #: pyanaconda/payload/dnf/payload.py:1417
 msgid "Performing post-installation setup tasks"
 msgstr "Suoritetaan asennuksen jälkeiset asennustehtävät"
 
-#: pyanaconda/installation.py:366
+#: pyanaconda/installation.py:373
 msgid "Creating snapshots"
 msgstr "Luodaan tilannevedoksia"
 
@@ -1090,6 +1090,12 @@ msgstr ""
 msgid "Btrfs volume \"%s\" specified with --useexisting does not exist."
 msgstr "Btrfs-taltio \"%s\" määritetty '--useexisting':lla ei ole olemassa."
 
+#: pyanaconda/modules/storage/partitioning/base_partitioning.py:57
+#, fuzzy
+#| msgid "Failed to set up installation source"
+msgid "Failed to proceed with the installation."
+msgstr "Asennuslähteen määrittäminen epäonnistui"
+
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:64
 #, python-format
 msgid "Unknown or invalid device '%s' specified"
@@ -1201,6 +1207,18 @@ msgid ""
 msgstr ""
 "Tältä laitteelta %(type)s puuttuu jäsenlaitteita. Voit poistaa sen tai "
 "valita toisen laitteen."
+
+#: pyanaconda/modules/storage/partitioning/interactive/change_device.py:87
+#, fuzzy
+#| msgid "Failed to add new device."
+msgid "Failed to change a device."
+msgstr "Uuden laitteen lisääminen epäonnistui."
+
+#: pyanaconda/modules/storage/partitioning/interactive/add_device.py:72
+#, fuzzy
+#| msgid "Failed to add new device."
+msgid "Failed to add a device."
+msgstr "Uuden laitteen lisääminen epäonnistui."
 
 #: pyanaconda/modules/storage/partitioning/automatic/utils.py:165
 msgid "No usable disks selected."
@@ -1367,6 +1385,28 @@ msgstr "Enemmän kuin yksi vastaavuus löytyi käynnistyslevylle ”{}”."
 msgid "Requested boot drive \"{}\" doesn't exist or cannot be used."
 msgstr ""
 "Pyydettyä käynnistyslevyä ”{}” ei ole olemassa tai sitä ei voida käyttää."
+
+#: pyanaconda/modules/storage/constants.py:30
+msgid ""
+"Workarounds for manual installations:\n"
+"* Select only the disks with the same sector size during manual installation "
+"in graphical or text mode.\n"
+"* When disks with inconsistent sector size are selected for the "
+"installation, restrict each created LVM Volume Group to use Physical Volumes "
+"with the same sector size. This can only be done in graphical mode in the "
+"Custom partitioning spoke.\n"
+"\n"
+"Workarounds for kickstart installations:\n"
+"* Restrict what disks are used for the partitioning by specifying "
+"'ignoredisk --drives=..' or 'ignoredisk --only-use=..'.\n"
+"* Specify what disks should be used for each created LVM Physical Volume: "
+"partition pv.1 --ondisk=..'.\n"
+"\n"
+"General workarounds:\n"
+"* Plain partitioning scheme can be used instead of LVM.\n"
+"* Some drives support re-configuration of sector sizes, for example by "
+"running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
+msgstr ""
 
 #: pyanaconda/modules/storage/platform.py:52
 msgid "boot loader device"
