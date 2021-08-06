@@ -25,7 +25,7 @@ msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2021-08-04 08:39+0200\n"
-"PO-Revision-Date: 2021-07-22 15:59+0000\n"
+"PO-Revision-Date: 2021-08-07 16:04+0000\n"
 "Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
 "Language-Team: Turkish <https://translate.fedoraproject.org/projects/"
 "anaconda/rhel-8/tr/>\n"
@@ -1087,10 +1087,8 @@ msgid "Btrfs volume \"%s\" specified with --useexisting does not exist."
 msgstr "--useexisting ile belirtilen \"%s\" Btrfs birimi yok."
 
 #: pyanaconda/modules/storage/partitioning/base_partitioning.py:57
-#, fuzzy
-#| msgid "Failed to set up installation source"
 msgid "Failed to proceed with the installation."
-msgstr "Kurulum kaynağı ayarlanamadı"
+msgstr "Kuruluma devam edilemedi."
 
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:64
 #, python-format
@@ -1206,16 +1204,12 @@ msgstr ""
 "seçebilirsiniz."
 
 #: pyanaconda/modules/storage/partitioning/interactive/change_device.py:87
-#, fuzzy
-#| msgid "Failed to add new device."
 msgid "Failed to change a device."
-msgstr "Yeni aygıt eklenemedi."
+msgstr "Aygıt değiştirilemedi."
 
 #: pyanaconda/modules/storage/partitioning/interactive/add_device.py:72
-#, fuzzy
-#| msgid "Failed to add new device."
 msgid "Failed to add a device."
-msgstr "Yeni aygıt eklenemedi."
+msgstr "Aygıt eklenemedi."
 
 #: pyanaconda/modules/storage/partitioning/automatic/utils.py:165
 msgid "No usable disks selected."
@@ -1402,6 +1396,24 @@ msgid ""
 "* Some drives support re-configuration of sector sizes, for example by "
 "running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 msgstr ""
+"Elle kurulumlar için geçici çözümler:\n"
+"* Grafiksel veya metin modunda elle kurulum sırasında yalnızca aynı sektör "
+"boyutuna sahip diskleri seçin.\n"
+"* Kurulum için tutarsız sektör boyutuna sahip diskler seçildiğinde, "
+"oluşturulan her LVM Birim Grubunu aynı sektör boyutuna sahip Fiziksel "
+"Birimleri kullanacak şekilde kısıtlayın. Bu, yalnızca Özel bölümlendirme "
+"bölümünde grafiksel modda yapılabilir.\n"
+"\n"
+"Kickstart kurulumları için geçici çözümler:\n"
+"* 'ignoredisk --drives=..' veya 'ignoredisk --only-use=..' belirterek "
+"bölümlendirme için hangi disklerin kullanıldığını kısıtlayın.\n"
+"* Oluşturulan her LVM Fiziksel Birimi için hangi disklerin kullanılması "
+"gerektiğini belirtin: partition pv.1 --ondisk=..'.\n"
+"\n"
+"Genel geçici çözümler:\n"
+"* LVM yerine düz bölümlendirme şeması kullanılabilir.\n"
+"* Bazı diskler, örneğin 'hdparm --set-sector-size=<BOYUT> <AYGIT>' komutunu "
+"çalıştırarak sektör boyutlarının yeniden yapılandırılmasını destekler.\n"
 
 #: pyanaconda/modules/storage/platform.py:52
 msgid "boot loader device"
