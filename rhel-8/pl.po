@@ -31,7 +31,7 @@ msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2021-08-04 08:39+0200\n"
-"PO-Revision-Date: 2021-07-04 13:04+0000\n"
+"PO-Revision-Date: 2021-08-07 16:04+0000\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <https://translate.fedoraproject.org/projects/anaconda/"
 "rhel-8/pl/>\n"
@@ -41,7 +41,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.7.1\n"
+"X-Generator: Weblate 4.7.2\n"
 
 #: anaconda.py:378
 msgid "Unable to create PID file"
@@ -1109,10 +1109,8 @@ msgstr ""
 "Wolumin Btrfs „%s” podany za pomocą parametru --useexisting nie istnieje."
 
 #: pyanaconda/modules/storage/partitioning/base_partitioning.py:57
-#, fuzzy
-#| msgid "Failed to set up installation source"
 msgid "Failed to proceed with the installation."
-msgstr "Ustawienie źródła instalacji się nie powiodło"
+msgstr "Kontynuacja instalacji się nie powiodła."
 
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:64
 #, python-format
@@ -1227,16 +1225,12 @@ msgstr ""
 "inne."
 
 #: pyanaconda/modules/storage/partitioning/interactive/change_device.py:87
-#, fuzzy
-#| msgid "Failed to add new device."
 msgid "Failed to change a device."
-msgstr "Dodanie nowego urządzenia się nie powiodło."
+msgstr "Zmiana urządzenia się nie powiodła."
 
 #: pyanaconda/modules/storage/partitioning/interactive/add_device.py:72
-#, fuzzy
-#| msgid "Failed to add new device."
 msgid "Failed to add a device."
-msgstr "Dodanie nowego urządzenia się nie powiodło."
+msgstr "Dodanie urządzenia się nie powiodło."
 
 #: pyanaconda/modules/storage/partitioning/automatic/utils.py:165
 msgid "No usable disks selected."
@@ -1425,6 +1419,25 @@ msgid ""
 "* Some drives support re-configuration of sector sizes, for example by "
 "running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 msgstr ""
+"Obejścia problemów dla ręcznych instalacji:\n"
+"• Wybranie tylko dysków o tym samym rozmiarze sektora podczas instalacji "
+"ręcznej w trybie graficznym lub tekstowym.\n"
+"• Kiedy do instalacji są wybrane dyski o niespójnym rozmiarze sektora, "
+"ograniczenie każdej utworzonej grupy woluminów LVM do użycia woluminów "
+"fizycznych o tym samym rozmiarze sektora. Można to zrobić tylko w trybie "
+"graficznym na ekranie niestandardowego partycjonowania.\n"
+"\n"
+"Obejścia problemów dla instalacji kickstart:\n"
+"• Ograniczenie, które dyski są używane do partycjonowania przez podanie „"
+"ignoredisk --drives=…” lub „ignoredisk --only-use=…”.\n"
+"• Podanie, które dyski mają być używane dla każdego utworzonego woluminu "
+"fizycznego LVM: partition pv.1 --ondisk=…”.\n"
+"\n"
+"Ogólne obejścia problemów:\n"
+"• Można użyć zwykłego schematu partycjonowania zamiast LVM.\n"
+"• Niektóre napędy obsługują ponowną konfigurację rozmiarów sektora, na "
+"przykład przez wykonanie polecenia „hdparm --set-sector-size=<ROZMIAR> "
+"<URZĄDZENIE>”.\n"
 
 #: pyanaconda/modules/storage/platform.py:52
 msgid "boot loader device"
