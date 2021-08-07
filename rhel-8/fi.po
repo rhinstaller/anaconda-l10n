@@ -27,7 +27,7 @@ msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2021-08-04 08:39+0200\n"
-"PO-Revision-Date: 2021-07-08 12:33+0000\n"
+"PO-Revision-Date: 2021-08-08 19:04+0000\n"
 "Last-Translator: Jan Kuparinen <copper_fin@hotmail.com>\n"
 "Language-Team: Finnish <https://translate.fedoraproject.org/projects/"
 "anaconda/rhel-8/fi/>\n"
@@ -36,7 +36,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.7.1\n"
+"X-Generator: Weblate 4.7.2\n"
 
 #: anaconda.py:378
 msgid "Unable to create PID file"
@@ -1091,10 +1091,8 @@ msgid "Btrfs volume \"%s\" specified with --useexisting does not exist."
 msgstr "Btrfs-taltio \"%s\" määritetty '--useexisting':lla ei ole olemassa."
 
 #: pyanaconda/modules/storage/partitioning/base_partitioning.py:57
-#, fuzzy
-#| msgid "Failed to set up installation source"
 msgid "Failed to proceed with the installation."
-msgstr "Asennuslähteen määrittäminen epäonnistui"
+msgstr "Asennuksen jatkaminen epäonnistui."
 
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:64
 #, python-format
@@ -1209,16 +1207,12 @@ msgstr ""
 "valita toisen laitteen."
 
 #: pyanaconda/modules/storage/partitioning/interactive/change_device.py:87
-#, fuzzy
-#| msgid "Failed to add new device."
 msgid "Failed to change a device."
-msgstr "Uuden laitteen lisääminen epäonnistui."
+msgstr "Laitteen vaihtaminen epäonnistui."
 
 #: pyanaconda/modules/storage/partitioning/interactive/add_device.py:72
-#, fuzzy
-#| msgid "Failed to add new device."
 msgid "Failed to add a device."
-msgstr "Uuden laitteen lisääminen epäonnistui."
+msgstr "Laitteen lisääminen epäonnistui."
 
 #: pyanaconda/modules/storage/partitioning/automatic/utils.py:165
 msgid "No usable disks selected."
@@ -1407,6 +1401,24 @@ msgid ""
 "* Some drives support re-configuration of sector sizes, for example by "
 "running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 msgstr ""
+"Manuaalisten asennusten kiertotavat:\n"
+"* Valitse vain saman sektorikokoiset levyt manuaalisen asennuksen aikana "
+"graafisessa tai tekstitilassa.\n"
+"* Kun asennukseen valitaan levyt, joiden sektorikoko on epäjohdonmukainen, "
+"rajoita jokaista luotua LVM-volyymiryhmää käyttämään fyysisiä volyymeja "
+"samalla sektorikoolla. Tämä voidaan tehdä vain graafisessa tilassa "
+"mukautetussa osiointi osassa.\n"
+"\n"
+"Kiertotavat kickstart-asennuksiin:\n"
+"* Rajoita osioinnissa käytettäviä levyjä määrittämällä 'ignoredisk --drives "
+"= ..' tai 'ignoredisk --only-use = ..'.\n"
+"* Määritä, mitä levyjä tulisi käyttää jokaiselle luotulle fyysiselle LVM-"
+"levylle: partition pv.1 --ondisk = .. '.\n"
+"\n"
+"Yleiset kiertotavat:\n"
+"* Tavallista osiointijärjestelmää voidaan käyttää LVM: n sijaan.\n"
+"* Jotkut asemat tukevat sektorikokojen uudelleenmääritystä, esimerkiksi "
+"suorittamalla 'hdparm --set-sector-size=<SIZE> <DEVICE>.\n"
 
 #: pyanaconda/modules/storage/platform.py:52
 msgid "boot loader device"
