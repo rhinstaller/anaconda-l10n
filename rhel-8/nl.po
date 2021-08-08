@@ -32,7 +32,7 @@ msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2021-08-04 08:39+0200\n"
-"PO-Revision-Date: 2021-07-04 13:04+0000\n"
+"PO-Revision-Date: 2021-08-08 19:04+0000\n"
 "Last-Translator: Geert Warrink <geert.warrink@onsnet.nu>\n"
 "Language-Team: Dutch <https://translate.fedoraproject.org/projects/anaconda/"
 "rhel-8/nl/>\n"
@@ -41,7 +41,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.7.1\n"
+"X-Generator: Weblate 4.7.2\n"
 
 #: anaconda.py:378
 msgid "Unable to create PID file"
@@ -1110,10 +1110,8 @@ msgid "Btrfs volume \"%s\" specified with --useexisting does not exist."
 msgstr "BTRFS-volume \"%s\" gespecificeerd met --useexisting bestaat niet."
 
 #: pyanaconda/modules/storage/partitioning/base_partitioning.py:57
-#, fuzzy
-#| msgid "Failed to set up installation source"
 msgid "Failed to proceed with the installation."
-msgstr "Instellen van installatiebron mislukte"
+msgstr "Verdergaan met de installatie mislukte."
 
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:64
 #, python-format
@@ -1229,16 +1227,12 @@ msgstr ""
 "ander apparaat selecteren."
 
 #: pyanaconda/modules/storage/partitioning/interactive/change_device.py:87
-#, fuzzy
-#| msgid "Failed to add new device."
 msgid "Failed to change a device."
-msgstr "Het toevoegen van een nieuw apparaat mislukte."
+msgstr "Het veranderen van een apparaat mislukte."
 
 #: pyanaconda/modules/storage/partitioning/interactive/add_device.py:72
-#, fuzzy
-#| msgid "Failed to add new device."
 msgid "Failed to add a device."
-msgstr "Het toevoegen van een nieuw apparaat mislukte."
+msgstr "Het toevoegen van een apparaat mislukte."
 
 #: pyanaconda/modules/storage/partitioning/automatic/utils.py:165
 msgid "No usable disks selected."
@@ -1429,6 +1423,25 @@ msgid ""
 "* Some drives support re-configuration of sector sizes, for example by "
 "running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 msgstr ""
+"Tijdelijke oplossingen voor handmatige installaties:\n"
+"* Selecteer alleen de schijven met dezelfde sectorgrootte tijdens handmatige "
+"installatie in grafische of tekstmodus.\n"
+"* Wanneer schijven met een inconsistente sectorgrootte zijn geselecteerd "
+"voor de installatie, beperk dan elke aangemaakte LVM-volumegroep om fysieke "
+"volumes met dezelfde sectorgrootte te gebruiken. Dit kan alleen in de "
+"grafische modus in de Aangepaste partitioneringsspaak.\n"
+"\n"
+"Tijdelijke oplossingen voor kickstart-installaties:\n"
+"* Beperk welke schijven worden gebruikt voor het partitioneren door "
+"'ignoredisk --drives=..' of 'ignoredisk --only-use=..' op te geven.\n"
+"* Specificeer welke schijven moeten worden gebruikt voor elk gemaakt LVM "
+"Fysiek Volume: partitie pv.1 --ondisk=..'.\n"
+"\n"
+"Algemene oplossingen:\n"
+"* In plaats van LVM kan een eenvoudig partitioneringsschema worden gebruikt."
+"\n"
+"* Sommige schijven ondersteunen herconfiguratie van sectorgroottes, "
+"bijvoorbeeld door 'hdparm --set-sector-size=<SIZE> <DEVICE>' uit te voeren.\n"
 
 #: pyanaconda/modules/storage/platform.py:52
 msgid "boot loader device"
