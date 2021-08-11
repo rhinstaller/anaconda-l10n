@@ -54,13 +54,14 @@
 # Ludek Janda <ljanda@redhat.com>, 2020. #zanata
 # Matthias Kruk <matthias.kruk@miraclelinux.com>, 2020.
 # Sundeep Anand <suanand@redhat.com>, 2021.
+# Hajime Taira <htaira@pantora.net>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2021-08-04 08:39+0200\n"
-"PO-Revision-Date: 2021-03-14 07:01+0000\n"
-"Last-Translator: Casey Jones <nahareport@yahoo.com>\n"
+"PO-Revision-Date: 2021-08-12 02:04+0000\n"
+"Last-Translator: Hajime Taira <htaira@pantora.net>\n"
 "Language-Team: Japanese <https://translate.fedoraproject.org/projects/"
 "anaconda/rhel-8/ja/>\n"
 "Language: ja\n"
@@ -68,7 +69,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.5.1\n"
+"X-Generator: Weblate 4.7.2\n"
 
 #: anaconda.py:378
 msgid "Unable to create PID file"
@@ -80,9 +81,8 @@ msgid ""
 "Anaconda is unable to create %s because the file already exists. Anaconda is "
 "already running, or a previous instance of anaconda has crashed."
 msgstr ""
-"すでに %s が存在するため、Anaconda はこのファイルを作成できません。すでに "
-"Anaconda が実行中か、もしくは前回実行した Anaconda のインスタンスがクラッシュ"
-"した可能性があります。"
+"すでに %s が存在するため、Anaconda はこのファイルを作成できません。すでに Anaconda が実行中か、もしくは前回実行した "
+"Anaconda のプロセスがクラッシュした可能性があります。"
 
 #: pyanaconda/addons.py:97
 #, python-format
@@ -333,9 +333,8 @@ msgid ""
 "\n"
 "%(details)s"
 msgstr ""
-"キックスタートスクリプトの %(lineno)s 行目の実行中にエラーが発生しました。致"
-"命的なエラーとなるためインストールを中止します。このエラーの詳細は次の通りで"
-"す。\n"
+"キックスタートスクリプトの %(lineno)s "
+"行目の実行中にエラーが発生しました。致命的なエラーとなるためインストールを中止します。このエラーの詳細は次のとおりです。\n"
 "\n"
 "%(details)s"
 
@@ -370,18 +369,10 @@ msgid "Unable to encrypt password: unsupported algorithm %s"
 msgstr "パスワードを暗号化できません: サポートされていないアルゴリズム %s"
 
 #: pyanaconda/errors.py:264
-#, fuzzy
-#| msgid ""
-#| "Failed to connect the system to Red Hat Insights.\n"
-#| "\n"
-#| "Would you like to ignore this and continue with installation?"
 msgid ""
 "An error occurred during Red Hat Insights configuration. Would you like to "
 "ignore this and continue with installation?"
-msgstr ""
-"システムを Red Hat Insights に接続できませんでした。\n"
-"\n"
-"これを無視してインストールを続行しますか?"
+msgstr "Red Hat Insightsの構成中にエラーが発生しました。このエラーを無視してインストールを続行しますか？"
 
 #: pyanaconda/kickstart.py:540
 msgid ""
@@ -1133,10 +1124,8 @@ msgid "Btrfs volume \"%s\" specified with --useexisting does not exist."
 msgstr "--useexisting で指定された Btrfs ボリューム \"%s\" は存在しません。"
 
 #: pyanaconda/modules/storage/partitioning/base_partitioning.py:57
-#, fuzzy
-#| msgid "Failed to set up installation source"
 msgid "Failed to proceed with the installation."
-msgstr "インストールソースの設定に失敗しました"
+msgstr "インストールを継続できません"
 
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:64
 #, python-format
@@ -1254,16 +1243,12 @@ msgstr ""
 "バイスを選択できます。"
 
 #: pyanaconda/modules/storage/partitioning/interactive/change_device.py:87
-#, fuzzy
-#| msgid "Failed to add new device."
 msgid "Failed to change a device."
-msgstr "新しいデバイスの追加に失敗しました。"
+msgstr "デバイスの変更に失敗しました。"
 
 #: pyanaconda/modules/storage/partitioning/interactive/add_device.py:72
-#, fuzzy
-#| msgid "Failed to add new device."
 msgid "Failed to add a device."
-msgstr "新しいデバイスの追加に失敗しました。"
+msgstr "デバイスの追加に失敗しました。"
 
 #: pyanaconda/modules/storage/partitioning/automatic/utils.py:165
 msgid "No usable disks selected."
@@ -1453,6 +1438,20 @@ msgid ""
 "* Some drives support re-configuration of sector sizes, for example by "
 "running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 msgstr ""
+"手動インストールのためのワークアラウンドは次のとおりです。\n"
+"* グラフィカルモードもしくはテキストモードでの手動インストール時に同じセクターサイズのディスクのみを選択します。\n"
+"* セクターサイズに一貫性のないディスクがインストール先のディスクとして選択された場合、作成された各LVMボリュームグループを制限して同じセクターサイズの"
+"物理ボリュームを使用します。 これはカスタムパーティショニング選択時のグラフィカルモードでのみ実行できます。\n"
+"\n"
+"Kickstartインストール時のワークアラウンドは次のとおりです。\n"
+"* 'ignoredisk --drives=...' もしくは 'ignoredisk --only-use=...' "
+"でパーティショニングに使用するディスクを制限します。\n"
+"* 作成されたLVM物理ボリュームごとに使用するディスクを指定します。例: 'partition pv.1 --ondisk=..'\n"
+"\n"
+"一般的なワークアラウンドは次のとおりです。\n"
+"* LVMの代わりにプレーンなパーティション作成を使用します。\n"
+"* 一部のディスクは、次のように実行することにより、セクターサイズの再構成をサポートします。例: 'hdparm --set-sector-"
+"size=<SIZE> <DEVICE>'\n"
 
 #: pyanaconda/modules/storage/platform.py:52
 msgid "boot loader device"
@@ -1647,8 +1646,8 @@ msgid ""
 "%(product_name)s requires %(needed_ram)s MB of memory to install, but you "
 "only have %(total_ram)s MB on this machine.\n"
 msgstr ""
-"%(product_name)s をインストールするには %(needed_ram)s MB のメモリーが必要で"
-"すが、このマシンには %(total_ram)s MB しかありません。\n"
+"%(product_name)s をインストールするには最低 %(needed_ram)s MB のメモリーが必要ですが、このシステムには "
+"%(total_ram)s  MB しかありません。\n"
 
 #: pyanaconda/startup_utils.py:85
 #, python-format
@@ -3179,7 +3178,7 @@ msgstr "root パスワードが設定されていません"
 
 #: pyanaconda/ui/gui/spokes/installation_progress.py:98
 msgid "Complete!"
-msgstr "完了しました!"
+msgstr "インストールが完了しました!"
 
 #: pyanaconda/ui/gui/spokes/installation_progress.py:120
 #, python-format
@@ -3202,8 +3201,8 @@ msgid ""
 "%s is now successfully installed and ready for you to use!\n"
 "Go ahead and reboot your system to start using it!"
 msgstr ""
-"%s が正しくインストールされ、使用準備が整いました。\n"
-"使用開始するにはお使いのシステムを再起動してください。"
+"%s が正しくインストールされ、利用準備が整いました。\n"
+"利用開始するにはシステムを再起動してください。"
 
 #: pyanaconda/ui/gui/spokes/installation_progress.py:160
 #, python-format
@@ -3211,8 +3210,8 @@ msgid ""
 "%s is now successfully installed and ready for you to use!\n"
 "Go ahead and quit the application to start using it!"
 msgstr ""
-"%s が正しくインストールされ、使用準備が整いました。\n"
-"使用開始するにはアプリケーションを終了してください。"
+"%s が正しくインストールされ、利用準備が整いました。\n"
+"利用開始するには退出してからシステムを再起動してください。"
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:68
 msgctxt "GUI|Spoke"
@@ -5640,7 +5639,7 @@ msgstr "ラベル:"
 #: pyanaconda/ui/gui/spokes/installation_source.glade:729
 msgctxt "GUI|Software Source"
 msgid "_Verify"
-msgstr "確証する (_V)"
+msgstr "検証する (_V)"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:617
 msgctxt "GUI|Software Source"
