@@ -33,7 +33,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2021-08-17 00:46+0000\n"
+"POT-Creation-Date: 2021-08-19 00:40+0000\n"
 "PO-Revision-Date: 2021-08-07 16:04+0000\n"
 "Last-Translator: simmon <simmon@nplob.com>\n"
 "Language-Team: Korean <https://translate.fedoraproject.org/projects/anaconda/"
@@ -1793,8 +1793,8 @@ msgid "Current host name: %s\n"
 msgstr "현재 호스트 이름: %s\n"
 
 #: pyanaconda/ui/tui/spokes/network.py:334
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:258
 #: pyanaconda/ui/gui/spokes/network.glade:2515
+#: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:116
 msgid "Host Name"
 msgstr "호스트 이름"
 
@@ -2214,7 +2214,7 @@ msgstr "비밀번호 사용"
 
 #: pyanaconda/ui/tui/spokes/user.py:144
 #: pyanaconda/ui/tui/spokes/root_password.py:99
-#: pyanaconda/ui/gui/spokes/root_password.glade:87
+#: pyanaconda/ui/gui/spokes/root_password.glade:232
 #: pyanaconda/ui/gui/spokes/subscription.glade:181
 #: pyanaconda/ui/gui/spokes/subscription.glade:568
 #: pyanaconda/ui/gui/spokes/user.glade:175
@@ -2307,7 +2307,7 @@ msgid "Disabled. Set password to enable root account."
 msgstr "사용 할 수 없습니다. 루트 계정을 사용하려면 비밀번호를 설정하십시오."
 
 #: pyanaconda/ui/tui/spokes/root_password.py:82
-#: pyanaconda/ui/gui/spokes/root_password.py:185
+#: pyanaconda/ui/gui/spokes/root_password.py:180
 msgid "Root account is disabled."
 msgstr "root 계정이 비활성화되어 있음."
 
@@ -2951,7 +2951,7 @@ msgstr "잘못된 시간대"
 #: pyanaconda/ui/gui/spokes/datetime_spoke.py:516
 #: pyanaconda/ui/gui/spokes/datetime_spoke.py:530
 #: pyanaconda/ui/gui/spokes/datetime_spoke.py:713
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:783
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:517
 msgid "PM"
 msgstr "오후"
 
@@ -3705,23 +3705,26 @@ msgid "Preserve _all"
 msgstr "모두 보존(_a)"
 
 #: pyanaconda/ui/gui/spokes/root_password.py:57
+#, fuzzy
+#| msgctxt "GUI|Subscription|Authentication|Account"
+#| msgid "_Account"
 msgctxt "GUI|Spoke"
-msgid "_Root Password"
-msgstr "root 비밀번호(_R)"
+msgid "_Root Account"
+msgstr "계정(_A)"
 
-#: pyanaconda/ui/gui/spokes/root_password.py:136
+#: pyanaconda/ui/gui/spokes/root_password.py:132
 msgid "Root password has been set."
 msgstr "root 비밀번호가 설정되었습니다."
 
-#: pyanaconda/ui/gui/spokes/root_password.py:183
+#: pyanaconda/ui/gui/spokes/root_password.py:178
 msgid "Disabled, set password to enable."
 msgstr "비활성화하려면 활성화 할 암호를 설정하십시오."
 
-#: pyanaconda/ui/gui/spokes/root_password.py:188
+#: pyanaconda/ui/gui/spokes/root_password.py:183
 msgid "Root password is set"
 msgstr "root 비밀번호가 설정 되어 있음"
 
-#: pyanaconda/ui/gui/spokes/root_password.py:190
+#: pyanaconda/ui/gui/spokes/root_password.py:185
 msgid "Root password is not set"
 msgstr "root 비밀번호가 설정되어 있지 않습니다"
 
@@ -5054,134 +5057,92 @@ msgstr "설치 진행"
 msgid "Preparing to install"
 msgstr "설치 준비"
 
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:112
-msgctxt "GUI|Date and Time|NTP"
-msgid "_Cancel"
-msgstr "취소(_C)"
-
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:126
-msgctxt "GUI|Date and Time|NTP"
-msgid "_OK"
-msgstr "좋음(_O)"
-
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:151
-msgid "Add and mark for usage NTP servers"
-msgstr "NTP 서버 사용을 위한 표시 및 추가"
-
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:173
-msgid "New NTP Server"
-msgstr "신규 NTP 서버"
-
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:192
-msgid "Add NTP Server"
-msgstr "NTP 서버 추가"
-
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:212
-msgid "This URL refers to a pool of NTP servers"
-msgstr "이 URL은 NTP 서버 풀을 나타냅니다"
-
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:227
-msgid "Server supports Network Time Security (NTS) authentication"
-msgstr "서버는 네트웍 시간 보안(NTS) 인증를 지원"
-
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:275
-msgid "Pool"
-msgstr "풀"
-
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:301
-msgid "Working"
-msgstr "작동 중"
-
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:309
-msgid "Use"
-msgstr "사용"
-
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:337
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:551
-msgid "Configure NTP"
-msgstr "NTP 설정"
-
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:358
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:966
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:92
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:700
 msgid "TIME & DATE"
 msgstr "시간 및 날짜"
 
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:408
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:142
 msgctxt "GUI|Date and Time"
 msgid "_Region:"
 msgstr "지역 (_R):"
 
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:438
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:172
 msgid "Region"
 msgstr "지역"
 
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:455
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:189
 msgctxt "GUI|Date and Time"
 msgid "_City:"
 msgstr "도시(_C):"
 
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:485
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:219
 msgid "City"
 msgstr "도시"
 
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:513
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:247
 msgctxt "GUI|Date and Time"
 msgid "_Network Time"
 msgstr "네트워크 시간(_N)"
 
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:531
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:265
 msgid "Use Network Time"
 msgstr "네트워크 시간 사용"
 
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:618
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:285
+#: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:378
+msgid "Configure NTP"
+msgstr "NTP 설정"
+
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:352
 msgid "Hours"
 msgstr "시"
 
 #. TRANSLATORS: This is the separator between hours and minutes, like in HH:MM
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:631
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:365
 msgctxt "GUI|Date and Time"
 msgid ":"
 msgstr ":"
 
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:651
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:385
 msgid "Minutes"
 msgstr "분"
 
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:669
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:403
 msgid "Hour Up"
 msgstr "시간 추가"
 
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:687
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:421
 msgid "Hour Down"
 msgstr "시간 감소"
 
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:705
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:439
 msgid "Minutes Up"
 msgstr "분 추가"
 
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:723
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:457
 msgid "Minutes Down"
 msgstr "분 감소"
 
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:767
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:501
 msgid "AM/PM Up"
 msgstr "오전/오후 위"
 
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:803
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:537
 msgid "AM/PM Down"
 msgstr "오전/오후 아래"
 
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:854
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:588
 msgctxt "GUI|Date and Time"
 msgid "24-_hour"
 msgstr "24 시간(_H)"
 
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:872
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:606
 msgctxt "GUI|Date and Time"
 msgid "_AM/PM"
 msgstr "오전/오후(_A)"
 
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:931
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:665
 msgid "Set Date & Time"
 msgstr "날짜와 시간 설정"
 
@@ -6554,6 +6515,57 @@ msgstr "취소(_C)"
 msgid "No Space"
 msgstr "여유 공간 없음"
 
+#: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:38
+msgctxt "GUI|Date and Time|NTP"
+msgid "_Cancel"
+msgstr "취소(_C)"
+
+#: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:52
+msgctxt "GUI|Date and Time|NTP"
+msgid "_OK"
+msgstr "좋음(_O)"
+
+#: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:77
+#, fuzzy
+#| msgid "Configure NTP servers"
+msgid "Configure Network Time Servers"
+msgstr "NTP 서버 설정"
+
+#: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:133
+msgid "Pool"
+msgstr "풀"
+
+#: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:159
+msgid "Working"
+msgstr "작동 중"
+
+#: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:214
+#, fuzzy
+#| msgctxt "GUI|Custom Partitioning"
+#| msgid "Add"
+msgid "Add"
+msgstr "추가"
+
+#: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:266
+#, fuzzy
+#| msgctxt "GUI|Custom Partitioning"
+#| msgid "Remove"
+msgid "Remove"
+msgstr "제거"
+
+#: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:318
+msgid "Edit"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:354
+msgid ""
+"<b>Pool</b > - If checked, indicates the Host Name refers to a pool of "
+"servers.\n"
+"\n"
+"<b>NTS</b> - If checked, indicates support for Network Time Security "
+"authentication."
+msgstr ""
+
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:21
 msgctxt "GUI|Custom Partitioning|Confirm Delete Dialog"
 msgid "_Cancel"
@@ -6810,44 +6822,73 @@ msgid "_Refresh..."
 msgstr "재생(_R) ..."
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:8
-#: pyanaconda/ui/gui/spokes/root_password.glade:229
-msgid "ROOT PASSWORD"
-msgstr "ROOT 비밀번호"
+msgid "ROOT ACCOUNT"
+msgstr ""
 
-#: pyanaconda/ui/gui/spokes/root_password.glade:53
+#: pyanaconda/ui/gui/spokes/root_password.glade:70
+msgid ""
+"The root account is used for administering the system.\n"
+"\n"
+"The root user (also known as super user) has complete access to the entire "
+"system. For this reason, logging into this system as the root user is best "
+"done only to perform system maintenance or administration."
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/root_password.glade:97
+#, fuzzy
+#| msgid "Lock root account"
+msgctxt "GUI|Password"
+msgid "_Disable root account"
+msgstr "root 계정을 잠금"
+
+#: pyanaconda/ui/gui/spokes/root_password.glade:125
+#, fuzzy
+#| msgid "Lock root account"
+msgctxt "GUI|Password"
+msgid "_Enable root account"
+msgstr "root 계정을 잠금"
+
+#: pyanaconda/ui/gui/spokes/root_password.glade:146
+msgid ""
+"Disabling the root account will lock the account and disable remote access "
+"with root account. This will prevent unintended administrative access to the "
+"system."
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/root_password.glade:162
+msgctxt "GUI|Password"
+msgid ""
+"Enabling the root account will allow you to set a root password and "
+"optionally enable remote access to root account on this system."
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/root_password.glade:196
 msgctxt "GUI|Password"
 msgid "_Root Password:"
 msgstr "root 비밀번호(_R):"
 
-#: pyanaconda/ui/gui/spokes/root_password.glade:67
+#: pyanaconda/ui/gui/spokes/root_password.glade:211
 msgctxt "GUI|Password"
 msgid "_Confirm:"
 msgstr "root 비번확인(_C):"
 
-#: pyanaconda/ui/gui/spokes/root_password.glade:107
+#: pyanaconda/ui/gui/spokes/root_password.glade:253
 #: pyanaconda/ui/gui/spokes/user.glade:194
 msgid "Confirm Password"
 msgstr "비밀번호 확인"
 
-#: pyanaconda/ui/gui/spokes/root_password.glade:142
+#: pyanaconda/ui/gui/spokes/root_password.glade:288
 #: pyanaconda/ui/gui/spokes/user.glade:245
 msgid "empty password"
 msgstr "암호를 입력하지 않습니다"
 
-#: pyanaconda/ui/gui/spokes/root_password.glade:163
-msgid ""
-"The root account is used for administering the system.  Enter a password for "
-"the root user."
-msgstr ""
-"시스템 관리는 root계정을 사용합니다. root 사용자의 비밀번호를 입력하십시오."
-
-#: pyanaconda/ui/gui/spokes/root_password.glade:184
-msgid "Lock root account"
-msgstr "root 계정을 잠금"
-
-#: pyanaconda/ui/gui/spokes/root_password.glade:200
+#: pyanaconda/ui/gui/spokes/root_password.glade:317
 msgid "Allow root SSH login with password"
 msgstr "root가 비밀번호로 SSH 로그인하도록 허용"
+
+#: pyanaconda/ui/gui/spokes/root_password.glade:374
+msgid "ROOT PASSWORD"
+msgstr "ROOT 비밀번호"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:176
 msgid "Add a new mount point."
@@ -7234,6 +7275,35 @@ msgstr "종료"
 #: ../data/liveinst/console.apps/liveinst.h:1
 msgid "Starting Install to Hard Drive"
 msgstr "하드 드라이브에 설치를 시작합니다"
+
+#~ msgctxt "GUI|Spoke"
+#~ msgid "_Root Password"
+#~ msgstr "root 비밀번호(_R)"
+
+#~ msgid "Add and mark for usage NTP servers"
+#~ msgstr "NTP 서버 사용을 위한 표시 및 추가"
+
+#~ msgid "New NTP Server"
+#~ msgstr "신규 NTP 서버"
+
+#~ msgid "Add NTP Server"
+#~ msgstr "NTP 서버 추가"
+
+#~ msgid "This URL refers to a pool of NTP servers"
+#~ msgstr "이 URL은 NTP 서버 풀을 나타냅니다"
+
+#~ msgid "Server supports Network Time Security (NTS) authentication"
+#~ msgstr "서버는 네트웍 시간 보안(NTS) 인증를 지원"
+
+#~ msgid "Use"
+#~ msgstr "사용"
+
+#~ msgid ""
+#~ "The root account is used for administering the system.  Enter a password "
+#~ "for the root user."
+#~ msgstr ""
+#~ "시스템 관리는 root계정을 사용합니다. root 사용자의 비밀번호를 입력하십시"
+#~ "오."
 
 #~ msgid "The maximum size \"%s\" is invalid."
 #~ msgstr "최대 크기 \"%s\"가 잘못되었습니다."

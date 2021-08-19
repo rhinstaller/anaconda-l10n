@@ -55,7 +55,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2021-08-17 00:46+0000\n"
+"POT-Creation-Date: 2021-08-19 00:40+0000\n"
 "PO-Revision-Date: 2021-07-07 10:04+0000\n"
 "Last-Translator: CoconutNut <patrick.vollandt@mein-gym.de>\n"
 "Language-Team: German <https://translate.fedoraproject.org/projects/anaconda/"
@@ -2002,8 +2002,8 @@ msgid "Current host name: %s\n"
 msgstr "Aktueller Rechnername: %s\n"
 
 #: pyanaconda/ui/tui/spokes/network.py:334
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:258
 #: pyanaconda/ui/gui/spokes/network.glade:2515
+#: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:116
 msgid "Host Name"
 msgstr "Rechnername"
 
@@ -2430,7 +2430,7 @@ msgstr "Passwort verwenden"
 
 #: pyanaconda/ui/tui/spokes/user.py:144
 #: pyanaconda/ui/tui/spokes/root_password.py:99
-#: pyanaconda/ui/gui/spokes/root_password.glade:87
+#: pyanaconda/ui/gui/spokes/root_password.glade:232
 #: pyanaconda/ui/gui/spokes/subscription.glade:181
 #: pyanaconda/ui/gui/spokes/subscription.glade:568
 #: pyanaconda/ui/gui/spokes/user.glade:175
@@ -2524,7 +2524,7 @@ msgstr ""
 "Deaktiviert. Legen Sie das Passwort fest, um das Root-Konto zu aktivieren."
 
 #: pyanaconda/ui/tui/spokes/root_password.py:82
-#: pyanaconda/ui/gui/spokes/root_password.py:185
+#: pyanaconda/ui/gui/spokes/root_password.py:180
 msgid "Root account is disabled."
 msgstr "Root-Konto ist deaktiviert."
 
@@ -3189,7 +3189,7 @@ msgstr "Ungültige Zeitzone"
 #: pyanaconda/ui/gui/spokes/datetime_spoke.py:516
 #: pyanaconda/ui/gui/spokes/datetime_spoke.py:530
 #: pyanaconda/ui/gui/spokes/datetime_spoke.py:713
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:783
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:517
 msgid "PM"
 msgstr "PM"
 
@@ -3978,23 +3978,26 @@ msgid "Preserve _all"
 msgstr "_Alles behalten"
 
 #: pyanaconda/ui/gui/spokes/root_password.py:57
+#, fuzzy
+#| msgctxt "GUI|Subscription|Authentication|Account"
+#| msgid "_Account"
 msgctxt "GUI|Spoke"
-msgid "_Root Password"
-msgstr "_Root-Passwort"
+msgid "_Root Account"
+msgstr "_Benutzerkonto"
 
-#: pyanaconda/ui/gui/spokes/root_password.py:136
+#: pyanaconda/ui/gui/spokes/root_password.py:132
 msgid "Root password has been set."
 msgstr "Root-Passwort wurde gesetzt."
 
-#: pyanaconda/ui/gui/spokes/root_password.py:183
+#: pyanaconda/ui/gui/spokes/root_password.py:178
 msgid "Disabled, set password to enable."
 msgstr "Deaktiviert, Passwort setzen zum Aktivieren."
 
-#: pyanaconda/ui/gui/spokes/root_password.py:188
+#: pyanaconda/ui/gui/spokes/root_password.py:183
 msgid "Root password is set"
 msgstr "Root-Passwort wurde gesetzt"
 
-#: pyanaconda/ui/gui/spokes/root_password.py:190
+#: pyanaconda/ui/gui/spokes/root_password.py:185
 msgid "Root password is not set"
 msgstr "Root-Passwort ist nicht gesetzt"
 
@@ -5373,134 +5376,92 @@ msgstr "INSTALLATIONS FORTSCHRITT"
 msgid "Preparing to install"
 msgstr "Installation wird vorbereitet"
 
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:112
-msgctxt "GUI|Date and Time|NTP"
-msgid "_Cancel"
-msgstr "_Abbrechen"
-
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:126
-msgctxt "GUI|Date and Time|NTP"
-msgid "_OK"
-msgstr "_OK"
-
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:151
-msgid "Add and mark for usage NTP servers"
-msgstr "NTP-Server hinzufügen und für die Benutzung kennzeichnen"
-
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:173
-msgid "New NTP Server"
-msgstr "Neuer NTP-Server"
-
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:192
-msgid "Add NTP Server"
-msgstr "NTP-Server hinzufügen"
-
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:212
-msgid "This URL refers to a pool of NTP servers"
-msgstr "Diese URL verweist auf eine Liste mit Zeitservern"
-
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:227
-msgid "Server supports Network Time Security (NTS) authentication"
-msgstr "Der Server unterstützt Network Time Security (NTS) Authentifizierung"
-
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:275
-msgid "Pool"
-msgstr "Pool"
-
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:301
-msgid "Working"
-msgstr "In Betrieb"
-
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:309
-msgid "Use"
-msgstr "Nutzung"
-
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:337
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:551
-msgid "Configure NTP"
-msgstr "NTP konfigurieren"
-
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:358
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:966
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:92
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:700
 msgid "TIME & DATE"
 msgstr "ZEIT & DATUM"
 
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:408
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:142
 msgctxt "GUI|Date and Time"
 msgid "_Region:"
 msgstr "_Region:"
 
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:438
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:172
 msgid "Region"
 msgstr "Region"
 
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:455
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:189
 msgctxt "GUI|Date and Time"
 msgid "_City:"
 msgstr "_Ort:"
 
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:485
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:219
 msgid "City"
 msgstr "Stadt"
 
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:513
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:247
 msgctxt "GUI|Date and Time"
 msgid "_Network Time"
 msgstr "_Netzwerk-Zeit"
 
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:531
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:265
 msgid "Use Network Time"
 msgstr "Netzwerk-Zeit benutzen"
 
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:618
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:285
+#: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:378
+msgid "Configure NTP"
+msgstr "NTP konfigurieren"
+
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:352
 msgid "Hours"
 msgstr "Stunden"
 
 #. TRANSLATORS: This is the separator between hours and minutes, like in HH:MM
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:631
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:365
 msgctxt "GUI|Date and Time"
 msgid ":"
 msgstr ":"
 
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:651
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:385
 msgid "Minutes"
 msgstr "Minuten"
 
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:669
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:403
 msgid "Hour Up"
 msgstr "Stunden hinauf"
 
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:687
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:421
 msgid "Hour Down"
 msgstr "Stunden runter"
 
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:705
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:439
 msgid "Minutes Up"
 msgstr "Minuten runter"
 
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:723
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:457
 msgid "Minutes Down"
 msgstr "Minuten runter"
 
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:767
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:501
 msgid "AM/PM Up"
 msgstr "AM/PM hinauf"
 
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:803
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:537
 msgid "AM/PM Down"
 msgstr "AM/PM runter"
 
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:854
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:588
 msgctxt "GUI|Date and Time"
 msgid "24-_hour"
 msgstr "24-_Stunden"
 
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:872
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:606
 msgctxt "GUI|Date and Time"
 msgid "_AM/PM"
 msgstr "_AM/ PM"
 
-#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:931
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:665
 msgid "Set Date & Time"
 msgstr "Datum & Zeit setzen"
 
@@ -6895,6 +6856,57 @@ msgstr "_Abbrechen"
 msgid "No Space"
 msgstr "Kein Platz"
 
+#: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:38
+msgctxt "GUI|Date and Time|NTP"
+msgid "_Cancel"
+msgstr "_Abbrechen"
+
+#: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:52
+msgctxt "GUI|Date and Time|NTP"
+msgid "_OK"
+msgstr "_OK"
+
+#: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:77
+#, fuzzy
+#| msgid "Configure NTP servers"
+msgid "Configure Network Time Servers"
+msgstr "NTP-Server konfigurieren"
+
+#: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:133
+msgid "Pool"
+msgstr "Pool"
+
+#: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:159
+msgid "Working"
+msgstr "In Betrieb"
+
+#: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:214
+#, fuzzy
+#| msgctxt "GUI|Custom Partitioning"
+#| msgid "Add"
+msgid "Add"
+msgstr "Hinzufügen"
+
+#: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:266
+#, fuzzy
+#| msgctxt "GUI|Custom Partitioning"
+#| msgid "Remove"
+msgid "Remove"
+msgstr "Entfernen"
+
+#: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:318
+msgid "Edit"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:354
+msgid ""
+"<b>Pool</b > - If checked, indicates the Host Name refers to a pool of "
+"servers.\n"
+"\n"
+"<b>NTS</b> - If checked, indicates support for Network Time Security "
+"authentication."
+msgstr ""
+
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:21
 msgctxt "GUI|Custom Partitioning|Confirm Delete Dialog"
 msgid "_Cancel"
@@ -7153,45 +7165,73 @@ msgid "_Refresh..."
 msgstr "_Aktualisieren..."
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:8
-#: pyanaconda/ui/gui/spokes/root_password.glade:229
-msgid "ROOT PASSWORD"
-msgstr "Root-Passwort"
+msgid "ROOT ACCOUNT"
+msgstr ""
 
-#: pyanaconda/ui/gui/spokes/root_password.glade:53
+#: pyanaconda/ui/gui/spokes/root_password.glade:70
+msgid ""
+"The root account is used for administering the system.\n"
+"\n"
+"The root user (also known as super user) has complete access to the entire "
+"system. For this reason, logging into this system as the root user is best "
+"done only to perform system maintenance or administration."
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/root_password.glade:97
+#, fuzzy
+#| msgid "Lock root account"
+msgctxt "GUI|Password"
+msgid "_Disable root account"
+msgstr "Root-Konto sperren"
+
+#: pyanaconda/ui/gui/spokes/root_password.glade:125
+#, fuzzy
+#| msgid "Lock root account"
+msgctxt "GUI|Password"
+msgid "_Enable root account"
+msgstr "Root-Konto sperren"
+
+#: pyanaconda/ui/gui/spokes/root_password.glade:146
+msgid ""
+"Disabling the root account will lock the account and disable remote access "
+"with root account. This will prevent unintended administrative access to the "
+"system."
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/root_password.glade:162
+msgctxt "GUI|Password"
+msgid ""
+"Enabling the root account will allow you to set a root password and "
+"optionally enable remote access to root account on this system."
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/root_password.glade:196
 msgctxt "GUI|Password"
 msgid "_Root Password:"
 msgstr "_Root-Passwort:"
 
-#: pyanaconda/ui/gui/spokes/root_password.glade:67
+#: pyanaconda/ui/gui/spokes/root_password.glade:211
 msgctxt "GUI|Password"
 msgid "_Confirm:"
 msgstr "_Bestätigen:"
 
-#: pyanaconda/ui/gui/spokes/root_password.glade:107
+#: pyanaconda/ui/gui/spokes/root_password.glade:253
 #: pyanaconda/ui/gui/spokes/user.glade:194
 msgid "Confirm Password"
 msgstr "Passwort bestätigen"
 
-#: pyanaconda/ui/gui/spokes/root_password.glade:142
+#: pyanaconda/ui/gui/spokes/root_password.glade:288
 #: pyanaconda/ui/gui/spokes/user.glade:245
 msgid "empty password"
 msgstr "leeres Passwort"
 
-#: pyanaconda/ui/gui/spokes/root_password.glade:163
-msgid ""
-"The root account is used for administering the system.  Enter a password for "
-"the root user."
-msgstr ""
-"Der Root-Account wird für die Verwaltung des Systems benötigt.  Geben Sie "
-"für den Root-Benutzer ein Passwort ein."
-
-#: pyanaconda/ui/gui/spokes/root_password.glade:184
-msgid "Lock root account"
-msgstr "Root-Konto sperren"
-
-#: pyanaconda/ui/gui/spokes/root_password.glade:200
+#: pyanaconda/ui/gui/spokes/root_password.glade:317
 msgid "Allow root SSH login with password"
 msgstr "Root-SSH-Anmeldung mit Passwort zulassen"
+
+#: pyanaconda/ui/gui/spokes/root_password.glade:374
+msgid "ROOT PASSWORD"
+msgstr "Root-Passwort"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:176
 msgid "Add a new mount point."
@@ -7579,6 +7619,36 @@ msgstr "Schließen"
 #: ../data/liveinst/console.apps/liveinst.h:1
 msgid "Starting Install to Hard Drive"
 msgstr "Installation auf die Festplatte wird gestartet"
+
+#~ msgctxt "GUI|Spoke"
+#~ msgid "_Root Password"
+#~ msgstr "_Root-Passwort"
+
+#~ msgid "Add and mark for usage NTP servers"
+#~ msgstr "NTP-Server hinzufügen und für die Benutzung kennzeichnen"
+
+#~ msgid "New NTP Server"
+#~ msgstr "Neuer NTP-Server"
+
+#~ msgid "Add NTP Server"
+#~ msgstr "NTP-Server hinzufügen"
+
+#~ msgid "This URL refers to a pool of NTP servers"
+#~ msgstr "Diese URL verweist auf eine Liste mit Zeitservern"
+
+#~ msgid "Server supports Network Time Security (NTS) authentication"
+#~ msgstr ""
+#~ "Der Server unterstützt Network Time Security (NTS) Authentifizierung"
+
+#~ msgid "Use"
+#~ msgstr "Nutzung"
+
+#~ msgid ""
+#~ "The root account is used for administering the system.  Enter a password "
+#~ "for the root user."
+#~ msgstr ""
+#~ "Der Root-Account wird für die Verwaltung des Systems benötigt.  Geben Sie "
+#~ "für den Root-Benutzer ein Passwort ein."
 
 #~ msgid "The maximum size \"%s\" is invalid."
 #~ msgstr "Die maximale Größe \"%s\" ist ungültig."
