@@ -32,10 +32,10 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2021-08-24 00:44+0000\n"
-"PO-Revision-Date: 2021-08-22 08:04+0000\n"
-"Last-Translator: Didik Supriadi <didiksupriadi41@gmail.com>\n"
+"PO-Revision-Date: 2021-08-28 12:04+0000\n"
+"Last-Translator: Andika Triwidada <andika@gmail.com>\n"
 "Language-Team: Indonesian <https://translate.fedoraproject.org/projects/"
-"anaconda/master/id/>\n"
+"anaconda/f35/id/>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -502,6 +502,24 @@ msgid ""
 "* Some drives support re-configuration of sector sizes, for example by "
 "running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 msgstr ""
+"Solusi untuk instalasi manual:\n"
+"* Pilih hanya disk dengan ukuran sektor yang sama selama instalasi manual "
+"dalam mode grafis atau teks.\n"
+"* Ketika disk denga ukuran sektor yang tidak konsisten dipilih untuk "
+"instalasi, batasi setiap Grup Volume LVM yang dibuat untuk memakai Volume "
+"Fisik dengan ukuran sektor yang sama. Ini hanya dapat dilakukan dalam mode "
+"grafis dalam spoke Pemartisian ubahan.\n"
+"\n"
+"Solusi untuk instalasi kickstart:\n"
+"* Batasi disk mana yang dipakai untuk pemartisian dengan menyatakan "
+"'ignoredisk --drives=..' atau 'ignoredisk --only-use=..'\n"
+"* Nyatakan disk mana mesti dipakai bagi Volume Fisik LVM yang dibuat: "
+"partition pv.1 --ondisk=..'\n"
+"\n"
+"Solusi umum:\n"
+"* Skema pemartisian polos dapat dipakai sebagai pengganti LVM.\n"
+"* Beberapa drive mendukung konfigurasi ulang ukuran sektor, sebagai contoh "
+"dengan menjalankan 'hdparm --set-sector-size=<SIZE> <DEVICE>'\n"
 
 #: pyanaconda/modules/storage/bootloader/base.py:184
 msgid "/boot file system"
@@ -673,25 +691,17 @@ msgid "Gathering entropy {percents}% (remaining time {time})"
 msgstr "Mengumpulkan entropi {percents}% (sisa waktu {time})"
 
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:65
-#, fuzzy
-#| msgid "Unknown or invalid device '%s' specified"
 msgid "Unknown or invalid device '{}' specified"
-msgstr "Peranti '%s' yang dinyatakan tidak valid atau tidak dikenal"
+msgstr "Peranti '{}' yang dinyatakan tidak valid atau tidak dikenal"
 
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:74
-#, fuzzy
-#| msgid ""
-#| "Unknown or invalid format '%(format)s' specified for device '%(device)s'"
 msgid "Unknown or invalid format '{}' specified for device '{}'"
 msgstr ""
-"Format '%(format)s' yang dinyatakan untuk peranti '%(device)s' tidak valid "
-"atau tidak dikenal"
+"Format '{}' yang dinyatakan untuk peranti {}' tidak valid atau tidak dikenal"
 
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:81
-#, fuzzy
-#| msgid "No format on device '%s'"
 msgid "No format on device '{}'"
-msgstr "Tidak ada format pada peranti '%s'"
+msgstr "Tidak ada format pada peranti '{}s'"
 
 #: pyanaconda/modules/storage/partitioning/automatic/utils.py:165
 msgid "No usable disks selected."
@@ -707,10 +717,8 @@ msgstr ""
 "Tidak ada ruang bebas yang cukup besar pada disk untuk pemartisian otomatis"
 
 #: pyanaconda/modules/storage/partitioning/interactive/add_device.py:72
-#, fuzzy
-#| msgid "Failed to add new device."
 msgid "Failed to add a device."
-msgstr "Gagal menambah peranti baru."
+msgstr "Gagal menambah suatu peranti."
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:213
 #, python-brace-format
@@ -813,36 +821,26 @@ msgstr ""
 "atau memilih peranti lain."
 
 #: pyanaconda/modules/storage/partitioning/interactive/change_device.py:87
-#, fuzzy
-#| msgid "Failed to add new device."
 msgid "Failed to change a device."
-msgstr "Gagal menambah peranti baru."
+msgstr "Gagal mengubah suatu peranti."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:161
-#, fuzzy
-#| msgid "No disk found for specified BIOS disk \"%s\"."
 msgid "No disk found for specified BIOS disk \"{}\"."
-msgstr "Tidak ada disk yang ditemukan untuk disk BIOS \"%s\" yang dinyatakan."
+msgstr "Tidak ada disk yang ditemukan untuk disk BIOS \"{}\" yang dinyatakan."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:202
-#, fuzzy
-#| msgid "RAID partition \"%s\" is defined multiple times."
 msgid "RAID partition \"{}\" is defined multiple times."
-msgstr "Partisi RAID \"%s\" didefinisikan beberapa kali."
+msgstr "Partisi RAID \"{}\" didefinisikan beberapa kali."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:214
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:484
-#, fuzzy
-#| msgid "PV partition \"%s\" is defined multiple times."
 msgid "PV partition \"{}\" is defined multiple times."
-msgstr "Partisi PV \"%s\" didefinisikan beberapa kali."
+msgstr "Partisi PV \"{}\" didefinisikan beberapa kali."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:226
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:496
-#, fuzzy
-#| msgid "Btrfs partition \"%s\" is defined multiple times."
 msgid "Btrfs partition \"{}\" is defined multiple times."
-msgstr "Partisi Btrfs \"%s\" didefinisikan beberapa kali."
+msgstr "Partisi Btrfs \"{}\" didefinisikan beberapa kali."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:252
 msgid "part --noformat must also use the --onpart option."
@@ -850,126 +848,87 @@ msgstr "part --noformat juga harus memakai opsi --onpart."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:257
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:352
-#, fuzzy
-#| msgid "Partition \"%s\" given in part command does not exist."
 msgid "Partition \"{}\" given in part command does not exist."
-msgstr "Partisi \"%s\" yang diberikan dalam perintah part tidak ada."
+msgstr "Partisi \"{}\" yang diberikan dalam perintah part tidak ada."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:294
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:573
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:952
-#, fuzzy
-#| msgid "The \"%s\" file system type is not supported."
 msgid "The \"{}\" file system type is not supported."
-msgstr "Tipe sistem berkas \"%s\" tidak didukung."
+msgstr "Tipe sistem berkas \"{}\" tidak didukung."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:309
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:328
-#, fuzzy
-#| msgid "Disk \"%s\" given in part command does not exist."
 msgid "Disk \"{}\" given in part command does not exist."
-msgstr "Disk \"%s\" yang diberikan dalam perintah part tidak ada."
+msgstr "Disk \"{}\" yang diberikan dalam perintah part tidak ada."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:314
-#, fuzzy
-#| msgid "Cannot install to unpartitionable device \"%s\"."
 msgid "Cannot install to unpartitionable device \"{}\"."
-msgstr "Tidak dapat memasang ke peranti \"%s\" yang tidak dapat dipartisi."
+msgstr "Tidak dapat memasang ke peranti \"{}\" yang tidak dapat dipartisi."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:322
-#, fuzzy
-#| msgid "Disk \"%s\" in part command is not partitioned."
 msgid "Disk \"{}\" in part command is not partitioned."
-msgstr "Disk \"%s\" dalam perintah part tidak dipartisi."
+msgstr "Disk \"{}\" dalam perintah part tidak dipartisi."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:518
 msgid "raid --noformat must also use the --device option."
 msgstr "raid --noformat juga harus memakai opsi --device."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:524
-#, fuzzy
-#| msgid "RAID device  \"%s\" given in raid command does not exist."
 msgid "RAID device  \"{}\" given in raid command does not exist."
-msgstr "Peranti RAID \"%s\" yang diberikan dalam perintah raid tidak ada."
+msgstr "Peranti RAID \"{}\" yang diberikan dalam perintah raid tidak ada."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:549
-#, fuzzy
-#| msgid ""
-#| "RAID device \"%(device)s\" has a format of \"%(format)s\", but should "
-#| "have a format of \"mdmember\"."
 msgid ""
 "RAID device \"{}\" has a format of \"{}\", but should have a format of "
 "\"mdmember\"."
 msgstr ""
-"Peranti RAID \"%(device)s\" memiliki format \"%(format)s\", tetapi "
-"seharusnya memiliki format \"mdmember\"."
+"Peranti RAID \"{}\" memiliki format \"{}\", tetapi seharusnya memiliki "
+"format \"mdmember\"."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:555
-#, fuzzy
-#| msgid "Tried to use undefined partition \"%s\" in RAID specification."
 msgid "Tried to use undefined partition \"{}\" in RAID specification."
 msgstr ""
-"Mencoba untuk menggunakan partisi \"%s\" yang tidak terdefinisi dalam "
+"Mencoba untuk menggunakan partisi \"{}\" yang tidak terdefinisi dalam "
 "spesifikasi RAID."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:596
-#, fuzzy
-#| msgid "RAID volume \"%s\" specified with --useexisting does not exist."
 msgid "RAID volume \"{}\" specified with --useexisting does not exist."
-msgstr "Volume RAID \"%s\" yang dinyatakan dengan --useexisting tidak ada."
+msgstr "Volume RAID \"{}\" yang dinyatakan dengan --useexisting tidak ada."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:607
-#, fuzzy
-#| msgid "The RAID volume name \"%s\" is already in use."
 msgid "The RAID volume name \"{}\" is already in use."
-msgstr "Nama volume RAID \"%s\" sudah dipakai."
+msgstr "Nama volume RAID \"{}\" sudah dipakai."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:721
-#, fuzzy
-#| msgid ""
-#| "Physical volume \"%(device)s\" has a format of \"%(format)s\", but should "
-#| "have a format of \"lvmpv\"."
 msgid ""
 "Physical volume \"{}\" has a format of \"{}\", but should have a format of "
 "\"lvmpv\"."
 msgstr ""
-"Volume fisik \"%(device)s\" memiliki format \"%(format)s\", tetapi "
-"seharusnya memiliki format \"lvmpv\"."
+"Volume fisik \"{}\" memiliki format \"{}\", tetapi seharusnya memiliki "
+"format \"lvmpv\"."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:727
-#, fuzzy
-#| msgid ""
-#| "Tried to use undefined partition \"%s\" in Volume Group specification"
 msgid "Tried to use undefined partition \"{}\" in Volume Group specification"
 msgstr ""
-"Mencoba memakai partisi \"%s\" yang tidak terdefinisi dalam spesifikasi "
+"Mencoba memakai partisi \"{}\" yang tidak terdefinisi dalam spesifikasi "
 "Volume Group"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:735
-#, fuzzy
-#| msgid ""
-#| "Volume group \"%s\" defined without any physical volumes.  Either specify "
-#| "physical volumes or use --useexisting."
 msgid ""
 "Volume group \"{}\" defined without any physical volumes. Either specify "
 "physical volumes or use --useexisting."
 msgstr ""
-"Grup volume \"%s\" didefinisikan tanpa volume fisik. Nyatakan volume fisik "
+"Grup volume \"{}\" didefinisikan tanpa volume fisik. Nyatakan volume fisik "
 "atau gunakan --useexisting."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:747
-#, fuzzy
-#| msgid ""
-#| "Volume group given physical extent size of \"%(extentSize)s\", but must "
-#| "be one of:\n"
-#| "%(validExtentSizes)s."
 msgid ""
 "Volume group given physical extent size of \"{}\", but must be one of:\n"
 "{}."
 msgstr ""
-"Grup volume diberi ukuran extent fisik \"%(extentSize)s\", tapi seharusnya "
-"satu dari:\n"
-"%(validExtentSizes)s."
+"Grup volume diberi ukuran extent fisik \"{}\", tapi seharusnya satu dari:\n"
+"{}."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:755
 msgid ""
@@ -980,35 +939,28 @@ msgstr ""
 "name=."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:762
-#, fuzzy
-#| msgid "Volume group \"%s\" given in volgroup command does not exist."
 msgid "Volume group \"{}\" given in volgroup command does not exist."
-msgstr "Grup volume \"%s\" yang diberikan dalam perintah volgroup tidak ada."
+msgstr "Grup volume \"{}\" yang diberikan dalam perintah volgroup tidak ada."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:767
-#, fuzzy
-#| msgid "The volume group name \"%s\" is already in use."
 msgid "The volume group name \"{}\" is already in use."
-msgstr "Nama volume grup \"%s\" sudah digunakan."
+msgstr "Nama volume grup \"{}\" sudah digunakan."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:821
 msgid "/boot cannot be of type \"lvmlv\" on s390x"
-msgstr ""
+msgstr "/boot tidak bisa bertipe \"lvmlv\" pada s390x"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:851
 msgid "Size cannot be decided on from kickstart nor obtained from device."
 msgstr ""
+"Ukuran tidak dapat diputuskan dari kickstart maupun diperoleh dari peranti."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:867
-#, fuzzy
-#| msgid ""
-#| "No volume group exists with the name \"%s\".  Specify volume groups "
-#| "before logical volumes."
 msgid ""
 "No volume group exists with the name \"{}\". Specify volume groups before "
 "logical volumes."
 msgstr ""
-"Tidak ada grup volume dengan nama \"%s\". Nyatakan grup volume sebelum "
+"Tidak ada grup volume dengan nama \"{}\". Nyatakan grup volume sebelum "
 "volume lojik."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:876
@@ -1017,15 +969,11 @@ msgstr ""
 "PV singgahan mesti menjadi miliki VG yang sama dengan LV yang disinggahkan"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:884
-#, fuzzy
-#| msgid ""
-#| "No thin pool exists with the name \"%s\". Specify thin pools before thin "
-#| "volumes."
 msgid ""
 "No thin pool exists with the name \"{}\". Specify thin pools before thin "
 "volumes."
 msgstr ""
-"Tidak ada thin pool dengan nama \"%s\". Nyatakan thin pool sebelum thin "
+"Tidak ada thin pool dengan nama \"{}\". Nyatakan thin pool sebelum thin "
 "volume."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:893
@@ -1034,59 +982,36 @@ msgstr "logvol --noformat juga harus memakai opsi --name=."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:899
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:964
-#, fuzzy
-#| msgid "Logical volume \"%s\" given in logvol command does not exist."
 msgid "Logical volume \"{}\" given in logvol command does not exist."
-msgstr "Volume lojik \"%s\" yang diberikan dalam perintah logvol tidak ada."
+msgstr "Volume lojik \"{}\" yang diberikan dalam perintah logvol tidak ada."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:931
-#, fuzzy
-#| msgid ""
-#| "Logical volume name \"%(logvol)s\" is already in use in volume group "
-#| "\"%(volgroup)s\"."
 msgid "Logical volume name \"{}\" is already in use in volume group \"{}\"."
-msgstr ""
-"Nama volume lojik \"%(logvol)s\" sudah dipakai dalam grup volume "
-"\"%(volgroup)s\"."
+msgstr "Nama volume lojik \"{}\" sudah dipakai dalam grup volume \"{}\"."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:937
-#, fuzzy
-#| msgid ""
-#| "Logical volume size \"%(logvolSize)s\" must be larger than the volume "
-#| "group extent size of \"%(extentSize)s\"."
 msgid ""
 "Logical volume size \"{}\" must be larger than the volume group extent size "
 "of \"{}\"."
 msgstr ""
-"Ukuran volume lojik \"%(logvolSize)s\" mesti lebih besar daripada ukuran "
-"extent grup volume \"%(extentSize)s\"."
+"Ukuran volume lojik \"{}\" mesti lebih besar daripada ukuran extent grup "
+"volume \"{}\"."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1144
-#, fuzzy
-#| msgid ""
-#| "Btrfs partition \"%(device)s\" has a format of \"%(format)s\", but should "
-#| "have a format of \"btrfs\"."
 msgid ""
 "Btrfs partition \"{}\" has a format of \"{}\", but should have a format of "
 "\"btrfs\"."
 msgstr ""
-"Partisi Btrfs \"%(device)s\" memiliki format \"%(format)s\", padahal "
-"mestinya memiliki format \"btrfs\"."
+"Partisi Btrfs \"{}\" memiliki format \"{}\", padahal mestinya memiliki "
+"format \"btrfs\"."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1150
-#, fuzzy
-#| msgid ""
-#| "Tried to use undefined partition \"%s\" in Btrfs volume specification."
 msgid "Tried to use undefined partition \"{}\" in Btrfs volume specification."
 msgstr ""
-"Mencoba memakai partisi \"%s\" yang tidak terdefinisi dalam spesifikasi "
+"Mencoba memakai partisi \"{}\" yang tidak terdefinisi dalam spesifikasi "
 "volume Btrfs."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1165
-#, fuzzy
-#| msgid ""
-#| "Btrfs volume defined without any member devices.  Either specify member "
-#| "devices or use --useexisting."
 msgid ""
 "Btrfs volume defined without any member devices. Either specify member "
 "devices or use --useexisting."
@@ -1095,22 +1020,16 @@ msgstr ""
 "atau gunakan --useexisting."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1189
-#, fuzzy
-#| msgid "Btrfs volume \"%s\" specified with --useexisting does not exist."
 msgid "Btrfs volume \"{}\" specified with --useexisting does not exist."
-msgstr "Volume Btrfs \"%s\" yang dinyatakan dengan --useexisting tidak ada."
+msgstr "Volume Btrfs \"{}\" yang dinyatakan dengan --useexisting tidak ada."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1212
-#, fuzzy
-#| msgid "The size \"%s\" is invalid."
 msgid "The size \"{}\" is invalid."
-msgstr "Ukuran \"%s\" tidak valid."
+msgstr "Ukuran \"{}\" tidak valid."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1217
-#, fuzzy
-#| msgid "The mount point \"%s\" is not valid.  It must start with a /."
 msgid "The mount point \"{}\" is not valid. It must start with a /."
-msgstr "Titik kait \"%s\" tidak valid. Harus dimulai dengan /."
+msgstr "Titik kait \"{}\" tidak valid. Harus dimulai dengan /."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1222
 #, python-brace-format
@@ -1146,17 +1065,10 @@ msgid "{device_name} on {container_name}"
 msgstr "{device_name} pada {container_name}"
 
 #: pyanaconda/modules/storage/devicetree/utils.py:78
-#, fuzzy
-#| msgid "Escrow certificate %s requires the network."
 msgid "Escrow certificate {} requires the network."
-msgstr "Sertifikat escrow %s membutuhkan jaringan."
+msgstr "Sertifikat escrow {} membutuhkan jaringan."
 
 #: pyanaconda/modules/storage/devicetree/utils.py:88
-#, fuzzy
-#| msgid ""
-#| "SSL error while downloading the escrow certificate:\n"
-#| "\n"
-#| "%s"
 msgid ""
 "SSL error while downloading the escrow certificate:\n"
 "\n"
@@ -1164,15 +1076,9 @@ msgid ""
 msgstr ""
 "Kesalahan SSL saat mengunduh sertifikat escrow:\n"
 "\n"
-"%s"
+"{}"
 
 #: pyanaconda/modules/storage/devicetree/utils.py:92
-#, fuzzy
-#| msgid ""
-#| "The following error was encountered while downloading the escrow "
-#| "certificate:\n"
-#| "\n"
-#| "%s"
 msgid ""
 "The following error was encountered while downloading the escrow "
 "certificate:\n"
@@ -1181,7 +1087,7 @@ msgid ""
 msgstr ""
 "Kesalahan berikut ini ditemui saat mengunduh sertifikat escrow:\n"
 "\n"
-"%s"
+"{}"
 
 #: pyanaconda/modules/storage/devicetree/fsset.py:423
 #, python-brace-format
@@ -1421,13 +1327,11 @@ msgstr "%s tidak ada. Tidak bisa menyiapkan firewall."
 
 #: pyanaconda/modules/payloads/payload/live_image/installation_progress.py:74
 msgid "Synchronizing writes to disk"
-msgstr ""
+msgstr "Menyelaraskan penulisan ke disk"
 
 #: pyanaconda/modules/payloads/payload/live_image/installation_progress.py:95
-#, fuzzy
-#| msgid "Installing software"
 msgid "Installing software {}%"
-msgstr "Memasang perangkat lunak"
+msgstr "Memasang perangkat lunak {}%"
 
 #: pyanaconda/modules/payloads/payload/live_image/installation.py:52
 msgid "Checking image checksum"
@@ -3874,12 +3778,9 @@ msgid "Preserve _all"
 msgstr "Pertahankan semu_a"
 
 #: pyanaconda/ui/gui/spokes/root_password.py:57
-#, fuzzy
-#| msgctxt "GUI|Subscription|Authentication|Account"
-#| msgid "_Account"
 msgctxt "GUI|Spoke"
 msgid "_Root Account"
-msgstr "_Akun"
+msgstr "Akun _Root"
 
 #: pyanaconda/ui/gui/spokes/root_password.py:132
 msgid "Root password has been set."
@@ -6727,10 +6628,8 @@ msgid "_OK"
 msgstr "_OK"
 
 #: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:77
-#, fuzzy
-#| msgid "Configure NTP servers"
 msgid "Configure Network Time Servers"
-msgstr "Konfigurasikan server NTP"
+msgstr "Konfigurasikan Server Waktu Jaringan"
 
 #: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:133
 msgid "Pool"
@@ -6741,22 +6640,16 @@ msgid "Working"
 msgstr "Bekerja"
 
 #: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:214
-#, fuzzy
-#| msgctxt "GUI|Custom Partitioning"
-#| msgid "Add"
 msgid "Add"
 msgstr "Tambah"
 
 #: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:266
-#, fuzzy
-#| msgctxt "GUI|Custom Partitioning"
-#| msgid "Remove"
 msgid "Remove"
 msgstr "Hapus"
 
 #: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:318
 msgid "Edit"
-msgstr ""
+msgstr "Sunting"
 
 #: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:354
 msgid ""
@@ -6766,6 +6659,11 @@ msgid ""
 "<b>NTS</b> - If checked, indicates support for Network Time Security "
 "authentication."
 msgstr ""
+"<b>Pool</b > - Bila dicentang, mengindikasikan bahwa Nama Host mengacu ke "
+"suatu pool server.\n"
+"\n"
+"<b>NTS</b> - Bila dicentang, mengindikasikan dukungan bagi autentikasi "
+"Network Time Security."
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:21
 msgctxt "GUI|Custom Partitioning|Confirm Delete Dialog"
@@ -7023,7 +6921,7 @@ msgstr "Sega_rkan..."
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:8
 msgid "ROOT ACCOUNT"
-msgstr ""
+msgstr "AKUN ROOT"
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:70
 msgid ""
@@ -7033,20 +6931,22 @@ msgid ""
 "system. For this reason, logging into this system as the root user is best "
 "done only to perform system maintenance or administration."
 msgstr ""
+"Akun root dipakai untuk mengadministrasi sistem.\n"
+"\n"
+"Pengguna root (juga dikenal sebagai pengguna super) memiliki akses lengkap "
+"ke seluruh sistem. Untuk alasan ini, log masuk ke sistem ini sebagai "
+"pengguna root terbaik hanya untuk melakukan administrasi atau pemeliharaan "
+"sistem."
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:97
-#, fuzzy
-#| msgid "Lock root account"
 msgctxt "GUI|Password"
 msgid "_Disable root account"
-msgstr "Kunci akun root"
+msgstr "_Nonaktifkan akun root"
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:125
-#, fuzzy
-#| msgid "Lock root account"
 msgctxt "GUI|Password"
 msgid "_Enable root account"
-msgstr "Kunci akun root"
+msgstr "_Fungsikan akun root"
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:146
 msgid ""
@@ -7054,6 +6954,9 @@ msgid ""
 "with root account. This will prevent unintended administrative access to the "
 "system."
 msgstr ""
+"Menonaktifkan akun root akan mengunci akun dan menonaktifkan akses jarak "
+"jauh dengan akun root. Ini akan mencegah akses administratif yang tidak "
+"dikehendaki ke sistem."
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:162
 msgctxt "GUI|Password"
@@ -7061,6 +6964,8 @@ msgid ""
 "Enabling the root account will allow you to set a root password and "
 "optionally enable remote access to root account on this system."
 msgstr ""
+"Memfungsikan akun root akan mengizinkan Anda menata kata sandi root dan "
+"secara opsional memfungsikan akses jarak jauh ke akun root pada sistem ini."
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:196
 msgctxt "GUI|Password"
