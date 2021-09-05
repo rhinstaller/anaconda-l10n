@@ -20,17 +20,17 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2021-09-03 00:49+0000\n"
-"PO-Revision-Date: 2021-06-17 19:04+0000\n"
-"Last-Translator: domantas ket <domant3lis@protonmail.com>\n"
+"PO-Revision-Date: 2021-09-06 14:05+0000\n"
+"Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
 "Language-Team: Lithuanian <https://translate.fedoraproject.org/projects/"
-"anaconda/master/lt/>\n"
+"anaconda/f35/lt/>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
 "%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 4.6.2\n"
+"X-Generator: Weblate 4.8\n"
 
 #: anaconda.py:316
 msgid "Unable to create PID file"
@@ -486,22 +486,12 @@ msgstr ""
 " Ar norite nepaisyti šio pranešimo ir vis tiek tęsti diegimą?"
 
 #: pyanaconda/errors.py:193
-#, fuzzy
-#| msgid ""
-#| "The following error occurred during the installation:\n"
-#| "\n"
-#| "{details}\n"
-#| "\n"
-#| "Would you like to ignore this and continue with installation?"
 msgid ""
 "An error occurred during Red Hat Insights configuration. Would you like to "
 "ignore this and continue with installation?"
 msgstr ""
-"Diegiant kilo žemiau nurodyta klaida:\n"
-"\n"
-"{details}\n"
-"\n"
-" Ar norite nepaisyti šio pranešimo ir vis tiek tęsti diegimą?"
+"RedHat Insights konfigūracijos metu įvyko klaida. Ar norite nepaisyti šio "
+"pranešimo ir vis tiek tęsti diegimą?"
 
 #: pyanaconda/network.py:109
 msgid "Host name cannot be None or an empty string."
@@ -791,19 +781,14 @@ msgid "Please ssh install@HOSTNAME to continue installation."
 msgstr "Diegimui tęsti įvykdykite ssh install@KOMPIUTERIS."
 
 #: pyanaconda/kickstart.py:163
-#, fuzzy
-#| msgid ""
-#| "The %%anaconda section has been deprecated. It may be removed from future "
-#| "releases, which will result in a fatal error when it is encountered. "
-#| "Please modify your kickstart file to remove this section."
 msgid ""
 "The {} section has been deprecated. It may be removed from future releases, "
 "which will result in a fatal error when it is encountered. Please modify "
 "your kickstart file to remove this section."
 msgstr ""
-"Skiltis %%anaconda yra pasenusi. Ji gali būti pašalinta būsimuose leidimuose "
-"ir dėl to kils lemtinga klaida. Pakeiskite savo kickstart failą ir "
-"pašalinkite šią skiltį."
+"Skiltis {} yra pasenusi. Ji gali būti pašalinta būsimuose leidimuose ir dėl "
+"to kils lemtinga klaida. Pakeiskite savo kickstart failą ir pašalinkite šią "
+"skiltį."
 
 #: pyanaconda/kickstart.py:450
 msgid ""
@@ -889,13 +874,11 @@ msgstr "Jūsų produktas nepalaiko %packages --ignorebroken savybės!"
 
 #: pyanaconda/modules/payloads/payload/live_image/installation_progress.py:74
 msgid "Synchronizing writes to disk"
-msgstr ""
+msgstr "Sinchronizuojami rašymai į diską"
 
 #: pyanaconda/modules/payloads/payload/live_image/installation_progress.py:95
-#, fuzzy
-#| msgid "Installing software"
 msgid "Installing software {}%"
-msgstr "Diegiama programinė įranga"
+msgstr "Diegiama programinė įranga {}%"
 
 #: pyanaconda/modules/payloads/payload/live_image/installation.py:52
 msgid "Checking image checksum"
@@ -1545,27 +1528,19 @@ msgstr[2] ""
 "kaip nustatyta."
 
 #: pyanaconda/modules/storage/snapshot/device.py:45
-#, fuzzy
-#| msgid "Snapshot: origin \"%s\" doesn't exist!"
 msgid "Snapshot: origin \"{}\" doesn't exist!"
-msgstr "Momentinė kopija: šaltinio „%s“ nėra!"
+msgstr "Momentinė kopija: šaltinio „{}“ nėra!"
 
 #: pyanaconda/modules/storage/snapshot/device.py:50
-#, fuzzy
-#| msgid ""
-#| "Snapshot: origin \"%(origin)s\" of snapshot \"%(name)s\" is not a valid "
-#| "thin LV device."
 msgid ""
 "Snapshot: origin \"{}\" of snapshot \"{}\" is not a valid thin LV device."
 msgstr ""
-"Momentinė kopija: kopijos „%(name)s“ šaltinis „%(origin)s“ nėra tinkamas "
-"plonas LV įrenginys."
+"Momentinė kopija: šaltinis „{}“ kopijai „{}“ nėra tinkamas plonas LV "
+"įrenginys."
 
 #: pyanaconda/modules/storage/snapshot/device.py:56
-#, fuzzy
-#| msgid "Snapshot %s already exists."
 msgid "Snapshot {} already exists."
-msgstr "Momentinė kopija %s jau yra."
+msgstr "Momentinė kopija {} jau yra."
 
 #: pyanaconda/modules/storage/constants.py:30
 msgid ""
@@ -1588,6 +1563,24 @@ msgid ""
 "* Some drives support re-configuration of sector sizes, for example by "
 "running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 msgstr ""
+"Apėjimai rankiniams diegimams:\n"
+"* Pasirinkite tik diskus su tuo pačiu sektoriaus dydžio rankiniame diegime "
+"grafinėje ar tekstinėje veiksenoje.\n"
+"* Kuomet diskai su skirtingais sektorių dydžiais yra pasirinkti diegimui, "
+"apribokite kiekvieną sukurtą LVM tomų grupę, kad naudotų to paties "
+"sektoriaus dydžio fizinius tomus. Tą galima atlikti tik grafinės veiksenos "
+"pasirinktiniame skaidyme.\n"
+"\n"
+"Apėjimai kickstart diegimams:\n"
+"* Apribokite, kurie diskai naudojami skaidyme nurodydami „ignoredisk "
+"--drives=..“ arba „ignoredisk --only-use=..“.\n"
+"* Nurodykite, kurie diskai turi būti naudojami kiekvienam kuriamam LVM "
+"fiziniam tomui: „partition pv.1 --ondisk=..“.\n"
+"\n"
+"Bendri apėjimai:\n"
+"* Galima naudoti tiesioginius skaidinius vietoje LVM.\n"
+"* Kai kurie diskai leidžia perkonfigūruoti sektorių dydžius, pavyzdžiui "
+"įvykdant „hdparm --set-sector-size=<SIZE> <DEVICE>“.\n"
 
 #: pyanaconda/modules/storage/installation.py:88
 msgid "An error occurred while resizing the device {}: {}"
@@ -1607,25 +1600,16 @@ msgid "Gathering entropy {percents}% (remaining time {time})"
 msgstr "Gaunama entropija {percents}% (likęs laikas: {time})"
 
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:65
-#, fuzzy
-#| msgid "Unknown or invalid device '%s' specified"
 msgid "Unknown or invalid device '{}' specified"
-msgstr "Nurodytas nežinomas arba netinkamas įrenginys „%s“"
+msgstr "Nurodytas nežinomas arba netinkamas įrenginys „{}“"
 
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:74
-#, fuzzy
-#| msgid ""
-#| "Unknown or invalid format '%(format)s' specified for device '%(device)s'"
 msgid "Unknown or invalid format '{}' specified for device '{}'"
-msgstr ""
-"Nežinomas arba netinkamas formatas „%(format)s“ nurodytas įrenginiui "
-"„%(device)s“"
+msgstr "Nežinomas arba netinkamas formatas „{}“ nurodytas įrenginiui „{}“"
 
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:81
-#, fuzzy
-#| msgid "No format on device '%s'"
 msgid "No format on device '{}'"
-msgstr "Įrenginyje „%s“ nėra formato"
+msgstr "Įrenginyje „{}“ nėra formato"
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:213
 #, python-brace-format
@@ -1722,42 +1706,30 @@ msgstr ""
 "pasirinkti kitą įrenginį."
 
 #: pyanaconda/modules/storage/partitioning/interactive/add_device.py:72
-#, fuzzy
-#| msgid "Failed to add new device."
 msgid "Failed to add a device."
-msgstr "Nepavyko pridėti naujo įrenginio."
+msgstr "Nepavyko pridėti įrenginio."
 
 #: pyanaconda/modules/storage/partitioning/interactive/change_device.py:87
-#, fuzzy
-#| msgid "Failed to add new device."
 msgid "Failed to change a device."
-msgstr "Nepavyko pridėti naujo įrenginio."
+msgstr "Nepavyko pakeisti įrenginio."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:161
-#, fuzzy
-#| msgid "No disk found for specified BIOS disk \"%s\"."
 msgid "No disk found for specified BIOS disk \"{}\"."
-msgstr "Nerastas diskas nurodytam BIOS diskui „%s“."
+msgstr "Nerastas diskas nurodytam BIOS diskui „{}“."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:202
-#, fuzzy
-#| msgid "RAID partition \"%s\" is defined multiple times."
 msgid "RAID partition \"{}\" is defined multiple times."
-msgstr "RAID skirsnis „%s“ yra apibrėžtas kelis kartus."
+msgstr "RAID skaidinys „{}“ yra apibrėžtas kelis kartus."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:214
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:484
-#, fuzzy
-#| msgid "PV partition \"%s\" is defined multiple times."
 msgid "PV partition \"{}\" is defined multiple times."
-msgstr "FT skirsnis „%s“ apibrėžtas kelis kartus."
+msgstr "FT skaidinys „{}“ apibrėžtas kelis kartus."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:226
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:496
-#, fuzzy
-#| msgid "Btrfs partition \"%s\" is defined multiple times."
 msgid "Btrfs partition \"{}\" is defined multiple times."
-msgstr "Btrfs skirsnis \"%s\" apibrėžtas kelis kartus."
+msgstr "Btrfs skaidinys \"{}\" apibrėžtas kelis kartus."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:252
 msgid "part --noformat must also use the --onpart option."
@@ -1765,122 +1737,79 @@ msgstr "part --noformat taip pat turi naudoti parametrą --onpart."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:257
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:352
-#, fuzzy
-#| msgid "Partition \"%s\" given in part command does not exist."
 msgid "Partition \"{}\" given in part command does not exist."
-msgstr "Nėra part komandoje nurodyti skirsnio „%s“."
+msgstr "Nėra part komandoje nurodyti skirsnio „{}“."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:294
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:573
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:952
-#, fuzzy
-#| msgid "The \"%s\" file system type is not supported."
 msgid "The \"{}\" file system type is not supported."
-msgstr "Failų sistemos tipas \"%s\" nepalaikomas."
+msgstr "Failų sistemos tipas \"{}\" nepalaikomas."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:309
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:328
-#, fuzzy
-#| msgid "Disk \"%s\" given in part command does not exist."
 msgid "Disk \"{}\" given in part command does not exist."
-msgstr "Nėra part komandoje nurodyti disko „%s“."
+msgstr "Nėra part komandoje nurodyti disko „{}“."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:314
-#, fuzzy
-#| msgid "Cannot install to unpartitionable device \"%s\"."
 msgid "Cannot install to unpartitionable device \"{}\"."
-msgstr "Negalima diegti į neskirstomą įrenginį „%s“."
+msgstr "Negalima diegti į neskaidomą įrenginį „{}“."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:322
-#, fuzzy
-#| msgid "Disk \"%s\" in part command is not partitioned."
 msgid "Disk \"{}\" in part command is not partitioned."
-msgstr "Diskas „%s“ part komandoje yra nepaskirstytas."
+msgstr "Diskas „{}“ part komandoje yra nepaskirstytas."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:518
 msgid "raid --noformat must also use the --device option."
 msgstr "raid --noformat taip pat turi naudoti parametrą --device."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:524
-#, fuzzy
-#| msgid "RAID device  \"%s\" given in raid command does not exist."
 msgid "RAID device  \"{}\" given in raid command does not exist."
-msgstr "Nėra RAID įrenginio „%s“, nurodyto raid komandoje."
+msgstr "Nėra RAID įrenginio „{}“, nurodyto raid komandoje."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:549
-#, fuzzy
-#| msgid ""
-#| "RAID device \"%(device)s\" has a format of \"%(format)s\", but should "
-#| "have a format of \"mdmember\"."
 msgid ""
 "RAID device \"{}\" has a format of \"{}\", but should have a format of "
 "\"mdmember\"."
-msgstr ""
-"RAID įrenginys „%(device)s“ yra „%(format)s“ formato, bet turi būti "
-"„mdmember“ formato."
+msgstr "RAID įrenginys „{}“ yra „{}“ formato, bet turi būti „mdmember“ formato."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:555
-#, fuzzy
-#| msgid "Tried to use undefined partition \"%s\" in RAID specification."
 msgid "Tried to use undefined partition \"{}\" in RAID specification."
-msgstr "Bandyta naudoti neapibrėžtą skirsnį „%s“ RAID specifikacijoje."
+msgstr "Bandyta naudoti neapibrėžtą skaidinį „{}“ RAID specifikacijoje."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:596
-#, fuzzy
-#| msgid "RAID volume \"%s\" specified with --useexisting does not exist."
 msgid "RAID volume \"{}\" specified with --useexisting does not exist."
-msgstr "Nėra RAID tomo „%s“ nurodyto su --useexisting."
+msgstr "Nėra RAID tomo „{}“ nurodyto su --useexisting."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:607
-#, fuzzy
-#| msgid "The RAID volume name \"%s\" is already in use."
 msgid "The RAID volume name \"{}\" is already in use."
-msgstr "RAID tomo pavadinimas „%s“ jau naudojamas."
+msgstr "RAID tomo pavadinimas „{}“ jau naudojamas."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:721
-#, fuzzy
-#| msgid ""
-#| "Physical volume \"%(device)s\" has a format of \"%(format)s\", but should "
-#| "have a format of \"lvmpv\"."
 msgid ""
 "Physical volume \"{}\" has a format of \"{}\", but should have a format of "
 "\"lvmpv\"."
-msgstr ""
-"Fizinis tomas „%(device)s“ yra „%(format)s“ formato, bet turi būti „lvmpv“ "
-"formato."
+msgstr "Fizinis tomas „{}“ yra „{}“ formato, bet turi būti „lvmpv“ formato."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:727
-#, fuzzy
-#| msgid ""
-#| "Tried to use undefined partition \"%s\" in Volume Group specification"
 msgid "Tried to use undefined partition \"{}\" in Volume Group specification"
-msgstr "Bandyta naudoti neapibrėžtą skirsnį „%s“ tomų grupės specifikacijoje"
+msgstr "Bandyta naudoti neapibrėžtą skaidinį „{}“ tomų grupės specifikacijoje"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:735
-#, fuzzy
-#| msgid ""
-#| "Volume group \"%s\" defined without any physical volumes.  Either specify "
-#| "physical volumes or use --useexisting."
 msgid ""
 "Volume group \"{}\" defined without any physical volumes. Either specify "
 "physical volumes or use --useexisting."
 msgstr ""
-"Tomų grupė „%s“ apibrėžta be fizinių tomų.  Nurodykite fizinius tomus arba "
+"Tomų grupė „{}“ apibrėžta be fizinių tomų.  Nurodykite fizinius tomus arba "
 "naudokite --useexisting."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:747
-#, fuzzy
-#| msgid ""
-#| "Volume group given physical extent size of \"%(extentSize)s\", but must "
-#| "be one of:\n"
-#| "%(validExtentSizes)s."
 msgid ""
 "Volume group given physical extent size of \"{}\", but must be one of:\n"
 "{}."
 msgstr ""
-"Tomų grupės nurodytas fizinis plėtinio dydis „%(extentSize)s“, bet turi būti "
-"vienas iš:\n"
-"%(validExtentSizes)s."
+"Tomų grupės nurodytas fizinis plėtinio dydis „{}“, bet turi būti vienas iš:\n"
+"{}."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:755
 msgid ""
@@ -1891,35 +1820,27 @@ msgstr ""
 "parametrą --name=."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:762
-#, fuzzy
-#| msgid "Volume group \"%s\" given in volgroup command does not exist."
 msgid "Volume group \"{}\" given in volgroup command does not exist."
-msgstr "Nėra tomų grupės „%s“, nurodytos volgroup komandoje."
+msgstr "Nėra tomų grupės „{}“, nurodytos volgroup komandoje."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:767
-#, fuzzy
-#| msgid "The volume group name \"%s\" is already in use."
 msgid "The volume group name \"{}\" is already in use."
-msgstr "Tomų grupės pavadinimas „%s“ jau naudojamas."
+msgstr "Tomų grupės pavadinimas „{}“ jau naudojamas."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:821
 msgid "/boot cannot be of type \"lvmlv\" on s390x"
-msgstr ""
+msgstr "/boot s390x sistemoje negali būti „lvmlv“ tipo"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:851
 msgid "Size cannot be decided on from kickstart nor obtained from device."
-msgstr ""
+msgstr "Didžio nepavyko nustatyti nei iš kickstart, nei gauti iš įrenginio."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:867
-#, fuzzy
-#| msgid ""
-#| "No volume group exists with the name \"%s\".  Specify volume groups "
-#| "before logical volumes."
 msgid ""
 "No volume group exists with the name \"{}\". Specify volume groups before "
 "logical volumes."
 msgstr ""
-"Nėra tomų grupės pavadinimu „%s“.  Nurodykite tomų grupes prieš loginius "
+"Nėra tomų grupės pavadinimu „{}“.  Nurodykite tomų grupes prieš loginius "
 "tomus."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:876
@@ -1927,15 +1848,11 @@ msgid "Cache PVs must belong to the same VG as the cached LV"
 msgstr "Podėlio FT turi priklausyti tai pačiai TG kaip ir podėlio LT"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:884
-#, fuzzy
-#| msgid ""
-#| "No thin pool exists with the name \"%s\". Specify thin pools before thin "
-#| "volumes."
 msgid ""
 "No thin pool exists with the name \"{}\". Specify thin pools before thin "
 "volumes."
 msgstr ""
-"Nėra plono rinkinio pavadinimu „%s“. Nurodykite plonus rinkinius prieš "
+"Nėra plono rinkinio pavadinimu „{}“. Nurodykite plonus rinkinius prieš "
 "plonus tomus."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:893
@@ -1944,93 +1861,59 @@ msgstr "logvol --noformat taip pat turi naudoti --vardas=parametras."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:899
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:964
-#, fuzzy
-#| msgid "Logical volume \"%s\" given in logvol command does not exist."
 msgid "Logical volume \"{}\" given in logvol command does not exist."
-msgstr "Nėra loginio tomo „%s“, pateikto logvol komandoje."
+msgstr "Nėra loginio tomo „[]“, pateikto logvol komandoje."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:931
-#, fuzzy
-#| msgid ""
-#| "Logical volume name \"%(logvol)s\" is already in use in volume group "
-#| "\"%(volgroup)s\"."
 msgid "Logical volume name \"{}\" is already in use in volume group \"{}\"."
-msgstr ""
-"Loginio tomo pavadinimas „%(logvol)s“ jau yra naudojamas tomų grupėje "
-"„%(volgroup)s“."
+msgstr "Loginio tomo pavadinimas „{}“ jau yra naudojamas tomų grupėje „{}“."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:937
-#, fuzzy
-#| msgid ""
-#| "Logical volume size \"%(logvolSize)s\" must be larger than the volume "
-#| "group extent size of \"%(extentSize)s\"."
 msgid ""
 "Logical volume size \"{}\" must be larger than the volume group extent size "
 "of \"{}\"."
 msgstr ""
-"Loginio tomo dydis „%(logvolSize)s“ turi būti didesnis nei tomų grupės "
-"plėtinio dydžio „%(extentSize)s“."
+"Loginio tomo dydis „{}“ turi būti didesnis nei tomų grupės plėtinio dydžio "
+"„{}“."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1144
-#, fuzzy
-#| msgid ""
-#| "Btrfs partition \"%(device)s\" has a format of \"%(format)s\", but should "
-#| "have a format of \"btrfs\"."
 msgid ""
 "Btrfs partition \"{}\" has a format of \"{}\", but should have a format of "
 "\"btrfs\"."
-msgstr ""
-"Btrfs skirsnis \"%(device)s\" yra \"%(format)s\" formato, bet turėtų būti "
-"\"btrfs\" formato."
+msgstr "Btrfs skirsnis „{}) yra „{}“ formato, bet turėtų būti „btrfs“ formato."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1150
-#, fuzzy
-#| msgid ""
-#| "Tried to use undefined partition \"%s\" in Btrfs volume specification."
 msgid "Tried to use undefined partition \"{}\" in Btrfs volume specification."
-msgstr "Bandyta naudoti neapibrėžtą skirsnį \"%s\" Btrfs tomo specifikacijoje."
+msgstr "Bandyta naudoti neapibrėžtą skirsnį „{}“ Btrfs tomo specifikacijoje."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1165
-#, fuzzy
-#| msgid ""
-#| "Btrfs volume defined without any member devices.  Either specify member "
-#| "devices or use --useexisting."
 msgid ""
 "Btrfs volume defined without any member devices. Either specify member "
 "devices or use --useexisting."
 msgstr ""
-"Btrfs tomas apibrėžtas be įrenginių narių.  Nurodykite įrenginius narius "
-"arba naudokite --useexisting."
+"Btrfs tomas apibrėžtas be įrenginių narių. Nurodykite įrenginius narius arba "
+"naudokite --useexisting."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1189
-#, fuzzy
-#| msgid "Btrfs volume \"%s\" specified with --useexisting does not exist."
 msgid "Btrfs volume \"{}\" specified with --useexisting does not exist."
-msgstr "Btrfs tomas \"%s\" nurodytas su --useexisting neegzistuoja."
+msgstr "Btrfs tomas „{}“ nurodytas su --useexisting neegzistuoja."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1212
-#, fuzzy
-#| msgid "The size \"%s\" is invalid."
 msgid "The size \"{}\" is invalid."
-msgstr "Dydis „%s“ yra netinkamas."
+msgstr "Dydis „{}“ yra netinkamas."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1217
-#, fuzzy
-#| msgid "The mount point \"%s\" is not valid.  It must start with a /."
 msgid "The mount point \"{}\" is not valid. It must start with a /."
-msgstr "Prijungimo taškas „%s“ yra netinkamas.  Jis turi prasidėti /."
+msgstr "Prijungimo taškas „{}“ yra netinkamas. Jis turi prasidėti /."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1222
-#, fuzzy, python-brace-format
-#| msgid "Target size \"%(size)s\" for device \"%(device)s\" is invalid."
+#, python-brace-format
 msgid "Target size \"{size}\" for device \"{device}\" is invalid."
-msgstr "Paskirties dydis „%(size)s“ įrenginiui „%(device)s“ yra netinkamas."
+msgstr "Paskirties dydis „{}“ įrenginiui „{}“ yra netinkamas."
 
 #: pyanaconda/modules/storage/partitioning/base_partitioning.py:56
-#, fuzzy
-#| msgid "Failed to set up installation source"
 msgid "Failed to proceed with the installation."
-msgstr "Nepavyko nustatyti diegimo šaltinio"
+msgstr "Nepavyko tęsti diegimo."
 
 #: pyanaconda/modules/storage/partitioning/automatic/utils.py:165
 msgid "No usable disks selected."
@@ -2069,17 +1952,10 @@ msgid "{product} Linux {version} for {arch}"
 msgstr "{product} Linux {version} {arch}"
 
 #: pyanaconda/modules/storage/devicetree/utils.py:78
-#, fuzzy
-#| msgid "Escrow certificate %s requires the network."
 msgid "Escrow certificate {} requires the network."
-msgstr "Escrow liudijimas %s reikalauja tinklo."
+msgstr "Escrow liudijimas {} reikalauja tinklo."
 
 #: pyanaconda/modules/storage/devicetree/utils.py:88
-#, fuzzy
-#| msgid ""
-#| "SSL error while downloading the escrow certificate:\n"
-#| "\n"
-#| "%s"
 msgid ""
 "SSL error while downloading the escrow certificate:\n"
 "\n"
@@ -2087,15 +1963,9 @@ msgid ""
 msgstr ""
 "SSL klaida parsiunčiant escrow liudijimą:\n"
 "\n"
-"%s"
+"{}"
 
 #: pyanaconda/modules/storage/devicetree/utils.py:92
-#, fuzzy
-#| msgid ""
-#| "The following error was encountered while downloading the escrow "
-#| "certificate:\n"
-#| "\n"
-#| "%s"
 msgid ""
 "The following error was encountered while downloading the escrow "
 "certificate:\n"
@@ -2104,7 +1974,7 @@ msgid ""
 msgstr ""
 "Ši klaida buvo aptikta parsiunčiant escrow liudijimą:\n"
 "\n"
-"%s"
+"{}"
 
 #: pyanaconda/modules/storage/devicetree/fsset.py:423
 #, python-brace-format
@@ -2569,10 +2439,8 @@ msgstr "Klaida tikrinant programinės įrangos pasirinkimą"
 
 #: pyanaconda/ui/tui/spokes/software_selection.py:166
 #: pyanaconda/ui/gui/spokes/software_selection.py:194
-#, fuzzy
-#| msgid "Error checking software selection"
 msgid "Warning checking software selection"
-msgstr "Klaida tikrinant programinės įrangos pasirinkimą"
+msgstr "Įspėjimas tikrinant programinės įrangos pasirinkimą"
 
 #: pyanaconda/ui/tui/spokes/software_selection.py:206
 msgid "Installation source needs to be set up first."
@@ -3379,14 +3247,11 @@ msgstr ""
 "detalesnei informacijai.</a>"
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:236
-#, fuzzy
-#| msgid ""
-#| "Error checking software dependencies.  <a href=\"\">Click for details.</a>"
 msgid ""
 "Warning checking software dependencies.  <a href=\"\">Click for details.</a>"
 msgstr ""
-"Klaida tikrinant programinės įrangos priklausomybes.  <a href=\"\">Spauskite "
-"detalesnei informacijai.</a>"
+"Įspėjimas tikrinant programinės įrangos priklausomybes.  <a href=\"\""
+">Spauskite detalesnei informacijai.</a>"
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:317
 #: pyanaconda/ui/gui/spokes/installation_source.py:675
@@ -3419,24 +3284,14 @@ msgid "Modify _Selections"
 msgstr "Pakeisti pa_sirinkimus"
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:411
-#, fuzzy
-#| msgid ""
-#| "The software marked for installation has the following errors.  This is "
-#| "likely caused by an error with your installation source.  You can quit "
-#| "the installer, change your software source, or change your software "
-#| "selections."
 msgid ""
 "The software marked for installation has the following warnings. These are "
 "not fatal, but you may wish to make changes to your software selections."
 msgstr ""
-"Diegiama programinė įranga turi šias klaidas.  Taip greičiausiai yra dėl "
-"klaidos jūsų diegimo šaltinyje.  Galite išeiti iš diegyklės, pakeisti "
-"programinės įrangos šaltinį arba pakeisti programinės įrangos pasirinkimus."
+"Diegiama programinė įranga turi šiuos įspėjimus. Jie nėra klaidos, bet "
+"galbūt norite pakeisti programinės įrangos pasirinkimus."
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:417
-#, fuzzy
-#| msgctxt "GUI|Summary|Warning Dialog"
-#| msgid "_OK"
 msgctxt "GUI|Software Selection|Warning Dialog"
 msgid "_OK"
 msgstr "_Gerai"
@@ -3548,12 +3403,9 @@ msgid "_OK"
 msgstr "_Gerai"
 
 #: pyanaconda/ui/gui/spokes/root_password.py:57
-#, fuzzy
-#| msgctxt "GUI|Subscription|Authentication|Account"
-#| msgid "_Account"
 msgctxt "GUI|Spoke"
 msgid "_Root Account"
-msgstr "_Paskyra"
+msgstr "_Root paskyra"
 
 #: pyanaconda/ui/gui/spokes/root_password.py:132
 msgid "Root password has been set."
@@ -3894,12 +3746,16 @@ msgid ""
 "Repository %s has invalid NFS server, exactly one colon ':' must be present "
 "between host and directory"
 msgstr ""
+"Saugykla %s turi netinkamą NFS serverį, tarp serverio ir katalogo turi būti "
+"vienintelis dvitaškis „:“"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:1185
 msgid ""
 "Invalid NFS server, exactly one colon ':' must be present between host and "
 "directory"
 msgstr ""
+"Netinkamas NFS serveris, tarp serverio ir katalogo turi būti vienintelis "
+"dvitaškis „:“"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:1194
 #, python-format
@@ -4247,13 +4103,9 @@ msgid "_New mount points will use the following partitioning scheme:"
 msgstr "_Nauji prijungimo taškai naudos šią skirsnių schemą:"
 
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:538
-#, fuzzy
-#| msgctxt "GUI|Custom Partitioning|Autopart Page"
-#| msgid "_Automatically created mount points can be encrypted by default:"
 msgctxt "GUI|Custom Partitioning|Autopart Page"
 msgid "_Encrypt automatically created mount points by default:"
-msgstr ""
-"_Automatiškai sukurti prijungimo taškai gali būti numatytai šifruojami:"
+msgstr "Numatytai ši_fruoti automatiškai sukurtus prijungimo taškus:"
 
 #: pyanaconda/ui/gui/spokes/lib/resize.py:54
 msgid "Preserve"
@@ -4956,7 +4808,7 @@ msgstr "Saugyklos pavadinimas."
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:8
 msgid "ROOT ACCOUNT"
-msgstr ""
+msgstr "ROOT PASKYRA"
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:70
 msgid ""
@@ -4966,20 +4818,21 @@ msgid ""
 "system. For this reason, logging into this system as the root user is best "
 "done only to perform system maintenance or administration."
 msgstr ""
+"root paskyra yra naudojama sistemos administravimui.\n"
+"\n"
+"root naudotojas (dar žinomas kaip super naudotojas) turi pilną prieigą prie "
+"visos sistemos. Todėl prie sistemos jungtis root naudotoju geriausia tik "
+"sistemos priežiūros bei administravimo tikslais."
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:97
-#, fuzzy
-#| msgid "Lock root account"
 msgctxt "GUI|Password"
 msgid "_Disable root account"
-msgstr "Užrakinti root paskyrą"
+msgstr "Iš_jungti root paskyrą"
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:125
-#, fuzzy
-#| msgid "Lock root account"
 msgctxt "GUI|Password"
 msgid "_Enable root account"
-msgstr "Užrakinti root paskyrą"
+msgstr "Į_jungti root paskyrą"
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:146
 msgid ""
@@ -4987,6 +4840,9 @@ msgid ""
 "with root account. This will prevent unintended administrative access to the "
 "system."
 msgstr ""
+"Išjungus root paskyrą bus užrakinta paskyra ir išjungtas nuotolinis "
+"prisijungimas root paskyra. Taip bus užkirstas kelias atsitiktinei "
+"administracinei prieigai prie sistemos."
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:162
 msgctxt "GUI|Password"
@@ -4994,6 +4850,8 @@ msgid ""
 "Enabling the root account will allow you to set a root password and "
 "optionally enable remote access to root account on this system."
 msgstr ""
+"Įjungus root paskyrą bus leidžiama nustatyti root slaptažodį ir galima "
+"leisti nuotolinę prieigą prie šios sistemos naudojant root paskyrą."
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:196
 msgctxt "GUI|Password"
@@ -6886,10 +6744,8 @@ msgid "_OK"
 msgstr "_Gerai"
 
 #: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:77
-#, fuzzy
-#| msgid "Configure NTP servers"
 msgid "Configure Network Time Servers"
-msgstr "Konfigūruoti NTP serverius"
+msgstr "Konfigūruoti tinklo laiko serverius"
 
 #: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:133
 msgid "Pool"
@@ -6900,22 +6756,16 @@ msgid "Working"
 msgstr "Dirbama"
 
 #: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:214
-#, fuzzy
-#| msgctxt "GUI|Custom Partitioning"
-#| msgid "Add"
 msgid "Add"
 msgstr "Pridėti"
 
 #: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:266
-#, fuzzy
-#| msgctxt "GUI|Custom Partitioning"
-#| msgid "Remove"
 msgid "Remove"
 msgstr "Pašalinti"
 
 #: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:318
 msgid "Edit"
-msgstr ""
+msgstr "Keisti"
 
 #: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:354
 msgid ""
@@ -6925,6 +6775,11 @@ msgid ""
 "<b>NTS</b> - If checked, indicates support for Network Time Security "
 "authentication."
 msgstr ""
+"<b>Aibė</b> - jei pažymėta, nurodo, kad serverio pavadinimas nurodo serverių "
+"aibę.\n"
+"\n"
+"<b>NTS</b> - jei pažymėta, nurodo tinklo laiko saugumo tapatybės "
+"patvirtinimo palaikymą."
 
 #: pyanaconda/ui/gui/spokes/network.glade:35
 msgid "Add device"
