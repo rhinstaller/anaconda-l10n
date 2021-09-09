@@ -35,13 +35,14 @@
 # Tian Shixiong <tiansworld@gmail.com>, 2020, 2021.
 # Radek Vykydal <rvykydal@redhat.com>, 2020.
 # Qiyu Yan <yanqiyu01@gmail.com>, 2020, 2021.
+# Sundeep Anand <suanand@redhat.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2021-09-09 00:54+0000\n"
-"PO-Revision-Date: 2021-07-03 10:04+0000\n"
-"Last-Translator: Charles Lee <lchopn@gmail.com>\n"
+"PO-Revision-Date: 2021-09-10 10:10+0000\n"
+"Last-Translator: Sundeep Anand <suanand@redhat.com>\n"
 "Language-Team: Chinese (Simplified) <https://translate.fedoraproject.org/"
 "projects/anaconda/rhel-9/zh_CN/>\n"
 "Language: zh_CN\n"
@@ -49,7 +50,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.7.1\n"
+"X-Generator: Weblate 4.8\n"
 
 #: anaconda.py:315
 msgid "Unable to create PID file"
@@ -1465,6 +1466,17 @@ msgid ""
 "* Some drives support re-configuration of sector sizes, for example by "
 "running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 msgstr ""
+"手工安装的临时解决方案：\n"
+"* 在图形模式或文本模式的手工安装期间，只选择带有相同扇区大小的磁盘。\n"
+"* 如果选项了扇区大小不一致的磁盘进行安装，限制每个创建的 LVM 卷组使用带有相同扇区大小的物理卷。这只能在自定义分区的图形模式中进行。\n"
+"\n"
+"kickstart 安装的临时解决方案：\n"
+"* 通过指定 'ignoredisk --drives=..' 或 'ignoredisk --only-use=..' 来限制使用用于分区的磁盘。\n"
+"* 指定对于每个创建的 LVM 物理卷应使用的磁盘：partition pv.1 --ondisk=..'.\n"
+"\n"
+"一般的临时解决方案：\n"
+"* 使用一般的分区方案而不是使用 LVM。\n"
+"* 一些驱动器支持重新配置扇区大小，例如通过运行 'hdparm --set-sector-size=<SIZE> <DEVICE>'。\n"
 
 #: pyanaconda/modules/storage/installation.py:88
 msgid "An error occurred while resizing the device {}: {}"
@@ -1592,16 +1604,12 @@ msgid ""
 msgstr "该 %(type)s 设备缺少成员设备。您可将其移除或选择其它不同设备。"
 
 #: pyanaconda/modules/storage/partitioning/interactive/add_device.py:72
-#, fuzzy
-#| msgid "Failed to add new device."
 msgid "Failed to add a device."
-msgstr "添加新设备失败。"
+msgstr "添加设备失败。"
 
 #: pyanaconda/modules/storage/partitioning/interactive/change_device.py:87
-#, fuzzy
-#| msgid "Failed to add new device."
 msgid "Failed to change a device."
-msgstr "添加新设备失败。"
+msgstr "更改设备失败。"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:162
 #, python-format
@@ -1832,10 +1840,8 @@ msgid "Btrfs volume \"%s\" specified with --useexisting does not exist."
 msgstr "由 --useexiting 选项指定的 Btrfs 卷“%s”不存在。"
 
 #: pyanaconda/modules/storage/partitioning/base_partitioning.py:57
-#, fuzzy
-#| msgid "Failed to set up installation source"
 msgid "Failed to proceed with the installation."
-msgstr "设置安装源失败"
+msgstr "继续安装失败。"
 
 #: pyanaconda/modules/storage/partitioning/automatic/utils.py:165
 msgid "No usable disks selected."
@@ -6473,7 +6479,7 @@ msgstr "尽可能的大"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:958
 msgid "Fixed"
-msgstr "已修复"
+msgstr "固定容量"
 
 #: pyanaconda/ui/gui/spokes/lib/detailederror.glade:25
 msgid "An unknown error occurred during installation.  Details are below."
@@ -6587,12 +6593,12 @@ msgstr "选择您要添加设备的类型(_S)"
 #: pyanaconda/ui/gui/spokes/network.glade:153
 #: pyanaconda/ui/gui/spokes/network.glade:286
 msgid "Wi-Fi Networks"
-msgstr "无线网络"
+msgstr "Wi-Fi 网络"
 
 #: pyanaconda/ui/gui/spokes/network.glade:170
 msgctxt "GUI|Network|Wireless|Configure"
 msgid "_Cancel"
-msgstr "取消(_C)"
+msgstr "(_C)取消"
 
 #: pyanaconda/ui/gui/spokes/network.glade:184
 msgctxt "GUI|Network|Wireless|Configure"
@@ -6601,12 +6607,12 @@ msgstr "配置(_C)"
 
 #: pyanaconda/ui/gui/spokes/network.glade:207
 msgid "Select a network to configure"
-msgstr "选择网络进行配置"
+msgstr "选择要配置的网络"
 
 #: pyanaconda/ui/gui/spokes/network.glade:303
 msgctxt "GUI|Network|Wireless|Select Network Dialog"
 msgid "_Cancel"
-msgstr "取消(_C)"
+msgstr "(_C)取消"
 
 #: pyanaconda/ui/gui/spokes/network.glade:317
 msgctxt "GUI|Network|Wireless|Select Network Dialog"
@@ -6696,7 +6702,7 @@ msgstr "安全密钥"
 
 #: pyanaconda/ui/gui/spokes/network.glade:1310
 msgid "My ssid"
-msgstr "我的 SSID 名称"
+msgstr "我的 ssid"
 
 #: pyanaconda/ui/gui/spokes/network.glade:1364
 msgctxt "GUI|Network|Wireless"
