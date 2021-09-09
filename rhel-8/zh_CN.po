@@ -43,8 +43,8 @@ msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2021-08-04 08:39+0200\n"
-"PO-Revision-Date: 2021-07-07 10:04+0000\n"
-"Last-Translator: Charles Lee <lchopn@gmail.com>\n"
+"PO-Revision-Date: 2021-09-10 10:10+0000\n"
+"Last-Translator: Sundeep Anand <suanand@redhat.com>\n"
 "Language-Team: Chinese (Simplified) <https://translate.fedoraproject.org/"
 "projects/anaconda/rhel-8/zh_CN/>\n"
 "Language: zh_CN\n"
@@ -52,7 +52,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.7.1\n"
+"X-Generator: Weblate 4.8\n"
 
 #: anaconda.py:378
 msgid "Unable to create PID file"
@@ -1029,10 +1029,8 @@ msgid "Btrfs volume \"%s\" specified with --useexisting does not exist."
 msgstr "由 --useexiting 选项指定的 Btrfs 卷“%s”不存在。"
 
 #: pyanaconda/modules/storage/partitioning/base_partitioning.py:57
-#, fuzzy
-#| msgid "Failed to set up installation source"
 msgid "Failed to proceed with the installation."
-msgstr "设置安装源失败"
+msgstr "继续安装失败。"
 
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:64
 #, python-format
@@ -1143,16 +1141,12 @@ msgid ""
 msgstr "该 %(type)s 设备缺少成员设备。您可将其移除或选择其它不同设备。"
 
 #: pyanaconda/modules/storage/partitioning/interactive/change_device.py:87
-#, fuzzy
-#| msgid "Failed to add new device."
 msgid "Failed to change a device."
-msgstr "添加新设备失败。"
+msgstr "更改设备失败。"
 
 #: pyanaconda/modules/storage/partitioning/interactive/add_device.py:72
-#, fuzzy
-#| msgid "Failed to add new device."
 msgid "Failed to add a device."
-msgstr "添加新设备失败。"
+msgstr "添加设备失败。"
 
 #: pyanaconda/modules/storage/partitioning/automatic/utils.py:165
 msgid "No usable disks selected."
@@ -1332,6 +1326,17 @@ msgid ""
 "* Some drives support re-configuration of sector sizes, for example by "
 "running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 msgstr ""
+"手工安装的临时解决方案：\n"
+"* 在图形模式或文本模式的手工安装期间，只选择带有相同扇区大小的磁盘。\n"
+"* 如果选项了扇区大小不一致的磁盘进行安装，限制每个创建的 LVM 卷组使用带有相同扇区大小的物理卷。这只能在自定义分区的图形模式中进行。\n"
+"\n"
+"kickstart 安装的临时解决方案：\n"
+"* 通过指定 'ignoredisk --drives=..' 或 'ignoredisk --only-use=..' 来限制使用用于分区的磁盘。\n"
+"* 指定对于每个创建的 LVM 物理卷应使用的磁盘：partition pv.1 --ondisk=..'.\n"
+"\n"
+"一般的临时解决方案：\n"
+"* 使用一般的分区方案而不是使用 LVM。\n"
+"* 一些驱动器支持重新配置扇区大小，例如通过运行 'hdparm --set-sector-size=<SIZE> <DEVICE>'。\n"
 
 #: pyanaconda/modules/storage/platform.py:52
 msgid "boot loader device"
@@ -3511,7 +3516,7 @@ msgstr "新挂载点将使用以下分区方案(_N)："
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:559
 msgctxt "GUI|Custom Partitioning|Autopart Page"
 msgid "_Encrypt automatically created mount points by default:"
-msgstr ""
+msgstr "_Encrypt 默认自动创建的挂载点："
 
 #: pyanaconda/ui/gui/spokes/lib/cart.py:193
 msgctxt "GUI|Selected Disks Dialog"
