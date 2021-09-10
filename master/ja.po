@@ -58,7 +58,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2021-09-09 00:50+0000\n"
+"POT-Creation-Date: 2021-09-10 00:52+0000\n"
 "PO-Revision-Date: 2021-09-10 10:10+0000\n"
 "Last-Translator: Ludek Janda <ljanda@redhat.com>\n"
 "Language-Team: Japanese <https://translate.fedoraproject.org/projects/"
@@ -70,11 +70,11 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 4.8\n"
 
-#: anaconda.py:316
+#: anaconda.py:306
 msgid "Unable to create PID file"
 msgstr "PID ファイルを作成できません"
 
-#: anaconda.py:317
+#: anaconda.py:307
 #, python-format
 msgid ""
 "Anaconda is unable to create %s because the file already exists. Anaconda is "
@@ -405,7 +405,9 @@ msgstr "次のユーザー名は、システムで予約されています: %s"
 msgid ""
 "Either a group name in the group list is invalid or groups are not separated "
 "by a comma."
-msgstr "グループ一覧のグループ名が無効か、またはグループがカンマで区切られていません。"
+msgstr ""
+"グループ一覧のグループ名が無効か、またはグループがカンマで区切られていませ"
+"ん。"
 
 #: pyanaconda/core/users.py:136
 msgid "Name cannot start with '-' character."
@@ -855,7 +857,7 @@ msgstr ""
 "\n"
 "インストーラーを終了します。"
 
-#: pyanaconda/kickstart.py:507 pyanaconda/installation.py:295
+#: pyanaconda/kickstart.py:507 pyanaconda/installation.py:304
 msgid "Running pre-installation scripts"
 msgstr "インストール前スクリプトを実行中"
 
@@ -948,7 +950,7 @@ msgid "Verifying {}"
 msgstr "{} を検証中"
 
 #: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:53
-#: pyanaconda/installation.py:366 pyanaconda/payload/live/payload_base.py:74
+#: pyanaconda/installation.py:375 pyanaconda/payload/live/payload_base.py:74
 msgid "Performing post-installation setup tasks"
 msgstr "インストール後セットアップ作業を実行中"
 
@@ -1116,8 +1118,8 @@ msgid ""
 "Your %(mount)s partition is too large for %(format)s formatting (allowable "
 "size is %(minSize)s to %(maxSize)s)"
 msgstr ""
-"ご使用の %(mount)s パーティションは、%(format)s フォーマットするには大きすぎます (指定可能なサイズは %(minSize)s "
-"から %(maxSize)s です)"
+"ご使用の %(mount)s パーティションは、%(format)s フォーマットするには大きすぎ"
+"ます (指定可能なサイズは %(minSize)s から %(maxSize)s です)"
 
 #: pyanaconda/modules/storage/checker/utils.py:174
 msgid "No valid boot loader target device found. See below for details."
@@ -1619,19 +1621,23 @@ msgid ""
 "running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 msgstr ""
 "手動インストールのためのワークアラウンドは次のとおりです。\n"
-"* グラフィカルモードもしくはテキストモードでの手動インストール時に同じセクターサイズのディスクのみを選択します。\n"
-"* セクターサイズに一貫性のないディスクがインストール先のディスクとして選択された場合、作成された各LVMボリュームグループを制限して同じセクターサイズの"
-"物理ボリュームを使用します。 これはカスタムパーティショニング選択時のグラフィカルモードでのみ実行できます。\n"
+"* グラフィカルモードもしくはテキストモードでの手動インストール時に同じセク"
+"ターサイズのディスクのみを選択します。\n"
+"* セクターサイズに一貫性のないディスクがインストール先のディスクとして選択さ"
+"れた場合、作成された各LVMボリュームグループを制限して同じセクターサイズの物理"
+"ボリュームを使用します。 これはカスタムパーティショニング選択時のグラフィカル"
+"モードでのみ実行できます。\n"
 "\n"
 "Kickstartインストール時のワークアラウンドは次のとおりです。\n"
-"* 'ignoredisk --drives=...' もしくは 'ignoredisk --only-use=...' "
-"でパーティショニングに使用するディスクを制限します。\n"
-"* 作成されたLVM物理ボリュームごとに使用するディスクを指定します。例: 'partition pv.1 --ondisk=..'\n"
+"* 'ignoredisk --drives=...' もしくは 'ignoredisk --only-use=...' でパーティ"
+"ショニングに使用するディスクを制限します。\n"
+"* 作成されたLVM物理ボリュームごとに使用するディスクを指定します。例: "
+"'partition pv.1 --ondisk=..'\n"
 "\n"
 "一般的なワークアラウンドは次のとおりです。\n"
 "* LVMの代わりにプレーンなパーティション作成を使用します。\n"
-"* 一部のディスクは、次のように実行することにより、セクターサイズの再構成をサポートします。例: 'hdparm --set-sector-"
-"size=<SIZE> <DEVICE>'\n"
+"* 一部のディスクは、次のように実行することにより、セクターサイズの再構成をサ"
+"ポートします。例: 'hdparm --set-sector-size=<SIZE> <DEVICE>'\n"
 
 #: pyanaconda/modules/storage/installation.py:88
 msgid "An error occurred while resizing the device {}: {}"
@@ -2217,32 +2223,36 @@ msgstr "設定ファイルと Kickstart ファイルを保存中"
 msgid "Running post-installation scripts"
 msgstr "インストール後のスクリプトを実行中"
 
-#: pyanaconda/installation.py:245
+#: pyanaconda/installation.py:220
+msgid "Copying logs"
+msgstr ""
+
+#: pyanaconda/installation.py:254
 #, python-format
 msgid "Waiting for %s threads to finish"
 msgstr "%s スレッドが完了するまで待機中"
 
-#: pyanaconda/installation.py:261
+#: pyanaconda/installation.py:270
 msgid "Setting up the installation environment"
 msgstr "インストール環境をセットアップ中"
 
-#: pyanaconda/installation.py:285 pyanaconda/installation.py:333
+#: pyanaconda/installation.py:294 pyanaconda/installation.py:342
 msgid "Configuring storage"
 msgstr "ストレージの設定中"
 
-#: pyanaconda/installation.py:305
+#: pyanaconda/installation.py:314
 msgid "Running pre-installation tasks"
 msgstr "インストールの準備タスクを実行中"
 
-#: pyanaconda/installation.py:327
+#: pyanaconda/installation.py:336
 msgid "Installing."
 msgstr "インストール中"
 
-#: pyanaconda/installation.py:340
+#: pyanaconda/installation.py:349
 msgid "Installing boot loader"
 msgstr "ブートローダーをインストール中"
 
-#: pyanaconda/installation.py:377
+#: pyanaconda/installation.py:386
 msgid "Creating snapshots"
 msgstr "スナップショットを作成中"
 
@@ -2661,8 +2671,10 @@ msgid ""
 "Formats marked with * are new formats meaning ALL DATA on the original "
 "format WILL BE LOST!"
 msgstr ""
-"マウントポイントを指定するため、上記からデバイスを選択し、フォーマットを設定してください。\n"
-"* でマークされるフォーマットは新しいフォーマットで、元々のフォーマットのすべてのデータが削除されることを意味しています。"
+"マウントポイントを指定するため、上記からデバイスを選択し、フォーマットを設定"
+"してください。\n"
+"* でマークされるフォーマットは新しいフォーマットで、元々のフォーマットのすべ"
+"てのデータが削除されることを意味しています。"
 
 #: pyanaconda/ui/tui/spokes/storage.py:753
 msgid ""
