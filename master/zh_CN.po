@@ -41,8 +41,8 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2021-09-09 00:50+0000\n"
-"PO-Revision-Date: 2021-09-09 15:07+0000\n"
-"Last-Translator: Ludek Janda <ljanda@redhat.com>\n"
+"PO-Revision-Date: 2021-09-10 10:10+0000\n"
+"Last-Translator: Sundeep Anand <suanand@redhat.com>\n"
 "Language-Team: Chinese (Simplified) <https://translate.fedoraproject.org/"
 "projects/anaconda/master/zh_CN/>\n"
 "Language: zh_CN\n"
@@ -867,13 +867,11 @@ msgstr "您的产品不支持 %packages --ignorebroken 特性！"
 
 #: pyanaconda/modules/payloads/payload/live_image/installation_progress.py:74
 msgid "Synchronizing writes to disk"
-msgstr ""
+msgstr "将写入同步到磁盘"
 
 #: pyanaconda/modules/payloads/payload/live_image/installation_progress.py:95
-#, fuzzy
-#| msgid "Installing software"
 msgid "Installing software {}%"
-msgstr "正在安装软件"
+msgstr "安装软件 {}%"
 
 #: pyanaconda/modules/payloads/payload/live_image/installation.py:52
 msgid "Checking image checksum"
@@ -1478,25 +1476,17 @@ msgstr[0] ""
 "盘 %(unselected)s。您必须将这些磁盘作为一个整体进行选择或者取消选择它们。"
 
 #: pyanaconda/modules/storage/snapshot/device.py:45
-#, fuzzy
-#| msgid "Snapshot: origin \"%s\" doesn't exist!"
 msgid "Snapshot: origin \"{}\" doesn't exist!"
-msgstr "快照：快照源 \"%s\" 不存在！"
+msgstr "快照：源 \"{}\" 不存在！"
 
 #: pyanaconda/modules/storage/snapshot/device.py:50
-#, fuzzy
-#| msgid ""
-#| "Snapshot: origin \"%(origin)s\" of snapshot \"%(name)s\" is not a valid "
-#| "thin LV device."
 msgid ""
 "Snapshot: origin \"{}\" of snapshot \"{}\" is not a valid thin LV device."
-msgstr "快照：快照“%(name)s”的源“%(origin)s”不是一个有效的瘦 LV 设备。"
+msgstr "快照：快照 \"{}\" 的源 \"{}\" 不是一个有效的瘦 LV 设备。"
 
 #: pyanaconda/modules/storage/snapshot/device.py:56
-#, fuzzy
-#| msgid "Snapshot %s already exists."
 msgid "Snapshot {} already exists."
-msgstr "快照 %s 已存在。"
+msgstr "快照 {} 已经存在。"
 
 #: pyanaconda/modules/storage/constants.py:30
 msgid ""
@@ -1519,6 +1509,17 @@ msgid ""
 "* Some drives support re-configuration of sector sizes, for example by "
 "running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 msgstr ""
+"手工安装的临时解决方案：\n"
+"* 在图形模式或文本模式的手工安装期间，只选择带有相同扇区大小的磁盘。\n"
+"* 如果选项了扇区大小不一致的磁盘进行安装，限制每个创建的 LVM 卷组使用带有相同扇区大小的物理卷。这只能在自定义分区的图形模式中进行。\n"
+"\n"
+"kickstart 安装的临时解决方案：\n"
+"* 通过指定 'ignoredisk --drives=..' 或 'ignoredisk --only-use=..' 来限制使用用于分区的磁盘。\n"
+"* 指定对于每个创建的 LVM 物理卷应使用的磁盘：partition pv.1 --ondisk=..'.\n"
+"\n"
+"一般的临时解决方案：\n"
+"* 使用一般的分区方案而不是使用 LVM。\n"
+"* 一些驱动器支持重新配置扇区大小，例如通过运行 'hdparm --set-sector-size=<SIZE> <DEVICE>'。\n"
 
 #: pyanaconda/modules/storage/installation.py:88
 msgid "An error occurred while resizing the device {}: {}"
@@ -1538,23 +1539,16 @@ msgid "Gathering entropy {percents}% (remaining time {time})"
 msgstr "正在收集熵 {percents}%（剩余时间 {time}）"
 
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:65
-#, fuzzy
-#| msgid "Unknown or invalid device '%s' specified"
 msgid "Unknown or invalid device '{}' specified"
-msgstr "指定了未知或无效设备 \"%s\""
+msgstr "未知或无效的设备 '{}' 指定"
 
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:74
-#, fuzzy
-#| msgid ""
-#| "Unknown or invalid format '%(format)s' specified for device '%(device)s'"
 msgid "Unknown or invalid format '{}' specified for device '{}'"
-msgstr "为设备 \"%(device)s\" 指定的格式 \"%(format)s\" 未知或者无效"
+msgstr "为设备 \"{}\" 指定的格式 \"{}\" 未知或者无效"
 
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:81
-#, fuzzy
-#| msgid "No format on device '%s'"
 msgid "No format on device '{}'"
-msgstr "设备 '%s' 没有格式化"
+msgstr "设备 '{}' 上没有格式化"
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:213
 #, python-brace-format
@@ -1657,30 +1651,22 @@ msgid "Failed to change a device."
 msgstr "更改设备失败。"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:161
-#, fuzzy
-#| msgid "No disk found for specified BIOS disk \"%s\"."
 msgid "No disk found for specified BIOS disk \"{}\"."
-msgstr "没有找到指定的 BIOS 磁盘 “%s”。"
+msgstr "没有为指定的 BIOS 磁盘 \"{}\" 找到磁盘。"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:202
-#, fuzzy
-#| msgid "RAID partition \"%s\" is defined multiple times."
 msgid "RAID partition \"{}\" is defined multiple times."
-msgstr "RAID 分区 “%s” 已定义多次。"
+msgstr "RAID 分区 “{}” 已定义多次。"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:214
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:484
-#, fuzzy
-#| msgid "PV partition \"%s\" is defined multiple times."
 msgid "PV partition \"{}\" is defined multiple times."
-msgstr "物理卷分区 “%s” 已定义多次。"
+msgstr "物理卷分区 “{}” 已定义多次。"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:226
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:496
-#, fuzzy
-#| msgid "Btrfs partition \"%s\" is defined multiple times."
 msgid "Btrfs partition \"{}\" is defined multiple times."
-msgstr "Btrfs 分区 “%s” 已定义多次。"
+msgstr "Btrfs 分区 “{}” 已定义多次。"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:252
 msgid "part --noformat must also use the --onpart option."
@@ -1688,115 +1674,77 @@ msgstr "part --noformat 必须同时使用 --onpart 选项。"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:257
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:352
-#, fuzzy
-#| msgid "Partition \"%s\" given in part command does not exist."
 msgid "Partition \"{}\" given in part command does not exist."
-msgstr "part 命令中指定的分区 “%s” 不存在。"
+msgstr "part 命令中指定的分区 “{}” 不存在。"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:294
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:573
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:952
-#, fuzzy
-#| msgid "The \"%s\" file system type is not supported."
 msgid "The \"{}\" file system type is not supported."
-msgstr "不支持 “%s” 文件系统类型。"
+msgstr "不支持 “{}” 文件系统类型。"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:309
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:328
-#, fuzzy
-#| msgid "Disk \"%s\" given in part command does not exist."
 msgid "Disk \"{}\" given in part command does not exist."
-msgstr "part 命令中指定的磁盘 “%s” 不存在。"
+msgstr "part 命令中指定的磁盘 “{}” 不存在。"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:314
-#, fuzzy
-#| msgid "Cannot install to unpartitionable device \"%s\"."
 msgid "Cannot install to unpartitionable device \"{}\"."
-msgstr "不能在无法分区的设备 “%s” 中安装。"
+msgstr "不能在无法分区的设备 “{}” 中安装。"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:322
-#, fuzzy
-#| msgid "Disk \"%s\" in part command is not partitioned."
 msgid "Disk \"{}\" in part command is not partitioned."
-msgstr "part 命令中的磁盘 “%s” 没有分区。"
+msgstr "part 命令中的磁盘 “{}” 没有分区。"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:518
 msgid "raid --noformat must also use the --device option."
 msgstr "raid --noformat 必须同时使用 --device 选项。"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:524
-#, fuzzy
-#| msgid "RAID device  \"%s\" given in raid command does not exist."
 msgid "RAID device  \"{}\" given in raid command does not exist."
-msgstr "raid 命令中指定的 RAID 设备“%s”不存在。"
+msgstr "raid 命令中指定的 RAID 设备“{}”不存在。"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:549
-#, fuzzy
-#| msgid ""
-#| "RAID device \"%(device)s\" has a format of \"%(format)s\", but should "
-#| "have a format of \"mdmember\"."
 msgid ""
 "RAID device \"{}\" has a format of \"{}\", but should have a format of "
 "\"mdmember\"."
-msgstr "RAID 设备“%(device)s”的格式为“%(format)s”，但它应该是“mdmember”格式。"
+msgstr "RAID 设备“{}”的格式为“{}”，但它应该是“mdmember”格式。"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:555
-#, fuzzy
-#| msgid "Tried to use undefined partition \"%s\" in RAID specification."
 msgid "Tried to use undefined partition \"{}\" in RAID specification."
-msgstr "已尝试按 RAID 标准使用未定义分区“%s”。"
+msgstr "已尝试按 RAID 标准使用未定义分区“{}”。"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:596
-#, fuzzy
-#| msgid "RAID volume \"%s\" specified with --useexisting does not exist."
 msgid "RAID volume \"{}\" specified with --useexisting does not exist."
-msgstr "--useexiting 选项指定的 RAID 卷“%s”不存在。"
+msgstr "--useexiting 选项指定的 RAID 卷“{}”不存在。"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:607
-#, fuzzy
-#| msgid "The RAID volume name \"%s\" is already in use."
 msgid "The RAID volume name \"{}\" is already in use."
-msgstr "名为“%s”的 RAID 卷已在使用。"
+msgstr "名为“{}”的 RAID 卷已在使用。"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:721
-#, fuzzy
-#| msgid ""
-#| "Physical volume \"%(device)s\" has a format of \"%(format)s\", but should "
-#| "have a format of \"lvmpv\"."
 msgid ""
 "Physical volume \"{}\" has a format of \"{}\", but should have a format of "
 "\"lvmpv\"."
-msgstr "物理卷“%(device)s”的格式为“%(format)s”，但应该是“lvmpv”格式。"
+msgstr "物理卷“{}”的格式为“{}”，但应该是“lvmpv”格式。"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:727
-#, fuzzy
-#| msgid ""
-#| "Tried to use undefined partition \"%s\" in Volume Group specification"
 msgid "Tried to use undefined partition \"{}\" in Volume Group specification"
-msgstr "已尝试在卷组规格中使用未定义分区 “%s”"
+msgstr "已尝试在卷组规格中使用未定义分区 “{}”"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:735
-#, fuzzy
-#| msgid ""
-#| "Volume group \"%s\" defined without any physical volumes.  Either specify "
-#| "physical volumes or use --useexisting."
 msgid ""
 "Volume group \"{}\" defined without any physical volumes. Either specify "
 "physical volumes or use --useexisting."
-msgstr "卷组“%s”没有定义任何物理卷。请指定物理卷，或者用 --useexisting 选项。"
+msgstr "卷组“{}”没有定义任何物理卷。请指定物理卷，或者用 --useexisting 选项。"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:747
-#, fuzzy
-#| msgid ""
-#| "Volume group given physical extent size of \"%(extentSize)s\", but must "
-#| "be one of:\n"
-#| "%(validExtentSizes)s."
 msgid ""
 "Volume group given physical extent size of \"{}\", but must be one of:\n"
 "{}."
 msgstr ""
-"卷组指定了物理大小“%(extentSize)s”，但它的数值必须是以下值之一：\n"
-"%(validExtentSizes)s。"
+"卷组指定了物理大小“{}”，但它的数值必须是以下值之一：\n"
+"{}。"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:755
 msgid ""
@@ -1806,50 +1754,36 @@ msgstr ""
 "volgroup --noformat 和 volgroup --useexisting 都必须同时使用 --name= 选项。"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:762
-#, fuzzy
-#| msgid "Volume group \"%s\" given in volgroup command does not exist."
 msgid "Volume group \"{}\" given in volgroup command does not exist."
-msgstr "volgroup 命令中指定的卷组“%s”不存在。"
+msgstr "volgroup 命令中指定的卷组“{}”不存在。"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:767
-#, fuzzy
-#| msgid "The volume group name \"%s\" is already in use."
 msgid "The volume group name \"{}\" is already in use."
-msgstr "卷组名称“%s”已在使用。"
+msgstr "卷组名称“{}”已在使用。"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:821
 msgid "/boot cannot be of type \"lvmlv\" on s390x"
-msgstr ""
+msgstr "在 s390x 上，/boot 的类型不能是 \"lvmlv\""
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:851
 msgid "Size cannot be decided on from kickstart nor obtained from device."
-msgstr ""
+msgstr "无法从 kickstart 中决定大小，也无法从设备获得。"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:867
-#, fuzzy
-#| msgid ""
-#| "No volume group exists with the name \"%s\".  Specify volume groups "
-#| "before logical volumes."
 msgid ""
 "No volume group exists with the name \"{}\". Specify volume groups before "
 "logical volumes."
-msgstr "名称为“%s”的卷组不存在。在指定逻辑卷前先指定卷组。"
+msgstr "名称为“{}”的卷组不存在。在指定逻辑卷前先指定卷组。"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:876
 msgid "Cache PVs must belong to the same VG as the cached LV"
 msgstr "缓冲的物理卷必须跟缓冲的逻辑卷属于同一卷组"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:884
-#, fuzzy
-#| msgid ""
-#| "No thin pool exists with the name \"%s\". Specify thin pools before thin "
-#| "volumes."
 msgid ""
 "No thin pool exists with the name \"{}\". Specify thin pools before thin "
 "volumes."
-msgstr ""
-"名称为“%s”的瘦池（thin pool）不存在。在指定瘦卷（thin volume）之前先指定瘦"
-"池。"
+msgstr "名称为“{}”的瘦池（thin pool）不存在。在指定瘦卷（thin volume）之前先指定瘦池。"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:893
 msgid "logvol --noformat must also use the --name= option."
@@ -1857,74 +1791,46 @@ msgstr "logvol --noformat 必须同时使用 --name= 选项。"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:899
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:964
-#, fuzzy
-#| msgid "Logical volume \"%s\" given in logvol command does not exist."
 msgid "Logical volume \"{}\" given in logvol command does not exist."
-msgstr "logvol 命令中指定的逻辑卷“%s”不存在。"
+msgstr "logvol 命令中指定的逻辑卷“{}”不存在。"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:931
-#, fuzzy
-#| msgid ""
-#| "Logical volume name \"%(logvol)s\" is already in use in volume group "
-#| "\"%(volgroup)s\"."
 msgid "Logical volume name \"{}\" is already in use in volume group \"{}\"."
-msgstr "逻辑卷名称“%(logvol)s”已经在卷组“%(volgroup)s”中使用。"
+msgstr "逻辑卷名称“{}”已经在卷组“{}”中使用。"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:937
-#, fuzzy
-#| msgid ""
-#| "Logical volume size \"%(logvolSize)s\" must be larger than the volume "
-#| "group extent size of \"%(extentSize)s\"."
 msgid ""
 "Logical volume size \"{}\" must be larger than the volume group extent size "
 "of \"{}\"."
-msgstr "逻辑卷尺寸“%(logvolSize)s”必须大于卷组扩展尺寸的 “%(extentSize)s”。"
+msgstr "逻辑卷尺寸“{}”必须大于卷组扩展尺寸的 “{}”。"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1144
-#, fuzzy
-#| msgid ""
-#| "Btrfs partition \"%(device)s\" has a format of \"%(format)s\", but should "
-#| "have a format of \"btrfs\"."
 msgid ""
 "Btrfs partition \"{}\" has a format of \"{}\", but should have a format of "
 "\"btrfs\"."
-msgstr "Btrfs 分区“%(device)s”的格式为“%(format)s”，但应该是“btrfs”格式。"
+msgstr "Btrfs 分区“{}”的格式为“{}”，但应该是“btrfs”格式。"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1150
-#, fuzzy
-#| msgid ""
-#| "Tried to use undefined partition \"%s\" in Btrfs volume specification."
 msgid "Tried to use undefined partition \"{}\" in Btrfs volume specification."
-msgstr "已尝试按 Btrfs 卷的标准使用未定义分区“%s”。"
+msgstr "已尝试按 Btrfs 卷的标准使用未定义分区“{}”。"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1165
-#, fuzzy
-#| msgid ""
-#| "Btrfs volume defined without any member devices.  Either specify member "
-#| "devices or use --useexisting."
 msgid ""
 "Btrfs volume defined without any member devices. Either specify member "
 "devices or use --useexisting."
-msgstr ""
-"Btrfs 卷的定义中没有任何成员设备。请指定成员设备，或者用 --useexisting 选项。"
+msgstr "Btrfs 卷没有定义任何物理卷。请指定成员设备，或者用 --useexisting 选项。"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1189
-#, fuzzy
-#| msgid "Btrfs volume \"%s\" specified with --useexisting does not exist."
 msgid "Btrfs volume \"{}\" specified with --useexisting does not exist."
-msgstr "由 --useexiting 选项指定的 Btrfs 卷“%s”不存在。"
+msgstr "--useexiting 选项指定的 Btrfs 卷“{}”不存在。"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1212
-#, fuzzy
-#| msgid "The size \"%s\" is invalid."
 msgid "The size \"{}\" is invalid."
-msgstr "大小 “%s” 无效。"
+msgstr "大小 “{}” 无效。"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1217
-#, fuzzy
-#| msgid "The mount point \"%s\" is not valid.  It must start with a /."
 msgid "The mount point \"{}\" is not valid. It must start with a /."
-msgstr "挂载点 “%s” 无效。必须以 / 开始。"
+msgstr "挂载点 “{}” 无效。必须以 / 开始。"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1222
 #, python-brace-format
@@ -1972,17 +1878,10 @@ msgid "{product} Linux {version} for {arch}"
 msgstr "面向 {arch} 架构的 {product} Linux {version}"
 
 #: pyanaconda/modules/storage/devicetree/utils.py:78
-#, fuzzy
-#| msgid "Escrow certificate %s requires the network."
 msgid "Escrow certificate {} requires the network."
-msgstr "证书托管 %s 需要网络 。"
+msgstr "托管证书 {} 需要网络 。"
 
 #: pyanaconda/modules/storage/devicetree/utils.py:88
-#, fuzzy
-#| msgid ""
-#| "SSL error while downloading the escrow certificate:\n"
-#| "\n"
-#| "%s"
 msgid ""
 "SSL error while downloading the escrow certificate:\n"
 "\n"
@@ -1990,15 +1889,9 @@ msgid ""
 msgstr ""
 "下载托管证书时出现 SSL 错误：\n"
 "\n"
-"%s"
+"{}"
 
 #: pyanaconda/modules/storage/devicetree/utils.py:92
-#, fuzzy
-#| msgid ""
-#| "The following error was encountered while downloading the escrow "
-#| "certificate:\n"
-#| "\n"
-#| "%s"
 msgid ""
 "The following error was encountered while downloading the escrow "
 "certificate:\n"
@@ -2007,7 +1900,7 @@ msgid ""
 msgstr ""
 "在下载托管的证书时出现以下错误：\n"
 "\n"
-"%s"
+"{}"
 
 #: pyanaconda/modules/storage/devicetree/fsset.py:423
 #, python-brace-format
@@ -3395,12 +3288,9 @@ msgid "_OK"
 msgstr "好(_O)"
 
 #: pyanaconda/ui/gui/spokes/root_password.py:57
-#, fuzzy
-#| msgctxt "GUI|Subscription|Authentication|Account"
-#| msgid "_Account"
 msgctxt "GUI|Spoke"
 msgid "_Root Account"
-msgstr "(_A)账户"
+msgstr "_Root 帐户"
 
 #: pyanaconda/ui/gui/spokes/root_password.py:137
 msgid "Root password has been set."
@@ -4751,7 +4641,7 @@ msgstr "软件仓库名称。"
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:8
 msgid "ROOT ACCOUNT"
-msgstr ""
+msgstr "ROOT 帐户"
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:70
 msgid ""
@@ -4761,34 +4651,31 @@ msgid ""
 "system. For this reason, logging into this system as the root user is best "
 "done only to perform system maintenance or administration."
 msgstr ""
+"root 帐户用于管理系统。root 用户（也称为超级用户）已完全访问整个系统。因此，最好以 root 用户身份登录该系统，以执行系统维护或管理。"
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:97
-#, fuzzy
-#| msgid "Lock root account"
 msgctxt "GUI|Password"
 msgid "_Disable root account"
-msgstr "锁定 root 账户"
+msgstr "禁用 root 账户（_D）"
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:125
-#, fuzzy
-#| msgid "Lock root account"
 msgctxt "GUI|Password"
 msgid "_Enable root account"
-msgstr "锁定 root 账户"
+msgstr "启用 root 账户（_E）"
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:146
 msgid ""
 "Disabling the root account will lock the account and disable remote access "
 "with root account. This will prevent unintended administrative access to the "
 "system."
-msgstr ""
+msgstr "禁用 root 帐户将锁定帐户并使用 root 帐户禁用远程访问权限。这将阻止意外对系统的管理访问。"
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:162
 msgctxt "GUI|Password"
 msgid ""
 "Enabling the root account will allow you to set a root password and "
 "optionally enable remote access to root account on this system."
-msgstr ""
+msgstr "启用 root 帐户将允许您设置 root 密码并选择性地启用对此系统上的 root 帐户的远程访问。"
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:196
 msgctxt "GUI|Password"
@@ -6645,8 +6532,6 @@ msgid "_OK"
 msgstr "好(_O)"
 
 #: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:77
-#, fuzzy
-#| msgid "Configure NTP servers"
 msgid "Configure Network Time Servers"
 msgstr "配置 NTP 服务器"
 
@@ -6659,22 +6544,16 @@ msgid "Working"
 msgstr "可以工作"
 
 #: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:214
-#, fuzzy
-#| msgctxt "GUI|Custom Partitioning"
-#| msgid "Add"
 msgid "Add"
 msgstr "添加"
 
 #: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:266
-#, fuzzy
-#| msgctxt "GUI|Custom Partitioning"
-#| msgid "Remove"
 msgid "Remove"
 msgstr "删除"
 
 #: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:318
 msgid "Edit"
-msgstr ""
+msgstr "编辑"
 
 #: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:354
 msgid ""
@@ -6683,7 +6562,7 @@ msgid ""
 "\n"
 "<b>NTS</b> - If checked, indicates support for Network Time Security "
 "authentication."
-msgstr ""
+msgstr "<b>Pool</b > - 如果选中，则表示主机名指的是一个服务器池。<b>NTS</b> - 如果选中，表示支持网络时间安全身份验证。"
 
 #: pyanaconda/ui/gui/spokes/network.glade:35
 msgid "Add device"
