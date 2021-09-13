@@ -41,8 +41,8 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2021-09-12 00:54+0000\n"
-"PO-Revision-Date: 2021-09-10 10:10+0000\n"
-"Last-Translator: Sundeep Anand <suanand@redhat.com>\n"
+"PO-Revision-Date: 2021-09-14 10:05+0000\n"
+"Last-Translator: Charles Lee <lchopn@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://translate.fedoraproject.org/"
 "projects/anaconda/rhel-9/zh_CN/>\n"
 "Language: zh_CN\n"
@@ -491,7 +491,7 @@ msgstr ""
 
 #: pyanaconda/errors.py:221
 msgid "Failed to provision the target system for Satellite."
-msgstr ""
+msgstr "无法将目标系统交由 Satellite 监管。"
 
 #: pyanaconda/errors.py:228
 #, python-brace-format
@@ -1476,18 +1476,15 @@ msgid ""
 msgstr ""
 "手工安装的临时解决方案：\n"
 "* 在图形模式或文本模式的手工安装期间，只选择带有相同扇区大小的磁盘。\n"
-"* 如果选项了扇区大小不一致的磁盘进行安装，限制每个创建的 LVM 卷组使用带有相同"
-"扇区大小的物理卷。这只能在自定义分区的图形模式中进行。\n"
+"* 如果选项了扇区大小不一致的磁盘进行安装，限制每个创建的 LVM 卷组使用带有相同扇区大小的物理卷。这只能在自定义分区的图形模式中进行。\n"
 "\n"
 "kickstart 安装的临时解决方案：\n"
-"* 通过指定 'ignoredisk --drives=..' 或 'ignoredisk --only-use=..' 来限制使用"
-"用于分区的磁盘。\n"
+"* 通过指定 'ignoredisk --drives=..' 或 'ignoredisk --only-use=..' 来限制使用用于分区的磁盘。\n"
 "* 指定对于每个创建的 LVM 物理卷应使用的磁盘：partition pv.1 --ondisk=..'.\n"
 "\n"
 "一般的临时解决方案：\n"
 "* 使用一般的分区方案而不是使用 LVM。\n"
-"* 一些驱动器支持重新配置扇区大小，例如通过运行 'hdparm --set-sector-"
-"size=<SIZE> <DEVICE>'。\n"
+"* 一些驱动器支持重新配置扇区大小，例如通过运行 'hdparm --set-sector-size=<SIZE> <DEVICE>'。\n"
 
 #: pyanaconda/modules/storage/installation.py:88
 msgid "An error occurred while resizing the device {}: {}"
@@ -3258,7 +3255,7 @@ msgstr "安装目的地(_D)"
 msgid ""
 "Partitioning method changed - planned storage configuration changes will be "
 "cancelled."
-msgstr "分区模式已改变——已计划的存储配置改变将被取消。"
+msgstr "分区模式已改变——已计划的存储配置变更将被取消。"
 
 #: pyanaconda/ui/gui/spokes/storage.py:405
 msgid ""
@@ -3414,33 +3411,31 @@ msgstr[0] "已选择 {} 个存储设备(_S)"
 #: pyanaconda/ui/gui/spokes/subscription.py:72
 msgctxt "GUI|Spoke"
 msgid "_Connect to Red Hat"
-msgstr "(_C)连接到红帽"
+msgstr "连接到红帽(_C)"
 
 #: pyanaconda/ui/gui/spokes/subscription.py:250
 msgid "Activation key set."
-msgstr "激活码集。"
+msgstr "激活密钥集。"
 
 #: pyanaconda/ui/gui/spokes/subscription.py:977
 msgid "Unregistering..."
-msgstr "正在取消注册 ..."
+msgstr "正在取消注册……"
 
 #: pyanaconda/ui/gui/spokes/subscription.py:979
 msgid "Registering..."
-msgstr "正在注册 ..."
+msgstr "正在注册……"
 
 #: pyanaconda/ui/gui/spokes/subscription.py:981
 msgid "Attaching subscription..."
-msgstr "正在附加订阅 ..."
+msgstr "正在附加订阅……"
 
 #: pyanaconda/ui/gui/spokes/subscription.py:983
 msgid "Subscription attached."
 msgstr "订阅已附加。"
 
 #: pyanaconda/ui/gui/spokes/subscription.py:988
-#, fuzzy
-#| msgid "Registration failed."
 msgid "Registered to Satellite."
-msgstr "注册失败。"
+msgstr "已经向 Satellite 注册。"
 
 #: pyanaconda/ui/gui/spokes/subscription.py:990
 msgid "Registered."
@@ -3452,13 +3447,11 @@ msgstr "未注册。"
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1023
 msgid "The system is registered to a Satellite instance."
-msgstr ""
+msgstr "此系统已被注册为一个 Satellite 实例。"
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1027
-#, fuzzy
-#| msgid "The system is currently not registered."
 msgid "The system is registered."
-msgstr "这个系统目前没有注册。"
+msgstr "此系统已经被注册。"
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1032
 msgid "Registered with account {}"
@@ -3502,7 +3495,7 @@ msgstr "已附加 {} 项订阅至此系统"
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1118
 msgid "Please enable network access before connecting to Red Hat."
-msgstr "在连接到红帽之前，请启用网络连接功能。"
+msgstr "在连接到红帽之前，请启用网络连接。"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.py:399
 msgctxt "GUI|Spoke"
@@ -3634,7 +3627,7 @@ msgstr "设置安装源失败，请查看源 url"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:694
 msgid "Satellite"
-msgstr ""
+msgstr "Satellite"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:703
 msgid "Error setting up base repository"
@@ -3662,7 +3655,7 @@ msgstr "您需配置网络才能使用网络安装源。"
 #: pyanaconda/ui/gui/spokes/installation_source.py:1124
 msgctxt "GUI|Software Source"
 msgid "_Satellite"
-msgstr ""
+msgstr "_Satellite"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:1126
 #: pyanaconda/ui/gui/spokes/installation_source.glade:635
@@ -3988,8 +3981,7 @@ msgstr ""
 msgid ""
 "  You don't have enough space available to install <b>%(product)s</b>, even "
 "if you used all of the free space available on the selected disks."
-msgstr ""
-"  即使使用所选盘上的全部可用空闲空间，也不够用来安装 <b>%(product)s</b>。"
+msgstr "  即使使用所选盘上的全部空闲空间，也不够用来安装 <b>%(product)s</b>。"
 
 #: pyanaconda/ui/gui/spokes/lib/storage_dialogs.py:178
 #, python-format
@@ -4187,15 +4179,13 @@ msgstr "该文件系统可能无法重新定义大小。"
 msgid ""
 "Error checking storage configuration. <a href=\"\">Click for details</a> or "
 "press Done again to continue."
-msgstr ""
-"检查存储配置时出错。<a href=\"\">点击查看详情</a>或再次按完成按钮继续。"
+msgstr "检查存储配置时出错。<a href=\"\">点击查看详情</a>或再次按完成按钮继续。"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:938
 msgid ""
 "Warning checking storage configuration. <a href=\"\">Click for details</a> "
 "or press Done again to continue."
-msgstr ""
-"检查存储配置时出现警告。<a href=\"\">点击查看详情</a>或再次按完成按钮继续。"
+msgstr "检查存储配置时出现警告。<a href=\"\">点击查看详情</a>或再次按完成按钮继续。"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1020
 msgid "Failed to add new device."
@@ -4607,7 +4597,7 @@ msgctxt "GUI|Software Source"
 msgid ""
 "Install the _default versions provided by the installation source (above) "
 "only"
-msgstr "只安装以上安装源内提供的默认版本(_D)"
+msgstr "只安装以上安装源内提供的默认版本 (_D)"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:986
 msgid "Additional repositories"
@@ -5028,8 +5018,7 @@ msgstr "键盘布局"
 msgid ""
 "Which keyboard layouts would you like to use on this system?  You may move "
 "any layout to the top of the list to select it as the default."
-msgstr ""
-"您想在本系统中使用哪个键盘布局？您可以将任意布局移动到顶部将其作为默认选项。"
+msgstr "您想在本系统中使用哪个键盘布局？您可以将任意布局移动到顶部将其作为默认选项。"
 
 #: pyanaconda/ui/gui/spokes/keyboard.glade:96
 msgid ""
@@ -5097,7 +5086,7 @@ msgstr "添加键盘布局"
 
 #: pyanaconda/ui/gui/spokes/keyboard.glade:482
 msgid "You may add a keyboard layout by selecting it below:"
-msgstr "您可从以下键盘布局中选择一个："
+msgstr "您可从以下键盘布局中选择一个添加："
 
 #: pyanaconda/ui/gui/spokes/keyboard.glade:531
 msgid "Available Layouts"
@@ -5199,8 +5188,7 @@ msgstr "设备选择"
 msgid ""
 "Select the device(s) you'd like to install to.  They will be left untouched "
 "until you click on the main menu's \"Begin Installation\" button."
-msgstr ""
-"选择您想要安装的设备。在您点击“开始安装”按钮之前，选择的设备并不会被操作。"
+msgstr "选择您想要将系统安装到的设备。在您点击“开始安装”按钮之前，选择的设备并不会被操作。"
 
 #: pyanaconda/ui/gui/spokes/storage.glade:114
 msgid "Local Standard Disks"
@@ -5289,7 +5277,7 @@ msgstr "基本环境"
 
 #: pyanaconda/ui/gui/spokes/software_selection.glade:86
 msgid "Additional software for Selected Environment"
-msgstr "已选环境的额外软件"
+msgstr "已选环境的附加软件"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:112
 msgctxt "GUI|Date and Time|NTP"
@@ -5488,7 +5476,7 @@ msgstr "认证"
 #: pyanaconda/ui/gui/spokes/subscription.glade:100
 msgctxt "GUI|Subscription|Authentication|Account"
 msgid "_Account"
-msgstr "(_A)账户"
+msgstr "账户(_A)"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:117
 msgctxt "GUI|Subscription|Authetication|Activation Key"
@@ -5497,15 +5485,15 @@ msgstr "激活码 (_K)"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:227
 msgid "Organization"
-msgstr "机构"
+msgstr "组织"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:239
 msgid "Activation Key"
-msgstr "激活码"
+msgstr "激活密钥"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:263
 msgid "key1,key2,..."
-msgstr "码1，码2，..."
+msgstr "密钥1,密钥2,..."
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:284
 msgid "Purpose"
@@ -5526,7 +5514,7 @@ msgstr "SLA"
 #: pyanaconda/ui/gui/spokes/subscription.glade:384
 msgctxt "GUI|Subscription|Set System Purpose"
 msgid "Set System Purpose"
-msgstr "设置系统目的"
+msgstr "设置系统用途"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:401
 #: pyanaconda/ui/gui/spokes/subscription.glade:851
@@ -5540,11 +5528,11 @@ msgstr "连接到 Red Hat Insights (_I)"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:455
 msgid "Custom base URL"
-msgstr "自定义基本 URL"
+msgstr "自定义基础 URL"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:503
 msgid "Satellite URL"
-msgstr ""
+msgstr "Satellite URL"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:517
 msgid "Use HTTP proxy"
@@ -5556,7 +5544,7 @@ msgstr "位置"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:580
 msgid "hostname:port"
-msgstr "主机名：端口"
+msgstr "主机名:端口"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:649
 msgid "Options"
@@ -5564,7 +5552,7 @@ msgstr "选项"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:672
 msgid "The system is currently not registered."
-msgstr "这个系统目前没有注册。"
+msgstr "该系统当前还未注册。"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:685
 msgctxt "GUI|Subscription|Register"
@@ -5582,15 +5570,15 @@ msgstr "方法"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:798
 msgid "System Purpose"
-msgstr "系统目的"
+msgstr "系统用途"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:913
 msgid "No subscriptions have been attached to the system"
-msgstr "系统还没有附加任何订阅"
+msgstr "还没有订阅附加至此系统"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:988
 msgid "SYSTEM PURPOSE"
-msgstr "系统目的"
+msgstr "系统用途"
 
 #: pyanaconda/ui/gui/spokes/advanced_user.glade:36
 msgctxt "GUI|Advanced User"
@@ -5651,9 +5639,7 @@ msgid ""
 "You may input a comma-separated list of group names and group IDs here. "
 "Groups that do not already exist will be created; specify their GID in "
 "parentheses. "
-msgstr ""
-"您可以用英文逗号做为分隔符在此输入多个组名以及组 ID。不存在的组将会被创建；在"
-"括起来英文括号中指定这些组的 GID。 "
+msgstr "您可以用英文逗号做为分隔符在此输入多个组名以及组 ID。不存在的组将会被创建；在括起来英文括号中指定这些组的 GID。 "
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:22
 msgctxt "GUI|Advanced Storage|DASD|Configure"
@@ -5710,7 +5696,7 @@ msgstr "成功找到设备。"
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:324
 msgid "The added DASD can be found under \"Local Standard Disks.\""
-msgstr "添加的 DASD 可在“本地标准磁盘”下找到"
+msgstr "已添加的 DASD 可在“本地标准磁盘”下找到"
 
 #: pyanaconda/ui/gui/spokes/advstorage/fcoe.glade:23
 msgctxt "GUI|Advanced Storage|FCoE"
@@ -5858,9 +5844,7 @@ msgstr "添加 iSCSI 存储对象"
 msgid ""
 "To use iSCSI disks, you must provide the address of your iSCSI target and "
 "the iSCSI initiator name you've configured for your host."
-msgstr ""
-"要使用 iSCSI 磁盘，您必须提供您主机上已配置的 iSCSI 目标的地址以及 iSCSI 发起"
-"程序的名称。"
+msgstr "要使用 iSCSI 磁盘，您必须提供 iSCSI 目标的地址以及您主机上配置的 iSCSI 发起者的名称。"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:142
 msgctxt "GUI|Advanced Storage|iSCSI|Configure"
@@ -5875,7 +5859,7 @@ msgstr "iSCSI 发起程序名称(_I)："
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:187
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:760
 msgid "No credentials (discovery authentication disabled)"
-msgstr "无证书(发现身份验证已禁用)"
+msgstr "无凭据（发现身份验证已禁用）"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:188
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:761
@@ -5978,7 +5962,7 @@ msgstr "节点登录认证类型(_N)："
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:763
 msgid "Use the credentials from discovery"
-msgstr "使用来自发现步骤的证书"
+msgstr "使用来自发现的凭据"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:797
 msgctxt "GUI|Advanced Storage|iSCSI|Login|CHAP"
@@ -6264,8 +6248,7 @@ msgid ""
 "You have chosen to encrypt some of your data. You will need to create a "
 "passphrase that you will use to access your data when you start your "
 "computer."
-msgstr ""
-"您选择加密您的部分数据。您需要创建一个口令，用于在计算机启动后访问您的数据。"
+msgstr "您已选择加密您的部分数据。您将需要创建一个口令，用于在计算机启动后访问您的数据。"
 
 #: pyanaconda/ui/gui/spokes/lib/passphrase.glade:102
 msgctxt "GUI|Passphrase Dialog"
@@ -6281,9 +6264,7 @@ msgstr "确认(_F)："
 msgid ""
 "Warning: You won't be able to switch between keyboard layouts (from the "
 "default one) when you decrypt your disks after install."
-msgstr ""
-"警告：安装完成后，当您对磁盘进行解密时，您将无法在不同的键盘布局之间切换（从"
-"默认键盘布局切换到其他键盘布局）。"
+msgstr "警告：安装完成后，当您对磁盘进行解密时，您将无法在不同的键盘布局之间切换（从默认键盘布局切换到其他键盘布局）。"
 
 #: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:8
 msgid "UNFORMATTED DASDS"
@@ -6305,8 +6286,8 @@ msgid ""
 "You can choose to format them now with dasdfmt or cancel to leave them "
 "unformatted. Unformatted DASDs cannot be used during installation."
 msgstr ""
-"在您的系统中检测到以下未格式化的或 LDL DASD 设备。您现在可使用 dasdfmt 将其格"
-"式化或取消并保持未格式化状态。未格式化的 DASD 设备不能在安装过程中使用。"
+"在您的系统中检测到以下未格式化的或 LDL DASD 设备。您现在可使用 dasdfmt 将其格式化或取消并保持未格式化状态。未格式化的 DASD "
+"设备不能在安装过程中使用。"
 
 #: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:86
 msgid "Unformatted DASDs Detected"
@@ -6553,7 +6534,7 @@ msgstr "删除(_R)"
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:249
 msgid "Secure Boot"
-msgstr "安全引导"
+msgstr "安全启动"
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:265
 msgid ""
@@ -6562,13 +6543,12 @@ msgid ""
 "supported on IBM z14 and earlier models, therefore choose to disable it if "
 "you intend to boot the installed system on such models."
 msgstr ""
-"如果在计算机上启用并配置了安全引导，则固件将在启动过程中验证 Linux 内核的完整"
-"性。 IBM z14和更早型号不支持安全启动，因此，如果要在此类型号上引导已安装的系"
-"统，请选择禁用此功能。"
+"如果在计算机上启用并配置了安全启动，则固件将在启动过程中验证 Linux 内核的完整性。 IBM "
+"z14和更早型号不支持安全启动，因此，如果要在此类型号上引导已安装的系统，请选择禁用此功能。"
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:283
 msgid "Enabled if supported by the installing machine"
-msgstr "如果安装机器支持则启用此功能"
+msgstr "所安装机器如支持则启用"
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:284
 msgid "Enabled unconditionally"
@@ -6627,7 +6607,7 @@ msgstr "Wi-Fi 网络"
 #: pyanaconda/ui/gui/spokes/network.glade:170
 msgctxt "GUI|Network|Wireless|Configure"
 msgid "_Cancel"
-msgstr "(_C)取消"
+msgstr "取消(_C)"
 
 #: pyanaconda/ui/gui/spokes/network.glade:184
 msgctxt "GUI|Network|Wireless|Configure"
@@ -6636,12 +6616,12 @@ msgstr "配置(_C)"
 
 #: pyanaconda/ui/gui/spokes/network.glade:207
 msgid "Select a network to configure"
-msgstr "选择要配置的网络"
+msgstr "选择网络进行配置"
 
 #: pyanaconda/ui/gui/spokes/network.glade:303
 msgctxt "GUI|Network|Wireless|Select Network Dialog"
 msgid "_Cancel"
-msgstr "(_C)取消"
+msgstr "取消(_C)"
 
 #: pyanaconda/ui/gui/spokes/network.glade:317
 msgctxt "GUI|Network|Wireless|Select Network Dialog"
@@ -6859,7 +6839,7 @@ msgstr "语言支持"
 
 #: pyanaconda/ui/gui/spokes/language_support.glade:78
 msgid "Select additional language support to be installed:"
-msgstr "选择要安装的其它语言支持："
+msgstr "选择要安装的附加语言支持："
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:176
 msgid "Add a new mount point."
