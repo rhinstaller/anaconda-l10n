@@ -53,13 +53,14 @@
 # Philippe Noel <philippe.bs.noel@tutanota.com>, 2020.
 # Arnaud T. <listes.00@gmail.com>, 2020.
 # Natacha Rault <n.rault@me.com>, 2021.
+# Sundeep Anand <suanand@redhat.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2021-09-13 13:27+0200\n"
 "PO-Revision-Date: 2021-09-15 03:15+0000\n"
-"Last-Translator: Ludek Janda <ljanda@redhat.com>\n"
+"Last-Translator: Sundeep Anand <suanand@redhat.com>\n"
 "Language-Team: French <https://translate.fedoraproject.org/projects/anaconda/"
 "rhel-8/fr/>\n"
 "Language: fr\n"
@@ -379,18 +380,12 @@ msgstr ""
 "charge"
 
 #: pyanaconda/errors.py:264
-#, fuzzy
-#| msgid ""
-#| "Failed to connect the system to Red Hat Insights.\n"
-#| "\n"
-#| "Would you like to ignore this and continue with installation?"
 msgid ""
 "An error occurred during Red Hat Insights configuration. Would you like to "
 "ignore this and continue with installation?"
 msgstr ""
-"Echec de la connexion du système à Red Hat Insights.\n"
-"\n"
-"Voulez-vous ignorer cela et continuer l'installation ?"
+"Une erreur s'est produite pendant la configuration de Red Hat Insights. "
+"Voulez-vous ignorer cela et poursuivre l'installation ?"
 
 #: pyanaconda/kickstart.py:540
 msgid ""
@@ -1162,10 +1157,8 @@ msgid "Btrfs volume \"%s\" specified with --useexisting does not exist."
 msgstr "Le volume Btfrs « %s » défini avec --useexisting n’existe pas."
 
 #: pyanaconda/modules/storage/partitioning/base_partitioning.py:57
-#, fuzzy
-#| msgid "Failed to set up installation source"
 msgid "Failed to proceed with the installation."
-msgstr "Échec de la mise en place de la source d’installation"
+msgstr "Impossible de poursuivre l'installation."
 
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:64
 #, python-format
@@ -1281,16 +1274,12 @@ msgstr ""
 "le retirer ou sélectionner un périphérique différent."
 
 #: pyanaconda/modules/storage/partitioning/interactive/change_device.py:87
-#, fuzzy
-#| msgid "Failed to add new device."
 msgid "Failed to change a device."
-msgstr "Impossible d’ajouter un nouveau périphérique."
+msgstr "Impossible de modifier un périphérique."
 
 #: pyanaconda/modules/storage/partitioning/interactive/add_device.py:72
-#, fuzzy
-#| msgid "Failed to add new device."
 msgid "Failed to add a device."
-msgstr "Impossible d’ajouter un nouveau périphérique."
+msgstr "Impossible d'ajouter un périphérique."
 
 #: pyanaconda/modules/storage/partitioning/automatic/utils.py:165
 msgid "No usable disks selected."
@@ -1484,6 +1473,26 @@ msgid ""
 "* Some drives support re-configuration of sector sizes, for example by "
 "running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 msgstr ""
+"Solutions de contournement pour les installations manuelles :\n"
+"* Sélectionnez uniquement les disques ayant la même taille de secteur lors "
+"de l'installation manuelle en mode graphique ou texte.\n"
+"* Lorsque des disques dont la taille de secteur est incohérente sont "
+"sélectionnés pour l'installation, limitez chaque groupe de volumes LVM créé "
+"à utiliser des volumes physiques ayant la même taille de secteur. Cela ne "
+"peut être fait qu'en mode graphique dans le rayon de partitionnement "
+"personnalisé.\n"
+"\n"
+"Solutions de contournement pour les installations de démarrage :\n"
+"* Limitez les disques utilisés pour le partitionnement en spécifiant "
+"'ignoredisk --drives=.. 'ou 'ignoredisk --only-use=..'.\n"
+"* Spécifiez quels disques doivent être utilisés pour chaque volume physique "
+"LVM créé : partition pv.1 —ondisk=.. '.\n"
+"\n"
+"Solutions de contournement générales :\n"
+"* Le schéma de partitionnement simple peut être utilisé à la place de LVM.\n"
+"* Certains disques prennent en charge la reconfiguration des tailles de "
+"secteurs, par exemple en exécutant 'hdparm --set-sector-size=<SIZE><DEVICE> "
+"'.\n"
 
 #: pyanaconda/modules/storage/platform.py:52
 msgid "boot loader device"
@@ -3789,7 +3798,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:559
 msgctxt "GUI|Custom Partitioning|Autopart Page"
 msgid "_Encrypt automatically created mount points by default:"
-msgstr ""
+msgstr "_Chiffrer les points de montage créés automatiquement par défaut :"
 
 #: pyanaconda/ui/gui/spokes/lib/cart.py:193
 msgctxt "GUI|Selected Disks Dialog"
