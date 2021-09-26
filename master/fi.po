@@ -27,7 +27,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2021-09-24 00:51+0000\n"
+"POT-Creation-Date: 2021-09-26 00:51+0000\n"
 "PO-Revision-Date: 2021-09-11 11:04+0000\n"
 "Last-Translator: Jan Kuparinen <copper_fin@hotmail.com>\n"
 "Language-Team: Finnish <https://translate.fedoraproject.org/projects/"
@@ -2519,7 +2519,7 @@ msgstr[1] ""
 "valitsematomia levyjä %(unselected)s. Sinun on valittava nämä levyt tai "
 "poistettava niiden valinta sarjana."
 
-#: pyanaconda/modules/storage/checker/utils.py:54
+#: pyanaconda/modules/storage/checker/utils.py:55
 #, python-format
 msgid ""
 "You have not defined a root partition (/), which is required for "
@@ -2528,17 +2528,17 @@ msgstr ""
 "Et ole valinnut juuriosiota (/), jota tarvitaan, jotta %s-asennusta voidaan "
 "jatkaa."
 
-#: pyanaconda/modules/storage/checker/utils.py:59
+#: pyanaconda/modules/storage/checker/utils.py:60
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:442
 msgid "You must create a new file system on the root device."
 msgstr "Juurilaitteelle on luotava uusi tiedostojärjestelmä."
 
-#: pyanaconda/modules/storage/checker/utils.py:65
+#: pyanaconda/modules/storage/checker/utils.py:66
 #, python-format
 msgid "Your root partition must be on a device of type: %s."
 msgstr "Juuriosiosi on oltava laitteessa tyyppiä: %s."
 
-#: pyanaconda/modules/storage/checker/utils.py:84
+#: pyanaconda/modules/storage/checker/utils.py:85
 #, python-brace-format
 msgid ""
 "The LDL DASD disk {name} ({busid}) cannot be used for the installation. "
@@ -2546,13 +2546,13 @@ msgid ""
 msgstr ""
 "LDL DASD -levyä {name} ({busid}) ei voi käyttää asennukseen. Alusta se."
 
-#: pyanaconda/modules/storage/checker/utils.py:106
+#: pyanaconda/modules/storage/checker/utils.py:107
 #, python-format
 msgid ""
 "It is recommended to create a new file system on your %(mount)s partition."
 msgstr "On suositeltavaa luoda uusi tiedostojärjestelmä %(mount)s-osiolle."
 
-#: pyanaconda/modules/storage/checker/utils.py:122
+#: pyanaconda/modules/storage/checker/utils.py:123
 #, python-format
 msgid ""
 "Your %(mount)s partition is less than %(size)s which is lower than "
@@ -2561,12 +2561,12 @@ msgstr ""
 "%(mount)s-osiosi koko on alle %(size)s, joka on vähemmän kuin normaalille "
 "%(productName)s -asennukselle suositellaan."
 
-#: pyanaconda/modules/storage/checker/utils.py:130
+#: pyanaconda/modules/storage/checker/utils.py:131
 #, python-format
 msgid "Your %(mount)s partition size is lower than required %(size)s."
 msgstr "%(mount)s-osiosi on pienempi kuin vaadittu %(size)s."
 
-#: pyanaconda/modules/storage/checker/utils.py:150
+#: pyanaconda/modules/storage/checker/utils.py:151
 #, python-format
 msgid ""
 "Your %(mount)s partition is too small for %(format)s formatting (allowable "
@@ -2575,7 +2575,7 @@ msgstr ""
 "Osiosi %(mount)s on liian pieni %(format)s:n alustamiseen (sallittu koko on "
 "%(minSize)s:sta %(maxSize)s een)"
 
-#: pyanaconda/modules/storage/checker/utils.py:156
+#: pyanaconda/modules/storage/checker/utils.py:157
 #, python-format
 msgid ""
 "Your %(mount)s partition is too large for %(format)s formatting (allowable "
@@ -2584,17 +2584,17 @@ msgstr ""
 "Osiosi %(mount)s on liian iso %(format)s:n alustamiseen (sallittu koko on "
 "%(minSize)s:sta %(maxSize)s:een)"
 
-#: pyanaconda/modules/storage/checker/utils.py:174
+#: pyanaconda/modules/storage/checker/utils.py:175
 msgid "No valid boot loader target device found. See below for details."
 msgstr ""
 "Kelvollista käynnistyslataimen kohdelaitetta ei löytynyt. Lisätietoja "
 "alapuolella."
 
-#: pyanaconda/modules/storage/checker/utils.py:187
+#: pyanaconda/modules/storage/checker/utils.py:188
 msgid "You have not created a bootable partition."
 msgstr "Eti ole luonut käynnistysosiota."
 
-#: pyanaconda/modules/storage/checker/utils.py:222
+#: pyanaconda/modules/storage/checker/utils.py:223
 msgid ""
 "Your BIOS-based system needs a special partition to boot from a GPT disk "
 "label. To continue, please create a 1MiB 'biosboot' type partition."
@@ -2602,7 +2602,14 @@ msgstr ""
 "BIOS-pohjainen järjestelmäsi tarvitsee erityisen osion käynnistääkseen GPT-"
 "levytarrasta. Jatkaaksesi, luo 1 Mt: n 'biosboot'-tyyppinen osio."
 
-#: pyanaconda/modules/storage/checker/utils.py:244
+#: pyanaconda/modules/storage/checker/utils.py:247
+msgid ""
+"Your firmware doesn't support XFS file system features on the /boot file "
+"system. The system will not be bootable. Please, upgrade the firmware or "
+"change the file system type."
+msgstr ""
+
+#: pyanaconda/modules/storage/checker/utils.py:305
 #, python-format
 msgid ""
 "You have not specified a swap partition. %(requiredMem)s of memory is "
@@ -2613,7 +2620,7 @@ msgstr ""
 "keskusmuistia, jos asennusta jatketaan ilman sivutus-osiota, mutta "
 "järjestelmässäsi on muistia vain %(installedMem)s."
 
-#: pyanaconda/modules/storage/checker/utils.py:251
+#: pyanaconda/modules/storage/checker/utils.py:312
 #, python-format
 msgid ""
 "You have not specified a swap partition. %(requiredMem)s of memory is "
@@ -2624,7 +2631,7 @@ msgstr ""
 "keskusmuistia, jos asennusta jatketaan ilman sivutus-osiota, mutta "
 "järjestelmässäsi on muistia vain %(installedMem)s."
 
-#: pyanaconda/modules/storage/checker/utils.py:257
+#: pyanaconda/modules/storage/checker/utils.py:318
 msgid ""
 "You have not specified a swap partition. Although not strictly required in "
 "all cases, it will significantly improve performance for most installations."
@@ -2633,7 +2640,7 @@ msgstr ""
 "tarvita, se parantaa merkittävästi järjestelmän suorituskykyä useimmissa "
 "asennuksissa."
 
-#: pyanaconda/modules/storage/checker/utils.py:275
+#: pyanaconda/modules/storage/checker/utils.py:336
 msgid ""
 "At least one of your swap devices does not have a UUID, which is common in "
 "swap space created using older versions of mkswap. These devices will be "
@@ -2645,7 +2652,7 @@ msgstr ""
 "laitteisiin viitataan /etc/fstab-tiedostossa laitepolulla, joka ei ole paras "
 "tapa, koska laitepolut voivat muuttua eri syistä. "
 
-#: pyanaconda/modules/storage/checker/utils.py:294
+#: pyanaconda/modules/storage/checker/utils.py:355
 #, python-format
 msgid ""
 "This mount point is invalid. The %s directory must be on the / file system."
@@ -2653,17 +2660,17 @@ msgstr ""
 "Tämä liitoskohta on virheellinen. Hakemiston %s tulee olla /-"
 "tiedostojärjestelmässä."
 
-#: pyanaconda/modules/storage/checker/utils.py:310
+#: pyanaconda/modules/storage/checker/utils.py:371
 #, python-format
 msgid "Your %s must be on a separate partition or LV."
 msgstr "%s:n on oltava erillisessä osiossa tai LV:ssä."
 
-#: pyanaconda/modules/storage/checker/utils.py:327
+#: pyanaconda/modules/storage/checker/utils.py:388
 #, python-format
 msgid "The mount point %s must be on a linux file system."
 msgstr "Liitoskohdan %s tulee olla Linux-tiedostojärjestelmässä."
 
-#: pyanaconda/modules/storage/checker/utils.py:352
+#: pyanaconda/modules/storage/checker/utils.py:413
 msgid ""
 "The existing unlocked LUKS device {} cannot be used for the installation "
 "without an encryption key specified for this device. Please, rescan the "
@@ -2673,7 +2680,7 @@ msgstr ""
 "ilman tälle laitteelle määritettyä salausavainta. Skannaa tallennustila "
 "uudelleen."
 
-#: pyanaconda/modules/storage/checker/utils.py:373
+#: pyanaconda/modules/storage/checker/utils.py:434
 #, python-format
 msgid ""
 "Encryption requested for LUKS device %s but no encryption key specified for "
@@ -2682,7 +2689,7 @@ msgstr ""
 "Salaus pyydettiin LUKS-laitteelle %s, mutta laitteelle ei määritetty "
 "salausavainta."
 
-#: pyanaconda/modules/storage/checker/utils.py:395
+#: pyanaconda/modules/storage/checker/utils.py:456
 #, python-format
 msgid ""
 "The available memory is less than %(size)s which can be too small for LUKS2 "
@@ -2691,7 +2698,7 @@ msgstr ""
 "Saatavilla oleva muisti on alle %(size)s, mikä voi olla liian pieni LUKS2-"
 "muodolle. Se saattaa epäonnistua."
 
-#: pyanaconda/modules/storage/checker/utils.py:436
+#: pyanaconda/modules/storage/checker/utils.py:497
 #, python-format
 msgid ""
 "%s is currently mounted and cannot be used for the installation. Please "
@@ -2700,7 +2707,7 @@ msgstr ""
 "%s on parhaillaan liitetty, eikä sitä voida käyttää asennukseen. Irrota "
 "liitos ja yritä uudelleen."
 
-#: pyanaconda/modules/storage/checker/utils.py:471
+#: pyanaconda/modules/storage/checker/utils.py:532
 msgid ""
 "Selected disks {} contain volume group '{}' that also uses further "
 "unselected disks. You must select or de-select all these disks as a set."

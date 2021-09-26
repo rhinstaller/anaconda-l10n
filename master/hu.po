@@ -31,7 +31,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2021-09-24 00:51+0000\n"
+"POT-Creation-Date: 2021-09-26 00:51+0000\n"
 "PO-Revision-Date: 2021-07-03 10:04+0000\n"
 "Last-Translator: Dankaházi (ifj.) István <dankahazi.istvan@gmail.com>\n"
 "Language-Team: Hungarian <https://translate.fedoraproject.org/projects/"
@@ -2547,7 +2547,7 @@ msgstr[1] ""
 "amelyek használják a(z) %(unselected)s lemezeket. Ki kell választania azokat "
 "is, vagy visszavonnia a lemezkészletként történő használatot."
 
-#: pyanaconda/modules/storage/checker/utils.py:54
+#: pyanaconda/modules/storage/checker/utils.py:55
 #, python-format
 msgid ""
 "You have not defined a root partition (/), which is required for "
@@ -2556,17 +2556,17 @@ msgstr ""
 "Nem adott meg gyökérpartíciót (/), amely szükséges a(z) %s telepítésének "
 "folytatásához."
 
-#: pyanaconda/modules/storage/checker/utils.py:59
+#: pyanaconda/modules/storage/checker/utils.py:60
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:442
 msgid "You must create a new file system on the root device."
 msgstr "Egy új fájlrendszert kell készítenie a root eszközön."
 
-#: pyanaconda/modules/storage/checker/utils.py:65
+#: pyanaconda/modules/storage/checker/utils.py:66
 #, python-format
 msgid "Your root partition must be on a device of type: %s."
 msgstr "A gyökérpartíciónak %s típusú eszközön kell lennie."
 
-#: pyanaconda/modules/storage/checker/utils.py:84
+#: pyanaconda/modules/storage/checker/utils.py:85
 #, python-brace-format
 msgid ""
 "The LDL DASD disk {name} ({busid}) cannot be used for the installation. "
@@ -2575,13 +2575,13 @@ msgstr ""
 "A(z) {name} ({busid}) LDL DASD lemez nem használható a telepítéshez. "
 "Formázza meg."
 
-#: pyanaconda/modules/storage/checker/utils.py:106
+#: pyanaconda/modules/storage/checker/utils.py:107
 #, python-format
 msgid ""
 "It is recommended to create a new file system on your %(mount)s partition."
 msgstr "Javasolt, hogy új fájlrendszert hozzon létre a(z) %(mount)s partíción."
 
-#: pyanaconda/modules/storage/checker/utils.py:122
+#: pyanaconda/modules/storage/checker/utils.py:123
 #, python-format
 msgid ""
 "Your %(mount)s partition is less than %(size)s which is lower than "
@@ -2590,12 +2590,12 @@ msgstr ""
 "A(z) %(mount)s partíció kisebb mint %(size)s, ami alacsonyabb, mint az "
 "ajánlott egy normál %(productName)s telepítéshez."
 
-#: pyanaconda/modules/storage/checker/utils.py:130
+#: pyanaconda/modules/storage/checker/utils.py:131
 #, python-format
 msgid "Your %(mount)s partition size is lower than required %(size)s."
 msgstr "A(z) %(mount)s partíció kisebb mint a szükséges %(size)s."
 
-#: pyanaconda/modules/storage/checker/utils.py:150
+#: pyanaconda/modules/storage/checker/utils.py:151
 #, python-format
 msgid ""
 "Your %(mount)s partition is too small for %(format)s formatting (allowable "
@@ -2604,7 +2604,7 @@ msgstr ""
 "A(z) %(mount)s partíció túl kicsi a(z) %(format)s formázáshoz (a megengedett "
 "méret %(minSize)s és %(maxSize)s között van)"
 
-#: pyanaconda/modules/storage/checker/utils.py:156
+#: pyanaconda/modules/storage/checker/utils.py:157
 #, python-format
 msgid ""
 "Your %(mount)s partition is too large for %(format)s formatting (allowable "
@@ -2613,16 +2613,16 @@ msgstr ""
 "A(z) %(mount)s partíció túl nagy a(z) %(format)s formázáshoz (a megengedett "
 "méret %(minSize)s és %(maxSize)s között van)"
 
-#: pyanaconda/modules/storage/checker/utils.py:174
+#: pyanaconda/modules/storage/checker/utils.py:175
 msgid "No valid boot loader target device found. See below for details."
 msgstr ""
 "Nem található érvényes rendszerbetöltő eszköz. A részleteket lásd alább."
 
-#: pyanaconda/modules/storage/checker/utils.py:187
+#: pyanaconda/modules/storage/checker/utils.py:188
 msgid "You have not created a bootable partition."
 msgstr "Nem hozott létre rendszerindító partíciót."
 
-#: pyanaconda/modules/storage/checker/utils.py:222
+#: pyanaconda/modules/storage/checker/utils.py:223
 msgid ""
 "Your BIOS-based system needs a special partition to boot from a GPT disk "
 "label. To continue, please create a 1MiB 'biosboot' type partition."
@@ -2631,7 +2631,14 @@ msgstr ""
 "lemezről indulhasson. A folytatáshoz kérjük hozzon létre egy 1 MiB méretű "
 "„biosboot” típusú partíciót."
 
-#: pyanaconda/modules/storage/checker/utils.py:244
+#: pyanaconda/modules/storage/checker/utils.py:247
+msgid ""
+"Your firmware doesn't support XFS file system features on the /boot file "
+"system. The system will not be bootable. Please, upgrade the firmware or "
+"change the file system type."
+msgstr ""
+
+#: pyanaconda/modules/storage/checker/utils.py:305
 #, python-format
 msgid ""
 "You have not specified a swap partition. %(requiredMem)s of memory is "
@@ -2641,7 +2648,7 @@ msgstr ""
 "Nem adott meg cserehely partíciót. %(requiredMem)s memória ajánlott a "
 "telepítés folytatásához cserehely nélkül, de csak %(installedMem)s érhető el."
 
-#: pyanaconda/modules/storage/checker/utils.py:251
+#: pyanaconda/modules/storage/checker/utils.py:312
 #, python-format
 msgid ""
 "You have not specified a swap partition. %(requiredMem)s of memory is "
@@ -2651,7 +2658,7 @@ msgstr ""
 "Nem adott meg cserehely partíciót. %(requiredMem)s memória szükséges a "
 "telepítés folytatásához cserehely nélkül, de csak %(installedMem)s érhető el."
 
-#: pyanaconda/modules/storage/checker/utils.py:257
+#: pyanaconda/modules/storage/checker/utils.py:318
 msgid ""
 "You have not specified a swap partition. Although not strictly required in "
 "all cases, it will significantly improve performance for most installations."
@@ -2659,7 +2666,7 @@ msgstr ""
 "Nem adott meg cserehely partíciót. Ez ugyan nem szükséges minden esetben, de "
 "a legtöbb telepítés esetén jelentősen növelheti a teljesítményt."
 
-#: pyanaconda/modules/storage/checker/utils.py:275
+#: pyanaconda/modules/storage/checker/utils.py:336
 msgid ""
 "At least one of your swap devices does not have a UUID, which is common in "
 "swap space created using older versions of mkswap. These devices will be "
@@ -2671,7 +2678,7 @@ msgstr ""
 "eszközútvonalként lesz hivatkozva az /etc/fstab fájlban, amely nem ideális, "
 "mivel az eszközútvonalak különféle körülmények esetén megváltozhatnak. "
 
-#: pyanaconda/modules/storage/checker/utils.py:294
+#: pyanaconda/modules/storage/checker/utils.py:355
 #, python-format
 msgid ""
 "This mount point is invalid. The %s directory must be on the / file system."
@@ -2679,17 +2686,17 @@ msgstr ""
 "Ez a csatolási pont érvénytelen. A(z) %s könyvtárnak a / fájlrendszeren kell "
 "lennie."
 
-#: pyanaconda/modules/storage/checker/utils.py:310
+#: pyanaconda/modules/storage/checker/utils.py:371
 #, python-format
 msgid "Your %s must be on a separate partition or LV."
 msgstr "A(z) %s különálló partíción vagy logikai köteten kell, hogy legyen."
 
-#: pyanaconda/modules/storage/checker/utils.py:327
+#: pyanaconda/modules/storage/checker/utils.py:388
 #, python-format
 msgid "The mount point %s must be on a linux file system."
 msgstr "A(z) %s csatolási pontnak egy linuxos fájlrendszeren kell lennie."
 
-#: pyanaconda/modules/storage/checker/utils.py:352
+#: pyanaconda/modules/storage/checker/utils.py:413
 msgid ""
 "The existing unlocked LUKS device {} cannot be used for the installation "
 "without an encryption key specified for this device. Please, rescan the "
@@ -2698,7 +2705,7 @@ msgstr ""
 "A létező és feloldott {} LUKS eszköz nem használható telepítéshez az "
 "eszközhöz megadott titkosítási kulcs nélkül. Vizsgálja újra a tárolót."
 
-#: pyanaconda/modules/storage/checker/utils.py:373
+#: pyanaconda/modules/storage/checker/utils.py:434
 #, python-format
 msgid ""
 "Encryption requested for LUKS device %s but no encryption key specified for "
@@ -2707,7 +2714,7 @@ msgstr ""
 "Titkosítást kért a(z) %s LUKS eszközhöz, de nem lett adattitkosítási kulcs "
 "megadva hozzá."
 
-#: pyanaconda/modules/storage/checker/utils.py:395
+#: pyanaconda/modules/storage/checker/utils.py:456
 #, python-format
 msgid ""
 "The available memory is less than %(size)s which can be too small for LUKS2 "
@@ -2716,7 +2723,7 @@ msgstr ""
 "Az elérhető memória kevesebb mint %(size)s, amely túl kicsit a LUKS2 "
 "formátumhoz. Lehet, hogy nem fog sikerülni."
 
-#: pyanaconda/modules/storage/checker/utils.py:436
+#: pyanaconda/modules/storage/checker/utils.py:497
 #, python-format
 msgid ""
 "%s is currently mounted and cannot be used for the installation. Please "
@@ -2725,7 +2732,7 @@ msgstr ""
 "A(z) %s jelenleg csatolt, és nem használható a telepítéshez. Válassza le és "
 "próbálja újra."
 
-#: pyanaconda/modules/storage/checker/utils.py:471
+#: pyanaconda/modules/storage/checker/utils.py:532
 msgid ""
 "Selected disks {} contain volume group '{}' that also uses further "
 "unselected disks. You must select or de-select all these disks as a set."
