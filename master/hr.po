@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2021-10-03 00:54+0000\n"
-"PO-Revision-Date: 2021-10-03 14:16+0000\n"
+"PO-Revision-Date: 2021-10-03 14:33+0000\n"
 "Last-Translator: Gogo Gogsi <linux.hr@protonmail.com>\n"
 "Language-Team: Croatian <https://translate.fedoraproject.org/projects/"
 "anaconda/master/hr/>\n"
@@ -2634,8 +2634,8 @@ msgid ""
 "You have not specified a swap partition. Although not strictly required in "
 "all cases, it will significantly improve performance for most installations."
 msgstr ""
-"Niste naveli swap particiju. Iako nije strogo nužna u svim slučajevima, "
-"značajno će poboljšati izvođenje u većini instalacija."
+"Niste odredili swap particiju. Iako nije strogo potrebna u svim slučajevima, "
+"značajno će poboljšati performanse za većinu instalacija."
 
 #: pyanaconda/modules/storage/checker/utils.py:336
 msgid ""
@@ -2644,9 +2644,9 @@ msgid ""
 "referred to by device path in /etc/fstab, which is not ideal since device "
 "paths can change under a variety of circumstances. "
 msgstr ""
-"Bar jedan od vaših swap uređaja nema UUID, što je uobičajeno u swap prostoru "
-"stvorenom koristeći starije verzije mkswap. Ovi uređaji će biti navedeni "
-"putanjom u /etc/fstab, što nije idealno, jer se putanje uređaja mogu "
+"Bar jedan od vaših swap uređaja nema UUID, što je uobičajeno za swap prostor "
+"stvorenim upotrebom starije mkswap inačice. Ovi uređaji će biti navedeni "
+"putanjom uređaja u /etc/fstab, što nije idealno, jer se putanje uređaja mogu "
 "promijeniti zbog raznih okolnosti. "
 
 #: pyanaconda/modules/storage/checker/utils.py:355
@@ -2654,13 +2654,13 @@ msgstr ""
 msgid ""
 "This mount point is invalid. The %s directory must be on the / file system."
 msgstr ""
-"Točka montiranja nije važeća. Direktorij %s mora biti na datotečnom "
-"sustavu /."
+"Ova točka montiranja je nevaljana. Direktorij %s mora biti u / datotečnom "
+"sustavu."
 
 #: pyanaconda/modules/storage/checker/utils.py:371
 #, python-format
 msgid "Your %s must be on a separate partition or LV."
-msgstr "%s mora biti na zasebnoj particiji ili logičkom prostoru."
+msgstr "Vaš %s mora biti na zasebnoj particiji ili LU."
 
 #: pyanaconda/modules/storage/checker/utils.py:388
 #, python-format
@@ -2673,6 +2673,9 @@ msgid ""
 "without an encryption key specified for this device. Please, rescan the "
 "storage."
 msgstr ""
+"Postojeći otključani LUKS uređaj {} se ne može koristiti za instalaciju bez "
+"ključa šifriranja određenim za ovaj uređaj. Ponovno pretražite uređaj "
+"pohrane."
 
 #: pyanaconda/modules/storage/checker/utils.py:434
 #, python-format
@@ -2680,8 +2683,8 @@ msgid ""
 "Encryption requested for LUKS device %s but no encryption key specified for "
 "this device."
 msgstr ""
-"Zatražena je enkripcija za LUKS uređaj %s ali nije dan enkripcijski ključ za "
-"ovaj uređaj."
+"Zatraženo je šifriranje LUKS uređaja %s ali nema određenog ključa šifriranja "
+"za ovaj uređaj."
 
 #: pyanaconda/modules/storage/checker/utils.py:456
 #, python-format
@@ -2689,6 +2692,8 @@ msgid ""
 "The available memory is less than %(size)s which can be too small for LUKS2 "
 "format. It may fail."
 msgstr ""
+"Dostupna memorija je manja od %(size)s što je premalo za LUKS2 format. Možda "
+"neće uspjeti."
 
 #: pyanaconda/modules/storage/checker/utils.py:497
 #, python-format
@@ -2696,49 +2701,40 @@ msgid ""
 "%s is currently mounted and cannot be used for the installation. Please "
 "unmount it and retry."
 msgstr ""
+"%s je trenutno montiran i ne može se koristiti za instalaciju. Odmontirajte "
+"ga i pokušajte ponovno."
 
 #: pyanaconda/modules/storage/checker/utils.py:532
 msgid ""
 "Selected disks {} contain volume group '{}' that also uses further "
 "unselected disks. You must select or de-select all these disks as a set."
 msgstr ""
-"Odabrani diskovi {} sadrže prostornu grupu '{}' koja koristi i druge "
-"neodabrane diskove. Morate odabrati ili poništiti odabir svih takvih diskova "
-"zajedno."
+"Odabrani diskovi {} sadrže grupu uređaja '{}' koja koristi druge neodabrane "
+"diskove. Morate odabrati ili ukloniti sve takve diskove."
 
 #: pyanaconda/modules/storage/partitioning/base_partitioning.py:56
-#, fuzzy
-#| msgid "Failed to set up installation source"
 msgid "Failed to proceed with the installation."
-msgstr "Greška prilikom postavljanja instalacijskog izvora"
+msgstr "Neuspjeli nastavak instalacije."
 
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:65
-#, fuzzy
-#| msgid "Unknown or invalid device '%s' specified"
 msgid "Unknown or invalid device '{}' specified"
-msgstr "Naveden nepoznat ili nevažeći uređaj '%s'"
+msgstr "Nepoznati ili nevaljani uređaj '{}' je naveden"
 
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:74
-#, fuzzy
-#| msgid ""
-#| "Unknown or invalid format '%(format)s' specified for device '%(device)s'"
 msgid "Unknown or invalid format '{}' specified for device '{}'"
-msgstr ""
-"Nepoznat ili nevažeći oblik '%(format)s' naveden za uređaj '%(device)s'"
+msgstr "Nepoznati ili nevaljani format '{}' je naveden za uređaj '{}'"
 
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:81
-#, fuzzy
-#| msgid "No format on device '%s'"
 msgid "No format on device '{}'"
-msgstr "Nema oblika na uređaju '%s'"
+msgstr "Nema formata na uređaju '{}'"
 
 #: pyanaconda/modules/storage/partitioning/automatic/utils.py:165
 msgid "No usable disks selected."
-msgstr ""
+msgstr "Nema odabranih upotrebljivih diskova."
 
 #: pyanaconda/modules/storage/partitioning/automatic/utils.py:168
 msgid "Not enough free space on selected disks."
-msgstr "Nema dovoljno slobodnog prostora na odabranim diskovima."
+msgstr "Nedovoljno slobodnog prostora na odabranim diskovima."
 
 #: pyanaconda/modules/storage/partitioning/automatic/utils.py:380
 msgid "No big enough free space on disks for automatic partitioning"
