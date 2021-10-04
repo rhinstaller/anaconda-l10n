@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2021-09-13 13:27+0200\n"
-"PO-Revision-Date: 2021-10-04 18:47+0000\n"
+"PO-Revision-Date: 2021-10-05 17:13+0000\n"
 "Last-Translator: Gogo Gogsi <linux.hr@protonmail.com>\n"
 "Language-Team: Croatian <https://translate.fedoraproject.org/projects/"
 "anaconda/rhel-8/hr/>\n"
@@ -104,11 +104,11 @@ msgstr "Podešavanje uređaja pohrane"
 
 #: pyanaconda/installation.py:289 pyanaconda/kickstart.py:597
 msgid "Running pre-installation scripts"
-msgstr "Pokretanje prije instalacijskih skripti"
+msgstr "Pokretanje predinstalacijskih skripti"
 
 #: pyanaconda/installation.py:296
 msgid "Running pre-installation tasks"
-msgstr "Pokretanje prije instalacijskih skripti"
+msgstr "Pokretanje predinstalacijskih zadataka"
 
 #: pyanaconda/installation.py:339
 msgid "Installing."
@@ -246,10 +246,11 @@ msgid ""
 "Some packages, groups or modules are broken, the installation will be "
 "aborted."
 msgstr ""
+"Određeni paketi, grupe ili moduli su slomljeni, instalacija će se prekinuti."
 
 #: pyanaconda/errors.py:199
 msgid "Would you like to ignore this and continue with installation?"
-msgstr ""
+msgstr "Želite li zanemariti ovo i nastaviti s instalacijom?"
 
 #: pyanaconda/errors.py:206
 #, python-format
@@ -1370,6 +1371,24 @@ msgid ""
 "* Some drives support re-configuration of sector sizes, for example by "
 "running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 msgstr ""
+"Zaobilazna rješenja za ručnu instalaciju:\n"
+"* Odaberite samo diskove s istom veličinom sektora tijekom ručne instalacije "
+"u grafičkom ili tekstnom načinu rada.\n"
+"* Kada su za instalaciju odabrani diskovi s nedosljednom veličinom sektora, "
+"ograničite svaki stvoreni ULU grupe uređaja da koristi fizičke uređaje s "
+"istom veličinom sektora. To se može samo učiniti u grafičkom načinu rada u "
+"odjeljku prilagođenog particioniranja.\n"
+"\n"
+"Zaobilazno rješenje za kickstart instalaciju:\n"
+"* Ograničite koji će se diskovi koristiti za particioniranje određivanjem "
+"'ignoredisk --drives=..' ili 'ignoredisk --only-use=..'.\n"
+"* Odredite koji će se diskovi koristiti za svaki stvoreni ULU fizičkog "
+"uređaja: 'partition pv.1 --ondisk=..'.\n"
+"\n"
+"Općenito zaobilazno rješenje:\n"
+"* Shema običnog particioniranja može se koristiti umjesto ULU-a.\n"
+"* Određeni uređaji podržavaju ponovno podešavanje veličine sektora, na "
+"primjer pokretanjem 'hdparm --set-sector-size=<VELIČINA> <UREĐAJ>'.\n"
 
 #: pyanaconda/modules/storage/platform.py:52
 msgid "boot loader device"
@@ -4486,16 +4505,12 @@ msgid "Deployment complete: %s"
 msgstr "Implementiranje završeno: %s"
 
 #: pyanaconda/payload/rpmostreepayload.py:525
-#, fuzzy
-#| msgid "Starting package installation process"
 msgid "Starting Flatpak installation"
-msgstr "Pokretanje procesa instalacije paketa"
+msgstr "Pokretanje Flatpak instalacije"
 
 #: pyanaconda/payload/rpmostreepayload.py:542
-#, fuzzy
-#| msgid "Performing post-installation setup tasks"
 msgid "Post-installation flatpak tasks"
-msgstr "Izvršavanje poslije-instalacijskih zadataka"
+msgstr "Naknadna instalacija Flatpak zadataka"
 
 #: pyanaconda/payload/rpmostreepayload.py:548
 msgid "Flatpak installation has finished"
@@ -4553,12 +4568,12 @@ msgstr "Instalacija %s"
 #: pyanaconda/payload/dnf/payload.py:1409
 #, python-format
 msgid "Configuring %s"
-msgstr ""
+msgstr "Podešavam %s"
 
 #: pyanaconda/payload/dnf/payload.py:1412
 #, python-format
 msgid "Verifying %s"
-msgstr ""
+msgstr "Provjeravam %s"
 
 #: widgets/src/SpokeSelector.c:82
 msgid "New Selector"
