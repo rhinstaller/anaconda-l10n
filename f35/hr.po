@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2021-10-04 00:57+0000\n"
-"PO-Revision-Date: 2021-10-04 18:47+0000\n"
+"PO-Revision-Date: 2021-10-05 17:13+0000\n"
 "Last-Translator: Gogo Gogsi <linux.hr@protonmail.com>\n"
 "Language-Team: Croatian <https://translate.fedoraproject.org/projects/"
 "anaconda/f35/hr/>\n"
@@ -2798,7 +2798,7 @@ msgstr "Pokušaj korištenja neodređene particije \"{}\" u RAID specifikaciji."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:596
 msgid "RAID volume \"{}\" specified with --useexisting does not exist."
-msgstr "RAID uređaj \"{}\" određen s --useexisting ne postoji."
+msgstr "RAID uređaj \"{}\" određen sa --useexisting ne postoji."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:607
 msgid "The RAID volume name \"{}\" is already in use."
@@ -3055,6 +3055,24 @@ msgid ""
 "* Some drives support re-configuration of sector sizes, for example by "
 "running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 msgstr ""
+"Zaobilazna rješenja za ručnu instalaciju:\n"
+"* Odaberite samo diskove s istom veličinom sektora tijekom ručne instalacije "
+"u grafičkom ili tekstnom načinu rada.\n"
+"* Kada su za instalaciju odabrani diskovi s nedosljednom veličinom sektora, "
+"ograničite svaki stvoreni ULU grupe uređaja da koristi fizičke uređaje s "
+"istom veličinom sektora. To se može samo učiniti u grafičkom načinu rada u "
+"odjeljku prilagođenog particioniranja.\n"
+"\n"
+"Zaobilazno rješenje za kickstart instalaciju:\n"
+"* Ograničite koji će se diskovi koristiti za particioniranje određivanjem "
+"'ignoredisk --drives=..' ili 'ignoredisk --only-use=..'.\n"
+"* Odredite koji će se diskovi koristiti za svaki stvoreni ULU fizičkog "
+"uređaja: 'partition pv.1 --ondisk=..'.\n"
+"\n"
+"Općenito zaobilazno rješenje:\n"
+"* Shema običnog particioniranja može se koristiti umjesto ULU-a.\n"
+"* Određeni uređaji podržavaju ponovno podešavanje veličine sektora, na "
+"primjer pokretanjem 'hdparm --set-sector-size=<VELIČINA> <UREĐAJ>'.\n"
 
 #: pyanaconda/modules/storage/devicetree/root.py:339
 msgid "Unknown Linux"
@@ -3571,11 +3589,11 @@ msgstr "Podešavanje uređaja pohrane"
 
 #: pyanaconda/installation.py:295 pyanaconda/kickstart.py:507
 msgid "Running pre-installation scripts"
-msgstr "Pokretanje prije instalacijskih skripti"
+msgstr "Pokretanje predinstalacijskih skripti"
 
 #: pyanaconda/installation.py:305
 msgid "Running pre-installation tasks"
-msgstr "Pokretanje prije instalacijskih skripti"
+msgstr "Pokretanje predinstalacijskih zadataka"
 
 #: pyanaconda/installation.py:327
 msgid "Installing."
@@ -3660,27 +3678,19 @@ msgstr ""
 "%(details)s"
 
 #: pyanaconda/errors.py:155
-#, fuzzy
-#| msgid ""
-#| "The following error occurred while installing.  This is a fatal error and "
-#| "installation will be aborted."
 msgid ""
 "The following error occurred while setting up the payload. This is a fatal "
 "error and installation will be aborted."
 msgstr ""
-"Došlo je do sljedeće greške pri instalaciji. Ovo je kobna greška i "
+"Došlo je do sljedeće greške pri postavljanju payloada. Ovo je kobna greška i "
 "instalacija će biti prekinuta."
 
 #: pyanaconda/errors.py:163
-#, fuzzy
-#| msgid ""
-#| "The following error occurred while installing.  This is a fatal error and "
-#| "installation will be aborted."
 msgid ""
 "The following error occurred while installing the payload. This is a fatal "
 "error and installation will be aborted."
 msgstr ""
-"Došlo je do sljedeće greške pri instalaciji. Ovo je kobra greška i "
+"Došlo je do sljedeće greške pri instalaciji payloada. Ovo je kobna greška i "
 "instalacija će biti prekinuta."
 
 #: pyanaconda/errors.py:171
