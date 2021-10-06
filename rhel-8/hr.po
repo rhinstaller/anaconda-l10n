@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2021-09-13 13:27+0200\n"
-"PO-Revision-Date: 2021-10-05 17:13+0000\n"
+"PO-Revision-Date: 2021-10-06 15:49+0000\n"
 "Last-Translator: Gogo Gogsi <linux.hr@protonmail.com>\n"
 "Language-Team: Croatian <https://translate.fedoraproject.org/projects/"
 "anaconda/rhel-8/hr/>\n"
@@ -42,12 +42,12 @@ msgstr ""
 #: pyanaconda/addons.py:97
 #, python-format
 msgid "Executing %s addon"
-msgstr ""
+msgstr "Pokretanje %s dodatka"
 
 #: pyanaconda/addons.py:113
 #, python-format
 msgid "Setting up %s addon"
-msgstr ""
+msgstr "Postavljanje %s dodatka"
 
 #: pyanaconda/input_checking.py:539
 msgid "Full name cannot contain colon characters"
@@ -167,8 +167,8 @@ msgid ""
 msgstr ""
 "Došlo je do problema s postojećim podešavanjem uređaja pohrane ili vašim "
 "početnim postavkama, na primjer kickstart datotekom. Morate riješiti ovaj "
-"problem prije nastavka instalacije. Postoji dostupna ljuska kojoj možete "
-"pristupiti pritiskom ctrl-alt-f1 i zatim ctrl-b 2.\n"
+"problem prije nastavka instalacije. Postoji dostupna naredbena ljuska kojoj "
+"možete pristupiti pritiskom ctrl-alt-f1 i zatim ctrl-b 2.\n"
 "\n"
 "Kada riješiti problem možete ponovno pokrenuti pretraživanje uređaja "
 "pohrane. Ako ne riješite problem morate zatvoriti instalacijski program."
@@ -261,6 +261,10 @@ msgid ""
 "\n"
 "%(exception)s"
 msgstr ""
+"Strujanje nije određeno za modul bez zadanog strujanja. Ovo je kobna greška "
+"i instalacija će se prekinuti. Pojedinosti greške su:\n"
+"\n"
+"%(exception)s"
 
 #: pyanaconda/errors.py:214
 #, python-format
@@ -270,6 +274,10 @@ msgid ""
 "\n"
 "%(exception)s"
 msgstr ""
+"Više strujanja nije određeno za jedan modul. Ovo je kobna greška i "
+"instalacija će se prekinuti. Pojedinosti ove greške su:\n"
+"\n"
+"%(exception)s"
 
 #: pyanaconda/errors.py:222
 #, python-format
@@ -405,7 +413,8 @@ msgstr "Pokrenite %s za demontiranje sustava kada završite."
 msgid ""
 "When finished, please exit from the shell and your system will reboot.\n"
 msgstr ""
-"Kada završite, izađite iz ljuske i vaš sustav će se ponovno pokrenuti.\n"
+"Kada završite, izađite iz naredbene ljuske i vaš sustav će se ponovno "
+"pokrenuti.\n"
 
 #: pyanaconda/rescue.py:430
 #, python-format
@@ -945,8 +954,7 @@ msgstr ""
 #, python-format
 msgid "Tried to use undefined partition \"%s\" in Volume Group specification"
 msgstr ""
-"Pokušaj korištenja nedefinirane particije \"%s\" u specifikaciji grupe "
-"volumena"
+"Pokušaj korištenja neodređene particije \"%s\" u specifikaciji grupe uređaja"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:782
 #, python-format
@@ -1033,8 +1041,8 @@ msgid ""
 "Logical volume size \"%(logvolSize)s\" must be larger than the volume group "
 "extent size of \"%(extentSize)s\"."
 msgstr ""
-"Logički volumen veličine \"%(logvolSize)s\" mora biti veći nego grupa "
-"volumena opsega veličine \"%(extentSize)s\"."
+"Logički uređaj veličine \"%(logvolSize)s\" mora biti veći od grupe uređaja "
+"veličine \"%(extentSize)s\"."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1238
 #, python-format
@@ -1042,8 +1050,8 @@ msgid ""
 "Btrfs partition \"%(device)s\" has a format of \"%(format)s\", but should "
 "have a format of \"btrfs\"."
 msgstr ""
-"BTRFS particija \"%(device)s\" je vrste \"%(format)s\", ali bi trebala biti "
-"vrste \"btrfs\"."
+"BTRFS particija \"%(device)s\" je formata \"%(format)s\", ali bi trebala "
+"biti formata \"btrfs\"."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1246
 #, python-format
@@ -1072,19 +1080,19 @@ msgstr "Neuspjeli nastavak instalacije."
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:64
 #, python-format
 msgid "Unknown or invalid device '%s' specified"
-msgstr "Naveden nepoznat ili nevažeći uređaj '%s'"
+msgstr "Nepoznat ili neispravan uređaj '%s' je naveden"
 
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:72
 #, python-format
 msgid ""
 "Unknown or invalid format '%(format)s' specified for device '%(device)s'"
 msgstr ""
-"Nepoznat ili nevažeći oblik '%(format)s' naveden za uređaj '%(device)s'"
+"Nepoznat ili neispravan format '%(format)s' je naveden za uređaj '%(device)s'"
 
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:79
 #, python-format
 msgid "No format on device '%s'"
-msgstr "Nema oblika na uređaju '%s'"
+msgstr "Nema formata na uređaju '%s'"
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:213
 #, python-brace-format
@@ -1392,7 +1400,7 @@ msgstr ""
 
 #: pyanaconda/modules/storage/platform.py:52
 msgid "boot loader device"
-msgstr ""
+msgstr "uređaj učitača pokretanja"
 
 #: pyanaconda/modules/storage/platform.py:54
 msgid "RAID Device"
@@ -1492,7 +1500,7 @@ msgstr ""
 #: pyanaconda/modules/storage/snapshot/device.py:43
 #, python-format
 msgid "Snapshot: origin \"%s\" doesn't exists!"
-msgstr ""
+msgstr "Snimka: izvor \"%s\" ne postoji!"
 
 #: pyanaconda/modules/storage/snapshot/device.py:47
 #, python-format
@@ -1500,7 +1508,7 @@ msgid ""
 "Snapshot: origin \"%(origin)s\" of snapshot \"%(name)s\" is not a valid thin "
 "LV device."
 msgstr ""
-"Snimka: izvor \"%(origin)s\" snimke \"%(name)s\" nije važeći tanki LV uređaj."
+"Snimka: izvor \"%(origin)s\" snimke \"%(name)s\" nije valjan thin LU uređaj."
 
 #: pyanaconda/modules/storage/snapshot/device.py:53
 #, python-format
@@ -1543,7 +1551,7 @@ msgstr "nedostupan"
 
 #: pyanaconda/modules/payloads/source/harddrive/harddrive.py:95
 msgid "The --biospart parameter of harddrive command is not supported!"
-msgstr ""
+msgstr "--biospart parametar ili harddrive naredba nisu podržani!"
 
 #: pyanaconda/modules/payloads/source/cdn/cdn.py:47
 msgid "Red Hat CDN"
@@ -1638,7 +1646,7 @@ msgstr "Upišite ssh install@%s za za početak instalacije."
 
 #: pyanaconda/startup_utils.py:230
 msgid "Please ssh install@HOSTNAME to continue installation."
-msgstr "Upišite ssh install@NAZIV-POSLUŽITELJA za za početak instalacije."
+msgstr "Upišite ssh install@<NAZIV POSLUŽITELJA> za nastavak instalacije."
 
 #: pyanaconda/ui/tui/hubs/summary.py:47
 msgid "Installation"
@@ -2279,11 +2287,11 @@ msgstr ""
 #: pyanaconda/ui/tui/spokes/storage.py:671
 msgctxt "TUI|Spoke Navigation|Partitioning"
 msgid "s"
-msgstr ""
+msgstr "s"
 
 #: pyanaconda/ui/tui/spokes/storage.py:661
 msgid "rescan devices"
-msgstr ""
+msgstr "ponovno pretraži uređaje"
 
 #: pyanaconda/ui/tui/spokes/storage.py:733
 msgid ""
@@ -2456,7 +2464,7 @@ msgstr "Odaberite vremensku zonu. Koristite brojke ili utipkajte nazive izravno"
 
 #: pyanaconda/ui/tui/spokes/time_spoke.py:376
 msgid "back to region list"
-msgstr ""
+msgstr "natrag na popis regija"
 
 #: pyanaconda/ui/tui/spokes/time_spoke.py:389
 msgid "NTP configuration"
@@ -2464,7 +2472,7 @@ msgstr "NTP podešavanje"
 
 #: pyanaconda/ui/tui/spokes/time_spoke.py:404
 msgid "no NTP servers have been configured"
-msgstr "nijedan NTP poslužitelj nije postavljen"
+msgstr "nema podešenih NTP poslužitelja"
 
 #: pyanaconda/ui/tui/spokes/time_spoke.py:415
 msgid "Add NTP server"
@@ -4010,6 +4018,8 @@ msgid ""
 "Support for this hardware has been removed in this major OS release. Please "
 "check theremoved functionality section of the release notes."
 msgstr ""
+"Podrška za ovaj hardver je uklonjena u glavnom izdanju OS-a. Provjerite "
+"odlomak bilješka izdanja uklonjenih funkcionalnosti."
 
 #: pyanaconda/core/constants.py:164
 msgid ""
@@ -4174,7 +4184,7 @@ msgstr "Ispitivanje uređaja pohrane..."
 
 #: pyanaconda/core/constants.py:299
 msgid "Testing availability..."
-msgstr "Provjeravam dostupnost..."
+msgstr "Testiranje dostupnosti..."
 
 #: pyanaconda/core/constants.py:300
 msgid "Downloading package metadata..."
@@ -4300,17 +4310,17 @@ msgstr "Bežična mreža je povezana sa %(access_point)s"
 #: pyanaconda/network.py:516
 #, python-format
 msgid "Bond %(interface_name)s (%(list_of_slaves)s) connected"
-msgstr "Veza %(interface_name)s (%(list_of_slaves)s) spojena"
+msgstr "Veza %(interface_name)s (%(list_of_slaves)s) je povezana"
 
 #: pyanaconda/network.py:520
 #, python-format
 msgid "Team %(interface_name)s (%(list_of_slaves)s) connected"
-msgstr "Tim %(interface_name)s %(list_of_slaves)s spojen"
+msgstr "Tim %(interface_name)s (%(list_of_slaves)s) je povezan"
 
 #: pyanaconda/network.py:524
 #, python-format
 msgid "Bridge %(interface_name)s (%(list_of_slaves)s) connected"
-msgstr "Most %(interface_name)s %(list_of_slaves)s spojen"
+msgstr "Most %(interface_name)s (%(list_of_slaves)s) je povezan"
 
 #: pyanaconda/network.py:530
 #, python-format
@@ -4378,8 +4388,8 @@ msgid ""
 "ADDRESS."
 msgstr ""
 "Ručno povežite vaš vnc klijent na IP ADRESU:%s za početak instalacije. "
-"Prebacite na korisničku ljusku (Ctrl-B 2) i pokrenite 'ip addr' za "
-"pronalazak IP ADRESE."
+"Prebacite na naredbenu ljusku (Ctrl-B 2) i pokrenite 'ip addr' za pronalazak "
+"IP ADRESE."
 
 #: pyanaconda/vnc.py:219
 msgid "Starting VNC..."
@@ -4463,7 +4473,7 @@ msgstr "%(productName)s %(productVersion)s INSTALACIJA"
 #: pyanaconda/pwpolicy.py:146
 #, python-format
 msgid "policy name required for %s"
-msgstr "ime pravila potrebno za %s"
+msgstr "naziv pravila potreban za %s"
 
 #: pyanaconda/pwpolicy.py:155
 #, python-format
@@ -4479,6 +4489,7 @@ msgstr "Instaliram %(flatpak_name)s"
 #, python-format
 msgid "Receiving objects: %(percent)d%% (%(fetched)d/%(requested)d) %(bytes)s"
 msgstr ""
+"Preuzimanje objekta: %(percent)d%% (%(fetched)d/%(requested)d) %(bytes)s"
 
 #: pyanaconda/payload/rpmostreepayload.py:139
 msgid "Writing objects"
@@ -5496,8 +5507,8 @@ msgid ""
 "The root account is used for administering the system.  Enter a password for "
 "the root user."
 msgstr ""
-"Administratorski (\"root\") račun se koristi za administraciju sustava.  "
-"Unesite lozinku za 'root' korisnika."
+"Korijenski račun se upotrebljava za administriranje sustava. Upišite lozinku "
+"za korijenskog korisnika."
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:29
 msgctxt "GUI|Software Source|ISO Chooser Dialog"
@@ -6567,7 +6578,7 @@ msgid ""
 "If you do not understand or accept the risks, then please exit this program "
 "by selecting \"I want to exit\" which will reboot your system."
 msgstr ""
-"Napomena: ovo predizdanje softvera namijenjeno za razvoj i testiranje. Ne "
+"Napomena: ovo predizdanje softvera namijenjeno je za razvoj i testiranje. Ne "
 "koristite ovaj softver za bilo kakav kritičan rad ili za proizvodno "
 "okruženje.\n"
 "\n"
@@ -6982,7 +6993,7 @@ msgid ""
 "complete other installation options while formatting completes."
 msgstr ""
 "Ovo može potrajati. Možete <a href=\"\">se vratiti na glavni izbornik</a> za "
-"dovršetak ostalih instalacijskih mogućnosti dok se formatiranje ne završi."
+"završetak ostalih instalacijskih mogućnosti dok se formatiranje ne završi."
 
 #: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:248
 msgid "Disk formatting complete."
@@ -7320,7 +7331,7 @@ msgstr "Instaliraj live CD-a na čvrsti disk"
 #: data/liveinst/gnome/rhel-welcome.desktop:3
 #: data/liveinst/gnome/rhel-welcome.js:62
 msgid "Welcome to Red Hat Enterprise Linux"
-msgstr ""
+msgstr "Dobrodošli u Red Hat Enterprise Linux"
 
 #: data/liveinst/liveinst-setup.desktop:4
 msgid "Liveinst Setup"
@@ -7328,7 +7339,7 @@ msgstr "Postavljanje live instalacije"
 
 #: data/liveinst/gnome/rhel-welcome.js:91
 msgid "Try RHEL"
-msgstr ""
+msgstr "Isprobajte RHEL"
 
 #: data/liveinst/gnome/rhel-welcome.js:107
 msgid ""
@@ -7336,6 +7347,9 @@ msgid ""
 "You can install Red Hat Enterprise Linux now, or choose \"Install to Hard "
 "Drive\" in the Activities Overview at any later time."
 msgstr ""
+"Trenutno koristite Red Hat Enterprise Linux sa live medija.\n"
+"Možete instalirati Red Hat Enterprise Linux odmah, ili kasnije "
+"odabrati\"Instaliraj na čvrsti disk\" u Aktivnosti pregledu."
 
 #: data/liveinst/gnome/rhel-welcome.js:127
 msgid ""
