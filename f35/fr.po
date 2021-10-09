@@ -52,13 +52,14 @@
 # Arnaud T. <listes.00@gmail.com>, 2020.
 # Guillaume Scigala <g.scigala@startmail.com>, 2021.
 # Natacha Rault <n.rault@me.com>, 2021.
+# Titouan Bénard <itotutona@evta.fr>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2021-10-09 00:50+0000\n"
-"PO-Revision-Date: 2021-09-15 03:15+0000\n"
-"Last-Translator: Ludek Janda <ljanda@redhat.com>\n"
+"PO-Revision-Date: 2021-10-09 20:50+0000\n"
+"Last-Translator: Titouan Bénard <itotutona@evta.fr>\n"
 "Language-Team: French <https://translate.fedoraproject.org/projects/anaconda/"
 "f35/fr/>\n"
 "Language: fr\n"
@@ -410,11 +411,13 @@ msgstr "Le nom du groupe de volumes « %s » est déjà utilisé."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:821
 msgid "/boot cannot be of type \"lvmlv\" on s390x"
-msgstr ""
+msgstr "/boot ne peut pas être de type \"lvmlv\" sur s390x"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:851
 msgid "Size cannot be decided on from kickstart nor obtained from device."
 msgstr ""
+"La taille ne peut pas être décidée à partir du kickstart ni obtenue à partir "
+"de l'appareil."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:867
 #, fuzzy
@@ -1479,16 +1482,13 @@ msgstr ""
 "Ceci est probablement dû à une erreur liée à votre source d’installation."
 
 #: pyanaconda/modules/payloads/payload/dnf/download_progress.py:68
-#, fuzzy, python-brace-format
-#| msgid ""
-#| "Downloading %(total_files)s RPMs, %(downloaded)s / %(total_size)s "
-#| "(%(percent)d%%) done."
+#, python-brace-format
 msgid ""
 "Downloading {total_files} RPMs, {downloaded_size} / {total_size} "
 "({total_percent}%) done."
 msgstr ""
-"Téléchargement de %(total_files)s RPM, %(downloaded)s / %(total_size)s "
-"(%(percent)d%%) fait."
+"Téléchargement de {total_files} RPM, {downloaded_size} / {total_size}  "
+"({total_percent}%) complété."
 
 #: pyanaconda/modules/payloads/payload/live_image/installation.py:52
 msgid "Checking image checksum"
@@ -1496,7 +1496,7 @@ msgstr "Vérification de la somme de contrôle de l’image"
 
 #: pyanaconda/modules/payloads/payload/live_image/installation_progress.py:74
 msgid "Synchronizing writes to disk"
-msgstr ""
+msgstr "Synchronisation des écritures sur le disque"
 
 #: pyanaconda/modules/payloads/payload/live_image/installation_progress.py:95
 #, fuzzy
@@ -1571,7 +1571,7 @@ msgstr "Miroir le plus proche"
 
 #: pyanaconda/modules/payloads/source/flatpak/flatpak.py:49
 msgid "Flatpak"
-msgstr ""
+msgstr "Flatpak"
 
 #: pyanaconda/modules/payloads/source/cdrom/cdrom.py:62
 msgid "Local media"
@@ -2221,7 +2221,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:538
 msgctxt "GUI|Custom Partitioning|Autopart Page"
 msgid "_Encrypt automatically created mount points by default:"
-msgstr ""
+msgstr "_Chiffrer crée automatiquement les points de montage par défaut :"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:58
 #, python-format
@@ -2789,12 +2789,16 @@ msgid ""
 "Repository %s has invalid NFS server, exactly one colon ':' must be present "
 "between host and directory"
 msgstr ""
+"Le référentiel %s a un serveur NFS non valide, plus précisément, les deux-"
+"points ':' doivent être présents entre l'hôte et le répertoire"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:1185
 msgid ""
 "Invalid NFS server, exactly one colon ':' must be present between host and "
 "directory"
 msgstr ""
+"Serveur NFS non valide, exactement un deux-points ':' doit être présent "
+"entre l'hôte et le répertoire"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:1194
 #, python-format
@@ -3860,8 +3864,6 @@ msgstr "Veuillez sélectionner la prise en charge langue à installer"
 
 #. TRANSLATORS: 'b' to go back to region list
 #: pyanaconda/ui/tui/spokes/time_spoke.py:47
-#, fuzzy
-#| msgid "back to region list"
 msgid "to go back to region list"
 msgstr "pour retourner à la liste des régions"
 
@@ -4074,8 +4076,6 @@ msgstr ""
 
 #. TRANSLATORS: 's' to rescan devices
 #: pyanaconda/ui/tui/spokes/storage.py:62
-#, fuzzy
-#| msgid "rescan devices"
 msgid "to rescan devices"
 msgstr "refaire l’analyse des périphériques"
 
@@ -4461,6 +4461,9 @@ msgid ""
 "which will result in a fatal error when it is encountered. Please modify "
 "your kickstart file to remove this section."
 msgstr ""
+"La section {} est obsolète. Il peut être supprimé des versions futures, ce "
+"qui entraînera une erreur fatale lorsqu'il sera rencontré.  Veuillez "
+"modifier votre fichier kickstart pour supprimer cette section."
 
 #: pyanaconda/kickstart.py:450
 msgid ""
@@ -4519,10 +4522,6 @@ msgid "Do you really want to quit?"
 msgstr "Voulez-vous vraiment quitter ?"
 
 #: pyanaconda/core/constants.py:154
-#, fuzzy
-#| msgid ""
-#| "Support for this hardware has been removed in this major OS release. "
-#| "Please check theremoved functionality section of the release notes."
 msgid ""
 "Support for this hardware has been removed in this major OS release. Please "
 "check the removed functionality section of the release notes."
@@ -4928,7 +4927,7 @@ msgstr "Quitter"
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:8
 msgid "ROOT ACCOUNT"
-msgstr ""
+msgstr "COMPTE ROOT"
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:70
 msgid ""
@@ -4938,6 +4937,12 @@ msgid ""
 "system. For this reason, logging into this system as the root user is best "
 "done only to perform system maintenance or administration."
 msgstr ""
+"Le compte root est utilisé pour administrer le système.\n"
+"\n"
+" L'utilisateur root (également connu sous le nom de super utilisateur) a un "
+"accès complet à l'ensemble du système.  Pour cette raison, il est préférable "
+"de se connecter à ce système en tant qu'utilisateur root uniquement pour "
+"effectuer la maintenance ou l'administration du système."
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:97
 #, fuzzy
@@ -4959,6 +4964,9 @@ msgid ""
 "with root account. This will prevent unintended administrative access to the "
 "system."
 msgstr ""
+"La désactivation du compte root verrouillera le compte et désactivera "
+"l'accès à distance avec le compte root.  Cela empêchera tout accès "
+"administratif involontaire au système."
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:162
 msgctxt "GUI|Password"
@@ -4966,6 +4974,8 @@ msgid ""
 "Enabling the root account will allow you to set a root password and "
 "optionally enable remote access to root account on this system."
 msgstr ""
+"L'activation du compte root vous permettra de définir un mot de passe root "
+"et éventuellement d'activer l'accès à distance au compte root sur ce système."
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:196
 msgctxt "GUI|Password"
@@ -5531,7 +5541,7 @@ msgstr "Supprimer"
 
 #: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:318
 msgid "Edit"
-msgstr ""
+msgstr "Editer"
 
 #: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:354
 msgid ""
@@ -5541,6 +5551,11 @@ msgid ""
 "<b>NTS</b> - If checked, indicates support for Network Time Security "
 "authentication."
 msgstr ""
+"<b>Pool</b > - Si coché, indique que le nom d'hôte fait référence à un "
+"ensemble de serveurs.\n"
+"\n"
+"<b>NTS</b> - Si coché, indique la prise en charge de l'authentification "
+"Network Time Security."
 
 #: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:378
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:288
