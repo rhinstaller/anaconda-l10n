@@ -32,8 +32,8 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2021-10-16 00:58+0000\n"
-"PO-Revision-Date: 2021-07-03 10:04+0000\n"
-"Last-Translator: Dankaházi (ifj.) István <dankahazi.istvan@gmail.com>\n"
+"PO-Revision-Date: 2021-10-18 09:05+0000\n"
+"Last-Translator: Balázs Meskó <meskobalazs@mailbox.org>\n"
 "Language-Team: Hungarian <https://translate.fedoraproject.org/projects/"
 "anaconda/rhel-9/hu/>\n"
 "Language: hu\n"
@@ -41,7 +41,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.7.1\n"
+"X-Generator: Weblate 4.8\n"
 
 #: anaconda.py:315
 msgid "Unable to create PID file"
@@ -58,15 +58,15 @@ msgstr ""
 
 #: tests/nosetests/pyanaconda_tests/ui/common_code_tests.py:31
 msgid "FOO"
-msgstr ""
+msgstr "FOO"
 
 #: tests/nosetests/pyanaconda_tests/ui/common_code_tests.py:42
 msgid "BAR"
-msgstr ""
+msgstr "BAR"
 
 #: tests/nosetests/pyanaconda_tests/ui/common_code_tests.py:53
 msgid "BAZ"
-msgstr ""
+msgstr "BAZ"
 
 #: pyanaconda/payload/dnf/payload.py:852
 msgid "Starting package installation process"
@@ -190,28 +190,20 @@ msgstr ""
 "%(details)s"
 
 #: pyanaconda/errors.py:185
-#, fuzzy
-#| msgid ""
-#| "The following error occurred while installing.  This is a fatal error and "
-#| "installation will be aborted."
 msgid ""
 "The following error occurred while setting up the payload. This is a fatal "
 "error and installation will be aborted."
 msgstr ""
-"A következő hiba történt a telepítés közben. Ez egy végzetes hiba, és a "
-"telepítés megszakad."
+"A következő hiba történt a tartalom beállítása során. Ez egy végzetes hiba, "
+"és a telepítés megszakad."
 
 #: pyanaconda/errors.py:193
-#, fuzzy
-#| msgid ""
-#| "The following error occurred while installing.  This is a fatal error and "
-#| "installation will be aborted."
 msgid ""
 "The following error occurred while installing the payload. This is a fatal "
 "error and installation will be aborted."
 msgstr ""
-"A következő hiba történt a telepítés közben. Ez egy végzetes hiba, és a "
-"telepítés megszakad."
+"A következő hiba történt a tartalom telepítése során. Ez egy végzetes hiba, "
+"és a telepítés megszakad."
 
 #: pyanaconda/errors.py:201
 msgid ""
@@ -251,18 +243,12 @@ msgstr ""
 "Szeretné figyelmen kívül hagyni ezt, és folytatni a telepítést?"
 
 #: pyanaconda/errors.py:238
-#, fuzzy
-#| msgid ""
-#| "The following error occurred while installing the boot loader. The system "
-#| "will not be bootable. Would you like to ignore this and continue with "
-#| "installation?"
 msgid ""
 "An error occurred during Red Hat Insights configuration. Would you like to "
 "ignore this and continue with installation?"
 msgstr ""
-"Az alábbi hiba történt a rendszerindító telepítése közben. A rendszer nem "
-"lesz indítható. Szeretné ezt figyelmen kívül hagyni, és folytatni a "
-"telepítést?"
+"Hiba történt a Red Hat Insights beállítása során. Figyelmen kívül hagyja, és "
+"folytata a telepítést?"
 
 #: pyanaconda/input_checking.py:548
 msgid "Full name cannot contain colon characters"
@@ -550,16 +536,12 @@ msgstr ""
 "particionáláshoz"
 
 #: pyanaconda/modules/storage/partitioning/interactive/add_device.py:72
-#, fuzzy
-#| msgid "Failed to add new device."
 msgid "Failed to add a device."
-msgstr "Az új eszköz hozzáadása sikertelen."
+msgstr "Az eszköz hozzáadása sikertelen."
 
 #: pyanaconda/modules/storage/partitioning/interactive/change_device.py:87
-#, fuzzy
-#| msgid "Failed to add new device."
 msgid "Failed to change a device."
-msgstr "Az új eszköz hozzáadása sikertelen."
+msgstr "Az eszköz módosítása sikertelen."
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:213
 #, python-brace-format
@@ -662,10 +644,8 @@ msgstr ""
 "egy másik eszközt."
 
 #: pyanaconda/modules/storage/partitioning/base_partitioning.py:57
-#, fuzzy
-#| msgid "Failed to set up installation source"
 msgid "Failed to proceed with the installation."
-msgstr "Telepítési forrás beállítása sikertelen"
+msgstr "A telepítés folytatása sikertelen."
 
 #: pyanaconda/modules/storage/bootloader/execution.py:185
 msgid "No match found for given boot drive \"{}\"."
@@ -841,6 +821,24 @@ msgid ""
 "* Some drives support re-configuration of sector sizes, for example by "
 "running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 msgstr ""
+"Kerülőmegoldások a kézi telepítésekhez:\n"
+"* Csak azonos szektorméretű lemezeket válasszon ki a grafikus vagy szöveges "
+"módú kézi telepítésnél.\n"
+"* Ha nem konzisztens szektorméretű lemezek vannak kiválasztva a "
+"telepítésnél, akkor korlátozzá az LVM kötetcsoportokat azonos szektorméretű "
+"fizikai kötetekre. Ez csak grafikus módban tehető meg, az Egyéni "
+"particionálási lépést használva.\n"
+"\n"
+"Kerülőmegoldás a kickstart telepítésekhez:\n"
+"* Korlátozza a particionálás során használt lemezeket az „ignoredisk "
+"--drives=..” vagy az „ignoredisk --only-use=..” kapcsolókkal.\n"
+"* Adja meg, hogy mely lemezek legyenek használva a létrehozott LVM fizikai "
+"kötetekhez: „partition pv.1 --ondisk=..”.\n"
+"\n"
+"Általános kerülőmegoldások:\n"
+"* Egyszerű particionálási séma az LVM helyett.\n"
+"* Egyes lemezek támogatják a szektorméretek újbóli beállítását, például a „"
+"hdparm --set-sector-size=<MÉRET> <ESZKÖZ>” futtatásával.\n"
 
 #: pyanaconda/modules/storage/disk_selection/utils.py:36
 msgid "The selected disk {} is not recognized."
@@ -2083,6 +2081,18 @@ msgid ""
 "'512m' = 512 megabytes\n"
 "'123456789' = 123 terabytes and a bit less than a half\n"
 msgstr ""
+"Adja meg a kívánt kapacitást egész vagy tizedestört számokkal, a megfelelő "
+"mértékegységgel.\n"
+"\n"
+"A számjegycsoportokat elválasztó szóközök nem engedettek. A mértékegységes "
+"decimális vagy bináris előtagból állnak, melyet nem kötelező módon a B betű "
+"követ. A kis- és nagybetűk nem számítanak a mértékegységeknél. Az "
+"alapértelmezett egység a MiB, ha nem adja meg.\n"
+"\n"
+"Példák az érvényes bemenetre:\n"
+"„100 GiB” = 100 gibibájt\n"
+"„512m” = 512 megabájt\n"
+"„123456789” = 123 és egy kicsit kevesebb mint fél terabájt\n"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:69
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:72
@@ -2831,6 +2841,8 @@ msgid ""
 "Invalid input. Specify the Desired Capacity in whole or decimal numbers, "
 "with an appropriate unit."
 msgstr ""
+"Érvénytelen bemenet. Adja meg a kívánt kapacitást egész számmal vagy "
+"tizedestörttel, és egy megfelelő mértékegységgel."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1794
 #: pyanaconda/ui/gui/spokes/blivet_gui.py:322
@@ -3639,8 +3651,6 @@ msgstr "Válassza ki a telepítendő nyelvi támogatást"
 
 #. TRANSLATORS: 'b' to go back to region list
 #: pyanaconda/ui/tui/spokes/time_spoke.py:47
-#, fuzzy
-#| msgid "back to region list"
 msgid "to go back to region list"
 msgstr "vissza a régiólistához"
 
@@ -3850,8 +3860,6 @@ msgstr ""
 
 #. TRANSLATORS: 's' to rescan devices
 #: pyanaconda/ui/tui/spokes/storage.py:62
-#, fuzzy
-#| msgid "rescan devices"
 msgid "to rescan devices"
 msgstr "eszközök újraolvasása"
 
@@ -5023,7 +5031,7 @@ msgstr ""
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:485
 msgid "Enter size and unit."
-msgstr ""
+msgstr "Adjon meg egy méretet és egy mértékegységet."
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:548
 msgid "Single"
@@ -5476,53 +5484,36 @@ msgstr "_Válassza ki az eszköztípust, amit hozzá kíván adni"
 
 #: pyanaconda/ui/gui/spokes/network.glade:153
 #: pyanaconda/ui/gui/spokes/network.glade:286
-#, fuzzy
-#| msgid "Network"
 msgid "Wi-Fi Networks"
-msgstr "Hálózat"
+msgstr "Wi-Fi hálózatok"
 
 #: pyanaconda/ui/gui/spokes/network.glade:170
-#, fuzzy
-#| msgctxt "GUI|Detailed Error Dialog"
-#| msgid "_Cancel"
 msgctxt "GUI|Network|Wireless|Configure"
 msgid "_Cancel"
 msgstr "_Mégse"
 
 #: pyanaconda/ui/gui/spokes/network.glade:184
-#, fuzzy
-#| msgid "Configure NTP"
 msgctxt "GUI|Network|Wireless|Configure"
 msgid "C_onfigure"
-msgstr "NTP beállítása"
+msgstr "_Beállítás"
 
 #: pyanaconda/ui/gui/spokes/network.glade:207
-#, fuzzy
-#| msgid "Writing network configuration"
 msgid "Select a network to configure"
-msgstr "Hálózati beállítások rögzítése"
+msgstr "Válassza ki a beállítandó hálózatot"
 
 #: pyanaconda/ui/gui/spokes/network.glade:303
-#, fuzzy
-#| msgctxt "GUI|Detailed Error Dialog"
-#| msgid "_Cancel"
 msgctxt "GUI|Network|Wireless|Select Network Dialog"
 msgid "_Cancel"
 msgstr "_Mégse"
 
 #: pyanaconda/ui/gui/spokes/network.glade:317
-#, fuzzy
-#| msgctxt "GUI|Network|Authentication Dialog"
-#| msgid "C_onnect"
 msgctxt "GUI|Network|Wireless|Select Network Dialog"
 msgid "C_onnect"
 msgstr "Kapcs_olódás"
 
 #: pyanaconda/ui/gui/spokes/network.glade:340
-#, fuzzy
-#| msgid "Select all"
 msgid "Select a network"
-msgstr "Összes kiválasztása"
+msgstr "Válasszon hálózatot"
 
 #: pyanaconda/ui/gui/spokes/network.glade:376
 msgid "NETWORK CONFIGURATION"
@@ -5606,7 +5597,7 @@ msgstr "Biztonsági kulcs"
 
 #: pyanaconda/ui/gui/spokes/network.glade:1310
 msgid "My ssid"
-msgstr ""
+msgstr "Saját SSID"
 
 #: pyanaconda/ui/gui/spokes/network.glade:1364
 msgctxt "GUI|Network|Wireless"
@@ -5775,7 +5766,7 @@ msgstr "Ez a felhasználó legyen adminisztrátor"
 #: pyanaconda/ui/gui/spokes/user.glade:268
 msgctxt "GUI|User"
 msgid "Allow this user to run the 'sudo' command."
-msgstr ""
+msgstr "Engedélyezés, hogy a felhasználó futtassa a „sudo” parancsot."
 
 #: pyanaconda/ui/gui/spokes/user.glade:286
 msgctxt "GUI|User"
@@ -6368,9 +6359,6 @@ msgid "_Open"
 msgstr "Me_gnyitás"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:95
-#, fuzzy
-#| msgctxt "GUI|Detailed Error Dialog"
-#| msgid "_Cancel"
 msgctxt "GUI|Software Source|Media Check Dialog"
 msgid "_Cancel"
 msgstr "_Mégse"
@@ -6954,12 +6942,9 @@ msgid "TOTAL SPACE"
 msgstr "TELJES LEMEZTERÜLET"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:1515
-#, fuzzy
-#| msgctxt "GUI|Advanced User"
-#| msgid "_Save Changes"
 msgctxt "GUI|Custom Partitioning"
 msgid "_Discard All Changes"
-msgstr "Változá_sok mentése"
+msgstr "Változások el_vetése"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:1520
 msgctxt "GUI|Custom Partitioning"
@@ -6967,6 +6952,8 @@ msgid ""
 "Return partitioning to the original state before you made any changes. This "
 "is not a destructive operation."
 msgstr ""
+"Particionálás visszaállítása a változtatások előtti állapotba. Ez nem "
+"destruktív művelet."
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:136
 msgctxt "GUI|Installation Destination|Filter|Search"
