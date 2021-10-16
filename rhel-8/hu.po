@@ -32,8 +32,8 @@ msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2021-09-13 13:27+0200\n"
-"PO-Revision-Date: 2021-07-03 10:04+0000\n"
-"Last-Translator: Dankaházi (ifj.) István <dankahazi.istvan@gmail.com>\n"
+"PO-Revision-Date: 2021-10-18 09:05+0000\n"
+"Last-Translator: Balázs Meskó <meskobalazs@mailbox.org>\n"
 "Language-Team: Hungarian <https://translate.fedoraproject.org/projects/"
 "anaconda/rhel-8/hu/>\n"
 "Language: hu\n"
@@ -41,7 +41,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.7.1\n"
+"X-Generator: Weblate 4.8\n"
 
 #: anaconda.py:378
 msgid "Unable to create PID file"
@@ -173,15 +173,6 @@ msgid "An error occurred while activating your storage configuration."
 msgstr "Hiba történt a tároló-összeállítás aktiválásakor."
 
 #: pyanaconda/errors.py:119
-#, fuzzy
-#| msgid ""
-#| "There is a problem with your existing storage configuration. You must "
-#| "resolve this matter before the installation can proceed. There is a shell "
-#| "available for use which you can access by pressing ctrl-alt-f1 and then "
-#| "ctrl-b 2.\n"
-#| "\n"
-#| "Once you have resolved the issue you can retry the storage scan. If you "
-#| "do not fix it you will have to exit the installer."
 msgid ""
 "There is a problem with your existing storage configuration or your initial "
 "settings, for example a kickstart file. You must resolve this matter before "
@@ -191,8 +182,9 @@ msgid ""
 "Once you have resolved the issue you can retry the storage scan. If you do "
 "not fix it you will have to exit the installer."
 msgstr ""
-"Probléma lépett fel a jelenlegi tárolókonfigurációjával. Meg kell oldania "
-"ezt a problémát mielőtt a telepítés folytatódhat. A segítségére lehet a "
+"Probléma lépett fel a jelenlegi tárolókonfigurációjával vagy a kezdeti "
+"beállításaival, például egy kickstart fájllal. Meg kell oldania ezt a "
+"problémát mielőtt a telepítés folytatódhat. A segítségére lehet a "
 "parancssor, amelyet a Ctrl-Alt-F1, majd a Ctrl-B 2 lenyomásával érhet el.\n"
 "\n"
 "Ha sikerült megoldania a problémát, újraindíthatja a tárolófelderítést. Ha "
@@ -353,18 +345,12 @@ msgid "Unable to encrypt password: unsupported algorithm %s"
 msgstr "Nem lehet titkosítani a jelszót: nem támogatott algoritmus: %s"
 
 #: pyanaconda/errors.py:264
-#, fuzzy
-#| msgid ""
-#| "Failed to connect the system to Red Hat Insights.\n"
-#| "\n"
-#| "Would you like to ignore this and continue with installation?"
 msgid ""
 "An error occurred during Red Hat Insights configuration. Would you like to "
 "ignore this and continue with installation?"
 msgstr ""
-" A rendszert nem sikerült a Red Hat Insights-hoz csatlakoztatni.(/n)\n"
-"(/n)\n"
-"Szeretné figyelmen kívül hagyni, és folytatni a telepítést?"
+"Hiba történt a Red Hat Insights beállítása során. Figyelmen kívül hagyja, és "
+"folytata a telepítést?"
 
 #: pyanaconda/kickstart.py:540
 msgid ""
@@ -1107,10 +1093,8 @@ msgid "Btrfs volume \"%s\" specified with --useexisting does not exist."
 msgstr "A(z) „%s”, --useexisting kapcsolóval megadott Btrfs kötet nem létezik."
 
 #: pyanaconda/modules/storage/partitioning/base_partitioning.py:57
-#, fuzzy
-#| msgid "Failed to set up installation source"
 msgid "Failed to proceed with the installation."
-msgstr "Telepítési forrás beállítása sikertelen"
+msgstr "A telepítés folytatása sikertelen."
 
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:64
 #, python-format
@@ -1226,16 +1210,12 @@ msgstr ""
 "egy másik eszközt."
 
 #: pyanaconda/modules/storage/partitioning/interactive/change_device.py:87
-#, fuzzy
-#| msgid "Failed to add new device."
 msgid "Failed to change a device."
-msgstr "Az új eszköz hozzáadása sikertelen."
+msgstr "Az eszköz módosítása sikertelen."
 
 #: pyanaconda/modules/storage/partitioning/interactive/add_device.py:72
-#, fuzzy
-#| msgid "Failed to add new device."
 msgid "Failed to add a device."
-msgstr "Az új eszköz hozzáadása sikertelen."
+msgstr "Az eszköz hozzáadása sikertelen."
 
 #: pyanaconda/modules/storage/partitioning/automatic/utils.py:165
 msgid "No usable disks selected."
@@ -1425,6 +1405,24 @@ msgid ""
 "* Some drives support re-configuration of sector sizes, for example by "
 "running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 msgstr ""
+"Kerülőmegoldások a kézi telepítésekhez:\n"
+"* Csak azonos szektorméretű lemezeket válasszon ki a grafikus vagy szöveges "
+"módú kézi telepítésnél.\n"
+"* Ha nem konzisztens szektorméretű lemezek vannak kiválasztva a "
+"telepítésnél, akkor korlátozzá az LVM kötetcsoportokat azonos szektorméretű "
+"fizikai kötetekre. Ez csak grafikus módban tehető meg, az Egyéni "
+"particionálási lépést használva.\n"
+"\n"
+"Kerülőmegoldás a kickstart telepítésekhez:\n"
+"* Korlátozza a particionálás során használt lemezeket az „ignoredisk "
+"--drives=..” vagy az „ignoredisk --only-use=..” kapcsolókkal.\n"
+"* Adja meg, hogy mely lemezek legyenek használva a létrehozott LVM fizikai "
+"kötetekhez: „partition pv.1 --ondisk=..”.\n"
+"\n"
+"Általános kerülőmegoldások:\n"
+"* Egyszerű particionálási séma az LVM helyett.\n"
+"* Egyes lemezek támogatják a szektorméretek újbóli beállítását, például a „"
+"hdparm --set-sector-size=<MÉRET> <ESZKÖZ>” futtatásával.\n"
 
 #: pyanaconda/modules/storage/platform.py:52
 msgid "boot loader device"
@@ -3691,6 +3689,7 @@ msgstr ""
 msgctxt "GUI|Custom Partitioning|Autopart Page"
 msgid "_Encrypt automatically created mount points by default:"
 msgstr ""
+"Automatikusan létrehozott csatolási pontok _titkosítása alapértelmezetten:"
 
 #: pyanaconda/ui/gui/spokes/lib/cart.py:193
 msgctxt "GUI|Selected Disks Dialog"
@@ -6352,53 +6351,36 @@ msgstr "_Válassza ki az eszköztípust, amit hozzá kíván adni"
 
 #: pyanaconda/ui/gui/spokes/network.glade:153
 #: pyanaconda/ui/gui/spokes/network.glade:286
-#, fuzzy
-#| msgid "Network"
 msgid "Wi-Fi Networks"
-msgstr "Hálózat"
+msgstr "Wi-Fi hálózatok"
 
 #: pyanaconda/ui/gui/spokes/network.glade:170
-#, fuzzy
-#| msgctxt "GUI|Detailed Error Dialog"
-#| msgid "_Cancel"
 msgctxt "GUI|Network|Wireless|Configure"
 msgid "_Cancel"
 msgstr "_Mégse"
 
 #: pyanaconda/ui/gui/spokes/network.glade:184
-#, fuzzy
-#| msgid "Configure NTP"
 msgctxt "GUI|Network|Wireless|Configure"
 msgid "C_onfigure"
-msgstr "NTP beállítása"
+msgstr "_Beállítás"
 
 #: pyanaconda/ui/gui/spokes/network.glade:207
-#, fuzzy
-#| msgid "Writing network configuration"
 msgid "Select a network to configure"
-msgstr "Hálózati beállítások rögzítése"
+msgstr "Válassza ki a beállítandó hálózatot"
 
 #: pyanaconda/ui/gui/spokes/network.glade:303
-#, fuzzy
-#| msgctxt "GUI|Detailed Error Dialog"
-#| msgid "_Cancel"
 msgctxt "GUI|Network|Wireless|Select Network Dialog"
 msgid "_Cancel"
 msgstr "_Mégse"
 
 #: pyanaconda/ui/gui/spokes/network.glade:317
-#, fuzzy
-#| msgctxt "GUI|Network|Authentication Dialog"
-#| msgid "C_onnect"
 msgctxt "GUI|Network|Wireless|Select Network Dialog"
 msgid "C_onnect"
 msgstr "Kapcs_olódás"
 
 #: pyanaconda/ui/gui/spokes/network.glade:340
-#, fuzzy
-#| msgid "Select all"
 msgid "Select a network"
-msgstr "Összes kiválasztása"
+msgstr "Válasszon hálózatot"
 
 #: pyanaconda/ui/gui/spokes/network.glade:376
 msgid "NETWORK CONFIGURATION"
@@ -6482,7 +6464,7 @@ msgstr "Biztonsági kulcs"
 
 #: pyanaconda/ui/gui/spokes/network.glade:1300
 msgid "My ssid"
-msgstr ""
+msgstr "Saját SSID"
 
 #: pyanaconda/ui/gui/spokes/network.glade:1354
 msgctxt "GUI|Network|Wireless"
