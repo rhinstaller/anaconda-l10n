@@ -62,8 +62,8 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2021-10-27 00:50+0000\n"
-"PO-Revision-Date: 2021-10-14 16:05+0000\n"
-"Last-Translator: Pedro Luis Valades Viera <perikiyoxd@gmail.com>\n"
+"PO-Revision-Date: 2021-10-31 17:05+0000\n"
+"Last-Translator: Emilio Herrera <ehespinosa57@gmail.com>\n"
 "Language-Team: Spanish <https://translate.fedoraproject.org/projects/"
 "anaconda/f35/es/>\n"
 "Language: es\n"
@@ -767,10 +767,10 @@ msgstr ""
 "* Cuando se seleccionan discos con tamaño de sector inconsistente para la "
 "instalación, restringir cada Grupo de Volumen LVM para usar Volúmenes "
 "Físicos con el mismo tamaño de sector. Esto sólo se puede hacer en el modo "
-"gráfico en el radio de partición Personalizado.\n"
+"gráfico en el diálogo de partición Personalizado.\n"
 "\n"
 "Soluciones alternativas para instalaciones kickstart:\n"
-"* Restringir que disco se usan para el particionado especificando "
+"* Restringir qué discos se usan para el particionado especificando "
 "'ignoredisk --drives=..' o 'ignoredisk --only-use=..'.\n"
 "* Especificar que discos deberían ser usados para cada Volumen Físico LVM "
 "creado: partition pv.1 --ondisk=..'.\n"
@@ -831,7 +831,8 @@ msgstr ""
 msgid ""
 "It is recommended to create a new file system on your %(mount)s partition."
 msgstr ""
-"Es recomendable crear un nuevo sistema de archivos en su partición %(mount)s."
+"Está recomendado crear un nuevo sistema de archivos en su partición "
+"%(mount)s."
 
 #: pyanaconda/modules/storage/checker/utils.py:122
 #, python-format
@@ -870,7 +871,7 @@ msgstr ""
 msgid "No valid boot loader target device found. See below for details."
 msgstr ""
 "No se encontró un dispositivo de destino válido para el cargador de "
-"arranque. Consulte abajo por los detalles."
+"arranque. Consulte abajo los detalles."
 
 #: pyanaconda/modules/storage/checker/utils.py:187
 msgid "You have not created a bootable partition."
@@ -923,11 +924,11 @@ msgid ""
 "referred to by device path in /etc/fstab, which is not ideal since device "
 "paths can change under a variety of circumstances. "
 msgstr ""
-"Por lo menos uno de sus dispositivos swap no posee un UUID, algo que suele "
+"Por lo menos uno de sus dispositivos swap no posee una UUID, algo que suele "
 "suceder cuando el espacio swap ha sido generado con versiones antiguas de "
 "mkswap. Estos dispositivos serán referenciados de acuerdo a su ruta en el "
 "archivo /etc/fstab, algo que no es recomendado ya que las rutas a los "
-"dispositivos se modifican de acuerdo a las circunstancias. "
+"dispositivos se modifican de acuerdo a diversas circunstancias. "
 
 #: pyanaconda/modules/storage/checker/utils.py:294
 #, python-format
@@ -940,14 +941,13 @@ msgstr ""
 #: pyanaconda/modules/storage/checker/utils.py:310
 #, python-format
 msgid "Your %s must be on a separate partition or LV."
-msgstr "Su %s debe estar enn una partición separado o un LV."
+msgstr "Su %s debe estar en una partición separado o un LV."
 
 #: pyanaconda/modules/storage/checker/utils.py:327
 #, python-format
 msgid "The mount point %s must be on a linux file system."
 msgstr ""
-"El punto de montaje %s debe establecerse dentro de un sistema de archivos "
-"Linux."
+"El punto de montaje %s debe estar dentro de un sistema de archivos Linux."
 
 #: pyanaconda/modules/storage/checker/utils.py:352
 msgid ""
@@ -1265,7 +1265,7 @@ msgstr "Falló la anulación del registro."
 
 #: pyanaconda/modules/subscription/runtime.py:374
 msgid "Failed to attach subscription."
-msgstr "Falló al añadir la suscripción."
+msgstr "Falló al vincular la suscripción."
 
 #: pyanaconda/modules/subscription/runtime.py:448
 msgid "product name unknown"
@@ -1289,7 +1289,7 @@ msgstr "La fuente horaria no es válida."
 #: pyanaconda/modules/network/firewall/installation.py:102
 #, python-format
 msgid "%s is missing. Cannot setup firewall."
-msgstr "Falta %s. No se puede configurar el cortafuegos."
+msgstr "%s desaparecido. No se puede configurar el cortafuegos."
 
 #: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:45
 msgid "Installing {}"
@@ -1593,10 +1593,10 @@ msgid ""
 "\n"
 msgstr ""
 "El entorno de rescate intentará encontrar su instalación de Linux y montarla "
-"bajo el directorio «%s». Posteriormente podrá realizar los cambios "
-"necesarios al sistema. Elija «1» para continuar con este paso.\n"
-"Puede elegir montar su sistema de archivos en modo de solo lectura si elige "
-"«2».\n"
+"bajo el directorio :%s. Posteriormente podrá realizar los cambios necesarios "
+"al sistema. Elija «1» para continuar con este paso.\n"
+"Puede elegir montar su sistema de archivos en modo de solo lectura en lugar "
+"de lectura-escritura si elige «2».\n"
 "Si este proceso no funcionase por algún motivo, elija «3» para saltar "
 "directamente a una consola.\n"
 "\n"
@@ -1647,7 +1647,7 @@ msgstr ""
 "Si quiere que la raíz de su sistema pase a ser la del sistema activo, "
 "ejecute el comando:\n"
 "\n"
-"\tchroot %(mountpoint)s\n"
+"chroot %(mountpoint)s\n"
 "\n"
 
 #: pyanaconda/rescue.py:442
@@ -1657,7 +1657,7 @@ msgid ""
 "\n"
 "Some of it may be mounted under {path}."
 msgstr ""
-"Se produjo un error intentando montar algo o todo su sistema: {message}\n"
+"Se produjo un error intentando montar parte o todo su sistema: {message}\n"
 "\n"
 "Se debe montar algo bajo {path}."
 
@@ -1676,11 +1676,11 @@ msgstr "Pulse %s para ir a la consola"
 
 #: pyanaconda/rescue.py:491
 msgid "Root Selection"
-msgstr "Selección de «root»"
+msgstr "Selección de Root"
 
 #: pyanaconda/rescue.py:517
 msgid "The following installations were discovered on your system."
-msgstr "Se encontraron las instalaciones siguientes en el sistema."
+msgstr "Se encontraron las siguientes instalaciones en el sistema."
 
 #: pyanaconda/exception.py:109
 #, python-format
