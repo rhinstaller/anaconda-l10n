@@ -70,8 +70,8 @@ msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2021-09-13 13:27+0200\n"
-"PO-Revision-Date: 2021-10-14 16:05+0000\n"
-"Last-Translator: Pedro Luis Valades Viera <perikiyoxd@gmail.com>\n"
+"PO-Revision-Date: 2021-10-31 17:05+0000\n"
+"Last-Translator: Emilio Herrera <ehespinosa57@gmail.com>\n"
 "Language-Team: Spanish <https://translate.fedoraproject.org/projects/"
 "anaconda/rhel-8/es/>\n"
 "Language: es\n"
@@ -437,10 +437,10 @@ msgid ""
 "\n"
 msgstr ""
 "El entorno de rescate intentará encontrar su instalación de Linux y montarla "
-"bajo el directorio «%s». Posteriormente podrá realizar los cambios "
-"necesarios al sistema. Elija «1» para continuar con este paso.\n"
-"Puede elegir montar su sistema de archivos en modo de solo lectura si elige "
-"«2».\n"
+"bajo el directorio :%s. Posteriormente podrá realizar los cambios necesarios "
+"al sistema. Elija «1» para continuar con este paso.\n"
+"Puede elegir montar su sistema de archivos en modo de solo lectura en lugar "
+"de lectura-escritura si elige «2».\n"
 "Si este proceso no funcionase por algún motivo, elija «3» para saltar "
 "directamente a una consola.\n"
 "\n"
@@ -491,7 +491,7 @@ msgstr ""
 "Si quiere que la raíz de su sistema pase a ser la del sistema activo, "
 "ejecute el comando:\n"
 "\n"
-"\tchroot %(mountpoint)s\n"
+"chroot %(mountpoint)s\n"
 "\n"
 
 #: pyanaconda/rescue.py:442
@@ -501,7 +501,7 @@ msgid ""
 "\n"
 "Some of it may be mounted under {path}."
 msgstr ""
-"Se produjo un error intentando montar algo o todo su sistema: {message}\n"
+"Se produjo un error intentando montar parte o todo su sistema: {message}\n"
 "\n"
 "Se debe montar algo bajo {path}."
 
@@ -520,11 +520,11 @@ msgstr "Pulse %s para ir a la consola"
 
 #: pyanaconda/rescue.py:491
 msgid "Root Selection"
-msgstr "Selección de «root»"
+msgstr "Selección de Root"
 
 #: pyanaconda/rescue.py:517
 msgid "The following installations were discovered on your system."
-msgstr "Fueron descubiertas las siguientes instalaciones en su sistema."
+msgstr "Se encontraron las siguientes instalaciones en el sistema."
 
 #: pyanaconda/modules/storage/installation.py:88
 msgid "An error occurred while resizing the device {}: {}"
@@ -560,7 +560,7 @@ msgstr "Debes crear un sistema de archivos nuevo en el dispositivo raíz."
 #: pyanaconda/modules/storage/checker/utils.py:65
 #, python-format
 msgid "Your root partition must be on a device of type: %s."
-msgstr "Su partición raíz debe ser un dispositivo de tipo: %s."
+msgstr "Su partición raíz debe estar en un dispositivo del tipo: %s."
 
 #: pyanaconda/modules/storage/checker/utils.py:84
 #, python-brace-format
@@ -576,7 +576,8 @@ msgstr ""
 msgid ""
 "It is recommended to create a new file system on your %(mount)s partition."
 msgstr ""
-"Es recomendable crear un nuevo sistema de archivos en su partición %(mount)s."
+"Está recomendado crear un nuevo sistema de archivos en su partición "
+"%(mount)s."
 
 #: pyanaconda/modules/storage/checker/utils.py:122
 #, python-format
@@ -615,7 +616,7 @@ msgstr ""
 msgid "No valid boot loader target device found. See below for details."
 msgstr ""
 "No se encontró un dispositivo de destino válido para el cargador de "
-"arranque. Consulte abajo por los detalles. "
+"arranque. Consulte abajo los detalles."
 
 #: pyanaconda/modules/storage/checker/utils.py:189
 msgid "You have not created a bootable partition."
@@ -668,11 +669,11 @@ msgid ""
 "referred to by device path in /etc/fstab, which is not ideal since device "
 "paths can change under a variety of circumstances. "
 msgstr ""
-"Por lo menos uno de sus dispositivos swap no posee un UUID, algo que suele "
+"Por lo menos uno de sus dispositivos swap no posee una UUID, algo que suele "
 "suceder cuando el espacio swap ha sido generado con versiones antiguas de "
 "mkswap. Estos dispositivos serán referenciados de acuerdo a su ruta en el "
 "archivo /etc/fstab, algo que no es recomendado ya que las rutas a los "
-"dispositivos se modifican de acuerdo a las circunstancias. "
+"dispositivos se modifican de acuerdo a diversas circunstancias. "
 
 #: pyanaconda/modules/storage/checker/utils.py:296
 #, python-format
@@ -685,14 +686,13 @@ msgstr ""
 #: pyanaconda/modules/storage/checker/utils.py:312
 #, python-format
 msgid "Your %s must be on a separate partition or LV."
-msgstr "%s debe estar en una partición separada o LV."
+msgstr "Su %s debe estar en una partición separado o un LV."
 
 #: pyanaconda/modules/storage/checker/utils.py:329
 #, python-format
 msgid "The mount point %s must be on a linux file system."
 msgstr ""
-"El punto de montaje %s debe establecerse dentro de un sistema de archivos "
-"Linux."
+"El punto de montaje %s debe estar dentro de un sistema de archivos Linux."
 
 #: pyanaconda/modules/storage/checker/utils.py:354
 msgid ""
@@ -989,7 +989,7 @@ msgstr "raid --noformat debe usar también la opción --device."
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:566
 #, python-format
 msgid "RAID device  \"%s\" given in raid command does not exist."
-msgstr "No existe el dispositivo RAID «%s» indicado en la orden raid."
+msgstr "El dispositivo RAID «%s» indicado en el comando raid no existe."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:591
 #, python-format
@@ -1009,7 +1009,7 @@ msgstr ""
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:639
 #, python-format
 msgid "RAID volume \"%s\" specified with --useexisting does not exist."
-msgstr "El volúmen RAID \"%s\" especiicado en --useexisting no existe."
+msgstr "El volúmen RAID \"%s\" especificado con --useexisting no existe."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:650
 #, python-format
@@ -1102,7 +1102,7 @@ msgstr "\"logvol --noformat\" debe usar también la opción \"--name=\" ."
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1045
 #, python-format
 msgid "Logical volume \"%s\" given in logvol command does not exist."
-msgstr "No existe el volumen lógico «%s» dado en la orden logvol."
+msgstr "El volumen lógico «%s» dado en el comando logvol no existe."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1008
 #, python-format
@@ -1120,7 +1120,7 @@ msgid ""
 "extent size of \"%(extentSize)s\"."
 msgstr ""
 "El tamaño \"%(logvolSize)s\" del volúmen lógico debe ser más grande que el "
-"tamaño de extensión \"%(extentSize)s\" del grupo de volúmn."
+"tamaño de extensión \"%(extentSize)s\" del grupo de volúmen."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1238
 #, python-format
@@ -1129,14 +1129,14 @@ msgid ""
 "have a format of \"btrfs\"."
 msgstr ""
 "La partición Btrfs «%(device)s» tiene como formato «%(format)s», pero este "
-"debería ser «btrfs»."
+"debería tener formato «btrfs»."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1246
 #, python-format
 msgid "Tried to use undefined partition \"%s\" in Btrfs volume specification."
 msgstr ""
 "Se intentó utilizar la partición indefinida «%s» en la especificación de "
-"volúmenes de Btrfs."
+"volúmen Btrfs."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1261
 msgid ""
@@ -1152,10 +1152,8 @@ msgid "Btrfs volume \"%s\" specified with --useexisting does not exist."
 msgstr "El volumen Btrfs \"%s\" especificado con --useexisting no existe."
 
 #: pyanaconda/modules/storage/partitioning/base_partitioning.py:57
-#, fuzzy
-#| msgid "Failed to set up installation source"
 msgid "Failed to proceed with the installation."
-msgstr "No se pudo configurar el origen de instalación"
+msgstr "Fallo al llevar adelante la instalación."
 
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:64
 #, python-format
@@ -1468,6 +1466,24 @@ msgid ""
 "* Some drives support re-configuration of sector sizes, for example by "
 "running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 msgstr ""
+"Soluciones alternativas para instalaciones manuales:\n"
+"* Seleccione sólo discos con el mismo tamaño de sector durante la "
+"instalación manual en modo gráfico o texto.\n"
+"* Cuando se seleccionan discos con tamaño de sector inconsistente para la "
+"instalación, restringir cada Grupo de Volumen LVM para usar Volúmenes "
+"Físicos con el mismo tamaño de sector. Esto sólo se puede hacer en el modo "
+"gráfico en el diálogo de partición Personalizado.\n"
+"\n"
+"Soluciones alternativas para instalaciones kickstart:\n"
+"* Restringir qué discos se usan para el particionado especificando "
+"'ignoredisk --drives=..' o 'ignoredisk --only-use=..'.\n"
+"* Especificar que discos deberían ser usados para cada Volumen Físico LVM "
+"creado: partition pv.1 --ondisk=..'.\n"
+"\n"
+"Soluciones alternativas generales\n"
+"* Se puede usar un esquema de partición simple en lugar de LVM.\n"
+"* Algunos dispositivos soportan la reconfiguración de los tamaños de sector, "
+"ejecutando por ejemplo 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 
 #: pyanaconda/modules/storage/platform.py:52
 msgid "boot loader device"
@@ -1591,21 +1607,21 @@ msgstr "La instantánea %s ya existe."
 #: pyanaconda/modules/network/firewall/installation.py:102
 #, python-format
 msgid "%s is missing. Cannot setup firewall."
-msgstr "Falta %s. No se puede configurar el cortafuegos."
+msgstr "%s desaparecido. No se puede configurar el cortafuegos."
 
 #: pyanaconda/modules/subscription/runtime.py:257
 #: pyanaconda/modules/subscription/runtime.py:303
 #: pyanaconda/ui/gui/spokes/subscription.py:1009
 msgid "Registration failed."
-msgstr "Fallo registro."
+msgstr "Falló el registro."
 
 #: pyanaconda/modules/subscription/runtime.py:334
 msgid "Unregistration failed."
-msgstr "La anulación del registro falló."
+msgstr "Falló la anulación del registro."
 
 #: pyanaconda/modules/subscription/runtime.py:374
 msgid "Failed to attach subscription."
-msgstr "Error al adjuntar suscripción."
+msgstr "Falló al vincular la suscripción."
 
 #: pyanaconda/modules/subscription/runtime.py:448
 msgid "product name unknown"
@@ -3965,38 +3981,25 @@ msgid "Probing storage"
 msgstr "Buscando dispositivos de almacenamiento"
 
 #: pyanaconda/ui/lib/space.py:103
-#, fuzzy
-#| msgid ""
-#| "Not enough space in file systems for the current software selection. An "
-#| "additional %s is needed."
 msgid ""
 "Not enough space in file systems for the current software selection. An "
 "additional {} is needed."
 msgstr ""
 "No hay espacio suficiente en el sistema de archivos para la selección de "
-"software actual. Se requieren un adicional de %s."
+"software actual. Se necesitan {} más."
 
 #: pyanaconda/ui/lib/space.py:106
-#, fuzzy
-#| msgid ""
-#| "Not enough space in file systems for the current software selection. An "
-#| "additional %s is needed."
 msgid "Not enough space in file systems for the current software selection."
 msgstr ""
 "No hay espacio suficiente en el sistema de archivos para la selección de "
-"software actual. Se requieren un adicional de %s."
+"software actual."
 
 #: pyanaconda/ui/lib/storage.py:209
-#, fuzzy, python-brace-format
-#| msgid "%(count)d disk selected; %(capacity)s capacity; %(free)s free"
-#| msgid_plural ""
-#| "%(count)d disks selected; %(capacity)s capacity; %(free)s free"
+#, python-brace-format
 msgid "{count} disk selected; {capacity} capacity; {free} free"
 msgid_plural "{count} disks selected; {capacity} capacity; {free} free"
-msgstr[0] ""
-"%(count)d disco seleccionado; %(capacity)s de capacidad; %(free)s libres"
-msgstr[1] ""
-"%(count)d discos seleccionados; %(capacity)s de capacidad; %(free)s libres"
+msgstr[0] "{count} disco seleccionado; {capacity} capacidad; {free} libre"
+msgstr[1] "{count} discos seleccionados; {capacity} capacidad; {free} libre"
 
 #: pyanaconda/ui/lib/storage.py:283
 msgid "Saving storage configuration..."
@@ -4644,10 +4647,9 @@ msgid "A %(command)s with the name %(policyName)s has already been defined."
 msgstr "Un %(command)s con el nombre %(policyName)s ya ha sido definido."
 
 #: pyanaconda/payload/flatpak.py:205
-#, fuzzy, python-format
-#| msgid "Installing software"
+#, python-format
 msgid "Installing %(flatpak_name)s"
-msgstr "Instalando software"
+msgstr "Instalando %(flatpak_name)s"
 
 #: pyanaconda/payload/rpmostreepayload.py:133
 #, python-format
@@ -4680,14 +4682,12 @@ msgid "Deployment complete: %s"
 msgstr "Instalación completa: %s"
 
 #: pyanaconda/payload/rpmostreepayload.py:525
-#, fuzzy
-#| msgid "Starting package installation process"
 msgid "Starting Flatpak installation"
-msgstr "Iniciando el proceso de instalación"
+msgstr "Iniciando instalación Flatpak"
 
 #: pyanaconda/payload/rpmostreepayload.py:542
 msgid "Post-installation flatpak tasks"
-msgstr "Tareas de postinstalación de Flatpak"
+msgstr "Tareas de postinstalación de flatpak"
 
 #: pyanaconda/payload/rpmostreepayload.py:548
 msgid "Flatpak installation has finished"
