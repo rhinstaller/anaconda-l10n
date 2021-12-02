@@ -58,7 +58,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2021-11-22 00:52+0000\n"
+"POT-Creation-Date: 2021-12-02 00:51+0000\n"
 "PO-Revision-Date: 2021-09-27 23:05+0000\n"
 "Last-Translator: René Genz <liebundartig@freenet.de>\n"
 "Language-Team: German <https://translate.fedoraproject.org/projects/anaconda/"
@@ -223,12 +223,6 @@ msgstr ""
 msgid "Starting package installation process"
 msgstr "Paket-Installationsvorgang starten"
 
-#: pyanaconda/payload/live/download_progress.py:66
-#: pyanaconda/payload/live/download_progress.py:75
-#, python-format
-msgid "Downloading %(url)s (%(pct)d%%)"
-msgstr "Herunterladen %(url)s (%(pct)d%%)"
-
 #: pyanaconda/payload/manager.py:76
 msgid "Failed to set up installation source"
 msgstr "Einrichten der Installationsquelle fehlgeschlagen"
@@ -274,43 +268,43 @@ msgstr ""
 msgid "Running pre-installation scripts"
 msgstr "Prä-Installationsskripte werden ausgeführt"
 
-#: pyanaconda/installation.py:86
+#: pyanaconda/installation.py:87
 msgid "Configuring Red Hat subscription"
 msgstr "Red Hat Abonnement konfigurieren"
 
-#: pyanaconda/installation.py:93
+#: pyanaconda/installation.py:94
 msgid "Configuring installed system"
 msgstr "Installiertes System konfigurieren"
 
-#: pyanaconda/installation.py:131
+#: pyanaconda/installation.py:132
 msgid "Writing network configuration"
 msgstr "Netzwerk-Konfiguration schreiben"
 
-#: pyanaconda/installation.py:138
+#: pyanaconda/installation.py:139
 msgid "Creating users"
 msgstr "Erstelle Benutzer"
 
-#: pyanaconda/installation.py:145
+#: pyanaconda/installation.py:146
 msgid "Configuring addons"
 msgstr "Konfiguriere Addons"
 
-#: pyanaconda/installation.py:155
+#: pyanaconda/installation.py:156
 msgid "Generating initramfs"
 msgstr "erzeuge initramfs"
 
-#: pyanaconda/installation.py:181
+#: pyanaconda/installation.py:182
 msgid "Setting up kexec"
 msgstr "Richte kexec ein"
 
-#: pyanaconda/installation.py:188
+#: pyanaconda/installation.py:189
 msgid "Storing configuration files and kickstarts"
 msgstr "Speichere Kickstart- und Konfigurationsdateien"
 
-#: pyanaconda/installation.py:208
+#: pyanaconda/installation.py:209
 msgid "Running post-installation scripts"
 msgstr "Post-Installationsskripte werden ausgeführt"
 
-#: pyanaconda/installation.py:249
+#: pyanaconda/installation.py:237
 #, python-format
 msgid "Waiting for %s threads to finish"
 msgstr "Warten auf Beendigung der %s-Aktivität"
@@ -1145,7 +1139,19 @@ msgstr "Synchronisiere Schreibvorgänge auf Medium"
 msgid "Installing software {}%"
 msgstr "Software \"{}%\" wird installiert"
 
-#: pyanaconda/modules/payloads/payload/live_image/installation.py:57
+#: pyanaconda/modules/payloads/payload/live_image/download_progress.py:54
+#, fuzzy
+#| msgid "Downloading %(url)s (%(pct)d%%)"
+msgid "Downloading {} ({}%)"
+msgstr "Herunterladen %(url)s (%(pct)d%%)"
+
+#: pyanaconda/modules/payloads/payload/live_image/installation.py:117
+#, fuzzy
+#| msgid "Downloading packages"
+msgid "Downloading {}"
+msgstr "Pakete werden heruntergeladen"
+
+#: pyanaconda/modules/payloads/payload/live_image/installation.py:170
 msgid "Checking image checksum"
 msgstr "Checksumme des Abbildes wird überprüft"
 
@@ -7323,8 +7329,10 @@ msgid "RA_ID Level:"
 msgstr "RA_ID-Level:"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:938
+#, fuzzy
+#| msgid "LUKS Version:"
 msgctxt "GUI|Custom Partitioning|Configure"
-msgid "LUKS Version:"
+msgid "LUK_S Version:"
 msgstr "LUKS-Version:"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:1009
@@ -7528,6 +7536,10 @@ msgstr "Schließen"
 #: ../data/liveinst/console.apps/liveinst.h:1
 msgid "Starting Install to Hard Drive"
 msgstr "Installation auf die Festplatte wird gestartet"
+
+#~ msgctxt "GUI|Custom Partitioning|Configure"
+#~ msgid "LUKS Version:"
+#~ msgstr "LUKS-Version:"
 
 #~ msgid "Installing software"
 #~ msgstr "Software wird installiert"

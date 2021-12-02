@@ -33,7 +33,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2021-11-22 00:52+0000\n"
+"POT-Creation-Date: 2021-12-02 00:51+0000\n"
 "PO-Revision-Date: 2021-11-12 22:05+0000\n"
 "Last-Translator: simmon <simmon@nplob.com>\n"
 "Language-Team: Korean <https://translate.fedoraproject.org/projects/anaconda/"
@@ -190,12 +190,6 @@ msgstr ""
 msgid "Starting package installation process"
 msgstr "꾸러미 설치 처리 시작 중"
 
-#: pyanaconda/payload/live/download_progress.py:66
-#: pyanaconda/payload/live/download_progress.py:75
-#, python-format
-msgid "Downloading %(url)s (%(pct)d%%)"
-msgstr "%(url)s (%(pct)d%%) 내려 받는 중"
-
 #: pyanaconda/payload/manager.py:76
 msgid "Failed to set up installation source"
 msgstr "설치 소스 설정에 실패했습니다"
@@ -241,43 +235,43 @@ msgstr ""
 msgid "Running pre-installation scripts"
 msgstr "사전-설치 스크립트 실행 중"
 
-#: pyanaconda/installation.py:86
+#: pyanaconda/installation.py:87
 msgid "Configuring Red Hat subscription"
 msgstr "Red Hat 서브스크립션 설정 중"
 
-#: pyanaconda/installation.py:93
+#: pyanaconda/installation.py:94
 msgid "Configuring installed system"
 msgstr "설치된 시스템 설정 중"
 
-#: pyanaconda/installation.py:131
+#: pyanaconda/installation.py:132
 msgid "Writing network configuration"
 msgstr "네트워크 설정 작성 중"
 
-#: pyanaconda/installation.py:138
+#: pyanaconda/installation.py:139
 msgid "Creating users"
 msgstr "사용자 생성 중"
 
-#: pyanaconda/installation.py:145
+#: pyanaconda/installation.py:146
 msgid "Configuring addons"
 msgstr "애드온 설정 중"
 
-#: pyanaconda/installation.py:155
+#: pyanaconda/installation.py:156
 msgid "Generating initramfs"
 msgstr "initramfs 생성 중"
 
-#: pyanaconda/installation.py:181
+#: pyanaconda/installation.py:182
 msgid "Setting up kexec"
 msgstr "kexec 설정"
 
-#: pyanaconda/installation.py:188
+#: pyanaconda/installation.py:189
 msgid "Storing configuration files and kickstarts"
 msgstr "구성 파일 및 킥 스타트 저장"
 
-#: pyanaconda/installation.py:208
+#: pyanaconda/installation.py:209
 msgid "Running post-installation scripts"
 msgstr "설치 후 스크립트 실행 중"
 
-#: pyanaconda/installation.py:249
+#: pyanaconda/installation.py:237
 #, python-format
 msgid "Waiting for %s threads to finish"
 msgstr "%s 쓰레드 완료 대기 중"
@@ -1089,7 +1083,19 @@ msgstr "디스크에 쓰기 동기화"
 msgid "Installing software {}%"
 msgstr "소프트웨어 설치 {}% 중"
 
-#: pyanaconda/modules/payloads/payload/live_image/installation.py:57
+#: pyanaconda/modules/payloads/payload/live_image/download_progress.py:54
+#, fuzzy
+#| msgid "Downloading %(url)s (%(pct)d%%)"
+msgid "Downloading {} ({}%)"
+msgstr "%(url)s (%(pct)d%%) 내려 받는 중"
+
+#: pyanaconda/modules/payloads/payload/live_image/installation.py:117
+#, fuzzy
+#| msgid "Downloading packages"
+msgid "Downloading {}"
+msgstr "꾸러미 내려 받는 중"
+
+#: pyanaconda/modules/payloads/payload/live_image/installation.py:170
 msgid "Checking image checksum"
 msgstr "이미지 체크섬 확인 중"
 
@@ -7071,9 +7077,11 @@ msgid "RA_ID Level:"
 msgstr "RAID 레벨(_I):"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:938
+#, fuzzy
+#| msgid "LUKS Version:"
 msgctxt "GUI|Custom Partitioning|Configure"
-msgid "LUKS Version:"
-msgstr "LUKS 번호 :"
+msgid "LUK_S Version:"
+msgstr "LUKS 버전:"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:1009
 msgctxt "GUI|Custom Partitioning|Configure|Devices"
@@ -7276,6 +7284,10 @@ msgstr "종료"
 #: ../data/liveinst/console.apps/liveinst.h:1
 msgid "Starting Install to Hard Drive"
 msgstr "하드 드라이브에 설치를 시작합니다"
+
+#~ msgctxt "GUI|Custom Partitioning|Configure"
+#~ msgid "LUKS Version:"
+#~ msgstr "LUKS 번호 :"
 
 #~ msgid "Installing software"
 #~ msgstr "소프트웨어 설치 중"
