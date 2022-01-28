@@ -44,7 +44,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2022-01-25 01:00+0000\n"
+"POT-Creation-Date: 2022-01-28 00:53+0000\n"
 "PO-Revision-Date: 2022-01-24 09:16+0000\n"
 "Last-Translator: Alessio <alciregi@posteo.net>\n"
 "Language-Team: Italian <https://translate.fedoraproject.org/projects/"
@@ -227,7 +227,7 @@ msgstr "La password è vuota."
 msgid "The passphrase is empty."
 msgstr "La passphrase è vuota."
 
-#: pyanaconda/core/constants.py:202 ui/webui/src/lib/credentials.js:194
+#: pyanaconda/core/constants.py:202
 msgid "The passwords do not match."
 msgstr "Le password non corrispondono."
 
@@ -1686,7 +1686,7 @@ msgstr "Live tarball"
 msgid "Closest mirror"
 msgstr "Mirror più vicino"
 
-#: pyanaconda/modules/payloads/kickstart.py:120
+#: pyanaconda/modules/payloads/kickstart.py:123
 msgid "The %packages --ignorebroken feature is not supported on your product!"
 msgstr ""
 "La funzione --ignorebroken di %packages non è supportata sul tuo prodotto!"
@@ -2043,11 +2043,11 @@ msgstr "per entrare nel %(spoke_title)s ha parlato"
 msgid "Full name can't contain the ':' character"
 msgstr "Il nome completo non può contenere il carattere ':'"
 
-#: pyanaconda/ui/tui/spokes/user.py:82
+#: pyanaconda/ui/tui/spokes/user.py:82 ui/webui/src/Summary.jsx:138
 msgid "User creation"
 msgstr "Creazione utente"
 
-#: pyanaconda/ui/tui/spokes/user.py:133
+#: pyanaconda/ui/tui/spokes/user.py:133 ui/webui/src/users/UserAccount.jsx:37
 msgid "Create user"
 msgstr "Creazione utente"
 
@@ -2083,6 +2083,7 @@ msgid "Groups"
 msgstr "Gruppi"
 
 #: pyanaconda/ui/tui/spokes/user.py:244 pyanaconda/ui/gui/spokes/user.py:456
+#: ui/webui/src/Summary.jsx:140
 msgid "No user will be created"
 msgstr "Non verrà creato alcun utente"
 
@@ -2381,6 +2382,8 @@ msgstr ""
 "Attenzione: il processore ha il Simultaneous Multithreading (SMT) attivato"
 
 #: pyanaconda/ui/tui/spokes/root_password.py:57
+#: ui/webui/src/users/RootAccount.jsx:96 ui/webui/src/users/RootAccount.jsx:107
+#: ui/webui/src/Summary.jsx:133
 msgid "Root password"
 msgstr "Password di root"
 
@@ -2420,6 +2423,7 @@ msgstr "Uscire dalla shell per continuare"
 
 #: pyanaconda/ui/tui/spokes/software_selection.py:65
 #: pyanaconda/ui/tui/spokes/software_selection.py:322
+#: ui/webui/src/payloads/SoftwareSelection.jsx:37
 msgid "Software selection"
 msgstr "Selezione software"
 
@@ -2687,6 +2691,7 @@ msgstr ""
 "Configurazione non salvata: netmask mancante nella configurazione statica"
 
 #: pyanaconda/ui/tui/spokes/installation_source.py:86
+#: ui/webui/src/Summary.jsx:111 ui/webui/src/payloads/InstallationSource.jsx:37
 msgid "Installation source"
 msgstr "Sorgente di installazione"
 
@@ -2897,10 +2902,6 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/custom_storage.py:455
 #: pyanaconda/ui/gui/spokes/custom_storage.py:498
 #: pyanaconda/ui/gui/spokes/network.py:284 pyanaconda/network.py:454
-#: ui/webui/src/lib/machine-info.js:59 ui/webui/src/lib/machine-info.js:243
-#: ui/webui/src/lib/machine-info.js:251 ui/webui/src/lib/machine-info.js:253
-#: ui/webui/src/lib/machine-info.js:260 ui/webui/src/lib/machine-info.js:262
-#: ui/webui/src/lib/machine-info.js:266
 msgid "Unknown"
 msgstr "Sconosciuto"
 
@@ -4701,7 +4702,7 @@ msgstr ""
 "Si è sicuri di voler abbandonare il\n"
 "processo di installazione?"
 
-#: pyanaconda/ui/gui/main.glade:175
+#: pyanaconda/ui/gui/main.glade:175 ui/webui/src/Summary.jsx:148
 msgid "Quit"
 msgstr "Abbandona"
 
@@ -7438,6 +7439,165 @@ msgstr "Installa il live CD sul disco rigido"
 msgid "Welcome to Fedora"
 msgstr "Benvenuti in Fedora"
 
+#: ui/webui/src/users/RootAccount.jsx:106
+#, fuzzy
+#| msgctxt "GUI|User"
+#| msgid "_Confirm password"
+msgid "Confirm root password"
+msgstr "_Conferma password"
+
+#: ui/webui/src/users/RootAccount.jsx:116
+#, fuzzy
+#| msgctxt "GUI|Password"
+#| msgid "_Enable root account"
+msgid "Lock root account"
+msgstr "_Abilita l'account di root"
+
+#: ui/webui/src/localization/Keyboard.jsx:37 ui/webui/src/Summary.jsx:97
+#, fuzzy
+#| msgctxt "GUI|Spoke"
+#| msgid "_Keyboard"
+msgid "Keyboard"
+msgstr "_Tastiera"
+
+#: ui/webui/src/localization/Language.jsx:37
+#, fuzzy
+#| msgid "Languages"
+msgid "Language"
+msgstr "Lingue"
+
+#: ui/webui/src/storage/InstallationDestination.jsx:118
+#, fuzzy
+#| msgid "Local Standard Disks"
+msgid "Local standard disks"
+msgstr "Dischi locali standard"
+
+#: ui/webui/src/storage/InstallationDestination.jsx:121
+#, fuzzy
+#| msgid "Selected disks"
+msgid "Usable disks"
+msgstr "Dischi selezionati"
+
+#: ui/webui/src/storage/InstallationDestination.jsx:161
+#: ui/webui/src/Summary.jsx:122
+#, fuzzy
+#| msgid "Installation Destination"
+msgid "Installation destination"
+msgstr "Destinazione di installazione"
+
+#: ui/webui/src/storage/InstallationDestination.jsx:167
+#, fuzzy
+#| msgid ""
+#| "Select the device(s) you'd like to install to.  They will be left "
+#| "untouched until you click on the main menu's \"Begin Installation\" "
+#| "button."
+msgid ""
+"Select the device(s) you would like to install to. They will be left "
+"untouched until you click on the main menu's 'Begin installation' button."
+msgstr ""
+"Selezionare il dispositivo(i) su cui installare. Non saranno modificati fino "
+"a che non si premerà il pulsante \"Avvia installazione\" del menu principale."
+
+#: ui/webui/src/Summary.jsx:88
+#, fuzzy
+#| msgid "Installation source"
+msgid "Installation summary"
+msgstr "Sorgente di installazione"
+
+#: ui/webui/src/Summary.jsx:95
+#, fuzzy
+#| msgid "Location"
+msgid "Localization"
+msgstr "Posizione"
+
+#: ui/webui/src/Summary.jsx:100
+#, fuzzy
+#| msgctxt "GUI|Spoke"
+#| msgid "_Language Support"
+msgid "Language support"
+msgstr "_Supporto linguistico"
+
+#: ui/webui/src/Summary.jsx:103 ui/webui/src/timezone/TimeDate.jsx:56
+#, fuzzy
+#| msgctxt "GUI|Spoke"
+#| msgid "_Time & Date"
+msgid "Time & Date"
+msgstr "_Data & Ora"
+
+#: ui/webui/src/Summary.jsx:114
+#, fuzzy
+#| msgctxt "GUI|Spoke"
+#| msgid "_Software Selection"
+msgid "Software Selection"
+msgstr "_Selezione Software"
+
+#: ui/webui/src/Summary.jsx:125
+#, fuzzy
+#| msgctxt "GUI|Spoke"
+#| msgid "_Network & Host Name"
+msgid "Network & Host name"
+msgstr "_Rete & Host Name"
+
+#: ui/webui/src/Summary.jsx:135
+#, fuzzy
+#| msgid "Root account is disabled."
+msgid "Root account is disabled"
+msgstr "L'account root è disabilitato."
+
+#: ui/webui/src/Summary.jsx:145
+#, fuzzy
+#| msgid ""
+#| "Please complete items marked with this icon before continuing to the next "
+#| "step."
+msgid ""
+"Please complete items marked with this icon before continuing to the next "
+"step"
+msgstr ""
+"Completare gli elementi contrassegnati con questa icona prima di procedere "
+"con il prossimo passo."
+
+#: ui/webui/src/Summary.jsx:147
+#, fuzzy
+#| msgctxt "GUI|Summary"
+#| msgid "_Begin Installation"
+msgid "Begin installation"
+msgstr "_Avvia installazione"
+
+#: ui/webui/src/Summary.jsx:150
+#, fuzzy
+#| msgid "We won't touch your disks until you click 'Begin Installation'."
+msgid "We won't touch your disks until you click 'Begin installation'"
+msgstr ""
+"I dischi non saranno modificati fino a che non si preme 'Avvia "
+"installazione'."
+
+#: ui/webui/src/Common.jsx:45
+#, fuzzy
+#| msgctxt "GUI|Spoke Navigation"
+#| msgid "_Done"
+msgid "Done"
+msgstr "_Fatto"
+
+#: ui/webui/src/timezone/TimeDate.jsx:64
+#, fuzzy
+#| msgctxt "GUI|Date and Time"
+#| msgid "_Network Time"
+msgid "Network time"
+msgstr "_Ora da rete"
+
+#: ui/webui/src/timezone/TimeDate.jsx:68
+#, fuzzy
+#| msgid "Use Network Time"
+msgid "Use network time"
+msgstr "Usa orario di rete"
+
+#: ui/webui/src/network/NetworkHostname.jsx:37
+#, fuzzy
+#| msgctxt "GUI|Spoke"
+#| msgid "_Network & Host Name"
+msgid "Network & Host Name"
+msgstr "_Rete & Host Name"
+
 #: data/liveinst/gnome/fedora-welcome.js:94
 msgid "Try Fedora"
 msgstr "Prova Fedora"
@@ -7464,278 +7624,211 @@ msgstr ""
 msgid "Close"
 msgstr "Chiudi"
 
-#: ui/webui/src/lib/machine-info.js:58
-msgid "Other"
-msgstr "Altro"
-
-#: ui/webui/src/lib/machine-info.js:60
-msgid "Desktop"
-msgstr "Desktop"
-
-#: ui/webui/src/lib/machine-info.js:61
-msgid "Low profile desktop"
-msgstr "Desktop a basso profilo"
-
-#: ui/webui/src/lib/machine-info.js:62
-msgid "Pizza box"
-msgstr "Pizza box"
-
-#: ui/webui/src/lib/machine-info.js:63
-msgid "Mini tower"
-msgstr "Mini tower"
-
-#: ui/webui/src/lib/machine-info.js:64
-msgid "Tower"
-msgstr "Tower"
-
-#: ui/webui/src/lib/machine-info.js:65
-msgid "Portable"
-msgstr "Portatile"
-
-#: ui/webui/src/lib/machine-info.js:66
-msgid "Laptop"
-msgstr "Laptop"
-
-#: ui/webui/src/lib/machine-info.js:67
-msgid "Notebook"
-msgstr "Notebook"
-
-#: ui/webui/src/lib/machine-info.js:68
-msgid "Handheld"
-msgstr "Palmare"
-
-#: ui/webui/src/lib/machine-info.js:69
-msgid "Docking station"
-msgstr "Docking station"
-
-#: ui/webui/src/lib/machine-info.js:70
-msgid "All-in-one"
-msgstr "All-in-one"
-
-#: ui/webui/src/lib/machine-info.js:71
-msgid "Sub-Notebook"
-msgstr "Sub-Notebook"
-
-#: ui/webui/src/lib/machine-info.js:72
-msgid "Space-saving computer"
-msgstr "Computer salva spazio"
-
-#: ui/webui/src/lib/machine-info.js:73
-msgid "Lunch box"
-msgstr "Lunch box"
-
-#: ui/webui/src/lib/machine-info.js:74
-msgid "Main server chassis"
-msgstr "Chassis del server principale"
-
-#: ui/webui/src/lib/machine-info.js:75
-msgid "Expansion chassis"
-msgstr "Chassis di espansione"
-
-#: ui/webui/src/lib/machine-info.js:76
-msgid "Sub-Chassis"
-msgstr "Sub-Chassis"
-
-#: ui/webui/src/lib/machine-info.js:77
-msgid "Bus expansion chassis"
-msgstr "Bus di espansione chassis"
-
-#: ui/webui/src/lib/machine-info.js:78
-msgid "Peripheral chassis"
-msgstr "Chassis periferico"
-
-#: ui/webui/src/lib/machine-info.js:79
-msgid "RAID chassis"
-msgstr "Chassis RAID"
-
-#: ui/webui/src/lib/machine-info.js:80
-msgid "Rack mount chassis"
-msgstr "Chassis a rack"
-
-#: ui/webui/src/lib/machine-info.js:81
-msgid "Sealed-case PC"
-msgstr "PC sigillato"
-
-#: ui/webui/src/lib/machine-info.js:82
-msgid "Multi-system chassis"
-msgstr "Chassis multisistema"
-
-#: ui/webui/src/lib/machine-info.js:83
-msgid "Compact PCI"
-msgstr "Compact PCI"
-
-#: ui/webui/src/lib/machine-info.js:84
-msgid "Advanced TCA"
-msgstr "TCA avanzato"
-
-#: ui/webui/src/lib/machine-info.js:85
-msgid "Blade"
-msgstr "Blade"
-
-#: ui/webui/src/lib/machine-info.js:86
-msgid "Blade enclosure"
-msgstr "Chassis del blade"
-
-#: ui/webui/src/lib/machine-info.js:87
-msgid "Tablet"
-msgstr "Tablet"
-
-#: ui/webui/src/lib/machine-info.js:88
-msgid "Convertible"
-msgstr "Convertibile"
-
-#: ui/webui/src/lib/machine-info.js:89
-msgid "Detachable"
-msgstr "Rimovibile"
-
-#: ui/webui/src/lib/machine-info.js:90
-msgid "IoT gateway"
-msgstr "Gateway IoT"
-
-#: ui/webui/src/lib/machine-info.js:91
-msgid "Embedded PC"
-msgstr "PC integrato"
-
-#: ui/webui/src/lib/machine-info.js:92
-msgid "Mini PC"
-msgstr "Mini PC"
-
-#: ui/webui/src/lib/machine-info.js:93
-msgid "Stick PC"
-msgstr "Stick PC"
-
-#: ui/webui/src/lib/machine-info.js:246
-msgid "$0 GiB"
-msgstr "$0 GiB"
-
-#: ui/webui/src/lib/machine-info.js:255
-msgid "Single rank"
-msgstr "Single rank"
-
-#: ui/webui/src/lib/machine-info.js:257
-msgid "Dual rank"
-msgstr "Dual rank"
-
-#: ui/webui/src/lib/machine-info.js:264
-msgid "Absent"
-msgstr "Assente"
-
-#: ui/webui/src/lib/machine-info.js:264
-msgid "Present"
-msgstr "Presente"
-
-#: ui/webui/src/lib/serverTime.js:379
-msgid "Synchronized"
-msgstr "Sincronizzato"
-
-#: ui/webui/src/lib/serverTime.js:381
-msgid "Synchronized with $0"
-msgstr "Sincronizzato con $0"
-
-#: ui/webui/src/lib/serverTime.js:385
-msgid "Synchronizing"
-msgstr "Sincronizzazione"
-
-#: ui/webui/src/lib/serverTime.js:386
-msgid "Trying to synchronize with $0"
-msgstr "Tentativo di sincronizzazione con $0"
-
-#: ui/webui/src/lib/serverTime.js:389
-msgid "Not synchronized"
-msgstr "Non sincronizzato"
-
-#: ui/webui/src/lib/serverTime.js:395
-msgid "Log messages"
-msgstr "Messaggi di log"
-
-#: ui/webui/src/lib/serverTime.js:483
-msgid "NTP server"
-msgstr "Server NTP"
-
-#: ui/webui/src/lib/serverTime.js:501
-msgid "Time zone"
-msgstr "Fuso Orario"
-
-#: ui/webui/src/lib/serverTime.js:512
-msgid "Set time"
-msgstr "Imposta l'orario"
-
-#: ui/webui/src/lib/serverTime.js:517
-msgid "Manually"
-msgstr "Manualmente"
-
-#: ui/webui/src/lib/serverTime.js:518
-msgid "Automatically using NTP"
-msgstr "Automaticamente utilizzando NTP"
-
-#: ui/webui/src/lib/serverTime.js:519
-msgid "Automatically using specific NTP servers"
-msgstr "Automaticamente utilizzando server NTP specifici"
-
-#: ui/webui/src/lib/serverTime.js:525
-msgid "Pick date"
-msgstr "Scegli una data"
-
-#: ui/webui/src/lib/serverTime.js:526
-#, fuzzy
-msgid "Toggle date picker"
-msgstr "Utilizza il selettore di date"
-
-#: ui/webui/src/lib/credentials.js:191
-msgid "No such file or directory"
-msgstr "Nessun file o directory"
-
-#: ui/webui/src/lib/credentials.js:210
-msgid "Prompting via ssh-keygen timed out"
-msgstr "Richiesta tramite ssh-keygen scaduta"
-
-#: ui/webui/src/lib/credentials.js:221
-msgid "Old password not accepted"
-msgstr "Vecchia password non accettata"
-
-#: ui/webui/src/lib/credentials.js:232
-msgid "Failed to change password"
-msgstr "Impossibile cambiare la password"
-
-#: ui/webui/src/lib/credentials.js:241
-msgid "New password was not accepted"
-msgstr "La nuova password non è stata accettata"
-
-#: ui/webui/src/lib/credentials.js:277
-msgid "Not a valid private key"
-msgstr "Chiave privata invalida"
-
-#: ui/webui/src/lib/credentials.js:285
-msgid "Prompting via ssh-add timed out"
-msgstr "Richiesta tramite ssh-add scaduta"
-
-#: ui/webui/src/lib/credentials.js:294
-msgid "Invalid file permissions"
-msgstr "Permessi dei file non validi"
-
-#: ui/webui/src/lib/credentials.js:298
-msgid "Password not accepted"
-msgstr "Password non accettata"
-
-#: ui/webui/src/lib/journal.js:211
-msgid "[no data]"
-msgstr "[nessun dato]"
-
-#: ui/webui/src/lib/journal.js:215
-msgid "[$0 bytes of binary data]"
-msgstr "[$0byte di dati binari]"
-
-#: ui/webui/src/lib/journal.js:217
-msgid "[binary data]"
-msgstr "[dati binari]"
-
-#: ui/webui/src/lib/packagekit.js:130
-msgid "PackageKit crashed"
-msgstr "PackageKit si è interrotto"
-
 #: ../data/liveinst/console.apps/liveinst.h:1
 msgid "Starting Install to Hard Drive"
 msgstr "Inizio installazione sul disco rigido"
+
+#~ msgid "Other"
+#~ msgstr "Altro"
+
+#~ msgid "Desktop"
+#~ msgstr "Desktop"
+
+#~ msgid "Low profile desktop"
+#~ msgstr "Desktop a basso profilo"
+
+#~ msgid "Pizza box"
+#~ msgstr "Pizza box"
+
+#~ msgid "Mini tower"
+#~ msgstr "Mini tower"
+
+#~ msgid "Tower"
+#~ msgstr "Tower"
+
+#~ msgid "Portable"
+#~ msgstr "Portatile"
+
+#~ msgid "Laptop"
+#~ msgstr "Laptop"
+
+#~ msgid "Notebook"
+#~ msgstr "Notebook"
+
+#~ msgid "Handheld"
+#~ msgstr "Palmare"
+
+#~ msgid "Docking station"
+#~ msgstr "Docking station"
+
+#~ msgid "All-in-one"
+#~ msgstr "All-in-one"
+
+#~ msgid "Sub-Notebook"
+#~ msgstr "Sub-Notebook"
+
+#~ msgid "Space-saving computer"
+#~ msgstr "Computer salva spazio"
+
+#~ msgid "Lunch box"
+#~ msgstr "Lunch box"
+
+#~ msgid "Main server chassis"
+#~ msgstr "Chassis del server principale"
+
+#~ msgid "Expansion chassis"
+#~ msgstr "Chassis di espansione"
+
+#~ msgid "Sub-Chassis"
+#~ msgstr "Sub-Chassis"
+
+#~ msgid "Bus expansion chassis"
+#~ msgstr "Bus di espansione chassis"
+
+#~ msgid "Peripheral chassis"
+#~ msgstr "Chassis periferico"
+
+#~ msgid "RAID chassis"
+#~ msgstr "Chassis RAID"
+
+#~ msgid "Rack mount chassis"
+#~ msgstr "Chassis a rack"
+
+#~ msgid "Sealed-case PC"
+#~ msgstr "PC sigillato"
+
+#~ msgid "Multi-system chassis"
+#~ msgstr "Chassis multisistema"
+
+#~ msgid "Compact PCI"
+#~ msgstr "Compact PCI"
+
+#~ msgid "Advanced TCA"
+#~ msgstr "TCA avanzato"
+
+#~ msgid "Blade"
+#~ msgstr "Blade"
+
+#~ msgid "Blade enclosure"
+#~ msgstr "Chassis del blade"
+
+#~ msgid "Tablet"
+#~ msgstr "Tablet"
+
+#~ msgid "Convertible"
+#~ msgstr "Convertibile"
+
+#~ msgid "Detachable"
+#~ msgstr "Rimovibile"
+
+#~ msgid "IoT gateway"
+#~ msgstr "Gateway IoT"
+
+#~ msgid "Embedded PC"
+#~ msgstr "PC integrato"
+
+#~ msgid "Mini PC"
+#~ msgstr "Mini PC"
+
+#~ msgid "Stick PC"
+#~ msgstr "Stick PC"
+
+#~ msgid "$0 GiB"
+#~ msgstr "$0 GiB"
+
+#~ msgid "Single rank"
+#~ msgstr "Single rank"
+
+#~ msgid "Dual rank"
+#~ msgstr "Dual rank"
+
+#~ msgid "Absent"
+#~ msgstr "Assente"
+
+#~ msgid "Present"
+#~ msgstr "Presente"
+
+#~ msgid "Synchronized"
+#~ msgstr "Sincronizzato"
+
+#~ msgid "Synchronized with $0"
+#~ msgstr "Sincronizzato con $0"
+
+#~ msgid "Synchronizing"
+#~ msgstr "Sincronizzazione"
+
+#~ msgid "Trying to synchronize with $0"
+#~ msgstr "Tentativo di sincronizzazione con $0"
+
+#~ msgid "Not synchronized"
+#~ msgstr "Non sincronizzato"
+
+#~ msgid "Log messages"
+#~ msgstr "Messaggi di log"
+
+#~ msgid "NTP server"
+#~ msgstr "Server NTP"
+
+#~ msgid "Time zone"
+#~ msgstr "Fuso Orario"
+
+#~ msgid "Set time"
+#~ msgstr "Imposta l'orario"
+
+#~ msgid "Manually"
+#~ msgstr "Manualmente"
+
+#~ msgid "Automatically using NTP"
+#~ msgstr "Automaticamente utilizzando NTP"
+
+#~ msgid "Automatically using specific NTP servers"
+#~ msgstr "Automaticamente utilizzando server NTP specifici"
+
+#~ msgid "Pick date"
+#~ msgstr "Scegli una data"
+
+#, fuzzy
+#~ msgid "Toggle date picker"
+#~ msgstr "Utilizza il selettore di date"
+
+#~ msgid "No such file or directory"
+#~ msgstr "Nessun file o directory"
+
+#~ msgid "Prompting via ssh-keygen timed out"
+#~ msgstr "Richiesta tramite ssh-keygen scaduta"
+
+#~ msgid "Old password not accepted"
+#~ msgstr "Vecchia password non accettata"
+
+#~ msgid "Failed to change password"
+#~ msgstr "Impossibile cambiare la password"
+
+#~ msgid "New password was not accepted"
+#~ msgstr "La nuova password non è stata accettata"
+
+#~ msgid "Not a valid private key"
+#~ msgstr "Chiave privata invalida"
+
+#~ msgid "Prompting via ssh-add timed out"
+#~ msgstr "Richiesta tramite ssh-add scaduta"
+
+#~ msgid "Invalid file permissions"
+#~ msgstr "Permessi dei file non validi"
+
+#~ msgid "Password not accepted"
+#~ msgstr "Password non accettata"
+
+#~ msgid "[no data]"
+#~ msgstr "[nessun dato]"
+
+#~ msgid "[$0 bytes of binary data]"
+#~ msgstr "[$0byte di dati binari]"
+
+#~ msgid "[binary data]"
+#~ msgstr "[dati binari]"
+
+#~ msgid "PackageKit crashed"
+#~ msgstr "PackageKit si è interrotto"
 
 #~ msgctxt "GUI|User"
 #~ msgid "_Make this user administrator"

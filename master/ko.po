@@ -33,7 +33,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2022-01-25 01:00+0000\n"
+"POT-Creation-Date: 2022-01-28 00:53+0000\n"
 "PO-Revision-Date: 2022-01-21 11:16+0000\n"
 "Last-Translator: simmon <simmon@nplob.com>\n"
 "Language-Team: Korean <https://translate.fedoraproject.org/projects/anaconda/"
@@ -211,7 +211,7 @@ msgstr "비밀번호가 입력되지 않았습니다."
 msgid "The passphrase is empty."
 msgstr "암호가 비어 있습니다."
 
-#: pyanaconda/core/constants.py:202 ui/webui/src/lib/credentials.js:194
+#: pyanaconda/core/constants.py:202
 msgid "The passwords do not match."
 msgstr "비밀번호가 일치하지 않습니다."
 
@@ -1617,7 +1617,7 @@ msgstr "라이브 타볼(Live tarball)"
 msgid "Closest mirror"
 msgstr "가장 가까운 미러"
 
-#: pyanaconda/modules/payloads/kickstart.py:120
+#: pyanaconda/modules/payloads/kickstart.py:123
 msgid "The %packages --ignorebroken feature is not supported on your product!"
 msgstr "%packages --ignorebroken 기능은 제품 상에서 지원되지 않습니다!"
 
@@ -1969,11 +1969,11 @@ msgstr "%(spoke_title)s 스포크에 들어가기"
 msgid "Full name can't contain the ':' character"
 msgstr "성명은 ':' 문자를 포함 할 수 없습니다"
 
-#: pyanaconda/ui/tui/spokes/user.py:82
+#: pyanaconda/ui/tui/spokes/user.py:82 ui/webui/src/Summary.jsx:138
 msgid "User creation"
 msgstr "사용자 생성"
 
-#: pyanaconda/ui/tui/spokes/user.py:133
+#: pyanaconda/ui/tui/spokes/user.py:133 ui/webui/src/users/UserAccount.jsx:37
 msgid "Create user"
 msgstr "사용자 생성"
 
@@ -2009,6 +2009,7 @@ msgid "Groups"
 msgstr "그룹"
 
 #: pyanaconda/ui/tui/spokes/user.py:244 pyanaconda/ui/gui/spokes/user.py:456
+#: ui/webui/src/Summary.jsx:140
 msgid "No user will be created"
 msgstr "어떤 사용자도 생성되지 않음"
 
@@ -2300,6 +2301,8 @@ msgid "Warning: Processor has Simultaneous Multithreading (SMT) enabled"
 msgstr "경고: 프로세서의 동시 멀티스레딩 기능(SMT)이 활성화되어 있습니다"
 
 #: pyanaconda/ui/tui/spokes/root_password.py:57
+#: ui/webui/src/users/RootAccount.jsx:96 ui/webui/src/users/RootAccount.jsx:107
+#: ui/webui/src/Summary.jsx:133
 msgid "Root password"
 msgstr "root 비밀번호"
 
@@ -2338,6 +2341,7 @@ msgstr "계속 진행하기 위해 쉘을 종료합니다"
 
 #: pyanaconda/ui/tui/spokes/software_selection.py:65
 #: pyanaconda/ui/tui/spokes/software_selection.py:322
+#: ui/webui/src/payloads/SoftwareSelection.jsx:37
 msgid "Software selection"
 msgstr "소프트웨어 선택"
 
@@ -2600,6 +2604,7 @@ msgid "Configuration not saved: netmask missing in static configuration"
 msgstr "구성이 저장되지 않았습니다: 정적 구성에서 넷매스크 누락"
 
 #: pyanaconda/ui/tui/spokes/installation_source.py:86
+#: ui/webui/src/Summary.jsx:111 ui/webui/src/payloads/InstallationSource.jsx:37
 msgid "Installation source"
 msgstr "설치 소스"
 
@@ -2804,10 +2809,6 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/custom_storage.py:455
 #: pyanaconda/ui/gui/spokes/custom_storage.py:498
 #: pyanaconda/ui/gui/spokes/network.py:284 pyanaconda/network.py:454
-#: ui/webui/src/lib/machine-info.js:59 ui/webui/src/lib/machine-info.js:243
-#: ui/webui/src/lib/machine-info.js:251 ui/webui/src/lib/machine-info.js:253
-#: ui/webui/src/lib/machine-info.js:260 ui/webui/src/lib/machine-info.js:262
-#: ui/webui/src/lib/machine-info.js:266
 msgid "Unknown"
 msgstr "알 수 없음"
 
@@ -4556,7 +4557,7 @@ msgstr ""
 "설치 프로그램을\n"
 "종료 하시겠습니까?"
 
-#: pyanaconda/ui/gui/main.glade:175
+#: pyanaconda/ui/gui/main.glade:175 ui/webui/src/Summary.jsx:148
 msgid "Quit"
 msgstr "종료"
 
@@ -7259,6 +7260,161 @@ msgstr "라이브 CD를 하드 디스크에 설치합니다"
 msgid "Welcome to Fedora"
 msgstr "페도라에 오신 것을 환영합니다"
 
+#: ui/webui/src/users/RootAccount.jsx:106
+#, fuzzy
+#| msgctxt "GUI|User"
+#| msgid "_Confirm password"
+msgid "Confirm root password"
+msgstr "비밀번호 확인(_C)"
+
+#: ui/webui/src/users/RootAccount.jsx:116
+#, fuzzy
+#| msgctxt "GUI|Password"
+#| msgid "_Enable root account"
+msgid "Lock root account"
+msgstr "root 계정 활성화(E)"
+
+#: ui/webui/src/localization/Keyboard.jsx:37 ui/webui/src/Summary.jsx:97
+#, fuzzy
+#| msgctxt "GUI|Spoke"
+#| msgid "_Keyboard"
+msgid "Keyboard"
+msgstr "키보드(_K)"
+
+#: ui/webui/src/localization/Language.jsx:37
+#, fuzzy
+#| msgid "Languages"
+msgid "Language"
+msgstr "언어 지원"
+
+#: ui/webui/src/storage/InstallationDestination.jsx:118
+#, fuzzy
+#| msgid "Local Standard Disks"
+msgid "Local standard disks"
+msgstr "로컬 표준 디스크"
+
+#: ui/webui/src/storage/InstallationDestination.jsx:121
+#, fuzzy
+#| msgid "Selected disks"
+msgid "Usable disks"
+msgstr "선택한 디스크"
+
+#: ui/webui/src/storage/InstallationDestination.jsx:161
+#: ui/webui/src/Summary.jsx:122
+#, fuzzy
+#| msgid "Installation Destination"
+msgid "Installation destination"
+msgstr "설치 대상"
+
+#: ui/webui/src/storage/InstallationDestination.jsx:167
+#, fuzzy
+#| msgid ""
+#| "Select the device(s) you'd like to install to.  They will be left "
+#| "untouched until you click on the main menu's \"Begin Installation\" "
+#| "button."
+msgid ""
+"Select the device(s) you would like to install to. They will be left "
+"untouched until you click on the main menu's 'Begin installation' button."
+msgstr ""
+"설치하려는 장치를 선택합니다. 주 메뉴의 \"설치 시작\"에 누름단추를 누를 때까"
+"지 설치는 시작되지 않습니다."
+
+#: ui/webui/src/Summary.jsx:88
+#, fuzzy
+#| msgid "Installation source"
+msgid "Installation summary"
+msgstr "설치 소스"
+
+#: ui/webui/src/Summary.jsx:95
+#, fuzzy
+#| msgid "Location"
+msgid "Localization"
+msgstr "위치"
+
+#: ui/webui/src/Summary.jsx:100
+#, fuzzy
+#| msgctxt "GUI|Spoke"
+#| msgid "_Language Support"
+msgid "Language support"
+msgstr "언어 지원(_L)"
+
+#: ui/webui/src/Summary.jsx:103 ui/webui/src/timezone/TimeDate.jsx:56
+#, fuzzy
+#| msgctxt "GUI|Spoke"
+#| msgid "_Time & Date"
+msgid "Time & Date"
+msgstr "시간과 날짜(_T)"
+
+#: ui/webui/src/Summary.jsx:114
+#, fuzzy
+#| msgctxt "GUI|Spoke"
+#| msgid "_Software Selection"
+msgid "Software Selection"
+msgstr "소프트웨어 선택(_S)"
+
+#: ui/webui/src/Summary.jsx:125
+#, fuzzy
+#| msgctxt "GUI|Spoke"
+#| msgid "_Network & Host Name"
+msgid "Network & Host name"
+msgstr "네트워크와 호스트 이름(_N)"
+
+#: ui/webui/src/Summary.jsx:135
+#, fuzzy
+#| msgid "Root account is disabled."
+msgid "Root account is disabled"
+msgstr "root 계정이 비활성화되어 있음."
+
+#: ui/webui/src/Summary.jsx:145
+#, fuzzy
+#| msgid ""
+#| "Please complete items marked with this icon before continuing to the next "
+#| "step."
+msgid ""
+"Please complete items marked with this icon before continuing to the next "
+"step"
+msgstr "다음 단계를 계속 진행하기 전에 이 아이콘으로 표시된 항목을 완료하세요."
+
+#: ui/webui/src/Summary.jsx:147
+#, fuzzy
+#| msgctxt "GUI|Summary"
+#| msgid "_Begin Installation"
+msgid "Begin installation"
+msgstr "설치 시작(_B)"
+
+#: ui/webui/src/Summary.jsx:150
+#, fuzzy
+#| msgid "We won't touch your disks until you click 'Begin Installation'."
+msgid "We won't touch your disks until you click 'Begin installation'"
+msgstr "'설치 시작'을 누르기 전까지 디스크에 어떤 사항도 변경되지 않습니다."
+
+#: ui/webui/src/Common.jsx:45
+#, fuzzy
+#| msgctxt "GUI|Spoke Navigation"
+#| msgid "_Done"
+msgid "Done"
+msgstr "완료(_D)"
+
+#: ui/webui/src/timezone/TimeDate.jsx:64
+#, fuzzy
+#| msgctxt "GUI|Date and Time"
+#| msgid "_Network Time"
+msgid "Network time"
+msgstr "네트워크 시간(_N)"
+
+#: ui/webui/src/timezone/TimeDate.jsx:68
+#, fuzzy
+#| msgid "Use Network Time"
+msgid "Use network time"
+msgstr "네트워크 시간 사용"
+
+#: ui/webui/src/network/NetworkHostname.jsx:37
+#, fuzzy
+#| msgctxt "GUI|Spoke"
+#| msgid "_Network & Host Name"
+msgid "Network & Host Name"
+msgstr "네트워크와 호스트 이름(_N)"
+
 #: data/liveinst/gnome/fedora-welcome.js:94
 msgid "Try Fedora"
 msgstr "페도라를 사용해보세요"
@@ -7285,277 +7441,210 @@ msgstr ""
 msgid "Close"
 msgstr "종료"
 
-#: ui/webui/src/lib/machine-info.js:58
-msgid "Other"
-msgstr "기타"
-
-#: ui/webui/src/lib/machine-info.js:60
-msgid "Desktop"
-msgstr "데스크탑"
-
-#: ui/webui/src/lib/machine-info.js:61
-msgid "Low profile desktop"
-msgstr "LP 데스크탑 (슬림형)"
-
-#: ui/webui/src/lib/machine-info.js:62
-msgid "Pizza box"
-msgstr "파자 상자"
-
-#: ui/webui/src/lib/machine-info.js:63
-msgid "Mini tower"
-msgstr "미니 타워"
-
-#: ui/webui/src/lib/machine-info.js:64
-msgid "Tower"
-msgstr "타워"
-
-#: ui/webui/src/lib/machine-info.js:65
-msgid "Portable"
-msgstr "이동형"
-
-#: ui/webui/src/lib/machine-info.js:66
-msgid "Laptop"
-msgstr "랩탑"
-
-#: ui/webui/src/lib/machine-info.js:67
-msgid "Notebook"
-msgstr "노트북"
-
-#: ui/webui/src/lib/machine-info.js:68
-msgid "Handheld"
-msgstr "휴대용"
-
-#: ui/webui/src/lib/machine-info.js:69
-msgid "Docking station"
-msgstr "도킹 스테이션"
-
-#: ui/webui/src/lib/machine-info.js:70
-msgid "All-in-one"
-msgstr "일체형"
-
-#: ui/webui/src/lib/machine-info.js:71
-msgid "Sub-Notebook"
-msgstr "서브노트북 (subnotebook)"
-
-#: ui/webui/src/lib/machine-info.js:72
-msgid "Space-saving computer"
-msgstr "공간 절약형 컴퓨터"
-
-#: ui/webui/src/lib/machine-info.js:73
-msgid "Lunch box"
-msgstr "실행 상자"
-
-#: ui/webui/src/lib/machine-info.js:74
-msgid "Main server chassis"
-msgstr "메인 서버 섀시"
-
-#: ui/webui/src/lib/machine-info.js:75
-msgid "Expansion chassis"
-msgstr "확장 섀시"
-
-#: ui/webui/src/lib/machine-info.js:76
-msgid "Sub-Chassis"
-msgstr "서브-섀시"
-
-#: ui/webui/src/lib/machine-info.js:77
-msgid "Bus expansion chassis"
-msgstr "버스 확장 섀시"
-
-#: ui/webui/src/lib/machine-info.js:78
-msgid "Peripheral chassis"
-msgstr "주변 섀시"
-
-#: ui/webui/src/lib/machine-info.js:79
-msgid "RAID chassis"
-msgstr "레이드 섀시"
-
-#: ui/webui/src/lib/machine-info.js:80
-msgid "Rack mount chassis"
-msgstr "랙 마운트 섀시"
-
-#: ui/webui/src/lib/machine-info.js:81
-msgid "Sealed-case PC"
-msgstr "밀폐형-케이스 PC"
-
-#: ui/webui/src/lib/machine-info.js:82
-msgid "Multi-system chassis"
-msgstr "다중-시스템 섀시"
-
-#: ui/webui/src/lib/machine-info.js:83
-msgid "Compact PCI"
-msgstr "컴팩트 PCI"
-
-#: ui/webui/src/lib/machine-info.js:84
-msgid "Advanced TCA"
-msgstr "고급 TCA"
-
-#: ui/webui/src/lib/machine-info.js:85
-msgid "Blade"
-msgstr "블레이드"
-
-#: ui/webui/src/lib/machine-info.js:86
-msgid "Blade enclosure"
-msgstr "블레이드 함체"
-
-#: ui/webui/src/lib/machine-info.js:87
-msgid "Tablet"
-msgstr "테블릿"
-
-#: ui/webui/src/lib/machine-info.js:88
-msgid "Convertible"
-msgstr "컨버터블"
-
-#: ui/webui/src/lib/machine-info.js:89
-msgid "Detachable"
-msgstr "탈부착 가능"
-
-#: ui/webui/src/lib/machine-info.js:90
-msgid "IoT gateway"
-msgstr "IoT 게이트웨이"
-
-#: ui/webui/src/lib/machine-info.js:91
-msgid "Embedded PC"
-msgstr "임베디드 PC"
-
-#: ui/webui/src/lib/machine-info.js:92
-msgid "Mini PC"
-msgstr "미니 PC"
-
-#: ui/webui/src/lib/machine-info.js:93
-msgid "Stick PC"
-msgstr "스틱 PC"
-
-#: ui/webui/src/lib/machine-info.js:246
-msgid "$0 GiB"
-msgstr "$0 GiB"
-
-#: ui/webui/src/lib/machine-info.js:255
-msgid "Single rank"
-msgstr "단일 랭크"
-
-#: ui/webui/src/lib/machine-info.js:257
-msgid "Dual rank"
-msgstr "듀얼 랭크"
-
-#: ui/webui/src/lib/machine-info.js:264
-msgid "Absent"
-msgstr "빈상태"
-
-#: ui/webui/src/lib/machine-info.js:264
-msgid "Present"
-msgstr "존재하는"
-
-#: ui/webui/src/lib/serverTime.js:379
-msgid "Synchronized"
-msgstr "동기화됨"
-
-#: ui/webui/src/lib/serverTime.js:381
-msgid "Synchronized with $0"
-msgstr "$0에 동기화됨"
-
-#: ui/webui/src/lib/serverTime.js:385
-msgid "Synchronizing"
-msgstr "동기화 중"
-
-#: ui/webui/src/lib/serverTime.js:386
-msgid "Trying to synchronize with $0"
-msgstr "$0와 동기화 시도 중"
-
-#: ui/webui/src/lib/serverTime.js:389
-msgid "Not synchronized"
-msgstr "동기화 되지 않음"
-
-#: ui/webui/src/lib/serverTime.js:395
-msgid "Log messages"
-msgstr "로그 메시지"
-
-#: ui/webui/src/lib/serverTime.js:483
-msgid "NTP server"
-msgstr "NTP 서버"
-
-#: ui/webui/src/lib/serverTime.js:501
-msgid "Time zone"
-msgstr "시간대"
-
-#: ui/webui/src/lib/serverTime.js:512
-msgid "Set time"
-msgstr "시간 설정"
-
-#: ui/webui/src/lib/serverTime.js:517
-msgid "Manually"
-msgstr "사용자에 의한"
-
-#: ui/webui/src/lib/serverTime.js:518
-msgid "Automatically using NTP"
-msgstr "NTP를 사용하여 자동적으로"
-
-#: ui/webui/src/lib/serverTime.js:519
-msgid "Automatically using specific NTP servers"
-msgstr "지정된 NTP 서버를 사용하여 자동적으로"
-
-#: ui/webui/src/lib/serverTime.js:525
-msgid "Pick date"
-msgstr "날짜 선택"
-
-#: ui/webui/src/lib/serverTime.js:526
-msgid "Toggle date picker"
-msgstr "날짜 선택기 전환"
-
-#: ui/webui/src/lib/credentials.js:191
-msgid "No such file or directory"
-msgstr "그런 파일 또는 디렉토리가 없음"
-
-#: ui/webui/src/lib/credentials.js:210
-msgid "Prompting via ssh-keygen timed out"
-msgstr "ssh-keygen을 통한 확인 시간이 만료됨"
-
-#: ui/webui/src/lib/credentials.js:221
-msgid "Old password not accepted"
-msgstr "오래된 root 비밀번호는 허용되지 않습니다"
-
-#: ui/webui/src/lib/credentials.js:232
-msgid "Failed to change password"
-msgstr "비밀번호 변경에 실패하였습니다"
-
-#: ui/webui/src/lib/credentials.js:241
-msgid "New password was not accepted"
-msgstr "신규 비밀번호는 허용되지 않습니다"
-
-#: ui/webui/src/lib/credentials.js:277
-msgid "Not a valid private key"
-msgstr "유효한 개인 키가 아닙니다"
-
-#: ui/webui/src/lib/credentials.js:285
-msgid "Prompting via ssh-add timed out"
-msgstr "ssh-add를 통한 확인 시간이 만료되었습니다"
-
-#: ui/webui/src/lib/credentials.js:294
-msgid "Invalid file permissions"
-msgstr "잘못된 파일 권한"
-
-#: ui/webui/src/lib/credentials.js:298
-msgid "Password not accepted"
-msgstr "비밀번호가 허용되지 않습니다"
-
-#: ui/webui/src/lib/journal.js:211
-msgid "[no data]"
-msgstr "[자료 없음]"
-
-#: ui/webui/src/lib/journal.js:215
-msgid "[$0 bytes of binary data]"
-msgstr "[바이너리의 $0 바이트 자료]"
-
-#: ui/webui/src/lib/journal.js:217
-msgid "[binary data]"
-msgstr "[바이너리 자료]"
-
-#: ui/webui/src/lib/packagekit.js:130
-msgid "PackageKit crashed"
-msgstr "PackageKit 충돌됨"
-
 #: ../data/liveinst/console.apps/liveinst.h:1
 msgid "Starting Install to Hard Drive"
 msgstr "하드 드라이브에 설치를 시작합니다"
+
+#~ msgid "Other"
+#~ msgstr "기타"
+
+#~ msgid "Desktop"
+#~ msgstr "데스크탑"
+
+#~ msgid "Low profile desktop"
+#~ msgstr "LP 데스크탑 (슬림형)"
+
+#~ msgid "Pizza box"
+#~ msgstr "파자 상자"
+
+#~ msgid "Mini tower"
+#~ msgstr "미니 타워"
+
+#~ msgid "Tower"
+#~ msgstr "타워"
+
+#~ msgid "Portable"
+#~ msgstr "이동형"
+
+#~ msgid "Laptop"
+#~ msgstr "랩탑"
+
+#~ msgid "Notebook"
+#~ msgstr "노트북"
+
+#~ msgid "Handheld"
+#~ msgstr "휴대용"
+
+#~ msgid "Docking station"
+#~ msgstr "도킹 스테이션"
+
+#~ msgid "All-in-one"
+#~ msgstr "일체형"
+
+#~ msgid "Sub-Notebook"
+#~ msgstr "서브노트북 (subnotebook)"
+
+#~ msgid "Space-saving computer"
+#~ msgstr "공간 절약형 컴퓨터"
+
+#~ msgid "Lunch box"
+#~ msgstr "실행 상자"
+
+#~ msgid "Main server chassis"
+#~ msgstr "메인 서버 섀시"
+
+#~ msgid "Expansion chassis"
+#~ msgstr "확장 섀시"
+
+#~ msgid "Sub-Chassis"
+#~ msgstr "서브-섀시"
+
+#~ msgid "Bus expansion chassis"
+#~ msgstr "버스 확장 섀시"
+
+#~ msgid "Peripheral chassis"
+#~ msgstr "주변 섀시"
+
+#~ msgid "RAID chassis"
+#~ msgstr "레이드 섀시"
+
+#~ msgid "Rack mount chassis"
+#~ msgstr "랙 마운트 섀시"
+
+#~ msgid "Sealed-case PC"
+#~ msgstr "밀폐형-케이스 PC"
+
+#~ msgid "Multi-system chassis"
+#~ msgstr "다중-시스템 섀시"
+
+#~ msgid "Compact PCI"
+#~ msgstr "컴팩트 PCI"
+
+#~ msgid "Advanced TCA"
+#~ msgstr "고급 TCA"
+
+#~ msgid "Blade"
+#~ msgstr "블레이드"
+
+#~ msgid "Blade enclosure"
+#~ msgstr "블레이드 함체"
+
+#~ msgid "Tablet"
+#~ msgstr "테블릿"
+
+#~ msgid "Convertible"
+#~ msgstr "컨버터블"
+
+#~ msgid "Detachable"
+#~ msgstr "탈부착 가능"
+
+#~ msgid "IoT gateway"
+#~ msgstr "IoT 게이트웨이"
+
+#~ msgid "Embedded PC"
+#~ msgstr "임베디드 PC"
+
+#~ msgid "Mini PC"
+#~ msgstr "미니 PC"
+
+#~ msgid "Stick PC"
+#~ msgstr "스틱 PC"
+
+#~ msgid "$0 GiB"
+#~ msgstr "$0 GiB"
+
+#~ msgid "Single rank"
+#~ msgstr "단일 랭크"
+
+#~ msgid "Dual rank"
+#~ msgstr "듀얼 랭크"
+
+#~ msgid "Absent"
+#~ msgstr "빈상태"
+
+#~ msgid "Present"
+#~ msgstr "존재하는"
+
+#~ msgid "Synchronized"
+#~ msgstr "동기화됨"
+
+#~ msgid "Synchronized with $0"
+#~ msgstr "$0에 동기화됨"
+
+#~ msgid "Synchronizing"
+#~ msgstr "동기화 중"
+
+#~ msgid "Trying to synchronize with $0"
+#~ msgstr "$0와 동기화 시도 중"
+
+#~ msgid "Not synchronized"
+#~ msgstr "동기화 되지 않음"
+
+#~ msgid "Log messages"
+#~ msgstr "로그 메시지"
+
+#~ msgid "NTP server"
+#~ msgstr "NTP 서버"
+
+#~ msgid "Time zone"
+#~ msgstr "시간대"
+
+#~ msgid "Set time"
+#~ msgstr "시간 설정"
+
+#~ msgid "Manually"
+#~ msgstr "사용자에 의한"
+
+#~ msgid "Automatically using NTP"
+#~ msgstr "NTP를 사용하여 자동적으로"
+
+#~ msgid "Automatically using specific NTP servers"
+#~ msgstr "지정된 NTP 서버를 사용하여 자동적으로"
+
+#~ msgid "Pick date"
+#~ msgstr "날짜 선택"
+
+#~ msgid "Toggle date picker"
+#~ msgstr "날짜 선택기 전환"
+
+#~ msgid "No such file or directory"
+#~ msgstr "그런 파일 또는 디렉토리가 없음"
+
+#~ msgid "Prompting via ssh-keygen timed out"
+#~ msgstr "ssh-keygen을 통한 확인 시간이 만료됨"
+
+#~ msgid "Old password not accepted"
+#~ msgstr "오래된 root 비밀번호는 허용되지 않습니다"
+
+#~ msgid "Failed to change password"
+#~ msgstr "비밀번호 변경에 실패하였습니다"
+
+#~ msgid "New password was not accepted"
+#~ msgstr "신규 비밀번호는 허용되지 않습니다"
+
+#~ msgid "Not a valid private key"
+#~ msgstr "유효한 개인 키가 아닙니다"
+
+#~ msgid "Prompting via ssh-add timed out"
+#~ msgstr "ssh-add를 통한 확인 시간이 만료되었습니다"
+
+#~ msgid "Invalid file permissions"
+#~ msgstr "잘못된 파일 권한"
+
+#~ msgid "Password not accepted"
+#~ msgstr "비밀번호가 허용되지 않습니다"
+
+#~ msgid "[no data]"
+#~ msgstr "[자료 없음]"
+
+#~ msgid "[$0 bytes of binary data]"
+#~ msgstr "[바이너리의 $0 바이트 자료]"
+
+#~ msgid "[binary data]"
+#~ msgstr "[바이너리 자료]"
+
+#~ msgid "PackageKit crashed"
+#~ msgstr "PackageKit 충돌됨"
 
 #~ msgctxt "GUI|User"
 #~ msgid "_Make this user administrator"
