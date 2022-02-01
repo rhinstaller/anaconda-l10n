@@ -9,7 +9,7 @@ msgstr ""
 "#-#-#-#-#  main.pot (anaconda 36.16)  #-#-#-#-#\n"
 "Project-Id-Version: anaconda 36.16\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2022-01-31 00:52+0000\n"
+"POT-Creation-Date: 2022-02-01 00:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,7 +21,7 @@ msgstr ""
 "#-#-#-#-#  main_js.pot (anaconda 36.16)  #-#-#-#-#\n"
 "Project-Id-Version: anaconda 36.16\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2022-01-31 00:52+0000\n"
+"POT-Creation-Date: 2022-02-01 00:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,7 +32,7 @@ msgstr ""
 "#-#-#-#-#  extra.pot (anaconda 36.16)  #-#-#-#-#\n"
 "Project-Id-Version: anaconda 36.16\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2022-01-31 00:51+0000\n"
+"POT-Creation-Date: 2022-02-01 00:55+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -112,7 +112,7 @@ msgid ""
 "The installer will now terminate."
 msgstr ""
 
-#: pyanaconda/kickstart.py:502 pyanaconda/installation.py:300
+#: pyanaconda/kickstart.py:502 pyanaconda/installation.py:281
 msgid "Running pre-installation scripts"
 msgstr ""
 
@@ -1415,7 +1415,7 @@ msgstr ""
 msgid "Closest mirror"
 msgstr ""
 
-#: pyanaconda/modules/payloads/kickstart.py:123
+#: pyanaconda/modules/payloads/kickstart.py:125
 msgid "The %packages --ignorebroken feature is not supported on your product!"
 msgstr ""
 
@@ -1502,7 +1502,7 @@ msgid "Verifying {}"
 msgstr ""
 
 #: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:53
-#: pyanaconda/installation.py:371
+#: pyanaconda/installation.py:354
 msgid "Performing post-installation setup tasks"
 msgstr ""
 
@@ -1758,7 +1758,7 @@ msgid "Use password"
 msgstr ""
 
 #: pyanaconda/ui/tui/spokes/user.py:148
-#: pyanaconda/ui/tui/spokes/root_password.py:103
+#: pyanaconda/ui/tui/spokes/root_password.py:90
 #: pyanaconda/ui/gui/spokes/root_password.glade:232
 #: pyanaconda/ui/gui/spokes/user.glade:175
 #: pyanaconda/ui/gui/spokes/subscription.glade:181
@@ -2045,30 +2045,13 @@ msgstr ""
 msgid "Warning: Processor has Simultaneous Multithreading (SMT) enabled"
 msgstr ""
 
-#: pyanaconda/ui/tui/spokes/root_password.py:57
+#: pyanaconda/ui/tui/spokes/root_password.py:55
 #: ui/webui/src/users/RootAccount.jsx:96 ui/webui/src/users/RootAccount.jsx:107
 #: ui/webui/src/Summary.jsx:133
 msgid "Root password"
 msgstr ""
 
-#: pyanaconda/ui/tui/spokes/root_password.py:84
-msgid "Disabled. Set password to enable root account."
-msgstr ""
-
-#: pyanaconda/ui/tui/spokes/root_password.py:86
-#: pyanaconda/ui/gui/spokes/root_password.py:182
-msgid "Root account is disabled."
-msgstr ""
-
-#: pyanaconda/ui/tui/spokes/root_password.py:89
-msgid "Password is set."
-msgstr ""
-
-#: pyanaconda/ui/tui/spokes/root_password.py:91
-msgid "Password is not set."
-msgstr ""
-
-#: pyanaconda/ui/tui/spokes/root_password.py:96
+#: pyanaconda/ui/tui/spokes/root_password.py:83
 msgid "Please select new root password. You will have to type it twice."
 msgstr ""
 
@@ -2826,25 +2809,13 @@ msgstr ""
 msgid "Layout switching not configured."
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/root_password.py:54
+#: pyanaconda/ui/gui/spokes/root_password.py:52
 msgctxt "GUI|Spoke"
 msgid "_Root Account"
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/root_password.py:134
+#: pyanaconda/ui/gui/spokes/root_password.py:132
 msgid "Root password has been set."
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/root_password.py:180
-msgid "Disabled, set password to enable."
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/root_password.py:185
-msgid "Root password is set"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/root_password.py:187
-msgid "Root password is not set"
 msgstr ""
 
 #: pyanaconda/ui/gui/spokes/blivet_gui.py:97
@@ -3721,6 +3692,18 @@ msgstr ""
 msgid "Checking storage configuration..."
 msgstr ""
 
+#: pyanaconda/ui/lib/users.py:35 ui/webui/src/Summary.jsx:135
+msgid "Root account is disabled"
+msgstr ""
+
+#: pyanaconda/ui/lib/users.py:37
+msgid "Root password is set"
+msgstr ""
+
+#: pyanaconda/ui/lib/users.py:39
+msgid "Root password is not set"
+msgstr ""
+
 #: pyanaconda/ui/lib/format_dasd.py:107
 msgid "Nothing to format"
 msgstr ""
@@ -3845,68 +3828,68 @@ msgid ""
 "Please enter a new one, or leave blank for no password."
 msgstr ""
 
-#: pyanaconda/installation.py:88
+#: pyanaconda/installation.py:69
 msgid "Configuring Red Hat subscription"
 msgstr ""
 
-#: pyanaconda/installation.py:95
+#: pyanaconda/installation.py:76
 msgid "Configuring installed system"
 msgstr ""
 
-#: pyanaconda/installation.py:133
+#: pyanaconda/installation.py:114
 msgid "Writing network configuration"
 msgstr ""
 
-#: pyanaconda/installation.py:140
+#: pyanaconda/installation.py:121
 msgid "Creating users"
 msgstr ""
 
-#: pyanaconda/installation.py:147
+#: pyanaconda/installation.py:128
 msgid "Configuring addons"
 msgstr ""
 
-#: pyanaconda/installation.py:157
+#: pyanaconda/installation.py:138
 msgid "Generating initramfs"
 msgstr ""
 
-#: pyanaconda/installation.py:183
+#: pyanaconda/installation.py:164
 msgid "Setting up kexec"
 msgstr ""
 
-#: pyanaconda/installation.py:190
+#: pyanaconda/installation.py:171
 msgid "Storing configuration files and kickstarts"
 msgstr ""
 
-#: pyanaconda/installation.py:210
+#: pyanaconda/installation.py:191
 msgid "Running post-installation scripts"
 msgstr ""
 
-#: pyanaconda/installation.py:238
+#: pyanaconda/installation.py:219
 #, python-format
 msgid "Waiting for %s threads to finish"
 msgstr ""
 
-#: pyanaconda/installation.py:266
+#: pyanaconda/installation.py:247
 msgid "Setting up the installation environment"
 msgstr ""
 
-#: pyanaconda/installation.py:290 pyanaconda/installation.py:338
+#: pyanaconda/installation.py:271 pyanaconda/installation.py:321
 msgid "Configuring storage"
 msgstr ""
 
-#: pyanaconda/installation.py:310
+#: pyanaconda/installation.py:291
 msgid "Running pre-installation tasks"
 msgstr ""
 
-#: pyanaconda/installation.py:332
+#: pyanaconda/installation.py:315
 msgid "Installing."
 msgstr ""
 
-#: pyanaconda/installation.py:345
+#: pyanaconda/installation.py:328
 msgid "Installing boot loader"
 msgstr ""
 
-#: pyanaconda/installation.py:382
+#: pyanaconda/installation.py:365
 msgid "Creating snapshots"
 msgstr ""
 
@@ -6819,10 +6802,6 @@ msgstr ""
 
 #: ui/webui/src/Summary.jsx:125
 msgid "Network & Host name"
-msgstr ""
-
-#: ui/webui/src/Summary.jsx:135
-msgid "Root account is disabled"
 msgstr ""
 
 #: ui/webui/src/Summary.jsx:145
