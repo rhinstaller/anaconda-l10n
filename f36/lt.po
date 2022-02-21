@@ -7,11 +7,11 @@
 # aurisc4 <aurisc4@gmail.com>, 2013
 # dcantrel <dcantrell@redhat.com>, 2011
 # Dimitris Glezos <glezos@indifex.com>, 2011
-# Aurimas Černius <aurisc4@gmail.com>, 2015. #zanata, 2020, 2021.
-# Aurimas Černius <aurisc4@gmail.com>, 2016. #zanata, 2020, 2021.
-# Aurimas Černius <aurisc4@gmail.com>, 2018. #zanata, 2020, 2021.
-# Aurimas Černius <aurisc4@gmail.com>, 2019. #zanata, 2020, 2021.
-# Aurimas Černius <aurisc4@gmail.com>, 2020. #zanata, 2021.
+# Aurimas Černius <aurisc4@gmail.com>, 2015. #zanata, 2020, 2021, 2022.
+# Aurimas Černius <aurisc4@gmail.com>, 2016. #zanata, 2020, 2021, 2022.
+# Aurimas Černius <aurisc4@gmail.com>, 2018. #zanata, 2020, 2021, 2022.
+# Aurimas Černius <aurisc4@gmail.com>, 2019. #zanata, 2020, 2021, 2022.
+# Aurimas Černius <aurisc4@gmail.com>, 2020. #zanata, 2021, 2022.
 # Ernestas Kulik <ekulik@redhat.com>, 2020.
 # Tautvydas Žukauskas <tautzuk@tutanota.com>, 2021.
 # domantas ket <domant3lis@protonmail.com>, 2021.
@@ -21,17 +21,17 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
 "POT-Creation-Date: 2022-01-26 00:59+0000\n"
-"PO-Revision-Date: 2021-11-04 06:05+0000\n"
-"Last-Translator: Vladimír Slávik <vslavik@redhat.com>\n"
+"PO-Revision-Date: 2022-02-22 21:16+0000\n"
+"Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
 "Language-Team: Lithuanian <https://translate.fedoraproject.org/projects/"
-"anaconda/master/lt/>\n"
+"anaconda/f36/lt/>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
 "%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 4.8\n"
+"X-Generator: Weblate 4.10.1\n"
 
 #: anaconda.py:306
 msgid "Unable to create PID file"
@@ -672,26 +672,6 @@ msgstr[2] ""
 "kaip nustatyta."
 
 #: pyanaconda/modules/storage/constants.py:30
-#, fuzzy
-#| msgid ""
-#| "Workarounds for manual installations:\n"
-#| "* Select only the disks with the same sector size during manual "
-#| "installation in graphical or text mode.\n"
-#| "* When disks with inconsistent sector size are selected for the "
-#| "installation, restrict each created LVM Volume Group to use Physical "
-#| "Volumes with the same sector size. This can only be done in graphical "
-#| "mode in the Custom partitioning spoke.\n"
-#| "\n"
-#| "Workarounds for kickstart installations:\n"
-#| "* Restrict what disks are used for the partitioning by specifying "
-#| "'ignoredisk --drives=..' or 'ignoredisk --only-use=..'.\n"
-#| "* Specify what disks should be used for each created LVM Physical Volume: "
-#| "partition pv.1 --ondisk=..'.\n"
-#| "\n"
-#| "General workarounds:\n"
-#| "* Plain partitioning scheme can be used instead of LVM.\n"
-#| "* Some drives support re-configuration of sector sizes, for example by "
-#| "running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 msgid ""
 "Workarounds for manual installations:\n"
 "* Select only the disks with the same sector size during manual installation "
@@ -721,8 +701,8 @@ msgstr ""
 "pasirinktiniame skaidyme.\n"
 "\n"
 "Apėjimai kickstart diegimams:\n"
-"* Apribokite, kurie diskai naudojami skaidyme nurodydami „ignoredisk --"
-"drives=..“ arba „ignoredisk --only-use=..“.\n"
+"* Apribokite, kurie diskai naudojami skaidyme nurodydami „ignoredisk "
+"--drives=..“ arba „ignoredisk --only-use=..“.\n"
 "* Nurodykite, kurie diskai turi būti naudojami kiekvienam kuriamam LVM "
 "fiziniam tomui: „partition pv.1 --ondisk=..“.\n"
 "\n"
@@ -858,7 +838,7 @@ msgid ""
 "Volume group \"{}\" defined without any physical volumes. Either specify "
 "physical volumes or use --useexisting."
 msgstr ""
-"Tomų grupė „{}“ apibrėžta be fizinių tomų.  Nurodykite fizinius tomus arba "
+"Tomų grupė „{}“ apibrėžta be fizinių tomų. Nurodykite fizinius tomus arba "
 "naudokite --useexisting."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:747
@@ -898,7 +878,7 @@ msgid ""
 "No volume group exists with the name \"{}\". Specify volume groups before "
 "logical volumes."
 msgstr ""
-"Nėra tomų grupės pavadinimu „{}“.  Nurodykite tomų grupes prieš loginius "
+"Nėra tomų grupės pavadinimu „{}“. Nurodykite tomų grupes prieš loginius "
 "tomus."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:876
@@ -1466,6 +1446,9 @@ msgid ""
 "system. The system will not be bootable. Please, upgrade the firmware or "
 "change the file system type."
 msgstr ""
+"Jūsų aparatinė programinė įranga nepalaiko XFS failų sistemos savybių /boot "
+"failų sistemoje. Sistemos nebus galima paleisti. Atnaujinkite aparatinę "
+"programinę įrangą arba pakeiskite failų sistemą."
 
 #: pyanaconda/modules/storage/checker/utils.py:305
 #, python-format
@@ -1629,7 +1612,7 @@ msgstr "Vietinė laikmena"
 
 #: pyanaconda/modules/payloads/source/live_tar/live_tar.py:43
 msgid "Live tarball"
-msgstr ""
+msgstr "Tiesioginis archyvas"
 
 #: pyanaconda/modules/payloads/source/closest_mirror/closest_mirror.py:45
 #: pyanaconda/ui/tui/spokes/installation_source.py:143
@@ -1685,16 +1668,12 @@ msgid "Writing objects"
 msgstr "Rašomi objektai"
 
 #: pyanaconda/modules/payloads/payload/live_image/download_progress.py:54
-#, fuzzy
-#| msgid "Downloading %(url)s (%(pct)d%%)"
 msgid "Downloading {} ({}%)"
-msgstr "Parsiunčiama %(url)s (%(pct)d%%)"
+msgstr "Atsisiunčiama {} ({}%)"
 
 #: pyanaconda/modules/payloads/payload/live_image/installation.py:131
-#, fuzzy
-#| msgid "Downloading packages"
 msgid "Downloading {}"
-msgstr "Parsiunčiami paketai"
+msgstr "Atsisiunčiama {}"
 
 #: pyanaconda/modules/payloads/payload/live_image/installation.py:185
 msgid "Checking image checksum"
@@ -2813,8 +2792,7 @@ msgstr[2] "Pasirinkta %d _saugyklos įrenginių"
 #: pyanaconda/ui/gui/spokes/custom_storage.py:344
 #, python-format
 msgid "%(items_selected)s of %(items_total)s mount points in %(page_name)s"
-msgstr ""
-"%(items_selected)s prijungimo taškai iš %(items_total)s iš %(page_name)s"
+msgstr "%(items_selected)s iš %(items_total)s prijungimo taškai %(page_name)s"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:371
 #, python-format
@@ -6207,11 +6185,9 @@ msgid "RA_ID Level:"
 msgstr "RA_ID lygis:"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:938
-#, fuzzy
-#| msgid "LUKS Version:"
 msgctxt "GUI|Custom Partitioning|Configure"
 msgid "LUK_S Version:"
-msgstr "LUKS versija:"
+msgstr "LUK_S versija:"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:1009
 msgctxt "GUI|Custom Partitioning|Configure|Devices"
@@ -6378,6 +6354,7 @@ msgctxt "GUI|User"
 msgid ""
 "Add ad_ministrative privileges to this user account (wheel group membership)"
 msgstr ""
+"Pridėti ad_ministracines privilegijas šiai paskyrai (narystė wheel grupėje)"
 
 #: pyanaconda/ui/gui/spokes/user.glade:269
 msgctxt "GUI|User"
@@ -7364,313 +7341,272 @@ msgid "Close"
 msgstr "Užverti"
 
 #: ui/webui/src/lib/machine-info.js:58
-#, fuzzy
-#| msgid "Other ({})"
 msgid "Other"
-msgstr "Kita ({})"
+msgstr "Kita"
 
 #: ui/webui/src/lib/machine-info.js:60
 msgid "Desktop"
-msgstr ""
+msgstr "Darbalaukis"
 
 #: ui/webui/src/lib/machine-info.js:61
 msgid "Low profile desktop"
-msgstr ""
+msgstr "Žemo profilio darbalaukis"
 
 #: ui/webui/src/lib/machine-info.js:62
 msgid "Pizza box"
-msgstr ""
+msgstr "Picos dėžutė"
 
 #: ui/webui/src/lib/machine-info.js:63
 msgid "Mini tower"
-msgstr ""
+msgstr "Mini bokštas"
 
 #: ui/webui/src/lib/machine-info.js:64
 msgid "Tower"
-msgstr ""
+msgstr "Bokštas"
 
 #: ui/webui/src/lib/machine-info.js:65
-#, fuzzy
-#| msgid "Portal"
 msgid "Portable"
-msgstr "Portalas"
+msgstr "Nešiojamas"
 
 #: ui/webui/src/lib/machine-info.js:66
 msgid "Laptop"
-msgstr ""
+msgstr "Nešiojamas kompiuteris"
 
 #: ui/webui/src/lib/machine-info.js:67
 msgid "Notebook"
-msgstr ""
+msgstr "Internetinis kompiuteris"
 
 #: ui/webui/src/lib/machine-info.js:68
 msgid "Handheld"
-msgstr ""
+msgstr "Rankinis"
 
 #: ui/webui/src/lib/machine-info.js:69
-#, fuzzy
-#| msgid "checking status"
 msgid "Docking station"
-msgstr "tikrinama būsena"
+msgstr "Prijungimo stotis"
 
 #: ui/webui/src/lib/machine-info.js:70
 msgid "All-in-one"
-msgstr ""
+msgstr "Viskas viename"
 
 #: ui/webui/src/lib/machine-info.js:71
 msgid "Sub-Notebook"
-msgstr ""
+msgstr "Mažas internetinis kompiuteris"
 
 #: ui/webui/src/lib/machine-info.js:72
 msgid "Space-saving computer"
-msgstr ""
+msgstr "Vietą taupantis kompiuteris"
 
 #: ui/webui/src/lib/machine-info.js:73
 msgid "Lunch box"
-msgstr ""
+msgstr "Pietų dėžutė"
 
 #: ui/webui/src/lib/machine-info.js:74
 msgid "Main server chassis"
-msgstr ""
+msgstr "Pagrindinio serverio važiuoklė"
 
 #: ui/webui/src/lib/machine-info.js:75
 msgid "Expansion chassis"
-msgstr ""
+msgstr "Plėtimo dėžė"
 
 #: ui/webui/src/lib/machine-info.js:76
 msgid "Sub-Chassis"
-msgstr ""
+msgstr "Važiuoklės dalis"
 
 #: ui/webui/src/lib/machine-info.js:77
 msgid "Bus expansion chassis"
-msgstr ""
+msgstr "Magistralės išplėtimo važiuoklė"
 
 #: ui/webui/src/lib/machine-info.js:78
 msgid "Peripheral chassis"
-msgstr ""
+msgstr "Periferinė važiuoklė"
 
 #: ui/webui/src/lib/machine-info.js:79
 msgid "RAID chassis"
-msgstr ""
+msgstr "RAID važiuoklė"
 
 #: ui/webui/src/lib/machine-info.js:80
 msgid "Rack mount chassis"
-msgstr ""
+msgstr "Stalčių montavimo važiuoklė"
 
 #: ui/webui/src/lib/machine-info.js:81
 msgid "Sealed-case PC"
-msgstr ""
+msgstr "Neardomos dėžės PK"
 
 #: ui/webui/src/lib/machine-info.js:82
 msgid "Multi-system chassis"
-msgstr ""
+msgstr "Daugiasistemė važiuoklė"
 
 #: ui/webui/src/lib/machine-info.js:83
 msgid "Compact PCI"
-msgstr ""
+msgstr "Kompaktiška PCI"
 
 #: ui/webui/src/lib/machine-info.js:84
-#, fuzzy
-#| msgctxt "GUI|User"
-#| msgid "_Advanced..."
 msgid "Advanced TCA"
-msgstr "_Sudėtingesni..."
+msgstr "Sudėtingesni TCA"
 
 #: ui/webui/src/lib/machine-info.js:85
 msgid "Blade"
-msgstr ""
+msgstr "Blade"
 
 #: ui/webui/src/lib/machine-info.js:86
 msgid "Blade enclosure"
-msgstr ""
+msgstr "Blade užraktas"
 
 #: ui/webui/src/lib/machine-info.js:87
-#, fuzzy
-#| msgid "Enabled"
 msgid "Tablet"
-msgstr "Įjungta"
+msgstr "Planšetė"
 
 #: ui/webui/src/lib/machine-info.js:88
 msgid "Convertible"
-msgstr ""
+msgstr "Konvertuojamas kompiuteris"
 
 #: ui/webui/src/lib/machine-info.js:89
 msgid "Detachable"
-msgstr ""
+msgstr "Atkabinamas"
 
 #: ui/webui/src/lib/machine-info.js:90
-#, fuzzy
-#| msgid "IPv4 gateway"
 msgid "IoT gateway"
-msgstr "IPv4 šliuzas"
+msgstr "IoT šliuzas"
 
 #: ui/webui/src/lib/machine-info.js:91
 msgid "Embedded PC"
-msgstr ""
+msgstr "Integruotas PK"
 
 #: ui/webui/src/lib/machine-info.js:92
 msgid "Mini PC"
-msgstr ""
+msgstr "Mini PK"
 
 #: ui/webui/src/lib/machine-info.js:93
 msgid "Stick PC"
-msgstr ""
+msgstr "Lazdinis PK"
 
 #: ui/webui/src/lib/machine-info.js:246
 msgid "$0 GiB"
-msgstr ""
+msgstr "$0 GiB"
 
 #: ui/webui/src/lib/machine-info.js:255
-#, fuzzy
-#| msgid "Single"
 msgid "Single rank"
-msgstr "Vienas"
+msgstr "Vieno rango"
 
 #: ui/webui/src/lib/machine-info.js:257
 msgid "Dual rank"
-msgstr ""
+msgstr "Dviejų rangų"
 
 #: ui/webui/src/lib/machine-info.js:264
 msgid "Absent"
-msgstr ""
+msgstr "Nėra"
 
 #: ui/webui/src/lib/machine-info.js:264
-#, fuzzy
-#| msgid "Preserve"
 msgid "Present"
-msgstr "Išlaikyti"
+msgstr "Yra"
 
 #: ui/webui/src/lib/serverTime.js:379
-#, fuzzy
-#| msgid "Synchronizing writes to disk"
 msgid "Synchronized"
-msgstr "Sinchronizuojami rašymai į diską"
+msgstr "Sinchronizuojami"
 
 #: ui/webui/src/lib/serverTime.js:381
-#, fuzzy
-#| msgid "Synchronizing writes to disk"
 msgid "Synchronized with $0"
-msgstr "Sinchronizuojami rašymai į diską"
+msgstr "Sinchronizuojama su $0"
 
 #: ui/webui/src/lib/serverTime.js:385
-#, fuzzy
-#| msgid "Synchronizing writes to disk"
 msgid "Synchronizing"
-msgstr "Sinchronizuojami rašymai į diską"
+msgstr "Sinchronizuojama"
 
 #: ui/webui/src/lib/serverTime.js:386
 msgid "Trying to synchronize with $0"
-msgstr ""
+msgstr "Bandoma sinchronizuoti su $0"
 
 #: ui/webui/src/lib/serverTime.js:389
-#, fuzzy
-#| msgid "Not connected"
 msgid "Not synchronized"
-msgstr "Neprisijungta"
+msgstr "Nesinchronizuota"
 
 #: ui/webui/src/lib/serverTime.js:395
 msgid "Log messages"
-msgstr ""
+msgstr "Vesti žurnalą"
 
 #: ui/webui/src/lib/serverTime.js:483
-#, fuzzy
-#| msgid "NTP servers:"
 msgid "NTP server"
-msgstr "NTP serveriai:"
+msgstr "NTP serveris"
 
 #: ui/webui/src/lib/serverTime.js:501
-#, fuzzy
-#| msgid "Timezone: %s\n"
 msgid "Time zone"
-msgstr "Laiko juosta: %s\n"
+msgstr "Laiko juosta"
 
 #: ui/webui/src/lib/serverTime.js:512
-#, fuzzy
-#| msgid "Set timezone"
 msgid "Set time"
-msgstr "Nustatyti laiko juostą"
+msgstr "Nustatyti laiką"
 
 #: ui/webui/src/lib/serverTime.js:517
 msgid "Manually"
-msgstr ""
+msgstr "Rankomis"
 
 #: ui/webui/src/lib/serverTime.js:518
 msgid "Automatically using NTP"
-msgstr ""
+msgstr "Automatiškai naudojant NTP"
 
 #: ui/webui/src/lib/serverTime.js:519
 msgid "Automatically using specific NTP servers"
-msgstr ""
+msgstr "Automatiškai naudojant konkrečius NTP serverius"
 
 #: ui/webui/src/lib/serverTime.js:525
 msgid "Pick date"
-msgstr ""
+msgstr "Pasirinkite datą"
 
 #: ui/webui/src/lib/serverTime.js:526
 msgid "Toggle date picker"
-msgstr ""
+msgstr "Perjungti datos parinkiklį"
 
 #: ui/webui/src/lib/credentials.js:191
 msgid "No such file or directory"
-msgstr ""
+msgstr "Nėra tokio failo ar katalogo"
 
 #: ui/webui/src/lib/credentials.js:210
 msgid "Prompting via ssh-keygen timed out"
-msgstr ""
+msgstr "Prašymui per ssh-keygen baigėsi laikas"
 
 #: ui/webui/src/lib/credentials.js:221
-#, fuzzy
-#| msgid "Root password is not set"
 msgid "Old password not accepted"
-msgstr "Root slaptažodis nenustatytas"
+msgstr "Senas slaptažodis nepriimtas"
 
 #: ui/webui/src/lib/credentials.js:232
-#, fuzzy
-#| msgid "Failed to change a device."
 msgid "Failed to change password"
-msgstr "Nepavyko pakeisti įrenginio."
+msgstr "Nepavyko pakeisti spaltažodžio"
 
 #: ui/webui/src/lib/credentials.js:241
-#, fuzzy
-#| msgid "Root password is not set"
 msgid "New password was not accepted"
-msgstr "Root slaptažodis nenustatytas"
+msgstr "Naujas slaptažodis nepriimtas"
 
 #: ui/webui/src/lib/credentials.js:277
 msgid "Not a valid private key"
-msgstr ""
+msgstr "Netinkama privatusis raktas"
 
 #: ui/webui/src/lib/credentials.js:285
 msgid "Prompting via ssh-add timed out"
-msgstr ""
+msgstr "Prašymui per ssh-add baigėsi laikas"
 
 #: ui/webui/src/lib/credentials.js:294
-#, fuzzy
-#| msgid "Invalid timezone"
 msgid "Invalid file permissions"
-msgstr "Netinkama laiko juosta"
+msgstr "Netinkami failo leidimai"
 
 #: ui/webui/src/lib/credentials.js:298
-#, fuzzy
-#| msgid "Password is not set."
 msgid "Password not accepted"
-msgstr "Slaptažodis nenustatytas."
+msgstr "Slaptažodis nepriimtas"
 
 #: ui/webui/src/lib/journal.js:211
 msgid "[no data]"
-msgstr ""
+msgstr "[nėra duomenų]"
 
 #: ui/webui/src/lib/journal.js:215
 msgid "[$0 bytes of binary data]"
-msgstr ""
+msgstr "[$0 baitų dvejetainių duomenų]"
 
 #: ui/webui/src/lib/journal.js:217
 msgid "[binary data]"
-msgstr ""
+msgstr "[dvejetainiai duomenys]"
 
 #: ui/webui/src/lib/packagekit.js:130
 msgid "PackageKit crashed"
-msgstr ""
+msgstr "PackageKit nulūžo"
 
 #: ../data/liveinst/console.apps/liveinst.h:1
 msgid "Starting Install to Hard Drive"
