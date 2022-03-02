@@ -58,7 +58,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2022-02-28 01:01+0000\n"
+"POT-Creation-Date: 2022-03-02 01:05+0000\n"
 "PO-Revision-Date: 2021-10-09 03:05+0000\n"
 "Last-Translator: Ludek Janda <ljanda@redhat.com>\n"
 "Language-Team: Japanese <https://translate.fedoraproject.org/projects/"
@@ -798,26 +798,22 @@ msgstr ""
 msgid "Layout switching not configured."
 msgstr "レイアウトの切り替えは設定されていません。"
 
-#: pyanaconda/ui/gui/spokes/installation_progress.py:100
-msgid "Complete!"
-msgstr "インストールが完了しました!"
-
-#: pyanaconda/ui/gui/spokes/installation_progress.py:122
+#: pyanaconda/ui/gui/spokes/installation_progress.py:80
 #, python-format
 msgid "Use of this product is subject to the license agreement found at %s"
 msgstr "本製品の使用は、以下 %s に定められている使用許諾契約の対象となります"
 
-#: pyanaconda/ui/gui/spokes/installation_progress.py:147
+#: pyanaconda/ui/gui/spokes/installation_progress.py:105
 msgctxt "GUI|Progress"
 msgid "_Reboot System"
 msgstr "システムの再起動(_R)"
 
-#: pyanaconda/ui/gui/spokes/installation_progress.py:149
+#: pyanaconda/ui/gui/spokes/installation_progress.py:107
 msgctxt "GUI|Progress"
 msgid "_Finish Installation"
 msgstr "インストールの終了(_F)"
 
-#: pyanaconda/ui/gui/spokes/installation_progress.py:157
+#: pyanaconda/ui/gui/spokes/installation_progress.py:115
 #, python-format
 msgid ""
 "%s is now successfully installed and ready for you to use!\n"
@@ -826,7 +822,7 @@ msgstr ""
 "%s が正しくインストールされ、利用準備が整いました。\n"
 "利用開始するにはシステムを再起動してください。"
 
-#: pyanaconda/ui/gui/spokes/installation_progress.py:162
+#: pyanaconda/ui/gui/spokes/installation_progress.py:120
 #, python-format
 msgid ""
 "%s is now successfully installed and ready for you to use!\n"
@@ -1247,6 +1243,14 @@ msgstr "新しいマウントポイントに次のパーティション設定ス
 msgctxt "GUI|Custom Partitioning|Autopart Page"
 msgid "_Encrypt automatically created mount points by default:"
 msgstr "デフォルトで暗号化可能な自動生成マウントポイント(_E) :"
+
+#: pyanaconda/ui/gui/spokes/lib/accordion.py:547
+#, fuzzy
+#| msgctxt "GUI|Storage"
+#| msgid "_Encrypt my data."
+msgctxt "GUI|Custom Partitioning|Autopart Page"
+msgid "Encrypt my data."
+msgstr "データを暗号化する(_E)。"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:58
 #, python-format
@@ -2134,19 +2138,19 @@ msgstr "パスワードは 6 文字以上でなければなりません。"
 msgid "The password cannot be more than eight characters long."
 msgstr "パスワードは 8 文字より長くできません。"
 
-#: pyanaconda/ui/tui/spokes/installation_progress.py:55
+#: pyanaconda/ui/tui/spokes/installation_progress.py:58
 msgid "Progress"
 msgstr "進行状況"
 
-#: pyanaconda/ui/tui/spokes/installation_progress.py:137
+#: pyanaconda/ui/tui/spokes/installation_progress.py:133
 msgid "Installation complete"
 msgstr "インストールの完了"
 
-#: pyanaconda/ui/tui/spokes/installation_progress.py:139
+#: pyanaconda/ui/tui/spokes/installation_progress.py:135
 msgid "Use of this product is subject to the license agreement found at:"
 msgstr "本製品の使用は、以下に定められている使用許諾契約の対象となります:"
 
-#: pyanaconda/ui/tui/spokes/installation_progress.py:150
+#: pyanaconda/ui/tui/spokes/installation_progress.py:143
 #, python-format
 msgid "Installation complete. Press %s to quit"
 msgstr "インストールは完了しました。%s を押して終了します"
@@ -2854,79 +2858,83 @@ msgstr ""
 msgid "Full name cannot contain colon characters"
 msgstr "フルネームにはコロン ':' を使用できません"
 
-#: pyanaconda/installation.py:94
+#: pyanaconda/installation.py:110
 msgid "Configuring Red Hat subscription"
 msgstr "Red Hat サブスクリプションの設定中"
 
-#: pyanaconda/installation.py:104
+#: pyanaconda/installation.py:120
 msgid "Configuring installed system"
 msgstr "インストール済みシステムを設定中"
 
-#: pyanaconda/installation.py:145
+#: pyanaconda/installation.py:161
 msgid "Writing network configuration"
 msgstr "ネットワーク設定を書き込み中"
 
-#: pyanaconda/installation.py:158
+#: pyanaconda/installation.py:174
 msgid "Creating users"
 msgstr "ユーザーの作成中"
 
-#: pyanaconda/installation.py:168
+#: pyanaconda/installation.py:184
 msgid "Configuring addons"
 msgstr "アドオンの設定中"
 
-#: pyanaconda/installation.py:181
+#: pyanaconda/installation.py:197
 msgid "Generating initramfs"
 msgstr "initramfs の生成中"
 
-#: pyanaconda/installation.py:218
+#: pyanaconda/installation.py:234
 msgid "Setting up kexec"
 msgstr "kexec の設定"
 
-#: pyanaconda/installation.py:229
+#: pyanaconda/installation.py:245
 msgid "Storing configuration files and kickstarts"
 msgstr "設定ファイルと Kickstart ファイルを保存中"
 
-#: pyanaconda/installation.py:249
+#: pyanaconda/installation.py:265
 msgid "Running post-installation scripts"
 msgstr "インストール後のスクリプトを実行中"
 
-#: pyanaconda/installation.py:276
+#: pyanaconda/installation.py:292
 #, python-format
 msgid "Waiting for %s threads to finish"
 msgstr "%s スレッドが完了するまで待機中"
 
-#: pyanaconda/installation.py:296
+#: pyanaconda/installation.py:313
 msgid "Setting up the installation environment"
 msgstr "インストール環境をセットアップ中"
 
-#: pyanaconda/installation.py:322 pyanaconda/installation.py:384
+#: pyanaconda/installation.py:339 pyanaconda/installation.py:401
 msgid "Configuring storage"
 msgstr "ストレージの設定中"
 
-#: pyanaconda/installation.py:335 pyanaconda/kickstart.py:502
+#: pyanaconda/installation.py:352 pyanaconda/kickstart.py:502
 msgid "Running pre-installation scripts"
 msgstr "インストール前スクリプトを実行中"
 
-#: pyanaconda/installation.py:348
+#: pyanaconda/installation.py:365
 msgid "Running pre-installation tasks"
 msgstr "インストールの準備タスクを実行中"
 
-#: pyanaconda/installation.py:372
+#: pyanaconda/installation.py:389
 msgid "Installing."
 msgstr "インストール中。"
 
-#: pyanaconda/installation.py:394
+#: pyanaconda/installation.py:411
 msgid "Installing boot loader"
 msgstr "ブートローダーをインストール中"
 
-#: pyanaconda/installation.py:427
+#: pyanaconda/installation.py:444
 #: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:53
 msgid "Performing post-installation setup tasks"
 msgstr "インストール後セットアップ作業を実行中"
 
-#: pyanaconda/installation.py:441
+#: pyanaconda/installation.py:458
 msgid "Creating snapshots"
 msgstr "スナップショットを作成中"
+
+#: pyanaconda/installation.py:513
+msgid "Complete!"
+msgstr "インストールが完了しました!"
 
 #: pyanaconda/modules/timezone/timezone.py:101
 msgid "Invalid time source."
@@ -4241,7 +4249,7 @@ msgstr "Root の選択"
 msgid "The following installations were discovered on your system."
 msgstr "ご使用のシステムで以下のインストールが見つかりました。"
 
-#: pyanaconda/payload/dnf/payload.py:475
+#: pyanaconda/payload/dnf/payload.py:477
 msgid "Starting package installation process"
 msgstr "パッケージインストールプロセスを開始しています"
 
