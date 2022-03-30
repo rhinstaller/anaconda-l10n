@@ -25,7 +25,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2022-03-28 01:20+0000\n"
+"POT-Creation-Date: 2022-03-30 01:14+0000\n"
 "PO-Revision-Date: 2021-11-22 06:16+0000\n"
 "Last-Translator: Ahmed M. Farrag <a.m.farrag@gmail.com>\n"
 "Language-Team: Arabic <https://translate.fedoraproject.org/projects/anaconda/"
@@ -2578,15 +2578,15 @@ msgstr ""
 msgid "Unknown name of the %addon section."
 msgstr ""
 
-#: pyanaconda/core/payload.py:141
+#: pyanaconda/core/payload.py:160
 msgid "No host url"
 msgstr ""
 
-#: pyanaconda/core/payload.py:162
+#: pyanaconda/core/payload.py:181
 msgid "malformed URL, cannot parse it."
 msgstr ""
 
-#: pyanaconda/core/payload.py:178
+#: pyanaconda/core/payload.py:197
 msgid "URL has no host component"
 msgstr ""
 
@@ -2765,7 +2765,7 @@ msgstr "يجري إعداد بيئة التثبيت"
 msgid "Configuring storage"
 msgstr ""
 
-#: pyanaconda/installation.py:352 pyanaconda/kickstart.py:502
+#: pyanaconda/installation.py:352 pyanaconda/kickstart.py:475
 msgid "Running pre-installation scripts"
 msgstr "يجري تنفيذ مخطوطات قبل التثبيت"
 
@@ -3969,7 +3969,7 @@ msgstr ""
 msgid "The following installations were discovered on your system."
 msgstr ""
 
-#: pyanaconda/payload/dnf/payload.py:488
+#: pyanaconda/payload/dnf/payload.py:510
 msgid "Starting package installation process"
 msgstr "يجري بدء عملية تثبيت الحزمة"
 
@@ -4189,13 +4189,13 @@ msgid ""
 "your kickstart file to remove this section."
 msgstr ""
 
-#: pyanaconda/kickstart.py:445
+#: pyanaconda/kickstart.py:418
 msgid ""
 "\n"
 "Some warnings occurred during reading the kickstart file:"
 msgstr ""
 
-#: pyanaconda/kickstart.py:458
+#: pyanaconda/kickstart.py:431
 #, python-format
 msgid ""
 "\n"
@@ -4940,6 +4940,7 @@ msgstr "مفعّل"
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:386
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1438
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1761
+#: ui/webui/src/components/storage/InstallationDestination.jsx:151
 msgid "Name"
 msgstr "الاسم"
 
@@ -5775,7 +5776,7 @@ msgid "Beta Warn"
 msgstr ""
 
 #: pyanaconda/ui/gui/spokes/welcome.glade:232
-#: ui/webui/src/components/installation/InstallationLanguage.jsx:165
+#: ui/webui/src/components/installation/InstallationLanguage.jsx:161
 msgid "What language would you like to use during the installation process?"
 msgstr "ما اللّغة التي تودّ استخدامها أثناء عمليّة التثبيت؟"
 
@@ -5922,6 +5923,7 @@ msgstr "السعة"
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:175
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:264
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:767
+#: ui/webui/src/components/storage/InstallationDestination.jsx:154
 msgid "Free"
 msgstr "فارغ"
 
@@ -6705,6 +6707,7 @@ msgid "Filter _By:"
 msgstr ""
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:931
+#: ui/webui/src/components/storage/InstallationDestination.jsx:152
 msgid "ID"
 msgstr "المعرّف"
 
@@ -7010,23 +7013,23 @@ msgstr ""
 msgid "Welcome to Fedora"
 msgstr "مرحبًا بكم في فيدورا"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:73
+#: ui/webui/src/components/AnacondaWizard.jsx:77
 #, fuzzy
 #| msgid "Installation source"
 msgid "Installation language"
 msgstr "مصدر التثبيت"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:78
+#: ui/webui/src/components/AnacondaWizard.jsx:82
 #, fuzzy
 #| msgid "Saving storage configuration..."
 msgid "Storage configuration"
 msgstr "يجري حفظ إعدادات التخزين..."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:83
+#: ui/webui/src/components/AnacondaWizard.jsx:87
 msgid "Review"
 msgstr ""
 
-#: ui/webui/src/components/AnacondaWizard.jsx:88
+#: ui/webui/src/components/AnacondaWizard.jsx:92
 #, fuzzy
 #| msgid "Installation source"
 msgid "Installation progress"
@@ -7066,30 +7069,34 @@ msgstr ""
 msgid "Reboot"
 msgstr ""
 
-#: ui/webui/src/components/storage/InstallationDestination.jsx:114
+#: ui/webui/src/components/storage/InstallationDestination.jsx:136
 #, fuzzy
 #| msgid "Local Standard Disks"
 msgid "Local standard disks"
 msgstr "الأقراص المعياريّة المحليّة"
 
-#: ui/webui/src/components/storage/InstallationDestination.jsx:117
+#: ui/webui/src/components/storage/InstallationDestination.jsx:140
 #, fuzzy
-#| msgid "Selected Device"
-msgid "Usable disks"
-msgstr "الجهاز المُنتقى"
+#| msgid "No disks selected"
+msgid "$0 (of $1) disk selected"
+msgid_plural "$0 (of $1) disks selected"
+msgstr[0] "لم يُنتقَ أيّ قرص"
+msgstr[1] "لم يُنتقَ أيّ قرص"
+msgstr[2] "لم يُنتقَ أيّ قرص"
+msgstr[3] "لم يُنتقَ أيّ قرص"
+msgstr[4] "لم يُنتقَ أيّ قرص"
+msgstr[5] "لم يُنتقَ أيّ قرص"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:153
-#, fuzzy
-#| msgid ""
-#| "Select the device(s) you'd like to install to.  They will be left "
-#| "untouched until you click on the main menu's \"Begin Installation\" "
-#| "button."
-msgid ""
-"Select the device(s) you would like to install to. They will be left "
-"untouched until you click on the main menu's 'Begin installation' button."
+msgid "Total"
 msgstr ""
-"انتقِ جهازًا أو أكثر ترغب بالتّثبيت عليها. لن تمسّ أجهزتك مطلقًا حتّى تضغط على زر "
-"\"ابدأ التّثبيت\" ضمن القائمة الرّئيسيّة."
+
+#: ui/webui/src/components/storage/InstallationDestination.jsx:181
+#, fuzzy
+#| msgctxt "GUI|Network|Add Device Dialog"
+#| msgid "_Select the type of device you wish to add"
+msgid "Select the device(s) you would like to install to"
+msgstr "انت_قِ نوع الجهاز الذي ترغب بإضافته"
 
 #: data/liveinst/gnome/fedora-welcome.js:94
 msgid "Try Fedora"
@@ -7120,6 +7127,23 @@ msgstr "أغلق"
 #: ../data/liveinst/console.apps/liveinst.h:1
 msgid "Starting Install to Hard Drive"
 msgstr "بدء التثبيت إلى القرص الصلب"
+
+#, fuzzy
+#~| msgid "Selected Device"
+#~ msgid "Usable disks"
+#~ msgstr "الجهاز المُنتقى"
+
+#, fuzzy
+#~| msgid ""
+#~| "Select the device(s) you'd like to install to.  They will be left "
+#~| "untouched until you click on the main menu's \"Begin Installation\" "
+#~| "button."
+#~ msgid ""
+#~ "Select the device(s) you would like to install to. They will be left "
+#~ "untouched until you click on the main menu's 'Begin installation' button."
+#~ msgstr ""
+#~ "انتقِ جهازًا أو أكثر ترغب بالتّثبيت عليها. لن تمسّ أجهزتك مطلقًا حتّى تضغط على "
+#~ "زر \"ابدأ التّثبيت\" ضمن القائمة الرّئيسيّة."
 
 #, fuzzy
 #~| msgid "PRE-RELEASE / TESTING"

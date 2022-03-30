@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2022-03-28 01:20+0000\n"
+"POT-Creation-Date: 2022-03-30 01:14+0000\n"
 "PO-Revision-Date: 2022-03-24 10:16+0000\n"
 "Last-Translator: Gogo Gogsi <linux.hr@protonmail.com>\n"
 "Language-Team: Croatian <https://translate.fedoraproject.org/projects/"
@@ -2672,15 +2672,15 @@ msgstr "Nedostaje naziv %addon odjeljka."
 msgid "Unknown name of the %addon section."
 msgstr "Nepoznat naziv %addon odjeljka."
 
-#: pyanaconda/core/payload.py:141
+#: pyanaconda/core/payload.py:160
 msgid "No host url"
 msgstr "Nema url poslužitelja"
 
-#: pyanaconda/core/payload.py:162
+#: pyanaconda/core/payload.py:181
 msgid "malformed URL, cannot parse it."
 msgstr "oštećen URL, nemoguća obrada."
 
-#: pyanaconda/core/payload.py:178
+#: pyanaconda/core/payload.py:197
 msgid "URL has no host component"
 msgstr "URL nema komponentu poslužitelja"
 
@@ -2867,7 +2867,7 @@ msgstr "Postavljanje instalacijskog okruženja"
 msgid "Configuring storage"
 msgstr "Podešavanje uređaja pohrane"
 
-#: pyanaconda/installation.py:352 pyanaconda/kickstart.py:502
+#: pyanaconda/installation.py:352 pyanaconda/kickstart.py:475
 msgid "Running pre-installation scripts"
 msgstr "Pokretanje predinstalacijskih skripti"
 
@@ -4183,7 +4183,7 @@ msgstr "Odabir korijena"
 msgid "The following installations were discovered on your system."
 msgstr "Sljedeće instalacije su otkrivene na vašem sustavu."
 
-#: pyanaconda/payload/dnf/payload.py:488
+#: pyanaconda/payload/dnf/payload.py:510
 msgid "Starting package installation process"
 msgstr "Pokretanje procesa instalacije paketa"
 
@@ -4451,7 +4451,7 @@ msgstr ""
 "rezultirati kobnom greškom kada se na njega naiđe. Promijenite vašu "
 "kickstart datoteku za uklanjanje ovog odjeljka."
 
-#: pyanaconda/kickstart.py:445
+#: pyanaconda/kickstart.py:418
 msgid ""
 "\n"
 "Some warnings occurred during reading the kickstart file:"
@@ -4459,7 +4459,7 @@ msgstr ""
 "\n"
 "Određena upozorenja su nastala tijekom čitanja kickstart datoteke:"
 
-#: pyanaconda/kickstart.py:458
+#: pyanaconda/kickstart.py:431
 #, python-format
 msgid ""
 "\n"
@@ -5186,6 +5186,7 @@ msgstr "Omogućeno"
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:386
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1438
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1761
+#: ui/webui/src/components/storage/InstallationDestination.jsx:151
 msgid "Name"
 msgstr "Naziv"
 
@@ -6042,7 +6043,7 @@ msgid "Beta Warn"
 msgstr "Beta upozorenje"
 
 #: pyanaconda/ui/gui/spokes/welcome.glade:232
-#: ui/webui/src/components/installation/InstallationLanguage.jsx:165
+#: ui/webui/src/components/installation/InstallationLanguage.jsx:161
 msgid "What language would you like to use during the installation process?"
 msgstr "Koji jezik želite koristiti tijekom instalacijskog postupka?"
 
@@ -6185,6 +6186,7 @@ msgstr "Kapacitet"
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:175
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:264
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:767
+#: ui/webui/src/components/storage/InstallationDestination.jsx:154
 msgid "Free"
 msgstr "Slobodno"
 
@@ -6978,6 +6980,7 @@ msgid "Filter _By:"
 msgstr "Filtriraj _po:"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:931
+#: ui/webui/src/components/storage/InstallationDestination.jsx:152
 msgid "ID"
 msgstr "ID"
 
@@ -7284,19 +7287,19 @@ msgstr "Postavljanje live instalacije"
 msgid "Welcome to Fedora"
 msgstr "Dobrodošli u Fedoru"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:73
+#: ui/webui/src/components/AnacondaWizard.jsx:77
 msgid "Installation language"
 msgstr "Jezik instalacije"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:78
+#: ui/webui/src/components/AnacondaWizard.jsx:82
 msgid "Storage configuration"
 msgstr "Podešavanje uređaja pohrane"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:83
+#: ui/webui/src/components/AnacondaWizard.jsx:87
 msgid "Review"
 msgstr ""
 
-#: ui/webui/src/components/AnacondaWizard.jsx:88
+#: ui/webui/src/components/AnacondaWizard.jsx:92
 msgid "Installation progress"
 msgstr "Napredak instalacije"
 
@@ -7339,21 +7342,29 @@ msgstr "Ako ne shvaćate ili ne prihvaćate rizike, tada zatvorite ovaj program.
 msgid "Reboot"
 msgstr "Ponovno pokreni"
 
-#: ui/webui/src/components/storage/InstallationDestination.jsx:114
+#: ui/webui/src/components/storage/InstallationDestination.jsx:136
 msgid "Local standard disks"
 msgstr "Lokalni standardni diskovi"
 
-#: ui/webui/src/components/storage/InstallationDestination.jsx:117
-msgid "Usable disks"
-msgstr "Upotrebljivi diskovi"
+#: ui/webui/src/components/storage/InstallationDestination.jsx:140
+#, fuzzy
+#| msgid "No disks selected"
+msgid "$0 (of $1) disk selected"
+msgid_plural "$0 (of $1) disks selected"
+msgstr[0] "Nema odabranih diskova"
+msgstr[1] "Nema odabranih diskova"
+msgstr[2] "Nema odabranih diskova"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:153
-msgid ""
-"Select the device(s) you would like to install to. They will be left "
-"untouched until you click on the main menu's 'Begin installation' button."
+msgid "Total"
 msgstr ""
-"Odaberite uređaj(e) za instalaciju. Ostati će nepromijenjeni dok ne "
-"odaberete 'Pokreni instalaciju' u glavnom izborniku."
+
+#: ui/webui/src/components/storage/InstallationDestination.jsx:181
+#, fuzzy
+#| msgctxt "GUI|Network|Add Device Dialog"
+#| msgid "_Select the type of device you wish to add"
+msgid "Select the device(s) you would like to install to"
+msgstr "_Odaberite vrstu uređaja koju želite dodati"
 
 #: data/liveinst/gnome/fedora-welcome.js:94
 msgid "Try Fedora"
@@ -7384,6 +7395,16 @@ msgstr "Zatvori"
 #: ../data/liveinst/console.apps/liveinst.h:1
 msgid "Starting Install to Hard Drive"
 msgstr "Pokretanje instalacije na čvrsti disk"
+
+#~ msgid "Usable disks"
+#~ msgstr "Upotrebljivi diskovi"
+
+#~ msgid ""
+#~ "Select the device(s) you would like to install to. They will be left "
+#~ "untouched until you click on the main menu's 'Begin installation' button."
+#~ msgstr ""
+#~ "Odaberite uređaj(e) za instalaciju. Ostati će nepromijenjeni dok ne "
+#~ "odaberete 'Pokreni instalaciju' u glavnom izborniku."
 
 #, fuzzy
 #~| msgid "PRE-RELEASE / TESTING"

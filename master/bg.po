@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2022-03-28 01:20+0000\n"
+"POT-Creation-Date: 2022-03-30 01:14+0000\n"
 "PO-Revision-Date: 2021-03-21 11:01+0000\n"
 "Last-Translator: stefan stoilov <stefan@null.net>\n"
 "Language-Team: Bulgarian <https://translate.fedoraproject.org/projects/"
@@ -2709,15 +2709,15 @@ msgstr ""
 msgid "Unknown name of the %addon section."
 msgstr ""
 
-#: pyanaconda/core/payload.py:141
+#: pyanaconda/core/payload.py:160
 msgid "No host url"
 msgstr "Няма url на хост"
 
-#: pyanaconda/core/payload.py:162
+#: pyanaconda/core/payload.py:181
 msgid "malformed URL, cannot parse it."
 msgstr "повреден URL, разборът неуспешен."
 
-#: pyanaconda/core/payload.py:178
+#: pyanaconda/core/payload.py:197
 msgid "URL has no host component"
 msgstr "URL-ът не съдържа част за хост"
 
@@ -2906,7 +2906,7 @@ msgstr "Създаване среда за инсталирането"
 msgid "Configuring storage"
 msgstr ""
 
-#: pyanaconda/installation.py:352 pyanaconda/kickstart.py:502
+#: pyanaconda/installation.py:352 pyanaconda/kickstart.py:475
 msgid "Running pre-installation scripts"
 msgstr "Изпълнение скриптове предхождащи инсталирането"
 
@@ -4314,7 +4314,7 @@ msgstr ""
 msgid "The following installations were discovered on your system."
 msgstr ""
 
-#: pyanaconda/payload/dnf/payload.py:488
+#: pyanaconda/payload/dnf/payload.py:510
 msgid "Starting package installation process"
 msgstr "Стартиране на процеса, инсталиращ пакетите"
 
@@ -4595,13 +4595,13 @@ msgid ""
 "your kickstart file to remove this section."
 msgstr ""
 
-#: pyanaconda/kickstart.py:445
+#: pyanaconda/kickstart.py:418
 msgid ""
 "\n"
 "Some warnings occurred during reading the kickstart file:"
 msgstr ""
 
-#: pyanaconda/kickstart.py:458
+#: pyanaconda/kickstart.py:431
 #, python-format
 msgid ""
 "\n"
@@ -5353,6 +5353,7 @@ msgstr "Разрешен"
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:386
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1438
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1761
+#: ui/webui/src/components/storage/InstallationDestination.jsx:151
 msgid "Name"
 msgstr "Име"
 
@@ -6198,7 +6199,7 @@ msgid "Beta Warn"
 msgstr "Предупреждение за предварителна версия"
 
 #: pyanaconda/ui/gui/spokes/welcome.glade:232
-#: ui/webui/src/components/installation/InstallationLanguage.jsx:165
+#: ui/webui/src/components/installation/InstallationLanguage.jsx:161
 msgid "What language would you like to use during the installation process?"
 msgstr "Какъв език желаете да ползвате по време на инсталационния процес?"
 
@@ -6345,6 +6346,7 @@ msgstr "Капацитет"
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:175
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:264
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:767
+#: ui/webui/src/components/storage/InstallationDestination.jsx:154
 msgid "Free"
 msgstr "Свободен"
 
@@ -7141,6 +7143,7 @@ msgid "Filter _By:"
 msgstr "Филтрирай _по:"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:931
+#: ui/webui/src/components/storage/InstallationDestination.jsx:152
 msgid "ID"
 msgstr "ID"
 
@@ -7449,23 +7452,23 @@ msgstr ""
 msgid "Welcome to Fedora"
 msgstr "Добре дошли във Fedora"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:73
+#: ui/webui/src/components/AnacondaWizard.jsx:77
 #, fuzzy
 #| msgid "Installation source"
 msgid "Installation language"
 msgstr "Източник за инсталиране"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:78
+#: ui/webui/src/components/AnacondaWizard.jsx:82
 #, fuzzy
 #| msgid "Network configuration"
 msgid "Storage configuration"
 msgstr "Конфигуриране на мрежа"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:83
+#: ui/webui/src/components/AnacondaWizard.jsx:87
 msgid "Review"
 msgstr ""
 
-#: ui/webui/src/components/AnacondaWizard.jsx:88
+#: ui/webui/src/components/AnacondaWizard.jsx:92
 #, fuzzy
 #| msgid "Installation source"
 msgid "Installation progress"
@@ -7505,31 +7508,30 @@ msgstr ""
 msgid "Reboot"
 msgstr ""
 
-#: ui/webui/src/components/storage/InstallationDestination.jsx:114
+#: ui/webui/src/components/storage/InstallationDestination.jsx:136
 #, fuzzy
 #| msgid "Local Standard Disks"
 msgid "Local standard disks"
 msgstr "Локални стандартни дискове"
 
-#: ui/webui/src/components/storage/InstallationDestination.jsx:117
+#: ui/webui/src/components/storage/InstallationDestination.jsx:140
 #, fuzzy
-#| msgid "Selected Device"
-msgid "Usable disks"
-msgstr "Избрано устройство"
+#| msgid "No disks selected"
+msgid "$0 (of $1) disk selected"
+msgid_plural "$0 (of $1) disks selected"
+msgstr[0] "Няма избрани дискове"
+msgstr[1] "Няма избрани дискове"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:153
-#, fuzzy
-#| msgid ""
-#| "Select the device(s) you'd like to install to.  They will be left "
-#| "untouched until you click on the main menu's \"Begin Installation\" "
-#| "button."
-msgid ""
-"Select the device(s) you would like to install to. They will be left "
-"untouched until you click on the main menu's 'Begin installation' button."
+msgid "Total"
 msgstr ""
-"Изберете устройството(ата), на което искате да инсталирате.  То ще остане "
-"непроменено докато не цъкнете бутона \"Започни инсталирането\" в главното "
-"меню."
+
+#: ui/webui/src/components/storage/InstallationDestination.jsx:181
+#, fuzzy
+#| msgctxt "GUI|Network|Add Device Dialog"
+#| msgid "_Select the type of device you wish to add"
+msgid "Select the device(s) you would like to install to"
+msgstr "Изберете типа у_стройство, което искате да добавите"
 
 #: data/liveinst/gnome/fedora-welcome.js:94
 msgid "Try Fedora"
@@ -7560,6 +7562,24 @@ msgstr "Затвори"
 #: ../data/liveinst/console.apps/liveinst.h:1
 msgid "Starting Install to Hard Drive"
 msgstr "Стартиране инсталирането на твърдия диск"
+
+#, fuzzy
+#~| msgid "Selected Device"
+#~ msgid "Usable disks"
+#~ msgstr "Избрано устройство"
+
+#, fuzzy
+#~| msgid ""
+#~| "Select the device(s) you'd like to install to.  They will be left "
+#~| "untouched until you click on the main menu's \"Begin Installation\" "
+#~| "button."
+#~ msgid ""
+#~ "Select the device(s) you would like to install to. They will be left "
+#~ "untouched until you click on the main menu's 'Begin installation' button."
+#~ msgstr ""
+#~ "Изберете устройството(ата), на което искате да инсталирате.  То ще остане "
+#~ "непроменено докато не цъкнете бутона \"Започни инсталирането\" в главното "
+#~ "меню."
 
 #, fuzzy
 #~| msgid "PRE-RELEASE / TESTING"

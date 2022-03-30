@@ -34,7 +34,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2022-03-28 01:20+0000\n"
+"POT-Creation-Date: 2022-03-30 01:14+0000\n"
 "PO-Revision-Date: 2021-08-20 16:02+0000\n"
 "Last-Translator: Junting Wu <Lance20501@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://translate.fedoraproject.org/"
@@ -2591,15 +2591,15 @@ msgstr "缺少 %addon 部份的名稱。"
 msgid "Unknown name of the %addon section."
 msgstr "%addon 部份有未知名稱。"
 
-#: pyanaconda/core/payload.py:141
+#: pyanaconda/core/payload.py:160
 msgid "No host url"
 msgstr "無主機 URL"
 
-#: pyanaconda/core/payload.py:162
+#: pyanaconda/core/payload.py:181
 msgid "malformed URL, cannot parse it."
 msgstr "格式不良的 URL，無法解析。"
 
-#: pyanaconda/core/payload.py:178
+#: pyanaconda/core/payload.py:197
 msgid "URL has no host component"
 msgstr "URL 不含主機部份"
 
@@ -2783,7 +2783,7 @@ msgstr "正在設定安裝環境"
 msgid "Configuring storage"
 msgstr "正在設定儲存裝置"
 
-#: pyanaconda/installation.py:352 pyanaconda/kickstart.py:502
+#: pyanaconda/installation.py:352 pyanaconda/kickstart.py:475
 msgid "Running pre-installation scripts"
 msgstr "正在執行安裝前的指令稿"
 
@@ -4160,7 +4160,7 @@ msgstr "根基環境選擇"
 msgid "The following installations were discovered on your system."
 msgstr "在您的系統中找到下列先前安裝。"
 
-#: pyanaconda/payload/dnf/payload.py:488
+#: pyanaconda/payload/dnf/payload.py:510
 msgid "Starting package installation process"
 msgstr "正開始軟體包安裝程序"
 
@@ -4435,7 +4435,7 @@ msgid ""
 "your kickstart file to remove this section."
 msgstr ""
 
-#: pyanaconda/kickstart.py:445
+#: pyanaconda/kickstart.py:418
 msgid ""
 "\n"
 "Some warnings occurred during reading the kickstart file:"
@@ -4443,7 +4443,7 @@ msgstr ""
 "\n"
 "在讀取 kickstart 檔案時有獲知一些警告："
 
-#: pyanaconda/kickstart.py:458
+#: pyanaconda/kickstart.py:431
 #, python-format
 msgid ""
 "\n"
@@ -5192,6 +5192,7 @@ msgstr "啟用"
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:386
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1438
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1761
+#: ui/webui/src/components/storage/InstallationDestination.jsx:151
 msgid "Name"
 msgstr "名稱"
 
@@ -6019,7 +6020,7 @@ msgid "Beta Warn"
 msgstr "Beta 警告"
 
 #: pyanaconda/ui/gui/spokes/welcome.glade:232
-#: ui/webui/src/components/installation/InstallationLanguage.jsx:165
+#: ui/webui/src/components/installation/InstallationLanguage.jsx:161
 msgid "What language would you like to use during the installation process?"
 msgstr "您想使用哪種語言安裝？"
 
@@ -6162,6 +6163,7 @@ msgstr "容量"
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:175
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:264
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:767
+#: ui/webui/src/components/storage/InstallationDestination.jsx:154
 msgid "Free"
 msgstr "剩餘空間"
 
@@ -6948,6 +6950,7 @@ msgid "Filter _By:"
 msgstr "篩選條件(_B)："
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:931
+#: ui/webui/src/components/storage/InstallationDestination.jsx:152
 msgid "ID"
 msgstr "ID"
 
@@ -7248,23 +7251,23 @@ msgstr "Liveinst 設定"
 msgid "Welcome to Fedora"
 msgstr "歡迎使用 Fedora"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:73
+#: ui/webui/src/components/AnacondaWizard.jsx:77
 #, fuzzy
 #| msgid "Installation source"
 msgid "Installation language"
 msgstr "安裝來源"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:78
+#: ui/webui/src/components/AnacondaWizard.jsx:82
 #, fuzzy
 #| msgid "Storage Configuration"
 msgid "Storage configuration"
 msgstr "儲存裝置組態"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:83
+#: ui/webui/src/components/AnacondaWizard.jsx:87
 msgid "Review"
 msgstr ""
 
-#: ui/webui/src/components/AnacondaWizard.jsx:88
+#: ui/webui/src/components/AnacondaWizard.jsx:92
 #, fuzzy
 #| msgid "Installation source"
 msgid "Installation progress"
@@ -7327,30 +7330,29 @@ msgstr ""
 msgid "Reboot"
 msgstr "重新開機中。"
 
-#: ui/webui/src/components/storage/InstallationDestination.jsx:114
+#: ui/webui/src/components/storage/InstallationDestination.jsx:136
 #, fuzzy
 #| msgid "Local Standard Disks"
 msgid "Local standard disks"
 msgstr "本地端標準磁碟"
 
-#: ui/webui/src/components/storage/InstallationDestination.jsx:117
+#: ui/webui/src/components/storage/InstallationDestination.jsx:140
 #, fuzzy
-#| msgid "Selected disks"
-msgid "Usable disks"
-msgstr "選取的磁碟"
+#| msgid "No disks selected"
+msgid "$0 (of $1) disk selected"
+msgid_plural "$0 (of $1) disks selected"
+msgstr[0] "尚未選取磁碟"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:153
-#, fuzzy
-#| msgid ""
-#| "Select the device(s) you'd like to install to.  They will be left "
-#| "untouched until you click on the main menu's \"Begin Installation\" "
-#| "button."
-msgid ""
-"Select the device(s) you would like to install to. They will be left "
-"untouched until you click on the main menu's 'Begin installation' button."
+msgid "Total"
 msgstr ""
-"請選取您想要安裝的目標裝置。直到您按下主選單的「開始安裝」按鈕為止，我們都不"
-"會碰觸它們。"
+
+#: ui/webui/src/components/storage/InstallationDestination.jsx:181
+#, fuzzy
+#| msgctxt "GUI|Network|Add Device Dialog"
+#| msgid "_Select the type of device you wish to add"
+msgid "Select the device(s) you would like to install to"
+msgstr "請選取您希望添加的裝置類型(_S)"
 
 #: data/liveinst/gnome/fedora-welcome.js:94
 msgid "Try Fedora"
@@ -7378,6 +7380,23 @@ msgstr "關閉"
 #: ../data/liveinst/console.apps/liveinst.h:1
 msgid "Starting Install to Hard Drive"
 msgstr "開始安裝到硬碟"
+
+#, fuzzy
+#~| msgid "Selected disks"
+#~ msgid "Usable disks"
+#~ msgstr "選取的磁碟"
+
+#, fuzzy
+#~| msgid ""
+#~| "Select the device(s) you'd like to install to.  They will be left "
+#~| "untouched until you click on the main menu's \"Begin Installation\" "
+#~| "button."
+#~ msgid ""
+#~ "Select the device(s) you would like to install to. They will be left "
+#~ "untouched until you click on the main menu's 'Begin installation' button."
+#~ msgstr ""
+#~ "請選取您想要安裝的目標裝置。直到您按下主選單的「開始安裝」按鈕為止，我們都"
+#~ "不會碰觸它們。"
 
 #, fuzzy
 #~| msgid "PRE-RELEASE / TESTING"

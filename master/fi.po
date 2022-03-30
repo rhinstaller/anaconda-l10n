@@ -27,7 +27,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2022-03-28 01:20+0000\n"
+"POT-Creation-Date: 2022-03-30 01:14+0000\n"
 "PO-Revision-Date: 2022-03-27 02:13+0000\n"
 "Last-Translator: Jan Kuparinen <copper_fin@hotmail.com>\n"
 "Language-Team: Finnish <https://translate.fedoraproject.org/projects/"
@@ -2679,15 +2679,15 @@ msgstr "Osasta %addon puuttuu nimi."
 msgid "Unknown name of the %addon section."
 msgstr "Osan %addon tuntematon nimi."
 
-#: pyanaconda/core/payload.py:141
+#: pyanaconda/core/payload.py:160
 msgid "No host url"
 msgstr "Ei isäntä-URL:ta"
 
-#: pyanaconda/core/payload.py:162
+#: pyanaconda/core/payload.py:181
 msgid "malformed URL, cannot parse it."
 msgstr "virheellinen URL, jäsentäminen ei onnistu."
 
-#: pyanaconda/core/payload.py:178
+#: pyanaconda/core/payload.py:197
 msgid "URL has no host component"
 msgstr "URL:ssa ei ole isäntäkomponenttia"
 
@@ -2873,7 +2873,7 @@ msgstr "Valmistellaan asennusta"
 msgid "Configuring storage"
 msgstr "Määritetään tallennustilaa"
 
-#: pyanaconda/installation.py:352 pyanaconda/kickstart.py:502
+#: pyanaconda/installation.py:352 pyanaconda/kickstart.py:475
 msgid "Running pre-installation scripts"
 msgstr "Suoritetaan asennusta edeltäviä skriptejä"
 
@@ -4196,7 +4196,7 @@ msgstr "Juurihakemiston valinta"
 msgid "The following installations were discovered on your system."
 msgstr "Seuraavat asennukset löydettiin järjestelmästäsi."
 
-#: pyanaconda/payload/dnf/payload.py:488
+#: pyanaconda/payload/dnf/payload.py:510
 msgid "Starting package installation process"
 msgstr "Aloitetaan paketin asennusprosessi"
 
@@ -4462,7 +4462,7 @@ msgstr ""
 "johtaa kohtalokkaaseen virheeseen, kun sitä yritetään käyttää. Muokkaa tätä "
 "aloitustiedostoa poistaaksesi tämä osa."
 
-#: pyanaconda/kickstart.py:445
+#: pyanaconda/kickstart.py:418
 msgid ""
 "\n"
 "Some warnings occurred during reading the kickstart file:"
@@ -4470,7 +4470,7 @@ msgstr ""
 "\n"
 "Joitain varoituksia ilmeni kickstart-tiedostoa luettaessa:"
 
-#: pyanaconda/kickstart.py:458
+#: pyanaconda/kickstart.py:431
 #, python-format
 msgid ""
 "\n"
@@ -5196,6 +5196,7 @@ msgstr "Käytössä"
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:386
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1438
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1761
+#: ui/webui/src/components/storage/InstallationDestination.jsx:151
 msgid "Name"
 msgstr "Nimi"
 
@@ -6051,7 +6052,7 @@ msgid "Beta Warn"
 msgstr "Beta-varoitus"
 
 #: pyanaconda/ui/gui/spokes/welcome.glade:232
-#: ui/webui/src/components/installation/InstallationLanguage.jsx:165
+#: ui/webui/src/components/installation/InstallationLanguage.jsx:161
 msgid "What language would you like to use during the installation process?"
 msgstr "Mitä kieltä asennuksen aikana käytetään?"
 
@@ -6194,6 +6195,7 @@ msgstr "Koko"
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:175
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:264
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:767
+#: ui/webui/src/components/storage/InstallationDestination.jsx:154
 msgid "Free"
 msgstr "Vapaana"
 
@@ -6987,6 +6989,7 @@ msgid "Filter _By:"
 msgstr "_Suodatusperuste:"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:931
+#: ui/webui/src/components/storage/InstallationDestination.jsx:152
 msgid "ID"
 msgstr "TUNNISTE"
 
@@ -7293,19 +7296,19 @@ msgstr "Liveinst:n asettaminen"
 msgid "Welcome to Fedora"
 msgstr "Tervetuloa Fedoraan"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:73
+#: ui/webui/src/components/AnacondaWizard.jsx:77
 msgid "Installation language"
 msgstr "Asennuskieli"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:78
+#: ui/webui/src/components/AnacondaWizard.jsx:82
 msgid "Storage configuration"
 msgstr "Tallennustilan määritykset"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:83
+#: ui/webui/src/components/AnacondaWizard.jsx:87
 msgid "Review"
 msgstr "Katselmoi"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:88
+#: ui/webui/src/components/AnacondaWizard.jsx:92
 msgid "Installation progress"
 msgstr "Asennuksen edistyminen"
 
@@ -7348,21 +7351,28 @@ msgstr "Jos et ymmärrä tai hyväksy riskejä, poistu tästä ohjelmasta."
 msgid "Reboot"
 msgstr "Käynnistä uudelleen"
 
-#: ui/webui/src/components/storage/InstallationDestination.jsx:114
+#: ui/webui/src/components/storage/InstallationDestination.jsx:136
 msgid "Local standard disks"
 msgstr "Paikalliset tavanomaiset levyt"
 
-#: ui/webui/src/components/storage/InstallationDestination.jsx:117
-msgid "Usable disks"
-msgstr "Käytettävissä olevat levyt"
+#: ui/webui/src/components/storage/InstallationDestination.jsx:140
+#, fuzzy
+#| msgid "No disks selected"
+msgid "$0 (of $1) disk selected"
+msgid_plural "$0 (of $1) disks selected"
+msgstr[0] "Yhtään levyä ei ole valittu"
+msgstr[1] "Yhtään levyä ei ole valittu"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:153
-msgid ""
-"Select the device(s) you would like to install to. They will be left "
-"untouched until you click on the main menu's 'Begin installation' button."
+msgid "Total"
 msgstr ""
-"Valitse laite tai laitteet, joihin haluat kohdistaa asennuksen. Kyseisiin "
-"laitteisiin ei kosketa, ennen kuin napsautat \"Aloita asennus\"-painiketta."
+
+#: ui/webui/src/components/storage/InstallationDestination.jsx:181
+#, fuzzy
+#| msgctxt "GUI|Network|Add Device Dialog"
+#| msgid "_Select the type of device you wish to add"
+msgid "Select the device(s) you would like to install to"
+msgstr "_Valitse laitteen tyyppi, jonka haluat lisätä"
 
 #: data/liveinst/gnome/fedora-welcome.js:94
 msgid "Try Fedora"
@@ -7393,6 +7403,17 @@ msgstr "Sulje"
 #: ../data/liveinst/console.apps/liveinst.h:1
 msgid "Starting Install to Hard Drive"
 msgstr "Aloitetaan asennus kiintolevylle"
+
+#~ msgid "Usable disks"
+#~ msgstr "Käytettävissä olevat levyt"
+
+#~ msgid ""
+#~ "Select the device(s) you would like to install to. They will be left "
+#~ "untouched until you click on the main menu's 'Begin installation' button."
+#~ msgstr ""
+#~ "Valitse laite tai laitteet, joihin haluat kohdistaa asennuksen. Kyseisiin "
+#~ "laitteisiin ei kosketa, ennen kuin napsautat \"Aloita asennus\"-"
+#~ "painiketta."
 
 #~ msgid "PRE-RELEASE/TESTING"
 #~ msgstr "ESIJULKAISU / KOEKÄYTTÖ"

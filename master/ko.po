@@ -35,7 +35,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2022-03-28 01:20+0000\n"
+"POT-Creation-Date: 2022-03-30 01:14+0000\n"
 "PO-Revision-Date: 2022-03-24 10:17+0000\n"
 "Last-Translator: 김인수 <simmon@nplob.com>\n"
 "Language-Team: Korean <https://translate.fedoraproject.org/projects/anaconda/"
@@ -2649,15 +2649,15 @@ msgstr "%addon 항목의 이름이 없습니다."
 msgid "Unknown name of the %addon section."
 msgstr "%addon 항목의 이름을 알 수 없습니다."
 
-#: pyanaconda/core/payload.py:141
+#: pyanaconda/core/payload.py:160
 msgid "No host url"
 msgstr "호스트 url 없음"
 
-#: pyanaconda/core/payload.py:162
+#: pyanaconda/core/payload.py:181
 msgid "malformed URL, cannot parse it."
 msgstr "잘못된 URL, 구문 분석 할 수 없습니다."
 
-#: pyanaconda/core/payload.py:178
+#: pyanaconda/core/payload.py:197
 msgid "URL has no host component"
 msgstr "URL에 호스트 구성 요소가 없음"
 
@@ -2841,7 +2841,7 @@ msgstr "설치 환경 구성"
 msgid "Configuring storage"
 msgstr "저장소 구성"
 
-#: pyanaconda/installation.py:352 pyanaconda/kickstart.py:502
+#: pyanaconda/installation.py:352 pyanaconda/kickstart.py:475
 msgid "Running pre-installation scripts"
 msgstr "사전-설치 스크립트 실행 중"
 
@@ -4128,7 +4128,7 @@ msgstr "root 선택"
 msgid "The following installations were discovered on your system."
 msgstr "다음 설치가 시스템에서 발견되었습니다."
 
-#: pyanaconda/payload/dnf/payload.py:488
+#: pyanaconda/payload/dnf/payload.py:510
 msgid "Starting package installation process"
 msgstr "꾸러미 설치 처리 시작 중"
 
@@ -4390,7 +4390,7 @@ msgstr ""
 "할 경우에 치명적인 결과를 가져 올 수 있습니다. 이 부분을 제거 할 경우에 킥스"
 "타트 파일을 수정하기 바랍니다."
 
-#: pyanaconda/kickstart.py:445
+#: pyanaconda/kickstart.py:418
 msgid ""
 "\n"
 "Some warnings occurred during reading the kickstart file:"
@@ -4398,7 +4398,7 @@ msgstr ""
 "\n"
 "킥스타트 파일을 읽는 중 몇 가지 경고가 발생했습니다 :"
 
-#: pyanaconda/kickstart.py:458
+#: pyanaconda/kickstart.py:431
 #, python-format
 msgid ""
 "\n"
@@ -5122,6 +5122,7 @@ msgstr "활성화됨"
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:386
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1438
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1761
+#: ui/webui/src/components/storage/InstallationDestination.jsx:151
 msgid "Name"
 msgstr "이름"
 
@@ -5966,7 +5967,7 @@ msgid "Beta Warn"
 msgstr "Beta 경고"
 
 #: pyanaconda/ui/gui/spokes/welcome.glade:232
-#: ui/webui/src/components/installation/InstallationLanguage.jsx:165
+#: ui/webui/src/components/installation/InstallationLanguage.jsx:161
 msgid "What language would you like to use during the installation process?"
 msgstr "설치 과정에서 어떤 언어를 사용하길 원하십니까?"
 
@@ -6109,6 +6110,7 @@ msgstr "용량"
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:175
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:264
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:767
+#: ui/webui/src/components/storage/InstallationDestination.jsx:154
 msgid "Free"
 msgstr "여유공간"
 
@@ -6898,6 +6900,7 @@ msgid "Filter _By:"
 msgstr "필터 항목 (_B):"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:931
+#: ui/webui/src/components/storage/InstallationDestination.jsx:152
 msgid "ID"
 msgstr "ID"
 
@@ -7202,19 +7205,19 @@ msgstr "라이브설치 설정"
 msgid "Welcome to Fedora"
 msgstr "페도라에 오신 것을 환영합니다"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:73
+#: ui/webui/src/components/AnacondaWizard.jsx:77
 msgid "Installation language"
 msgstr "설치 언어"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:78
+#: ui/webui/src/components/AnacondaWizard.jsx:82
 msgid "Storage configuration"
 msgstr "저장소 구성"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:83
+#: ui/webui/src/components/AnacondaWizard.jsx:87
 msgid "Review"
 msgstr "재검토"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:88
+#: ui/webui/src/components/AnacondaWizard.jsx:92
 msgid "Installation progress"
 msgstr "설치 진행"
 
@@ -7256,21 +7259,27 @@ msgstr ""
 msgid "Reboot"
 msgstr "재시작"
 
-#: ui/webui/src/components/storage/InstallationDestination.jsx:114
+#: ui/webui/src/components/storage/InstallationDestination.jsx:136
 msgid "Local standard disks"
 msgstr "로컬 표준 디스크"
 
-#: ui/webui/src/components/storage/InstallationDestination.jsx:117
-msgid "Usable disks"
-msgstr "사용 할 수 있는 디스크"
+#: ui/webui/src/components/storage/InstallationDestination.jsx:140
+#, fuzzy
+#| msgid "No disks selected"
+msgid "$0 (of $1) disk selected"
+msgid_plural "$0 (of $1) disks selected"
+msgstr[0] "선택한 디스크가 없음"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:153
-msgid ""
-"Select the device(s) you would like to install to. They will be left "
-"untouched until you click on the main menu's 'Begin installation' button."
+msgid "Total"
 msgstr ""
-"설치하려는 장치를 선택합니다. 주 메뉴의 \"설치 시작\"에 누름단추를 누를 때까"
-"지 설치는 시작되지 않습니다."
+
+#: ui/webui/src/components/storage/InstallationDestination.jsx:181
+#, fuzzy
+#| msgctxt "GUI|Network|Add Device Dialog"
+#| msgid "_Select the type of device you wish to add"
+msgid "Select the device(s) you would like to install to"
+msgstr "추가하고자 하는 장치 유형을 선택 (_S)"
 
 #: data/liveinst/gnome/fedora-welcome.js:94
 msgid "Try Fedora"
@@ -7301,6 +7310,16 @@ msgstr "종료"
 #: ../data/liveinst/console.apps/liveinst.h:1
 msgid "Starting Install to Hard Drive"
 msgstr "하드 드라이브에 설치를 시작합니다"
+
+#~ msgid "Usable disks"
+#~ msgstr "사용 할 수 있는 디스크"
+
+#~ msgid ""
+#~ "Select the device(s) you would like to install to. They will be left "
+#~ "untouched until you click on the main menu's 'Begin installation' button."
+#~ msgstr ""
+#~ "설치하려는 장치를 선택합니다. 주 메뉴의 \"설치 시작\"에 누름단추를 누를 때"
+#~ "까지 설치는 시작되지 않습니다."
 
 #~ msgid "PRE-RELEASE/TESTING"
 #~ msgstr "사전-출시/시험 중"

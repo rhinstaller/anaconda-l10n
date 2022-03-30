@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2022-03-28 01:20+0000\n"
+"POT-Creation-Date: 2022-03-30 01:14+0000\n"
 "PO-Revision-Date: 2015-10-02 08:28+0000\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Thai (http://www.transifex.com/projects/p/anaconda/language/"
@@ -2494,15 +2494,15 @@ msgstr ""
 msgid "Unknown name of the %addon section."
 msgstr ""
 
-#: pyanaconda/core/payload.py:141
+#: pyanaconda/core/payload.py:160
 msgid "No host url"
 msgstr ""
 
-#: pyanaconda/core/payload.py:162
+#: pyanaconda/core/payload.py:181
 msgid "malformed URL, cannot parse it."
 msgstr ""
 
-#: pyanaconda/core/payload.py:178
+#: pyanaconda/core/payload.py:197
 msgid "URL has no host component"
 msgstr ""
 
@@ -2675,7 +2675,7 @@ msgstr ""
 msgid "Configuring storage"
 msgstr ""
 
-#: pyanaconda/installation.py:352 pyanaconda/kickstart.py:502
+#: pyanaconda/installation.py:352 pyanaconda/kickstart.py:475
 msgid "Running pre-installation scripts"
 msgstr "กำลังเรียกใช้สคริปต์ก่อนติดตั้ง..."
 
@@ -3843,7 +3843,7 @@ msgstr ""
 msgid "The following installations were discovered on your system."
 msgstr ""
 
-#: pyanaconda/payload/dnf/payload.py:488
+#: pyanaconda/payload/dnf/payload.py:510
 msgid "Starting package installation process"
 msgstr ""
 
@@ -4073,13 +4073,13 @@ msgid ""
 "your kickstart file to remove this section."
 msgstr ""
 
-#: pyanaconda/kickstart.py:445
+#: pyanaconda/kickstart.py:418
 msgid ""
 "\n"
 "Some warnings occurred during reading the kickstart file:"
 msgstr ""
 
-#: pyanaconda/kickstart.py:458
+#: pyanaconda/kickstart.py:431
 #, python-format
 msgid ""
 "\n"
@@ -4791,6 +4791,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:386
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1438
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1761
+#: ui/webui/src/components/storage/InstallationDestination.jsx:151
 msgid "Name"
 msgstr ""
 
@@ -5599,7 +5600,7 @@ msgid "Beta Warn"
 msgstr ""
 
 #: pyanaconda/ui/gui/spokes/welcome.glade:232
-#: ui/webui/src/components/installation/InstallationLanguage.jsx:165
+#: ui/webui/src/components/installation/InstallationLanguage.jsx:161
 msgid "What language would you like to use during the installation process?"
 msgstr "คุณต้องการใช้ภาษาอะไรในการติดตั้ง?"
 
@@ -5742,6 +5743,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:175
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:264
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:767
+#: ui/webui/src/components/storage/InstallationDestination.jsx:154
 msgid "Free"
 msgstr "ว่าง"
 
@@ -6496,6 +6498,7 @@ msgid "Filter _By:"
 msgstr ""
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:931
+#: ui/webui/src/components/storage/InstallationDestination.jsx:152
 msgid "ID"
 msgstr "ID"
 
@@ -6794,23 +6797,23 @@ msgstr ""
 msgid "Welcome to Fedora"
 msgstr "ยินดีต้อนรับสู่ Fedora"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:73
+#: ui/webui/src/components/AnacondaWizard.jsx:77
 #, fuzzy
 #| msgid "Installation source"
 msgid "Installation language"
 msgstr "แหล่งที่มาสำหรับการติดตั้ง"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:78
+#: ui/webui/src/components/AnacondaWizard.jsx:82
 #, fuzzy
 #| msgid "Generating updated storage configuration"
 msgid "Storage configuration"
 msgstr "กำลังสร้างค่ากำหนดที่จัดเก็บข้อมูลที่ปรับปรุงแล้ว"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:83
+#: ui/webui/src/components/AnacondaWizard.jsx:87
 msgid "Review"
 msgstr ""
 
-#: ui/webui/src/components/AnacondaWizard.jsx:88
+#: ui/webui/src/components/AnacondaWizard.jsx:92
 #, fuzzy
 #| msgid "Installation source"
 msgid "Installation progress"
@@ -6848,18 +6851,21 @@ msgstr ""
 msgid "Reboot"
 msgstr ""
 
-#: ui/webui/src/components/storage/InstallationDestination.jsx:114
+#: ui/webui/src/components/storage/InstallationDestination.jsx:136
 msgid "Local standard disks"
 msgstr ""
 
-#: ui/webui/src/components/storage/InstallationDestination.jsx:117
-msgid "Usable disks"
-msgstr ""
+#: ui/webui/src/components/storage/InstallationDestination.jsx:140
+msgid "$0 (of $1) disk selected"
+msgid_plural "$0 (of $1) disks selected"
+msgstr[0] ""
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:153
-msgid ""
-"Select the device(s) you would like to install to. They will be left "
-"untouched until you click on the main menu's 'Begin installation' button."
+msgid "Total"
+msgstr ""
+
+#: ui/webui/src/components/storage/InstallationDestination.jsx:181
+msgid "Select the device(s) you would like to install to"
 msgstr ""
 
 #: data/liveinst/gnome/fedora-welcome.js:94

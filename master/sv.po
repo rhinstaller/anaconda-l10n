@@ -27,7 +27,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2022-03-28 01:20+0000\n"
+"POT-Creation-Date: 2022-03-30 01:14+0000\n"
 "PO-Revision-Date: 2022-03-25 21:33+0000\n"
 "Last-Translator: Luna Jernberg <bittin@reimu.nl>\n"
 "Language-Team: Swedish <https://translate.fedoraproject.org/projects/"
@@ -2676,15 +2676,15 @@ msgstr "Namn saknas på %addon-sektionen."
 msgid "Unknown name of the %addon section."
 msgstr "Okänt namn på %addon-sektionen."
 
-#: pyanaconda/core/payload.py:141
+#: pyanaconda/core/payload.py:160
 msgid "No host url"
 msgstr "Ingen värd-url"
 
-#: pyanaconda/core/payload.py:162
+#: pyanaconda/core/payload.py:181
 msgid "malformed URL, cannot parse it."
 msgstr "felformad URL, kan inte tolka den."
 
-#: pyanaconda/core/payload.py:178
+#: pyanaconda/core/payload.py:197
 msgid "URL has no host component"
 msgstr "URL:en har ingen värdkomponent"
 
@@ -2870,7 +2870,7 @@ msgstr "Sätter upp installationsmiljön"
 msgid "Configuring storage"
 msgstr "Konfigurerar lagring"
 
-#: pyanaconda/installation.py:352 pyanaconda/kickstart.py:502
+#: pyanaconda/installation.py:352 pyanaconda/kickstart.py:475
 msgid "Running pre-installation scripts"
 msgstr "Kör förinstallationsskript"
 
@@ -4182,7 +4182,7 @@ msgstr "Rotval"
 msgid "The following installations were discovered on your system."
 msgstr "Följande installationer har upptäckts på ditt system."
 
-#: pyanaconda/payload/dnf/payload.py:488
+#: pyanaconda/payload/dnf/payload.py:510
 msgid "Starting package installation process"
 msgstr "Startar paketinstallationsprocessen"
 
@@ -4449,7 +4449,7 @@ msgstr ""
 "vilket kommer resultera i ett ödesdigert fel när det påträffas. Ändra din "
 "kickstart-fil och ta bort detta avsnitt."
 
-#: pyanaconda/kickstart.py:445
+#: pyanaconda/kickstart.py:418
 msgid ""
 "\n"
 "Some warnings occurred during reading the kickstart file:"
@@ -4457,7 +4457,7 @@ msgstr ""
 "\n"
 "Några varningar uppstod när kickstart-filen lästes:"
 
-#: pyanaconda/kickstart.py:458
+#: pyanaconda/kickstart.py:431
 #, python-format
 msgid ""
 "\n"
@@ -5185,6 +5185,7 @@ msgstr "Aktiverat"
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:386
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1438
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1761
+#: ui/webui/src/components/storage/InstallationDestination.jsx:151
 msgid "Name"
 msgstr "Namn"
 
@@ -6038,7 +6039,7 @@ msgid "Beta Warn"
 msgstr "Betavarning"
 
 #: pyanaconda/ui/gui/spokes/welcome.glade:232
-#: ui/webui/src/components/installation/InstallationLanguage.jsx:165
+#: ui/webui/src/components/installation/InstallationLanguage.jsx:161
 msgid "What language would you like to use during the installation process?"
 msgstr "Vilket språk vill du använda under installationen?"
 
@@ -6181,6 +6182,7 @@ msgstr "Kapacitet"
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:175
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:264
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:767
+#: ui/webui/src/components/storage/InstallationDestination.jsx:154
 msgid "Free"
 msgstr "Ledigt"
 
@@ -6974,6 +6976,7 @@ msgid "Filter _By:"
 msgstr "Filtrera _efter:"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:931
+#: ui/webui/src/components/storage/InstallationDestination.jsx:152
 msgid "ID"
 msgstr "ID"
 
@@ -7281,19 +7284,19 @@ msgstr "Liveinst-inställning"
 msgid "Welcome to Fedora"
 msgstr "Välkommen till Fedora"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:73
+#: ui/webui/src/components/AnacondaWizard.jsx:77
 msgid "Installation language"
 msgstr "Installations språk"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:78
+#: ui/webui/src/components/AnacondaWizard.jsx:82
 msgid "Storage configuration"
 msgstr "Lagringskonfiguration"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:83
+#: ui/webui/src/components/AnacondaWizard.jsx:87
 msgid "Review"
 msgstr "Granska"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:88
+#: ui/webui/src/components/AnacondaWizard.jsx:92
 msgid "Installation progress"
 msgstr "Installationsförlopp"
 
@@ -7357,21 +7360,28 @@ msgstr ""
 msgid "Reboot"
 msgstr "Startar om"
 
-#: ui/webui/src/components/storage/InstallationDestination.jsx:114
+#: ui/webui/src/components/storage/InstallationDestination.jsx:136
 msgid "Local standard disks"
 msgstr "Lokala standarddiskar"
 
-#: ui/webui/src/components/storage/InstallationDestination.jsx:117
-msgid "Usable disks"
-msgstr "Användbara diskar"
+#: ui/webui/src/components/storage/InstallationDestination.jsx:140
+#, fuzzy
+#| msgid "No disks selected"
+msgid "$0 (of $1) disk selected"
+msgid_plural "$0 (of $1) disks selected"
+msgstr[0] "Inga diskar valda"
+msgstr[1] "Inga diskar valda"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:153
-msgid ""
-"Select the device(s) you would like to install to. They will be left "
-"untouched until you click on the main menu's 'Begin installation' button."
+msgid "Total"
 msgstr ""
-"Välj enheterna du skulle vilja installera på. De kommer lämnas orörda tills "
-"du klickar på huvudmenyns knapp ”Starta installationen”."
+
+#: ui/webui/src/components/storage/InstallationDestination.jsx:181
+#, fuzzy
+#| msgctxt "GUI|Network|Add Device Dialog"
+#| msgid "_Select the type of device you wish to add"
+msgid "Select the device(s) you would like to install to"
+msgstr "_Välj enhetstypen du vill lägga till"
 
 #: data/liveinst/gnome/fedora-welcome.js:94
 msgid "Try Fedora"
@@ -7402,6 +7412,16 @@ msgstr "Stäng"
 #: ../data/liveinst/console.apps/liveinst.h:1
 msgid "Starting Install to Hard Drive"
 msgstr "Påbörjar installation på hårddisk"
+
+#~ msgid "Usable disks"
+#~ msgstr "Användbara diskar"
+
+#~ msgid ""
+#~ "Select the device(s) you would like to install to. They will be left "
+#~ "untouched until you click on the main menu's 'Begin installation' button."
+#~ msgstr ""
+#~ "Välj enheterna du skulle vilja installera på. De kommer lämnas orörda "
+#~ "tills du klickar på huvudmenyns knapp ”Starta installationen”."
 
 #~ msgid "PRE-RELEASE/TESTING"
 #~ msgstr "FÖRUTGÅVA/TESTNING"

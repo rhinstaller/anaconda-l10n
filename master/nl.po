@@ -31,7 +31,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2022-03-28 01:20+0000\n"
+"POT-Creation-Date: 2022-03-30 01:14+0000\n"
 "PO-Revision-Date: 2022-03-24 10:17+0000\n"
 "Last-Translator: Geert Warrink <geert.warrink@onsnet.nu>\n"
 "Language-Team: Dutch <https://translate.fedoraproject.org/projects/anaconda/"
@@ -2704,15 +2704,15 @@ msgstr "Naam van de %addon sectie ontbreekt."
 msgid "Unknown name of the %addon section."
 msgstr "Onbekende naam van de %addon sectie."
 
-#: pyanaconda/core/payload.py:141
+#: pyanaconda/core/payload.py:160
 msgid "No host url"
 msgstr "Geen host-url"
 
-#: pyanaconda/core/payload.py:162
+#: pyanaconda/core/payload.py:181
 msgid "malformed URL, cannot parse it."
 msgstr "ongeldige URL, kan deze niet ontleden."
 
-#: pyanaconda/core/payload.py:178
+#: pyanaconda/core/payload.py:197
 msgid "URL has no host component"
 msgstr "URL heeft geen host-onderdeel"
 
@@ -2898,7 +2898,7 @@ msgstr "Opzetten van installatie-omgeving"
 msgid "Configuring storage"
 msgstr "Configuratie-opslag"
 
-#: pyanaconda/installation.py:352 pyanaconda/kickstart.py:502
+#: pyanaconda/installation.py:352 pyanaconda/kickstart.py:475
 msgid "Running pre-installation scripts"
 msgstr "Uitvoeren van pre-installatiescripts"
 
@@ -4235,7 +4235,7 @@ msgstr "Rootselectie"
 msgid "The following installations were discovered on your system."
 msgstr "De volgende installaties zijn op je systeem ontdekt."
 
-#: pyanaconda/payload/dnf/payload.py:488
+#: pyanaconda/payload/dnf/payload.py:510
 msgid "Starting package installation process"
 msgstr "Beginnen met pakketinstallatieproces"
 
@@ -4503,7 +4503,7 @@ msgstr ""
 "releases, wat zal resulteren in een fatale fout wanneer het wordt "
 "aangetroffen. Pas je kickstart-bestand aan om deze sectie te verwijderen."
 
-#: pyanaconda/kickstart.py:445
+#: pyanaconda/kickstart.py:418
 msgid ""
 "\n"
 "Some warnings occurred during reading the kickstart file:"
@@ -4511,7 +4511,7 @@ msgstr ""
 "\n"
 "Tijdens het lezen van het kickstartbestand traden waarschuwingen op:"
 
-#: pyanaconda/kickstart.py:458
+#: pyanaconda/kickstart.py:431
 #, python-format
 msgid ""
 "\n"
@@ -5241,6 +5241,7 @@ msgstr "Aangezet"
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:386
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1438
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1761
+#: ui/webui/src/components/storage/InstallationDestination.jsx:151
 msgid "Name"
 msgstr "Naam"
 
@@ -6099,7 +6100,7 @@ msgid "Beta Warn"
 msgstr "Beta waarschuwing"
 
 #: pyanaconda/ui/gui/spokes/welcome.glade:232
-#: ui/webui/src/components/installation/InstallationLanguage.jsx:165
+#: ui/webui/src/components/installation/InstallationLanguage.jsx:161
 msgid "What language would you like to use during the installation process?"
 msgstr "Welke taal wil je gebruiken tijdens het installatieproces?"
 
@@ -6242,6 +6243,7 @@ msgstr "Capaciteit"
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:175
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:264
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:767
+#: ui/webui/src/components/storage/InstallationDestination.jsx:154
 msgid "Free"
 msgstr "Beschikbaar"
 
@@ -7044,6 +7046,7 @@ msgid "Filter _By:"
 msgstr "Filter _met:"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:931
+#: ui/webui/src/components/storage/InstallationDestination.jsx:152
 msgid "ID"
 msgstr "ID"
 
@@ -7354,19 +7357,19 @@ msgstr "Liveinst instelling"
 msgid "Welcome to Fedora"
 msgstr "Welkom bij Fedora"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:73
+#: ui/webui/src/components/AnacondaWizard.jsx:77
 msgid "Installation language"
 msgstr "Installatietaal"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:78
+#: ui/webui/src/components/AnacondaWizard.jsx:82
 msgid "Storage configuration"
 msgstr "Opslagconfiguratie"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:83
+#: ui/webui/src/components/AnacondaWizard.jsx:87
 msgid "Review"
 msgstr "Overzicht"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:88
+#: ui/webui/src/components/AnacondaWizard.jsx:92
 msgid "Installation progress"
 msgstr "Installatievoortgang"
 
@@ -7410,21 +7413,28 @@ msgstr ""
 msgid "Reboot"
 msgstr "Opnieuw opstarten"
 
-#: ui/webui/src/components/storage/InstallationDestination.jsx:114
+#: ui/webui/src/components/storage/InstallationDestination.jsx:136
 msgid "Local standard disks"
 msgstr "Lokale standaardschijven"
 
-#: ui/webui/src/components/storage/InstallationDestination.jsx:117
-msgid "Usable disks"
-msgstr "Bruikbare schijven"
+#: ui/webui/src/components/storage/InstallationDestination.jsx:140
+#, fuzzy
+#| msgid "No disks selected"
+msgid "$0 (of $1) disk selected"
+msgid_plural "$0 (of $1) disks selected"
+msgstr[0] "Geen schijven geselecteerd"
+msgstr[1] "Geen schijven geselecteerd"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:153
-msgid ""
-"Select the device(s) you would like to install to. They will be left "
-"untouched until you click on the main menu's 'Begin installation' button."
+msgid "Total"
 msgstr ""
-"Selecteer de schijf(schijven) waarop je wilt installeren.  Er gebeurt niets "
-"mee totdat je op de 'Begin met installatie'-knop klikt in het hoofdmenu."
+
+#: ui/webui/src/components/storage/InstallationDestination.jsx:181
+#, fuzzy
+#| msgctxt "GUI|Network|Add Device Dialog"
+#| msgid "_Select the type of device you wish to add"
+msgid "Select the device(s) you would like to install to"
+msgstr "_Selecteer het type apparaat dat je wilt toevoegen"
 
 #: data/liveinst/gnome/fedora-welcome.js:94
 msgid "Try Fedora"
@@ -7455,6 +7465,17 @@ msgstr "Sluiten"
 #: ../data/liveinst/console.apps/liveinst.h:1
 msgid "Starting Install to Hard Drive"
 msgstr "Beginnen met installeren naar harde schijf"
+
+#~ msgid "Usable disks"
+#~ msgstr "Bruikbare schijven"
+
+#~ msgid ""
+#~ "Select the device(s) you would like to install to. They will be left "
+#~ "untouched until you click on the main menu's 'Begin installation' button."
+#~ msgstr ""
+#~ "Selecteer de schijf(schijven) waarop je wilt installeren.  Er gebeurt "
+#~ "niets mee totdat je op de 'Begin met installatie'-knop klikt in het "
+#~ "hoofdmenu."
 
 #~ msgid "PRE-RELEASE/TESTING"
 #~ msgstr "PRE-RELEASE/TESTEN"

@@ -42,7 +42,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2022-03-28 01:20+0000\n"
+"POT-Creation-Date: 2022-03-30 01:14+0000\n"
 "PO-Revision-Date: 2022-03-22 05:17+0000\n"
 "Last-Translator: Charles Lee <lchopn@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://translate.fedoraproject.org/"
@@ -2592,15 +2592,15 @@ msgstr "缺少 %addon 小节的名称。"
 msgid "Unknown name of the %addon section."
 msgstr "%addon 小节的名称未知。"
 
-#: pyanaconda/core/payload.py:141
+#: pyanaconda/core/payload.py:160
 msgid "No host url"
 msgstr "无主机 URL"
 
-#: pyanaconda/core/payload.py:162
+#: pyanaconda/core/payload.py:181
 msgid "malformed URL, cannot parse it."
 msgstr "异常 URL，无法解析。"
 
-#: pyanaconda/core/payload.py:178
+#: pyanaconda/core/payload.py:197
 msgid "URL has no host component"
 msgstr "URL 中没有主机部分"
 
@@ -2784,7 +2784,7 @@ msgstr "正在设置安装环境"
 msgid "Configuring storage"
 msgstr "设置存储设备"
 
-#: pyanaconda/installation.py:352 pyanaconda/kickstart.py:502
+#: pyanaconda/installation.py:352 pyanaconda/kickstart.py:475
 msgid "Running pre-installation scripts"
 msgstr "运行安装前脚本"
 
@@ -4017,7 +4017,7 @@ msgstr "选择 root 分区"
 msgid "The following installations were discovered on your system."
 msgstr "在机器上中找到以下已安装的系统。"
 
-#: pyanaconda/payload/dnf/payload.py:488
+#: pyanaconda/payload/dnf/payload.py:510
 msgid "Starting package installation process"
 msgstr "启动软件包安装进程"
 
@@ -4269,7 +4269,7 @@ msgstr ""
 "{} 部分已弃用。安装过程中如遇此部分，则会导致致命错误，后续发行版本中会将其移"
 "除。请修改您的 kickstart 文件，将此部分从中删除。"
 
-#: pyanaconda/kickstart.py:445
+#: pyanaconda/kickstart.py:418
 msgid ""
 "\n"
 "Some warnings occurred during reading the kickstart file:"
@@ -4277,7 +4277,7 @@ msgstr ""
 "\n"
 "读取 kickstart 文件时出现警告："
 
-#: pyanaconda/kickstart.py:458
+#: pyanaconda/kickstart.py:431
 #, python-format
 msgid ""
 "\n"
@@ -4992,6 +4992,7 @@ msgstr "已启用"
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:386
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1438
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1761
+#: ui/webui/src/components/storage/InstallationDestination.jsx:151
 msgid "Name"
 msgstr "名称"
 
@@ -5821,7 +5822,7 @@ msgid "Beta Warn"
 msgstr "Beta 版警告"
 
 #: pyanaconda/ui/gui/spokes/welcome.glade:232
-#: ui/webui/src/components/installation/InstallationLanguage.jsx:165
+#: ui/webui/src/components/installation/InstallationLanguage.jsx:161
 msgid "What language would you like to use during the installation process?"
 msgstr "您在安装过程中想使用哪种语言？"
 
@@ -5964,6 +5965,7 @@ msgstr "容量"
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:175
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:264
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:767
+#: ui/webui/src/components/storage/InstallationDestination.jsx:154
 msgid "Free"
 msgstr "空闲"
 
@@ -6741,6 +6743,7 @@ msgid "Filter _By:"
 msgstr "过滤方式(_B)："
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:931
+#: ui/webui/src/components/storage/InstallationDestination.jsx:152
 msgid "ID"
 msgstr "ID"
 
@@ -7043,19 +7046,19 @@ msgstr "Liveinst 设置"
 msgid "Welcome to Fedora"
 msgstr "欢迎使用 Fedora"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:73
+#: ui/webui/src/components/AnacondaWizard.jsx:77
 msgid "Installation language"
 msgstr "安装语言"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:78
+#: ui/webui/src/components/AnacondaWizard.jsx:82
 msgid "Storage configuration"
 msgstr "存储配置"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:83
+#: ui/webui/src/components/AnacondaWizard.jsx:87
 msgid "Review"
 msgstr "回顾"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:88
+#: ui/webui/src/components/AnacondaWizard.jsx:92
 msgid "Installation progress"
 msgstr "安装进度"
 
@@ -7113,21 +7116,27 @@ msgstr ""
 msgid "Reboot"
 msgstr "重启"
 
-#: ui/webui/src/components/storage/InstallationDestination.jsx:114
+#: ui/webui/src/components/storage/InstallationDestination.jsx:136
 msgid "Local standard disks"
 msgstr "本地标准磁盘"
 
-#: ui/webui/src/components/storage/InstallationDestination.jsx:117
-msgid "Usable disks"
-msgstr "可用磁盘"
+#: ui/webui/src/components/storage/InstallationDestination.jsx:140
+#, fuzzy
+#| msgid "No disks selected"
+msgid "$0 (of $1) disk selected"
+msgid_plural "$0 (of $1) disks selected"
+msgstr[0] "未选择任何磁盘"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:153
-msgid ""
-"Select the device(s) you would like to install to. They will be left "
-"untouched until you click on the main menu's 'Begin installation' button."
+msgid "Total"
 msgstr ""
-"选择您想要将系统安装到的设备。在您点击“开始安装”按钮之前，选择的设备并不会被"
-"操作。"
+
+#: ui/webui/src/components/storage/InstallationDestination.jsx:181
+#, fuzzy
+#| msgctxt "GUI|Network|Add Device Dialog"
+#| msgid "_Select the type of device you wish to add"
+msgid "Select the device(s) you would like to install to"
+msgstr "选择您要添加设备的类型(_S)"
 
 #: data/liveinst/gnome/fedora-welcome.js:94
 msgid "Try Fedora"
@@ -7158,6 +7167,16 @@ msgstr "关闭"
 #: ../data/liveinst/console.apps/liveinst.h:1
 msgid "Starting Install to Hard Drive"
 msgstr "开始安装到硬盘"
+
+#~ msgid "Usable disks"
+#~ msgstr "可用磁盘"
+
+#~ msgid ""
+#~ "Select the device(s) you would like to install to. They will be left "
+#~ "untouched until you click on the main menu's 'Begin installation' button."
+#~ msgstr ""
+#~ "选择您想要将系统安装到的设备。在您点击“开始安装”按钮之前，选择的设备并不会"
+#~ "被操作。"
 
 #~ msgid "PRE-RELEASE/TESTING"
 #~ msgstr "预发布/测试"

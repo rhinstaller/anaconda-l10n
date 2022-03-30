@@ -61,7 +61,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2022-03-28 01:20+0000\n"
+"POT-Creation-Date: 2022-03-30 01:14+0000\n"
 "PO-Revision-Date: 2022-03-15 06:10+0000\n"
 "Last-Translator: Matthias Schaufelberger <matthiasschaufelberger@web.de>\n"
 "Language-Team: German <https://translate.fedoraproject.org/projects/anaconda/"
@@ -2763,15 +2763,15 @@ msgstr "Fehlender Name des %addon-Abschnitts."
 msgid "Unknown name of the %addon section."
 msgstr "Unbekannter Name des %addon-Abschnitts."
 
-#: pyanaconda/core/payload.py:141
+#: pyanaconda/core/payload.py:160
 msgid "No host url"
 msgstr "Keine Host-URL"
 
-#: pyanaconda/core/payload.py:162
+#: pyanaconda/core/payload.py:181
 msgid "malformed URL, cannot parse it."
 msgstr "ungültige URL, kann nicht geparst werden."
 
-#: pyanaconda/core/payload.py:178
+#: pyanaconda/core/payload.py:197
 msgid "URL has no host component"
 msgstr "URL hat keine Host-Komponente"
 
@@ -2959,7 +2959,7 @@ msgstr "Einrichten der Installationsumgebung"
 msgid "Configuring storage"
 msgstr "Speicher konfigurieren"
 
-#: pyanaconda/installation.py:352 pyanaconda/kickstart.py:502
+#: pyanaconda/installation.py:352 pyanaconda/kickstart.py:475
 msgid "Running pre-installation scripts"
 msgstr "Prä-Installationsskripte werden ausgeführt"
 
@@ -4316,7 +4316,7 @@ msgstr "Root-Auswahl"
 msgid "The following installations were discovered on your system."
 msgstr "Die nachfolgenden Installationen wurden auf Ihrem System gefunden."
 
-#: pyanaconda/payload/dnf/payload.py:488
+#: pyanaconda/payload/dnf/payload.py:510
 msgid "Starting package installation process"
 msgstr "Paket-Installationsvorgang starten"
 
@@ -4591,7 +4591,7 @@ msgstr ""
 "werden, was zu einem schwerwiegenden Fehler führt, wenn er gefunden wird. "
 "Bitte ändern Sie Ihre Kickstart-Datei, um diesen Abschnitt zu entfernen."
 
-#: pyanaconda/kickstart.py:445
+#: pyanaconda/kickstart.py:418
 msgid ""
 "\n"
 "Some warnings occurred during reading the kickstart file:"
@@ -4599,7 +4599,7 @@ msgstr ""
 "\n"
 "Während dem Lesen der Kickstart-Datei sind einige Warnungen aufgetreten:"
 
-#: pyanaconda/kickstart.py:458
+#: pyanaconda/kickstart.py:431
 #, python-format
 msgid ""
 "\n"
@@ -5330,6 +5330,7 @@ msgstr "Aktiviert"
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:386
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1438
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1761
+#: ui/webui/src/components/storage/InstallationDestination.jsx:151
 msgid "Name"
 msgstr "Name"
 
@@ -6193,7 +6194,7 @@ msgid "Beta Warn"
 msgstr "Beta-Warnung"
 
 #: pyanaconda/ui/gui/spokes/welcome.glade:232
-#: ui/webui/src/components/installation/InstallationLanguage.jsx:165
+#: ui/webui/src/components/installation/InstallationLanguage.jsx:161
 msgid "What language would you like to use during the installation process?"
 msgstr ""
 "Welche Sprache möchten Sie während des Installationsvorgangs verwenden?"
@@ -6337,6 +6338,7 @@ msgstr "Kapazität"
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:175
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:264
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:767
+#: ui/webui/src/components/storage/InstallationDestination.jsx:154
 msgid "Free"
 msgstr "Verfügbar"
 
@@ -7149,6 +7151,7 @@ msgid "Filter _By:"
 msgstr "Filtern _nach:"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:931
+#: ui/webui/src/components/storage/InstallationDestination.jsx:152
 msgid "ID"
 msgstr "ID"
 
@@ -7458,23 +7461,23 @@ msgstr "Einstellungen Liveinst"
 msgid "Welcome to Fedora"
 msgstr "Willkommen bei Fedora"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:73
+#: ui/webui/src/components/AnacondaWizard.jsx:77
 #, fuzzy
 #| msgid "Installation source"
 msgid "Installation language"
 msgstr "Installationsquelle"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:78
+#: ui/webui/src/components/AnacondaWizard.jsx:82
 #, fuzzy
 #| msgid "Storage Configuration"
 msgid "Storage configuration"
 msgstr "Konfiguration speichern"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:83
+#: ui/webui/src/components/AnacondaWizard.jsx:87
 msgid "Review"
 msgstr ""
 
-#: ui/webui/src/components/AnacondaWizard.jsx:88
+#: ui/webui/src/components/AnacondaWizard.jsx:92
 #, fuzzy
 #| msgid "Installation source"
 msgid "Installation progress"
@@ -7541,22 +7544,28 @@ msgstr ""
 msgid "Reboot"
 msgstr "Neustarten."
 
-#: ui/webui/src/components/storage/InstallationDestination.jsx:114
+#: ui/webui/src/components/storage/InstallationDestination.jsx:136
 msgid "Local standard disks"
 msgstr "Lokale Standard-Speichermedien"
 
-#: ui/webui/src/components/storage/InstallationDestination.jsx:117
-msgid "Usable disks"
-msgstr "Nutzbare Speichermedien"
+#: ui/webui/src/components/storage/InstallationDestination.jsx:140
+#, fuzzy
+#| msgid "No disks selected"
+msgid "$0 (of $1) disk selected"
+msgid_plural "$0 (of $1) disks selected"
+msgstr[0] "Keine Medien ausgewählt"
+msgstr[1] "Keine Medien ausgewählt"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:153
-msgid ""
-"Select the device(s) you would like to install to. They will be left "
-"untouched until you click on the main menu's 'Begin installation' button."
+msgid "Total"
 msgstr ""
-"Wählen Sie für die Installation ein oder mehrere Speichermedien aus. Diese "
-"bleiben solange unverändert, bis Sie auf die Schaltfläche »Installation "
-"starten« im Hauptmenü klicken."
+
+#: ui/webui/src/components/storage/InstallationDestination.jsx:181
+#, fuzzy
+#| msgctxt "GUI|Network|Add Device Dialog"
+#| msgid "_Select the type of device you wish to add"
+msgid "Select the device(s) you would like to install to"
+msgstr "_Wählen Sie den Gerätetyp, den Sie hinzufügen möchten"
 
 #: data/liveinst/gnome/fedora-welcome.js:94
 msgid "Try Fedora"
@@ -7587,6 +7596,17 @@ msgstr "Schließen"
 #: ../data/liveinst/console.apps/liveinst.h:1
 msgid "Starting Install to Hard Drive"
 msgstr "Installation auf die Festplatte wird gestartet"
+
+#~ msgid "Usable disks"
+#~ msgstr "Nutzbare Speichermedien"
+
+#~ msgid ""
+#~ "Select the device(s) you would like to install to. They will be left "
+#~ "untouched until you click on the main menu's 'Begin installation' button."
+#~ msgstr ""
+#~ "Wählen Sie für die Installation ein oder mehrere Speichermedien aus. "
+#~ "Diese bleiben solange unverändert, bis Sie auf die Schaltfläche "
+#~ "»Installation starten« im Hauptmenü klicken."
 
 #, fuzzy
 #~| msgid "PRE-RELEASE / TESTING"
