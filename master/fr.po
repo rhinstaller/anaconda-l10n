@@ -55,13 +55,14 @@
 # Sundeep Anand <suanand@redhat.com>, 2021.
 # Titouan Bénard <itotutona@evta.fr>, 2021.
 # Jérôme Fenal <jfenal@free.fr>, 2022.
+# Nicolas Bourgeois <nicolas+fedora@graour.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
 "POT-Creation-Date: 2022-04-20 01:42+0000\n"
-"PO-Revision-Date: 2022-03-04 15:16+0000\n"
-"Last-Translator: Ludek Janda <ljanda@redhat.com>\n"
+"PO-Revision-Date: 2022-04-21 20:17+0000\n"
+"Last-Translator: Nicolas Bourgeois <nicolas+fedora@graour.com>\n"
 "Language-Team: French <https://translate.fedoraproject.org/projects/anaconda/"
 "master/fr/>\n"
 "Language: fr\n"
@@ -226,7 +227,8 @@ msgid ""
 "{}."
 msgstr ""
 "Groupe de volumes dont la taille d'étendue physique est \"{}\", mais doit "
-"être l'un des suivants : {}."
+"être l'un des suivants :\n"
+"{}."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:755
 msgid ""
@@ -341,10 +343,8 @@ msgstr ""
 "valable."
 
 #: pyanaconda/modules/storage/partitioning/automatic/noninteractive_partitioning.py:111
-#, fuzzy
-#| msgid "Selected disks"
 msgid "No usable disks."
-msgstr "Disques sélectionnés"
+msgstr "Pas de disques utilisables."
 
 #: pyanaconda/modules/storage/partitioning/automatic/utils.py:165
 msgid "No usable disks selected."
@@ -604,19 +604,24 @@ msgid ""
 "* Some drives support re-configuration of sector sizes, for example by "
 "running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 msgstr ""
-"Solutions de contournement pour les installations manuelles : * Sélectionnez "
-"uniquement les disques avec la même taille de secteur lors de l'installation "
-"manuelle en mode graphique ou texte. * Lorsque des disques avec une taille "
-"de secteur incohérente sont sélectionnés pour l'installation, limitez chaque "
-"groupe de volumes LVM créé pour utiliser des volumes physiques avec la même "
-"taille de secteur. Cela ne peut être fait qu'en mode graphique dans le rayon "
-"de partitionnement personnalisé. Solutions de contournement pour les "
-"installations kickstart : * Limitez les disques utilisés pour le "
-"partitionnement en spécifiant 'ignoredisk --drives=..' ou 'ignoredisk --only-"
-"use=..'. * Spécifiez quels disques doivent être utilisés pour chaque volume "
-"physique LVM créé : 'partition pv.1 --ondisk=..'. Contournements généraux : "
-"* Un schéma de partitionnement simple peut être utilisé à la place de LVM. * "
-"Certains lecteurs prennent en charge la reconfiguration des tailles de "
+"Solutions de contournement pour les installations manuelles : \n"
+"* Sélectionnez uniquement les disques avec la même taille de secteur lors de "
+"l'installation manuelle en mode graphique ou texte. \n"
+"* Lorsque des disques avec une taille de secteur incohérente sont "
+"sélectionnés pour l'installation, limitez chaque groupe de volumes LVM créé "
+"pour utiliser des volumes physiques avec la même taille de secteur. Cela ne "
+"peut être fait qu'en mode graphique dans le rayon de partitionnement "
+"personnalisé. \n"
+"\n"
+"Solutions de contournement pour les installations kickstart : \n"
+"* Limitez les disques utilisés pour le partitionnement en spécifiant "
+"'ignoredisk --drives=..' ou 'ignoredisk --only-use=..'. \n"
+"* Spécifiez quels disques doivent être utilisés pour chaque volume physique "
+"LVM créé : 'partition pv.1 --ondisk=..'. \n"
+"\n"
+"Contournements généraux : \n"
+"* Un schéma de partitionnement simple peut être utilisé à la place de LVM. \n"
+"* Certains lecteurs prennent en charge la reconfiguration des tailles de "
 "secteur, par exemple en exécutant '--set-sector-size=<SIZE> <DEVICE>'.\n"
 
 #: pyanaconda/modules/storage/checker/utils.py:55
@@ -705,19 +710,14 @@ msgstr ""
 "« biosboot » de 1 Mio."
 
 #: pyanaconda/modules/storage/checker/utils.py:247
-#, fuzzy
-#| msgid ""
-#| "Your firmware doesn't support XFS file system features on the /boot file "
-#| "system. The system will not be bootable. Please, upgrade the firmware or "
-#| "change the file system type."
 msgid ""
 "The system will not be bootable. The firmware does not support XFS file "
 "system features on the boot file system. Upgrade the firmware or change the "
 "file system type."
 msgstr ""
-"Votre micrologiciel ne prend pas en charge les fonctionnalités du système de "
-"fichiers XFS sur le système de fichiers /boot. Le système ne sera pas "
-"amorçable. Veuillez mettre à niveau le micrologiciel ou modifier le type de "
+"Le système ne sera pas amorçable. Le micrologiciel ne prend pas en charge "
+"les fonctionnalités du système de fichiers XFS sur le système de fichiers /"
+"boot. Veuillez mettre à niveau le micrologiciel ou modifier le type de "
 "système de fichiers."
 
 #: pyanaconda/modules/storage/checker/utils.py:305
@@ -748,6 +748,9 @@ msgid ""
 "performance for most installations, it is recommended to specify a swap "
 "partition."
 msgstr ""
+"Une partition de swap n'a pas été spécifiée. Pour améliorer "
+"significativement les performances dans la plupart des cas, il est "
+"recommandé de spécifier une partition de swap."
 
 #: pyanaconda/modules/storage/checker/utils.py:337
 msgid ""
@@ -1018,7 +1021,10 @@ msgid ""
 "SSL error while downloading the escrow certificate:\n"
 "\n"
 "{}"
-msgstr "Erreur SSL lors du téléchargement du certificat d'entiercement : {}"
+msgstr ""
+"Erreur SSL lors du téléchargement du certificat d'entiercement : \n"
+"\n"
+"{}"
 
 #: pyanaconda/modules/storage/devicetree/utils.py:92
 msgid ""
@@ -1028,7 +1034,9 @@ msgid ""
 "{}"
 msgstr ""
 "L'erreur suivante s'est produite lors du téléchargement du certificat "
-"d'entiercement : {}"
+"d'entiercement : \n"
+"\n"
+"{}"
 
 #: pyanaconda/modules/storage/devicetree/root.py:339
 msgid "Unknown Linux"
@@ -1149,11 +1157,11 @@ msgstr[1] ""
 #: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:45
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_manager.py:203
 msgid "Installing {}"
-msgstr "Installing {}"
+msgstr "Installation de {}"
 
 #: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:47
 msgid "Configuring {}"
-msgstr "Configuring {}"
+msgstr "Configuration de {}"
 
 #: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:49
 msgid "Verifying {}"
@@ -1178,7 +1186,7 @@ msgid ""
 "Downloading {total_files} RPMs, {downloaded_size} / {total_size} "
 "({total_percent}%) done."
 msgstr ""
-"Téléchargement de {total_files} RPM, {downloaded_size} / {total_size}  "
+"Téléchargement de {total_files} RPM, {downloaded_size} / {total_size} "
 "({total_percent}%) complété."
 
 #: pyanaconda/modules/payloads/payload/dnf/dnf_manager.py:586
@@ -1236,10 +1244,8 @@ msgid "Flatpak installation has finished"
 msgstr "L’installation de Flatpak est terminée"
 
 #: pyanaconda/modules/payloads/payload/live_image/installation.py:131
-#, fuzzy
-#| msgid "Downloading packages"
 msgid "Downloading {}"
-msgstr "Téléchargement des paquets"
+msgstr "Téléchargement de {}"
 
 #: pyanaconda/modules/payloads/payload/live_image/installation.py:185
 msgid "Checking image checksum"
@@ -1254,10 +1260,8 @@ msgid "Installing software {}%"
 msgstr "Installation du logiciel {} %"
 
 #: pyanaconda/modules/payloads/payload/live_image/download_progress.py:54
-#, fuzzy
-#| msgid "Downloading %(url)s (%(pct)d%%)"
 msgid "Downloading {} ({}%)"
-msgstr "Téléchargement de %(url)s (%(pct)d%%)"
+msgstr "Téléchargement de {} ({}%)"
 
 #: pyanaconda/modules/payloads/source/flatpak/flatpak.py:49
 msgid "Flatpak"
@@ -1915,12 +1919,9 @@ msgid "_Encrypt automatically created mount points by default:"
 msgstr "_Chiffrer crée automatiquement les points de montage par défaut :"
 
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:547
-#, fuzzy
-#| msgctxt "GUI|Storage"
-#| msgid "_Encrypt my data."
 msgctxt "GUI|Custom Partitioning|Autopart Page"
 msgid "Encrypt my data."
-msgstr "_Chiffrer mes données."
+msgstr "Chiffrer mes données."
 
 #: pyanaconda/ui/gui/spokes/lib/resize.py:54
 msgid "Preserve"
@@ -5960,11 +5961,9 @@ msgid "RA_ID Level:"
 msgstr "Niveau de RA_ID :"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:938
-#, fuzzy
-#| msgid "LUKS Version:"
 msgctxt "GUI|Custom Partitioning|Configure"
 msgid "LUK_S Version:"
-msgstr "Version LUKS :"
+msgstr "Version LUK_S :"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:1009
 msgctxt "GUI|Custom Partitioning|Configure|Devices"
@@ -6157,12 +6156,11 @@ msgid "Advanced Custom (_Blivet-GUI)"
 msgstr "Personnalisation avancée (_Blivet-GUI)"
 
 #: pyanaconda/ui/gui/spokes/storage.glade:433
-#, fuzzy
-#| msgid "Free space unavailable but reclaimable from existing partitions."
 msgctxt "GUI|Storage"
 msgid "Free up space by re_moving or shrinking existing partitions"
 msgstr ""
-"Espace libre indisponible mais récupérable depuis des partitions existantes."
+"Récupérer de l'espace libre en supprimant ou en réduisant des partitions "
+"existantes"
 
 #: pyanaconda/ui/gui/spokes/storage.glade:465
 msgid "Encryption"
@@ -7436,6 +7434,8 @@ msgctxt "GUI|User"
 msgid ""
 "Add ad_ministrative privileges to this user account (wheel group membership)"
 msgstr ""
+"Accorder les privilèges administrateur à cet utilisateur (membre du groupe "
+"wheel)"
 
 #: pyanaconda/ui/gui/spokes/user.glade:269
 msgctxt "GUI|User"
@@ -7483,50 +7483,42 @@ msgid "Liveinst Setup"
 msgstr "Configuration de l’installation live"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:147
-#, fuzzy
-#| msgid "Local Standard Disks"
 msgid "Local standard disks"
 msgstr "Disques locaux standards"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:154
-#, fuzzy
-#| msgid "No disks selected"
 msgid "$0 (of $1) disk selected"
 msgid_plural "$0 (of $1) disks selected"
-msgstr[0] "Aucun disque sélectionné"
-msgstr[1] "Aucun disque sélectionné"
+msgstr[0] "$0 (parmi $1) disque sélectionné"
+msgstr[1] "$0 (parmi $1) disques sélectionnés"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:161
-#, fuzzy
-#| msgctxt "GUI|Refresh Dialog|Rescan"
-#| msgid "_Rescan Disks"
 msgid "Rescan disks"
 msgstr "_Réanalyser les disques"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:185
 msgid "Total"
-msgstr ""
+msgstr "Total"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:213
-#, fuzzy
-#| msgctxt "GUI|Network|Add Device Dialog"
-#| msgid "_Select the type of device you wish to add"
 msgid "Select the device(s) you would like to install to"
-msgstr "_Sélectionner le type de périphérique que vous souhaitez ajouter"
+msgstr "_Sélectionner le(s) périphérique(s) que vous souhaitez ajouter"
 
 #: ui/webui/src/components/localization/InstallationLanguage.jsx:173
 msgid "No results found"
-msgstr ""
+msgstr "Aucun résultat trouvé"
 
 #: ui/webui/src/components/localization/InstallationLanguage.jsx:199
 msgid ""
 "Select the language you would like to use. This language will also be "
 "selected for your installed system."
 msgstr ""
+"Veuillez sélectionner la langue que vous voulez utiliser. Cette langue sera "
+"aussi sélectionnée pour votre système une fois installé."
 
 #: ui/webui/src/components/AnacondaWizard.jsx:96
 msgid "Welcome"
-msgstr ""
+msgstr "Bienvenue"
 
 #: ui/webui/src/components/AnacondaWizard.jsx:97
 #, fuzzy
@@ -7536,8 +7528,6 @@ msgstr "Programme d’installation Anaconda"
 
 #: ui/webui/src/components/AnacondaWizard.jsx:102
 #: ui/webui/src/components/installation/InstallationProgress.jsx:111
-#, fuzzy
-#| msgid "Storage Configuration"
 msgid "Storage configuration"
 msgstr "Configuration du stockage"
 
@@ -7555,8 +7545,6 @@ msgid "Language"
 msgstr "Langues"
 
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:84
-#, fuzzy
-#| msgid "Installation Destination"
 msgid "Installation destination"
 msgstr "Cible de l’installation"
 
@@ -7568,15 +7556,15 @@ msgstr "Disques locaux standards"
 
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:99
 msgid "total"
-msgstr ""
+msgstr "total"
 
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:124
 msgid "Erase disks and install"
-msgstr ""
+msgstr "Effacer les disques et installer"
 
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:130
 msgid "Back"
-msgstr ""
+msgstr "Retour"
 
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:135
 msgid "Erase disks and install?"
@@ -7587,6 +7575,8 @@ msgid ""
 "The selected disks will be erased, this cannot be undone. Are you sure you "
 "want to continue with the installation?"
 msgstr ""
+"Les disques sélectionnés seront effacés, cela ne peut être annulé. Êtes-vous "
+"sûr de vouloir continuer avec l'installation ?"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:112
 #, fuzzy
@@ -7595,8 +7585,6 @@ msgid "Payload installation"
 msgstr "Installation"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:113
-#, fuzzy
-#| msgid "Storage Configuration"
 msgid "System configuration"
 msgstr "Configuration du stockage"
 
@@ -7607,62 +7595,48 @@ msgid "Boot loader installation"
 msgstr "pour démarrer l’installation"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:123
-#, fuzzy
-#| msgid "Install"
 msgid "Installed"
-msgstr "Installer"
+msgstr "Installé"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:126
-#, fuzzy
-#| msgid "Installation"
 msgid "Installation failed"
-msgstr "Installation"
+msgstr "l’installation a échoué"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:128
-#, fuzzy
-#| msgid "Installing."
 msgid "Installing"
-msgstr "Installation en cours."
+msgstr "Installation en cours"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:141
 msgid "pending step"
-msgstr ""
+msgstr "étape en attente"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:144
-#, fuzzy
-#| msgid "Complete!"
 msgid "completed step"
-msgstr "Terminé !"
+msgstr "étape terminée"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:147
-#, fuzzy
-#| msgid "Current host name:"
 msgid "current step"
-msgstr "Nom d’hôte actuel :"
+msgstr "étape actuelle"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:166
 msgid "Hide logs"
-msgstr ""
+msgstr "Cacher les traces"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:166
 msgid "Show logs"
-msgstr ""
+msgstr "Afficher les traces"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:180
-#, fuzzy
-#| msgid "Rebooting."
 msgid "Reboot"
-msgstr "Redémarrage."
+msgstr "Redémarrer"
 
 #: ui/webui/src/components/AnacondaHeader.jsx:32
 msgid "Pre-release"
-msgstr ""
+msgstr "Préversion"
 
 #: ui/webui/src/components/AnacondaHeader.jsx:38
-#, fuzzy
-#| msgid "This is unstable, pre-release software."
 msgid "This is unstable, pre-release software"
-msgstr "Ce logiciel est en pré-version. Il est donc instable."
+msgstr "Ce logiciel est en pré-version. Il est donc instable"
 
 #: ui/webui/src/components/AnacondaHeader.jsx:43
 msgid ""
@@ -7670,43 +7644,28 @@ msgid ""
 "testing purposes only. Do NOT use this software for any critical work or for "
 "production environments."
 msgstr ""
+"Avertissement : ce logiciel est une pré-version qui est destinée à des fins "
+"de développement et de test uniquement. Ne pas utiliser ce logiciel pour "
+"tout travail critique ou pour des environnements de production."
 
 #: ui/webui/src/components/AnacondaHeader.jsx:46
-#, fuzzy
-#| msgid ""
-#| "Notice: This is pre-released software that is intended for development "
-#| "and testing purposes only.  Do *not* use this software for any critical "
-#| "work or for production environments.\n"
-#| "\n"
-#| "By clicking \"I want to proceed\", you understand and accept the risks "
-#| "associated with pre-released software, that you intend to use this for "
-#| "testing and development purposes only and are willing to report any bugs "
-#| "or issues in order to enhance this work.\n"
-#| "\n"
-#| "If you do not understand or accept the risks, then please exit this "
-#| "program by selecting \"I want to exit\" which will reboot your system."
 msgid ""
 "By continuing to use this software, you understand and accept the risks "
 "associated with pre-released software, that you intend to use this for "
 "testing and development purposes only and are willing to report any bugs or "
 "issues in order to enhance this work."
 msgstr ""
-"Avertissement : ce logiciel est une pré-version qui est destinée à des fins "
-"de développement et de test uniquement. Ne pas utiliser ce logiciel pour "
-"tout travail critique ou pour des environnements de production.\n"
-"\n"
-"En cliquant sur « Je veux procéder », vous comprenez et acceptez les risques "
-"associés aux logiciels en pré-version, que vous avez l’intention de "
-"l’utiliser à des fins de test et de développement uniquement, et êtes prêts "
-"à rapporter tous les bugs ou problèmes afin d’améliorer ce travail .\n"
-"\n"
-"Si vous ne comprenez pas ou n’acceptez pas les risques, merci de quitter ce "
-"programme en sélectionnant « Je veux quitter » qui redémarrera votre système."
+"En utilisant ce logiciel, vous comprenez et acceptez les risques associés "
+"aux logiciels en pré-version, que vous avez l’intention de l’utiliser à des "
+"fins de test et de développement uniquement, et êtes prêts à rapporter tous "
+"les bugs ou problèmes afin d’améliorer ce travail."
 
 #: ui/webui/src/components/AnacondaHeader.jsx:49
 msgid ""
 "If you do not understand or accept the risks, then please exit this program."
 msgstr ""
+"Si vous ne comprenez pas ou n’acceptez pas les risques, merci de quitter ce "
+"programme."
 
 #: data/liveinst/gnome/fedora-welcome.js:94
 msgid "Try Fedora"
