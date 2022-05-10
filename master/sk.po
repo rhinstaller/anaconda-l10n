@@ -25,7 +25,7 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
 "POT-Creation-Date: 2022-05-09 01:30+0000\n"
-"PO-Revision-Date: 2022-03-17 10:16+0000\n"
+"PO-Revision-Date: 2022-05-10 18:18+0000\n"
 "Last-Translator: Ondrej Sulek <feonsu@gmail.com>\n"
 "Language-Team: Slovak <https://translate.fedoraproject.org/projects/anaconda/"
 "master/sk/>\n"
@@ -34,7 +34,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.11.2\n"
+"X-Generator: Weblate 4.12.1\n"
 
 #: pyanaconda/vnc.py:79
 #, python-format
@@ -1073,10 +1073,8 @@ msgstr ""
 "{}"
 
 #: pyanaconda/modules/storage/partitioning/automatic/noninteractive_partitioning.py:111
-#, fuzzy
-#| msgid "Selected disks"
 msgid "No usable disks."
-msgstr "Vybrané disky"
+msgstr "Žiadne použiteľné disky."
 
 #: pyanaconda/modules/storage/partitioning/automatic/utils.py:165
 msgid "No usable disks selected."
@@ -1440,6 +1438,24 @@ msgid ""
 "* Some drives support re-configuration of sector sizes, for example by "
 "running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 msgstr ""
+"Riešenia pre manuálne inštalácie:\n"
+"* V priebehu manuálnej inštalácie (v grafickom alebo textovom režime) "
+"vyberte iba disky s rovnakou veľkosťou sektorov.\n"
+"* Ak sú pre inštaláciu vybrané disky z nekonzistentnou veľkosťou sektorov, "
+"obmedzte každú z vytvorených skupín zväzkov LVM (VG) tak, aby používala iba "
+"fyzické zväzky (PV) s rovnakou veľkosťou sektorov. Toto je možné vykonať iba "
+"v grafickom režime vo vlastnom rozdelení diskov.\n"
+"\n"
+"Riešenia pre kickstart inštaláciu:\n"
+"* Obmedzte disky použité pre rozdelenie diskov zadaním 'ignoredisk --"
+"drives=..' alebo 'ignoredisk --only-use=..'.\n"
+"* Zadajte disky, ktoré majú byť použité pre každý z vytváraných fyzických "
+"zväzkov LVM (PV): 'partition pv.1 --ondisk=..'.\n"
+"\n"
+"Všeobecné riešenia:\n"
+"* Namiesto LVM je možné použiť obyčajnú schému rozdelenia diskov.\n"
+"* Niektoré disky podporujú opätovné nastavenie veľkosti sektorov, napríklad "
+"spustením 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 
 #: pyanaconda/modules/storage/installation.py:88
 msgid "An error occurred while resizing the device {}: {}"
@@ -3068,12 +3084,9 @@ msgid "_Encrypt automatically created mount points by default:"
 msgstr "Pr_edvolene šifrovať automaticky vytvorené body pripojenia:"
 
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:547
-#, fuzzy
-#| msgctxt "GUI|Storage"
-#| msgid "_Encrypt my data."
 msgctxt "GUI|Custom Partitioning|Autopart Page"
 msgid "Encrypt my data."
-msgstr "_Zašifrovať moje údaje."
+msgstr "Zašifrovať moje údaje."
 
 #: pyanaconda/ui/gui/spokes/lib/network_secret_agent.py:180
 #: pyanaconda/ui/gui/spokes/lib/network_secret_agent.glade:95
@@ -7327,8 +7340,6 @@ msgstr "_Vyberte typ zariadenia, ktoré chcete pridať"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:111
 #: ui/webui/src/components/AnacondaWizard.jsx:102
-#, fuzzy
-#| msgid "Storage Configuration"
 msgid "Storage configuration"
 msgstr "Konfigurácia úložiska"
 
@@ -7357,10 +7368,8 @@ msgid "Installed"
 msgstr "Inštalácia"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:126
-#, fuzzy
-#| msgid "Installation"
 msgid "Installation failed"
-msgstr "Inštalácia"
+msgstr "Inštalácia zlyhala"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:128
 #, fuzzy
@@ -7403,10 +7412,8 @@ msgid "Pre-release"
 msgstr ""
 
 #: ui/webui/src/components/AnacondaHeader.jsx:38
-#, fuzzy
-#| msgid "This is unstable, pre-release software."
 msgid "This is unstable, pre-release software"
-msgstr "Toto je nestabilný, predčasne uvoľnený softvér."
+msgstr "Toto je nestabilný, predčasne uvoľnený softvér"
 
 #: ui/webui/src/components/AnacondaHeader.jsx:43
 msgid ""
@@ -7453,14 +7460,10 @@ msgid ""
 msgstr ""
 
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:76
-#, fuzzy
-#| msgid "Languages"
 msgid "Language"
-msgstr "Jazyky"
+msgstr "Jazyk"
 
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:84
-#, fuzzy
-#| msgid "Installation Destination"
 msgid "Installation destination"
 msgstr "Cieľ inštalácie"
 
