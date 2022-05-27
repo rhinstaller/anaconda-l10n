@@ -69,7 +69,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2022-05-24 01:40+0000\n"
+"POT-Creation-Date: 2022-05-27 01:23+0000\n"
 "PO-Revision-Date: 2022-05-24 14:18+0000\n"
 "Last-Translator: Renan Bruno <plenus@tutanota.com>\n"
 "Language-Team: Portuguese (Brazil) <https://translate.fedoraproject.org/"
@@ -4380,7 +4380,7 @@ msgstr "Baixando metadados do pacote..."
 msgid "Downloading group metadata..."
 msgstr "Baixando metadados do grupo..."
 
-#: pyanaconda/core/constants.py:276 ui/webui/src/components/app.jsx:87
+#: pyanaconda/core/constants.py:276
 msgid "Anaconda Installer"
 msgstr "Instalador Anaconda"
 
@@ -5072,7 +5072,7 @@ msgstr "A descrição vai aqui."
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1438
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1761
 #: pyanaconda/ui/gui/spokes/installation_source.glade:595
-#: ui/webui/src/components/storage/InstallationDestination.jsx:190
+#: ui/webui/src/components/storage/InstallationDestination.jsx:199
 msgid "Name"
 msgstr "Nome"
 
@@ -5228,7 +5228,7 @@ msgstr "Capacidade"
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:175
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:264
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:767
-#: ui/webui/src/components/storage/InstallationDestination.jsx:193
+#: ui/webui/src/components/storage/InstallationDestination.jsx:206
 msgid "Free"
 msgstr "Livre"
 
@@ -5656,7 +5656,7 @@ msgid "Filter _By:"
 msgstr "Filtrar _por:"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:931
-#: ui/webui/src/components/storage/InstallationDestination.jsx:191
+#: ui/webui/src/components/storage/InstallationDestination.jsx:203
 msgid "ID"
 msgstr "ID"
 
@@ -7425,7 +7425,6 @@ msgid ""
 msgstr "Se você não entender ou aceitar os riscos, saia deste programa."
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:110
-#: ui/webui/src/components/AnacondaWizard.jsx:109
 msgid "Storage configuration"
 msgstr "Configuração de armazenamento"
 
@@ -7479,7 +7478,14 @@ msgstr "Nome do host atual:"
 msgid "Reboot"
 msgstr "Reiniciar"
 
+#: ui/webui/src/components/app.jsx:87
+#, fuzzy
+#| msgid "Anaconda Installer"
+msgid "Anaconda installer"
+msgstr "Instalador Anaconda"
+
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:84
+#: ui/webui/src/components/AnacondaWizard.jsx:109
 msgid "Installation destination"
 msgstr "Destino da instalação"
 
@@ -7511,28 +7517,46 @@ msgstr ""
 "Os discos selecionados serão apagados, e isso não pode ser desfeito. Tem "
 "certeza de que deseja continuar com a instalação?"
 
-#: ui/webui/src/components/storage/InstallationDestination.jsx:154
-msgid "Local standard disks"
-msgstr "Discos padrão locais"
+#: ui/webui/src/components/storage/InstallationDestination.jsx:159
+msgid ""
+"Locally available storage devices (SATA, NVMe SSD, SCSI hard drives, "
+"external disks, etc.)"
+msgstr ""
 
-#: ui/webui/src/components/storage/InstallationDestination.jsx:161
+#: ui/webui/src/components/storage/InstallationDestination.jsx:171
 msgid "$0 (of $1) disk selected"
 msgid_plural "$0 (of $1) disks selected"
 msgstr[0] "$0 (de $1) disco selecionado"
 msgstr[1] "$0 (de $1) discos selecionados"
 
-#: ui/webui/src/components/storage/InstallationDestination.jsx:168
+#: ui/webui/src/components/storage/InstallationDestination.jsx:180
 msgid "Rescan disks"
 msgstr "Nova varredura de discos"
 
-#: ui/webui/src/components/storage/InstallationDestination.jsx:192
+#: ui/webui/src/components/storage/InstallationDestination.jsx:204
 msgid "Total"
 msgstr "Total"
 
-#: ui/webui/src/components/storage/InstallationDestination.jsx:232
+#: ui/webui/src/components/storage/InstallationDestination.jsx:211
+msgid "Available storage capacity on the disk."
+msgstr ""
+
+#: ui/webui/src/components/storage/InstallationDestination.jsx:236
+msgid "Local standard disks"
+msgstr "Discos padrão locais"
+
+#: ui/webui/src/components/storage/InstallationDestination.jsx:274
 msgid ""
 "Select the device(s) to install to. The installation requires $0 of "
 "available space. Storage will be automatically partitioned."
+msgstr ""
+
+#: ui/webui/src/components/storage/InstallationDestination.jsx:282
+msgid "Selected disks will be erased at at install"
+msgstr ""
+
+#: ui/webui/src/components/storage/InstallationDestination.jsx:285
+msgid "To prevent loss, backup the data."
 msgstr ""
 
 #: ui/webui/src/components/AnacondaWizard.jsx:103
@@ -7540,7 +7564,9 @@ msgid "Welcome"
 msgstr "Boas-vindas"
 
 #: ui/webui/src/components/AnacondaWizard.jsx:104
-msgid "Welcome to Anaconda Installer"
+#, fuzzy
+#| msgid "Welcome to Anaconda Installer"
+msgid "Welcome to the Anaconda installer"
 msgstr "Boas-vindas ao instalador Anaconda"
 
 #: ui/webui/src/components/AnacondaWizard.jsx:114

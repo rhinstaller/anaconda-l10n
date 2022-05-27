@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2022-05-24 01:40+0000\n"
+"POT-Creation-Date: 2022-05-27 01:23+0000\n"
 "PO-Revision-Date: 2022-04-11 20:17+0000\n"
 "Last-Translator: Gogo Gogsi <linux.hr@protonmail.com>\n"
 "Language-Team: Croatian <https://translate.fedoraproject.org/projects/"
@@ -4301,7 +4301,7 @@ msgstr "Preuzimanje metapodataka paketa..."
 msgid "Downloading group metadata..."
 msgstr "Preuzimanje grupnih metapodataka..."
 
-#: pyanaconda/core/constants.py:276 ui/webui/src/components/app.jsx:87
+#: pyanaconda/core/constants.py:276
 msgid "Anaconda Installer"
 msgstr "Anaconda program za instalaciju"
 
@@ -4994,7 +4994,7 @@ msgstr "Opis ide ovdje."
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1438
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1761
 #: pyanaconda/ui/gui/spokes/installation_source.glade:595
-#: ui/webui/src/components/storage/InstallationDestination.jsx:190
+#: ui/webui/src/components/storage/InstallationDestination.jsx:199
 msgid "Name"
 msgstr "Naziv"
 
@@ -5149,7 +5149,7 @@ msgstr "Kapacitet"
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:175
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:264
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:767
-#: ui/webui/src/components/storage/InstallationDestination.jsx:193
+#: ui/webui/src/components/storage/InstallationDestination.jsx:206
 msgid "Free"
 msgstr "Slobodno"
 
@@ -5577,7 +5577,7 @@ msgid "Filter _By:"
 msgstr "Filtriraj _po:"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:931
-#: ui/webui/src/components/storage/InstallationDestination.jsx:191
+#: ui/webui/src/components/storage/InstallationDestination.jsx:203
 msgid "ID"
 msgstr "ID"
 
@@ -7344,7 +7344,6 @@ msgid ""
 msgstr "Ako ne shvaćate ili ne prihvaćate rizike, tada zatvorite ovaj program."
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:110
-#: ui/webui/src/components/AnacondaWizard.jsx:109
 msgid "Storage configuration"
 msgstr "Podešavanje uređaja pohrane"
 
@@ -7390,7 +7389,14 @@ msgstr "trenutni korak"
 msgid "Reboot"
 msgstr "Ponovno pokreni"
 
+#: ui/webui/src/components/app.jsx:87
+#, fuzzy
+#| msgid "Anaconda Installer"
+msgid "Anaconda installer"
+msgstr "Anaconda program za instalaciju"
+
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:84
+#: ui/webui/src/components/AnacondaWizard.jsx:109
 msgid "Installation destination"
 msgstr "Instalacijsko odredište"
 
@@ -7422,29 +7428,47 @@ msgstr ""
 "Odabrani diskovi će biti obrisani, to se ne može poništiti. Sigurno želite "
 "nastaviti s instalacijom?"
 
-#: ui/webui/src/components/storage/InstallationDestination.jsx:154
-msgid "Local standard disks"
-msgstr "Lokalni standardni diskovi"
+#: ui/webui/src/components/storage/InstallationDestination.jsx:159
+msgid ""
+"Locally available storage devices (SATA, NVMe SSD, SCSI hard drives, "
+"external disks, etc.)"
+msgstr ""
 
-#: ui/webui/src/components/storage/InstallationDestination.jsx:161
+#: ui/webui/src/components/storage/InstallationDestination.jsx:171
 msgid "$0 (of $1) disk selected"
 msgid_plural "$0 (of $1) disks selected"
 msgstr[0] "$0 disk (od $1) odabran"
 msgstr[1] "$0 diska (od $1) odabrana"
 msgstr[2] "$0 diskova (od $1) odabrano"
 
-#: ui/webui/src/components/storage/InstallationDestination.jsx:168
+#: ui/webui/src/components/storage/InstallationDestination.jsx:180
 msgid "Rescan disks"
 msgstr "Ponovno pretraži diskove"
 
-#: ui/webui/src/components/storage/InstallationDestination.jsx:192
+#: ui/webui/src/components/storage/InstallationDestination.jsx:204
 msgid "Total"
 msgstr "Ukupno"
 
-#: ui/webui/src/components/storage/InstallationDestination.jsx:232
+#: ui/webui/src/components/storage/InstallationDestination.jsx:211
+msgid "Available storage capacity on the disk."
+msgstr ""
+
+#: ui/webui/src/components/storage/InstallationDestination.jsx:236
+msgid "Local standard disks"
+msgstr "Lokalni standardni diskovi"
+
+#: ui/webui/src/components/storage/InstallationDestination.jsx:274
 msgid ""
 "Select the device(s) to install to. The installation requires $0 of "
 "available space. Storage will be automatically partitioned."
+msgstr ""
+
+#: ui/webui/src/components/storage/InstallationDestination.jsx:282
+msgid "Selected disks will be erased at at install"
+msgstr ""
+
+#: ui/webui/src/components/storage/InstallationDestination.jsx:285
+msgid "To prevent loss, backup the data."
 msgstr ""
 
 #: ui/webui/src/components/AnacondaWizard.jsx:103
@@ -7452,7 +7476,9 @@ msgid "Welcome"
 msgstr "Dobrodošli"
 
 #: ui/webui/src/components/AnacondaWizard.jsx:104
-msgid "Welcome to Anaconda Installer"
+#, fuzzy
+#| msgid "Welcome to Anaconda Installer"
+msgid "Welcome to the Anaconda installer"
 msgstr "Dobrodošli u Anaconda program za instalaciju"
 
 #: ui/webui/src/components/AnacondaWizard.jsx:114
