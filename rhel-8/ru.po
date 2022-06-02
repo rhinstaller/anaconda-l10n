@@ -50,7 +50,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2022-05-26 09:07+0200\n"
+"POT-Creation-Date: 2022-06-01 20:41+0200\n"
 "PO-Revision-Date: 2022-06-02 17:18+0000\n"
 "Last-Translator: Ivan Vorstanenko <ivanvorstanenko@proton.me>\n"
 "Language-Team: Russian <https://translate.fedoraproject.org/projects/"
@@ -1571,7 +1571,7 @@ msgid "Verifying %s"
 msgstr "Проверка %s"
 
 #: pyanaconda/payload/dnf/payload.py:1418
-#: pyanaconda/payload/live/payload_base.py:159 pyanaconda/installation.py:361
+#: pyanaconda/payload/live/payload_base.py:172 pyanaconda/installation.py:361
 msgid "Performing post-installation setup tasks"
 msgstr "Выполняется настройка после установки"
 
@@ -1581,14 +1581,14 @@ msgstr "Выполняется настройка после установки"
 msgid "Downloading %(url)s (%(pct)d%%)"
 msgstr "Загрузка %(url)s (%(pct)d%%)"
 
-#: pyanaconda/payload/live/payload_base.py:80
-#: pyanaconda/payload/live/payload_liveos.py:96
-msgid "Installing software"
-msgstr "Устанавливается программное обеспечение"
-
 #: pyanaconda/payload/live/payload_liveimg.py:212
 msgid "Checking image checksum"
 msgstr "Проверка контрольной суммы образа"
+
+#: pyanaconda/payload/live/payload_liveos.py:96
+#: pyanaconda/payload/live/payload_base.py:78
+msgid "Installing software"
+msgstr "Устанавливается программное обеспечение"
 
 #: pyanaconda/payload/flatpak.py:205
 #, python-format
@@ -2621,6 +2621,28 @@ msgstr "_Сеть и имя хоста"
 msgid "Host name is not valid: %s"
 msgstr "Неправильное имя узла: %s"
 
+#: pyanaconda/ui/gui/spokes/root_password.py:56
+msgctxt "GUI|Spoke"
+msgid "_Root Password"
+msgstr "_Root Password"
+
+#: pyanaconda/ui/gui/spokes/root_password.py:128
+msgid "Root password has been set."
+msgstr "Пароль root задан."
+
+#: pyanaconda/ui/gui/spokes/root_password.py:161
+#: pyanaconda/ui/tui/spokes/root_password.py:88
+msgid "Root account is disabled."
+msgstr "Пользователь root заблокирован."
+
+#: pyanaconda/ui/gui/spokes/root_password.py:163
+msgid "Root password is set"
+msgstr "Пароль root задан"
+
+#: pyanaconda/ui/gui/spokes/root_password.py:165
+msgid "Root password is not set"
+msgstr "Пароль root не задан"
+
 #: pyanaconda/ui/gui/spokes/software_selection.py:68
 msgctxt "GUI|Spoke"
 msgid "_Software Selection"
@@ -2987,33 +3009,6 @@ msgstr "К системе прикреплено {} подписок"
 msgid "Please enable network access before connecting to Red Hat."
 msgstr "Перед подключением к Red Hat включите доступ к сети."
 
-#: pyanaconda/ui/gui/spokes/welcome.py:255
-#, python-format
-msgid "WELCOME TO %(name)s %(version)s."
-msgstr "ДОБРО ПОЖАЛОВАТЬ В %(name)s %(version)s."
-
-#: pyanaconda/ui/gui/spokes/root_password.py:56
-msgctxt "GUI|Spoke"
-msgid "_Root Password"
-msgstr "_Root Password"
-
-#: pyanaconda/ui/gui/spokes/root_password.py:128
-msgid "Root password has been set."
-msgstr "Пароль root задан."
-
-#: pyanaconda/ui/gui/spokes/root_password.py:161
-#: pyanaconda/ui/tui/spokes/root_password.py:88
-msgid "Root account is disabled."
-msgstr "Пользователь root заблокирован."
-
-#: pyanaconda/ui/gui/spokes/root_password.py:163
-msgid "Root password is set"
-msgstr "Пароль root задан"
-
-#: pyanaconda/ui/gui/spokes/root_password.py:165
-msgid "Root password is not set"
-msgstr "Пароль root не задан"
-
 #: pyanaconda/ui/gui/spokes/user.py:68
 msgid "Invalid group name."
 msgstr "Неверное имя группы."
@@ -3040,6 +3035,11 @@ msgstr "Будет создан администратор %s"
 #, python-format
 msgid "User %s will be created"
 msgstr "Будет создан пользователь %s"
+
+#: pyanaconda/ui/gui/spokes/welcome.py:255
+#, python-format
+msgid "WELCOME TO %(name)s %(version)s."
+msgstr "ДОБРО ПОЖАЛОВАТЬ В %(name)s %(version)s."
 
 #: pyanaconda/ui/gui/__init__.py:346 widgets/src/BaseWindow.c:151
 msgid "Help!"
@@ -5151,7 +5151,8 @@ msgstr "Ошибка при добавлении FCoE SAN."
 msgid ""
 "The following error occurred while attempting to add an FCoE SAN.  Please "
 "check your configuration and try again"
-msgstr "Ошибка при добавлении FCoE SAN. Проверьте настройки и повторите попытку"
+msgstr ""
+"Ошибка при добавлении FCoE SAN. Проверьте настройки и повторите попытку"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:40
 msgctxt "GUI|Advanced Storage|iSCSI|Configure"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2022-05-26 09:07+0200\n"
+"POT-Creation-Date: 2022-06-01 20:41+0200\n"
 "PO-Revision-Date: 2020-07-23 15:29+0000\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <https://translate.fedoraproject.org/projects/anaconda/"
@@ -1512,7 +1512,7 @@ msgid "Verifying %s"
 msgstr "%s тексеру"
 
 #: pyanaconda/payload/dnf/payload.py:1418
-#: pyanaconda/payload/live/payload_base.py:159 pyanaconda/installation.py:361
+#: pyanaconda/payload/live/payload_base.py:172 pyanaconda/installation.py:361
 msgid "Performing post-installation setup tasks"
 msgstr "Орнатудан кейінгі тапсырмаларды орындау"
 
@@ -1522,14 +1522,14 @@ msgstr "Орнатудан кейінгі тапсырмаларды орынд�
 msgid "Downloading %(url)s (%(pct)d%%)"
 msgstr "Жүктелуде %(url)s (%(pct)d%%)"
 
-#: pyanaconda/payload/live/payload_base.py:80
-#: pyanaconda/payload/live/payload_liveos.py:96
-msgid "Installing software"
-msgstr "Бағд. қамтаманы орнату"
-
 #: pyanaconda/payload/live/payload_liveimg.py:212
 msgid "Checking image checksum"
 msgstr "Бейненің бақылау сомасын тексеру"
+
+#: pyanaconda/payload/live/payload_liveos.py:96
+#: pyanaconda/payload/live/payload_base.py:78
+msgid "Installing software"
+msgstr "Бағд. қамтаманы орнату"
 
 #: pyanaconda/payload/flatpak.py:205
 #, python-format
@@ -2558,6 +2558,28 @@ msgstr "_Желі және хост аты"
 msgid "Host name is not valid: %s"
 msgstr "Хост аты жарамсыз: %s"
 
+#: pyanaconda/ui/gui/spokes/root_password.py:56
+msgctxt "GUI|Spoke"
+msgid "_Root Password"
+msgstr "Root па_ролі"
+
+#: pyanaconda/ui/gui/spokes/root_password.py:128
+msgid "Root password has been set."
+msgstr "Root паролі орнатылған."
+
+#: pyanaconda/ui/gui/spokes/root_password.py:161
+#: pyanaconda/ui/tui/spokes/root_password.py:88
+msgid "Root account is disabled."
+msgstr "Root тіркелгісі сөндірулі."
+
+#: pyanaconda/ui/gui/spokes/root_password.py:163
+msgid "Root password is set"
+msgstr "Root паролі орнатылды"
+
+#: pyanaconda/ui/gui/spokes/root_password.py:165
+msgid "Root password is not set"
+msgstr "Әкімші (root) паролі орнатылмаған"
+
 #: pyanaconda/ui/gui/spokes/software_selection.py:68
 msgctxt "GUI|Spoke"
 msgid "_Software Selection"
@@ -2924,33 +2946,6 @@ msgstr "{} жазылу жүйеге байланысқан"
 msgid "Please enable network access before connecting to Red Hat."
 msgstr "Red Hat-қа байланысу алдында желілік байланысты іске қосыңыз."
 
-#: pyanaconda/ui/gui/spokes/welcome.py:255
-#, python-format
-msgid "WELCOME TO %(name)s %(version)s."
-msgstr "%(name)s %(version)s жүйесіне қош келдіңіз."
-
-#: pyanaconda/ui/gui/spokes/root_password.py:56
-msgctxt "GUI|Spoke"
-msgid "_Root Password"
-msgstr "Root па_ролі"
-
-#: pyanaconda/ui/gui/spokes/root_password.py:128
-msgid "Root password has been set."
-msgstr "Root паролі орнатылған."
-
-#: pyanaconda/ui/gui/spokes/root_password.py:161
-#: pyanaconda/ui/tui/spokes/root_password.py:88
-msgid "Root account is disabled."
-msgstr "Root тіркелгісі сөндірулі."
-
-#: pyanaconda/ui/gui/spokes/root_password.py:163
-msgid "Root password is set"
-msgstr "Root паролі орнатылды"
-
-#: pyanaconda/ui/gui/spokes/root_password.py:165
-msgid "Root password is not set"
-msgstr "Әкімші (root) паролі орнатылмаған"
-
 #: pyanaconda/ui/gui/spokes/user.py:68
 msgid "Invalid group name."
 msgstr "Жарамсыз топ аты."
@@ -2977,6 +2972,11 @@ msgstr "%s әкімшісі жасалатын болады"
 #, python-format
 msgid "User %s will be created"
 msgstr "%s пайдаланушысы жасалатын болады"
+
+#: pyanaconda/ui/gui/spokes/welcome.py:255
+#, python-format
+msgid "WELCOME TO %(name)s %(version)s."
+msgstr "%(name)s %(version)s жүйесіне қош келдіңіз."
 
 #: pyanaconda/ui/gui/__init__.py:346 widgets/src/BaseWindow.c:151
 msgid "Help!"
