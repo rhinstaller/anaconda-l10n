@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2022-06-01 20:41+0200\n"
+"POT-Creation-Date: 2022-06-10 13:39+0200\n"
 "PO-Revision-Date: 2021-08-20 16:02+0000\n"
 "Last-Translator: Junting Wu <Lance20501@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://translate.fedoraproject.org/"
@@ -68,6 +68,116 @@ msgstr "格式不良的 URL，無法解析。"
 #: pyanaconda/core/payload.py:168
 msgid "URL has no host component"
 msgstr "URL 不含主機部份"
+
+#: pyanaconda/core/storage.py:84
+msgid "Unsupported"
+msgstr "不支援"
+
+#: pyanaconda/core/storage.py:85 pyanaconda/core/storage.py:96
+msgid "LVM"
+msgstr "LVM"
+
+#: pyanaconda/core/storage.py:86
+msgid "RAID"
+msgstr "RAID"
+
+#: pyanaconda/core/storage.py:87 pyanaconda/core/storage.py:94
+msgid "Standard Partition"
+msgstr "標準分割區"
+
+#: pyanaconda/core/storage.py:88 pyanaconda/core/storage.py:95
+msgid "Btrfs"
+msgstr "Btrfs"
+
+#: pyanaconda/core/storage.py:89 pyanaconda/core/storage.py:97
+msgid "LVM Thin Provisioning"
+msgstr "LVM 限縮供應"
+
+#: pyanaconda/core/storage.py:90 pyanaconda/ui/gui/spokes/lib/resize.glade:150
+msgid "Disk"
+msgstr "磁碟"
+
+#: pyanaconda/core/storage.py:108
+msgid ""
+"The 'swap' area on your computer is used by the operating\n"
+"system when running low on memory."
+msgstr "當記憶體不足時，作業系統會使用您電腦上的「置換空間」區域。"
+
+#: pyanaconda/core/storage.py:110
+msgid ""
+"The 'boot' area on your computer is where files needed\n"
+"to start the operating system are stored."
+msgstr "啟動作業系統所需的檔案，儲存於您電腦上的「根基」(/) 區域中。"
+
+#: pyanaconda/core/storage.py:112
+msgid ""
+"The 'root' area on your computer is where core system\n"
+"files and applications are stored."
+msgstr "核心系統檔案與應用程式儲存在您電腦上的「根基」(/) 區域中。"
+
+#: pyanaconda/core/storage.py:114
+msgid ""
+"The 'home' area on your computer is where all your personal\n"
+"data is stored."
+msgstr "您所有的個人資料皆儲存在您電腦上的「home」區域中。"
+
+#: pyanaconda/core/storage.py:116
+msgid ""
+"The BIOS boot partition is required to enable booting\n"
+"from GPT-partitioned disks on BIOS hardware."
+msgstr ""
+"需要 BIOS 開機分割區，好從 BIOS 硬體上的 GPT 分割區\n"
+"啟動開機程序。"
+
+#: pyanaconda/core/storage.py:118
+msgid ""
+"The PReP boot partition is required as part of the\n"
+"boot loader configuration on some PPC platforms."
+msgstr ""
+"在一些 PPC 平臺上，需要 PReP 開機分割區作為\n"
+"開機載入器的部分組態。"
+
+#: pyanaconda/core/users.py:66
+#, python-format
+msgid "User name is reserved for system: %s"
+msgstr "使用者名稱已保留給系統使用：%s"
+
+#: pyanaconda/core/users.py:90
+msgid ""
+"Either a group name in the group list is invalid or groups are not separated "
+"by a comma."
+msgstr "群組列表中的群組名稱為無效的、或者是群組之間沒有以逗點分割。"
+
+#: pyanaconda/core/users.py:122
+msgid "Name cannot start with '-' character."
+msgstr "名稱不能以「-」開頭。"
+
+#: pyanaconda/core/users.py:125
+#, python-format
+msgid "Name '%s' is not allowed."
+msgstr "不允許「%s」名稱。"
+
+#: pyanaconda/core/users.py:128
+msgid "Fully numeric name is not allowed."
+msgstr "不允許全部數字的名稱。"
+
+#: pyanaconda/core/users.py:132
+msgid "Name '$' is not allowed."
+msgstr "不允許「$」名稱。"
+
+#: pyanaconda/core/users.py:142
+#, python-format
+msgid "Name cannot contain character: '%s'"
+msgstr "名稱不能包含符號：「%s」"
+
+#: pyanaconda/core/users.py:145
+msgid "Name must be shorter than 33 characters."
+msgstr "名稱長度必須少於 33 個字元。"
+
+#: pyanaconda/core/users.py:149
+#, python-format
+msgid "Name '%s' is invalid."
+msgstr "無效名稱「%s」。"
 
 #: pyanaconda/core/constants.py:89
 msgid "Start VNC"
@@ -207,168 +317,63 @@ msgstr "您將需要按 <b>完成</b> 兩次以確認它。"
 msgid "Password set."
 msgstr "密碼已設定。"
 
-#: pyanaconda/core/constants.py:242
+#. TRANSLATORS: Password error message from libreport library needs to be joined with "You will have to press <b>Done</b> twice to confirm it." add a missing '.'
+#: pyanaconda/core/constants.py:240
+msgid "{}. {}"
+msgstr ""
+
+#: pyanaconda/core/constants.py:244
 msgid "Empty"
 msgstr "空白"
 
-#: pyanaconda/core/constants.py:243
+#: pyanaconda/core/constants.py:245
 msgid "Too short"
 msgstr "過短"
 
-#: pyanaconda/core/constants.py:244
+#: pyanaconda/core/constants.py:246
 #: pyanaconda/ui/gui/spokes/lib/passphrase.glade:182
 msgid "Weak"
 msgstr "脆弱"
 
-#: pyanaconda/core/constants.py:245
+#: pyanaconda/core/constants.py:247
 msgid "Fair"
 msgstr "一般"
 
-#: pyanaconda/core/constants.py:246
+#: pyanaconda/core/constants.py:248
 msgid "Good"
 msgstr "良好"
 
-#: pyanaconda/core/constants.py:247
+#: pyanaconda/core/constants.py:249
 msgid "Strong"
 msgstr "強固"
 
-#: pyanaconda/core/constants.py:250
+#: pyanaconda/core/constants.py:252
 msgid "Hide password."
 msgstr "隱藏密碼。"
 
-#: pyanaconda/core/constants.py:251
+#: pyanaconda/core/constants.py:253
 msgid "Show password."
 msgstr "顯示密碼。"
 
-#: pyanaconda/core/constants.py:298
+#: pyanaconda/core/constants.py:300
 msgid "Probing storage..."
 msgstr "正在探測儲存裝置..."
 
-#: pyanaconda/core/constants.py:299
+#: pyanaconda/core/constants.py:301
 msgid "Testing availability..."
 msgstr "測試可用性..."
 
-#: pyanaconda/core/constants.py:300
+#: pyanaconda/core/constants.py:302
 msgid "Downloading package metadata..."
 msgstr "正在下載軟體包中界資料..."
 
-#: pyanaconda/core/constants.py:301
+#: pyanaconda/core/constants.py:303
 msgid "Downloading group metadata..."
 msgstr "正在下載群組 metadata..."
 
-#: pyanaconda/core/constants.py:304
+#: pyanaconda/core/constants.py:306
 msgid "Anaconda Installer"
 msgstr "Anaconda 安裝程式"
-
-#: pyanaconda/core/storage.py:84
-msgid "Unsupported"
-msgstr "不支援"
-
-#: pyanaconda/core/storage.py:85 pyanaconda/core/storage.py:96
-msgid "LVM"
-msgstr "LVM"
-
-#: pyanaconda/core/storage.py:86
-msgid "RAID"
-msgstr "RAID"
-
-#: pyanaconda/core/storage.py:87 pyanaconda/core/storage.py:94
-msgid "Standard Partition"
-msgstr "標準分割區"
-
-#: pyanaconda/core/storage.py:88 pyanaconda/core/storage.py:95
-msgid "Btrfs"
-msgstr "Btrfs"
-
-#: pyanaconda/core/storage.py:89 pyanaconda/core/storage.py:97
-msgid "LVM Thin Provisioning"
-msgstr "LVM 限縮供應"
-
-#: pyanaconda/core/storage.py:90 pyanaconda/ui/gui/spokes/lib/resize.glade:150
-msgid "Disk"
-msgstr "磁碟"
-
-#: pyanaconda/core/storage.py:108
-msgid ""
-"The 'swap' area on your computer is used by the operating\n"
-"system when running low on memory."
-msgstr "當記憶體不足時，作業系統會使用您電腦上的「置換空間」區域。"
-
-#: pyanaconda/core/storage.py:110
-msgid ""
-"The 'boot' area on your computer is where files needed\n"
-"to start the operating system are stored."
-msgstr "啟動作業系統所需的檔案，儲存於您電腦上的「根基」(/) 區域中。"
-
-#: pyanaconda/core/storage.py:112
-msgid ""
-"The 'root' area on your computer is where core system\n"
-"files and applications are stored."
-msgstr "核心系統檔案與應用程式儲存在您電腦上的「根基」(/) 區域中。"
-
-#: pyanaconda/core/storage.py:114
-msgid ""
-"The 'home' area on your computer is where all your personal\n"
-"data is stored."
-msgstr "您所有的個人資料皆儲存在您電腦上的「home」區域中。"
-
-#: pyanaconda/core/storage.py:116
-msgid ""
-"The BIOS boot partition is required to enable booting\n"
-"from GPT-partitioned disks on BIOS hardware."
-msgstr ""
-"需要 BIOS 開機分割區，好從 BIOS 硬體上的 GPT 分割區\n"
-"啟動開機程序。"
-
-#: pyanaconda/core/storage.py:118
-msgid ""
-"The PReP boot partition is required as part of the\n"
-"boot loader configuration on some PPC platforms."
-msgstr ""
-"在一些 PPC 平臺上，需要 PReP 開機分割區作為\n"
-"開機載入器的部分組態。"
-
-#: pyanaconda/core/users.py:66
-#, python-format
-msgid "User name is reserved for system: %s"
-msgstr "使用者名稱已保留給系統使用：%s"
-
-#: pyanaconda/core/users.py:90
-msgid ""
-"Either a group name in the group list is invalid or groups are not separated "
-"by a comma."
-msgstr "群組列表中的群組名稱為無效的、或者是群組之間沒有以逗點分割。"
-
-#: pyanaconda/core/users.py:122
-msgid "Name cannot start with '-' character."
-msgstr "名稱不能以「-」開頭。"
-
-#: pyanaconda/core/users.py:125
-#, python-format
-msgid "Name '%s' is not allowed."
-msgstr "不允許「%s」名稱。"
-
-#: pyanaconda/core/users.py:128
-msgid "Fully numeric name is not allowed."
-msgstr "不允許全部數字的名稱。"
-
-#: pyanaconda/core/users.py:132
-msgid "Name '$' is not allowed."
-msgstr "不允許「$」名稱。"
-
-#: pyanaconda/core/users.py:142
-#, python-format
-msgid "Name cannot contain character: '%s'"
-msgstr "名稱不能包含符號：「%s」"
-
-#: pyanaconda/core/users.py:145
-msgid "Name must be shorter than 33 characters."
-msgstr "名稱長度必須少於 33 個字元。"
-
-#: pyanaconda/core/users.py:149
-#, python-format
-msgid "Name '%s' is invalid."
-msgstr "無效名稱「%s」。"
 
 #: pyanaconda/modules/network/firewall/installation.py:102
 #, python-format
@@ -1452,14 +1457,14 @@ msgstr "正在執行安裝後的設定工作"
 msgid "Downloading %(url)s (%(pct)d%%)"
 msgstr "正在下載 %(url)s (%(pct)d%%)"
 
+#: pyanaconda/payload/live/payload_base.py:78
+#: pyanaconda/payload/live/payload_liveos.py:96
+msgid "Installing software"
+msgstr "正在安裝軟體"
+
 #: pyanaconda/payload/live/payload_liveimg.py:212
 msgid "Checking image checksum"
 msgstr "正在檢查映像檔校驗總和碼"
-
-#: pyanaconda/payload/live/payload_liveos.py:96
-#: pyanaconda/payload/live/payload_base.py:78
-msgid "Installing software"
-msgstr "正在安裝軟體"
 
 #: pyanaconda/payload/flatpak.py:205
 #, python-format
@@ -1602,7 +1607,7 @@ msgid "_Cancel"
 msgstr "取消(_C)"
 
 #: pyanaconda/ui/gui/spokes/lib/detailederror.py:58
-#: pyanaconda/ui/gui/__init__.py:835
+#: pyanaconda/ui/gui/__init__.py:853
 msgctxt "GUI|Detailed Error Dialog"
 msgid "_Quit"
 msgstr "退出(_Q)"
@@ -2460,28 +2465,6 @@ msgstr "網路與主機名稱(_N)"
 msgid "Host name is not valid: %s"
 msgstr "主機名稱無效：%s"
 
-#: pyanaconda/ui/gui/spokes/root_password.py:56
-msgctxt "GUI|Spoke"
-msgid "_Root Password"
-msgstr "_Root 密碼"
-
-#: pyanaconda/ui/gui/spokes/root_password.py:128
-msgid "Root password has been set."
-msgstr "已設定 Root 密碼。"
-
-#: pyanaconda/ui/gui/spokes/root_password.py:161
-#: pyanaconda/ui/tui/spokes/root_password.py:88
-msgid "Root account is disabled."
-msgstr "Root 帳號已停用。"
-
-#: pyanaconda/ui/gui/spokes/root_password.py:163
-msgid "Root password is set"
-msgstr "Root 密碼已設定"
-
-#: pyanaconda/ui/gui/spokes/root_password.py:165
-msgid "Root password is not set"
-msgstr "尚未設定 root 密碼"
-
 #: pyanaconda/ui/gui/spokes/software_selection.py:68
 msgctxt "GUI|Spoke"
 msgid "_Software Selection"
@@ -2556,6 +2539,114 @@ msgstr "修改軟體來源(_M)"
 msgctxt "GUI|Software Selection|Error Dialog"
 msgid "Modify _Selections"
 msgstr "修改選取項目(_S)"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:73
+msgctxt "GUI|Spoke"
+msgid "_Connect to Red Hat"
+msgstr "連線至 Red Hat(_C)"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:251
+msgid "Activation key set."
+msgstr "已設定啟用金鑰。"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1001
+msgid "Unregistering..."
+msgstr "正在取消註冊…"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1003
+msgid "Registering..."
+msgstr "正在註冊…"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1005
+msgid "Attaching subscription..."
+msgstr "正在連接訂閱…"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1007
+msgid "Subscription attached."
+msgstr "已連接訂閱。"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1011
+msgid "Registered."
+msgstr "已註冊。"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1013
+msgid "Not registered."
+msgstr "未註冊。"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1043
+msgid "Registered with account {}"
+msgstr "已使用 {} 帳號註冊"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1047
+msgid "Registered with organization {}"
+msgstr "已使用 {} 組織註冊"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1055
+msgid "Role: {}"
+msgstr "角色：{}"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1059
+msgid "SLA: {}"
+msgstr "SLA：{}"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1063
+msgid "Usage: {}"
+msgstr "使用方法：{}"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1071
+msgid "Connected to Red Hat Insights"
+msgstr "已連線到 Red Hat Insights"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1073
+msgid "Not connected to Red Hat Insights"
+msgstr "未連線到 Red Hat Insights"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1085
+msgid "Subscribed in Simple Content Access mode."
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1087
+msgid "No subscriptions are attached to the system"
+msgstr "沒有連接到系統的訂閱"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1089
+msgid "1 subscription attached to the system"
+msgstr "有 1 個連接到系統的訂閱"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1091
+msgid "{} subscriptions attached to the system"
+msgstr "有 {} 個連接到系統的訂閱"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1132
+msgid "Please enable network access before connecting to Red Hat."
+msgstr "請在連線至 Red Hat 前啟用網路存取權。"
+
+#: pyanaconda/ui/gui/spokes/welcome.py:255
+#, python-format
+msgid "WELCOME TO %(name)s %(version)s."
+msgstr "歡迎使用 %(name)s %(version)s。"
+
+#: pyanaconda/ui/gui/spokes/root_password.py:56
+msgctxt "GUI|Spoke"
+msgid "_Root Password"
+msgstr "_Root 密碼"
+
+#: pyanaconda/ui/gui/spokes/root_password.py:128
+msgid "Root password has been set."
+msgstr "已設定 Root 密碼。"
+
+#: pyanaconda/ui/gui/spokes/root_password.py:161
+#: pyanaconda/ui/tui/spokes/root_password.py:88
+msgid "Root account is disabled."
+msgstr "Root 帳號已停用。"
+
+#: pyanaconda/ui/gui/spokes/root_password.py:163
+msgid "Root password is set"
+msgstr "Root 密碼已設定"
+
+#: pyanaconda/ui/gui/spokes/root_password.py:165
+msgid "Root password is not set"
+msgstr "尚未設定 root 密碼"
 
 #: pyanaconda/ui/gui/spokes/storage.py:103
 msgid "Please wait... software metadata still loading."
@@ -2697,47 +2788,47 @@ msgstr "NVDIMM 裝置 {namespace}"
 msgid "{} free"
 msgstr "{} 可用"
 
-#: pyanaconda/ui/gui/spokes/storage.py:714
+#: pyanaconda/ui/gui/spokes/storage.py:735
 msgid ""
 "You have chosen to skip boot loader installation. Your system may not be "
 "bootable."
 msgstr "如果您選擇跳過開機管理程式安裝，您的系統將無法開機。"
 
-#: pyanaconda/ui/gui/spokes/storage.py:893
+#: pyanaconda/ui/gui/spokes/storage.py:914
 msgid "There was a problem with your disk selection. Click here for details."
 msgstr "您的磁碟選取發生錯誤。請點按這裡查看詳細資訊。"
 
-#: pyanaconda/ui/gui/spokes/storage.py:998
+#: pyanaconda/ui/gui/spokes/storage.py:1019
 msgid ""
 "The following errors were encountered when checking your disk selection. You "
 "can modify your selection or quit the installer."
 msgstr ""
 "檢查您的磁碟選取時遭遇下列錯誤。您可以修改您的選取項目，或是退出安裝程式。"
 
-#: pyanaconda/ui/gui/spokes/storage.py:1003
 #: pyanaconda/ui/gui/spokes/storage.py:1024
+#: pyanaconda/ui/gui/spokes/storage.py:1045
 msgctxt "GUI|Storage|Error Dialog"
 msgid "_Quit"
 msgstr "退出(_Q)"
 
-#: pyanaconda/ui/gui/spokes/storage.py:1004
+#: pyanaconda/ui/gui/spokes/storage.py:1025
 msgctxt "GUI|Storage|Error Dialog"
 msgid "_Modify Disk Selection"
 msgstr "修改磁碟選取(_M)"
 
-#: pyanaconda/ui/gui/spokes/storage.py:1019
+#: pyanaconda/ui/gui/spokes/storage.py:1040
 msgid ""
 "The following errors were encountered when checking your storage "
 "configuration.  You can modify your storage layout or quit the installer."
 msgstr ""
 "檢查您的儲存組態時遭遇以下錯誤。您可以修改您的儲存配置，或者退出安裝程式。"
 
-#: pyanaconda/ui/gui/spokes/storage.py:1025
+#: pyanaconda/ui/gui/spokes/storage.py:1046
 msgctxt "GUI|Storage|Error Dialog"
 msgid "_Modify Storage Layout"
 msgstr "修改儲存配置(_M)"
 
-#: pyanaconda/ui/gui/spokes/storage.py:1039
+#: pyanaconda/ui/gui/spokes/storage.py:1060
 msgid ""
 "The following warnings were encountered when checking your storage "
 "configuration.  These are not fatal, but you may wish to make changes to "
@@ -2745,91 +2836,10 @@ msgid ""
 msgstr ""
 "檢查您的儲存組態時遭遇以下警告。這些雖不嚴重，但您可能會想修改儲存布局。"
 
-#: pyanaconda/ui/gui/spokes/storage.py:1044
+#: pyanaconda/ui/gui/spokes/storage.py:1065
 msgctxt "GUI|Storage|Warning Dialog"
 msgid "_OK"
 msgstr "確定(_O)"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:73
-msgctxt "GUI|Spoke"
-msgid "_Connect to Red Hat"
-msgstr "連線至 Red Hat(_C)"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:251
-msgid "Activation key set."
-msgstr "已設定啟用金鑰。"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1001
-msgid "Unregistering..."
-msgstr "正在取消註冊…"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1003
-msgid "Registering..."
-msgstr "正在註冊…"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1005
-msgid "Attaching subscription..."
-msgstr "正在連接訂閱…"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1007
-msgid "Subscription attached."
-msgstr "已連接訂閱。"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1011
-msgid "Registered."
-msgstr "已註冊。"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1013
-msgid "Not registered."
-msgstr "未註冊。"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1043
-msgid "Registered with account {}"
-msgstr "已使用 {} 帳號註冊"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1047
-msgid "Registered with organization {}"
-msgstr "已使用 {} 組織註冊"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1055
-msgid "Role: {}"
-msgstr "角色：{}"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1059
-msgid "SLA: {}"
-msgstr "SLA：{}"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1063
-msgid "Usage: {}"
-msgstr "使用方法：{}"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1071
-msgid "Connected to Red Hat Insights"
-msgstr "已連線到 Red Hat Insights"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1073
-msgid "Not connected to Red Hat Insights"
-msgstr "未連線到 Red Hat Insights"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1085
-msgid "Subscribed in Simple Content Access mode."
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1087
-msgid "No subscriptions are attached to the system"
-msgstr "沒有連接到系統的訂閱"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1089
-msgid "1 subscription attached to the system"
-msgstr "有 1 個連接到系統的訂閱"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1091
-msgid "{} subscriptions attached to the system"
-msgstr "有 {} 個連接到系統的訂閱"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1132
-msgid "Please enable network access before connecting to Red Hat."
-msgstr "請在連線至 Red Hat 前啟用網路存取權。"
 
 #: pyanaconda/ui/gui/spokes/user.py:68
 msgid "Invalid group name."
@@ -2858,21 +2868,16 @@ msgstr "將建立管理員 %s"
 msgid "User %s will be created"
 msgstr "將建立使用者 %s"
 
-#: pyanaconda/ui/gui/spokes/welcome.py:255
-#, python-format
-msgid "WELCOME TO %(name)s %(version)s."
-msgstr "歡迎使用 %(name)s %(version)s。"
-
-#: pyanaconda/ui/gui/__init__.py:346 widgets/src/BaseWindow.c:151
+#: pyanaconda/ui/gui/__init__.py:364 widgets/src/BaseWindow.c:151
 msgid "Help!"
 msgstr "求助！"
 
-#: pyanaconda/ui/gui/__init__.py:851
+#: pyanaconda/ui/gui/__init__.py:869
 msgctxt "GUI|Yes No Dialog"
 msgid "_No"
 msgstr "否(_N)"
 
-#: pyanaconda/ui/gui/__init__.py:852
+#: pyanaconda/ui/gui/__init__.py:870
 msgctxt "GUI|Yes No Dialog"
 msgid "_Yes"
 msgstr "是(_Y)"
@@ -2899,29 +2904,29 @@ msgstr "檔案系統沒有足夠用於目前軟體選擇的空間。需要額外
 msgid "Not enough space in file systems for the current software selection."
 msgstr "檔案系統沒有足夠用於目前軟體選擇的空間。"
 
-#: pyanaconda/ui/lib/storage.py:209
+#: pyanaconda/ui/lib/storage.py:210
 #, python-brace-format
 msgid "{count} disk selected; {capacity} capacity; {free} free"
 msgid_plural "{count} disks selected; {capacity} capacity; {free} free"
 msgstr[0] "已選取 {count} 顆硬碟；空間：{capacity}；剩餘：{free}"
 
-#: pyanaconda/ui/lib/storage.py:283
+#: pyanaconda/ui/lib/storage.py:310
 msgid "Saving storage configuration..."
 msgstr "正在儲存儲存裝置組態..."
 
-#: pyanaconda/ui/lib/storage.py:288
+#: pyanaconda/ui/lib/storage.py:315
 msgid "Failed to save storage configuration"
 msgstr "無法寫入儲存裝置組態"
 
-#: pyanaconda/ui/lib/storage.py:293
+#: pyanaconda/ui/lib/storage.py:320
 msgid "Failed to save boot loader configuration"
 msgstr "無法寫入開機載入器設定"
 
-#: pyanaconda/ui/lib/storage.py:297
+#: pyanaconda/ui/lib/storage.py:324
 msgid "Checking storage configuration..."
 msgstr "正在檢查儲存組態..."
 
-#: pyanaconda/ui/lib/subscription.py:287
+#: pyanaconda/ui/lib/subscription.py:302
 msgid "Registration failed due to insufficient credentials."
 msgstr "因憑證不足而註冊失敗。"
 
@@ -2973,9 +2978,9 @@ msgstr "開始安裝"
 #: pyanaconda/ui/tui/spokes/network.py:571
 #: pyanaconda/ui/tui/spokes/software_selection.py:251
 #: pyanaconda/ui/tui/spokes/storage.py:259
-#: pyanaconda/ui/tui/spokes/storage.py:536
-#: pyanaconda/ui/tui/spokes/storage.py:608
-#: pyanaconda/ui/tui/spokes/storage.py:676
+#: pyanaconda/ui/tui/spokes/storage.py:525
+#: pyanaconda/ui/tui/spokes/storage.py:597
+#: pyanaconda/ui/tui/spokes/storage.py:665
 msgctxt "TUI|Spoke Navigation"
 msgid "c"
 msgstr "c"
@@ -3312,164 +3317,6 @@ msgstr "所選環境的額外軟體"
 msgid "No additional software to select."
 msgstr "未選取額外軟體。"
 
-#: pyanaconda/ui/tui/spokes/storage.py:61
-msgid "Use All Space"
-msgstr "使用所有空間"
-
-#: pyanaconda/ui/tui/spokes/storage.py:62
-msgid "Replace Existing Linux system(s)"
-msgstr "取代既有的 Linux 系統"
-
-#: pyanaconda/ui/tui/spokes/storage.py:63
-msgid "Use Free Space"
-msgstr "使用可用的空間"
-
-#: pyanaconda/ui/tui/spokes/storage.py:81
-msgid "Installation Destination"
-msgstr "安裝目的地"
-
-#: pyanaconda/ui/tui/spokes/storage.py:206
-msgid "Select all"
-msgstr "全選"
-
-#: pyanaconda/ui/tui/spokes/storage.py:315
-msgid ""
-"The following unformatted or LDL DASDs have been detected on your system. "
-"You can choose to format them now with dasdfmt or cancel to leave them "
-"unformatted. Unformatted DASDs cannot be used during installation.\n"
-"\n"
-msgstr ""
-"以下的未格式化磁碟或 LDL DASD 被偵測到。您可以選擇透過 dasdfmt 立刻格式化、或"
-"者是取消，保持他們為未格式化狀態。未格式化的 DASD 無法用於安裝過程。\n"
-
-#: pyanaconda/ui/tui/spokes/storage.py:322
-msgid ""
-"Warning: All storage changes made using the installer will be lost when you "
-"choose to format.\n"
-"\n"
-"Proceed to run dasdfmt?\n"
-msgstr ""
-"警告：一旦您選擇格式化，所有安裝程式中作過的儲存裝置更動都會喪失。\n"
-"\n"
-"是否繼續執行 dasdfmt？\n"
-
-#: pyanaconda/ui/tui/spokes/storage.py:331
-msgid "This may take a moment."
-msgstr "這可能需要一段時間。"
-
-#: pyanaconda/ui/tui/spokes/storage.py:347
-msgid "Passphrase"
-msgstr "密語"
-
-#: pyanaconda/ui/tui/spokes/storage.py:348
-msgid ""
-"Please provide a default LUKS passphrase for all devices you want to "
-"encrypt. You will have to type it twice."
-msgstr "請提供您想加密的裝置的預設 LUKS 密語。您將需要輸入兩次。"
-
-#: pyanaconda/ui/tui/spokes/storage.py:437
-msgid "Partitioning Options"
-msgstr "分割區設定"
-
-#: pyanaconda/ui/tui/spokes/storage.py:477
-msgid "Manually assign mount points"
-msgstr "手動指定掛載點"
-
-#: pyanaconda/ui/tui/spokes/storage.py:484
-msgid ""
-"Installation requires partitioning of your hard drive. Select what space to "
-"use for the install target or manually assign mount points."
-msgstr "安裝需要您的磁碟已分過區。選擇想用於安裝的空間、或者是手動指定掛載點。"
-
-#: pyanaconda/ui/tui/spokes/storage.py:529
-msgid "Reverting previous configuration. This may take a moment..."
-msgstr "放棄上次的設定。這需要一段時間…"
-
-#: pyanaconda/ui/tui/spokes/storage.py:561
-msgid "Partition Scheme Options"
-msgstr "分割區規劃選項"
-
-#: pyanaconda/ui/tui/spokes/storage.py:597
-msgid "Select a partition scheme configuration."
-msgstr "請選取分割區規劃組態。"
-
-#: pyanaconda/ui/tui/spokes/storage.py:629
-msgid "Assign mount points"
-msgstr "指定掛載點"
-
-#: pyanaconda/ui/tui/spokes/storage.py:649
-msgid ""
-"Choose device from above to assign mount point and set format.\n"
-"Formats marked with * are new formats meaning ALL DATA on the original "
-"format WILL BE LOST!"
-msgstr ""
-"選擇以上的裝置以指定掛載點、並且設定格式。\n"
-"格式化以「*」標記為新格式，意味著在原始格式的所有檔案將會消失！！"
-
-#. TRANSLATORS: 's' to rescan devices
-#: pyanaconda/ui/tui/spokes/storage.py:661
-#: pyanaconda/ui/tui/spokes/storage.py:671
-msgctxt "TUI|Spoke Navigation|Partitioning"
-msgid "s"
-msgstr "s"
-
-#: pyanaconda/ui/tui/spokes/storage.py:661
-msgid "rescan devices"
-msgstr "重新掃描裝置"
-
-#: pyanaconda/ui/tui/spokes/storage.py:733
-msgid ""
-"Warning: This will revert all changes done so far.\n"
-"Do you want to proceed?\n"
-msgstr ""
-"警告：這將會回復所有變更至很久以前，\n"
-"您確定要進行？\n"
-
-#: pyanaconda/ui/tui/spokes/storage.py:742
-msgid "Scanning disks. This may take a moment..."
-msgstr "掃描磁碟中。這需要一段時間…"
-
-#: pyanaconda/ui/tui/spokes/storage.py:756
-#, python-format
-msgid "Configure device: %s"
-msgstr "設定裝置：%s"
-
-#: pyanaconda/ui/tui/spokes/storage.py:776
-msgid "Choose from above to assign mount point and/or set format."
-msgstr "從以上分配掛載點並設定格式。"
-
-#: pyanaconda/ui/tui/spokes/storage.py:792
-#: pyanaconda/ui/gui/spokes/lib/summary.glade:177
-msgid "Mount point"
-msgstr "掛載點"
-
-#: pyanaconda/ui/tui/spokes/storage.py:799
-#: pyanaconda/ui/tui/spokes/storage.py:804
-#: pyanaconda/ui/tui/spokes/storage.py:836
-msgid "none"
-msgstr "無"
-
-#: pyanaconda/ui/tui/spokes/storage.py:822
-msgid "Invalid mount point given"
-msgstr "提供了無效的掛載點"
-
-#: pyanaconda/ui/tui/spokes/storage.py:835
-msgid "Format"
-msgstr "格式化"
-
-#: pyanaconda/ui/tui/spokes/storage.py:845
-msgid "Invalid or unsupported format given"
-msgstr "提供了無效、或不支援的格式"
-
-#: pyanaconda/ui/tui/spokes/storage.py:847
-#, python-format
-msgid "Supported formats: %s"
-msgstr "支援的格式：%s"
-
-#: pyanaconda/ui/tui/spokes/storage.py:864
-msgid "Reformat"
-msgstr "重新格式化"
-
 #: pyanaconda/ui/tui/spokes/time_spoke.py:48
 msgid "status: working"
 msgstr "狀態：運作中"
@@ -3629,6 +3476,164 @@ msgstr ""
 "無效的使用者名稱：%(name)s。\n"
 "%(error_message)s"
 
+#: pyanaconda/ui/tui/spokes/storage.py:61
+msgid "Use All Space"
+msgstr "使用所有空間"
+
+#: pyanaconda/ui/tui/spokes/storage.py:62
+msgid "Replace Existing Linux system(s)"
+msgstr "取代既有的 Linux 系統"
+
+#: pyanaconda/ui/tui/spokes/storage.py:63
+msgid "Use Free Space"
+msgstr "使用可用的空間"
+
+#: pyanaconda/ui/tui/spokes/storage.py:81
+msgid "Installation Destination"
+msgstr "安裝目的地"
+
+#: pyanaconda/ui/tui/spokes/storage.py:206
+msgid "Select all"
+msgstr "全選"
+
+#: pyanaconda/ui/tui/spokes/storage.py:315
+msgid ""
+"The following unformatted or LDL DASDs have been detected on your system. "
+"You can choose to format them now with dasdfmt or cancel to leave them "
+"unformatted. Unformatted DASDs cannot be used during installation.\n"
+"\n"
+msgstr ""
+"以下的未格式化磁碟或 LDL DASD 被偵測到。您可以選擇透過 dasdfmt 立刻格式化、或"
+"者是取消，保持他們為未格式化狀態。未格式化的 DASD 無法用於安裝過程。\n"
+
+#: pyanaconda/ui/tui/spokes/storage.py:322
+msgid ""
+"Warning: All storage changes made using the installer will be lost when you "
+"choose to format.\n"
+"\n"
+"Proceed to run dasdfmt?\n"
+msgstr ""
+"警告：一旦您選擇格式化，所有安裝程式中作過的儲存裝置更動都會喪失。\n"
+"\n"
+"是否繼續執行 dasdfmt？\n"
+
+#: pyanaconda/ui/tui/spokes/storage.py:331
+msgid "This may take a moment."
+msgstr "這可能需要一段時間。"
+
+#: pyanaconda/ui/tui/spokes/storage.py:347
+msgid "Passphrase"
+msgstr "密語"
+
+#: pyanaconda/ui/tui/spokes/storage.py:348
+msgid ""
+"Please provide a default LUKS passphrase for all devices you want to "
+"encrypt. You will have to type it twice."
+msgstr "請提供您想加密的裝置的預設 LUKS 密語。您將需要輸入兩次。"
+
+#: pyanaconda/ui/tui/spokes/storage.py:426
+msgid "Partitioning Options"
+msgstr "分割區設定"
+
+#: pyanaconda/ui/tui/spokes/storage.py:466
+msgid "Manually assign mount points"
+msgstr "手動指定掛載點"
+
+#: pyanaconda/ui/tui/spokes/storage.py:473
+msgid ""
+"Installation requires partitioning of your hard drive. Select what space to "
+"use for the install target or manually assign mount points."
+msgstr "安裝需要您的磁碟已分過區。選擇想用於安裝的空間、或者是手動指定掛載點。"
+
+#: pyanaconda/ui/tui/spokes/storage.py:518
+msgid "Reverting previous configuration. This may take a moment..."
+msgstr "放棄上次的設定。這需要一段時間…"
+
+#: pyanaconda/ui/tui/spokes/storage.py:550
+msgid "Partition Scheme Options"
+msgstr "分割區規劃選項"
+
+#: pyanaconda/ui/tui/spokes/storage.py:586
+msgid "Select a partition scheme configuration."
+msgstr "請選取分割區規劃組態。"
+
+#: pyanaconda/ui/tui/spokes/storage.py:618
+msgid "Assign mount points"
+msgstr "指定掛載點"
+
+#: pyanaconda/ui/tui/spokes/storage.py:638
+msgid ""
+"Choose device from above to assign mount point and set format.\n"
+"Formats marked with * are new formats meaning ALL DATA on the original "
+"format WILL BE LOST!"
+msgstr ""
+"選擇以上的裝置以指定掛載點、並且設定格式。\n"
+"格式化以「*」標記為新格式，意味著在原始格式的所有檔案將會消失！！"
+
+#. TRANSLATORS: 's' to rescan devices
+#: pyanaconda/ui/tui/spokes/storage.py:650
+#: pyanaconda/ui/tui/spokes/storage.py:660
+msgctxt "TUI|Spoke Navigation|Partitioning"
+msgid "s"
+msgstr "s"
+
+#: pyanaconda/ui/tui/spokes/storage.py:650
+msgid "rescan devices"
+msgstr "重新掃描裝置"
+
+#: pyanaconda/ui/tui/spokes/storage.py:722
+msgid ""
+"Warning: This will revert all changes done so far.\n"
+"Do you want to proceed?\n"
+msgstr ""
+"警告：這將會回復所有變更至很久以前，\n"
+"您確定要進行？\n"
+
+#: pyanaconda/ui/tui/spokes/storage.py:731
+msgid "Scanning disks. This may take a moment..."
+msgstr "掃描磁碟中。這需要一段時間…"
+
+#: pyanaconda/ui/tui/spokes/storage.py:745
+#, python-format
+msgid "Configure device: %s"
+msgstr "設定裝置：%s"
+
+#: pyanaconda/ui/tui/spokes/storage.py:765
+msgid "Choose from above to assign mount point and/or set format."
+msgstr "從以上分配掛載點並設定格式。"
+
+#: pyanaconda/ui/tui/spokes/storage.py:781
+#: pyanaconda/ui/gui/spokes/lib/summary.glade:177
+msgid "Mount point"
+msgstr "掛載點"
+
+#: pyanaconda/ui/tui/spokes/storage.py:788
+#: pyanaconda/ui/tui/spokes/storage.py:793
+#: pyanaconda/ui/tui/spokes/storage.py:825
+msgid "none"
+msgstr "無"
+
+#: pyanaconda/ui/tui/spokes/storage.py:811
+msgid "Invalid mount point given"
+msgstr "提供了無效的掛載點"
+
+#: pyanaconda/ui/tui/spokes/storage.py:824
+msgid "Format"
+msgstr "格式化"
+
+#: pyanaconda/ui/tui/spokes/storage.py:834
+msgid "Invalid or unsupported format given"
+msgstr "提供了無效、或不支援的格式"
+
+#: pyanaconda/ui/tui/spokes/storage.py:836
+#, python-format
+msgid "Supported formats: %s"
+msgstr "支援的格式：%s"
+
+#: pyanaconda/ui/tui/spokes/storage.py:853
+msgid "Reformat"
+msgstr "重新格式化"
+
 #: pyanaconda/ui/tui/tuiobject.py:144
 #, python-format
 msgid "Enter a new value for '%(title)s' and press %(enter)s"
@@ -3780,191 +3785,6 @@ msgid ""
 msgstr ""
 "X 無法在您的機器上啟動。您是否想要啟動 VNC 以從其他電腦連接本電腦並執行圖形化"
 "安裝，或是繼續以文字模式安裝？"
-
-#: pyanaconda/errors.py:112
-msgid "An error occurred while activating your storage configuration."
-msgstr "啟用儲存組態時發生錯誤。"
-
-#: pyanaconda/errors.py:119
-#, fuzzy
-#| msgid ""
-#| "There is a problem with your existing storage configuration. You must "
-#| "resolve this matter before the installation can proceed. There is a shell "
-#| "available for use which you can access by pressing ctrl-alt-f1 and then "
-#| "ctrl-b 2.\n"
-#| "\n"
-#| "Once you have resolved the issue you can retry the storage scan. If you "
-#| "do not fix it you will have to exit the installer."
-msgid ""
-"There is a problem with your existing storage configuration or your initial "
-"settings, for example a kickstart file. You must resolve this matter before "
-"the installation can proceed. There is a shell available for use which you "
-"can access by pressing ctrl-alt-f1 and then ctrl-b 2.\n"
-"\n"
-"Once you have resolved the issue you can retry the storage scan. If you do "
-"not fix it you will have to exit the installer."
-msgstr ""
-"您目前的儲存組態有問題。在繼續安裝之前，您必須先解決該問題。您可以按下 Ctrl"
-"+Alt+F1，再按下 Ctrl+B 2 來存取能供您使用的 shell。\n"
-"\n"
-"一旦您解決問題之後，您可以重新掃描儲存裝置。如果不修正問題，則必須結束安裝程"
-"式。"
-
-#: pyanaconda/errors.py:128
-msgctxt "GUI|Storage Detailed Error Dialog"
-msgid "_Exit Installer"
-msgstr "離開安裝程式(_E)"
-
-#: pyanaconda/errors.py:129
-msgctxt "GUI|Storage Detailed Error Dialog"
-msgid "_Retry"
-msgstr "重試(_R)"
-
-#: pyanaconda/errors.py:136
-#, python-format
-msgid ""
-"The ISO image %s has a size which is not a multiple of 2048 bytes.  This may "
-"mean it was corrupted on transfer to this computer.\n"
-"\n"
-"It is recommended that you exit and abort your installation, but you can "
-"choose to continue if you think this is in error. Would you like to continue "
-"using this image?"
-msgstr ""
-"ISO 映像檔 %s 大小不是 2048 位元組的倍數。這可能代表檔案在傳輸到此電腦的過程"
-"中損壞。\n"
-"\n"
-"建議您離開並中止安裝，但如果您認為判斷有誤的話也可以選擇繼續。您是否想要繼續"
-"使用此映像檔呢？"
-
-#: pyanaconda/errors.py:150
-msgid ""
-"The installer has tried to mount the installation image, but cannot find it "
-"on the hard drive.\n"
-"\n"
-"Should I try again to locate the image?"
-msgstr ""
-"安裝程式嘗試掛載安裝映像檔，但在硬碟上卻找不到。\n"
-"\n"
-"是否應重新嘗試找尋該映像檔？"
-
-#: pyanaconda/errors.py:161
-#, python-format
-msgid ""
-"The group '%s' is required for this installation. This group does not exist. "
-"This is a fatal error and installation will be aborted."
-msgstr ""
-"需要「%s」群組才能進行安裝。這個群組並不存在。這是嚴重錯誤，將中止安裝。"
-
-#: pyanaconda/errors.py:167
-#, python-format
-msgid ""
-"You have specified that the group '%s' should be installed.  This group does "
-"not exist.  Would you like to ignore this group and continue with "
-"installation?"
-msgstr ""
-"您已指定應安裝「%s」群組。但此群組並不存在。您是否要忽略此群組，並繼續安裝？"
-
-#: pyanaconda/errors.py:172
-#, python-format
-msgid ""
-"You have specified that the group '%s' should be excluded from "
-"installation.  This group does not exist.  Would you like to ignore this "
-"group and continue with installation?"
-msgstr ""
-"您已指定「%s」群組應從安裝中排除。但此群組卻不存在。您是否想要忽略此群組，並"
-"繼續安裝？"
-
-#: pyanaconda/errors.py:193
-msgid ""
-"Some packages, groups or modules are broken, the installation will be "
-"aborted."
-msgstr "有些軟體包、群組、模組可能損壞，將中止安裝。"
-
-#: pyanaconda/errors.py:199
-msgid "Would you like to ignore this and continue with installation?"
-msgstr "忽略並繼續安裝？"
-
-#: pyanaconda/errors.py:206
-#, python-format
-msgid ""
-"Stream was not specified for a module without a default stream. This is a "
-"fatal error and installation will be aborted. The details of this error "
-"are:\n"
-"\n"
-"%(exception)s"
-msgstr ""
-"未對沒有預設串流的模組指定串流。這錯誤十分嚴重，且安裝程序將被中止。關於此錯"
-"誤的詳細資訊為：\n"
-"\n"
-"%(exception)s"
-
-#: pyanaconda/errors.py:214
-#, python-format
-msgid ""
-"Multiple streams have been specified for a single module. This is a fatal "
-"error and installation will be aborted. The details of this error are:\n"
-"\n"
-"%(exception)s"
-msgstr ""
-"對一個單一模組指定多個串流。這錯誤十分嚴重，且安裝程序將被中止。關於此錯誤的"
-"詳細資訊為：\n"
-"\n"
-"%(exception)s"
-
-#: pyanaconda/errors.py:222
-#, python-format
-msgid ""
-"There was an error running the kickstart script at line %(lineno)s.  This is "
-"a fatal error and installation will be aborted.  The details of this error "
-"are:\n"
-"\n"
-"%(details)s"
-msgstr ""
-"執行 kickstart 指令稿的第 %(lineno)s 列時遭遇錯誤。這是嚴重錯誤，將中止安裝。"
-"此錯誤的詳細資訊為：\n"
-"\n"
-"%(details)s"
-
-#: pyanaconda/errors.py:230
-msgid ""
-"The following error occurred while installing.  This is a fatal error and "
-"installation will be aborted."
-msgstr "安裝時遭遇下列錯誤。這是嚴重錯誤，將中止安裝。"
-
-#: pyanaconda/errors.py:238
-msgid ""
-"The following software marked for installation has errors.\n"
-"This is likely caused by an error with your installation source."
-msgstr ""
-"以下軟體被標記安裝錯誤。\n"
-"這可能是因為您安裝來源的錯誤而導致的。"
-
-#: pyanaconda/errors.py:246
-msgid ""
-"The following error occurred while installing the boot loader. The system "
-"will not be bootable. Would you like to ignore this and continue with "
-"installation?"
-msgstr ""
-"安裝開機載入器時遭遇下列錯誤。系統將無法開機。您是否要忽略這個問題，並繼續安"
-"裝？"
-
-#: pyanaconda/errors.py:258
-#, python-format
-msgid "Unable to encrypt password: unsupported algorithm %s"
-msgstr "無法解密密碼：不支援的演算法 %s"
-
-#: pyanaconda/errors.py:264
-#, fuzzy
-#| msgid ""
-#| "The following error occurred while installing the boot loader. The system "
-#| "will not be bootable. Would you like to ignore this and continue with "
-#| "installation?"
-msgid ""
-"An error occurred during Red Hat Insights configuration. Would you like to "
-"ignore this and continue with installation?"
-msgstr ""
-"安裝開機載入器時遭遇下列錯誤。系統將無法開機。您是否要忽略這個問題，並繼續安"
-"裝？"
 
 #: pyanaconda/exception.py:109
 #, python-format
@@ -4400,6 +4220,203 @@ msgid ""
 msgstr ""
 "VNC 密碼必須 6 到 8 個字元長。\n"
 "請輸入新的密碼，或留空不設密碼。"
+
+#: pyanaconda/errors.py:112
+msgid "An error occurred while activating your storage configuration."
+msgstr "啟用儲存組態時發生錯誤。"
+
+#: pyanaconda/errors.py:119
+#, fuzzy
+#| msgid ""
+#| "There is a problem with your existing storage configuration. You must "
+#| "resolve this matter before the installation can proceed. There is a shell "
+#| "available for use which you can access by pressing ctrl-alt-f1 and then "
+#| "ctrl-b 2.\n"
+#| "\n"
+#| "Once you have resolved the issue you can retry the storage scan. If you "
+#| "do not fix it you will have to exit the installer."
+msgid ""
+"There is a problem with your existing storage configuration or your initial "
+"settings, for example a kickstart file. You must resolve this matter before "
+"the installation can proceed. There is a shell available for use which you "
+"can access by pressing ctrl-alt-f1 and then ctrl-b 2.\n"
+"\n"
+"Once you have resolved the issue you can retry the storage scan. If you do "
+"not fix it you will have to exit the installer."
+msgstr ""
+"您目前的儲存組態有問題。在繼續安裝之前，您必須先解決該問題。您可以按下 Ctrl"
+"+Alt+F1，再按下 Ctrl+B 2 來存取能供您使用的 shell。\n"
+"\n"
+"一旦您解決問題之後，您可以重新掃描儲存裝置。如果不修正問題，則必須結束安裝程"
+"式。"
+
+#: pyanaconda/errors.py:128
+msgctxt "GUI|Storage Detailed Error Dialog"
+msgid "_Exit Installer"
+msgstr "離開安裝程式(_E)"
+
+#: pyanaconda/errors.py:129
+msgctxt "GUI|Storage Detailed Error Dialog"
+msgid "_Retry"
+msgstr "重試(_R)"
+
+#: pyanaconda/errors.py:136
+#, python-format
+msgid ""
+"The ISO image %s has a size which is not a multiple of 2048 bytes.  This may "
+"mean it was corrupted on transfer to this computer.\n"
+"\n"
+"It is recommended that you exit and abort your installation, but you can "
+"choose to continue if you think this is in error. Would you like to continue "
+"using this image?"
+msgstr ""
+"ISO 映像檔 %s 大小不是 2048 位元組的倍數。這可能代表檔案在傳輸到此電腦的過程"
+"中損壞。\n"
+"\n"
+"建議您離開並中止安裝，但如果您認為判斷有誤的話也可以選擇繼續。您是否想要繼續"
+"使用此映像檔呢？"
+
+#: pyanaconda/errors.py:150
+msgid ""
+"The installer has tried to mount the installation image, but cannot find it "
+"on the hard drive.\n"
+"\n"
+"Should I try again to locate the image?"
+msgstr ""
+"安裝程式嘗試掛載安裝映像檔，但在硬碟上卻找不到。\n"
+"\n"
+"是否應重新嘗試找尋該映像檔？"
+
+#: pyanaconda/errors.py:161
+#, python-format
+msgid ""
+"The group '%s' is required for this installation. This group does not exist. "
+"This is a fatal error and installation will be aborted."
+msgstr ""
+"需要「%s」群組才能進行安裝。這個群組並不存在。這是嚴重錯誤，將中止安裝。"
+
+#: pyanaconda/errors.py:167
+#, python-format
+msgid ""
+"You have specified that the group '%s' should be installed.  This group does "
+"not exist.  Would you like to ignore this group and continue with "
+"installation?"
+msgstr ""
+"您已指定應安裝「%s」群組。但此群組並不存在。您是否要忽略此群組，並繼續安裝？"
+
+#: pyanaconda/errors.py:172
+#, python-format
+msgid ""
+"You have specified that the group '%s' should be excluded from "
+"installation.  This group does not exist.  Would you like to ignore this "
+"group and continue with installation?"
+msgstr ""
+"您已指定「%s」群組應從安裝中排除。但此群組卻不存在。您是否想要忽略此群組，並"
+"繼續安裝？"
+
+#: pyanaconda/errors.py:193
+msgid ""
+"Some packages, groups or modules are broken, the installation will be "
+"aborted."
+msgstr "有些軟體包、群組、模組可能損壞，將中止安裝。"
+
+#: pyanaconda/errors.py:199
+msgid "Would you like to ignore this and continue with installation?"
+msgstr "忽略並繼續安裝？"
+
+#: pyanaconda/errors.py:206
+#, python-format
+msgid ""
+"Stream was not specified for a module without a default stream. This is a "
+"fatal error and installation will be aborted. The details of this error "
+"are:\n"
+"\n"
+"%(exception)s"
+msgstr ""
+"未對沒有預設串流的模組指定串流。這錯誤十分嚴重，且安裝程序將被中止。關於此錯"
+"誤的詳細資訊為：\n"
+"\n"
+"%(exception)s"
+
+#: pyanaconda/errors.py:214
+#, python-format
+msgid ""
+"Multiple streams have been specified for a single module. This is a fatal "
+"error and installation will be aborted. The details of this error are:\n"
+"\n"
+"%(exception)s"
+msgstr ""
+"對一個單一模組指定多個串流。這錯誤十分嚴重，且安裝程序將被中止。關於此錯誤的"
+"詳細資訊為：\n"
+"\n"
+"%(exception)s"
+
+#: pyanaconda/errors.py:222
+#, python-format
+msgid ""
+"There was an error running the kickstart script at line %(lineno)s.  This is "
+"a fatal error and installation will be aborted.  The details of this error "
+"are:\n"
+"\n"
+"%(details)s"
+msgstr ""
+"執行 kickstart 指令稿的第 %(lineno)s 列時遭遇錯誤。這是嚴重錯誤，將中止安裝。"
+"此錯誤的詳細資訊為：\n"
+"\n"
+"%(details)s"
+
+#: pyanaconda/errors.py:230
+msgid ""
+"The following error occurred while installing.  This is a fatal error and "
+"installation will be aborted."
+msgstr "安裝時遭遇下列錯誤。這是嚴重錯誤，將中止安裝。"
+
+#: pyanaconda/errors.py:238
+msgid ""
+"The following software marked for installation has errors.\n"
+"This is likely caused by an error with your installation source."
+msgstr ""
+"以下軟體被標記安裝錯誤。\n"
+"這可能是因為您安裝來源的錯誤而導致的。"
+
+#: pyanaconda/errors.py:246
+msgid ""
+"The following error occurred while installing the boot loader. The system "
+"will not be bootable. Would you like to ignore this and continue with "
+"installation?"
+msgstr ""
+"安裝開機載入器時遭遇下列錯誤。系統將無法開機。您是否要忽略這個問題，並繼續安"
+"裝？"
+
+#: pyanaconda/errors.py:258
+#, python-format
+msgid "Unable to encrypt password: unsupported algorithm %s"
+msgstr "無法解密密碼：不支援的演算法 %s"
+
+#: pyanaconda/errors.py:264
+#, fuzzy
+#| msgid ""
+#| "The following error occurred while installing the boot loader. The system "
+#| "will not be bootable. Would you like to ignore this and continue with "
+#| "installation?"
+msgid ""
+"An error occurred during Red Hat Insights configuration. Would you like to "
+"ignore this and continue with installation?"
+msgstr ""
+"安裝開機載入器時遭遇下列錯誤。系統將無法開機。您是否要忽略這個問題，並繼續安"
+"裝？"
+
+#: pyanaconda/errors.py:275
+msgid ""
+"An error occurred during registration attempt triggered by the rhsm "
+"kickstart command. This could have happened due to incorrect rhsm command "
+"arguments or subscription infrastructure issues. Would you like to ignore "
+"this and continue with installation?"
+msgstr ""
+
+#: pyanaconda/errors.py:281
+msgid "Error detail: "
+msgstr ""
 
 #: anaconda.py:378
 msgid "Unable to create PID file"

@@ -27,7 +27,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2022-06-01 20:41+0200\n"
+"POT-Creation-Date: 2022-06-10 13:39+0200\n"
 "PO-Revision-Date: 2022-02-26 23:16+0000\n"
 "Last-Translator: Göran Uddeborg <goeran@uddeborg.se>\n"
 "Language-Team: Swedish <https://translate.fedoraproject.org/projects/"
@@ -58,6 +58,126 @@ msgstr "felformad URL, kan inte tolka den."
 #: pyanaconda/core/payload.py:168
 msgid "URL has no host component"
 msgstr "URL:en har ingen värdkomponent"
+
+#: pyanaconda/core/storage.py:84
+msgid "Unsupported"
+msgstr "Ej stött"
+
+#: pyanaconda/core/storage.py:85 pyanaconda/core/storage.py:96
+msgid "LVM"
+msgstr "LVM"
+
+#: pyanaconda/core/storage.py:86
+msgid "RAID"
+msgstr "RAID"
+
+#: pyanaconda/core/storage.py:87 pyanaconda/core/storage.py:94
+msgid "Standard Partition"
+msgstr "Standardpartition"
+
+#: pyanaconda/core/storage.py:88 pyanaconda/core/storage.py:95
+msgid "Btrfs"
+msgstr "Btrfs"
+
+#: pyanaconda/core/storage.py:89 pyanaconda/core/storage.py:97
+msgid "LVM Thin Provisioning"
+msgstr "LVM tunt underhåll"
+
+#: pyanaconda/core/storage.py:90 pyanaconda/ui/gui/spokes/lib/resize.glade:150
+msgid "Disk"
+msgstr "Disk"
+
+#: pyanaconda/core/storage.py:108
+msgid ""
+"The 'swap' area on your computer is used by the operating\n"
+"system when running low on memory."
+msgstr ""
+"Växlingsarean på din dator används av operativsystemet\n"
+"när det får ont om minne."
+
+#: pyanaconda/core/storage.py:110
+msgid ""
+"The 'boot' area on your computer is where files needed\n"
+"to start the operating system are stored."
+msgstr ""
+"Startarean på din dator är där filer som behövs\n"
+"för att starta operativsystemet lagras."
+
+#: pyanaconda/core/storage.py:112
+msgid ""
+"The 'root' area on your computer is where core system\n"
+"files and applications are stored."
+msgstr ""
+"Rotområdet på din dator är där centrala systemfiler\n"
+"och program lagras."
+
+#: pyanaconda/core/storage.py:114
+msgid ""
+"The 'home' area on your computer is where all your personal\n"
+"data is stored."
+msgstr ""
+"Hemområdet på din dator är där alla dina personliga\n"
+"data lagras."
+
+#: pyanaconda/core/storage.py:116
+msgid ""
+"The BIOS boot partition is required to enable booting\n"
+"from GPT-partitioned disks on BIOS hardware."
+msgstr ""
+"BIOS-startpartitionen behövs för att kunna starta\n"
+"från GPT-partitionerade diskar med BIOS-hårdvara."
+
+#: pyanaconda/core/storage.py:118
+msgid ""
+"The PReP boot partition is required as part of the\n"
+"boot loader configuration on some PPC platforms."
+msgstr ""
+"PReP-startpartitionen behövs som den del av\n"
+"startprogrammets konfiguration på en del PPC-plattformar."
+
+#: pyanaconda/core/users.py:66
+#, python-format
+msgid "User name is reserved for system: %s"
+msgstr "Användarnamnet är reserverat för systemet: %s"
+
+#: pyanaconda/core/users.py:90
+msgid ""
+"Either a group name in the group list is invalid or groups are not separated "
+"by a comma."
+msgstr ""
+"Antingen är ett av gruppnamnen i grupplistan felaktigt eller så är grupperna "
+"inte separerade av kommatecken."
+
+#: pyanaconda/core/users.py:122
+msgid "Name cannot start with '-' character."
+msgstr "Namn kan inte börja med tecknet ”-”."
+
+#: pyanaconda/core/users.py:125
+#, python-format
+msgid "Name '%s' is not allowed."
+msgstr "Namnet ”%s” är inte tillåtet."
+
+#: pyanaconda/core/users.py:128
+msgid "Fully numeric name is not allowed."
+msgstr "Helt numeriska namn är inte tillåtna."
+
+#: pyanaconda/core/users.py:132
+msgid "Name '$' is not allowed."
+msgstr "Namnet ”$” är inte tillåtet."
+
+#: pyanaconda/core/users.py:142
+#, python-format
+msgid "Name cannot contain character: '%s'"
+msgstr "Namnet får inte innehålla tecknet: ”%s”"
+
+#: pyanaconda/core/users.py:145
+msgid "Name must be shorter than 33 characters."
+msgstr "Namnet måste vara kortare än 33 tecken."
+
+#: pyanaconda/core/users.py:149
+#, python-format
+msgid "Name '%s' is invalid."
+msgstr "Namnet ”%s” är felaktigt."
 
 #: pyanaconda/core/constants.py:89
 msgid "Start VNC"
@@ -209,178 +329,63 @@ msgstr "Du måste trycka <b>Klar</b> två gånger för att bekräfta det."
 msgid "Password set."
 msgstr "Lösenordet satt."
 
-#: pyanaconda/core/constants.py:242
+#. TRANSLATORS: Password error message from libreport library needs to be joined with "You will have to press <b>Done</b> twice to confirm it." add a missing '.'
+#: pyanaconda/core/constants.py:240
+msgid "{}. {}"
+msgstr ""
+
+#: pyanaconda/core/constants.py:244
 msgid "Empty"
 msgstr "Tomt"
 
-#: pyanaconda/core/constants.py:243
+#: pyanaconda/core/constants.py:245
 msgid "Too short"
 msgstr "För kort"
 
-#: pyanaconda/core/constants.py:244
+#: pyanaconda/core/constants.py:246
 #: pyanaconda/ui/gui/spokes/lib/passphrase.glade:182
 msgid "Weak"
 msgstr "Svagt"
 
-#: pyanaconda/core/constants.py:245
+#: pyanaconda/core/constants.py:247
 msgid "Fair"
 msgstr "Rimligt"
 
-#: pyanaconda/core/constants.py:246
+#: pyanaconda/core/constants.py:248
 msgid "Good"
 msgstr "Bra"
 
-#: pyanaconda/core/constants.py:247
+#: pyanaconda/core/constants.py:249
 msgid "Strong"
 msgstr "Starkt"
 
-#: pyanaconda/core/constants.py:250
+#: pyanaconda/core/constants.py:252
 msgid "Hide password."
 msgstr "Dölj lösenord."
 
-#: pyanaconda/core/constants.py:251
+#: pyanaconda/core/constants.py:253
 msgid "Show password."
 msgstr "Visa lösenord."
 
-#: pyanaconda/core/constants.py:298
+#: pyanaconda/core/constants.py:300
 msgid "Probing storage..."
 msgstr "Känner av lagring …"
 
-#: pyanaconda/core/constants.py:299
+#: pyanaconda/core/constants.py:301
 msgid "Testing availability..."
 msgstr "Testar tillgänglighet …"
 
-#: pyanaconda/core/constants.py:300
+#: pyanaconda/core/constants.py:302
 msgid "Downloading package metadata..."
 msgstr "Hämtar paketmetadata …"
 
-#: pyanaconda/core/constants.py:301
+#: pyanaconda/core/constants.py:303
 msgid "Downloading group metadata..."
 msgstr "Hämtar gruppmetadata …"
 
-#: pyanaconda/core/constants.py:304
+#: pyanaconda/core/constants.py:306
 msgid "Anaconda Installer"
 msgstr "Anaconda-installeraren"
-
-#: pyanaconda/core/storage.py:84
-msgid "Unsupported"
-msgstr "Ej stött"
-
-#: pyanaconda/core/storage.py:85 pyanaconda/core/storage.py:96
-msgid "LVM"
-msgstr "LVM"
-
-#: pyanaconda/core/storage.py:86
-msgid "RAID"
-msgstr "RAID"
-
-#: pyanaconda/core/storage.py:87 pyanaconda/core/storage.py:94
-msgid "Standard Partition"
-msgstr "Standardpartition"
-
-#: pyanaconda/core/storage.py:88 pyanaconda/core/storage.py:95
-msgid "Btrfs"
-msgstr "Btrfs"
-
-#: pyanaconda/core/storage.py:89 pyanaconda/core/storage.py:97
-msgid "LVM Thin Provisioning"
-msgstr "LVM tunt underhåll"
-
-#: pyanaconda/core/storage.py:90 pyanaconda/ui/gui/spokes/lib/resize.glade:150
-msgid "Disk"
-msgstr "Disk"
-
-#: pyanaconda/core/storage.py:108
-msgid ""
-"The 'swap' area on your computer is used by the operating\n"
-"system when running low on memory."
-msgstr ""
-"Växlingsarean på din dator används av operativsystemet\n"
-"när det får ont om minne."
-
-#: pyanaconda/core/storage.py:110
-msgid ""
-"The 'boot' area on your computer is where files needed\n"
-"to start the operating system are stored."
-msgstr ""
-"Startarean på din dator är där filer som behövs\n"
-"för att starta operativsystemet lagras."
-
-#: pyanaconda/core/storage.py:112
-msgid ""
-"The 'root' area on your computer is where core system\n"
-"files and applications are stored."
-msgstr ""
-"Rotområdet på din dator är där centrala systemfiler\n"
-"och program lagras."
-
-#: pyanaconda/core/storage.py:114
-msgid ""
-"The 'home' area on your computer is where all your personal\n"
-"data is stored."
-msgstr ""
-"Hemområdet på din dator är där alla dina personliga\n"
-"data lagras."
-
-#: pyanaconda/core/storage.py:116
-msgid ""
-"The BIOS boot partition is required to enable booting\n"
-"from GPT-partitioned disks on BIOS hardware."
-msgstr ""
-"BIOS-startpartitionen behövs för att kunna starta\n"
-"från GPT-partitionerade diskar med BIOS-hårdvara."
-
-#: pyanaconda/core/storage.py:118
-msgid ""
-"The PReP boot partition is required as part of the\n"
-"boot loader configuration on some PPC platforms."
-msgstr ""
-"PReP-startpartitionen behövs som den del av\n"
-"startprogrammets konfiguration på en del PPC-plattformar."
-
-#: pyanaconda/core/users.py:66
-#, python-format
-msgid "User name is reserved for system: %s"
-msgstr "Användarnamnet är reserverat för systemet: %s"
-
-#: pyanaconda/core/users.py:90
-msgid ""
-"Either a group name in the group list is invalid or groups are not separated "
-"by a comma."
-msgstr ""
-"Antingen är ett av gruppnamnen i grupplistan felaktigt eller så är grupperna "
-"inte separerade av kommatecken."
-
-#: pyanaconda/core/users.py:122
-msgid "Name cannot start with '-' character."
-msgstr "Namn kan inte börja med tecknet ”-”."
-
-#: pyanaconda/core/users.py:125
-#, python-format
-msgid "Name '%s' is not allowed."
-msgstr "Namnet ”%s” är inte tillåtet."
-
-#: pyanaconda/core/users.py:128
-msgid "Fully numeric name is not allowed."
-msgstr "Helt numeriska namn är inte tillåtna."
-
-#: pyanaconda/core/users.py:132
-msgid "Name '$' is not allowed."
-msgstr "Namnet ”$” är inte tillåtet."
-
-#: pyanaconda/core/users.py:142
-#, python-format
-msgid "Name cannot contain character: '%s'"
-msgstr "Namnet får inte innehålla tecknet: ”%s”"
-
-#: pyanaconda/core/users.py:145
-msgid "Name must be shorter than 33 characters."
-msgstr "Namnet måste vara kortare än 33 tecken."
-
-#: pyanaconda/core/users.py:149
-#, python-format
-msgid "Name '%s' is invalid."
-msgstr "Namnet ”%s” är felaktigt."
 
 #: pyanaconda/modules/network/firewall/installation.py:102
 #, python-format
@@ -1547,14 +1552,14 @@ msgstr "Utför inställningsåtgärder efter installationen"
 msgid "Downloading %(url)s (%(pct)d%%)"
 msgstr "Hämtar %(url)s (%(pct)d %%)"
 
+#: pyanaconda/payload/live/payload_base.py:78
+#: pyanaconda/payload/live/payload_liveos.py:96
+msgid "Installing software"
+msgstr "Installerar program"
+
 #: pyanaconda/payload/live/payload_liveimg.py:212
 msgid "Checking image checksum"
 msgstr "Kontrollerar avbildens kontrollsumma"
-
-#: pyanaconda/payload/live/payload_liveos.py:96
-#: pyanaconda/payload/live/payload_base.py:78
-msgid "Installing software"
-msgstr "Installerar program"
 
 #: pyanaconda/payload/flatpak.py:205
 #, python-format
@@ -1703,7 +1708,7 @@ msgid "_Cancel"
 msgstr "_Avbryt"
 
 #: pyanaconda/ui/gui/spokes/lib/detailederror.py:58
-#: pyanaconda/ui/gui/__init__.py:835
+#: pyanaconda/ui/gui/__init__.py:853
 msgctxt "GUI|Detailed Error Dialog"
 msgid "_Quit"
 msgstr "_Avsluta"
@@ -2588,28 +2593,6 @@ msgstr "_Nätverk & värdnamn"
 msgid "Host name is not valid: %s"
 msgstr "Värdnamnet är inte korrekt: %s"
 
-#: pyanaconda/ui/gui/spokes/root_password.py:56
-msgctxt "GUI|Spoke"
-msgid "_Root Password"
-msgstr "_Rootlösenord"
-
-#: pyanaconda/ui/gui/spokes/root_password.py:128
-msgid "Root password has been set."
-msgstr "Root-lösenordet har satts."
-
-#: pyanaconda/ui/gui/spokes/root_password.py:161
-#: pyanaconda/ui/tui/spokes/root_password.py:88
-msgid "Root account is disabled."
-msgstr "Root-kontot är avaktiverat."
-
-#: pyanaconda/ui/gui/spokes/root_password.py:163
-msgid "Root password is set"
-msgstr "Root-lösenordet är satt"
-
-#: pyanaconda/ui/gui/spokes/root_password.py:165
-msgid "Root password is not set"
-msgstr "Root-lösenordet är inte satt"
-
 #: pyanaconda/ui/gui/spokes/software_selection.py:68
 msgctxt "GUI|Spoke"
 msgid "_Software Selection"
@@ -2686,6 +2669,114 @@ msgstr "_Ändra programvarukälla"
 msgctxt "GUI|Software Selection|Error Dialog"
 msgid "Modify _Selections"
 msgstr "Ändra _val"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:73
+msgctxt "GUI|Spoke"
+msgid "_Connect to Red Hat"
+msgstr "_Anslut till Red Hat"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:251
+msgid "Activation key set."
+msgstr "Aktiveringsnyckel satt."
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1001
+msgid "Unregistering..."
+msgstr "Avregistrerar …"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1003
+msgid "Registering..."
+msgstr "Registrerar …"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1005
+msgid "Attaching subscription..."
+msgstr "Ansluter prenumerationen …"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1007
+msgid "Subscription attached."
+msgstr "Prenumerationen ansluten."
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1011
+msgid "Registered."
+msgstr "Registrerat."
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1013
+msgid "Not registered."
+msgstr "Inte registrerat."
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1043
+msgid "Registered with account {}"
+msgstr "Registrerades på kontot {}"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1047
+msgid "Registered with organization {}"
+msgstr "Registrerades inom organisationen {}"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1055
+msgid "Role: {}"
+msgstr "Roll: {}"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1059
+msgid "SLA: {}"
+msgstr "SLA: {}"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1063
+msgid "Usage: {}"
+msgstr "Användning: {}"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1071
+msgid "Connected to Red Hat Insights"
+msgstr "Ansluten till Red Hat Insights"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1073
+msgid "Not connected to Red Hat Insights"
+msgstr "Inte ansluten till Red Hat Insights"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1085
+msgid "Subscribed in Simple Content Access mode."
+msgstr "Prenumererad i Enkelt innehållsåtkomstsläge."
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1087
+msgid "No subscriptions are attached to the system"
+msgstr "Inga prenumerationen är kopplade till systemet"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1089
+msgid "1 subscription attached to the system"
+msgstr "1 prenumeration är kopplad till systemet"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1091
+msgid "{} subscriptions attached to the system"
+msgstr "{} prenumerationer är kopplade till systemet"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1132
+msgid "Please enable network access before connecting to Red Hat."
+msgstr "Aktivera nätverksåtkomst före anslutning till Red Hat."
+
+#: pyanaconda/ui/gui/spokes/welcome.py:255
+#, python-format
+msgid "WELCOME TO %(name)s %(version)s."
+msgstr "VÄLKOMMEN TILL %(name)s %(version)s."
+
+#: pyanaconda/ui/gui/spokes/root_password.py:56
+msgctxt "GUI|Spoke"
+msgid "_Root Password"
+msgstr "_Rootlösenord"
+
+#: pyanaconda/ui/gui/spokes/root_password.py:128
+msgid "Root password has been set."
+msgstr "Root-lösenordet har satts."
+
+#: pyanaconda/ui/gui/spokes/root_password.py:161
+#: pyanaconda/ui/tui/spokes/root_password.py:88
+msgid "Root account is disabled."
+msgstr "Root-kontot är avaktiverat."
+
+#: pyanaconda/ui/gui/spokes/root_password.py:163
+msgid "Root password is set"
+msgstr "Root-lösenordet är satt"
+
+#: pyanaconda/ui/gui/spokes/root_password.py:165
+msgid "Root password is not set"
+msgstr "Root-lösenordet är inte satt"
 
 #: pyanaconda/ui/gui/spokes/storage.py:103
 msgid "Please wait... software metadata still loading."
@@ -2838,7 +2929,7 @@ msgstr "NVDIMM-enhet {namespace}"
 msgid "{} free"
 msgstr "{} fritt"
 
-#: pyanaconda/ui/gui/spokes/storage.py:714
+#: pyanaconda/ui/gui/spokes/storage.py:735
 msgid ""
 "You have chosen to skip boot loader installation. Your system may not be "
 "bootable."
@@ -2846,11 +2937,11 @@ msgstr ""
 "Du har valt att hoppa över installation av startprogram. Det kan hända att "
 "ditt system inte kommer gå att starta."
 
-#: pyanaconda/ui/gui/spokes/storage.py:893
+#: pyanaconda/ui/gui/spokes/storage.py:914
 msgid "There was a problem with your disk selection. Click here for details."
 msgstr "Det blev ett problem med ditt diskval. Klicka här för detaljer."
 
-#: pyanaconda/ui/gui/spokes/storage.py:998
+#: pyanaconda/ui/gui/spokes/storage.py:1019
 msgid ""
 "The following errors were encountered when checking your disk selection. You "
 "can modify your selection or quit the installer."
@@ -2858,18 +2949,18 @@ msgstr ""
 "Följande fel uppstod vid kontroll av ditt diskval. Du kan ändra ditt val "
 "eller avsluta installeraren."
 
-#: pyanaconda/ui/gui/spokes/storage.py:1003
 #: pyanaconda/ui/gui/spokes/storage.py:1024
+#: pyanaconda/ui/gui/spokes/storage.py:1045
 msgctxt "GUI|Storage|Error Dialog"
 msgid "_Quit"
 msgstr "_Avsluta"
 
-#: pyanaconda/ui/gui/spokes/storage.py:1004
+#: pyanaconda/ui/gui/spokes/storage.py:1025
 msgctxt "GUI|Storage|Error Dialog"
 msgid "_Modify Disk Selection"
 msgstr "_Ändra diskval"
 
-#: pyanaconda/ui/gui/spokes/storage.py:1019
+#: pyanaconda/ui/gui/spokes/storage.py:1040
 msgid ""
 "The following errors were encountered when checking your storage "
 "configuration.  You can modify your storage layout or quit the installer."
@@ -2877,12 +2968,12 @@ msgstr ""
 "Följande fel upptäcktes vid kontroll av din lagringskonfiguration.  Du kan "
 "ändra din lagringslayout eller avsluta installationsprogrammet."
 
-#: pyanaconda/ui/gui/spokes/storage.py:1025
+#: pyanaconda/ui/gui/spokes/storage.py:1046
 msgctxt "GUI|Storage|Error Dialog"
 msgid "_Modify Storage Layout"
 msgstr "_Ändra lagringslayout"
 
-#: pyanaconda/ui/gui/spokes/storage.py:1039
+#: pyanaconda/ui/gui/spokes/storage.py:1060
 msgid ""
 "The following warnings were encountered when checking your storage "
 "configuration.  These are not fatal, but you may wish to make changes to "
@@ -2892,91 +2983,10 @@ msgstr ""
 "Dessa är inte avgörande, men du kanske vill göra ändringar av din "
 "lagringslayout."
 
-#: pyanaconda/ui/gui/spokes/storage.py:1044
+#: pyanaconda/ui/gui/spokes/storage.py:1065
 msgctxt "GUI|Storage|Warning Dialog"
 msgid "_OK"
 msgstr "_OK"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:73
-msgctxt "GUI|Spoke"
-msgid "_Connect to Red Hat"
-msgstr "_Anslut till Red Hat"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:251
-msgid "Activation key set."
-msgstr "Aktiveringsnyckel satt."
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1001
-msgid "Unregistering..."
-msgstr "Avregistrerar …"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1003
-msgid "Registering..."
-msgstr "Registrerar …"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1005
-msgid "Attaching subscription..."
-msgstr "Ansluter prenumerationen …"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1007
-msgid "Subscription attached."
-msgstr "Prenumerationen ansluten."
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1011
-msgid "Registered."
-msgstr "Registrerat."
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1013
-msgid "Not registered."
-msgstr "Inte registrerat."
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1043
-msgid "Registered with account {}"
-msgstr "Registrerades på kontot {}"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1047
-msgid "Registered with organization {}"
-msgstr "Registrerades inom organisationen {}"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1055
-msgid "Role: {}"
-msgstr "Roll: {}"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1059
-msgid "SLA: {}"
-msgstr "SLA: {}"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1063
-msgid "Usage: {}"
-msgstr "Användning: {}"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1071
-msgid "Connected to Red Hat Insights"
-msgstr "Ansluten till Red Hat Insights"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1073
-msgid "Not connected to Red Hat Insights"
-msgstr "Inte ansluten till Red Hat Insights"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1085
-msgid "Subscribed in Simple Content Access mode."
-msgstr "Prenumererad i Enkelt innehållsåtkomstsläge."
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1087
-msgid "No subscriptions are attached to the system"
-msgstr "Inga prenumerationen är kopplade till systemet"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1089
-msgid "1 subscription attached to the system"
-msgstr "1 prenumeration är kopplad till systemet"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1091
-msgid "{} subscriptions attached to the system"
-msgstr "{} prenumerationer är kopplade till systemet"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1132
-msgid "Please enable network access before connecting to Red Hat."
-msgstr "Aktivera nätverksåtkomst före anslutning till Red Hat."
 
 #: pyanaconda/ui/gui/spokes/user.py:68
 msgid "Invalid group name."
@@ -3005,21 +3015,16 @@ msgstr "Administratören %s kommer skapas"
 msgid "User %s will be created"
 msgstr "Användaren %s kommer skapas"
 
-#: pyanaconda/ui/gui/spokes/welcome.py:255
-#, python-format
-msgid "WELCOME TO %(name)s %(version)s."
-msgstr "VÄLKOMMEN TILL %(name)s %(version)s."
-
-#: pyanaconda/ui/gui/__init__.py:346 widgets/src/BaseWindow.c:151
+#: pyanaconda/ui/gui/__init__.py:364 widgets/src/BaseWindow.c:151
 msgid "Help!"
 msgstr "Hjälp!"
 
-#: pyanaconda/ui/gui/__init__.py:851
+#: pyanaconda/ui/gui/__init__.py:869
 msgctxt "GUI|Yes No Dialog"
 msgid "_No"
 msgstr "_Nej"
 
-#: pyanaconda/ui/gui/__init__.py:852
+#: pyanaconda/ui/gui/__init__.py:870
 msgctxt "GUI|Yes No Dialog"
 msgid "_Yes"
 msgstr "_Ja"
@@ -3050,30 +3055,30 @@ msgstr ""
 "Inte tillräckligt utrymme i filsystemen för det aktuella valet av "
 "programvara."
 
-#: pyanaconda/ui/lib/storage.py:209
+#: pyanaconda/ui/lib/storage.py:210
 #, python-brace-format
 msgid "{count} disk selected; {capacity} capacity; {free} free"
 msgid_plural "{count} disks selected; {capacity} capacity; {free} free"
 msgstr[0] "{count} disk vald; {capacity} kapacitet; {free} fritt"
 msgstr[1] "{count} diskar valda; {capacity} kapacitet; {free} fritt"
 
-#: pyanaconda/ui/lib/storage.py:283
+#: pyanaconda/ui/lib/storage.py:310
 msgid "Saving storage configuration..."
 msgstr "Sparar lagringskonfigurationen …"
 
-#: pyanaconda/ui/lib/storage.py:288
+#: pyanaconda/ui/lib/storage.py:315
 msgid "Failed to save storage configuration"
 msgstr "Misslyckades att spara lagringskonfigurationen"
 
-#: pyanaconda/ui/lib/storage.py:293
+#: pyanaconda/ui/lib/storage.py:320
 msgid "Failed to save boot loader configuration"
 msgstr "Misslyckades att spara uppstartskonfigurationen"
 
-#: pyanaconda/ui/lib/storage.py:297
+#: pyanaconda/ui/lib/storage.py:324
 msgid "Checking storage configuration..."
 msgstr "Kontrollerar lagringskonfiguration …"
 
-#: pyanaconda/ui/lib/subscription.py:287
+#: pyanaconda/ui/lib/subscription.py:302
 msgid "Registration failed due to insufficient credentials."
 msgstr "Registreringen misslyckades på grund av otillräckliga kreditiv."
 
@@ -3125,9 +3130,9 @@ msgstr "för att börja installationen"
 #: pyanaconda/ui/tui/spokes/network.py:571
 #: pyanaconda/ui/tui/spokes/software_selection.py:251
 #: pyanaconda/ui/tui/spokes/storage.py:259
-#: pyanaconda/ui/tui/spokes/storage.py:536
-#: pyanaconda/ui/tui/spokes/storage.py:608
-#: pyanaconda/ui/tui/spokes/storage.py:676
+#: pyanaconda/ui/tui/spokes/storage.py:525
+#: pyanaconda/ui/tui/spokes/storage.py:597
+#: pyanaconda/ui/tui/spokes/storage.py:665
 msgctxt "TUI|Spoke Navigation"
 msgid "c"
 msgstr "c"
@@ -3466,175 +3471,6 @@ msgstr "Ytterligare programvara för den valda miljön"
 msgid "No additional software to select."
 msgstr "Ingen ytterligare programvara att välja."
 
-#: pyanaconda/ui/tui/spokes/storage.py:61
-msgid "Use All Space"
-msgstr "Använd allt utrymme"
-
-#: pyanaconda/ui/tui/spokes/storage.py:62
-msgid "Replace Existing Linux system(s)"
-msgstr "Ersätt befintligt Linuxsystem"
-
-#: pyanaconda/ui/tui/spokes/storage.py:63
-msgid "Use Free Space"
-msgstr "Använd ledigt utrymme"
-
-#: pyanaconda/ui/tui/spokes/storage.py:81
-msgid "Installation Destination"
-msgstr "Installationsmål"
-
-#: pyanaconda/ui/tui/spokes/storage.py:206
-msgid "Select all"
-msgstr "Välj alla"
-
-#: pyanaconda/ui/tui/spokes/storage.py:315
-msgid ""
-"The following unformatted or LDL DASDs have been detected on your system. "
-"You can choose to format them now with dasdfmt or cancel to leave them "
-"unformatted. Unformatted DASDs cannot be used during installation.\n"
-"\n"
-msgstr ""
-"Följande oformaterade eller LDL-DASD:er har hittats på ditt system. Du kan "
-"välja att formatera dem nu med dasdfmt eller avbryta för att lämna dem "
-"oformaterade. Oformaterade DASD:er kan inte användas under installationen.\n"
-"\n"
-
-#: pyanaconda/ui/tui/spokes/storage.py:322
-msgid ""
-"Warning: All storage changes made using the installer will be lost when you "
-"choose to format.\n"
-"\n"
-"Proceed to run dasdfmt?\n"
-msgstr ""
-"Varning: alla lagringsändringar som gjorts med installeraren kommer gå "
-"förlorade när du väljer att formatera.\n"
-"\n"
-"Gå vidare och köra dasdfmt?\n"
-
-#: pyanaconda/ui/tui/spokes/storage.py:331
-msgid "This may take a moment."
-msgstr "Detta kan ta en stund."
-
-#: pyanaconda/ui/tui/spokes/storage.py:347
-msgid "Passphrase"
-msgstr "Lösenfras"
-
-#: pyanaconda/ui/tui/spokes/storage.py:348
-msgid ""
-"Please provide a default LUKS passphrase for all devices you want to "
-"encrypt. You will have to type it twice."
-msgstr ""
-"Ange en standard LUKS-lösenfras för alla enheter du vill kryptera. Du kommer "
-"behöva skriva det två gånger."
-
-#: pyanaconda/ui/tui/spokes/storage.py:437
-msgid "Partitioning Options"
-msgstr "Partitioneringsalternativ"
-
-#: pyanaconda/ui/tui/spokes/storage.py:477
-msgid "Manually assign mount points"
-msgstr "Ange monteringspunkter manuellt"
-
-#: pyanaconda/ui/tui/spokes/storage.py:484
-msgid ""
-"Installation requires partitioning of your hard drive. Select what space to "
-"use for the install target or manually assign mount points."
-msgstr ""
-"Installationen kräver partitionering av din hårddisk. Välj det utrymme som "
-"skall användas som installationsmål eller ange manuellt monteringspunkter."
-
-#: pyanaconda/ui/tui/spokes/storage.py:529
-msgid "Reverting previous configuration. This may take a moment..."
-msgstr "Återställ tidigare konfiguration. Detta kan ta en stund …"
-
-#: pyanaconda/ui/tui/spokes/storage.py:561
-msgid "Partition Scheme Options"
-msgstr "Alternativ för partitionsschema"
-
-#: pyanaconda/ui/tui/spokes/storage.py:597
-msgid "Select a partition scheme configuration."
-msgstr "Välj en konfiguration för partitionsschema."
-
-#: pyanaconda/ui/tui/spokes/storage.py:629
-msgid "Assign mount points"
-msgstr "Ange monteringspunkter"
-
-#: pyanaconda/ui/tui/spokes/storage.py:649
-msgid ""
-"Choose device from above to assign mount point and set format.\n"
-"Formats marked with * are new formats meaning ALL DATA on the original "
-"format WILL BE LOST!"
-msgstr ""
-"Välj en enhet från ovanstående för att tilldela en monteringspunkt och ange "
-"format.\n"
-"Format markerade med * är nya format vilket betyder att ALLA DATA i "
-"originalformatet KOMMER GÅ FÖRLORADE!"
-
-#. TRANSLATORS: 's' to rescan devices
-#: pyanaconda/ui/tui/spokes/storage.py:661
-#: pyanaconda/ui/tui/spokes/storage.py:671
-msgctxt "TUI|Spoke Navigation|Partitioning"
-msgid "s"
-msgstr "s"
-
-#: pyanaconda/ui/tui/spokes/storage.py:661
-msgid "rescan devices"
-msgstr "sök om enheter"
-
-#: pyanaconda/ui/tui/spokes/storage.py:733
-msgid ""
-"Warning: This will revert all changes done so far.\n"
-"Do you want to proceed?\n"
-msgstr ""
-"Varning: detta kommer återställa alla ändringar gjord hittills.\n"
-"Vill du gå vidare?\n"
-
-#: pyanaconda/ui/tui/spokes/storage.py:742
-msgid "Scanning disks. This may take a moment..."
-msgstr "Söker efter diskar. Detta kan ta en stund …"
-
-#: pyanaconda/ui/tui/spokes/storage.py:756
-#, python-format
-msgid "Configure device: %s"
-msgstr "Konfigurera enheten: %s"
-
-#: pyanaconda/ui/tui/spokes/storage.py:776
-msgid "Choose from above to assign mount point and/or set format."
-msgstr ""
-"Välj från ovanstående för att tilldela en monteringspunkt och/eller ange ett "
-"format."
-
-#: pyanaconda/ui/tui/spokes/storage.py:792
-#: pyanaconda/ui/gui/spokes/lib/summary.glade:177
-msgid "Mount point"
-msgstr "Monteringspunkt"
-
-#: pyanaconda/ui/tui/spokes/storage.py:799
-#: pyanaconda/ui/tui/spokes/storage.py:804
-#: pyanaconda/ui/tui/spokes/storage.py:836
-msgid "none"
-msgstr "inget"
-
-#: pyanaconda/ui/tui/spokes/storage.py:822
-msgid "Invalid mount point given"
-msgstr "Felaktig monteringspunkt angiven"
-
-#: pyanaconda/ui/tui/spokes/storage.py:835
-msgid "Format"
-msgstr "Formatera"
-
-#: pyanaconda/ui/tui/spokes/storage.py:845
-msgid "Invalid or unsupported format given"
-msgstr "Felaktigt format eller format som ej stödjs angivet"
-
-#: pyanaconda/ui/tui/spokes/storage.py:847
-#, python-format
-msgid "Supported formats: %s"
-msgstr "Format som stödjs: %s"
-
-#: pyanaconda/ui/tui/spokes/storage.py:864
-msgid "Reformat"
-msgstr "Formatera om"
-
 #: pyanaconda/ui/tui/spokes/time_spoke.py:48
 msgid "status: working"
 msgstr "status: fungerar"
@@ -3794,6 +3630,175 @@ msgstr ""
 "Ogiltig användarnamn%(name)s.\n"
 "%(error_message)s"
 
+#: pyanaconda/ui/tui/spokes/storage.py:61
+msgid "Use All Space"
+msgstr "Använd allt utrymme"
+
+#: pyanaconda/ui/tui/spokes/storage.py:62
+msgid "Replace Existing Linux system(s)"
+msgstr "Ersätt befintligt Linuxsystem"
+
+#: pyanaconda/ui/tui/spokes/storage.py:63
+msgid "Use Free Space"
+msgstr "Använd ledigt utrymme"
+
+#: pyanaconda/ui/tui/spokes/storage.py:81
+msgid "Installation Destination"
+msgstr "Installationsmål"
+
+#: pyanaconda/ui/tui/spokes/storage.py:206
+msgid "Select all"
+msgstr "Välj alla"
+
+#: pyanaconda/ui/tui/spokes/storage.py:315
+msgid ""
+"The following unformatted or LDL DASDs have been detected on your system. "
+"You can choose to format them now with dasdfmt or cancel to leave them "
+"unformatted. Unformatted DASDs cannot be used during installation.\n"
+"\n"
+msgstr ""
+"Följande oformaterade eller LDL-DASD:er har hittats på ditt system. Du kan "
+"välja att formatera dem nu med dasdfmt eller avbryta för att lämna dem "
+"oformaterade. Oformaterade DASD:er kan inte användas under installationen.\n"
+"\n"
+
+#: pyanaconda/ui/tui/spokes/storage.py:322
+msgid ""
+"Warning: All storage changes made using the installer will be lost when you "
+"choose to format.\n"
+"\n"
+"Proceed to run dasdfmt?\n"
+msgstr ""
+"Varning: alla lagringsändringar som gjorts med installeraren kommer gå "
+"förlorade när du väljer att formatera.\n"
+"\n"
+"Gå vidare och köra dasdfmt?\n"
+
+#: pyanaconda/ui/tui/spokes/storage.py:331
+msgid "This may take a moment."
+msgstr "Detta kan ta en stund."
+
+#: pyanaconda/ui/tui/spokes/storage.py:347
+msgid "Passphrase"
+msgstr "Lösenfras"
+
+#: pyanaconda/ui/tui/spokes/storage.py:348
+msgid ""
+"Please provide a default LUKS passphrase for all devices you want to "
+"encrypt. You will have to type it twice."
+msgstr ""
+"Ange en standard LUKS-lösenfras för alla enheter du vill kryptera. Du kommer "
+"behöva skriva det två gånger."
+
+#: pyanaconda/ui/tui/spokes/storage.py:426
+msgid "Partitioning Options"
+msgstr "Partitioneringsalternativ"
+
+#: pyanaconda/ui/tui/spokes/storage.py:466
+msgid "Manually assign mount points"
+msgstr "Ange monteringspunkter manuellt"
+
+#: pyanaconda/ui/tui/spokes/storage.py:473
+msgid ""
+"Installation requires partitioning of your hard drive. Select what space to "
+"use for the install target or manually assign mount points."
+msgstr ""
+"Installationen kräver partitionering av din hårddisk. Välj det utrymme som "
+"skall användas som installationsmål eller ange manuellt monteringspunkter."
+
+#: pyanaconda/ui/tui/spokes/storage.py:518
+msgid "Reverting previous configuration. This may take a moment..."
+msgstr "Återställ tidigare konfiguration. Detta kan ta en stund …"
+
+#: pyanaconda/ui/tui/spokes/storage.py:550
+msgid "Partition Scheme Options"
+msgstr "Alternativ för partitionsschema"
+
+#: pyanaconda/ui/tui/spokes/storage.py:586
+msgid "Select a partition scheme configuration."
+msgstr "Välj en konfiguration för partitionsschema."
+
+#: pyanaconda/ui/tui/spokes/storage.py:618
+msgid "Assign mount points"
+msgstr "Ange monteringspunkter"
+
+#: pyanaconda/ui/tui/spokes/storage.py:638
+msgid ""
+"Choose device from above to assign mount point and set format.\n"
+"Formats marked with * are new formats meaning ALL DATA on the original "
+"format WILL BE LOST!"
+msgstr ""
+"Välj en enhet från ovanstående för att tilldela en monteringspunkt och ange "
+"format.\n"
+"Format markerade med * är nya format vilket betyder att ALLA DATA i "
+"originalformatet KOMMER GÅ FÖRLORADE!"
+
+#. TRANSLATORS: 's' to rescan devices
+#: pyanaconda/ui/tui/spokes/storage.py:650
+#: pyanaconda/ui/tui/spokes/storage.py:660
+msgctxt "TUI|Spoke Navigation|Partitioning"
+msgid "s"
+msgstr "s"
+
+#: pyanaconda/ui/tui/spokes/storage.py:650
+msgid "rescan devices"
+msgstr "sök om enheter"
+
+#: pyanaconda/ui/tui/spokes/storage.py:722
+msgid ""
+"Warning: This will revert all changes done so far.\n"
+"Do you want to proceed?\n"
+msgstr ""
+"Varning: detta kommer återställa alla ändringar gjord hittills.\n"
+"Vill du gå vidare?\n"
+
+#: pyanaconda/ui/tui/spokes/storage.py:731
+msgid "Scanning disks. This may take a moment..."
+msgstr "Söker efter diskar. Detta kan ta en stund …"
+
+#: pyanaconda/ui/tui/spokes/storage.py:745
+#, python-format
+msgid "Configure device: %s"
+msgstr "Konfigurera enheten: %s"
+
+#: pyanaconda/ui/tui/spokes/storage.py:765
+msgid "Choose from above to assign mount point and/or set format."
+msgstr ""
+"Välj från ovanstående för att tilldela en monteringspunkt och/eller ange ett "
+"format."
+
+#: pyanaconda/ui/tui/spokes/storage.py:781
+#: pyanaconda/ui/gui/spokes/lib/summary.glade:177
+msgid "Mount point"
+msgstr "Monteringspunkt"
+
+#: pyanaconda/ui/tui/spokes/storage.py:788
+#: pyanaconda/ui/tui/spokes/storage.py:793
+#: pyanaconda/ui/tui/spokes/storage.py:825
+msgid "none"
+msgstr "inget"
+
+#: pyanaconda/ui/tui/spokes/storage.py:811
+msgid "Invalid mount point given"
+msgstr "Felaktig monteringspunkt angiven"
+
+#: pyanaconda/ui/tui/spokes/storage.py:824
+msgid "Format"
+msgstr "Formatera"
+
+#: pyanaconda/ui/tui/spokes/storage.py:834
+msgid "Invalid or unsupported format given"
+msgstr "Felaktigt format eller format som ej stödjs angivet"
+
+#: pyanaconda/ui/tui/spokes/storage.py:836
+#, python-format
+msgid "Supported formats: %s"
+msgstr "Format som stödjs: %s"
+
+#: pyanaconda/ui/tui/spokes/storage.py:853
+msgid "Reformat"
+msgstr "Formatera om"
+
 #: pyanaconda/ui/tui/tuiobject.py:144
 #, python-format
 msgid "Enter a new value for '%(title)s' and press %(enter)s"
@@ -3951,192 +3956,6 @@ msgstr ""
 "X kunde inte startas på din maskin. Vill du starta VNC för att ansluta till "
 "denna dator från en annan dator och utföra en grafisk installation, eller "
 "fortsätta med en textlägesinstallation?"
-
-#: pyanaconda/errors.py:112
-msgid "An error occurred while activating your storage configuration."
-msgstr "Ett fel uppstod när din lagringskonfiguration aktiverades."
-
-#: pyanaconda/errors.py:119
-msgid ""
-"There is a problem with your existing storage configuration or your initial "
-"settings, for example a kickstart file. You must resolve this matter before "
-"the installation can proceed. There is a shell available for use which you "
-"can access by pressing ctrl-alt-f1 and then ctrl-b 2.\n"
-"\n"
-"Once you have resolved the issue you can retry the storage scan. If you do "
-"not fix it you will have to exit the installer."
-msgstr ""
-"Det finns ett problem med din befintliga lagringskonfiguration eller dina "
-"initiala inställningar, till exempel en kickstart-fil. Du måste reda ut "
-"denna sak före installationen kan fortsätta. Det finns ett skal tillgängligt "
-"att användas som du kan komma åt genom att trycka ctrl-alt-f1 och sedan ctrl-"
-"b 2.\n"
-"\n"
-"När du har löst problemet kan du göra om försöket att söka efter lagring. Om "
-"du inte ordnar det blir du tvungen att avsluta installeraren."
-
-#: pyanaconda/errors.py:128
-msgctxt "GUI|Storage Detailed Error Dialog"
-msgid "_Exit Installer"
-msgstr "_Avsluta installeraren"
-
-#: pyanaconda/errors.py:129
-msgctxt "GUI|Storage Detailed Error Dialog"
-msgid "_Retry"
-msgstr "_Försök igen"
-
-#: pyanaconda/errors.py:136
-#, python-format
-msgid ""
-"The ISO image %s has a size which is not a multiple of 2048 bytes.  This may "
-"mean it was corrupted on transfer to this computer.\n"
-"\n"
-"It is recommended that you exit and abort your installation, but you can "
-"choose to continue if you think this is in error. Would you like to continue "
-"using this image?"
-msgstr ""
-"ISO-avbilden %s har en storlek som inte är en multipel av 2048 byte.  Detta "
-"kan betyda att den gick sönder i överföringen till denna dator.\n"
-"\n"
-"Det rekommenderas att du avslutar och avbryter installationen, men du kan "
-"välja att fortsätta om du tror att detta är felaktigt.  Vill du fortsätta "
-"och använda denna avbild?"
-
-#: pyanaconda/errors.py:150
-msgid ""
-"The installer has tried to mount the installation image, but cannot find it "
-"on the hard drive.\n"
-"\n"
-"Should I try again to locate the image?"
-msgstr ""
-"Installeraren har försökt montera installationsavbilden, men kan inte hitta "
-"den på hårddisken.\n"
-"\n"
-"Skall jag försöka igen att hitta avbilden?"
-
-#: pyanaconda/errors.py:161
-#, python-format
-msgid ""
-"The group '%s' is required for this installation. This group does not exist. "
-"This is a fatal error and installation will be aborted."
-msgstr ""
-"Gruppen ”%s” krävs för denna installation. Denna grupp finns inte. Detta är "
-"ett ödesdigert fel och installationen kommer avbrytas."
-
-#: pyanaconda/errors.py:167
-#, python-format
-msgid ""
-"You have specified that the group '%s' should be installed.  This group does "
-"not exist.  Would you like to ignore this group and continue with "
-"installation?"
-msgstr ""
-"Du har angivit att gruppen ”%s” skall installeras.  Denna grupp finns inte.  "
-"Vill du bortse från denna grupp och fortsätta med installationen?"
-
-#: pyanaconda/errors.py:172
-#, python-format
-msgid ""
-"You have specified that the group '%s' should be excluded from "
-"installation.  This group does not exist.  Would you like to ignore this "
-"group and continue with installation?"
-msgstr ""
-"Du har angivit att gruppen ”%s” skall uteslutas från installationen.  Denna "
-"grupp finns inte.  Vill du bortse från denna grupp och fortsätta med "
-"installationen?"
-
-#: pyanaconda/errors.py:193
-msgid ""
-"Some packages, groups or modules are broken, the installation will be "
-"aborted."
-msgstr ""
-"Några paket, grupper eller moduler är trasiga, installationen kommer "
-"avbrytas."
-
-#: pyanaconda/errors.py:199
-msgid "Would you like to ignore this and continue with installation?"
-msgstr "Vill du bortse från detta och fortsätta med installationen?"
-
-#: pyanaconda/errors.py:206
-#, python-format
-msgid ""
-"Stream was not specified for a module without a default stream. This is a "
-"fatal error and installation will be aborted. The details of this error "
-"are:\n"
-"\n"
-"%(exception)s"
-msgstr ""
-"Strömmen angavs inte för en modul utan en standardström. Detta är ett "
-"ödesdigert fel och installationen kommer avbrytas. Detaljerna om detta fel "
-"är:\n"
-"\n"
-"%(exception)s"
-
-#: pyanaconda/errors.py:214
-#, python-format
-msgid ""
-"Multiple streams have been specified for a single module. This is a fatal "
-"error and installation will be aborted. The details of this error are:\n"
-"\n"
-"%(exception)s"
-msgstr ""
-"Flera strömmar angavs inte för en modul enskild modul. Detta är ett "
-"ödesdigert fel och installationen kommer avbrytas. Detaljerna om detta fel "
-"är:\n"
-"\n"
-"%(exception)s"
-
-#: pyanaconda/errors.py:222
-#, python-format
-msgid ""
-"There was an error running the kickstart script at line %(lineno)s.  This is "
-"a fatal error and installation will be aborted.  The details of this error "
-"are:\n"
-"\n"
-"%(details)s"
-msgstr ""
-"Ett fel uppstod när kickstart-skriptet på rad %(lineno)s kördes.  Detta är "
-"ett ödesdigert fel och installationen kommer avbrytas.  Detaljerna om detta "
-"fel är:\n"
-"\n"
-"%(details)s"
-
-#: pyanaconda/errors.py:230
-msgid ""
-"The following error occurred while installing.  This is a fatal error and "
-"installation will be aborted."
-msgstr ""
-"Följande fel uppstod under installationen.  Detta är ett ödesdigert fel och "
-"installationen kommer avbrytas."
-
-#: pyanaconda/errors.py:238
-msgid ""
-"The following software marked for installation has errors.\n"
-"This is likely caused by an error with your installation source."
-msgstr ""
-"Följande programvara markerad att installeras har fel.\n"
-"Detta beror förmodligen på fel hos din installationskälla."
-
-#: pyanaconda/errors.py:246
-msgid ""
-"The following error occurred while installing the boot loader. The system "
-"will not be bootable. Would you like to ignore this and continue with "
-"installation?"
-msgstr ""
-"Följande fel uppstod när startprogrammet installerades. Systemet kommer inte "
-"gå att starta. Vill du bortse från detta och fortsätta med installationen?"
-
-#: pyanaconda/errors.py:258
-#, python-format
-msgid "Unable to encrypt password: unsupported algorithm %s"
-msgstr "Kan inte kryptera lösenord: ej stödd algoritm %s"
-
-#: pyanaconda/errors.py:264
-msgid ""
-"An error occurred during Red Hat Insights configuration. Would you like to "
-"ignore this and continue with installation?"
-msgstr ""
-"Ett fel uppstod under Red Hat Insights-konfigurationen. Vill du bortse från "
-"detta och fortsätta med installationen?"
 
 #: pyanaconda/exception.py:109
 #, python-format
@@ -4578,6 +4397,204 @@ msgid ""
 msgstr ""
 "VNC-lösenordet måste vara mellan sex och åtta tecken långt.\n"
 "Vänligen ange ett nytt, eller lämna blankt för inget lösenord."
+
+#: pyanaconda/errors.py:112
+msgid "An error occurred while activating your storage configuration."
+msgstr "Ett fel uppstod när din lagringskonfiguration aktiverades."
+
+#: pyanaconda/errors.py:119
+msgid ""
+"There is a problem with your existing storage configuration or your initial "
+"settings, for example a kickstart file. You must resolve this matter before "
+"the installation can proceed. There is a shell available for use which you "
+"can access by pressing ctrl-alt-f1 and then ctrl-b 2.\n"
+"\n"
+"Once you have resolved the issue you can retry the storage scan. If you do "
+"not fix it you will have to exit the installer."
+msgstr ""
+"Det finns ett problem med din befintliga lagringskonfiguration eller dina "
+"initiala inställningar, till exempel en kickstart-fil. Du måste reda ut "
+"denna sak före installationen kan fortsätta. Det finns ett skal tillgängligt "
+"att användas som du kan komma åt genom att trycka ctrl-alt-f1 och sedan ctrl-"
+"b 2.\n"
+"\n"
+"När du har löst problemet kan du göra om försöket att söka efter lagring. Om "
+"du inte ordnar det blir du tvungen att avsluta installeraren."
+
+#: pyanaconda/errors.py:128
+msgctxt "GUI|Storage Detailed Error Dialog"
+msgid "_Exit Installer"
+msgstr "_Avsluta installeraren"
+
+#: pyanaconda/errors.py:129
+msgctxt "GUI|Storage Detailed Error Dialog"
+msgid "_Retry"
+msgstr "_Försök igen"
+
+#: pyanaconda/errors.py:136
+#, python-format
+msgid ""
+"The ISO image %s has a size which is not a multiple of 2048 bytes.  This may "
+"mean it was corrupted on transfer to this computer.\n"
+"\n"
+"It is recommended that you exit and abort your installation, but you can "
+"choose to continue if you think this is in error. Would you like to continue "
+"using this image?"
+msgstr ""
+"ISO-avbilden %s har en storlek som inte är en multipel av 2048 byte.  Detta "
+"kan betyda att den gick sönder i överföringen till denna dator.\n"
+"\n"
+"Det rekommenderas att du avslutar och avbryter installationen, men du kan "
+"välja att fortsätta om du tror att detta är felaktigt.  Vill du fortsätta "
+"och använda denna avbild?"
+
+#: pyanaconda/errors.py:150
+msgid ""
+"The installer has tried to mount the installation image, but cannot find it "
+"on the hard drive.\n"
+"\n"
+"Should I try again to locate the image?"
+msgstr ""
+"Installeraren har försökt montera installationsavbilden, men kan inte hitta "
+"den på hårddisken.\n"
+"\n"
+"Skall jag försöka igen att hitta avbilden?"
+
+#: pyanaconda/errors.py:161
+#, python-format
+msgid ""
+"The group '%s' is required for this installation. This group does not exist. "
+"This is a fatal error and installation will be aborted."
+msgstr ""
+"Gruppen ”%s” krävs för denna installation. Denna grupp finns inte. Detta är "
+"ett ödesdigert fel och installationen kommer avbrytas."
+
+#: pyanaconda/errors.py:167
+#, python-format
+msgid ""
+"You have specified that the group '%s' should be installed.  This group does "
+"not exist.  Would you like to ignore this group and continue with "
+"installation?"
+msgstr ""
+"Du har angivit att gruppen ”%s” skall installeras.  Denna grupp finns inte.  "
+"Vill du bortse från denna grupp och fortsätta med installationen?"
+
+#: pyanaconda/errors.py:172
+#, python-format
+msgid ""
+"You have specified that the group '%s' should be excluded from "
+"installation.  This group does not exist.  Would you like to ignore this "
+"group and continue with installation?"
+msgstr ""
+"Du har angivit att gruppen ”%s” skall uteslutas från installationen.  Denna "
+"grupp finns inte.  Vill du bortse från denna grupp och fortsätta med "
+"installationen?"
+
+#: pyanaconda/errors.py:193
+msgid ""
+"Some packages, groups or modules are broken, the installation will be "
+"aborted."
+msgstr ""
+"Några paket, grupper eller moduler är trasiga, installationen kommer "
+"avbrytas."
+
+#: pyanaconda/errors.py:199
+msgid "Would you like to ignore this and continue with installation?"
+msgstr "Vill du bortse från detta och fortsätta med installationen?"
+
+#: pyanaconda/errors.py:206
+#, python-format
+msgid ""
+"Stream was not specified for a module without a default stream. This is a "
+"fatal error and installation will be aborted. The details of this error "
+"are:\n"
+"\n"
+"%(exception)s"
+msgstr ""
+"Strömmen angavs inte för en modul utan en standardström. Detta är ett "
+"ödesdigert fel och installationen kommer avbrytas. Detaljerna om detta fel "
+"är:\n"
+"\n"
+"%(exception)s"
+
+#: pyanaconda/errors.py:214
+#, python-format
+msgid ""
+"Multiple streams have been specified for a single module. This is a fatal "
+"error and installation will be aborted. The details of this error are:\n"
+"\n"
+"%(exception)s"
+msgstr ""
+"Flera strömmar angavs inte för en modul enskild modul. Detta är ett "
+"ödesdigert fel och installationen kommer avbrytas. Detaljerna om detta fel "
+"är:\n"
+"\n"
+"%(exception)s"
+
+#: pyanaconda/errors.py:222
+#, python-format
+msgid ""
+"There was an error running the kickstart script at line %(lineno)s.  This is "
+"a fatal error and installation will be aborted.  The details of this error "
+"are:\n"
+"\n"
+"%(details)s"
+msgstr ""
+"Ett fel uppstod när kickstart-skriptet på rad %(lineno)s kördes.  Detta är "
+"ett ödesdigert fel och installationen kommer avbrytas.  Detaljerna om detta "
+"fel är:\n"
+"\n"
+"%(details)s"
+
+#: pyanaconda/errors.py:230
+msgid ""
+"The following error occurred while installing.  This is a fatal error and "
+"installation will be aborted."
+msgstr ""
+"Följande fel uppstod under installationen.  Detta är ett ödesdigert fel och "
+"installationen kommer avbrytas."
+
+#: pyanaconda/errors.py:238
+msgid ""
+"The following software marked for installation has errors.\n"
+"This is likely caused by an error with your installation source."
+msgstr ""
+"Följande programvara markerad att installeras har fel.\n"
+"Detta beror förmodligen på fel hos din installationskälla."
+
+#: pyanaconda/errors.py:246
+msgid ""
+"The following error occurred while installing the boot loader. The system "
+"will not be bootable. Would you like to ignore this and continue with "
+"installation?"
+msgstr ""
+"Följande fel uppstod när startprogrammet installerades. Systemet kommer inte "
+"gå att starta. Vill du bortse från detta och fortsätta med installationen?"
+
+#: pyanaconda/errors.py:258
+#, python-format
+msgid "Unable to encrypt password: unsupported algorithm %s"
+msgstr "Kan inte kryptera lösenord: ej stödd algoritm %s"
+
+#: pyanaconda/errors.py:264
+msgid ""
+"An error occurred during Red Hat Insights configuration. Would you like to "
+"ignore this and continue with installation?"
+msgstr ""
+"Ett fel uppstod under Red Hat Insights-konfigurationen. Vill du bortse från "
+"detta och fortsätta med installationen?"
+
+#: pyanaconda/errors.py:275
+msgid ""
+"An error occurred during registration attempt triggered by the rhsm "
+"kickstart command. This could have happened due to incorrect rhsm command "
+"arguments or subscription infrastructure issues. Would you like to ignore "
+"this and continue with installation?"
+msgstr ""
+
+#: pyanaconda/errors.py:281
+msgid "Error detail: "
+msgstr ""
 
 #: anaconda.py:378
 msgid "Unable to create PID file"

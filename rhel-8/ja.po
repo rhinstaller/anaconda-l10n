@@ -60,7 +60,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2022-06-01 20:41+0200\n"
+"POT-Creation-Date: 2022-06-10 13:39+0200\n"
 "PO-Revision-Date: 2022-05-06 21:46+0000\n"
 "Last-Translator: Transtats <suanand@redhat.com>\n"
 "Language-Team: Japanese <https://translate.fedoraproject.org/projects/"
@@ -91,6 +91,126 @@ msgstr "不正な形式の URL、こちらは解釈できません。"
 #: pyanaconda/core/payload.py:168
 msgid "URL has no host component"
 msgstr "URL にホストが含まれていません"
+
+#: pyanaconda/core/storage.py:84
+msgid "Unsupported"
+msgstr "サポート対象外"
+
+#: pyanaconda/core/storage.py:85 pyanaconda/core/storage.py:96
+msgid "LVM"
+msgstr "LVM"
+
+#: pyanaconda/core/storage.py:86
+msgid "RAID"
+msgstr "RAID"
+
+#: pyanaconda/core/storage.py:87 pyanaconda/core/storage.py:94
+msgid "Standard Partition"
+msgstr "標準パーティション"
+
+#: pyanaconda/core/storage.py:88 pyanaconda/core/storage.py:95
+msgid "Btrfs"
+msgstr "BTRFS"
+
+#: pyanaconda/core/storage.py:89 pyanaconda/core/storage.py:97
+msgid "LVM Thin Provisioning"
+msgstr "LVM シンプロビジョニング"
+
+#: pyanaconda/core/storage.py:90 pyanaconda/ui/gui/spokes/lib/resize.glade:150
+msgid "Disk"
+msgstr "ディスク"
+
+#: pyanaconda/core/storage.py:108
+msgid ""
+"The 'swap' area on your computer is used by the operating\n"
+"system when running low on memory."
+msgstr ""
+"ご使用の コンピューターの 'swap' 領域は、メモリー不足の状態になると\n"
+"オペレーティングシステムで使用されます。"
+
+#: pyanaconda/core/storage.py:110
+msgid ""
+"The 'boot' area on your computer is where files needed\n"
+"to start the operating system are stored."
+msgstr ""
+"ご使用のコンピューターの Boot 領域に、オペレーティング\n"
+"システムの開始に必要なファイルを保存しています。"
+
+#: pyanaconda/core/storage.py:112
+msgid ""
+"The 'root' area on your computer is where core system\n"
+"files and applications are stored."
+msgstr ""
+"ご使用のコンピューターの root 領域に、主要なシステムファイルと\n"
+"アプリケーションを保存しています。"
+
+#: pyanaconda/core/storage.py:114
+msgid ""
+"The 'home' area on your computer is where all your personal\n"
+"data is stored."
+msgstr ""
+"ご使用の コンピューターのホーム領域に、ユーザーの個人\n"
+"データをすべて保存しています。"
+
+#: pyanaconda/core/storage.py:116
+msgid ""
+"The BIOS boot partition is required to enable booting\n"
+"from GPT-partitioned disks on BIOS hardware."
+msgstr ""
+"BIOS ハードウェア上で GPT パーティション設定したディスク からの\n"
+"起動を有効にするには、BIOS のブートパーティションが必要です。"
+
+#: pyanaconda/core/storage.py:118
+msgid ""
+"The PReP boot partition is required as part of the\n"
+"boot loader configuration on some PPC platforms."
+msgstr ""
+"一部の PPC プラットフォームでは、ブートローダー設定に\n"
+"PReP ブートパーティションが必要です。"
+
+#: pyanaconda/core/users.py:66
+#, python-format
+msgid "User name is reserved for system: %s"
+msgstr "次のユーザー名は、システムで予約されています: %s"
+
+#: pyanaconda/core/users.py:90
+msgid ""
+"Either a group name in the group list is invalid or groups are not separated "
+"by a comma."
+msgstr ""
+"グループ一覧のグループ名が無効か、またはグループがカンマで区切られていませ"
+"ん。"
+
+#: pyanaconda/core/users.py:122
+msgid "Name cannot start with '-' character."
+msgstr "ユーザー名は '-' 文字で始めることができません。"
+
+#: pyanaconda/core/users.py:125
+#, python-format
+msgid "Name '%s' is not allowed."
+msgstr "ユーザー名 '%s' は許可されません。"
+
+#: pyanaconda/core/users.py:128
+msgid "Fully numeric name is not allowed."
+msgstr "全て数値のユーザー名は許可されません。"
+
+#: pyanaconda/core/users.py:132
+msgid "Name '$' is not allowed."
+msgstr "ユーザー名 '$' は許可されません。"
+
+#: pyanaconda/core/users.py:142
+#, python-format
+msgid "Name cannot contain character: '%s'"
+msgstr "ユーザー名には文字('%s') を含めることができません"
+
+#: pyanaconda/core/users.py:145
+msgid "Name must be shorter than 33 characters."
+msgstr "ユーザー名は 33 文字未満にしてください。"
+
+#: pyanaconda/core/users.py:149
+#, python-format
+msgid "Name '%s' is invalid."
+msgstr "ユーザー名 '%s' は無効です。"
 
 #: pyanaconda/core/constants.py:89
 msgid "Start VNC"
@@ -243,178 +363,63 @@ msgstr "確認する場合は、<b>完了</b> を 2 回押す必要がありま�
 msgid "Password set."
 msgstr "パスワードの指定。"
 
-#: pyanaconda/core/constants.py:242
+#. TRANSLATORS: Password error message from libreport library needs to be joined with "You will have to press <b>Done</b> twice to confirm it." add a missing '.'
+#: pyanaconda/core/constants.py:240
+msgid "{}. {}"
+msgstr ""
+
+#: pyanaconda/core/constants.py:244
 msgid "Empty"
 msgstr "未入力"
 
-#: pyanaconda/core/constants.py:243
+#: pyanaconda/core/constants.py:245
 msgid "Too short"
 msgstr "短すぎます"
 
-#: pyanaconda/core/constants.py:244
+#: pyanaconda/core/constants.py:246
 #: pyanaconda/ui/gui/spokes/lib/passphrase.glade:182
 msgid "Weak"
 msgstr "脆弱"
 
-#: pyanaconda/core/constants.py:245
+#: pyanaconda/core/constants.py:247
 msgid "Fair"
 msgstr "普通"
 
-#: pyanaconda/core/constants.py:246
+#: pyanaconda/core/constants.py:248
 msgid "Good"
 msgstr "良好"
 
-#: pyanaconda/core/constants.py:247
+#: pyanaconda/core/constants.py:249
 msgid "Strong"
 msgstr "強力"
 
-#: pyanaconda/core/constants.py:250
+#: pyanaconda/core/constants.py:252
 msgid "Hide password."
 msgstr "パスワードを隠す。"
 
-#: pyanaconda/core/constants.py:251
+#: pyanaconda/core/constants.py:253
 msgid "Show password."
 msgstr "パスワードを表示。"
 
-#: pyanaconda/core/constants.py:298
+#: pyanaconda/core/constants.py:300
 msgid "Probing storage..."
 msgstr "ストレージを検出中..."
 
-#: pyanaconda/core/constants.py:299
+#: pyanaconda/core/constants.py:301
 msgid "Testing availability..."
 msgstr "入手可能かテストしています..."
 
-#: pyanaconda/core/constants.py:300
+#: pyanaconda/core/constants.py:302
 msgid "Downloading package metadata..."
 msgstr "パッケージメタデータをダウンロード中..."
 
-#: pyanaconda/core/constants.py:301
+#: pyanaconda/core/constants.py:303
 msgid "Downloading group metadata..."
 msgstr "グループメタデータをダウンロード中..."
 
-#: pyanaconda/core/constants.py:304
+#: pyanaconda/core/constants.py:306
 msgid "Anaconda Installer"
 msgstr "Anaconda インストーラー"
-
-#: pyanaconda/core/storage.py:84
-msgid "Unsupported"
-msgstr "サポート対象外"
-
-#: pyanaconda/core/storage.py:85 pyanaconda/core/storage.py:96
-msgid "LVM"
-msgstr "LVM"
-
-#: pyanaconda/core/storage.py:86
-msgid "RAID"
-msgstr "RAID"
-
-#: pyanaconda/core/storage.py:87 pyanaconda/core/storage.py:94
-msgid "Standard Partition"
-msgstr "標準パーティション"
-
-#: pyanaconda/core/storage.py:88 pyanaconda/core/storage.py:95
-msgid "Btrfs"
-msgstr "BTRFS"
-
-#: pyanaconda/core/storage.py:89 pyanaconda/core/storage.py:97
-msgid "LVM Thin Provisioning"
-msgstr "LVM シンプロビジョニング"
-
-#: pyanaconda/core/storage.py:90 pyanaconda/ui/gui/spokes/lib/resize.glade:150
-msgid "Disk"
-msgstr "ディスク"
-
-#: pyanaconda/core/storage.py:108
-msgid ""
-"The 'swap' area on your computer is used by the operating\n"
-"system when running low on memory."
-msgstr ""
-"ご使用の コンピューターの 'swap' 領域は、メモリー不足の状態になると\n"
-"オペレーティングシステムで使用されます。"
-
-#: pyanaconda/core/storage.py:110
-msgid ""
-"The 'boot' area on your computer is where files needed\n"
-"to start the operating system are stored."
-msgstr ""
-"ご使用のコンピューターの Boot 領域に、オペレーティング\n"
-"システムの開始に必要なファイルを保存しています。"
-
-#: pyanaconda/core/storage.py:112
-msgid ""
-"The 'root' area on your computer is where core system\n"
-"files and applications are stored."
-msgstr ""
-"ご使用のコンピューターの root 領域に、主要なシステムファイルと\n"
-"アプリケーションを保存しています。"
-
-#: pyanaconda/core/storage.py:114
-msgid ""
-"The 'home' area on your computer is where all your personal\n"
-"data is stored."
-msgstr ""
-"ご使用の コンピューターのホーム領域に、ユーザーの個人\n"
-"データをすべて保存しています。"
-
-#: pyanaconda/core/storage.py:116
-msgid ""
-"The BIOS boot partition is required to enable booting\n"
-"from GPT-partitioned disks on BIOS hardware."
-msgstr ""
-"BIOS ハードウェア上で GPT パーティション設定したディスク からの\n"
-"起動を有効にするには、BIOS のブートパーティションが必要です。"
-
-#: pyanaconda/core/storage.py:118
-msgid ""
-"The PReP boot partition is required as part of the\n"
-"boot loader configuration on some PPC platforms."
-msgstr ""
-"一部の PPC プラットフォームでは、ブートローダー設定に\n"
-"PReP ブートパーティションが必要です。"
-
-#: pyanaconda/core/users.py:66
-#, python-format
-msgid "User name is reserved for system: %s"
-msgstr "次のユーザー名は、システムで予約されています: %s"
-
-#: pyanaconda/core/users.py:90
-msgid ""
-"Either a group name in the group list is invalid or groups are not separated "
-"by a comma."
-msgstr ""
-"グループ一覧のグループ名が無効か、またはグループがカンマで区切られていませ"
-"ん。"
-
-#: pyanaconda/core/users.py:122
-msgid "Name cannot start with '-' character."
-msgstr "ユーザー名は '-' 文字で始めることができません。"
-
-#: pyanaconda/core/users.py:125
-#, python-format
-msgid "Name '%s' is not allowed."
-msgstr "ユーザー名 '%s' は許可されません。"
-
-#: pyanaconda/core/users.py:128
-msgid "Fully numeric name is not allowed."
-msgstr "全て数値のユーザー名は許可されません。"
-
-#: pyanaconda/core/users.py:132
-msgid "Name '$' is not allowed."
-msgstr "ユーザー名 '$' は許可されません。"
-
-#: pyanaconda/core/users.py:142
-#, python-format
-msgid "Name cannot contain character: '%s'"
-msgstr "ユーザー名には文字('%s') を含めることができません"
-
-#: pyanaconda/core/users.py:145
-msgid "Name must be shorter than 33 characters."
-msgstr "ユーザー名は 33 文字未満にしてください。"
-
-#: pyanaconda/core/users.py:149
-#, python-format
-msgid "Name '%s' is invalid."
-msgstr "ユーザー名 '%s' は無効です。"
 
 #: pyanaconda/modules/network/firewall/installation.py:102
 #, python-format
@@ -1597,14 +1602,14 @@ msgstr "インストール後セットアップ作業を実行中"
 msgid "Downloading %(url)s (%(pct)d%%)"
 msgstr "%(url)s (%(pct)d%%) をダウンロード中"
 
+#: pyanaconda/payload/live/payload_base.py:78
+#: pyanaconda/payload/live/payload_liveos.py:96
+msgid "Installing software"
+msgstr "ソフトウェアをインストール中…"
+
 #: pyanaconda/payload/live/payload_liveimg.py:212
 msgid "Checking image checksum"
 msgstr "イメージのチェックサムを確認中"
-
-#: pyanaconda/payload/live/payload_liveos.py:96
-#: pyanaconda/payload/live/payload_base.py:78
-msgid "Installing software"
-msgstr "ソフトウェアをインストール中…"
 
 #: pyanaconda/payload/flatpak.py:205
 #, python-format
@@ -1752,7 +1757,7 @@ msgid "_Cancel"
 msgstr "取り消し(_C)"
 
 #: pyanaconda/ui/gui/spokes/lib/detailederror.py:58
-#: pyanaconda/ui/gui/__init__.py:835
+#: pyanaconda/ui/gui/__init__.py:853
 msgctxt "GUI|Detailed Error Dialog"
 msgid "_Quit"
 msgstr "終了(_Q)"
@@ -2634,28 +2639,6 @@ msgstr "ネットワークとホスト名(_N)"
 msgid "Host name is not valid: %s"
 msgstr "ホスト名が有効ではありません: %s"
 
-#: pyanaconda/ui/gui/spokes/root_password.py:56
-msgctxt "GUI|Spoke"
-msgid "_Root Password"
-msgstr "root パスワード(_R):"
-
-#: pyanaconda/ui/gui/spokes/root_password.py:128
-msgid "Root password has been set."
-msgstr "ルートパスワードが設定されました。"
-
-#: pyanaconda/ui/gui/spokes/root_password.py:161
-#: pyanaconda/ui/tui/spokes/root_password.py:88
-msgid "Root account is disabled."
-msgstr "root アカウントは無効になっています。"
-
-#: pyanaconda/ui/gui/spokes/root_password.py:163
-msgid "Root password is set"
-msgstr "root パスワードは設定されています"
-
-#: pyanaconda/ui/gui/spokes/root_password.py:165
-msgid "Root password is not set"
-msgstr "root パスワードが設定されていません"
-
 #: pyanaconda/ui/gui/spokes/software_selection.py:68
 msgctxt "GUI|Spoke"
 msgid "_Software Selection"
@@ -2734,6 +2717,114 @@ msgstr "ソフトウェアソースを修正 (_M)"
 msgctxt "GUI|Software Selection|Error Dialog"
 msgid "Modify _Selections"
 msgstr "選択を変更(_S)"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:73
+msgctxt "GUI|Spoke"
+msgid "_Connect to Red Hat"
+msgstr "Red Hat に接続 (_C)"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:251
+msgid "Activation key set."
+msgstr "アクティベーションキーセット。"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1001
+msgid "Unregistering..."
+msgstr "登録解除中..."
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1003
+msgid "Registering..."
+msgstr "登録中..."
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1005
+msgid "Attaching subscription..."
+msgstr "サブスクリプションを割り当て中..."
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1007
+msgid "Subscription attached."
+msgstr "サブスクリプションが割り当てられました。"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1011
+msgid "Registered."
+msgstr "登録済み。"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1013
+msgid "Not registered."
+msgstr "登録されていません。"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1043
+msgid "Registered with account {}"
+msgstr "アカウント {} に登録済み"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1047
+msgid "Registered with organization {}"
+msgstr "組織 {} に登録済み"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1055
+msgid "Role: {}"
+msgstr "ロール: {}"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1059
+msgid "SLA: {}"
+msgstr "SLA: {}"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1063
+msgid "Usage: {}"
+msgstr "用途: {}"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1071
+msgid "Connected to Red Hat Insights"
+msgstr "Red Hat Insights に接続しています"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1073
+msgid "Not connected to Red Hat Insights"
+msgstr "Red Hat Insights に接続していません"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1085
+msgid "Subscribed in Simple Content Access mode."
+msgstr "シンプルコンテンツアクセスモードでサブスクライブされます。"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1087
+msgid "No subscriptions are attached to the system"
+msgstr "システムに割り当てられたサブスクリプションはありません"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1089
+msgid "1 subscription attached to the system"
+msgstr "システムにサブスクリプションが 1 つ割り当てられています"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1091
+msgid "{} subscriptions attached to the system"
+msgstr "システムにサブスクリプションが {} 割り当てられています"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1132
+msgid "Please enable network access before connecting to Red Hat."
+msgstr "Red Hat に接続する前に、ネットワークアクセスを有効にしてください。"
+
+#: pyanaconda/ui/gui/spokes/welcome.py:255
+#, python-format
+msgid "WELCOME TO %(name)s %(version)s."
+msgstr "%(name)s %(version)s へようこそ。"
+
+#: pyanaconda/ui/gui/spokes/root_password.py:56
+msgctxt "GUI|Spoke"
+msgid "_Root Password"
+msgstr "root パスワード(_R):"
+
+#: pyanaconda/ui/gui/spokes/root_password.py:128
+msgid "Root password has been set."
+msgstr "ルートパスワードが設定されました。"
+
+#: pyanaconda/ui/gui/spokes/root_password.py:161
+#: pyanaconda/ui/tui/spokes/root_password.py:88
+msgid "Root account is disabled."
+msgstr "root アカウントは無効になっています。"
+
+#: pyanaconda/ui/gui/spokes/root_password.py:163
+msgid "Root password is set"
+msgstr "root パスワードは設定されています"
+
+#: pyanaconda/ui/gui/spokes/root_password.py:165
+msgid "Root password is not set"
+msgstr "root パスワードが設定されていません"
 
 #: pyanaconda/ui/gui/spokes/storage.py:103
 msgid "Please wait... software metadata still loading."
@@ -2885,7 +2976,7 @@ msgstr "NVDIMM デバイス {namespace}"
 msgid "{} free"
 msgstr "{} の空き"
 
-#: pyanaconda/ui/gui/spokes/storage.py:714
+#: pyanaconda/ui/gui/spokes/storage.py:735
 msgid ""
 "You have chosen to skip boot loader installation. Your system may not be "
 "bootable."
@@ -2893,11 +2984,11 @@ msgstr ""
 "ブートローダーのインストールを省略するよう選択しています。 システムが起動不可"
 "になる可能性があります。"
 
-#: pyanaconda/ui/gui/spokes/storage.py:893
+#: pyanaconda/ui/gui/spokes/storage.py:914
 msgid "There was a problem with your disk selection. Click here for details."
 msgstr "ディスク選択中に問題が発生。クリックすると詳細を表示します。"
 
-#: pyanaconda/ui/gui/spokes/storage.py:998
+#: pyanaconda/ui/gui/spokes/storage.py:1019
 msgid ""
 "The following errors were encountered when checking your disk selection. You "
 "can modify your selection or quit the installer."
@@ -2905,18 +2996,18 @@ msgstr ""
 "ディスクの選択のチェック中に以下のエラーが発生しました。ディスクの選択を変更"
 "するかインストーラーを終了してください。"
 
-#: pyanaconda/ui/gui/spokes/storage.py:1003
 #: pyanaconda/ui/gui/spokes/storage.py:1024
+#: pyanaconda/ui/gui/spokes/storage.py:1045
 msgctxt "GUI|Storage|Error Dialog"
 msgid "_Quit"
 msgstr "終了(_Q)"
 
-#: pyanaconda/ui/gui/spokes/storage.py:1004
+#: pyanaconda/ui/gui/spokes/storage.py:1025
 msgctxt "GUI|Storage|Error Dialog"
 msgid "_Modify Disk Selection"
 msgstr "ディスクの選択を変更(_M)"
 
-#: pyanaconda/ui/gui/spokes/storage.py:1019
+#: pyanaconda/ui/gui/spokes/storage.py:1040
 msgid ""
 "The following errors were encountered when checking your storage "
 "configuration.  You can modify your storage layout or quit the installer."
@@ -2924,12 +3015,12 @@ msgstr ""
 "ストレージ設定の確認中に以下のエラーが発生しました。ストレージのレイアウトを"
 "変更するか、インストーラーを終了してください。"
 
-#: pyanaconda/ui/gui/spokes/storage.py:1025
+#: pyanaconda/ui/gui/spokes/storage.py:1046
 msgctxt "GUI|Storage|Error Dialog"
 msgid "_Modify Storage Layout"
 msgstr "ストレージ配列の修正(_M)"
 
-#: pyanaconda/ui/gui/spokes/storage.py:1039
+#: pyanaconda/ui/gui/spokes/storage.py:1060
 msgid ""
 "The following warnings were encountered when checking your storage "
 "configuration.  These are not fatal, but you may wish to make changes to "
@@ -2938,91 +3029,10 @@ msgstr ""
 "ストレージ設定の確認中に以下の警告が出されました。致命的ではありませんが、ス"
 "トレージレイアウトの変更をお勧めします。"
 
-#: pyanaconda/ui/gui/spokes/storage.py:1044
+#: pyanaconda/ui/gui/spokes/storage.py:1065
 msgctxt "GUI|Storage|Warning Dialog"
 msgid "_OK"
 msgstr "OK(_O)"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:73
-msgctxt "GUI|Spoke"
-msgid "_Connect to Red Hat"
-msgstr "Red Hat に接続 (_C)"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:251
-msgid "Activation key set."
-msgstr "アクティベーションキーセット。"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1001
-msgid "Unregistering..."
-msgstr "登録解除中..."
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1003
-msgid "Registering..."
-msgstr "登録中..."
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1005
-msgid "Attaching subscription..."
-msgstr "サブスクリプションを割り当て中..."
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1007
-msgid "Subscription attached."
-msgstr "サブスクリプションが割り当てられました。"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1011
-msgid "Registered."
-msgstr "登録済み。"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1013
-msgid "Not registered."
-msgstr "登録されていません。"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1043
-msgid "Registered with account {}"
-msgstr "アカウント {} に登録済み"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1047
-msgid "Registered with organization {}"
-msgstr "組織 {} に登録済み"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1055
-msgid "Role: {}"
-msgstr "ロール: {}"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1059
-msgid "SLA: {}"
-msgstr "SLA: {}"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1063
-msgid "Usage: {}"
-msgstr "用途: {}"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1071
-msgid "Connected to Red Hat Insights"
-msgstr "Red Hat Insights に接続しています"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1073
-msgid "Not connected to Red Hat Insights"
-msgstr "Red Hat Insights に接続していません"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1085
-msgid "Subscribed in Simple Content Access mode."
-msgstr "シンプルコンテンツアクセスモードでサブスクライブされます。"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1087
-msgid "No subscriptions are attached to the system"
-msgstr "システムに割り当てられたサブスクリプションはありません"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1089
-msgid "1 subscription attached to the system"
-msgstr "システムにサブスクリプションが 1 つ割り当てられています"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1091
-msgid "{} subscriptions attached to the system"
-msgstr "システムにサブスクリプションが {} 割り当てられています"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1132
-msgid "Please enable network access before connecting to Red Hat."
-msgstr "Red Hat に接続する前に、ネットワークアクセスを有効にしてください。"
 
 #: pyanaconda/ui/gui/spokes/user.py:68
 msgid "Invalid group name."
@@ -3051,21 +3061,16 @@ msgstr "管理者 %s が作成されます"
 msgid "User %s will be created"
 msgstr "ユーザー %s が作成されます"
 
-#: pyanaconda/ui/gui/spokes/welcome.py:255
-#, python-format
-msgid "WELCOME TO %(name)s %(version)s."
-msgstr "%(name)s %(version)s へようこそ。"
-
-#: pyanaconda/ui/gui/__init__.py:346 widgets/src/BaseWindow.c:151
+#: pyanaconda/ui/gui/__init__.py:364 widgets/src/BaseWindow.c:151
 msgid "Help!"
 msgstr "ヘルプ"
 
-#: pyanaconda/ui/gui/__init__.py:851
+#: pyanaconda/ui/gui/__init__.py:869
 msgctxt "GUI|Yes No Dialog"
 msgid "_No"
 msgstr "いいえ(_N)"
 
-#: pyanaconda/ui/gui/__init__.py:852
+#: pyanaconda/ui/gui/__init__.py:870
 msgctxt "GUI|Yes No Dialog"
 msgid "_Yes"
 msgstr "はい(_Y)"
@@ -3095,29 +3100,29 @@ msgid "Not enough space in file systems for the current software selection."
 msgstr ""
 "現在のソフトウェアの選択には、ファイルシステムに空き容量が不足しています。"
 
-#: pyanaconda/ui/lib/storage.py:209
+#: pyanaconda/ui/lib/storage.py:210
 #, python-brace-format
 msgid "{count} disk selected; {capacity} capacity; {free} free"
 msgid_plural "{count} disks selected; {capacity} capacity; {free} free"
 msgstr[0] "選択されたディスク数 {count}、容量 {capacity}、空き領域 {free}"
 
-#: pyanaconda/ui/lib/storage.py:283
+#: pyanaconda/ui/lib/storage.py:310
 msgid "Saving storage configuration..."
 msgstr "ストレージ設定を保存しています..."
 
-#: pyanaconda/ui/lib/storage.py:288
+#: pyanaconda/ui/lib/storage.py:315
 msgid "Failed to save storage configuration"
 msgstr "ストレージ設定の保存に失敗しました"
 
-#: pyanaconda/ui/lib/storage.py:293
+#: pyanaconda/ui/lib/storage.py:320
 msgid "Failed to save boot loader configuration"
 msgstr "ブートローダー設定の保存に失敗しました"
 
-#: pyanaconda/ui/lib/storage.py:297
+#: pyanaconda/ui/lib/storage.py:324
 msgid "Checking storage configuration..."
 msgstr "ストレージ設定をチェック中..."
 
-#: pyanaconda/ui/lib/subscription.py:287
+#: pyanaconda/ui/lib/subscription.py:302
 msgid "Registration failed due to insufficient credentials."
 msgstr "クレデンシャルが不十分なため、登録に失敗しました。"
 
@@ -3169,9 +3174,9 @@ msgstr "インストールを開始"
 #: pyanaconda/ui/tui/spokes/network.py:571
 #: pyanaconda/ui/tui/spokes/software_selection.py:251
 #: pyanaconda/ui/tui/spokes/storage.py:259
-#: pyanaconda/ui/tui/spokes/storage.py:536
-#: pyanaconda/ui/tui/spokes/storage.py:608
-#: pyanaconda/ui/tui/spokes/storage.py:676
+#: pyanaconda/ui/tui/spokes/storage.py:525
+#: pyanaconda/ui/tui/spokes/storage.py:597
+#: pyanaconda/ui/tui/spokes/storage.py:665
 msgctxt "TUI|Spoke Navigation"
 msgid "c"
 msgstr "c"
@@ -3513,175 +3518,6 @@ msgstr "選択した環境のその他のソフトウェア"
 msgid "No additional software to select."
 msgstr "選択できる他のソフトウェアはありません。"
 
-#: pyanaconda/ui/tui/spokes/storage.py:61
-msgid "Use All Space"
-msgstr "すべての領域を使用する"
-
-#: pyanaconda/ui/tui/spokes/storage.py:62
-msgid "Replace Existing Linux system(s)"
-msgstr "既存の Linux システムを入れ替える"
-
-#: pyanaconda/ui/tui/spokes/storage.py:63
-msgid "Use Free Space"
-msgstr "空き領域を使用する"
-
-#: pyanaconda/ui/tui/spokes/storage.py:81
-msgid "Installation Destination"
-msgstr "インストール先"
-
-#: pyanaconda/ui/tui/spokes/storage.py:206
-msgid "Select all"
-msgstr "すべて選択"
-
-#: pyanaconda/ui/tui/spokes/storage.py:315
-msgid ""
-"The following unformatted or LDL DASDs have been detected on your system. "
-"You can choose to format them now with dasdfmt or cancel to leave them "
-"unformatted. Unformatted DASDs cannot be used during installation.\n"
-"\n"
-msgstr ""
-"システムで、以下の未フォーマットまたは Linux ディスクレイアウトの DASD が検出"
-"されました。デバイスを選択して dasdfmt でフォーマット化するか、取り消して未"
-"フォーマットのままにするか選択します。未フォーマットの DASD は、インストール"
-"中に使用できません。\n"
-"\n"
-
-#: pyanaconda/ui/tui/spokes/storage.py:322
-msgid ""
-"Warning: All storage changes made using the installer will be lost when you "
-"choose to format.\n"
-"\n"
-"Proceed to run dasdfmt?\n"
-msgstr ""
-"警告: インストーラーを使って行った変更は初期化を選択すると失われます。\n"
-"\n"
-"dasdfmt を実行しますか?\n"
-
-#: pyanaconda/ui/tui/spokes/storage.py:331
-msgid "This may take a moment."
-msgstr "しばらくお待ちください。"
-
-#: pyanaconda/ui/tui/spokes/storage.py:347
-msgid "Passphrase"
-msgstr "パスフレーズ"
-
-#: pyanaconda/ui/tui/spokes/storage.py:348
-msgid ""
-"Please provide a default LUKS passphrase for all devices you want to "
-"encrypt. You will have to type it twice."
-msgstr ""
-"暗号化したいすべてのデバイス向けのデフォルトの LUKS パスフレーズを入力してく"
-"ださい。2 回入力する必要があります。"
-
-#: pyanaconda/ui/tui/spokes/storage.py:437
-msgid "Partitioning Options"
-msgstr "パーティションオプション"
-
-#: pyanaconda/ui/tui/spokes/storage.py:477
-msgid "Manually assign mount points"
-msgstr "マウントポイントを手動で指定"
-
-#: pyanaconda/ui/tui/spokes/storage.py:484
-msgid ""
-"Installation requires partitioning of your hard drive. Select what space to "
-"use for the install target or manually assign mount points."
-msgstr ""
-"インストールにはハードドライブのパーティション設定が必要です。インストール先"
-"として使用する領域を選択するか、マウントポイントを手動で指定してください。"
-
-#: pyanaconda/ui/tui/spokes/storage.py:529
-msgid "Reverting previous configuration. This may take a moment..."
-msgstr "以前の設定を復元中です。少々お待ちください..."
-
-#: pyanaconda/ui/tui/spokes/storage.py:561
-msgid "Partition Scheme Options"
-msgstr "パーティションスキーマのオプション"
-
-#: pyanaconda/ui/tui/spokes/storage.py:597
-msgid "Select a partition scheme configuration."
-msgstr "パーティションスキーマの設定を選択してください。"
-
-#: pyanaconda/ui/tui/spokes/storage.py:629
-msgid "Assign mount points"
-msgstr "マウントポイントを指定"
-
-#: pyanaconda/ui/tui/spokes/storage.py:649
-msgid ""
-"Choose device from above to assign mount point and set format.\n"
-"Formats marked with * are new formats meaning ALL DATA on the original "
-"format WILL BE LOST!"
-msgstr ""
-"マウントポイントを指定するため、上記からデバイスを選択し、フォーマットを設定"
-"してください。\n"
-"* でマークされるフォーマットは新しいフォーマットで、元々のフォーマットのすべ"
-"てのデータが削除されることを意味しています。"
-
-#. TRANSLATORS: 's' to rescan devices
-#: pyanaconda/ui/tui/spokes/storage.py:661
-#: pyanaconda/ui/tui/spokes/storage.py:671
-msgctxt "TUI|Spoke Navigation|Partitioning"
-msgid "s"
-msgstr "s"
-
-#: pyanaconda/ui/tui/spokes/storage.py:661
-msgid "rescan devices"
-msgstr "デバイスの再スキャン"
-
-#: pyanaconda/ui/tui/spokes/storage.py:733
-msgid ""
-"Warning: This will revert all changes done so far.\n"
-"Do you want to proceed?\n"
-msgstr ""
-"警告:すべての変更を元にもどします。\n"
-"続行しますか?\n"
-
-#: pyanaconda/ui/tui/spokes/storage.py:742
-msgid "Scanning disks. This may take a moment..."
-msgstr "ディスクのスキャン中です。しばらくお待ちください..."
-
-#: pyanaconda/ui/tui/spokes/storage.py:756
-#, python-format
-msgid "Configure device: %s"
-msgstr "デバイスの設定: %s"
-
-#: pyanaconda/ui/tui/spokes/storage.py:776
-msgid "Choose from above to assign mount point and/or set format."
-msgstr ""
-"マウントポイントを指定するため、上記から選択し、さらに/またはフォーマットを設"
-"定してください。"
-
-#: pyanaconda/ui/tui/spokes/storage.py:792
-#: pyanaconda/ui/gui/spokes/lib/summary.glade:177
-msgid "Mount point"
-msgstr "マウントポイント"
-
-#: pyanaconda/ui/tui/spokes/storage.py:799
-#: pyanaconda/ui/tui/spokes/storage.py:804
-#: pyanaconda/ui/tui/spokes/storage.py:836
-msgid "none"
-msgstr "なし"
-
-#: pyanaconda/ui/tui/spokes/storage.py:822
-msgid "Invalid mount point given"
-msgstr "無効なマウントポイントが指定されました"
-
-#: pyanaconda/ui/tui/spokes/storage.py:835
-msgid "Format"
-msgstr "フォーマット"
-
-#: pyanaconda/ui/tui/spokes/storage.py:845
-msgid "Invalid or unsupported format given"
-msgstr "無効またはサポートされていないフォーマットが指定されました"
-
-#: pyanaconda/ui/tui/spokes/storage.py:847
-#, python-format
-msgid "Supported formats: %s"
-msgstr "サポートされるフォーマット: %s"
-
-#: pyanaconda/ui/tui/spokes/storage.py:864
-msgid "Reformat"
-msgstr "再フォーマット"
-
 #: pyanaconda/ui/tui/spokes/time_spoke.py:48
 msgid "status: working"
 msgstr "状態: 稼働中"
@@ -3841,6 +3677,175 @@ msgstr ""
 "無効なユーザー名: %(name)s\n"
 "%(error_message)s"
 
+#: pyanaconda/ui/tui/spokes/storage.py:61
+msgid "Use All Space"
+msgstr "すべての領域を使用する"
+
+#: pyanaconda/ui/tui/spokes/storage.py:62
+msgid "Replace Existing Linux system(s)"
+msgstr "既存の Linux システムを入れ替える"
+
+#: pyanaconda/ui/tui/spokes/storage.py:63
+msgid "Use Free Space"
+msgstr "空き領域を使用する"
+
+#: pyanaconda/ui/tui/spokes/storage.py:81
+msgid "Installation Destination"
+msgstr "インストール先"
+
+#: pyanaconda/ui/tui/spokes/storage.py:206
+msgid "Select all"
+msgstr "すべて選択"
+
+#: pyanaconda/ui/tui/spokes/storage.py:315
+msgid ""
+"The following unformatted or LDL DASDs have been detected on your system. "
+"You can choose to format them now with dasdfmt or cancel to leave them "
+"unformatted. Unformatted DASDs cannot be used during installation.\n"
+"\n"
+msgstr ""
+"システムで、以下の未フォーマットまたは Linux ディスクレイアウトの DASD が検出"
+"されました。デバイスを選択して dasdfmt でフォーマット化するか、取り消して未"
+"フォーマットのままにするか選択します。未フォーマットの DASD は、インストール"
+"中に使用できません。\n"
+"\n"
+
+#: pyanaconda/ui/tui/spokes/storage.py:322
+msgid ""
+"Warning: All storage changes made using the installer will be lost when you "
+"choose to format.\n"
+"\n"
+"Proceed to run dasdfmt?\n"
+msgstr ""
+"警告: インストーラーを使って行った変更は初期化を選択すると失われます。\n"
+"\n"
+"dasdfmt を実行しますか?\n"
+
+#: pyanaconda/ui/tui/spokes/storage.py:331
+msgid "This may take a moment."
+msgstr "しばらくお待ちください。"
+
+#: pyanaconda/ui/tui/spokes/storage.py:347
+msgid "Passphrase"
+msgstr "パスフレーズ"
+
+#: pyanaconda/ui/tui/spokes/storage.py:348
+msgid ""
+"Please provide a default LUKS passphrase for all devices you want to "
+"encrypt. You will have to type it twice."
+msgstr ""
+"暗号化したいすべてのデバイス向けのデフォルトの LUKS パスフレーズを入力してく"
+"ださい。2 回入力する必要があります。"
+
+#: pyanaconda/ui/tui/spokes/storage.py:426
+msgid "Partitioning Options"
+msgstr "パーティションオプション"
+
+#: pyanaconda/ui/tui/spokes/storage.py:466
+msgid "Manually assign mount points"
+msgstr "マウントポイントを手動で指定"
+
+#: pyanaconda/ui/tui/spokes/storage.py:473
+msgid ""
+"Installation requires partitioning of your hard drive. Select what space to "
+"use for the install target or manually assign mount points."
+msgstr ""
+"インストールにはハードドライブのパーティション設定が必要です。インストール先"
+"として使用する領域を選択するか、マウントポイントを手動で指定してください。"
+
+#: pyanaconda/ui/tui/spokes/storage.py:518
+msgid "Reverting previous configuration. This may take a moment..."
+msgstr "以前の設定を復元中です。少々お待ちください..."
+
+#: pyanaconda/ui/tui/spokes/storage.py:550
+msgid "Partition Scheme Options"
+msgstr "パーティションスキーマのオプション"
+
+#: pyanaconda/ui/tui/spokes/storage.py:586
+msgid "Select a partition scheme configuration."
+msgstr "パーティションスキーマの設定を選択してください。"
+
+#: pyanaconda/ui/tui/spokes/storage.py:618
+msgid "Assign mount points"
+msgstr "マウントポイントを指定"
+
+#: pyanaconda/ui/tui/spokes/storage.py:638
+msgid ""
+"Choose device from above to assign mount point and set format.\n"
+"Formats marked with * are new formats meaning ALL DATA on the original "
+"format WILL BE LOST!"
+msgstr ""
+"マウントポイントを指定するため、上記からデバイスを選択し、フォーマットを設定"
+"してください。\n"
+"* でマークされるフォーマットは新しいフォーマットで、元々のフォーマットのすべ"
+"てのデータが削除されることを意味しています。"
+
+#. TRANSLATORS: 's' to rescan devices
+#: pyanaconda/ui/tui/spokes/storage.py:650
+#: pyanaconda/ui/tui/spokes/storage.py:660
+msgctxt "TUI|Spoke Navigation|Partitioning"
+msgid "s"
+msgstr "s"
+
+#: pyanaconda/ui/tui/spokes/storage.py:650
+msgid "rescan devices"
+msgstr "デバイスの再スキャン"
+
+#: pyanaconda/ui/tui/spokes/storage.py:722
+msgid ""
+"Warning: This will revert all changes done so far.\n"
+"Do you want to proceed?\n"
+msgstr ""
+"警告:すべての変更を元にもどします。\n"
+"続行しますか?\n"
+
+#: pyanaconda/ui/tui/spokes/storage.py:731
+msgid "Scanning disks. This may take a moment..."
+msgstr "ディスクのスキャン中です。しばらくお待ちください..."
+
+#: pyanaconda/ui/tui/spokes/storage.py:745
+#, python-format
+msgid "Configure device: %s"
+msgstr "デバイスの設定: %s"
+
+#: pyanaconda/ui/tui/spokes/storage.py:765
+msgid "Choose from above to assign mount point and/or set format."
+msgstr ""
+"マウントポイントを指定するため、上記から選択し、さらに/またはフォーマットを設"
+"定してください。"
+
+#: pyanaconda/ui/tui/spokes/storage.py:781
+#: pyanaconda/ui/gui/spokes/lib/summary.glade:177
+msgid "Mount point"
+msgstr "マウントポイント"
+
+#: pyanaconda/ui/tui/spokes/storage.py:788
+#: pyanaconda/ui/tui/spokes/storage.py:793
+#: pyanaconda/ui/tui/spokes/storage.py:825
+msgid "none"
+msgstr "なし"
+
+#: pyanaconda/ui/tui/spokes/storage.py:811
+msgid "Invalid mount point given"
+msgstr "無効なマウントポイントが指定されました"
+
+#: pyanaconda/ui/tui/spokes/storage.py:824
+msgid "Format"
+msgstr "フォーマット"
+
+#: pyanaconda/ui/tui/spokes/storage.py:834
+msgid "Invalid or unsupported format given"
+msgstr "無効またはサポートされていないフォーマットが指定されました"
+
+#: pyanaconda/ui/tui/spokes/storage.py:836
+#, python-format
+msgid "Supported formats: %s"
+msgstr "サポートされるフォーマット: %s"
+
+#: pyanaconda/ui/tui/spokes/storage.py:853
+msgid "Reformat"
+msgstr "再フォーマット"
+
 #: pyanaconda/ui/tui/tuiobject.py:144
 #, python-format
 msgid "Enter a new value for '%(title)s' and press %(enter)s"
@@ -3999,187 +4004,6 @@ msgstr ""
 "ご使用の マシンで X を起動できませんでした。VNC を起動して別のコンピューター"
 "からこのマシンに接続しグラフィカルなインストールを行うか、またはテキストモー"
 "ドのインストールで続行しますか?"
-
-#: pyanaconda/errors.py:112
-msgid "An error occurred while activating your storage configuration."
-msgstr "ストレージ設定の有効化中にエラーが発生しました。"
-
-#: pyanaconda/errors.py:119
-msgid ""
-"There is a problem with your existing storage configuration or your initial "
-"settings, for example a kickstart file. You must resolve this matter before "
-"the installation can proceed. There is a shell available for use which you "
-"can access by pressing ctrl-alt-f1 and then ctrl-b 2.\n"
-"\n"
-"Once you have resolved the issue you can retry the storage scan. If you do "
-"not fix it you will have to exit the installer."
-msgstr ""
-"既存のストレージ設定または Kickstart ファイル等の初期設定に問題があります。イ"
-"ンストールを行う前にこの問題を解決する必要があります。ctrl-alt-f1 の後に "
-"ctrl-b 2 を押すとシェルにアクセスできます。\n"
-"\n"
-"この問題を解決してからストレージスキャンを再試行してください。問題が解決でき"
-"ない場合は、インストーラーを終了しなければなりません。"
-
-#: pyanaconda/errors.py:128
-msgctxt "GUI|Storage Detailed Error Dialog"
-msgid "_Exit Installer"
-msgstr "インストーラーを終了(_E)"
-
-#: pyanaconda/errors.py:129
-msgctxt "GUI|Storage Detailed Error Dialog"
-msgid "_Retry"
-msgstr "リトライ(_R)"
-
-#: pyanaconda/errors.py:136
-#, python-format
-msgid ""
-"The ISO image %s has a size which is not a multiple of 2048 bytes.  This may "
-"mean it was corrupted on transfer to this computer.\n"
-"\n"
-"It is recommended that you exit and abort your installation, but you can "
-"choose to continue if you think this is in error. Would you like to continue "
-"using this image?"
-msgstr ""
-"ISO イメージ %s のサイズは 2048 バイトの倍数になっていません。このコンピュー"
-"ターへの転送中にイメージが破損したことを示している可能性があります。\n"
-"\n"
-"インストールを終了、中止することをお勧めしますが、これが何かの間違いだと思わ"
-"れる場合は続行を選択することもできます。このイメージで続行しますか?"
-
-#: pyanaconda/errors.py:150
-msgid ""
-"The installer has tried to mount the installation image, but cannot find it "
-"on the hard drive.\n"
-"\n"
-"Should I try again to locate the image?"
-msgstr ""
-"インストーラーによりインストールイメージのマウントが試行されましたが、ハード"
-"ドライブ上にイメージが見つかりません。\n"
-"\n"
-"イメージの検索をやり直しますか?"
-
-#: pyanaconda/errors.py:161
-#, python-format
-msgid ""
-"The group '%s' is required for this installation. This group does not exist. "
-"This is a fatal error and installation will be aborted."
-msgstr ""
-"グループ '%s' がこのインストールに必要です。このグループは存在していません。"
-"これは致命的なエラーでインストールは中断されます。"
-
-#: pyanaconda/errors.py:167
-#, python-format
-msgid ""
-"You have specified that the group '%s' should be installed.  This group does "
-"not exist.  Would you like to ignore this group and continue with "
-"installation?"
-msgstr ""
-"グループ '%s' をインストールするように指定されていますが、このグループは存在"
-"しません。このグループを省略してインストールを続行しますか?"
-
-#: pyanaconda/errors.py:172
-#, python-format
-msgid ""
-"You have specified that the group '%s' should be excluded from "
-"installation.  This group does not exist.  Would you like to ignore this "
-"group and continue with installation?"
-msgstr ""
-"グループ '%s' をインストールから除外するように指定されていますが、このグルー"
-"プは存在しません。このグループを省略してインストールを続行しますか?"
-
-#: pyanaconda/errors.py:193
-msgid ""
-"Some packages, groups or modules are broken, the installation will be "
-"aborted."
-msgstr ""
-"一部のパッケージ、グループ、またはモジュールは壊れています。インストールを中"
-"止します。"
-
-#: pyanaconda/errors.py:199
-msgid "Would you like to ignore this and continue with installation?"
-msgstr "これを省略してインストールを続行しますか?"
-
-#: pyanaconda/errors.py:206
-#, python-format
-msgid ""
-"Stream was not specified for a module without a default stream. This is a "
-"fatal error and installation will be aborted. The details of this error "
-"are:\n"
-"\n"
-"%(exception)s"
-msgstr ""
-"デフォルトストリームのないモジュールにはストリームが指定されていません。これ"
-"は致命的なエラーで、インストールが中止されます。このエラーの詳細は次のとおり"
-"です。\n"
-"\n"
-"%(exception)s"
-
-#: pyanaconda/errors.py:214
-#, python-format
-msgid ""
-"Multiple streams have been specified for a single module. This is a fatal "
-"error and installation will be aborted. The details of this error are:\n"
-"\n"
-"%(exception)s"
-msgstr ""
-"1 つのモジュールに複数のストリームが指定されています。これは致命的なエラー"
-"で、インストールが中止されます。このエラーの詳細は次のとおりです。\n"
-"\n"
-"%(exception)s"
-
-#: pyanaconda/errors.py:222
-#, python-format
-msgid ""
-"There was an error running the kickstart script at line %(lineno)s.  This is "
-"a fatal error and installation will be aborted.  The details of this error "
-"are:\n"
-"\n"
-"%(details)s"
-msgstr ""
-"Kickstart ファイル中のスクリプトの %(lineno)s 行目の実行中にエラーが発生しま"
-"した。致命的なエラーとなるためインストールを中止します。このエラーの詳細は次"
-"のとおりです。\n"
-"\n"
-"%(details)s"
-
-#: pyanaconda/errors.py:230
-msgid ""
-"The following error occurred while installing.  This is a fatal error and "
-"installation will be aborted."
-msgstr ""
-"インストール中に次のエラーが発生しました。致命的なエラーとなるため、インス"
-"トールを中止します。"
-
-#: pyanaconda/errors.py:238
-msgid ""
-"The following software marked for installation has errors.\n"
-"This is likely caused by an error with your installation source."
-msgstr ""
-"インストール対象の以下のソフトウェアにエラーがあります。\n"
-"インストールソースでのエラーが原因となっている可能性が高いと思われます。"
-
-#: pyanaconda/errors.py:246
-msgid ""
-"The following error occurred while installing the boot loader. The system "
-"will not be bootable. Would you like to ignore this and continue with "
-"installation?"
-msgstr ""
-"ブートローダーのインストール中に以下のエラーが発生しました。システムを起動で"
-"きません。これを省略してインストールを続行しますか?"
-
-#: pyanaconda/errors.py:258
-#, python-format
-msgid "Unable to encrypt password: unsupported algorithm %s"
-msgstr "パスワードを暗号化できません: サポートされていないアルゴリズム %s"
-
-#: pyanaconda/errors.py:264
-msgid ""
-"An error occurred during Red Hat Insights configuration. Would you like to "
-"ignore this and continue with installation?"
-msgstr ""
-"Red Hat Insightsの構成中にエラーが発生しました。このエラーを無視してインス"
-"トールを続行しますか？"
 
 #: pyanaconda/exception.py:109
 #, python-format
@@ -4621,6 +4445,199 @@ msgid ""
 msgstr ""
 "VNCパスワードは 6〜8 文字にする必要があります。\n"
 "新しいパスワードを入力してください。パスワード不要なら空白にします。"
+
+#: pyanaconda/errors.py:112
+msgid "An error occurred while activating your storage configuration."
+msgstr "ストレージ設定の有効化中にエラーが発生しました。"
+
+#: pyanaconda/errors.py:119
+msgid ""
+"There is a problem with your existing storage configuration or your initial "
+"settings, for example a kickstart file. You must resolve this matter before "
+"the installation can proceed. There is a shell available for use which you "
+"can access by pressing ctrl-alt-f1 and then ctrl-b 2.\n"
+"\n"
+"Once you have resolved the issue you can retry the storage scan. If you do "
+"not fix it you will have to exit the installer."
+msgstr ""
+"既存のストレージ設定または Kickstart ファイル等の初期設定に問題があります。イ"
+"ンストールを行う前にこの問題を解決する必要があります。ctrl-alt-f1 の後に "
+"ctrl-b 2 を押すとシェルにアクセスできます。\n"
+"\n"
+"この問題を解決してからストレージスキャンを再試行してください。問題が解決でき"
+"ない場合は、インストーラーを終了しなければなりません。"
+
+#: pyanaconda/errors.py:128
+msgctxt "GUI|Storage Detailed Error Dialog"
+msgid "_Exit Installer"
+msgstr "インストーラーを終了(_E)"
+
+#: pyanaconda/errors.py:129
+msgctxt "GUI|Storage Detailed Error Dialog"
+msgid "_Retry"
+msgstr "リトライ(_R)"
+
+#: pyanaconda/errors.py:136
+#, python-format
+msgid ""
+"The ISO image %s has a size which is not a multiple of 2048 bytes.  This may "
+"mean it was corrupted on transfer to this computer.\n"
+"\n"
+"It is recommended that you exit and abort your installation, but you can "
+"choose to continue if you think this is in error. Would you like to continue "
+"using this image?"
+msgstr ""
+"ISO イメージ %s のサイズは 2048 バイトの倍数になっていません。このコンピュー"
+"ターへの転送中にイメージが破損したことを示している可能性があります。\n"
+"\n"
+"インストールを終了、中止することをお勧めしますが、これが何かの間違いだと思わ"
+"れる場合は続行を選択することもできます。このイメージで続行しますか?"
+
+#: pyanaconda/errors.py:150
+msgid ""
+"The installer has tried to mount the installation image, but cannot find it "
+"on the hard drive.\n"
+"\n"
+"Should I try again to locate the image?"
+msgstr ""
+"インストーラーによりインストールイメージのマウントが試行されましたが、ハード"
+"ドライブ上にイメージが見つかりません。\n"
+"\n"
+"イメージの検索をやり直しますか?"
+
+#: pyanaconda/errors.py:161
+#, python-format
+msgid ""
+"The group '%s' is required for this installation. This group does not exist. "
+"This is a fatal error and installation will be aborted."
+msgstr ""
+"グループ '%s' がこのインストールに必要です。このグループは存在していません。"
+"これは致命的なエラーでインストールは中断されます。"
+
+#: pyanaconda/errors.py:167
+#, python-format
+msgid ""
+"You have specified that the group '%s' should be installed.  This group does "
+"not exist.  Would you like to ignore this group and continue with "
+"installation?"
+msgstr ""
+"グループ '%s' をインストールするように指定されていますが、このグループは存在"
+"しません。このグループを省略してインストールを続行しますか?"
+
+#: pyanaconda/errors.py:172
+#, python-format
+msgid ""
+"You have specified that the group '%s' should be excluded from "
+"installation.  This group does not exist.  Would you like to ignore this "
+"group and continue with installation?"
+msgstr ""
+"グループ '%s' をインストールから除外するように指定されていますが、このグルー"
+"プは存在しません。このグループを省略してインストールを続行しますか?"
+
+#: pyanaconda/errors.py:193
+msgid ""
+"Some packages, groups or modules are broken, the installation will be "
+"aborted."
+msgstr ""
+"一部のパッケージ、グループ、またはモジュールは壊れています。インストールを中"
+"止します。"
+
+#: pyanaconda/errors.py:199
+msgid "Would you like to ignore this and continue with installation?"
+msgstr "これを省略してインストールを続行しますか?"
+
+#: pyanaconda/errors.py:206
+#, python-format
+msgid ""
+"Stream was not specified for a module without a default stream. This is a "
+"fatal error and installation will be aborted. The details of this error "
+"are:\n"
+"\n"
+"%(exception)s"
+msgstr ""
+"デフォルトストリームのないモジュールにはストリームが指定されていません。これ"
+"は致命的なエラーで、インストールが中止されます。このエラーの詳細は次のとおり"
+"です。\n"
+"\n"
+"%(exception)s"
+
+#: pyanaconda/errors.py:214
+#, python-format
+msgid ""
+"Multiple streams have been specified for a single module. This is a fatal "
+"error and installation will be aborted. The details of this error are:\n"
+"\n"
+"%(exception)s"
+msgstr ""
+"1 つのモジュールに複数のストリームが指定されています。これは致命的なエラー"
+"で、インストールが中止されます。このエラーの詳細は次のとおりです。\n"
+"\n"
+"%(exception)s"
+
+#: pyanaconda/errors.py:222
+#, python-format
+msgid ""
+"There was an error running the kickstart script at line %(lineno)s.  This is "
+"a fatal error and installation will be aborted.  The details of this error "
+"are:\n"
+"\n"
+"%(details)s"
+msgstr ""
+"Kickstart ファイル中のスクリプトの %(lineno)s 行目の実行中にエラーが発生しま"
+"した。致命的なエラーとなるためインストールを中止します。このエラーの詳細は次"
+"のとおりです。\n"
+"\n"
+"%(details)s"
+
+#: pyanaconda/errors.py:230
+msgid ""
+"The following error occurred while installing.  This is a fatal error and "
+"installation will be aborted."
+msgstr ""
+"インストール中に次のエラーが発生しました。致命的なエラーとなるため、インス"
+"トールを中止します。"
+
+#: pyanaconda/errors.py:238
+msgid ""
+"The following software marked for installation has errors.\n"
+"This is likely caused by an error with your installation source."
+msgstr ""
+"インストール対象の以下のソフトウェアにエラーがあります。\n"
+"インストールソースでのエラーが原因となっている可能性が高いと思われます。"
+
+#: pyanaconda/errors.py:246
+msgid ""
+"The following error occurred while installing the boot loader. The system "
+"will not be bootable. Would you like to ignore this and continue with "
+"installation?"
+msgstr ""
+"ブートローダーのインストール中に以下のエラーが発生しました。システムを起動で"
+"きません。これを省略してインストールを続行しますか?"
+
+#: pyanaconda/errors.py:258
+#, python-format
+msgid "Unable to encrypt password: unsupported algorithm %s"
+msgstr "パスワードを暗号化できません: サポートされていないアルゴリズム %s"
+
+#: pyanaconda/errors.py:264
+msgid ""
+"An error occurred during Red Hat Insights configuration. Would you like to "
+"ignore this and continue with installation?"
+msgstr ""
+"Red Hat Insightsの構成中にエラーが発生しました。このエラーを無視してインス"
+"トールを続行しますか？"
+
+#: pyanaconda/errors.py:275
+msgid ""
+"An error occurred during registration attempt triggered by the rhsm "
+"kickstart command. This could have happened due to incorrect rhsm command "
+"arguments or subscription infrastructure issues. Would you like to ignore "
+"this and continue with installation?"
+msgstr ""
+
+#: pyanaconda/errors.py:281
+msgid "Error detail: "
+msgstr ""
 
 #: anaconda.py:378
 msgid "Unable to create PID file"

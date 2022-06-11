@@ -62,7 +62,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2022-06-01 20:41+0200\n"
+"POT-Creation-Date: 2022-06-10 13:39+0200\n"
 "PO-Revision-Date: 2022-04-09 10:12+0000\n"
 "Last-Translator: Joachim Philipp <joachim.philipp@gmail.com>\n"
 "Language-Team: German <https://translate.fedoraproject.org/projects/anaconda/"
@@ -93,6 +93,126 @@ msgstr "ungültige URL, kann nicht geparst werden."
 #: pyanaconda/core/payload.py:168
 msgid "URL has no host component"
 msgstr "URL hat keine Host-Komponente"
+
+#: pyanaconda/core/storage.py:84
+msgid "Unsupported"
+msgstr "Nicht unterstützt"
+
+#: pyanaconda/core/storage.py:85 pyanaconda/core/storage.py:96
+msgid "LVM"
+msgstr "LVM"
+
+#: pyanaconda/core/storage.py:86
+msgid "RAID"
+msgstr "RAID"
+
+#: pyanaconda/core/storage.py:87 pyanaconda/core/storage.py:94
+msgid "Standard Partition"
+msgstr "Standard-Partition"
+
+#: pyanaconda/core/storage.py:88 pyanaconda/core/storage.py:95
+msgid "Btrfs"
+msgstr "Btrfs"
+
+#: pyanaconda/core/storage.py:89 pyanaconda/core/storage.py:97
+msgid "LVM Thin Provisioning"
+msgstr "LVM Reduzierte Bereitstellung"
+
+#: pyanaconda/core/storage.py:90 pyanaconda/ui/gui/spokes/lib/resize.glade:150
+msgid "Disk"
+msgstr "Festplatte"
+
+#: pyanaconda/core/storage.py:108
+msgid ""
+"The 'swap' area on your computer is used by the operating\n"
+"system when running low on memory."
+msgstr ""
+"Der »SWAP«-Bereich Ihres Computers wird vom Betriebssystem\n"
+"benötigt, wenn Ihr System wenig Arbeitsspeicher zur Verfügung hat."
+
+#: pyanaconda/core/storage.py:110
+msgid ""
+"The 'boot' area on your computer is where files needed\n"
+"to start the operating system are stored."
+msgstr ""
+"Im 'Boot'-Bereich Ihres Computers befinden sich die\n"
+"zum Start des Betriebssystems benötigten Dateien."
+
+#: pyanaconda/core/storage.py:112
+msgid ""
+"The 'root' area on your computer is where core system\n"
+"files and applications are stored."
+msgstr ""
+"Im »Root«-Bereich Ihres Computers werden die Kern-\n"
+"Systemdateien und Anwendungen abgelegt."
+
+#: pyanaconda/core/storage.py:114
+msgid ""
+"The 'home' area on your computer is where all your personal\n"
+"data is stored."
+msgstr ""
+"Im 'Home'-Bereich Ihres Computers werden Ihre persönlichen\n"
+"Daten gespeichert."
+
+#: pyanaconda/core/storage.py:116
+msgid ""
+"The BIOS boot partition is required to enable booting\n"
+"from GPT-partitioned disks on BIOS hardware."
+msgstr ""
+"Die BIOS-Bootpartition wird benötigt, um das Starten von \n"
+"GPT-partitionierten Speichermedien auf BIOS-Hardware zu aktivieren."
+
+#: pyanaconda/core/storage.py:118
+msgid ""
+"The PReP boot partition is required as part of the\n"
+"boot loader configuration on some PPC platforms."
+msgstr ""
+"Auf einigen PPC-Plattformen wird die PReP-Bootpartition \n"
+"als Teil der Bootloader-Konfiguration benötigt."
+
+#: pyanaconda/core/users.py:66
+#, python-format
+msgid "User name is reserved for system: %s"
+msgstr "Benutzername ist reserviert für System: %s"
+
+#: pyanaconda/core/users.py:90
+msgid ""
+"Either a group name in the group list is invalid or groups are not separated "
+"by a comma."
+msgstr ""
+"Entweder ist ein Gruppenname in der Gruppenliste ungültig oder Gruppen sind "
+"nicht durch ein Komma getrennt."
+
+#: pyanaconda/core/users.py:122
+msgid "Name cannot start with '-' character."
+msgstr "Der Name darf nicht mit einem '-' Zeichen beginnen."
+
+#: pyanaconda/core/users.py:125
+#, python-format
+msgid "Name '%s' is not allowed."
+msgstr "Name '%s' ist nicht erlaubt."
+
+#: pyanaconda/core/users.py:128
+msgid "Fully numeric name is not allowed."
+msgstr "Ein vollständig numerischer Name ist nicht zulässig."
+
+#: pyanaconda/core/users.py:132
+msgid "Name '$' is not allowed."
+msgstr "Der Name '$' ist nicht erlaubt."
+
+#: pyanaconda/core/users.py:142
+#, python-format
+msgid "Name cannot contain character: '%s'"
+msgstr "Name darf dieses Zeichen nicht enthalten: '%s'"
+
+#: pyanaconda/core/users.py:145
+msgid "Name must be shorter than 33 characters."
+msgstr "Der Name muss kürzer als 33 Zeichen sein."
+
+#: pyanaconda/core/users.py:149
+#, python-format
+msgid "Name '%s' is invalid."
+msgstr "Name '%s' ist ungültig."
 
 #: pyanaconda/core/constants.py:89
 msgid "Start VNC"
@@ -254,178 +374,63 @@ msgstr "Klicke <b>Fertig</b> zweimal, um es zu bestätigen."
 msgid "Password set."
 msgstr "Passwort gesetzt."
 
-#: pyanaconda/core/constants.py:242
+#. TRANSLATORS: Password error message from libreport library needs to be joined with "You will have to press <b>Done</b> twice to confirm it." add a missing '.'
+#: pyanaconda/core/constants.py:240
+msgid "{}. {}"
+msgstr ""
+
+#: pyanaconda/core/constants.py:244
 msgid "Empty"
 msgstr "Nicht gesetzt"
 
-#: pyanaconda/core/constants.py:243
+#: pyanaconda/core/constants.py:245
 msgid "Too short"
 msgstr "Zu kurz"
 
-#: pyanaconda/core/constants.py:244
+#: pyanaconda/core/constants.py:246
 #: pyanaconda/ui/gui/spokes/lib/passphrase.glade:182
 msgid "Weak"
 msgstr "Schwach"
 
-#: pyanaconda/core/constants.py:245
+#: pyanaconda/core/constants.py:247
 msgid "Fair"
 msgstr "Ausreichend"
 
-#: pyanaconda/core/constants.py:246
+#: pyanaconda/core/constants.py:248
 msgid "Good"
 msgstr "Gut"
 
-#: pyanaconda/core/constants.py:247
+#: pyanaconda/core/constants.py:249
 msgid "Strong"
 msgstr "Stark"
 
-#: pyanaconda/core/constants.py:250
+#: pyanaconda/core/constants.py:252
 msgid "Hide password."
 msgstr "Passwort verstecken."
 
-#: pyanaconda/core/constants.py:251
+#: pyanaconda/core/constants.py:253
 msgid "Show password."
 msgstr "Passwort anzeigen."
 
-#: pyanaconda/core/constants.py:298
+#: pyanaconda/core/constants.py:300
 msgid "Probing storage..."
 msgstr "Überprüfen des Speichermediums..."
 
-#: pyanaconda/core/constants.py:299
+#: pyanaconda/core/constants.py:301
 msgid "Testing availability..."
 msgstr "Verfügbarkeit testen..."
 
-#: pyanaconda/core/constants.py:300
+#: pyanaconda/core/constants.py:302
 msgid "Downloading package metadata..."
 msgstr "Paket-Metadaten herunterladen..."
 
-#: pyanaconda/core/constants.py:301
+#: pyanaconda/core/constants.py:303
 msgid "Downloading group metadata..."
 msgstr "Gruppen-Metadaten herunterladen..."
 
-#: pyanaconda/core/constants.py:304
+#: pyanaconda/core/constants.py:306
 msgid "Anaconda Installer"
 msgstr "Anaconda-Installationsprogramm"
-
-#: pyanaconda/core/storage.py:84
-msgid "Unsupported"
-msgstr "Nicht unterstützt"
-
-#: pyanaconda/core/storage.py:85 pyanaconda/core/storage.py:96
-msgid "LVM"
-msgstr "LVM"
-
-#: pyanaconda/core/storage.py:86
-msgid "RAID"
-msgstr "RAID"
-
-#: pyanaconda/core/storage.py:87 pyanaconda/core/storage.py:94
-msgid "Standard Partition"
-msgstr "Standard-Partition"
-
-#: pyanaconda/core/storage.py:88 pyanaconda/core/storage.py:95
-msgid "Btrfs"
-msgstr "Btrfs"
-
-#: pyanaconda/core/storage.py:89 pyanaconda/core/storage.py:97
-msgid "LVM Thin Provisioning"
-msgstr "LVM Reduzierte Bereitstellung"
-
-#: pyanaconda/core/storage.py:90 pyanaconda/ui/gui/spokes/lib/resize.glade:150
-msgid "Disk"
-msgstr "Festplatte"
-
-#: pyanaconda/core/storage.py:108
-msgid ""
-"The 'swap' area on your computer is used by the operating\n"
-"system when running low on memory."
-msgstr ""
-"Der »SWAP«-Bereich Ihres Computers wird vom Betriebssystem\n"
-"benötigt, wenn Ihr System wenig Arbeitsspeicher zur Verfügung hat."
-
-#: pyanaconda/core/storage.py:110
-msgid ""
-"The 'boot' area on your computer is where files needed\n"
-"to start the operating system are stored."
-msgstr ""
-"Im 'Boot'-Bereich Ihres Computers befinden sich die\n"
-"zum Start des Betriebssystems benötigten Dateien."
-
-#: pyanaconda/core/storage.py:112
-msgid ""
-"The 'root' area on your computer is where core system\n"
-"files and applications are stored."
-msgstr ""
-"Im »Root«-Bereich Ihres Computers werden die Kern-\n"
-"Systemdateien und Anwendungen abgelegt."
-
-#: pyanaconda/core/storage.py:114
-msgid ""
-"The 'home' area on your computer is where all your personal\n"
-"data is stored."
-msgstr ""
-"Im 'Home'-Bereich Ihres Computers werden Ihre persönlichen\n"
-"Daten gespeichert."
-
-#: pyanaconda/core/storage.py:116
-msgid ""
-"The BIOS boot partition is required to enable booting\n"
-"from GPT-partitioned disks on BIOS hardware."
-msgstr ""
-"Die BIOS-Bootpartition wird benötigt, um das Starten von \n"
-"GPT-partitionierten Speichermedien auf BIOS-Hardware zu aktivieren."
-
-#: pyanaconda/core/storage.py:118
-msgid ""
-"The PReP boot partition is required as part of the\n"
-"boot loader configuration on some PPC platforms."
-msgstr ""
-"Auf einigen PPC-Plattformen wird die PReP-Bootpartition \n"
-"als Teil der Bootloader-Konfiguration benötigt."
-
-#: pyanaconda/core/users.py:66
-#, python-format
-msgid "User name is reserved for system: %s"
-msgstr "Benutzername ist reserviert für System: %s"
-
-#: pyanaconda/core/users.py:90
-msgid ""
-"Either a group name in the group list is invalid or groups are not separated "
-"by a comma."
-msgstr ""
-"Entweder ist ein Gruppenname in der Gruppenliste ungültig oder Gruppen sind "
-"nicht durch ein Komma getrennt."
-
-#: pyanaconda/core/users.py:122
-msgid "Name cannot start with '-' character."
-msgstr "Der Name darf nicht mit einem '-' Zeichen beginnen."
-
-#: pyanaconda/core/users.py:125
-#, python-format
-msgid "Name '%s' is not allowed."
-msgstr "Name '%s' ist nicht erlaubt."
-
-#: pyanaconda/core/users.py:128
-msgid "Fully numeric name is not allowed."
-msgstr "Ein vollständig numerischer Name ist nicht zulässig."
-
-#: pyanaconda/core/users.py:132
-msgid "Name '$' is not allowed."
-msgstr "Der Name '$' ist nicht erlaubt."
-
-#: pyanaconda/core/users.py:142
-#, python-format
-msgid "Name cannot contain character: '%s'"
-msgstr "Name darf dieses Zeichen nicht enthalten: '%s'"
-
-#: pyanaconda/core/users.py:145
-msgid "Name must be shorter than 33 characters."
-msgstr "Der Name muss kürzer als 33 Zeichen sein."
-
-#: pyanaconda/core/users.py:149
-#, python-format
-msgid "Name '%s' is invalid."
-msgstr "Name '%s' ist ungültig."
 
 #: pyanaconda/modules/network/firewall/installation.py:102
 #, python-format
@@ -1629,14 +1634,14 @@ msgstr "Post-Installationsaufgaben werden durchgeführt"
 msgid "Downloading %(url)s (%(pct)d%%)"
 msgstr "Herunterladen %(url)s (%(pct)d%%)"
 
+#: pyanaconda/payload/live/payload_base.py:78
+#: pyanaconda/payload/live/payload_liveos.py:96
+msgid "Installing software"
+msgstr "Software wird installiert"
+
 #: pyanaconda/payload/live/payload_liveimg.py:212
 msgid "Checking image checksum"
 msgstr "Checksumme des Abbildes wird überprüft"
-
-#: pyanaconda/payload/live/payload_liveos.py:96
-#: pyanaconda/payload/live/payload_base.py:78
-msgid "Installing software"
-msgstr "Software wird installiert"
 
 #: pyanaconda/payload/flatpak.py:205
 #, python-format
@@ -1786,7 +1791,7 @@ msgid "_Cancel"
 msgstr "_Abbrechen"
 
 #: pyanaconda/ui/gui/spokes/lib/detailederror.py:58
-#: pyanaconda/ui/gui/__init__.py:835
+#: pyanaconda/ui/gui/__init__.py:853
 msgctxt "GUI|Detailed Error Dialog"
 msgid "_Quit"
 msgstr "_Beenden"
@@ -2685,28 +2690,6 @@ msgstr "_Netzwerk und Hostname"
 msgid "Host name is not valid: %s"
 msgstr "Rechnername ist ungültig: %s"
 
-#: pyanaconda/ui/gui/spokes/root_password.py:56
-msgctxt "GUI|Spoke"
-msgid "_Root Password"
-msgstr "_Root Passwort"
-
-#: pyanaconda/ui/gui/spokes/root_password.py:128
-msgid "Root password has been set."
-msgstr "Root-Passwort wurde gesetzt."
-
-#: pyanaconda/ui/gui/spokes/root_password.py:161
-#: pyanaconda/ui/tui/spokes/root_password.py:88
-msgid "Root account is disabled."
-msgstr "Root-Konto ist deaktiviert."
-
-#: pyanaconda/ui/gui/spokes/root_password.py:163
-msgid "Root password is set"
-msgstr "Root-Passwort wurde gesetzt"
-
-#: pyanaconda/ui/gui/spokes/root_password.py:165
-msgid "Root password is not set"
-msgstr "Root-Passwort ist nicht gesetzt"
-
 #: pyanaconda/ui/gui/spokes/software_selection.py:68
 msgctxt "GUI|Spoke"
 msgid "_Software Selection"
@@ -2786,6 +2769,116 @@ msgstr "_Software-Quelle ändern"
 msgctxt "GUI|Software Selection|Error Dialog"
 msgid "Modify _Selections"
 msgstr "_Auswahl ändern"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:73
+msgctxt "GUI|Spoke"
+msgid "_Connect to Red Hat"
+msgstr "_Verbindung zu Red Hat"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:251
+msgid "Activation key set."
+msgstr "Aktivierungsschlüssel hinterlegt."
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1001
+msgid "Unregistering..."
+msgstr "Abmelden..."
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1003
+msgid "Registering..."
+msgstr "Registrieren..."
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1005
+msgid "Attaching subscription..."
+msgstr "Hinzufügen von Abonnements..."
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1007
+msgid "Subscription attached."
+msgstr "Abonnement hinzugefügt."
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1011
+msgid "Registered."
+msgstr "Verbunden."
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1013
+msgid "Not registered."
+msgstr "Nicht registriert."
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1043
+msgid "Registered with account {}"
+msgstr "Registriert mit Konto {}"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1047
+msgid "Registered with organization {}"
+msgstr "Registriert mit Organisation {}"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1055
+msgid "Role: {}"
+msgstr "Rolle: {}"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1059
+msgid "SLA: {}"
+msgstr "SLA: {}"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1063
+msgid "Usage: {}"
+msgstr "Zweck: {}"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1071
+msgid "Connected to Red Hat Insights"
+msgstr "Verbunden mit Red Hat Insights"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1073
+msgid "Not connected to Red Hat Insights"
+msgstr "Nicht mit Red Hat Insights verbunden"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1085
+msgid "Subscribed in Simple Content Access mode."
+msgstr "Abonniert im Modus Einfacher Zugriff auf Inhalte."
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1087
+msgid "No subscriptions are attached to the system"
+msgstr "Es sind keine Abonnements mit diesem System verbunden"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1089
+msgid "1 subscription attached to the system"
+msgstr "Es ist ein Abonnement mit diesem System verbunden"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1091
+msgid "{} subscriptions attached to the system"
+msgstr "Es sind {} Abonnements mit diesem System verbunden"
+
+#: pyanaconda/ui/gui/spokes/subscription.py:1132
+msgid "Please enable network access before connecting to Red Hat."
+msgstr ""
+"Bitte aktivieren Sie die Netzwerkverbindung bevor Sie versuchen zu Red Hat "
+"zu verbinden."
+
+#: pyanaconda/ui/gui/spokes/welcome.py:255
+#, python-format
+msgid "WELCOME TO %(name)s %(version)s."
+msgstr "WILLKOMMEN BEI %(name)s %(version)s."
+
+#: pyanaconda/ui/gui/spokes/root_password.py:56
+msgctxt "GUI|Spoke"
+msgid "_Root Password"
+msgstr "_Root Passwort"
+
+#: pyanaconda/ui/gui/spokes/root_password.py:128
+msgid "Root password has been set."
+msgstr "Root-Passwort wurde gesetzt."
+
+#: pyanaconda/ui/gui/spokes/root_password.py:161
+#: pyanaconda/ui/tui/spokes/root_password.py:88
+msgid "Root account is disabled."
+msgstr "Root-Konto ist deaktiviert."
+
+#: pyanaconda/ui/gui/spokes/root_password.py:163
+msgid "Root password is set"
+msgstr "Root-Passwort wurde gesetzt"
+
+#: pyanaconda/ui/gui/spokes/root_password.py:165
+msgid "Root password is not set"
+msgstr "Root-Passwort ist nicht gesetzt"
 
 #: pyanaconda/ui/gui/spokes/storage.py:103
 msgid "Please wait... software metadata still loading."
@@ -2940,7 +3033,7 @@ msgstr "NVDIMM-Gerät {namespace}"
 msgid "{} free"
 msgstr "{} verfügbar"
 
-#: pyanaconda/ui/gui/spokes/storage.py:714
+#: pyanaconda/ui/gui/spokes/storage.py:735
 msgid ""
 "You have chosen to skip boot loader installation. Your system may not be "
 "bootable."
@@ -2948,13 +3041,13 @@ msgstr ""
 "Sie haben entschieden die Bootloader-Installation zu überspringen. Das "
 "System kann eventuell nicht starten."
 
-#: pyanaconda/ui/gui/spokes/storage.py:893
+#: pyanaconda/ui/gui/spokes/storage.py:914
 msgid "There was a problem with your disk selection. Click here for details."
 msgstr ""
 "Bei der Speichermedien-Auswahl ist ein Problem aufgetreten. Mausklick für "
 "Einzelheiten."
 
-#: pyanaconda/ui/gui/spokes/storage.py:998
+#: pyanaconda/ui/gui/spokes/storage.py:1019
 msgid ""
 "The following errors were encountered when checking your disk selection. You "
 "can modify your selection or quit the installer."
@@ -2963,18 +3056,18 @@ msgstr ""
 "aufgetreten. Sie können Ihre Auswahl ändern oder das Installationsprogramm "
 "beenden."
 
-#: pyanaconda/ui/gui/spokes/storage.py:1003
 #: pyanaconda/ui/gui/spokes/storage.py:1024
+#: pyanaconda/ui/gui/spokes/storage.py:1045
 msgctxt "GUI|Storage|Error Dialog"
 msgid "_Quit"
 msgstr "_Beenden"
 
-#: pyanaconda/ui/gui/spokes/storage.py:1004
+#: pyanaconda/ui/gui/spokes/storage.py:1025
 msgctxt "GUI|Storage|Error Dialog"
 msgid "_Modify Disk Selection"
 msgstr "_Auswahl des Speichermediums ändern"
 
-#: pyanaconda/ui/gui/spokes/storage.py:1019
+#: pyanaconda/ui/gui/spokes/storage.py:1040
 msgid ""
 "The following errors were encountered when checking your storage "
 "configuration.  You can modify your storage layout or quit the installer."
@@ -2983,12 +3076,12 @@ msgstr ""
 "aufgetreten. Sie können die Speicherkonfiguration ändern oder das "
 "Installationsprogramm beenden."
 
-#: pyanaconda/ui/gui/spokes/storage.py:1025
+#: pyanaconda/ui/gui/spokes/storage.py:1046
 msgctxt "GUI|Storage|Error Dialog"
 msgid "_Modify Storage Layout"
 msgstr "Speicher_belegung ändern"
 
-#: pyanaconda/ui/gui/spokes/storage.py:1039
+#: pyanaconda/ui/gui/spokes/storage.py:1060
 msgid ""
 "The following warnings were encountered when checking your storage "
 "configuration.  These are not fatal, but you may wish to make changes to "
@@ -2998,93 +3091,10 @@ msgstr ""
 "aufgetreten. Auch wenn diese nicht schwerwiegend sind, sollten Sie ggf. "
 "dennoch Änderungen an Ihrer Speicherkonfiguration vornehmen."
 
-#: pyanaconda/ui/gui/spokes/storage.py:1044
+#: pyanaconda/ui/gui/spokes/storage.py:1065
 msgctxt "GUI|Storage|Warning Dialog"
 msgid "_OK"
 msgstr "_OK"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:73
-msgctxt "GUI|Spoke"
-msgid "_Connect to Red Hat"
-msgstr "_Verbindung zu Red Hat"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:251
-msgid "Activation key set."
-msgstr "Aktivierungsschlüssel hinterlegt."
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1001
-msgid "Unregistering..."
-msgstr "Abmelden..."
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1003
-msgid "Registering..."
-msgstr "Registrieren..."
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1005
-msgid "Attaching subscription..."
-msgstr "Hinzufügen von Abonnements..."
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1007
-msgid "Subscription attached."
-msgstr "Abonnement hinzugefügt."
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1011
-msgid "Registered."
-msgstr "Verbunden."
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1013
-msgid "Not registered."
-msgstr "Nicht registriert."
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1043
-msgid "Registered with account {}"
-msgstr "Registriert mit Konto {}"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1047
-msgid "Registered with organization {}"
-msgstr "Registriert mit Organisation {}"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1055
-msgid "Role: {}"
-msgstr "Rolle: {}"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1059
-msgid "SLA: {}"
-msgstr "SLA: {}"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1063
-msgid "Usage: {}"
-msgstr "Zweck: {}"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1071
-msgid "Connected to Red Hat Insights"
-msgstr "Verbunden mit Red Hat Insights"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1073
-msgid "Not connected to Red Hat Insights"
-msgstr "Nicht mit Red Hat Insights verbunden"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1085
-msgid "Subscribed in Simple Content Access mode."
-msgstr "Abonniert im Modus Einfacher Zugriff auf Inhalte."
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1087
-msgid "No subscriptions are attached to the system"
-msgstr "Es sind keine Abonnements mit diesem System verbunden"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1089
-msgid "1 subscription attached to the system"
-msgstr "Es ist ein Abonnement mit diesem System verbunden"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1091
-msgid "{} subscriptions attached to the system"
-msgstr "Es sind {} Abonnements mit diesem System verbunden"
-
-#: pyanaconda/ui/gui/spokes/subscription.py:1132
-msgid "Please enable network access before connecting to Red Hat."
-msgstr ""
-"Bitte aktivieren Sie die Netzwerkverbindung bevor Sie versuchen zu Red Hat "
-"zu verbinden."
 
 #: pyanaconda/ui/gui/spokes/user.py:68
 msgid "Invalid group name."
@@ -3113,21 +3123,16 @@ msgstr "Administrator %s wird erstellt"
 msgid "User %s will be created"
 msgstr "Benutzer %s wird erstellt"
 
-#: pyanaconda/ui/gui/spokes/welcome.py:255
-#, python-format
-msgid "WELCOME TO %(name)s %(version)s."
-msgstr "WILLKOMMEN BEI %(name)s %(version)s."
-
-#: pyanaconda/ui/gui/__init__.py:346 widgets/src/BaseWindow.c:151
+#: pyanaconda/ui/gui/__init__.py:364 widgets/src/BaseWindow.c:151
 msgid "Help!"
 msgstr "Hilfe!"
 
-#: pyanaconda/ui/gui/__init__.py:851
+#: pyanaconda/ui/gui/__init__.py:869
 msgctxt "GUI|Yes No Dialog"
 msgid "_No"
 msgstr "_Nein"
 
-#: pyanaconda/ui/gui/__init__.py:852
+#: pyanaconda/ui/gui/__init__.py:870
 msgctxt "GUI|Yes No Dialog"
 msgid "_Yes"
 msgstr "_Ja"
@@ -3158,30 +3163,30 @@ msgstr ""
 "Für die derzeitige Softwareauswahl steht nicht genügend Speicherplatz zur "
 "Verfügung. Zusätzlich werden {} benötigt."
 
-#: pyanaconda/ui/lib/storage.py:209
+#: pyanaconda/ui/lib/storage.py:210
 #, python-brace-format
 msgid "{count} disk selected; {capacity} capacity; {free} free"
 msgid_plural "{count} disks selected; {capacity} capacity; {free} free"
 msgstr[0] "{count} Disk ausgewählt; {capacity} Kapazität; {free} verfügbar"
 msgstr[1] "{count} Disks ausgewählt; {capacity} Kapazität; {free} verfügbar"
 
-#: pyanaconda/ui/lib/storage.py:283
+#: pyanaconda/ui/lib/storage.py:310
 msgid "Saving storage configuration..."
 msgstr "Speicherkonfiguration sichern..."
 
-#: pyanaconda/ui/lib/storage.py:288
+#: pyanaconda/ui/lib/storage.py:315
 msgid "Failed to save storage configuration"
 msgstr "Das Sichern der Speichermedien-Konfiguration ist fehlgeschlagen"
 
-#: pyanaconda/ui/lib/storage.py:293
+#: pyanaconda/ui/lib/storage.py:320
 msgid "Failed to save boot loader configuration"
 msgstr "Fehler beim Speichern der Bootloader-Konfiguration"
 
-#: pyanaconda/ui/lib/storage.py:297
+#: pyanaconda/ui/lib/storage.py:324
 msgid "Checking storage configuration..."
 msgstr "Überprüfe Speichermedien-Konfiguration..."
 
-#: pyanaconda/ui/lib/subscription.py:287
+#: pyanaconda/ui/lib/subscription.py:302
 msgid "Registration failed due to insufficient credentials."
 msgstr ""
 "Die Registration ist aufgrund unzureichender Zugangsdaten fehlgeschlagen."
@@ -3236,9 +3241,9 @@ msgstr "Installation beginnen"
 #: pyanaconda/ui/tui/spokes/network.py:571
 #: pyanaconda/ui/tui/spokes/software_selection.py:251
 #: pyanaconda/ui/tui/spokes/storage.py:259
-#: pyanaconda/ui/tui/spokes/storage.py:536
-#: pyanaconda/ui/tui/spokes/storage.py:608
-#: pyanaconda/ui/tui/spokes/storage.py:676
+#: pyanaconda/ui/tui/spokes/storage.py:525
+#: pyanaconda/ui/tui/spokes/storage.py:597
+#: pyanaconda/ui/tui/spokes/storage.py:665
 msgctxt "TUI|Spoke Navigation"
 msgid "c"
 msgstr "\"c\" drücken um fortzufahren"
@@ -3582,178 +3587,6 @@ msgstr "Zusätzliche Software für die ausgewählte Umgebung"
 msgid "No additional software to select."
 msgstr "Keine zusätzliche Software zum Auswählen."
 
-#: pyanaconda/ui/tui/spokes/storage.py:61
-msgid "Use All Space"
-msgstr "Gesamten Speicherplatz benutzen"
-
-#: pyanaconda/ui/tui/spokes/storage.py:62
-msgid "Replace Existing Linux system(s)"
-msgstr "Ersetze bestehende(s) Linux-System(e)"
-
-#: pyanaconda/ui/tui/spokes/storage.py:63
-msgid "Use Free Space"
-msgstr "Freien Speicherplatz benutzen"
-
-#: pyanaconda/ui/tui/spokes/storage.py:81
-msgid "Installation Destination"
-msgstr "Installationsziel"
-
-#: pyanaconda/ui/tui/spokes/storage.py:206
-msgid "Select all"
-msgstr "Alles auswählen"
-
-#: pyanaconda/ui/tui/spokes/storage.py:315
-msgid ""
-"The following unformatted or LDL DASDs have been detected on your system. "
-"You can choose to format them now with dasdfmt or cancel to leave them "
-"unformatted. Unformatted DASDs cannot be used during installation.\n"
-"\n"
-msgstr ""
-"Die nachfolgenden unformatierten oder LDL-DASDs wurden auf Ihrem System "
-"gefunden. Sie können diese mit »dasdfmt« formatieren oder unformatiert "
-"belassen. Nicht formatierte DASDs können bei der Installation nicht "
-"verwendet werden.\n"
-"\n"
-
-#: pyanaconda/ui/tui/spokes/storage.py:322
-msgid ""
-"Warning: All storage changes made using the installer will be lost when you "
-"choose to format.\n"
-"\n"
-"Proceed to run dasdfmt?\n"
-msgstr ""
-"Warnung: Alle Änderungen am Speicherplatz, die Sie mithilfe des "
-"Installationsprogramms vorgenommen haben, gehen verloren, wenn Sie "
-"formatieren.\n"
-"\n"
-"Fortfahren mit dem Ausführen von dasdfmt?\n"
-
-#: pyanaconda/ui/tui/spokes/storage.py:331
-msgid "This may take a moment."
-msgstr "Der Vorgang wird einige Zeit beanspruchen."
-
-#: pyanaconda/ui/tui/spokes/storage.py:347
-msgid "Passphrase"
-msgstr "Passphrase"
-
-#: pyanaconda/ui/tui/spokes/storage.py:348
-msgid ""
-"Please provide a default LUKS passphrase for all devices you want to "
-"encrypt. You will have to type it twice."
-msgstr ""
-"Bitte geben Sie eine Standard-LUKS-Passphrase für alle Geräte an, die Sie "
-"verschlüsseln möchten. Sie müssen es zweimal eingeben."
-
-#: pyanaconda/ui/tui/spokes/storage.py:437
-msgid "Partitioning Options"
-msgstr "Partitionierungsoptionen"
-
-#: pyanaconda/ui/tui/spokes/storage.py:477
-msgid "Manually assign mount points"
-msgstr "Einhängepunkte manuell zuweisen"
-
-#: pyanaconda/ui/tui/spokes/storage.py:484
-msgid ""
-"Installation requires partitioning of your hard drive. Select what space to "
-"use for the install target or manually assign mount points."
-msgstr ""
-"Für die Installation muss Ihre Festplatte partitioniert werden. Wählen Sie "
-"den Speicherplatz aus, der für das Installationsziel verwendet werden soll "
-"oder fügen Sie manuell Einhängepunkte hinzu."
-
-#: pyanaconda/ui/tui/spokes/storage.py:529
-msgid "Reverting previous configuration. This may take a moment..."
-msgstr ""
-"Einstellungen werden zurückgenommen. Dies wird etwas Zeit beanspruchen..."
-
-#: pyanaconda/ui/tui/spokes/storage.py:561
-msgid "Partition Scheme Options"
-msgstr "Optionen zum Partitionsschema"
-
-#: pyanaconda/ui/tui/spokes/storage.py:597
-msgid "Select a partition scheme configuration."
-msgstr "Wählen Sie eine Partitionsschema-Konfiguration."
-
-#: pyanaconda/ui/tui/spokes/storage.py:629
-msgid "Assign mount points"
-msgstr "Einhängepunkte zuweisen"
-
-#: pyanaconda/ui/tui/spokes/storage.py:649
-msgid ""
-"Choose device from above to assign mount point and set format.\n"
-"Formats marked with * are new formats meaning ALL DATA on the original "
-"format WILL BE LOST!"
-msgstr ""
-"Wählen Sie das Gerät von oben, um den Einhängepunkt zuzuweisen und das "
-"Format festzulegen.\n"
-"Mit * markierte Formate sind neue Formate, das heißt, dass ALLE DATEN im "
-"Originalformat VERLOREN GEHEN!"
-
-#. TRANSLATORS: 's' to rescan devices
-#: pyanaconda/ui/tui/spokes/storage.py:661
-#: pyanaconda/ui/tui/spokes/storage.py:671
-msgctxt "TUI|Spoke Navigation|Partitioning"
-msgid "s"
-msgstr "s"
-
-#: pyanaconda/ui/tui/spokes/storage.py:661
-msgid "rescan devices"
-msgstr "Geräte erneut einlesen"
-
-#: pyanaconda/ui/tui/spokes/storage.py:733
-msgid ""
-"Warning: This will revert all changes done so far.\n"
-"Do you want to proceed?\n"
-msgstr ""
-"Warnung: Dies wird alle getroffenen Einstellungen zurücksetzen.\n"
-"Möchten Sie fortfahren?\n"
-
-#: pyanaconda/ui/tui/spokes/storage.py:742
-msgid "Scanning disks. This may take a moment..."
-msgstr "Festplatten werden erkannt. Dies kann eine Weile dauern..."
-
-#: pyanaconda/ui/tui/spokes/storage.py:756
-#, python-format
-msgid "Configure device: %s"
-msgstr "Gerät %s konfigurieren"
-
-#: pyanaconda/ui/tui/spokes/storage.py:776
-msgid "Choose from above to assign mount point and/or set format."
-msgstr ""
-"Wählen Sie von oben, um den Einhängepunkt und/oder das Format festzulegen."
-
-#: pyanaconda/ui/tui/spokes/storage.py:792
-#: pyanaconda/ui/gui/spokes/lib/summary.glade:177
-msgid "Mount point"
-msgstr "Einhängepunkt"
-
-#: pyanaconda/ui/tui/spokes/storage.py:799
-#: pyanaconda/ui/tui/spokes/storage.py:804
-#: pyanaconda/ui/tui/spokes/storage.py:836
-msgid "none"
-msgstr "keinen"
-
-#: pyanaconda/ui/tui/spokes/storage.py:822
-msgid "Invalid mount point given"
-msgstr "Ungültiger Einhängepunkt gewählt"
-
-#: pyanaconda/ui/tui/spokes/storage.py:835
-msgid "Format"
-msgstr "Format"
-
-#: pyanaconda/ui/tui/spokes/storage.py:845
-msgid "Invalid or unsupported format given"
-msgstr "Ungültiges oder nicht unterstütztes Format gewählt"
-
-#: pyanaconda/ui/tui/spokes/storage.py:847
-#, python-format
-msgid "Supported formats: %s"
-msgstr "Unterstützte Formate: %s"
-
-#: pyanaconda/ui/tui/spokes/storage.py:864
-msgid "Reformat"
-msgstr "Neu formatieren"
-
 #: pyanaconda/ui/tui/spokes/time_spoke.py:48
 msgid "status: working"
 msgstr "Status: läuft"
@@ -3915,6 +3748,178 @@ msgstr ""
 "Ungültiger Benutzername: %(name)s.\n"
 "%(error_message)s"
 
+#: pyanaconda/ui/tui/spokes/storage.py:61
+msgid "Use All Space"
+msgstr "Gesamten Speicherplatz benutzen"
+
+#: pyanaconda/ui/tui/spokes/storage.py:62
+msgid "Replace Existing Linux system(s)"
+msgstr "Ersetze bestehende(s) Linux-System(e)"
+
+#: pyanaconda/ui/tui/spokes/storage.py:63
+msgid "Use Free Space"
+msgstr "Freien Speicherplatz benutzen"
+
+#: pyanaconda/ui/tui/spokes/storage.py:81
+msgid "Installation Destination"
+msgstr "Installationsziel"
+
+#: pyanaconda/ui/tui/spokes/storage.py:206
+msgid "Select all"
+msgstr "Alles auswählen"
+
+#: pyanaconda/ui/tui/spokes/storage.py:315
+msgid ""
+"The following unformatted or LDL DASDs have been detected on your system. "
+"You can choose to format them now with dasdfmt or cancel to leave them "
+"unformatted. Unformatted DASDs cannot be used during installation.\n"
+"\n"
+msgstr ""
+"Die nachfolgenden unformatierten oder LDL-DASDs wurden auf Ihrem System "
+"gefunden. Sie können diese mit »dasdfmt« formatieren oder unformatiert "
+"belassen. Nicht formatierte DASDs können bei der Installation nicht "
+"verwendet werden.\n"
+"\n"
+
+#: pyanaconda/ui/tui/spokes/storage.py:322
+msgid ""
+"Warning: All storage changes made using the installer will be lost when you "
+"choose to format.\n"
+"\n"
+"Proceed to run dasdfmt?\n"
+msgstr ""
+"Warnung: Alle Änderungen am Speicherplatz, die Sie mithilfe des "
+"Installationsprogramms vorgenommen haben, gehen verloren, wenn Sie "
+"formatieren.\n"
+"\n"
+"Fortfahren mit dem Ausführen von dasdfmt?\n"
+
+#: pyanaconda/ui/tui/spokes/storage.py:331
+msgid "This may take a moment."
+msgstr "Der Vorgang wird einige Zeit beanspruchen."
+
+#: pyanaconda/ui/tui/spokes/storage.py:347
+msgid "Passphrase"
+msgstr "Passphrase"
+
+#: pyanaconda/ui/tui/spokes/storage.py:348
+msgid ""
+"Please provide a default LUKS passphrase for all devices you want to "
+"encrypt. You will have to type it twice."
+msgstr ""
+"Bitte geben Sie eine Standard-LUKS-Passphrase für alle Geräte an, die Sie "
+"verschlüsseln möchten. Sie müssen es zweimal eingeben."
+
+#: pyanaconda/ui/tui/spokes/storage.py:426
+msgid "Partitioning Options"
+msgstr "Partitionierungsoptionen"
+
+#: pyanaconda/ui/tui/spokes/storage.py:466
+msgid "Manually assign mount points"
+msgstr "Einhängepunkte manuell zuweisen"
+
+#: pyanaconda/ui/tui/spokes/storage.py:473
+msgid ""
+"Installation requires partitioning of your hard drive. Select what space to "
+"use for the install target or manually assign mount points."
+msgstr ""
+"Für die Installation muss Ihre Festplatte partitioniert werden. Wählen Sie "
+"den Speicherplatz aus, der für das Installationsziel verwendet werden soll "
+"oder fügen Sie manuell Einhängepunkte hinzu."
+
+#: pyanaconda/ui/tui/spokes/storage.py:518
+msgid "Reverting previous configuration. This may take a moment..."
+msgstr ""
+"Einstellungen werden zurückgenommen. Dies wird etwas Zeit beanspruchen..."
+
+#: pyanaconda/ui/tui/spokes/storage.py:550
+msgid "Partition Scheme Options"
+msgstr "Optionen zum Partitionsschema"
+
+#: pyanaconda/ui/tui/spokes/storage.py:586
+msgid "Select a partition scheme configuration."
+msgstr "Wählen Sie eine Partitionsschema-Konfiguration."
+
+#: pyanaconda/ui/tui/spokes/storage.py:618
+msgid "Assign mount points"
+msgstr "Einhängepunkte zuweisen"
+
+#: pyanaconda/ui/tui/spokes/storage.py:638
+msgid ""
+"Choose device from above to assign mount point and set format.\n"
+"Formats marked with * are new formats meaning ALL DATA on the original "
+"format WILL BE LOST!"
+msgstr ""
+"Wählen Sie das Gerät von oben, um den Einhängepunkt zuzuweisen und das "
+"Format festzulegen.\n"
+"Mit * markierte Formate sind neue Formate, das heißt, dass ALLE DATEN im "
+"Originalformat VERLOREN GEHEN!"
+
+#. TRANSLATORS: 's' to rescan devices
+#: pyanaconda/ui/tui/spokes/storage.py:650
+#: pyanaconda/ui/tui/spokes/storage.py:660
+msgctxt "TUI|Spoke Navigation|Partitioning"
+msgid "s"
+msgstr "s"
+
+#: pyanaconda/ui/tui/spokes/storage.py:650
+msgid "rescan devices"
+msgstr "Geräte erneut einlesen"
+
+#: pyanaconda/ui/tui/spokes/storage.py:722
+msgid ""
+"Warning: This will revert all changes done so far.\n"
+"Do you want to proceed?\n"
+msgstr ""
+"Warnung: Dies wird alle getroffenen Einstellungen zurücksetzen.\n"
+"Möchten Sie fortfahren?\n"
+
+#: pyanaconda/ui/tui/spokes/storage.py:731
+msgid "Scanning disks. This may take a moment..."
+msgstr "Festplatten werden erkannt. Dies kann eine Weile dauern..."
+
+#: pyanaconda/ui/tui/spokes/storage.py:745
+#, python-format
+msgid "Configure device: %s"
+msgstr "Gerät %s konfigurieren"
+
+#: pyanaconda/ui/tui/spokes/storage.py:765
+msgid "Choose from above to assign mount point and/or set format."
+msgstr ""
+"Wählen Sie von oben, um den Einhängepunkt und/oder das Format festzulegen."
+
+#: pyanaconda/ui/tui/spokes/storage.py:781
+#: pyanaconda/ui/gui/spokes/lib/summary.glade:177
+msgid "Mount point"
+msgstr "Einhängepunkt"
+
+#: pyanaconda/ui/tui/spokes/storage.py:788
+#: pyanaconda/ui/tui/spokes/storage.py:793
+#: pyanaconda/ui/tui/spokes/storage.py:825
+msgid "none"
+msgstr "keinen"
+
+#: pyanaconda/ui/tui/spokes/storage.py:811
+msgid "Invalid mount point given"
+msgstr "Ungültiger Einhängepunkt gewählt"
+
+#: pyanaconda/ui/tui/spokes/storage.py:824
+msgid "Format"
+msgstr "Format"
+
+#: pyanaconda/ui/tui/spokes/storage.py:834
+msgid "Invalid or unsupported format given"
+msgstr "Ungültiges oder nicht unterstütztes Format gewählt"
+
+#: pyanaconda/ui/tui/spokes/storage.py:836
+#, python-format
+msgid "Supported formats: %s"
+msgstr "Unterstützte Formate: %s"
+
+#: pyanaconda/ui/tui/spokes/storage.py:853
+msgid "Reformat"
+msgstr "Neu formatieren"
+
 #: pyanaconda/ui/tui/tuiobject.py:144
 #, python-format
 msgid "Enter a new value for '%(title)s' and press %(enter)s"
@@ -4075,202 +4080,6 @@ msgstr ""
 "X konnte auf Ihrer Maschine nicht gestartet werden. Soll VNC ausgeführt "
 "werden, um von einem anderen Rechner aus mit der graphischen Installation "
 "fortzufahren oder soll die Installation im Text-Modus fortgesetzt werden?"
-
-#: pyanaconda/errors.py:112
-msgid "An error occurred while activating your storage configuration."
-msgstr ""
-"Beim Aktivieren Ihrer Speicherkonfiguration ist ein Fehler aufgetreten."
-
-#: pyanaconda/errors.py:119
-msgid ""
-"There is a problem with your existing storage configuration or your initial "
-"settings, for example a kickstart file. You must resolve this matter before "
-"the installation can proceed. There is a shell available for use which you "
-"can access by pressing ctrl-alt-f1 and then ctrl-b 2.\n"
-"\n"
-"Once you have resolved the issue you can retry the storage scan. If you do "
-"not fix it you will have to exit the installer."
-msgstr ""
-"Es gibt ein Problem mit Ihrer vorhandenen Speicherkonfiguration oder Ihren "
-"Anfangseinstellungen, z. B. einer Kickstart-Datei. Sie müssen dieses Problem "
-"beheben, bevor die Installation fortgesetzt werden kann. Es steht eine Shell "
-"zur Verfügung, die Sie durch Drücken von Strg-Alt-F1 und dann Strg-b 2 "
-"aufrufen können.\n"
-"\n"
-"Sobald Sie das Problem behoben haben, können Sie die Speicherprüfung erneut "
-"durchführen. Wenn Sie das Problem nicht beheben, müssen Sie das "
-"Installationsprogramm beenden."
-
-#: pyanaconda/errors.py:128
-msgctxt "GUI|Storage Detailed Error Dialog"
-msgid "_Exit Installer"
-msgstr "Installer _beenden"
-
-#: pyanaconda/errors.py:129
-msgctxt "GUI|Storage Detailed Error Dialog"
-msgid "_Retry"
-msgstr "_Erneut konfigurieren"
-
-#: pyanaconda/errors.py:136
-#, python-format
-msgid ""
-"The ISO image %s has a size which is not a multiple of 2048 bytes.  This may "
-"mean it was corrupted on transfer to this computer.\n"
-"\n"
-"It is recommended that you exit and abort your installation, but you can "
-"choose to continue if you think this is in error. Would you like to continue "
-"using this image?"
-msgstr ""
-"Das ISO-Abbild %s besitzt eine Größe, die kein Vielfaches von 2048 Bytes "
-"ist. Dies kann bedeuten, dass es beim Übertragen auf diesen Rechner "
-"beschädigt wurde.\n"
-"\n"
-"Es wird empfohlen, dass Sie Ihre Installation abbrechen. Sie können jedoch "
-"auch fortfahren, wenn Sie dies für einen Fehler halten. Möchten Sie mit "
-"diesem Abbild fortfahren?"
-
-#: pyanaconda/errors.py:150
-msgid ""
-"The installer has tried to mount the installation image, but cannot find it "
-"on the hard drive.\n"
-"\n"
-"Should I try again to locate the image?"
-msgstr ""
-"Der Installer hat versucht, das Installations-Abbild einzuhängen, aber es "
-"wurde auf der Festplatte nicht gefunden.\n"
-"\n"
-"Soll erneut versucht werden, das Abbild zu finden?"
-
-#: pyanaconda/errors.py:161
-#, python-format
-msgid ""
-"The group '%s' is required for this installation. This group does not exist. "
-"This is a fatal error and installation will be aborted."
-msgstr ""
-"Die Gruppe '%s' wird für die Installation benötigt. Diese Gruppe existiert "
-"nicht. Hierbei handelt es sich um einen schwerwiegenden Fehler und die "
-"Installation wird abgebrochen."
-
-#: pyanaconda/errors.py:167
-#, python-format
-msgid ""
-"You have specified that the group '%s' should be installed.  This group does "
-"not exist.  Would you like to ignore this group and continue with "
-"installation?"
-msgstr ""
-"Sie haben angegeben, dass die Gruppe »%s« installiert werden soll. Diese "
-"Gruppe existiert nicht. Möchten Sie diese Gruppe überspringen und mit der "
-"Installation fortfahren?"
-
-#: pyanaconda/errors.py:172
-#, python-format
-msgid ""
-"You have specified that the group '%s' should be excluded from "
-"installation.  This group does not exist.  Would you like to ignore this "
-"group and continue with installation?"
-msgstr ""
-"Sie haben angegeben, dass die Gruppe »%s« von der Installation "
-"ausgeschlossen werden soll. Diese Gruppe existiert nicht. Möchten Sie diese "
-"Gruppe überspringen und mit der Installation fortfahren?"
-
-#: pyanaconda/errors.py:193
-msgid ""
-"Some packages, groups or modules are broken, the installation will be "
-"aborted."
-msgstr ""
-"Einige Pakete, Gruppen oder Module sind defekt, die Installation wird "
-"abgebrochen."
-
-#: pyanaconda/errors.py:199
-msgid "Would you like to ignore this and continue with installation?"
-msgstr "Möchten Sie dies ignorieren und mit der Installation fortfahren?"
-
-#: pyanaconda/errors.py:206
-#, python-format
-msgid ""
-"Stream was not specified for a module without a default stream. This is a "
-"fatal error and installation will be aborted. The details of this error "
-"are:\n"
-"\n"
-"%(exception)s"
-msgstr ""
-"Stream wurde für ein Modul ohne Standardstream nicht angegeben. Dies ist ein "
-"schwerwiegender Fehler und die Installation wird abgebrochen. Die Details "
-"dieses Fehlers sind:\n"
-"\n"
-"%(exception)s"
-
-#: pyanaconda/errors.py:214
-#, python-format
-msgid ""
-"Multiple streams have been specified for a single module. This is a fatal "
-"error and installation will be aborted. The details of this error are:\n"
-"\n"
-"%(exception)s"
-msgstr ""
-"Mehrere Streams wurden für ein einzelnes Modul angegeben. Dies ist ein "
-"schwerwiegender Fehler und die Installation wird abgebrochen. Die Details "
-"dieses Fehlers sind:\n"
-"\n"
-"%(exception)s"
-
-#: pyanaconda/errors.py:222
-#, python-format
-msgid ""
-"There was an error running the kickstart script at line %(lineno)s.  This is "
-"a fatal error and installation will be aborted.  The details of this error "
-"are:\n"
-"\n"
-"%(details)s"
-msgstr ""
-"Beim Ausführen des Kickstart-Skripts trat ein Fehler in Zeile %(lineno)s "
-"auf. Hierbei handelt es sich um einen schwerwiegenden Fehler und die "
-"Installation wird abgebrochen. Sehen Sie nachfolgend die Details dieses "
-"Fehlers:\n"
-"\n"
-"%(details)s"
-
-#: pyanaconda/errors.py:230
-msgid ""
-"The following error occurred while installing.  This is a fatal error and "
-"installation will be aborted."
-msgstr ""
-"Der folgende Fehler trat während der Installation auf. Hierbei handelt es "
-"sich um einen schwerwiegenden Fehler und die Installation wird abgebrochen."
-
-#: pyanaconda/errors.py:238
-msgid ""
-"The following software marked for installation has errors.\n"
-"This is likely caused by an error with your installation source."
-msgstr ""
-"Die folgende zur Installation markierte Software weist Fehler auf.\n"
-"Dies wird wahrscheinlich durch einen Fehler mit Ihrer Installationsquelle "
-"verursacht."
-
-#: pyanaconda/errors.py:246
-msgid ""
-"The following error occurred while installing the boot loader. The system "
-"will not be bootable. Would you like to ignore this and continue with "
-"installation?"
-msgstr ""
-"Beim Installieren des Bootloaders ist der nachfolgende Fehler aufgetreten. "
-"Das System wird nicht startfähig sein. Möchten Sie dies ignorieren und mit "
-"der Installation fortfahren?"
-
-#: pyanaconda/errors.py:258
-#, python-format
-msgid "Unable to encrypt password: unsupported algorithm %s"
-msgstr ""
-"Passwort konnte nicht verschlüsselt werden: Nicht unterstützter Algorithmus "
-"%s"
-
-#: pyanaconda/errors.py:264
-msgid ""
-"An error occurred during Red Hat Insights configuration. Would you like to "
-"ignore this and continue with installation?"
-msgstr ""
-"Bei der Konfiguration von Red Hat Insights ist ein Fehler aufgetreten. "
-"Möchten Sie dies ignorieren und mit der Installation fortfahren?"
 
 #: pyanaconda/exception.py:109
 #, python-format
@@ -4718,6 +4527,214 @@ msgid ""
 msgstr ""
 "VNC-Passwort muss sechs bis acht Zeichen lang sein.\n"
 "Bitte geben Sie ein neues ein, oder lassen Sie es frei für kein Passwort."
+
+#: pyanaconda/errors.py:112
+msgid "An error occurred while activating your storage configuration."
+msgstr ""
+"Beim Aktivieren Ihrer Speicherkonfiguration ist ein Fehler aufgetreten."
+
+#: pyanaconda/errors.py:119
+msgid ""
+"There is a problem with your existing storage configuration or your initial "
+"settings, for example a kickstart file. You must resolve this matter before "
+"the installation can proceed. There is a shell available for use which you "
+"can access by pressing ctrl-alt-f1 and then ctrl-b 2.\n"
+"\n"
+"Once you have resolved the issue you can retry the storage scan. If you do "
+"not fix it you will have to exit the installer."
+msgstr ""
+"Es gibt ein Problem mit Ihrer vorhandenen Speicherkonfiguration oder Ihren "
+"Anfangseinstellungen, z. B. einer Kickstart-Datei. Sie müssen dieses Problem "
+"beheben, bevor die Installation fortgesetzt werden kann. Es steht eine Shell "
+"zur Verfügung, die Sie durch Drücken von Strg-Alt-F1 und dann Strg-b 2 "
+"aufrufen können.\n"
+"\n"
+"Sobald Sie das Problem behoben haben, können Sie die Speicherprüfung erneut "
+"durchführen. Wenn Sie das Problem nicht beheben, müssen Sie das "
+"Installationsprogramm beenden."
+
+#: pyanaconda/errors.py:128
+msgctxt "GUI|Storage Detailed Error Dialog"
+msgid "_Exit Installer"
+msgstr "Installer _beenden"
+
+#: pyanaconda/errors.py:129
+msgctxt "GUI|Storage Detailed Error Dialog"
+msgid "_Retry"
+msgstr "_Erneut konfigurieren"
+
+#: pyanaconda/errors.py:136
+#, python-format
+msgid ""
+"The ISO image %s has a size which is not a multiple of 2048 bytes.  This may "
+"mean it was corrupted on transfer to this computer.\n"
+"\n"
+"It is recommended that you exit and abort your installation, but you can "
+"choose to continue if you think this is in error. Would you like to continue "
+"using this image?"
+msgstr ""
+"Das ISO-Abbild %s besitzt eine Größe, die kein Vielfaches von 2048 Bytes "
+"ist. Dies kann bedeuten, dass es beim Übertragen auf diesen Rechner "
+"beschädigt wurde.\n"
+"\n"
+"Es wird empfohlen, dass Sie Ihre Installation abbrechen. Sie können jedoch "
+"auch fortfahren, wenn Sie dies für einen Fehler halten. Möchten Sie mit "
+"diesem Abbild fortfahren?"
+
+#: pyanaconda/errors.py:150
+msgid ""
+"The installer has tried to mount the installation image, but cannot find it "
+"on the hard drive.\n"
+"\n"
+"Should I try again to locate the image?"
+msgstr ""
+"Der Installer hat versucht, das Installations-Abbild einzuhängen, aber es "
+"wurde auf der Festplatte nicht gefunden.\n"
+"\n"
+"Soll erneut versucht werden, das Abbild zu finden?"
+
+#: pyanaconda/errors.py:161
+#, python-format
+msgid ""
+"The group '%s' is required for this installation. This group does not exist. "
+"This is a fatal error and installation will be aborted."
+msgstr ""
+"Die Gruppe '%s' wird für die Installation benötigt. Diese Gruppe existiert "
+"nicht. Hierbei handelt es sich um einen schwerwiegenden Fehler und die "
+"Installation wird abgebrochen."
+
+#: pyanaconda/errors.py:167
+#, python-format
+msgid ""
+"You have specified that the group '%s' should be installed.  This group does "
+"not exist.  Would you like to ignore this group and continue with "
+"installation?"
+msgstr ""
+"Sie haben angegeben, dass die Gruppe »%s« installiert werden soll. Diese "
+"Gruppe existiert nicht. Möchten Sie diese Gruppe überspringen und mit der "
+"Installation fortfahren?"
+
+#: pyanaconda/errors.py:172
+#, python-format
+msgid ""
+"You have specified that the group '%s' should be excluded from "
+"installation.  This group does not exist.  Would you like to ignore this "
+"group and continue with installation?"
+msgstr ""
+"Sie haben angegeben, dass die Gruppe »%s« von der Installation "
+"ausgeschlossen werden soll. Diese Gruppe existiert nicht. Möchten Sie diese "
+"Gruppe überspringen und mit der Installation fortfahren?"
+
+#: pyanaconda/errors.py:193
+msgid ""
+"Some packages, groups or modules are broken, the installation will be "
+"aborted."
+msgstr ""
+"Einige Pakete, Gruppen oder Module sind defekt, die Installation wird "
+"abgebrochen."
+
+#: pyanaconda/errors.py:199
+msgid "Would you like to ignore this and continue with installation?"
+msgstr "Möchten Sie dies ignorieren und mit der Installation fortfahren?"
+
+#: pyanaconda/errors.py:206
+#, python-format
+msgid ""
+"Stream was not specified for a module without a default stream. This is a "
+"fatal error and installation will be aborted. The details of this error "
+"are:\n"
+"\n"
+"%(exception)s"
+msgstr ""
+"Stream wurde für ein Modul ohne Standardstream nicht angegeben. Dies ist ein "
+"schwerwiegender Fehler und die Installation wird abgebrochen. Die Details "
+"dieses Fehlers sind:\n"
+"\n"
+"%(exception)s"
+
+#: pyanaconda/errors.py:214
+#, python-format
+msgid ""
+"Multiple streams have been specified for a single module. This is a fatal "
+"error and installation will be aborted. The details of this error are:\n"
+"\n"
+"%(exception)s"
+msgstr ""
+"Mehrere Streams wurden für ein einzelnes Modul angegeben. Dies ist ein "
+"schwerwiegender Fehler und die Installation wird abgebrochen. Die Details "
+"dieses Fehlers sind:\n"
+"\n"
+"%(exception)s"
+
+#: pyanaconda/errors.py:222
+#, python-format
+msgid ""
+"There was an error running the kickstart script at line %(lineno)s.  This is "
+"a fatal error and installation will be aborted.  The details of this error "
+"are:\n"
+"\n"
+"%(details)s"
+msgstr ""
+"Beim Ausführen des Kickstart-Skripts trat ein Fehler in Zeile %(lineno)s "
+"auf. Hierbei handelt es sich um einen schwerwiegenden Fehler und die "
+"Installation wird abgebrochen. Sehen Sie nachfolgend die Details dieses "
+"Fehlers:\n"
+"\n"
+"%(details)s"
+
+#: pyanaconda/errors.py:230
+msgid ""
+"The following error occurred while installing.  This is a fatal error and "
+"installation will be aborted."
+msgstr ""
+"Der folgende Fehler trat während der Installation auf. Hierbei handelt es "
+"sich um einen schwerwiegenden Fehler und die Installation wird abgebrochen."
+
+#: pyanaconda/errors.py:238
+msgid ""
+"The following software marked for installation has errors.\n"
+"This is likely caused by an error with your installation source."
+msgstr ""
+"Die folgende zur Installation markierte Software weist Fehler auf.\n"
+"Dies wird wahrscheinlich durch einen Fehler mit Ihrer Installationsquelle "
+"verursacht."
+
+#: pyanaconda/errors.py:246
+msgid ""
+"The following error occurred while installing the boot loader. The system "
+"will not be bootable. Would you like to ignore this and continue with "
+"installation?"
+msgstr ""
+"Beim Installieren des Bootloaders ist der nachfolgende Fehler aufgetreten. "
+"Das System wird nicht startfähig sein. Möchten Sie dies ignorieren und mit "
+"der Installation fortfahren?"
+
+#: pyanaconda/errors.py:258
+#, python-format
+msgid "Unable to encrypt password: unsupported algorithm %s"
+msgstr ""
+"Passwort konnte nicht verschlüsselt werden: Nicht unterstützter Algorithmus "
+"%s"
+
+#: pyanaconda/errors.py:264
+msgid ""
+"An error occurred during Red Hat Insights configuration. Would you like to "
+"ignore this and continue with installation?"
+msgstr ""
+"Bei der Konfiguration von Red Hat Insights ist ein Fehler aufgetreten. "
+"Möchten Sie dies ignorieren und mit der Installation fortfahren?"
+
+#: pyanaconda/errors.py:275
+msgid ""
+"An error occurred during registration attempt triggered by the rhsm "
+"kickstart command. This could have happened due to incorrect rhsm command "
+"arguments or subscription infrastructure issues. Would you like to ignore "
+"this and continue with installation?"
+msgstr ""
+
+#: pyanaconda/errors.py:281
+msgid "Error detail: "
+msgstr ""
 
 #: anaconda.py:378
 msgid "Unable to create PID file"
