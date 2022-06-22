@@ -19,13 +19,13 @@
 # feonsu <feonsu@gmail.com>, 2017. #zanata
 # feonsu <feonsu@gmail.com>, 2018. #zanata
 # feonsu <feonsu@gmail.com>, 2019. #zanata
-# Ondrej Sulek <feonsu@gmail.com>, 2020, 2021.
+# Ondrej Sulek <feonsu@gmail.com>, 2020, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2022-06-16 10:08+0200\n"
-"PO-Revision-Date: 2021-09-29 10:05+0000\n"
+"PO-Revision-Date: 2022-06-24 16:18+0000\n"
 "Last-Translator: Ondrej Sulek <feonsu@gmail.com>\n"
 "Language-Team: Slovak <https://translate.fedoraproject.org/projects/anaconda/"
 "rhel-8/sk/>\n"
@@ -34,7 +34,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.8\n"
+"X-Generator: Weblate 4.13\n"
 
 #: pyanaconda/core/kickstart/addon.py:128
 msgid "Missing name of the %addon section."
@@ -210,7 +210,7 @@ msgstr "Heslo je nastavené."
 #. TRANSLATORS: Password error message from libreport library needs to be joined with "You will have to press <b>Done</b> twice to confirm it." add a missing '.'
 #: pyanaconda/core/constants.py:240
 msgid "{}. {}"
-msgstr ""
+msgstr "{}. {}"
 
 #: pyanaconda/core/constants.py:244
 msgid "Empty"
@@ -1281,6 +1281,24 @@ msgid ""
 "* Some drives support re-configuration of sector sizes, for example by "
 "running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 msgstr ""
+"Riešenia pre manuálne inštalácie:\n"
+"* V priebehu manuálnej inštalácie (v grafickom alebo textovom režime) "
+"vyberte iba disky s rovnakou veľkosťou sektorov.\n"
+"* Ak sú pre inštaláciu vybrané disky z nekonzistentnou veľkosťou sektorov, "
+"obmedzte každú z vytvorených skupín zväzkov LVM (VG) tak, aby používala iba "
+"fyzické zväzky (PV) s rovnakou veľkosťou sektorov. Toto je možné vykonať iba "
+"v grafickom režime vo vlastnom rozdelení diskov.\n"
+"\n"
+"Riešenia pre kickstart inštaláciu:\n"
+"* Obmedzte disky použité pre rozdelenie diskov zadaním 'ignoredisk --"
+"drives=..' alebo 'ignoredisk --only-use=..'.\n"
+"* Zadajte disky, ktoré majú byť použité pre každý z vytváraných fyzických "
+"zväzkov LVM (PV): 'partition pv.1 --ondisk=..'.\n"
+"\n"
+"Všeobecné riešenia:\n"
+"* Namiesto LVM je možné použiť obyčajnú schému rozdelenia diskov.\n"
+"* Niektoré disky podporujú opätovné nastavenie veľkosti sektorov, napríklad "
+"spustením 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 
 #: pyanaconda/modules/storage/installation.py:88
 msgid "An error occurred while resizing the device {}: {}"
@@ -4140,7 +4158,7 @@ msgstr ""
 
 #: pyanaconda/errors.py:281
 msgid "Error detail: "
-msgstr ""
+msgstr "Podrobnosti o chybe: "
 
 #: pyanaconda/exception.py:109
 #, python-format
