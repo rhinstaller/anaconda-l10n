@@ -25,7 +25,7 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2022-06-22 01:51+0000\n"
-"PO-Revision-Date: 2022-03-18 14:16+0000\n"
+"PO-Revision-Date: 2022-06-24 16:18+0000\n"
 "Last-Translator: Ondrej Sulek <feonsu@gmail.com>\n"
 "Language-Team: Slovak <https://translate.fedoraproject.org/projects/anaconda/"
 "rhel-9/sk/>\n"
@@ -34,7 +34,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.11.2\n"
+"X-Generator: Weblate 4.13\n"
 
 #: pyanaconda/startup_utils.py:81
 #, python-format
@@ -465,7 +465,7 @@ msgstr ""
 
 #: pyanaconda/errors.py:256
 msgid "Error detail: "
-msgstr ""
+msgstr "Podrobnosti o chybe: "
 
 #: pyanaconda/ntp.py:49
 msgid "status: working"
@@ -794,7 +794,7 @@ msgstr "Heslo je nastavené."
 #. TRANSLATORS: Password error message from libreport library needs to be joined with "You will have to press <b>Done</b> twice to confirm it." add a missing '.'
 #: pyanaconda/core/constants.py:235
 msgid "{}. {}"
-msgstr ""
+msgstr "{}. {}"
 
 #: pyanaconda/core/constants.py:239
 msgid "Empty"
@@ -2002,6 +2002,24 @@ msgid ""
 "* Some drives support re-configuration of sector sizes, for example by "
 "running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 msgstr ""
+"Riešenia pre manuálne inštalácie:\n"
+"* V priebehu manuálnej inštalácie (v grafickom alebo textovom režime) "
+"vyberte iba disky s rovnakou veľkosťou sektorov.\n"
+"* Ak sú pre inštaláciu vybrané disky z nekonzistentnou veľkosťou sektorov, "
+"obmedzte každú z vytvorených skupín zväzkov LVM (VG) tak, aby používala iba "
+"fyzické zväzky (PV) s rovnakou veľkosťou sektorov. Toto je možné vykonať iba "
+"v grafickom režime vo vlastnom rozdelení diskov.\n"
+"\n"
+"Riešenia pre kickstart inštaláciu:\n"
+"* Obmedzte disky použité pre rozdelenie diskov zadaním 'ignoredisk --"
+"drives=..' alebo 'ignoredisk --only-use=..'.\n"
+"* Zadajte disky, ktoré majú byť použité pre každý z vytváraných fyzických "
+"zväzkov LVM (PV): 'partition pv.1 --ondisk=..'.\n"
+"\n"
+"Všeobecné riešenia:\n"
+"* Namiesto LVM je možné použiť obyčajnú schému rozdelenia diskov.\n"
+"* Niektoré disky podporujú opätovné nastavenie veľkosti sektorov, napríklad "
+"spustením 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 
 #: pyanaconda/modules/storage/kickstart.py:65
 msgid "File system type \"{}\" given in autopart command is invalid."
