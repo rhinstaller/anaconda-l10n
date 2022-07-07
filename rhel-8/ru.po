@@ -50,7 +50,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2022-06-16 10:08+0200\n"
+"POT-Creation-Date: 2022-06-28 11:50+0200\n"
 "PO-Revision-Date: 2022-06-22 11:18+0000\n"
 "Last-Translator: Igor Gorbounov <igor.gorbounov@gmail.com>\n"
 "Language-Team: Russian <https://translate.fedoraproject.org/projects/"
@@ -451,117 +451,6 @@ msgstr "Сервер NFS {}"
 msgid "Local repositories"
 msgstr "Локальные репозитории"
 
-#: pyanaconda/modules/storage/bootloader/execution.py:185
-msgid "No match found for given boot drive \"{}\"."
-msgstr "Не найдено соответствия для загрузочного диска «{}»."
-
-#: pyanaconda/modules/storage/bootloader/execution.py:189
-msgid "More than one match found for given boot drive \"{}\"."
-msgstr "Для загрузочного диска «{}» найдено несколько соответствий."
-
-#: pyanaconda/modules/storage/bootloader/execution.py:193
-msgid "Requested boot drive \"{}\" doesn't exist or cannot be used."
-msgstr "Загрузочный диск «{}» не существует или его нельзя использовать."
-
-#: pyanaconda/modules/storage/bootloader/base.py:162
-msgid "/boot file system"
-msgstr "Файловая система /boot"
-
-#: pyanaconda/modules/storage/bootloader/base.py:311
-#, python-format
-msgid ""
-"RAID sets that contain '%(desc)s' must have one of the following raid "
-"levels: %(raid_level)s."
-msgstr ""
-"Массивы RAID, в которые входит «%(desc)s», должны иметь один из следующих "
-"уровней raid: %(raid_level)s."
-
-#: pyanaconda/modules/storage/bootloader/base.py:319
-#, python-format
-msgid ""
-"RAID sets that contain '%(desc)s' must have one of the following metadata "
-"versions: %(metadata_versions)s."
-msgstr ""
-"Массивы RAID, в которые входит «%(desc)s», могут иметь метаданные следующих "
-"версий: %(metadata_versions)s."
-
-#: pyanaconda/modules/storage/bootloader/base.py:327
-#, python-format
-msgid ""
-"RAID sets that contain '%(desc)s' must have one of the following device "
-"types: %(types)s."
-msgstr ""
-"Массивы RAID, в которые входит «%(desc)s», должны иметь устройства одного из "
-"следующих типов: %(types)s."
-
-#: pyanaconda/modules/storage/bootloader/base.py:343
-#, python-format
-msgid "%(name)s must have one of the following disklabel types: %(types)s."
-msgstr "%(name)s может иметь следующий тип метки диска: %(types)s."
-
-#: pyanaconda/modules/storage/bootloader/base.py:355
-#, python-format
-msgid "%(desc)s cannot be of type %(type)s."
-msgstr "Недопустимый тип %(desc)s: %(type)s."
-
-#: pyanaconda/modules/storage/bootloader/base.py:361
-#, python-format
-msgid "%(desc)s must be mounted on one of %(mountpoints)s."
-msgstr "%(desc)s должен быть смонтирован на одном из %(mountpoints)s."
-
-#: pyanaconda/modules/storage/bootloader/base.py:373
-#, python-format
-msgid "%(desc)s must be between %(min)d and %(max)d MB in size"
-msgstr "Размер %(desc)s должен быть между %(min)d и %(max)d МБ"
-
-#: pyanaconda/modules/storage/bootloader/base.py:379
-#, python-format
-msgid "%(desc)s must not be smaller than %(min)dMB."
-msgstr "%(desc)s не должен быть меньше %(min)d МБ."
-
-#: pyanaconda/modules/storage/bootloader/base.py:388
-#, python-format
-msgid "%(desc)s must not be larger than %(max)dMB."
-msgstr "%(desc)s не должен быть больше %(max)d МБ."
-
-#: pyanaconda/modules/storage/bootloader/base.py:406
-#, python-format
-msgid "%(desc)s must be within the first %(max_end)s of the disk."
-msgstr "%(desc)s должен быть в пределах первого %(max_end)s диска."
-
-#: pyanaconda/modules/storage/bootloader/base.py:416
-#, python-format
-msgid "%s must be on a primary partition."
-msgstr "%s должен быть на основном разделе."
-
-#: pyanaconda/modules/storage/bootloader/base.py:501
-msgid ""
-"Boot loader stage1 device cannot be on an iSCSI disk which is not configured "
-"in iBFT."
-msgstr ""
-"Устройство для загрузчика stage1 не может находиться на диске iSCSI, не "
-"настроенном в iBFT."
-
-#: pyanaconda/modules/storage/bootloader/base.py:558
-#: pyanaconda/modules/storage/bootloader/base.py:672
-#, python-format
-msgid "%s cannot be on an encrypted block device."
-msgstr "%s не может быть на зашифрованном блочном устройстве."
-
-#: pyanaconda/modules/storage/bootloader/base.py:624
-#, python-format
-msgid ""
-"%(bootloader_stage2_description)s cannot be on an iSCSI disk which is not "
-"configured in iBFT."
-msgstr ""
-"%(bootloader_stage2_description)s не может находиться на диске iSCSI, не "
-"настроенном в iBFT."
-
-#: pyanaconda/modules/storage/bootloader/base.py:631
-#, python-format
-msgid "%(desc)s cannot be of type %(type)s"
-msgstr "%(desc)s не может иметь тип %(type)s"
-
 #: pyanaconda/modules/storage/bootloader/bootloader.py:171
 msgid "GRUB2 does not support installation to a partition."
 msgstr "GRUB2 не поддерживает установку на раздел."
@@ -602,6 +491,117 @@ msgstr ""
 "многодисковом массиве, а устройство загрузчика первой стадии, %(stage1dev)s, "
 "не является частью этого массива. Загрузчик первой стадии будет установлен "
 "только на одиночный привод."
+
+#: pyanaconda/modules/storage/bootloader/base.py:166
+msgid "/boot file system"
+msgstr "Файловая система /boot"
+
+#: pyanaconda/modules/storage/bootloader/base.py:315
+#, python-format
+msgid ""
+"RAID sets that contain '%(desc)s' must have one of the following raid "
+"levels: %(raid_level)s."
+msgstr ""
+"Массивы RAID, в которые входит «%(desc)s», должны иметь один из следующих "
+"уровней raid: %(raid_level)s."
+
+#: pyanaconda/modules/storage/bootloader/base.py:323
+#, python-format
+msgid ""
+"RAID sets that contain '%(desc)s' must have one of the following metadata "
+"versions: %(metadata_versions)s."
+msgstr ""
+"Массивы RAID, в которые входит «%(desc)s», могут иметь метаданные следующих "
+"версий: %(metadata_versions)s."
+
+#: pyanaconda/modules/storage/bootloader/base.py:331
+#, python-format
+msgid ""
+"RAID sets that contain '%(desc)s' must have one of the following device "
+"types: %(types)s."
+msgstr ""
+"Массивы RAID, в которые входит «%(desc)s», должны иметь устройства одного из "
+"следующих типов: %(types)s."
+
+#: pyanaconda/modules/storage/bootloader/base.py:347
+#, python-format
+msgid "%(name)s must have one of the following disklabel types: %(types)s."
+msgstr "%(name)s может иметь следующий тип метки диска: %(types)s."
+
+#: pyanaconda/modules/storage/bootloader/base.py:359
+#, python-format
+msgid "%(desc)s cannot be of type %(type)s."
+msgstr "Недопустимый тип %(desc)s: %(type)s."
+
+#: pyanaconda/modules/storage/bootloader/base.py:365
+#, python-format
+msgid "%(desc)s must be mounted on one of %(mountpoints)s."
+msgstr "%(desc)s должен быть смонтирован на одном из %(mountpoints)s."
+
+#: pyanaconda/modules/storage/bootloader/base.py:377
+#, python-format
+msgid "%(desc)s must be between %(min)d and %(max)d MB in size"
+msgstr "Размер %(desc)s должен быть между %(min)d и %(max)d МБ"
+
+#: pyanaconda/modules/storage/bootloader/base.py:383
+#, python-format
+msgid "%(desc)s must not be smaller than %(min)dMB."
+msgstr "%(desc)s не должен быть меньше %(min)d МБ."
+
+#: pyanaconda/modules/storage/bootloader/base.py:392
+#, python-format
+msgid "%(desc)s must not be larger than %(max)dMB."
+msgstr "%(desc)s не должен быть больше %(max)d МБ."
+
+#: pyanaconda/modules/storage/bootloader/base.py:410
+#, python-format
+msgid "%(desc)s must be within the first %(max_end)s of the disk."
+msgstr "%(desc)s должен быть в пределах первого %(max_end)s диска."
+
+#: pyanaconda/modules/storage/bootloader/base.py:420
+#, python-format
+msgid "%s must be on a primary partition."
+msgstr "%s должен быть на основном разделе."
+
+#: pyanaconda/modules/storage/bootloader/base.py:504
+msgid ""
+"Boot loader stage1 device cannot be on an iSCSI disk which is not configured "
+"in iBFT."
+msgstr ""
+"Устройство для загрузчика stage1 не может находиться на диске iSCSI, не "
+"настроенном в iBFT."
+
+#: pyanaconda/modules/storage/bootloader/base.py:561
+#: pyanaconda/modules/storage/bootloader/base.py:674
+#, python-format
+msgid "%s cannot be on an encrypted block device."
+msgstr "%s не может быть на зашифрованном блочном устройстве."
+
+#: pyanaconda/modules/storage/bootloader/base.py:626
+#, python-format
+msgid ""
+"%(bootloader_stage2_description)s cannot be on an iSCSI disk which is not "
+"configured in iBFT."
+msgstr ""
+"%(bootloader_stage2_description)s не может находиться на диске iSCSI, не "
+"настроенном в iBFT."
+
+#: pyanaconda/modules/storage/bootloader/base.py:633
+#, python-format
+msgid "%(desc)s cannot be of type %(type)s"
+msgstr "%(desc)s не может иметь тип %(type)s"
+
+#: pyanaconda/modules/storage/bootloader/execution.py:187
+msgid "No match found for given boot drive \"{}\"."
+msgstr "Не найдено соответствия для загрузочного диска «{}»."
+
+#: pyanaconda/modules/storage/bootloader/execution.py:191
+msgid "More than one match found for given boot drive \"{}\"."
+msgstr "Для загрузочного диска «{}» найдено несколько соответствий."
+
+#: pyanaconda/modules/storage/bootloader/execution.py:195
+msgid "Requested boot drive \"{}\" doesn't exist or cannot be used."
+msgstr "Загрузочный диск «{}» не существует или его нельзя использовать."
 
 #: pyanaconda/modules/storage/checker/utils.py:54
 #, python-format
