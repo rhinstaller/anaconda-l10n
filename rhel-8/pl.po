@@ -30,7 +30,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2022-06-28 11:50+0200\n"
+"POT-Creation-Date: 2022-07-14 18:19+0200\n"
 "PO-Revision-Date: 2022-06-14 06:18+0000\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <https://translate.fedoraproject.org/projects/anaconda/"
@@ -50,18 +50,6 @@ msgstr "Brak nazwy sekcji %addon."
 #: pyanaconda/core/kickstart/addon.py:138
 msgid "Unknown name of the %addon section."
 msgstr "Nieznana nazwa sekcji %addon."
-
-#: pyanaconda/core/payload.py:131
-msgid "No host url"
-msgstr "Brak adresu URL komputera"
-
-#: pyanaconda/core/payload.py:152
-msgid "malformed URL, cannot parse it."
-msgstr "błędnie sformatowany adres URL, nie można go przetworzyć."
-
-#: pyanaconda/core/payload.py:168
-msgid "URL has no host component"
-msgstr "Adres URL nie ma części komputera"
 
 #: pyanaconda/core/constants.py:89
 msgid "Start VNC"
@@ -274,6 +262,18 @@ msgstr "Pobieranie metadanych grup…"
 msgid "Anaconda Installer"
 msgstr "Instalator Anaconda"
 
+#: pyanaconda/core/payload.py:131
+msgid "No host url"
+msgstr "Brak adresu URL komputera"
+
+#: pyanaconda/core/payload.py:152
+msgid "malformed URL, cannot parse it."
+msgstr "błędnie sformatowany adres URL, nie można go przetworzyć."
+
+#: pyanaconda/core/payload.py:168
+msgid "URL has no host component"
+msgstr "Adres URL nie ma części komputera"
+
 #: pyanaconda/core/storage.py:84
 msgid "Unsupported"
 msgstr "Nieobsługiwane"
@@ -433,47 +433,6 @@ msgstr "Serwer NFS {}"
 msgid "Local repositories"
 msgstr "Lokalne repozytoria"
 
-#: pyanaconda/modules/storage/bootloader/bootloader.py:171
-msgid "GRUB2 does not support installation to a partition."
-msgstr "GRUB2 nie obsługuje instalacji na partycji."
-
-#: pyanaconda/modules/storage/bootloader/bootloader.py:178
-msgid "GRUB2 encrypted password must be in grub.pbkdf2 format."
-msgstr "Zaszyfrowane hasło GRUB2 musi być w formacie „grub.pbkdf2”."
-
-#: pyanaconda/modules/storage/bootloader/grub2.py:487
-#, python-format
-msgid ""
-"%(deviceName)s may not have enough space for grub2 to embed core.img when "
-"using the %(fsType)s file system on %(deviceType)s"
-msgstr ""
-"%(deviceName)s może nie mieć wystarczającej ilości miejsca, aby GRUB2 mógł "
-"osadzić core.img podczas używania systemu plików %(fsType)s na %(deviceType)s"
-
-#: pyanaconda/modules/storage/bootloader/grub2.py:526
-#, python-format
-msgid ""
-"boot loader stage2 device %(stage2dev)s is on a multi-disk array, but boot "
-"loader stage1 device %(stage1dev)s is not. A drive failure in %(stage2dev)s "
-"could render the system unbootable."
-msgstr ""
-"urządzenie stage2 %(stage2dev)s programu startowego jest na macierzy "
-"wielodyskowej, ale urządzenie stage1 %(stage1dev)s programu startowego nie "
-"jest. Awaria napędu w %(stage2dev)s może spowodować niemożliwość "
-"uruchomienia systemu."
-
-#: pyanaconda/modules/storage/bootloader/grub2.py:533
-#, python-format
-msgid ""
-"boot loader stage2 device %(stage2dev)s is on a multi-disk array, but boot "
-"loader stage1 device %(stage1dev)s is not part of this array. The stage1 "
-"boot loader will only be installed to a single drive."
-msgstr ""
-"urządzenie stage2 %(stage2dev)s programu startowego jest na macierzy "
-"wielodyskowej, ale urządzenie stage1 %(stage1dev)s programu startowego nie "
-"jest częścią tej macierzy. Program startowy stage1 zostanie zainstalowany "
-"tylko na jednym napędzie."
-
 #: pyanaconda/modules/storage/bootloader/base.py:166
 msgid "/boot file system"
 msgstr "System plików /boot"
@@ -573,6 +532,14 @@ msgstr ""
 msgid "%(desc)s cannot be of type %(type)s"
 msgstr "%(desc)s nie może być typu %(type)s"
 
+#: pyanaconda/modules/storage/bootloader/bootloader.py:171
+msgid "GRUB2 does not support installation to a partition."
+msgstr "GRUB2 nie obsługuje instalacji na partycji."
+
+#: pyanaconda/modules/storage/bootloader/bootloader.py:178
+msgid "GRUB2 encrypted password must be in grub.pbkdf2 format."
+msgstr "Zaszyfrowane hasło GRUB2 musi być w formacie „grub.pbkdf2”."
+
 #: pyanaconda/modules/storage/bootloader/execution.py:187
 msgid "No match found for given boot drive \"{}\"."
 msgstr "Nie odnaleziono wyników dla podanego napędu startowego „{}”."
@@ -585,6 +552,39 @@ msgstr ""
 #: pyanaconda/modules/storage/bootloader/execution.py:195
 msgid "Requested boot drive \"{}\" doesn't exist or cannot be used."
 msgstr "Żądany napęd startowy „{}” nie istnieje lub nie może być używany."
+
+#: pyanaconda/modules/storage/bootloader/grub2.py:487
+#, python-format
+msgid ""
+"%(deviceName)s may not have enough space for grub2 to embed core.img when "
+"using the %(fsType)s file system on %(deviceType)s"
+msgstr ""
+"%(deviceName)s może nie mieć wystarczającej ilości miejsca, aby GRUB2 mógł "
+"osadzić core.img podczas używania systemu plików %(fsType)s na %(deviceType)s"
+
+#: pyanaconda/modules/storage/bootloader/grub2.py:526
+#, python-format
+msgid ""
+"boot loader stage2 device %(stage2dev)s is on a multi-disk array, but boot "
+"loader stage1 device %(stage1dev)s is not. A drive failure in %(stage2dev)s "
+"could render the system unbootable."
+msgstr ""
+"urządzenie stage2 %(stage2dev)s programu startowego jest na macierzy "
+"wielodyskowej, ale urządzenie stage1 %(stage1dev)s programu startowego nie "
+"jest. Awaria napędu w %(stage2dev)s może spowodować niemożliwość "
+"uruchomienia systemu."
+
+#: pyanaconda/modules/storage/bootloader/grub2.py:533
+#, python-format
+msgid ""
+"boot loader stage2 device %(stage2dev)s is on a multi-disk array, but boot "
+"loader stage1 device %(stage1dev)s is not part of this array. The stage1 "
+"boot loader will only be installed to a single drive."
+msgstr ""
+"urządzenie stage2 %(stage2dev)s programu startowego jest na macierzy "
+"wielodyskowej, ale urządzenie stage1 %(stage1dev)s programu startowego nie "
+"jest częścią tej macierzy. Program startowy stage1 zostanie zainstalowany "
+"tylko na jednym napędzie."
 
 #: pyanaconda/modules/storage/checker/utils.py:54
 #, python-format
@@ -778,6 +778,17 @@ msgstr ""
 "niewybranych dysków. Należy wybrać lub usunąć wybór tych wszystkich dysków "
 "jako zestaw."
 
+#: pyanaconda/modules/storage/devicetree/fsset.py:390
+#, python-brace-format
+msgid ""
+"There is an entry in your /etc/fstab file that contains an invalid or "
+"incorrect file system type. The file says that {detected_type} at "
+"{mount_point} is {fstab_type}."
+msgstr ""
+"Jeden z wpisów w pliku /etc/fstab zawiera nieprawidłowy lub niepoprawny typ "
+"systemu plików. Według pliku {detected_type} w {mount_point} jest typu "
+"{fstab_type}."
+
 #: pyanaconda/modules/storage/devicetree/root.py:339
 msgid "Unknown Linux"
 msgstr "Nieznany system Linux"
@@ -791,27 +802,6 @@ msgstr "{product} {version} dla {arch}"
 #, python-brace-format
 msgid "{product} Linux {version} for {arch}"
 msgstr "{product} Linux {version} dla {arch}"
-
-#: pyanaconda/modules/storage/devicetree/viewer.py:303
-#, python-brace-format
-msgid "{device_description} ({device_name})"
-msgstr "{device_description} ({device_name})"
-
-#: pyanaconda/modules/storage/devicetree/viewer.py:309
-#, python-brace-format
-msgid "{device_name} on {container_name}"
-msgstr "{device_name} w {container_name}"
-
-#: pyanaconda/modules/storage/devicetree/fsset.py:390
-#, python-brace-format
-msgid ""
-"There is an entry in your /etc/fstab file that contains an invalid or "
-"incorrect file system type. The file says that {detected_type} at "
-"{mount_point} is {fstab_type}."
-msgstr ""
-"Jeden z wpisów w pliku /etc/fstab zawiera nieprawidłowy lub niepoprawny typ "
-"systemu plików. Według pliku {detected_type} w {mount_point} jest typu "
-"{fstab_type}."
 
 #: pyanaconda/modules/storage/devicetree/utils.py:68
 #, python-format
@@ -840,6 +830,16 @@ msgstr ""
 "Wystąpił następujący błąd podczas pobierania certyfikatu escrow:\n"
 "\n"
 "%s"
+
+#: pyanaconda/modules/storage/devicetree/viewer.py:303
+#, python-brace-format
+msgid "{device_description} ({device_name})"
+msgstr "{device_description} ({device_name})"
+
+#: pyanaconda/modules/storage/devicetree/viewer.py:309
+#, python-brace-format
+msgid "{device_name} on {container_name}"
+msgstr "{device_name} w {container_name}"
 
 #: pyanaconda/modules/storage/disk_selection/utils.py:36
 msgid "The selected disk {} is not recognized."
@@ -1697,6 +1697,15 @@ msgctxt "GUI|Summary|Warning Dialog"
 msgid "_OK"
 msgstr "_OK"
 
+#: pyanaconda/ui/gui/spokes/advstorage/nvdimm.py:82
+msgctxt "GUI|Advanced Storage|NVDIM"
+msgid "No device to be reconfigured selected."
+msgstr "Nie wybrano żadnego urządzenia do ponownej konfiguracji."
+
+#: pyanaconda/ui/gui/spokes/advstorage/nvdimm.py:174
+msgid "Rescanning disks finished."
+msgstr "Ukończono ponowne skanowanie dysków."
+
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.py:158
 #, python-format
 msgid ""
@@ -1707,26 +1716,6 @@ msgstr ""
 "Wykryto następujące węzły za pomocą inicjatora iSCSI <b>%(initiatorName)s</"
 "b> używając adresu IP portalu <b>%(portalAddress)s</b>. Proszę wybrać, do "
 "których węzłów zalogować:"
-
-#: pyanaconda/ui/gui/spokes/advstorage/nvdimm.py:82
-msgctxt "GUI|Advanced Storage|NVDIM"
-msgid "No device to be reconfigured selected."
-msgstr "Nie wybrano żadnego urządzenia do ponownej konfiguracji."
-
-#: pyanaconda/ui/gui/spokes/advstorage/nvdimm.py:174
-msgid "Rescanning disks finished."
-msgstr "Ukończono ponowne skanowanie dysków."
-
-#: pyanaconda/ui/gui/spokes/lib/cart.py:193
-msgctxt "GUI|Selected Disks Dialog"
-msgid "_Do not install boot loader"
-msgstr "_Bez instalowania programu startowego"
-
-#: pyanaconda/ui/gui/spokes/lib/cart.py:198
-#: pyanaconda/ui/gui/spokes/lib/cart.glade:200
-msgctxt "GUI|Selected Disks Dialog"
-msgid "_Set as Boot Device"
-msgstr "_Ustaw jako urządzenie startowe"
 
 #: pyanaconda/ui/gui/spokes/lib/detailederror.py:48
 msgctxt "GUI|Detailed Error Dialog"
@@ -1856,6 +1845,17 @@ msgstr ""
 msgctxt "GUI|Custom Partitioning|Autopart Page"
 msgid "_Encrypt automatically created mount points by default:"
 msgstr "_Domyślne szyfrowanie automatycznie utworzonych punktów montowania:"
+
+#: pyanaconda/ui/gui/spokes/lib/cart.py:193
+msgctxt "GUI|Selected Disks Dialog"
+msgid "_Do not install boot loader"
+msgstr "_Bez instalowania programu startowego"
+
+#: pyanaconda/ui/gui/spokes/lib/cart.py:198
+#: pyanaconda/ui/gui/spokes/lib/cart.glade:200
+msgctxt "GUI|Selected Disks Dialog"
+msgid "_Set as Boot Device"
+msgstr "_Ustaw jako urządzenie startowe"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:47
 #, python-format
@@ -3862,120 +3862,6 @@ msgstr ""
 "\n"
 "Użyć ich mimo to?"
 
-#: pyanaconda/rescue.py:272
-msgid "Unable to find /bin/bash to execute!  Not starting shell."
-msgstr ""
-"Nie można odnaleźć /bin/bash do wykonania. Powłoka nie zostanie uruchomiona."
-
-#: pyanaconda/rescue.py:289
-msgid "Rescue"
-msgstr "Ratowanie systemu"
-
-#: pyanaconda/rescue.py:296
-#, python-format
-msgid ""
-"The rescue environment will now attempt to find your Linux installation and "
-"mount it under the directory : %s.  You can then make any changes required "
-"to your system.  Choose '1' to proceed with this step.\n"
-"You can choose to mount your file systems read-only instead of read-write by "
-"choosing '2'.\n"
-"If for some reason this process does not work choose '3' to skip directly to "
-"a shell.\n"
-"\n"
-msgstr ""
-"Środowisko ratownicze spróbuje teraz odnaleźć instalację systemu Linux "
-"i zamontować ją w katalogu %s. Wtedy będzie można dokonać wszystkich "
-"niezbędnych zmian w systemie. Aby kontynuować, należy wybrać przycisk „1”.\n"
-"Można także zamontować systemy plików w trybie tylko do odczytu, zamiast "
-"w trybie pełnego dostępu, wybierając przycisk „2”.\n"
-"Jeśli z jakiegoś powodu ten proces się nie powiedzie, należy wybrać przycisk "
-"„3”, aby przejść od razu do powłoki.\n"
-"\n"
-
-#: pyanaconda/rescue.py:308
-msgid "Continue"
-msgstr "Kontynuuj"
-
-#: pyanaconda/rescue.py:309
-msgid "Read-only mount"
-msgstr "Zamontowanie tylko do odczytu"
-
-#: pyanaconda/rescue.py:310
-msgid "Skip to shell"
-msgstr "Przejście do powłoki"
-
-#: pyanaconda/rescue.py:311
-msgid "Quit (Reboot)"
-msgstr "Zakończ (uruchom ponownie)"
-
-#: pyanaconda/rescue.py:408
-msgid "Rescue Shell"
-msgstr "Powłoka ratunkowa"
-
-#: pyanaconda/rescue.py:418
-#, python-format
-msgid "Run %s to unmount the system when you are finished."
-msgstr "Należy wykonać polecenie %s, aby odmontować system po ukończeniu."
-
-#: pyanaconda/rescue.py:419
-msgid ""
-"When finished, please exit from the shell and your system will reboot.\n"
-msgstr ""
-"Po ukończeniu należy wyjść z powłoki, a system zostanie ponownie "
-"uruchomiony.\n"
-
-#: pyanaconda/rescue.py:430
-#, python-format
-msgid ""
-"Your system has been mounted under %(mountpoint)s.\n"
-"\n"
-"If you would like to make the root of your system the root of the active "
-"system, run the command:\n"
-"\n"
-"\tchroot %(mountpoint)s\n"
-"\n"
-msgstr ""
-"System został zamontowany w katalogu %(mountpoint)s.\n"
-"\n"
-"Aby ustawić główny katalog tego systemu jako główny katalog aktywnego "
-"systemu, należy wykonać polecenie:\n"
-"\n"
-"\tchroot %(mountpoint)s\n"
-"\n"
-
-#: pyanaconda/rescue.py:442
-#, python-brace-format
-msgid ""
-"An error occurred trying to mount some or all of your system: {message}\n"
-"\n"
-"Some of it may be mounted under {path}."
-msgstr ""
-"Wystąpił błąd podczas próby montowania części lub całości systemu: "
-"{message}\n"
-"\n"
-"Część systemu może być zamontowana w katalogu {path}."
-
-#: pyanaconda/rescue.py:454
-msgid "You don't have any Linux partitions.\n"
-msgstr "Brak partycji systemu Linux.\n"
-
-#: pyanaconda/rescue.py:460
-msgid "Not mounting the system.\n"
-msgstr "System nie zostanie zamontowany.\n"
-
-#: pyanaconda/rescue.py:474
-#, python-format
-msgid "Please press %s to get a shell"
-msgstr "Proszę nacisnąć klawisz %s, aby przejść do powłoki"
-
-#: pyanaconda/rescue.py:491
-msgid "Root Selection"
-msgstr "Wybór głównego katalogu"
-
-#: pyanaconda/rescue.py:517
-msgid "The following installations were discovered on your system."
-msgstr "Na komputerze wykryto następujące instalacje."
-
 #: pyanaconda/addons.py:97
 #, python-format
 msgid "Executing %s addon"
@@ -4464,6 +4350,120 @@ msgstr "wymagana jest nazwa polityki dla %s"
 #, python-format
 msgid "A %(command)s with the name %(policyName)s has already been defined."
 msgstr "Już określono %(command)s o nazwie %(policyName)s."
+
+#: pyanaconda/rescue.py:272
+msgid "Unable to find /bin/bash to execute!  Not starting shell."
+msgstr ""
+"Nie można odnaleźć /bin/bash do wykonania. Powłoka nie zostanie uruchomiona."
+
+#: pyanaconda/rescue.py:289
+msgid "Rescue"
+msgstr "Ratowanie systemu"
+
+#: pyanaconda/rescue.py:296
+#, python-format
+msgid ""
+"The rescue environment will now attempt to find your Linux installation and "
+"mount it under the directory : %s.  You can then make any changes required "
+"to your system.  Choose '1' to proceed with this step.\n"
+"You can choose to mount your file systems read-only instead of read-write by "
+"choosing '2'.\n"
+"If for some reason this process does not work choose '3' to skip directly to "
+"a shell.\n"
+"\n"
+msgstr ""
+"Środowisko ratownicze spróbuje teraz odnaleźć instalację systemu Linux "
+"i zamontować ją w katalogu %s. Wtedy będzie można dokonać wszystkich "
+"niezbędnych zmian w systemie. Aby kontynuować, należy wybrać przycisk „1”.\n"
+"Można także zamontować systemy plików w trybie tylko do odczytu, zamiast "
+"w trybie pełnego dostępu, wybierając przycisk „2”.\n"
+"Jeśli z jakiegoś powodu ten proces się nie powiedzie, należy wybrać przycisk "
+"„3”, aby przejść od razu do powłoki.\n"
+"\n"
+
+#: pyanaconda/rescue.py:308
+msgid "Continue"
+msgstr "Kontynuuj"
+
+#: pyanaconda/rescue.py:309
+msgid "Read-only mount"
+msgstr "Zamontowanie tylko do odczytu"
+
+#: pyanaconda/rescue.py:310
+msgid "Skip to shell"
+msgstr "Przejście do powłoki"
+
+#: pyanaconda/rescue.py:311
+msgid "Quit (Reboot)"
+msgstr "Zakończ (uruchom ponownie)"
+
+#: pyanaconda/rescue.py:408
+msgid "Rescue Shell"
+msgstr "Powłoka ratunkowa"
+
+#: pyanaconda/rescue.py:418
+#, python-format
+msgid "Run %s to unmount the system when you are finished."
+msgstr "Należy wykonać polecenie %s, aby odmontować system po ukończeniu."
+
+#: pyanaconda/rescue.py:419
+msgid ""
+"When finished, please exit from the shell and your system will reboot.\n"
+msgstr ""
+"Po ukończeniu należy wyjść z powłoki, a system zostanie ponownie "
+"uruchomiony.\n"
+
+#: pyanaconda/rescue.py:430
+#, python-format
+msgid ""
+"Your system has been mounted under %(mountpoint)s.\n"
+"\n"
+"If you would like to make the root of your system the root of the active "
+"system, run the command:\n"
+"\n"
+"\tchroot %(mountpoint)s\n"
+"\n"
+msgstr ""
+"System został zamontowany w katalogu %(mountpoint)s.\n"
+"\n"
+"Aby ustawić główny katalog tego systemu jako główny katalog aktywnego "
+"systemu, należy wykonać polecenie:\n"
+"\n"
+"\tchroot %(mountpoint)s\n"
+"\n"
+
+#: pyanaconda/rescue.py:442
+#, python-brace-format
+msgid ""
+"An error occurred trying to mount some or all of your system: {message}\n"
+"\n"
+"Some of it may be mounted under {path}."
+msgstr ""
+"Wystąpił błąd podczas próby montowania części lub całości systemu: "
+"{message}\n"
+"\n"
+"Część systemu może być zamontowana w katalogu {path}."
+
+#: pyanaconda/rescue.py:454
+msgid "You don't have any Linux partitions.\n"
+msgstr "Brak partycji systemu Linux.\n"
+
+#: pyanaconda/rescue.py:460
+msgid "Not mounting the system.\n"
+msgstr "System nie zostanie zamontowany.\n"
+
+#: pyanaconda/rescue.py:474
+#, python-format
+msgid "Please press %s to get a shell"
+msgstr "Proszę nacisnąć klawisz %s, aby przejść do powłoki"
+
+#: pyanaconda/rescue.py:491
+msgid "Root Selection"
+msgstr "Wybór głównego katalogu"
+
+#: pyanaconda/rescue.py:517
+msgid "The following installations were discovered on your system."
+msgstr "Na komputerze wykryto następujące instalacje."
 
 #: pyanaconda/startup_utils.py:83
 #, python-format
@@ -5128,7 +5128,7 @@ msgid "Discovering DASD devices.  This may take a moment..."
 msgstr "Wykrywanie urządzeń DASD. Może to chwilę zająć…"
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:212
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:253
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:254
 msgid "Device discovery failed."
 msgstr "Wykrycie urządzenia się nie powiodło."
 
@@ -5146,7 +5146,7 @@ msgid "_Retry Discovery"
 msgstr "_Ponów wykrywanie"
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:307
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:346
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:347
 msgid "Device discovery succeeded."
 msgstr "Pomyślnie wykryto urządzenia."
 
@@ -5445,37 +5445,37 @@ msgstr ""
 "Ostrzeżenie: istniejące dane na ponownie konfigurowanych urządzeniach "
 "zostaną utracone."
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:82
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:83
 msgid "ADD zFCP STORAGE TARGET"
 msgstr "DODANIE DOCELOWYCH URZĄDZEŃ DO PRZECHOWYWANIA DANYCH zFCP"
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:105
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:106
 msgid ""
-"To use zFCP disks, you must provide the device number, WWPN, and LUN "
-"configured for the device."
+"To use zFCP-attached SCSI disks, you must provide the FCP device number. "
+"Storage WWPN and FCP LUN are necessary if the zFCP adapter is not configured "
+"in NPIV mode or when automatic LUN scanning is disabled via a kernel module "
+"parameter."
 msgstr ""
-"Aby użyć dysków zFCP, należy podać numer urządzenia, WWPN i LUN "
-"skonfigurowane dla urządzenia."
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:132
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:133
 msgctxt "GUI|Advanced Storage|zFCP|Device Number"
 msgid "_Device number:"
 msgstr "Numer urzą_dzenia:"
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:159
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:160
 msgid "WWPN:"
 msgstr "WWPN:"
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:177
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:178
 msgctxt "GUI|Advanced Storage|zFCP|Start Discovery"
 msgid "_Start Discovery"
 msgstr "_Rozpocznij wykrywanie"
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:214
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:215
 msgid "Discovering zFCP devices.  This may take a moment..."
 msgstr "Wykrywanie urządzeń zFCP. Może to chwilę zająć…"
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:268
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:269
 msgid ""
 "The following error occurred discovering zFCP devices.  Please double check "
 "your configuration information and try again."
@@ -5483,12 +5483,12 @@ msgstr ""
 "Wystąpił następujący błąd podczas wykrywania urządzeń zFCP. Proszę dwa razy "
 "sprawdzić, czy informacje konfiguracji są poprawne i spróbować ponownie."
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:291
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:292
 msgctxt "GUI|Advanced Storage|zFCP|Retry Discovery"
 msgid "_Retry Discovery"
 msgstr "_Ponów wykrywanie"
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:373
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:374
 msgid "LUN:"
 msgstr "LUN:"
 
@@ -5624,61 +5624,6 @@ msgid ""
 msgstr ""
 "Hasła lub klucze szyfrowania są wymagane, aby uzyskać\n"
 "dostęp do sieci bezprzewodowej"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:23
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Cancel"
-msgstr "_Anuluj"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:38
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Save Passphrase"
-msgstr "Zapi_sz hasło"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:65
-msgid "DISK ENCRYPTION PASSPHRASE"
-msgstr "HASŁO SZYFROWANIA DYSKU"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:81
-msgid ""
-"You have chosen to encrypt some of your data. You will need to create a "
-"passphrase that you will use to access your data when you start your "
-"computer."
-msgstr ""
-"Wybrano zaszyfrowanie części danych. Należy utworzyć hasło, które będzie "
-"używane do uzyskiwania dostępu do danych podczas uruchamiania komputera."
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:102
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Passphrase:"
-msgstr "_Hasło:"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:133
-msgctxt "GUI|Passphrase Dialog"
-msgid "Con_firm:"
-msgstr "_Potwierdzenie:"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:275
-msgid ""
-"Warning: You won't be able to switch between keyboard layouts (from the "
-"default one) when you decrypt your disks after install."
-msgstr ""
-"Ostrzeżenie: nie będzie można przełączać między układami klawiatury "
-"(z domyślnego) podczas odszyfrowywania dysków po instalacji."
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:23
-msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
-msgid "_Quit"
-msgstr "Za_kończ"
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:37
-msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
-msgid "_Continue"
-msgstr "_Kontynuuj"
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:122
-msgid "Unsupported Hardware"
-msgstr "Nieobsługiwany sprzęt"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:21
 msgctxt "GUI|Custom Partitioning|Confirm Delete Dialog"
@@ -5901,6 +5846,47 @@ msgstr ""
 msgid "Disk formatting complete."
 msgstr "Ukończono formatowanie dysków."
 
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:23
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Cancel"
+msgstr "_Anuluj"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:38
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Save Passphrase"
+msgstr "Zapi_sz hasło"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:65
+msgid "DISK ENCRYPTION PASSPHRASE"
+msgstr "HASŁO SZYFROWANIA DYSKU"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:81
+msgid ""
+"You have chosen to encrypt some of your data. You will need to create a "
+"passphrase that you will use to access your data when you start your "
+"computer."
+msgstr ""
+"Wybrano zaszyfrowanie części danych. Należy utworzyć hasło, które będzie "
+"używane do uzyskiwania dostępu do danych podczas uruchamiania komputera."
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:102
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Passphrase:"
+msgstr "_Hasło:"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:133
+msgctxt "GUI|Passphrase Dialog"
+msgid "Con_firm:"
+msgstr "_Potwierdzenie:"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:275
+msgid ""
+"Warning: You won't be able to switch between keyboard layouts (from the "
+"default one) when you decrypt your disks after install."
+msgstr ""
+"Ostrzeżenie: nie będzie można przełączać między układami klawiatury "
+"(z domyślnego) podczas odszyfrowywania dysków po instalacji."
+
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:8
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:71
 msgid "RESCAN DISKS"
@@ -6042,6 +6028,20 @@ msgstr "Kolejność"
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:166
 msgid "Device"
 msgstr "Urządzenie"
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:23
+msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
+msgid "_Quit"
+msgstr "Za_kończ"
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:37
+msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
+msgid "_Continue"
+msgstr "_Kontynuuj"
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:122
+msgid "Unsupported Hardware"
+msgstr "Nieobsługiwany sprzęt"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:176
 msgid "Add a new mount point."
@@ -7471,6 +7471,13 @@ msgstr "Zamknij"
 #: ../data/liveinst/console.apps/liveinst.h:1
 msgid "Starting Install to Hard Drive"
 msgstr "Rozpoczynanie instalacji na dysku twardym"
+
+#~ msgid ""
+#~ "To use zFCP disks, you must provide the device number, WWPN, and LUN "
+#~ "configured for the device."
+#~ msgstr ""
+#~ "Aby użyć dysków zFCP, należy podać numer urządzenia, WWPN i LUN "
+#~ "skonfigurowane dla urządzenia."
 
 #~ msgid "Disabled. Set password to enable root account."
 #~ msgstr "Wyłączone. Należy ustawić hasło, aby włączyć konto roota."

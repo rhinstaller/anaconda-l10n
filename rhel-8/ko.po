@@ -35,7 +35,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2022-06-28 11:50+0200\n"
+"POT-Creation-Date: 2022-07-14 18:19+0200\n"
 "PO-Revision-Date: 2022-06-12 12:26+0000\n"
 "Last-Translator: 김인수 <simmon@nplob.com>\n"
 "Language-Team: Korean <https://translate.fedoraproject.org/projects/anaconda/"
@@ -54,18 +54,6 @@ msgstr "%addon 항목의 이름이 없습니다."
 #: pyanaconda/core/kickstart/addon.py:138
 msgid "Unknown name of the %addon section."
 msgstr "%addon 항목의 이름을 알 수 없습니다."
-
-#: pyanaconda/core/payload.py:131
-msgid "No host url"
-msgstr "호스트 url 없음"
-
-#: pyanaconda/core/payload.py:152
-msgid "malformed URL, cannot parse it."
-msgstr "잘못된 URL, 구문 분석 할 수 없습니다."
-
-#: pyanaconda/core/payload.py:168
-msgid "URL has no host component"
-msgstr "URL에 호스트 구성 요소가 없음"
 
 #: pyanaconda/core/constants.py:89
 msgid "Start VNC"
@@ -274,6 +262,18 @@ msgstr "그룹 메타자료 내려받기 중..."
 msgid "Anaconda Installer"
 msgstr "아나콘다 설치 프로그램"
 
+#: pyanaconda/core/payload.py:131
+msgid "No host url"
+msgstr "호스트 url 없음"
+
+#: pyanaconda/core/payload.py:152
+msgid "malformed URL, cannot parse it."
+msgstr "잘못된 URL, 구문 분석 할 수 없습니다."
+
+#: pyanaconda/core/payload.py:168
+msgid "URL has no host component"
+msgstr "URL에 호스트 구성 요소가 없음"
+
 #: pyanaconda/core/storage.py:84
 msgid "Unsupported"
 msgstr "지원되지 않음"
@@ -432,45 +432,6 @@ msgstr "NFS 서버 {}"
 msgid "Local repositories"
 msgstr "로컬 저장소"
 
-#: pyanaconda/modules/storage/bootloader/bootloader.py:171
-msgid "GRUB2 does not support installation to a partition."
-msgstr "이 파티션에는 GRUB2 설치를 지원하지 않습니다."
-
-#: pyanaconda/modules/storage/bootloader/bootloader.py:178
-msgid "GRUB2 encrypted password must be in grub.pbkdf2 format."
-msgstr "GRUB2 암호화 된 암호는 grub.pbkdf2 형식이어야합니다."
-
-#: pyanaconda/modules/storage/bootloader/grub2.py:487
-#, python-format
-msgid ""
-"%(deviceName)s may not have enough space for grub2 to embed core.img when "
-"using the %(fsType)s file system on %(deviceType)s"
-msgstr ""
-"%(deviceName)s은 %(deviceType)s에서 %(fsType)s 파일 시스템을 사용 할 때에 "
-"grub2를 임베디드 core.img 에 공간이 충분하지 않을 수 있습니다"
-
-#: pyanaconda/modules/storage/bootloader/grub2.py:526
-#, python-format
-msgid ""
-"boot loader stage2 device %(stage2dev)s is on a multi-disk array, but boot "
-"loader stage1 device %(stage1dev)s is not. A drive failure in %(stage2dev)s "
-"could render the system unbootable."
-msgstr ""
-"멀티 디스크 어레이에 부트로더 stage2 장치 %(stage2dev)s은 있지만 부트로더 "
-"stage1 장치 %(stage1dev)s는 없습니다. %(stage2dev)s에서의 드라이브 오류는 시"
-"스템 부팅이 불가하도록 할 수 있습니다."
-
-#: pyanaconda/modules/storage/bootloader/grub2.py:533
-#, python-format
-msgid ""
-"boot loader stage2 device %(stage2dev)s is on a multi-disk array, but boot "
-"loader stage1 device %(stage1dev)s is not part of this array. The stage1 "
-"boot loader will only be installed to a single drive."
-msgstr ""
-"멀티 디스크 어레이에 부트로더 stage2 장치 %(stage2dev)s은 있지만 부트로더 "
-"stage1 장치 %(stage1dev)s는 없습니다. Stage 1 부트로더만 단일 드라이브에 설치"
-"됩니다."
-
 #: pyanaconda/modules/storage/bootloader/base.py:166
 msgid "/boot file system"
 msgstr "/boot 파일 시스템"
@@ -570,6 +531,14 @@ msgstr ""
 msgid "%(desc)s cannot be of type %(type)s"
 msgstr "%(desc)s는 유형 %(type)s이 될 수 없습니다"
 
+#: pyanaconda/modules/storage/bootloader/bootloader.py:171
+msgid "GRUB2 does not support installation to a partition."
+msgstr "이 파티션에는 GRUB2 설치를 지원하지 않습니다."
+
+#: pyanaconda/modules/storage/bootloader/bootloader.py:178
+msgid "GRUB2 encrypted password must be in grub.pbkdf2 format."
+msgstr "GRUB2 암호화 된 암호는 grub.pbkdf2 형식이어야합니다."
+
 #: pyanaconda/modules/storage/bootloader/execution.py:187
 msgid "No match found for given boot drive \"{}\"."
 msgstr "주어진 부팅 드라이브 \"{}\"에 일치하는 항목이 없습니다."
@@ -582,6 +551,37 @@ msgstr ""
 #: pyanaconda/modules/storage/bootloader/execution.py:195
 msgid "Requested boot drive \"{}\" doesn't exist or cannot be used."
 msgstr "요청한 부팅 드라이브 \"{}\"이 (가) 없거나 사용할 수 없습니다."
+
+#: pyanaconda/modules/storage/bootloader/grub2.py:487
+#, python-format
+msgid ""
+"%(deviceName)s may not have enough space for grub2 to embed core.img when "
+"using the %(fsType)s file system on %(deviceType)s"
+msgstr ""
+"%(deviceName)s은 %(deviceType)s에서 %(fsType)s 파일 시스템을 사용 할 때에 "
+"grub2를 임베디드 core.img 에 공간이 충분하지 않을 수 있습니다"
+
+#: pyanaconda/modules/storage/bootloader/grub2.py:526
+#, python-format
+msgid ""
+"boot loader stage2 device %(stage2dev)s is on a multi-disk array, but boot "
+"loader stage1 device %(stage1dev)s is not. A drive failure in %(stage2dev)s "
+"could render the system unbootable."
+msgstr ""
+"멀티 디스크 어레이에 부트로더 stage2 장치 %(stage2dev)s은 있지만 부트로더 "
+"stage1 장치 %(stage1dev)s는 없습니다. %(stage2dev)s에서의 드라이브 오류는 시"
+"스템 부팅이 불가하도록 할 수 있습니다."
+
+#: pyanaconda/modules/storage/bootloader/grub2.py:533
+#, python-format
+msgid ""
+"boot loader stage2 device %(stage2dev)s is on a multi-disk array, but boot "
+"loader stage1 device %(stage1dev)s is not part of this array. The stage1 "
+"boot loader will only be installed to a single drive."
+msgstr ""
+"멀티 디스크 어레이에 부트로더 stage2 장치 %(stage2dev)s은 있지만 부트로더 "
+"stage1 장치 %(stage1dev)s는 없습니다. Stage 1 부트로더만 단일 드라이브에 설치"
+"됩니다."
 
 #: pyanaconda/modules/storage/checker/utils.py:54
 #, python-format
@@ -766,6 +766,16 @@ msgstr ""
 "선택된 디스크 {)는 선택 되지 않은 추가 디스크를 사용하는 볼륨 그룹 '{}'이 포"
 "함되어 있습니다. 이러한 모든 디스크 세트로 선택 하거나 선택-취소해야 합니다."
 
+#: pyanaconda/modules/storage/devicetree/fsset.py:390
+#, python-brace-format
+msgid ""
+"There is an entry in your /etc/fstab file that contains an invalid or "
+"incorrect file system type. The file says that {detected_type} at "
+"{mount_point} is {fstab_type}."
+msgstr ""
+"/etc/fstab 파일 항목에 유효하지 않거나 잘못된 파일 시스템 유형이 들어 있습니"
+"다: 파일은 {mount_point}에 {detected_type}가 {fstab_type}라고 나타냅니다."
+
 #: pyanaconda/modules/storage/devicetree/root.py:339
 msgid "Unknown Linux"
 msgstr "알 수없는 리눅스"
@@ -779,26 +789,6 @@ msgstr "{product}· {version} for {arch}"
 #, python-brace-format
 msgid "{product} Linux {version} for {arch}"
 msgstr "{product} Linux {version} for {arch}"
-
-#: pyanaconda/modules/storage/devicetree/viewer.py:303
-#, python-brace-format
-msgid "{device_description} ({device_name})"
-msgstr "{device_description} ({device_name})"
-
-#: pyanaconda/modules/storage/devicetree/viewer.py:309
-#, python-brace-format
-msgid "{device_name} on {container_name}"
-msgstr "{container_name} 상의 {device_name}"
-
-#: pyanaconda/modules/storage/devicetree/fsset.py:390
-#, python-brace-format
-msgid ""
-"There is an entry in your /etc/fstab file that contains an invalid or "
-"incorrect file system type. The file says that {detected_type} at "
-"{mount_point} is {fstab_type}."
-msgstr ""
-"/etc/fstab 파일 항목에 유효하지 않거나 잘못된 파일 시스템 유형이 들어 있습니"
-"다: 파일은 {mount_point}에 {detected_type}가 {fstab_type}라고 나타냅니다."
 
 #: pyanaconda/modules/storage/devicetree/utils.py:68
 #, python-format
@@ -827,6 +817,16 @@ msgstr ""
 "escrow 인증서 내려받기 하는 중 다음과 같은 오류가 발생했습니다:\n"
 "\n"
 "%s"
+
+#: pyanaconda/modules/storage/devicetree/viewer.py:303
+#, python-brace-format
+msgid "{device_description} ({device_name})"
+msgstr "{device_description} ({device_name})"
+
+#: pyanaconda/modules/storage/devicetree/viewer.py:309
+#, python-brace-format
+msgid "{device_name} on {container_name}"
+msgstr "{container_name} 상의 {device_name}"
 
 #: pyanaconda/modules/storage/disk_selection/utils.py:36
 msgid "The selected disk {} is not recognized."
@@ -1653,16 +1653,6 @@ msgctxt "GUI|Summary|Warning Dialog"
 msgid "_OK"
 msgstr "좋음(_O)"
 
-#: pyanaconda/ui/gui/spokes/advstorage/iscsi.py:158
-#, python-format
-msgid ""
-"The following nodes were discovered using the iSCSI initiator <b>"
-"%(initiatorName)s</b> using the portal IP address <b>%(portalAddress)s</b>.  "
-"Please select which nodes you wish to log into:"
-msgstr ""
-"포털 IP 주소가 <b>%(portalAddress)s</b>인 iSCSI 초기자가 <b>"
-"%(initiatorName)s</b>인 노드를 발견했습니다.  로그인할 노드를 선택해주세요.:"
-
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.py:82
 msgctxt "GUI|Advanced Storage|NVDIM"
 msgid "No device to be reconfigured selected."
@@ -1672,16 +1662,15 @@ msgstr "재구성 할 장치를 선택하지 마십시오."
 msgid "Rescanning disks finished."
 msgstr "디스크 재검색이 완료되었습니다."
 
-#: pyanaconda/ui/gui/spokes/lib/cart.py:193
-msgctxt "GUI|Selected Disks Dialog"
-msgid "_Do not install boot loader"
-msgstr "부트로더를 설치하지 않음(_D)"
-
-#: pyanaconda/ui/gui/spokes/lib/cart.py:198
-#: pyanaconda/ui/gui/spokes/lib/cart.glade:200
-msgctxt "GUI|Selected Disks Dialog"
-msgid "_Set as Boot Device"
-msgstr "부트 장치로 설정(_S)"
+#: pyanaconda/ui/gui/spokes/advstorage/iscsi.py:158
+#, python-format
+msgid ""
+"The following nodes were discovered using the iSCSI initiator <b>"
+"%(initiatorName)s</b> using the portal IP address <b>%(portalAddress)s</b>.  "
+"Please select which nodes you wish to log into:"
+msgstr ""
+"포털 IP 주소가 <b>%(portalAddress)s</b>인 iSCSI 초기자가 <b>"
+"%(initiatorName)s</b>인 노드를 발견했습니다.  로그인할 노드를 선택해주세요.:"
 
 #: pyanaconda/ui/gui/spokes/lib/detailederror.py:48
 msgctxt "GUI|Detailed Error Dialog"
@@ -1808,6 +1797,17 @@ msgstr "신규 적재 지점은 다음 파티션 구성표를 사용합니다:"
 msgctxt "GUI|Custom Partitioning|Autopart Page"
 msgid "_Encrypt automatically created mount points by default:"
 msgstr "기본적으로 자동 생성된 적재 지점의 암호화(_E):"
+
+#: pyanaconda/ui/gui/spokes/lib/cart.py:193
+msgctxt "GUI|Selected Disks Dialog"
+msgid "_Do not install boot loader"
+msgstr "부트로더를 설치하지 않음(_D)"
+
+#: pyanaconda/ui/gui/spokes/lib/cart.py:198
+#: pyanaconda/ui/gui/spokes/lib/cart.glade:200
+msgctxt "GUI|Selected Disks Dialog"
+msgid "_Set as Boot Device"
+msgstr "부트 장치로 설정(_S)"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:47
 #, python-format
@@ -3766,115 +3766,6 @@ msgstr ""
 "\n"
 "그래도 사용 하시겠습니까?"
 
-#: pyanaconda/rescue.py:272
-msgid "Unable to find /bin/bash to execute!  Not starting shell."
-msgstr "실행할 /bin/bash 를 찾을 수 없습니다! 쉘을 시작 할 수 없습니다."
-
-#: pyanaconda/rescue.py:289
-msgid "Rescue"
-msgstr "복구"
-
-#: pyanaconda/rescue.py:296
-#, python-format
-msgid ""
-"The rescue environment will now attempt to find your Linux installation and "
-"mount it under the directory : %s.  You can then make any changes required "
-"to your system.  Choose '1' to proceed with this step.\n"
-"You can choose to mount your file systems read-only instead of read-write by "
-"choosing '2'.\n"
-"If for some reason this process does not work choose '3' to skip directly to "
-"a shell.\n"
-"\n"
-msgstr ""
-"이제 복구 환경은 리눅스 설치를 찾아 디렉토리: %s 아래에 적재하려고 시도합니"
-"다. 그런 다음 시스템에 필요한 변경을 수행 할 수 있습니다. 이 단계를 진행하려"
-"면 '1'을 선택하십시오.\n"
-"'2'를 선택하여 읽기-쓰기 대신에 파일 시스템 읽기만 적재하도록 선택 할 수 있습"
-"니다.\n"
-"어떤 이유로 이 처리가 작동하지 않으면 쉘에 직접 건너 뛰려면 '3'을 선택하세"
-"요.\n"
-"\n"
-
-#: pyanaconda/rescue.py:308
-msgid "Continue"
-msgstr "진행"
-
-#: pyanaconda/rescue.py:309
-msgid "Read-only mount"
-msgstr "읽기-전용 적재"
-
-#: pyanaconda/rescue.py:310
-msgid "Skip to shell"
-msgstr "쉘로 건너뛰기"
-
-#: pyanaconda/rescue.py:311
-msgid "Quit (Reboot)"
-msgstr "종료 (재시작)"
-
-#: pyanaconda/rescue.py:408
-msgid "Rescue Shell"
-msgstr "복구 쉘"
-
-#: pyanaconda/rescue.py:418
-#, python-format
-msgid "Run %s to unmount the system when you are finished."
-msgstr "완료시 시스템을 내려 놓기 위해 %s를 실행합니다."
-
-#: pyanaconda/rescue.py:419
-msgid ""
-"When finished, please exit from the shell and your system will reboot.\n"
-msgstr "작업 완료 후, 쉘을 종료하면 시스템이 재시작됩니다.\n"
-
-#: pyanaconda/rescue.py:430
-#, python-format
-msgid ""
-"Your system has been mounted under %(mountpoint)s.\n"
-"\n"
-"If you would like to make the root of your system the root of the active "
-"system, run the command:\n"
-"\n"
-"\tchroot %(mountpoint)s\n"
-"\n"
-msgstr ""
-"시스템이 %(mountpoint)s에 적재 되었습니다.\n"
-"\n"
-"시스템의 root를 활성 시스템의 root로 만들려면 다음 명령을 실행하십시오. :\n"
-"\n"
-"\tchroot %(mountpoint)s\n"
-"\n"
-
-#: pyanaconda/rescue.py:442
-#, python-brace-format
-msgid ""
-"An error occurred trying to mount some or all of your system: {message}\n"
-"\n"
-"Some of it may be mounted under {path}."
-msgstr ""
-"시스템의 일부 또는 전체를 적재 하는 중 오류가 발생했습니다: {message}\n"
-"\n"
-"이들 일부는 {path} 아래에서 적재 될 수 있습니다."
-
-#: pyanaconda/rescue.py:454
-msgid "You don't have any Linux partitions.\n"
-msgstr "리눅스 파티션이 없습니다.\n"
-
-#: pyanaconda/rescue.py:460
-msgid "Not mounting the system.\n"
-msgstr "시스템이 적재되지 않았습니다.\n"
-
-#: pyanaconda/rescue.py:474
-#, python-format
-msgid "Please press %s to get a shell"
-msgstr "쉘에 진입하기 위해 %s를 눌러 주세요"
-
-#: pyanaconda/rescue.py:491
-msgid "Root Selection"
-msgstr "root 선택"
-
-#: pyanaconda/rescue.py:517
-msgid "The following installations were discovered on your system."
-msgstr "다음 설치가 시스템에서 발견되었습니다."
-
 #: pyanaconda/addons.py:97
 #, python-format
 msgid "Executing %s addon"
@@ -4351,6 +4242,115 @@ msgstr "필요한 정책 이름 %s"
 #, python-format
 msgid "A %(command)s with the name %(policyName)s has already been defined."
 msgstr "A %(command)s 이름이 적힌 %(policyName)s 이미 정의되었습니다."
+
+#: pyanaconda/rescue.py:272
+msgid "Unable to find /bin/bash to execute!  Not starting shell."
+msgstr "실행할 /bin/bash 를 찾을 수 없습니다! 쉘을 시작 할 수 없습니다."
+
+#: pyanaconda/rescue.py:289
+msgid "Rescue"
+msgstr "복구"
+
+#: pyanaconda/rescue.py:296
+#, python-format
+msgid ""
+"The rescue environment will now attempt to find your Linux installation and "
+"mount it under the directory : %s.  You can then make any changes required "
+"to your system.  Choose '1' to proceed with this step.\n"
+"You can choose to mount your file systems read-only instead of read-write by "
+"choosing '2'.\n"
+"If for some reason this process does not work choose '3' to skip directly to "
+"a shell.\n"
+"\n"
+msgstr ""
+"이제 복구 환경은 리눅스 설치를 찾아 디렉토리: %s 아래에 적재하려고 시도합니"
+"다. 그런 다음 시스템에 필요한 변경을 수행 할 수 있습니다. 이 단계를 진행하려"
+"면 '1'을 선택하십시오.\n"
+"'2'를 선택하여 읽기-쓰기 대신에 파일 시스템 읽기만 적재하도록 선택 할 수 있습"
+"니다.\n"
+"어떤 이유로 이 처리가 작동하지 않으면 쉘에 직접 건너 뛰려면 '3'을 선택하세"
+"요.\n"
+"\n"
+
+#: pyanaconda/rescue.py:308
+msgid "Continue"
+msgstr "진행"
+
+#: pyanaconda/rescue.py:309
+msgid "Read-only mount"
+msgstr "읽기-전용 적재"
+
+#: pyanaconda/rescue.py:310
+msgid "Skip to shell"
+msgstr "쉘로 건너뛰기"
+
+#: pyanaconda/rescue.py:311
+msgid "Quit (Reboot)"
+msgstr "종료 (재시작)"
+
+#: pyanaconda/rescue.py:408
+msgid "Rescue Shell"
+msgstr "복구 쉘"
+
+#: pyanaconda/rescue.py:418
+#, python-format
+msgid "Run %s to unmount the system when you are finished."
+msgstr "완료시 시스템을 내려 놓기 위해 %s를 실행합니다."
+
+#: pyanaconda/rescue.py:419
+msgid ""
+"When finished, please exit from the shell and your system will reboot.\n"
+msgstr "작업 완료 후, 쉘을 종료하면 시스템이 재시작됩니다.\n"
+
+#: pyanaconda/rescue.py:430
+#, python-format
+msgid ""
+"Your system has been mounted under %(mountpoint)s.\n"
+"\n"
+"If you would like to make the root of your system the root of the active "
+"system, run the command:\n"
+"\n"
+"\tchroot %(mountpoint)s\n"
+"\n"
+msgstr ""
+"시스템이 %(mountpoint)s에 적재 되었습니다.\n"
+"\n"
+"시스템의 root를 활성 시스템의 root로 만들려면 다음 명령을 실행하십시오. :\n"
+"\n"
+"\tchroot %(mountpoint)s\n"
+"\n"
+
+#: pyanaconda/rescue.py:442
+#, python-brace-format
+msgid ""
+"An error occurred trying to mount some or all of your system: {message}\n"
+"\n"
+"Some of it may be mounted under {path}."
+msgstr ""
+"시스템의 일부 또는 전체를 적재 하는 중 오류가 발생했습니다: {message}\n"
+"\n"
+"이들 일부는 {path} 아래에서 적재 될 수 있습니다."
+
+#: pyanaconda/rescue.py:454
+msgid "You don't have any Linux partitions.\n"
+msgstr "리눅스 파티션이 없습니다.\n"
+
+#: pyanaconda/rescue.py:460
+msgid "Not mounting the system.\n"
+msgstr "시스템이 적재되지 않았습니다.\n"
+
+#: pyanaconda/rescue.py:474
+#, python-format
+msgid "Please press %s to get a shell"
+msgstr "쉘에 진입하기 위해 %s를 눌러 주세요"
+
+#: pyanaconda/rescue.py:491
+msgid "Root Selection"
+msgstr "root 선택"
+
+#: pyanaconda/rescue.py:517
+msgid "The following installations were discovered on your system."
+msgstr "다음 설치가 시스템에서 발견되었습니다."
 
 #: pyanaconda/startup_utils.py:83
 #, python-format
@@ -5004,7 +5004,7 @@ msgid "Discovering DASD devices.  This may take a moment..."
 msgstr "DASD 장치를 검색하고 있습니다. 잠시만 기다려주십시오..."
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:212
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:253
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:254
 msgid "Device discovery failed."
 msgstr "장치 검색에 실패했습니다."
 
@@ -5022,7 +5022,7 @@ msgid "_Retry Discovery"
 msgstr "검색을 다시 시도(_R)"
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:307
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:346
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:347
 msgid "Device discovery succeeded."
 msgstr "성공적으로 장치를 검색했습니다."
 
@@ -5311,37 +5311,37 @@ msgstr ""
 msgid "Warning: Existing data on reconfigured devices will be lost."
 msgstr "경고: 재구성 된 장치에 대한 기존 데이터가 손실됩니다."
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:82
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:83
 msgid "ADD zFCP STORAGE TARGET"
 msgstr "zFCP 저장소 대상 추가"
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:105
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:106
 msgid ""
-"To use zFCP disks, you must provide the device number, WWPN, and LUN "
-"configured for the device."
+"To use zFCP-attached SCSI disks, you must provide the FCP device number. "
+"Storage WWPN and FCP LUN are necessary if the zFCP adapter is not configured "
+"in NPIV mode or when automatic LUN scanning is disabled via a kernel module "
+"parameter."
 msgstr ""
-"zFCP 디스크를 사용하려면 장치에 설정된 장치 번호, WWPN, LUN 을 입력해야 합니"
-"다."
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:132
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:133
 msgctxt "GUI|Advanced Storage|zFCP|Device Number"
 msgid "_Device number:"
 msgstr "장치 번호(_D):"
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:159
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:160
 msgid "WWPN:"
 msgstr "WWPN:"
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:177
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:178
 msgctxt "GUI|Advanced Storage|zFCP|Start Discovery"
 msgid "_Start Discovery"
 msgstr "검색 시작(_S)"
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:214
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:215
 msgid "Discovering zFCP devices.  This may take a moment..."
 msgstr "zFCP 장치를 검색하고 있습니다. 잠시만 기다려주십시오..."
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:268
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:269
 msgid ""
 "The following error occurred discovering zFCP devices.  Please double check "
 "your configuration information and try again."
@@ -5349,12 +5349,12 @@ msgstr ""
 "zFCP 장치를 검색하는 동안 다음과 같은 오류가 발생했습니다. 설정 정보를 다시 "
 "확인하고 다시 시도해 보십시오."
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:291
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:292
 msgctxt "GUI|Advanced Storage|zFCP|Retry Discovery"
 msgid "_Retry Discovery"
 msgstr "검색을 다시 시도(_R)"
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:373
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:374
 msgid "LUN:"
 msgstr "LUN:"
 
@@ -5487,61 +5487,6 @@ msgid ""
 msgstr ""
 "무선 네트워크에 액세스하려면 암호 또는 암호화 키가 \n"
 "필요합니다"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:23
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Cancel"
-msgstr "취소(_C)"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:38
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Save Passphrase"
-msgstr "암호 저장(_S)"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:65
-msgid "DISK ENCRYPTION PASSPHRASE"
-msgstr "디스크 암호화 암호문"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:81
-msgid ""
-"You have chosen to encrypt some of your data. You will need to create a "
-"passphrase that you will use to access your data when you start your "
-"computer."
-msgstr ""
-"데이터의 일부를 암호화할 것을 선택하셨습니다. 컴퓨터를 시작할 때 데이터에 액"
-"세스하기 위해 사용될 암호를 생성해야 합니다."
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:102
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Passphrase:"
-msgstr "암호(_P):"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:133
-msgctxt "GUI|Passphrase Dialog"
-msgid "Con_firm:"
-msgstr "확인(_f):"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:275
-msgid ""
-"Warning: You won't be able to switch between keyboard layouts (from the "
-"default one) when you decrypt your disks after install."
-msgstr ""
-"경고: 설치 후에 자신의 디스크 해독 할 때에 키보드 배열(기본값 중 하나에서) 사"
-"이에서 전환 할 수 없습니다."
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:23
-msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
-msgid "_Quit"
-msgstr "종료(_Q)"
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:37
-msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
-msgid "_Continue"
-msgstr "계속 진행(_C)"
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:122
-msgid "Unsupported Hardware"
-msgstr "지원되지 않는 하드웨어"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:21
 msgctxt "GUI|Custom Partitioning|Confirm Delete Dialog"
@@ -5760,6 +5705,47 @@ msgstr ""
 msgid "Disk formatting complete."
 msgstr "디스크 포맷이 완료되었습니다."
 
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:23
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Cancel"
+msgstr "취소(_C)"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:38
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Save Passphrase"
+msgstr "암호 저장(_S)"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:65
+msgid "DISK ENCRYPTION PASSPHRASE"
+msgstr "디스크 암호화 암호문"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:81
+msgid ""
+"You have chosen to encrypt some of your data. You will need to create a "
+"passphrase that you will use to access your data when you start your "
+"computer."
+msgstr ""
+"데이터의 일부를 암호화할 것을 선택하셨습니다. 컴퓨터를 시작할 때 데이터에 액"
+"세스하기 위해 사용될 암호를 생성해야 합니다."
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:102
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Passphrase:"
+msgstr "암호(_P):"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:133
+msgctxt "GUI|Passphrase Dialog"
+msgid "Con_firm:"
+msgstr "확인(_f):"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:275
+msgid ""
+"Warning: You won't be able to switch between keyboard layouts (from the "
+"default one) when you decrypt your disks after install."
+msgstr ""
+"경고: 설치 후에 자신의 디스크 해독 할 때에 키보드 배열(기본값 중 하나에서) 사"
+"이에서 전환 할 수 없습니다."
+
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:8
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:71
 msgid "RESCAN DISKS"
@@ -5900,6 +5886,20 @@ msgstr "순서"
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:166
 msgid "Device"
 msgstr "장치"
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:23
+msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
+msgid "_Quit"
+msgstr "종료(_Q)"
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:37
+msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
+msgid "_Continue"
+msgstr "계속 진행(_C)"
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:122
+msgid "Unsupported Hardware"
+msgstr "지원되지 않는 하드웨어"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:176
 msgid "Add a new mount point."
@@ -7320,6 +7320,13 @@ msgstr "종료"
 #: ../data/liveinst/console.apps/liveinst.h:1
 msgid "Starting Install to Hard Drive"
 msgstr "하드 드라이브에 설치를 시작합니다"
+
+#~ msgid ""
+#~ "To use zFCP disks, you must provide the device number, WWPN, and LUN "
+#~ "configured for the device."
+#~ msgstr ""
+#~ "zFCP 디스크를 사용하려면 장치에 설정된 장치 번호, WWPN, LUN 을 입력해야 합"
+#~ "니다."
 
 #~ msgid "Disabled. Set password to enable root account."
 #~ msgstr ""

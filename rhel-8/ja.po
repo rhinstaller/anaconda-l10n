@@ -60,7 +60,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2022-06-28 11:50+0200\n"
+"POT-Creation-Date: 2022-07-14 18:19+0200\n"
 "PO-Revision-Date: 2022-06-18 09:18+0000\n"
 "Last-Translator: Ludek Janda <ljanda@redhat.com>\n"
 "Language-Team: Japanese <https://translate.fedoraproject.org/projects/"
@@ -79,18 +79,6 @@ msgstr "%addonセクション名がありません。"
 #: pyanaconda/core/kickstart/addon.py:138
 msgid "Unknown name of the %addon section."
 msgstr "%addon セクションの名前が不明です。"
-
-#: pyanaconda/core/payload.py:131
-msgid "No host url"
-msgstr "ホスト URLがありません"
-
-#: pyanaconda/core/payload.py:152
-msgid "malformed URL, cannot parse it."
-msgstr "不正な形式の URL、こちらは解釈できません。"
-
-#: pyanaconda/core/payload.py:168
-msgid "URL has no host component"
-msgstr "URL にホストが含まれていません"
 
 #: pyanaconda/core/constants.py:89
 msgid "Start VNC"
@@ -301,6 +289,18 @@ msgstr "グループメタデータをダウンロード中..."
 msgid "Anaconda Installer"
 msgstr "Anaconda インストーラー"
 
+#: pyanaconda/core/payload.py:131
+msgid "No host url"
+msgstr "ホスト URLがありません"
+
+#: pyanaconda/core/payload.py:152
+msgid "malformed URL, cannot parse it."
+msgstr "不正な形式の URL、こちらは解釈できません。"
+
+#: pyanaconda/core/payload.py:168
+msgid "URL has no host component"
+msgstr "URL にホストが含まれていません"
+
 #: pyanaconda/core/storage.py:84
 msgid "Unsupported"
 msgstr "サポート対象外"
@@ -460,48 +460,6 @@ msgstr "NFS サーバー {}"
 msgid "Local repositories"
 msgstr "ローカルリポジトリー"
 
-#: pyanaconda/modules/storage/bootloader/bootloader.py:171
-msgid "GRUB2 does not support installation to a partition."
-msgstr "GRUB2 は、パーティションへのインストールをサポートしていません。"
-
-#: pyanaconda/modules/storage/bootloader/bootloader.py:178
-msgid "GRUB2 encrypted password must be in grub.pbkdf2 format."
-msgstr ""
-"GRUB2 暗号化パスワードは grub.pbkdf2 フォーマットである必要があります。"
-
-#: pyanaconda/modules/storage/bootloader/grub2.py:487
-#, python-format
-msgid ""
-"%(deviceName)s may not have enough space for grub2 to embed core.img when "
-"using the %(fsType)s file system on %(deviceType)s"
-msgstr ""
-"%(deviceType)s の %(fsType)s ファイルシステムを使用する場合、grub2 によって組"
-"み込まれる core.img 用の領域が %(deviceName)s には不足している可能性がありま"
-"す"
-
-#: pyanaconda/modules/storage/bootloader/grub2.py:526
-#, python-format
-msgid ""
-"boot loader stage2 device %(stage2dev)s is on a multi-disk array, but boot "
-"loader stage1 device %(stage1dev)s is not. A drive failure in %(stage2dev)s "
-"could render the system unbootable."
-msgstr ""
-"ブートローダー stage2 デバイス %(stage2dev)s は、複数ディスクアレイ上にありま"
-"すが、ブートローダー stage1 デバイス %(stage1dev)s はこのアレイ上にありませ"
-"ん。%(stage2dev)s 上のドライブ障害により、システムが起動できない可能性があり"
-"ます。"
-
-#: pyanaconda/modules/storage/bootloader/grub2.py:533
-#, python-format
-msgid ""
-"boot loader stage2 device %(stage2dev)s is on a multi-disk array, but boot "
-"loader stage1 device %(stage1dev)s is not part of this array. The stage1 "
-"boot loader will only be installed to a single drive."
-msgstr ""
-"ブートローダー stage2 デバイス %(stage2dev)s は、複数ディスクアレイ上にありま"
-"すが、ブートローダー stage1 デバイス %(stage1dev)s はこのアレイ上にありませ"
-"ん。stage1 ブートローダーは 1 つのドライブのみにインストールされます。"
-
 #: pyanaconda/modules/storage/bootloader/base.py:166
 msgid "/boot file system"
 msgstr "/boot ファイルシステム"
@@ -603,6 +561,15 @@ msgstr ""
 msgid "%(desc)s cannot be of type %(type)s"
 msgstr "%(desc)sは %(type)s タイプにすることはできません"
 
+#: pyanaconda/modules/storage/bootloader/bootloader.py:171
+msgid "GRUB2 does not support installation to a partition."
+msgstr "GRUB2 は、パーティションへのインストールをサポートしていません。"
+
+#: pyanaconda/modules/storage/bootloader/bootloader.py:178
+msgid "GRUB2 encrypted password must be in grub.pbkdf2 format."
+msgstr ""
+"GRUB2 暗号化パスワードは grub.pbkdf2 フォーマットである必要があります。"
+
 #: pyanaconda/modules/storage/bootloader/execution.py:187
 msgid "No match found for given boot drive \"{}\"."
 msgstr "指定されたブートドライブ \"{}\" と一致するものがありません。"
@@ -614,6 +581,39 @@ msgstr "指定されたブートドライブ \"{}\" と一致するものが複�
 #: pyanaconda/modules/storage/bootloader/execution.py:195
 msgid "Requested boot drive \"{}\" doesn't exist or cannot be used."
 msgstr "要求されたブートドライブ \"{}\" 'は存在しないか、使用できません。"
+
+#: pyanaconda/modules/storage/bootloader/grub2.py:487
+#, python-format
+msgid ""
+"%(deviceName)s may not have enough space for grub2 to embed core.img when "
+"using the %(fsType)s file system on %(deviceType)s"
+msgstr ""
+"%(deviceType)s の %(fsType)s ファイルシステムを使用する場合、grub2 によって組"
+"み込まれる core.img 用の領域が %(deviceName)s には不足している可能性がありま"
+"す"
+
+#: pyanaconda/modules/storage/bootloader/grub2.py:526
+#, python-format
+msgid ""
+"boot loader stage2 device %(stage2dev)s is on a multi-disk array, but boot "
+"loader stage1 device %(stage1dev)s is not. A drive failure in %(stage2dev)s "
+"could render the system unbootable."
+msgstr ""
+"ブートローダー stage2 デバイス %(stage2dev)s は、複数ディスクアレイ上にありま"
+"すが、ブートローダー stage1 デバイス %(stage1dev)s はこのアレイ上にありませ"
+"ん。%(stage2dev)s 上のドライブ障害により、システムが起動できない可能性があり"
+"ます。"
+
+#: pyanaconda/modules/storage/bootloader/grub2.py:533
+#, python-format
+msgid ""
+"boot loader stage2 device %(stage2dev)s is on a multi-disk array, but boot "
+"loader stage1 device %(stage1dev)s is not part of this array. The stage1 "
+"boot loader will only be installed to a single drive."
+msgstr ""
+"ブートローダー stage2 デバイス %(stage2dev)s は、複数ディスクアレイ上にありま"
+"すが、ブートローダー stage1 デバイス %(stage1dev)s はこのアレイ上にありませ"
+"ん。stage1 ブートローダーは 1 つのドライブのみにインストールされます。"
 
 #: pyanaconda/modules/storage/checker/utils.py:54
 #, python-format
@@ -813,6 +813,17 @@ msgstr ""
 "プ '{}' が含まれています。これらすべてのディスクは、セットとして選択または選"
 "択解除する必要があります。"
 
+#: pyanaconda/modules/storage/devicetree/fsset.py:390
+#, python-brace-format
+msgid ""
+"There is an entry in your /etc/fstab file that contains an invalid or "
+"incorrect file system type. The file says that {detected_type} at "
+"{mount_point} is {fstab_type}."
+msgstr ""
+"/etc/fstab ファイルに、無効または不正なファイルシステムのタイプを含むエント"
+"リーがあります。このファイルは、{mount_point} の {detected_type} が "
+"{fstab_type} であることを示しています。"
+
 #: pyanaconda/modules/storage/devicetree/root.py:339
 msgid "Unknown Linux"
 msgstr "不明の Linux"
@@ -826,27 +837,6 @@ msgstr "{product} {version} - {arch} 版"
 #, python-brace-format
 msgid "{product} Linux {version} for {arch}"
 msgstr "{product} Linux {version} - {arch} 版"
-
-#: pyanaconda/modules/storage/devicetree/viewer.py:303
-#, python-brace-format
-msgid "{device_description} ({device_name})"
-msgstr "{device_description} ({device_name})"
-
-#: pyanaconda/modules/storage/devicetree/viewer.py:309
-#, python-brace-format
-msgid "{device_name} on {container_name}"
-msgstr "{container_name} 上の {device_name}"
-
-#: pyanaconda/modules/storage/devicetree/fsset.py:390
-#, python-brace-format
-msgid ""
-"There is an entry in your /etc/fstab file that contains an invalid or "
-"incorrect file system type. The file says that {detected_type} at "
-"{mount_point} is {fstab_type}."
-msgstr ""
-"/etc/fstab ファイルに、無効または不正なファイルシステムのタイプを含むエント"
-"リーがあります。このファイルは、{mount_point} の {detected_type} が "
-"{fstab_type} であることを示しています。"
 
 #: pyanaconda/modules/storage/devicetree/utils.py:68
 #, python-format
@@ -875,6 +865,16 @@ msgstr ""
 "エスクロー証明書のダウンロード中に次のエラーに 遭遇しました:\n"
 "\n"
 "%s"
+
+#: pyanaconda/modules/storage/devicetree/viewer.py:303
+#, python-brace-format
+msgid "{device_description} ({device_name})"
+msgstr "{device_description} ({device_name})"
+
+#: pyanaconda/modules/storage/devicetree/viewer.py:309
+#, python-brace-format
+msgid "{device_name} on {container_name}"
+msgstr "{container_name} 上の {device_name}"
 
 #: pyanaconda/modules/storage/disk_selection/utils.py:36
 msgid "The selected disk {} is not recognized."
@@ -1720,6 +1720,15 @@ msgctxt "GUI|Summary|Warning Dialog"
 msgid "_OK"
 msgstr "OK(_O)"
 
+#: pyanaconda/ui/gui/spokes/advstorage/nvdimm.py:82
+msgctxt "GUI|Advanced Storage|NVDIM"
+msgid "No device to be reconfigured selected."
+msgstr "再構成するデバイスが選択されていません。"
+
+#: pyanaconda/ui/gui/spokes/advstorage/nvdimm.py:174
+msgid "Rescanning disks finished."
+msgstr "ディスクの再スキャンが完了しました。"
+
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.py:158
 #, python-format
 msgid ""
@@ -1730,26 +1739,6 @@ msgstr ""
 "ポータル IP アドレス <b>%(portalAddress)s</b> を使用する iSCSI イニシエー"
 "ター <b>%(initiatorName)s</b> を使用して、次のノードが検出されました。ログイ"
 "ンしたいノードを選択してください:"
-
-#: pyanaconda/ui/gui/spokes/advstorage/nvdimm.py:82
-msgctxt "GUI|Advanced Storage|NVDIM"
-msgid "No device to be reconfigured selected."
-msgstr "再構成するデバイスが選択されていません。"
-
-#: pyanaconda/ui/gui/spokes/advstorage/nvdimm.py:174
-msgid "Rescanning disks finished."
-msgstr "ディスクの再スキャンが完了しました。"
-
-#: pyanaconda/ui/gui/spokes/lib/cart.py:193
-msgctxt "GUI|Selected Disks Dialog"
-msgid "_Do not install boot loader"
-msgstr "ブートローダーをインストールしない(D)"
-
-#: pyanaconda/ui/gui/spokes/lib/cart.py:198
-#: pyanaconda/ui/gui/spokes/lib/cart.glade:200
-msgctxt "GUI|Selected Disks Dialog"
-msgid "_Set as Boot Device"
-msgstr "ブートデバイスとして設定(_S)"
 
 #: pyanaconda/ui/gui/spokes/lib/detailederror.py:48
 msgctxt "GUI|Detailed Error Dialog"
@@ -1878,6 +1867,17 @@ msgstr "新しいマウントポイントに次のパーティション設定ス
 msgctxt "GUI|Custom Partitioning|Autopart Page"
 msgid "_Encrypt automatically created mount points by default:"
 msgstr "デフォルトで暗号化可能な自動生成マウントポイント(_E) :"
+
+#: pyanaconda/ui/gui/spokes/lib/cart.py:193
+msgctxt "GUI|Selected Disks Dialog"
+msgid "_Do not install boot loader"
+msgstr "ブートローダーをインストールしない(D)"
+
+#: pyanaconda/ui/gui/spokes/lib/cart.py:198
+#: pyanaconda/ui/gui/spokes/lib/cart.glade:200
+msgctxt "GUI|Selected Disks Dialog"
+msgid "_Set as Boot Device"
+msgstr "ブートデバイスとして設定(_S)"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:47
 #, python-format
@@ -3859,118 +3859,6 @@ msgstr ""
 "\n"
 "それでも、このパスワードを使用しますか?"
 
-#: pyanaconda/rescue.py:272
-msgid "Unable to find /bin/bash to execute!  Not starting shell."
-msgstr "実行する /bin/bash が見つかりません。シェルを起動できません。"
-
-#: pyanaconda/rescue.py:289
-msgid "Rescue"
-msgstr "レスキュー"
-
-#: pyanaconda/rescue.py:296
-#, python-format
-msgid ""
-"The rescue environment will now attempt to find your Linux installation and "
-"mount it under the directory : %s.  You can then make any changes required "
-"to your system.  Choose '1' to proceed with this step.\n"
-"You can choose to mount your file systems read-only instead of read-write by "
-"choosing '2'.\n"
-"If for some reason this process does not work choose '3' to skip directly to "
-"a shell.\n"
-"\n"
-msgstr ""
-"レスキュー環境では、Linux インストールの検索、%s ディレクトリー配下へのマウン"
-"トが行われ、システムに必要な変更を行うことができるようになります。このステッ"
-"プを続行する場合は '1' を選択します。\n"
-"読み取りと書き込みではなく、読み取り専用のアクセスでファイルシステムをマウン"
-"トする場合は '2' を選択してください。\n"
-"何らかの理由でこのプロセスが正しく動作しない場合は、'3' を選択すると、このス"
-"テップを飛ばしてシェルに切り替わります。\n"
-"\n"
-
-#: pyanaconda/rescue.py:308
-msgid "Continue"
-msgstr "続行"
-
-#: pyanaconda/rescue.py:309
-msgid "Read-only mount"
-msgstr "読み取り専用でマウント"
-
-#: pyanaconda/rescue.py:310
-msgid "Skip to shell"
-msgstr "シェルへスキップ"
-
-#: pyanaconda/rescue.py:311
-msgid "Quit (Reboot)"
-msgstr "終了 (再起動)"
-
-#: pyanaconda/rescue.py:408
-msgid "Rescue Shell"
-msgstr "セキュアシェル"
-
-#: pyanaconda/rescue.py:418
-#, python-format
-msgid "Run %s to unmount the system when you are finished."
-msgstr ""
-"メンテナンスが終わったら、%s を実行してシステムをアンマウントしてください。"
-
-#: pyanaconda/rescue.py:419
-msgid ""
-"When finished, please exit from the shell and your system will reboot.\n"
-msgstr "完了したらシェルを終了してください。システムは再起動します。\n"
-
-#: pyanaconda/rescue.py:430
-#, python-format
-msgid ""
-"Your system has been mounted under %(mountpoint)s.\n"
-"\n"
-"If you would like to make the root of your system the root of the active "
-"system, run the command:\n"
-"\n"
-"\tchroot %(mountpoint)s\n"
-"\n"
-msgstr ""
-"お使いのシステムは %(mountpoint)s にマウントされています。\n"
-"\n"
-"お使いのシステムの root をアクティブなシステムの root にするには、次のコマン"
-"ドを実行します。\n"
-"\n"
-"\\\tchroot %(mountpoint)s\n"
-"\n"
-
-#: pyanaconda/rescue.py:442
-#, python-brace-format
-msgid ""
-"An error occurred trying to mount some or all of your system: {message}\n"
-"\n"
-"Some of it may be mounted under {path}."
-msgstr ""
-"システムの一部またはすべてをマウントするときにエラーが発生しました: "
-"{message}\n"
-"\n"
-"その内いくつかは {path} にマウントされている可能性があります。"
-
-#: pyanaconda/rescue.py:454
-msgid "You don't have any Linux partitions.\n"
-msgstr "Linux パーティションがありません。\n"
-
-#: pyanaconda/rescue.py:460
-msgid "Not mounting the system.\n"
-msgstr "システムをマウントしていません\n"
-
-#: pyanaconda/rescue.py:474
-#, python-format
-msgid "Please press %s to get a shell"
-msgstr "%s を押してシェルを起動してください"
-
-#: pyanaconda/rescue.py:491
-msgid "Root Selection"
-msgstr "Root の選択"
-
-#: pyanaconda/rescue.py:517
-msgid "The following installations were discovered on your system."
-msgstr "ご使用のシステムで以下のインストールが見つかりました。"
-
 #: pyanaconda/addons.py:97
 #, python-format
 msgid "Executing %s addon"
@@ -4448,6 +4336,118 @@ msgstr "%s にポリシー名が必要です"
 #, python-format
 msgid "A %(command)s with the name %(policyName)s has already been defined."
 msgstr "%(policyName)s という名前の %(command)s はすでに定義されています。"
+
+#: pyanaconda/rescue.py:272
+msgid "Unable to find /bin/bash to execute!  Not starting shell."
+msgstr "実行する /bin/bash が見つかりません。シェルを起動できません。"
+
+#: pyanaconda/rescue.py:289
+msgid "Rescue"
+msgstr "レスキュー"
+
+#: pyanaconda/rescue.py:296
+#, python-format
+msgid ""
+"The rescue environment will now attempt to find your Linux installation and "
+"mount it under the directory : %s.  You can then make any changes required "
+"to your system.  Choose '1' to proceed with this step.\n"
+"You can choose to mount your file systems read-only instead of read-write by "
+"choosing '2'.\n"
+"If for some reason this process does not work choose '3' to skip directly to "
+"a shell.\n"
+"\n"
+msgstr ""
+"レスキュー環境では、Linux インストールの検索、%s ディレクトリー配下へのマウン"
+"トが行われ、システムに必要な変更を行うことができるようになります。このステッ"
+"プを続行する場合は '1' を選択します。\n"
+"読み取りと書き込みではなく、読み取り専用のアクセスでファイルシステムをマウン"
+"トする場合は '2' を選択してください。\n"
+"何らかの理由でこのプロセスが正しく動作しない場合は、'3' を選択すると、このス"
+"テップを飛ばしてシェルに切り替わります。\n"
+"\n"
+
+#: pyanaconda/rescue.py:308
+msgid "Continue"
+msgstr "続行"
+
+#: pyanaconda/rescue.py:309
+msgid "Read-only mount"
+msgstr "読み取り専用でマウント"
+
+#: pyanaconda/rescue.py:310
+msgid "Skip to shell"
+msgstr "シェルへスキップ"
+
+#: pyanaconda/rescue.py:311
+msgid "Quit (Reboot)"
+msgstr "終了 (再起動)"
+
+#: pyanaconda/rescue.py:408
+msgid "Rescue Shell"
+msgstr "セキュアシェル"
+
+#: pyanaconda/rescue.py:418
+#, python-format
+msgid "Run %s to unmount the system when you are finished."
+msgstr ""
+"メンテナンスが終わったら、%s を実行してシステムをアンマウントしてください。"
+
+#: pyanaconda/rescue.py:419
+msgid ""
+"When finished, please exit from the shell and your system will reboot.\n"
+msgstr "完了したらシェルを終了してください。システムは再起動します。\n"
+
+#: pyanaconda/rescue.py:430
+#, python-format
+msgid ""
+"Your system has been mounted under %(mountpoint)s.\n"
+"\n"
+"If you would like to make the root of your system the root of the active "
+"system, run the command:\n"
+"\n"
+"\tchroot %(mountpoint)s\n"
+"\n"
+msgstr ""
+"お使いのシステムは %(mountpoint)s にマウントされています。\n"
+"\n"
+"お使いのシステムの root をアクティブなシステムの root にするには、次のコマン"
+"ドを実行します。\n"
+"\n"
+"\\\tchroot %(mountpoint)s\n"
+"\n"
+
+#: pyanaconda/rescue.py:442
+#, python-brace-format
+msgid ""
+"An error occurred trying to mount some or all of your system: {message}\n"
+"\n"
+"Some of it may be mounted under {path}."
+msgstr ""
+"システムの一部またはすべてをマウントするときにエラーが発生しました: "
+"{message}\n"
+"\n"
+"その内いくつかは {path} にマウントされている可能性があります。"
+
+#: pyanaconda/rescue.py:454
+msgid "You don't have any Linux partitions.\n"
+msgstr "Linux パーティションがありません。\n"
+
+#: pyanaconda/rescue.py:460
+msgid "Not mounting the system.\n"
+msgstr "システムをマウントしていません\n"
+
+#: pyanaconda/rescue.py:474
+#, python-format
+msgid "Please press %s to get a shell"
+msgstr "%s を押してシェルを起動してください"
+
+#: pyanaconda/rescue.py:491
+msgid "Root Selection"
+msgstr "Root の選択"
+
+#: pyanaconda/rescue.py:517
+msgid "The following installations were discovered on your system."
+msgstr "ご使用のシステムで以下のインストールが見つかりました。"
 
 #: pyanaconda/startup_utils.py:83
 #, python-format
@@ -5105,7 +5105,7 @@ msgid "Discovering DASD devices.  This may take a moment..."
 msgstr "DASD デバイスを検索中です。少々お待ちください..."
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:212
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:253
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:254
 msgid "Device discovery failed."
 msgstr "デバイスの検索に失敗しました。"
 
@@ -5123,7 +5123,7 @@ msgid "_Retry Discovery"
 msgstr "検索を再試行(_R)"
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:307
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:346
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:347
 msgid "Device discovery succeeded."
 msgstr "デバイスの検索に成功しました。"
 
@@ -5416,37 +5416,37 @@ msgstr ""
 msgid "Warning: Existing data on reconfigured devices will be lost."
 msgstr "警告: 再設定されたデバイスの既存のデータは失われます。"
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:82
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:83
 msgid "ADD zFCP STORAGE TARGET"
 msgstr "zFCP ターゲットの追加"
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:105
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:106
 msgid ""
-"To use zFCP disks, you must provide the device number, WWPN, and LUN "
-"configured for the device."
+"To use zFCP-attached SCSI disks, you must provide the FCP device number. "
+"Storage WWPN and FCP LUN are necessary if the zFCP adapter is not configured "
+"in NPIV mode or when automatic LUN scanning is disabled via a kernel module "
+"parameter."
 msgstr ""
-"zFCP ディスクを使用する場合は、そのデバイスに設定されているデバイス番号、"
-"WWPN、LUN を入力する必要があります。"
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:132
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:133
 msgctxt "GUI|Advanced Storage|zFCP|Device Number"
 msgid "_Device number:"
 msgstr "デバイス番号(_D):"
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:159
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:160
 msgid "WWPN:"
 msgstr "WWPN:"
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:177
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:178
 msgctxt "GUI|Advanced Storage|zFCP|Start Discovery"
 msgid "_Start Discovery"
 msgstr "検索を開始(_S)"
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:214
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:215
 msgid "Discovering zFCP devices.  This may take a moment..."
 msgstr "zFCP デバイスを検索中です。少々お待ちください..."
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:268
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:269
 msgid ""
 "The following error occurred discovering zFCP devices.  Please double check "
 "your configuration information and try again."
@@ -5454,12 +5454,12 @@ msgstr ""
 "zFCP デバイスの検索中に、次のエラーが発生しました。設定情報を再度確認し、再試"
 "行してください。"
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:291
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:292
 msgctxt "GUI|Advanced Storage|zFCP|Retry Discovery"
 msgid "_Retry Discovery"
 msgstr "検索を再試行(_R)"
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:373
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:374
 msgid "LUN:"
 msgstr "LUN:"
 
@@ -5592,61 +5592,6 @@ msgid ""
 msgstr ""
 "この無線 LAN にアクセスするには、パスワード\n"
 "もしくは暗号キーが必要です"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:23
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Cancel"
-msgstr "取り消し(_C)"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:38
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Save Passphrase"
-msgstr "パスフレーズの保存(_S)"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:65
-msgid "DISK ENCRYPTION PASSPHRASE"
-msgstr "ディスク暗号化用パスフレーズ"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:81
-msgid ""
-"You have chosen to encrypt some of your data. You will need to create a "
-"passphrase that you will use to access your data when you start your "
-"computer."
-msgstr ""
-"データの一部を暗号化する選択をしました。コンピューターの起動時に、データへの"
-"アクセスに使用するパスフレーズを作成する必要があります。"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:102
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Passphrase:"
-msgstr "パスフレーズ(_P):"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:133
-msgctxt "GUI|Passphrase Dialog"
-msgid "Con_firm:"
-msgstr "確認(_F):"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:275
-msgid ""
-"Warning: You won't be able to switch between keyboard layouts (from the "
-"default one) when you decrypt your disks after install."
-msgstr ""
-"警告: インストール後のディスク復号時は、キーボードレイアウトを切り替えられま"
-"せん (デフォルトのものを使用します)。"
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:23
-msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
-msgid "_Quit"
-msgstr "終了(_Q)"
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:37
-msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
-msgid "_Continue"
-msgstr "続行(_C)"
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:122
-msgid "Unsupported Hardware"
-msgstr "サポートされていないハードウェア"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:21
 msgctxt "GUI|Custom Partitioning|Confirm Delete Dialog"
@@ -5866,6 +5811,47 @@ msgstr ""
 msgid "Disk formatting complete."
 msgstr "ディスクのフォーマットが完了しました。"
 
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:23
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Cancel"
+msgstr "取り消し(_C)"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:38
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Save Passphrase"
+msgstr "パスフレーズの保存(_S)"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:65
+msgid "DISK ENCRYPTION PASSPHRASE"
+msgstr "ディスク暗号化用パスフレーズ"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:81
+msgid ""
+"You have chosen to encrypt some of your data. You will need to create a "
+"passphrase that you will use to access your data when you start your "
+"computer."
+msgstr ""
+"データの一部を暗号化する選択をしました。コンピューターの起動時に、データへの"
+"アクセスに使用するパスフレーズを作成する必要があります。"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:102
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Passphrase:"
+msgstr "パスフレーズ(_P):"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:133
+msgctxt "GUI|Passphrase Dialog"
+msgid "Con_firm:"
+msgstr "確認(_F):"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:275
+msgid ""
+"Warning: You won't be able to switch between keyboard layouts (from the "
+"default one) when you decrypt your disks after install."
+msgstr ""
+"警告: インストール後のディスク復号時は、キーボードレイアウトを切り替えられま"
+"せん (デフォルトのものを使用します)。"
+
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:8
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:71
 msgid "RESCAN DISKS"
@@ -6008,6 +5994,20 @@ msgstr "順序"
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:166
 msgid "Device"
 msgstr "デバイス"
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:23
+msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
+msgid "_Quit"
+msgstr "終了(_Q)"
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:37
+msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
+msgid "_Continue"
+msgstr "続行(_C)"
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:122
+msgid "Unsupported Hardware"
+msgstr "サポートされていないハードウェア"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:176
 msgid "Add a new mount point."
@@ -7435,6 +7435,13 @@ msgstr "閉じる"
 #: ../data/liveinst/console.apps/liveinst.h:1
 msgid "Starting Install to Hard Drive"
 msgstr "ハードドライブへのインストールを開始します"
+
+#~ msgid ""
+#~ "To use zFCP disks, you must provide the device number, WWPN, and LUN "
+#~ "configured for the device."
+#~ msgstr ""
+#~ "zFCP ディスクを使用する場合は、そのデバイスに設定されているデバイス番号、"
+#~ "WWPN、LUN を入力する必要があります。"
 
 #~ msgid "Disabled. Set password to enable root account."
 #~ msgstr "無効。rootアカウントのパスワードを設定する。"

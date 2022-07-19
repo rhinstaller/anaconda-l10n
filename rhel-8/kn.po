@@ -23,7 +23,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2022-06-28 11:50+0200\n"
+"POT-Creation-Date: 2022-07-14 18:19+0200\n"
 "PO-Revision-Date: 2015-03-01 08:43+0000\n"
 "Last-Translator: Ding-Yi Chen <dingyichen@gmail.com>\n"
 "Language-Team: Kannada (http://www.transifex.com/projects/p/anaconda/"
@@ -42,18 +42,6 @@ msgstr ""
 #: pyanaconda/core/kickstart/addon.py:138
 msgid "Unknown name of the %addon section."
 msgstr ""
-
-#: pyanaconda/core/payload.py:131
-msgid "No host url"
-msgstr "ಯಾವುದೆ ಆತಿಥೇಯ url ಇಲ್ಲ"
-
-#: pyanaconda/core/payload.py:152
-msgid "malformed URL, cannot parse it."
-msgstr "ತಪ್ಪಾದ URL, ಅದನ್ನು ಪಾರ್ಸ್ ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲ."
-
-#: pyanaconda/core/payload.py:168
-msgid "URL has no host component"
-msgstr "URL ಯಾವುದೆ ಆತಿಥೇಯ ಘಟಕವನ್ನು ಹೊಂದಿಲ್ಲ"
 
 #: pyanaconda/core/constants.py:89
 msgid "Start VNC"
@@ -246,6 +234,18 @@ msgstr "ಗುಂಪಿನ ಮೆಟಾಡೇಟಾವನ್ನು ಇಳಿಸ�
 msgid "Anaconda Installer"
 msgstr ""
 
+#: pyanaconda/core/payload.py:131
+msgid "No host url"
+msgstr "ಯಾವುದೆ ಆತಿಥೇಯ url ಇಲ್ಲ"
+
+#: pyanaconda/core/payload.py:152
+msgid "malformed URL, cannot parse it."
+msgstr "ತಪ್ಪಾದ URL, ಅದನ್ನು ಪಾರ್ಸ್ ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲ."
+
+#: pyanaconda/core/payload.py:168
+msgid "URL has no host component"
+msgstr "URL ಯಾವುದೆ ಆತಿಥೇಯ ಘಟಕವನ್ನು ಹೊಂದಿಲ್ಲ"
+
 #: pyanaconda/core/storage.py:84
 msgid "Unsupported"
 msgstr ""
@@ -405,37 +405,6 @@ msgstr "NFS ಪೂರೈಕೆಗಣಕ %s"
 msgid "Local repositories"
 msgstr "ಹೆಚ್ಚುವರಿ ರೆಪೊಸಿಟರಿಗಳು"
 
-#: pyanaconda/modules/storage/bootloader/bootloader.py:171
-msgid "GRUB2 does not support installation to a partition."
-msgstr "ಒಂದು ವಿಭಾಗಕ್ಕೆ ಅನುಸ್ಥಾಪಿಸುವುದನ್ನು GRUB2 ಬೆಂಬಲಿಸುವುದಿಲ್ಲ."
-
-#: pyanaconda/modules/storage/bootloader/bootloader.py:178
-msgid "GRUB2 encrypted password must be in grub.pbkdf2 format."
-msgstr ""
-
-#: pyanaconda/modules/storage/bootloader/grub2.py:487
-#, python-format
-msgid ""
-"%(deviceName)s may not have enough space for grub2 to embed core.img when "
-"using the %(fsType)s file system on %(deviceType)s"
-msgstr ""
-
-#: pyanaconda/modules/storage/bootloader/grub2.py:526
-#, python-format
-msgid ""
-"boot loader stage2 device %(stage2dev)s is on a multi-disk array, but boot "
-"loader stage1 device %(stage1dev)s is not. A drive failure in %(stage2dev)s "
-"could render the system unbootable."
-msgstr ""
-
-#: pyanaconda/modules/storage/bootloader/grub2.py:533
-#, python-format
-msgid ""
-"boot loader stage2 device %(stage2dev)s is on a multi-disk array, but boot "
-"loader stage1 device %(stage1dev)s is not part of this array. The stage1 "
-"boot loader will only be installed to a single drive."
-msgstr ""
-
 #: pyanaconda/modules/storage/bootloader/base.py:166
 msgid "/boot file system"
 msgstr ""
@@ -531,6 +500,14 @@ msgstr ""
 msgid "%(desc)s cannot be of type %(type)s"
 msgstr "%(desc)s ಎನ್ನುವುದು %(type)s ಯ ಬಗೆಯದ್ದಾಗಿರಬಾರದು"
 
+#: pyanaconda/modules/storage/bootloader/bootloader.py:171
+msgid "GRUB2 does not support installation to a partition."
+msgstr "ಒಂದು ವಿಭಾಗಕ್ಕೆ ಅನುಸ್ಥಾಪಿಸುವುದನ್ನು GRUB2 ಬೆಂಬಲಿಸುವುದಿಲ್ಲ."
+
+#: pyanaconda/modules/storage/bootloader/bootloader.py:178
+msgid "GRUB2 encrypted password must be in grub.pbkdf2 format."
+msgstr ""
+
 #: pyanaconda/modules/storage/bootloader/execution.py:187
 msgid "No match found for given boot drive \"{}\"."
 msgstr ""
@@ -541,6 +518,29 @@ msgstr ""
 
 #: pyanaconda/modules/storage/bootloader/execution.py:195
 msgid "Requested boot drive \"{}\" doesn't exist or cannot be used."
+msgstr ""
+
+#: pyanaconda/modules/storage/bootloader/grub2.py:487
+#, python-format
+msgid ""
+"%(deviceName)s may not have enough space for grub2 to embed core.img when "
+"using the %(fsType)s file system on %(deviceType)s"
+msgstr ""
+
+#: pyanaconda/modules/storage/bootloader/grub2.py:526
+#, python-format
+msgid ""
+"boot loader stage2 device %(stage2dev)s is on a multi-disk array, but boot "
+"loader stage1 device %(stage1dev)s is not. A drive failure in %(stage2dev)s "
+"could render the system unbootable."
+msgstr ""
+
+#: pyanaconda/modules/storage/bootloader/grub2.py:533
+#, python-format
+msgid ""
+"boot loader stage2 device %(stage2dev)s is on a multi-disk array, but boot "
+"loader stage1 device %(stage1dev)s is not part of this array. The stage1 "
+"boot loader will only be installed to a single drive."
 msgstr ""
 
 #: pyanaconda/modules/storage/checker/utils.py:54
@@ -703,6 +703,14 @@ msgid ""
 "unselected disks. You must select or de-select all these disks as a set."
 msgstr ""
 
+#: pyanaconda/modules/storage/devicetree/fsset.py:390
+#, python-brace-format
+msgid ""
+"There is an entry in your /etc/fstab file that contains an invalid or "
+"incorrect file system type. The file says that {detected_type} at "
+"{mount_point} is {fstab_type}."
+msgstr ""
+
 #: pyanaconda/modules/storage/devicetree/root.py:339
 msgid "Unknown Linux"
 msgstr ""
@@ -715,24 +723,6 @@ msgstr ""
 #: pyanaconda/modules/storage/devicetree/root.py:344
 #, python-brace-format
 msgid "{product} Linux {version} for {arch}"
-msgstr ""
-
-#: pyanaconda/modules/storage/devicetree/viewer.py:303
-#, python-brace-format
-msgid "{device_description} ({device_name})"
-msgstr ""
-
-#: pyanaconda/modules/storage/devicetree/viewer.py:309
-#, python-brace-format
-msgid "{device_name} on {container_name}"
-msgstr ""
-
-#: pyanaconda/modules/storage/devicetree/fsset.py:390
-#, python-brace-format
-msgid ""
-"There is an entry in your /etc/fstab file that contains an invalid or "
-"incorrect file system type. The file says that {detected_type} at "
-"{mount_point} is {fstab_type}."
 msgstr ""
 
 #: pyanaconda/modules/storage/devicetree/utils.py:68
@@ -759,6 +749,16 @@ msgstr ""
 "ಎಸ್ಕ್ರೊ ಪ್ರಮಾಣಪತ್ರವನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡುವಾಗ ಈ ಕೆಳಕಂಡ ದೋಷವು ಕಂಡುಬಂದಿದೆ:\n"
 "\n"
 "%s"
+
+#: pyanaconda/modules/storage/devicetree/viewer.py:303
+#, python-brace-format
+msgid "{device_description} ({device_name})"
+msgstr ""
+
+#: pyanaconda/modules/storage/devicetree/viewer.py:309
+#, python-brace-format
+msgid "{device_name} on {container_name}"
+msgstr ""
 
 #: pyanaconda/modules/storage/disk_selection/utils.py:36
 msgid "The selected disk {} is not recognized."
@@ -1613,6 +1613,15 @@ msgctxt "GUI|Summary|Warning Dialog"
 msgid "_OK"
 msgstr ""
 
+#: pyanaconda/ui/gui/spokes/advstorage/nvdimm.py:82
+msgctxt "GUI|Advanced Storage|NVDIM"
+msgid "No device to be reconfigured selected."
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/advstorage/nvdimm.py:174
+msgid "Rescanning disks finished."
+msgstr ""
+
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.py:158
 #, fuzzy, python-format
 #| msgid ""
@@ -1627,26 +1636,6 @@ msgstr ""
 "<b>%(targetAddress)s</b> ಗುರಿ IP ವಿಳಾಸವನ್ನು ಬಳಸಿಕೊಂಡು <b>%(initiatorName)s</"
 "b> iSCSI ಆರಂಭಕವನ್ನು ಬಳಸಿಕೊಂಡು ಈ ಕೆಳಗಿನ ನೋಡ್‌ಗಳನ್ನು ಪತ್ತೆ ಮಾಡಲಾಗಿದೆ.  ನೀವು ಯಾವ "
 "ನೋಡ್‌ಗಳಿಗೆ ಪ್ರವೇಶಿಸಲು ಬಯಸುವಿರಿ ಎನ್ನುವುದನ್ನು ಆಯ್ಕೆ ಮಾಡಿ:"
-
-#: pyanaconda/ui/gui/spokes/advstorage/nvdimm.py:82
-msgctxt "GUI|Advanced Storage|NVDIM"
-msgid "No device to be reconfigured selected."
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/advstorage/nvdimm.py:174
-msgid "Rescanning disks finished."
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/lib/cart.py:193
-msgctxt "GUI|Selected Disks Dialog"
-msgid "_Do not install boot loader"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/lib/cart.py:198
-#: pyanaconda/ui/gui/spokes/lib/cart.glade:200
-msgctxt "GUI|Selected Disks Dialog"
-msgid "_Set as Boot Device"
-msgstr "ಬೂಟ್ ಸಾಧನವಾಗಿ ಹೊಂದಿಸು (_S)"
 
 #: pyanaconda/ui/gui/spokes/lib/detailederror.py:48
 msgctxt "GUI|Detailed Error Dialog"
@@ -1775,6 +1764,17 @@ msgstr ""
 msgctxt "GUI|Custom Partitioning|Autopart Page"
 msgid "_Encrypt automatically created mount points by default:"
 msgstr ""
+
+#: pyanaconda/ui/gui/spokes/lib/cart.py:193
+msgctxt "GUI|Selected Disks Dialog"
+msgid "_Do not install boot loader"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/lib/cart.py:198
+#: pyanaconda/ui/gui/spokes/lib/cart.glade:200
+msgctxt "GUI|Selected Disks Dialog"
+msgid "_Set as Boot Device"
+msgstr "ಬೂಟ್ ಸಾಧನವಾಗಿ ಹೊಂದಿಸು (_S)"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:47
 #, python-format
@@ -3727,98 +3727,6 @@ msgid ""
 "Would you like to use it anyway?"
 msgstr ""
 
-#: pyanaconda/rescue.py:272
-msgid "Unable to find /bin/bash to execute!  Not starting shell."
-msgstr ""
-
-#: pyanaconda/rescue.py:289
-msgid "Rescue"
-msgstr "ಪಾರುಗಾಣಿಸು"
-
-#: pyanaconda/rescue.py:296
-#, python-format
-msgid ""
-"The rescue environment will now attempt to find your Linux installation and "
-"mount it under the directory : %s.  You can then make any changes required "
-"to your system.  Choose '1' to proceed with this step.\n"
-"You can choose to mount your file systems read-only instead of read-write by "
-"choosing '2'.\n"
-"If for some reason this process does not work choose '3' to skip directly to "
-"a shell.\n"
-"\n"
-msgstr ""
-
-#: pyanaconda/rescue.py:308
-msgid "Continue"
-msgstr "ಮುಂದುವರೆ"
-
-#: pyanaconda/rescue.py:309
-msgid "Read-only mount"
-msgstr ""
-
-#: pyanaconda/rescue.py:310
-msgid "Skip to shell"
-msgstr ""
-
-#: pyanaconda/rescue.py:311
-msgid "Quit (Reboot)"
-msgstr ""
-
-#: pyanaconda/rescue.py:408
-msgid "Rescue Shell"
-msgstr ""
-
-#: pyanaconda/rescue.py:418
-#, python-format
-msgid "Run %s to unmount the system when you are finished."
-msgstr "ನೀವು ಪೂರ್ಣಗೊಳಿಸಿದ ನಂತರ ವ್ಯವಸ್ಥೆಯನ್ನು ಅವರೋಹಿಸಲು %s ಅನ್ನು ಚಲಾಯಿಸಿ."
-
-#: pyanaconda/rescue.py:419
-msgid ""
-"When finished, please exit from the shell and your system will reboot.\n"
-msgstr ""
-
-#: pyanaconda/rescue.py:430
-#, python-format
-msgid ""
-"Your system has been mounted under %(mountpoint)s.\n"
-"\n"
-"If you would like to make the root of your system the root of the active "
-"system, run the command:\n"
-"\n"
-"\tchroot %(mountpoint)s\n"
-"\n"
-msgstr ""
-
-#: pyanaconda/rescue.py:442
-#, python-brace-format
-msgid ""
-"An error occurred trying to mount some or all of your system: {message}\n"
-"\n"
-"Some of it may be mounted under {path}."
-msgstr ""
-
-#: pyanaconda/rescue.py:454
-msgid "You don't have any Linux partitions.\n"
-msgstr ""
-
-#: pyanaconda/rescue.py:460
-msgid "Not mounting the system.\n"
-msgstr ""
-
-#: pyanaconda/rescue.py:474
-#, python-format
-msgid "Please press %s to get a shell"
-msgstr ""
-
-#: pyanaconda/rescue.py:491
-msgid "Root Selection"
-msgstr ""
-
-#: pyanaconda/rescue.py:517
-msgid "The following installations were discovered on your system."
-msgstr ""
-
 #: pyanaconda/addons.py:97
 #, python-format
 msgid "Executing %s addon"
@@ -4264,6 +4172,98 @@ msgstr ""
 #: pyanaconda/pwpolicy.py:155
 #, python-format
 msgid "A %(command)s with the name %(policyName)s has already been defined."
+msgstr ""
+
+#: pyanaconda/rescue.py:272
+msgid "Unable to find /bin/bash to execute!  Not starting shell."
+msgstr ""
+
+#: pyanaconda/rescue.py:289
+msgid "Rescue"
+msgstr "ಪಾರುಗಾಣಿಸು"
+
+#: pyanaconda/rescue.py:296
+#, python-format
+msgid ""
+"The rescue environment will now attempt to find your Linux installation and "
+"mount it under the directory : %s.  You can then make any changes required "
+"to your system.  Choose '1' to proceed with this step.\n"
+"You can choose to mount your file systems read-only instead of read-write by "
+"choosing '2'.\n"
+"If for some reason this process does not work choose '3' to skip directly to "
+"a shell.\n"
+"\n"
+msgstr ""
+
+#: pyanaconda/rescue.py:308
+msgid "Continue"
+msgstr "ಮುಂದುವರೆ"
+
+#: pyanaconda/rescue.py:309
+msgid "Read-only mount"
+msgstr ""
+
+#: pyanaconda/rescue.py:310
+msgid "Skip to shell"
+msgstr ""
+
+#: pyanaconda/rescue.py:311
+msgid "Quit (Reboot)"
+msgstr ""
+
+#: pyanaconda/rescue.py:408
+msgid "Rescue Shell"
+msgstr ""
+
+#: pyanaconda/rescue.py:418
+#, python-format
+msgid "Run %s to unmount the system when you are finished."
+msgstr "ನೀವು ಪೂರ್ಣಗೊಳಿಸಿದ ನಂತರ ವ್ಯವಸ್ಥೆಯನ್ನು ಅವರೋಹಿಸಲು %s ಅನ್ನು ಚಲಾಯಿಸಿ."
+
+#: pyanaconda/rescue.py:419
+msgid ""
+"When finished, please exit from the shell and your system will reboot.\n"
+msgstr ""
+
+#: pyanaconda/rescue.py:430
+#, python-format
+msgid ""
+"Your system has been mounted under %(mountpoint)s.\n"
+"\n"
+"If you would like to make the root of your system the root of the active "
+"system, run the command:\n"
+"\n"
+"\tchroot %(mountpoint)s\n"
+"\n"
+msgstr ""
+
+#: pyanaconda/rescue.py:442
+#, python-brace-format
+msgid ""
+"An error occurred trying to mount some or all of your system: {message}\n"
+"\n"
+"Some of it may be mounted under {path}."
+msgstr ""
+
+#: pyanaconda/rescue.py:454
+msgid "You don't have any Linux partitions.\n"
+msgstr ""
+
+#: pyanaconda/rescue.py:460
+msgid "Not mounting the system.\n"
+msgstr ""
+
+#: pyanaconda/rescue.py:474
+#, python-format
+msgid "Please press %s to get a shell"
+msgstr ""
+
+#: pyanaconda/rescue.py:491
+msgid "Root Selection"
+msgstr ""
+
+#: pyanaconda/rescue.py:517
+msgid "The following installations were discovered on your system."
 msgstr ""
 
 #: pyanaconda/startup_utils.py:83
@@ -4919,7 +4919,7 @@ msgid "Discovering DASD devices.  This may take a moment..."
 msgstr ""
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:212
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:253
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:254
 msgid "Device discovery failed."
 msgstr ""
 
@@ -4935,7 +4935,7 @@ msgid "_Retry Discovery"
 msgstr ""
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:307
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:346
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:347
 msgid "Device discovery succeeded."
 msgstr ""
 
@@ -5226,46 +5226,48 @@ msgstr ""
 msgid "Warning: Existing data on reconfigured devices will be lost."
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:82
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:83
 msgid "ADD zFCP STORAGE TARGET"
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:105
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:106
 msgid ""
-"To use zFCP disks, you must provide the device number, WWPN, and LUN "
-"configured for the device."
+"To use zFCP-attached SCSI disks, you must provide the FCP device number. "
+"Storage WWPN and FCP LUN are necessary if the zFCP adapter is not configured "
+"in NPIV mode or when automatic LUN scanning is disabled via a kernel module "
+"parameter."
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:132
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:133
 msgctxt "GUI|Advanced Storage|zFCP|Device Number"
 msgid "_Device number:"
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:159
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:160
 msgid "WWPN:"
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:177
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:178
 msgctxt "GUI|Advanced Storage|zFCP|Start Discovery"
 msgid "_Start Discovery"
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:214
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:215
 msgid "Discovering zFCP devices.  This may take a moment..."
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:268
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:269
 msgid ""
 "The following error occurred discovering zFCP devices.  Please double check "
 "your configuration information and try again."
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:291
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:292
 msgctxt "GUI|Advanced Storage|zFCP|Retry Discovery"
 msgid "_Retry Discovery"
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:373
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:374
 msgid "LUN:"
 msgstr ""
 
@@ -5396,62 +5398,6 @@ msgid ""
 msgstr ""
 "ವೈರ್ಲೆಸ್ ಜಾಲಬಂಧವನ್ನು ನಿಲುಕಿಸಿಕೊಳ್ಳಲು ಗುಪ್ತಪದ ಅಥವ ಗೂಢಲಿಪೀಕರಣ \n"
 "ಕೀಲಿಯ ಅಗತ್ಯವಿರುತ್ತದೆ"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:23
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Cancel"
-msgstr "ರದ್ದುಗೊಳಿಸು (_C)"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:38
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Save Passphrase"
-msgstr "ಗುಪ್ತವಾಕ್ಯಾಂಶವನ್ನು ಉಳಿಸು (_S)"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:65
-msgid "DISK ENCRYPTION PASSPHRASE"
-msgstr "ಡಿಸ್ಕ್ ಗೂಢಲಿಪೀಕರಣ ಗುಪ್ತವಾಕ್ಯಾಂಶ"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:81
-msgid ""
-"You have chosen to encrypt some of your data. You will need to create a "
-"passphrase that you will use to access your data when you start your "
-"computer."
-msgstr ""
-"ನೀವು ನಿಮ್ಮ ಕೆಲವು ದತ್ತಾಂಶವನ್ನು ಗೂಢಲಿಪೀಕರಿಸಲು ಬಯಸಿದ್ದೀರಿ. ಗಣಕವನ್ನು ಆರಂಭಿಸಿದಾಗ ನಿಮ್ಮ  "
-"ದತ್ತಾಂಶವನ್ನು ನಿಲುಕಿಸಿಕೊಳ್ಳಲು ನೀವು ಬಳಸಬಹುದಾದ ಒಂದು ಗುಪ್ತವಾಕ್ಯಾಂಶವನ್ನು "
-"ಒದಗಿಸಬೇಕಾಗುತ್ತದೆ."
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:102
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Passphrase:"
-msgstr "ಗುಪ್ತವಾಕ್ಯಾಂಶ (_P):"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:133
-msgctxt "GUI|Passphrase Dialog"
-msgid "Con_firm:"
-msgstr "ಖಚಿತಪಡಿಸು (_f):"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:275
-msgid ""
-"Warning: You won't be able to switch between keyboard layouts (from the "
-"default one) when you decrypt your disks after install."
-msgstr ""
-"ಎಚ್ಚರಿಕೆ: ಅನುಸ್ಥಾಪನೆಯ ನಂತರ ನೀವು ನಿಮ್ಮ ಡಿಸ್ಕುಗಳನ್ನು ಡೀಕ್ರಿಪ್ಟ್ ಮಾಡಿದಲ್ಲಿ ಕೀಲಿಮಣೆ "
-"ವಿನ್ಯಾಸಗಳ (ಪೂರ್ವನಿಯೋಜಿತದಿಂದ) ನಡುವೆ ಬದಲಾಯಿಸಲು ಸಾಧ್ಯವಿರುವುದಿಲ್ಲ."
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:23
-msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
-msgid "_Quit"
-msgstr "ನಿರ್ಗಮಿಸು (_Q)"
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:37
-msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
-msgid "_Continue"
-msgstr "ಮುಂದುವರೆ (_C)"
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:122
-msgid "Unsupported Hardware"
-msgstr "ಬೆಂಬಲವಿರದ ಯಂತ್ರಾಂಶ"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:21
 msgctxt "GUI|Custom Partitioning|Confirm Delete Dialog"
@@ -5666,6 +5612,48 @@ msgstr ""
 msgid "Disk formatting complete."
 msgstr "ಡಿಸ್ಕ್‌ ಫಾರ್ಮ್ಯಾಟ್‌ ಮಾಡುವಿಕೆ ಪೂರ್ಣಗೊಂಡಿದೆ."
 
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:23
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Cancel"
+msgstr "ರದ್ದುಗೊಳಿಸು (_C)"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:38
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Save Passphrase"
+msgstr "ಗುಪ್ತವಾಕ್ಯಾಂಶವನ್ನು ಉಳಿಸು (_S)"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:65
+msgid "DISK ENCRYPTION PASSPHRASE"
+msgstr "ಡಿಸ್ಕ್ ಗೂಢಲಿಪೀಕರಣ ಗುಪ್ತವಾಕ್ಯಾಂಶ"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:81
+msgid ""
+"You have chosen to encrypt some of your data. You will need to create a "
+"passphrase that you will use to access your data when you start your "
+"computer."
+msgstr ""
+"ನೀವು ನಿಮ್ಮ ಕೆಲವು ದತ್ತಾಂಶವನ್ನು ಗೂಢಲಿಪೀಕರಿಸಲು ಬಯಸಿದ್ದೀರಿ. ಗಣಕವನ್ನು ಆರಂಭಿಸಿದಾಗ ನಿಮ್ಮ  "
+"ದತ್ತಾಂಶವನ್ನು ನಿಲುಕಿಸಿಕೊಳ್ಳಲು ನೀವು ಬಳಸಬಹುದಾದ ಒಂದು ಗುಪ್ತವಾಕ್ಯಾಂಶವನ್ನು "
+"ಒದಗಿಸಬೇಕಾಗುತ್ತದೆ."
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:102
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Passphrase:"
+msgstr "ಗುಪ್ತವಾಕ್ಯಾಂಶ (_P):"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:133
+msgctxt "GUI|Passphrase Dialog"
+msgid "Con_firm:"
+msgstr "ಖಚಿತಪಡಿಸು (_f):"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:275
+msgid ""
+"Warning: You won't be able to switch between keyboard layouts (from the "
+"default one) when you decrypt your disks after install."
+msgstr ""
+"ಎಚ್ಚರಿಕೆ: ಅನುಸ್ಥಾಪನೆಯ ನಂತರ ನೀವು ನಿಮ್ಮ ಡಿಸ್ಕುಗಳನ್ನು ಡೀಕ್ರಿಪ್ಟ್ ಮಾಡಿದಲ್ಲಿ ಕೀಲಿಮಣೆ "
+"ವಿನ್ಯಾಸಗಳ (ಪೂರ್ವನಿಯೋಜಿತದಿಂದ) ನಡುವೆ ಬದಲಾಯಿಸಲು ಸಾಧ್ಯವಿರುವುದಿಲ್ಲ."
+
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:8
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:71
 msgid "RESCAN DISKS"
@@ -5808,6 +5796,20 @@ msgstr "ಕ್ರಮ"
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:166
 msgid "Device"
 msgstr ""
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:23
+msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
+msgid "_Quit"
+msgstr "ನಿರ್ಗಮಿಸು (_Q)"
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:37
+msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
+msgid "_Continue"
+msgstr "ಮುಂದುವರೆ (_C)"
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:122
+msgid "Unsupported Hardware"
+msgstr "ಬೆಂಬಲವಿರದ ಯಂತ್ರಾಂಶ"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:176
 msgid "Add a new mount point."

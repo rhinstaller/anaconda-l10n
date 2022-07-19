@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2022-06-28 11:50+0200\n"
+"POT-Creation-Date: 2022-07-14 18:19+0200\n"
 "PO-Revision-Date: 2015-09-08 10:41+0000\n"
 "Last-Translator: Momcilo Medic <medicmomcilo@gmail.com>\n"
 "Language-Team: Serbian (http://www.transifex.com/projects/p/anaconda/"
@@ -32,18 +32,6 @@ msgstr ""
 #: pyanaconda/core/kickstart/addon.py:138
 msgid "Unknown name of the %addon section."
 msgstr ""
-
-#: pyanaconda/core/payload.py:131
-msgid "No host url"
-msgstr "Url нема host-a"
-
-#: pyanaconda/core/payload.py:152
-msgid "malformed URL, cannot parse it."
-msgstr "неисправан URL, не могу га обрадити."
-
-#: pyanaconda/core/payload.py:168
-msgid "URL has no host component"
-msgstr "URL нема део"
 
 #: pyanaconda/core/constants.py:89
 msgid "Start VNC"
@@ -235,6 +223,18 @@ msgstr "Преузимам информације о групама..."
 msgid "Anaconda Installer"
 msgstr ""
 
+#: pyanaconda/core/payload.py:131
+msgid "No host url"
+msgstr "Url нема host-a"
+
+#: pyanaconda/core/payload.py:152
+msgid "malformed URL, cannot parse it."
+msgstr "неисправан URL, не могу га обрадити."
+
+#: pyanaconda/core/payload.py:168
+msgid "URL has no host component"
+msgstr "URL нема део"
+
 #: pyanaconda/core/storage.py:84
 msgid "Unsupported"
 msgstr ""
@@ -396,45 +396,6 @@ msgstr "NFS сервер %s"
 msgid "Local repositories"
 msgstr "Додатне ризнице"
 
-#: pyanaconda/modules/storage/bootloader/bootloader.py:171
-msgid "GRUB2 does not support installation to a partition."
-msgstr "GRUB2 не подржава инсталацију на партицију."
-
-#: pyanaconda/modules/storage/bootloader/bootloader.py:178
-msgid "GRUB2 encrypted password must be in grub.pbkdf2 format."
-msgstr ""
-
-#: pyanaconda/modules/storage/bootloader/grub2.py:487
-#, python-format
-msgid ""
-"%(deviceName)s may not have enough space for grub2 to embed core.img when "
-"using the %(fsType)s file system on %(deviceType)s"
-msgstr ""
-"%(deviceName)s можда нема довољно места за grub2 да уврсти core.img када је "
-"у употреби %(fsType)s систем датотека на %(deviceType)s"
-
-#: pyanaconda/modules/storage/bootloader/grub2.py:526
-#, python-format
-msgid ""
-"boot loader stage2 device %(stage2dev)s is on a multi-disk array, but boot "
-"loader stage1 device %(stage1dev)s is not. A drive failure in %(stage2dev)s "
-"could render the system unbootable."
-msgstr ""
-"boot loader stage2 уређај %(stage2dev)s је на више-дискном низу, али boot "
-"loader stage1 уређај %(stage1dev)s није. Отказивање уређаја у %(stage2dev)s "
-"би могло довести до тога да систем не може да се подигне."
-
-#: pyanaconda/modules/storage/bootloader/grub2.py:533
-#, python-format
-msgid ""
-"boot loader stage2 device %(stage2dev)s is on a multi-disk array, but boot "
-"loader stage1 device %(stage1dev)s is not part of this array. The stage1 "
-"boot loader will only be installed to a single drive."
-msgstr ""
-"boot loader stage2 уређај %(stage2dev)s је на више-дискном низу, али boot "
-"loader stage1 уређај %(stage1dev)s није у овом низу. stage1 boot loader ће "
-"бити инсталиран на само један уређај."
-
 #: pyanaconda/modules/storage/bootloader/base.py:166
 msgid "/boot file system"
 msgstr "/boot систем датотека"
@@ -530,6 +491,14 @@ msgstr ""
 msgid "%(desc)s cannot be of type %(type)s"
 msgstr "%(desc)s не може имати тип %(type)s"
 
+#: pyanaconda/modules/storage/bootloader/bootloader.py:171
+msgid "GRUB2 does not support installation to a partition."
+msgstr "GRUB2 не подржава инсталацију на партицију."
+
+#: pyanaconda/modules/storage/bootloader/bootloader.py:178
+msgid "GRUB2 encrypted password must be in grub.pbkdf2 format."
+msgstr ""
+
 #: pyanaconda/modules/storage/bootloader/execution.py:187
 msgid "No match found for given boot drive \"{}\"."
 msgstr ""
@@ -541,6 +510,37 @@ msgstr ""
 #: pyanaconda/modules/storage/bootloader/execution.py:195
 msgid "Requested boot drive \"{}\" doesn't exist or cannot be used."
 msgstr ""
+
+#: pyanaconda/modules/storage/bootloader/grub2.py:487
+#, python-format
+msgid ""
+"%(deviceName)s may not have enough space for grub2 to embed core.img when "
+"using the %(fsType)s file system on %(deviceType)s"
+msgstr ""
+"%(deviceName)s можда нема довољно места за grub2 да уврсти core.img када је "
+"у употреби %(fsType)s систем датотека на %(deviceType)s"
+
+#: pyanaconda/modules/storage/bootloader/grub2.py:526
+#, python-format
+msgid ""
+"boot loader stage2 device %(stage2dev)s is on a multi-disk array, but boot "
+"loader stage1 device %(stage1dev)s is not. A drive failure in %(stage2dev)s "
+"could render the system unbootable."
+msgstr ""
+"boot loader stage2 уређај %(stage2dev)s је на више-дискном низу, али boot "
+"loader stage1 уређај %(stage1dev)s није. Отказивање уређаја у %(stage2dev)s "
+"би могло довести до тога да систем не може да се подигне."
+
+#: pyanaconda/modules/storage/bootloader/grub2.py:533
+#, python-format
+msgid ""
+"boot loader stage2 device %(stage2dev)s is on a multi-disk array, but boot "
+"loader stage1 device %(stage1dev)s is not part of this array. The stage1 "
+"boot loader will only be installed to a single drive."
+msgstr ""
+"boot loader stage2 уређај %(stage2dev)s је на више-дискном низу, али boot "
+"loader stage1 уређај %(stage1dev)s није у овом низу. stage1 boot loader ће "
+"бити инсталиран на само један уређај."
 
 #: pyanaconda/modules/storage/checker/utils.py:54
 #, python-format
@@ -723,32 +723,6 @@ msgstr ""
 "неозначени диск %(unselected)s. Морате означити или поништити означавање "
 "ових дискова као заједницу."
 
-#: pyanaconda/modules/storage/devicetree/root.py:339
-msgid "Unknown Linux"
-msgstr ""
-
-#: pyanaconda/modules/storage/devicetree/root.py:342
-#, python-brace-format
-msgid "{product} {version} for {arch}"
-msgstr ""
-
-#: pyanaconda/modules/storage/devicetree/root.py:344
-#, python-brace-format
-msgid "{product} Linux {version} for {arch}"
-msgstr ""
-
-#: pyanaconda/modules/storage/devicetree/viewer.py:303
-#, fuzzy, python-brace-format
-#| msgid "%(description)s (%(deviceName)s)"
-msgid "{device_description} ({device_name})"
-msgstr "%(description)s (%(deviceName)s)"
-
-#: pyanaconda/modules/storage/devicetree/viewer.py:309
-#, fuzzy, python-brace-format
-#| msgid "%(deviceName)s on %(container)s"
-msgid "{device_name} on {container_name}"
-msgstr "%(deviceName)s на %(container)s"
-
 #: pyanaconda/modules/storage/devicetree/fsset.py:390
 #, fuzzy, python-brace-format
 #| msgid ""
@@ -763,6 +737,20 @@ msgstr ""
 "Постоји унос у вашој /etc/fstab датотеци који садржи нетачан или неисправан "
 "систем датотека:\n"
 "\n"
+
+#: pyanaconda/modules/storage/devicetree/root.py:339
+msgid "Unknown Linux"
+msgstr ""
+
+#: pyanaconda/modules/storage/devicetree/root.py:342
+#, python-brace-format
+msgid "{product} {version} for {arch}"
+msgstr ""
+
+#: pyanaconda/modules/storage/devicetree/root.py:344
+#, python-brace-format
+msgid "{product} Linux {version} for {arch}"
+msgstr ""
 
 #: pyanaconda/modules/storage/devicetree/utils.py:68
 #, python-format
@@ -791,6 +779,18 @@ msgstr ""
 "Следећа грешка се догодила при преузимању escrow сертификата:\n"
 "\n"
 "%s"
+
+#: pyanaconda/modules/storage/devicetree/viewer.py:303
+#, fuzzy, python-brace-format
+#| msgid "%(description)s (%(deviceName)s)"
+msgid "{device_description} ({device_name})"
+msgstr "%(description)s (%(deviceName)s)"
+
+#: pyanaconda/modules/storage/devicetree/viewer.py:309
+#, fuzzy, python-brace-format
+#| msgid "%(deviceName)s on %(container)s"
+msgid "{device_name} on {container_name}"
+msgstr "%(deviceName)s на %(container)s"
 
 #: pyanaconda/modules/storage/disk_selection/utils.py:36
 msgid "The selected disk {} is not recognized."
@@ -1655,6 +1655,15 @@ msgctxt "GUI|Summary|Warning Dialog"
 msgid "_OK"
 msgstr ""
 
+#: pyanaconda/ui/gui/spokes/advstorage/nvdimm.py:82
+msgctxt "GUI|Advanced Storage|NVDIM"
+msgid "No device to be reconfigured selected."
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/advstorage/nvdimm.py:174
+msgid "Rescanning disks finished."
+msgstr ""
+
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.py:158
 #, fuzzy, python-format
 #| msgid ""
@@ -1669,26 +1678,6 @@ msgstr ""
 "Следећи чворови су откривени користећи iSCSI иницијатором <b>"
 "%(initiatorName)s</b> користећи циљну IP адресу <b>%(targetAddress)s</b>.  "
 "Молим одаберите на које чворове желите да се пријавите:"
-
-#: pyanaconda/ui/gui/spokes/advstorage/nvdimm.py:82
-msgctxt "GUI|Advanced Storage|NVDIM"
-msgid "No device to be reconfigured selected."
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/advstorage/nvdimm.py:174
-msgid "Rescanning disks finished."
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/lib/cart.py:193
-msgctxt "GUI|Selected Disks Dialog"
-msgid "_Do not install boot loader"
-msgstr "_Немој инсталирати boot loader"
-
-#: pyanaconda/ui/gui/spokes/lib/cart.py:198
-#: pyanaconda/ui/gui/spokes/lib/cart.glade:200
-msgctxt "GUI|Selected Disks Dialog"
-msgid "_Set as Boot Device"
-msgstr "_Поставити као покретачки уређај"
 
 #: pyanaconda/ui/gui/spokes/lib/detailederror.py:48
 msgctxt "GUI|Detailed Error Dialog"
@@ -1817,6 +1806,17 @@ msgstr "_Нове тачке монтирања ће користити след
 msgctxt "GUI|Custom Partitioning|Autopart Page"
 msgid "_Encrypt automatically created mount points by default:"
 msgstr ""
+
+#: pyanaconda/ui/gui/spokes/lib/cart.py:193
+msgctxt "GUI|Selected Disks Dialog"
+msgid "_Do not install boot loader"
+msgstr "_Немој инсталирати boot loader"
+
+#: pyanaconda/ui/gui/spokes/lib/cart.py:198
+#: pyanaconda/ui/gui/spokes/lib/cart.glade:200
+msgctxt "GUI|Selected Disks Dialog"
+msgid "_Set as Boot Device"
+msgstr "_Поставити као покретачки уређај"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:47
 #, python-format
@@ -3850,116 +3850,6 @@ msgstr ""
 "\n"
 "Желите ли да је употребите свакако?"
 
-#: pyanaconda/rescue.py:272
-msgid "Unable to find /bin/bash to execute!  Not starting shell."
-msgstr "Не могу да нађем /bin/bash ради извршавања!  Не покрећем љуску."
-
-#: pyanaconda/rescue.py:289
-msgid "Rescue"
-msgstr "Спаси"
-
-#: pyanaconda/rescue.py:296
-#, python-format
-msgid ""
-"The rescue environment will now attempt to find your Linux installation and "
-"mount it under the directory : %s.  You can then make any changes required "
-"to your system.  Choose '1' to proceed with this step.\n"
-"You can choose to mount your file systems read-only instead of read-write by "
-"choosing '2'.\n"
-"If for some reason this process does not work choose '3' to skip directly to "
-"a shell.\n"
-"\n"
-msgstr ""
-"Окружење за спасавање ће сада покушати да пронађе вашу Linux инсталацију и "
-"повеже је у директоријум: %s. Тада можете извршити све потребне промене на "
-"вашем систему. Изаберите '1' ако желите наставити са овим кораком. Можете "
-"изабрати да повежете ваш систем датотека само за читање уместо за читање и "
-"писање тако што ћете изабрати '2'.\n"
-"\n"
-"Ако из неког разлога овај процес не ради, изаберите '3' и ви ћете бити "
-"директно пребачени у командну љуску.\n"
-"\n"
-
-#: pyanaconda/rescue.py:308
-msgid "Continue"
-msgstr "Настави"
-
-#: pyanaconda/rescue.py:309
-msgid "Read-only mount"
-msgstr "Монтирано само за читање"
-
-#: pyanaconda/rescue.py:310
-msgid "Skip to shell"
-msgstr "Прескочи у љуску"
-
-#: pyanaconda/rescue.py:311
-msgid "Quit (Reboot)"
-msgstr ""
-
-#: pyanaconda/rescue.py:408
-msgid "Rescue Shell"
-msgstr ""
-
-#: pyanaconda/rescue.py:418
-#, python-format
-msgid "Run %s to unmount the system when you are finished."
-msgstr "Покрените %s да одвежете систем када завршите."
-
-#: pyanaconda/rescue.py:419
-msgid ""
-"When finished, please exit from the shell and your system will reboot.\n"
-msgstr ""
-
-#: pyanaconda/rescue.py:430
-#, python-format
-msgid ""
-"Your system has been mounted under %(mountpoint)s.\n"
-"\n"
-"If you would like to make the root of your system the root of the active "
-"system, run the command:\n"
-"\n"
-"\tchroot %(mountpoint)s\n"
-"\n"
-msgstr ""
-
-#: pyanaconda/rescue.py:442
-#, fuzzy, python-brace-format
-#| msgid ""
-#| "An error occurred trying to mount some or all of your system.  Some of it "
-#| "may be mounted under %s\n"
-#| "\n"
-msgid ""
-"An error occurred trying to mount some or all of your system: {message}\n"
-"\n"
-"Some of it may be mounted under {path}."
-msgstr ""
-"Дошло је до грешке при покушају повезивања дела или целог вашег система. "
-"Његов део може бити повезан под %s\n"
-"\n"
-
-#: pyanaconda/rescue.py:454
-#, fuzzy
-#| msgid "You don't have any Linux partitions. %s\n"
-msgid "You don't have any Linux partitions.\n"
-msgstr "Немате ниједну Linux партицију.  %s\n"
-
-#: pyanaconda/rescue.py:460
-msgid "Not mounting the system.\n"
-msgstr ""
-
-#: pyanaconda/rescue.py:474
-#, python-format
-msgid "Please press %s to get a shell"
-msgstr ""
-
-#: pyanaconda/rescue.py:491
-msgid "Root Selection"
-msgstr "Избор корена"
-
-#: pyanaconda/rescue.py:517
-msgid "The following installations were discovered on your system."
-msgstr ""
-
 #: pyanaconda/addons.py:97
 #, python-format
 msgid "Executing %s addon"
@@ -4417,6 +4307,116 @@ msgstr "име полисе неопходно за %s"
 #, python-format
 msgid "A %(command)s with the name %(policyName)s has already been defined."
 msgstr "%(command)s са именом %(policyName)s је већ дефинисана."
+
+#: pyanaconda/rescue.py:272
+msgid "Unable to find /bin/bash to execute!  Not starting shell."
+msgstr "Не могу да нађем /bin/bash ради извршавања!  Не покрећем љуску."
+
+#: pyanaconda/rescue.py:289
+msgid "Rescue"
+msgstr "Спаси"
+
+#: pyanaconda/rescue.py:296
+#, python-format
+msgid ""
+"The rescue environment will now attempt to find your Linux installation and "
+"mount it under the directory : %s.  You can then make any changes required "
+"to your system.  Choose '1' to proceed with this step.\n"
+"You can choose to mount your file systems read-only instead of read-write by "
+"choosing '2'.\n"
+"If for some reason this process does not work choose '3' to skip directly to "
+"a shell.\n"
+"\n"
+msgstr ""
+"Окружење за спасавање ће сада покушати да пронађе вашу Linux инсталацију и "
+"повеже је у директоријум: %s. Тада можете извршити све потребне промене на "
+"вашем систему. Изаберите '1' ако желите наставити са овим кораком. Можете "
+"изабрати да повежете ваш систем датотека само за читање уместо за читање и "
+"писање тако што ћете изабрати '2'.\n"
+"\n"
+"Ако из неког разлога овај процес не ради, изаберите '3' и ви ћете бити "
+"директно пребачени у командну љуску.\n"
+"\n"
+
+#: pyanaconda/rescue.py:308
+msgid "Continue"
+msgstr "Настави"
+
+#: pyanaconda/rescue.py:309
+msgid "Read-only mount"
+msgstr "Монтирано само за читање"
+
+#: pyanaconda/rescue.py:310
+msgid "Skip to shell"
+msgstr "Прескочи у љуску"
+
+#: pyanaconda/rescue.py:311
+msgid "Quit (Reboot)"
+msgstr ""
+
+#: pyanaconda/rescue.py:408
+msgid "Rescue Shell"
+msgstr ""
+
+#: pyanaconda/rescue.py:418
+#, python-format
+msgid "Run %s to unmount the system when you are finished."
+msgstr "Покрените %s да одвежете систем када завршите."
+
+#: pyanaconda/rescue.py:419
+msgid ""
+"When finished, please exit from the shell and your system will reboot.\n"
+msgstr ""
+
+#: pyanaconda/rescue.py:430
+#, python-format
+msgid ""
+"Your system has been mounted under %(mountpoint)s.\n"
+"\n"
+"If you would like to make the root of your system the root of the active "
+"system, run the command:\n"
+"\n"
+"\tchroot %(mountpoint)s\n"
+"\n"
+msgstr ""
+
+#: pyanaconda/rescue.py:442
+#, fuzzy, python-brace-format
+#| msgid ""
+#| "An error occurred trying to mount some or all of your system.  Some of it "
+#| "may be mounted under %s\n"
+#| "\n"
+msgid ""
+"An error occurred trying to mount some or all of your system: {message}\n"
+"\n"
+"Some of it may be mounted under {path}."
+msgstr ""
+"Дошло је до грешке при покушају повезивања дела или целог вашег система. "
+"Његов део може бити повезан под %s\n"
+"\n"
+
+#: pyanaconda/rescue.py:454
+#, fuzzy
+#| msgid "You don't have any Linux partitions. %s\n"
+msgid "You don't have any Linux partitions.\n"
+msgstr "Немате ниједну Linux партицију.  %s\n"
+
+#: pyanaconda/rescue.py:460
+msgid "Not mounting the system.\n"
+msgstr ""
+
+#: pyanaconda/rescue.py:474
+#, python-format
+msgid "Please press %s to get a shell"
+msgstr ""
+
+#: pyanaconda/rescue.py:491
+msgid "Root Selection"
+msgstr "Избор корена"
+
+#: pyanaconda/rescue.py:517
+msgid "The following installations were discovered on your system."
+msgstr ""
 
 #: pyanaconda/startup_utils.py:83
 #, python-format
@@ -5068,7 +5068,7 @@ msgid "Discovering DASD devices.  This may take a moment..."
 msgstr "Откривам DASD уређаје. Ово може потрајати моменат..."
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:212
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:253
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:254
 msgid "Device discovery failed."
 msgstr "Неуспешно откривање уређаја."
 
@@ -5086,7 +5086,7 @@ msgid "_Retry Discovery"
 msgstr "_Покушај поново откривање"
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:307
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:346
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:347
 msgid "Device discovery succeeded."
 msgstr ""
 
@@ -5377,37 +5377,37 @@ msgstr ""
 msgid "Warning: Existing data on reconfigured devices will be lost."
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:82
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:83
 msgid "ADD zFCP STORAGE TARGET"
 msgstr "ДОДАЈ zFCP СКЛАДИШТЕНИ ЦИЉ"
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:105
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:106
 msgid ""
-"To use zFCP disks, you must provide the device number, WWPN, and LUN "
-"configured for the device."
+"To use zFCP-attached SCSI disks, you must provide the FCP device number. "
+"Storage WWPN and FCP LUN are necessary if the zFCP adapter is not configured "
+"in NPIV mode or when automatic LUN scanning is disabled via a kernel module "
+"parameter."
 msgstr ""
-"Да бисте користили zFCP дискове, морате навести број уређаја, WWPN, и LUN "
-"подешене за уређај."
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:132
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:133
 msgctxt "GUI|Advanced Storage|zFCP|Device Number"
 msgid "_Device number:"
 msgstr "_Број уређаја:"
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:159
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:160
 msgid "WWPN:"
 msgstr "WWPN:"
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:177
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:178
 msgctxt "GUI|Advanced Storage|zFCP|Start Discovery"
 msgid "_Start Discovery"
 msgstr "_Започни откривање"
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:214
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:215
 msgid "Discovering zFCP devices.  This may take a moment..."
 msgstr "Откривам zFCP уређаје. Ово може потрајати моменат..."
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:268
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:269
 msgid ""
 "The following error occurred discovering zFCP devices.  Please double check "
 "your configuration information and try again."
@@ -5415,12 +5415,12 @@ msgstr ""
 "Дошло је до следеће грешке при откривању zFCP уређаја. Молим проверите још "
 "једном ваша подешавања и покушајте поново."
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:291
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:292
 msgctxt "GUI|Advanced Storage|zFCP|Retry Discovery"
 msgid "_Retry Discovery"
 msgstr "_Покушај поново откривање"
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:373
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:374
 msgid "LUN:"
 msgstr "LUN:"
 
@@ -5551,62 +5551,6 @@ msgid ""
 msgstr ""
 "Лозинке или енкрипцијски кључеви су неопходни за приступ\n"
 "бежичној мрежи"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:23
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Cancel"
-msgstr "_Откажи"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:38
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Save Passphrase"
-msgstr "_Сачувај лозинку"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:65
-msgid "DISK ENCRYPTION PASSPHRASE"
-msgstr "ЛОЗИНКА ЗА ЕНКРИПЦИЈУ ДИСКА"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:81
-msgid ""
-"You have chosen to encrypt some of your data. You will need to create a "
-"passphrase that you will use to access your data when you start your "
-"computer."
-msgstr ""
-"Изабрали сте да енкриптујете неке ваше податке. Биће потребно да одредите "
-"лозинку коју ћете користити да приступите вашим подацима када покренете "
-"рачунар."
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:102
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Passphrase:"
-msgstr "_Лозинка:"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:133
-msgctxt "GUI|Passphrase Dialog"
-msgid "Con_firm:"
-msgstr "По_тврда:"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:275
-msgid ""
-"Warning: You won't be able to switch between keyboard layouts (from the "
-"default one) when you decrypt your disks after install."
-msgstr ""
-"Упозорење: Нећете моћи мењати распоред тастатуре (са подразумеваног) када "
-"декриптујете ваше дискове након инсталације."
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:23
-msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
-msgid "_Quit"
-msgstr "_Излаз"
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:37
-msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
-msgid "_Continue"
-msgstr "На_стави"
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:122
-msgid "Unsupported Hardware"
-msgstr "Неподржани хардвер"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:21
 msgctxt "GUI|Custom Partitioning|Confirm Delete Dialog"
@@ -5821,6 +5765,48 @@ msgstr ""
 msgid "Disk formatting complete."
 msgstr "Форматирање диска је завршено."
 
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:23
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Cancel"
+msgstr "_Откажи"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:38
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Save Passphrase"
+msgstr "_Сачувај лозинку"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:65
+msgid "DISK ENCRYPTION PASSPHRASE"
+msgstr "ЛОЗИНКА ЗА ЕНКРИПЦИЈУ ДИСКА"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:81
+msgid ""
+"You have chosen to encrypt some of your data. You will need to create a "
+"passphrase that you will use to access your data when you start your "
+"computer."
+msgstr ""
+"Изабрали сте да енкриптујете неке ваше податке. Биће потребно да одредите "
+"лозинку коју ћете користити да приступите вашим подацима када покренете "
+"рачунар."
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:102
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Passphrase:"
+msgstr "_Лозинка:"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:133
+msgctxt "GUI|Passphrase Dialog"
+msgid "Con_firm:"
+msgstr "По_тврда:"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:275
+msgid ""
+"Warning: You won't be able to switch between keyboard layouts (from the "
+"default one) when you decrypt your disks after install."
+msgstr ""
+"Упозорење: Нећете моћи мењати распоред тастатуре (са подразумеваног) када "
+"декриптујете ваше дискове након инсталације."
+
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:8
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:71
 msgid "RESCAN DISKS"
@@ -5963,6 +5949,20 @@ msgstr "Ре"
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:166
 msgid "Device"
 msgstr "Уређај"
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:23
+msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
+msgid "_Quit"
+msgstr "_Излаз"
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:37
+msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
+msgid "_Continue"
+msgstr "На_стави"
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:122
+msgid "Unsupported Hardware"
+msgstr "Неподржани хардвер"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:176
 msgid "Add a new mount point."
@@ -7401,6 +7401,13 @@ msgstr "Затвори"
 #: ../data/liveinst/console.apps/liveinst.h:1
 msgid "Starting Install to Hard Drive"
 msgstr "Започињем инсталацију на чврсти диск"
+
+#~ msgid ""
+#~ "To use zFCP disks, you must provide the device number, WWPN, and LUN "
+#~ "configured for the device."
+#~ msgstr ""
+#~ "Да бисте користили zFCP дискове, морате навести број уређаја, WWPN, и LUN "
+#~ "подешене за уређај."
 
 #~ msgctxt "GUI|Network|Wireless"
 #~ msgid "_Network Name"

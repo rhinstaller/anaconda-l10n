@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2022-06-28 11:50+0200\n"
+"POT-Creation-Date: 2022-07-14 18:19+0200\n"
 "PO-Revision-Date: 2021-11-07 08:55+0000\n"
 "Last-Translator: Fabio Tomat <f.t.public@gmail.com>\n"
 "Language-Team: Friulian <https://translate.fedoraproject.org/projects/"
@@ -22,18 +22,6 @@ msgstr ""
 #: pyanaconda/core/kickstart/addon.py:138
 msgid "Unknown name of the %addon section."
 msgstr ""
-
-#: pyanaconda/core/payload.py:131
-msgid "No host url"
-msgstr "Nissun url host"
-
-#: pyanaconda/core/payload.py:152
-msgid "malformed URL, cannot parse it."
-msgstr "URL malformât, impussibil analizâlu."
-
-#: pyanaconda/core/payload.py:168
-msgid "URL has no host component"
-msgstr "Il URL nol à une componente host"
 
 #: pyanaconda/core/constants.py:89
 msgid "Start VNC"
@@ -234,6 +222,18 @@ msgstr "Daûr a discjariâ i metadâts dal grup..."
 msgid "Anaconda Installer"
 msgstr "Instaladôr Anaconda"
 
+#: pyanaconda/core/payload.py:131
+msgid "No host url"
+msgstr "Nissun url host"
+
+#: pyanaconda/core/payload.py:152
+msgid "malformed URL, cannot parse it."
+msgstr "URL malformât, impussibil analizâlu."
+
+#: pyanaconda/core/payload.py:168
+msgid "URL has no host component"
+msgstr "Il URL nol à une componente host"
+
 #: pyanaconda/core/storage.py:84
 msgid "Unsupported"
 msgstr ""
@@ -391,47 +391,6 @@ msgstr "Servidôr NFS {}"
 msgid "Local repositories"
 msgstr "Dipuesits locâi"
 
-#: pyanaconda/modules/storage/bootloader/bootloader.py:171
-msgid "GRUB2 does not support installation to a partition."
-msgstr "GRUB2 nol supuarte la instalazion suntune partizion."
-
-#: pyanaconda/modules/storage/bootloader/bootloader.py:178
-msgid "GRUB2 encrypted password must be in grub.pbkdf2 format."
-msgstr ""
-
-#: pyanaconda/modules/storage/bootloader/grub2.py:487
-#, python-format
-msgid ""
-"%(deviceName)s may not have enough space for grub2 to embed core.img when "
-"using the %(fsType)s file system on %(deviceType)s"
-msgstr ""
-"%(deviceName)s al pues no vê vonde spazi par fâ in mût che grub2 al "
-"incorporedi core.img cuant che si dopre il filesystem %(fsType)s intal "
-"dispositîf %(deviceType)s"
-
-#: pyanaconda/modules/storage/bootloader/grub2.py:526
-#, python-format
-msgid ""
-"boot loader stage2 device %(stage2dev)s is on a multi-disk array, but boot "
-"loader stage1 device %(stage1dev)s is not. A drive failure in %(stage2dev)s "
-"could render the system unbootable."
-msgstr ""
-"Il dispositîf dal bootloader fase 2 %(stage2dev)s al sta suntun array multi-"
-"disc, ma il dispositîf dal bootloader fase 1 %(stage1dev)s no. Un vuast de "
-"unitât in %(stage2dev)s al pues fâ in mût che il sisteme no si invii."
-
-#: pyanaconda/modules/storage/bootloader/grub2.py:533
-#, python-format
-msgid ""
-"boot loader stage2 device %(stage2dev)s is on a multi-disk array, but boot "
-"loader stage1 device %(stage1dev)s is not part of this array. The stage1 "
-"boot loader will only be installed to a single drive."
-msgstr ""
-"Il dispositîf dal bootloader fase 2 %(stage2dev)s al sta suntun array multi-"
-"disc, ma il dispositîf dal bootloader fase 1 %(stage1dev)s nol fâs part di "
-"chest array. La fase 1 dal bootloader e vignarà instalade suntune singule "
-"unitât."
-
 #: pyanaconda/modules/storage/bootloader/base.py:166
 msgid "/boot file system"
 msgstr "filesystem /boot"
@@ -529,6 +488,14 @@ msgstr ""
 msgid "%(desc)s cannot be of type %(type)s"
 msgstr "%(desc)s nol pues jessi di gjenar %(type)s"
 
+#: pyanaconda/modules/storage/bootloader/bootloader.py:171
+msgid "GRUB2 does not support installation to a partition."
+msgstr "GRUB2 nol supuarte la instalazion suntune partizion."
+
+#: pyanaconda/modules/storage/bootloader/bootloader.py:178
+msgid "GRUB2 encrypted password must be in grub.pbkdf2 format."
+msgstr ""
+
 #: pyanaconda/modules/storage/bootloader/execution.py:187
 msgid "No match found for given boot drive \"{}\"."
 msgstr ""
@@ -540,6 +507,39 @@ msgstr ""
 #: pyanaconda/modules/storage/bootloader/execution.py:195
 msgid "Requested boot drive \"{}\" doesn't exist or cannot be used."
 msgstr ""
+
+#: pyanaconda/modules/storage/bootloader/grub2.py:487
+#, python-format
+msgid ""
+"%(deviceName)s may not have enough space for grub2 to embed core.img when "
+"using the %(fsType)s file system on %(deviceType)s"
+msgstr ""
+"%(deviceName)s al pues no vê vonde spazi par fâ in mût che grub2 al "
+"incorporedi core.img cuant che si dopre il filesystem %(fsType)s intal "
+"dispositîf %(deviceType)s"
+
+#: pyanaconda/modules/storage/bootloader/grub2.py:526
+#, python-format
+msgid ""
+"boot loader stage2 device %(stage2dev)s is on a multi-disk array, but boot "
+"loader stage1 device %(stage1dev)s is not. A drive failure in %(stage2dev)s "
+"could render the system unbootable."
+msgstr ""
+"Il dispositîf dal bootloader fase 2 %(stage2dev)s al sta suntun array multi-"
+"disc, ma il dispositîf dal bootloader fase 1 %(stage1dev)s no. Un vuast de "
+"unitât in %(stage2dev)s al pues fâ in mût che il sisteme no si invii."
+
+#: pyanaconda/modules/storage/bootloader/grub2.py:533
+#, python-format
+msgid ""
+"boot loader stage2 device %(stage2dev)s is on a multi-disk array, but boot "
+"loader stage1 device %(stage1dev)s is not part of this array. The stage1 "
+"boot loader will only be installed to a single drive."
+msgstr ""
+"Il dispositîf dal bootloader fase 2 %(stage2dev)s al sta suntun array multi-"
+"disc, ma il dispositîf dal bootloader fase 1 %(stage1dev)s nol fâs part di "
+"chest array. La fase 1 dal bootloader e vignarà instalade suntune singule "
+"unitât."
 
 #: pyanaconda/modules/storage/checker/utils.py:54
 #, python-format
@@ -728,6 +728,17 @@ msgstr ""
 "altris discs che no son stâts selezionâts. Si scugne selezionâ o deselezionâ "
 "ducj chescj discs adun."
 
+#: pyanaconda/modules/storage/devicetree/fsset.py:390
+#, python-brace-format
+msgid ""
+"There is an entry in your /etc/fstab file that contains an invalid or "
+"incorrect file system type. The file says that {detected_type} at "
+"{mount_point} is {fstab_type}."
+msgstr ""
+"Tal file /etc/fstab si à une vôs che e conten un gjenar di filesystem no "
+"valit o no just. Il file al dîs che {detected_type} su {mount_point} al è "
+"{fstab_type}."
+
 #: pyanaconda/modules/storage/devicetree/root.py:339
 msgid "Unknown Linux"
 msgstr ""
@@ -741,27 +752,6 @@ msgstr "{product} {version} par {arch}"
 #, python-brace-format
 msgid "{product} Linux {version} for {arch}"
 msgstr "{product} Linux {version} par {arch}"
-
-#: pyanaconda/modules/storage/devicetree/viewer.py:303
-#, python-brace-format
-msgid "{device_description} ({device_name})"
-msgstr "{device_description} ({device_name})"
-
-#: pyanaconda/modules/storage/devicetree/viewer.py:309
-#, python-brace-format
-msgid "{device_name} on {container_name}"
-msgstr "{device_name} su {container_name}"
-
-#: pyanaconda/modules/storage/devicetree/fsset.py:390
-#, python-brace-format
-msgid ""
-"There is an entry in your /etc/fstab file that contains an invalid or "
-"incorrect file system type. The file says that {detected_type} at "
-"{mount_point} is {fstab_type}."
-msgstr ""
-"Tal file /etc/fstab si à une vôs che e conten un gjenar di filesystem no "
-"valit o no just. Il file al dîs che {detected_type} su {mount_point} al è "
-"{fstab_type}."
 
 #: pyanaconda/modules/storage/devicetree/utils.py:68
 #, python-format
@@ -791,6 +781,16 @@ msgstr ""
 "garanzie:\n"
 "\n"
 "%s"
+
+#: pyanaconda/modules/storage/devicetree/viewer.py:303
+#, python-brace-format
+msgid "{device_description} ({device_name})"
+msgstr "{device_description} ({device_name})"
+
+#: pyanaconda/modules/storage/devicetree/viewer.py:309
+#, python-brace-format
+msgid "{device_name} on {container_name}"
+msgstr "{device_name} su {container_name}"
 
 #: pyanaconda/modules/storage/disk_selection/utils.py:36
 msgid "The selected disk {} is not recognized."
@@ -1652,6 +1652,15 @@ msgctxt "GUI|Summary|Warning Dialog"
 msgid "_OK"
 msgstr "_Va ben"
 
+#: pyanaconda/ui/gui/spokes/advstorage/nvdimm.py:82
+msgctxt "GUI|Advanced Storage|NVDIM"
+msgid "No device to be reconfigured selected."
+msgstr "Nol è stât selezionât nissun dispositîf di tornâ a configurâ."
+
+#: pyanaconda/ui/gui/spokes/advstorage/nvdimm.py:174
+msgid "Rescanning disks finished."
+msgstr "Finît di tornâ a analizâ i discs."
+
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.py:158
 #, python-format
 msgid ""
@@ -1662,26 +1671,6 @@ msgstr ""
 "I grops chi sot a son stâts discuvierts doprant l'iniziadôr iSCSI <b>"
 "%(initiatorName)s</b> doprant la direzion IP dal portâl <b>"
 "%(portalAddress)s</b>.  Selezione i grops dulà che tu desideris acedi:"
-
-#: pyanaconda/ui/gui/spokes/advstorage/nvdimm.py:82
-msgctxt "GUI|Advanced Storage|NVDIM"
-msgid "No device to be reconfigured selected."
-msgstr "Nol è stât selezionât nissun dispositîf di tornâ a configurâ."
-
-#: pyanaconda/ui/gui/spokes/advstorage/nvdimm.py:174
-msgid "Rescanning disks finished."
-msgstr "Finît di tornâ a analizâ i discs."
-
-#: pyanaconda/ui/gui/spokes/lib/cart.py:193
-msgctxt "GUI|Selected Disks Dialog"
-msgid "_Do not install boot loader"
-msgstr "_No sta instalâ il bootloader"
-
-#: pyanaconda/ui/gui/spokes/lib/cart.py:198
-#: pyanaconda/ui/gui/spokes/lib/cart.glade:200
-msgctxt "GUI|Selected Disks Dialog"
-msgid "_Set as Boot Device"
-msgstr "_Stabilìs come dispositîf di boot"
 
 #: pyanaconda/ui/gui/spokes/lib/detailederror.py:48
 msgctxt "GUI|Detailed Error Dialog"
@@ -1811,6 +1800,17 @@ msgstr ""
 msgctxt "GUI|Custom Partitioning|Autopart Page"
 msgid "_Encrypt automatically created mount points by default:"
 msgstr ""
+
+#: pyanaconda/ui/gui/spokes/lib/cart.py:193
+msgctxt "GUI|Selected Disks Dialog"
+msgid "_Do not install boot loader"
+msgstr "_No sta instalâ il bootloader"
+
+#: pyanaconda/ui/gui/spokes/lib/cart.py:198
+#: pyanaconda/ui/gui/spokes/lib/cart.glade:200
+msgctxt "GUI|Selected Disks Dialog"
+msgid "_Set as Boot Device"
+msgstr "_Stabilìs come dispositîf di boot"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:47
 #, python-format
@@ -3826,110 +3826,6 @@ msgstr ""
 "\n"
 "Doprâle distès?"
 
-#: pyanaconda/rescue.py:272
-msgid "Unable to find /bin/bash to execute!  Not starting shell."
-msgstr ""
-"Impussibil cjatâ /bin/bash di eseguî! La shell/console no vignarà inviade."
-
-#: pyanaconda/rescue.py:289
-msgid "Rescue"
-msgstr "Ripristinament"
-
-#: pyanaconda/rescue.py:296
-#, python-format
-msgid ""
-"The rescue environment will now attempt to find your Linux installation and "
-"mount it under the directory : %s.  You can then make any changes required "
-"to your system.  Choose '1' to proceed with this step.\n"
-"You can choose to mount your file systems read-only instead of read-write by "
-"choosing '2'.\n"
-"If for some reason this process does not work choose '3' to skip directly to "
-"a shell.\n"
-"\n"
-msgstr ""
-"L'ambient di ripristinament al cirarà di cjatâ la instalazion di Linux e "
-"montâle sot de cartele : %s.  Dopo si podarà fâ cualsisei modifiche "
-"necessarie al sisteme.  Sielzi '1' par lâ indenant cun chest passaç.\n"
-"Si pues sielzi di montâ i filesystem in modalitât dome-leture invezit che "
-"leture-scriture sielzint '2'.\n"
-"Se par cualchi reson chest procès nol funzione sielzi '3' par lâ subite "
-"suntune shell/console.\n"
-"\n"
-
-#: pyanaconda/rescue.py:308
-msgid "Continue"
-msgstr "Continue"
-
-#: pyanaconda/rescue.py:309
-msgid "Read-only mount"
-msgstr "Montaç in dome-leture"
-
-#: pyanaconda/rescue.py:310
-msgid "Skip to shell"
-msgstr "Salte ae shell/console"
-
-#: pyanaconda/rescue.py:311
-msgid "Quit (Reboot)"
-msgstr ""
-
-#: pyanaconda/rescue.py:408
-msgid "Rescue Shell"
-msgstr ""
-
-#: pyanaconda/rescue.py:418
-#, python-format
-msgid "Run %s to unmount the system when you are finished."
-msgstr "Eseguî %s par dismontâ il sisteme une volte finît."
-
-#: pyanaconda/rescue.py:419
-msgid ""
-"When finished, please exit from the shell and your system will reboot.\n"
-msgstr ""
-
-#: pyanaconda/rescue.py:430
-#, python-format
-msgid ""
-"Your system has been mounted under %(mountpoint)s.\n"
-"\n"
-"If you would like to make the root of your system the root of the active "
-"system, run the command:\n"
-"\n"
-"\tchroot %(mountpoint)s\n"
-"\n"
-msgstr ""
-
-#: pyanaconda/rescue.py:442
-#, python-brace-format
-msgid ""
-"An error occurred trying to mount some or all of your system: {message}\n"
-"\n"
-"Some of it may be mounted under {path}."
-msgstr ""
-"Al è capitât un erôr cirint di montâ cualchi o ducj i sistemis: {message}\n"
-"\n"
-"Cualchidun al podarès jessi stât montât sot di {path}."
-
-#: pyanaconda/rescue.py:454
-msgid "You don't have any Linux partitions.\n"
-msgstr "No si à nissune partizion Linux.\n"
-
-#: pyanaconda/rescue.py:460
-msgid "Not mounting the system.\n"
-msgstr ""
-
-#: pyanaconda/rescue.py:474
-#, python-format
-msgid "Please press %s to get a shell"
-msgstr "Frache %s par vê une shell/console"
-
-#: pyanaconda/rescue.py:491
-msgid "Root Selection"
-msgstr "Selezion di root"
-
-#: pyanaconda/rescue.py:517
-msgid "The following installations were discovered on your system."
-msgstr ""
-
 #: pyanaconda/addons.py:97
 #, python-format
 msgid "Executing %s addon"
@@ -4405,6 +4301,110 @@ msgstr "non de politiche domandât par %s"
 #, python-format
 msgid "A %(command)s with the name %(policyName)s has already been defined."
 msgstr "Un %(command)s cul non %(policyName)s al è za stât definît."
+
+#: pyanaconda/rescue.py:272
+msgid "Unable to find /bin/bash to execute!  Not starting shell."
+msgstr ""
+"Impussibil cjatâ /bin/bash di eseguî! La shell/console no vignarà inviade."
+
+#: pyanaconda/rescue.py:289
+msgid "Rescue"
+msgstr "Ripristinament"
+
+#: pyanaconda/rescue.py:296
+#, python-format
+msgid ""
+"The rescue environment will now attempt to find your Linux installation and "
+"mount it under the directory : %s.  You can then make any changes required "
+"to your system.  Choose '1' to proceed with this step.\n"
+"You can choose to mount your file systems read-only instead of read-write by "
+"choosing '2'.\n"
+"If for some reason this process does not work choose '3' to skip directly to "
+"a shell.\n"
+"\n"
+msgstr ""
+"L'ambient di ripristinament al cirarà di cjatâ la instalazion di Linux e "
+"montâle sot de cartele : %s.  Dopo si podarà fâ cualsisei modifiche "
+"necessarie al sisteme.  Sielzi '1' par lâ indenant cun chest passaç.\n"
+"Si pues sielzi di montâ i filesystem in modalitât dome-leture invezit che "
+"leture-scriture sielzint '2'.\n"
+"Se par cualchi reson chest procès nol funzione sielzi '3' par lâ subite "
+"suntune shell/console.\n"
+"\n"
+
+#: pyanaconda/rescue.py:308
+msgid "Continue"
+msgstr "Continue"
+
+#: pyanaconda/rescue.py:309
+msgid "Read-only mount"
+msgstr "Montaç in dome-leture"
+
+#: pyanaconda/rescue.py:310
+msgid "Skip to shell"
+msgstr "Salte ae shell/console"
+
+#: pyanaconda/rescue.py:311
+msgid "Quit (Reboot)"
+msgstr ""
+
+#: pyanaconda/rescue.py:408
+msgid "Rescue Shell"
+msgstr ""
+
+#: pyanaconda/rescue.py:418
+#, python-format
+msgid "Run %s to unmount the system when you are finished."
+msgstr "Eseguî %s par dismontâ il sisteme une volte finît."
+
+#: pyanaconda/rescue.py:419
+msgid ""
+"When finished, please exit from the shell and your system will reboot.\n"
+msgstr ""
+
+#: pyanaconda/rescue.py:430
+#, python-format
+msgid ""
+"Your system has been mounted under %(mountpoint)s.\n"
+"\n"
+"If you would like to make the root of your system the root of the active "
+"system, run the command:\n"
+"\n"
+"\tchroot %(mountpoint)s\n"
+"\n"
+msgstr ""
+
+#: pyanaconda/rescue.py:442
+#, python-brace-format
+msgid ""
+"An error occurred trying to mount some or all of your system: {message}\n"
+"\n"
+"Some of it may be mounted under {path}."
+msgstr ""
+"Al è capitât un erôr cirint di montâ cualchi o ducj i sistemis: {message}\n"
+"\n"
+"Cualchidun al podarès jessi stât montât sot di {path}."
+
+#: pyanaconda/rescue.py:454
+msgid "You don't have any Linux partitions.\n"
+msgstr "No si à nissune partizion Linux.\n"
+
+#: pyanaconda/rescue.py:460
+msgid "Not mounting the system.\n"
+msgstr ""
+
+#: pyanaconda/rescue.py:474
+#, python-format
+msgid "Please press %s to get a shell"
+msgstr "Frache %s par vê une shell/console"
+
+#: pyanaconda/rescue.py:491
+msgid "Root Selection"
+msgstr "Selezion di root"
+
+#: pyanaconda/rescue.py:517
+msgid "The following installations were discovered on your system."
+msgstr ""
 
 #: pyanaconda/startup_utils.py:83
 #, python-format
@@ -5063,7 +5063,7 @@ msgid "Discovering DASD devices.  This may take a moment..."
 msgstr "Daûr a cirî dispositîfs DASD. Al podarès tirâle a dilunc..."
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:212
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:253
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:254
 msgid "Device discovery failed."
 msgstr "Ricercje dispositîfs falide."
 
@@ -5081,7 +5081,7 @@ msgid "_Retry Discovery"
 msgstr "_Torne prove ricercje"
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:307
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:346
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:347
 msgid "Device discovery succeeded."
 msgstr "Ricercje dispositîfs lade a bon fin."
 
@@ -5370,37 +5370,37 @@ msgstr ""
 msgid "Warning: Existing data on reconfigured devices will be lost."
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:82
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:83
 msgid "ADD zFCP STORAGE TARGET"
 msgstr "ZONTE DESTINAZION ARCHIVIAMENT zFCP"
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:105
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:106
 msgid ""
-"To use zFCP disks, you must provide the device number, WWPN, and LUN "
-"configured for the device."
+"To use zFCP-attached SCSI disks, you must provide the FCP device number. "
+"Storage WWPN and FCP LUN are necessary if the zFCP adapter is not configured "
+"in NPIV mode or when automatic LUN scanning is disabled via a kernel module "
+"parameter."
 msgstr ""
-"Par doprâ i discs zFCP si scugne furnî il numar di dispositîf, il WWPN e il "
-"LUN configurât pal dispositîf."
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:132
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:133
 msgctxt "GUI|Advanced Storage|zFCP|Device Number"
 msgid "_Device number:"
 msgstr "Numar _dispositîf:"
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:159
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:160
 msgid "WWPN:"
 msgstr "WWPN:"
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:177
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:178
 msgctxt "GUI|Advanced Storage|zFCP|Start Discovery"
 msgid "_Start Discovery"
 msgstr "_Tache ricercje"
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:214
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:215
 msgid "Discovering zFCP devices.  This may take a moment..."
 msgstr "Daûr a cirî dispositîfs zFCP. Al podarès tirâle a dilunc..."
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:268
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:269
 msgid ""
 "The following error occurred discovering zFCP devices.  Please double check "
 "your configuration information and try again."
@@ -5408,12 +5408,12 @@ msgstr ""
 "Al è vignût fûr l'erôr chi sot te ricercje dai dispositîfs zFCP.  Torne "
 "controle lis informazions di configurazion e torne prove."
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:291
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:292
 msgctxt "GUI|Advanced Storage|zFCP|Retry Discovery"
 msgid "_Retry Discovery"
 msgstr "_Torne prove ricercje"
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:373
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:374
 msgid "LUN:"
 msgstr "LUN:"
 
@@ -5546,61 +5546,6 @@ msgid ""
 msgstr ""
 "A son necessaris password o clâfs di cifradure par acedi\n"
 "ae rêt cence fîi"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:23
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Cancel"
-msgstr "_Anule"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:38
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Save Passphrase"
-msgstr "_Salve passphrase"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:65
-msgid "DISK ENCRYPTION PASSPHRASE"
-msgstr "PASSPHRASE DI CIFRADURE DISC"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:81
-msgid ""
-"You have chosen to encrypt some of your data. You will need to create a "
-"passphrase that you will use to access your data when you start your "
-"computer."
-msgstr ""
-"Si à sielt di cifrâ cualchi dât. Al covente creâ une passphrase che si "
-"doprarà par acedi ai dâts cuant che si inviarà il computer."
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:102
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Passphrase:"
-msgstr "_Passphrase:"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:133
-msgctxt "GUI|Passphrase Dialog"
-msgid "Con_firm:"
-msgstr "Con_ferme:"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:275
-msgid ""
-"Warning: You won't be able to switch between keyboard layouts (from the "
-"default one) when you decrypt your disks after install."
-msgstr ""
-"Avertiment: nol sarà pussibil passâ tra lis disposizions di tastiere (da chê "
-"predefinide) cuant che si decifre i discs dopo de instalazion."
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:23
-msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
-msgid "_Quit"
-msgstr "_Jes"
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:37
-msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
-msgid "_Continue"
-msgstr "_Continue"
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:122
-msgid "Unsupported Hardware"
-msgstr "Hardware no supuartât"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:21
 msgctxt "GUI|Custom Partitioning|Confirm Delete Dialog"
@@ -5814,6 +5759,47 @@ msgstr ""
 msgid "Disk formatting complete."
 msgstr "Formatazion disc completade."
 
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:23
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Cancel"
+msgstr "_Anule"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:38
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Save Passphrase"
+msgstr "_Salve passphrase"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:65
+msgid "DISK ENCRYPTION PASSPHRASE"
+msgstr "PASSPHRASE DI CIFRADURE DISC"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:81
+msgid ""
+"You have chosen to encrypt some of your data. You will need to create a "
+"passphrase that you will use to access your data when you start your "
+"computer."
+msgstr ""
+"Si à sielt di cifrâ cualchi dât. Al covente creâ une passphrase che si "
+"doprarà par acedi ai dâts cuant che si inviarà il computer."
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:102
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Passphrase:"
+msgstr "_Passphrase:"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:133
+msgctxt "GUI|Passphrase Dialog"
+msgid "Con_firm:"
+msgstr "Con_ferme:"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:275
+msgid ""
+"Warning: You won't be able to switch between keyboard layouts (from the "
+"default one) when you decrypt your disks after install."
+msgstr ""
+"Avertiment: nol sarà pussibil passâ tra lis disposizions di tastiere (da chê "
+"predefinide) cuant che si decifre i discs dopo de instalazion."
+
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:8
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:71
 msgid "RESCAN DISKS"
@@ -5957,6 +5943,20 @@ msgstr "Ordin"
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:166
 msgid "Device"
 msgstr "Dispositîf"
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:23
+msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
+msgid "_Quit"
+msgstr "_Jes"
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:37
+msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
+msgid "_Continue"
+msgstr "_Continue"
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:122
+msgid "Unsupported Hardware"
+msgstr "Hardware no supuartât"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:176
 msgid "Add a new mount point."
@@ -7388,6 +7388,13 @@ msgstr "Siere"
 #: ../data/liveinst/console.apps/liveinst.h:1
 msgid "Starting Install to Hard Drive"
 msgstr "Daûr a tacâ la instalazion sul disc fis"
+
+#~ msgid ""
+#~ "To use zFCP disks, you must provide the device number, WWPN, and LUN "
+#~ "configured for the device."
+#~ msgstr ""
+#~ "Par doprâ i discs zFCP si scugne furnî il numar di dispositîf, il WWPN e "
+#~ "il LUN configurât pal dispositîf."
 
 #, fuzzy
 #~| msgid "Anaconda Installer"

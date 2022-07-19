@@ -31,7 +31,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2022-06-28 11:50+0200\n"
+"POT-Creation-Date: 2022-07-14 18:19+0200\n"
 "PO-Revision-Date: 2022-06-09 19:18+0000\n"
 "Last-Translator: Balázs Meskó <meskobalazs@mailbox.org>\n"
 "Language-Team: Hungarian <https://translate.fedoraproject.org/projects/"
@@ -50,18 +50,6 @@ msgstr "A(z) %addon szakasz neve hiányzik."
 #: pyanaconda/core/kickstart/addon.py:138
 msgid "Unknown name of the %addon section."
 msgstr "A(z) %addon szakasz neve ismeretlen."
-
-#: pyanaconda/core/payload.py:131
-msgid "No host url"
-msgstr "Nincs kiszolgáló URL"
-
-#: pyanaconda/core/payload.py:152
-msgid "malformed URL, cannot parse it."
-msgstr "rosszul formázott URL, nem lehet értelmezni."
-
-#: pyanaconda/core/payload.py:168
-msgid "URL has no host component"
-msgstr "Az URL-nek nincs kiszolgáló komponense"
 
 #: pyanaconda/core/constants.py:89
 msgid "Start VNC"
@@ -277,6 +265,18 @@ msgstr "Csoport metaadatainak letöltése…"
 msgid "Anaconda Installer"
 msgstr "Anaconda telepítő"
 
+#: pyanaconda/core/payload.py:131
+msgid "No host url"
+msgstr "Nincs kiszolgáló URL"
+
+#: pyanaconda/core/payload.py:152
+msgid "malformed URL, cannot parse it."
+msgstr "rosszul formázott URL, nem lehet értelmezni."
+
+#: pyanaconda/core/payload.py:168
+msgid "URL has no host component"
+msgstr "Az URL-nek nincs kiszolgáló komponense"
+
 #: pyanaconda/core/storage.py:84
 msgid "Unsupported"
 msgstr "Nem támogatott"
@@ -436,47 +436,6 @@ msgstr "{} NFS kiszolgáló"
 msgid "Local repositories"
 msgstr "Helyi tárolók"
 
-#: pyanaconda/modules/storage/bootloader/bootloader.py:171
-msgid "GRUB2 does not support installation to a partition."
-msgstr "A GRUB2 nem támogatja a partícióra történő telepítést."
-
-#: pyanaconda/modules/storage/bootloader/bootloader.py:178
-msgid "GRUB2 encrypted password must be in grub.pbkdf2 format."
-msgstr "A GRUB2 titkosított jelszónak grub.pbkdf2 formátumban kell lennie."
-
-#: pyanaconda/modules/storage/bootloader/grub2.py:487
-#, python-format
-msgid ""
-"%(deviceName)s may not have enough space for grub2 to embed core.img when "
-"using the %(fsType)s file system on %(deviceType)s"
-msgstr ""
-"Előfordulhat, hogy a(z) %(deviceName)s nem rendelkezik elegendő szabad "
-"tárhellyel a grub2 számára, hogy tárolja a core.img fájlt a(z) "
-"%(deviceType)s eszközön, a(z) %(fsType)s fájlrendszeren"
-
-#: pyanaconda/modules/storage/bootloader/grub2.py:526
-#, python-format
-msgid ""
-"boot loader stage2 device %(stage2dev)s is on a multi-disk array, but boot "
-"loader stage1 device %(stage1dev)s is not. A drive failure in %(stage2dev)s "
-"could render the system unbootable."
-msgstr ""
-"A(z) „%(stage2dev)s” 2. szintű indítóbetöltő egy többkötetes rendszeren van, "
-"de a(z) „ %(stage1dev)s” 1. szintű indítóbetöltő nem. Egy a(z) "
-"„%(stage2dev)s” köteten bekövetkező meghajtóhiba indíthatatlanná teheti a "
-"rendszert."
-
-#: pyanaconda/modules/storage/bootloader/grub2.py:533
-#, python-format
-msgid ""
-"boot loader stage2 device %(stage2dev)s is on a multi-disk array, but boot "
-"loader stage1 device %(stage1dev)s is not part of this array. The stage1 "
-"boot loader will only be installed to a single drive."
-msgstr ""
-"A(z) „%(stage2dev)s” 2. szintű rendszerbetöltő eszköz egy többkötetes "
-"tömbben van, de a(z) „%(stage1dev)s” 1. szintű rendszerbetöltő eszköz nincs "
-"ebben. Az 1. szintű rendszerbetöltő csak egyetlen meghajtóra lesz telepítve."
-
 #: pyanaconda/modules/storage/bootloader/base.py:166
 msgid "/boot file system"
 msgstr "/boot fájlrendszer"
@@ -578,6 +537,14 @@ msgstr ""
 msgid "%(desc)s cannot be of type %(type)s"
 msgstr "A(z) %(desc)s nem lehet %(type)s típusú"
 
+#: pyanaconda/modules/storage/bootloader/bootloader.py:171
+msgid "GRUB2 does not support installation to a partition."
+msgstr "A GRUB2 nem támogatja a partícióra történő telepítést."
+
+#: pyanaconda/modules/storage/bootloader/bootloader.py:178
+msgid "GRUB2 encrypted password must be in grub.pbkdf2 format."
+msgstr "A GRUB2 titkosított jelszónak grub.pbkdf2 formátumban kell lennie."
+
 #: pyanaconda/modules/storage/bootloader/execution.py:187
 msgid "No match found for given boot drive \"{}\"."
 msgstr "Nem található egyezés a(z) „{}” indítási eszközre."
@@ -589,6 +556,39 @@ msgstr "Egynél több egyezés található a(z) „{}” indítási eszközre."
 #: pyanaconda/modules/storage/bootloader/execution.py:195
 msgid "Requested boot drive \"{}\" doesn't exist or cannot be used."
 msgstr "A kért „{}” indítási eszköz nem létezik, vagy nem használható."
+
+#: pyanaconda/modules/storage/bootloader/grub2.py:487
+#, python-format
+msgid ""
+"%(deviceName)s may not have enough space for grub2 to embed core.img when "
+"using the %(fsType)s file system on %(deviceType)s"
+msgstr ""
+"Előfordulhat, hogy a(z) %(deviceName)s nem rendelkezik elegendő szabad "
+"tárhellyel a grub2 számára, hogy tárolja a core.img fájlt a(z) "
+"%(deviceType)s eszközön, a(z) %(fsType)s fájlrendszeren"
+
+#: pyanaconda/modules/storage/bootloader/grub2.py:526
+#, python-format
+msgid ""
+"boot loader stage2 device %(stage2dev)s is on a multi-disk array, but boot "
+"loader stage1 device %(stage1dev)s is not. A drive failure in %(stage2dev)s "
+"could render the system unbootable."
+msgstr ""
+"A(z) „%(stage2dev)s” 2. szintű indítóbetöltő egy többkötetes rendszeren van, "
+"de a(z) „ %(stage1dev)s” 1. szintű indítóbetöltő nem. Egy a(z) "
+"„%(stage2dev)s” köteten bekövetkező meghajtóhiba indíthatatlanná teheti a "
+"rendszert."
+
+#: pyanaconda/modules/storage/bootloader/grub2.py:533
+#, python-format
+msgid ""
+"boot loader stage2 device %(stage2dev)s is on a multi-disk array, but boot "
+"loader stage1 device %(stage1dev)s is not part of this array. The stage1 "
+"boot loader will only be installed to a single drive."
+msgstr ""
+"A(z) „%(stage2dev)s” 2. szintű rendszerbetöltő eszköz egy többkötetes "
+"tömbben van, de a(z) „%(stage1dev)s” 1. szintű rendszerbetöltő eszköz nincs "
+"ebben. Az 1. szintű rendszerbetöltő csak egyetlen meghajtóra lesz telepítve."
 
 #: pyanaconda/modules/storage/checker/utils.py:54
 #, python-format
@@ -777,6 +777,17 @@ msgstr ""
 "további nem kiválasztott lemezeket használ. Ki kell választania azokat is, "
 "vagy csoportosan vissza kell vonnia ezen lemezek kiválasztását."
 
+#: pyanaconda/modules/storage/devicetree/fsset.py:390
+#, python-brace-format
+msgid ""
+"There is an entry in your /etc/fstab file that contains an invalid or "
+"incorrect file system type. The file says that {detected_type} at "
+"{mount_point} is {fstab_type}."
+msgstr ""
+"Egy bejegyzés az /etc/fstab fájlban hibás vagy pontatlan fájlrendszertípust "
+"tartalmaz. A fájl szerint a {mount_point} helyen lévő {detected_type} "
+"fájlrendszer típusa {fstab_type}."
+
 #: pyanaconda/modules/storage/devicetree/root.py:339
 msgid "Unknown Linux"
 msgstr "Ismeretlen Linux"
@@ -790,27 +801,6 @@ msgstr "{product} {version} {arch} architektúrára"
 #, python-brace-format
 msgid "{product} Linux {version} for {arch}"
 msgstr "{product} Linux {version} {arch} architektúrára"
-
-#: pyanaconda/modules/storage/devicetree/viewer.py:303
-#, python-brace-format
-msgid "{device_description} ({device_name})"
-msgstr "{device_description} ({device_name})"
-
-#: pyanaconda/modules/storage/devicetree/viewer.py:309
-#, python-brace-format
-msgid "{device_name} on {container_name}"
-msgstr "{device_name} ezen: {container_name}"
-
-#: pyanaconda/modules/storage/devicetree/fsset.py:390
-#, python-brace-format
-msgid ""
-"There is an entry in your /etc/fstab file that contains an invalid or "
-"incorrect file system type. The file says that {detected_type} at "
-"{mount_point} is {fstab_type}."
-msgstr ""
-"Egy bejegyzés az /etc/fstab fájlban hibás vagy pontatlan fájlrendszertípust "
-"tartalmaz. A fájl szerint a {mount_point} helyen lévő {detected_type} "
-"fájlrendszer típusa {fstab_type}."
 
 #: pyanaconda/modules/storage/devicetree/utils.py:68
 #, python-format
@@ -839,6 +829,16 @@ msgstr ""
 "A következő hiba lépett fel a letéti igazolás letöltése közben:\n"
 "\n"
 "%s"
+
+#: pyanaconda/modules/storage/devicetree/viewer.py:303
+#, python-brace-format
+msgid "{device_description} ({device_name})"
+msgstr "{device_description} ({device_name})"
+
+#: pyanaconda/modules/storage/devicetree/viewer.py:309
+#, python-brace-format
+msgid "{device_name} on {container_name}"
+msgstr "{device_name} ezen: {container_name}"
 
 #: pyanaconda/modules/storage/disk_selection/utils.py:36
 msgid "The selected disk {} is not recognized."
@@ -1687,6 +1687,15 @@ msgctxt "GUI|Summary|Warning Dialog"
 msgid "_OK"
 msgstr "_OK"
 
+#: pyanaconda/ui/gui/spokes/advstorage/nvdimm.py:82
+msgctxt "GUI|Advanced Storage|NVDIM"
+msgid "No device to be reconfigured selected."
+msgstr "Nincs újrakonfigurálandó eszköz kiválasztva."
+
+#: pyanaconda/ui/gui/spokes/advstorage/nvdimm.py:174
+msgid "Rescanning disks finished."
+msgstr "A lemezek újrapásztázása befejeződött."
+
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.py:158
 #, python-format
 msgid ""
@@ -1698,26 +1707,6 @@ msgstr ""
 "iSCSI kezdeményező segítségével, a(z) <b>%(portalAddress)s</b> portál IP-"
 "címének használatával . Válassza ki azokat a csomópontokat, amelyekre be "
 "kíván jelentkezni:"
-
-#: pyanaconda/ui/gui/spokes/advstorage/nvdimm.py:82
-msgctxt "GUI|Advanced Storage|NVDIM"
-msgid "No device to be reconfigured selected."
-msgstr "Nincs újrakonfigurálandó eszköz kiválasztva."
-
-#: pyanaconda/ui/gui/spokes/advstorage/nvdimm.py:174
-msgid "Rescanning disks finished."
-msgstr "A lemezek újrapásztázása befejeződött."
-
-#: pyanaconda/ui/gui/spokes/lib/cart.py:193
-msgctxt "GUI|Selected Disks Dialog"
-msgid "_Do not install boot loader"
-msgstr "_Ne telepítsen rendszerbetöltőt"
-
-#: pyanaconda/ui/gui/spokes/lib/cart.py:198
-#: pyanaconda/ui/gui/spokes/lib/cart.glade:200
-msgctxt "GUI|Selected Disks Dialog"
-msgid "_Set as Boot Device"
-msgstr "_Beállítás mint indítható eszköz"
 
 #: pyanaconda/ui/gui/spokes/lib/detailederror.py:48
 msgctxt "GUI|Detailed Error Dialog"
@@ -1848,6 +1837,17 @@ msgctxt "GUI|Custom Partitioning|Autopart Page"
 msgid "_Encrypt automatically created mount points by default:"
 msgstr ""
 "Automatikusan létrehozott csatolási pontok _titkosítása alapértelmezetten:"
+
+#: pyanaconda/ui/gui/spokes/lib/cart.py:193
+msgctxt "GUI|Selected Disks Dialog"
+msgid "_Do not install boot loader"
+msgstr "_Ne telepítsen rendszerbetöltőt"
+
+#: pyanaconda/ui/gui/spokes/lib/cart.py:198
+#: pyanaconda/ui/gui/spokes/lib/cart.glade:200
+msgctxt "GUI|Selected Disks Dialog"
+msgid "_Set as Boot Device"
+msgstr "_Beállítás mint indítható eszköz"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:47
 #, python-format
@@ -3844,118 +3844,6 @@ msgstr ""
 "\n"
 "Ennek ellenére mindenképp alkalmazza?"
 
-#: pyanaconda/rescue.py:272
-msgid "Unable to find /bin/bash to execute!  Not starting shell."
-msgstr "Nem található a futtatandó /bin/bash!  Nem indul parancssor."
-
-#: pyanaconda/rescue.py:289
-msgid "Rescue"
-msgstr "Helyreállítás"
-
-#: pyanaconda/rescue.py:296
-#, python-format
-msgid ""
-"The rescue environment will now attempt to find your Linux installation and "
-"mount it under the directory : %s.  You can then make any changes required "
-"to your system.  Choose '1' to proceed with this step.\n"
-"You can choose to mount your file systems read-only instead of read-write by "
-"choosing '2'.\n"
-"If for some reason this process does not work choose '3' to skip directly to "
-"a shell.\n"
-"\n"
-msgstr ""
-"A helyreállítási rendszer megpróbálja megtalálni a Linux telepítését, és "
-"csatolni a %s könyvtár alá. Ezek után bármilyen szükséges változtatást "
-"megtehet a rendszerén. Válassza az „1”-et a lépés folytatásához.\n"
-"Választhatja, hogy csak olvasható módban csatolja a fájlrendszereket a „2” "
-"választásával.\n"
-"Ha valamiért nem működik ez a folyamat, akkor válassza a „3”-at a "
-"parancssorhoz ugráshoz.\n"
-"\n"
-
-#: pyanaconda/rescue.py:308
-msgid "Continue"
-msgstr "Folytatás"
-
-#: pyanaconda/rescue.py:309
-msgid "Read-only mount"
-msgstr "Csak olvasható csatolás"
-
-#: pyanaconda/rescue.py:310
-msgid "Skip to shell"
-msgstr "Ugrás a parancssorig"
-
-#: pyanaconda/rescue.py:311
-msgid "Quit (Reboot)"
-msgstr "Kilépés (Újraindítás)"
-
-#: pyanaconda/rescue.py:408
-msgid "Rescue Shell"
-msgstr "Helyreállítási parancssor"
-
-#: pyanaconda/rescue.py:418
-#, python-format
-msgid "Run %s to unmount the system when you are finished."
-msgstr "A(z) %s futtatása a rendszer leválasztásához, amint végzett."
-
-#: pyanaconda/rescue.py:419
-msgid ""
-"When finished, please exit from the shell and your system will reboot.\n"
-msgstr ""
-"Amikor végzett, kérjük lépjen ki a parancssorból, és a rendszer újra fog "
-"indulni.\n"
-
-#: pyanaconda/rescue.py:430
-#, python-format
-msgid ""
-"Your system has been mounted under %(mountpoint)s.\n"
-"\n"
-"If you would like to make the root of your system the root of the active "
-"system, run the command:\n"
-"\n"
-"\tchroot %(mountpoint)s\n"
-"\n"
-msgstr ""
-"A rendszer a(z) %(mountpoint)s alatt lett csatolva.\n"
-"\n"
-"Ha szeretné a rendszer gyökerét az aktív rendszer gyökerévé tenni, futtassa "
-"a következő parancsot:\n"
-"\n"
-"\tchroot %(mountpoint)s\n"
-"\n"
-
-#: pyanaconda/rescue.py:442
-#, python-brace-format
-msgid ""
-"An error occurred trying to mount some or all of your system: {message}\n"
-"\n"
-"Some of it may be mounted under {path}."
-msgstr ""
-"Hiba történt a rendszer része vagy egésze csatolásakor: {message}.\n"
-"\n"
-"Egy része lehet, hogy a(z) {path} alatt lett csatolva."
-
-#: pyanaconda/rescue.py:454
-msgid "You don't have any Linux partitions.\n"
-msgstr "Nincs semmilyen linuxos partíciója.\n"
-
-#: pyanaconda/rescue.py:460
-msgid "Not mounting the system.\n"
-msgstr "A rendszer nem kerül csatolásra.\n"
-
-#: pyanaconda/rescue.py:474
-#, python-format
-msgid "Please press %s to get a shell"
-msgstr "Parancssorért nyomjon %s gombot"
-
-#: pyanaconda/rescue.py:491
-msgid "Root Selection"
-msgstr "Gyökér kiválasztása"
-
-#: pyanaconda/rescue.py:517
-msgid "The following installations were discovered on your system."
-msgstr "A következő telepítések lettek felfedezve a rendszeren."
-
 #: pyanaconda/addons.py:97
 #, python-format
 msgid "Executing %s addon"
@@ -4437,6 +4325,118 @@ msgstr "házirendnév szükséges ehhez: %s"
 #, python-format
 msgid "A %(command)s with the name %(policyName)s has already been defined."
 msgstr "A(z) %(command)s a(z) %(policyName)s névvel már meg lett adva."
+
+#: pyanaconda/rescue.py:272
+msgid "Unable to find /bin/bash to execute!  Not starting shell."
+msgstr "Nem található a futtatandó /bin/bash!  Nem indul parancssor."
+
+#: pyanaconda/rescue.py:289
+msgid "Rescue"
+msgstr "Helyreállítás"
+
+#: pyanaconda/rescue.py:296
+#, python-format
+msgid ""
+"The rescue environment will now attempt to find your Linux installation and "
+"mount it under the directory : %s.  You can then make any changes required "
+"to your system.  Choose '1' to proceed with this step.\n"
+"You can choose to mount your file systems read-only instead of read-write by "
+"choosing '2'.\n"
+"If for some reason this process does not work choose '3' to skip directly to "
+"a shell.\n"
+"\n"
+msgstr ""
+"A helyreállítási rendszer megpróbálja megtalálni a Linux telepítését, és "
+"csatolni a %s könyvtár alá. Ezek után bármilyen szükséges változtatást "
+"megtehet a rendszerén. Válassza az „1”-et a lépés folytatásához.\n"
+"Választhatja, hogy csak olvasható módban csatolja a fájlrendszereket a „2” "
+"választásával.\n"
+"Ha valamiért nem működik ez a folyamat, akkor válassza a „3”-at a "
+"parancssorhoz ugráshoz.\n"
+"\n"
+
+#: pyanaconda/rescue.py:308
+msgid "Continue"
+msgstr "Folytatás"
+
+#: pyanaconda/rescue.py:309
+msgid "Read-only mount"
+msgstr "Csak olvasható csatolás"
+
+#: pyanaconda/rescue.py:310
+msgid "Skip to shell"
+msgstr "Ugrás a parancssorig"
+
+#: pyanaconda/rescue.py:311
+msgid "Quit (Reboot)"
+msgstr "Kilépés (Újraindítás)"
+
+#: pyanaconda/rescue.py:408
+msgid "Rescue Shell"
+msgstr "Helyreállítási parancssor"
+
+#: pyanaconda/rescue.py:418
+#, python-format
+msgid "Run %s to unmount the system when you are finished."
+msgstr "A(z) %s futtatása a rendszer leválasztásához, amint végzett."
+
+#: pyanaconda/rescue.py:419
+msgid ""
+"When finished, please exit from the shell and your system will reboot.\n"
+msgstr ""
+"Amikor végzett, kérjük lépjen ki a parancssorból, és a rendszer újra fog "
+"indulni.\n"
+
+#: pyanaconda/rescue.py:430
+#, python-format
+msgid ""
+"Your system has been mounted under %(mountpoint)s.\n"
+"\n"
+"If you would like to make the root of your system the root of the active "
+"system, run the command:\n"
+"\n"
+"\tchroot %(mountpoint)s\n"
+"\n"
+msgstr ""
+"A rendszer a(z) %(mountpoint)s alatt lett csatolva.\n"
+"\n"
+"Ha szeretné a rendszer gyökerét az aktív rendszer gyökerévé tenni, futtassa "
+"a következő parancsot:\n"
+"\n"
+"\tchroot %(mountpoint)s\n"
+"\n"
+
+#: pyanaconda/rescue.py:442
+#, python-brace-format
+msgid ""
+"An error occurred trying to mount some or all of your system: {message}\n"
+"\n"
+"Some of it may be mounted under {path}."
+msgstr ""
+"Hiba történt a rendszer része vagy egésze csatolásakor: {message}.\n"
+"\n"
+"Egy része lehet, hogy a(z) {path} alatt lett csatolva."
+
+#: pyanaconda/rescue.py:454
+msgid "You don't have any Linux partitions.\n"
+msgstr "Nincs semmilyen linuxos partíciója.\n"
+
+#: pyanaconda/rescue.py:460
+msgid "Not mounting the system.\n"
+msgstr "A rendszer nem kerül csatolásra.\n"
+
+#: pyanaconda/rescue.py:474
+#, python-format
+msgid "Please press %s to get a shell"
+msgstr "Parancssorért nyomjon %s gombot"
+
+#: pyanaconda/rescue.py:491
+msgid "Root Selection"
+msgstr "Gyökér kiválasztása"
+
+#: pyanaconda/rescue.py:517
+msgid "The following installations were discovered on your system."
+msgstr "A következő telepítések lettek felfedezve a rendszeren."
 
 #: pyanaconda/startup_utils.py:83
 #, python-format
@@ -5101,7 +5101,7 @@ msgid "Discovering DASD devices.  This may take a moment..."
 msgstr "DASD eszközök felfedezése. Ez eltarthat egy darabig…"
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:212
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:253
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:254
 msgid "Device discovery failed."
 msgstr "Eszközfelfedezés sikertelen."
 
@@ -5119,7 +5119,7 @@ msgid "_Retry Discovery"
 msgstr "Felfedezés új_ra"
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:307
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:346
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:347
 msgid "Device discovery succeeded."
 msgstr "Az eszközfelfedezés sikeres."
 
@@ -5413,37 +5413,37 @@ msgid "Warning: Existing data on reconfigured devices will be lost."
 msgstr ""
 "Figyelmeztetés: Az újrakonfigurálandó eszközökön lévő adatok elvesznek."
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:82
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:83
 msgid "ADD zFCP STORAGE TARGET"
 msgstr "zFCP TÁROLÓ CÉL HOZZÁADÁSA"
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:105
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:106
 msgid ""
-"To use zFCP disks, you must provide the device number, WWPN, and LUN "
-"configured for the device."
+"To use zFCP-attached SCSI disks, you must provide the FCP device number. "
+"Storage WWPN and FCP LUN are necessary if the zFCP adapter is not configured "
+"in NPIV mode or when automatic LUN scanning is disabled via a kernel module "
+"parameter."
 msgstr ""
-"A zFCP lemezek használatához meg kell adnia az eszközhöz beállított "
-"eszközszámot, a WWPN-t és a LUN-t."
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:132
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:133
 msgctxt "GUI|Advanced Storage|zFCP|Device Number"
 msgid "_Device number:"
 msgstr "_Eszköz száma:"
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:159
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:160
 msgid "WWPN:"
 msgstr "WWPN:"
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:177
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:178
 msgctxt "GUI|Advanced Storage|zFCP|Start Discovery"
 msgid "_Start Discovery"
 msgstr "Felfedezés indítá_sa"
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:214
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:215
 msgid "Discovering zFCP devices.  This may take a moment..."
 msgstr "zFCP eszközök felfedezése. Ez eltarthat egy ideig…"
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:268
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:269
 msgid ""
 "The following error occurred discovering zFCP devices.  Please double check "
 "your configuration information and try again."
@@ -5451,12 +5451,12 @@ msgstr ""
 "A következő hiba történt a zFCP eszközök felfedezésekor. Ellenőrizze a "
 "konfigurációs információkat, és próbálja újra."
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:291
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:292
 msgctxt "GUI|Advanced Storage|zFCP|Retry Discovery"
 msgid "_Retry Discovery"
 msgstr "Felfedezés új_ra"
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:373
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:374
 msgid "LUN:"
 msgstr "LUN:"
 
@@ -5590,62 +5590,6 @@ msgid ""
 msgstr ""
 "Jelszó vagy titkosítási kulcs szükséges a vezeték\n"
 "nélküli hálózathoz hozzáféréshez"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:23
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Cancel"
-msgstr "_Mégse"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:38
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Save Passphrase"
-msgstr "Jelszó menté_se"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:65
-msgid "DISK ENCRYPTION PASSPHRASE"
-msgstr "LEMEZTITKOSÍTÁSI JELSZÓ"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:81
-msgid ""
-"You have chosen to encrypt some of your data. You will need to create a "
-"passphrase that you will use to access your data when you start your "
-"computer."
-msgstr ""
-"Úgy döntött, hogy titkosítja néhány adatát. Készítenie kell egy jelszót, "
-"amit az adatainak elérésére használ majd, amikor elindítja a számítógépét."
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:102
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Passphrase:"
-msgstr "_Jelszó:"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:133
-msgctxt "GUI|Passphrase Dialog"
-msgid "Con_firm:"
-msgstr "_Megerősítés:"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:275
-msgid ""
-"Warning: You won't be able to switch between keyboard layouts (from the "
-"default one) when you decrypt your disks after install."
-msgstr ""
-"Figyelem: Nem lesz képes váltani a billentyűzet kiosztások közt (az "
-"alapértelmezettről) miután feloldja a titkosítást a lemezein a telepítés "
-"után."
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:23
-msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
-msgid "_Quit"
-msgstr "_Kilépés"
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:37
-msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
-msgid "_Continue"
-msgstr "_Tovább"
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:122
-msgid "Unsupported Hardware"
-msgstr "Nem támogatott hardver"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:21
 msgctxt "GUI|Custom Partitioning|Confirm Delete Dialog"
@@ -5864,6 +5808,48 @@ msgstr ""
 msgid "Disk formatting complete."
 msgstr "A merevlemez formázása kész."
 
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:23
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Cancel"
+msgstr "_Mégse"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:38
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Save Passphrase"
+msgstr "Jelszó menté_se"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:65
+msgid "DISK ENCRYPTION PASSPHRASE"
+msgstr "LEMEZTITKOSÍTÁSI JELSZÓ"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:81
+msgid ""
+"You have chosen to encrypt some of your data. You will need to create a "
+"passphrase that you will use to access your data when you start your "
+"computer."
+msgstr ""
+"Úgy döntött, hogy titkosítja néhány adatát. Készítenie kell egy jelszót, "
+"amit az adatainak elérésére használ majd, amikor elindítja a számítógépét."
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:102
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Passphrase:"
+msgstr "_Jelszó:"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:133
+msgctxt "GUI|Passphrase Dialog"
+msgid "Con_firm:"
+msgstr "_Megerősítés:"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:275
+msgid ""
+"Warning: You won't be able to switch between keyboard layouts (from the "
+"default one) when you decrypt your disks after install."
+msgstr ""
+"Figyelem: Nem lesz képes váltani a billentyűzet kiosztások közt (az "
+"alapértelmezettről) miután feloldja a titkosítást a lemezein a telepítés "
+"után."
+
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:8
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:71
 msgid "RESCAN DISKS"
@@ -6005,6 +5991,20 @@ msgstr "Sorrend"
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:166
 msgid "Device"
 msgstr "Eszköz"
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:23
+msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
+msgid "_Quit"
+msgstr "_Kilépés"
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:37
+msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
+msgid "_Continue"
+msgstr "_Tovább"
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:122
+msgid "Unsupported Hardware"
+msgstr "Nem támogatott hardver"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:176
 msgid "Add a new mount point."
@@ -7434,6 +7434,13 @@ msgstr "Bezárás"
 #: ../data/liveinst/console.apps/liveinst.h:1
 msgid "Starting Install to Hard Drive"
 msgstr "Telepítés megkezdése a merevlemezre"
+
+#~ msgid ""
+#~ "To use zFCP disks, you must provide the device number, WWPN, and LUN "
+#~ "configured for the device."
+#~ msgstr ""
+#~ "A zFCP lemezek használatához meg kell adnia az eszközhöz beállított "
+#~ "eszközszámot, a WWPN-t és a LUN-t."
 
 #~ msgid "Disabled. Set password to enable root account."
 #~ msgstr ""

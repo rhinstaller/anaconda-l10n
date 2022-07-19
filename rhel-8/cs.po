@@ -46,7 +46,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2022-06-28 11:50+0200\n"
+"POT-Creation-Date: 2022-07-14 18:19+0200\n"
 "PO-Revision-Date: 2022-04-07 12:17+0000\n"
 "Last-Translator: Daniel Rusek <mail@asciiwolf.com>\n"
 "Language-Team: Czech <https://translate.fedoraproject.org/projects/anaconda/"
@@ -65,18 +65,6 @@ msgstr "Chybí název sekce %addon"
 #: pyanaconda/core/kickstart/addon.py:138
 msgid "Unknown name of the %addon section."
 msgstr "Neznámý název sekce %addon."
-
-#: pyanaconda/core/payload.py:131
-msgid "No host url"
-msgstr "Žádná url adresa hostitele"
-
-#: pyanaconda/core/payload.py:152
-msgid "malformed URL, cannot parse it."
-msgstr "nesprávně formulovaná URL adresa – nelze ji zpracovat."
-
-#: pyanaconda/core/payload.py:168
-msgid "URL has no host component"
-msgstr "URL neobsahuje část s názvem hostitele"
 
 #: pyanaconda/core/constants.py:89
 msgid "Start VNC"
@@ -291,6 +279,18 @@ msgstr "Stahování metadat skupin…"
 msgid "Anaconda Installer"
 msgstr "Instalátor Anaconda"
 
+#: pyanaconda/core/payload.py:131
+msgid "No host url"
+msgstr "Žádná url adresa hostitele"
+
+#: pyanaconda/core/payload.py:152
+msgid "malformed URL, cannot parse it."
+msgstr "nesprávně formulovaná URL adresa – nelze ji zpracovat."
+
+#: pyanaconda/core/payload.py:168
+msgid "URL has no host component"
+msgstr "URL neobsahuje část s názvem hostitele"
+
 #: pyanaconda/core/storage.py:84
 msgid "Unsupported"
 msgstr "Nepodporováno"
@@ -451,47 +451,6 @@ msgstr "NFS server {}"
 msgid "Local repositories"
 msgstr "Místní repozitáře"
 
-#: pyanaconda/modules/storage/bootloader/bootloader.py:171
-msgid "GRUB2 does not support installation to a partition."
-msgstr "GRUB2 nepodporuje instalaci na oddíl."
-
-#: pyanaconda/modules/storage/bootloader/bootloader.py:178
-msgid "GRUB2 encrypted password must be in grub.pbkdf2 format."
-msgstr "Je třeba, aby šifrované heslo pro GRUB2 bylo ve formátu grub.pbkdf2."
-
-#: pyanaconda/modules/storage/bootloader/grub2.py:487
-#, python-format
-msgid ""
-"%(deviceName)s may not have enough space for grub2 to embed core.img when "
-"using the %(fsType)s file system on %(deviceType)s"
-msgstr ""
-"Pokud je na %(deviceType)s použit souborový systém %(fsType)s, nemusí být na "
-"%(deviceName)s dostatek místa pro vložení core.img zavaděče grub2."
-
-#: pyanaconda/modules/storage/bootloader/grub2.py:526
-#, python-format
-msgid ""
-"boot loader stage2 device %(stage2dev)s is on a multi-disk array, but boot "
-"loader stage1 device %(stage1dev)s is not. A drive failure in %(stage2dev)s "
-"could render the system unbootable."
-msgstr ""
-"zařízení %(stage2dev)s pro druhý stupeň zavaděče se nachází na poli, "
-"složeném z více jednotek, ale zařízení %(stage1dev)s pro první stupeň "
-"zavaděče nikoliv. Chyba na jednotce u %(stage2dev)s může způsobit, že systém "
-"nebude možné spustit."
-
-#: pyanaconda/modules/storage/bootloader/grub2.py:533
-#, python-format
-msgid ""
-"boot loader stage2 device %(stage2dev)s is on a multi-disk array, but boot "
-"loader stage1 device %(stage1dev)s is not part of this array. The stage1 "
-"boot loader will only be installed to a single drive."
-msgstr ""
-"zařízení %(stage2dev)s pro druhý stupeň zavaděče se nachází na poli, "
-"složeném z více jednotek, ale zařízení %(stage1dev)s pro první stupeň "
-"zavaděče není součástí tohoto pole. První stupeň zavaděče bude nainstalován "
-"pouze na jedinou jednotku (která když selže, nebude odkud systém zavést)."
-
 #: pyanaconda/modules/storage/bootloader/base.py:166
 msgid "/boot file system"
 msgstr "souborový systém /boot"
@@ -594,6 +553,14 @@ msgstr ""
 msgid "%(desc)s cannot be of type %(type)s"
 msgstr "%(desc)s nemůže být typu %(type)s"
 
+#: pyanaconda/modules/storage/bootloader/bootloader.py:171
+msgid "GRUB2 does not support installation to a partition."
+msgstr "GRUB2 nepodporuje instalaci na oddíl."
+
+#: pyanaconda/modules/storage/bootloader/bootloader.py:178
+msgid "GRUB2 encrypted password must be in grub.pbkdf2 format."
+msgstr "Je třeba, aby šifrované heslo pro GRUB2 bylo ve formátu grub.pbkdf2."
+
 #: pyanaconda/modules/storage/bootloader/execution.py:187
 msgid "No match found for given boot drive \"{}\"."
 msgstr "Pro zadanou zaváděcí jednotku „{}“ nenalezena žádná shoda."
@@ -605,6 +572,39 @@ msgstr "Nalezena více než jedna shoda pro danou zaváděcí jednotku „{}“.
 #: pyanaconda/modules/storage/bootloader/execution.py:195
 msgid "Requested boot drive \"{}\" doesn't exist or cannot be used."
 msgstr "Požadovaná zaváděcí jednotka „{}“ neexistuje nebo ji nelze použít."
+
+#: pyanaconda/modules/storage/bootloader/grub2.py:487
+#, python-format
+msgid ""
+"%(deviceName)s may not have enough space for grub2 to embed core.img when "
+"using the %(fsType)s file system on %(deviceType)s"
+msgstr ""
+"Pokud je na %(deviceType)s použit souborový systém %(fsType)s, nemusí být na "
+"%(deviceName)s dostatek místa pro vložení core.img zavaděče grub2."
+
+#: pyanaconda/modules/storage/bootloader/grub2.py:526
+#, python-format
+msgid ""
+"boot loader stage2 device %(stage2dev)s is on a multi-disk array, but boot "
+"loader stage1 device %(stage1dev)s is not. A drive failure in %(stage2dev)s "
+"could render the system unbootable."
+msgstr ""
+"zařízení %(stage2dev)s pro druhý stupeň zavaděče se nachází na poli, "
+"složeném z více jednotek, ale zařízení %(stage1dev)s pro první stupeň "
+"zavaděče nikoliv. Chyba na jednotce u %(stage2dev)s může způsobit, že systém "
+"nebude možné spustit."
+
+#: pyanaconda/modules/storage/bootloader/grub2.py:533
+#, python-format
+msgid ""
+"boot loader stage2 device %(stage2dev)s is on a multi-disk array, but boot "
+"loader stage1 device %(stage1dev)s is not part of this array. The stage1 "
+"boot loader will only be installed to a single drive."
+msgstr ""
+"zařízení %(stage2dev)s pro druhý stupeň zavaděče se nachází na poli, "
+"složeném z více jednotek, ale zařízení %(stage1dev)s pro první stupeň "
+"zavaděče není součástí tohoto pole. První stupeň zavaděče bude nainstalován "
+"pouze na jedinou jednotku (která když selže, nebude odkud systém zavést)."
 
 #: pyanaconda/modules/storage/checker/utils.py:54
 #, python-format
@@ -801,6 +801,17 @@ msgstr ""
 "nevybrané jednotky. Pokud chcete pokračovat, je nutné mít tyto jednotky buď "
 "vybrané všechny, nebo žádné."
 
+#: pyanaconda/modules/storage/devicetree/fsset.py:390
+#, python-brace-format
+msgid ""
+"There is an entry in your /etc/fstab file that contains an invalid or "
+"incorrect file system type. The file says that {detected_type} at "
+"{mount_point} is {fstab_type}."
+msgstr ""
+"Ve svém souboru /etc/fstab máte záznam, který obsahuje neplatný nebo "
+"nesprávný typ souborového systému. Soubor tvrdí že {detected_type} na "
+"{mount_point} je {fstab_type}."
+
 #: pyanaconda/modules/storage/devicetree/root.py:339
 msgid "Unknown Linux"
 msgstr "Neznámý Linux"
@@ -814,27 +825,6 @@ msgstr "{product} {version} pro {arch}"
 #, python-brace-format
 msgid "{product} Linux {version} for {arch}"
 msgstr "{product} Linux {version} pro {arch}"
-
-#: pyanaconda/modules/storage/devicetree/viewer.py:303
-#, python-brace-format
-msgid "{device_description} ({device_name})"
-msgstr "{device_description} ({device_name})"
-
-#: pyanaconda/modules/storage/devicetree/viewer.py:309
-#, python-brace-format
-msgid "{device_name} on {container_name}"
-msgstr "{device_name} na {container_name}"
-
-#: pyanaconda/modules/storage/devicetree/fsset.py:390
-#, python-brace-format
-msgid ""
-"There is an entry in your /etc/fstab file that contains an invalid or "
-"incorrect file system type. The file says that {detected_type} at "
-"{mount_point} is {fstab_type}."
-msgstr ""
-"Ve svém souboru /etc/fstab máte záznam, který obsahuje neplatný nebo "
-"nesprávný typ souborového systému. Soubor tvrdí že {detected_type} na "
-"{mount_point} je {fstab_type}."
 
 #: pyanaconda/modules/storage/devicetree/utils.py:68
 #, python-format
@@ -863,6 +853,16 @@ msgstr ""
 "Při stahování certifikátu třetí strany nastala chyba:\n"
 "\n"
 "%s"
+
+#: pyanaconda/modules/storage/devicetree/viewer.py:303
+#, python-brace-format
+msgid "{device_description} ({device_name})"
+msgstr "{device_description} ({device_name})"
+
+#: pyanaconda/modules/storage/devicetree/viewer.py:309
+#, python-brace-format
+msgid "{device_name} on {container_name}"
+msgstr "{device_name} na {container_name}"
 
 #: pyanaconda/modules/storage/disk_selection/utils.py:36
 msgid "The selected disk {} is not recognized."
@@ -1710,6 +1710,15 @@ msgctxt "GUI|Summary|Warning Dialog"
 msgid "_OK"
 msgstr "_OK"
 
+#: pyanaconda/ui/gui/spokes/advstorage/nvdimm.py:82
+msgctxt "GUI|Advanced Storage|NVDIM"
+msgid "No device to be reconfigured selected."
+msgstr "Není vybráno žádné zařízení, které má být přenastaveno."
+
+#: pyanaconda/ui/gui/spokes/advstorage/nvdimm.py:174
+msgid "Rescanning disks finished."
+msgstr "Opětovné naskenování jednotek datového úložiště bylo dokončeno."
+
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.py:158
 #, python-format
 msgid ""
@@ -1720,26 +1729,6 @@ msgstr ""
 "Prostřednictvím iSCSI iniciátoru <b>%(initiatorName)s</b> a IP adresy "
 "portálu <b>%(portalAddress)s</b> byly nalezeny následující uzly. Vyberte, ke "
 "kterým z nich se chcete přihlásit:"
-
-#: pyanaconda/ui/gui/spokes/advstorage/nvdimm.py:82
-msgctxt "GUI|Advanced Storage|NVDIM"
-msgid "No device to be reconfigured selected."
-msgstr "Není vybráno žádné zařízení, které má být přenastaveno."
-
-#: pyanaconda/ui/gui/spokes/advstorage/nvdimm.py:174
-msgid "Rescanning disks finished."
-msgstr "Opětovné naskenování jednotek datového úložiště bylo dokončeno."
-
-#: pyanaconda/ui/gui/spokes/lib/cart.py:193
-msgctxt "GUI|Selected Disks Dialog"
-msgid "_Do not install boot loader"
-msgstr "Neinstalovat zava_děč systému"
-
-#: pyanaconda/ui/gui/spokes/lib/cart.py:198
-#: pyanaconda/ui/gui/spokes/lib/cart.glade:200
-msgctxt "GUI|Selected Disks Dialog"
-msgid "_Set as Boot Device"
-msgstr "Na_stavit jako zařízení pro zavádění systému"
 
 #: pyanaconda/ui/gui/spokes/lib/detailederror.py:48
 msgctxt "GUI|Detailed Error Dialog"
@@ -1867,6 +1856,17 @@ msgstr "_Nové přípojné body použijí následující schéma rozdělení:"
 msgctxt "GUI|Custom Partitioning|Autopart Page"
 msgid "_Encrypt automatically created mount points by default:"
 msgstr "Implicitně šifrovat automaticky vytvoř_ené přípojné body:"
+
+#: pyanaconda/ui/gui/spokes/lib/cart.py:193
+msgctxt "GUI|Selected Disks Dialog"
+msgid "_Do not install boot loader"
+msgstr "Neinstalovat zava_děč systému"
+
+#: pyanaconda/ui/gui/spokes/lib/cart.py:198
+#: pyanaconda/ui/gui/spokes/lib/cart.glade:200
+msgctxt "GUI|Selected Disks Dialog"
+msgid "_Set as Boot Device"
+msgstr "Na_stavit jako zařízení pro zavádění systému"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:47
 #, python-format
@@ -3869,116 +3869,6 @@ msgstr ""
 "\n"
 "Chcete ho přesto použít?"
 
-#: pyanaconda/rescue.py:272
-msgid "Unable to find /bin/bash to execute!  Not starting shell."
-msgstr "Nedaří se najít /bin/bash. Shell nebude spuštěn."
-
-#: pyanaconda/rescue.py:289
-msgid "Rescue"
-msgstr "Záchranné prostředí"
-
-#: pyanaconda/rescue.py:296
-#, python-format
-msgid ""
-"The rescue environment will now attempt to find your Linux installation and "
-"mount it under the directory : %s.  You can then make any changes required "
-"to your system.  Choose '1' to proceed with this step.\n"
-"You can choose to mount your file systems read-only instead of read-write by "
-"choosing '2'.\n"
-"If for some reason this process does not work choose '3' to skip directly to "
-"a shell.\n"
-"\n"
-msgstr ""
-"Záchranné prostředí ser nyní pokusí nalézt nainstalované linuxové systémy a "
-"připojit je do adresáře: %s. Poté můžete provést všechny potřebné změny. Pro "
-"pokračování zvolte „1“.\n"
-"Pomocí „2“ můžete nalezené souborové systémy připojit pouze pro čtení místo "
-"pro čtení i zápis.\n"
-"Pokud z nějakého důvodu tyto možnosti nefungují, můžete pomocí „3“ přejít "
-"přímo do konzole.\n"
-"\n"
-
-#: pyanaconda/rescue.py:308
-msgid "Continue"
-msgstr "Pokračovat"
-
-#: pyanaconda/rescue.py:309
-msgid "Read-only mount"
-msgstr "Připojit pouze pro čtení"
-
-#: pyanaconda/rescue.py:310
-msgid "Skip to shell"
-msgstr "Přeskočit do shellu"
-
-#: pyanaconda/rescue.py:311
-msgid "Quit (Reboot)"
-msgstr "Ukončit (Restartovat)"
-
-#: pyanaconda/rescue.py:408
-msgid "Rescue Shell"
-msgstr "Záchranný shell"
-
-#: pyanaconda/rescue.py:418
-#, python-format
-msgid "Run %s to unmount the system when you are finished."
-msgstr "Až budete mít hotovo, spusťte %s a odpojte tak souborový systém."
-
-#: pyanaconda/rescue.py:419
-msgid ""
-"When finished, please exit from the shell and your system will reboot.\n"
-msgstr "Po dokončení práce ukončete shell a váš systém bude restartován.\n"
-
-#: pyanaconda/rescue.py:430
-#, python-format
-msgid ""
-"Your system has been mounted under %(mountpoint)s.\n"
-"\n"
-"If you would like to make the root of your system the root of the active "
-"system, run the command:\n"
-"\n"
-"\tchroot %(mountpoint)s\n"
-"\n"
-msgstr ""
-"Váš systém byl připojen do adresáře %(mountpoint)s.\n"
-"\n"
-"Pokud byste chtěli, aby se kořen vašeho systému stal kořenem aktivního "
-"systémového prostředí, zadejte příkaz:\n"
-"\n"
-"\tchroot %(mountpoint)s\n"
-"\n"
-
-#: pyanaconda/rescue.py:442
-#, python-brace-format
-msgid ""
-"An error occurred trying to mount some or all of your system: {message}\n"
-"\n"
-"Some of it may be mounted under {path}."
-msgstr ""
-"Během připojování systému nebo jeho svazků došlo k chybě: {message}\n"
-"\n"
-"Některé svazky mohou být připojeny do {path}."
-
-#: pyanaconda/rescue.py:454
-msgid "You don't have any Linux partitions.\n"
-msgstr "Nebyly nalezeny žádné linuxové oddíly.\n"
-
-#: pyanaconda/rescue.py:460
-msgid "Not mounting the system.\n"
-msgstr "Souborový systém nebude připojen.\n"
-
-#: pyanaconda/rescue.py:474
-#, python-format
-msgid "Please press %s to get a shell"
-msgstr "Pokud se chcete vrátit do shellu, stiskněte %s"
-
-#: pyanaconda/rescue.py:491
-msgid "Root Selection"
-msgstr "Výběr kořenového adresáře"
-
-#: pyanaconda/rescue.py:517
-msgid "The following installations were discovered on your system."
-msgstr "Na tomto stroji byly nalezeny následující nainstalované systémy."
-
 #: pyanaconda/addons.py:97
 #, python-format
 msgid "Executing %s addon"
@@ -4456,6 +4346,116 @@ msgstr "Pro %s je vyžadován název politiky."
 #, python-format
 msgid "A %(command)s with the name %(policyName)s has already been defined."
 msgstr "Příkaz %(command)s s názvem %(policyName)s je již definován."
+
+#: pyanaconda/rescue.py:272
+msgid "Unable to find /bin/bash to execute!  Not starting shell."
+msgstr "Nedaří se najít /bin/bash. Shell nebude spuštěn."
+
+#: pyanaconda/rescue.py:289
+msgid "Rescue"
+msgstr "Záchranné prostředí"
+
+#: pyanaconda/rescue.py:296
+#, python-format
+msgid ""
+"The rescue environment will now attempt to find your Linux installation and "
+"mount it under the directory : %s.  You can then make any changes required "
+"to your system.  Choose '1' to proceed with this step.\n"
+"You can choose to mount your file systems read-only instead of read-write by "
+"choosing '2'.\n"
+"If for some reason this process does not work choose '3' to skip directly to "
+"a shell.\n"
+"\n"
+msgstr ""
+"Záchranné prostředí ser nyní pokusí nalézt nainstalované linuxové systémy a "
+"připojit je do adresáře: %s. Poté můžete provést všechny potřebné změny. Pro "
+"pokračování zvolte „1“.\n"
+"Pomocí „2“ můžete nalezené souborové systémy připojit pouze pro čtení místo "
+"pro čtení i zápis.\n"
+"Pokud z nějakého důvodu tyto možnosti nefungují, můžete pomocí „3“ přejít "
+"přímo do konzole.\n"
+"\n"
+
+#: pyanaconda/rescue.py:308
+msgid "Continue"
+msgstr "Pokračovat"
+
+#: pyanaconda/rescue.py:309
+msgid "Read-only mount"
+msgstr "Připojit pouze pro čtení"
+
+#: pyanaconda/rescue.py:310
+msgid "Skip to shell"
+msgstr "Přeskočit do shellu"
+
+#: pyanaconda/rescue.py:311
+msgid "Quit (Reboot)"
+msgstr "Ukončit (Restartovat)"
+
+#: pyanaconda/rescue.py:408
+msgid "Rescue Shell"
+msgstr "Záchranný shell"
+
+#: pyanaconda/rescue.py:418
+#, python-format
+msgid "Run %s to unmount the system when you are finished."
+msgstr "Až budete mít hotovo, spusťte %s a odpojte tak souborový systém."
+
+#: pyanaconda/rescue.py:419
+msgid ""
+"When finished, please exit from the shell and your system will reboot.\n"
+msgstr "Po dokončení práce ukončete shell a váš systém bude restartován.\n"
+
+#: pyanaconda/rescue.py:430
+#, python-format
+msgid ""
+"Your system has been mounted under %(mountpoint)s.\n"
+"\n"
+"If you would like to make the root of your system the root of the active "
+"system, run the command:\n"
+"\n"
+"\tchroot %(mountpoint)s\n"
+"\n"
+msgstr ""
+"Váš systém byl připojen do adresáře %(mountpoint)s.\n"
+"\n"
+"Pokud byste chtěli, aby se kořen vašeho systému stal kořenem aktivního "
+"systémového prostředí, zadejte příkaz:\n"
+"\n"
+"\tchroot %(mountpoint)s\n"
+"\n"
+
+#: pyanaconda/rescue.py:442
+#, python-brace-format
+msgid ""
+"An error occurred trying to mount some or all of your system: {message}\n"
+"\n"
+"Some of it may be mounted under {path}."
+msgstr ""
+"Během připojování systému nebo jeho svazků došlo k chybě: {message}\n"
+"\n"
+"Některé svazky mohou být připojeny do {path}."
+
+#: pyanaconda/rescue.py:454
+msgid "You don't have any Linux partitions.\n"
+msgstr "Nebyly nalezeny žádné linuxové oddíly.\n"
+
+#: pyanaconda/rescue.py:460
+msgid "Not mounting the system.\n"
+msgstr "Souborový systém nebude připojen.\n"
+
+#: pyanaconda/rescue.py:474
+#, python-format
+msgid "Please press %s to get a shell"
+msgstr "Pokud se chcete vrátit do shellu, stiskněte %s"
+
+#: pyanaconda/rescue.py:491
+msgid "Root Selection"
+msgstr "Výběr kořenového adresáře"
+
+#: pyanaconda/rescue.py:517
+msgid "The following installations were discovered on your system."
+msgstr "Na tomto stroji byly nalezeny následující nainstalované systémy."
 
 #: pyanaconda/startup_utils.py:83
 #, python-format
@@ -5117,7 +5117,7 @@ msgid "Discovering DASD devices.  This may take a moment..."
 msgstr "Probíhá vyhledávání zařízení DASD. Může to chvíli trvat…"
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:212
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:253
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:254
 msgid "Device discovery failed."
 msgstr "Vyhledání zařízení se nezdařilo."
 
@@ -5135,7 +5135,7 @@ msgid "_Retry Discovery"
 msgstr "_Znovu vyhledávat"
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:307
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:346
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:347
 msgid "Device discovery succeeded."
 msgstr "Vyhledání zařízení bylo úspěšné."
 
@@ -5428,37 +5428,37 @@ msgid "Warning: Existing data on reconfigured devices will be lost."
 msgstr ""
 "Varování: Stávající data na přenastavovaných zařízeních budou ztracena."
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:82
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:83
 msgid "ADD zFCP STORAGE TARGET"
 msgstr "PŘIDAT CÍL ÚLOŽIŠTĚ zFCP"
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:105
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:106
 msgid ""
-"To use zFCP disks, you must provide the device number, WWPN, and LUN "
-"configured for the device."
+"To use zFCP-attached SCSI disks, you must provide the FCP device number. "
+"Storage WWPN and FCP LUN are necessary if the zFCP adapter is not configured "
+"in NPIV mode or when automatic LUN scanning is disabled via a kernel module "
+"parameter."
 msgstr ""
-"Pokud chcete použít zFCP jednotky, je třeba zadat číslo zařízení, WWPN a LUN "
-"nastavený pro zařízení."
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:132
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:133
 msgctxt "GUI|Advanced Storage|zFCP|Device Number"
 msgid "_Device number:"
 msgstr "Číslo _zařízení:"
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:159
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:160
 msgid "WWPN:"
 msgstr "WWPN:"
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:177
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:178
 msgctxt "GUI|Advanced Storage|zFCP|Start Discovery"
 msgid "_Start Discovery"
 msgstr "_Zahájit vyhledávání"
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:214
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:215
 msgid "Discovering zFCP devices.  This may take a moment..."
 msgstr "Probíhá vyhledávání zFCP zařízení. To může chvíli trvat..."
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:268
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:269
 msgid ""
 "The following error occurred discovering zFCP devices.  Please double check "
 "your configuration information and try again."
@@ -5466,12 +5466,12 @@ msgstr ""
 "Při vyhledávání zFCP došlo k následující chybě. Pečlivě překontrolujte "
 "nastavení a zkuste to znovu."
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:291
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:292
 msgctxt "GUI|Advanced Storage|zFCP|Retry Discovery"
 msgid "_Retry Discovery"
 msgstr "_Znovu vyhledávat"
 
-#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:373
+#: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:374
 msgid "LUN:"
 msgstr "LUN:"
 
@@ -5604,64 +5604,6 @@ msgid ""
 msgstr ""
 "Pro přístup k bezdrátové síti jsou vyžadována\n"
 "hesla nebo šifrovací klíče"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:23
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Cancel"
-msgstr "_Storno"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:38
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Save Passphrase"
-msgstr "Uložit he_slovou frázi"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:65
-msgid "DISK ENCRYPTION PASSPHRASE"
-msgstr "HESLOVÁ FRÁZE PRO ŠIFROVÁNÍ JEDNOTKY"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:81
-msgid ""
-"You have chosen to encrypt some of your data. You will need to create a "
-"passphrase that you will use to access your data when you start your "
-"computer."
-msgstr ""
-"Zvolili jste některá z vašich dat šifrovat. Bude potřeba vytvořit heslovou "
-"frázi, které budete zadávat při startu počítače, aby bylo možné k datům "
-"přistupovat."
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:102
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Passphrase:"
-msgstr "_Heslová fráze:"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:133
-msgctxt "GUI|Passphrase Dialog"
-msgid "Con_firm:"
-msgstr "P_otvrzení:"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:275
-msgid ""
-"Warning: You won't be able to switch between keyboard layouts (from the "
-"default one) when you decrypt your disks after install."
-msgstr ""
-"Varování: Když budete po instalaci šifrovanou jednotku odemykat, bude k "
-"dispozici pouze rozložení klávesnice, které jste zvolili za výchozí (nepůjde "
-"přepínat) ‒ pamatujte na to při tvorbě heslové fráze, aby byla taková, že "
-"půjde napsat."
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:23
-msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
-msgid "_Quit"
-msgstr "_Konec"
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:37
-msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
-msgid "_Continue"
-msgstr "_Pokračovat"
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:122
-msgid "Unsupported Hardware"
-msgstr "Nepodporovaný hardware"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:21
 msgctxt "GUI|Custom Partitioning|Confirm Delete Dialog"
@@ -5883,6 +5825,50 @@ msgstr ""
 msgid "Disk formatting complete."
 msgstr "Formátování jednotky dokončeno."
 
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:23
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Cancel"
+msgstr "_Storno"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:38
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Save Passphrase"
+msgstr "Uložit he_slovou frázi"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:65
+msgid "DISK ENCRYPTION PASSPHRASE"
+msgstr "HESLOVÁ FRÁZE PRO ŠIFROVÁNÍ JEDNOTKY"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:81
+msgid ""
+"You have chosen to encrypt some of your data. You will need to create a "
+"passphrase that you will use to access your data when you start your "
+"computer."
+msgstr ""
+"Zvolili jste některá z vašich dat šifrovat. Bude potřeba vytvořit heslovou "
+"frázi, které budete zadávat při startu počítače, aby bylo možné k datům "
+"přistupovat."
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:102
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Passphrase:"
+msgstr "_Heslová fráze:"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:133
+msgctxt "GUI|Passphrase Dialog"
+msgid "Con_firm:"
+msgstr "P_otvrzení:"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:275
+msgid ""
+"Warning: You won't be able to switch between keyboard layouts (from the "
+"default one) when you decrypt your disks after install."
+msgstr ""
+"Varování: Když budete po instalaci šifrovanou jednotku odemykat, bude k "
+"dispozici pouze rozložení klávesnice, které jste zvolili za výchozí (nepůjde "
+"přepínat) ‒ pamatujte na to při tvorbě heslové fráze, aby byla taková, že "
+"půjde napsat."
+
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:8
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:71
 msgid "RESCAN DISKS"
@@ -6024,6 +6010,20 @@ msgstr "Pořadí"
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:166
 msgid "Device"
 msgstr "Zařízení"
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:23
+msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
+msgid "_Quit"
+msgstr "_Konec"
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:37
+msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
+msgid "_Continue"
+msgstr "_Pokračovat"
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:122
+msgid "Unsupported Hardware"
+msgstr "Nepodporovaný hardware"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:176
 msgid "Add a new mount point."
@@ -7453,6 +7453,13 @@ msgstr "Zavřít"
 #: ../data/liveinst/console.apps/liveinst.h:1
 msgid "Starting Install to Hard Drive"
 msgstr "Zahajuje se instalace do počítače"
+
+#~ msgid ""
+#~ "To use zFCP disks, you must provide the device number, WWPN, and LUN "
+#~ "configured for the device."
+#~ msgstr ""
+#~ "Pokud chcete použít zFCP jednotky, je třeba zadat číslo zařízení, WWPN a "
+#~ "LUN nastavený pro zařízení."
 
 #~ msgid "Disabled. Set password to enable root account."
 #~ msgstr "Zakázáno. Pokud chcete povolit účet uživatele root, nastavte heslo."
