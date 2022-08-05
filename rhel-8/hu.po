@@ -32,7 +32,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2022-07-20 15:56+0200\n"
+"POT-Creation-Date: 2022-08-04 19:11+0200\n"
 "PO-Revision-Date: 2022-07-31 11:39+0000\n"
 "Last-Translator: yangyangdaji <1504305527@qq.com>\n"
 "Language-Team: Hungarian <https://translate.fedoraproject.org/projects/"
@@ -2601,12 +2601,12 @@ msgid "Enterprise"
 msgstr "Enterprise"
 
 #: pyanaconda/ui/gui/spokes/network.py:1101 widgets/src/SpokeSelector.c:81
+#: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:544
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:152
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:594
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:928
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1248
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1538
-#: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:544
 msgid "None"
 msgstr "Nincs"
 
@@ -2932,6 +2932,38 @@ msgctxt "GUI|Storage|Warning Dialog"
 msgid "_OK"
 msgstr "_OK"
 
+#: pyanaconda/ui/gui/spokes/user.py:68
+msgid "Invalid group name."
+msgstr "Érvénytelen csoportnév."
+
+#: pyanaconda/ui/gui/spokes/user.py:232
+msgctxt "GUI|Spoke"
+msgid "_User Creation"
+msgstr "_Felhasználó létrehozása"
+
+#: pyanaconda/ui/gui/spokes/user.py:358
+msgid "The password was set by kickstart."
+msgstr "A jelszó a kickstart fájl alapján került beállításra."
+
+#: pyanaconda/ui/gui/spokes/user.py:450 pyanaconda/ui/tui/spokes/user.py:232
+msgid "No user will be created"
+msgstr "Nem kerül hozzáadásra felhasználó"
+
+#: pyanaconda/ui/gui/spokes/user.py:452 pyanaconda/ui/tui/spokes/user.py:236
+#, python-format
+msgid "Administrator %s will be created"
+msgstr "%s adminisztrátor hozzáadásra kerül"
+
+#: pyanaconda/ui/gui/spokes/user.py:454 pyanaconda/ui/tui/spokes/user.py:238
+#, python-format
+msgid "User %s will be created"
+msgstr "%s felhasználó hozzáadásra kerül"
+
+#: pyanaconda/ui/gui/spokes/welcome.py:255
+#, python-format
+msgid "WELCOME TO %(name)s %(version)s."
+msgstr "ÜDVÖZLI A(Z) %(name)s %(version)s."
+
 #: pyanaconda/ui/gui/spokes/subscription.py:73
 msgctxt "GUI|Spoke"
 msgid "_Connect to Red Hat"
@@ -2965,85 +2997,53 @@ msgstr "Regisztrált."
 msgid "Not registered."
 msgstr "Nem regisztrált."
 
-#: pyanaconda/ui/gui/spokes/subscription.py:1043
+#: pyanaconda/ui/gui/spokes/subscription.py:1044
 msgid "Registered with account {}"
 msgstr "A(z) {} fiókkal regisztrálva"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:1047
+#: pyanaconda/ui/gui/spokes/subscription.py:1048
 msgid "Registered with organization {}"
 msgstr "A(z) {} szervezettel regisztrált"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:1055
+#: pyanaconda/ui/gui/spokes/subscription.py:1056
 msgid "Role: {}"
 msgstr "Szerep: {}"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:1059
+#: pyanaconda/ui/gui/spokes/subscription.py:1060
 msgid "SLA: {}"
 msgstr "SLA: {}"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:1063
+#: pyanaconda/ui/gui/spokes/subscription.py:1064
 msgid "Usage: {}"
 msgstr "Használat: {}"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:1071
+#: pyanaconda/ui/gui/spokes/subscription.py:1072
 msgid "Connected to Red Hat Insights"
 msgstr "Kapcsolódva a Red Hat Insightshoz"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:1073
+#: pyanaconda/ui/gui/spokes/subscription.py:1074
 msgid "Not connected to Red Hat Insights"
 msgstr "Nem kapcsolódott a Red Hat Insightshoz"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:1085
+#: pyanaconda/ui/gui/spokes/subscription.py:1086
 msgid "Subscribed in Simple Content Access mode."
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/subscription.py:1087
+#: pyanaconda/ui/gui/spokes/subscription.py:1088
 msgid "No subscriptions are attached to the system"
 msgstr "Nincs előfizetés rendelve a rendszerhez"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:1089
+#: pyanaconda/ui/gui/spokes/subscription.py:1090
 msgid "1 subscription attached to the system"
 msgstr "1 előfizetés van a rendszerhez rendelve"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:1091
+#: pyanaconda/ui/gui/spokes/subscription.py:1092
 msgid "{} subscriptions attached to the system"
 msgstr "{} előfizetés van a rendszerhez rendelve"
 
-#: pyanaconda/ui/gui/spokes/subscription.py:1132
+#: pyanaconda/ui/gui/spokes/subscription.py:1133
 msgid "Please enable network access before connecting to Red Hat."
 msgstr "Engedélyezze a hálózati elérést, mielőtt kapcsolódna a Red Hathez."
-
-#: pyanaconda/ui/gui/spokes/user.py:68
-msgid "Invalid group name."
-msgstr "Érvénytelen csoportnév."
-
-#: pyanaconda/ui/gui/spokes/user.py:232
-msgctxt "GUI|Spoke"
-msgid "_User Creation"
-msgstr "_Felhasználó létrehozása"
-
-#: pyanaconda/ui/gui/spokes/user.py:358
-msgid "The password was set by kickstart."
-msgstr "A jelszó a kickstart fájl alapján került beállításra."
-
-#: pyanaconda/ui/gui/spokes/user.py:450 pyanaconda/ui/tui/spokes/user.py:232
-msgid "No user will be created"
-msgstr "Nem kerül hozzáadásra felhasználó"
-
-#: pyanaconda/ui/gui/spokes/user.py:452 pyanaconda/ui/tui/spokes/user.py:236
-#, python-format
-msgid "Administrator %s will be created"
-msgstr "%s adminisztrátor hozzáadásra kerül"
-
-#: pyanaconda/ui/gui/spokes/user.py:454 pyanaconda/ui/tui/spokes/user.py:238
-#, python-format
-msgid "User %s will be created"
-msgstr "%s felhasználó hozzáadásra kerül"
-
-#: pyanaconda/ui/gui/spokes/welcome.py:255
-#, python-format
-msgid "WELCOME TO %(name)s %(version)s."
-msgstr "ÜDVÖZLI A(Z) %(name)s %(version)s."
 
 #: pyanaconda/ui/gui/__init__.py:364 widgets/src/BaseWindow.c:151
 msgid "Help!"
@@ -4720,354 +4720,6 @@ msgstr ""
 "Nincs változás addig a lemezeken, amíg nem kattint a „Telepítés megkezdése” "
 "gombra."
 
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:67
-#: pyanaconda/ui/gui/spokes/storage.glade:450
-#: pyanaconda/ui/gui/spokes/storage.glade:1136
-msgid "INSTALLATION DESTINATION"
-msgstr "TELEPÍTÉSI CÉL"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:136
-msgctxt "GUI|Installation Destination|Filter|Search"
-msgid "Search _By:"
-msgstr "Keresés _eszerint:"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:153
-msgid "Port / Target / LUN #"
-msgstr "Port / Cél / LUN #"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:154
-msgid "Target WWID"
-msgstr "Cél WWID"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:193
-msgctxt "GUI|Installation Destination|Filter|Search|Port Target LUN"
-msgid "_Port:"
-msgstr "_Port:"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:219
-msgctxt "GUI|Installation Destination|Filter|Search|Port Target LUN"
-msgid "_Target:"
-msgstr "_Cél:"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:247
-msgctxt "GUI|Installation Destination|Filter|Search|Port Target LUN"
-msgid "_LUN:"
-msgstr "_LUN:"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:289
-msgctxt "GUI|Installation Destination|Filter|Search|WWID"
-msgid "_WWID:"
-msgstr "_WWID:"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:339
-msgctxt "GUI|Installation Destination|Filter|Search"
-msgid "Search Res_ults:"
-msgstr "Keresési _találatok:"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:386
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1438
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1761
-#: pyanaconda/ui/gui/spokes/lib/cart.glade:150
-#: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:238
-#: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:741
-#: pyanaconda/ui/gui/spokes/lib/resize.glade:161
-#: pyanaconda/ui/gui/spokes/installation_source.glade:1040
-msgid "Name"
-msgstr "Név"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:400
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:597
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:800
-msgid "WWID"
-msgstr "WWID"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:414
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:814
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1148
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1466
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1789
-#: pyanaconda/ui/gui/spokes/lib/cart.glade:162
-#: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:251
-#: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:754
-msgid "Capacity"
-msgstr "Kapacitás"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:428
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:596
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:842
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:930
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1176
-msgid "Interconnect"
-msgstr "Összekapcsolás"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:442
-msgid "Model"
-msgstr "Modell"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:456
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1541
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1817
-msgid "LUN"
-msgstr "LUN"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:470
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1831
-msgid "Port"
-msgstr "Port"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:484
-msgid "Target"
-msgstr "Cél"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:498
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:595
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:828
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:929
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1162
-msgid "Vendor"
-msgstr "Gyártó"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:512
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1249
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1424
-msgid "Namespace"
-msgstr "Névtér"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:526
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1250
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1452
-msgid "Mode"
-msgstr "Mód"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:553
-msgctxt "GUI|Installation Destination|Filter"
-msgid "Searc_h"
-msgstr "Keresé_s"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:578
-msgctxt "GUI|Installation Destination|Filter|Multipath"
-msgid "Filter _By:"
-msgstr "Szű_rés eszerint:"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:635
-msgctxt "GUI|Installation Destination|Filter|Multipath|Vendor"
-msgid "Show Only _Devices From:"
-msgstr "_Eszközök megjelenítése csak innen:"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:676
-msgctxt "GUI|Installation Destination|Filter|Multipath|Interconnect"
-msgid "Show Only _Devices With:"
-msgstr "_Eszközök megjelenítése csak ezzel:"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:717
-msgctxt "GUI|Installation Destination|Filter|Multipath|WWID"
-msgid "Show Only _Devices Containing:"
-msgstr "_Eszközök megjelenítése, amelyek ezt tartalmazzák:"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:856
-msgid "Paths"
-msgstr "Útvonalak"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:886
-msgctxt "GUI|Installation Destination|Filter"
-msgid "_Multipath Devices"
-msgstr "_Többutas eszközök"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:912
-msgctxt "GUI|Installation Destination|Filter|Other"
-msgid "Filter _By:"
-msgstr "Szű_rés eszerint:"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:931
-msgid "ID"
-msgstr "Azonosító"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:969
-msgctxt "GUI|Installation Destination|Filter|Other|Vendor"
-msgid "Show Only _Devices From:"
-msgstr "_Eszközök megjelenítése csak innen:"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1010
-msgctxt "GUI|Installation Destination|Filter|Other|Interconnect"
-msgid "Show Only _Devices With:"
-msgstr "_Eszközök megjelenítése csak ezzel:"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1051
-msgctxt "GUI|Installation Destination|Filter|Other|ID"
-msgid "Show Only _Devices Containing:"
-msgstr "_Eszközök megjelenítése, amelyek ezt tartalmazzák:"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1134
-msgid "Identifier"
-msgstr "Azonosító"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1206
-msgctxt "GUI|Installation Destination|Filter"
-msgid "_Other SAN Devices"
-msgstr "_Egyéb SAN eszközök"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1232
-msgctxt "GUI|Installation Destination|Filter|NVDIMM Devices"
-msgid "Filter B_y:"
-msgstr "Szűrés eszeri_nt:"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1288
-msgctxt "GUI|Installation Destination|Filter|NVDIMM Devices|Mode"
-msgid "Show Only Devices in _Mode:"
-msgstr "Csak az ilyen _módú eszközök megjelenítése:"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1305
-msgid "Sector"
-msgstr "Szektor"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1306
-msgid "Memory"
-msgstr "Memória"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1333
-msgctxt "GUI|Installation Destination|Filter|NVDIMM Devices|Namespace"
-msgid "_Namespace:"
-msgstr "_Névtér:"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1496
-msgctxt "GUI|Installation Destination|Filter"
-msgid "_NVDIMM Devices"
-msgstr "_NVDIMM eszközök"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1522
-msgctxt "GUI|Installation Destination|Filter|zSeries"
-msgid "Filter B_y:"
-msgstr "Szűrés eszeri_nt:"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1539
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1747
-msgid "CCW"
-msgstr "CCW"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1540
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1803
-msgid "WWPN"
-msgstr "WWPN"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1578
-msgctxt "GUI|Installation Destination|Filter|zSeries|CCW"
-msgid "_CCW:"
-msgstr "_CCW:"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1621
-msgctxt "GUI|Installation Destination|Filter|zSeries|WWPN"
-msgid "_WWPN:"
-msgstr "_WWPN:"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1664
-msgctxt "GUI|Installation Destination|Filter|zSeries|LUN"
-msgid "_LUN:"
-msgstr "_LUN:"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1775
-#: pyanaconda/ui/gui/spokes/lib/summary.glade:155
-msgid "Type"
-msgstr "Típus"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1861
-msgctxt "GUI|Installation Destination|Filter"
-msgid "_zSeries Devices"
-msgstr "_zSeries eszközök"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1884
-msgctxt "GUI|Installation Destination|Filter"
-msgid "_Add zFCP LUN..."
-msgstr "ZFCP LUN hozzá_adása…"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1899
-msgctxt "GUI|Installation Destination|Filter"
-msgid "Add EC_KD DASD..."
-msgstr "EC_KD DASD hozzáadása…"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1914
-msgctxt "GUI|Installation Destination|Filter"
-msgid "Add _iSCSI Target..."
-msgstr "_iSCSI cél hozzáadása…"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1929
-msgctxt "GUI|Installation Destination|Filter"
-msgid "Add FCo_E SAN..."
-msgstr "_FCoE SAN hozzáadása…"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1944
-msgctxt "GUI|Installation Destination|Filter"
-msgid "Reconfigure _NVDIMM..."
-msgstr "_NVDIMM újrakonfigurálása…"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1959
-msgctxt "GUI|Installation Destination|Filter"
-msgid "Refresh _List"
-msgstr "_Lista frissítése"
-
-#: pyanaconda/ui/gui/spokes/advanced_user.glade:36
-msgctxt "GUI|Advanced User"
-msgid "_Cancel"
-msgstr "_Mégse"
-
-#: pyanaconda/ui/gui/spokes/advanced_user.glade:50
-msgctxt "GUI|Advanced User"
-msgid "_Save Changes"
-msgstr "Változá_sok mentése"
-
-#: pyanaconda/ui/gui/spokes/advanced_user.glade:82
-msgid "ADVANCED USER CONFIGURATION"
-msgstr "SPECIÁLIS FELHASZNÁLÓI BEÁLLÍTÁSOK"
-
-#: pyanaconda/ui/gui/spokes/advanced_user.glade:105
-msgctxt "GUI|Advanced User"
-msgid "Home _directory:"
-msgstr "Saját _könyvtár:"
-
-#: pyanaconda/ui/gui/spokes/advanced_user.glade:140
-msgid "User and Group IDs"
-msgstr "Felhasználó és csoport azonosítók"
-
-#: pyanaconda/ui/gui/spokes/advanced_user.glade:160
-msgctxt "GUI|Advanced User"
-msgid "Specify a _user ID manually:"
-msgstr "Adjon meg egy felhasználói azonosítót:"
-
-#: pyanaconda/ui/gui/spokes/advanced_user.glade:177
-msgctxt "GUI|Advanced User"
-msgid "Specify a _group ID manually:"
-msgstr "Adjon meg egy csoport azonosítót:"
-
-#: pyanaconda/ui/gui/spokes/advanced_user.glade:237
-msgid "Group Membership"
-msgstr "Csoporttagság"
-
-#: pyanaconda/ui/gui/spokes/advanced_user.glade:265
-msgctxt "GUI|Advanced User"
-msgid "_Add user to the following groups:"
-msgstr "A felhasználó hozzá_adása a következő csoportokhoz:"
-
-#: pyanaconda/ui/gui/spokes/advanced_user.glade:298
-msgid "Example:"
-msgstr "Például:"
-
-#: pyanaconda/ui/gui/spokes/advanced_user.glade:315
-msgid "wheel, my-team (1245), project-x (29935)"
-msgstr "wheel, my-team (1245), project-x (29935)"
-
-#: pyanaconda/ui/gui/spokes/advanced_user.glade:348
-msgid "Tip:"
-msgstr "Tipp:"
-
-#: pyanaconda/ui/gui/spokes/advanced_user.glade:367
-msgid ""
-"You may input a comma-separated list of group names and group IDs here. "
-"Groups that do not already exist will be created; specify their GID in "
-"parentheses. "
-msgstr ""
-"Itt vesszővel elválasztva megadhat csoportlista neveket és azonosítókat. A "
-"még nem létező csoportok létrehozásra kerülnek; a GID azonosítójukat "
-"zárójelben adja meg utánuk. "
-
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:22
 msgctxt "GUI|Advanced Storage|DASD|Configure"
 msgid "_Cancel"
@@ -5461,42 +5113,6 @@ msgstr "Felfedezés új_ra"
 msgid "LUN:"
 msgstr "LUN:"
 
-#: pyanaconda/ui/gui/spokes/blivet_gui.glade:8
-msgid "BLIVET GUI PARTITIONING"
-msgstr "BLIVET GUI PARTICIONÁLÁS"
-
-#: pyanaconda/ui/gui/spokes/blivet_gui.glade:131
-msgctxt "GUI|Blivet Gui Partitioning"
-msgid "_Undo last action"
-msgstr "_Legutóbbi művelet visszavonása"
-
-#: pyanaconda/ui/gui/spokes/blivet_gui.glade:150
-msgctxt "GUI|Blivet Gui Partitioning"
-msgid "_Reset All"
-msgstr "Összes _visszaállítása"
-
-#: pyanaconda/ui/gui/spokes/installation_progress.glade:8
-#: pyanaconda/ui/gui/spokes/installation_progress.glade:164
-msgid "INSTALLATION PROGRESS"
-msgstr "TELEPÍTÉSI FOLYAMAT"
-
-#: pyanaconda/ui/gui/spokes/installation_progress.glade:75
-msgid "Preparing to install"
-msgstr "Telepítés előkészítése"
-
-#: pyanaconda/ui/gui/spokes/language_support.glade:33
-msgid "LANGUAGE SUPPORT"
-msgstr "NYELVI TÁMOGATÁS"
-
-#: pyanaconda/ui/gui/spokes/language_support.glade:78
-msgid "Select additional language support to be installed:"
-msgstr "Válasszon további telepíteni kívánt nyelvi támogatást:"
-
-#: pyanaconda/ui/gui/spokes/language_support.glade:186
-#: pyanaconda/ui/gui/spokes/welcome.glade:333
-msgid "Type here to search."
-msgstr "Gépeljen ide a kereséshez."
-
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:24
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:77
 msgid "SELECTED DISKS AND BOOT LOADER"
@@ -5520,6 +5136,28 @@ msgstr "Rendszerindítás"
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:728
 msgid "Description"
 msgstr "Leírás"
+
+#: pyanaconda/ui/gui/spokes/lib/cart.glade:150
+#: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:238
+#: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:741
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:161
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:386
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1438
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1761
+#: pyanaconda/ui/gui/spokes/installation_source.glade:1040
+msgid "Name"
+msgstr "Név"
+
+#: pyanaconda/ui/gui/spokes/lib/cart.glade:162
+#: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:251
+#: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:754
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:414
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:814
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1148
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1466
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1789
+msgid "Capacity"
+msgstr "Kapacitás"
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:175
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:264
@@ -5989,6 +5627,11 @@ msgstr ""
 msgid "Order"
 msgstr "Sorrend"
 
+#: pyanaconda/ui/gui/spokes/lib/summary.glade:155
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1775
+msgid "Type"
+msgstr "Típus"
+
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:166
 msgid "Device"
 msgstr "Eszköz"
@@ -6006,6 +5649,363 @@ msgstr "_Tovább"
 #: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:122
 msgid "Unsupported Hardware"
 msgstr "Nem támogatott hardver"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:67
+#: pyanaconda/ui/gui/spokes/storage.glade:450
+#: pyanaconda/ui/gui/spokes/storage.glade:1136
+msgid "INSTALLATION DESTINATION"
+msgstr "TELEPÍTÉSI CÉL"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:136
+msgctxt "GUI|Installation Destination|Filter|Search"
+msgid "Search _By:"
+msgstr "Keresés _eszerint:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:153
+msgid "Port / Target / LUN #"
+msgstr "Port / Cél / LUN #"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:154
+msgid "Target WWID"
+msgstr "Cél WWID"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:193
+msgctxt "GUI|Installation Destination|Filter|Search|Port Target LUN"
+msgid "_Port:"
+msgstr "_Port:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:219
+msgctxt "GUI|Installation Destination|Filter|Search|Port Target LUN"
+msgid "_Target:"
+msgstr "_Cél:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:247
+msgctxt "GUI|Installation Destination|Filter|Search|Port Target LUN"
+msgid "_LUN:"
+msgstr "_LUN:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:289
+msgctxt "GUI|Installation Destination|Filter|Search|WWID"
+msgid "_WWID:"
+msgstr "_WWID:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:339
+msgctxt "GUI|Installation Destination|Filter|Search"
+msgid "Search Res_ults:"
+msgstr "Keresési _találatok:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:400
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:597
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:800
+msgid "WWID"
+msgstr "WWID"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:428
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:596
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:842
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:930
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1176
+msgid "Interconnect"
+msgstr "Összekapcsolás"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:442
+msgid "Model"
+msgstr "Modell"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:456
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1541
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1817
+msgid "LUN"
+msgstr "LUN"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:470
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1831
+msgid "Port"
+msgstr "Port"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:484
+msgid "Target"
+msgstr "Cél"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:498
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:595
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:828
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:929
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1162
+msgid "Vendor"
+msgstr "Gyártó"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:512
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1249
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1424
+msgid "Namespace"
+msgstr "Névtér"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:526
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1250
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1452
+msgid "Mode"
+msgstr "Mód"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:553
+msgctxt "GUI|Installation Destination|Filter"
+msgid "Searc_h"
+msgstr "Keresé_s"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:578
+msgctxt "GUI|Installation Destination|Filter|Multipath"
+msgid "Filter _By:"
+msgstr "Szű_rés eszerint:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:635
+msgctxt "GUI|Installation Destination|Filter|Multipath|Vendor"
+msgid "Show Only _Devices From:"
+msgstr "_Eszközök megjelenítése csak innen:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:676
+msgctxt "GUI|Installation Destination|Filter|Multipath|Interconnect"
+msgid "Show Only _Devices With:"
+msgstr "_Eszközök megjelenítése csak ezzel:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:717
+msgctxt "GUI|Installation Destination|Filter|Multipath|WWID"
+msgid "Show Only _Devices Containing:"
+msgstr "_Eszközök megjelenítése, amelyek ezt tartalmazzák:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:856
+msgid "Paths"
+msgstr "Útvonalak"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:886
+msgctxt "GUI|Installation Destination|Filter"
+msgid "_Multipath Devices"
+msgstr "_Többutas eszközök"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:912
+msgctxt "GUI|Installation Destination|Filter|Other"
+msgid "Filter _By:"
+msgstr "Szű_rés eszerint:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:931
+msgid "ID"
+msgstr "Azonosító"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:969
+msgctxt "GUI|Installation Destination|Filter|Other|Vendor"
+msgid "Show Only _Devices From:"
+msgstr "_Eszközök megjelenítése csak innen:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1010
+msgctxt "GUI|Installation Destination|Filter|Other|Interconnect"
+msgid "Show Only _Devices With:"
+msgstr "_Eszközök megjelenítése csak ezzel:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1051
+msgctxt "GUI|Installation Destination|Filter|Other|ID"
+msgid "Show Only _Devices Containing:"
+msgstr "_Eszközök megjelenítése, amelyek ezt tartalmazzák:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1134
+msgid "Identifier"
+msgstr "Azonosító"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1206
+msgctxt "GUI|Installation Destination|Filter"
+msgid "_Other SAN Devices"
+msgstr "_Egyéb SAN eszközök"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1232
+msgctxt "GUI|Installation Destination|Filter|NVDIMM Devices"
+msgid "Filter B_y:"
+msgstr "Szűrés eszeri_nt:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1288
+msgctxt "GUI|Installation Destination|Filter|NVDIMM Devices|Mode"
+msgid "Show Only Devices in _Mode:"
+msgstr "Csak az ilyen _módú eszközök megjelenítése:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1305
+msgid "Sector"
+msgstr "Szektor"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1306
+msgid "Memory"
+msgstr "Memória"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1333
+msgctxt "GUI|Installation Destination|Filter|NVDIMM Devices|Namespace"
+msgid "_Namespace:"
+msgstr "_Névtér:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1496
+msgctxt "GUI|Installation Destination|Filter"
+msgid "_NVDIMM Devices"
+msgstr "_NVDIMM eszközök"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1522
+msgctxt "GUI|Installation Destination|Filter|zSeries"
+msgid "Filter B_y:"
+msgstr "Szűrés eszeri_nt:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1539
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1747
+msgid "CCW"
+msgstr "CCW"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1540
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1803
+msgid "WWPN"
+msgstr "WWPN"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1578
+msgctxt "GUI|Installation Destination|Filter|zSeries|CCW"
+msgid "_CCW:"
+msgstr "_CCW:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1621
+msgctxt "GUI|Installation Destination|Filter|zSeries|WWPN"
+msgid "_WWPN:"
+msgstr "_WWPN:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1664
+msgctxt "GUI|Installation Destination|Filter|zSeries|LUN"
+msgid "_LUN:"
+msgstr "_LUN:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1861
+msgctxt "GUI|Installation Destination|Filter"
+msgid "_zSeries Devices"
+msgstr "_zSeries eszközök"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1884
+msgctxt "GUI|Installation Destination|Filter"
+msgid "_Add zFCP LUN..."
+msgstr "ZFCP LUN hozzá_adása…"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1899
+msgctxt "GUI|Installation Destination|Filter"
+msgid "Add EC_KD DASD..."
+msgstr "EC_KD DASD hozzáadása…"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1914
+msgctxt "GUI|Installation Destination|Filter"
+msgid "Add _iSCSI Target..."
+msgstr "_iSCSI cél hozzáadása…"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1929
+msgctxt "GUI|Installation Destination|Filter"
+msgid "Add FCo_E SAN..."
+msgstr "_FCoE SAN hozzáadása…"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1944
+msgctxt "GUI|Installation Destination|Filter"
+msgid "Reconfigure _NVDIMM..."
+msgstr "_NVDIMM újrakonfigurálása…"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1959
+msgctxt "GUI|Installation Destination|Filter"
+msgid "Refresh _List"
+msgstr "_Lista frissítése"
+
+#: pyanaconda/ui/gui/spokes/advanced_user.glade:36
+msgctxt "GUI|Advanced User"
+msgid "_Cancel"
+msgstr "_Mégse"
+
+#: pyanaconda/ui/gui/spokes/advanced_user.glade:50
+msgctxt "GUI|Advanced User"
+msgid "_Save Changes"
+msgstr "Változá_sok mentése"
+
+#: pyanaconda/ui/gui/spokes/advanced_user.glade:82
+msgid "ADVANCED USER CONFIGURATION"
+msgstr "SPECIÁLIS FELHASZNÁLÓI BEÁLLÍTÁSOK"
+
+#: pyanaconda/ui/gui/spokes/advanced_user.glade:105
+msgctxt "GUI|Advanced User"
+msgid "Home _directory:"
+msgstr "Saját _könyvtár:"
+
+#: pyanaconda/ui/gui/spokes/advanced_user.glade:140
+msgid "User and Group IDs"
+msgstr "Felhasználó és csoport azonosítók"
+
+#: pyanaconda/ui/gui/spokes/advanced_user.glade:160
+msgctxt "GUI|Advanced User"
+msgid "Specify a _user ID manually:"
+msgstr "Adjon meg egy felhasználói azonosítót:"
+
+#: pyanaconda/ui/gui/spokes/advanced_user.glade:177
+msgctxt "GUI|Advanced User"
+msgid "Specify a _group ID manually:"
+msgstr "Adjon meg egy csoport azonosítót:"
+
+#: pyanaconda/ui/gui/spokes/advanced_user.glade:237
+msgid "Group Membership"
+msgstr "Csoporttagság"
+
+#: pyanaconda/ui/gui/spokes/advanced_user.glade:265
+msgctxt "GUI|Advanced User"
+msgid "_Add user to the following groups:"
+msgstr "A felhasználó hozzá_adása a következő csoportokhoz:"
+
+#: pyanaconda/ui/gui/spokes/advanced_user.glade:298
+msgid "Example:"
+msgstr "Például:"
+
+#: pyanaconda/ui/gui/spokes/advanced_user.glade:315
+msgid "wheel, my-team (1245), project-x (29935)"
+msgstr "wheel, my-team (1245), project-x (29935)"
+
+#: pyanaconda/ui/gui/spokes/advanced_user.glade:348
+msgid "Tip:"
+msgstr "Tipp:"
+
+#: pyanaconda/ui/gui/spokes/advanced_user.glade:367
+msgid ""
+"You may input a comma-separated list of group names and group IDs here. "
+"Groups that do not already exist will be created; specify their GID in "
+"parentheses. "
+msgstr ""
+"Itt vesszővel elválasztva megadhat csoportlista neveket és azonosítókat. A "
+"még nem létező csoportok létrehozásra kerülnek; a GID azonosítójukat "
+"zárójelben adja meg utánuk. "
+
+#: pyanaconda/ui/gui/spokes/blivet_gui.glade:8
+msgid "BLIVET GUI PARTITIONING"
+msgstr "BLIVET GUI PARTICIONÁLÁS"
+
+#: pyanaconda/ui/gui/spokes/blivet_gui.glade:131
+msgctxt "GUI|Blivet Gui Partitioning"
+msgid "_Undo last action"
+msgstr "_Legutóbbi művelet visszavonása"
+
+#: pyanaconda/ui/gui/spokes/blivet_gui.glade:150
+msgctxt "GUI|Blivet Gui Partitioning"
+msgid "_Reset All"
+msgstr "Összes _visszaállítása"
+
+#: pyanaconda/ui/gui/spokes/installation_progress.glade:8
+#: pyanaconda/ui/gui/spokes/installation_progress.glade:164
+msgid "INSTALLATION PROGRESS"
+msgstr "TELEPÍTÉSI FOLYAMAT"
+
+#: pyanaconda/ui/gui/spokes/installation_progress.glade:75
+msgid "Preparing to install"
+msgstr "Telepítés előkészítése"
+
+#: pyanaconda/ui/gui/spokes/language_support.glade:33
+msgid "LANGUAGE SUPPORT"
+msgstr "NYELVI TÁMOGATÁS"
+
+#: pyanaconda/ui/gui/spokes/language_support.glade:78
+msgid "Select additional language support to be installed:"
+msgstr "Válasszon további telepíteni kívánt nyelvi támogatást:"
+
+#: pyanaconda/ui/gui/spokes/language_support.glade:186
+#: pyanaconda/ui/gui/spokes/welcome.glade:333
+msgid "Type here to search."
+msgstr "Gépeljen ide a kereséshez."
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:8
 msgid "CONNECT TO RED HAT"
