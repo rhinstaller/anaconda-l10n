@@ -11,19 +11,16 @@ jobs:
       max-parallel: 1
       # update this matrix to support new Anaconda branches
       matrix:
-        branch: [ master, f36, rhel-9, rhel-9.0 ]
+        branch: [ master, f37, rhel-9 ]
         include:
           - branch: master
             anaconda-branch: master
             container-tag: master
-          - branch: f36
-            anaconda-branch: f36-devel
-            container-tag: f36-devel
+          - branch: f37
+            anaconda-branch: f37-release
+            container-tag: f37-release
           - branch: rhel-9
             anaconda-branch: rhel-9
-            container-tag: master
-          - branch: rhel-9.0
-            anaconda-branch: rhel-9.0
             container-tag: master
 
     runs-on: ubuntu-latest
