@@ -62,8 +62,8 @@ msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2022-09-06 15:49+0200\n"
-"PO-Revision-Date: 2022-07-31 11:39+0000\n"
-"Last-Translator: yangyangdaji <1504305527@qq.com>\n"
+"PO-Revision-Date: 2022-09-08 09:11+0000\n"
+"Last-Translator: Transtats <suanand@redhat.com>\n"
 "Language-Team: Japanese <https://translate.fedoraproject.org/projects/"
 "anaconda/rhel-8/ja/>\n"
 "Language: ja\n"
@@ -71,7 +71,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.13\n"
+"X-Generator: Weblate 4.14\n"
 
 #: pyanaconda/core/kickstart/addon.py:128
 msgid "Missing name of the %addon section."
@@ -821,9 +821,9 @@ msgid ""
 "incorrect file system type. The file says that {detected_type} at "
 "{mount_point} is {fstab_type}."
 msgstr ""
-"/etc/fstab ファイルに、無効または不正なファイルシステムのタイプを含むエント"
-"リーがあります。このファイルは、{mount_point} の {detected_type} が "
-"{fstab_type} であることを示しています。"
+"/etc/fstab ファイルに、無効または不正なファイルシステムのタイプを含むエントリ"
+"ーがあります。このファイルは、{mount_point} の {mount_point} が {fstab_type} "
+"であることを示しています。"
 
 #: pyanaconda/modules/storage/devicetree/root.py:339
 msgid "Unknown Linux"
@@ -1211,7 +1211,7 @@ msgstr ""
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:410
 msgid "Please enter a mount point."
-msgstr "有効なマウントポイントを記入して下さい。"
+msgstr "マウントポイントを記入して下さい。"
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:423
 #, python-brace-format
@@ -1240,8 +1240,7 @@ msgid ""
 "partitions. You can remove it or select a different device."
 msgstr ""
 "このソフトウェア RAID アレイには、%(total)d メンバーパーティションのうち "
-"%(missing)d メンバーパーティションが不足しています。削除するか別のデバイスを"
-"選択してください。"
+"%(missing)d が不足しています。削除するか別のデバイスを選択してください。"
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:1203
 #, python-format
@@ -1250,8 +1249,7 @@ msgid ""
 "volumes. You can remove it or select a different device."
 msgstr ""
 "この LVM のボリュームグループには %(totalPVs)d 物理ボリュームのうち "
-"%(missingPVs)d 物理ボリュームが不足しています。削除するか別のデバイスを選択し"
-"てください。"
+"%(missingPVs)d が不足しています。削除するか別のデバイスを選択してください。"
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:1207
 #, python-format
@@ -1325,23 +1323,23 @@ msgid ""
 "running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 msgstr ""
 "手動インストールのためのワークアラウンドは次のとおりです。\n"
-"* グラフィカルモードもしくはテキストモードでの手動インストール時に同じセク"
-"ターサイズのディスクのみを選択します。\n"
+"* グラフィカルモードもしくはテキストモードでの手動インストール時に同じセクタ"
+"ーサイズのディスクのみを選択します。\n"
 "* セクターサイズに一貫性のないディスクがインストール先のディスクとして選択さ"
 "れた場合、作成された各LVMボリュームグループを制限して同じセクターサイズの物理"
 "ボリュームを使用します。 これはカスタムパーティショニング選択時のグラフィカル"
 "モードでのみ実行できます。\n"
 "\n"
 "Kickstartインストール時のワークアラウンドは次のとおりです。\n"
-"* 'ignoredisk --drives=...' もしくは 'ignoredisk --only-use=...' でパーティ"
-"ショニングに使用するディスクを制限します。\n"
+"* 'ignoredisk --drives=...' もしくは 'ignoredisk --only-use=...' "
+"でパーティショニングに使用するディスクを制限します。\n"
 "* 作成されたLVM物理ボリュームごとに使用するディスクを指定します。例: "
 "'partition pv.1 --ondisk=..'\n"
 "\n"
 "一般的なワークアラウンドは次のとおりです。\n"
 "* LVMの代わりにプレーンなパーティション作成を使用します。\n"
-"* 一部のディスクは、次のように実行することにより、セクターサイズの再構成をサ"
-"ポートします。例: 'hdparm --set-sector-size=<SIZE> <DEVICE>'\n"
+"* 一部のディスクは、たとえば 'hdparm --set-sector-size=<SIZE> <DEVICE>' "
+"を実行することにより、セクターサイズの再構成をサポートします。\n"
 
 #: pyanaconda/modules/storage/installation.py:88
 msgid "An error occurred while resizing the device {}: {}"
@@ -1399,8 +1397,7 @@ msgstr "fcoe コマンドで指定された NIC \"{}\" は存在しません。"
 msgid ""
 "Network interface \"{nic}\" required by iSCSI \"{iscsi_target}\" target is "
 "not up."
-msgstr ""
-"iSCSI \"{iscsi_target}\" ターゲットに要求されるネットワークインターフェース "
+msgstr "iSCSI \"{iscsi_target}\" ターゲットに要求されるネットワークインターフェイス "
 "\"{nic}\" が起動していません。"
 
 #: pyanaconda/modules/storage/kickstart.py:190
@@ -1606,7 +1603,7 @@ msgstr "%(url)s (%(pct)d%%) をダウンロード中"
 #: pyanaconda/payload/live/payload_base.py:78
 #: pyanaconda/payload/live/payload_liveos.py:96
 msgid "Installing software"
-msgstr "ソフトウェアをインストール中…"
+msgstr "ソフトウェアをインストール中"
 
 #: pyanaconda/payload/live/payload_liveimg.py:212
 msgid "Checking image checksum"
@@ -2130,7 +2127,7 @@ msgid ""
 "You have currently selected:\n"
 "%s"
 msgstr ""
-"プロパティを編集するマウントポイントを1つ選択してください。\n"
+"プロパティを編集するマウントポイントを 1 つ選択してください。\n"
 "\n"
 "現在次のマウントポイントが選択されています:\n"
 "%s"
@@ -2752,9 +2749,9 @@ msgid ""
 "of available space, including <b>%(software)s</b> for software and <b>"
 "%(swap)s</b> for swap space."
 msgstr ""
-"現在の <b>%(product)s</b>ソフトウェア選択には、ソフトウェア領域に <b>"
-"%(software)s</b>、swap 領域に <b>%(swap)s</b> を含む使用可能な領域が <b>"
-"%(total)s</b> 必要です。"
+"現在の <b>%(product)s</b> ソフトウェア選択には、ソフトウェア領域に "
+"<b>%(software)s</b>、swap 領域に <b>%(swap)s</b> を含む使用可能な領域が "
+"<b>%(total)s</b> 必要です。"
 
 #: pyanaconda/ui/gui/spokes/storage.py:115
 #, python-format
@@ -3844,7 +3841,7 @@ msgid ""
 "Invalid user name: %(name)s.\n"
 "%(error_message)s"
 msgstr ""
-"無効なユーザー名: %(name)s\n"
+"無効なユーザー名: %(name)s。\n"
 "%(error_message)s"
 
 #: pyanaconda/ui/tui/tuiobject.py:144
@@ -4082,10 +4079,15 @@ msgid ""
 "arguments or subscription infrastructure issues. Would you like to ignore "
 "this and continue with installation?"
 msgstr ""
+"rhsm kickstart "
+"コマンドによってトリガーされた登録の試行中にエラーが発生しました。これは、"
+"rhsm コマンドの引数が正しくないか、サブスクリプションインフラストラクチャーの"
+"問題が原因で発生した可能性があります。これを無視してインストールを続行します"
+"か?"
 
 #: pyanaconda/errors.py:281
 msgid "Error detail: "
-msgstr ""
+msgstr "エラーの詳細: "
 
 #: pyanaconda/exception.py:109
 #, python-format
@@ -4435,7 +4437,7 @@ msgstr "Linux パーティションがありません。\n"
 
 #: pyanaconda/rescue.py:460
 msgid "Not mounting the system.\n"
-msgstr "システムをマウントしていません\n"
+msgstr "システムをマウントしていません。\n"
 
 #: pyanaconda/rescue.py:474
 #, python-format
@@ -4783,8 +4785,7 @@ msgstr "デバイスの検索に成功しました。"
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:324
 msgid "The added DASD can be found under \"Local Standard Disks.\""
-msgstr ""
-"追加された DASD は、\"ローカルの標準ディスク\" として見つけることができます"
+msgstr "追加された DASD は、\"ローカルの標準ディスク\" として見つけることができます。"
 
 #: pyanaconda/ui/gui/spokes/advstorage/fcoe.glade:23
 msgctxt "GUI|Advanced Storage|FCoE"
@@ -5081,6 +5082,11 @@ msgid ""
 "in NPIV mode or when automatic LUN scanning is disabled via a kernel module "
 "parameter."
 msgstr ""
+"zFCP 接続の SCSI ディスクを使用するには、FCP "
+"デバイス番号を指定する必要があります。ストレージ WWPN と FCP LUN は、zFCP "
+"アダプタが NPIV モードで設定されていない場合、"
+"またはカーネルモジュールパラメーターによって自動 LUN "
+"スキャンが無効化されている場合に必要です。"
 
 #: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:133
 msgctxt "GUI|Advanced Storage|zFCP|Device Number"
@@ -6074,6 +6080,11 @@ msgid ""
 "vulnerabilities, and compliance, and analyzing costs. For more information, "
 "visit the Red Hat Insights information page."
 msgstr ""
+"Red Hat Insights は、リスクを特定して優先順位を付け、脆弱性とコンプライアンス"
+"を管理し、コストを分析することにより、"
+"ハイブリッドインフラストラクチャー全体で IT "
+"の効率と速度を向上させることを目的としています。詳細については、Red Hat "
+"Insights の情報ページにアクセスしてください。"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:456
 msgid "Custom base URL"
@@ -6535,7 +6546,7 @@ msgstr "デバイス(_E):"
 #: pyanaconda/ui/gui/spokes/installation_source.glade:713
 msgctxt "GUI|Software Source"
 msgid "_Choose an ISO"
-msgstr "ISO を１つ選択(_C)"
+msgstr "ISO を 1 つ選択(_C)"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:753
 msgctxt "GUI|Software Source"
