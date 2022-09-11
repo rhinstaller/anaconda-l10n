@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
 "POT-Creation-Date: 2022-09-10 01:58+0000\n"
-"PO-Revision-Date: 2022-08-03 10:19+0000\n"
+"PO-Revision-Date: 2022-09-12 10:19+0000\n"
 "Last-Translator: Gogo Gogsi <linux.hr@protonmail.com>\n"
 "Language-Team: Croatian <https://translate.fedoraproject.org/projects/"
 "anaconda/master/hr/>\n"
@@ -27,7 +27,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.13\n"
+"X-Generator: Weblate 4.14\n"
 
 #: pyanaconda/exception.py:109
 #, python-format
@@ -1011,17 +1011,13 @@ msgid "You have not created a bootable partition."
 msgstr "Niste stvorili particiju za pokretanje sustava."
 
 #: pyanaconda/modules/storage/checker/utils.py:225
-#, fuzzy
-#| msgid ""
-#| "Your BIOS-based system needs a special partition to boot from a GPT disk "
-#| "label. To continue, please create a 1MiB 'biosboot' type partition."
 msgid ""
 "Your BIOS-based system needs a special partition to boot from a GPT disk "
 "label. To continue, please create a 1MiB 'biosboot' type partition on the {} "
 "disk."
 msgstr ""
 "Vaš BIOS temeljni sustav treba posebnu particiju za pokretanje sustava s GPT "
-"diska. Za nastavak, stvorite 1MiB 'biosboot' vrstu particije."
+"diska. Za nastavak, stvorite 1MiB 'biosboot' vrstu particije na {} disku."
 
 #: pyanaconda/modules/storage/checker/utils.py:250
 msgid ""
@@ -1778,10 +1774,14 @@ msgid ""
 "arguments or subscription infrastructure issues. Would you like to ignore "
 "this and continue with installation?"
 msgstr ""
+"Došlo je do greške tijekom pokušaja registracije koju je pokrenula rhsm "
+"kickstart naredba. To se moglo dogoditi zbog netočnih argumenata rhsm "
+"naredbe ili problema s infrastrukturom pretplate. Želite li ovo zanemariti i "
+"nastaviti s instalacijom?"
 
 #: pyanaconda/errors.py:206
 msgid "Error detail: "
-msgstr ""
+msgstr "Pojedinosti greške: "
 
 #: pyanaconda/installation.py:110
 msgid "Configuring Red Hat subscription"
@@ -6660,6 +6660,10 @@ msgid ""
 "in NPIV mode or when automatic LUN scanning is disabled via a kernel module "
 "parameter."
 msgstr ""
+"Za korištenje zFCP-pripojenih SCSI diskova, morate navesti FCP broj uređaja. "
+"Pohrana WWPN i FCP LUN potrebni su ako zFCP adapter nije podešen u NPIV "
+"načinu rada ili kada je automatsko LUN pretraživanje onemogućeno putem "
+"parametra modula kernela."
 
 #: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:133
 msgctxt "GUI|Advanced Storage|zFCP|Device Number"
@@ -7351,14 +7355,12 @@ msgid "Language"
 msgstr "Jezik"
 
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:91
-#, fuzzy
-#| msgid "To prevent loss, backup the data."
 msgid "To prevent loss, make sure to backup your data. "
-msgstr "Kako bi spriječili gubitak podataka, sigurnosno ih kopirajte."
+msgstr "Kako bi spriječili gubitak podataka, sigurnosno ih kopirajte. "
 
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:94
 msgid "Erasing the disks cannot be undone."
-msgstr ""
+msgstr "Brisanje diskova se ne može poništiti."
 
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:104
 msgid "Local standard disk"
@@ -7468,38 +7470,27 @@ msgid ""
 msgstr "Ako ne shvaćate ili ne prihvaćate rizike, tada zatvorite ovaj program."
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:139
-#, fuzzy
-#| msgid "Selected disks"
 msgid "Select no disk"
-msgstr "Odabrani diskovi"
+msgstr "Odaberi bez diska"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:143
-#, fuzzy
-#| msgctxt "GUI|Network|Wireless"
-#| msgid "_Select network"
 msgid "Select none"
-msgstr "_Odaberi mrežu"
+msgstr "Odaberi nijedan"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:148
-#, fuzzy
-#| msgid "Selected disks"
 msgid "Select all disks"
-msgstr "Odabrani diskovi"
+msgstr "Odaberi sve diskove"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:160
-#, fuzzy
-#| msgid "Selected disks"
 msgid "Select multiple disks"
-msgstr "Odabrani diskovi"
+msgstr "Odaberi više diskova"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:164
-#, fuzzy
-#| msgid "Nothing selected"
 msgid "$0 selected"
 msgid_plural "$0 selected"
-msgstr[0] "Ništa nije odabrano"
-msgstr[1] "Ništa nije odabrano"
-msgstr[2] "Ništa nije odabrano"
+msgstr[0] "$0 odabran"
+msgstr[1] "$0 odabrana"
+msgstr[2] "$0 odabrano"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:249
 msgid ""
@@ -7511,14 +7502,12 @@ msgstr ""
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:256
 msgid "Local disks label info"
-msgstr ""
+msgstr "Informacije naslova lokalnih diskova"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:264
 #: ui/webui/src/components/storage/InstallationDestination.jsx:281
-#, fuzzy
-#| msgid "Rescan disks"
 msgid "Discover disks"
-msgstr "Ponovno pretraži diskove"
+msgstr "Otkrij diskove"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:292
 msgid "Total"
