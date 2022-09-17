@@ -36,7 +36,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2022-09-15 02:09+0000\n"
+"POT-Creation-Date: 2022-09-17 01:54+0000\n"
 "PO-Revision-Date: 2022-09-17 17:19+0000\n"
 "Last-Translator: yangyangdaji <1504305527@qq.com>\n"
 "Language-Team: Chinese (Traditional) <https://translate.fedoraproject.org/"
@@ -498,8 +498,9 @@ msgstr "嘗試在儲區群組規格中使用未定義的分割區 \"{}\""
 msgid ""
 "Volume group \"{}\" defined without any physical volumes. Either specify "
 "physical volumes or use --useexisting."
-msgstr "已定義儲區群組 \"{}\" 但無任何實體儲區。請指定實體儲區，或使用 "
-"--useexisting。"
+msgstr ""
+"已定義儲區群組 \"{}\" 但無任何實體儲區。請指定實體儲區，或使用 --"
+"useexisting。"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:747
 msgid ""
@@ -582,7 +583,8 @@ msgstr "嘗試在 Btrfs 儲區規格中使用未定義的分割區 \"{}\" 。"
 msgid ""
 "Btrfs volume defined without any member devices. Either specify member "
 "devices or use --useexisting."
-msgstr "Btrfs 儲區已定義但無任何成員裝置。請指定成員裝置，或使用 --useexisting。"
+msgstr ""
+"Btrfs 儲區已定義但無任何成員裝置。請指定成員裝置，或使用 --useexisting。"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1189
 msgid "Btrfs volume \"{}\" specified with --useexisting does not exist."
@@ -978,16 +980,17 @@ msgid ""
 "label. To continue, please create a 1MiB 'biosboot' type partition on the {} "
 "disk."
 msgstr ""
-"您的系統基於 BIOS，需要有特殊的分割區才能以 GPT 磁碟標籤模式開機。要繼續，"
-"請在 {} 磁碟上創建一個 1MiB 的「biosboot」類型分區。"
+"您的系統基於 BIOS，需要有特殊的分割區才能以 GPT 磁碟標籤模式開機。要繼續，請"
+"在 {} 磁碟上創建一個 1MiB 的「biosboot」類型分區。"
 
 #: pyanaconda/modules/storage/checker/utils.py:250
 msgid ""
 "The system will not be bootable. The firmware does not support XFS file "
 "system features on the boot file system. Upgrade the firmware or change the "
 "file system type."
-msgstr "系統將無法啟動。 固件不支持引導文件系統上的 XFS 文件系統功能。 "
-"升級固件或更改文件系統類型。"
+msgstr ""
+"系統將無法啟動。 固件不支持引導文件系統上的 XFS 文件系統功能。 升級固件或更改"
+"文件系統類型。"
 
 #: pyanaconda/modules/storage/checker/utils.py:308
 #, python-format
@@ -1182,27 +1185,25 @@ msgid ""
 msgstr ""
 "手動安裝的解決方法：\n"
 "* 在圖形或文本模式下手動安裝時，只選擇具有相同扇區大小的磁盤。\n"
-"* 當選擇扇區大小不一致的磁盤進行安裝時，限制每個創建的 LVM "
-"卷組使用具有相同扇區大小的物理卷。 這只能在自定義分區輻條中的圖形模式下完成。"
-"\n"
+"* 當選擇扇區大小不一致的磁盤進行安裝時，限制每個創建的 LVM 卷組使用具有相同扇"
+"區大小的物理卷。 這只能在自定義分區輻條中的圖形模式下完成。\n"
 "\n"
 "kickstart 安裝的解決方法：\n"
 "* 通過指定 '手動安裝的解決方法：\n"
 "* 在圖形或文本模式下手動安裝時，只選擇具有相同扇區大小的磁盤。\n"
-"* 當選擇扇區大小不一致的磁盤進行安裝時，限制每個創建的 LVM "
-"卷組使用具有相同扇區大小的物理卷。 這只能在自定義分區輻條中的圖形模式下完成。"
-"\n"
+"* 當選擇扇區大小不一致的磁盤進行安裝時，限制每個創建的 LVM 卷組使用具有相同扇"
+"區大小的物理卷。 這只能在自定義分區輻條中的圖形模式下完成。\n"
 "\n"
 "kickstart 安裝的解決方法：\n"
-"* 通過指定 'ignoredisk --drives=..' 或 'ignoredisk --only-use=..'. "
-"來限制用於分區的磁盤。\n"
+"* 通過指定 'ignoredisk --drives=..' 或 'ignoredisk --only-use=..'. 來限制用於"
+"分區的磁盤。\n"
 "* 指定每個創建的 LVM 物理卷應該使用Volume: 'partition pv.1 --ondisk=..'.\n"
 "\n"
 "一般解決方法：\n"
 "* 可以使用普通分區方案代替 LVM。\n"
 "* 某些驅動器支持重新配置扇區大小，例如通過運行“hdparm --set-sector-"
-"size=<SIZE> <DEVICE>”。 或 'ignoredisk --only-use=..' 來限制用於分區的磁盤。"
-"\n"
+"size=<SIZE> <DEVICE>”。 或 'ignoredisk --only-use=..' 來限制用於分區的磁"
+"盤。\n"
 "* 指定每個創建的 LVM 物理卷應該使用哪些磁盤：'partition pv.1 --ondisk=..'。\n"
 "\n"
 "一般解決方法：\n"
@@ -1210,7 +1211,7 @@ msgstr ""
 "* 某些驅動器支持重新配置扇區大小，例如通過運行 'hdparm --set-sector-"
 "size=<SIZE> <DEVICE>'.\n"
 
-#: pyanaconda/modules/timezone/timezone.py:106
+#: pyanaconda/modules/timezone/timezone.py:105
 msgid "Invalid time source."
 msgstr "無效的時間來源。"
 
@@ -1382,17 +1383,17 @@ msgstr "使用文字模式安裝"
 msgid "Do you really want to quit?"
 msgstr "您是否確定要退出？"
 
-#: pyanaconda/core/constants.py:143
+#: pyanaconda/core/constants.py:145
 msgid ""
 "No disks detected.  Please shut down the computer, connect at least one "
 "disk, and restart to complete installation."
 msgstr "未偵測到磁碟。請關閉電腦，接上至少一顆硬碟，並重新啟動完成安裝。"
 
-#: pyanaconda/core/constants.py:148
+#: pyanaconda/core/constants.py:150
 msgid "No disks selected; please select at least one disk to install to."
 msgstr "尚未選取磁碟；請選擇至少一個磁碟以便安裝。"
 
-#: pyanaconda/core/constants.py:153
+#: pyanaconda/core/constants.py:155
 msgid ""
 "Simultaneous Multithreading (SMT) technology can provide performance "
 "improvements for certain workloads, but introduces several publicly "
@@ -1402,10 +1403,10 @@ msgid ""
 "ways to mitigate these risks."
 msgstr ""
 "同步多線程（SMT）技術可以為某些工作負載提供性能改進，但會引入一些公開披露的安"
-"全問題。您可以選擇禁用SMT，這可能會影響性能。如果您選擇啟用SMT，請閱讀https:/"
-"/red.ht/rhel-smt以了解您的潛在風險並了解其他減輕這些風險的方法。"
+"全問題。您可以選擇禁用SMT，這可能會影響性能。如果您選擇啟用SMT，請閱讀"
+"https://red.ht/rhel-smt以了解您的潛在風險並了解其他減輕這些風險的方法。"
 
-#: pyanaconda/core/constants.py:163
+#: pyanaconda/core/constants.py:165
 msgid ""
 "Simultaneous Multithreading (SMT) may improve performance for certain "
 "workloads, but introduces several publicly disclosed security issues. You "
@@ -1414,134 +1415,134 @@ msgid ""
 "these risks."
 msgstr ""
 "同時多線程（SMT）可以提高某些工作負載的性能，但會引入一些公開披露的安全問題。"
-"您可以禁用SMT，這可能會影響性能。請閱讀https://red.ht/rhel-"
-"smt以了解潛在風險並了解減輕這些風險的方法。"
+"您可以禁用SMT，這可能會影響性能。請閱讀https://red.ht/rhel-smt以了解潛在風險"
+"並了解減輕這些風險的方法。"
 
-#: pyanaconda/core/constants.py:179
+#: pyanaconda/core/constants.py:181
 msgid "The password is empty."
 msgstr "密碼空白。"
 
-#: pyanaconda/core/constants.py:180
+#: pyanaconda/core/constants.py:182
 msgid "The passphrase is empty."
 msgstr "密碼空白。"
 
-#: pyanaconda/core/constants.py:183
+#: pyanaconda/core/constants.py:185
 msgid "The passwords do not match."
 msgstr "密碼兩者不相符。"
 
-#: pyanaconda/core/constants.py:184
+#: pyanaconda/core/constants.py:186
 msgid "The passphrases do not match."
 msgstr "密語不符合。"
 
-#: pyanaconda/core/constants.py:187
+#: pyanaconda/core/constants.py:189
 msgid "The passwords you entered were different. Please try again."
 msgstr "您輸入了不同的密碼。請重試。"
 
-#: pyanaconda/core/constants.py:188
+#: pyanaconda/core/constants.py:190
 msgid "The passphrases you entered were different. Please try again."
 msgstr "您輸入了不同的密語。請重試。"
 
-#: pyanaconda/core/constants.py:194
+#: pyanaconda/core/constants.py:196
 msgid "The password is too short"
 msgstr "密碼過短"
 
-#: pyanaconda/core/constants.py:195
+#: pyanaconda/core/constants.py:197
 msgid "The passphrase is too short"
 msgstr "密語過短"
 
-#: pyanaconda/core/constants.py:198
+#: pyanaconda/core/constants.py:200
 msgid "The password you have provided is weak."
 msgstr "您提供的密碼相當脆弱。"
 
-#: pyanaconda/core/constants.py:199
+#: pyanaconda/core/constants.py:201
 msgid "The passphrase you have provided is weak."
 msgstr "您提供的密語很危險。"
 
-#: pyanaconda/core/constants.py:202
+#: pyanaconda/core/constants.py:204
 msgid "The password you have provided is weak:"
 msgstr "您提供的密碼很危險："
 
-#: pyanaconda/core/constants.py:203
+#: pyanaconda/core/constants.py:205
 msgid "The passphrase you have provided is weak:"
 msgstr "您提供的密語很危險："
 
-#: pyanaconda/core/constants.py:205
+#: pyanaconda/core/constants.py:207
 msgid "Press <b>Done</b> again to use the password anyway."
 msgstr "請再按一次 <b>完成</b> 仍然使用這個密碼。"
 
-#: pyanaconda/core/constants.py:207
+#: pyanaconda/core/constants.py:209
 msgid ""
 "The password you have provided contains non-ASCII characters. You may not be "
 "able to switch between keyboard layouts when typing it."
 msgstr "您提供的密碼包含非 ASCII 字符。您將無法在輸入它時在鍵盤佈局之間切換。"
 
-#: pyanaconda/core/constants.py:208
+#: pyanaconda/core/constants.py:210
 msgid ""
 "The passphrase you have provided contains non-ASCII characters. You may not "
 "be able to switch between keyboard layouts when typing it."
 msgstr "您提供的密語包含非 ASCII 字符。您將無法在輸入它時在鍵盤佈局之間切換。"
 
-#: pyanaconda/core/constants.py:210
+#: pyanaconda/core/constants.py:212
 msgid "You will have to press <b>Done</b> twice to confirm it."
 msgstr "您將需要按 <b>完成</b> 兩次以確認它。"
 
-#: pyanaconda/core/constants.py:211
+#: pyanaconda/core/constants.py:213
 #: pyanaconda/ui/gui/spokes/subscription.py:227
 #: pyanaconda/ui/gui/spokes/subscription.py:241
 msgid "Password set."
 msgstr "密碼已設定。"
 
 #. TRANSLATORS: Password error message from libreport library needs to be joined with "You will have to press <b>Done</b> twice to confirm it." add a missing '.'
-#: pyanaconda/core/constants.py:213
+#: pyanaconda/core/constants.py:215
 msgid "{}. {}"
 msgstr "{}。{}"
 
-#: pyanaconda/core/constants.py:217
+#: pyanaconda/core/constants.py:219
 msgid "Empty"
 msgstr "空白"
 
-#: pyanaconda/core/constants.py:218
+#: pyanaconda/core/constants.py:220
 msgid "Too short"
 msgstr "過短"
 
-#: pyanaconda/core/constants.py:219
+#: pyanaconda/core/constants.py:221
 #: pyanaconda/ui/gui/spokes/lib/passphrase.glade:182
 msgid "Weak"
 msgstr "脆弱"
 
-#: pyanaconda/core/constants.py:220
+#: pyanaconda/core/constants.py:222
 msgid "Fair"
 msgstr "一般"
 
-#: pyanaconda/core/constants.py:221
+#: pyanaconda/core/constants.py:223
 msgid "Good"
 msgstr "良好"
 
-#: pyanaconda/core/constants.py:222
+#: pyanaconda/core/constants.py:224
 msgid "Strong"
 msgstr "強固"
 
-#: pyanaconda/core/constants.py:225
+#: pyanaconda/core/constants.py:227
 msgid "Hide password."
 msgstr "隱藏密碼。"
 
-#: pyanaconda/core/constants.py:226
+#: pyanaconda/core/constants.py:228
 msgid "Show password."
 msgstr "顯示密碼。"
 
-#: pyanaconda/core/constants.py:269
+#: pyanaconda/core/constants.py:271
 msgid "Probing storage..."
 msgstr "正在探測儲存裝置..."
 
-#: pyanaconda/core/constants.py:270
+#: pyanaconda/core/constants.py:272
 msgid "Downloading package metadata..."
 msgstr "正在下載軟體包中界資料..."
 
-#: pyanaconda/core/constants.py:271
+#: pyanaconda/core/constants.py:273
 msgid "Downloading group metadata..."
 msgstr "正在下載群組 metadata..."
 
-#: pyanaconda/core/constants.py:274
+#: pyanaconda/core/constants.py:276
 msgid "Anaconda Installer"
 msgstr "Anaconda 安裝程式"
 
@@ -1620,9 +1621,8 @@ msgid ""
 "Once you have resolved the issue you can retry the storage scan. If you do "
 "not fix it you will have to exit the installer."
 msgstr ""
-"您目前的儲存組態有問題（例如 kickstart "
-"文件）。在繼續安裝之前，您必須先解決該問題。您可以按下 Ctrl+Alt+F1，再按下 "
-"Ctrl+B 2 來存取能供您使用的 shell。\n"
+"您目前的儲存組態有問題（例如 kickstart 文件）。在繼續安裝之前，您必須先解決該"
+"問題。您可以按下 Ctrl+Alt+F1，再按下 Ctrl+B 2 來存取能供您使用的 shell。\n"
 "\n"
 "一旦您解決問題之後，您可以重新掃描儲存裝置。如果不修正問題，則必須結束安裝程"
 "式。"
@@ -2463,8 +2463,8 @@ msgid ""
 msgstr ""
 "請以整數或十進制小數指定期望容量，並帶上合適的單位。\n"
 "\n"
-"不允許以空格分隔的數字組。單位包括十進制前綴或二進制前綴，以及可選的字母 "
-"B。單位對字母的大小寫不敏感。如果省略單位，則默認的單位是 MiB。\n"
+"不允許以空格分隔的數字組。單位包括十進制前綴或二進制前綴，以及可選的字母 B。"
+"單位對字母的大小寫不敏感。如果省略單位，則默認的單位是 MiB。\n"
 "\n"
 "有效輸入的例子：\n"
 "“100GiB” = 100 Gibibytes\n"
@@ -3288,7 +3288,8 @@ msgstr "修改選取項目(_S)"
 msgid ""
 "The software marked for installation has the following warnings. These are "
 "not fatal, but you may wish to make changes to your software selections."
-msgstr "標記為安裝的軟體有以下警告。 這些不是致命的，但您可能希望更改您的軟體選擇。"
+msgstr ""
+"標記為安裝的軟體有以下警告。 這些不是致命的，但您可能希望更改您的軟體選擇。"
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:419
 msgctxt "GUI|Software Selection|Warning Dialog"
@@ -4123,7 +4124,7 @@ msgstr ""
 msgid "Full name cannot contain colon characters"
 msgstr "完整名稱不包含冒號字元"
 
-#: pyanaconda/startup_utils.py:82
+#: pyanaconda/startup_utils.py:83
 #, python-format
 msgid ""
 "%(product_name)s requires %(needed_ram)s MB of memory to install, but you "
@@ -4132,7 +4133,7 @@ msgstr ""
 "%(product_name)s 需要 %(needed_ram)s MB 的記憶體才能安裝，但是您這臺機器上只"
 "有 %(total_ram)s MB。\n"
 
-#: pyanaconda/startup_utils.py:84
+#: pyanaconda/startup_utils.py:85
 #, python-format
 msgid ""
 "The %(product_name)s graphical installer requires %(needed_ram)s MB of "
@@ -4141,7 +4142,7 @@ msgstr ""
 "%(product_name)s 圖形化安裝程式需要 %(needed_ram)s MB 的記憶體，但您僅有 "
 "%(total_ram)s MB。\n"
 
-#: pyanaconda/startup_utils.py:87
+#: pyanaconda/startup_utils.py:88
 msgid ""
 "\n"
 "Press [Enter] to reboot your system.\n"
@@ -4149,11 +4150,11 @@ msgstr ""
 "\n"
 "請按 [Enter] 鍵重新開機。\n"
 
-#: pyanaconda/startup_utils.py:89
+#: pyanaconda/startup_utils.py:90
 msgid "Not enough RAM"
 msgstr "記憶體不足"
 
-#: pyanaconda/startup_utils.py:90
+#: pyanaconda/startup_utils.py:91
 msgid ""
 " Try the text mode installer by running:\n"
 "\n"
@@ -4167,24 +4168,24 @@ msgstr ""
 "\n"
 " 於 root 身分登入的終端機。"
 
-#: pyanaconda/startup_utils.py:92
+#: pyanaconda/startup_utils.py:93
 msgid " Starting text mode."
 msgstr " 正在啟動文字模式。"
 
-#: pyanaconda/startup_utils.py:129
+#: pyanaconda/startup_utils.py:130
 msgid "The installation cannot continue and the system will be rebooted"
 msgstr "安裝過程無法繼續，系統將重新啟動"
 
-#: pyanaconda/startup_utils.py:130
+#: pyanaconda/startup_utils.py:131
 msgid "Press ENTER to continue"
 msgstr "請按下 Enter 繼續"
 
-#: pyanaconda/startup_utils.py:276
+#: pyanaconda/startup_utils.py:277
 #, python-format
 msgid "Please ssh install@%s to begin the install."
 msgstr "請 ssh install@%s 以開始安裝。"
 
-#: pyanaconda/startup_utils.py:278
+#: pyanaconda/startup_utils.py:279
 msgid "Please ssh install@HOSTNAME to continue installation."
 msgstr "請 ssh install@HOSTNAME 以繼續安裝。"
 
@@ -5617,7 +5618,8 @@ msgstr "網路組態"
 msgid ""
 "We'll need network access to fetch information about your location and to "
 "make software updates available for you."
-msgstr "我們需要存取網路以取得有關於您位置的相關資訊，並且提供您可用的軟體更新。"
+msgstr ""
+"我們需要存取網路以取得有關於您位置的相關資訊，並且提供您可用的軟體更新。"
 
 #: pyanaconda/ui/gui/spokes/network.glade:449
 #: pyanaconda/ui/gui/spokes/network.glade:2587
@@ -7181,7 +7183,8 @@ msgid ""
 "associated with pre-released software, that you intend to use this for "
 "testing and development purposes only and are willing to report any bugs or "
 "issues in order to enhance this work."
-msgstr "繼續使用此軟體，即表示您了解並接受與預發佈軟體相關的風險，您打算僅將其用於測"
+msgstr ""
+"繼續使用此軟體，即表示您了解並接受與預發佈軟體相關的風險，您打算僅將其用於測"
 "試和開發目的，並願意報告任何錯誤或問題以改進此工作。"
 
 #: ui/webui/src/components/AnacondaHeader.jsx:50
