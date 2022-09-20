@@ -25,16 +25,16 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2022-09-06 02:11+0000\n"
-"PO-Revision-Date: 2022-03-02 09:16+0000\n"
+"PO-Revision-Date: 2022-09-21 11:19+0000\n"
 "Last-Translator: Ondrej Sulek <feonsu@gmail.com>\n"
 "Language-Team: Slovak <https://translate.fedoraproject.org/projects/anaconda/"
-"rhel-9/sk/>\n"
+"rhel-90/sk/>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.11\n"
+"X-Generator: Weblate 4.14.1\n"
 
 #: pyanaconda/exception.py:109
 #, python-format
@@ -1007,6 +1007,9 @@ msgid ""
 "system. The system will not be bootable. Please, upgrade the firmware or "
 "change the file system type."
 msgstr ""
+"Váš firmware nepodporuje na súborovom systéme /boot funkcie súborového "
+"systému XFS. Tento systém nebude možné zaviesť. Buď tento firmware "
+"aktualizujte, alebo zmeňte typ súborového systému."
 
 #: pyanaconda/modules/storage/checker/utils.py:305
 #, python-format
@@ -1224,6 +1227,24 @@ msgid ""
 "* Some drives support re-configuration of sector sizes, for example by "
 "running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 msgstr ""
+"Riešenia pre manuálne inštalácie:\n"
+"* V priebehu manuálnej inštalácie (v grafickom alebo textovom režime) "
+"vyberte iba disky s rovnakou veľkosťou sektorov.\n"
+"* Ak sú pre inštaláciu vybrané disky z nekonzistentnou veľkosťou sektorov, "
+"obmedzte každú z vytvorených skupín zväzkov LVM (VG) tak, aby používala iba "
+"fyzické zväzky (PV) s rovnakou veľkosťou sektorov. Toto je možné vykonať iba "
+"v grafickom režime vo vlastnom rozdelení diskov.\n"
+"\n"
+"Riešenia pre kickstart inštaláciu:\n"
+"* Obmedzte disky použité pre rozdelenie diskov zadaním 'ignoredisk --"
+"drives=..' alebo 'ignoredisk --only-use=..'.\n"
+"* Zadajte disky, ktoré majú byť použité pre každý z vytváraných fyzických "
+"zväzkov LVM (PV): 'partition pv.1 --ondisk=..'.\n"
+"\n"
+"Všeobecné riešenia:\n"
+"* Namiesto LVM je možné použiť obyčajnú schému rozdelenia diskov.\n"
+"* Niektoré disky podporujú opätovné nastavenie veľkosti sektorov, napríklad "
+"spustením 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 
 #: pyanaconda/modules/timezone/timezone.py:100
 msgid "Invalid time source."
@@ -1231,7 +1252,7 @@ msgstr "Neplatný zdroj času."
 
 #: pyanaconda/modules/subscription/runtime.py:280
 msgid "Please select an organization for your account and try again."
-msgstr ""
+msgstr "Vyberte prosím organizáciu pre váš účet a skúste to znovu."
 
 #: pyanaconda/modules/subscription/runtime.py:305
 #: pyanaconda/modules/subscription/runtime.py:356
@@ -3532,7 +3553,7 @@ msgstr "Nezaregistrované."
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1083
 msgid "The system is registered to a Satellite instance."
-msgstr ""
+msgstr "Tento systém je zaregistrovaná do inštancie Satellite."
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1087
 msgid "The system is registered."
@@ -6255,7 +6276,7 @@ msgstr "Vlastná základná URL adresa"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:594
 msgid "Satellite URL"
-msgstr ""
+msgstr "Satellite URL"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:608
 msgid "Use HTTP proxy"
