@@ -46,8 +46,8 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
 "POT-Creation-Date: 2022-10-21 01:44+0000\n"
-"PO-Revision-Date: 2022-08-03 10:19+0000\n"
-"Last-Translator: yangyangdaji <1504305527@qq.com>\n"
+"PO-Revision-Date: 2022-10-22 15:19+0000\n"
+"Last-Translator: Daniel Rusek <mail@asciiwolf.com>\n"
 "Language-Team: Czech <https://translate.fedoraproject.org/projects/anaconda/"
 "master/cs/>\n"
 "Language: cs\n"
@@ -55,7 +55,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.13\n"
+"X-Generator: Weblate 4.14.1\n"
 
 #: pyanaconda/vnc.py:78
 #, python-format
@@ -135,14 +135,6 @@ msgstr ""
 "\n"
 
 #: pyanaconda/vnc.py:264
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "\n"
-#| "WARNING!!! VNC server running with NO PASSWORD!\n"
-#| "You can use the vncpassword=PASSWORD boot option\n"
-#| "if you would like to secure the server.\n"
-#| "\n"
 msgid ""
 "\n"
 "\n"
@@ -155,7 +147,7 @@ msgstr ""
 "\n"
 "VAROVÁNÍ!!! VNC server je spuštěný BEZ HESLA!\n"
 "Pokud chcete server zabezpečit, můžete použít\n"
-"při startu systému parametr vncpassword=HESLO.\n"
+"při startu systému parametr inst.vncpassword=HESLO.\n"
 "\n"
 
 #: pyanaconda/vnc.py:268
@@ -318,7 +310,7 @@ msgstr ""
 
 #: pyanaconda/errors.py:206
 msgid "Error detail: "
-msgstr ""
+msgstr "Podrobnosti o chybě: "
 
 #: pyanaconda/installation.py:110
 msgid "Configuring Red Hat subscription"
@@ -418,9 +410,9 @@ msgid ""
 "a shell.\n"
 "\n"
 msgstr ""
-"Záchranné prostředí ser nyní pokusí nalézt nainstalované linuxové systémy a "
-"připojit je do adresáře: %s. Poté můžete provést všechny potřebné změny. Pro "
-"pokračování zvolte „1“.\n"
+"Záchranné prostředí se nyní pokusí nalézt nainstalované linuxové systémy a "
+"připojit je do adresáře: %s.  Poté můžete provést všechny potřebné změny.  "
+"Pro pokračování zvolte „1“.\n"
 "Pomocí „2“ můžete nalezené souborové systémy připojit pouze pro čtení místo "
 "pro čtení i zápis.\n"
 "Pokud z nějakého důvodu tyto možnosti nefungují, můžete pomocí „3“ přejít "
@@ -1189,10 +1181,6 @@ msgid "You have not created a bootable partition."
 msgstr "Nemáte vytvořený oddíl, ze kterého zavádět systém."
 
 #: pyanaconda/modules/storage/checker/utils.py:225
-#, fuzzy
-#| msgid ""
-#| "Your BIOS-based system needs a special partition to boot from a GPT disk "
-#| "label. To continue, please create a 1MiB 'biosboot' type partition."
 msgid ""
 "Your BIOS-based system needs a special partition to boot from a GPT disk "
 "label. To continue, please create a 1MiB 'biosboot' type partition on the {} "
@@ -1200,7 +1188,8 @@ msgid ""
 msgstr ""
 "Pro zavádění systému z jednotky, používající rozdělení GPT, potřebuje váš "
 "stroj (protože má firmware typu BIOS) k tomu účelu zvláštní oddíl. Aby bylo "
-"možné pokračovat, vytvořte oddíl typu „biosboot“ o velikosti 1 MiB."
+"možné pokračovat, vytvořte na disku {} oddíl typu „biosboot“ o velikosti 1 "
+"MiB."
 
 #: pyanaconda/modules/storage/checker/utils.py:250
 #, fuzzy
@@ -2505,11 +2494,9 @@ msgstr "OK"
 
 #: pyanaconda/ui/gui/spokes/lib/installation_source_helpers.py:375
 #: pyanaconda/ui/gui/spokes/lib/installation_source_helpers.py:391
-#, fuzzy
-#| msgid "Rescanning disks finished."
 msgctxt "GUI|Software Source|Media Check Dialog"
 msgid "Verification finished."
-msgstr "Opětovné naskenování jednotek datového úložiště bylo dokončeno."
+msgstr "Kontrola byla dokončena."
 
 #: pyanaconda/ui/gui/spokes/lib/installation_source_helpers.py:379
 msgctxt "GUI|Software Source|Media Check Dialog"
@@ -7234,9 +7221,6 @@ msgstr ""
 "jako uživatel root pouze pro provádění údržby nebo správy systému."
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:101
-#, fuzzy
-#| msgctxt "GUI|Password"
-#| msgid "_Disable root account"
 msgctxt "GUI|Password"
 msgid "D_isable root account"
 msgstr "_Zakázat účet správce"
@@ -7405,16 +7389,12 @@ msgid "Payload installation"
 msgstr "Instalace"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:107
-#, fuzzy
-#| msgid "Storage Configuration"
 msgid "System configuration"
-msgstr "Uspořádání úložiště"
+msgstr "Nastavení systému"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:108
-#, fuzzy
-#| msgid "to begin installation"
 msgid "Boot loader installation"
-msgstr "pokud chcete zahájit instalaci"
+msgstr "Instalace zavaděče systému"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:117
 msgid "Installed"
@@ -7430,19 +7410,15 @@ msgstr "Instalování"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:138
 msgid "pending step"
-msgstr ""
+msgstr "čekající krok"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:141
-#, fuzzy
-#| msgid "Complete!"
 msgid "completed step"
-msgstr "Dokončeno!"
+msgstr "dokončený krok"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:144
-#, fuzzy
-#| msgid "Current host name:"
 msgid "current step"
-msgstr "Stávající název stroje:"
+msgstr "aktuální krok"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:164
 msgid "Reboot"
@@ -7450,7 +7426,7 @@ msgstr "Restartovat"
 
 #: ui/webui/src/components/AnacondaWizard.jsx:50
 msgid "Welcome"
-msgstr ""
+msgstr "Vítejte"
 
 #: ui/webui/src/components/AnacondaWizard.jsx:55
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:86
@@ -7460,38 +7436,30 @@ msgstr "Cíl instalace"
 
 #: ui/webui/src/components/AnacondaWizard.jsx:60
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:74
-#, fuzzy
-#| msgid "Begin installation"
 msgid "Review and install"
-msgstr "Zahájit instalaci"
+msgstr "Zkontrolovat a nainstalovat"
 
 #: ui/webui/src/components/localization/InstallationLanguage.jsx:174
-#, fuzzy
-#| msgid "Languages"
 msgid "Common languages"
-msgstr "Jazyky"
+msgstr "Běžné jazyky"
 
 #: ui/webui/src/components/localization/InstallationLanguage.jsx:217
 msgid "No results found"
 msgstr "Nenalezeny žádné výsledky"
 
 #: ui/webui/src/components/localization/InstallationLanguage.jsx:286
-#, fuzzy
-#| msgid "Anaconda Installer"
 msgid "Welcome to the Anaconda installer"
-msgstr "Instalátor Anaconda"
+msgstr "Vítejte v instalátoru Anaconda"
 
 #: ui/webui/src/components/localization/InstallationLanguage.jsx:290
-#, fuzzy
-#| msgid "Select a network"
 msgid "Select a language"
-msgstr "Vyberte síť"
+msgstr "Vyberte jazyk"
 
 #: ui/webui/src/components/localization/InstallationLanguage.jsx:304
 msgid ""
 "The selected language will be used for installation and in the installed "
 "software."
-msgstr ""
+msgstr "Vybraný jazyk bude použit pro instalaci a v nainstalovaném softwaru."
 
 #: ui/webui/src/components/app.jsx:97
 msgid "Anaconda installer"
@@ -7503,11 +7471,11 @@ msgstr "Jazyk"
 
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:91
 msgid "To prevent loss, make sure to backup your data. "
-msgstr ""
+msgstr "Abyste zamezili ztrátě dat, nezapomeňte zálohovat svá data. "
 
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:94
 msgid "Erasing the disks cannot be undone."
-msgstr ""
+msgstr "Vymazání jednotek nelze vrátit zpět."
 
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:104
 msgid "Local standard disk"
@@ -7519,7 +7487,7 @@ msgstr "Celkem"
 
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:135
 msgid "Erase disks and install"
-msgstr ""
+msgstr "Vymazat jednotky a nainstalovat"
 
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:141
 msgid "Back"
@@ -7527,13 +7495,15 @@ msgstr "Zpět"
 
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:146
 msgid "Erase disks and install?"
-msgstr ""
+msgstr "Vymazat jednotky a nainstalovat?"
 
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:150
 msgid ""
 "The selected disks will be erased, this cannot be undone. Are you sure you "
 "want to continue with the installation?"
 msgstr ""
+"Vybrané jednotky budou vymazány, toto nemůže být vráceno zpět. Jste si "
+"jisti, že chcete pokračovat v instalaci?"
 
 #: ui/webui/src/components/storage/HelpStorageOptions.jsx:16
 msgid "Storage options"
@@ -7571,38 +7541,27 @@ msgid ""
 msgstr ""
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:153
-#, fuzzy
-#| msgid "Selected disks"
 msgid "Select no disk"
-msgstr "Vybrané jednotky"
+msgstr "Nevybrat žádnou jednotku"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:157
-#, fuzzy
-#| msgctxt "GUI|Network|Wireless"
-#| msgid "_Select network"
 msgid "Select none"
-msgstr "_Vybrat síť"
+msgstr "Nevybrat nic"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:162
-#, fuzzy
-#| msgid "Selected disks"
 msgid "Select all disks"
-msgstr "Vybrané jednotky"
+msgstr "Vybrat všechny jednotky"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:174
-#, fuzzy
-#| msgid "Selected disks"
 msgid "Select multiple disks"
-msgstr "Vybrané jednotky"
+msgstr "Vybrat více jednotek"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:178
-#, fuzzy
-#| msgid "Nothing selected"
 msgid "$0 selected"
 msgid_plural "$0 selected"
-msgstr[0] "Nic neoznačeno"
-msgstr[1] "Nic neoznačeno"
-msgstr[2] "Nic neoznačeno"
+msgstr[0] "$0 vybrán"
+msgstr[1] "$0 vybrány"
+msgstr[2] "$0 vybráno"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:266
 msgid ""
@@ -7616,10 +7575,8 @@ msgstr ""
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:281
 #: ui/webui/src/components/storage/InstallationDestination.jsx:307
-#, fuzzy
-#| msgid "Selected disks"
 msgid "Detect disks"
-msgstr "Vybrané jednotky"
+msgstr "Nalézt jednotky"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:302
 msgid "Scans for local storage devices"
@@ -7631,31 +7588,23 @@ msgstr "Celkem"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:325
 msgid "Available storage capacity on the disk."
-msgstr ""
+msgstr "Dostupná kapacita úložiště na jednotce."
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:353
-#, fuzzy
-#| msgctxt "GUI|Refresh Dialog|Rescan"
-#| msgid "_Rescan Disks"
 msgid "Detecting disks"
-msgstr "Znovu p_roskenovat jednotky"
+msgstr "Zjišťují se jednotky"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:419
 msgid "Local standard disks"
 msgstr "Lokální standardní jednotky"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:429
-#, fuzzy
-#| msgid "No usable disks selected."
 msgid "No additional disks detected"
-msgstr "Nebyly vybrány žádné použitelné jednotky."
+msgstr "Nebyly zjištěny žádné dodatečné jednotky"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:463
-#, fuzzy
-#| msgctxt "GUI|Refresh Dialog|Rescan"
-#| msgid "_Rescan Disks"
 msgid "Checking disks"
-msgstr "Znovu p_roskenovat jednotky"
+msgstr "Ověřování jednotek"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:467
 msgid "This may take a moment"
@@ -7666,10 +7615,12 @@ msgid ""
 "Select the device(s) to install to. The installation requires $0 of "
 "available space. Storage will be automatically partitioned."
 msgstr ""
+"Vyberte zařízení pro instalaci. Instalace vyžaduje $0 dostupného místa. "
+"Úložiště bude automaticky rozděleno."
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:485
 msgid "Learn more about your storage options."
-msgstr ""
+msgstr "Zjistěte více o možnostech vašeho úložiště."
 
 #: ui/webui/src/components/AnacondaHeader.jsx:32
 msgid "Pre-release"
