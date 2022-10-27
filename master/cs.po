@@ -46,7 +46,7 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
 "POT-Creation-Date: 2022-10-27 01:46+0000\n"
-"PO-Revision-Date: 2022-10-22 15:19+0000\n"
+"PO-Revision-Date: 2022-10-28 20:19+0000\n"
 "Last-Translator: Daniel Rusek <mail@asciiwolf.com>\n"
 "Language-Team: Czech <https://translate.fedoraproject.org/projects/anaconda/"
 "master/cs/>\n"
@@ -257,7 +257,7 @@ msgid ""
 "The following error occurred while setting up the payload. This is a fatal "
 "error and installation will be aborted."
 msgstr ""
-"Při nastavování nákladu došlo k následující chybě. Jedná se o zásadní chybu "
+"Při nastavování payloadu došlo k následující chybě. Jedná se o zásadní chybu "
 "a instalace proto bude přerušena."
 
 #: pyanaconda/errors.py:159
@@ -265,7 +265,7 @@ msgid ""
 "The following error occurred while installing the payload. This is a fatal "
 "error and installation will be aborted."
 msgstr ""
-"Při instalaci došlo k následující chybě. Jedná se o zásadní chybu a "
+"Při instalaci payloadu došlo k následující chybě. Jedná se o zásadní chybu a "
 "instalace proto bude přerušena."
 
 #: pyanaconda/errors.py:167
@@ -1192,19 +1192,14 @@ msgstr ""
 "MiB."
 
 #: pyanaconda/modules/storage/checker/utils.py:250
-#, fuzzy
-#| msgid ""
-#| "Your firmware doesn't support XFS file system features on the /boot file "
-#| "system. The system will not be bootable. Please, upgrade the firmware or "
-#| "change the file system type."
 msgid ""
 "The system will not be bootable. The firmware does not support XFS file "
 "system features on the boot file system. Upgrade the firmware or change the "
 "file system type."
 msgstr ""
-"Firmware tohoto stroje nepodporuje na souborovém systému /boot funkce "
-"souborového systému XFS. Systém nebude možné spustit. Buď firmware "
-"aktualizujte, nebo změňte typ souborového systému."
+"Systém nebude možné zavést. Firmware tohoto stroje nepodporuje vlastnosti "
+"souborového systému XFS na zaváděcím oddílu. Buď firmware aktualizujte, nebo "
+"změňte typ souborového systému."
 
 #: pyanaconda/modules/storage/checker/utils.py:308
 #, python-format
@@ -1234,6 +1229,8 @@ msgid ""
 "performance for most installations, it is recommended to specify a swap "
 "partition."
 msgstr ""
+"Odkládací oddíl (swap) nebyl uveden. Pro výrazné zlepšení výkonu na většině "
+"instalací je doporučeno odkládací oddíl zadat."
 
 #: pyanaconda/modules/storage/checker/utils.py:340
 msgid ""
@@ -5866,7 +5863,7 @@ msgstr ""
 
 #: pyanaconda/ui/gui/spokes/storage.glade:115
 msgid "Local Standard Disks"
-msgstr "Lokální standardní jednotky"
+msgstr "Místní standardní jednotky"
 
 #: pyanaconda/ui/gui/spokes/storage.glade:179
 #: pyanaconda/ui/gui/spokes/storage.glade:319
@@ -6287,8 +6284,7 @@ msgstr "_Znovu vyhledávat"
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:324
 msgid "The added DASD can be found under \"Local Standard Disks.\""
-msgstr ""
-"Přidanou DASD jednotku lze nalézt v „Lokálních standardních jednotkách.“"
+msgstr "Přidanou DASD jednotku lze nalézt v „Místních standardních jednotkách.“"
 
 #: pyanaconda/ui/gui/spokes/advstorage/fcoe.glade:23
 msgctxt "GUI|Advanced Storage|FCoE"
@@ -7383,10 +7379,8 @@ msgid "Storage configuration"
 msgstr "Uspořádání úložiště"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:106
-#, fuzzy
-#| msgid "Installation"
 msgid "Payload installation"
-msgstr "Instalace"
+msgstr "Payload instalace"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:107
 msgid "System configuration"
@@ -7479,7 +7473,7 @@ msgstr "Vymazání jednotek nelze vrátit zpět."
 
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:104
 msgid "Local standard disk"
-msgstr "Lokální standardní jednotky"
+msgstr "Místní standardní jednotka"
 
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:110
 msgid "total"
@@ -7515,6 +7509,9 @@ msgid ""
 "the installation target for your Fedora installation. At least 1 disk must "
 "be selected for the installation to proceed."
 msgstr ""
+"Cíl instalace vám umožní nastavit, které jednotky budou použity jako "
+"instalační cíl pro vaši Fedora instalaci. Alespoň jedna jednotka musí být "
+"vybrána, aby instalace mohla pokračovat."
 
 #: ui/webui/src/components/storage/HelpStorageOptions.jsx:24
 msgid ""
@@ -7568,6 +7565,8 @@ msgid ""
 "Locally available storage devices (SATA, NVMe SSD, SCSI hard drives, "
 "external disks, etc.)"
 msgstr ""
+"Místně dostupná úložná zařízení (SATA, NVMe SSD, pevné disky SCSI, externí "
+"jednotky atd.)"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:273
 msgid "Local disks label info"
@@ -7580,7 +7579,7 @@ msgstr "Nalézt jednotky"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:302
 msgid "Scans for local storage devices"
-msgstr ""
+msgstr "Hledat místní zařízení pro ukládání dat"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:318
 msgid "Total"
@@ -7596,7 +7595,7 @@ msgstr "Zjišťují se jednotky"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:419
 msgid "Local standard disks"
-msgstr "Lokální standardní jednotky"
+msgstr "Místní standardní jednotky"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:429
 msgid "No additional disks detected"
@@ -7636,43 +7635,27 @@ msgid ""
 "testing purposes only. Do NOT use this software for any critical work or for "
 "production environments."
 msgstr ""
+"Upozornění: Toto je předprodukční software, který je určený pouze pro účely "
+"vývoje a testování. Tento software NEpoužívejte pro jakoukoli kritickou "
+"práci nebo pro produkční prostředí."
 
 #: ui/webui/src/components/AnacondaHeader.jsx:47
-#, fuzzy
-#| msgid ""
-#| "Notice: This is pre-released software that is intended for development "
-#| "and testing purposes only.  Do *not* use this software for any critical "
-#| "work or for production environments.\n"
-#| "\n"
-#| "By clicking \"I want to proceed\", you understand and accept the risks "
-#| "associated with pre-released software, that you intend to use this for "
-#| "testing and development purposes only and are willing to report any bugs "
-#| "or issues in order to enhance this work.\n"
-#| "\n"
-#| "If you do not understand or accept the risks, then please exit this "
-#| "program by selecting \"I want to exit\" which will reboot your system."
 msgid ""
 "By continuing to use this software, you understand and accept the risks "
 "associated with pre-released software, that you intend to use this for "
 "testing and development purposes only and are willing to report any bugs or "
 "issues in order to enhance this work."
 msgstr ""
-"Upozornění: Toto je předprodukční software, který je určený pouze pro účely "
-"vývoje a testování. Tento software NEpoužívejte pro jakoukoli kritickou "
-"práci nebo pro produkční prostředí.\n"
-"\n"
-"Kliknutím na „Chci pokračovat“ potvrzujete, že chápete a přijímáte rizika "
-"spojená s předprodukčním softwarem, který máte v úmyslu používat pouze pro "
-"testovací a vývojové účely a jste ochotni hlásit jakékoli chyby nebo "
-"problémy za účelem zlepšení tohoto díla.\n"
-"\n"
-"Pokud nerozumíte nebo nesouhlasíte s riziky, ukončete tento program výběrem "
-"možnosti „Chci ukončit“, po kterém bude systém restartován."
+"Pokračováním v používání tohoto softwaru potvrzujete, že chápete a přijímáte "
+"rizika spojená s předprodukčním softwarem, který máte v úmyslu používat "
+"pouze pro testovací a vývojové účely a jste ochotni hlásit jakékoli chyby "
+"nebo problémy za účelem zlepšení tohoto díla."
 
 #: ui/webui/src/components/AnacondaHeader.jsx:50
 msgid ""
 "If you do not understand or accept the risks, then please exit this program."
 msgstr ""
+"Pokud nerozumíte nebo nesouhlasíte s riziky, ukončete prosím tento program."
 
 #: data/liveinst/gnome/fedora-welcome.js:94
 msgid "Try Fedora"
