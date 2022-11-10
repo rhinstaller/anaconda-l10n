@@ -21,14 +21,14 @@
 # Juhani Numminen <juhaninumminen0@gmail.com>, 2017. #zanata
 # Jiri Grönroos <jiri.gronroos@iki.fi>, 2018. #zanata, 2022.
 # Jan Kuparinen <copper_fin@hotmail.com>, 2020, 2021, 2022.
-# Ricky Tigg <ricky.tigg@gmail.com>, 2020, 2021.
+# Ricky Tigg <ricky.tigg@gmail.com>, 2020, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2022-10-27 15:34+0200\n"
-"PO-Revision-Date: 2022-07-28 17:52+0000\n"
-"Last-Translator: Jan Kuparinen <copper_fin@hotmail.com>\n"
+"PO-Revision-Date: 2022-11-10 19:19+0000\n"
+"Last-Translator: Ricky Tigg <ricky.tigg@gmail.com>\n"
 "Language-Team: Finnish <https://translate.fedoraproject.org/projects/"
 "anaconda/rhel-8/fi/>\n"
 "Language: fi\n"
@@ -36,7 +36,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13\n"
+"X-Generator: Weblate 4.14.2\n"
 
 #: anaconda.py:378
 msgid "Unable to create PID file"
@@ -239,7 +239,7 @@ msgstr "Käytä komentoa ssh install@%s asennuksen aloittamiseksi."
 
 #: pyanaconda/startup_utils.py:230
 msgid "Please ssh install@HOSTNAME to continue installation."
-msgstr "Käytä komentoa 'ssh install@ISÄNTÄNIMI' asennuksen jatkamiseksi."
+msgstr "Käytä komentoa 'ssh install@KONENIMI' asennuksen jatkamiseksi."
 
 #: pyanaconda/rescue.py:272
 msgid "Unable to find /bin/bash to execute!  Not starting shell."
@@ -330,7 +330,7 @@ msgid ""
 msgstr ""
 "Järjestelmää tai sen osia liitettäessä tapahtui virhe: {message}\n"
 "\n"
-"Osa järjestelmästä on ehkä liitetty liitoskohtaan {path}."
+"Osa järjestelmästä on ehkä liitetty liitospisteeseen {path}."
 
 #: pyanaconda/rescue.py:454
 msgid "You don't have any Linux partitions.\n"
@@ -370,15 +370,15 @@ msgstr "%(productName)s %(productVersion)s:N ASENNUS"
 
 #: pyanaconda/network.py:111
 msgid "Host name cannot be None or an empty string."
-msgstr "Isäntänimi ei voi olla None tai tyhjä merkkijono."
+msgstr "Konenimi ei voi olla Ei mikään tai tyhjä merkkijono."
 
 #: pyanaconda/network.py:114
 msgid "Host name must be 255 or fewer characters in length."
-msgstr "Isäntänimi voi olla korkeintaan 255 merkkiä pitkä."
+msgstr "Konenimi voi olla korkeintaan 255 merkkiä pitkä."
 
 #: pyanaconda/network.py:117
 msgid "Local host name must not end with period '.'."
-msgstr "Paikallinen isäntänimi ei saa päättyä pisteeseen '.'."
+msgstr "Paikallinen konenimi ei saa päättyä pisteeseen '.'."
 
 #: pyanaconda/network.py:120
 msgid ""
@@ -386,9 +386,9 @@ msgid ""
 "parts between periods must contain something and cannot start or end with "
 "'-'."
 msgstr ""
-"Isäntänimet voivat sisältää vain seuraavia merkkejä: 'a–z', 'A–Z', '0–9', "
-"'-', tai '.', pisteen molemmin puolin on oltava merkkejä eikä se saa alkaa "
-"tai päättyä '-':lla."
+"Konenimet voivat sisältää vain seuraavia merkkejä: 'a–z', 'A–Z', '0–9', '-', "
+"tai '.', pisteen molemmin puolin on oltava merkkejä eikä se saa alkaa tai "
+"päättyä '-':lla."
 
 #: pyanaconda/network.py:473 pyanaconda/ui/gui/spokes/network.py:281
 #: pyanaconda/ui/gui/spokes/custom_storage.py:455
@@ -684,7 +684,7 @@ msgid ""
 "This is a fatal error and installation will be aborted."
 msgstr ""
 "Ryhmä '%s' vaaditaan tätä asennusta varten. Tätä ryhmää ei ole olemassa. "
-"Tämä on kohtalokas virhe ja asennus keskeytetään."
+"Tämä on vakava virhe ja asennus keskeytetään."
 
 #: pyanaconda/errors.py:167
 #, python-format
@@ -726,9 +726,8 @@ msgid ""
 "\n"
 "%(exception)s"
 msgstr ""
-"Virtaa ei määritetty moduulille, jossa ei ole oletusvirtaa. Tämä on "
-"kohtalokas virhe ja asennus keskeytetään. Tämän virheen yksityiskohdat "
-"ovat:\n"
+"Virtaa ei määritetty moduulille, jossa ei ole oletusvirtaa. Tämä on vakava "
+"virhe ja asennus keskeytetään. Tämän virheen yksityiskohdat ovat:\n"
 "\n"
 "%(exception)s"
 
@@ -740,7 +739,7 @@ msgid ""
 "\n"
 "%(exception)s"
 msgstr ""
-"Yhdelle moduulille on määritetty useita virtoja. Tämä on kohtalokas virhe ja "
+"Yhdelle moduulille on määritetty useita virtoja. Tämä on vakava virhe ja "
 "asennus keskeytetään. Tämän virheen yksityiskohdat ovat:\n"
 "\n"
 "%(exception)s"
@@ -755,7 +754,7 @@ msgid ""
 "%(details)s"
 msgstr ""
 "Kickstart-komentosarjan suorittamisessa tapahtui virhe rivillä %(lineno)s. "
-"Tämä on kohtalokas virhe ja asennus keskeytetään. Virheen lisätiedot ovat:\n"
+"Tämä on vakava virhe ja asennus keskeytetään. Virheen lisätiedot ovat:\n"
 "\n"
 "%(details)s"
 
@@ -764,8 +763,8 @@ msgid ""
 "The following error occurred while installing.  This is a fatal error and "
 "installation will be aborted."
 msgstr ""
-"Seuraava virhe tapahtui asennuksen aikana. Tämä on kohtalokas virhe ja "
-"asennus keskeytetään."
+"Seuraava virhe tapahtui asennuksen aikana. Tämä on vakava virhe ja asennus "
+"keskeytetään."
 
 #: pyanaconda/errors.py:238
 msgid ""
@@ -1166,7 +1165,7 @@ msgstr "Osiointivalinnat"
 
 #: pyanaconda/ui/tui/spokes/storage.py:466
 msgid "Manually assign mount points"
-msgstr "Määritä liitoskohdat manuaalisesti"
+msgstr "Määritä liitospisteet manuaalisesti"
 
 #: pyanaconda/ui/tui/spokes/storage.py:473
 msgid ""
@@ -1174,7 +1173,7 @@ msgid ""
 "use for the install target or manually assign mount points."
 msgstr ""
 "Asennus vaatii kiintolevysi osioinnin. Valitse mitä tilaa asennuskohteelle "
-"käytetään, tai määritä käsin liitoskohdat."
+"käytetään, tai määritä käsin liitospisteet."
 
 #: pyanaconda/ui/tui/spokes/storage.py:518
 msgid "Reverting previous configuration. This may take a moment..."
@@ -1190,7 +1189,7 @@ msgstr "Valitse osiointimallin määritykset."
 
 #: pyanaconda/ui/tui/spokes/storage.py:618
 msgid "Assign mount points"
-msgstr "Määritä liitoskohdat"
+msgstr "Määritä liitospisteet"
 
 #: pyanaconda/ui/tui/spokes/storage.py:638
 msgid ""
@@ -1220,7 +1219,7 @@ msgid ""
 "Do you want to proceed?\n"
 msgstr ""
 "Varoitus: kaikki tähän mennessä tehdyt muutokset häviävät.\n"
-"Haluatko jatkaa?\n"
+"Haluatko käsitellä?\n"
 
 #: pyanaconda/ui/tui/spokes/storage.py:731
 msgid "Scanning disks. This may take a moment..."
@@ -1234,12 +1233,12 @@ msgstr "Määritä laite: %s"
 #: pyanaconda/ui/tui/spokes/storage.py:765
 msgid "Choose from above to assign mount point and/or set format."
 msgstr ""
-"Valitse ylhäältä, jos haluat määrittää liitoskohdan ja/tai asettaa muodon."
+"Valitse ylhäältä, jos haluat määrittää liitospisteen ja/tai asettaa muodon."
 
 #: pyanaconda/ui/tui/spokes/storage.py:781
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:177
 msgid "Mount point"
-msgstr "Liitoskohta"
+msgstr "Liitospiste"
 
 #: pyanaconda/ui/tui/spokes/storage.py:788
 #: pyanaconda/ui/tui/spokes/storage.py:793
@@ -1249,7 +1248,7 @@ msgstr "ei mikään"
 
 #: pyanaconda/ui/tui/spokes/storage.py:811
 msgid "Invalid mount point given"
-msgstr "Annettiin virheellinen liitoskohta"
+msgstr "Annettiin virheellinen liitospiste"
 
 #: pyanaconda/ui/tui/spokes/storage.py:824
 msgid "Format"
@@ -1397,7 +1396,7 @@ msgstr "Tietokoneen nimi: %s\n"
 #: pyanaconda/ui/tui/spokes/network.py:325
 #, python-format
 msgid "Current host name: %s\n"
-msgstr "Nykyinen isäntänimi: %s\n"
+msgstr "Nykyinen konenimi: %s\n"
 
 #: pyanaconda/ui/tui/spokes/network.py:332
 #: pyanaconda/ui/gui/spokes/network.glade:2506
@@ -1407,7 +1406,7 @@ msgstr "Tietokoneen nimi"
 
 #: pyanaconda/ui/tui/spokes/network.py:333
 msgid "Set host name"
-msgstr "Määritä isäntänimi"
+msgstr "Määritä konenimi"
 
 #: pyanaconda/ui/tui/spokes/network.py:337
 #, python-format
@@ -1421,7 +1420,7 @@ msgstr "Määritä asetukset laitteelle %s"
 #: pyanaconda/ui/gui/spokes/network.py:1706
 #, python-format
 msgid "Host name is not valid: %s"
-msgstr "Isäntänimi ei ole kelvollinen: %s"
+msgstr "Konenimi ei ole kelvollinen: %s"
 
 #: pyanaconda/ui/tui/spokes/network.py:447
 msgid "Device configuration"
@@ -2263,7 +2262,7 @@ msgstr "Ei mitään"
 #: pyanaconda/ui/gui/spokes/network.py:1469
 msgctxt "GUI|Spoke"
 msgid "_Network & Host Name"
-msgstr "_Verkko ja Isäntänimi"
+msgstr "_Verkko ja konenimi"
 
 #: pyanaconda/ui/gui/spokes/language_support.py:64
 msgctxt "GUI|Spoke"
@@ -2410,11 +2409,11 @@ msgstr "NFS-palvelin on tyhjä"
 #: pyanaconda/ui/gui/spokes/installation_source.py:1191
 #, python-format
 msgid "Repository %s has invalid host name"
-msgstr "Tietovarastossa %s on virheellinen isäntänimi"
+msgstr "Tietovarastossa %s on virheellinen konenimi"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:1193
 msgid "Invalid host name"
-msgstr "Ei kelvollinen isäntänimi"
+msgstr "Ei kelvollinen konenimi"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:1197
 #, python-format
@@ -2531,7 +2530,7 @@ msgstr[1] "%d _massamuistilaitetta valittu"
 #: pyanaconda/ui/gui/spokes/custom_storage.py:344
 #, python-format
 msgid "%(items_selected)s of %(items_total)s mount points in %(page_name)s"
-msgstr "%(items_selected)s %(items_total)s liitoskohdista %(page_name)s:ssa"
+msgstr "%(items_selected)s %(items_total)s liitospisteistä %(page_name)s:ssa"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:371
 #, python-format
@@ -2541,7 +2540,7 @@ msgid ""
 "You have currently selected:\n"
 "%s"
 msgstr ""
-"Valitse yksittäinen liitoskohta muokataksesi ominaisuuksia.\n"
+"Valitse yksittäinen liitospiste muokataksesi ominaisuuksia.\n"
 "\n"
 "Tällä hetkellä valittuna:\n"
 "%s"
@@ -2553,7 +2552,7 @@ msgid ""
 "you'll be able to view their details here."
 msgstr ""
 "Kun olet luonut %(name)s %(version)s -järjestelmän asennusta varten "
-"liitoskohtia, niiden tiedot näkyvät tässä."
+"liitospisteitä, niiden tiedot näkyvät tässä."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:602
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade:178
@@ -2580,7 +2579,7 @@ msgid ""
 "The space available to this mount point can be changed by modifying the "
 "volume below."
 msgstr ""
-"Tämän liitoskohdan käytettävissä olevaa tilaa voidaan vaihtaa muuttamalla "
+"Tämän liitospisteen käytettävissä olevaa tilaa voidaan vaihtaa muuttamalla "
 "alla olevaa taltiota."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:842
@@ -2886,7 +2885,7 @@ msgid ""
 "You haven't created any mount points for your %(product)s %(version)s "
 "installation yet.  You can:"
 msgstr ""
-"Et ole luonut vielä yhtäkään liitoskohtaa %(product)s %(version)s -"
+"Et ole luonut vielä yhtäkään liitospistettä %(product)s %(version)s -"
 "asennustasi varten.. Voit:"
 
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:500
@@ -2896,20 +2895,20 @@ msgstr "_Napsauttaa tästä luodaksesi ne automaattisesti."
 
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:526
 msgid "Create new mount points by clicking the '+' button."
-msgstr "Luo uusia liitoskohtia napsauttamalla ”+”-painiketta."
+msgstr "Luo uusia liitospisteitä napsauttamalla ”+”-painiketta."
 
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:534
 msgid ""
 "Or, assign new mount points to existing partitions after selecting them "
 "below."
 msgstr ""
-"Tai vaihtoehtoisesti määritä uusia liitoskohtia olemassa oleviin osioihin "
+"Tai vaihtoehtoisesti määritä uusia liitospisteitä olemassa oleviin osioihin "
 "valitsemalla ne ensin alta."
 
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:539
 msgctxt "GUI|Custom Partitioning|Autopart Page"
 msgid "_New mount points will use the following partitioning scheme:"
-msgstr "_Uudet liitoskohdat käyttävät seuraavaa osiointimallia:"
+msgstr "_Uudet liitospisteet käyttävät seuraavaa osiointimallia:"
 
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:559
 msgctxt "GUI|Custom Partitioning|Autopart Page"
@@ -3473,16 +3472,16 @@ msgstr "Tiedostojärjestelmän nimiö ei ole hyväksyttävässä muodossa."
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:307
 msgid "That mount point is already in use. Try something else?"
-msgstr "Tuo liitoskohta on jo käytössä. Kokeillaanko jotain muuta?"
+msgstr "Tuo liitospiste on jo käytössä. Kokeillaanko jotain muuta?"
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:310
 msgid "Please enter a valid mount point."
-msgstr "Anna kelvollinen liitoskohta."
+msgstr "Syötä kelvollinen liitospiste."
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:313
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:325
 msgid "That mount point is invalid. Try something else?"
-msgstr "Tuo liitoskohta ei ole kelvollinen. Kokeillaanko jotain muuta?"
+msgstr "Tuo liitospiste ei ole kelvollinen. Kokeillaanko jotain muuta?"
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:340
 msgid "Invalid container name."
@@ -3499,7 +3498,7 @@ msgstr ""
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:410
 msgid "Please enter a mount point."
-msgstr "Syötä liitoskohta."
+msgstr "Syötä liitospiste."
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:423
 #, python-brace-format
@@ -4035,8 +4034,8 @@ msgstr ""
 msgid ""
 "This mount point is invalid. The %s directory must be on the / file system."
 msgstr ""
-"Tämä liitoskohta on virheellinen. Hakemiston %s tulee olla /-"
-"tiedostojärjestelmässä."
+"Tämä liitospiste on virheellinen. Hakemiston %s tulee olla "
+"/-tiedostojärjestelmässä."
 
 #: pyanaconda/modules/storage/checker/utils.py:312
 #, python-format
@@ -4046,7 +4045,7 @@ msgstr "%s:n on oltava erillisessä osiossa tai LV:ssä."
 #: pyanaconda/modules/storage/checker/utils.py:329
 #, python-format
 msgid "The mount point %s must be on a linux file system."
-msgstr "Liitoskohdan %s tulee olla Linux-tiedostojärjestelmässä."
+msgstr "Liitospisteen %s tulee olla Linux-tiedostojärjestelmässä."
 
 #: pyanaconda/modules/storage/checker/utils.py:354
 msgid ""
@@ -4192,7 +4191,7 @@ msgstr "%(desc)s ei voi olla tyyppiä %(type)s."
 #, python-format
 msgid "%(desc)s must be mounted on one of %(mountpoints)s."
 msgstr ""
-"%(desc)s:n tulee olla liitettynä yhteen %(mountpoints)s:n liitoskohtaan."
+"%(desc)s:n tulee olla liitettynä yhteen %(mountpoints)s:n liitospisteeseen."
 
 #: pyanaconda/modules/storage/bootloader/base.py:377
 #, python-format
@@ -4373,7 +4372,7 @@ msgid ""
 "The 'root' area on your computer is where core system\n"
 "files and applications are stored."
 msgstr ""
-"Tietokoneesi root-alueelle tallennetaan ydinjärjestelmän\n"
+"Tietokoneen root-alueelle tallennetaan ydinjärjestelmän\n"
 "tiedostot ja sovellukset."
 
 #: pyanaconda/core/storage.py:114
@@ -4735,17 +4734,17 @@ msgid ""
 "If you do not understand or accept the risks, then please exit this program "
 "by selecting \"I want to exit\" which will reboot your system."
 msgstr ""
-"Huomio: Tämä on esijulkaisu ohjelmistosta, ja se on tarkoitettu vain "
-"kehitys- ja testaustarkoituksiin. Älä käytä tätä ohjelmistoa missään "
-"kriittisessä tai tuotannossa olevassa ympäristössä. \n"
+"Huomio: Tämä on esijulkaisu ohjelmistosta, ja se on tarkoitettu vain kehitys-"
+" ja testaustarkoituksiin. Älä käytä tätä ohjelmistoa missään kriittisessä "
+"tai tuotannossa olevassa ympäristössä. \n"
 "\n"
-"Napsauttamalla \"Haluan edetä\" ymmärrät ja hyväksyt esijulkaisuun liittyvät "
-"riskit, aiot käyttää ohjelmistoa vain kehitys- ja testaustarkoituksiin, ja "
-"että olet halukas ilmoittamaan mahdollisista ongelmista parantaaksesi tätä "
-"ohjelmistoa.\n"
+"Napsauttamalla \"Haluan käsitellä\" ymmärrät ja hyväksyt esijulkaisuun "
+"liittyvät riskit, aiot käyttää ohjelmistoa vain kehitys- ja "
+"testaustarkoituksiin, ja että olet halukas ilmoittamaan mahdollisista "
+"ongelmista parantaaksesi tätä ohjelmistoa.\n"
 "\n"
-"Jos et ymmärrä tai hyväksy riskejä, poistu ohjelmasta napsauttamalla "
-"\"Haluan poistua\"; sen jälkeen järjestelmä käynnistyy uudelleen."
+"Jos et ymmärrä tai hyväksy riskejä, poistu ohjelmasta napsauttamalla \"Haluan"
+" poistua\"; sen jälkeen järjestelmä käynnistyy uudelleen."
 
 #: pyanaconda/ui/gui/spokes/welcome.glade:130
 msgid "Beta Warn"
@@ -5099,7 +5098,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/network.glade:450
 #: pyanaconda/ui/gui/spokes/network.glade:2583
 msgid "NETWORK & HOST NAME"
-msgstr "VERKKO JA ISÄNTÄNIMI"
+msgstr "VERKKO JA KONENIMI"
 
 #: pyanaconda/ui/gui/spokes/network.glade:489
 msgid ""
@@ -5107,7 +5106,7 @@ msgid ""
 "configuration.  You can set the host name here."
 msgstr ""
 "Käytä Live-työpöytäympäristön työkaluja verkkokokoonpanon mukauttamiseen. "
-"Voit asettaa isäntänimen täältä."
+"Voit asettaa konenimen täältä."
 
 #: pyanaconda/ui/gui/spokes/network.glade:702
 msgid "Slaves"
@@ -5280,11 +5279,11 @@ msgstr "_Toteuta"
 
 #: pyanaconda/ui/gui/spokes/network.glade:2522
 msgid "Set as current system host name."
-msgstr "Aseta nykyiseksi järjestelmän isäntänimeksi."
+msgstr "Aseta nykyisen järjestelmän konenimeksi."
 
 #: pyanaconda/ui/gui/spokes/network.glade:2537
 msgid "Current host name:"
-msgstr "Nykyinen isäntänimi:"
+msgstr "Nykyinen konenimi:"
 
 #: pyanaconda/ui/gui/spokes/keyboard.glade:15
 #: pyanaconda/ui/gui/spokes/keyboard.glade:388
@@ -5786,7 +5785,7 @@ msgstr "AM/PM alas"
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:820
 msgctxt "GUI|Date and Time"
 msgid "24-_hour"
-msgstr "24-_tunti"
+msgstr "24-_tuntinen muoto"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:838
 msgctxt "GUI|Date and Time"
@@ -5829,7 +5828,7 @@ msgstr "RAID10"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:176
 msgid "Add a new mount point."
-msgstr "Lisää uusi liitoskohta."
+msgstr "Lisää uusi liitospiste."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:177
 msgctxt "GUI|Custom Partitioning"
@@ -5838,7 +5837,7 @@ msgstr "Lisää"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:192
 msgid "Remove the selected mount point(s)."
-msgstr "Poista valitut liitoskohdat."
+msgstr "Poista valitut liitospisteet."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:193
 msgctxt "GUI|Custom Partitioning"
@@ -5871,7 +5870,7 @@ msgstr "Laitteen kuvaus"
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:353
 msgctxt "GUI|Custom Partitioning|Configure|Devices"
 msgid "Mount _Point:"
-msgstr "_Liitoskohta:"
+msgstr "Liitos_piste:"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:400
 msgctxt "GUI|Custom Partitioning|Configure|Devices"
@@ -6082,7 +6081,7 @@ msgstr "Sijainti"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:581
 msgid "hostname:port"
-msgstr "isäntänimi:portti"
+msgstr "konenimi:portti"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:650
 msgid "Options"
@@ -6280,8 +6279,8 @@ msgid ""
 "Pressing 'OK' below will take you to the disk selection screen where you "
 "will need to re-select your disks."
 msgstr ""
-"Painamalla alla olevaa OK-painiketta pääset levynvalintanäyttöön, jossa "
-"sinun on valittava levysi uudelleen."
+"Painamalla alla olevaa OK-painiketta pääsee levynvalintanäyttöön, jossa on "
+"valittava levyt uudelleen."
 
 #: pyanaconda/ui/gui/spokes/lib/passphrase.glade:23
 msgctxt "GUI|Passphrase Dialog"
@@ -6400,7 +6399,7 @@ msgstr "_Valitse"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:173
 msgid "CONFIGURE MOUNT POINT"
-msgstr "LIITOSKOHDAN ASETUKSET"
+msgstr "LIITOSPISTEEN MÄÄRITTÄMINEN"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:189
 msgid "Select one or more disks this device may reside on."
@@ -6437,7 +6436,7 @@ msgstr "_Peru"
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:339
 msgctxt "GUI|Custom Partitioning|Add Dialog"
 msgid "_Add mount point"
-msgstr "_Lisää liitoskohta"
+msgstr "_Lisää liitospiste"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:373
 msgctxt "GUI|Custom Partitioning|Add Dialog"
@@ -6451,7 +6450,7 @@ msgstr "Liitos_kohta:"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:408
 msgid "ADD A NEW MOUNT POINT"
-msgstr "LISÄÄ UUSI LIITOSKOHTA"
+msgstr "LISÄÄ UUSI LIITOSPISTE"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:426
 msgid ""
@@ -6459,14 +6458,14 @@ msgid ""
 "after creating the mount point below."
 msgstr ""
 "Lisää mukautusvaihtoehtoja on käytettävissä\n"
-"kun olet luonut alla olevan liitoskohdan."
+"kun olet luonut alla olevan liitospisteen."
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:461
 msgid ""
 "That mount point is already in\n"
 "use.  Try something else?"
 msgstr ""
-"Liitoskohta on jo käytössä.\n"
+"Liitospiste on jo käytössä.\n"
 "Kokeillaanko jotain muuta?"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:485
