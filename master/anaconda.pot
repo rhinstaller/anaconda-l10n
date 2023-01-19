@@ -9,7 +9,7 @@ msgstr ""
 "#-#-#-#-#  main.pot (anaconda 38.16)  #-#-#-#-#\n"
 "Project-Id-Version: anaconda 38.16\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2023-01-18 01:16+0000\n"
+"POT-Creation-Date: 2023-01-19 01:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,7 +21,7 @@ msgstr ""
 "#-#-#-#-#  main_js.pot (anaconda 38.16)  #-#-#-#-#\n"
 "Project-Id-Version: anaconda 38.16\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2023-01-18 01:16+0000\n"
+"POT-Creation-Date: 2023-01-19 01:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,7 +33,7 @@ msgstr ""
 "#-#-#-#-#  extra.pot (anaconda 38.16)  #-#-#-#-#\n"
 "Project-Id-Version: anaconda 38.16\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2023-01-18 01:14+0000\n"
+"POT-Creation-Date: 2023-01-19 01:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -134,7 +134,7 @@ msgstr ""
 msgid "Configuring storage"
 msgstr ""
 
-#: pyanaconda/installation.py:357 pyanaconda/kickstart.py:450
+#: pyanaconda/installation.py:357 pyanaconda/kickstart.py:427
 msgid "Running pre-installation scripts"
 msgstr ""
 
@@ -1144,7 +1144,7 @@ msgid "%(desc)s cannot be of type %(type)s"
 msgstr ""
 
 #: pyanaconda/modules/payloads/source/closest_mirror/closest_mirror.py:52
-#: pyanaconda/ui/tui/spokes/installation_source.py:153
+#: pyanaconda/ui/tui/spokes/installation_source.py:151
 #: pyanaconda/ui/gui/spokes/installation_source.glade:339
 msgid "Closest mirror"
 msgstr ""
@@ -1534,7 +1534,15 @@ msgstr ""
 msgid "Setting up installation source..."
 msgstr ""
 
-#: pyanaconda/core/constants.py:272
+#: pyanaconda/core/constants.py:270
+msgid "Error setting up repositories"
+msgstr ""
+
+#: pyanaconda/core/constants.py:271
+msgid "Checking software dependencies..."
+msgstr ""
+
+#: pyanaconda/core/constants.py:274
 msgid "Anaconda Installer"
 msgstr ""
 
@@ -1765,13 +1773,13 @@ msgstr ""
 msgid "The following installations were discovered on your system."
 msgstr ""
 
-#: pyanaconda/kickstart.py:393
+#: pyanaconda/kickstart.py:370
 msgid ""
 "\n"
 "Some warnings occurred during reading the kickstart file:"
 msgstr ""
 
-#: pyanaconda/kickstart.py:406
+#: pyanaconda/kickstart.py:383
 #, python-format
 msgid ""
 "\n"
@@ -1992,108 +2000,88 @@ msgid ""
 "installation or continue with a text mode installation?"
 msgstr ""
 
-#: pyanaconda/payload/dnf/payload.py:382
+#: pyanaconda/payload/dnf/payload.py:363
 #, python-brace-format
 msgid ""
 "The '{repository_name}' repository has no mirror, baseurl or metalink set."
 msgstr ""
 
-#: pyanaconda/payload/dnf/payload.py:430
+#: pyanaconda/payload/dnf/payload.py:411
 #, python-brace-format
 msgid "The '{repository_name}' repository uses an unsupported protocol."
 msgstr ""
 
-#: pyanaconda/payload/dnf/payload.py:457
+#: pyanaconda/payload/dnf/payload.py:438
 msgid "Starting package installation process"
 msgstr ""
 
-#: pyanaconda/payload/dnf/payload.py:525
+#: pyanaconda/payload/dnf/payload.py:506
 msgid "Downloading package metadata..."
 msgstr ""
 
-#: pyanaconda/payload/dnf/payload.py:534
+#: pyanaconda/payload/dnf/payload.py:515
 msgid "Downloading group metadata..."
 msgstr ""
 
-#: pyanaconda/payload/dnf/payload.py:539
+#: pyanaconda/payload/dnf/payload.py:520
 msgid "No base repository is configured."
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:80
+#: pyanaconda/ui/gui/spokes/installation_source.py:81
 msgctxt "GUI|Spoke"
 msgid "_Installation Source"
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:245
+#: pyanaconda/ui/gui/spokes/installation_source.py:246
 msgid "Failed to set up installation source; check the NFS configuration."
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:316
-#: pyanaconda/ui/gui/spokes/software_selection.py:319
-msgid "Checking software dependencies..."
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/installation_source.py:320
-msgid "Error setting up base repository"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/installation_source.py:322
-#: pyanaconda/ui/tui/spokes/installation_source.py:129
-msgid "Error setting up software source"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/installation_source.py:324
-#: pyanaconda/ui/gui/spokes/datetime_spoke.py:341
-#: pyanaconda/ui/tui/spokes/installation_source.py:133
-msgid "Nothing selected"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/installation_source.py:441
+#: pyanaconda/ui/gui/spokes/installation_source.py:442
 msgid "Failed to set up installation sources; check their configurations."
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/installation_source.py:534
-#, python-format
-msgid "Device: %s"
 msgstr ""
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:535
 #, python-format
+msgid "Device: %s"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/installation_source.py:536
+#, python-format
 msgid "Label: %s"
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:693
+#: pyanaconda/ui/gui/spokes/installation_source.py:694
 msgid "You need to configure the network to use a network installation source."
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:760
+#: pyanaconda/ui/gui/spokes/installation_source.py:761
 msgid "URL is empty"
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:764
+#: pyanaconda/ui/gui/spokes/installation_source.py:765
 #: pyanaconda/ui/gui/spokes/lib/installation_source_helpers.py:256
 msgid "Invalid URL"
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:770
+#: pyanaconda/ui/gui/spokes/installation_source.py:771
 msgid "Protocol in URL does not match selected protocol"
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:773
+#: pyanaconda/ui/gui/spokes/installation_source.py:774
 msgid "NFS server is empty"
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:777
+#: pyanaconda/ui/gui/spokes/installation_source.py:778
 msgid ""
 "Invalid NFS server, exactly one colon ':' must be present between host and "
 "directory"
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:785
+#: pyanaconda/ui/gui/spokes/installation_source.py:786
 msgid "Invalid host name"
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/installation_source.py:788
+#: pyanaconda/ui/gui/spokes/installation_source.py:789
 msgid "Remote directory is required"
 msgstr ""
 
@@ -2104,7 +2092,6 @@ msgstr ""
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:186
 #: pyanaconda/ui/gui/spokes/storage.py:290
-#: pyanaconda/ui/tui/spokes/installation_source.py:131
 #: pyanaconda/ui/tui/spokes/software_selection.py:162
 #: pyanaconda/ui/tui/spokes/storage.py:139
 msgid "Processing..."
@@ -3247,6 +3234,10 @@ msgstr ""
 msgid "Invalid timezone"
 msgstr ""
 
+#: pyanaconda/ui/gui/spokes/datetime_spoke.py:341
+msgid "Nothing selected"
+msgstr ""
+
 #: pyanaconda/ui/gui/spokes/datetime_spoke.py:518
 #: pyanaconda/ui/gui/spokes/datetime_spoke.py:532
 #: pyanaconda/ui/gui/spokes/datetime_spoke.py:717
@@ -3349,60 +3340,60 @@ msgstr ""
 msgid "Installation source"
 msgstr ""
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:168
+#: pyanaconda/ui/tui/spokes/installation_source.py:166
 msgid "Choose an installation source type."
 msgstr ""
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:169
+#: pyanaconda/ui/tui/spokes/installation_source.py:167
 msgid "CD/DVD"
 msgstr ""
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:170
+#: pyanaconda/ui/tui/spokes/installation_source.py:168
 msgid "local ISO file"
 msgstr ""
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:171
+#: pyanaconda/ui/tui/spokes/installation_source.py:169
 msgid "Network"
 msgstr ""
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:174
+#: pyanaconda/ui/tui/spokes/installation_source.py:172
 msgid "SE/HMC"
 msgstr ""
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:252
-#: pyanaconda/ui/tui/spokes/installation_source.py:317
+#: pyanaconda/ui/tui/spokes/installation_source.py:250
+#: pyanaconda/ui/tui/spokes/installation_source.py:315
 msgid "Specify Repo Options"
 msgstr ""
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:276
+#: pyanaconda/ui/tui/spokes/installation_source.py:274
 msgid "Repo URL"
 msgstr ""
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:340
+#: pyanaconda/ui/tui/spokes/installation_source.py:338
 msgid "SERVER:/PATH"
 msgstr ""
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:344
+#: pyanaconda/ui/tui/spokes/installation_source.py:342
 msgid "NFS mount options"
 msgstr ""
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:354
+#: pyanaconda/ui/tui/spokes/installation_source.py:352
 msgid "Server must be specified as SERVER:/PATH"
 msgstr ""
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:398
+#: pyanaconda/ui/tui/spokes/installation_source.py:396
 msgid "Select device containing the ISO file"
 msgstr ""
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:441
+#: pyanaconda/ui/tui/spokes/installation_source.py:439
 msgid "No mountable devices found"
 msgstr ""
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:470
+#: pyanaconda/ui/tui/spokes/installation_source.py:468
 msgid "Select an ISO to use as install source"
 msgstr ""
 
-#: pyanaconda/ui/tui/spokes/installation_source.py:486
+#: pyanaconda/ui/tui/spokes/installation_source.py:484
 msgid "No *.iso files found in device root folder"
 msgstr ""
 
