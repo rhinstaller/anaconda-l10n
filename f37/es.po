@@ -56,7 +56,7 @@
 # Adolfo Jayme Barrientos <fitoschido@gmail.com>, 2020.
 # José Lemos Neto <lemosjosex@protonmail.com>, 2021.
 # robert schneider <robertschv@gmail.com>, 2021.
-# Pedro Luis Valades Viera <perikiyoxd@gmail.com>, 2021.
+# Pedro Luis Valades Viera <perikiyoxd@gmail.com>, 2021, 2023.
 # Daniel Hernandez <hernandez101900daniel@gmail.com>, 2022.
 # lukas lee <lukasofkonoha@gmail.com>, 2022.
 # Pablo Munoz Alabau <pamual@posteo.es>, 2022.
@@ -66,8 +66,8 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
 "POT-Creation-Date: 2022-11-26 01:19+0000\n"
-"PO-Revision-Date: 2022-09-21 11:19+0000\n"
-"Last-Translator: Emilio Herrera <ehespinosa57@gmail.com>\n"
+"PO-Revision-Date: 2023-02-08 14:20+0000\n"
+"Last-Translator: Pedro Luis Valades Viera <perikiyoxd@gmail.com>\n"
 "Language-Team: Spanish <https://translate.fedoraproject.org/projects/"
 "anaconda/f37/es/>\n"
 "Language: es\n"
@@ -75,7 +75,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 4.15.2\n"
 
 #: anaconda.py:303
 msgid "Unable to create PID file"
@@ -906,7 +906,7 @@ msgstr "CDN de Red Hat"
 
 #: pyanaconda/modules/payloads/source/live_tar/live_tar.py:43
 msgid "Live tarball"
-msgstr "Live tarball"
+msgstr "Tarball en vivo"
 
 #: pyanaconda/modules/payloads/source/live_image/live_image.py:57
 msgid "Live image"
@@ -1777,8 +1777,8 @@ msgid ""
 "disk."
 msgstr ""
 "Su sistema basado en BIOS necesita una partición especial para arrancar "
-"desde disco de etiquetas GPT. Para continuar por favor crear una partición "
-"'biosboot' de 1MiB en el disco {}.."
+"desde un disco de particiones GPT. Para continuar, por favor cree una "
+"partición tipo 'biosboot' de 1MiB en el disco {}."
 
 #: pyanaconda/modules/storage/checker/utils.py:256
 msgid ""
@@ -2273,7 +2273,7 @@ msgstr ""
 
 #: pyanaconda/ui/lib/users.py:35
 msgid "Root account is disabled"
-msgstr "Cuenta root inhabilitada"
+msgstr "La cuenta root está deshabilitada"
 
 #: pyanaconda/ui/lib/users.py:37
 msgid "Root password is set"
@@ -7539,6 +7539,9 @@ msgid ""
 "the installation target for your Fedora installation. At least 1 disk must "
 "be selected for the installation to proceed."
 msgstr ""
+"El destino de la instalación le permite configurar qué discos se utilizarán "
+"como destino de la instalación de Fedora. Al menos 1 disco debe ser "
+"seleccionado para que la instalación proceda."
 
 #: ui/webui/src/components/HelpDrawer.jsx:58
 msgid ""
@@ -7547,6 +7550,11 @@ msgid ""
 "disks are detected when the installer starts - any storage devices connected "
 "after the installation has started will not be shown."
 msgstr ""
+"Todos los dispositivos de almacenamiento local disponibles (discos duros "
+"SATA, IDE y SCSI, unidades flash USB, etc.) se muestran en la sección "
+"'Discos locales estándar'. Los discos locales se detectan cuando se inicia "
+"el instalador - cualquier dispositivo de almacenamiento conectado después de "
+"que se haya iniciado la instalación no se mostrará."
 
 #: ui/webui/src/components/HelpDrawer.jsx:64
 msgid ""
@@ -7554,6 +7562,9 @@ msgid ""
 "using the refresh icon. All detected disks, including any new ones, will be "
 "displayed in the Local Standard Disks section."
 msgstr ""
+"Si necesita configurar otros dispositivos de almacenamiento local, actualice "
+"la página con el icono de refrescar. Todos los discos detectados, incluidos "
+"los nuevos, se mostrarán en la sección Discos estándar locales."
 
 #: ui/webui/src/components/HelpDrawer.jsx:69
 msgid ""
@@ -7563,14 +7574,20 @@ msgid ""
 "firmware, and the total amount of free space on your disks. A ZRAM-based "
 "swap will be used instead of a disk-based swap partition."
 msgstr ""
+"El instalador determinará la cantidad total de espacio en todos los discos "
+"seleccionados y creará una disposición Btrfs adecuada para su sistema. Los "
+"detalles de esta disposición dependen de si su sistema utiliza firmware BIOS "
+"o UEFI, y de la cantidad total de espacio libre en sus discos. Se utilizará "
+"una partición de intercambio basada en ZRAM en lugar de una partición de "
+"intercambio basada en disco."
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:162
 msgid ""
 "Locally available storage devices (SATA, NVMe SSD, SCSI hard drives, "
 "external disks, etc.)"
 msgstr ""
-"Dispositivos de almacenamiento disponibles localmente (discos duros SATA, "
-"NVMe SSD, SCSI, discos externos, etc.)"
+"Dispositivos de almacenamiento local disponibles (discos duros SATA, NVMe, "
+"SCSI, discos externos, etc.)"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:174
 msgid "$0 (of $1) disk selected"
@@ -7595,10 +7612,8 @@ msgid "Local standard disks"
 msgstr "Discos estándares locales"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:280
-#, fuzzy
-#| msgid "Rescan disks"
 msgid "Checking disks"
-msgstr "Re-escanear discos"
+msgstr "Comprobando discos"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:284
 msgid "This may take a moment"
@@ -7609,18 +7624,21 @@ msgid ""
 "Select the device(s) to install to. The installation requires $0 of "
 "available space. Storage will be automatically partitioned."
 msgstr ""
+"Seleccione los dispositivos en los que desea realizar la instalación. La "
+"instalación requiere $0 de espacio disponible. El almacenamiento se "
+"particionará automáticamente."
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:302
 msgid "Learn more about your storage options."
-msgstr ""
+msgstr "Más información sobre las opciones de almacenamiento."
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:318
 msgid "Selected disks will be erased at install"
-msgstr ""
+msgstr "Los discos seleccionados se borrarán en la instalación"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:321
 msgid "To prevent loss, backup the data."
-msgstr ""
+msgstr "Para evitar pérdidas, realice una copia de seguridad de los datos."
 
 #: ui/webui/src/components/localization/InstallationLanguage.jsx:181
 msgid "No results found"
