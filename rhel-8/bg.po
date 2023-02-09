@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2023-02-02 15:55+0100\n"
+"POT-Creation-Date: 2023-02-09 12:21+0100\n"
 "PO-Revision-Date: 2023-02-08 14:20+0000\n"
 "Last-Translator: Bogomil Shopov <bogomil.fedora@gmail.com>\n"
 "Language-Team: Bulgarian <https://translate.fedoraproject.org/projects/"
@@ -44,6 +44,568 @@ msgid ""
 msgstr ""
 "Anaconda не може да създаде %s понеже файлът вече съществува. Anaconda вече "
 "работи или предишно стартиране на anaconda се е провалило."
+
+#: pyanaconda/vnc.py:79
+#, python-format
+msgid "%(productName)s %(productVersion)s installation"
+msgstr "%(productName)s %(productVersion)s инсталация"
+
+#: pyanaconda/vnc.py:148
+#, python-format
+msgid "%(productName)s %(productVersion)s installation on host %(name)s"
+msgstr "%(productName)s %(productVersion)s инсталация на хост %(name)s"
+
+#: pyanaconda/vnc.py:167
+#, python-format
+msgid "Attempting to connect to vnc client on host %s..."
+msgstr "Опит за връзка с vnc клиент на машина %s..."
+
+#: pyanaconda/vnc.py:181
+msgid "Connected!"
+msgstr "Връзката е успешна!"
+
+#: pyanaconda/vnc.py:184
+msgid "Will try to connect again in 15 seconds..."
+msgstr "Следващ опит за връзка след 15 секунди..."
+
+#: pyanaconda/vnc.py:191
+#, python-format
+msgid "Giving up attempting to connect after %d try!\n"
+msgid_plural "Giving up attempting to connect after %d tries!\n"
+msgstr[0] "Отказвам се в опитите да се свържа след %d опит!\n"
+msgstr[1] "Отказвам се в опитите да се свържа след %d опита!\n"
+
+#: pyanaconda/vnc.py:199
+msgid "Attempting to start vncconfig"
+msgstr "Опитвам да стартирам vncconfig"
+
+#: pyanaconda/vnc.py:212
+#, python-format
+msgid "Please manually connect your vnc client to %s to begin the install."
+msgstr ""
+"Моля, свържете ръчно Вашия vnc клиент към %s за да започне инсталацията."
+
+#: pyanaconda/vnc.py:214
+#, python-format
+msgid ""
+"Please manually connect your vnc client to IP-ADDRESS:%s to begin the "
+"install. Switch to the shell (Ctrl-B 2) and run 'ip addr' to find the IP-"
+"ADDRESS."
+msgstr ""
+"Моля, свържете ръчно Вашия vnc клиент към IP адрес:%s, за да започне "
+"инсталацията. Превключете в команден режим (Ctrl-B 2) и стартирайте 'ip "
+"addr' за да откриете IP адреса."
+
+#: pyanaconda/vnc.py:219
+msgid "Starting VNC..."
+msgstr "Стартиране на VNC..."
+
+#: pyanaconda/vnc.py:256
+msgid "The VNC server is now running."
+msgstr "VNC сървърът е стартиран."
+
+#: pyanaconda/vnc.py:260
+msgid ""
+"\n"
+"\n"
+"You chose to connect to a listening vncviewer. \n"
+"This does not require a password to be set.  If you \n"
+"set a password, it will be used in case the connection \n"
+"to the vncviewer is unsuccessful\n"
+"\n"
+msgstr ""
+"\n"
+"\n"
+"Вие избрахте да се свържете към vncviewer.\n"
+"Това не изисква да има зададена парола.  Ако\n"
+"зададете парола, тя ще бъде използвана в случай,\n"
+"че връзката с vncviewer е неуспешна.\n"
+"\n"
+
+#: pyanaconda/vnc.py:265
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "\n"
+#| "WARNING!!! VNC server running with NO PASSWORD!\n"
+#| "You can use the vncpassword=PASSWORD boot option\n"
+#| "if you would like to secure the server.\n"
+#| "\n"
+msgid ""
+"\n"
+"\n"
+"WARNING!!! VNC server running with NO PASSWORD!\n"
+"You can use the inst.vncpassword=PASSWORD boot option\n"
+"if you would like to secure the server.\n"
+"\n"
+msgstr ""
+"\n"
+"\n"
+"ВНИМАНИЕ!!! VNC сървърът работи БЕЗ ПАРОЛА!\n"
+"Можете да използвате опцията vncpassword=PASSWORD\n"
+"при стартирането, ако искате да защитите сървъра.\n"
+"\n"
+
+#: pyanaconda/vnc.py:269
+msgid ""
+"\n"
+"\n"
+"You chose to execute vnc with a password. \n"
+"\n"
+msgstr ""
+"\n"
+"\n"
+"Избрахте да стартирате vnc с парола.\n"
+"\n"
+
+#: pyanaconda/vnc.py:271
+msgid ""
+"\n"
+"\n"
+"Unknown Error.  Aborting. \n"
+"\n"
+msgstr ""
+"\n"
+"\n"
+"Непозната грешка.  Излизане. \n"
+"\n"
+
+#: pyanaconda/vnc.py:293
+msgid ""
+"VNC password must be six to eight characters long.\n"
+"Please enter a new one, or leave blank for no password."
+msgstr ""
+"VNC паролата трябва да е дълга шест до осем знака.\n"
+"Моля, въведете нова или оставете празно за без парола."
+
+#: pyanaconda/startup_utils.py:83
+#, python-format
+msgid ""
+"%(product_name)s requires %(needed_ram)s MB of memory to install, but you "
+"only have %(total_ram)s MB on this machine.\n"
+msgstr ""
+"%(product_name)s изисква %(needed_ram)s MB памет за да се инсталира, но на "
+"тази машина има само %(total_ram)s MB.\n"
+
+#: pyanaconda/startup_utils.py:85
+#, fuzzy, python-format
+#| msgid ""
+#| "The %(product_name)s graphical installer requires %(needed_ram)s MB of "
+#| "memory, but you only have %(total_ram)s MB\n"
+#| "."
+msgid ""
+"The %(product_name)s graphical installer requires %(needed_ram)s MB of "
+"memory, but you only have %(total_ram)s MB.\n"
+msgstr ""
+"Графичният инсталатор на %(product_name)s изисква %(needed_ram)s MB памет, "
+"но имате само %(total_ram)s MB\n"
+"."
+
+#: pyanaconda/startup_utils.py:88
+msgid ""
+"\n"
+"Press [Enter] to reboot your system.\n"
+msgstr ""
+"\n"
+"Натиснете [Enter], за да рестартирате системата.\n"
+
+#: pyanaconda/startup_utils.py:90
+msgid "Not enough RAM"
+msgstr "Няма достатъчно памет (RAM)"
+
+#: pyanaconda/startup_utils.py:91
+msgid ""
+" Try the text mode installer by running:\n"
+"\n"
+"'/usr/bin/liveinst -T'\n"
+"\n"
+" from a root terminal."
+msgstr ""
+" Пробвайте текстовия инсталатор като стартирате:\n"
+"\n"
+"'/usr/bin/liveinst -T'\n"
+"\n"
+" в терминал с root права."
+
+#: pyanaconda/startup_utils.py:93
+msgid " Starting text mode."
+msgstr " Стартиране на текстов режим."
+
+#: pyanaconda/startup_utils.py:130
+msgid "The installation cannot continue and the system will be rebooted"
+msgstr "Инсталирането не може да продължи. Системата ще бъде рестартирана."
+
+#: pyanaconda/startup_utils.py:131
+msgid "Press ENTER to continue"
+msgstr "Натиснете ENTER за да продължите"
+
+#: pyanaconda/startup_utils.py:228
+#, python-format
+msgid "Please ssh install@%s to begin the install."
+msgstr "Моля направете ssh install@%s за да започнете инсталирането."
+
+#: pyanaconda/startup_utils.py:230
+msgid "Please ssh install@HOSTNAME to continue installation."
+msgstr "Моля направете ssh install@HOSTNAME, за да продължите инсталирането."
+
+#: pyanaconda/rescue.py:272
+msgid "Unable to find /bin/bash to execute!  Not starting shell."
+msgstr ""
+"Не намирам /bin/bash, за да го стартирам!  Няма да стартирам команден "
+"интерпретатор."
+
+#: pyanaconda/rescue.py:289
+msgid "Rescue"
+msgstr "Спасяване"
+
+#: pyanaconda/rescue.py:296
+#, python-format
+msgid ""
+"The rescue environment will now attempt to find your Linux installation and "
+"mount it under the directory : %s.  You can then make any changes required "
+"to your system.  Choose '1' to proceed with this step.\n"
+"You can choose to mount your file systems read-only instead of read-write by "
+"choosing '2'.\n"
+"If for some reason this process does not work choose '3' to skip directly to "
+"a shell.\n"
+"\n"
+msgstr ""
+"Спасителната среда ще се опита да намери Linux инсталацията Ви и да я "
+"монтира в директория %s.  След това, Вие ще можете да направите желаните "
+"промени в системата Ви.  Изберете '1', за да продължите така.\n"
+"Вие може да изберете да монтирате файловата система само за четене, а не за "
+"четене и запис, като изберете '2'.  \n"
+"Ако по някаква причина този процес не работи, изберете '3', с което ще "
+"влезете директно в командния интерпретатор.\n"
+"\n"
+
+#: pyanaconda/rescue.py:308
+msgid "Continue"
+msgstr "Продължение"
+
+#: pyanaconda/rescue.py:309
+msgid "Read-only mount"
+msgstr "Монтиране само за четене"
+
+#: pyanaconda/rescue.py:310
+msgid "Skip to shell"
+msgstr "Към команден интерпретатор"
+
+#: pyanaconda/rescue.py:311
+msgid "Quit (Reboot)"
+msgstr ""
+
+#: pyanaconda/rescue.py:408
+msgid "Rescue Shell"
+msgstr ""
+
+#: pyanaconda/rescue.py:418
+#, python-format
+msgid "Run %s to unmount the system when you are finished."
+msgstr "Стартирайте %s, за да демонтирате системата, когато завършите."
+
+#: pyanaconda/rescue.py:419
+msgid ""
+"When finished, please exit from the shell and your system will reboot.\n"
+msgstr ""
+
+#: pyanaconda/rescue.py:430
+#, python-format
+msgid ""
+"Your system has been mounted under %(mountpoint)s.\n"
+"\n"
+"If you would like to make the root of your system the root of the active "
+"system, run the command:\n"
+"\n"
+"\tchroot %(mountpoint)s\n"
+"\n"
+msgstr ""
+
+#: pyanaconda/rescue.py:442
+#, fuzzy, python-brace-format
+#| msgid ""
+#| "An error occurred trying to mount some or all of your system.  Some of it "
+#| "may be mounted under %s\n"
+#| "\n"
+msgid ""
+"An error occurred trying to mount some or all of your system: {message}\n"
+"\n"
+"Some of it may be mounted under {path}."
+msgstr ""
+"Възникна грешка при монтирането на няколко или всички системи.  Някоя от тях "
+"може да е монтирана в {}."
+
+#: pyanaconda/rescue.py:454
+#, fuzzy
+#| msgid "You don't have any Linux partitions. %s\n"
+msgid "You don't have any Linux partitions.\n"
+msgstr "Нямате никакви Линукс дялове. {}\n"
+
+#: pyanaconda/rescue.py:460
+msgid "Not mounting the system.\n"
+msgstr ""
+
+#: pyanaconda/rescue.py:474
+#, python-format
+msgid "Please press %s to get a shell"
+msgstr ""
+
+#: pyanaconda/rescue.py:491
+msgid "Root Selection"
+msgstr ""
+
+#: pyanaconda/rescue.py:517
+msgid "The following installations were discovered on your system."
+msgstr ""
+
+#: pyanaconda/pwpolicy.py:146
+#, python-format
+msgid "policy name required for %s"
+msgstr ""
+
+#: pyanaconda/pwpolicy.py:155
+#, python-format
+msgid "A %(command)s with the name %(policyName)s has already been defined."
+msgstr "%(command)s с име %(policyName)s вече беше дефинирано."
+
+#: pyanaconda/product.py:69
+#, python-format
+msgid "%(productName)s %(productVersion)s INSTALLATION"
+msgstr "ИНСТАЛИРАНЕ НА %(productName)s %(productVersion)s"
+
+#: pyanaconda/network.py:111
+msgid "Host name cannot be None or an empty string."
+msgstr "Името на хоста не може да е None или празно."
+
+#: pyanaconda/network.py:114
+msgid "Host name must be 255 or fewer characters in length."
+msgstr "Името на хоста трябва да е дълго не повече от 255 символа."
+
+#: pyanaconda/network.py:117
+msgid "Local host name must not end with period '.'."
+msgstr ""
+
+#: pyanaconda/network.py:120
+msgid ""
+"Host names can only contain the characters 'a-z', 'A-Z', '0-9', '-', or '.', "
+"parts between periods must contain something and cannot start or end with "
+"'-'."
+msgstr ""
+"Имената на хостове може да съдържат само символите 'a-z', 'A-Z', '0-9', '-', "
+"или '.', частите между точки трябва да съдържат нещо и не могат да започват "
+"или завършват с '-'."
+
+#: pyanaconda/network.py:473 pyanaconda/ui/gui/spokes/network.py:281
+#: pyanaconda/ui/gui/spokes/custom_storage.py:460
+#: pyanaconda/ui/gui/spokes/custom_storage.py:503
+msgid "Unknown"
+msgstr "Непознат"
+
+#: pyanaconda/network.py:476
+#, fuzzy
+#| msgid "Unavailable"
+msgid "Status not available"
+msgstr "Недостъпен"
+
+#: pyanaconda/network.py:481
+msgid "Connecting..."
+msgstr "Свързвам се..."
+
+#: pyanaconda/network.py:483
+msgid "Disconnecting..."
+msgstr "Прекратявам връзката..."
+
+#: pyanaconda/network.py:514
+#, python-format
+msgid "Wired (%(interface_name)s) connected"
+msgstr "Жичният (%(interface_name)s) е свързан"
+
+#: pyanaconda/network.py:517
+#, python-format
+msgid "Wireless connected to %(access_point)s"
+msgstr "Безжично свързан към %(access_point)s"
+
+#: pyanaconda/network.py:520
+#, python-format
+msgid "Bond %(interface_name)s (%(list_of_slaves)s) connected"
+msgstr "Обединеният %(interface_name)s (%(list_of_slaves)s) е свързан"
+
+#: pyanaconda/network.py:524
+#, python-format
+msgid "Team %(interface_name)s (%(list_of_slaves)s) connected"
+msgstr ""
+
+#: pyanaconda/network.py:528
+#, python-format
+msgid "Bridge %(interface_name)s (%(list_of_slaves)s) connected"
+msgstr ""
+
+#: pyanaconda/network.py:534
+#, python-format
+msgid "VLAN %(interface_name)s (%(parent_device)s, ID %(vlanid)s) connected"
+msgstr "VLAN %(interface_name)s (%(parent_device)s, ID %(vlanid)s) е свързан"
+
+#: pyanaconda/network.py:553
+#, python-format
+msgid "Connected: %(list_of_interface_names)s"
+msgstr "Свързан: %(list_of_interface_names)s"
+
+#: pyanaconda/network.py:555
+msgid "Not connected"
+msgstr "Не е свързан"
+
+#: pyanaconda/network.py:558 pyanaconda/ui/gui/spokes/network.glade:2357
+msgid "No network devices available"
+msgstr "Няма достъпни мрежови устройства"
+
+#: pyanaconda/kickstart.py:540
+msgid ""
+"\n"
+"Some warnings occurred during reading the kickstart file:"
+msgstr ""
+
+#: pyanaconda/kickstart.py:553
+#, python-format
+msgid ""
+"\n"
+"An error occurred during reading the kickstart file:\n"
+"%s\n"
+"\n"
+"The installer will now terminate."
+msgstr ""
+
+#: pyanaconda/kickstart.py:597 pyanaconda/installation.py:285
+msgid "Running pre-installation scripts"
+msgstr "Изпълнение скриптове предхождащи инсталирането"
+
+#: pyanaconda/installation.py:87
+msgid "Configuring Red Hat subscription"
+msgstr "Конфигуриране на Red Hat subscription"
+
+#: pyanaconda/installation.py:94
+msgid "Configuring installed system"
+msgstr "Конфигуриране на инсталираната система"
+
+#: pyanaconda/installation.py:132
+msgid "Writing network configuration"
+msgstr "Записване конфигурацията на мрежата"
+
+#: pyanaconda/installation.py:139
+msgid "Creating users"
+msgstr "Създаване на потребители"
+
+#: pyanaconda/installation.py:146
+msgid "Configuring addons"
+msgstr "Конфигуриране на добавки"
+
+#: pyanaconda/installation.py:162
+msgid "Generating initramfs"
+msgstr "Създаване на initramfs"
+
+#: pyanaconda/installation.py:190
+msgid "Setting up kexec"
+msgstr ""
+
+#: pyanaconda/installation.py:195
+msgid "Storing configuration files and kickstarts"
+msgstr ""
+
+#: pyanaconda/installation.py:214
+msgid "Running post-installation scripts"
+msgstr "Изпълнение на скриптове след инсталирането"
+
+#: pyanaconda/installation.py:244
+#, python-format
+msgid "Waiting for %s threads to finish"
+msgstr "Изчакване завършването на %s задачи"
+
+#: pyanaconda/installation.py:258
+msgid "Setting up the installation environment"
+msgstr "Създаване среда за инсталирането"
+
+#: pyanaconda/installation.py:275 pyanaconda/installation.py:341
+msgid "Configuring storage"
+msgstr ""
+
+#: pyanaconda/installation.py:292
+msgid "Running pre-installation tasks"
+msgstr ""
+
+#: pyanaconda/installation.py:335
+msgid "Installing."
+msgstr ""
+
+#: pyanaconda/installation.py:348
+msgid "Installing boot loader"
+msgstr "Инсталиране програмата за първоначално зареждане"
+
+#: pyanaconda/installation.py:361 pyanaconda/payload/live/payload_base.py:172
+#: pyanaconda/payload/dnf/payload.py:1422
+msgid "Performing post-installation setup tasks"
+msgstr "Изпълнение на задачи, завършващи инсталирането"
+
+#: pyanaconda/installation.py:369
+msgid "Creating snapshots"
+msgstr ""
+
+#: pyanaconda/input_checking.py:539
+msgid "Full name cannot contain colon characters"
+msgstr "Пълното име не може да съдържа двоеточие"
+
+#: pyanaconda/exception.py:109
+#, python-format
+msgid ""
+"The installation was stopped due to what seems to be a problem with your "
+"hardware. The exact error message is:\n"
+"\n"
+"%s.\n"
+"\n"
+" The installer will now terminate."
+msgstr ""
+"Инсталирането беше прекратено, тъй като, изглежда, има проблем с хардуера "
+"Ви. Съобщението за грешка е:\n"
+"\n"
+"%s.\n"
+"\n"
+" Инсталаторът ще прекрати работата си сега."
+
+#: pyanaconda/exception.py:113
+msgid "Hardware error occurred"
+msgstr "Възникна хардуерна грешка"
+
+#: pyanaconda/exception.py:174
+#, python-format
+msgid ""
+"\n"
+"The installation was stopped due to an error which occurred while running in "
+"non-interactive cmdline mode. Since there cannot be any questions in cmdline "
+"mode, edit your kickstart file and retry installation. \n"
+"The exact error message is: \n"
+"\n"
+"%s. \n"
+"\n"
+"The installer will now terminate."
+msgstr ""
+
+#: pyanaconda/exception.py:182
+#, python-format
+msgid ""
+"\n"
+"Running in cmdline mode, no interactive debugging allowed.\n"
+"The exact error message is: \n"
+"\n"
+"%s.\n"
+"\n"
+"The installer will now terminate."
+msgstr ""
+"\n"
+"Работа в режим на команден ред без възможност за интерактивно отстраняване "
+"на грешки.\n"
+"Точното съобщение за грешка е: \n"
+"\n"
+"%s.\n"
+"\n"
+"Инсталаторът ще прекрати работа сега."
 
 #: pyanaconda/errors.py:112
 #, fuzzy
@@ -257,458 +819,6 @@ msgid ""
 "Would you like to ignore this and continue with installation?"
 msgstr ""
 
-#: pyanaconda/vnc.py:79
-#, python-format
-msgid "%(productName)s %(productVersion)s installation"
-msgstr "%(productName)s %(productVersion)s инсталация"
-
-#: pyanaconda/vnc.py:148
-#, python-format
-msgid "%(productName)s %(productVersion)s installation on host %(name)s"
-msgstr "%(productName)s %(productVersion)s инсталация на хост %(name)s"
-
-#: pyanaconda/vnc.py:167
-#, python-format
-msgid "Attempting to connect to vnc client on host %s..."
-msgstr "Опит за връзка с vnc клиент на машина %s..."
-
-#: pyanaconda/vnc.py:181
-msgid "Connected!"
-msgstr "Връзката е успешна!"
-
-#: pyanaconda/vnc.py:184
-msgid "Will try to connect again in 15 seconds..."
-msgstr "Следващ опит за връзка след 15 секунди..."
-
-#: pyanaconda/vnc.py:191
-#, python-format
-msgid "Giving up attempting to connect after %d try!\n"
-msgid_plural "Giving up attempting to connect after %d tries!\n"
-msgstr[0] "Отказвам се в опитите да се свържа след %d опит!\n"
-msgstr[1] "Отказвам се в опитите да се свържа след %d опита!\n"
-
-#: pyanaconda/vnc.py:199
-msgid "Attempting to start vncconfig"
-msgstr "Опитвам да стартирам vncconfig"
-
-#: pyanaconda/vnc.py:212
-#, python-format
-msgid "Please manually connect your vnc client to %s to begin the install."
-msgstr ""
-"Моля, свържете ръчно Вашия vnc клиент към %s за да започне инсталацията."
-
-#: pyanaconda/vnc.py:214
-#, python-format
-msgid ""
-"Please manually connect your vnc client to IP-ADDRESS:%s to begin the "
-"install. Switch to the shell (Ctrl-B 2) and run 'ip addr' to find the IP-"
-"ADDRESS."
-msgstr ""
-"Моля, свържете ръчно Вашия vnc клиент към IP адрес:%s, за да започне "
-"инсталацията. Превключете в команден режим (Ctrl-B 2) и стартирайте 'ip "
-"addr' за да откриете IP адреса."
-
-#: pyanaconda/vnc.py:219
-msgid "Starting VNC..."
-msgstr "Стартиране на VNC..."
-
-#: pyanaconda/vnc.py:256
-msgid "The VNC server is now running."
-msgstr "VNC сървърът е стартиран."
-
-#: pyanaconda/vnc.py:260
-msgid ""
-"\n"
-"\n"
-"You chose to connect to a listening vncviewer. \n"
-"This does not require a password to be set.  If you \n"
-"set a password, it will be used in case the connection \n"
-"to the vncviewer is unsuccessful\n"
-"\n"
-msgstr ""
-"\n"
-"\n"
-"Вие избрахте да се свържете към vncviewer.\n"
-"Това не изисква да има зададена парола.  Ако\n"
-"зададете парола, тя ще бъде използвана в случай,\n"
-"че връзката с vncviewer е неуспешна.\n"
-"\n"
-
-#: pyanaconda/vnc.py:265
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "\n"
-#| "WARNING!!! VNC server running with NO PASSWORD!\n"
-#| "You can use the vncpassword=PASSWORD boot option\n"
-#| "if you would like to secure the server.\n"
-#| "\n"
-msgid ""
-"\n"
-"\n"
-"WARNING!!! VNC server running with NO PASSWORD!\n"
-"You can use the inst.vncpassword=PASSWORD boot option\n"
-"if you would like to secure the server.\n"
-"\n"
-msgstr ""
-"\n"
-"\n"
-"ВНИМАНИЕ!!! VNC сървърът работи БЕЗ ПАРОЛА!\n"
-"Можете да използвате опцията vncpassword=PASSWORD\n"
-"при стартирането, ако искате да защитите сървъра.\n"
-"\n"
-
-#: pyanaconda/vnc.py:269
-msgid ""
-"\n"
-"\n"
-"You chose to execute vnc with a password. \n"
-"\n"
-msgstr ""
-"\n"
-"\n"
-"Избрахте да стартирате vnc с парола.\n"
-"\n"
-
-#: pyanaconda/vnc.py:271
-msgid ""
-"\n"
-"\n"
-"Unknown Error.  Aborting. \n"
-"\n"
-msgstr ""
-"\n"
-"\n"
-"Непозната грешка.  Излизане. \n"
-"\n"
-
-#: pyanaconda/vnc.py:293
-msgid ""
-"VNC password must be six to eight characters long.\n"
-"Please enter a new one, or leave blank for no password."
-msgstr ""
-"VNC паролата трябва да е дълга шест до осем знака.\n"
-"Моля, въведете нова или оставете празно за без парола."
-
-#: pyanaconda/startup_utils.py:83
-#, python-format
-msgid ""
-"%(product_name)s requires %(needed_ram)s MB of memory to install, but you "
-"only have %(total_ram)s MB on this machine.\n"
-msgstr ""
-"%(product_name)s изисква %(needed_ram)s MB памет за да се инсталира, но на "
-"тази машина има само %(total_ram)s MB.\n"
-
-#: pyanaconda/startup_utils.py:85
-#, fuzzy, python-format
-#| msgid ""
-#| "The %(product_name)s graphical installer requires %(needed_ram)s MB of "
-#| "memory, but you only have %(total_ram)s MB\n"
-#| "."
-msgid ""
-"The %(product_name)s graphical installer requires %(needed_ram)s MB of "
-"memory, but you only have %(total_ram)s MB.\n"
-msgstr ""
-"Графичният инсталатор на %(product_name)s изисква %(needed_ram)s MB памет, "
-"но имате само %(total_ram)s MB\n"
-"."
-
-#: pyanaconda/startup_utils.py:88
-msgid ""
-"\n"
-"Press [Enter] to reboot your system.\n"
-msgstr ""
-"\n"
-"Натиснете [Enter], за да рестартирате системата.\n"
-
-#: pyanaconda/startup_utils.py:90
-msgid "Not enough RAM"
-msgstr "Няма достатъчно памет (RAM)"
-
-#: pyanaconda/startup_utils.py:91
-msgid ""
-" Try the text mode installer by running:\n"
-"\n"
-"'/usr/bin/liveinst -T'\n"
-"\n"
-" from a root terminal."
-msgstr ""
-" Пробвайте текстовия инсталатор като стартирате:\n"
-"\n"
-"'/usr/bin/liveinst -T'\n"
-"\n"
-" в терминал с root права."
-
-#: pyanaconda/startup_utils.py:93
-msgid " Starting text mode."
-msgstr " Стартиране на текстов режим."
-
-#: pyanaconda/startup_utils.py:130
-msgid "The installation cannot continue and the system will be rebooted"
-msgstr "Инсталирането не може да продължи. Системата ще бъде рестартирана."
-
-#: pyanaconda/startup_utils.py:131
-msgid "Press ENTER to continue"
-msgstr "Натиснете ENTER за да продължите"
-
-#: pyanaconda/startup_utils.py:228
-#, python-format
-msgid "Please ssh install@%s to begin the install."
-msgstr "Моля направете ssh install@%s за да започнете инсталирането."
-
-#: pyanaconda/startup_utils.py:230
-msgid "Please ssh install@HOSTNAME to continue installation."
-msgstr "Моля направете ssh install@HOSTNAME, за да продължите инсталирането."
-
-#: pyanaconda/pwpolicy.py:146
-#, python-format
-msgid "policy name required for %s"
-msgstr ""
-
-#: pyanaconda/pwpolicy.py:155
-#, python-format
-msgid "A %(command)s with the name %(policyName)s has already been defined."
-msgstr "%(command)s с име %(policyName)s вече беше дефинирано."
-
-#: pyanaconda/product.py:69
-#, python-format
-msgid "%(productName)s %(productVersion)s INSTALLATION"
-msgstr "ИНСТАЛИРАНЕ НА %(productName)s %(productVersion)s"
-
-#: pyanaconda/network.py:111
-msgid "Host name cannot be None or an empty string."
-msgstr "Името на хоста не може да е None или празно."
-
-#: pyanaconda/network.py:114
-msgid "Host name must be 255 or fewer characters in length."
-msgstr "Името на хоста трябва да е дълго не повече от 255 символа."
-
-#: pyanaconda/network.py:117
-msgid "Local host name must not end with period '.'."
-msgstr ""
-
-#: pyanaconda/network.py:120
-msgid ""
-"Host names can only contain the characters 'a-z', 'A-Z', '0-9', '-', or '.', "
-"parts between periods must contain something and cannot start or end with "
-"'-'."
-msgstr ""
-"Имената на хостове може да съдържат само символите 'a-z', 'A-Z', '0-9', '-', "
-"или '.', частите между точки трябва да съдържат нещо и не могат да започват "
-"или завършват с '-'."
-
-#: pyanaconda/network.py:473 pyanaconda/ui/gui/spokes/custom_storage.py:460
-#: pyanaconda/ui/gui/spokes/custom_storage.py:503
-#: pyanaconda/ui/gui/spokes/network.py:281
-msgid "Unknown"
-msgstr "Непознат"
-
-#: pyanaconda/network.py:476
-#, fuzzy
-#| msgid "Unavailable"
-msgid "Status not available"
-msgstr "Недостъпен"
-
-#: pyanaconda/network.py:481
-msgid "Connecting..."
-msgstr "Свързвам се..."
-
-#: pyanaconda/network.py:483
-msgid "Disconnecting..."
-msgstr "Прекратявам връзката..."
-
-#: pyanaconda/network.py:514
-#, python-format
-msgid "Wired (%(interface_name)s) connected"
-msgstr "Жичният (%(interface_name)s) е свързан"
-
-#: pyanaconda/network.py:517
-#, python-format
-msgid "Wireless connected to %(access_point)s"
-msgstr "Безжично свързан към %(access_point)s"
-
-#: pyanaconda/network.py:520
-#, python-format
-msgid "Bond %(interface_name)s (%(list_of_slaves)s) connected"
-msgstr "Обединеният %(interface_name)s (%(list_of_slaves)s) е свързан"
-
-#: pyanaconda/network.py:524
-#, python-format
-msgid "Team %(interface_name)s (%(list_of_slaves)s) connected"
-msgstr ""
-
-#: pyanaconda/network.py:528
-#, python-format
-msgid "Bridge %(interface_name)s (%(list_of_slaves)s) connected"
-msgstr ""
-
-#: pyanaconda/network.py:534
-#, python-format
-msgid "VLAN %(interface_name)s (%(parent_device)s, ID %(vlanid)s) connected"
-msgstr "VLAN %(interface_name)s (%(parent_device)s, ID %(vlanid)s) е свързан"
-
-#: pyanaconda/network.py:553
-#, python-format
-msgid "Connected: %(list_of_interface_names)s"
-msgstr "Свързан: %(list_of_interface_names)s"
-
-#: pyanaconda/network.py:555
-msgid "Not connected"
-msgstr "Не е свързан"
-
-#: pyanaconda/network.py:558 pyanaconda/ui/gui/spokes/network.glade:2357
-msgid "No network devices available"
-msgstr "Няма достъпни мрежови устройства"
-
-#: pyanaconda/kickstart.py:540
-msgid ""
-"\n"
-"Some warnings occurred during reading the kickstart file:"
-msgstr ""
-
-#: pyanaconda/kickstart.py:553
-#, python-format
-msgid ""
-"\n"
-"An error occurred during reading the kickstart file:\n"
-"%s\n"
-"\n"
-"The installer will now terminate."
-msgstr ""
-
-#: pyanaconda/kickstart.py:597 pyanaconda/installation.py:285
-msgid "Running pre-installation scripts"
-msgstr "Изпълнение скриптове предхождащи инсталирането"
-
-#: pyanaconda/installation.py:87
-msgid "Configuring Red Hat subscription"
-msgstr "Конфигуриране на Red Hat subscription"
-
-#: pyanaconda/installation.py:94
-msgid "Configuring installed system"
-msgstr "Конфигуриране на инсталираната система"
-
-#: pyanaconda/installation.py:132
-msgid "Writing network configuration"
-msgstr "Записване конфигурацията на мрежата"
-
-#: pyanaconda/installation.py:139
-msgid "Creating users"
-msgstr "Създаване на потребители"
-
-#: pyanaconda/installation.py:146
-msgid "Configuring addons"
-msgstr "Конфигуриране на добавки"
-
-#: pyanaconda/installation.py:162
-msgid "Generating initramfs"
-msgstr "Създаване на initramfs"
-
-#: pyanaconda/installation.py:190
-msgid "Setting up kexec"
-msgstr ""
-
-#: pyanaconda/installation.py:195
-msgid "Storing configuration files and kickstarts"
-msgstr ""
-
-#: pyanaconda/installation.py:214
-msgid "Running post-installation scripts"
-msgstr "Изпълнение на скриптове след инсталирането"
-
-#: pyanaconda/installation.py:244
-#, python-format
-msgid "Waiting for %s threads to finish"
-msgstr "Изчакване завършването на %s задачи"
-
-#: pyanaconda/installation.py:258
-msgid "Setting up the installation environment"
-msgstr "Създаване среда за инсталирането"
-
-#: pyanaconda/installation.py:275 pyanaconda/installation.py:341
-msgid "Configuring storage"
-msgstr ""
-
-#: pyanaconda/installation.py:292
-msgid "Running pre-installation tasks"
-msgstr ""
-
-#: pyanaconda/installation.py:335
-msgid "Installing."
-msgstr ""
-
-#: pyanaconda/installation.py:348
-msgid "Installing boot loader"
-msgstr "Инсталиране програмата за първоначално зареждане"
-
-#: pyanaconda/installation.py:361 pyanaconda/payload/live/payload_base.py:172
-#: pyanaconda/payload/dnf/payload.py:1422
-msgid "Performing post-installation setup tasks"
-msgstr "Изпълнение на задачи, завършващи инсталирането"
-
-#: pyanaconda/installation.py:369
-msgid "Creating snapshots"
-msgstr ""
-
-#: pyanaconda/input_checking.py:539
-msgid "Full name cannot contain colon characters"
-msgstr "Пълното име не може да съдържа двоеточие"
-
-#: pyanaconda/exception.py:109
-#, python-format
-msgid ""
-"The installation was stopped due to what seems to be a problem with your "
-"hardware. The exact error message is:\n"
-"\n"
-"%s.\n"
-"\n"
-" The installer will now terminate."
-msgstr ""
-"Инсталирането беше прекратено, тъй като, изглежда, има проблем с хардуера "
-"Ви. Съобщението за грешка е:\n"
-"\n"
-"%s.\n"
-"\n"
-" Инсталаторът ще прекрати работата си сега."
-
-#: pyanaconda/exception.py:113
-msgid "Hardware error occurred"
-msgstr "Възникна хардуерна грешка"
-
-#: pyanaconda/exception.py:174
-#, python-format
-msgid ""
-"\n"
-"The installation was stopped due to an error which occurred while running in "
-"non-interactive cmdline mode. Since there cannot be any questions in cmdline "
-"mode, edit your kickstart file and retry installation. \n"
-"The exact error message is: \n"
-"\n"
-"%s. \n"
-"\n"
-"The installer will now terminate."
-msgstr ""
-
-#: pyanaconda/exception.py:182
-#, python-format
-msgid ""
-"\n"
-"Running in cmdline mode, no interactive debugging allowed.\n"
-"The exact error message is: \n"
-"\n"
-"%s.\n"
-"\n"
-"The installer will now terminate."
-msgstr ""
-"\n"
-"Работа в режим на команден ред без възможност за интерактивно отстраняване "
-"на грешки.\n"
-"Точното съобщение за грешка е: \n"
-"\n"
-"%s.\n"
-"\n"
-"Инсталаторът ще прекрати работа сега."
-
 #: pyanaconda/display.py:301
 msgid "Graphical installation is not available. Starting text mode."
 msgstr "Графично инсталиране не е налично. Стартиране в текстов режим."
@@ -740,116 +850,6 @@ msgstr "Изпълнение на добавка %s"
 #| msgid "Executing %s addon"
 msgid "Setting up %s addon"
 msgstr "Изпълнение на добавка %s"
-
-#: pyanaconda/rescue.py:272
-msgid "Unable to find /bin/bash to execute!  Not starting shell."
-msgstr ""
-"Не намирам /bin/bash, за да го стартирам!  Няма да стартирам команден "
-"интерпретатор."
-
-#: pyanaconda/rescue.py:289
-msgid "Rescue"
-msgstr "Спасяване"
-
-#: pyanaconda/rescue.py:296
-#, python-format
-msgid ""
-"The rescue environment will now attempt to find your Linux installation and "
-"mount it under the directory : %s.  You can then make any changes required "
-"to your system.  Choose '1' to proceed with this step.\n"
-"You can choose to mount your file systems read-only instead of read-write by "
-"choosing '2'.\n"
-"If for some reason this process does not work choose '3' to skip directly to "
-"a shell.\n"
-"\n"
-msgstr ""
-"Спасителната среда ще се опита да намери Linux инсталацията Ви и да я "
-"монтира в директория %s.  След това, Вие ще можете да направите желаните "
-"промени в системата Ви.  Изберете '1', за да продължите така.\n"
-"Вие може да изберете да монтирате файловата система само за четене, а не за "
-"четене и запис, като изберете '2'.  \n"
-"Ако по някаква причина този процес не работи, изберете '3', с което ще "
-"влезете директно в командния интерпретатор.\n"
-"\n"
-
-#: pyanaconda/rescue.py:308
-msgid "Continue"
-msgstr "Продължение"
-
-#: pyanaconda/rescue.py:309
-msgid "Read-only mount"
-msgstr "Монтиране само за четене"
-
-#: pyanaconda/rescue.py:310
-msgid "Skip to shell"
-msgstr "Към команден интерпретатор"
-
-#: pyanaconda/rescue.py:311
-msgid "Quit (Reboot)"
-msgstr ""
-
-#: pyanaconda/rescue.py:408
-msgid "Rescue Shell"
-msgstr ""
-
-#: pyanaconda/rescue.py:418
-#, python-format
-msgid "Run %s to unmount the system when you are finished."
-msgstr "Стартирайте %s, за да демонтирате системата, когато завършите."
-
-#: pyanaconda/rescue.py:419
-msgid ""
-"When finished, please exit from the shell and your system will reboot.\n"
-msgstr ""
-
-#: pyanaconda/rescue.py:430
-#, python-format
-msgid ""
-"Your system has been mounted under %(mountpoint)s.\n"
-"\n"
-"If you would like to make the root of your system the root of the active "
-"system, run the command:\n"
-"\n"
-"\tchroot %(mountpoint)s\n"
-"\n"
-msgstr ""
-
-#: pyanaconda/rescue.py:442
-#, fuzzy, python-brace-format
-#| msgid ""
-#| "An error occurred trying to mount some or all of your system.  Some of it "
-#| "may be mounted under %s\n"
-#| "\n"
-msgid ""
-"An error occurred trying to mount some or all of your system: {message}\n"
-"\n"
-"Some of it may be mounted under {path}."
-msgstr ""
-"Възникна грешка при монтирането на няколко или всички системи.  Някоя от тях "
-"може да е монтирана в {}."
-
-#: pyanaconda/rescue.py:454
-#, fuzzy
-#| msgid "You don't have any Linux partitions. %s\n"
-msgid "You don't have any Linux partitions.\n"
-msgstr "Нямате никакви Линукс дялове. {}\n"
-
-#: pyanaconda/rescue.py:460
-msgid "Not mounting the system.\n"
-msgstr ""
-
-#: pyanaconda/rescue.py:474
-#, python-format
-msgid "Please press %s to get a shell"
-msgstr ""
-
-#: pyanaconda/rescue.py:491
-msgid "Root Selection"
-msgstr ""
-
-#: pyanaconda/rescue.py:517
-msgid "The following installations were discovered on your system."
-msgstr ""
 
 #: pyanaconda/ui/tui/tuiobject.py:153
 #, python-format
@@ -893,9 +893,9 @@ msgstr ""
 #: pyanaconda/ui/tui/spokes/user.py:145
 #: pyanaconda/ui/tui/spokes/root_password.py:103
 #: pyanaconda/ui/gui/spokes/user.glade:173
+#: pyanaconda/ui/gui/spokes/root_password.glade:87
 #: pyanaconda/ui/gui/spokes/subscription.glade:181
 #: pyanaconda/ui/gui/spokes/subscription.glade:569
-#: pyanaconda/ui/gui/spokes/root_password.glade:87
 msgid "Password"
 msgstr "Парола"
 
@@ -1772,166 +1772,6 @@ msgctxt "GUI|Yes No Dialog"
 msgid "_Yes"
 msgstr "_Да"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:99
-#: pyanaconda/ui/gui/spokes/custom_storage.glade:87
-msgid "MANUAL PARTITIONING"
-msgstr "РЪЧНО РАЗДЕЛЯНЕ"
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:273
-#, python-format
-msgctxt "GUI|Custom Partitioning"
-msgid "%d _storage device selected"
-msgid_plural "%d _storage devices selected"
-msgstr[0] "%d избрано запаметяващо у_стройство"
-msgstr[1] "%d избрани запаметяващи у_стройства"
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:344
-#, python-format
-msgid "%(items_selected)s of %(items_total)s mount points in %(page_name)s"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:371
-#, python-format
-msgid ""
-"Please select a single mount point to edit properties.\n"
-"\n"
-"You have currently selected:\n"
-"%s"
-msgstr ""
-"Моля, изберете една точка на монтиране, за да редактирате свойства.\n"
-"\n"
-"В момента са избрани:\n"
-"%s"
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:376
-#, python-format
-msgid ""
-"When you create mount points for your %(name)s %(version)s installation, "
-"you'll be able to view their details here."
-msgstr ""
-"Когато създадете точки на монтиране за Вашата %(name)s %(version)s "
-"инсталация, Вие ще можете да видите подробности за тях тук."
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:607
-#: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade:178
-msgid "Device reconfiguration failed."
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:755
-msgid "No disks assigned"
-msgstr "Няма зададени дискове"
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:769
-#, fuzzy
-#| msgctxt "GUI|Custom Partitioning|Devices"
-#| msgid " and %d other"
-#| msgid_plural " and %d others"
-msgctxt "GUI|Custom Partitioning|Devices"
-msgid " and {} other"
-msgid_plural " and {} others"
-msgstr[0] " и %d друг"
-msgstr[1] " и %d други"
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:813
-msgid "The container is encrypted."
-msgstr "Контейнерът е криптиран."
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:842
-msgid ""
-"The space available to this mount point can be changed by modifying the "
-"volume below."
-msgstr ""
-"Пространството, достъпно за тази точка на монтиране, може да бъде променено "
-"чрез промяна на тома по-долу."
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:847
-msgid "This file system may not be resized."
-msgstr "Тази файлова система не може да бъде преоразмерена."
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:940
-#, fuzzy
-#| msgid ""
-#| "Error checking storage configuration.  <a href=\"\">Click for details</a> "
-#| "or press Done again to continue."
-msgid ""
-"Error checking storage configuration. <a href=\"\">Click for details</a> or "
-"press Done again to continue."
-msgstr ""
-"Грешка при проверка конфигурацията на запаметяващите устройства.  <a href="
-"\"\">Цъкнете за подробности</a> или отново цъкнете Готово, за да продължим."
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:944
-#, fuzzy
-#| msgid ""
-#| "Warning checking storage configuration.  <a href=\"\">Click for details</"
-#| "a> or press Done again to continue."
-msgid ""
-"Warning checking storage configuration. <a href=\"\">Click for details</a> "
-"or press Done again to continue."
-msgstr ""
-"Предупреждения при проверка конфигурацията на устройствата за съхранение на "
-"данни.  <a href=\"\">Цъкнете за подробности</a> или отново цъкнете Готово, "
-"за да продължим."
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1026
-msgid "Failed to add new device."
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1084
-#, fuzzy
-#| msgid "Device discovery failed."
-msgid "Device removal request failed."
-msgstr "Откриването на устройства не успя."
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1221
-msgid "No disks selected. Keeping previous disk set."
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1300
-#, fuzzy
-#| msgid "(%s free)"
-msgid "({} free)"
-msgstr "(%s своб.)"
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1482
-#, fuzzy
-#| msgid "Automatic partitioning selected"
-msgid "Automatic partitioning failed."
-msgstr "Избрано е автоматично разделяне"
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1772
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1776
-#: pyanaconda/ui/gui/spokes/installation_source.py:98
-msgid " <a href=\"\">Click for details.</a>"
-msgstr " <a href=\"\">Цъкнете за подробности.</a>"
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1789
-#: pyanaconda/ui/gui/spokes/blivet_gui.py:320
-msgid ""
-"Continuing with this action will reset all your partitioning selections to "
-"their current on-disk state."
-msgstr ""
-"Продължаването на това действие ще отхвърли всички Ваши промени в "
-"разделянето и състоянието ще се върне към това, както е било на диска."
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1800
-#: pyanaconda/ui/gui/spokes/blivet_gui.py:328
-msgctxt "GUI|Custom Partitioning|Reset Dialog"
-msgid "_Reset selections"
-msgstr "Отхвъ_рли промените в избора"
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1802
-#: pyanaconda/ui/gui/spokes/blivet_gui.py:329
-msgctxt "GUI|Custom Partitioning|Reset Dialog"
-msgid "_Preserve current selections"
-msgstr "За_пази текущо избраните"
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1884
-#, fuzzy
-#| msgid "%s cannot be on an encrypted block device."
-msgid "Failed to unlock encrypted block device."
-msgstr "%s не може да е върху криптирано блоково устройство."
-
 #: pyanaconda/ui/gui/spokes/welcome.py:255
 #, python-format
 msgid "WELCOME TO %(name)s %(version)s."
@@ -2425,12 +2265,12 @@ msgid "Enterprise"
 msgstr "Enterprise"
 
 #: pyanaconda/ui/gui/spokes/network.py:1101 widgets/src/SpokeSelector.c:81
+#: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:543
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:152
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:594
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:928
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1248
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1538
-#: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:543
 msgid "None"
 msgstr "Нищо"
 
@@ -2475,6 +2315,12 @@ msgstr "Превключването на подредбата не е конф�
 #: pyanaconda/ui/gui/spokes/installation_source.py:71
 msgid "Setting up installation source..."
 msgstr "Задаване източник за инсталирането..."
+
+#: pyanaconda/ui/gui/spokes/installation_source.py:98
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1772
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1776
+msgid " <a href=\"\">Click for details.</a>"
+msgstr " <a href=\"\">Цъкнете за подробности.</a>"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:110
 msgid "Invalid proxy URL"
@@ -2689,6 +2535,160 @@ msgstr "Ако искате да ползвате NTP, настройте пър
 msgid "You have no working NTP server configured"
 msgstr "Нямате конфигурирани работещи NTP сървъри"
 
+#: pyanaconda/ui/gui/spokes/custom_storage.py:99
+#: pyanaconda/ui/gui/spokes/custom_storage.glade:87
+msgid "MANUAL PARTITIONING"
+msgstr "РЪЧНО РАЗДЕЛЯНЕ"
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:273
+#, python-format
+msgctxt "GUI|Custom Partitioning"
+msgid "%d _storage device selected"
+msgid_plural "%d _storage devices selected"
+msgstr[0] "%d избрано запаметяващо у_стройство"
+msgstr[1] "%d избрани запаметяващи у_стройства"
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:344
+#, python-format
+msgid "%(items_selected)s of %(items_total)s mount points in %(page_name)s"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:371
+#, python-format
+msgid ""
+"Please select a single mount point to edit properties.\n"
+"\n"
+"You have currently selected:\n"
+"%s"
+msgstr ""
+"Моля, изберете една точка на монтиране, за да редактирате свойства.\n"
+"\n"
+"В момента са избрани:\n"
+"%s"
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:376
+#, python-format
+msgid ""
+"When you create mount points for your %(name)s %(version)s installation, "
+"you'll be able to view their details here."
+msgstr ""
+"Когато създадете точки на монтиране за Вашата %(name)s %(version)s "
+"инсталация, Вие ще можете да видите подробности за тях тук."
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:607
+#: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade:178
+msgid "Device reconfiguration failed."
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:755
+msgid "No disks assigned"
+msgstr "Няма зададени дискове"
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:769
+#, fuzzy
+#| msgctxt "GUI|Custom Partitioning|Devices"
+#| msgid " and %d other"
+#| msgid_plural " and %d others"
+msgctxt "GUI|Custom Partitioning|Devices"
+msgid " and {} other"
+msgid_plural " and {} others"
+msgstr[0] " и %d друг"
+msgstr[1] " и %d други"
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:813
+msgid "The container is encrypted."
+msgstr "Контейнерът е криптиран."
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:842
+msgid ""
+"The space available to this mount point can be changed by modifying the "
+"volume below."
+msgstr ""
+"Пространството, достъпно за тази точка на монтиране, може да бъде променено "
+"чрез промяна на тома по-долу."
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:847
+msgid "This file system may not be resized."
+msgstr "Тази файлова система не може да бъде преоразмерена."
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:940
+#, fuzzy
+#| msgid ""
+#| "Error checking storage configuration.  <a href=\"\">Click for details</a> "
+#| "or press Done again to continue."
+msgid ""
+"Error checking storage configuration. <a href=\"\">Click for details</a> or "
+"press Done again to continue."
+msgstr ""
+"Грешка при проверка конфигурацията на запаметяващите устройства.  <a href="
+"\"\">Цъкнете за подробности</a> или отново цъкнете Готово, за да продължим."
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:944
+#, fuzzy
+#| msgid ""
+#| "Warning checking storage configuration.  <a href=\"\">Click for details</"
+#| "a> or press Done again to continue."
+msgid ""
+"Warning checking storage configuration. <a href=\"\">Click for details</a> "
+"or press Done again to continue."
+msgstr ""
+"Предупреждения при проверка конфигурацията на устройствата за съхранение на "
+"данни.  <a href=\"\">Цъкнете за подробности</a> или отново цъкнете Готово, "
+"за да продължим."
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1026
+msgid "Failed to add new device."
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1084
+#, fuzzy
+#| msgid "Device discovery failed."
+msgid "Device removal request failed."
+msgstr "Откриването на устройства не успя."
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1221
+msgid "No disks selected. Keeping previous disk set."
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1300
+#, fuzzy
+#| msgid "(%s free)"
+msgid "({} free)"
+msgstr "(%s своб.)"
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1482
+#, fuzzy
+#| msgid "Automatic partitioning selected"
+msgid "Automatic partitioning failed."
+msgstr "Избрано е автоматично разделяне"
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1789
+#: pyanaconda/ui/gui/spokes/blivet_gui.py:320
+msgid ""
+"Continuing with this action will reset all your partitioning selections to "
+"their current on-disk state."
+msgstr ""
+"Продължаването на това действие ще отхвърли всички Ваши промени в "
+"разделянето и състоянието ще се върне към това, както е било на диска."
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1800
+#: pyanaconda/ui/gui/spokes/blivet_gui.py:328
+msgctxt "GUI|Custom Partitioning|Reset Dialog"
+msgid "_Reset selections"
+msgstr "Отхвъ_рли промените в избора"
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1802
+#: pyanaconda/ui/gui/spokes/blivet_gui.py:329
+msgctxt "GUI|Custom Partitioning|Reset Dialog"
+msgid "_Preserve current selections"
+msgstr "За_пази текущо избраните"
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1884
+#, fuzzy
+#| msgid "%s cannot be on an encrypted block device."
+msgid "Failed to unlock encrypted block device."
+msgstr "%s не може да е върху криптирано блоково устройство."
+
 #: pyanaconda/ui/gui/spokes/blivet_gui.py:103
 msgctxt "GUI|Spoke"
 msgid "_Blivet-GUI Partitioning"
@@ -2726,6 +2726,88 @@ msgid "{} _storage device selected"
 msgid_plural "{} _storage devices selected"
 msgstr[0] "%d избрано запаметяващо у_стройство"
 msgstr[1] "%d избрани запаметяващи у_стройства"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:53
+msgid "Preserve"
+msgstr "Запазване"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:54
+msgid "Shrink"
+msgstr "Смаляване"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:55
+msgid "Delete"
+msgstr "Изтриване"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:96
+#, python-format
+msgid "Installation requires a total of <b>%s</b> for system data."
+msgstr "Инсталирането изисква общо <b>%s</b> за системни данни."
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:128
+msgid "This device contains the installation source."
+msgstr "Това устройство съдържа източника за инсталиране."
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:148
+msgid ""
+"You can remove existing file systems you no longer need to free up space for "
+"this installation.  Removing a file system will permanently delete all of "
+"the data it contains."
+msgstr ""
+"Може да премахнете съществуващи файлови системи, от които вече не се "
+"нуждаете, за да освободите пространство за тази инсталация.  Премахването на "
+"файлова система ще изтрие завинаги всички данни, които тя съдържа."
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:155
+msgid ""
+"There is also free space available in pre-existing file systems.  While it's "
+"risky and we recommend you back up your data first, you can recover that "
+"free disk space and make it available for this installation below."
+msgstr ""
+"Има и свободно пространство съдържащо се в предишни файлови системи.  Понеже "
+"все пак е рисковано, ние Ви препоръчваме първо да архивирате данните си, "
+"след което да възстановите това свободно пространство и да го направите "
+"достъпно за тази инсталация по-долу."
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:236
+#, python-format
+msgid "%(freeSize)s of %(devSize)s"
+msgstr "%(freeSize)s от %(devSize)s"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:246
+msgid "Not resizeable"
+msgstr "С непроменяема големина"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:281
+msgid "Free space"
+msgstr "Свободно пространство"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:306
+#, python-format
+msgid "<b>%(count)s disk; %(size)s reclaimable space</b> (in file systems)"
+msgid_plural ""
+"<b>%(count)s disks; %(size)s reclaimable space</b> (in file systems)"
+msgstr[0] ""
+"<b>%(count)s диск; %(size)s възстановим обем</b> (във файлови системи)"
+msgstr[1] ""
+"<b>%(count)s диска; %(size)s възстановим обем</b> (във файлови системи)"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:317
+#, python-format
+msgid "Total selected space to reclaim: <b>%s</b>"
+msgstr "Общо избрано пространство за възстановяване: <b>%s</b>"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:546
+#: pyanaconda/ui/gui/spokes/lib/resize.py:551
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:267
+msgctxt "GUI|Reclaim Dialog"
+msgid "Delete _all"
+msgstr "Изтрий _всички"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:548
+msgctxt "GUI|Reclaim Dialog"
+msgid "Preserve _all"
+msgstr "Запази _всички"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:47
 #, python-format
@@ -2849,87 +2931,16 @@ msgstr "Зададеното име %s вече се ползва."
 msgid "No disks selected."
 msgstr "Няма избрани дискове."
 
-#: pyanaconda/ui/gui/spokes/lib/resize.py:53
-msgid "Preserve"
-msgstr "Запазване"
+#: pyanaconda/ui/gui/spokes/lib/cart.py:193
+msgctxt "GUI|Selected Disks Dialog"
+msgid "_Do not install boot loader"
+msgstr "_Не инсталирай програма за първонач. зареждане"
 
-#: pyanaconda/ui/gui/spokes/lib/resize.py:54
-msgid "Shrink"
-msgstr "Смаляване"
-
-#: pyanaconda/ui/gui/spokes/lib/resize.py:55
-msgid "Delete"
-msgstr "Изтриване"
-
-#: pyanaconda/ui/gui/spokes/lib/resize.py:96
-#, python-format
-msgid "Installation requires a total of <b>%s</b> for system data."
-msgstr "Инсталирането изисква общо <b>%s</b> за системни данни."
-
-#: pyanaconda/ui/gui/spokes/lib/resize.py:128
-msgid "This device contains the installation source."
-msgstr "Това устройство съдържа източника за инсталиране."
-
-#: pyanaconda/ui/gui/spokes/lib/resize.py:148
-msgid ""
-"You can remove existing file systems you no longer need to free up space for "
-"this installation.  Removing a file system will permanently delete all of "
-"the data it contains."
-msgstr ""
-"Може да премахнете съществуващи файлови системи, от които вече не се "
-"нуждаете, за да освободите пространство за тази инсталация.  Премахването на "
-"файлова система ще изтрие завинаги всички данни, които тя съдържа."
-
-#: pyanaconda/ui/gui/spokes/lib/resize.py:155
-msgid ""
-"There is also free space available in pre-existing file systems.  While it's "
-"risky and we recommend you back up your data first, you can recover that "
-"free disk space and make it available for this installation below."
-msgstr ""
-"Има и свободно пространство съдържащо се в предишни файлови системи.  Понеже "
-"все пак е рисковано, ние Ви препоръчваме първо да архивирате данните си, "
-"след което да възстановите това свободно пространство и да го направите "
-"достъпно за тази инсталация по-долу."
-
-#: pyanaconda/ui/gui/spokes/lib/resize.py:236
-#, python-format
-msgid "%(freeSize)s of %(devSize)s"
-msgstr "%(freeSize)s от %(devSize)s"
-
-#: pyanaconda/ui/gui/spokes/lib/resize.py:246
-msgid "Not resizeable"
-msgstr "С непроменяема големина"
-
-#: pyanaconda/ui/gui/spokes/lib/resize.py:281
-msgid "Free space"
-msgstr "Свободно пространство"
-
-#: pyanaconda/ui/gui/spokes/lib/resize.py:306
-#, python-format
-msgid "<b>%(count)s disk; %(size)s reclaimable space</b> (in file systems)"
-msgid_plural ""
-"<b>%(count)s disks; %(size)s reclaimable space</b> (in file systems)"
-msgstr[0] ""
-"<b>%(count)s диск; %(size)s възстановим обем</b> (във файлови системи)"
-msgstr[1] ""
-"<b>%(count)s диска; %(size)s възстановим обем</b> (във файлови системи)"
-
-#: pyanaconda/ui/gui/spokes/lib/resize.py:317
-#, python-format
-msgid "Total selected space to reclaim: <b>%s</b>"
-msgstr "Общо избрано пространство за възстановяване: <b>%s</b>"
-
-#: pyanaconda/ui/gui/spokes/lib/resize.py:546
-#: pyanaconda/ui/gui/spokes/lib/resize.py:551
-#: pyanaconda/ui/gui/spokes/lib/resize.glade:267
-msgctxt "GUI|Reclaim Dialog"
-msgid "Delete _all"
-msgstr "Изтрий _всички"
-
-#: pyanaconda/ui/gui/spokes/lib/resize.py:548
-msgctxt "GUI|Reclaim Dialog"
-msgid "Preserve _all"
-msgstr "Запази _всички"
+#: pyanaconda/ui/gui/spokes/lib/cart.py:198
+#: pyanaconda/ui/gui/spokes/lib/cart.glade:200
+msgctxt "GUI|Selected Disks Dialog"
+msgid "_Set as Boot Device"
+msgstr "Задаване на зареждащо у_стройство"
 
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:444
 msgid "DATA"
@@ -2975,17 +2986,6 @@ msgstr "_Новите точки на монтиране ще използват
 msgctxt "GUI|Custom Partitioning|Autopart Page"
 msgid "_Encrypt automatically created mount points by default:"
 msgstr ""
-
-#: pyanaconda/ui/gui/spokes/lib/cart.py:193
-msgctxt "GUI|Selected Disks Dialog"
-msgid "_Do not install boot loader"
-msgstr "_Не инсталирай програма за първонач. зареждане"
-
-#: pyanaconda/ui/gui/spokes/lib/cart.py:198
-#: pyanaconda/ui/gui/spokes/lib/cart.glade:200
-msgctxt "GUI|Selected Disks Dialog"
-msgid "_Set as Boot Device"
-msgstr "Задаване на зареждащо у_стройство"
 
 #: pyanaconda/ui/gui/spokes/lib/subscription.py:66
 msgid "Other ({})"
@@ -3965,6 +3965,20 @@ msgstr ""
 "\n"
 "%s"
 
+#: pyanaconda/modules/storage/devicetree/root.py:342
+msgid "Unknown Linux"
+msgstr ""
+
+#: pyanaconda/modules/storage/devicetree/root.py:345
+#, python-brace-format
+msgid "{product} {version} for {arch}"
+msgstr ""
+
+#: pyanaconda/modules/storage/devicetree/root.py:347
+#, python-brace-format
+msgid "{product} Linux {version} for {arch}"
+msgstr ""
+
 #: pyanaconda/modules/storage/devicetree/fsset.py:390
 #, fuzzy, python-brace-format
 #| msgid ""
@@ -3979,20 +3993,6 @@ msgstr ""
 "Във Вашия /etc/fstab има ред, съдържащ невалиден или некоректен тип файлова "
 "система:\n"
 "\n"
-
-#: pyanaconda/modules/storage/devicetree/root.py:342
-msgid "Unknown Linux"
-msgstr ""
-
-#: pyanaconda/modules/storage/devicetree/root.py:345
-#, python-brace-format
-msgid "{product} {version} for {arch}"
-msgstr ""
-
-#: pyanaconda/modules/storage/devicetree/root.py:347
-#, python-brace-format
-msgid "{product} Linux {version} for {arch}"
-msgstr ""
 
 #: pyanaconda/modules/storage/checker/utils.py:54
 #, python-format
@@ -4201,6 +4201,18 @@ msgstr ""
 "boot loader stage1 от зареждащата програма ще бъде инсталирана на единично "
 "устройство."
 
+#: pyanaconda/modules/storage/bootloader/execution.py:187
+msgid "No match found for given boot drive \"{}\"."
+msgstr ""
+
+#: pyanaconda/modules/storage/bootloader/execution.py:191
+msgid "More than one match found for given boot drive \"{}\"."
+msgstr ""
+
+#: pyanaconda/modules/storage/bootloader/execution.py:195
+msgid "Requested boot drive \"{}\" doesn't exist or cannot be used."
+msgstr ""
+
 #: pyanaconda/modules/storage/bootloader/bootloader.py:171
 msgid "GRUB2 does not support installation to a partition."
 msgstr "GRUB2 не поддържа инсталиране в дял."
@@ -4304,18 +4316,6 @@ msgstr ""
 #, python-format
 msgid "%(desc)s cannot be of type %(type)s"
 msgstr "%(desc)s не може да е от тип %(type)s"
-
-#: pyanaconda/modules/storage/bootloader/execution.py:187
-msgid "No match found for given boot drive \"{}\"."
-msgstr ""
-
-#: pyanaconda/modules/storage/bootloader/execution.py:191
-msgid "More than one match found for given boot drive \"{}\"."
-msgstr ""
-
-#: pyanaconda/modules/storage/bootloader/execution.py:195
-msgid "Requested boot drive \"{}\" doesn't exist or cannot be used."
-msgstr ""
 
 #: pyanaconda/modules/payloads/source/repo_files/repo_files.py:54
 #, fuzzy
@@ -4469,6 +4469,18 @@ msgid ""
 msgstr ""
 "PReP зареждащият дял е необходим като част от\n"
 "зареждащата конфигурация на някои PPC платформи."
+
+#: pyanaconda/core/payload.py:131
+msgid "No host url"
+msgstr "Няма url на хост"
+
+#: pyanaconda/core/payload.py:152
+msgid "malformed URL, cannot parse it."
+msgstr "повреден URL, разборът неуспешен."
+
+#: pyanaconda/core/payload.py:168
+msgid "URL has no host component"
+msgstr "URL-ът не съдържа част за хост"
 
 #: pyanaconda/core/constants.py:89
 msgid "Start VNC"
@@ -4653,18 +4665,6 @@ msgstr "Сваляне метаданни на групи..."
 #: pyanaconda/core/constants.py:306
 msgid "Anaconda Installer"
 msgstr "Инсталатор Anaconda"
-
-#: pyanaconda/core/payload.py:131
-msgid "No host url"
-msgstr "Няма url на хост"
-
-#: pyanaconda/core/payload.py:152
-msgid "malformed URL, cannot parse it."
-msgstr "повреден URL, разборът неуспешен."
-
-#: pyanaconda/core/payload.py:168
-msgid "URL has no host component"
-msgstr "URL-ът не съдържа част за хост"
 
 #: pyanaconda/core/kickstart/addon.py:128
 msgid "Missing name of the %addon section."
@@ -4870,134 +4870,6 @@ msgstr "Направи този потребител ад_министратор
 msgctxt "GUI|User"
 msgid "_Advanced..."
 msgstr "Р_азширени..."
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:8
-msgid "CONNECT TO RED HAT"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:83
-#: pyanaconda/ui/gui/spokes/lib/network_secret_agent.glade:8
-msgid "Authentication"
-msgstr "Удостоверяване"
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:100
-msgctxt "GUI|Subscription|Authentication|Account"
-msgid "_Account"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:117
-msgctxt "GUI|Subscription|Authetication|Activation Key"
-msgid "Activation _Key"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:227
-msgid "Organization"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:239
-msgid "Activation Key"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:263
-msgid "key1,key2,..."
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:284
-msgid "Purpose"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:310
-msgid "Usage"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:322
-msgid "Role"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:334
-msgid "SLA"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:384
-msgctxt "GUI|Subscription|Set System Purpose"
-msgid "Set System Purpose"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:401
-#: pyanaconda/ui/gui/spokes/subscription.glade:852
-msgid "Insights"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:414
-msgctxt "GUI|Subscription|Red Hat Insights"
-msgid "Connect to Red Hat _Insights"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:418
-msgid ""
-"Red Hat Insights aims to increase your IT efficiency and speed across hybrid "
-"infrastructures by identifying and prioritizing risks, managing "
-"vulnerabilities, and compliance, and analyzing costs. For more information, "
-"visit the Red Hat Insights information page."
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:456
-msgid "Custom base URL"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:504
-msgid "Custom server URL"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:518
-msgid "Use HTTP proxy"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:545
-msgid "Location"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:581
-msgid "hostname:port"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:650
-msgid "Options"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:673
-msgid "The system is currently not registered."
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:686
-msgctxt "GUI|Subscription|Register"
-msgid "_Register"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:732
-msgid "The system has been properly subscribed"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:746
-msgctxt "GUI|Subscription|Unregister"
-msgid "_Unregister"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:782
-msgid "Method"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:799
-msgid "System Purpose"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:914
-msgid "No subscriptions have been attached to the system"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:989
-msgid "SYSTEM PURPOSE"
-msgstr ""
 
 #: pyanaconda/ui/gui/spokes/storage.glade:27
 msgctxt "GUI|Storage|Need Space Dialog"
@@ -5775,13 +5647,13 @@ msgid "Enabled"
 msgstr "Разрешен"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:1040
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:161
+#: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:237
+#: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:740
+#: pyanaconda/ui/gui/spokes/lib/cart.glade:150
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:386
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1438
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1761
-#: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:237
-#: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:740
-#: pyanaconda/ui/gui/spokes/lib/resize.glade:161
-#: pyanaconda/ui/gui/spokes/lib/cart.glade:150
 msgid "Name"
 msgstr "Име"
 
@@ -6184,272 +6056,384 @@ msgctxt "GUI|Custom Partitioning"
 msgid "_Reset All"
 msgstr "Анули_рай всичко"
 
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:136
-msgctxt "GUI|Installation Destination|Filter|Search"
-msgid "Search _By:"
-msgstr "Тъ_рсене по:"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:153
-msgid "Port / Target / LUN #"
-msgstr "Port / Target / LUN #"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:154
-msgid "Target WWID"
-msgstr "Целеви WWID"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:193
-msgctxt "GUI|Installation Destination|Filter|Search|Port Target LUN"
-msgid "_Port:"
-msgstr "_Порт:"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:219
-msgctxt "GUI|Installation Destination|Filter|Search|Port Target LUN"
-msgid "_Target:"
-msgstr "_Цел:"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:247
-msgctxt "GUI|Installation Destination|Filter|Search|Port Target LUN"
-msgid "_LUN:"
-msgstr "_LUN:"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:289
-msgctxt "GUI|Installation Destination|Filter|Search|WWID"
-msgid "_WWID:"
-msgstr "_WWID:"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:339
-msgctxt "GUI|Installation Destination|Filter|Search"
-msgid "Search Res_ults:"
+#: pyanaconda/ui/gui/spokes/subscription.glade:8
+msgid "CONNECT TO RED HAT"
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:400
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:597
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:800
-msgid "WWID"
-msgstr "WWID"
+#: pyanaconda/ui/gui/spokes/subscription.glade:83
+#: pyanaconda/ui/gui/spokes/lib/network_secret_agent.glade:8
+msgid "Authentication"
+msgstr "Удостоверяване"
 
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:414
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:814
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1148
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1466
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1789
-#: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:250
-#: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:753
-#: pyanaconda/ui/gui/spokes/lib/cart.glade:162
-msgid "Capacity"
-msgstr "Капацитет"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:428
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:596
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:842
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:930
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1176
-msgid "Interconnect"
-msgstr "Свързване"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:442
-msgid "Model"
-msgstr "Модел"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:456
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1541
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1817
-msgid "LUN"
-msgstr "LUN"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:470
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1831
-msgid "Port"
-msgstr "Порт"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:484
-msgid "Target"
-msgstr "Цел"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:498
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:595
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:828
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:929
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1162
-msgid "Vendor"
-msgstr "Доставчик"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:512
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1249
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1424
-msgid "Namespace"
+#: pyanaconda/ui/gui/spokes/subscription.glade:100
+msgctxt "GUI|Subscription|Authentication|Account"
+msgid "_Account"
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:526
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1250
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1452
-msgid "Mode"
+#: pyanaconda/ui/gui/spokes/subscription.glade:117
+msgctxt "GUI|Subscription|Authetication|Activation Key"
+msgid "Activation _Key"
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:553
-msgctxt "GUI|Installation Destination|Filter"
-msgid "Searc_h"
-msgstr "_Търси"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:578
-msgctxt "GUI|Installation Destination|Filter|Multipath"
-msgid "Filter _By:"
-msgstr "Филтрирай _по:"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:635
-msgctxt "GUI|Installation Destination|Filter|Multipath|Vendor"
-msgid "Show Only _Devices From:"
-msgstr "Покажи само _устройства от:"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:676
-msgctxt "GUI|Installation Destination|Filter|Multipath|Interconnect"
-msgid "Show Only _Devices With:"
-msgstr "Покажи само _устройства с:"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:717
-msgctxt "GUI|Installation Destination|Filter|Multipath|WWID"
-msgid "Show Only _Devices Containing:"
-msgstr "Покажи само _устройства, съдържащи:"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:856
-msgid "Paths"
-msgstr "Пътища"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:886
-msgctxt "GUI|Installation Destination|Filter"
-msgid "_Multipath Devices"
+#: pyanaconda/ui/gui/spokes/subscription.glade:227
+msgid "Organization"
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:912
-msgctxt "GUI|Installation Destination|Filter|Other"
-msgid "Filter _By:"
-msgstr "Филтрирай _по:"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:931
-msgid "ID"
-msgstr "ID"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:969
-msgctxt "GUI|Installation Destination|Filter|Other|Vendor"
-msgid "Show Only _Devices From:"
-msgstr "Покажи само _устройства от:"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1010
-msgctxt "GUI|Installation Destination|Filter|Other|Interconnect"
-msgid "Show Only _Devices With:"
-msgstr "Покажи само _устройствата с:"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1051
-msgctxt "GUI|Installation Destination|Filter|Other|ID"
-msgid "Show Only _Devices Containing:"
-msgstr "Покажи само _устройства, съдържащи:"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1134
-msgid "Identifier"
-msgstr "Идентификатор"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1206
-msgctxt "GUI|Installation Destination|Filter"
-msgid "_Other SAN Devices"
-msgstr "Други SAN устр_ойства"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1232
-msgctxt "GUI|Installation Destination|Filter|NVDIMM Devices"
-msgid "Filter B_y:"
+#: pyanaconda/ui/gui/spokes/subscription.glade:239
+msgid "Activation Key"
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1288
-msgctxt "GUI|Installation Destination|Filter|NVDIMM Devices|Mode"
-msgid "Show Only Devices in _Mode:"
+#: pyanaconda/ui/gui/spokes/subscription.glade:263
+msgid "key1,key2,..."
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1305
-msgid "Sector"
+#: pyanaconda/ui/gui/spokes/subscription.glade:284
+msgid "Purpose"
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1306
-msgid "Memory"
-msgstr "Памет:"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1333
-msgctxt "GUI|Installation Destination|Filter|NVDIMM Devices|Namespace"
-msgid "_Namespace:"
+#: pyanaconda/ui/gui/spokes/subscription.glade:310
+msgid "Usage"
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1496
-msgctxt "GUI|Installation Destination|Filter"
-msgid "_NVDIMM Devices"
+#: pyanaconda/ui/gui/spokes/subscription.glade:322
+msgid "Role"
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1522
-msgctxt "GUI|Installation Destination|Filter|zSeries"
-msgid "Filter B_y:"
-msgstr "Фил_трирай по:"
+#: pyanaconda/ui/gui/spokes/subscription.glade:334
+msgid "SLA"
+msgstr ""
 
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1539
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1747
-msgid "CCW"
-msgstr "CCW"
+#: pyanaconda/ui/gui/spokes/subscription.glade:384
+msgctxt "GUI|Subscription|Set System Purpose"
+msgid "Set System Purpose"
+msgstr ""
 
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1540
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1803
-msgid "WWPN"
-msgstr "WWPN"
+#: pyanaconda/ui/gui/spokes/subscription.glade:401
+#: pyanaconda/ui/gui/spokes/subscription.glade:852
+msgid "Insights"
+msgstr ""
 
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1578
-msgctxt "GUI|Installation Destination|Filter|zSeries|CCW"
-msgid "_CCW:"
-msgstr "_CCW:"
+#: pyanaconda/ui/gui/spokes/subscription.glade:414
+msgctxt "GUI|Subscription|Red Hat Insights"
+msgid "Connect to Red Hat _Insights"
+msgstr ""
 
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1621
-msgctxt "GUI|Installation Destination|Filter|zSeries|WWPN"
-msgid "_WWPN:"
-msgstr "_WWPN:"
+#: pyanaconda/ui/gui/spokes/subscription.glade:418
+msgid ""
+"Red Hat Insights aims to increase your IT efficiency and speed across hybrid "
+"infrastructures by identifying and prioritizing risks, managing "
+"vulnerabilities, and compliance, and analyzing costs. For more information, "
+"visit the Red Hat Insights information page."
+msgstr ""
 
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1664
-msgctxt "GUI|Installation Destination|Filter|zSeries|LUN"
-msgid "_LUN:"
-msgstr "_LUN:"
+#: pyanaconda/ui/gui/spokes/subscription.glade:456
+msgid "Custom base URL"
+msgstr ""
 
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1775
+#: pyanaconda/ui/gui/spokes/subscription.glade:504
+msgid "Custom server URL"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/subscription.glade:518
+msgid "Use HTTP proxy"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/subscription.glade:545
+msgid "Location"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/subscription.glade:581
+msgid "hostname:port"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/subscription.glade:650
+msgid "Options"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/subscription.glade:673
+msgid "The system is currently not registered."
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/subscription.glade:686
+msgctxt "GUI|Subscription|Register"
+msgid "_Register"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/subscription.glade:732
+msgid "The system has been properly subscribed"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/subscription.glade:746
+msgctxt "GUI|Subscription|Unregister"
+msgid "_Unregister"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/subscription.glade:782
+msgid "Method"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/subscription.glade:799
+msgid "System Purpose"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/subscription.glade:914
+msgid "No subscriptions have been attached to the system"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/subscription.glade:989
+msgid "SYSTEM PURPOSE"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:23
+msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
+msgid "_Quit"
+msgstr "_Изход"
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:37
+msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
+msgid "_Continue"
+msgstr "_Продължение"
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:122
+msgid "Unsupported Hardware"
+msgstr "Неподдържан хардуер"
+
+#: pyanaconda/ui/gui/spokes/lib/summary.glade:25
+#: pyanaconda/ui/gui/spokes/lib/summary.glade:89
+msgid "SUMMARY OF CHANGES"
+msgstr "ОБОБЩЕНИЕ НА ПРОМЕНИТЕ"
+
+#: pyanaconda/ui/gui/spokes/lib/summary.glade:42
+msgctxt "GUI|Summary Dialog"
+msgid "_Cancel & Return to Custom Partitioning"
+msgstr "_Отказ и връщане в разделяне на диска"
+
+#: pyanaconda/ui/gui/spokes/lib/summary.glade:57
+msgctxt "GUI|Summary Dialog"
+msgid "_Accept Changes"
+msgstr "_Приемам промените"
+
+#: pyanaconda/ui/gui/spokes/lib/summary.glade:105
+msgid ""
+"Your customizations will result in the following changes taking effect after "
+"you return to the main menu and begin installation:"
+msgstr ""
+"Вашите настройки ще предизвикат следните промени, след като се върнете в "
+"основното меню и започнете инсталирането:"
+
+#: pyanaconda/ui/gui/spokes/lib/summary.glade:133
+msgid "Order"
+msgstr "Ред"
+
+#: pyanaconda/ui/gui/spokes/lib/summary.glade:144
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:194
+msgid "Action"
+msgstr "Действие"
+
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:155
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1775
 msgid "Type"
 msgstr "Тип"
 
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1861
-msgctxt "GUI|Installation Destination|Filter"
-msgid "_zSeries Devices"
-msgstr "_zSeries устройства"
+#: pyanaconda/ui/gui/spokes/lib/summary.glade:166
+msgid "Device"
+msgstr "Устройство"
 
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1884
-msgctxt "GUI|Installation Destination|Filter"
-msgid "_Add zFCP LUN..."
-msgstr "Доб_авяне на zFCP LUN..."
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:53
+msgctxt "GUI|Reclaim Dialog"
+msgid "_Cancel"
+msgstr "_Отказване"
 
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1899
-msgctxt "GUI|Installation Destination|Filter"
-msgid "Add EC_KD DASD..."
-msgstr "Добавяне на EC_KD DASD..."
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:68
+msgctxt "GUI|Reclaim Dialog"
+msgid "_Reclaim space"
+msgstr "_Възстанови пространството"
 
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1914
-msgctxt "GUI|Installation Destination|Filter"
-msgid "Add _iSCSI Target..."
-msgstr "Добавяне на _iSCSI цел..."
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:101
+msgid "RECLAIM DISK SPACE"
+msgstr "ВЪЗСТАНОВЯВАНЕ НА ДИСКОВ ОБЕМ"
 
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1929
-msgctxt "GUI|Installation Destination|Filter"
-msgid "Add FCo_E SAN..."
-msgstr "Добавяне на FCo_E SAN..."
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:118
+msgid "Description goes here."
+msgstr "Описанието ще е тук."
 
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1944
-msgctxt "GUI|Installation Destination|Filter"
-msgid "Reconfigure _NVDIMM..."
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:172
+msgid "File System"
+msgstr "Файлова система"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:183
+msgid "Reclaimable Space"
+msgstr "Възстановимо пространство"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:219
+msgctxt "GUI|Reclaim Dialog"
+msgid "_Preserve"
+msgstr "_Запази"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:235
+msgctxt "GUI|Reclaim Dialog"
+msgid "_Delete"
+msgstr "Изтри_й"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:251
+msgctxt "GUI|Reclaim Dialog"
+msgid "_Shrink"
+msgstr "_Смали"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:365
+msgid "Reclaim"
+msgstr "Възстанови"
+
+#: pyanaconda/ui/gui/spokes/lib/refresh.glade:8
+#: pyanaconda/ui/gui/spokes/lib/refresh.glade:71
+msgid "RESCAN DISKS"
+msgstr "ПОВТОРНО СКАНИРАНЕ НА ДИСКОВЕ"
+
+#: pyanaconda/ui/gui/spokes/lib/refresh.glade:25
+msgctxt "GUI|Refresh Dialog|Rescan"
+msgid "_Cancel"
+msgstr "_Отказване"
+
+#: pyanaconda/ui/gui/spokes/lib/refresh.glade:39
+msgctxt "GUI|Refresh Dialog|Rescan"
+msgid "_OK"
+msgstr "_Добре"
+
+#: pyanaconda/ui/gui/spokes/lib/refresh.glade:87
+msgid ""
+"You can remove or insert additional disks at this time and press 'Rescan "
+"Disks' below for the changes to take effect."
+msgstr ""
+"Вие можете да премахнете или добавите допълнителни дискове сега и да цъкнете "
+"'Сканирай повторно' по-долу за да се приложат промените."
+
+#: pyanaconda/ui/gui/spokes/lib/refresh.glade:118
+msgid ""
+"<b>Warning:</b> All storage changes made using the installer will be lost "
+"when you press 'Rescan Disks'."
+msgstr ""
+"<b>Внимание:</b> Всички storage промени, направени чрез инсталатора ще се "
+"изгубят при натискането на 'Сканирай повторно'."
+
+#: pyanaconda/ui/gui/spokes/lib/refresh.glade:143
+msgctxt "GUI|Refresh Dialog|Rescan"
+msgid "_Rescan Disks"
+msgstr "Скани_рай отново"
+
+#: pyanaconda/ui/gui/spokes/lib/refresh.glade:176
+#: pyanaconda/ui/gui/spokes/lib/refresh.glade:212
+msgid "Scanning disks.  This may take a moment..."
+msgstr "Сканиране на дисковете. Може да отнеме време..."
+
+#: pyanaconda/ui/gui/spokes/lib/refresh.glade:223
+msgid ""
+"You may <a href=\"\">go back to the main menu</a> to complete other\n"
+"installation options while this scan completes."
+msgstr ""
+"Можете да се <a href=\"\">върнете в главното меню</a> и да довършите\n"
+"други инсталационни задачи, докато това сканиране завърши."
+
+#: pyanaconda/ui/gui/spokes/lib/refresh.glade:254
+msgid "Disk rescan complete."
+msgstr "Повторното сканиране на дискове завърши."
+
+#: pyanaconda/ui/gui/spokes/lib/refresh.glade:269
+msgid ""
+"Pressing 'OK' below will take you to the disk selection screen where you "
+"will need to re-select your disks."
+msgstr ""
+"Натискането на 'Добре' по-долу ще Ви отведе в прозореца за избор на дискове, "
+"където ще трябва отново да направите избора си."
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:23
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Cancel"
+msgstr "_Отказване"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:38
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Save Passphrase"
+msgstr "_Запиши тайната фраза"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:65
+msgid "DISK ENCRYPTION PASSPHRASE"
+msgstr "ПАРОЛА ЗА КРИПТИРАНЕ НА ДИСК"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:81
+msgid ""
+"You have chosen to encrypt some of your data. You will need to create a "
+"passphrase that you will use to access your data when you start your "
+"computer."
+msgstr ""
+"Избрали сте да криптирате някои Ваши данни. Ще трябва да зададете тайна "
+"фраза, която ще използвате за достъп до данните си, когато стартирате "
+"компютъра."
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:102
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Passphrase:"
+msgstr "_Тайна фраза:"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:133
+msgctxt "GUI|Passphrase Dialog"
+msgid "Con_firm:"
+msgstr "Потвърдете:"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:275
+msgid ""
+"Warning: You won't be able to switch between keyboard layouts (from the "
+"default one) when you decrypt your disks after install."
+msgstr ""
+"Внимание: Вие няма да можете да превключвате клавиатурните подредби (от "
+"подразбиращата се), когато декриптирате дисковете си след инсталирането."
+
+#: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:8
+msgid "UNFORMATTED DASDS"
+msgstr "НЕФОРМАТИРАНИ DASD"
+
+#: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:23
+msgctxt "GUI|DAD Format Dialog"
+msgid "_Cancel"
+msgstr "_Отказване"
+
+#: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:37
+msgctxt "GUI|DAD Format Dialog"
+msgid "_OK"
+msgstr "_Добре"
+
+#: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:70
+msgid ""
+"The following unformatted or LDL DASDs have been detected on your system. "
+"You can choose to format them now with dasdfmt or cancel to leave them "
+"unformatted. Unformatted DASDs cannot be used during installation."
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1959
-msgctxt "GUI|Installation Destination|Filter"
-msgid "Refresh _List"
-msgstr "О_пресни списъка"
+#: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:86
+msgid "Unformatted DASDs Detected"
+msgstr "Намерени са неформатирани DASD"
+
+#: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:136
+msgid ""
+"<b>Warning</b>: All storage changes made using the installer will be lost "
+"when you choose to format."
+msgstr ""
+"<b>Внимание</b>: Всички storage промени, направени чрез инсталатора ще се "
+"загубят, ако решите да форматирате."
+
+#: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:160
+msgctxt "GUI|DAD Format Dialog"
+msgid "_Format with dasdfmt"
+msgstr "_Форматиране с dasdfmt"
+
+#: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:209
+msgid ""
+"This may take a moment. You may <a href=\"\">go back to the main menu</a> to "
+"complete other installation options while formatting completes."
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:248
+msgid "Disk formatting complete."
+msgstr "Форматирането на дисковете завърши."
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:21
 msgctxt "GUI|Custom Partitioning|Confirm Delete Dialog"
@@ -6480,6 +6464,17 @@ msgstr "КОНФИГУРИРАНЕ ТОЧКА НА МОНТИРАНЕ"
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:137
 msgid "Description"
 msgstr "Описание"
+
+#: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:250
+#: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:753
+#: pyanaconda/ui/gui/spokes/lib/cart.glade:162
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:414
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:814
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1148
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1466
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1789
+msgid "Capacity"
+msgstr "Капацитет"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:263
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:766
@@ -6592,252 +6587,6 @@ msgstr "Възможно най-големия"
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:957
 msgid "Fixed"
 msgstr "Коригирано"
-
-#: pyanaconda/ui/gui/spokes/lib/summary.glade:25
-#: pyanaconda/ui/gui/spokes/lib/summary.glade:89
-msgid "SUMMARY OF CHANGES"
-msgstr "ОБОБЩЕНИЕ НА ПРОМЕНИТЕ"
-
-#: pyanaconda/ui/gui/spokes/lib/summary.glade:42
-msgctxt "GUI|Summary Dialog"
-msgid "_Cancel & Return to Custom Partitioning"
-msgstr "_Отказ и връщане в разделяне на диска"
-
-#: pyanaconda/ui/gui/spokes/lib/summary.glade:57
-msgctxt "GUI|Summary Dialog"
-msgid "_Accept Changes"
-msgstr "_Приемам промените"
-
-#: pyanaconda/ui/gui/spokes/lib/summary.glade:105
-msgid ""
-"Your customizations will result in the following changes taking effect after "
-"you return to the main menu and begin installation:"
-msgstr ""
-"Вашите настройки ще предизвикат следните промени, след като се върнете в "
-"основното меню и започнете инсталирането:"
-
-#: pyanaconda/ui/gui/spokes/lib/summary.glade:133
-msgid "Order"
-msgstr "Ред"
-
-#: pyanaconda/ui/gui/spokes/lib/summary.glade:144
-#: pyanaconda/ui/gui/spokes/lib/resize.glade:194
-msgid "Action"
-msgstr "Действие"
-
-#: pyanaconda/ui/gui/spokes/lib/summary.glade:166
-msgid "Device"
-msgstr "Устройство"
-
-#: pyanaconda/ui/gui/spokes/lib/resize.glade:53
-msgctxt "GUI|Reclaim Dialog"
-msgid "_Cancel"
-msgstr "_Отказване"
-
-#: pyanaconda/ui/gui/spokes/lib/resize.glade:68
-msgctxt "GUI|Reclaim Dialog"
-msgid "_Reclaim space"
-msgstr "_Възстанови пространството"
-
-#: pyanaconda/ui/gui/spokes/lib/resize.glade:101
-msgid "RECLAIM DISK SPACE"
-msgstr "ВЪЗСТАНОВЯВАНЕ НА ДИСКОВ ОБЕМ"
-
-#: pyanaconda/ui/gui/spokes/lib/resize.glade:118
-msgid "Description goes here."
-msgstr "Описанието ще е тук."
-
-#: pyanaconda/ui/gui/spokes/lib/resize.glade:172
-msgid "File System"
-msgstr "Файлова система"
-
-#: pyanaconda/ui/gui/spokes/lib/resize.glade:183
-msgid "Reclaimable Space"
-msgstr "Възстановимо пространство"
-
-#: pyanaconda/ui/gui/spokes/lib/resize.glade:219
-msgctxt "GUI|Reclaim Dialog"
-msgid "_Preserve"
-msgstr "_Запази"
-
-#: pyanaconda/ui/gui/spokes/lib/resize.glade:235
-msgctxt "GUI|Reclaim Dialog"
-msgid "_Delete"
-msgstr "Изтри_й"
-
-#: pyanaconda/ui/gui/spokes/lib/resize.glade:251
-msgctxt "GUI|Reclaim Dialog"
-msgid "_Shrink"
-msgstr "_Смали"
-
-#: pyanaconda/ui/gui/spokes/lib/resize.glade:365
-msgid "Reclaim"
-msgstr "Възстанови"
-
-#: pyanaconda/ui/gui/spokes/lib/refresh.glade:8
-#: pyanaconda/ui/gui/spokes/lib/refresh.glade:71
-msgid "RESCAN DISKS"
-msgstr "ПОВТОРНО СКАНИРАНЕ НА ДИСКОВЕ"
-
-#: pyanaconda/ui/gui/spokes/lib/refresh.glade:25
-msgctxt "GUI|Refresh Dialog|Rescan"
-msgid "_Cancel"
-msgstr "_Отказване"
-
-#: pyanaconda/ui/gui/spokes/lib/refresh.glade:39
-msgctxt "GUI|Refresh Dialog|Rescan"
-msgid "_OK"
-msgstr "_Добре"
-
-#: pyanaconda/ui/gui/spokes/lib/refresh.glade:87
-msgid ""
-"You can remove or insert additional disks at this time and press 'Rescan "
-"Disks' below for the changes to take effect."
-msgstr ""
-"Вие можете да премахнете или добавите допълнителни дискове сега и да цъкнете "
-"'Сканирай повторно' по-долу за да се приложат промените."
-
-#: pyanaconda/ui/gui/spokes/lib/refresh.glade:118
-msgid ""
-"<b>Warning:</b> All storage changes made using the installer will be lost "
-"when you press 'Rescan Disks'."
-msgstr ""
-"<b>Внимание:</b> Всички storage промени, направени чрез инсталатора ще се "
-"изгубят при натискането на 'Сканирай повторно'."
-
-#: pyanaconda/ui/gui/spokes/lib/refresh.glade:143
-msgctxt "GUI|Refresh Dialog|Rescan"
-msgid "_Rescan Disks"
-msgstr "Скани_рай отново"
-
-#: pyanaconda/ui/gui/spokes/lib/refresh.glade:176
-#: pyanaconda/ui/gui/spokes/lib/refresh.glade:212
-msgid "Scanning disks.  This may take a moment..."
-msgstr "Сканиране на дисковете. Може да отнеме време..."
-
-#: pyanaconda/ui/gui/spokes/lib/refresh.glade:223
-msgid ""
-"You may <a href=\"\">go back to the main menu</a> to complete other\n"
-"installation options while this scan completes."
-msgstr ""
-"Можете да се <a href=\"\">върнете в главното меню</a> и да довършите\n"
-"други инсталационни задачи, докато това сканиране завърши."
-
-#: pyanaconda/ui/gui/spokes/lib/refresh.glade:254
-msgid "Disk rescan complete."
-msgstr "Повторното сканиране на дискове завърши."
-
-#: pyanaconda/ui/gui/spokes/lib/refresh.glade:269
-msgid ""
-"Pressing 'OK' below will take you to the disk selection screen where you "
-"will need to re-select your disks."
-msgstr ""
-"Натискането на 'Добре' по-долу ще Ви отведе в прозореца за избор на дискове, "
-"където ще трябва отново да направите избора си."
-
-#: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:8
-msgid "UNFORMATTED DASDS"
-msgstr "НЕФОРМАТИРАНИ DASD"
-
-#: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:23
-msgctxt "GUI|DAD Format Dialog"
-msgid "_Cancel"
-msgstr "_Отказване"
-
-#: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:37
-msgctxt "GUI|DAD Format Dialog"
-msgid "_OK"
-msgstr "_Добре"
-
-#: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:70
-msgid ""
-"The following unformatted or LDL DASDs have been detected on your system. "
-"You can choose to format them now with dasdfmt or cancel to leave them "
-"unformatted. Unformatted DASDs cannot be used during installation."
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:86
-msgid "Unformatted DASDs Detected"
-msgstr "Намерени са неформатирани DASD"
-
-#: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:136
-msgid ""
-"<b>Warning</b>: All storage changes made using the installer will be lost "
-"when you choose to format."
-msgstr ""
-"<b>Внимание</b>: Всички storage промени, направени чрез инсталатора ще се "
-"загубят, ако решите да форматирате."
-
-#: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:160
-msgctxt "GUI|DAD Format Dialog"
-msgid "_Format with dasdfmt"
-msgstr "_Форматиране с dasdfmt"
-
-#: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:209
-msgid ""
-"This may take a moment. You may <a href=\"\">go back to the main menu</a> to "
-"complete other installation options while formatting completes."
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:248
-msgid "Disk formatting complete."
-msgstr "Форматирането на дисковете завърши."
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:23
-msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
-msgid "_Quit"
-msgstr "_Изход"
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:37
-msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
-msgid "_Continue"
-msgstr "_Продължение"
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:122
-msgid "Unsupported Hardware"
-msgstr "Неподдържан хардуер"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:23
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Cancel"
-msgstr "_Отказване"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:38
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Save Passphrase"
-msgstr "_Запиши тайната фраза"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:65
-msgid "DISK ENCRYPTION PASSPHRASE"
-msgstr "ПАРОЛА ЗА КРИПТИРАНЕ НА ДИСК"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:81
-msgid ""
-"You have chosen to encrypt some of your data. You will need to create a "
-"passphrase that you will use to access your data when you start your "
-"computer."
-msgstr ""
-"Избрали сте да криптирате някои Ваши данни. Ще трябва да зададете тайна "
-"фраза, която ще използвате за достъп до данните си, когато стартирате "
-"компютъра."
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:102
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Passphrase:"
-msgstr "_Тайна фраза:"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:133
-msgctxt "GUI|Passphrase Dialog"
-msgid "Con_firm:"
-msgstr "Потвърдете:"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:275
-msgid ""
-"Warning: You won't be able to switch between keyboard layouts (from the "
-"default one) when you decrypt your disks after install."
-msgstr ""
-"Внимание: Вие няма да можете да превключвате клавиатурните подредби (от "
-"подразбиращата се), когато декриптирате дисковете си след инсталирането."
 
 #: pyanaconda/ui/gui/spokes/lib/network_secret_agent.glade:25
 msgctxt "GUI|Network|Authentication Dialog"
@@ -7395,6 +7144,257 @@ msgid ""
 msgstr ""
 "Тук можете да въведете разделени със запетая имена на групи и ID-та на "
 "групи. Несъществуващите групи ще бъдат създадени; задайте техния GID в скоби."
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:136
+msgctxt "GUI|Installation Destination|Filter|Search"
+msgid "Search _By:"
+msgstr "Тъ_рсене по:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:153
+msgid "Port / Target / LUN #"
+msgstr "Port / Target / LUN #"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:154
+msgid "Target WWID"
+msgstr "Целеви WWID"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:193
+msgctxt "GUI|Installation Destination|Filter|Search|Port Target LUN"
+msgid "_Port:"
+msgstr "_Порт:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:219
+msgctxt "GUI|Installation Destination|Filter|Search|Port Target LUN"
+msgid "_Target:"
+msgstr "_Цел:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:247
+msgctxt "GUI|Installation Destination|Filter|Search|Port Target LUN"
+msgid "_LUN:"
+msgstr "_LUN:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:289
+msgctxt "GUI|Installation Destination|Filter|Search|WWID"
+msgid "_WWID:"
+msgstr "_WWID:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:339
+msgctxt "GUI|Installation Destination|Filter|Search"
+msgid "Search Res_ults:"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:400
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:597
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:800
+msgid "WWID"
+msgstr "WWID"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:428
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:596
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:842
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:930
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1176
+msgid "Interconnect"
+msgstr "Свързване"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:442
+msgid "Model"
+msgstr "Модел"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:456
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1541
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1817
+msgid "LUN"
+msgstr "LUN"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:470
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1831
+msgid "Port"
+msgstr "Порт"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:484
+msgid "Target"
+msgstr "Цел"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:498
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:595
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:828
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:929
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1162
+msgid "Vendor"
+msgstr "Доставчик"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:512
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1249
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1424
+msgid "Namespace"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:526
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1250
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1452
+msgid "Mode"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:553
+msgctxt "GUI|Installation Destination|Filter"
+msgid "Searc_h"
+msgstr "_Търси"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:578
+msgctxt "GUI|Installation Destination|Filter|Multipath"
+msgid "Filter _By:"
+msgstr "Филтрирай _по:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:635
+msgctxt "GUI|Installation Destination|Filter|Multipath|Vendor"
+msgid "Show Only _Devices From:"
+msgstr "Покажи само _устройства от:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:676
+msgctxt "GUI|Installation Destination|Filter|Multipath|Interconnect"
+msgid "Show Only _Devices With:"
+msgstr "Покажи само _устройства с:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:717
+msgctxt "GUI|Installation Destination|Filter|Multipath|WWID"
+msgid "Show Only _Devices Containing:"
+msgstr "Покажи само _устройства, съдържащи:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:856
+msgid "Paths"
+msgstr "Пътища"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:886
+msgctxt "GUI|Installation Destination|Filter"
+msgid "_Multipath Devices"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:912
+msgctxt "GUI|Installation Destination|Filter|Other"
+msgid "Filter _By:"
+msgstr "Филтрирай _по:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:931
+msgid "ID"
+msgstr "ID"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:969
+msgctxt "GUI|Installation Destination|Filter|Other|Vendor"
+msgid "Show Only _Devices From:"
+msgstr "Покажи само _устройства от:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1010
+msgctxt "GUI|Installation Destination|Filter|Other|Interconnect"
+msgid "Show Only _Devices With:"
+msgstr "Покажи само _устройствата с:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1051
+msgctxt "GUI|Installation Destination|Filter|Other|ID"
+msgid "Show Only _Devices Containing:"
+msgstr "Покажи само _устройства, съдържащи:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1134
+msgid "Identifier"
+msgstr "Идентификатор"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1206
+msgctxt "GUI|Installation Destination|Filter"
+msgid "_Other SAN Devices"
+msgstr "Други SAN устр_ойства"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1232
+msgctxt "GUI|Installation Destination|Filter|NVDIMM Devices"
+msgid "Filter B_y:"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1288
+msgctxt "GUI|Installation Destination|Filter|NVDIMM Devices|Mode"
+msgid "Show Only Devices in _Mode:"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1305
+msgid "Sector"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1306
+msgid "Memory"
+msgstr "Памет:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1333
+msgctxt "GUI|Installation Destination|Filter|NVDIMM Devices|Namespace"
+msgid "_Namespace:"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1496
+msgctxt "GUI|Installation Destination|Filter"
+msgid "_NVDIMM Devices"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1522
+msgctxt "GUI|Installation Destination|Filter|zSeries"
+msgid "Filter B_y:"
+msgstr "Фил_трирай по:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1539
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1747
+msgid "CCW"
+msgstr "CCW"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1540
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1803
+msgid "WWPN"
+msgstr "WWPN"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1578
+msgctxt "GUI|Installation Destination|Filter|zSeries|CCW"
+msgid "_CCW:"
+msgstr "_CCW:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1621
+msgctxt "GUI|Installation Destination|Filter|zSeries|WWPN"
+msgid "_WWPN:"
+msgstr "_WWPN:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1664
+msgctxt "GUI|Installation Destination|Filter|zSeries|LUN"
+msgid "_LUN:"
+msgstr "_LUN:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1861
+msgctxt "GUI|Installation Destination|Filter"
+msgid "_zSeries Devices"
+msgstr "_zSeries устройства"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1884
+msgctxt "GUI|Installation Destination|Filter"
+msgid "_Add zFCP LUN..."
+msgstr "Доб_авяне на zFCP LUN..."
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1899
+msgctxt "GUI|Installation Destination|Filter"
+msgid "Add EC_KD DASD..."
+msgstr "Добавяне на EC_KD DASD..."
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1914
+msgctxt "GUI|Installation Destination|Filter"
+msgid "Add _iSCSI Target..."
+msgstr "Добавяне на _iSCSI цел..."
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1929
+msgctxt "GUI|Installation Destination|Filter"
+msgid "Add FCo_E SAN..."
+msgstr "Добавяне на FCo_E SAN..."
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1944
+msgctxt "GUI|Installation Destination|Filter"
+msgid "Reconfigure _NVDIMM..."
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1959
+msgctxt "GUI|Installation Destination|Filter"
+msgid "Refresh _List"
+msgstr "О_пресни списъка"
 
 #: pyanaconda/ui/gui/hubs/summary.glade:8
 #: pyanaconda/ui/gui/hubs/summary.glade:145

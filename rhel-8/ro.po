@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2023-02-02 15:55+0100\n"
+"POT-Creation-Date: 2023-02-09 12:21+0100\n"
 "PO-Revision-Date: 2020-11-29 01:35+0000\n"
 "Last-Translator: Mințoi Petre Bogdan <bogdomania@yahoo.com>\n"
 "Language-Team: Romanian <https://translate.fedoraproject.org/projects/"
@@ -40,6 +40,565 @@ msgid ""
 msgstr ""
 "Anaconda nu poate crea %s pentru că fișierul există deja. Anaconda rulează "
 "deja, sau o instanță anterioară de anaconda a avut o avarie."
+
+#: pyanaconda/vnc.py:79
+#, python-format
+msgid "%(productName)s %(productVersion)s installation"
+msgstr "instalare %(productName)s %(productVersion)s"
+
+#: pyanaconda/vnc.py:148
+#, python-format
+msgid "%(productName)s %(productVersion)s installation on host %(name)s"
+msgstr "instalare %(productName)s %(productVersion)s pe gazda %(name)s"
+
+#: pyanaconda/vnc.py:167
+#, python-format
+msgid "Attempting to connect to vnc client on host %s..."
+msgstr "Se încearcă conexiunea la clientul vnc de pe gazda %s..."
+
+#: pyanaconda/vnc.py:181
+msgid "Connected!"
+msgstr "Conectat!"
+
+#: pyanaconda/vnc.py:184
+msgid "Will try to connect again in 15 seconds..."
+msgstr "Se va încerca din nou în 15 secunde..."
+
+#: pyanaconda/vnc.py:191
+#, python-format
+msgid "Giving up attempting to connect after %d try!\n"
+msgid_plural "Giving up attempting to connect after %d tries!\n"
+msgstr[0] ""
+"Se renunță la conectare după  %d încercare!\n"
+"\n"
+msgstr[1] "Se renunță la conectare după  %d încercări!\n"
+msgstr[2] "Se renunță la conectare după  %d de încercări!\n"
+
+#: pyanaconda/vnc.py:199
+msgid "Attempting to start vncconfig"
+msgstr "Se încearcă pornirea vncconfig"
+
+#: pyanaconda/vnc.py:212
+#, python-format
+msgid "Please manually connect your vnc client to %s to begin the install."
+msgstr ""
+"Vă rugăm să vă conectați cu clientul dumneavoastră vnc la %s pentru a începe "
+"instalarea."
+
+#: pyanaconda/vnc.py:214
+#, python-format
+msgid ""
+"Please manually connect your vnc client to IP-ADDRESS:%s to begin the "
+"install. Switch to the shell (Ctrl-B 2) and run 'ip addr' to find the IP-"
+"ADDRESS."
+msgstr ""
+
+#: pyanaconda/vnc.py:219
+msgid "Starting VNC..."
+msgstr "Se pornește VNC..."
+
+#: pyanaconda/vnc.py:256
+msgid "The VNC server is now running."
+msgstr "Acum serverul VNC rulează."
+
+#: pyanaconda/vnc.py:260
+msgid ""
+"\n"
+"\n"
+"You chose to connect to a listening vncviewer. \n"
+"This does not require a password to be set.  If you \n"
+"set a password, it will be used in case the connection \n"
+"to the vncviewer is unsuccessful\n"
+"\n"
+msgstr ""
+"\n"
+"\n"
+"Ați ales să vă conectați la un server de ascultare vncviewer.\n"
+"Aceasta nu necesită setarea unei parole. Dacă doriți să\n"
+"setați o parolă, aceasta va fi folosită în caz că conexiunea la\n"
+"vncviewer s-a făcut fără succes.\n"
+"\n"
+
+#: pyanaconda/vnc.py:265
+msgid ""
+"\n"
+"\n"
+"WARNING!!! VNC server running with NO PASSWORD!\n"
+"You can use the inst.vncpassword=PASSWORD boot option\n"
+"if you would like to secure the server.\n"
+"\n"
+msgstr ""
+
+#: pyanaconda/vnc.py:269
+msgid ""
+"\n"
+"\n"
+"You chose to execute vnc with a password. \n"
+"\n"
+msgstr ""
+"\n"
+"\n"
+"Ați ales să executați vnc cu o parolă.\n"
+"\n"
+
+#: pyanaconda/vnc.py:271
+msgid ""
+"\n"
+"\n"
+"Unknown Error.  Aborting. \n"
+"\n"
+msgstr ""
+"\n"
+"\n"
+"Eroare necunoscută. Se renunță.\n"
+"\n"
+
+#: pyanaconda/vnc.py:293
+msgid ""
+"VNC password must be six to eight characters long.\n"
+"Please enter a new one, or leave blank for no password."
+msgstr ""
+"Parola VNC trebuie să fie între șase și opt caractere lungime.\n"
+"Introduceți una nouă, sau lăsați gol pentru a nu stabili o parolă."
+
+#: pyanaconda/startup_utils.py:83
+#, python-format
+msgid ""
+"%(product_name)s requires %(needed_ram)s MB of memory to install, but you "
+"only have %(total_ram)s MB on this machine.\n"
+msgstr ""
+"%(product_name)s necesită %(needed_ram)s MB de memorie pentru a se instala, "
+"dar aveți doar %(total_ram)s MB pe acest calculator.\n"
+
+#: pyanaconda/startup_utils.py:85
+#, fuzzy, python-format
+#| msgid ""
+#| "The %(product_name)s graphical installer requires %(needed_ram)s MB of "
+#| "memory, but you only have %(total_ram)s MB\n"
+#| "."
+msgid ""
+"The %(product_name)s graphical installer requires %(needed_ram)s MB of "
+"memory, but you only have %(total_ram)s MB.\n"
+msgstr ""
+"Instalatorul grafic pentru %(product_name)s necesită %(needed_ram)s MB de "
+"memorie, dar aveți doar %(total_ram)s MB\n"
+"."
+
+#: pyanaconda/startup_utils.py:88
+msgid ""
+"\n"
+"Press [Enter] to reboot your system.\n"
+msgstr ""
+
+#: pyanaconda/startup_utils.py:90
+msgid "Not enough RAM"
+msgstr "RAM insuficient"
+
+#: pyanaconda/startup_utils.py:91
+msgid ""
+" Try the text mode installer by running:\n"
+"\n"
+"'/usr/bin/liveinst -T'\n"
+"\n"
+" from a root terminal."
+msgstr ""
+"Încercați instalarea în mod text prin comanda:\n"
+"\n"
+"/usr/bin/liveinst -T\n"
+"\n"
+"de la un terminal de root."
+
+#: pyanaconda/startup_utils.py:93
+msgid " Starting text mode."
+msgstr "Se începe modul text."
+
+#: pyanaconda/startup_utils.py:130
+msgid "The installation cannot continue and the system will be rebooted"
+msgstr "Instalarea nu poate continua și sistemul va fi repornit"
+
+#: pyanaconda/startup_utils.py:131
+msgid "Press ENTER to continue"
+msgstr "Apăsați ENTER pentru a continua"
+
+#: pyanaconda/startup_utils.py:228
+#, python-format
+msgid "Please ssh install@%s to begin the install."
+msgstr "ssh install@%s pentru a începe instalarea."
+
+#: pyanaconda/startup_utils.py:230
+msgid "Please ssh install@HOSTNAME to continue installation."
+msgstr ""
+
+#: pyanaconda/rescue.py:272
+msgid "Unable to find /bin/bash to execute!  Not starting shell."
+msgstr ""
+"Nu se poate găsi /bin/bash pentru execuție! Nu se pornește linia de comandă."
+
+#: pyanaconda/rescue.py:289
+msgid "Rescue"
+msgstr "Recuperează"
+
+#: pyanaconda/rescue.py:296
+#, python-format
+msgid ""
+"The rescue environment will now attempt to find your Linux installation and "
+"mount it under the directory : %s.  You can then make any changes required "
+"to your system.  Choose '1' to proceed with this step.\n"
+"You can choose to mount your file systems read-only instead of read-write by "
+"choosing '2'.\n"
+"If for some reason this process does not work choose '3' to skip directly to "
+"a shell.\n"
+"\n"
+msgstr ""
+"Mediul de salvare va încerca să găsească instalarea de Linux și să o monteze "
+"sub directorul: %s.  Puteți apoi realiza orice modificări necesare pentru "
+"sistem. Alegeți „1” pentru a continua cu acest pas.\n"
+"Puteți alege montarea sistemului în mod „numai citire” în loc de „citire/"
+"scriere” prin opțiunea „2”.\n"
+"Dacă această procedură nu funcționează, puteți alege opțiunea „3” pentru a "
+"intra direct la linia de comandă.\n"
+"\n"
+
+#: pyanaconda/rescue.py:308
+msgid "Continue"
+msgstr "Continuă"
+
+#: pyanaconda/rescue.py:309
+msgid "Read-only mount"
+msgstr "Montare „numai citire”"
+
+#: pyanaconda/rescue.py:310
+msgid "Skip to shell"
+msgstr "Mergi direct la linia de comandă"
+
+#: pyanaconda/rescue.py:311
+msgid "Quit (Reboot)"
+msgstr "Ieșire (Reboot)"
+
+#: pyanaconda/rescue.py:408
+msgid "Rescue Shell"
+msgstr "Linia de comandă de recuperare"
+
+#: pyanaconda/rescue.py:418
+#, python-format
+msgid "Run %s to unmount the system when you are finished."
+msgstr "Rulați %s pentru a demonta sistemul când ați terminat."
+
+#: pyanaconda/rescue.py:419
+msgid ""
+"When finished, please exit from the shell and your system will reboot.\n"
+msgstr ""
+"După ce terminați, vă rugăm ieșiți din linia de comandă și sistemul "
+"dumneavoastră va fi repornit.\n"
+
+#: pyanaconda/rescue.py:430
+#, python-format
+msgid ""
+"Your system has been mounted under %(mountpoint)s.\n"
+"\n"
+"If you would like to make the root of your system the root of the active "
+"system, run the command:\n"
+"\n"
+"\tchroot %(mountpoint)s\n"
+"\n"
+msgstr ""
+
+#: pyanaconda/rescue.py:442
+#, fuzzy, python-brace-format
+#| msgid ""
+#| "An error occurred trying to mount some or all of your system.  Some of it "
+#| "may be mounted under %s\n"
+#| "\n"
+msgid ""
+"An error occurred trying to mount some or all of your system: {message}\n"
+"\n"
+"Some of it may be mounted under {path}."
+msgstr ""
+"S-a întâmpinat o eroare la încercarea de a monta parțial sau total sistemul. "
+"Unele dintre acestea pot fi montate sub %s\n"
+"\n"
+
+#: pyanaconda/rescue.py:454
+#, fuzzy
+#| msgid "You don't have any Linux partitions. %s\n"
+msgid "You don't have any Linux partitions.\n"
+msgstr "Nu aveți nicio partiție Linux. %s\n"
+
+#: pyanaconda/rescue.py:460
+msgid "Not mounting the system.\n"
+msgstr "Sistemul nu se montează.\n"
+
+#: pyanaconda/rescue.py:474
+#, python-format
+msgid "Please press %s to get a shell"
+msgstr "Apăsați %s pentru o linie de comandă."
+
+#: pyanaconda/rescue.py:491
+msgid "Root Selection"
+msgstr "Selecție rădăcină (root)"
+
+#: pyanaconda/rescue.py:517
+msgid "The following installations were discovered on your system."
+msgstr ""
+
+#: pyanaconda/pwpolicy.py:146
+#, python-format
+msgid "policy name required for %s"
+msgstr "este necesară politică (policy) pentru %s"
+
+#: pyanaconda/pwpolicy.py:155
+#, python-format
+msgid "A %(command)s with the name %(policyName)s has already been defined."
+msgstr "%(command)s cu același nume %(policyName)s a fost deja definită."
+
+#: pyanaconda/product.py:69
+#, python-format
+msgid "%(productName)s %(productVersion)s INSTALLATION"
+msgstr "INSTALARE %(productName)s %(productVersion)s"
+
+#: pyanaconda/network.py:111
+msgid "Host name cannot be None or an empty string."
+msgstr "Host name nu poate fi „niciuna” sau un șir nul."
+
+#: pyanaconda/network.py:114
+msgid "Host name must be 255 or fewer characters in length."
+msgstr "Host name trebuie să aibă maxim 255 de caractere."
+
+#: pyanaconda/network.py:117
+msgid "Local host name must not end with period '.'."
+msgstr ""
+
+#: pyanaconda/network.py:120
+msgid ""
+"Host names can only contain the characters 'a-z', 'A-Z', '0-9', '-', or '.', "
+"parts between periods must contain something and cannot start or end with "
+"'-'."
+msgstr ""
+"Host names nu pot conține caracterele „a-z”, „A-Z”, „0-9”, „-” sau „.” între "
+"puncte, trebuie să conțină ceva și nu pot să înceapă sau să se termine cu "
+"„-”."
+
+#: pyanaconda/network.py:473 pyanaconda/ui/gui/spokes/network.py:281
+#: pyanaconda/ui/gui/spokes/custom_storage.py:460
+#: pyanaconda/ui/gui/spokes/custom_storage.py:503
+msgid "Unknown"
+msgstr "Necunoscut"
+
+#: pyanaconda/network.py:476
+#, fuzzy
+#| msgid "Unavailable"
+msgid "Status not available"
+msgstr "Indisponibil"
+
+#: pyanaconda/network.py:481
+msgid "Connecting..."
+msgstr "Se conectează..."
+
+#: pyanaconda/network.py:483
+msgid "Disconnecting..."
+msgstr "Se deconectează..."
+
+#: pyanaconda/network.py:514
+#, python-format
+msgid "Wired (%(interface_name)s) connected"
+msgstr "Rețeaua cu fir (%(interface_name)s) conectată"
+
+#: pyanaconda/network.py:517
+#, python-format
+msgid "Wireless connected to %(access_point)s"
+msgstr "Rețeaua fără fir (wireless) conectată la %(access_point)s"
+
+#: pyanaconda/network.py:520
+#, python-format
+msgid "Bond %(interface_name)s (%(list_of_slaves)s) connected"
+msgstr "Asocierea (bond) %(interface_name)s (%(list_of_slaves)s) conectată"
+
+#: pyanaconda/network.py:524
+#, python-format
+msgid "Team %(interface_name)s (%(list_of_slaves)s) connected"
+msgstr ""
+
+#: pyanaconda/network.py:528
+#, python-format
+msgid "Bridge %(interface_name)s (%(list_of_slaves)s) connected"
+msgstr ""
+
+#: pyanaconda/network.py:534
+#, python-format
+msgid "VLAN %(interface_name)s (%(parent_device)s, ID %(vlanid)s) connected"
+msgstr "VLAN %(interface_name)s (%(parent_device)s, ID %(vlanid)s) conectat"
+
+#: pyanaconda/network.py:553
+#, python-format
+msgid "Connected: %(list_of_interface_names)s"
+msgstr "Conectate: %(list_of_interface_names)s"
+
+#: pyanaconda/network.py:555
+msgid "Not connected"
+msgstr "Neconectat"
+
+#: pyanaconda/network.py:558 pyanaconda/ui/gui/spokes/network.glade:2357
+msgid "No network devices available"
+msgstr "Nu se găsesc dispozitive de rețea"
+
+#: pyanaconda/kickstart.py:540
+msgid ""
+"\n"
+"Some warnings occurred during reading the kickstart file:"
+msgstr ""
+
+#: pyanaconda/kickstart.py:553
+#, python-format
+msgid ""
+"\n"
+"An error occurred during reading the kickstart file:\n"
+"%s\n"
+"\n"
+"The installer will now terminate."
+msgstr ""
+
+#: pyanaconda/kickstart.py:597 pyanaconda/installation.py:285
+msgid "Running pre-installation scripts"
+msgstr "Se rulează scripturi post-instalare"
+
+#: pyanaconda/installation.py:87
+msgid "Configuring Red Hat subscription"
+msgstr ""
+
+#: pyanaconda/installation.py:94
+msgid "Configuring installed system"
+msgstr "Se configurează sistemul instalat"
+
+#: pyanaconda/installation.py:132
+msgid "Writing network configuration"
+msgstr "Se scrie configurația de rețea"
+
+#: pyanaconda/installation.py:139
+msgid "Creating users"
+msgstr "Se creează utilizatori"
+
+#: pyanaconda/installation.py:146
+msgid "Configuring addons"
+msgstr "Se configurează add-on-uri"
+
+#: pyanaconda/installation.py:162
+msgid "Generating initramfs"
+msgstr "Se generează initramfs"
+
+#: pyanaconda/installation.py:190
+msgid "Setting up kexec"
+msgstr "Se configurează kexec"
+
+#: pyanaconda/installation.py:195
+msgid "Storing configuration files and kickstarts"
+msgstr "Se depozitează fișierele de configurație și kickstart"
+
+#: pyanaconda/installation.py:214
+msgid "Running post-installation scripts"
+msgstr "Se rulează scripturi post-instalare"
+
+#: pyanaconda/installation.py:244
+#, python-format
+msgid "Waiting for %s threads to finish"
+msgstr "Se așteaptă terminarea a %s fire de execuție"
+
+#: pyanaconda/installation.py:258
+msgid "Setting up the installation environment"
+msgstr "Se setează mediul de instalare"
+
+#: pyanaconda/installation.py:275 pyanaconda/installation.py:341
+msgid "Configuring storage"
+msgstr "Se configurează spațiul de stocare"
+
+#: pyanaconda/installation.py:292
+msgid "Running pre-installation tasks"
+msgstr "Se execută sarcini de pre-instalare"
+
+#: pyanaconda/installation.py:335
+msgid "Installing."
+msgstr "Se instalează."
+
+#: pyanaconda/installation.py:348
+msgid "Installing boot loader"
+msgstr "Se instalează încărcătorul de sistem"
+
+#: pyanaconda/installation.py:361 pyanaconda/payload/live/payload_base.py:172
+#: pyanaconda/payload/dnf/payload.py:1422
+msgid "Performing post-installation setup tasks"
+msgstr "Se efectuează sarcini de setare post-instalare"
+
+#: pyanaconda/installation.py:369
+msgid "Creating snapshots"
+msgstr "Se creează snapshot-uri"
+
+#: pyanaconda/input_checking.py:539
+msgid "Full name cannot contain colon characters"
+msgstr "Numele complet nu poate conține caractere „două puncte”"
+
+#: pyanaconda/exception.py:109
+#, python-format
+msgid ""
+"The installation was stopped due to what seems to be a problem with your "
+"hardware. The exact error message is:\n"
+"\n"
+"%s.\n"
+"\n"
+" The installer will now terminate."
+msgstr ""
+"Instalarea s-a oprit din cauza unei posibile erori cu hardware-ul. Mesajul "
+"de eroare exact:\n"
+"\n"
+"%s.\n"
+"\n"
+"Instalarea va fi abandonată."
+
+#: pyanaconda/exception.py:113
+msgid "Hardware error occurred"
+msgstr "S-a produs o eroare de hardware"
+
+#: pyanaconda/exception.py:174
+#, python-format
+msgid ""
+"\n"
+"The installation was stopped due to an error which occurred while running in "
+"non-interactive cmdline mode. Since there cannot be any questions in cmdline "
+"mode, edit your kickstart file and retry installation. \n"
+"The exact error message is: \n"
+"\n"
+"%s. \n"
+"\n"
+"The installer will now terminate."
+msgstr ""
+"\n"
+"Instalarea a fost oprită din cauza unei erori, întâlnită  în timp ce se "
+"rulează în modul de linie de comandă non-interactiv. Dat fiind că nu pot "
+"exista întrebări în modul liniei de comandă, modificați fișierul kickstart "
+"și încercați din nou instalarea.\n"
+"Mesajul de eroare exact:\n"
+": \n"
+"\n"
+"%s. \n"
+"\n"
+"Instalarea va fi abandonată."
+
+#: pyanaconda/exception.py:182
+#, python-format
+msgid ""
+"\n"
+"Running in cmdline mode, no interactive debugging allowed.\n"
+"The exact error message is: \n"
+"\n"
+"%s.\n"
+"\n"
+"The installer will now terminate."
+msgstr ""
+"\n"
+"Nu este permisă depanarea interactivă în timpul modului linie de comandă.\n"
+"Mesajul exact de eroare:\n"
+"\n"
+"%s.\n"
+"\n"
+"Instalarea va fi abandonată."
 
 #: pyanaconda/errors.py:112
 #, fuzzy
@@ -263,453 +822,6 @@ msgid ""
 "Would you like to ignore this and continue with installation?"
 msgstr ""
 
-#: pyanaconda/vnc.py:79
-#, python-format
-msgid "%(productName)s %(productVersion)s installation"
-msgstr "instalare %(productName)s %(productVersion)s"
-
-#: pyanaconda/vnc.py:148
-#, python-format
-msgid "%(productName)s %(productVersion)s installation on host %(name)s"
-msgstr "instalare %(productName)s %(productVersion)s pe gazda %(name)s"
-
-#: pyanaconda/vnc.py:167
-#, python-format
-msgid "Attempting to connect to vnc client on host %s..."
-msgstr "Se încearcă conexiunea la clientul vnc de pe gazda %s..."
-
-#: pyanaconda/vnc.py:181
-msgid "Connected!"
-msgstr "Conectat!"
-
-#: pyanaconda/vnc.py:184
-msgid "Will try to connect again in 15 seconds..."
-msgstr "Se va încerca din nou în 15 secunde..."
-
-#: pyanaconda/vnc.py:191
-#, python-format
-msgid "Giving up attempting to connect after %d try!\n"
-msgid_plural "Giving up attempting to connect after %d tries!\n"
-msgstr[0] ""
-"Se renunță la conectare după  %d încercare!\n"
-"\n"
-msgstr[1] "Se renunță la conectare după  %d încercări!\n"
-msgstr[2] "Se renunță la conectare după  %d de încercări!\n"
-
-#: pyanaconda/vnc.py:199
-msgid "Attempting to start vncconfig"
-msgstr "Se încearcă pornirea vncconfig"
-
-#: pyanaconda/vnc.py:212
-#, python-format
-msgid "Please manually connect your vnc client to %s to begin the install."
-msgstr ""
-"Vă rugăm să vă conectați cu clientul dumneavoastră vnc la %s pentru a începe "
-"instalarea."
-
-#: pyanaconda/vnc.py:214
-#, python-format
-msgid ""
-"Please manually connect your vnc client to IP-ADDRESS:%s to begin the "
-"install. Switch to the shell (Ctrl-B 2) and run 'ip addr' to find the IP-"
-"ADDRESS."
-msgstr ""
-
-#: pyanaconda/vnc.py:219
-msgid "Starting VNC..."
-msgstr "Se pornește VNC..."
-
-#: pyanaconda/vnc.py:256
-msgid "The VNC server is now running."
-msgstr "Acum serverul VNC rulează."
-
-#: pyanaconda/vnc.py:260
-msgid ""
-"\n"
-"\n"
-"You chose to connect to a listening vncviewer. \n"
-"This does not require a password to be set.  If you \n"
-"set a password, it will be used in case the connection \n"
-"to the vncviewer is unsuccessful\n"
-"\n"
-msgstr ""
-"\n"
-"\n"
-"Ați ales să vă conectați la un server de ascultare vncviewer.\n"
-"Aceasta nu necesită setarea unei parole. Dacă doriți să\n"
-"setați o parolă, aceasta va fi folosită în caz că conexiunea la\n"
-"vncviewer s-a făcut fără succes.\n"
-"\n"
-
-#: pyanaconda/vnc.py:265
-msgid ""
-"\n"
-"\n"
-"WARNING!!! VNC server running with NO PASSWORD!\n"
-"You can use the inst.vncpassword=PASSWORD boot option\n"
-"if you would like to secure the server.\n"
-"\n"
-msgstr ""
-
-#: pyanaconda/vnc.py:269
-msgid ""
-"\n"
-"\n"
-"You chose to execute vnc with a password. \n"
-"\n"
-msgstr ""
-"\n"
-"\n"
-"Ați ales să executați vnc cu o parolă.\n"
-"\n"
-
-#: pyanaconda/vnc.py:271
-msgid ""
-"\n"
-"\n"
-"Unknown Error.  Aborting. \n"
-"\n"
-msgstr ""
-"\n"
-"\n"
-"Eroare necunoscută. Se renunță.\n"
-"\n"
-
-#: pyanaconda/vnc.py:293
-msgid ""
-"VNC password must be six to eight characters long.\n"
-"Please enter a new one, or leave blank for no password."
-msgstr ""
-"Parola VNC trebuie să fie între șase și opt caractere lungime.\n"
-"Introduceți una nouă, sau lăsați gol pentru a nu stabili o parolă."
-
-#: pyanaconda/startup_utils.py:83
-#, python-format
-msgid ""
-"%(product_name)s requires %(needed_ram)s MB of memory to install, but you "
-"only have %(total_ram)s MB on this machine.\n"
-msgstr ""
-"%(product_name)s necesită %(needed_ram)s MB de memorie pentru a se instala, "
-"dar aveți doar %(total_ram)s MB pe acest calculator.\n"
-
-#: pyanaconda/startup_utils.py:85
-#, fuzzy, python-format
-#| msgid ""
-#| "The %(product_name)s graphical installer requires %(needed_ram)s MB of "
-#| "memory, but you only have %(total_ram)s MB\n"
-#| "."
-msgid ""
-"The %(product_name)s graphical installer requires %(needed_ram)s MB of "
-"memory, but you only have %(total_ram)s MB.\n"
-msgstr ""
-"Instalatorul grafic pentru %(product_name)s necesită %(needed_ram)s MB de "
-"memorie, dar aveți doar %(total_ram)s MB\n"
-"."
-
-#: pyanaconda/startup_utils.py:88
-msgid ""
-"\n"
-"Press [Enter] to reboot your system.\n"
-msgstr ""
-
-#: pyanaconda/startup_utils.py:90
-msgid "Not enough RAM"
-msgstr "RAM insuficient"
-
-#: pyanaconda/startup_utils.py:91
-msgid ""
-" Try the text mode installer by running:\n"
-"\n"
-"'/usr/bin/liveinst -T'\n"
-"\n"
-" from a root terminal."
-msgstr ""
-"Încercați instalarea în mod text prin comanda:\n"
-"\n"
-"/usr/bin/liveinst -T\n"
-"\n"
-"de la un terminal de root."
-
-#: pyanaconda/startup_utils.py:93
-msgid " Starting text mode."
-msgstr "Se începe modul text."
-
-#: pyanaconda/startup_utils.py:130
-msgid "The installation cannot continue and the system will be rebooted"
-msgstr "Instalarea nu poate continua și sistemul va fi repornit"
-
-#: pyanaconda/startup_utils.py:131
-msgid "Press ENTER to continue"
-msgstr "Apăsați ENTER pentru a continua"
-
-#: pyanaconda/startup_utils.py:228
-#, python-format
-msgid "Please ssh install@%s to begin the install."
-msgstr "ssh install@%s pentru a începe instalarea."
-
-#: pyanaconda/startup_utils.py:230
-msgid "Please ssh install@HOSTNAME to continue installation."
-msgstr ""
-
-#: pyanaconda/pwpolicy.py:146
-#, python-format
-msgid "policy name required for %s"
-msgstr "este necesară politică (policy) pentru %s"
-
-#: pyanaconda/pwpolicy.py:155
-#, python-format
-msgid "A %(command)s with the name %(policyName)s has already been defined."
-msgstr "%(command)s cu același nume %(policyName)s a fost deja definită."
-
-#: pyanaconda/product.py:69
-#, python-format
-msgid "%(productName)s %(productVersion)s INSTALLATION"
-msgstr "INSTALARE %(productName)s %(productVersion)s"
-
-#: pyanaconda/network.py:111
-msgid "Host name cannot be None or an empty string."
-msgstr "Host name nu poate fi „niciuna” sau un șir nul."
-
-#: pyanaconda/network.py:114
-msgid "Host name must be 255 or fewer characters in length."
-msgstr "Host name trebuie să aibă maxim 255 de caractere."
-
-#: pyanaconda/network.py:117
-msgid "Local host name must not end with period '.'."
-msgstr ""
-
-#: pyanaconda/network.py:120
-msgid ""
-"Host names can only contain the characters 'a-z', 'A-Z', '0-9', '-', or '.', "
-"parts between periods must contain something and cannot start or end with "
-"'-'."
-msgstr ""
-"Host names nu pot conține caracterele „a-z”, „A-Z”, „0-9”, „-” sau „.” între "
-"puncte, trebuie să conțină ceva și nu pot să înceapă sau să se termine cu "
-"„-”."
-
-#: pyanaconda/network.py:473 pyanaconda/ui/gui/spokes/custom_storage.py:460
-#: pyanaconda/ui/gui/spokes/custom_storage.py:503
-#: pyanaconda/ui/gui/spokes/network.py:281
-msgid "Unknown"
-msgstr "Necunoscut"
-
-#: pyanaconda/network.py:476
-#, fuzzy
-#| msgid "Unavailable"
-msgid "Status not available"
-msgstr "Indisponibil"
-
-#: pyanaconda/network.py:481
-msgid "Connecting..."
-msgstr "Se conectează..."
-
-#: pyanaconda/network.py:483
-msgid "Disconnecting..."
-msgstr "Se deconectează..."
-
-#: pyanaconda/network.py:514
-#, python-format
-msgid "Wired (%(interface_name)s) connected"
-msgstr "Rețeaua cu fir (%(interface_name)s) conectată"
-
-#: pyanaconda/network.py:517
-#, python-format
-msgid "Wireless connected to %(access_point)s"
-msgstr "Rețeaua fără fir (wireless) conectată la %(access_point)s"
-
-#: pyanaconda/network.py:520
-#, python-format
-msgid "Bond %(interface_name)s (%(list_of_slaves)s) connected"
-msgstr "Asocierea (bond) %(interface_name)s (%(list_of_slaves)s) conectată"
-
-#: pyanaconda/network.py:524
-#, python-format
-msgid "Team %(interface_name)s (%(list_of_slaves)s) connected"
-msgstr ""
-
-#: pyanaconda/network.py:528
-#, python-format
-msgid "Bridge %(interface_name)s (%(list_of_slaves)s) connected"
-msgstr ""
-
-#: pyanaconda/network.py:534
-#, python-format
-msgid "VLAN %(interface_name)s (%(parent_device)s, ID %(vlanid)s) connected"
-msgstr "VLAN %(interface_name)s (%(parent_device)s, ID %(vlanid)s) conectat"
-
-#: pyanaconda/network.py:553
-#, python-format
-msgid "Connected: %(list_of_interface_names)s"
-msgstr "Conectate: %(list_of_interface_names)s"
-
-#: pyanaconda/network.py:555
-msgid "Not connected"
-msgstr "Neconectat"
-
-#: pyanaconda/network.py:558 pyanaconda/ui/gui/spokes/network.glade:2357
-msgid "No network devices available"
-msgstr "Nu se găsesc dispozitive de rețea"
-
-#: pyanaconda/kickstart.py:540
-msgid ""
-"\n"
-"Some warnings occurred during reading the kickstart file:"
-msgstr ""
-
-#: pyanaconda/kickstart.py:553
-#, python-format
-msgid ""
-"\n"
-"An error occurred during reading the kickstart file:\n"
-"%s\n"
-"\n"
-"The installer will now terminate."
-msgstr ""
-
-#: pyanaconda/kickstart.py:597 pyanaconda/installation.py:285
-msgid "Running pre-installation scripts"
-msgstr "Se rulează scripturi post-instalare"
-
-#: pyanaconda/installation.py:87
-msgid "Configuring Red Hat subscription"
-msgstr ""
-
-#: pyanaconda/installation.py:94
-msgid "Configuring installed system"
-msgstr "Se configurează sistemul instalat"
-
-#: pyanaconda/installation.py:132
-msgid "Writing network configuration"
-msgstr "Se scrie configurația de rețea"
-
-#: pyanaconda/installation.py:139
-msgid "Creating users"
-msgstr "Se creează utilizatori"
-
-#: pyanaconda/installation.py:146
-msgid "Configuring addons"
-msgstr "Se configurează add-on-uri"
-
-#: pyanaconda/installation.py:162
-msgid "Generating initramfs"
-msgstr "Se generează initramfs"
-
-#: pyanaconda/installation.py:190
-msgid "Setting up kexec"
-msgstr "Se configurează kexec"
-
-#: pyanaconda/installation.py:195
-msgid "Storing configuration files and kickstarts"
-msgstr "Se depozitează fișierele de configurație și kickstart"
-
-#: pyanaconda/installation.py:214
-msgid "Running post-installation scripts"
-msgstr "Se rulează scripturi post-instalare"
-
-#: pyanaconda/installation.py:244
-#, python-format
-msgid "Waiting for %s threads to finish"
-msgstr "Se așteaptă terminarea a %s fire de execuție"
-
-#: pyanaconda/installation.py:258
-msgid "Setting up the installation environment"
-msgstr "Se setează mediul de instalare"
-
-#: pyanaconda/installation.py:275 pyanaconda/installation.py:341
-msgid "Configuring storage"
-msgstr "Se configurează spațiul de stocare"
-
-#: pyanaconda/installation.py:292
-msgid "Running pre-installation tasks"
-msgstr "Se execută sarcini de pre-instalare"
-
-#: pyanaconda/installation.py:335
-msgid "Installing."
-msgstr "Se instalează."
-
-#: pyanaconda/installation.py:348
-msgid "Installing boot loader"
-msgstr "Se instalează încărcătorul de sistem"
-
-#: pyanaconda/installation.py:361 pyanaconda/payload/live/payload_base.py:172
-#: pyanaconda/payload/dnf/payload.py:1422
-msgid "Performing post-installation setup tasks"
-msgstr "Se efectuează sarcini de setare post-instalare"
-
-#: pyanaconda/installation.py:369
-msgid "Creating snapshots"
-msgstr "Se creează snapshot-uri"
-
-#: pyanaconda/input_checking.py:539
-msgid "Full name cannot contain colon characters"
-msgstr "Numele complet nu poate conține caractere „două puncte”"
-
-#: pyanaconda/exception.py:109
-#, python-format
-msgid ""
-"The installation was stopped due to what seems to be a problem with your "
-"hardware. The exact error message is:\n"
-"\n"
-"%s.\n"
-"\n"
-" The installer will now terminate."
-msgstr ""
-"Instalarea s-a oprit din cauza unei posibile erori cu hardware-ul. Mesajul "
-"de eroare exact:\n"
-"\n"
-"%s.\n"
-"\n"
-"Instalarea va fi abandonată."
-
-#: pyanaconda/exception.py:113
-msgid "Hardware error occurred"
-msgstr "S-a produs o eroare de hardware"
-
-#: pyanaconda/exception.py:174
-#, python-format
-msgid ""
-"\n"
-"The installation was stopped due to an error which occurred while running in "
-"non-interactive cmdline mode. Since there cannot be any questions in cmdline "
-"mode, edit your kickstart file and retry installation. \n"
-"The exact error message is: \n"
-"\n"
-"%s. \n"
-"\n"
-"The installer will now terminate."
-msgstr ""
-"\n"
-"Instalarea a fost oprită din cauza unei erori, întâlnită  în timp ce se "
-"rulează în modul de linie de comandă non-interactiv. Dat fiind că nu pot "
-"exista întrebări în modul liniei de comandă, modificați fișierul kickstart "
-"și încercați din nou instalarea.\n"
-"Mesajul de eroare exact:\n"
-": \n"
-"\n"
-"%s. \n"
-"\n"
-"Instalarea va fi abandonată."
-
-#: pyanaconda/exception.py:182
-#, python-format
-msgid ""
-"\n"
-"Running in cmdline mode, no interactive debugging allowed.\n"
-"The exact error message is: \n"
-"\n"
-"%s.\n"
-"\n"
-"The installer will now terminate."
-msgstr ""
-"\n"
-"Nu este permisă depanarea interactivă în timpul modului linie de comandă.\n"
-"Mesajul exact de eroare:\n"
-"\n"
-"%s.\n"
-"\n"
-"Instalarea va fi abandonată."
-
 #: pyanaconda/display.py:301
 msgid "Graphical installation is not available. Starting text mode."
 msgstr "Instalarea grafică nu e disponibilă. Se începe modul text."
@@ -741,118 +853,6 @@ msgstr "Se execută suplimentul %s"
 #| msgid "Executing %s addon"
 msgid "Setting up %s addon"
 msgstr "Se execută suplimentul %s"
-
-#: pyanaconda/rescue.py:272
-msgid "Unable to find /bin/bash to execute!  Not starting shell."
-msgstr ""
-"Nu se poate găsi /bin/bash pentru execuție! Nu se pornește linia de comandă."
-
-#: pyanaconda/rescue.py:289
-msgid "Rescue"
-msgstr "Recuperează"
-
-#: pyanaconda/rescue.py:296
-#, python-format
-msgid ""
-"The rescue environment will now attempt to find your Linux installation and "
-"mount it under the directory : %s.  You can then make any changes required "
-"to your system.  Choose '1' to proceed with this step.\n"
-"You can choose to mount your file systems read-only instead of read-write by "
-"choosing '2'.\n"
-"If for some reason this process does not work choose '3' to skip directly to "
-"a shell.\n"
-"\n"
-msgstr ""
-"Mediul de salvare va încerca să găsească instalarea de Linux și să o monteze "
-"sub directorul: %s.  Puteți apoi realiza orice modificări necesare pentru "
-"sistem. Alegeți „1” pentru a continua cu acest pas.\n"
-"Puteți alege montarea sistemului în mod „numai citire” în loc de „citire/"
-"scriere” prin opțiunea „2”.\n"
-"Dacă această procedură nu funcționează, puteți alege opțiunea „3” pentru a "
-"intra direct la linia de comandă.\n"
-"\n"
-
-#: pyanaconda/rescue.py:308
-msgid "Continue"
-msgstr "Continuă"
-
-#: pyanaconda/rescue.py:309
-msgid "Read-only mount"
-msgstr "Montare „numai citire”"
-
-#: pyanaconda/rescue.py:310
-msgid "Skip to shell"
-msgstr "Mergi direct la linia de comandă"
-
-#: pyanaconda/rescue.py:311
-msgid "Quit (Reboot)"
-msgstr "Ieșire (Reboot)"
-
-#: pyanaconda/rescue.py:408
-msgid "Rescue Shell"
-msgstr "Linia de comandă de recuperare"
-
-#: pyanaconda/rescue.py:418
-#, python-format
-msgid "Run %s to unmount the system when you are finished."
-msgstr "Rulați %s pentru a demonta sistemul când ați terminat."
-
-#: pyanaconda/rescue.py:419
-msgid ""
-"When finished, please exit from the shell and your system will reboot.\n"
-msgstr ""
-"După ce terminați, vă rugăm ieșiți din linia de comandă și sistemul "
-"dumneavoastră va fi repornit.\n"
-
-#: pyanaconda/rescue.py:430
-#, python-format
-msgid ""
-"Your system has been mounted under %(mountpoint)s.\n"
-"\n"
-"If you would like to make the root of your system the root of the active "
-"system, run the command:\n"
-"\n"
-"\tchroot %(mountpoint)s\n"
-"\n"
-msgstr ""
-
-#: pyanaconda/rescue.py:442
-#, fuzzy, python-brace-format
-#| msgid ""
-#| "An error occurred trying to mount some or all of your system.  Some of it "
-#| "may be mounted under %s\n"
-#| "\n"
-msgid ""
-"An error occurred trying to mount some or all of your system: {message}\n"
-"\n"
-"Some of it may be mounted under {path}."
-msgstr ""
-"S-a întâmpinat o eroare la încercarea de a monta parțial sau total sistemul. "
-"Unele dintre acestea pot fi montate sub %s\n"
-"\n"
-
-#: pyanaconda/rescue.py:454
-#, fuzzy
-#| msgid "You don't have any Linux partitions. %s\n"
-msgid "You don't have any Linux partitions.\n"
-msgstr "Nu aveți nicio partiție Linux. %s\n"
-
-#: pyanaconda/rescue.py:460
-msgid "Not mounting the system.\n"
-msgstr "Sistemul nu se montează.\n"
-
-#: pyanaconda/rescue.py:474
-#, python-format
-msgid "Please press %s to get a shell"
-msgstr "Apăsați %s pentru o linie de comandă."
-
-#: pyanaconda/rescue.py:491
-msgid "Root Selection"
-msgstr "Selecție rădăcină (root)"
-
-#: pyanaconda/rescue.py:517
-msgid "The following installations were discovered on your system."
-msgstr ""
 
 #: pyanaconda/ui/tui/tuiobject.py:153
 #, python-format
@@ -896,9 +896,9 @@ msgstr ""
 #: pyanaconda/ui/tui/spokes/user.py:145
 #: pyanaconda/ui/tui/spokes/root_password.py:103
 #: pyanaconda/ui/gui/spokes/user.glade:173
+#: pyanaconda/ui/gui/spokes/root_password.glade:87
 #: pyanaconda/ui/gui/spokes/subscription.glade:181
 #: pyanaconda/ui/gui/spokes/subscription.glade:569
-#: pyanaconda/ui/gui/spokes/root_password.glade:87
 msgid "Password"
 msgstr "Parola"
 
@@ -1775,169 +1775,6 @@ msgctxt "GUI|Yes No Dialog"
 msgid "_Yes"
 msgstr "_Da"
 
-#: pyanaconda/ui/gui/spokes/custom_storage.py:99
-#: pyanaconda/ui/gui/spokes/custom_storage.glade:87
-msgid "MANUAL PARTITIONING"
-msgstr "PARTIȚIONARE MANUALĂ"
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:273
-#, python-format
-msgctxt "GUI|Custom Partitioning"
-msgid "%d _storage device selected"
-msgid_plural "%d _storage devices selected"
-msgstr[0] "%d dispozitiv de _stocare selectat"
-msgstr[1] "%d dispozitive de _stocare selectate"
-msgstr[2] "%d de dispozitive de _stocare selectate"
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:344
-#, python-format
-msgid "%(items_selected)s of %(items_total)s mount points in %(page_name)s"
-msgstr ""
-"%(items_selected)s din %(items_total)s puncte de montare în %(page_name)s"
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:371
-#, python-format
-msgid ""
-"Please select a single mount point to edit properties.\n"
-"\n"
-"You have currently selected:\n"
-"%s"
-msgstr ""
-"Vă rugăm să selectați un singur punct de montare pentru a edita "
-"proprietățile.\n"
-"\n"
-"Momentan ați selectat:\n"
-"%s"
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:376
-#, python-format
-msgid ""
-"When you create mount points for your %(name)s %(version)s installation, "
-"you'll be able to view their details here."
-msgstr ""
-"Când creați puncte de montare pentru a instala %(name)s %(version)s , puteți "
-"vedea detaliile acestora aici."
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:607
-#: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade:178
-msgid "Device reconfiguration failed."
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:755
-msgid "No disks assigned"
-msgstr "Nu au fost alocate discuri"
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:769
-#, fuzzy
-#| msgctxt "GUI|Custom Partitioning|Devices"
-#| msgid " and %d other"
-#| msgid_plural " and %d others"
-msgctxt "GUI|Custom Partitioning|Devices"
-msgid " and {} other"
-msgid_plural " and {} others"
-msgstr[0] "și %d altul"
-msgstr[1] "și alte %d"
-msgstr[2] "și alte %d"
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:813
-msgid "The container is encrypted."
-msgstr "Containerul este criptat."
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:842
-msgid ""
-"The space available to this mount point can be changed by modifying the "
-"volume below."
-msgstr ""
-"Spațiul disponibil pentru acest punct de montare poate fi schimbat prin "
-"modificarea volumului de mai jos."
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:847
-msgid "This file system may not be resized."
-msgstr "Sistemul de fișiere nu poate fi redimensionat."
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:940
-#, fuzzy
-#| msgid ""
-#| "Error checking storage configuration.  <a href=\"\">Click for details</a> "
-#| "or press Done again to continue."
-msgid ""
-"Error checking storage configuration. <a href=\"\">Click for details</a> or "
-"press Done again to continue."
-msgstr ""
-"Eroare la verificarea configurației de stocare.  <a href=\"\">Clic pentru "
-"detalii</a> sau apăsați Gata din nou pentru a continua."
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:944
-#, fuzzy
-#| msgid ""
-#| "Warning checking storage configuration.  <a href=\"\">Click for details</"
-#| "a> or press Done again to continue."
-msgid ""
-"Warning checking storage configuration. <a href=\"\">Click for details</a> "
-"or press Done again to continue."
-msgstr ""
-"Avertizare la verificarea configurației de stocare.  <a href=\"\">Clic "
-"pentru detalii</a> sau apăsați Gata din nou pentru a continua."
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1026
-msgid "Failed to add new device."
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1084
-#, fuzzy
-#| msgid "Device discovery failed."
-msgid "Device removal request failed."
-msgstr "Descoperirea dispozitivelor a eșuat."
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1221
-msgid "No disks selected. Keeping previous disk set."
-msgstr "Niciun disc selectat. Se păstrează setul de discuri precedent."
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1300
-#, fuzzy
-#| msgid "(%s free)"
-msgid "({} free)"
-msgstr "(%s liber)"
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1482
-#, fuzzy
-#| msgid "Automatic partitioning selected"
-msgid "Automatic partitioning failed."
-msgstr "A fost selectată partiționarea automată"
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1772
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1776
-#: pyanaconda/ui/gui/spokes/installation_source.py:98
-msgid " <a href=\"\">Click for details.</a>"
-msgstr "<a href=\"\">Clic pentru detalii.</a>"
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1789
-#: pyanaconda/ui/gui/spokes/blivet_gui.py:320
-msgid ""
-"Continuing with this action will reset all your partitioning selections to "
-"their current on-disk state."
-msgstr ""
-"Continuând această acțiune veți reseta toate selecțiile de partiție pentru "
-"starea curentă a discurilor."
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1800
-#: pyanaconda/ui/gui/spokes/blivet_gui.py:328
-msgctxt "GUI|Custom Partitioning|Reset Dialog"
-msgid "_Reset selections"
-msgstr "_Resetează selecții"
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1802
-#: pyanaconda/ui/gui/spokes/blivet_gui.py:329
-msgctxt "GUI|Custom Partitioning|Reset Dialog"
-msgid "_Preserve current selections"
-msgstr "_Păstrează selecțiile curente"
-
-#: pyanaconda/ui/gui/spokes/custom_storage.py:1884
-#, fuzzy
-#| msgid "%s cannot be on an encrypted block device."
-msgid "Failed to unlock encrypted block device."
-msgstr "%s nu poate fi pe un dispozitiv criptat de tip bloc."
-
 #: pyanaconda/ui/gui/spokes/welcome.py:255
 #, python-format
 msgid "WELCOME TO %(name)s %(version)s."
@@ -2433,12 +2270,12 @@ msgid "Enterprise"
 msgstr "Enterprise"
 
 #: pyanaconda/ui/gui/spokes/network.py:1101 widgets/src/SpokeSelector.c:81
+#: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:543
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:152
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:594
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:928
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1248
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1538
-#: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:543
 msgid "None"
 msgstr "Niciuna"
 
@@ -2485,6 +2322,12 @@ msgstr "Schimbarea aranjamentului nu este configurată."
 #: pyanaconda/ui/gui/spokes/installation_source.py:71
 msgid "Setting up installation source..."
 msgstr "Se setează sursa de instalare..."
+
+#: pyanaconda/ui/gui/spokes/installation_source.py:98
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1772
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1776
+msgid " <a href=\"\">Click for details.</a>"
+msgstr "<a href=\"\">Clic pentru detalii.</a>"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:110
 msgid "Invalid proxy URL"
@@ -2703,6 +2546,163 @@ msgstr "Trebuie să setați rețeaua înainte de a putea folosi NTP"
 msgid "You have no working NTP server configured"
 msgstr "Nu aveți un server de NTP configurat"
 
+#: pyanaconda/ui/gui/spokes/custom_storage.py:99
+#: pyanaconda/ui/gui/spokes/custom_storage.glade:87
+msgid "MANUAL PARTITIONING"
+msgstr "PARTIȚIONARE MANUALĂ"
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:273
+#, python-format
+msgctxt "GUI|Custom Partitioning"
+msgid "%d _storage device selected"
+msgid_plural "%d _storage devices selected"
+msgstr[0] "%d dispozitiv de _stocare selectat"
+msgstr[1] "%d dispozitive de _stocare selectate"
+msgstr[2] "%d de dispozitive de _stocare selectate"
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:344
+#, python-format
+msgid "%(items_selected)s of %(items_total)s mount points in %(page_name)s"
+msgstr ""
+"%(items_selected)s din %(items_total)s puncte de montare în %(page_name)s"
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:371
+#, python-format
+msgid ""
+"Please select a single mount point to edit properties.\n"
+"\n"
+"You have currently selected:\n"
+"%s"
+msgstr ""
+"Vă rugăm să selectați un singur punct de montare pentru a edita "
+"proprietățile.\n"
+"\n"
+"Momentan ați selectat:\n"
+"%s"
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:376
+#, python-format
+msgid ""
+"When you create mount points for your %(name)s %(version)s installation, "
+"you'll be able to view their details here."
+msgstr ""
+"Când creați puncte de montare pentru a instala %(name)s %(version)s , puteți "
+"vedea detaliile acestora aici."
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:607
+#: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade:178
+msgid "Device reconfiguration failed."
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:755
+msgid "No disks assigned"
+msgstr "Nu au fost alocate discuri"
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:769
+#, fuzzy
+#| msgctxt "GUI|Custom Partitioning|Devices"
+#| msgid " and %d other"
+#| msgid_plural " and %d others"
+msgctxt "GUI|Custom Partitioning|Devices"
+msgid " and {} other"
+msgid_plural " and {} others"
+msgstr[0] "și %d altul"
+msgstr[1] "și alte %d"
+msgstr[2] "și alte %d"
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:813
+msgid "The container is encrypted."
+msgstr "Containerul este criptat."
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:842
+msgid ""
+"The space available to this mount point can be changed by modifying the "
+"volume below."
+msgstr ""
+"Spațiul disponibil pentru acest punct de montare poate fi schimbat prin "
+"modificarea volumului de mai jos."
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:847
+msgid "This file system may not be resized."
+msgstr "Sistemul de fișiere nu poate fi redimensionat."
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:940
+#, fuzzy
+#| msgid ""
+#| "Error checking storage configuration.  <a href=\"\">Click for details</a> "
+#| "or press Done again to continue."
+msgid ""
+"Error checking storage configuration. <a href=\"\">Click for details</a> or "
+"press Done again to continue."
+msgstr ""
+"Eroare la verificarea configurației de stocare.  <a href=\"\">Clic pentru "
+"detalii</a> sau apăsați Gata din nou pentru a continua."
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:944
+#, fuzzy
+#| msgid ""
+#| "Warning checking storage configuration.  <a href=\"\">Click for details</"
+#| "a> or press Done again to continue."
+msgid ""
+"Warning checking storage configuration. <a href=\"\">Click for details</a> "
+"or press Done again to continue."
+msgstr ""
+"Avertizare la verificarea configurației de stocare.  <a href=\"\">Clic "
+"pentru detalii</a> sau apăsați Gata din nou pentru a continua."
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1026
+msgid "Failed to add new device."
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1084
+#, fuzzy
+#| msgid "Device discovery failed."
+msgid "Device removal request failed."
+msgstr "Descoperirea dispozitivelor a eșuat."
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1221
+msgid "No disks selected. Keeping previous disk set."
+msgstr "Niciun disc selectat. Se păstrează setul de discuri precedent."
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1300
+#, fuzzy
+#| msgid "(%s free)"
+msgid "({} free)"
+msgstr "(%s liber)"
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1482
+#, fuzzy
+#| msgid "Automatic partitioning selected"
+msgid "Automatic partitioning failed."
+msgstr "A fost selectată partiționarea automată"
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1789
+#: pyanaconda/ui/gui/spokes/blivet_gui.py:320
+msgid ""
+"Continuing with this action will reset all your partitioning selections to "
+"their current on-disk state."
+msgstr ""
+"Continuând această acțiune veți reseta toate selecțiile de partiție pentru "
+"starea curentă a discurilor."
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1800
+#: pyanaconda/ui/gui/spokes/blivet_gui.py:328
+msgctxt "GUI|Custom Partitioning|Reset Dialog"
+msgid "_Reset selections"
+msgstr "_Resetează selecții"
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1802
+#: pyanaconda/ui/gui/spokes/blivet_gui.py:329
+msgctxt "GUI|Custom Partitioning|Reset Dialog"
+msgid "_Preserve current selections"
+msgstr "_Păstrează selecțiile curente"
+
+#: pyanaconda/ui/gui/spokes/custom_storage.py:1884
+#, fuzzy
+#| msgid "%s cannot be on an encrypted block device."
+msgid "Failed to unlock encrypted block device."
+msgstr "%s nu poate fi pe un dispozitiv criptat de tip bloc."
+
 #: pyanaconda/ui/gui/spokes/blivet_gui.py:103
 msgctxt "GUI|Spoke"
 msgid "_Blivet-GUI Partitioning"
@@ -2740,6 +2740,92 @@ msgid_plural "{} _storage devices selected"
 msgstr[0] "%d _storage dizpozitiv selectat"
 msgstr[1] "%d _storage dizpozitive selectate"
 msgstr[2] "%d _storage de dizpozitive selectate"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:53
+msgid "Preserve"
+msgstr "Păstrează"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:54
+msgid "Shrink"
+msgstr "Micșorează"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:55
+msgid "Delete"
+msgstr "Șterge"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:96
+#, python-format
+msgid "Installation requires a total of <b>%s</b> for system data."
+msgstr "Instalarea are nevoie de <b>%s</b> pentru date de sistem."
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:128
+msgid "This device contains the installation source."
+msgstr "Acest dispozitiv conține sursa de instalare."
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:148
+msgid ""
+"You can remove existing file systems you no longer need to free up space for "
+"this installation.  Removing a file system will permanently delete all of "
+"the data it contains."
+msgstr ""
+"Puteți elimina sisteme de fișiere existente de care nu mai aveți nevoie "
+"pentru a elibera spațiu pentru această instalare. Ștergerea unui sistem de "
+"fișiere va șterge permanent toate datele conținute."
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:155
+msgid ""
+"There is also free space available in pre-existing file systems.  While it's "
+"risky and we recommend you back up your data first, you can recover that "
+"free disk space and make it available for this installation below."
+msgstr ""
+"Mai este spațiu disponibil în sistemele de fișiere pre-existente. Deși este "
+"riscant și vă recomandăm să faceți mai întâi o copie de siguranță, puteți "
+"recupera spațiul liber de pe disc și-l puteți face disponibil pentru "
+"instalarea de mai jos."
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:236
+#, python-format
+msgid "%(freeSize)s of %(devSize)s"
+msgstr "%(freeSize)s a %(devSize)s"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:246
+msgid "Not resizeable"
+msgstr "Nu e redimensionabil"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:281
+msgid "Free space"
+msgstr "Spațiu liber"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:306
+#, python-format
+msgid "<b>%(count)s disk; %(size)s reclaimable space</b> (in file systems)"
+msgid_plural ""
+"<b>%(count)s disks; %(size)s reclaimable space</b> (in file systems)"
+msgstr[0] ""
+"<b>%(count)s disc; %(size)s spațiu recuperabil</b> (în sistemele de fișiere)"
+msgstr[1] ""
+"<b>%(count)s discuri; %(size)s spațiu recuperabil</b> (în sistemele de "
+"fișiere)"
+msgstr[2] ""
+"<b>%(count)s de discuri; %(size)s spațiu recuperabil</b> (în sistemele de "
+"fișiere)"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:317
+#, python-format
+msgid "Total selected space to reclaim: <b>%s</b>"
+msgstr "Spațiu total de recuperat: <b>%s</b>"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:546
+#: pyanaconda/ui/gui/spokes/lib/resize.py:551
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:267
+msgctxt "GUI|Reclaim Dialog"
+msgid "Delete _all"
+msgstr "Șterge to_ate"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:548
+msgctxt "GUI|Reclaim Dialog"
+msgid "Preserve _all"
+msgstr "Păstrează to_ate"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:47
 #, python-format
@@ -2867,91 +2953,16 @@ msgstr "Numele este utilizat deja."
 msgid "No disks selected."
 msgstr "Nu au fost selectate discuri."
 
-#: pyanaconda/ui/gui/spokes/lib/resize.py:53
-msgid "Preserve"
-msgstr "Păstrează"
+#: pyanaconda/ui/gui/spokes/lib/cart.py:193
+msgctxt "GUI|Selected Disks Dialog"
+msgid "_Do not install boot loader"
+msgstr "_Nu instala încărcătorul (bootloader)"
 
-#: pyanaconda/ui/gui/spokes/lib/resize.py:54
-msgid "Shrink"
-msgstr "Micșorează"
-
-#: pyanaconda/ui/gui/spokes/lib/resize.py:55
-msgid "Delete"
-msgstr "Șterge"
-
-#: pyanaconda/ui/gui/spokes/lib/resize.py:96
-#, python-format
-msgid "Installation requires a total of <b>%s</b> for system data."
-msgstr "Instalarea are nevoie de <b>%s</b> pentru date de sistem."
-
-#: pyanaconda/ui/gui/spokes/lib/resize.py:128
-msgid "This device contains the installation source."
-msgstr "Acest dispozitiv conține sursa de instalare."
-
-#: pyanaconda/ui/gui/spokes/lib/resize.py:148
-msgid ""
-"You can remove existing file systems you no longer need to free up space for "
-"this installation.  Removing a file system will permanently delete all of "
-"the data it contains."
-msgstr ""
-"Puteți elimina sisteme de fișiere existente de care nu mai aveți nevoie "
-"pentru a elibera spațiu pentru această instalare. Ștergerea unui sistem de "
-"fișiere va șterge permanent toate datele conținute."
-
-#: pyanaconda/ui/gui/spokes/lib/resize.py:155
-msgid ""
-"There is also free space available in pre-existing file systems.  While it's "
-"risky and we recommend you back up your data first, you can recover that "
-"free disk space and make it available for this installation below."
-msgstr ""
-"Mai este spațiu disponibil în sistemele de fișiere pre-existente. Deși este "
-"riscant și vă recomandăm să faceți mai întâi o copie de siguranță, puteți "
-"recupera spațiul liber de pe disc și-l puteți face disponibil pentru "
-"instalarea de mai jos."
-
-#: pyanaconda/ui/gui/spokes/lib/resize.py:236
-#, python-format
-msgid "%(freeSize)s of %(devSize)s"
-msgstr "%(freeSize)s a %(devSize)s"
-
-#: pyanaconda/ui/gui/spokes/lib/resize.py:246
-msgid "Not resizeable"
-msgstr "Nu e redimensionabil"
-
-#: pyanaconda/ui/gui/spokes/lib/resize.py:281
-msgid "Free space"
-msgstr "Spațiu liber"
-
-#: pyanaconda/ui/gui/spokes/lib/resize.py:306
-#, python-format
-msgid "<b>%(count)s disk; %(size)s reclaimable space</b> (in file systems)"
-msgid_plural ""
-"<b>%(count)s disks; %(size)s reclaimable space</b> (in file systems)"
-msgstr[0] ""
-"<b>%(count)s disc; %(size)s spațiu recuperabil</b> (în sistemele de fișiere)"
-msgstr[1] ""
-"<b>%(count)s discuri; %(size)s spațiu recuperabil</b> (în sistemele de "
-"fișiere)"
-msgstr[2] ""
-"<b>%(count)s de discuri; %(size)s spațiu recuperabil</b> (în sistemele de "
-"fișiere)"
-
-#: pyanaconda/ui/gui/spokes/lib/resize.py:317
-#, python-format
-msgid "Total selected space to reclaim: <b>%s</b>"
-msgstr "Spațiu total de recuperat: <b>%s</b>"
-
-#: pyanaconda/ui/gui/spokes/lib/resize.py:546
-#: pyanaconda/ui/gui/spokes/lib/resize.py:551
-#: pyanaconda/ui/gui/spokes/lib/resize.glade:267
-msgctxt "GUI|Reclaim Dialog"
-msgid "Delete _all"
-msgstr "Șterge to_ate"
-
-#: pyanaconda/ui/gui/spokes/lib/resize.py:548
-msgctxt "GUI|Reclaim Dialog"
-msgid "Preserve _all"
-msgstr "Păstrează to_ate"
+#: pyanaconda/ui/gui/spokes/lib/cart.py:198
+#: pyanaconda/ui/gui/spokes/lib/cart.glade:200
+msgctxt "GUI|Selected Disks Dialog"
+msgid "_Set as Boot Device"
+msgstr "_Setează ca dispozitiv de încărcare (boot)"
 
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:444
 msgid "DATA"
@@ -2997,17 +3008,6 @@ msgstr "_Noile puncte de montare vor folosi următoarea schemă de partiționare
 msgctxt "GUI|Custom Partitioning|Autopart Page"
 msgid "_Encrypt automatically created mount points by default:"
 msgstr ""
-
-#: pyanaconda/ui/gui/spokes/lib/cart.py:193
-msgctxt "GUI|Selected Disks Dialog"
-msgid "_Do not install boot loader"
-msgstr "_Nu instala încărcătorul (bootloader)"
-
-#: pyanaconda/ui/gui/spokes/lib/cart.py:198
-#: pyanaconda/ui/gui/spokes/lib/cart.glade:200
-msgctxt "GUI|Selected Disks Dialog"
-msgid "_Set as Boot Device"
-msgstr "_Setează ca dispozitiv de încărcare (boot)"
 
 #: pyanaconda/ui/gui/spokes/lib/subscription.py:66
 msgid "Other ({})"
@@ -4016,6 +4016,20 @@ msgstr ""
 "\n"
 "%s"
 
+#: pyanaconda/modules/storage/devicetree/root.py:342
+msgid "Unknown Linux"
+msgstr ""
+
+#: pyanaconda/modules/storage/devicetree/root.py:345
+#, python-brace-format
+msgid "{product} {version} for {arch}"
+msgstr ""
+
+#: pyanaconda/modules/storage/devicetree/root.py:347
+#, python-brace-format
+msgid "{product} Linux {version} for {arch}"
+msgstr ""
+
 #: pyanaconda/modules/storage/devicetree/fsset.py:390
 #, fuzzy, python-brace-format
 #| msgid ""
@@ -4030,20 +4044,6 @@ msgstr ""
 "O intrare din fișierul /etc/fstab conține un tip invalid sau greșit de "
 "sistem de fișiere:\n"
 "\n"
-
-#: pyanaconda/modules/storage/devicetree/root.py:342
-msgid "Unknown Linux"
-msgstr ""
-
-#: pyanaconda/modules/storage/devicetree/root.py:345
-#, python-brace-format
-msgid "{product} {version} for {arch}"
-msgstr ""
-
-#: pyanaconda/modules/storage/devicetree/root.py:347
-#, python-brace-format
-msgid "{product} Linux {version} for {arch}"
-msgstr ""
 
 #: pyanaconda/modules/storage/checker/utils.py:54
 #, python-format
@@ -4269,6 +4269,18 @@ msgstr ""
 "este parte al acestei matrici. Încărcătorul stage1 va fi instalat pe un "
 "singur disc."
 
+#: pyanaconda/modules/storage/bootloader/execution.py:187
+msgid "No match found for given boot drive \"{}\"."
+msgstr ""
+
+#: pyanaconda/modules/storage/bootloader/execution.py:191
+msgid "More than one match found for given boot drive \"{}\"."
+msgstr ""
+
+#: pyanaconda/modules/storage/bootloader/execution.py:195
+msgid "Requested boot drive \"{}\" doesn't exist or cannot be used."
+msgstr ""
+
 #: pyanaconda/modules/storage/bootloader/bootloader.py:171
 msgid "GRUB2 does not support installation to a partition."
 msgstr "GRUB2 nu suportă instalarea pe o partiție."
@@ -4373,18 +4385,6 @@ msgstr ""
 #, python-format
 msgid "%(desc)s cannot be of type %(type)s"
 msgstr "%(desc)s nu poate fi de tip %(type)s"
-
-#: pyanaconda/modules/storage/bootloader/execution.py:187
-msgid "No match found for given boot drive \"{}\"."
-msgstr ""
-
-#: pyanaconda/modules/storage/bootloader/execution.py:191
-msgid "More than one match found for given boot drive \"{}\"."
-msgstr ""
-
-#: pyanaconda/modules/storage/bootloader/execution.py:195
-msgid "Requested boot drive \"{}\" doesn't exist or cannot be used."
-msgstr ""
 
 #: pyanaconda/modules/payloads/source/repo_files/repo_files.py:54
 #, fuzzy
@@ -4540,6 +4540,18 @@ msgid ""
 msgstr ""
 "Partiția de încărcare (boot) PReP este o parte din configurația de pornire\n"
 "pentru anumite platforme PPC."
+
+#: pyanaconda/core/payload.py:131
+msgid "No host url"
+msgstr "Nu e setat url „host”"
+
+#: pyanaconda/core/payload.py:152
+msgid "malformed URL, cannot parse it."
+msgstr "URL formatat greșit, nu poate fi parsat."
+
+#: pyanaconda/core/payload.py:168
+msgid "URL has no host component"
+msgstr "URL nu are componentă „host”"
 
 #: pyanaconda/core/constants.py:89
 msgid "Start VNC"
@@ -4724,18 +4736,6 @@ msgstr "Se descarcă metadatele pentru grup..."
 #: pyanaconda/core/constants.py:306
 msgid "Anaconda Installer"
 msgstr "Programul de instalare Anaconda"
-
-#: pyanaconda/core/payload.py:131
-msgid "No host url"
-msgstr "Nu e setat url „host”"
-
-#: pyanaconda/core/payload.py:152
-msgid "malformed URL, cannot parse it."
-msgstr "URL formatat greșit, nu poate fi parsat."
-
-#: pyanaconda/core/payload.py:168
-msgid "URL has no host component"
-msgstr "URL nu are componentă „host”"
 
 #: pyanaconda/core/kickstart/addon.py:128
 msgid "Missing name of the %addon section."
@@ -4943,134 +4943,6 @@ msgstr "Setează ca utilizator ad_ministrator"
 msgctxt "GUI|User"
 msgid "_Advanced..."
 msgstr "_Avansat..."
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:8
-msgid "CONNECT TO RED HAT"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:83
-#: pyanaconda/ui/gui/spokes/lib/network_secret_agent.glade:8
-msgid "Authentication"
-msgstr "Autentificare"
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:100
-msgctxt "GUI|Subscription|Authentication|Account"
-msgid "_Account"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:117
-msgctxt "GUI|Subscription|Authetication|Activation Key"
-msgid "Activation _Key"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:227
-msgid "Organization"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:239
-msgid "Activation Key"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:263
-msgid "key1,key2,..."
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:284
-msgid "Purpose"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:310
-msgid "Usage"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:322
-msgid "Role"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:334
-msgid "SLA"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:384
-msgctxt "GUI|Subscription|Set System Purpose"
-msgid "Set System Purpose"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:401
-#: pyanaconda/ui/gui/spokes/subscription.glade:852
-msgid "Insights"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:414
-msgctxt "GUI|Subscription|Red Hat Insights"
-msgid "Connect to Red Hat _Insights"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:418
-msgid ""
-"Red Hat Insights aims to increase your IT efficiency and speed across hybrid "
-"infrastructures by identifying and prioritizing risks, managing "
-"vulnerabilities, and compliance, and analyzing costs. For more information, "
-"visit the Red Hat Insights information page."
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:456
-msgid "Custom base URL"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:504
-msgid "Custom server URL"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:518
-msgid "Use HTTP proxy"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:545
-msgid "Location"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:581
-msgid "hostname:port"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:650
-msgid "Options"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:673
-msgid "The system is currently not registered."
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:686
-msgctxt "GUI|Subscription|Register"
-msgid "_Register"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:732
-msgid "The system has been properly subscribed"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:746
-msgctxt "GUI|Subscription|Unregister"
-msgid "_Unregister"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:782
-msgid "Method"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:799
-msgid "System Purpose"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:914
-msgid "No subscriptions have been attached to the system"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/subscription.glade:989
-msgid "SYSTEM PURPOSE"
-msgstr ""
 
 #: pyanaconda/ui/gui/spokes/storage.glade:27
 msgctxt "GUI|Storage|Need Space Dialog"
@@ -5850,13 +5722,13 @@ msgid "Enabled"
 msgstr "Activat"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:1040
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:161
+#: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:237
+#: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:740
+#: pyanaconda/ui/gui/spokes/lib/cart.glade:150
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:386
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1438
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1761
-#: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:237
-#: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:740
-#: pyanaconda/ui/gui/spokes/lib/resize.glade:161
-#: pyanaconda/ui/gui/spokes/lib/cart.glade:150
 msgid "Name"
 msgstr "Nume"
 
@@ -6259,272 +6131,383 @@ msgctxt "GUI|Custom Partitioning"
 msgid "_Reset All"
 msgstr "_Resetează tot"
 
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:136
-msgctxt "GUI|Installation Destination|Filter|Search"
-msgid "Search _By:"
-msgstr "Caută du_pă"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:153
-msgid "Port / Target / LUN #"
-msgstr "Port / Target / LUN #"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:154
-msgid "Target WWID"
-msgstr "Target WWID"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:193
-msgctxt "GUI|Installation Destination|Filter|Search|Port Target LUN"
-msgid "_Port:"
-msgstr "_Port:"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:219
-msgctxt "GUI|Installation Destination|Filter|Search|Port Target LUN"
-msgid "_Target:"
-msgstr "_Target:"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:247
-msgctxt "GUI|Installation Destination|Filter|Search|Port Target LUN"
-msgid "_LUN:"
-msgstr "_LUN:"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:289
-msgctxt "GUI|Installation Destination|Filter|Search|WWID"
-msgid "_WWID:"
-msgstr "_WWID:"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:339
-msgctxt "GUI|Installation Destination|Filter|Search"
-msgid "Search Res_ults:"
-msgstr "Rezultate că_utare:"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:400
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:597
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:800
-msgid "WWID"
-msgstr "WWID"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:414
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:814
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1148
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1466
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1789
-#: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:250
-#: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:753
-#: pyanaconda/ui/gui/spokes/lib/cart.glade:162
-msgid "Capacity"
-msgstr "Capacitate"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:428
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:596
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:842
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:930
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1176
-msgid "Interconnect"
-msgstr "Interconectare"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:442
-msgid "Model"
-msgstr "Model"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:456
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1541
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1817
-msgid "LUN"
-msgstr "LUN"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:470
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1831
-msgid "Port"
-msgstr "Port"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:484
-msgid "Target"
-msgstr "Target"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:498
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:595
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:828
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:929
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1162
-msgid "Vendor"
-msgstr "Producător"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:512
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1249
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1424
-msgid "Namespace"
+#: pyanaconda/ui/gui/spokes/subscription.glade:8
+msgid "CONNECT TO RED HAT"
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:526
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1250
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1452
-msgid "Mode"
+#: pyanaconda/ui/gui/spokes/subscription.glade:83
+#: pyanaconda/ui/gui/spokes/lib/network_secret_agent.glade:8
+msgid "Authentication"
+msgstr "Autentificare"
+
+#: pyanaconda/ui/gui/spokes/subscription.glade:100
+msgctxt "GUI|Subscription|Authentication|Account"
+msgid "_Account"
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:553
-msgctxt "GUI|Installation Destination|Filter"
-msgid "Searc_h"
-msgstr "Că_utare"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:578
-msgctxt "GUI|Installation Destination|Filter|Multipath"
-msgid "Filter _By:"
-msgstr "Filtrează du_pă"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:635
-msgctxt "GUI|Installation Destination|Filter|Multipath|Vendor"
-msgid "Show Only _Devices From:"
-msgstr "Arată doar _dispozitivele de la:"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:676
-msgctxt "GUI|Installation Destination|Filter|Multipath|Interconnect"
-msgid "Show Only _Devices With:"
-msgstr "Arată doar _dispozitivele cu:"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:717
-msgctxt "GUI|Installation Destination|Filter|Multipath|WWID"
-msgid "Show Only _Devices Containing:"
-msgstr "Arată doar _dispozitivele care conțin:"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:856
-msgid "Paths"
-msgstr "Căi"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:886
-msgctxt "GUI|Installation Destination|Filter"
-msgid "_Multipath Devices"
-msgstr "Dispozitive _multicăi"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:912
-msgctxt "GUI|Installation Destination|Filter|Other"
-msgid "Filter _By:"
-msgstr "Filtrează _după"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:931
-msgid "ID"
-msgstr "ID"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:969
-msgctxt "GUI|Installation Destination|Filter|Other|Vendor"
-msgid "Show Only _Devices From:"
-msgstr "Arată doar _dispozitivele de la:"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1010
-msgctxt "GUI|Installation Destination|Filter|Other|Interconnect"
-msgid "Show Only _Devices With:"
-msgstr "Arată doar _dispozitivele cu:"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1051
-msgctxt "GUI|Installation Destination|Filter|Other|ID"
-msgid "Show Only _Devices Containing:"
-msgstr "Arată doar _dispozitivele care conțin:"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1134
-msgid "Identifier"
-msgstr "Identificator"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1206
-msgctxt "GUI|Installation Destination|Filter"
-msgid "_Other SAN Devices"
-msgstr "Alte disp_ozitive SAN"
-
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1232
-msgctxt "GUI|Installation Destination|Filter|NVDIMM Devices"
-msgid "Filter B_y:"
+#: pyanaconda/ui/gui/spokes/subscription.glade:117
+msgctxt "GUI|Subscription|Authetication|Activation Key"
+msgid "Activation _Key"
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1288
-msgctxt "GUI|Installation Destination|Filter|NVDIMM Devices|Mode"
-msgid "Show Only Devices in _Mode:"
+#: pyanaconda/ui/gui/spokes/subscription.glade:227
+msgid "Organization"
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1305
-msgid "Sector"
+#: pyanaconda/ui/gui/spokes/subscription.glade:239
+msgid "Activation Key"
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1306
-msgid "Memory"
+#: pyanaconda/ui/gui/spokes/subscription.glade:263
+msgid "key1,key2,..."
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1333
-msgctxt "GUI|Installation Destination|Filter|NVDIMM Devices|Namespace"
-msgid "_Namespace:"
+#: pyanaconda/ui/gui/spokes/subscription.glade:284
+msgid "Purpose"
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1496
-msgctxt "GUI|Installation Destination|Filter"
-msgid "_NVDIMM Devices"
+#: pyanaconda/ui/gui/spokes/subscription.glade:310
+msgid "Usage"
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1522
-msgctxt "GUI|Installation Destination|Filter|zSeries"
-msgid "Filter B_y:"
-msgstr "Filtrea_ză după:"
+#: pyanaconda/ui/gui/spokes/subscription.glade:322
+msgid "Role"
+msgstr ""
 
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1539
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1747
-msgid "CCW"
-msgstr "CCW"
+#: pyanaconda/ui/gui/spokes/subscription.glade:334
+msgid "SLA"
+msgstr ""
 
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1540
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1803
-msgid "WWPN"
-msgstr "WWPN"
+#: pyanaconda/ui/gui/spokes/subscription.glade:384
+msgctxt "GUI|Subscription|Set System Purpose"
+msgid "Set System Purpose"
+msgstr ""
 
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1578
-msgctxt "GUI|Installation Destination|Filter|zSeries|CCW"
-msgid "_CCW:"
-msgstr "_CCW:"
+#: pyanaconda/ui/gui/spokes/subscription.glade:401
+#: pyanaconda/ui/gui/spokes/subscription.glade:852
+msgid "Insights"
+msgstr ""
 
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1621
-msgctxt "GUI|Installation Destination|Filter|zSeries|WWPN"
-msgid "_WWPN:"
-msgstr "_WWPN:"
+#: pyanaconda/ui/gui/spokes/subscription.glade:414
+msgctxt "GUI|Subscription|Red Hat Insights"
+msgid "Connect to Red Hat _Insights"
+msgstr ""
 
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1664
-msgctxt "GUI|Installation Destination|Filter|zSeries|LUN"
-msgid "_LUN:"
-msgstr "_LUN:"
+#: pyanaconda/ui/gui/spokes/subscription.glade:418
+msgid ""
+"Red Hat Insights aims to increase your IT efficiency and speed across hybrid "
+"infrastructures by identifying and prioritizing risks, managing "
+"vulnerabilities, and compliance, and analyzing costs. For more information, "
+"visit the Red Hat Insights information page."
+msgstr ""
 
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1775
+#: pyanaconda/ui/gui/spokes/subscription.glade:456
+msgid "Custom base URL"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/subscription.glade:504
+msgid "Custom server URL"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/subscription.glade:518
+msgid "Use HTTP proxy"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/subscription.glade:545
+msgid "Location"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/subscription.glade:581
+msgid "hostname:port"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/subscription.glade:650
+msgid "Options"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/subscription.glade:673
+msgid "The system is currently not registered."
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/subscription.glade:686
+msgctxt "GUI|Subscription|Register"
+msgid "_Register"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/subscription.glade:732
+msgid "The system has been properly subscribed"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/subscription.glade:746
+msgctxt "GUI|Subscription|Unregister"
+msgid "_Unregister"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/subscription.glade:782
+msgid "Method"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/subscription.glade:799
+msgid "System Purpose"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/subscription.glade:914
+msgid "No subscriptions have been attached to the system"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/subscription.glade:989
+msgid "SYSTEM PURPOSE"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:23
+msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
+msgid "_Quit"
+msgstr "_Renunță"
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:37
+msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
+msgid "_Continue"
+msgstr "_Continuă"
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:122
+msgid "Unsupported Hardware"
+msgstr "Hardware nesuportat"
+
+#: pyanaconda/ui/gui/spokes/lib/summary.glade:25
+#: pyanaconda/ui/gui/spokes/lib/summary.glade:89
+msgid "SUMMARY OF CHANGES"
+msgstr "Sumarul schimbărilor"
+
+#: pyanaconda/ui/gui/spokes/lib/summary.glade:42
+msgctxt "GUI|Summary Dialog"
+msgid "_Cancel & Return to Custom Partitioning"
+msgstr "_Renunță și revino la Partiționare particularizată"
+
+#: pyanaconda/ui/gui/spokes/lib/summary.glade:57
+msgctxt "GUI|Summary Dialog"
+msgid "_Accept Changes"
+msgstr "_Acceptă schimbările"
+
+#: pyanaconda/ui/gui/spokes/lib/summary.glade:105
+msgid ""
+"Your customizations will result in the following changes taking effect after "
+"you return to the main menu and begin installation:"
+msgstr ""
+"Particularizarea va avea ca efect implementarea următoarelor schimbări după "
+"ce reveniți la meniul principal și începeți instalarea:"
+
+#: pyanaconda/ui/gui/spokes/lib/summary.glade:133
+msgid "Order"
+msgstr "Ordine"
+
+#: pyanaconda/ui/gui/spokes/lib/summary.glade:144
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:194
+msgid "Action"
+msgstr "Acțiune"
+
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:155
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1775
 msgid "Type"
 msgstr "Tip"
 
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1861
-msgctxt "GUI|Installation Destination|Filter"
-msgid "_zSeries Devices"
-msgstr "Dispozitive _zSeries"
+#: pyanaconda/ui/gui/spokes/lib/summary.glade:166
+msgid "Device"
+msgstr "Dispozitiv"
 
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1884
-msgctxt "GUI|Installation Destination|Filter"
-msgid "_Add zFCP LUN..."
-msgstr "_Adaugă LUN zFCP..."
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:53
+msgctxt "GUI|Reclaim Dialog"
+msgid "_Cancel"
+msgstr "_Renunță"
 
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1899
-msgctxt "GUI|Installation Destination|Filter"
-msgid "Add EC_KD DASD..."
-msgstr "Adaugă EC_KD DASD..."
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:68
+msgctxt "GUI|Reclaim Dialog"
+msgid "_Reclaim space"
+msgstr "Re_cuperare spațiu"
 
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1914
-msgctxt "GUI|Installation Destination|Filter"
-msgid "Add _iSCSI Target..."
-msgstr "Adaugă țintă _iSCSI..."
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:101
+msgid "RECLAIM DISK SPACE"
+msgstr "RECUPEREAZĂ SPAȚIU PE DISC"
 
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1929
-msgctxt "GUI|Installation Destination|Filter"
-msgid "Add FCo_E SAN..."
-msgstr "Adaugă SAN FCo_E..."
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:118
+msgid "Description goes here."
+msgstr "Aici este descrierea."
 
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1944
-msgctxt "GUI|Installation Destination|Filter"
-msgid "Reconfigure _NVDIMM..."
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:172
+msgid "File System"
+msgstr "Sistem de fișiere"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:183
+msgid "Reclaimable Space"
+msgstr "Spațiu recuperabil"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:219
+msgctxt "GUI|Reclaim Dialog"
+msgid "_Preserve"
+msgstr "_Păstrează"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:235
+msgctxt "GUI|Reclaim Dialog"
+msgid "_Delete"
+msgstr "Ș_terge"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:251
+msgctxt "GUI|Reclaim Dialog"
+msgid "_Shrink"
+msgstr "Micșorea_ză"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:365
+msgid "Reclaim"
+msgstr "Recuperează"
+
+#: pyanaconda/ui/gui/spokes/lib/refresh.glade:8
+#: pyanaconda/ui/gui/spokes/lib/refresh.glade:71
+msgid "RESCAN DISKS"
+msgstr "RESCANARE DISCURI"
+
+#: pyanaconda/ui/gui/spokes/lib/refresh.glade:25
+msgctxt "GUI|Refresh Dialog|Rescan"
+msgid "_Cancel"
+msgstr "_Renunță"
+
+#: pyanaconda/ui/gui/spokes/lib/refresh.glade:39
+msgctxt "GUI|Refresh Dialog|Rescan"
+msgid "_OK"
+msgstr "_Ok"
+
+#: pyanaconda/ui/gui/spokes/lib/refresh.glade:87
+msgid ""
+"You can remove or insert additional disks at this time and press 'Rescan "
+"Disks' below for the changes to take effect."
+msgstr ""
+"Puteți elimina sau introduce discuri suplimentare în acest moment și să "
+"apăsați „Rescanare discuri” de mai jos pentru ca schimbările să aibă efect."
+
+#: pyanaconda/ui/gui/spokes/lib/refresh.glade:118
+msgid ""
+"<b>Warning:</b> All storage changes made using the installer will be lost "
+"when you press 'Rescan Disks'."
+msgstr ""
+"<b>Atenție:</b> Toate schimbările de stocare realizate cu ajutorul "
+"instalatorului se vor pierde atunci când apăsați pe „Rescanează discuri”."
+
+#: pyanaconda/ui/gui/spokes/lib/refresh.glade:143
+msgctxt "GUI|Refresh Dialog|Rescan"
+msgid "_Rescan Disks"
+msgstr "_Rescanează discuri"
+
+#: pyanaconda/ui/gui/spokes/lib/refresh.glade:176
+#: pyanaconda/ui/gui/spokes/lib/refresh.glade:212
+msgid "Scanning disks.  This may take a moment..."
+msgstr "Se scanează discurile. Ar putea dura mai mult timp..."
+
+#: pyanaconda/ui/gui/spokes/lib/refresh.glade:223
+msgid ""
+"You may <a href=\"\">go back to the main menu</a> to complete other\n"
+"installation options while this scan completes."
+msgstr ""
+"Puteți <a href=\"\">reveni la meniul principal</a> pentru a completa alte\n"
+"opțiuni de instalare în timp ce se completează scanarea."
+
+#: pyanaconda/ui/gui/spokes/lib/refresh.glade:254
+msgid "Disk rescan complete."
+msgstr "Rescanare discuri completă."
+
+#: pyanaconda/ui/gui/spokes/lib/refresh.glade:269
+msgid ""
+"Pressing 'OK' below will take you to the disk selection screen where you "
+"will need to re-select your disks."
+msgstr ""
+"Prin apăsarea butonului „OK” de mai jos veți merge la ecranul de selecție al "
+"discurilor unde va trebui să reselectați discurile."
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:23
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Cancel"
+msgstr "_Renunță"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:38
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Save Passphrase"
+msgstr "_Salvează frază secretă"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:65
+msgid "DISK ENCRYPTION PASSPHRASE"
+msgstr "FAZĂ CRIPTARE DISCURI"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:81
+msgid ""
+"You have chosen to encrypt some of your data. You will need to create a "
+"passphrase that you will use to access your data when you start your "
+"computer."
+msgstr ""
+"Ați ales să criptați o parte din datele dumneavoastră. Vă trebuie o frază "
+"secretă necesară pentru a accesa datele atunci când porniți calculatorul."
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:102
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Passphrase:"
+msgstr "Frază se_cretă"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:133
+msgctxt "GUI|Passphrase Dialog"
+msgid "Con_firm:"
+msgstr "Con_firmare:"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:275
+msgid ""
+"Warning: You won't be able to switch between keyboard layouts (from the "
+"default one) when you decrypt your disks after install."
+msgstr ""
+"Atenție: Nu veți putea comuta între aranjamente de tastatură (de la cel "
+"implicit) atunci când se decriptează discurile după instalare."
+
+#: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:8
+msgid "UNFORMATTED DASDS"
+msgstr "DASD-uri NEFORMATATE"
+
+#: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:23
+msgctxt "GUI|DAD Format Dialog"
+msgid "_Cancel"
+msgstr "_Renunță"
+
+#: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:37
+msgctxt "GUI|DAD Format Dialog"
+msgid "_OK"
+msgstr "_Ok"
+
+#: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:70
+msgid ""
+"The following unformatted or LDL DASDs have been detected on your system. "
+"You can choose to format them now with dasdfmt or cancel to leave them "
+"unformatted. Unformatted DASDs cannot be used during installation."
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1959
-msgctxt "GUI|Installation Destination|Filter"
-msgid "Refresh _List"
-msgstr "Reîmprospătează _lista"
+#: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:86
+msgid "Unformatted DASDs Detected"
+msgstr "DASD-uri neformatate detectate"
+
+#: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:136
+msgid ""
+"<b>Warning</b>: All storage changes made using the installer will be lost "
+"when you choose to format."
+msgstr ""
+"<b>Atenție</b>: Toate schimbările făcute prin intermediul programului de "
+"instalare se vor pierde când alegeți să formatați."
+
+#: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:160
+msgctxt "GUI|DAD Format Dialog"
+msgid "_Format with dasdfmt"
+msgstr "_Formatează cu dasdfmt"
+
+#: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:209
+msgid ""
+"This may take a moment. You may <a href=\"\">go back to the main menu</a> to "
+"complete other installation options while formatting completes."
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:248
+msgid "Disk formatting complete."
+msgstr "Formatare completă."
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:21
 msgctxt "GUI|Custom Partitioning|Confirm Delete Dialog"
@@ -6555,6 +6538,17 @@ msgstr "CONFIGURARE PUNCT DE MONTARE"
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:137
 msgid "Description"
 msgstr "Descriere"
+
+#: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:250
+#: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:753
+#: pyanaconda/ui/gui/spokes/lib/cart.glade:162
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:414
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:814
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1148
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1466
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1789
+msgid "Capacity"
+msgstr "Capacitate"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:263
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:766
@@ -6668,251 +6662,6 @@ msgstr "Cât mai mare posibil"
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:957
 msgid "Fixed"
 msgstr "Fixă"
-
-#: pyanaconda/ui/gui/spokes/lib/summary.glade:25
-#: pyanaconda/ui/gui/spokes/lib/summary.glade:89
-msgid "SUMMARY OF CHANGES"
-msgstr "Sumarul schimbărilor"
-
-#: pyanaconda/ui/gui/spokes/lib/summary.glade:42
-msgctxt "GUI|Summary Dialog"
-msgid "_Cancel & Return to Custom Partitioning"
-msgstr "_Renunță și revino la Partiționare particularizată"
-
-#: pyanaconda/ui/gui/spokes/lib/summary.glade:57
-msgctxt "GUI|Summary Dialog"
-msgid "_Accept Changes"
-msgstr "_Acceptă schimbările"
-
-#: pyanaconda/ui/gui/spokes/lib/summary.glade:105
-msgid ""
-"Your customizations will result in the following changes taking effect after "
-"you return to the main menu and begin installation:"
-msgstr ""
-"Particularizarea va avea ca efect implementarea următoarelor schimbări după "
-"ce reveniți la meniul principal și începeți instalarea:"
-
-#: pyanaconda/ui/gui/spokes/lib/summary.glade:133
-msgid "Order"
-msgstr "Ordine"
-
-#: pyanaconda/ui/gui/spokes/lib/summary.glade:144
-#: pyanaconda/ui/gui/spokes/lib/resize.glade:194
-msgid "Action"
-msgstr "Acțiune"
-
-#: pyanaconda/ui/gui/spokes/lib/summary.glade:166
-msgid "Device"
-msgstr "Dispozitiv"
-
-#: pyanaconda/ui/gui/spokes/lib/resize.glade:53
-msgctxt "GUI|Reclaim Dialog"
-msgid "_Cancel"
-msgstr "_Renunță"
-
-#: pyanaconda/ui/gui/spokes/lib/resize.glade:68
-msgctxt "GUI|Reclaim Dialog"
-msgid "_Reclaim space"
-msgstr "Re_cuperare spațiu"
-
-#: pyanaconda/ui/gui/spokes/lib/resize.glade:101
-msgid "RECLAIM DISK SPACE"
-msgstr "RECUPEREAZĂ SPAȚIU PE DISC"
-
-#: pyanaconda/ui/gui/spokes/lib/resize.glade:118
-msgid "Description goes here."
-msgstr "Aici este descrierea."
-
-#: pyanaconda/ui/gui/spokes/lib/resize.glade:172
-msgid "File System"
-msgstr "Sistem de fișiere"
-
-#: pyanaconda/ui/gui/spokes/lib/resize.glade:183
-msgid "Reclaimable Space"
-msgstr "Spațiu recuperabil"
-
-#: pyanaconda/ui/gui/spokes/lib/resize.glade:219
-msgctxt "GUI|Reclaim Dialog"
-msgid "_Preserve"
-msgstr "_Păstrează"
-
-#: pyanaconda/ui/gui/spokes/lib/resize.glade:235
-msgctxt "GUI|Reclaim Dialog"
-msgid "_Delete"
-msgstr "Ș_terge"
-
-#: pyanaconda/ui/gui/spokes/lib/resize.glade:251
-msgctxt "GUI|Reclaim Dialog"
-msgid "_Shrink"
-msgstr "Micșorea_ză"
-
-#: pyanaconda/ui/gui/spokes/lib/resize.glade:365
-msgid "Reclaim"
-msgstr "Recuperează"
-
-#: pyanaconda/ui/gui/spokes/lib/refresh.glade:8
-#: pyanaconda/ui/gui/spokes/lib/refresh.glade:71
-msgid "RESCAN DISKS"
-msgstr "RESCANARE DISCURI"
-
-#: pyanaconda/ui/gui/spokes/lib/refresh.glade:25
-msgctxt "GUI|Refresh Dialog|Rescan"
-msgid "_Cancel"
-msgstr "_Renunță"
-
-#: pyanaconda/ui/gui/spokes/lib/refresh.glade:39
-msgctxt "GUI|Refresh Dialog|Rescan"
-msgid "_OK"
-msgstr "_Ok"
-
-#: pyanaconda/ui/gui/spokes/lib/refresh.glade:87
-msgid ""
-"You can remove or insert additional disks at this time and press 'Rescan "
-"Disks' below for the changes to take effect."
-msgstr ""
-"Puteți elimina sau introduce discuri suplimentare în acest moment și să "
-"apăsați „Rescanare discuri” de mai jos pentru ca schimbările să aibă efect."
-
-#: pyanaconda/ui/gui/spokes/lib/refresh.glade:118
-msgid ""
-"<b>Warning:</b> All storage changes made using the installer will be lost "
-"when you press 'Rescan Disks'."
-msgstr ""
-"<b>Atenție:</b> Toate schimbările de stocare realizate cu ajutorul "
-"instalatorului se vor pierde atunci când apăsați pe „Rescanează discuri”."
-
-#: pyanaconda/ui/gui/spokes/lib/refresh.glade:143
-msgctxt "GUI|Refresh Dialog|Rescan"
-msgid "_Rescan Disks"
-msgstr "_Rescanează discuri"
-
-#: pyanaconda/ui/gui/spokes/lib/refresh.glade:176
-#: pyanaconda/ui/gui/spokes/lib/refresh.glade:212
-msgid "Scanning disks.  This may take a moment..."
-msgstr "Se scanează discurile. Ar putea dura mai mult timp..."
-
-#: pyanaconda/ui/gui/spokes/lib/refresh.glade:223
-msgid ""
-"You may <a href=\"\">go back to the main menu</a> to complete other\n"
-"installation options while this scan completes."
-msgstr ""
-"Puteți <a href=\"\">reveni la meniul principal</a> pentru a completa alte\n"
-"opțiuni de instalare în timp ce se completează scanarea."
-
-#: pyanaconda/ui/gui/spokes/lib/refresh.glade:254
-msgid "Disk rescan complete."
-msgstr "Rescanare discuri completă."
-
-#: pyanaconda/ui/gui/spokes/lib/refresh.glade:269
-msgid ""
-"Pressing 'OK' below will take you to the disk selection screen where you "
-"will need to re-select your disks."
-msgstr ""
-"Prin apăsarea butonului „OK” de mai jos veți merge la ecranul de selecție al "
-"discurilor unde va trebui să reselectați discurile."
-
-#: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:8
-msgid "UNFORMATTED DASDS"
-msgstr "DASD-uri NEFORMATATE"
-
-#: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:23
-msgctxt "GUI|DAD Format Dialog"
-msgid "_Cancel"
-msgstr "_Renunță"
-
-#: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:37
-msgctxt "GUI|DAD Format Dialog"
-msgid "_OK"
-msgstr "_Ok"
-
-#: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:70
-msgid ""
-"The following unformatted or LDL DASDs have been detected on your system. "
-"You can choose to format them now with dasdfmt or cancel to leave them "
-"unformatted. Unformatted DASDs cannot be used during installation."
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:86
-msgid "Unformatted DASDs Detected"
-msgstr "DASD-uri neformatate detectate"
-
-#: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:136
-msgid ""
-"<b>Warning</b>: All storage changes made using the installer will be lost "
-"when you choose to format."
-msgstr ""
-"<b>Atenție</b>: Toate schimbările făcute prin intermediul programului de "
-"instalare se vor pierde când alegeți să formatați."
-
-#: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:160
-msgctxt "GUI|DAD Format Dialog"
-msgid "_Format with dasdfmt"
-msgstr "_Formatează cu dasdfmt"
-
-#: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:209
-msgid ""
-"This may take a moment. You may <a href=\"\">go back to the main menu</a> to "
-"complete other installation options while formatting completes."
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:248
-msgid "Disk formatting complete."
-msgstr "Formatare completă."
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:23
-msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
-msgid "_Quit"
-msgstr "_Renunță"
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:37
-msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
-msgid "_Continue"
-msgstr "_Continuă"
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:122
-msgid "Unsupported Hardware"
-msgstr "Hardware nesuportat"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:23
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Cancel"
-msgstr "_Renunță"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:38
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Save Passphrase"
-msgstr "_Salvează frază secretă"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:65
-msgid "DISK ENCRYPTION PASSPHRASE"
-msgstr "FAZĂ CRIPTARE DISCURI"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:81
-msgid ""
-"You have chosen to encrypt some of your data. You will need to create a "
-"passphrase that you will use to access your data when you start your "
-"computer."
-msgstr ""
-"Ați ales să criptați o parte din datele dumneavoastră. Vă trebuie o frază "
-"secretă necesară pentru a accesa datele atunci când porniți calculatorul."
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:102
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Passphrase:"
-msgstr "Frază se_cretă"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:133
-msgctxt "GUI|Passphrase Dialog"
-msgid "Con_firm:"
-msgstr "Con_firmare:"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:275
-msgid ""
-"Warning: You won't be able to switch between keyboard layouts (from the "
-"default one) when you decrypt your disks after install."
-msgstr ""
-"Atenție: Nu veți putea comuta între aranjamente de tastatură (de la cel "
-"implicit) atunci când se decriptează discurile după instalare."
 
 #: pyanaconda/ui/gui/spokes/lib/network_secret_agent.glade:25
 msgctxt "GUI|Network|Authentication Dialog"
@@ -7477,6 +7226,257 @@ msgstr ""
 "Puteți introduce o listă separată prin virgule de nume de grupuri și ID-uri "
 "de grupuri aici. Grupurile care nu există deja vor fi create; specificați "
 "GID-ul lor în paranteze."
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:136
+msgctxt "GUI|Installation Destination|Filter|Search"
+msgid "Search _By:"
+msgstr "Caută du_pă"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:153
+msgid "Port / Target / LUN #"
+msgstr "Port / Target / LUN #"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:154
+msgid "Target WWID"
+msgstr "Target WWID"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:193
+msgctxt "GUI|Installation Destination|Filter|Search|Port Target LUN"
+msgid "_Port:"
+msgstr "_Port:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:219
+msgctxt "GUI|Installation Destination|Filter|Search|Port Target LUN"
+msgid "_Target:"
+msgstr "_Target:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:247
+msgctxt "GUI|Installation Destination|Filter|Search|Port Target LUN"
+msgid "_LUN:"
+msgstr "_LUN:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:289
+msgctxt "GUI|Installation Destination|Filter|Search|WWID"
+msgid "_WWID:"
+msgstr "_WWID:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:339
+msgctxt "GUI|Installation Destination|Filter|Search"
+msgid "Search Res_ults:"
+msgstr "Rezultate că_utare:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:400
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:597
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:800
+msgid "WWID"
+msgstr "WWID"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:428
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:596
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:842
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:930
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1176
+msgid "Interconnect"
+msgstr "Interconectare"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:442
+msgid "Model"
+msgstr "Model"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:456
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1541
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1817
+msgid "LUN"
+msgstr "LUN"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:470
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1831
+msgid "Port"
+msgstr "Port"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:484
+msgid "Target"
+msgstr "Target"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:498
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:595
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:828
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:929
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1162
+msgid "Vendor"
+msgstr "Producător"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:512
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1249
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1424
+msgid "Namespace"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:526
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1250
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1452
+msgid "Mode"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:553
+msgctxt "GUI|Installation Destination|Filter"
+msgid "Searc_h"
+msgstr "Că_utare"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:578
+msgctxt "GUI|Installation Destination|Filter|Multipath"
+msgid "Filter _By:"
+msgstr "Filtrează du_pă"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:635
+msgctxt "GUI|Installation Destination|Filter|Multipath|Vendor"
+msgid "Show Only _Devices From:"
+msgstr "Arată doar _dispozitivele de la:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:676
+msgctxt "GUI|Installation Destination|Filter|Multipath|Interconnect"
+msgid "Show Only _Devices With:"
+msgstr "Arată doar _dispozitivele cu:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:717
+msgctxt "GUI|Installation Destination|Filter|Multipath|WWID"
+msgid "Show Only _Devices Containing:"
+msgstr "Arată doar _dispozitivele care conțin:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:856
+msgid "Paths"
+msgstr "Căi"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:886
+msgctxt "GUI|Installation Destination|Filter"
+msgid "_Multipath Devices"
+msgstr "Dispozitive _multicăi"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:912
+msgctxt "GUI|Installation Destination|Filter|Other"
+msgid "Filter _By:"
+msgstr "Filtrează _după"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:931
+msgid "ID"
+msgstr "ID"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:969
+msgctxt "GUI|Installation Destination|Filter|Other|Vendor"
+msgid "Show Only _Devices From:"
+msgstr "Arată doar _dispozitivele de la:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1010
+msgctxt "GUI|Installation Destination|Filter|Other|Interconnect"
+msgid "Show Only _Devices With:"
+msgstr "Arată doar _dispozitivele cu:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1051
+msgctxt "GUI|Installation Destination|Filter|Other|ID"
+msgid "Show Only _Devices Containing:"
+msgstr "Arată doar _dispozitivele care conțin:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1134
+msgid "Identifier"
+msgstr "Identificator"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1206
+msgctxt "GUI|Installation Destination|Filter"
+msgid "_Other SAN Devices"
+msgstr "Alte disp_ozitive SAN"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1232
+msgctxt "GUI|Installation Destination|Filter|NVDIMM Devices"
+msgid "Filter B_y:"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1288
+msgctxt "GUI|Installation Destination|Filter|NVDIMM Devices|Mode"
+msgid "Show Only Devices in _Mode:"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1305
+msgid "Sector"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1306
+msgid "Memory"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1333
+msgctxt "GUI|Installation Destination|Filter|NVDIMM Devices|Namespace"
+msgid "_Namespace:"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1496
+msgctxt "GUI|Installation Destination|Filter"
+msgid "_NVDIMM Devices"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1522
+msgctxt "GUI|Installation Destination|Filter|zSeries"
+msgid "Filter B_y:"
+msgstr "Filtrea_ză după:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1539
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1747
+msgid "CCW"
+msgstr "CCW"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1540
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1803
+msgid "WWPN"
+msgstr "WWPN"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1578
+msgctxt "GUI|Installation Destination|Filter|zSeries|CCW"
+msgid "_CCW:"
+msgstr "_CCW:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1621
+msgctxt "GUI|Installation Destination|Filter|zSeries|WWPN"
+msgid "_WWPN:"
+msgstr "_WWPN:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1664
+msgctxt "GUI|Installation Destination|Filter|zSeries|LUN"
+msgid "_LUN:"
+msgstr "_LUN:"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1861
+msgctxt "GUI|Installation Destination|Filter"
+msgid "_zSeries Devices"
+msgstr "Dispozitive _zSeries"
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1884
+msgctxt "GUI|Installation Destination|Filter"
+msgid "_Add zFCP LUN..."
+msgstr "_Adaugă LUN zFCP..."
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1899
+msgctxt "GUI|Installation Destination|Filter"
+msgid "Add EC_KD DASD..."
+msgstr "Adaugă EC_KD DASD..."
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1914
+msgctxt "GUI|Installation Destination|Filter"
+msgid "Add _iSCSI Target..."
+msgstr "Adaugă țintă _iSCSI..."
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1929
+msgctxt "GUI|Installation Destination|Filter"
+msgid "Add FCo_E SAN..."
+msgstr "Adaugă SAN FCo_E..."
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1944
+msgctxt "GUI|Installation Destination|Filter"
+msgid "Reconfigure _NVDIMM..."
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/advanced_storage.glade:1959
+msgctxt "GUI|Installation Destination|Filter"
+msgid "Refresh _List"
+msgstr "Reîmprospătează _lista"
 
 #: pyanaconda/ui/gui/hubs/summary.glade:8
 #: pyanaconda/ui/gui/hubs/summary.glade:145
