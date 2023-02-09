@@ -22,14 +22,14 @@
 # Göran Uddeborg <goeran@uddeborg.se>, 2018. #zanata, 2020, 2021, 2022.
 # Göran Uddeborg <goeran@uddeborg.se>, 2019. #zanata, 2020, 2021, 2022.
 # Göran Uddeborg <goeran@uddeborg.se>, 2020. #zanata, 2021, 2022.
-# Luna Jernberg <bittin@reimu.nl>, 2020, 2021, 2022.
+# Luna Jernberg <bittin@reimu.nl>, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2023-02-09 01:19+0000\n"
-"PO-Revision-Date: 2022-07-31 11:40+0000\n"
-"Last-Translator: Göran Uddeborg <goeran@uddeborg.se>\n"
+"PO-Revision-Date: 2023-02-09 12:48+0000\n"
+"Last-Translator: Luna Jernberg <bittin@reimu.nl>\n"
 "Language-Team: Swedish <https://translate.fedoraproject.org/projects/"
 "anaconda/rhel-9/sv/>\n"
 "Language: sv\n"
@@ -37,7 +37,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13\n"
+"X-Generator: Weblate 4.15.2\n"
 
 #: pyanaconda/payload/live/payload_base.py:73
 #: pyanaconda/payload/live/payload_liveos.py:93
@@ -248,6 +248,13 @@ msgid ""
 "\n"
 "Would you like to ignore this and continue with installation?"
 msgstr ""
+"Misslyckades att aktivera Red Hat-prenumeration på det installerade systemet."
+"\n"
+"\n"
+"Din Red Hat-prenumeration kan vara ogiltig (t.ex. på grund av en utgången "
+"utvecklarprenumeration).\n"
+"\n"
+"Vill du ignorera detta och fortsätta med installationen?"
 
 #: pyanaconda/exception.py:109
 #, python-format
@@ -836,13 +843,15 @@ msgstr "Är du säker på att du vill ta bort all data på {}?"
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:422
 msgid ""
 "Select all of the drives you would like the mount point to be created on."
-msgstr ""
+msgstr "Välj alla enheter som du vill att monteringspunkten ska skapas på."
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:425
 msgid ""
 "Select a drive for the mount point to be created on. If you select multiple, "
 "only 1 drive will be used."
 msgstr ""
+"Välj en enhet som monteringspunkten ska skapas på. Om du väljer flera kommer "
+"endast 1 enhet att användas."
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:623
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:329
@@ -1802,7 +1811,7 @@ msgstr "Tomt förrådsnamn"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:1321
 msgid "Invalid repository name"
-msgstr "Felaktigt förrådsnamn"
+msgstr "Ogiltigt förrådsnamn"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:1326
 msgid "Repository name conflicts with internal repository name."
@@ -3303,14 +3312,6 @@ msgstr ""
 "\n"
 
 #: pyanaconda/vnc.py:265
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "\n"
-#| "WARNING!!! VNC server running with NO PASSWORD!\n"
-#| "You can use the vncpassword=PASSWORD boot option\n"
-#| "if you would like to secure the server.\n"
-#| "\n"
 msgid ""
 "\n"
 "\n"
@@ -3322,7 +3323,7 @@ msgstr ""
 "\n"
 "\n"
 "VARNING!!! VNC-servern kör UTAN LÖSENORD!\n"
-"Du kan använda startflaggan vncpassword=LÖSENORD\n"
+"Du kan använda startflaggan inst.vncpassword=LÖSENORD\n"
 "om du vill säkra servern.\n"
 "\n"
 
@@ -5417,23 +5418,18 @@ msgstr "Läge"
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:554
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1916
 msgid "Controllers"
-msgstr ""
+msgstr "Styrenheter"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:568
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1622
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1930
-#, fuzzy
-#| msgid "Unsupported"
 msgid "Transport"
-msgstr "Ej stött"
+msgstr "Transport"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:582
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1944
-#, fuzzy
-#| msgctxt "GUI|Advanced Storage|iSCSI|Configure"
-#| msgid "_Target IP Address:"
 msgid "Transport address"
-msgstr "_Mål-IP-adress:"
+msgstr "Transport adress"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:596
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1623
@@ -5444,10 +5440,8 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:610
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1624
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1972
-#, fuzzy
-#| msgid "Namespace"
 msgid "Namespace ID"
-msgstr "Namnrymd"
+msgstr "Namnrymd ID"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:637
 msgctxt "GUI|Installation Destination|Filter"
@@ -5545,36 +5539,29 @@ msgid "_NVDIMM Devices"
 msgstr "_NVDIMM Enheter"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1604
-#, fuzzy
-#| msgctxt "GUI|Installation Destination|Filter|NVDIMM Devices"
-#| msgid "Filter B_y:"
 msgctxt "GUI|Installation Destination|Filter|NVMe Fabrics Devices"
 msgid "Filter B_y:"
-msgstr "_Filtrera efter:"
+msgstr "Filtrera e_fter:"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1621
 msgid "Controller"
-msgstr ""
+msgstr "Kontroller"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1658
 msgctxt "GUI|Installation Destination|Filter|NVMe Fabrics Devices|Controller"
 msgid "_Controller ID:"
-msgstr ""
+msgstr "_Kontroller ID:"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1697
-#, fuzzy
-#| msgid "Type"
 msgctxt "GUI|Installation Destination|Filter|NVMe Fabrics Devices|Transport"
 msgid "_Type:"
-msgstr "Typ"
+msgstr "_Typ:"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1723
-#, fuzzy
-#| msgid "IP Address"
 msgctxt ""
 "GUI|Installation Destination|Filter|NVMe Fabrics Devices|Transport Address"
 msgid "_Address:"
-msgstr "IP-adress"
+msgstr "_Adress:"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1762
 msgctxt "GUI|Installation Destination|Filter|NVMe Fabrics Devices|Namespace"
