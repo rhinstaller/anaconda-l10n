@@ -7,11 +7,11 @@
 # aurisc4 <aurisc4@gmail.com>, 2013
 # dcantrel <dcantrell@redhat.com>, 2011
 # Dimitris Glezos <glezos@indifex.com>, 2011
-# Aurimas Černius <aurisc4@gmail.com>, 2015. #zanata, 2020, 2021, 2022.
-# Aurimas Černius <aurisc4@gmail.com>, 2016. #zanata, 2020, 2021, 2022.
-# Aurimas Černius <aurisc4@gmail.com>, 2018. #zanata, 2020, 2021, 2022.
-# Aurimas Černius <aurisc4@gmail.com>, 2019. #zanata, 2020, 2021, 2022.
-# Aurimas Černius <aurisc4@gmail.com>, 2020. #zanata, 2021, 2022.
+# Aurimas Černius <aurisc4@gmail.com>, 2015. #zanata, 2020, 2021, 2022, 2023.
+# Aurimas Černius <aurisc4@gmail.com>, 2016. #zanata, 2020, 2021, 2022, 2023.
+# Aurimas Černius <aurisc4@gmail.com>, 2018. #zanata, 2020, 2021, 2022, 2023.
+# Aurimas Černius <aurisc4@gmail.com>, 2019. #zanata, 2020, 2021, 2022, 2023.
+# Aurimas Černius <aurisc4@gmail.com>, 2020. #zanata, 2021, 2022, 2023.
 # Ernestas Kulik <ekulik@redhat.com>, 2020.
 # Tautvydas Žukauskas <tautzuk@tutanota.com>, 2021.
 # domantas ket <domant3lis@protonmail.com>, 2021.
@@ -23,8 +23,8 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
 "POT-Creation-Date: 2023-02-16 01:17+0000\n"
-"PO-Revision-Date: 2023-03-03 13:01+0000\n"
-"Last-Translator: Jiří Konečný <jkonecny@redhat.com>\n"
+"PO-Revision-Date: 2023-03-06 01:18+0000\n"
+"Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
 "Language-Team: Lithuanian <https://translate.fedoraproject.org/projects/"
 "anaconda/f38/lt/>\n"
 "Language: lt\n"
@@ -40,11 +40,13 @@ msgstr ""
 msgid ""
 "The '{repository_name}' repository has no mirror, baseurl or metalink set."
 msgstr ""
+"Saugykla „{repository_name}“ neturi nustatyto veidrodžio, bazinio url ar "
+"metasaito."
 
 #: pyanaconda/payload/dnf/payload.py:411
 #, python-brace-format
 msgid "The '{repository_name}' repository uses an unsupported protocol."
-msgstr ""
+msgstr "Saugykla „{repository_name}“ naudoja nepalaikomą protokolą."
 
 #: pyanaconda/payload/dnf/payload.py:438
 msgid "Starting package installation process"
@@ -60,7 +62,7 @@ msgstr "Parsiunčiami grupės metaduomenys..."
 
 #: pyanaconda/payload/dnf/payload.py:520
 msgid "No base repository is configured."
-msgstr ""
+msgstr "Nėra sukonfigūruotos saugyklos."
 
 #: pyanaconda/errors.py:119
 msgid "An error occurred while activating your storage configuration."
@@ -163,10 +165,13 @@ msgid ""
 "arguments or subscription infrastructure issues. Would you like to ignore "
 "this and continue with installation?"
 msgstr ""
+"Kilo klaida registracijos bandymo metu, sukelta rhsm kickstart komandos. "
+"Taip galėjo nutikti dėl neteisingos rhsm komandos argumentų ar prenumeratos "
+"infrastruktūros problemų. Ar norite nepaisyti ir tęsti diegimą?"
 
 #: pyanaconda/errors.py:206
 msgid "Error detail: "
-msgstr ""
+msgstr "Detali klaida: "
 
 #: pyanaconda/exception.py:109
 #, python-format
@@ -756,18 +761,18 @@ msgid "Are you sure you want to delete all of the data on {}?"
 msgstr "Ar tikrai norite ištrinti visus {} duomenis?"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:433
-#, fuzzy
-#| msgctxt "GUI|Network|Add Device Dialog"
-#| msgid "_Select the type of device you wish to add"
 msgid ""
 "Select all of the drives you would like the mount point to be created on."
-msgstr "_Pasirinkite įrenginio tipą pridėjimui"
+msgstr ""
+"_Pasirinkite visus įrenginius, kuriems norite sukurti prijungimo taškus."
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:436
 msgid ""
 "Select a drive for the mount point to be created on. If you select multiple, "
 "only 1 drive will be used."
 msgstr ""
+"Pasirinkite diską, kuriame sukurti prijungimo tašką. Jei pasirinkite kelis, "
+"tik pirmasis bus naudojamas."
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:631
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:329
@@ -780,10 +785,8 @@ msgstr "Nepasirinkta diskų."
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.py:666
 #: pyanaconda/ui/gui/spokes/lib/installation_source_helpers.py:261
-#, fuzzy
-#| msgid "Invalid proxy protocol: %s"
 msgid "Invalid protocol"
-msgstr "Netinkamas tarpinio serverio protokolas: %s"
+msgstr "Netinkamas protokolas"
 
 #: pyanaconda/ui/gui/spokes/lib/installation_source_helpers.py:46
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1768
@@ -792,10 +795,8 @@ msgid " <a href=\"\">Click for details.</a>"
 msgstr " <a href=\"\">Spauskite detalesnei informacijai.</a>"
 
 #: pyanaconda/ui/gui/spokes/lib/installation_source_helpers.py:180
-#, fuzzy
-#| msgid "Repository %s has invalid url"
 msgid "The '{}' repository is invalid: {}"
-msgstr "Saugykla %s turi netinkamą url"
+msgstr "Saugykla „{}“ yra netinkama: {}"
 
 #: pyanaconda/ui/gui/spokes/lib/installation_source_helpers.py:206
 msgid "Empty repository name"
@@ -806,38 +807,28 @@ msgid "Invalid repository name"
 msgstr "Netinkamas saugyklos pavadinimas"
 
 #: pyanaconda/ui/gui/spokes/lib/installation_source_helpers.py:212
-#, fuzzy
-#| msgid "Duplicate repository names."
 msgid "Duplicate repository names"
-msgstr "Dubliuoti saugyklų pavadinimai."
+msgstr "Dubliuoti saugyklų pavadinimai"
 
 #: pyanaconda/ui/gui/spokes/lib/installation_source_helpers.py:215
 msgid "Repository name conflicts with internal repository name"
 msgstr "Saugyklos pavadinimas konfliktuoja su vidiniu saugyklos pavadinimu"
 
 #: pyanaconda/ui/gui/spokes/lib/installation_source_helpers.py:228
-#, fuzzy
-#| msgid "Empty"
 msgid "Empty URL"
-msgstr "Tuščias"
+msgstr "Tuščias URL"
 
 #: pyanaconda/ui/gui/spokes/lib/installation_source_helpers.py:243
-#, fuzzy
-#| msgid "NTP servers:"
 msgid "Empty server"
-msgstr "NTP serveriai:"
+msgstr "Tuščias serveris"
 
 #: pyanaconda/ui/gui/spokes/lib/installation_source_helpers.py:246
-#, fuzzy
-#| msgid "Invalid timezone"
 msgid "Invalid server"
-msgstr "Netinkama laiko juosta"
+msgstr "Netinkamas serveris"
 
 #: pyanaconda/ui/gui/spokes/lib/installation_source_helpers.py:249
-#, fuzzy
-#| msgid "Empty"
 msgid "Empty path"
-msgstr "Tuščias"
+msgstr "Tuščias kelias"
 
 #: pyanaconda/ui/gui/spokes/lib/installation_source_helpers.py:256
 #: pyanaconda/ui/gui/spokes/installation_source.py:765
@@ -880,11 +871,9 @@ msgstr "Gerai"
 
 #: pyanaconda/ui/gui/spokes/lib/installation_source_helpers.py:508
 #: pyanaconda/ui/gui/spokes/lib/installation_source_helpers.py:524
-#, fuzzy
-#| msgid "Rescanning disks finished."
 msgctxt "GUI|Software Source|Media Check Dialog"
 msgid "Verification finished."
-msgstr "Diskai perskaityti iš naujo."
+msgstr "Tikrinimas baigtas."
 
 #: pyanaconda/ui/gui/spokes/lib/installation_source_helpers.py:512
 msgctxt "GUI|Software Source|Media Check Dialog"
@@ -1645,16 +1634,12 @@ msgid "_Installation Source"
 msgstr "_Diegimo šaltinis"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:246
-#, fuzzy
-#| msgid "Failed to set up installation source; check the repo url."
 msgid "Failed to set up installation source; check the NFS configuration."
-msgstr "Nepavyko nustatyti diegimo šaltinio; patikrinkite saugyklos url."
+msgstr "Nepavyko nustatyti diegimo šaltinio; patikrinkite NFS konfigūraciją."
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:442
-#, fuzzy
-#| msgid "Failed to set up installation source; check the repo url."
 msgid "Failed to set up installation sources; check their configurations."
-msgstr "Nepavyko nustatyti diegimo šaltinio; patikrinkite saugyklos url."
+msgstr "Nepavyko nustatyti diegimo šaltinių; patikrinkite jų konfigūracijas."
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:535
 #, python-format
@@ -2878,10 +2863,8 @@ msgid "Setting up installation source..."
 msgstr "Nustatomas diegimo šaltinis..."
 
 #: pyanaconda/core/constants.py:270
-#, fuzzy
-#| msgid "Error setting up base repository"
 msgid "Error setting up repositories"
-msgstr "Klaida nustatant pagrindinę saugyklą"
+msgstr "Klaida nustatant saugyklas"
 
 #: pyanaconda/core/constants.py:271
 msgid "Checking software dependencies..."
@@ -3169,14 +3152,6 @@ msgstr ""
 "\n"
 
 #: pyanaconda/vnc.py:264
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "\n"
-#| "WARNING!!! VNC server running with NO PASSWORD!\n"
-#| "You can use the vncpassword=PASSWORD boot option\n"
-#| "if you would like to secure the server.\n"
-#| "\n"
 msgid ""
 "\n"
 "\n"
@@ -3302,8 +3277,6 @@ msgid "Running pre-installation tasks"
 msgstr "Vykdomos prieš diegimo užduotys"
 
 #: pyanaconda/installation.py:394
-#, fuzzy
-#| msgid "Installing software"
 msgid "Installing the software"
 msgstr "Diegiama programinė įranga"
 
@@ -4061,10 +4034,8 @@ msgid "No big enough free space on disks for automatic partitioning"
 msgstr "Nėra pakankamai vietos automatiniam skaidymui skaidiniais"
 
 #: pyanaconda/modules/storage/partitioning/automatic/noninteractive_partitioning.py:111
-#, fuzzy
-#| msgid "Selected disks"
 msgid "No usable disks."
-msgstr "Pasirinkti diskai"
+msgstr "Nėra tinkamų diskų"
 
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:65
 msgid "Unknown or invalid device '{}' specified"
@@ -4313,10 +4284,6 @@ msgid "You have not created a bootable partition."
 msgstr "Nesukūrėte įkeliamo skirsnio."
 
 #: pyanaconda/modules/storage/checker/utils.py:225
-#, fuzzy
-#| msgid ""
-#| "Your BIOS-based system needs a special partition to boot from a GPT disk "
-#| "label. To continue, please create a 1MiB 'biosboot' type partition."
 msgid ""
 "Your BIOS-based system needs a special partition to boot from a GPT disk "
 "label. To continue, please create a 1MiB 'biosboot' type partition on the {} "
@@ -4326,18 +4293,13 @@ msgstr ""
 "užrašo. Norėdami tęsti sukurkite 1MiB „biosboot“ tipo skirsnį."
 
 #: pyanaconda/modules/storage/checker/utils.py:250
-#, fuzzy
-#| msgid ""
-#| "Your firmware doesn't support XFS file system features on the /boot file "
-#| "system. The system will not be bootable. Please, upgrade the firmware or "
-#| "change the file system type."
 msgid ""
 "The system will not be bootable. The firmware does not support XFS file "
 "system features on the boot file system. Upgrade the firmware or change the "
 "file system type."
 msgstr ""
-"Jūsų aparatinė programinė įranga nepalaiko XFS failų sistemos savybių /boot "
-"failų sistemoje. Sistemos nebus galima paleisti. Atnaujinkite aparatinę "
+"Jūsų sistema bus nepaleidžiama. Jūsų aparatinė programinė įranga nepalaiko "
+"XFS failų sistemos savybių /boot failų sistemoje. Atnaujinkite aparatinę "
 "programinę įrangą arba pakeiskite failų sistemą."
 
 #: pyanaconda/modules/storage/checker/utils.py:308
@@ -4368,6 +4330,8 @@ msgid ""
 "performance for most installations, it is recommended to specify a swap "
 "partition."
 msgstr ""
+"Nenurodytas mainų skaidinys. Siekiant pagerinti daugumos diegimų našumą, "
+"rekomenduojama nurodyti mainų skaidinį."
 
 #: pyanaconda/modules/storage/checker/utils.py:340
 msgid ""
@@ -4645,11 +4609,9 @@ msgid "Advanced Custom (_Blivet-GUI)"
 msgstr "Sudėtingesnis pasirinktinis (_Blivet grafinis)"
 
 #: pyanaconda/ui/gui/spokes/storage.glade:446
-#, fuzzy
-#| msgid "Free space unavailable but reclaimable from existing partitions."
 msgctxt "GUI|Storage"
 msgid "Free up space by re_moving or shrinking existing partitions"
-msgstr "Laisvos vietos neprieinama, bet atkovojama iš esamų skirsnių."
+msgstr "Atlaisvinkite vietos pašalindami arba sumažindami esamus skaidinius."
 
 #: pyanaconda/ui/gui/spokes/storage.glade:474
 msgid "Encryption"
@@ -5988,22 +5950,16 @@ msgid "Reclaim"
 msgstr "Atkovoti"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:14
-#, fuzzy
-#| msgid "No additional software to select."
 msgid "Install additional software from a specified URL"
-msgstr "Nėra papildomos programinės įrangos."
+msgstr "Įdiegti papildomos programinės įrangos iš nurodyto URL."
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:18
-#, fuzzy
-#| msgid "No additional software to select."
 msgid "Install additional software from a NFS server"
-msgstr "Nėra papildomos programinės įrangos."
+msgstr "Įdiegti papildomos programinės įrangos iš NFS serverio"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:22
-#, fuzzy
-#| msgid "No additional software to select."
 msgid "Install additional software from another source"
-msgstr "Nėra papildomos programinės įrangos."
+msgstr "Įdiekite papildomos programinės įrangos iš kito šaltinio"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:79
 msgid "Enabled"
@@ -6048,113 +6004,85 @@ msgstr "Saugyklos pavadinimas"
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:231
 msgctxt "GUI|Software Source"
 msgid "_Source:"
-msgstr ""
+msgstr "Š_altinis:"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:284
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:485
-#, fuzzy
-#| msgctxt "GUI|Software Source"
-#| msgid "Pro_xy URL:"
 msgctxt "GUI|Software Source"
 msgid "_URL:"
-msgstr "_Tarpinio serverio URL:"
+msgstr "_URL:"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:298
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:500
-#, fuzzy
-#| msgid "Name of the repository."
 msgid "URL of the repository"
-msgstr "Saugyklos pavadinimas."
+msgstr "Saugyklos URL"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:300
 msgid "http:// or https:// or ftp://"
-msgstr ""
+msgstr "http:// arba https://, arba ftp://"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:313
-#, fuzzy
-#| msgctxt "GUI|Software Source"
-#| msgid "URL type:"
 msgctxt "GUI|Software Source"
 msgid "URL _type:"
-msgstr "URL tipas:"
+msgstr "URL _tipas:"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:330
-#, fuzzy
-#| msgid "repository URL"
 msgid "Repository URL"
-msgstr "saugyklos URL"
+msgstr "Saugyklos URL"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:331
-#, fuzzy
-#| msgid "mirrorlist"
 msgid "Mirrorlist"
-msgstr "veidrodžių sąrašas"
+msgstr "Veidrodžių sąrašas"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:332
-#, fuzzy
-#| msgid "metalink"
 msgid "Metalink"
-msgstr "meta nuoroda"
+msgstr "Meta nuoroda"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:346
-#, fuzzy
-#| msgctxt "GUI|Software Source"
-#| msgid "Pro_xy URL:"
 msgctxt "GUI|Software Source"
 msgid "Pro_xy:"
-msgstr "_Tarpinio serverio URL:"
+msgstr "_Tarpinis serveris:"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:358
-#, fuzzy
-#| msgctxt "GUI|Network|Wireless|Configure"
-#| msgid "C_onfigure"
 msgctxt "GUI|Software Source"
 msgid "Configure proxy"
-msgstr "K_onfigūruoti"
+msgstr "Konfigūruoti tarpinį serverį"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:387
-#, fuzzy
-#| msgid "NTP servers:"
 msgctxt "GUI|Software Source"
 msgid "_Server:"
-msgstr "NTP serveriai:"
+msgstr "Serveris:"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:403
-#, fuzzy
-#| msgid "Paths"
 msgctxt "GUI|Software Source"
 msgid "_Path:"
-msgstr "Keliai"
+msgstr "_Kelias:"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:419
-#, fuzzy
-#| msgctxt "GUI|Software Source"
-#| msgid "N_FS mount options:"
 msgctxt "GUI|Software Source"
 msgid "_Mount options:"
-msgstr "N_FS prijungimo parametrai:"
+msgstr "_Prijungimo parametrai:"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:433
 msgid "Host name or IP address of the NFS server"
-msgstr ""
+msgstr "NFS serverio pavadinimas arba IP adresas"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:445
 msgid "Path on the NFS server to the additional repository"
-msgstr ""
+msgstr "Kelias NFS serveryje iki papildomos saugyklos"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:457
 msgid "Optional comma-separated list of mount options for the NFS mount"
 msgstr ""
+"Papildomas kableliu skiriamas prijungimo parametrų sąrašas NFS prijungimui"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:459
-#, fuzzy
-#| msgid "Not registered."
 msgid "Not required"
-msgstr "Neprisiregistruota."
+msgstr "Nebūtina"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:532
 msgid "Create a new additional repository or select an existing one."
-msgstr ""
+msgstr "Sukurti naują papildomą saugyklą arba pasirinkite esamą."
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:566
 msgid "Additional repositories"
@@ -6408,6 +6336,10 @@ msgid ""
 "in NPIV mode or when automatic LUN scanning is disabled via a kernel module "
 "parameter."
 msgstr ""
+"Norėdami naudoti zFCP-susietus SCSI diskus, turite pateikti FCP įrenginio "
+"numerį. Saugyklos WWPN ir FCO LUN nėra būtini, jei zFCP adapteris nėra "
+"sukonfigūruotas NPIV veiksena arba automatinis LUN skenavimas yra išjungtas "
+"branduolio modulio parametre."
 
 #: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:133
 msgctxt "GUI|Advanced Storage|zFCP|Device Number"
@@ -6982,12 +6914,9 @@ msgstr ""
 "sistemos priežiūros bei administravimo tikslais."
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:101
-#, fuzzy
-#| msgctxt "GUI|Password"
-#| msgid "_Disable root account"
 msgctxt "GUI|Password"
 msgid "D_isable root account"
-msgstr "Iš_jungti root paskyrą"
+msgstr "_Išjungti root paskyrą"
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:130
 msgctxt "GUI|Password"
@@ -7267,6 +7196,10 @@ msgid ""
 "vulnerabilities, and compliance, and analyzing costs. For more information, "
 "visit the Red Hat Insights information page."
 msgstr ""
+"Red Hat Insights tiekia pagerinti jūsų IT efektyvumą ir greitį hibridinėse "
+"infrastruktūrose indentifikuodama ir prioritetizuodama rizikas, valdydama "
+"pažeidžiamumus, suderinamumą bei analizuodama kaštus. Daugiau informacijos "
+"rasite Red Hat Insights informacijos puslapyje."
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:456
 msgid "Custom base URL"
@@ -7422,11 +7355,8 @@ msgstr "Internetinio diegimo nustatymas"
 
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:74
 #: ui/webui/src/components/AnacondaWizard.jsx:60
-#, fuzzy
-#| msgctxt "GUI|Summary"
-#| msgid "_Begin Installation"
 msgid "Review and install"
-msgstr "_Pradėti diegimą"
+msgstr "Peržiūrėti ir įdiegti"
 
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:78
 msgid "Language"
@@ -7441,10 +7371,12 @@ msgstr "Diegimo paskirtis"
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:91
 msgid "To prevent loss, make sure to backup your data. "
 msgstr ""
+"Siekiant išvengti praradimų, įsitikinkite, kada pasidarėte atsarginę duomenų "
+"kopiją. "
 
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:94
 msgid "Erasing the disks cannot be undone."
-msgstr ""
+msgstr "Diskų ištrynimo negalima atstatyti."
 
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:104
 msgid "Local standard disk"
@@ -7452,69 +7384,59 @@ msgstr "Vietiniai standartiniai diskai"
 
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:110
 msgid "total"
-msgstr ""
+msgstr "iš viso"
 
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:135
 msgid "Erase disks and install"
-msgstr ""
+msgstr "Ištrinti diskus ir įdiegit"
 
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:141
 msgid "Back"
-msgstr ""
+msgstr "Grįžti"
 
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:146
 msgid "Erase disks and install?"
-msgstr ""
+msgstr "Ištrinti diskus ir įdiegti?"
 
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:150
 msgid ""
 "The selected disks will be erased, this cannot be undone. Are you sure you "
 "want to continue with the installation?"
 msgstr ""
+"Pažymėti diskai bus ištrinti, to negalima atstatyti. Ar tikrai norite tęsti "
+"diegimą?"
 
 #: ui/webui/src/components/localization/InstallationLanguage.jsx:175
-#, fuzzy
-#| msgid "Languages"
 msgid "Common languages"
-msgstr "Kalbos"
+msgstr "Dažnos kalbos"
 
 #: ui/webui/src/components/localization/InstallationLanguage.jsx:218
 msgid "No results found"
-msgstr ""
+msgstr "Rezultatų nerasta"
 
 #: ui/webui/src/components/localization/InstallationLanguage.jsx:281
-#, fuzzy
-#| msgid "Select a network"
 msgid "Find a language"
-msgstr "Pasirinkti tinklą"
+msgstr "Rasti kalbą"
 
 #: ui/webui/src/components/localization/InstallationLanguage.jsx:308
-#, fuzzy
-#| msgid "Anaconda Installer"
 msgid "Welcome to the Anaconda installer"
-msgstr "Anaconda diegyklė"
+msgstr "Sveiki paleidę Anaconda diegyklę"
 
 #: ui/webui/src/components/localization/InstallationLanguage.jsx:312
-#, fuzzy
-#| msgid "Languages"
 msgid "Choose a language"
-msgstr "Kalbos"
+msgstr "Pasirinkite kalbą"
 
 #: ui/webui/src/components/localization/InstallationLanguage.jsx:321
-#, fuzzy
-#| msgid "Languages"
 msgid "Chosen language: "
-msgstr "Kalbos"
+msgstr "Pasirinkta kalba: "
 
 #: ui/webui/src/components/AnacondaHeader.jsx:32
 msgid "Pre-release"
-msgstr ""
+msgstr "Išankstinis leidimas"
 
 #: ui/webui/src/components/AnacondaHeader.jsx:38
-#, fuzzy
-#| msgid "This is unstable, pre-release software."
 msgid "This is unstable, pre-release software"
-msgstr "Tai nestabili, neišleista programinė įranga."
+msgstr "Tai nestabili, neišleista programinė įranga"
 
 #: ui/webui/src/components/AnacondaHeader.jsx:44
 msgid ""
@@ -7522,47 +7444,28 @@ msgid ""
 "testing purposes only. Do NOT use this software for any critical work or for "
 "production environments."
 msgstr ""
+"Pastaba: tai yra neišleista programinė įranga, kuri yra skirta tik kūrimo "
+"bei testavimo reikmėms. NENAUDOKITE šios įrangos kritiniam darbui ar "
+"realioms aplinkoms."
 
 #: ui/webui/src/components/AnacondaHeader.jsx:47
-#, fuzzy
-#| msgid ""
-#| "Notice: This is pre-released software that is intended for development "
-#| "and testing purposes only.  Do *not* use this software for any critical "
-#| "work or for production environments.\n"
-#| "\n"
-#| "By clicking \"I want to proceed\", you understand and accept the risks "
-#| "associated with pre-released software, that you intend to use this for "
-#| "testing and development purposes only and are willing to report any bugs "
-#| "or issues in order to enhance this work.\n"
-#| "\n"
-#| "If you do not understand or accept the risks, then please exit this "
-#| "program by selecting \"I want to exit\" which will reboot your system."
 msgid ""
 "By continuing to use this software, you understand and accept the risks "
 "associated with pre-released software, that you intend to use this for "
 "testing and development purposes only and are willing to report any bugs or "
 "issues in order to enhance this work."
 msgstr ""
-"Įspėjimas: tai yra negalutinė programinė įranga, kuri yra skirta tik kūrimo "
-"ir testavimo reikmėms. *Nenaudokite* šios programinės įrangos jokiam "
-"kritinės svarbos darbui ar darbinėje aplinkoje.\n"
-"\n"
-"Paspausdami „Noriu tęsti“ jūs suprantate ir sutinkate su negalutine "
-"programine įranga susijusiomis rizikomis bei ketinate ją naudoti tik "
-"testavimo bei kūrimo reikmėms ir pageidaujate pranešti apie bet kokias "
-"klaidas ar problemas, taip pagerinant šį darbą.\n"
-"\n"
-"Jei nesuprantate arba nesutinkate su rizikomis, tuomet išeikite iš šios "
-"programos pasirinkdami „Noriu išeiti“, tai iš naujo paleis jūsų sistemą."
+"Tęsdami jūs suprantate ir sutinkate su negalutine programine įranga "
+"susijusiomis rizikomis bei ketinate ją naudoti tik testavimo bei kūrimo "
+"reikmėms ir pageidaujate pranešti apie bet kokias klaidas ar problemas, taip "
+"pagerinant šį darbą."
 
 #: ui/webui/src/components/AnacondaHeader.jsx:50
 msgid ""
 "If you do not understand or accept the risks, then please exit this program."
-msgstr ""
+msgstr "Jei nesuprantate arba nesutinkate su rizikomis, išeikite iš programos."
 
 #: ui/webui/src/components/app.jsx:97
-#, fuzzy
-#| msgid "Anaconda Installer"
 msgid "Anaconda installer"
 msgstr "Anaconda diegyklė"
 
@@ -7572,11 +7475,9 @@ msgstr "Saugyklos konfigūracija"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:115
 msgid "Storage configuration: Storage is currently being configured."
-msgstr ""
+msgstr "Saugyklos konfigūracija: saugykla šiuo metu yra konfigūruojama."
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:118
-#, fuzzy
-#| msgid "Software selection"
 msgid "Software installation"
 msgstr "Programinės įrangos pasirinkimas"
 
@@ -7585,10 +7486,10 @@ msgid ""
 "Software installation: Storage configuration complete. The software is now "
 "being installed onto your device."
 msgstr ""
+"Programinės įrangos diegimas: saugyklos konfigūracija baigta. Programinė "
+"įranga dabar yra diegiama jūsų įrenginyje."
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:123
-#, fuzzy
-#| msgid "Storage Configuration"
 msgid "System configuration"
 msgstr "Saugyklos konfigūracija"
 
@@ -7597,30 +7498,28 @@ msgid ""
 "System configuration: Software installation complete. The system is now "
 "being configured."
 msgstr ""
+"Sistemos konfigūracija: programinės įrangos diegimas baigtas. Sistema dabar "
+"yra konfigūruojama."
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:128
-#, fuzzy
-#| msgid "Location"
 msgid "Finalization"
-msgstr "Vieta"
+msgstr "Baigiama"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:130
 msgid ""
 "Finalizing: The system configuration is complete. Finalizing installation "
 "may take a few moments."
 msgstr ""
+"Baigiama: sistemos konfigūracija užbaigta. Diegimo baigimas gali kiek "
+"užtrukti."
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:140
-#, fuzzy
-#| msgid "Install"
 msgid "Installed"
-msgstr "Diegti"
+msgstr "Įdiegta"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:143
-#, fuzzy
-#| msgid "Installation"
 msgid "Installation failed"
-msgstr "Diegimas"
+msgstr "Diegimas nepavyko"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:145
 msgid "Installing"
@@ -7628,156 +7527,123 @@ msgstr "Diegiama"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:162
 msgid "pending step"
-msgstr ""
+msgstr "laukiantis žingsnis"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:163
 msgid "Pending"
-msgstr ""
+msgstr "Laukia"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:168
-#, fuzzy
-#| msgid "Complete!"
 msgid "completed step"
-msgstr "Užbaigta!"
+msgstr "užbaigtas žingsnis"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:169
-#, fuzzy
-#| msgid "Complete!"
 msgid "Completed"
-msgstr "Užbaigta!"
+msgstr "Užbaigta"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:173
-#, fuzzy
-#| msgid "Current host name:"
 msgid "current step"
-msgstr "Dabartinis kompiuterio pavadinimas:"
+msgstr "dabartinis žingsnis"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:174
-#, fuzzy
-#| msgid "Progress"
 msgid "In progress"
-msgstr "Eiga"
+msgstr "Vyksta"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:211
-#, fuzzy
-#| msgid "Rebooting."
 msgid "Reboot"
-msgstr "Perleidžiama."
+msgstr "Perleisti"
 
 #: ui/webui/src/components/AnacondaWizard.jsx:50
 msgid "Welcome"
-msgstr ""
+msgstr "Sveiki"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:153
-#, fuzzy
-#| msgid "Selected disks"
 msgid "Select no disk"
-msgstr "Pasirinkti diskai"
+msgstr "Nesirinkite jokio disko"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:157
-#, fuzzy
-#| msgctxt "GUI|Network|Wireless"
-#| msgid "_Select network"
 msgid "Select none"
-msgstr "_Pasirinkti tinklą"
+msgstr "Nežymėti nieko"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:162
-#, fuzzy
-#| msgid "Selected disks"
 msgid "Select all disks"
-msgstr "Pasirinkti diskai"
+msgstr "Pasirinkti visus diskai"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:174
-#, fuzzy
-#| msgid "Selected disks"
 msgid "Select multiple disks"
-msgstr "Pasirinkti diskai"
+msgstr "Pasirinkti daugelį diskų"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:178
-#, fuzzy
-#| msgid "Nothing selected"
 msgid "$0 selected"
 msgid_plural "$0 selected"
-msgstr[0] "Nieko nepasirinkta"
-msgstr[1] "Nieko nepasirinkta"
-msgstr[2] "Nieko nepasirinkta"
+msgstr[0] "Pasirinktas $0"
+msgstr[1] "Pasirinkti $0"
+msgstr[2] "Pasirinkta $0"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:266
 msgid ""
 "Locally available storage devices (SATA, NVMe SSD, SCSI hard drives, "
 "external disks, etc.)"
 msgstr ""
+"Vietoje esantys saugyklo įrenginiai (SATA, NVMe SSD, SCSI kietieji diskai, "
+"išoriniai diskai, ir kt.)"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:273
 msgid "Local disks label info"
-msgstr ""
+msgstr "Vietinio disko užrašas"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:281
 #: ui/webui/src/components/storage/InstallationDestination.jsx:307
-#, fuzzy
-#| msgid "Selected disks"
 msgid "Detect disks"
-msgstr "Pasirinkti diskai"
+msgstr "Aptikti diskus"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:302
 msgid "Scans for local storage devices"
-msgstr ""
+msgstr "Skenuoja vietinius saugyklos įrenginius"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:318
 msgid "Total"
-msgstr ""
+msgstr "Iš viso"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:325
 msgid "Available storage capacity on the disk."
-msgstr ""
+msgstr "Prieinama saugyklos talpa diske."
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:353
-#, fuzzy
-#| msgctxt "GUI|Refresh Dialog|Rescan"
-#| msgid "_Rescan Disks"
 msgid "Detecting disks"
-msgstr "Pe_rskaityti diskus iš naujo"
+msgstr "Aptinkami diskai"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:419
-#, fuzzy
-#| msgid "Local Standard Disks"
 msgid "Local standard disks"
 msgstr "Vietiniai standartiniai diskai"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:429
-#, fuzzy
-#| msgid "No usable disks selected."
 msgid "No additional disks detected"
-msgstr "Nepasirinkta naudojamų diskų."
+msgstr "Neaptikta papildomų diskų"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:463
-#, fuzzy
-#| msgctxt "GUI|Refresh Dialog|Rescan"
-#| msgid "_Rescan Disks"
 msgid "Checking disks"
-msgstr "Pe_rskaityti diskus iš naujo"
+msgstr "Tikrinami diskai"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:467
-#, fuzzy
-#| msgid "This may take a moment."
 msgid "This may take a moment"
-msgstr "Tai gali užtrukti."
+msgstr "Tai gali užtrukti"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:480
 msgid ""
 "Select the device(s) to install to. The installation requires $0 of "
 "available space. Storage will be automatically partitioned."
 msgstr ""
+"Pasirinkite įrenginius, į kuriuos diegti. Diegimui reikia %0 prieinamos "
+"vietos. Saugykla bus automatiškai suskaidyta."
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:485
 msgid "Learn more about your storage options."
-msgstr ""
+msgstr "Sužinokite daugiau apie saugyklos parametrus."
 
 #: ui/webui/src/components/storage/HelpStorageOptions.jsx:16
-#, fuzzy
-#| msgid "Storage Options"
 msgid "Storage options"
-msgstr "Saugyklos nustatymai"
+msgstr "Saugyklos parametrai"
 
 #: ui/webui/src/components/storage/HelpStorageOptions.jsx:20
 msgid ""
@@ -7785,24 +7651,28 @@ msgid ""
 "installation target. You must select a minimum of 1 disk for the "
 "installationprocess to proceed."
 msgstr ""
+"Diegimo paskirtyje galite sukonfigūruoti diskus, naudojamus kaip diegimo "
+"paskirtis. Turite pasirinkti bent vieną diską diegimo procesui tęsti."
 
 #: ui/webui/src/components/storage/HelpStorageOptions.jsx:26
 msgid ""
 "Use the Detect disks button to view and configure the local storage devices "
 "connected after starting the installation process."
 msgstr ""
+"Naudokite mygtuką „Aptikti diskus“ prijungtiems saugyklos įrenginiams "
+"pamatyti ir konfigūruoti po diegimo proceso paleidimo."
 
 #: ui/webui/src/components/storage/HelpStorageOptions.jsx:31
-#, fuzzy
-#| msgid "Use text mode"
 msgid "Use the "
-msgstr "Naudoti tekstinę veikseną"
+msgstr "Naudokite "
 
 #: ui/webui/src/components/storage/HelpStorageOptions.jsx:33
 msgid ""
 " button to view and configure the local storage devices connected after "
 "starting the installation process."
 msgstr ""
+" mygtuką prijungtiems saugyklos įrenginiams pamatyti ir konfigūruoti po "
+"diegimo proceso pradžios."
 
 #: ui/webui/src/components/storage/HelpStorageOptions.jsx:38
 msgid ""
@@ -7812,6 +7682,11 @@ msgid ""
 "total free space on disks. A ZRAM-based swap is used instead of a disk-based "
 "swap partition."
 msgstr ""
+"Diegyklė nustato visą vietą visuose pasirinktuose diskuose bei sukuria Btrfs "
+"išdėstymą, tinkamą jūsų sistemai. Išdėstymo specifika priklauso nuo to, ar "
+"jūsų sistema naudoja BIOS, ar UEFI aparatinę programinę įrangą bei bendros "
+"laisvos vietos diskuose. ZRAM pagrindo mainų sritis yra naudojama disko "
+"pagrindo mainų skaidiniui."
 
 #: data/liveinst/gnome/fedora-welcome.js:94
 msgid "Try Fedora"
