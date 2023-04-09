@@ -41,13 +41,14 @@
 # Anonymous <noreply@weblate.org>, 2020.
 # Josef Hruska <hrusjos@gmail.com>, 2020, 2022.
 # yangyangdaji <1504305527@qq.com>, 2022, 2023.
+# Jan Kalabza <jan.kalabza@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
 "POT-Creation-Date: 2023-03-09 01:25+0000\n"
-"PO-Revision-Date: 2023-04-02 02:20+0000\n"
-"Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
+"PO-Revision-Date: 2023-04-10 08:20+0000\n"
+"Last-Translator: Jan Kalabza <jan.kalabza@gmail.com>\n"
 "Language-Team: Czech <https://translate.fedoraproject.org/projects/anaconda/"
 "f38/cs/>\n"
 "Language: cs\n"
@@ -139,12 +140,12 @@ msgstr "Dokončeno!"
 #, python-brace-format
 msgid ""
 "The '{repository_name}' repository has no mirror, baseurl or metalink set."
-msgstr ""
+msgstr "Repozitář '{repository_name}' nemá mirror, baseurl nebo metalink."
 
 #: pyanaconda/payload/dnf/payload.py:411
 #, python-brace-format
 msgid "The '{repository_name}' repository uses an unsupported protocol."
-msgstr ""
+msgstr "Repozitář '{repository_name}' používá nepodporovaný protokol."
 
 #: pyanaconda/payload/dnf/payload.py:438
 msgid "Starting package installation process"
@@ -285,6 +286,10 @@ msgid ""
 "arguments or subscription infrastructure issues. Would you like to ignore "
 "this and continue with installation?"
 msgstr ""
+"Při pokusu o registraci sa vyskytla chyba vzniklá příkazem kickstart rhsm. "
+"Příčinou může být neplatný argument příkazu rhsm, nebo chyba v "
+"infrastruktuře předplatného. Chcete tuto chybu ignorovat a pokračovat v "
+"instalaci?"
 
 #: pyanaconda/errors.py:206
 msgid "Error detail: "
@@ -1054,7 +1059,7 @@ msgstr ""
 
 #: pyanaconda/ui/gui/__init__.py:355 widgets/src/BaseWindow.c:151
 msgid "Help!"
-msgstr "Nápověda"
+msgstr "Nápověda!"
 
 #: pyanaconda/ui/gui/__init__.py:845
 #: pyanaconda/ui/gui/spokes/lib/detailederror.py:58
@@ -1113,11 +1118,9 @@ msgid "Failed to set up installation source; check the NFS configuration."
 msgstr "Nepodařilo se nastavit zdroj instalace – zkontrolujte nastavení NFS."
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:442
-#, fuzzy
-#| msgid "Failed to set up installation source; check the repo url."
 msgid "Failed to set up installation sources; check their configurations."
 msgstr ""
-"Instalační zdroj se nepodařilo nastavit – zkontrolujte URL adresu repozitáře."
+"Instalační zdroje se nepodařilo nastavit – zkontrolujte jejich konfiguraci."
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:535
 #, python-format
@@ -1586,10 +1589,8 @@ msgstr "Zachovat _vše"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.py:666
 #: pyanaconda/ui/gui/spokes/lib/installation_source_helpers.py:261
-#, fuzzy
-#| msgid "Invalid proxy protocol: %s"
 msgid "Invalid protocol"
-msgstr "Neplatný protokol proxy: %s"
+msgstr "Neplatný protokol"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:58
 #, python-format
@@ -1704,18 +1705,17 @@ msgid "Are you sure you want to delete all of the data on {}?"
 msgstr "Opravdu chcete smazat všechna data na {}?"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:433
-#, fuzzy
-#| msgctxt "GUI|Network|Add Device Dialog"
-#| msgid "_Select the type of device you wish to add"
 msgid ""
 "Select all of the drives you would like the mount point to be created on."
-msgstr "_Vyberte typ zařízení, které chcete přidat"
+msgstr "Vyberte všechny jednotky, na kterých chcete vytvořit bod připojení."
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:436
 msgid ""
 "Select a drive for the mount point to be created on. If you select multiple, "
 "only 1 drive will be used."
 msgstr ""
+"Vyberte disk, na kterém se má vytvořit bod připojení. Pokud vyberete více "
+"disků, bude použit pouze 1 disk."
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:631
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:329
@@ -1782,10 +1782,8 @@ msgid " <a href=\"\">Click for details.</a>"
 msgstr " <a href=\"\">Podrobnosti obdržíte kliknutím sem.</a>"
 
 #: pyanaconda/ui/gui/spokes/lib/installation_source_helpers.py:180
-#, fuzzy
-#| msgid "Repository %s has invalid url"
 msgid "The '{}' repository is invalid: {}"
-msgstr "Repozitář %s nemá vyplněnou platnou URL adresu"
+msgstr "Repozitář '{}' je neplatny: {}"
 
 #: pyanaconda/ui/gui/spokes/lib/installation_source_helpers.py:206
 msgid "Empty repository name"
@@ -1812,10 +1810,8 @@ msgid "Empty server"
 msgstr "Prázdný server"
 
 #: pyanaconda/ui/gui/spokes/lib/installation_source_helpers.py:246
-#, fuzzy
-#| msgid "Invalid timezone"
 msgid "Invalid server"
-msgstr "Neplatné časové pásmo"
+msgstr "Neplatný server"
 
 #: pyanaconda/ui/gui/spokes/lib/installation_source_helpers.py:249
 msgid "Empty path"
@@ -2153,7 +2149,8 @@ msgid ""
 "Go ahead and reboot your system to start using it!"
 msgstr ""
 "Systém %s je nyní úspěšně nainstalován a připraven k použití!\n"
-"Pokračujte restartováním stroje a začněte ho používat."
+"\n"
+"Pokračujte restartováním stroje a začněte ho používat!"
 
 #: pyanaconda/ui/gui/spokes/installation_progress.py:120
 #, python-format
@@ -2162,7 +2159,8 @@ msgid ""
 "Go ahead and quit the application to start using it!"
 msgstr ""
 "Systém %s je nyní úspěšně nainstalován a připraven k použití!\n"
-"Pokračuje ukončením aplikace a začněte ho používat."
+"\n"
+"Pokračuje ukončením aplikace a začněte ho používat!"
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:58
 msgctxt "GUI|Spoke"
@@ -2440,7 +2438,7 @@ msgstr "Heslo správce (root) je nastaveno"
 
 #: pyanaconda/ui/lib/users.py:39
 msgid "Root password is not set"
-msgstr "Heslo správce (root) není nastaveno"
+msgstr "Heslo uživatele Root není nastaveno"
 
 #: pyanaconda/ui/lib/storage.py:210
 #, python-brace-format
@@ -2481,7 +2479,7 @@ msgstr "Prosím potvrďte výběr softwaru"
 
 #: pyanaconda/ui/lib/software.py:64
 msgid "Selected environment is not valid"
-msgstr "Vybrané prostředí není platné."
+msgstr "Vybrané prostředí není platné"
 
 #: pyanaconda/ui/lib/subscription.py:305
 msgid "Registration failed due to insufficient credentials."
@@ -3177,7 +3175,7 @@ msgid ""
 "using the %(fsType)s file system on %(deviceType)s"
 msgstr ""
 "Pokud je na %(deviceType)s použit souborový systém %(fsType)s, nemusí být na "
-"%(deviceName)s dostatek místa pro vložení core.img zavaděče grub2."
+"%(deviceName)s dostatek místa pro vložení core.img zavaděče grub2"
 
 #: pyanaconda/modules/storage/bootloader/grub2.py:530
 #, python-format
@@ -3528,7 +3526,7 @@ msgstr "Na vybraných jednotkách není dostatek volného místa."
 
 #: pyanaconda/modules/storage/partitioning/automatic/utils.py:394
 msgid "No big enough free space on disks for automatic partitioning"
-msgstr "Na jednotkách není dostatek volného místa pro automatické rozdělení."
+msgstr "Na jednotkách není dostatek volného místa pro automatické rozdělení"
 
 #: pyanaconda/modules/storage/partitioning/automatic/noninteractive_partitioning.py:111
 msgid "No usable disks."
@@ -3780,7 +3778,7 @@ msgstr "Jméno „%s“ není platné."
 
 #: pyanaconda/core/kickstart/addon.py:128
 msgid "Missing name of the %addon section."
-msgstr "Chybí název sekce %addon"
+msgstr "Chybí název sekce %addon."
 
 #: pyanaconda/core/kickstart/addon.py:138
 msgid "Unknown name of the %addon section."
@@ -4030,7 +4028,7 @@ msgstr "Skrýt heslo."
 
 #: pyanaconda/core/constants.py:225
 msgid "Show password."
-msgstr "Zobrazit heslo"
+msgstr "Zobrazit heslo."
 
 #: pyanaconda/core/constants.py:268
 msgid "Probing storage..."
@@ -4062,7 +4060,7 @@ msgstr "Je třeba, aby délka názvu stroje nepřesahovala 64 znaků."
 
 #: pyanaconda/network.py:112
 msgid "Local host name must not end with period '.'."
-msgstr "Místní název stroje nemůže končit na „.“ (tečka)"
+msgstr "Místní název stroje nemůže končit na tečku '.'."
 
 #: pyanaconda/network.py:115
 msgid ""
@@ -4502,7 +4500,7 @@ msgstr " Spouštění textového režimu."
 
 #: pyanaconda/startup_utils.py:129
 msgid "The installation cannot continue and the system will be rebooted"
-msgstr "Instalace nemůže pokračovat. Počítač bude restartován."
+msgstr "Instalace nemůže pokračovat. Počítač bude restartován"
 
 #: pyanaconda/startup_utils.py:130
 msgid "Press ENTER to continue"
@@ -4965,7 +4963,7 @@ msgid ""
 "This device cannot be edited directly. You can remove it or select a "
 "different device."
 msgstr ""
-"Toto zařízení nemůže být upravováno přímo. Můžete ho jen odebrat nebo vybrat "
+"Toto zařízení nemůže být editováno přímo. Můžete ho jen odebrat nebo vybrat "
 "jiné zařízení."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:1422
@@ -5448,6 +5446,10 @@ msgid ""
 "vulnerabilities, and compliance, and analyzing costs. For more information, "
 "visit the Red Hat Insights information page."
 msgstr ""
+"Red Hat Insights si klade za cíl zvýšit efektivitu a rychlost vašeho IT "
+"napříč hybridními infrastrukturami identifikací a prioritizací rizik, "
+"správou zranitelností a dodržováním předpisů a analýzou nákladů. Pro více "
+"informací navštivte informační stránku Red Hat Insights."
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:456
 msgid "Custom base URL"
@@ -6504,22 +6506,16 @@ msgid "Disk summary goes here"
 msgstr "Souhrn jednotek bude zde"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:14
-#, fuzzy
-#| msgid "No additional software to select."
 msgid "Install additional software from a specified URL"
-msgstr "Žádný doplňkový software k dispozici."
+msgstr "Instalace dalšího software ze specifické adresy URL"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:18
-#, fuzzy
-#| msgid "No additional software to select."
 msgid "Install additional software from a NFS server"
-msgstr "Žádný doplňkový software k dispozici."
+msgstr "Instalace dalšího software z NFS serveru"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:22
-#, fuzzy
-#| msgid "No additional software to select."
 msgid "Install additional software from another source"
-msgstr "Žádný doplňkový software k dispozici."
+msgstr "Instalace dalšího software z jiných zdrojů"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:79
 msgid "Enabled"
@@ -6564,61 +6560,46 @@ msgstr "Název repozitáře"
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:231
 msgctxt "GUI|Software Source"
 msgid "_Source:"
-msgstr ""
+msgstr "_Zdroj:"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:284
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:485
-#, fuzzy
-#| msgctxt "GUI|Software Source"
-#| msgid "Pro_xy URL:"
 msgctxt "GUI|Software Source"
 msgid "_URL:"
-msgstr "URL adresa pro_xy:"
+msgstr "_URL:"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:298
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:500
-#, fuzzy
-#| msgid "Name of the repository."
 msgid "URL of the repository"
-msgstr "Název repozitáře."
+msgstr "URL repozitáře"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:300
 msgid "http:// or https:// or ftp://"
-msgstr ""
+msgstr "http:// nebo https:// nebo ftp://"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:313
-#, fuzzy
-#| msgctxt "GUI|Software Source"
-#| msgid "URL type:"
 msgctxt "GUI|Software Source"
 msgid "URL _type:"
-msgstr "Typ URL:"
+msgstr "_Typ URL:"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:330
-#, fuzzy
-#| msgid "repository URL"
 msgid "Repository URL"
 msgstr "URL adresa repozitáře"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:331
-#, fuzzy
-#| msgid "mirrorlist"
 msgid "Mirrorlist"
-msgstr "seznam zrcadel"
+msgstr "Seznam zrcadel"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:332
 #, fuzzy
 #| msgid "metalink"
 msgid "Metalink"
-msgstr "meta odkaz"
+msgstr "Meta odkaz"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:346
-#, fuzzy
-#| msgctxt "GUI|Software Source"
-#| msgid "Pro_xy URL:"
 msgctxt "GUI|Software Source"
 msgid "Pro_xy:"
-msgstr "URL adresa pro_xy:"
+msgstr "Pro_xy:"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:358
 msgctxt "GUI|Software Source"
@@ -6626,44 +6607,35 @@ msgid "Configure proxy"
 msgstr "Nastavit proxy"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:387
-#, fuzzy
-#| msgid "NTP servers:"
 msgctxt "GUI|Software Source"
 msgid "_Server:"
-msgstr "NTP servery:"
+msgstr "_Server:"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:403
-#, fuzzy
-#| msgid "Paths"
 msgctxt "GUI|Software Source"
 msgid "_Path:"
-msgstr "Cesty"
+msgstr "_Cesta:"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:419
-#, fuzzy
-#| msgctxt "GUI|Software Source"
-#| msgid "N_FS mount options:"
 msgctxt "GUI|Software Source"
 msgid "_Mount options:"
-msgstr "Možnosti připojení N_FS:"
+msgstr "_Možnosti připojení:"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:433
 msgid "Host name or IP address of the NFS server"
-msgstr ""
+msgstr "Jméno hosta nebo IP adresa NFS serveru"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:445
 msgid "Path on the NFS server to the additional repository"
-msgstr ""
+msgstr "Cesta na serveru NFS k přídavnému úložišti"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:457
 msgid "Optional comma-separated list of mount options for the NFS mount"
-msgstr ""
+msgstr "Volitelný seznam oddělený čárkami pro připojení NFS"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:459
-#, fuzzy
-#| msgid "Not registered."
 msgid "Not required"
-msgstr "Nezaregistrováno."
+msgstr "Není požadováno"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:532
 msgid "Create a new additional repository or select an existing one."
@@ -7471,26 +7443,20 @@ msgid "No results found"
 msgstr "Nenalezeny žádné výsledky"
 
 #: ui/webui/src/components/localization/InstallationLanguage.jsx:281
-#, fuzzy
-#| msgid "Select a language"
 msgid "Find a language"
-msgstr "Vyberte jazyk"
+msgstr "Hledání jazyka"
 
 #: ui/webui/src/components/localization/InstallationLanguage.jsx:308
 msgid "Welcome to the Anaconda installer"
 msgstr "Vítejte v instalátoru Anaconda"
 
 #: ui/webui/src/components/localization/InstallationLanguage.jsx:312
-#, fuzzy
-#| msgid "Common languages"
 msgid "Choose a language"
-msgstr "Běžné jazyky"
+msgstr "Výběr jazyka"
 
 #: ui/webui/src/components/localization/InstallationLanguage.jsx:321
-#, fuzzy
-#| msgid "Common languages"
 msgid "Chosen language: "
-msgstr "Běžné jazyky"
+msgstr "Zvolený jazyk: "
 
 #: ui/webui/src/components/AnacondaWizard.jsx:50
 msgid "Welcome"
@@ -7513,19 +7479,19 @@ msgstr "Uspořádání úložiště"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:115
 msgid "Storage configuration: Storage is currently being configured."
-msgstr ""
+msgstr "Konfigurace úložiště: Úložiště se právě konfiguruje."
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:118
-#, fuzzy
-#| msgid "Software selection"
 msgid "Software installation"
-msgstr "Výběr softwaru"
+msgstr "Instalace softwaru"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:120
 msgid ""
 "Software installation: Storage configuration complete. The software is now "
 "being installed onto your device."
 msgstr ""
+"Instalace softwaru: Konfigurace úložiště dokončena. Software se nyní "
+"instaluje do vašeho zařízení."
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:123
 msgid "System configuration"
@@ -7536,18 +7502,20 @@ msgid ""
 "System configuration: Software installation complete. The system is now "
 "being configured."
 msgstr ""
+"Konfigurace systému: Instalace softwaru dokončena. Systém se nyní "
+"konfiguruje."
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:128
-#, fuzzy
-#| msgid "Localization"
 msgid "Finalization"
-msgstr "Lokalizace"
+msgstr "Dokončování"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:130
 msgid ""
 "Finalizing: The system configuration is complete. Finalizing installation "
 "may take a few moments."
 msgstr ""
+"Dokončování: Konfigurace systému je dokončena. Dokončení instalace může "
+"chvíli trvat."
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:140
 msgid "Installed"
@@ -7566,30 +7534,24 @@ msgid "pending step"
 msgstr "čekající krok"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:163
-#, fuzzy
-#| msgid "pending step"
 msgid "Pending"
-msgstr "čekající krok"
+msgstr "Čekání"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:168
 msgid "completed step"
 msgstr "dokončený krok"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:169
-#, fuzzy
-#| msgid "Complete!"
 msgid "Completed"
-msgstr "Dokončeno!"
+msgstr "Dokončeno"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:173
 msgid "current step"
 msgstr "aktuální krok"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:174
-#, fuzzy
-#| msgid "Progress"
 msgid "In progress"
-msgstr "Průběh"
+msgstr "V běhu"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:211
 msgid "Reboot"
@@ -7659,18 +7621,20 @@ msgid ""
 "Use the Detect disks button to view and configure the local storage devices "
 "connected after starting the installation process."
 msgstr ""
+"Pomocí tlačítka Rozpoznat disky můžete po spuštění instalačního procesu "
+"zobrazit a nakonfigurovat připojená místní úložná zařízení."
 
 #: ui/webui/src/components/storage/HelpStorageOptions.jsx:31
-#, fuzzy
-#| msgid "Use text mode"
 msgid "Use the "
-msgstr "Použít textový režim"
+msgstr "Použít "
 
 #: ui/webui/src/components/storage/HelpStorageOptions.jsx:33
 msgid ""
 " button to view and configure the local storage devices connected after "
 "starting the installation process."
 msgstr ""
+" tlačítko pro zobrazení a konfiguraci připojených místních úložných zařízení "
+"po zahájení procesu instalace."
 
 #: ui/webui/src/components/storage/HelpStorageOptions.jsx:38
 msgid ""
@@ -7714,7 +7678,7 @@ msgstr ""
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:273
 msgid "Local disks label info"
-msgstr ""
+msgstr "Informace o názvu místních disků"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:281
 #: ui/webui/src/components/storage/InstallationDestination.jsx:307
