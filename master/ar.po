@@ -31,7 +31,7 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
 "POT-Creation-Date: 2023-03-09 01:21+0000\n"
-"PO-Revision-Date: 2023-04-06 22:20+0000\n"
+"PO-Revision-Date: 2023-04-12 11:56+0000\n"
 "Last-Translator: Khalid Abu Shawarib <khalid.shawarib@gmail.com>\n"
 "Language-Team: Arabic <https://translate.fedoraproject.org/projects/anaconda/"
 "master/ar/>\n"
@@ -64,6 +64,12 @@ msgid ""
 "if you would like to secure the server.\n"
 "\n"
 msgstr ""
+"\n"
+"\n"
+"تحذير! خادوم VNC يعمل بدون كلمة مرور!\n"
+"يمكنك استعمال خيار الإقلاع ‪“inst.vncpassword‪=كلمة_مرور”\n"
+"إذا أردت تأمين الخادوم.\n"
+"\n"
 
 #: pyanaconda/vnc.py:259
 msgid ""
@@ -104,6 +110,11 @@ msgid ""
 "\n"
 "The installer will now terminate."
 msgstr ""
+"\n"
+"حدث خطأ أثناء قراءة الملف البادئ kickstart:\n"
+"%s\n"
+"\n"
+"سينهى المثبت الآن."
 
 #: pyanaconda/startup_utils.py:92
 msgid ""
@@ -137,6 +148,8 @@ msgid ""
 "\n"
 "Some warnings occurred during reading the kickstart file:"
 msgstr ""
+"\n"
+"بعض التحذيرات ظهرت خلال قراءة الملف البادئ kickstart:"
 
 #: pyanaconda/exception.py:177
 #, python-format
@@ -166,6 +179,8 @@ msgid ""
 "\n"
 "Would you like to use it anyway?"
 msgstr ""
+"\n"
+"هل ترغب باستعمالها بأي حال؟"
 
 #: pyanaconda/ui/gui/spokes/lib/storage_dialogs.py:166
 #, python-format
@@ -173,6 +188,8 @@ msgid ""
 "  You don't have enough space available to install <b>%(product)s</b>, even "
 "if you used all of the free space available on the selected disks."
 msgstr ""
+"  ليس لديك مساحة كافية لتثبيت <b>%(product)s</b>، حتى لو استعملت كل المساحة "
+"الحرة المتاحة على كل الأقراص المنتقاة."
 
 #: pyanaconda/ui/gui/spokes/lib/installation_source_helpers.py:46
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1768
@@ -217,12 +234,12 @@ msgstr ""
 msgctxt "GUI|Custom Partitioning|Devices"
 msgid " and {} other"
 msgid_plural " and {} others"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
-msgstr[5] ""
+msgstr[0] " فقط"
+msgstr[1] " و واحدٌ آخر"
+msgstr[2] " و اثنين آخرين"
+msgstr[3] " و {} آخرين"
+msgstr[4] " و {} آخراً"
+msgstr[5] " و {} آخر"
 
 #: pyanaconda/modules/storage/bootloader/base.py:656
 #, python-format
@@ -230,6 +247,8 @@ msgid ""
 "%(bootloader_stage2_description)s cannot be on an iSCSI disk which is not "
 "configured in iBFT."
 msgstr ""
+"لا يمكن لـ %(bootloader_stage2_description)s أن يكون على قرص iSCSI لم يعدّ "
+"في وضع iBFT."
 
 #: pyanaconda/modules/storage/bootloader/base.py:663
 #, python-format
@@ -272,6 +291,8 @@ msgid ""
 "%(deviceName)s may not have enough space for grub2 to embed core.img when "
 "using the %(fsType)s file system on %(deviceType)s"
 msgstr ""
+"%(deviceName)s قد لا يحوي مساحة كافية لـ grub2 كي يضمّن core.img عند استعمال "
+"نظام الملفات %(fsType)s على %(deviceType)s"
 
 #: pyanaconda/ui/gui/spokes/lib/resize.py:237
 #, python-format
@@ -281,7 +302,7 @@ msgstr "%(freeSize)s من %(devSize)s"
 #: pyanaconda/ui/gui/spokes/custom_storage.py:350
 #, python-format
 msgid "%(items_selected)s of %(items_total)s mount points in %(page_name)s"
-msgstr ""
+msgstr "%(items_selected)s من %(items_total)s نقاط وصل في %(page_name)s"
 
 #: pyanaconda/modules/storage/bootloader/base.py:362
 #, python-format
@@ -322,7 +343,12 @@ msgstr "%d مب/ثا"
 msgctxt "GUI|Custom Partitioning"
 msgid "%d _storage device selected"
 msgid_plural "%d _storage devices selected"
-msgstr[0] ""
+msgstr[0] "لا أجهزة تخزين محددة"
+msgstr[1] "جهاز تخزين واحد محدد"
+msgstr[2] "جهازي تخزين محددين"
+msgstr[3] "%d أجهزة تخزين محددة"
+msgstr[4] "%d جهاز تخزين محدد"
+msgstr[5] "%d جهاز تخزين محدد"
 
 #: pyanaconda/ui/gui/spokes/lib/storage_dialogs.py:132
 #, python-format
@@ -340,7 +366,7 @@ msgstr "%s لا يمكن أن يكون جهازًا مشفرًا."
 msgid ""
 "%s is currently mounted and cannot be used for the installation. Please "
 "unmount it and retry."
-msgstr ""
+msgstr "%s موصل حاليا ولا يمكن استعماله للتثبيت. الرجاء فصله وإعادة المحاولة."
 
 #: pyanaconda/modules/network/firewall/installation.py:102
 #, python-format
@@ -353,6 +379,8 @@ msgid ""
 "%s is now successfully installed and ready for you to use!\n"
 "Go ahead and quit the application to start using it!"
 msgstr ""
+"تم تثبيت %s بنجاح وهو جاهز لتستعمله!\n"
+"اذهب واخرج من التطبيق لتبدأ استعماله!"
 
 #: pyanaconda/ui/gui/spokes/installation_progress.py:115
 #, python-format
@@ -360,6 +388,8 @@ msgid ""
 "%s is now successfully installed and ready for you to use!\n"
 "Go ahead and reboot your system to start using it!"
 msgstr ""
+"تم تثبيت %s بنجاح وهو جاهز لتستعمله!\n"
+"اذهب واعد تشغيل نظامك لتبدأ استعماله!"
 
 #: pyanaconda/modules/storage/bootloader/base.py:435
 #, python-format
@@ -386,7 +416,7 @@ msgstr "%s حرة"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:821
 msgid "/boot cannot be of type \"lvmlv\" on s390x"
-msgstr ""
+msgstr "‎/boot لا يمكن أن يكون من نوع \"lvmlv\" على s390x"
 
 #: pyanaconda/modules/storage/bootloader/base.py:189
 msgid "/boot file system"
@@ -395,7 +425,7 @@ msgstr "نظام ملفات الإقلاع /boot"
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:409
 #, python-brace-format
 msgid "/boot/efi must be on a device of type {type} or {another}"
-msgstr ""
+msgstr "‎/boot/efi يجب أن يكون على جهاز من نوع {type} أو {another}"
 
 #: widgets/src/MountpointSelector.c:84
 msgid "0 GB"
@@ -7118,36 +7148,26 @@ msgid ""
 msgstr ""
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:174
-#, fuzzy
-#| msgid "Progress"
 msgid "In progress"
-msgstr "التقدم"
+msgstr "يجري العمل"
 
 #: ui/webui/src/components/AnacondaWizard.jsx:55
 #: ui/webui/src/components/storage/InstallationDestination.jsx:476
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:86
-#, fuzzy
-#| msgid "Installation source"
 msgid "Installation destination"
-msgstr "مصدر التثبيت"
+msgstr "وجهة التثبيت"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:143
-#, fuzzy
-#| msgid "Installation"
 msgid "Installation failed"
-msgstr "التثبيت"
+msgstr "فشل التثبيت"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:140
-#, fuzzy
-#| msgid "Install"
 msgid "Installed"
-msgstr "ثبّت"
+msgstr "تم التثبيت"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:145
-#, fuzzy
-#| msgid "Installation"
 msgid "Installing"
-msgstr "التثبيت"
+msgstr "يجري التثبيت"
 
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:78
 msgid "Language"
@@ -7162,14 +7182,10 @@ msgid "Local disks label info"
 msgstr ""
 
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:104
-#, fuzzy
-#| msgid "Local Standard Disks"
 msgid "Local standard disk"
-msgstr "الأقراص المعياريّة المحليّة"
+msgstr "القرص المعياري المحلي"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:419
-#, fuzzy
-#| msgid "Local Standard Disks"
 msgid "Local standard disks"
 msgstr "الأقراص المعياريّة المحليّة"
 
@@ -7180,10 +7196,8 @@ msgid ""
 msgstr ""
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:429
-#, fuzzy
-#| msgid "No disks selected"
 msgid "No additional disks detected"
-msgstr "لم يُنتقَ أيّ قرص"
+msgstr "لم تُكتشف أي أقراص أضافية"
 
 #: ui/webui/src/components/localization/InstallationLanguage.jsx:218
 msgid "No results found"
@@ -7210,39 +7224,28 @@ msgstr ""
 
 #: ui/webui/src/components/AnacondaWizard.jsx:60
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:74
-#, fuzzy
-#| msgid "Installation"
 msgid "Review and install"
-msgstr "التثبيت"
+msgstr "راجع وثبّت"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:302
 msgid "Scans for local storage devices"
 msgstr ""
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:162
-#, fuzzy
-#| msgid "Selected Device"
 msgid "Select all disks"
-msgstr "الجهاز المُنتقى"
+msgstr "اختر كل الأقراص"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:174
-#, fuzzy
-#| msgid "Selected Device"
 msgid "Select multiple disks"
-msgstr "الجهاز المُنتقى"
+msgstr "اختر عدة أقراص"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:153
-#, fuzzy
-#| msgid "Selected Device"
 msgid "Select no disk"
-msgstr "الجهاز المُنتقى"
+msgstr "لا تختر أي قرص"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:157
-#, fuzzy
-#| msgctxt "GUI|Software Source"
-#| msgid "_On the network:"
 msgid "Select none"
-msgstr "على ال_شّبكة:"
+msgstr "لا تختر شيء"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:480
 msgid ""
@@ -7251,10 +7254,8 @@ msgid ""
 msgstr ""
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:118
-#, fuzzy
-#| msgid "Software selection"
 msgid "Software installation"
-msgstr "انتقاء البرمجيات"
+msgstr "تثبيت البرمجيات"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:120
 msgid ""
@@ -7263,26 +7264,20 @@ msgid ""
 msgstr ""
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:113
-#, fuzzy
-#| msgid "Saving storage configuration..."
 msgid "Storage configuration"
-msgstr "يجري حفظ إعدادات التخزين..."
+msgstr "إعدادات التخزين"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:115
 msgid "Storage configuration: Storage is currently being configured."
 msgstr ""
 
 #: ui/webui/src/components/storage/HelpStorageOptions.jsx:16
-#, fuzzy
-#| msgid "Saving storage configuration..."
 msgid "Storage options"
-msgstr "يجري حفظ إعدادات التخزين..."
+msgstr "خيارات التخزين"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:123
-#, fuzzy
-#| msgid "Saving storage configuration..."
 msgid "System configuration"
-msgstr "يجري حفظ إعدادات التخزين..."
+msgstr "إعدادات النظام"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:125
 msgid ""
@@ -7306,16 +7301,12 @@ msgid ""
 msgstr ""
 
 #: ui/webui/src/components/AnacondaHeader.jsx:38
-#, fuzzy
-#| msgid "This is unstable, pre-release software."
 msgid "This is unstable, pre-release software"
-msgstr "هذه برمجيّات غير مستقرة و مصنفة كبرمجيّات ما قبل الإصدار."
+msgstr "هذه برمجيّات ما قبل الإصدار وهي غير مستقرة"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:467
-#, fuzzy
-#| msgid "Scanning disks.  This may take a moment..."
 msgid "This may take a moment"
-msgstr "يجري فحص الأقراص. قد تأخذ قليلًا من الوقت..."
+msgstr "قد تأخذ قليلًا من الوقت"
 
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:91
 msgid "To prevent loss, make sure to backup your data. "
@@ -7330,10 +7321,8 @@ msgid "Try Fedora"
 msgstr "جرّب فيدورا"
 
 #: ui/webui/src/components/storage/HelpStorageOptions.jsx:31
-#, fuzzy
-#| msgid "Use text mode"
 msgid "Use the "
-msgstr "إستعمل النّمط النّصي"
+msgstr "استعمل "
 
 #: ui/webui/src/components/storage/HelpStorageOptions.jsx:26
 msgid ""
@@ -7346,10 +7335,8 @@ msgid "Welcome"
 msgstr ""
 
 #: ui/webui/src/components/localization/InstallationLanguage.jsx:308
-#, fuzzy
-#| msgid "Anaconda Installer"
 msgid "Welcome to the Anaconda installer"
-msgstr "مُثبّت أناكوندا"
+msgstr "مرحبا بك إلى مُثبّت أناكوندا"
 
 #: data/liveinst/gnome/fedora-welcome.js:110
 msgid ""
@@ -7370,10 +7357,8 @@ msgstr ""
 "من معرض الأنشطة في أي وقت لاحقًا خلال التّشغيل."
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:168
-#, fuzzy
-#| msgid "Complete!"
 msgid "completed step"
-msgstr "تم!"
+msgstr "الخطوة المتممة"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:173
 msgid "current step"
