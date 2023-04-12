@@ -31,7 +31,7 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
 "POT-Creation-Date: 2023-03-09 01:21+0000\n"
-"PO-Revision-Date: 2023-04-12 11:56+0000\n"
+"PO-Revision-Date: 2023-04-14 10:20+0000\n"
 "Last-Translator: Khalid Abu Shawarib <khalid.shawarib@gmail.com>\n"
 "Language-Team: Arabic <https://translate.fedoraproject.org/projects/anaconda/"
 "master/ar/>\n"
@@ -409,10 +409,8 @@ msgid "%s to switch layouts."
 msgstr "%s للتبديل بين المخططات."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1286
-#, fuzzy
-#| msgid "%s free"
 msgid "({} free)"
-msgstr "%s حرة"
+msgstr "(%s حرة)"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:821
 msgid "/boot cannot be of type \"lvmlv\" on s390x"
@@ -448,14 +446,19 @@ msgstr "24-_ساعة"
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:368
 msgctxt "GUI|Date and Time"
 msgid ":"
-msgstr ""
+msgstr ":"
 
 #: pyanaconda/ui/gui/spokes/lib/resize.py:304
 #, python-format
 msgid "<b>%(count)s disk; %(size)s reclaimable space</b> (in file systems)"
 msgid_plural ""
 "<b>%(count)s disks; %(size)s reclaimable space</b> (in file systems)"
-msgstr[0] ""
+msgstr[0] "<b> لا أقراص، %(size)s يمكن استردادها</b> (في نظم الملفات)"
+msgstr[1] "<b> قرص واحد، %(size)s يمكن استردادها</b> (في نظم الملفات)"
+msgstr[2] "<b>قرصان اثنان، %(size)s يمكن استردادها</b> (في نظم الملفات)"
+msgstr[3] "<b>%(count)s أقراص، %(size)s يمكن استردادها</b> (في نظم الملفات)"
+msgstr[4] "<b>%(count)s قرصاً، %(size)s يمكن استردادها</b> (في نظم الملفات)"
+msgstr[5] "<b>%(count)s قرص، %(size)s يمكن استردادها</b> (في نظم الملفات)"
 
 #: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:354
 msgid ""
@@ -465,6 +468,9 @@ msgid ""
 "<b>NTS</b> - If checked, indicates support for Network Time Security "
 "authentication."
 msgstr ""
+"<b>مجموعة</b > - تدل أن اسم المضيف يعود على مجموعة خوادم إذا حددت.\n"
+"\n"
+"<b>NTS</b > - تدل على دعم توثيق أمن وقت الشبكة إذا حددت."
 
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:118
 msgid ""
@@ -479,6 +485,8 @@ msgid ""
 "<b>Warning</b>: All storage changes made using the installer will be lost "
 "when you choose to format."
 msgstr ""
+"<b>تحذير:</b> ستخسر جميع تغييرات التخزين التي أجريتها من خلال المُثبّت عندما "
+"تختار التهيئة."
 
 #: pyanaconda/ui/gui/spokes/lib/storage_dialogs.py:178
 #, python-format
@@ -522,6 +530,8 @@ msgid ""
 "performance for most installations, it is recommended to specify a swap "
 "partition."
 msgstr ""
+"لم يحدد قسم إبدال. لتحسين الأداء لأغلب التثبيتات، من المستحسن تحديد قسم "
+"إبدال."
 
 #: pyanaconda/ui/gui/spokes/keyboard.glade:466
 msgid "ADD A KEYBOARD LAYOUT"
@@ -533,7 +543,7 @@ msgstr "أضف نقطة وصل جديدة"
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:67
 msgid "ADD DASD STORAGE TARGET"
-msgstr ""
+msgstr "أضِف هدف تخزين DASD"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:85
 msgid "ADD iSCSI STORAGE TARGET"
@@ -541,7 +551,7 @@ msgstr "أضِف هدف تخزين iSCSI"
 
 #: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:83
 msgid "ADD zFCP STORAGE TARGET"
-msgstr ""
+msgstr "أضِف هدف تخزين zFCP"
 
 #: pyanaconda/ui/gui/spokes/advanced_user.glade:82
 msgid "ADVANCED USER CONFIGURATION"
@@ -552,15 +562,15 @@ msgstr "إعدادات المستخدم المتقدّمة"
 #: pyanaconda/ui/gui/spokes/datetime_spoke.py:716
 #: pyanaconda/ui/gui/spokes/datetime_spoke.py:719
 msgid "AM"
-msgstr ""
+msgstr "ص"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:540
 msgid "AM/PM Down"
-msgstr ""
+msgstr "ص/م تحت"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:504
 msgid "AM/PM Up"
-msgstr ""
+msgstr "ص/م فوق"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:1422
 msgid "AVAILABLE SPACE"
@@ -569,12 +579,12 @@ msgstr "المساحة المتوفّرة"
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:126
 msgctxt "GUI|Software Source"
 msgid "A_dd"
-msgstr ""
+msgstr "أَ_ضف"
 
 #: pyanaconda/ui/gui/spokes/storage.glade:367
 msgctxt "GUI|Storage"
 msgid "A_utomatic"
-msgstr ""
+msgstr "تل_قائي"
 
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:129
 #: pyanaconda/ui/gui/spokes/lib/resize.glade:194
@@ -588,7 +598,7 @@ msgstr "مفتاح التفعيل"
 #: pyanaconda/ui/gui/spokes/subscription.glade:117
 msgctxt "GUI|Subscription|Authetication|Activation Key"
 msgid "Activation _Key"
-msgstr ""
+msgstr "مفتاح تن_شيط"
 
 #: pyanaconda/ui/gui/spokes/subscription.py:246
 msgid "Activation key set."
@@ -596,17 +606,17 @@ msgstr "تم تعيين مفتاح التفعيل."
 
 #: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:214
 msgid "Add"
-msgstr ""
+msgstr "أضف"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:177
 msgctxt "GUI|Custom Partitioning"
 msgid "Add"
-msgstr ""
+msgstr "أضف"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1899
 msgctxt "GUI|Installation Destination|Filter"
 msgid "Add EC_KD DASD..."
-msgstr ""
+msgstr "أضف EC_KD DASD..."
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1929
 msgctxt "GUI|Installation Destination|Filter"
@@ -615,19 +625,19 @@ msgstr "أضِف FCo_E SAN..."
 
 #: pyanaconda/ui/gui/spokes/keyboard.glade:575
 msgid "Add Layout"
-msgstr ""
+msgstr "أضِف مخططًا"
 
 #: pyanaconda/ui/tui/spokes/time_spoke.py:335
 msgid "Add NTP server"
-msgstr ""
+msgstr "أضف خادوم NTP"
 
 #: pyanaconda/ui/tui/spokes/time_spoke.py:380
 msgid "Add NTP server address"
-msgstr ""
+msgstr "أضف عنوان خادوم NTP"
 
 #: pyanaconda/ui/gui/spokes/storage.glade:286
 msgid "Add Specialized Disk"
-msgstr ""
+msgstr "أضف قرص متخصص"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1914
 msgctxt "GUI|Installation Destination|Filter"
@@ -636,7 +646,7 @@ msgstr "أضِف هدف _iSCSI..."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:176
 msgid "Add a new mount point."
-msgstr ""
+msgstr "أضف نقطة وصل جديدة."
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:125
 msgid "Add a new repository."
@@ -646,7 +656,7 @@ msgstr "أضِف مستودعصا جديدًا."
 msgctxt "GUI|User"
 msgid ""
 "Add ad_ministrative privileges to this user account (wheel group membership)"
-msgstr ""
+msgstr "أضف صلاحيات م_دير إلى حساب هذا المستخدم (عضوية مجموعة wheel)"
 
 #: pyanaconda/ui/gui/spokes/network.glade:35
 msgid "Add device"
@@ -657,20 +667,16 @@ msgid "Additional repositories"
 msgstr "مستودعات إضافية"
 
 #: pyanaconda/ui/gui/spokes/software_selection.glade:86
-#, fuzzy
-#| msgid "Add-Ons for Selected Environment"
 msgid "Additional software for Selected Environment"
-msgstr "إضافات للبيئة المُنتقاة"
+msgstr "برمجيات إضافية للبيئة المُنتقاة"
 
 #: pyanaconda/ui/tui/spokes/software_selection.py:343
-#, fuzzy
-#| msgid "Add-Ons for Selected Environment"
 msgid "Additional software for selected environment"
-msgstr "إضافات للبيئة المُنتقاة"
+msgstr "برمجيات إضافية للبيئة المُنتقاة"
 
 #: pyanaconda/ui/tui/spokes/user.py:159
 msgid "Administrator"
-msgstr ""
+msgstr "مدير"
 
 #: pyanaconda/ui/tui/spokes/user.py:249 pyanaconda/ui/gui/spokes/user.py:458
 #, python-format
@@ -680,21 +686,21 @@ msgstr "سيتم إنشاء المدير %s"
 #: pyanaconda/ui/gui/spokes/storage.glade:404
 msgctxt "GUI|Storage"
 msgid "Advanced Custom (_Blivet-GUI)"
-msgstr ""
+msgstr "مخصص متقدم (_Blivet-GUI)"
 
 #: pyanaconda/ui/gui/spokes/network.glade:2453
 msgctxt "GUI|Network"
 msgid "Airplane Mode"
-msgstr ""
+msgstr "وضع الطيران"
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:334
 msgid "Allow root SSH login with password"
-msgstr ""
+msgstr "أسمح بولوج root عبر SSH بكلمة مرور"
 
 #: pyanaconda/ui/gui/spokes/user.glade:269
 msgctxt "GUI|User"
 msgid "Allow this user to run the 'sudo' command."
-msgstr ""
+msgstr "اسمح لهذا المستخدم بتشغيل أمر 'sudo'."
 
 #: pyanaconda/ui/gui/spokes/keyboard.glade:331
 msgid "Alt + Shift to switch layouts."
@@ -704,7 +710,7 @@ msgstr "Alt + Shift للتحويل بين مخططات المفاتيح."
 msgid ""
 "An error occurred during Red Hat Insights configuration. Would you like to "
 "ignore this and continue with installation?"
-msgstr ""
+msgstr "حدث خطأ أثناء إعداد رد هات إنسايتس. هل تريد تجاهل هذا ومتابعة التثبيت؟"
 
 #: pyanaconda/errors.py:200
 msgid ""
@@ -713,6 +719,9 @@ msgid ""
 "arguments or subscription infrastructure issues. Would you like to ignore "
 "this and continue with installation?"
 msgstr ""
+"حدث خطأ أثناء محاولة التسجيل بسبب أمر rhms kickstart. قد يكون سبب حدوث هذا "
+"معطيات أمر rhms خاطئة أو مشاكل بنية تحتية لخدمة الاشتراك. هل تريد تجاهل هذا "
+"ومتابعة التثبيت؟"
 
 #: pyanaconda/rescue.py:442
 #, python-brace-format
@@ -721,6 +730,9 @@ msgid ""
 "\n"
 "Some of it may be mounted under {path}."
 msgstr ""
+"حدث خطأ أثناء محاولة وصل بعض أو كل النظام:{message}\n"
+"\n"
+"بعضها قد تكون موصولة تحت {path}."
 
 #: pyanaconda/errors.py:119
 msgid "An error occurred while activating your storage configuration."
@@ -728,7 +740,7 @@ msgstr "وقع خطأ لدى تفعيل إعداداتك للتخزين."
 
 #: pyanaconda/modules/storage/installation.py:93
 msgid "An error occurred while resizing the device {}: {}"
-msgstr ""
+msgstr "حدث خطأ أثناء تغيير حجم الجهاز {} : {}"
 
 #: pyanaconda/ui/gui/spokes/lib/detailederror.glade:25
 msgid "An unknown error occurred during installation.  Details are below."
@@ -749,35 +761,35 @@ msgstr ""
 
 #: pyanaconda/modules/storage/platform.py:47
 msgid "Apple Bootstrap Partition"
-msgstr ""
+msgstr "قسم تمهيد Apple"
 
 #: pyanaconda/modules/storage/platform.py:46
 msgid "Apple EFI Boot Partition"
-msgstr ""
+msgstr "قسم إقلاع Apple EFI"
 
 #: pyanaconda/ui/tui/spokes/network.py:497
 msgid "Apply configuration in installer"
 msgstr "طبّق الإعدادات ضمن المُثبّت"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:398
-#, fuzzy
-#| msgid "Are you sure you want to delete all of the data on %s?"
 msgid ""
 "Are you sure you want to delete all of the data on {}, including snapshots?"
-msgstr "هل أنت متأكّد أنّك تريد حذف جميع البيانات الموجودة على %s؟"
+msgstr ""
+"هل أنت متأكّد أنّك ترغب بحذف جميع البيانات الموجودة على {}، بما فيها اللقطات "
+"الاحتياطية؟"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:393
 #, fuzzy
 #| msgid "Are you sure you want to delete all of the data on %s?"
 msgid ""
 "Are you sure you want to delete all of the data on {}, including subvolumes?"
-msgstr "هل أنت متأكّد أنّك تريد حذف جميع البيانات الموجودة على %s؟"
+msgstr ""
+"هل أنت متأكّد أنّك ترغب بحذف جميع البيانات الموجودة على {}، بما فيها الأقراص "
+"الفرعية؟"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:401
-#, fuzzy
-#| msgid "Are you sure you want to delete all of the data on %s?"
 msgid "Are you sure you want to delete all of the data on {}?"
-msgstr "هل أنت متأكّد أنّك تريد حذف جميع البيانات الموجودة على %s؟"
+msgstr "هل أنت متأكّد أنّك ترغب بحذف جميع البيانات الموجودة على {}؟"
 
 #: pyanaconda/ui/gui/main.glade:152
 msgid ""
@@ -793,7 +805,7 @@ msgstr "أقصى ما يُمكن"
 
 #: pyanaconda/ui/tui/spokes/storage.py:639
 msgid "Assign mount points"
-msgstr ""
+msgstr "عين نقاط الوصل"
 
 #: pyanaconda/modules/storage/checker/utils.py:340
 msgid ""
@@ -802,6 +814,9 @@ msgid ""
 "referred to by device path in /etc/fstab, which is not ideal since device "
 "paths can change under a variety of circumstances. "
 msgstr ""
+"واحد من أجهزة الإبدال ليس لديه معرف UUID، وهذا شائع في مساحات الإبدال التي "
+"تم إنشاؤها بإصدارات قديمة من mkswap. سيرجع لهذه الأجهزة بمسار الجهاز في ‎/"
+"etc/fstab، لكن هذا ليس مثالياً لأن مسارات الأجهزة قد تتغير في ظروف متنوعة. "
 
 #: pyanaconda/ui/gui/spokes/subscription.py:984
 msgid "Attaching subscription..."
@@ -814,7 +829,7 @@ msgstr "جاري محاولة الاتّصال بالخادوم vnc %s..."
 
 #: pyanaconda/vnc.py:198
 msgid "Attempting to start vncconfig"
-msgstr ""
+msgstr "يجري محاولة بدء vncconfig"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:83
 #: pyanaconda/ui/gui/spokes/lib/network_secret_agent.glade:8
@@ -836,7 +851,7 @@ msgstr "تلقائي"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1468
 msgid "Automatic partitioning failed."
-msgstr ""
+msgstr "فشل التقسيم التلقائي."
 
 #: pyanaconda/ui/tui/spokes/storage.py:149
 #: pyanaconda/ui/gui/spokes/storage.py:300
@@ -845,15 +860,16 @@ msgstr "تم انتقاء التقسيم التلقائي"
 
 #: pyanaconda/ui/gui/spokes/keyboard.glade:531
 msgid "Available Layouts"
-msgstr ""
+msgstr "المخططات المتاحة"
 
 #: pyanaconda/ui/tui/spokes/language_support.py:113
 msgid "Available languages"
-msgstr ""
+msgstr "اللغات المتاحة"
 
 #: pyanaconda/ui/tui/spokes/language_support.py:108
+#, fuzzy
 msgid "Available locales"
-msgstr ""
+msgstr "المحليات المتاحة"
 
 #: pyanaconda/ui/tui/spokes/time_spoke.py:252
 msgid "Available regions"
@@ -874,15 +890,15 @@ msgstr "BAZ"
 
 #: pyanaconda/ui/gui/spokes/blivet_gui.glade:8
 msgid "BLIVET GUI PARTITIONING"
-msgstr ""
+msgstr "تقسيم BLIVET مرئي"
 
 #: pyanaconda/ui/tui/spokes/network.py:49
 msgid "Bad format of the IP address"
-msgstr ""
+msgstr "تنسيق سيء لعنوان IP"
 
 #: pyanaconda/ui/tui/spokes/network.py:50
 msgid "Bad format of the netmask"
-msgstr ""
+msgstr "تنسيق سيئ لقناع الشبكة"
 
 #: pyanaconda/ui/gui/spokes/software_selection.glade:66
 msgid "Base Environment"
@@ -893,8 +909,9 @@ msgid "Base environment"
 msgstr "البيئة الأساسية"
 
 #: pyanaconda/ui/gui/spokes/lib/beta_warning_dialog.glade:130
+#, fuzzy
 msgid "Beta Warn"
-msgstr ""
+msgstr "تحذير تجريبي"
 
 #: pyanaconda/ui/gui/spokes/network.py:287
 #: pyanaconda/ui/gui/spokes/network.glade:15
@@ -915,11 +932,13 @@ msgid ""
 "Boot loader stage1 device cannot be on an iSCSI disk which is not configured "
 "in iBFT."
 msgstr ""
+"جهاز المرحلة الأولى من محمل الإقلاع لا يمكن أن يكون على قرص iSCSI لم يعد في "
+"iBFT."
 
 #: pyanaconda/ui/gui/spokes/network.py:290
 #: pyanaconda/ui/gui/spokes/network.glade:19
 msgid "Bridge"
-msgstr ""
+msgstr "جسر"
 
 #: pyanaconda/network.py:488
 #, python-format
@@ -939,21 +958,23 @@ msgid ""
 "Btrfs partition \"{}\" has a format of \"{}\", but should have a format of "
 "\"btrfs\"."
 msgstr ""
+"قسم Btrfs \"{}\" لديه التنسيق \"{}\"، لكن يجب أن يكون في تنسيق \"btrfs\"."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:226
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:496
 msgid "Btrfs partition \"{}\" is defined multiple times."
-msgstr ""
+msgstr "قسم Btrfs \"{}\" معرّف عدة مرات."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1189
 msgid "Btrfs volume \"{}\" specified with --useexisting does not exist."
-msgstr ""
+msgstr "قرص Btrfs \"{}\" الذي حدد مع ‎--useexisting غير موجود."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1165
 msgid ""
 "Btrfs volume defined without any member devices. Either specify member "
 "devices or use --useexisting."
 msgstr ""
+"قرص Btrfs معرف بدون أي أجهزة كأعضاء. حدد جهاز كعضو أو استعمل ‎--useexisting."
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1539
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1747
@@ -977,32 +998,32 @@ msgstr "كلمة م_رور CHAP:"
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:811
 msgctxt "GUI|Advanced Storage|iSCSI|Login|CHAP"
 msgid "CHAP _Password:"
-msgstr ""
+msgstr "كلمة م_رور CHAP:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:937
 msgctxt "GUI|Advanced Storage|iSCSI|Login|Reverse CHAP"
 msgid "CHAP _Password:"
-msgstr ""
+msgstr "كلمة م_رور CHAP:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:263
 msgctxt "GUI|Advanced Storage|iSCSI|Configure|CHAP"
 msgid "CHAP _User name:"
-msgstr ""
+msgstr "ا_سم مستخدم CHAP:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:389
 msgctxt "GUI|Advanced Storage|iSCSI|Configure|Reverse CHAP"
 msgid "CHAP _User name:"
-msgstr ""
+msgstr "ا_سم مستخدم CHAP:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:797
 msgctxt "GUI|Advanced Storage|iSCSI|Login|CHAP"
 msgid "CHAP _User name:"
-msgstr ""
+msgstr "ا_سم مستخدم CHAP:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:923
 msgctxt "GUI|Advanced Storage|iSCSI|Login|Reverse CHAP"
 msgid "CHAP _User name:"
-msgstr ""
+msgstr "ا_سم مستخدم CHAP:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:188
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:761
@@ -1029,7 +1050,7 @@ msgstr "تهيئة نقطة الوصل"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:8
 msgid "CONNECT TO RED HAT"
-msgstr ""
+msgstr "متصل برد هات"
 
 #: pyanaconda/ui/gui/spokes/user.glade:10
 #: pyanaconda/ui/gui/spokes/user.glade:398
@@ -1048,12 +1069,12 @@ msgstr "ا_ضبط"
 #: pyanaconda/ui/gui/spokes/lib/network_secret_agent.glade:40
 msgctxt "GUI|Network|Authentication Dialog"
 msgid "C_onnect"
-msgstr ""
+msgstr "ات_صل"
 
 #: pyanaconda/ui/gui/spokes/network.glade:317
 msgctxt "GUI|Network|Wireless|Select Network Dialog"
 msgid "C_onnect"
-msgstr "ا_تصل"
+msgstr "ات_صل"
 
 #: pyanaconda/ui/gui/spokes/network.py:99
 msgid "Cable unplugged"
@@ -1061,7 +1082,7 @@ msgstr "الشريط غير موصول"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:876
 msgid "Cache PVs must belong to the same VG as the cached LV"
-msgstr ""
+msgstr "مخبأ PVs يجب أن ينتمي إلى نفس VG المنتمي إليها LV"
 
 #: pyanaconda/ui/gui/spokes/lib/installation_source_helpers.py:492
 msgctxt "GUI|Software Source|Media Check Dialog"
@@ -1070,11 +1091,11 @@ msgstr "ألغِ"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:314
 msgid "Cannot install to unpartitionable device \"{}\"."
-msgstr ""
+msgstr "لا يمكن التثبيت إلى القرص الغير قابل للتقسيم \"{}\"."
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:275
 msgid "Cannot set label on file system."
-msgstr ""
+msgstr "لا يمكن ضبط لصيقة على نظام الملفات."
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:414
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:814
@@ -1089,7 +1110,7 @@ msgstr "السعة"
 
 #: pyanaconda/ui/tui/spokes/time_spoke.py:164
 msgid "Change timezone"
-msgstr ""
+msgstr "غير النطاق الزمني"
 
 #: pyanaconda/ui/gui/spokes/keyboard.glade:96
 msgid ""
@@ -1121,14 +1142,17 @@ msgid ""
 "Formats marked with * are new formats meaning ALL DATA on the original "
 "format WILL BE LOST!"
 msgstr ""
+"اختر جهاز من فوق لتعيين نقطة الوصل واضبط التنسيق.\n"
+"التنسيقات المعلمة بـ * هي تنسيقات جديدة، تعني أن كل بيانات التنسيق الأصلية "
+"ستضيع!"
 
 #: pyanaconda/ui/tui/spokes/storage.py:780
 msgid "Choose from above to assign mount point and/or set format."
-msgstr ""
+msgstr "اختر من فوق لتعيين نقطة الوصل و/أو ضبط التنسيق."
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:220
 msgid "City"
-msgstr ""
+msgstr "المدينة"
 
 #: pyanaconda/ui/tui/spokes/installation_source.py:151
 #: pyanaconda/modules/payloads/source/closest_mirror/closest_mirror.py:52
@@ -1143,20 +1167,20 @@ msgstr "تم!"
 #: pyanaconda/ui/gui/spokes/lib/passphrase.glade:133
 msgctxt "GUI|Passphrase Dialog"
 msgid "Con_firm:"
-msgstr ""
+msgstr "أ_كّد:"
 
 #: pyanaconda/ui/tui/spokes/network.py:574
 msgid "Configuration not saved: netmask missing in static configuration"
-msgstr ""
+msgstr "لم تحفظ الإعدادات: قناع الشبكة مفقود في الإعدادات الساكنة"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:288
 #: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:378
 msgid "Configure NTP"
-msgstr ""
+msgstr "اضبط NTP"
 
 #: pyanaconda/ui/tui/spokes/time_spoke.py:176
 msgid "Configure NTP servers"
-msgstr ""
+msgstr "اضبط خوادم NTP"
 
 #: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:77
 msgid "Configure Network Time Servers"
@@ -1170,7 +1194,7 @@ msgstr "اضبط الجهاز %s"
 #: pyanaconda/ui/tui/spokes/storage.py:760
 #, python-format
 msgid "Configure device: %s"
-msgstr ""
+msgstr "اضبط جهاز: %s"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:358
 msgctxt "GUI|Software Source"
@@ -1196,7 +1220,7 @@ msgstr "يجري إعداد النظام المثبّت"
 
 #: pyanaconda/installation.py:344 pyanaconda/installation.py:406
 msgid "Configuring storage"
-msgstr ""
+msgstr "يعدّ التخزين"
 
 #: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:47
 msgid "Configuring {}"
@@ -1205,7 +1229,7 @@ msgstr "يجري الضبط {}"
 #: pyanaconda/ui/gui/spokes/root_password.glade:261
 #: pyanaconda/ui/gui/spokes/user.glade:194
 msgid "Confirm Password"
-msgstr ""
+msgstr "أكّد كلمة المرور"
 
 #: pyanaconda/ui/tui/spokes/network.py:493
 msgid "Connect automatically after reboot"
@@ -1214,7 +1238,7 @@ msgstr "اتّصل تلقائيًا بعد إعادة التّشغيل"
 #: pyanaconda/ui/gui/spokes/subscription.glade:414
 msgctxt "GUI|Subscription|Red Hat Insights"
 msgid "Connect to Red Hat _Insights"
-msgstr ""
+msgstr "اتصل بريدهات إنسايتس"
 
 #: pyanaconda/ui/gui/spokes/network.py:110
 msgid "Connected"
@@ -1254,11 +1278,11 @@ msgstr "استمر"
 msgid ""
 "Continuing with this action will reset all your partitioning selections to "
 "their current on-disk state."
-msgstr ""
+msgstr "المضي بالأمر سيعيد كل اختياراتك للتقسيمات إلى الوضع الحالي على القرص."
 
 #: pyanaconda/ui/gui/spokes/lib/subscription.py:158
 msgid "Contract"
-msgstr ""
+msgstr "عقد"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:58
 #, python-format
@@ -1267,7 +1291,7 @@ msgstr "أنشئ %(container_type)s جديدًا ..."
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:532
 msgid "Create a new additional repository or select an existing one."
-msgstr ""
+msgstr "أنشئ مستودع إضافياً أو اختر واحداً موجوداً مسبقاً."
 
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:505
 msgid "Create new mount points by clicking the '+' button."
@@ -1280,11 +1304,12 @@ msgstr "أنشئ أو انتق %(container_type)s"
 
 #: pyanaconda/ui/tui/spokes/user.py:133
 msgid "Create user"
-msgstr ""
+msgstr "أنشئ مستخدماً"
 
 #: pyanaconda/installation.py:463
+#, fuzzy
 msgid "Creating snapshots"
-msgstr ""
+msgstr "يجري إنشاء لقطات"
 
 #: pyanaconda/installation.py:174
 msgid "Creating users"
@@ -1292,12 +1317,12 @@ msgstr "يجري إنشاء المستخدمين"
 
 #: pyanaconda/ui/gui/spokes/network.glade:2541
 msgid "Current host name:"
-msgstr ""
+msgstr "اسم المضيف الحالي:"
 
 #: pyanaconda/ui/tui/spokes/network.py:331
 #, python-format
 msgid "Current host name: %s\n"
-msgstr ""
+msgstr "اسم المضيف الحالي: %s\n"
 
 #: widgets/src/LayoutIndicator.c:34
 #, c-format
@@ -1311,7 +1336,7 @@ msgstr "المُخطط الحالي: '%s'. انقر للتّحول إلى الم
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:456
 msgid "Custom base URL"
-msgstr ""
+msgstr "URL أساسي مخصص"
 
 #: pyanaconda/ui/tui/spokes/storage.py:151
 #: pyanaconda/ui/gui/spokes/storage.py:302
@@ -1320,7 +1345,7 @@ msgstr "تم انتقاء التقسيم المخصص"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:504
 msgid "Custom server URL"
-msgstr ""
+msgstr "URL خادوم مخصص"
 
 #: pyanaconda/ui/lib/software.py:52
 msgid "Custom software selected"
@@ -1328,7 +1353,7 @@ msgstr "تم انتقاء برمجيات مخصصة"
 
 #: pyanaconda/modules/storage/platform.py:48
 msgid "DASD"
-msgstr ""
+msgstr "DASD"
 
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:423
 msgid "DATA"
@@ -1351,7 +1376,7 @@ msgstr "DNS"
 #: pyanaconda/ui/gui/spokes/root_password.glade:101
 msgctxt "GUI|Password"
 msgid "D_isable root account"
-msgstr ""
+msgstr "ع_طل حساب root"
 
 #: pyanaconda/ui/tui/hubs/__init__.py:54
 msgid "Default HUB title"
@@ -1381,15 +1406,17 @@ msgstr "احذف ال_كل"
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:366
 msgctxt "GUI|Custom Partitioning|Confirm Delete Dialog"
 msgid "Delete _all file systems which are only used by {}."
-msgstr ""
+msgstr "احذف _كل أنظمة الملفات المستخدمة فقط من {}."
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:537
+#, fuzzy
 msgid "Deployment complete: {}"
-msgstr ""
+msgstr "تم النشر: {}"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:504
+#, fuzzy
 msgid "Deployment starting: {}"
-msgstr ""
+msgstr "يبدأ النشر: {}"
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:137
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:219
@@ -1404,24 +1431,24 @@ msgstr "يأتي الوصف هنا."
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:372
 msgctxt "GUI|Custom Partitioning|Add Dialog"
 msgid "Desired _Capacity:"
-msgstr ""
+msgstr "السّعة المر_غوبة:"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:400
 msgctxt "GUI|Custom Partitioning|Configure|Devices"
 msgid "Desired _Capacity:"
-msgstr ""
+msgstr "السّعة المر_غوبة:"
 
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:151
 msgid "Device"
-msgstr ""
+msgstr "جهاز"
 
 #: pyanaconda/modules/storage/kickstart.py:115
 msgid "Device \"{}\" given in clearpart device list does not exist."
-msgstr ""
+msgstr "الجهاز \"{}\" المعطى في قائمة أجهزة clearpart غير موجود."
 
 #: pyanaconda/ui/gui/spokes/storage.glade:77
 msgid "Device Selection"
-msgstr ""
+msgstr "اختيار الجهاز"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:614
 msgctxt "GUI|Custom Partitioning|Configure"
@@ -1442,34 +1469,35 @@ msgstr "وصف الجهاز"
 #: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:254
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:212
 msgid "Device discovery failed."
-msgstr ""
+msgstr "فشل استكشاف الجهاز."
 
 #: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:347
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:307
 msgid "Device discovery succeeded."
-msgstr ""
+msgstr "نجح استكشاف الجهاز."
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:432
 msgid "Device does not support RAID level selection {}."
-msgstr ""
+msgstr "الجهاز لا يدعم مستوى RAID المحدد {}."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:613
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade:178
 msgid "Device reconfiguration failed."
-msgstr ""
+msgstr "فشل إعادة ضبط الجهاز."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1070
 msgid "Device removal request failed."
-msgstr ""
+msgstr "فشل طلب إزالة الجهاز."
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:202
 msgctxt "GUI|Software Source"
 msgid "Device with an _ISO file"
-msgstr ""
+msgstr "جهاز بملف _ISO"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:498
+#, fuzzy
 msgid "Device(s):"
-msgstr ""
+msgstr "الأجهزة:"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:115
 msgid "Device:"
@@ -1482,7 +1510,7 @@ msgstr "الجهاز: %s"
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade:252
 msgid "Devices reconfiguration succeeded."
-msgstr ""
+msgstr "نجح إعادة ضبط الجهاز."
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:285
 msgid "Disabled"
@@ -1494,6 +1522,8 @@ msgid ""
 "with root account. This will prevent unintended administrative access to the "
 "system."
 msgstr ""
+"تعطيل حساب root سيغلق الوصول عن بعد بحساب root. هذا سيمنع الوصول الإداري غير "
+"المقصود إلى النظام."
 
 #: pyanaconda/ui/gui/spokes/network.py:101
 msgid "Disconnected"
@@ -1509,7 +1539,7 @@ msgstr "يجري قطع الاتصال..."
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:173
 msgid "Discovering DASD devices.  This may take a moment..."
-msgstr ""
+msgstr "يجري استكشاف أجهزة DASD.  قد يأخذ فترة قصيرة..."
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:502
 msgid "Discovering iSCSI targets.  This may take a moment..."
@@ -1517,7 +1547,7 @@ msgstr "يجري استكشاف iSCSI الأهداف. قد يأخذ فترة ق�
 
 #: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:215
 msgid "Discovering zFCP devices.  This may take a moment..."
-msgstr ""
+msgstr "يجري استكشاف أجهزة zFCP.  قد يأخذ فترة قصيرة..."
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:541
 msgid "Discovery login rejected."
@@ -1534,28 +1564,28 @@ msgstr "القرص \"{}\" المُعطى في أمر كليربارت clearpart 
 #: pyanaconda/modules/storage/kickstart.py:134
 #: pyanaconda/modules/storage/kickstart.py:139
 msgid "Disk \"{}\" given in ignoredisk command does not exist."
-msgstr ""
+msgstr "القرص \"{}\" المُعطى في أمر ignoredisk غير موجود."
 
 #: pyanaconda/modules/storage/kickstart.py:245
 msgid "Disk \"{}\" given in nvdimm command does not exist."
-msgstr ""
+msgstr "القرص \"{}\" المُعطى في أمر nvdimm غير موجود."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:309
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:328
 msgid "Disk \"{}\" given in part command does not exist."
-msgstr ""
+msgstr "القرص \"{}\" المُعطى في أمر part غير موجود."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:322
 msgid "Disk \"{}\" in part command is not partitioned."
-msgstr ""
+msgstr "القرص \"{}\" المعطى في أمر part غير مقسم."
 
 #: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:248
 msgid "Disk formatting complete."
-msgstr ""
+msgstr "تمت تهيئة القرص."
 
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:254
 msgid "Disk rescan complete."
-msgstr ""
+msgstr "تم إعادة فحص القرص."
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:306
 msgid "Disk summary goes here"
@@ -1576,7 +1606,7 @@ msgstr "لن يتم مسّ الأقراص غير المُنتقاة هنا."
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:360
 msgctxt "GUI|Custom Partitioning|Confirm Delete Dialog"
 msgid "Do _not show this dialog for other selected file systems."
-msgstr ""
+msgstr "_لا تظهر هذا الحوار لأنظمة الملفات الأخرى المحددة."
 
 #: pyanaconda/core/constants.py:84
 msgid "Do you really want to quit?"
@@ -1592,7 +1622,7 @@ msgstr "يجري تحميل معلومات الحزم..."
 
 #: pyanaconda/modules/payloads/payload/dnf/installation.py:222
 msgid "Downloading packages"
-msgstr ""
+msgstr "يجري تحميل الحزم"
 
 #: pyanaconda/modules/payloads/payload/dnf/download_progress.py:68
 #, python-brace-format
@@ -2245,7 +2275,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/subscription.glade:401
 #: pyanaconda/ui/gui/spokes/subscription.glade:852
 msgid "Insights"
-msgstr ""
+msgstr "إنسايتس"
 
 #: data/liveinst/liveinst.desktop:4
 msgid "Install"
