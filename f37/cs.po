@@ -47,8 +47,8 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
 "POT-Creation-Date: 2023-03-08 01:26+0000\n"
-"PO-Revision-Date: 2023-04-11 09:20+0000\n"
-"Last-Translator: Daniel Rusek <mail@asciiwolf.com>\n"
+"PO-Revision-Date: 2023-04-18 12:20+0000\n"
+"Last-Translator: Jan Kalabza <jan.kalabza@gmail.com>\n"
 "Language-Team: Czech <https://translate.fedoraproject.org/projects/anaconda/"
 "f37/cs/>\n"
 "Language: cs\n"
@@ -2145,7 +2145,6 @@ msgid ""
 "Go ahead and reboot your system to start using it!"
 msgstr ""
 "Systém %s je nyní úspěšně nainstalován a připraven k použití!\n"
-"\n"
 "Pokračujte restartováním stroje a začněte ho používat!"
 
 #: pyanaconda/ui/gui/spokes/installation_progress.py:120
@@ -2155,7 +2154,6 @@ msgid ""
 "Go ahead and quit the application to start using it!"
 msgstr ""
 "Systém %s je nyní úspěšně nainstalován a připraven k použití!\n"
-"\n"
 "Pokračuje ukončením aplikace a začněte ho používat!"
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:58
@@ -2804,10 +2802,9 @@ msgid ""
 "label. To continue, please create a 1MiB 'biosboot' type partition on the {} "
 "disk."
 msgstr ""
-"Pro zavádění systému z jednotky, používající rozdělení GPT, potřebuje váš "
-"stroj (protože má firmware typu BIOS) k tomu účelu zvláštní oddíl. Aby bylo "
-"možné pokračovat, vytvořte na disku {} oddíl typu „biosboot“ o velikosti 1 "
-"MiB."
+"Váš systém založený na BIOSu potřebuje špeciální oddíl na zavedení systému z "
+"GPT disku.Pokud chcete pokračovat, vytvořte 1 MiB oddíl typu 'biosboot' na "
+"disku {}."
 
 #: pyanaconda/modules/storage/checker/utils.py:256
 msgid ""
@@ -3690,7 +3687,7 @@ msgstr "Flatpak"
 
 #: pyanaconda/modules/payloads/source/nfs/nfs.py:73
 msgid "NFS server {}"
-msgstr "NFS server {}"
+msgstr "Server NFS {}"
 
 #: pyanaconda/modules/payloads/source/repo_files/repo_files.py:53
 msgid "Local repositories"
@@ -5508,6 +5505,10 @@ msgid ""
 "in NPIV mode or when automatic LUN scanning is disabled via a kernel module "
 "parameter."
 msgstr ""
+"Když chcete použít disky připojené zFCP SCSI, musíte poskytnout číslo "
+"zařízení FCP. WWPN úložiště a FCP LUN jsou potřeba, když adaptér zFCP není "
+"nakonfigurovaný v režimu NPIV, anebo když je automatické vyhledávání LUN "
+"vypnuté parametrem modulu jadra."
 
 #: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:133
 msgctxt "GUI|Advanced Storage|zFCP|Device Number"
@@ -7391,6 +7392,8 @@ msgid ""
 "Select the language you would like to use. This language will also be "
 "selected for your installed system."
 msgstr ""
+"Vyberte jazyk, který chcete použít. Tento jazyk bude také vybrán pro váš "
+"nainstalovaný systém."
 
 #: ui/webui/src/components/localization/InstallationLanguage.jsx:216
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:77
@@ -7417,10 +7420,8 @@ msgid "Storage configuration"
 msgstr "Uspořádání úložiště"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:106
-#, fuzzy
-#| msgid "Installation"
 msgid "Payload installation"
-msgstr "Instalace"
+msgstr "Payload instalace"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:107
 msgid "System configuration"
@@ -7468,6 +7469,9 @@ msgid ""
 "the installation target for your Fedora installation. At least 1 disk must "
 "be selected for the installation to proceed."
 msgstr ""
+"Cíl instalace vám umožní nastavit, které jednotky budou použity jako "
+"instalační cíl pro vaši Fedora instalaci. Alespoň jedna jednotka musí být "
+"vybrána, aby instalace mohla pokračovat."
 
 #: ui/webui/src/components/HelpDrawer.jsx:58
 msgid ""
@@ -7476,6 +7480,10 @@ msgid ""
 "disks are detected when the installer starts - any storage devices connected "
 "after the installation has started will not be shown."
 msgstr ""
+"Všechny lokální dostupné úložné zařízení (SATA, IDE a SCSI pevné disky, USB "
+"disky, atd.) jsou zobrazené v sekcii Lokální standartní disky. Lokální disky "
+"se zjistili při startu instalátoru. Jakýkoliv úložné zařízení připojené po "
+"započnutí inštalacie nebudou zobrazené."
 
 #: ui/webui/src/components/HelpDrawer.jsx:64
 msgid ""
@@ -7483,6 +7491,9 @@ msgid ""
 "using the refresh icon. All detected disks, including any new ones, will be "
 "displayed in the Local Standard Disks section."
 msgstr ""
+"Když potřebujete nastavit další lokální úložné zařízení, obnovte stránku "
+"pomocí ikony Obnovit. Všecky zjištěné disky včetně nových budou zobrazené v "
+"sekci Lokální standardní disky."
 
 #: ui/webui/src/components/HelpDrawer.jsx:69
 msgid ""
@@ -7492,6 +7503,11 @@ msgid ""
 "firmware, and the total amount of free space on your disks. A ZRAM-based "
 "swap will be used instead of a disk-based swap partition."
 msgstr ""
+"Instalátor určí celkové množství místa na všech vybraných discích a vytvoří "
+"rozloženi Btrfs vhodné pro váš systém. Specifikace tohoto rozložení závisí "
+"na tom, zda váš systém používá BIOS anebo UEFI firmware, a od celkového "
+"množství volného místa na vašich discích. Namísto swap oddílu založeném na "
+"disku bude použitý swap založený na ZRAM."
 
 #: ui/webui/src/components/AnacondaHeader.jsx:32
 msgid "Pre-release"
@@ -7507,43 +7523,27 @@ msgid ""
 "testing purposes only. Do NOT use this software for any critical work or for "
 "production environments."
 msgstr ""
+"Upozornění: Toto je předprodukční software, který je určený pouze pro účely "
+"vývoje a testování. Tento software NEpoužívejte pro jakoukoli kritickou "
+"práci nebo pro produkční prostředí."
 
 #: ui/webui/src/components/AnacondaHeader.jsx:47
-#, fuzzy
-#| msgid ""
-#| "Notice: This is pre-released software that is intended for development "
-#| "and testing purposes only.  Do *not* use this software for any critical "
-#| "work or for production environments.\n"
-#| "\n"
-#| "By clicking \"I want to proceed\", you understand and accept the risks "
-#| "associated with pre-released software, that you intend to use this for "
-#| "testing and development purposes only and are willing to report any bugs "
-#| "or issues in order to enhance this work.\n"
-#| "\n"
-#| "If you do not understand or accept the risks, then please exit this "
-#| "program by selecting \"I want to exit\" which will reboot your system."
 msgid ""
 "By continuing to use this software, you understand and accept the risks "
 "associated with pre-released software, that you intend to use this for "
 "testing and development purposes only and are willing to report any bugs or "
 "issues in order to enhance this work."
 msgstr ""
-"Upozornění: Toto je předprodukční software, který je určený pouze pro účely "
-"vývoje a testování. Tento software NEpoužívejte pro jakoukoli kritickou "
-"práci nebo pro produkční prostředí.\n"
-"\n"
-"Kliknutím na „Chci pokračovat“ potvrzujete, že chápete a přijímáte rizika "
-"spojená s předprodukčním softwarem, který máte v úmyslu používat pouze pro "
-"testovací a vývojové účely a jste ochotni hlásit jakékoli chyby nebo "
-"problémy za účelem zlepšení tohoto díla.\n"
-"\n"
-"Pokud nerozumíte nebo nesouhlasíte s riziky, ukončete tento program výběrem "
-"možnosti „Chci ukončit“, po kterém bude systém restartován."
+"Pokračováním v používání tohoto softwaru potvrzujete, že chápete a přijímáte "
+"rizika spojená s předprodukčním softwarem, který máte v úmyslu používat "
+"pouze pro testovací a vývojové účely a jste ochotni hlásit jakékoli chyby "
+"nebo problémy za účelem zlepšení tohoto díla."
 
 #: ui/webui/src/components/AnacondaHeader.jsx:50
 msgid ""
 "If you do not understand or accept the risks, then please exit this program."
 msgstr ""
+"Pokud nerozumíte nebo nesouhlasíte s riziky, ukončete prosím tento program."
 
 #: ui/webui/src/components/app.jsx:93
 msgid "Anaconda installer"
@@ -7558,18 +7558,13 @@ msgstr ""
 "jednotky atd.)"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:174
-#, fuzzy
-#| msgid "No disks selected"
 msgid "$0 (of $1) disk selected"
 msgid_plural "$0 (of $1) disks selected"
-msgstr[0] "Nebyly vybrány žádné jednotky"
+msgstr[0] "Nebyla vybrána žádna jednotka"
 msgstr[1] "Nebyly vybrány žádné jednotky"
 msgstr[2] "Nebyly vybrány žádné jednotky"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:183
-#, fuzzy
-#| msgctxt "GUI|Refresh Dialog|Rescan"
-#| msgid "_Rescan Disks"
 msgid "Rescan disks"
 msgstr "Znovu proskenovat jednotky"
 
@@ -7607,7 +7602,7 @@ msgstr "Zjistěte více o možnostech vašeho úložiště."
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:318
 msgid "Selected disks will be erased at install"
-msgstr ""
+msgstr "Vybrané jednotky budou během instalace vymazány"
 
 #: ui/webui/src/components/storage/InstallationDestination.jsx:321
 msgid "To prevent loss, backup the data."
