@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2023-02-09 12:21+0100\n"
-"PO-Revision-Date: 2023-04-16 06:20+0000\n"
+"PO-Revision-Date: 2023-04-18 12:20+0000\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <https://translate.fedoraproject.org/projects/"
 "anaconda/rhel-8/sl/>\n"
@@ -43,17 +43,17 @@ msgstr ""
 #: pyanaconda/vnc.py:79
 #, python-format
 msgid "%(productName)s %(productVersion)s installation"
-msgstr "%(productName) %(productVersion) namestitev"
+msgstr "%(productName)s %(productVersion)s nameščanje"
 
 #: pyanaconda/vnc.py:148
 #, python-format
 msgid "%(productName)s %(productVersion)s installation on host %(name)s"
-msgstr "%(productName) %(productVersion) namestitev na gostitelja %(name)"
+msgstr "%(productName)s %(productVersion)s nameščanje na gostitelja %(name)s"
 
 #: pyanaconda/vnc.py:167
 #, python-format
 msgid "Attempting to connect to vnc client on host %s..."
-msgstr "Poskus povezovanja na odjemalca vnc na gostitelju %h..."
+msgstr "Poskus povezovanja na odjemalca vnc na gostitelju %s..."
 
 #: pyanaconda/vnc.py:181
 msgid "Connected!"
@@ -137,6 +137,10 @@ msgid ""
 "Unknown Error.  Aborting. \n"
 "\n"
 msgstr ""
+"\n"
+"\n"
+"Neznana napaka.  Prekinjam. \n"
+"\n"
 
 #: pyanaconda/vnc.py:293
 msgid ""
@@ -307,7 +311,7 @@ msgstr ""
 #: pyanaconda/product.py:69
 #, python-format
 msgid "%(productName)s %(productVersion)s INSTALLATION"
-msgstr "%(productName)s %(productVersion)s NAMESTITEV"
+msgstr "%(productName)s %(productVersion)s NAMEŠČANJE"
 
 #: pyanaconda/network.py:111
 msgid "Host name cannot be None or an empty string."
@@ -327,6 +331,9 @@ msgid ""
 "parts between periods must contain something and cannot start or end with "
 "'-'."
 msgstr ""
+"Imena gostitelja lahko vsebujejo samo znake 'a-z', 'A-Z', '0-9', '-', ali "
+"'.', deli med pikami morajo vsebovati nekaj in se ne smejo začeti ali "
+"končati z '-'."
 
 #: pyanaconda/network.py:473 pyanaconda/ui/gui/spokes/network.py:281
 #: pyanaconda/ui/gui/spokes/custom_storage.py:460
@@ -349,12 +356,12 @@ msgstr "Odklapljanje..."
 #: pyanaconda/network.py:514
 #, python-format
 msgid "Wired (%(interface_name)s) connected"
-msgstr "Žično (%(interface_name)) povezan"
+msgstr "Žično (%(interface_name)s) povezan"
 
 #: pyanaconda/network.py:517
 #, python-format
 msgid "Wireless connected to %(access_point)s"
-msgstr "Brezžično povezan na %(access_point)"
+msgstr "Brezžično povezan na %(access_point)s"
 
 #: pyanaconda/network.py:520
 #, python-format
@@ -379,7 +386,7 @@ msgstr ""
 #: pyanaconda/network.py:553
 #, python-format
 msgid "Connected: %(list_of_interface_names)s"
-msgstr ""
+msgstr "Povezano: %(list_of_interface_names)s"
 
 #: pyanaconda/network.py:555
 msgid "Not connected"
@@ -395,7 +402,7 @@ msgid ""
 "Some warnings occurred during reading the kickstart file:"
 msgstr ""
 "\n"
-"Pojavilo se je nekaj opozoril med branjem zagonske datoteke:"
+"Pojavilo se je nekaj opozoril med branjem datoteke kickstart:"
 
 #: pyanaconda/kickstart.py:553
 #, python-format
@@ -407,7 +414,7 @@ msgid ""
 "The installer will now terminate."
 msgstr ""
 "\n"
-"Prišlo je do napake ob branju zagonske datoteke:\n"
+"Prišlo je do napake ob branju datoteke kickstart:\n"
 "%s\n"
 "\n"
 "Namestilnik bo zdaj končal."
@@ -446,7 +453,7 @@ msgstr "Nastavljanje kexec"
 
 #: pyanaconda/installation.py:195
 msgid "Storing configuration files and kickstarts"
-msgstr "Shranjevanje konfiguracijskih datotek in zagonov"
+msgstr "Shranjevanje konfiguracijskih datotek in datotek kickstart"
 
 #: pyanaconda/installation.py:214
 msgid "Running post-installation scripts"
@@ -500,10 +507,16 @@ msgid ""
 "\n"
 " The installer will now terminate."
 msgstr ""
+"Nameščanje se je ustavilo zaradi verjetnega problema s strojno opremo. "
+"Natančno sporočilo napake je:\n"
+"\n"
+"%s.\n"
+"\n"
+" Namestilnik bo zdaj končal."
 
 #: pyanaconda/exception.py:113
 msgid "Hardware error occurred"
-msgstr ""
+msgstr "Pojavila se je napaka na strojni opremi"
 
 #: pyanaconda/exception.py:174
 #, python-format
@@ -549,6 +562,7 @@ msgstr ""
 "nastavitvami, npr. z začetno datoteko. Ta problem morate razrešiti pred "
 "nadaljevanje namestitve. Na voljo je shell, da katerega lahko dostopite s "
 "pritiskom najprej ctrl-alt-f1 in potem ctrl-b 2.\n"
+"\n"
 "Ko boste rešili težavo, lahko ponovno prečešete hrambo. Če ne razrešite "
 "tega, boste morali zapustiti namestilnik."
 
@@ -642,6 +656,10 @@ msgid ""
 "\n"
 "%(details)s"
 msgstr ""
+"Bila je napaka ob poganjanju skripta kickstart pri vrstici %(lineno)s.  To "
+"je fatalna napaka in nameščanje bo prekinjeno.  Podrobnosti te napake so:\n"
+"\n"
+"%(details)s"
 
 #: pyanaconda/errors.py:230
 msgid ""
@@ -654,6 +672,8 @@ msgid ""
 "The following software marked for installation has errors.\n"
 "This is likely caused by an error with your installation source."
 msgstr ""
+"Naslednje programje označeno za nameščanje ima napake.\n"
+"To je verjetno povzročeno zaradi napake na viru nameščanja."
 
 #: pyanaconda/errors.py:246
 msgid ""
@@ -663,7 +683,7 @@ msgid ""
 msgstr ""
 "Naslednja napaka se je pojavila ob namestitvi zagonskega nalagalnika. Tega "
 "sistema ne bo mogoče zagnati. Ali želite to prezreti in nadaljevati z "
-"namestitvijo?"
+"nameščanjem?"
 
 #: pyanaconda/errors.py:258
 #, python-format
@@ -685,6 +705,10 @@ msgid ""
 "arguments or subscription infrastructure issues. Would you like to ignore "
 "this and continue with installation?"
 msgstr ""
+"Pojavila se je napaka med poskusom registracije sprožene s kickstart ukazom "
+"rhsm. To se je lahko zgodilo zaradi napačnih argumentov ukaza rhsm ali "
+"naročnine na infrstrukturi. Ali želite to prezreti in nadaljevati z "
+"nameščanjem?"
 
 #: pyanaconda/errors.py:281
 msgid "Error detail: "
@@ -702,7 +726,7 @@ msgstr ""
 
 #: pyanaconda/display.py:301
 msgid "Graphical installation is not available. Starting text mode."
-msgstr "Grafična namestitev ni na voljo. Začenjam besedilni način."
+msgstr "Grafično nameščanje ni na voljo. Začenjam besedilni način."
 
 #: pyanaconda/display.py:309
 msgid ""
@@ -731,7 +755,7 @@ msgstr ""
 #: pyanaconda/ui/tui/tuiobject.py:153
 #, python-format
 msgid "Enter a new value for '%(title)s' and press %(enter)s"
-msgstr ""
+msgstr "Vnesite novo vrednost za '%(title)s' in pritisnite %(enter)s"
 
 #: pyanaconda/ui/tui/tuiobject.py:282
 msgid ""
@@ -739,7 +763,7 @@ msgid ""
 "Would you like to use it anyway?"
 msgstr ""
 "\n"
-"Ali bi to kljub temu uporabili?"
+"Ali bi radi to kljub temu uporabili?"
 
 #: pyanaconda/ui/tui/spokes/user.py:40
 msgid "Full name can't contain the ':' character"
@@ -808,8 +832,8 @@ msgid ""
 "Invalid user name: %(name)s.\n"
 "%(error_message)s"
 msgstr ""
-"Neveljavno uporabniško ime/na %(name).\n"
-"%(error_message)"
+"Neveljavno uporabniško ime/na %(name)s.\n"
+"%(error_message)s"
 
 #: pyanaconda/ui/tui/spokes/unsupported_hardware.py:38
 #: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:68
@@ -830,7 +854,7 @@ msgstr "preverjanje statusa"
 
 #: pyanaconda/ui/tui/spokes/time_spoke.py:75
 msgid "Time settings"
-msgstr "Nastavljanje časa"
+msgstr "Nastavitve časa"
 
 #: pyanaconda/ui/tui/spokes/time_spoke.py:211
 #: pyanaconda/ui/gui/spokes/datetime_spoke.py:585
@@ -956,7 +980,7 @@ msgstr "Obdelovanje..."
 #: pyanaconda/ui/tui/spokes/storage.py:130
 #: pyanaconda/ui/gui/spokes/storage.py:425
 msgid "Kickstart insufficient"
-msgstr ""
+msgstr "Kickstart nezadosten"
 
 #: pyanaconda/ui/tui/spokes/storage.py:132
 #: pyanaconda/ui/gui/spokes/storage.py:427
@@ -1050,7 +1074,7 @@ msgid ""
 "use for the install target or manually assign mount points."
 msgstr ""
 "Namestitev zahteva particioniranje vaše diskovne naprave. Izberite količino "
-"uporabnega prostora cilja namestitve ali ročno dodelite točke priklopa."
+"uporabnega prostora cilja nameščanja ali ročno dodelite točke priklopa."
 
 #: pyanaconda/ui/tui/spokes/storage.py:518
 msgid "Reverting previous configuration. This may take a moment..."
@@ -1237,12 +1261,12 @@ msgstr "Konfiguracija omrežja"
 #: pyanaconda/ui/tui/spokes/network.py:274
 #, python-format
 msgid "Wired (%(interface_name)s) disconnected\n"
-msgstr "Žični (%(interface_name)) odklopljeni\n"
+msgstr "Žični (%(interface_name)s) odklopljeni\n"
 
 #: pyanaconda/ui/tui/spokes/network.py:279
 #, python-format
 msgid "Wired (%(interface_name)s) connected\n"
-msgstr "Žični (%(interface_name)) povezani\n"
+msgstr "Žični (%(interface_name)s) povezani\n"
 
 #: pyanaconda/ui/tui/spokes/network.py:295
 #, python-format
@@ -1372,7 +1396,7 @@ msgstr ""
 
 #: pyanaconda/ui/tui/spokes/language_support.py:144
 msgid "Please select language support to install"
-msgstr "Izberite podporo jezika za namestitev"
+msgstr "Izberite podporo jezika za nameščanje"
 
 #: pyanaconda/ui/tui/spokes/language_support.py:146
 msgid "to return to language list"
@@ -1460,7 +1484,7 @@ msgstr "Napredek"
 
 #: pyanaconda/ui/tui/spokes/installation_progress.py:133
 msgid "Installation complete"
-msgstr "Namestitev končana"
+msgstr "Nameščanje končano"
 
 #: pyanaconda/ui/tui/spokes/installation_progress.py:135
 msgid "Use of this product is subject to the license agreement found at:"
@@ -1470,7 +1494,7 @@ msgstr ""
 #: pyanaconda/ui/tui/spokes/installation_progress.py:146
 #, python-format
 msgid "Installation complete. Press %s to quit"
-msgstr "Namestitev je končana. Pritisnite %s za izhod"
+msgstr "Nameščanje je končano. Pritisnite %s za izhod"
 
 #: pyanaconda/ui/tui/spokes/askvnc.py:49
 msgid "VNC"
@@ -1589,11 +1613,11 @@ msgstr "Neuspelo shranjevanje konfiguracije hrambe"
 
 #: pyanaconda/ui/lib/storage.py:320
 msgid "Failed to save boot loader configuration"
-msgstr ""
+msgstr "Shranjevanje konfiguracije začetnega nalagalnika ni uspelo"
 
 #: pyanaconda/ui/lib/storage.py:324
 msgid "Checking storage configuration..."
-msgstr ""
+msgstr "Preverjanje konfiguracije hrambe..."
 
 #: pyanaconda/ui/lib/space.py:103
 msgid ""
@@ -1642,7 +1666,7 @@ msgstr "_Da"
 #: pyanaconda/ui/gui/spokes/welcome.py:255
 #, python-format
 msgid "WELCOME TO %(name)s %(version)s."
-msgstr "DOBRODOŠLI NA %(name) %(version)."
+msgstr "DOBRODOŠLI NA %(name)s %(version)s."
 
 #: pyanaconda/ui/gui/spokes/user.py:68
 msgid "Invalid group name."
@@ -1655,7 +1679,7 @@ msgstr "_Kreiranje uporabnika"
 
 #: pyanaconda/ui/gui/spokes/user.py:358
 msgid "The password was set by kickstart."
-msgstr ""
+msgstr "Geslo je bilo nastavljeno s kickstartom."
 
 #: pyanaconda/ui/gui/spokes/subscription.py:73
 msgctxt "GUI|Spoke"
@@ -1674,11 +1698,11 @@ msgstr "Ključ aktivacije nastavljen."
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1001
 msgid "Unregistering..."
-msgstr ""
+msgstr "Odregistriranje..."
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1003
 msgid "Registering..."
-msgstr ""
+msgstr "Registriranje..."
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1005
 msgid "Attaching subscription..."
@@ -1783,10 +1807,9 @@ msgid ""
 "or remove existing partitions via our guided reclaim space tool, or you can "
 "adjust your partitions on your own in the custom partitioning interface."
 msgstr ""
-"<b>Nimate dovolj prostora za namestitev %s</b>.  Obstoječe particije lahko "
+"<b>Nimate dovolj prostora za nameščanje %s</b>.  Obstoječe particije lahko "
 "skrčite ali odstranite prek našega vodenega orodja za krčenje prostora ali "
-"pa lahko svoje particije prilagodite sami v vmesniku particijoniranja po "
-"meri."
+"pa lahko svoje particije prilagodite sami v vmesniku particioniranja po meri."
 
 #: pyanaconda/ui/gui/spokes/storage.py:200
 #, python-format
@@ -1794,7 +1817,7 @@ msgid ""
 "  You don't have enough space available to install <b>%(product)s</b>, even "
 "if you used all of the free space available on the selected disks."
 msgstr ""
-"  Nimate dovolj prostora za namestitev  <b>%(product)</b>, tudi če bi "
+"  Nimate dovolj prostora za nameščanje  <b>%(product)s</b>, tudi če bi "
 "uporabili ves prosti prostor, ki je na še voljo na izbranih diskih."
 
 #: pyanaconda/ui/gui/spokes/storage.py:212
@@ -1805,10 +1828,10 @@ msgid ""
 "could add more disks for additional space, modify your software selection to "
 "install a smaller version of <b>%(productName)s</b>, or quit the installer."
 msgstr ""
-"<b>Nimate dovolj prostora za namestitev %(productName)</b>, tudi če bi "
+"<b>Nimate dovolj prostora za nameščanje %(productName)s</b>, tudi če bi "
 "uporabili ves prosti prostor, ki je na še voljo na izbranih diskih.  Lahko "
 "dodate več diskov za dodatni prostor, spremenite izbiro programja, da "
-"namestite manjšo različico <b>%(productName)</b> ali pa zapustite "
+"namestite manjšo različico <b>%(productName)s</b> ali pa zapustite "
 "namestilnik."
 
 #: pyanaconda/ui/gui/spokes/storage.py:238
@@ -1828,11 +1851,15 @@ msgstr ""
 msgid ""
 "Error checking storage configuration.  <a href=\"\">Click for details.</a>"
 msgstr ""
+"Napaka pri preverjanju konfiguracije hrambe.  <a href=\"\">Kliknite za "
+"podrobnosti.</a>"
 
 #: pyanaconda/ui/gui/spokes/storage.py:560
 msgid ""
 "Warning checking storage configuration.  <a href=\"\">Click for details.</a>"
 msgstr ""
+"Opozorilo pri preverjanju konfiguracije hrambe.  <a href=\"\">Kliknite za "
+"podrobnosti.</a>"
 
 #: pyanaconda/ui/gui/spokes/storage.py:591
 #, python-brace-format
@@ -1849,45 +1876,51 @@ msgstr ""
 
 #: pyanaconda/ui/gui/spokes/storage.py:611
 msgid "{} free"
-msgstr ""
+msgstr "{} prosto"
 
 #: pyanaconda/ui/gui/spokes/storage.py:735
 msgid ""
 "You have chosen to skip boot loader installation. Your system may not be "
 "bootable."
 msgstr ""
+"Izbrali ste preskok nameščanja zagonskega nalagalnika. Vašega sistema morda "
+"ne bo mogoče zagnati."
 
 #: pyanaconda/ui/gui/spokes/storage.py:914
 msgid "There was a problem with your disk selection. Click here for details."
-msgstr ""
+msgstr "Bil je problem z vašo izbiro diskov. Kliknite sem za podrobnosti."
 
 #: pyanaconda/ui/gui/spokes/storage.py:1019
 msgid ""
 "The following errors were encountered when checking your disk selection. You "
 "can modify your selection or quit the installer."
 msgstr ""
+"Naslednje napake so se pojavile med preverjanjem vaše izbire diskov. Lahko "
+"spremenite vašo izbiro ali zapustite namestilnik."
 
 #: pyanaconda/ui/gui/spokes/storage.py:1024
 #: pyanaconda/ui/gui/spokes/storage.py:1045
 msgctxt "GUI|Storage|Error Dialog"
 msgid "_Quit"
-msgstr ""
+msgstr "_Zapusti"
 
 #: pyanaconda/ui/gui/spokes/storage.py:1025
 msgctxt "GUI|Storage|Error Dialog"
 msgid "_Modify Disk Selection"
-msgstr ""
+msgstr "_Spremeni izbiro diskov"
 
 #: pyanaconda/ui/gui/spokes/storage.py:1040
 msgid ""
 "The following errors were encountered when checking your storage "
 "configuration.  You can modify your storage layout or quit the installer."
 msgstr ""
+"Naslednje napake so se pojavile pri preverjanju konfiguracije vaše hrambe.  "
+"Lahko spremenite vašo postavite hrambe ali zapustite namestilnik."
 
 #: pyanaconda/ui/gui/spokes/storage.py:1046
 msgctxt "GUI|Storage|Error Dialog"
 msgid "_Modify Storage Layout"
-msgstr ""
+msgstr "_Spremeni postavitev hrambe"
 
 #: pyanaconda/ui/gui/spokes/storage.py:1060
 msgid ""
@@ -1895,11 +1928,13 @@ msgid ""
 "configuration.  These are not fatal, but you may wish to make changes to "
 "your storage layout."
 msgstr ""
+"Naslednja opozorila se se pojavila med preverjanjem vaše konfiguracije "
+"hrambe.  Niso fatalne, a morda bi želeli spremeniti vašo postavitev hrambe."
 
 #: pyanaconda/ui/gui/spokes/storage.py:1065
 msgctxt "GUI|Storage|Warning Dialog"
 msgid "_OK"
-msgstr ""
+msgstr "_V redu"
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:68
 msgctxt "GUI|Spoke"
@@ -1921,7 +1956,7 @@ msgstr "Red Hat CDN zahteva registracijo."
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:327
 msgid "Invalid environment specified in kickstart"
-msgstr ""
+msgstr "Neveljavno okolje določeno v kickstartu"
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:330
 #: pyanaconda/ui/gui/spokes/software_selection.py:335
@@ -1945,6 +1980,9 @@ msgid ""
 "likely caused by an error with your installation source.  You can quit the "
 "installer, change your software source, or change your software selections."
 msgstr ""
+"Programje označeno za nameščanje ima naslednje napake.  To je verjetno "
+"povzročeno zaradi napake v viru nameščanja.  Lahko zapustite namestilnik,  "
+"zamenjate vir programja ali spremenite izbiro programja."
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:629
 msgctxt "GUI|Software Selection|Error Dialog"
@@ -2305,7 +2343,7 @@ msgstr "_Ponovni zagon sistema"
 #: pyanaconda/ui/gui/spokes/installation_progress.py:147
 msgctxt "GUI|Progress"
 msgid "_Finish Installation"
-msgstr "_Končaj namestitev"
+msgstr "_Končaj nameščanje"
 
 #: pyanaconda/ui/gui/spokes/installation_progress.py:155
 #, python-format
@@ -2328,7 +2366,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/datetime_spoke.py:426
 msgctxt "GUI|Spoke"
 msgid "_Time & Date"
-msgstr "_Čas in datum"
+msgstr "_Čas & datum"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.py:571
 msgid "Restoring hardware time..."
@@ -2392,11 +2430,13 @@ msgid ""
 "When you create mount points for your %(name)s %(version)s installation, "
 "you'll be able to view their details here."
 msgstr ""
+"Ko ustvarite priklopne točke za vaše nameščanje %(name)s %(version)s, boste "
+"lahko videli podrobnosti tukaj."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:607
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade:178
 msgid "Device reconfiguration failed."
-msgstr ""
+msgstr "Ponovna konfiguracija naprave ni uspela."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:755
 msgid "No disks assigned"
@@ -2406,10 +2446,10 @@ msgstr "Ni nobenega dodeljenega diska"
 msgctxt "GUI|Custom Partitioning|Devices"
 msgid " and {} other"
 msgid_plural " and {} others"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] " in {} ostalo"
+msgstr[1] " in {} ostala"
+msgstr[2] " in {} ostalo"
+msgstr[3] " in {} ostalo"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:813
 msgid "The container is encrypted."
@@ -2536,7 +2576,7 @@ msgstr "Zbriši"
 #: pyanaconda/ui/gui/spokes/lib/resize.py:96
 #, python-format
 msgid "Installation requires a total of <b>%s</b> for system data."
-msgstr "Namestitev zahteva skupaj <b>%s</b> za sistemske podatke."
+msgstr "Nameščanje zahteva skupaj <b>%s</b> za sistemske podatke."
 
 #: pyanaconda/ui/gui/spokes/lib/resize.py:128
 msgid "This device contains the installation source."
@@ -2548,8 +2588,8 @@ msgid ""
 "this installation.  Removing a file system will permanently delete all of "
 "the data it contains."
 msgstr ""
-"Obstoječe datotečne sisteme, ki jih ne potrebujete več, lahko odstranite, da "
-"sprostite prostor za to namestitev.  Odstranjevanje datotečnega sistema bo "
+"Obstoječe datotečne sisteme, ki jih ne potrebujete več lahko odstranite, da "
+"sprostite prostor za to nameščanje.  Odstranjevanje datotečnega sistema bo "
 "trajno izbrisalo vse podatke, ki jih ta vsebuje."
 
 #: pyanaconda/ui/gui/spokes/lib/resize.py:155
@@ -2561,12 +2601,12 @@ msgstr ""
 "Na voljo je tudi prosti prostor v že obstoječih datotečnih sistemih. Čeprav "
 "je tvegano in vam  priporočamo da najprej izvedete varnostno kopiranje "
 "podatkov, lahko prosti prostor na disku povrnete in mu omogočite, da bo na "
-"voljo za to namestitev spodaj."
+"voljo za to nameščanje spodaj."
 
 #: pyanaconda/ui/gui/spokes/lib/resize.py:236
 #, python-format
 msgid "%(freeSize)s of %(devSize)s"
-msgstr "%(freeSize) od %(devSize)"
+msgstr "%(freeSize)s od %(devSize)s"
 
 #: pyanaconda/ui/gui/spokes/lib/resize.py:246
 msgid "Not resizeable"
@@ -2603,24 +2643,24 @@ msgstr "Ohrani _vse"
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:47
 #, python-format
 msgid "Create a new %(container_type)s ..."
-msgstr "Ustvari novi %(container_type) ..."
+msgstr "Ustvari novi %(container_type)s ..."
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:48
 #, python-format
 msgid "Create or select %(container_type)s"
-msgstr "Ustvari ali izberi %(container_type)"
+msgstr "Ustvari ali izberi %(container_type)s"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:49
 #, python-format
 msgid "CONFIGURE %(container_type)s"
-msgstr "KONFIGURIRAJ %(container_type)"
+msgstr "KONFIGURIRAJ %(container_type)s"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:50
 #, python-format
 msgid ""
 "Please create a name for this %(container_type)s and select at least one "
 "disk below."
-msgstr "Ustvari ime za ta %(container_type) in izberi vsaj en disk spodaj."
+msgstr "Ustvari ime za ta %(container_type)s in izberi vsaj en disk spodaj."
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:57
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:60
@@ -2699,7 +2739,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:606
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:329
 msgid "Name is already in use."
-msgstr ""
+msgstr "Ime je že v rabi."
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:709
 msgid "No disks selected."
@@ -2731,8 +2771,8 @@ msgid ""
 "You haven't created any mount points for your %(product)s %(version)s "
 "installation yet.  You can:"
 msgstr ""
-"Niste ustvarili še nobene priklopne točke za namestitev vašega  %(product) "
-"%(version). Lahko:"
+"Niste ustvarili še nobene priklopne točke za nameščanje vašega  %(product)s "
+"%(version)s. Lahko:"
 
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:500
 msgctxt "GUI|Custom Partitioning|Autopart Page"
@@ -2809,7 +2849,7 @@ msgid ""
 "the wireless network '%(network_id)s'."
 msgstr ""
 "Gesla ali ključi šifriranja so zahtevani za dostop\n"
-"do brezžičnega omrežja '%(network_id)'."
+"do brezžičnega omrežja '%(network_id)s'."
 
 #: pyanaconda/ui/gui/spokes/lib/network_secret_agent.py:196
 msgctxt "GUI|Network|Secrets Dialog"
@@ -2945,7 +2985,7 @@ msgstr ""
 
 #: pyanaconda/payload/rpmostreepayload.py:548
 msgid "Flatpak installation has finished"
-msgstr "Flatpak namestitev je končana"
+msgstr "Flatpak nameščanje je končano"
 
 #: pyanaconda/payload/manager.py:76
 msgid "Failed to set up installation source"
@@ -2985,7 +3025,7 @@ msgstr "Prenašanje paketov"
 
 #: pyanaconda/payload/dnf/payload.py:1398
 msgid "Preparing transaction from installation source"
-msgstr ""
+msgstr "Priprava transakcije iz vira namestitve"
 
 #: pyanaconda/payload/dnf/payload.py:1411
 #, python-format
@@ -3011,7 +3051,7 @@ msgstr ""
 
 #: pyanaconda/modules/subscription/runtime.py:344
 msgid "Unregistration failed."
-msgstr ""
+msgstr "Odregistracija ni uspela."
 
 #: pyanaconda/modules/subscription/runtime.py:418
 msgid "product name unknown"
@@ -3094,7 +3134,7 @@ msgstr ""
 
 #: pyanaconda/modules/storage/platform.py:230
 msgid "You must include at least one disk as an install target."
-msgstr ""
+msgstr "Vključiti morate vsaj en disk kot cilj nameščanja."
 
 #: pyanaconda/modules/storage/platform.py:240
 msgid "DASD"
@@ -3116,34 +3156,34 @@ msgstr ""
 
 #: pyanaconda/modules/storage/kickstart.py:65
 msgid "File system type \"{}\" given in autopart command is invalid."
-msgstr ""
+msgstr "Vrsta datotečnega sistema \"{}\" dana v ukazu autopart je neveljavna."
 
 #: pyanaconda/modules/storage/kickstart.py:81
 msgid "Btrfs file system is not supported."
-msgstr ""
+msgstr "Datotečni sistem Btrfs ni podprt."
 
 #: pyanaconda/modules/storage/kickstart.py:104
 msgid ""
 "Disklabel \"{}\" given in clearpart command is not supported on this "
 "platform."
-msgstr ""
+msgstr "Oznaka diska \"{}\" dana v ukazu clearpart ni podprta na tej platformi."
 
 #: pyanaconda/modules/storage/kickstart.py:110
 msgid "Disk \"{}\" given in clearpart command does not exist."
-msgstr ""
+msgstr "Disk \"{}\" dan v ukazu clearpart ne obstaja."
 
 #: pyanaconda/modules/storage/kickstart.py:115
 msgid "Device \"{}\" given in clearpart device list does not exist."
-msgstr ""
+msgstr "Naprava \"{}\" dana v seznamu naprav clearpart ne obstaja."
 
 #: pyanaconda/modules/storage/kickstart.py:134
 #: pyanaconda/modules/storage/kickstart.py:139
 msgid "Disk \"{}\" given in ignoredisk command does not exist."
-msgstr ""
+msgstr "Disk \"{}\" dan v ukazu ignoredisk ne obstaja."
 
 #: pyanaconda/modules/storage/kickstart.py:149
 msgid "NIC \"{}\" given in fcoe command does not exist."
-msgstr ""
+msgstr "NIC \"{}\" dan v ukazu fcoe ne obstaja."
 
 #: pyanaconda/modules/storage/kickstart.py:174
 #, python-brace-format
@@ -3174,20 +3214,20 @@ msgstr ""
 
 #: pyanaconda/modules/storage/installation.py:88
 msgid "An error occurred while resizing the device {}: {}"
-msgstr ""
+msgstr "Pojavila se je napaka pri spreminjanju velikosti naprave {}: {}"
 
 #: pyanaconda/modules/storage/installation.py:139
 msgid "Gathering entropy 100%"
-msgstr ""
+msgstr "Nabiranje entropije 100%"
 
 #: pyanaconda/modules/storage/installation.py:143
 msgid "Gathering entropy (time ran out)"
-msgstr ""
+msgstr "Nabiranje entropije (čas je potekel)"
 
 #: pyanaconda/modules/storage/installation.py:146
 #, python-brace-format
 msgid "Gathering entropy {percents}% (remaining time {time})"
-msgstr ""
+msgstr "Nabiranje entropije {percents}% (preostali čas {time})"
 
 #: pyanaconda/modules/storage/constants.py:30
 msgid ""
@@ -3251,7 +3291,7 @@ msgstr ""
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:213
 #, python-brace-format
 msgid "New {name} {version} Installation"
-msgstr "Nova namestitev {name} {version}"
+msgstr "Novo nameščanje {name} {version}"
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:275
 msgid "Cannot set label on file system."
@@ -3292,22 +3332,22 @@ msgstr "Vnesite priklopno točko."
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:409
 #, python-brace-format
 msgid "/boot/efi must be on a device of type {type} or {another}"
-msgstr ""
+msgstr "/boot/efi mora biti na napravi vrste {type} ali {another}"
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:416
 #, python-brace-format
 msgid "{fs} must be on a device of type {type}"
-msgstr ""
+msgstr "{fs} mora biti na napravi vrste {type}"
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:422
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:425
 msgid "{} cannot be encrypted"
-msgstr ""
+msgstr "{} ne more biti šifriran"
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:428
 #: pyanaconda/modules/storage/checker/utils.py:59
 msgid "You must create a new file system on the root device."
-msgstr ""
+msgstr "Ustvariti morate novi datotečni sistem na korenski napravi."
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:432
 msgid "Device does not support RAID level selection {}."
@@ -3566,15 +3606,16 @@ msgstr ""
 
 #: pyanaconda/modules/storage/partitioning/automatic/utils.py:165
 msgid "No usable disks selected."
-msgstr ""
+msgstr "Ni izbranih uporabnih diskov."
 
 #: pyanaconda/modules/storage/partitioning/automatic/utils.py:168
 msgid "Not enough free space on selected disks."
-msgstr ""
+msgstr "Ni dovolj prostega prostora na izbranih diskih."
 
 #: pyanaconda/modules/storage/partitioning/automatic/utils.py:380
 msgid "No big enough free space on disks for automatic partitioning"
 msgstr ""
+"Ni dovolj velikega prostega prostora na diskih za samodejno particioniranje"
 
 #: pyanaconda/modules/storage/disk_selection/utils.py:36
 msgid "The selected disk {} is not recognized."
@@ -3652,11 +3693,13 @@ msgid ""
 "You have not defined a root partition (/), which is required for "
 "installation of %s to continue."
 msgstr ""
+"Niste določili korenske particije (/), ki je obvezna, da se nameščanje %s "
+"nadaljuje."
 
 #: pyanaconda/modules/storage/checker/utils.py:65
 #, python-format
 msgid "Your root partition must be on a device of type: %s."
-msgstr ""
+msgstr "Korenska particija mora biti na napravi vrste: %s."
 
 #: pyanaconda/modules/storage/checker/utils.py:84
 #, python-brace-format
@@ -3670,6 +3713,8 @@ msgstr ""
 msgid ""
 "It is recommended to create a new file system on your %(mount)s partition."
 msgstr ""
+"Priporočljivo je, da ustvarite nov datotečni sistem na vaši particiji "
+"%(mount)s."
 
 #: pyanaconda/modules/storage/checker/utils.py:122
 #, python-format
@@ -3677,11 +3722,13 @@ msgid ""
 "Your %(mount)s partition is less than %(size)s which is lower than "
 "recommended for a normal %(productName)s install."
 msgstr ""
+"Vaša particija %(mount)s je manjša od %(size)s, kar je manj od priporočene "
+"za normalno nameščanje %(productName)s."
 
 #: pyanaconda/modules/storage/checker/utils.py:130
 #, python-format
 msgid "Your %(mount)s partition size is lower than required %(size)s."
-msgstr ""
+msgstr "Velikost vaše particije %(mount)s je manjša od zahtevane %(size)s."
 
 #: pyanaconda/modules/storage/checker/utils.py:150
 #, python-format
@@ -3689,6 +3736,8 @@ msgid ""
 "Your %(mount)s partition is too small for %(format)s formatting (allowable "
 "size is %(minSize)s to %(maxSize)s)"
 msgstr ""
+"Vaša particija %(mount)s je premajhna za formatiranje za %(format)s ("
+"dovoljena velikost je od %(minSize)s do %(maxSize)s)"
 
 #: pyanaconda/modules/storage/checker/utils.py:156
 #, python-format
@@ -3696,14 +3745,18 @@ msgid ""
 "Your %(mount)s partition is too large for %(format)s formatting (allowable "
 "size is %(minSize)s to %(maxSize)s)"
 msgstr ""
+"Vaša particija %(mount)s je prevelika za formatiranje za %(format)s ("
+"dovoljena velikost je od %(minSize)s do %(maxSize)s)"
 
 #: pyanaconda/modules/storage/checker/utils.py:174
 msgid "No valid boot loader target device found. See below for details."
 msgstr ""
+"Ni najdene veljavne ciljne naprave za zagonski nalagalnik. Oglejte si "
+"podrobnosti spodaj."
 
 #: pyanaconda/modules/storage/checker/utils.py:189
 msgid "You have not created a bootable partition."
-msgstr ""
+msgstr "Niste ustvarili zagonske particije."
 
 #: pyanaconda/modules/storage/checker/utils.py:224
 msgid ""
@@ -3746,6 +3799,8 @@ msgstr ""
 msgid ""
 "This mount point is invalid. The %s directory must be on the / file system."
 msgstr ""
+"Ta priklopna točka je neveljavna. Imenik %s mora biti na datotečnemu sistemu "
+"/."
 
 #: pyanaconda/modules/storage/checker/utils.py:312
 #, python-format
@@ -3755,7 +3810,7 @@ msgstr ""
 #: pyanaconda/modules/storage/checker/utils.py:329
 #, python-format
 msgid "The mount point %s must be on a linux file system."
-msgstr ""
+msgstr "Priklopna točka %s mora biti na linuxovem datotečnem sistemu."
 
 #: pyanaconda/modules/storage/checker/utils.py:354
 msgid ""
@@ -3784,6 +3839,8 @@ msgid ""
 "%s is currently mounted and cannot be used for the installation. Please "
 "unmount it and retry."
 msgstr ""
+"%s je trenutno priklopljen in ne more biti uporabljen za nameščanje. "
+"Odklopite ga in poskusite znova."
 
 #: pyanaconda/modules/storage/checker/utils.py:459
 msgid ""
@@ -3824,7 +3881,7 @@ msgstr "Več kot en zadetek najden za dan zagonski pogon \"{}\"."
 
 #: pyanaconda/modules/storage/bootloader/execution.py:195
 msgid "Requested boot drive \"{}\" doesn't exist or cannot be used."
-msgstr ""
+msgstr "Zahtevani zagonski pogon \"{}\" ne obstaja ali ga ni mogoče uporabiti."
 
 #: pyanaconda/modules/storage/bootloader/bootloader.py:171
 msgid "GRUB2 does not support installation to a partition."
@@ -3836,7 +3893,7 @@ msgstr "Šifrirano geslo GRUB2 mora biti v formatu grub.pbkdf2."
 
 #: pyanaconda/modules/storage/bootloader/base.py:166
 msgid "/boot file system"
-msgstr ""
+msgstr "Datotečni sistem /boot"
 
 #: pyanaconda/modules/storage/bootloader/base.py:315
 #, python-format
@@ -4037,18 +4094,24 @@ msgid ""
 "The 'boot' area on your computer is where files needed\n"
 "to start the operating system are stored."
 msgstr ""
+"Zagonsko področje 'boot' na vašem računalniku hrani datoteke,\n"
+"ki so potrebne za zagon operacijskega sistema."
 
 #: pyanaconda/core/storage.py:112
 msgid ""
 "The 'root' area on your computer is where core system\n"
 "files and applications are stored."
 msgstr ""
+"Korensko področje 'root' na vašem računalniku hrani datoteke,\n"
+"ki so potrebne za jedro operacijskega sistema in aplikacij."
 
 #: pyanaconda/core/storage.py:114
 msgid ""
 "The 'home' area on your computer is where all your personal\n"
 "data is stored."
 msgstr ""
+"Domače področje 'home' na vašem računalniku hrani\n"
+"vse vaše osebne datoteke."
 
 #: pyanaconda/core/storage.py:116
 msgid ""
@@ -4076,7 +4139,7 @@ msgstr "URL nima komponente gostitelja"
 
 #: pyanaconda/core/constants.py:89
 msgid "Start VNC"
-msgstr "Zaganjam VNC..."
+msgstr "Zaženi VNC"
 
 #: pyanaconda/core/constants.py:90
 msgid "Use text mode"
@@ -4105,7 +4168,7 @@ msgid ""
 "disk, and restart to complete installation."
 msgstr ""
 "Ni zaznanih diskov.  Ustavite računalnik, priklopite vsaj en disk in ponovno "
-"zaženite, da dokončate namestitev."
+"zaženite, da dokončate nameščanje."
 
 #: pyanaconda/core/constants.py:175
 msgid "No disks selected; please select at least one disk to install to."
@@ -4294,12 +4357,14 @@ msgstr "0 GB"
 #: widgets/src/LayoutIndicator.c:33
 #, c-format
 msgid "Current layout: '%s'. Click to switch to the next layout."
-msgstr "Trenutna postavitev: 's%'. Kliknite za preklop na naslednjo postavitev."
+msgstr "Trenutna postavitev: '%s'. Kliknite za preklop na naslednjo postavitev."
 
 #: widgets/src/LayoutIndicator.c:34
 #, c-format
 msgid "Current layout: '%s'. Add more layouts to enable switching."
 msgstr ""
+"Trenutna postavitev: '%s'. Dodajte več postavitev, da bi omogočili "
+"preklapljanje."
 
 #: widgets/src/DiskOverview.c:97
 msgid "New Device"
@@ -4311,7 +4376,7 @@ msgstr "0 MB"
 
 #: widgets/src/BaseWindow.c:147
 msgid "DISTRIBUTION INSTALLATION"
-msgstr "NAMESTITEV DISTRIBUCIJE"
+msgstr "NAMEŠČANJE DISTRIBUCIJE"
 
 #: widgets/src/BaseWindow.c:148
 msgid "SPOKE NAME"
@@ -4364,7 +4429,7 @@ msgstr ""
 
 #: pyanaconda/ui/gui/spokes/welcome.glade:68
 msgid "This is unstable, pre-release software."
-msgstr ""
+msgstr "To je še nestabilno programje pred redne izdaje."
 
 #: pyanaconda/ui/gui/spokes/welcome.glade:97
 msgid ""
@@ -4380,14 +4445,25 @@ msgid ""
 "If you do not understand or accept the risks, then please exit this program "
 "by selecting \"I want to exit\" which will reboot your system."
 msgstr ""
+"Obvestilo: To je predhodna izdaja programske opreme, ki je namenjena zgolj "
+"razvoju in testiranju. *Ne* uporabljajte te programske opreme za kakršnokoli "
+"kritično delo ali v produkcijskem okolju.\n"
+"\n"
+"S klikom \"Želim nadaljevati\" razumete in sprejemate tveganja povezana s "
+"predhodno izdajo programske opreme, da jo nameravate uporabiti samo za "
+"namene testiranja in razvoja in ste pripravljeni prijaviti morebitne napake "
+"ali težave, da bi to delo izboljšali.\n"
+"\n"
+"Če tveganj ne razumete ali ne sprejemate, zapustite ta program tako, da "
+"izberete \"Želim zapustiti\", kar bo znova zagnalo vaš sistem."
 
 #: pyanaconda/ui/gui/spokes/welcome.glade:130
 msgid "Beta Warn"
-msgstr ""
+msgstr "Beta opozorilo"
 
 #: pyanaconda/ui/gui/spokes/welcome.glade:228
 msgid "What language would you like to use during the installation process?"
-msgstr "Kateri jezik bi radi uporabljali med namestitvijo?"
+msgstr "Kateri jezik bi želeli uporabljati med postopkom nameščanja?"
 
 #: pyanaconda/ui/gui/spokes/welcome.glade:313
 msgid "Languages"
@@ -4500,7 +4576,7 @@ msgstr "Prosti prostor razpoložljiv za uporabo."
 #: pyanaconda/ui/gui/spokes/storage.glade:152
 #: pyanaconda/ui/gui/spokes/storage.glade:368
 msgid "fs free"
-msgstr ""
+msgstr "fs prosto"
 
 #: pyanaconda/ui/gui/spokes/storage.glade:168
 #: pyanaconda/ui/gui/spokes/storage.glade:384
@@ -4555,7 +4631,7 @@ msgstr "Lokalni standardni diski"
 #: pyanaconda/ui/gui/spokes/storage.glade:614
 #: pyanaconda/ui/gui/spokes/storage.glade:754
 msgid "Disks left unselected here will not be touched."
-msgstr ""
+msgstr "Tukaj neizbrani diski bodo ostali nedotaknjeni."
 
 #: pyanaconda/ui/gui/spokes/storage.glade:633
 msgid "Specialized & Network Disks"
@@ -4564,7 +4640,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/storage.glade:704
 msgctxt "GUI|Storage"
 msgid "_Add a disk..."
-msgstr ""
+msgstr "_Dodaj disk..."
 
 #: pyanaconda/ui/gui/spokes/storage.glade:721
 msgid "Add Specialized Disk"
@@ -4572,17 +4648,17 @@ msgstr ""
 
 #: pyanaconda/ui/gui/spokes/storage.glade:781
 msgid "Storage Configuration"
-msgstr ""
+msgstr "Konfiguracija hrambe"
 
 #: pyanaconda/ui/gui/spokes/storage.glade:801
 msgctxt "GUI|Storage"
 msgid "A_utomatic"
-msgstr ""
+msgstr "S_amodejno"
 
 #: pyanaconda/ui/gui/spokes/storage.glade:819
 msgctxt "GUI|Storage"
 msgid "_Custom"
-msgstr ""
+msgstr "_Po meri"
 
 #: pyanaconda/ui/gui/spokes/storage.glade:838
 msgctxt "GUI|Storage"
@@ -4596,12 +4672,12 @@ msgstr ""
 
 #: pyanaconda/ui/gui/spokes/storage.glade:901
 msgid "Encryption"
-msgstr ""
+msgstr "Šifriranje"
 
 #: pyanaconda/ui/gui/spokes/storage.glade:931
 msgctxt "GUI|Storage"
 msgid "_Encrypt my data."
-msgstr ""
+msgstr "_Šifriraj moje podatke."
 
 #: pyanaconda/ui/gui/spokes/storage.glade:947
 msgid "You'll set a passphrase next."
@@ -4609,11 +4685,11 @@ msgstr ""
 
 #: pyanaconda/ui/gui/spokes/storage.glade:997
 msgid "Storage Options"
-msgstr ""
+msgstr "Možnosti hrambe"
 
 #: pyanaconda/ui/gui/spokes/storage.glade:1028
 msgid "summary"
-msgstr ""
+msgstr "povzetek"
 
 #: pyanaconda/ui/gui/spokes/storage.glade:1061
 msgctxt "GUI|Storage"
@@ -4623,7 +4699,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/storage.glade:1100
 msgctxt "GUI|Storage"
 msgid "_Refresh..."
-msgstr ""
+msgstr "_Osveži..."
 
 #: pyanaconda/ui/gui/spokes/software_selection.glade:10
 msgid "SOFTWARE SELECTION"
@@ -4726,7 +4802,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/network.glade:450
 #: pyanaconda/ui/gui/spokes/network.glade:2583
 msgid "NETWORK & HOST NAME"
-msgstr ""
+msgstr "OMREŽJE & IME GOSTITELJA"
 
 #: pyanaconda/ui/gui/spokes/network.glade:489
 msgid ""
@@ -4921,12 +4997,17 @@ msgid ""
 "Which keyboard layouts would you like to use on this system?  You may move "
 "any layout to the top of the list to select it as the default."
 msgstr ""
+"Katere postavitve tipkovnice bi želeli uporabljati na tem sistemu?  "
+"Katerokoli postavitev lahko premaknete na vrh seznama, da jo izberete kot "
+"privzeto."
 
 #: pyanaconda/ui/gui/spokes/keyboard.glade:96
 msgid ""
 "Changes here will only apply to the installed system. Use the desktop's tool "
 "to configure the keyboard for the installation process."
 msgstr ""
+"Tukajšnje spremembe bodo veljale samo na nameščenem sistemu. Uporabite "
+"namizno orodje za konfiguracijo tipkovnice za postopek nameščanja."
 
 #: pyanaconda/ui/gui/spokes/keyboard.glade:167
 msgid "Selected Layouts"
@@ -4955,16 +5036,16 @@ msgstr "Premakni izbrano postavitev _dol"
 #: pyanaconda/ui/gui/spokes/keyboard.glade:251
 msgctxt "GUI|Keyboard Layout"
 msgid "_Preview layout"
-msgstr ""
+msgstr "_Predogled postavitve"
 
 #: pyanaconda/ui/gui/spokes/keyboard.glade:291
 msgctxt "GUI|Keyboard Layout"
 msgid "_Test the layout configuration below:"
-msgstr ""
+msgstr "_Testirajte konfiguracijo postavitve spodaj:"
 
 #: pyanaconda/ui/gui/spokes/keyboard.glade:331
 msgid "Alt + Shift to switch layouts."
-msgstr ""
+msgstr "Alt + Shift za preklop postavitve."
 
 #: pyanaconda/ui/gui/spokes/keyboard.glade:346
 msgctxt "GUI|Keyboard Layout"
@@ -4987,11 +5068,11 @@ msgstr "DODAJ POSTAVITEV TIPKOVNICE"
 
 #: pyanaconda/ui/gui/spokes/keyboard.glade:483
 msgid "You may add a keyboard layout by selecting it below:"
-msgstr ""
+msgstr "Lahko dodate postavitev tipkovnice iz izbiro spodaj:"
 
 #: pyanaconda/ui/gui/spokes/keyboard.glade:532
 msgid "Available Layouts"
-msgstr ""
+msgstr "Razpoložljive postavitve"
 
 #: pyanaconda/ui/gui/spokes/keyboard.glade:573
 msgid "Add Layout"
@@ -5018,7 +5099,7 @@ msgstr ""
 
 #: pyanaconda/ui/gui/spokes/keyboard.glade:751
 msgid "Layout Options"
-msgstr ""
+msgstr "Možnosti postavitve"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:29
 msgctxt "GUI|Software Source|ISO Chooser Dialog"
@@ -5056,31 +5137,31 @@ msgstr "_V redu"
 #: pyanaconda/ui/gui/spokes/installation_source.glade:267
 msgctxt "GUI|Software Source|Proxy Dialog"
 msgid "_Enable HTTP Proxy"
-msgstr ""
+msgstr "_Omogoči posrednika HTTP"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:299
 msgctxt "GUI|Software Source|Proxy Dialog"
 msgid "_Proxy Host:"
-msgstr ""
+msgstr "_Gostitelj posrednika:"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:316
 msgid "<span size=\"small\"><b>Example:</b> squid.mysite.org:3128</span>"
-msgstr ""
+msgstr "<span size=\"small\"><b>Primer:</b> squid.mysite.org:3128</span>"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:349
 msgctxt "GUI|Software Source|Proxy Dialog"
 msgid "_Use Authentication"
-msgstr ""
+msgstr "_Uporabi avtentikacijo"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:375
 msgctxt "GUI|Software Source|Proxy Dialog"
 msgid "User _name:"
-msgstr ""
+msgstr "Uporabniško _ime:"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:392
 msgctxt "GUI|Software Source|Proxy Dialog"
 msgid "Pass_word:"
-msgstr ""
+msgstr "Ge_slo:"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:474
 msgid "INSTALLATION SOURCE"
@@ -5088,12 +5169,12 @@ msgstr "VIR NAMESTITVE"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:531
 msgid "Which installation source would you like to use?"
-msgstr ""
+msgstr "Kateri vir namestitve bi radi uporabili?"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:545
 msgctxt "GUI|Software Source"
 msgid "_Auto-detected installation media:"
-msgstr ""
+msgstr "_Samodejno zaznani mediji nameščanja:"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:571
 msgid "Device:"
@@ -5107,7 +5188,7 @@ msgstr "Oznaka:"
 #: pyanaconda/ui/gui/spokes/installation_source.glade:729
 msgctxt "GUI|Software Source"
 msgid "_Verify"
-msgstr ""
+msgstr "_Verificiraj"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:617
 msgctxt "GUI|Software Source"
@@ -5127,7 +5208,7 @@ msgstr "_ISO datoteka:"
 #: pyanaconda/ui/gui/spokes/installation_source.glade:682
 msgctxt "GUI|Software Source"
 msgid "D_evice:"
-msgstr ""
+msgstr "N_aprava:"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:713
 msgctxt "GUI|Software Source"
@@ -5142,54 +5223,54 @@ msgstr "_Na omrežju:"
 #: pyanaconda/ui/gui/spokes/installation_source.glade:817
 msgctxt "GUI|Software Source"
 msgid "_Proxy setup..."
-msgstr ""
+msgstr "_Nastavitev posrednika..."
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:834
 #: pyanaconda/ui/gui/spokes/installation_source.glade:1314
 msgctxt "GUI|Software Source"
 msgid "URL type:"
-msgstr ""
+msgstr "Vrsta URL:"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:849
 #: pyanaconda/ui/gui/spokes/installation_source.glade:1299
 msgid "repository URL"
-msgstr ""
+msgstr "URL skladišča"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:850
 #: pyanaconda/ui/gui/spokes/installation_source.glade:1300
 msgid "mirrorlist"
-msgstr ""
+msgstr "seznam zrcalnih strežnikov"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:851
 #: pyanaconda/ui/gui/spokes/installation_source.glade:1301
 msgid "metalink"
-msgstr ""
+msgstr "metapovezava"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:878
 msgctxt "GUI|Software Source"
 msgid "N_FS mount options:"
-msgstr ""
+msgstr "M_ožnosti priklopa NFS:"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:893
 #: pyanaconda/ui/gui/spokes/installation_source.glade:894
 msgid "This field is optional."
-msgstr ""
+msgstr "To polje je neobvezno."
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:927
 msgid "Updates"
-msgstr ""
+msgstr "Posodobitve"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:941
 msgctxt "GUI|Software Source"
 msgid "Install the _latest available software updates"
-msgstr ""
+msgstr "Namesti _zadnje razpoložljive programske posodobitve"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:958
 msgctxt "GUI|Software Source"
 msgid ""
 "Install the _default versions provided by the installation source (above) "
 "only"
-msgstr ""
+msgstr "Namesti samo _privzete različice razpoložljive v viru nameščanja"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:986
 msgid "Additional repositories"
@@ -5321,7 +5402,7 @@ msgstr ""
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:267
 msgid "Working"
-msgstr ""
+msgstr "Delujoče"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:275
 msgid "Use"
@@ -5448,7 +5529,7 @@ msgstr ""
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:176
 msgid "Add a new mount point."
-msgstr ""
+msgstr "Dodaj novo priklopno točko."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:177
 msgctxt "GUI|Custom Partitioning"
@@ -5529,7 +5610,7 @@ msgstr "_Šifriraj"
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:698
 msgctxt "GUI|Custom Partitioning|Configure"
 msgid "File S_ystem:"
-msgstr ""
+msgstr "Datotečni s_istem:"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:741
 msgctxt "GUI|Custom Partitioning|Configure"
@@ -5560,7 +5641,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:1009
 msgctxt "GUI|Custom Partitioning|Configure|Devices"
 msgid "_Update Settings"
-msgstr ""
+msgstr "_Posodobi nastavitve"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:1032
 msgid ""
@@ -5773,7 +5854,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:144
 #: pyanaconda/ui/gui/spokes/lib/resize.glade:194
 msgid "Action"
-msgstr ""
+msgstr "Dejavnost"
 
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:155
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1775
@@ -5832,7 +5913,7 @@ msgstr "Zahtevaj nazaj"
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:8
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:71
 msgid "RESCAN DISKS"
-msgstr ""
+msgstr "PONOVNO PREČEŠI DISKE"
 
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:25
 msgctxt "GUI|Refresh Dialog|Rescan"
@@ -5849,38 +5930,46 @@ msgid ""
 "You can remove or insert additional disks at this time and press 'Rescan "
 "Disks' below for the changes to take effect."
 msgstr ""
+"Tokrat lahko odstranite ali vstavite dodatne diske in pritisnite \"Ponovno "
+"prečeši diske\" spodaj, da bi spremembe tudi učinkovale."
 
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:118
 msgid ""
 "<b>Warning:</b> All storage changes made using the installer will be lost "
 "when you press 'Rescan Disks'."
 msgstr ""
+"<b>Opozorilo:</b> Vse spremembe hrambe opravljene s pomočjo namestitvenega "
+"programa bodo izgubljene po pritisku \"Ponovno prečeši diske\"."
 
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:143
 msgctxt "GUI|Refresh Dialog|Rescan"
 msgid "_Rescan Disks"
-msgstr ""
+msgstr "_Ponovno prečeši diske"
 
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:176
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:212
 msgid "Scanning disks.  This may take a moment..."
-msgstr ""
+msgstr "Prečesavanje diskov. To utegne trajati nekaj časa..."
 
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:223
 msgid ""
 "You may <a href=\"\">go back to the main menu</a> to complete other\n"
 "installation options while this scan completes."
 msgstr ""
+"Lahko <a href=\"\">greste nazaj na glavni meni</a>, da zaključite ostale\n"
+"možnosti namestitve, medtem ko bo prečesavanje dokončano."
 
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:254
 msgid "Disk rescan complete."
-msgstr ""
+msgstr "Ponovno prečesavanje diskov končano."
 
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:269
 msgid ""
 "Pressing 'OK' below will take you to the disk selection screen where you "
 "will need to re-select your disks."
 msgstr ""
+"Pritisk na \"V redu\" spodaj vas bo popeljalo na zaslon izbire diskov, kjer "
+"boste ponovno izbirali vaše diske."
 
 #: pyanaconda/ui/gui/spokes/lib/passphrase.glade:23
 msgctxt "GUI|Passphrase Dialog"
@@ -5911,7 +6000,7 @@ msgstr "_Geselna fraza:"
 #: pyanaconda/ui/gui/spokes/lib/passphrase.glade:133
 msgctxt "GUI|Passphrase Dialog"
 msgid "Con_firm:"
-msgstr ""
+msgstr "Po_trdi:"
 
 #: pyanaconda/ui/gui/spokes/lib/passphrase.glade:275
 msgid ""
@@ -5949,21 +6038,25 @@ msgid ""
 "<b>Warning</b>: All storage changes made using the installer will be lost "
 "when you choose to format."
 msgstr ""
+"<b>Opozorilo</b>: Vse spremembe hrambe, ki ste jih napravili z namestilnikom "
+"bodo izgubljene, ko izberete formatiranje."
 
 #: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:160
 msgctxt "GUI|DAD Format Dialog"
 msgid "_Format with dasdfmt"
-msgstr ""
+msgstr "_Formatiranje z dasdfmt"
 
 #: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:209
 msgid ""
 "This may take a moment. You may <a href=\"\">go back to the main menu</a> to "
 "complete other installation options while formatting completes."
 msgstr ""
+"To lahko nekaj časa traja. Lahko <a href=\"\">greste nazaj na glavni meni</"
+"a>, da zaključite ostale možnosti namestitve med formatiranjem."
 
 #: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:248
 msgid "Disk formatting complete."
-msgstr ""
+msgstr "Formatiranje diska končano."
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:21
 msgctxt "GUI|Custom Partitioning|Confirm Delete Dialog"
@@ -6107,11 +6200,11 @@ msgstr "Samodejno"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:956
 msgid "As large as possible"
-msgstr "Veliko kolikor je le mogoče"
+msgstr "Kolikor veliko je mogoče"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:957
 msgid "Fixed"
-msgstr ""
+msgstr "Fiksno"
 
 #: pyanaconda/ui/gui/spokes/lib/network_secret_agent.glade:25
 msgctxt "GUI|Network|Authentication Dialog"
@@ -6128,6 +6221,8 @@ msgid ""
 "Passwords or encryption keys are required to access\n"
 "the wireless network"
 msgstr ""
+"Zahtevana so gesla ali ključi šifriranja za dostop\n"
+"do brezžičnega omrežja"
 
 #: pyanaconda/ui/gui/spokes/lib/detailederror.glade:25
 msgid "An unknown error occurred during installation.  Details are below."
@@ -6190,7 +6285,7 @@ msgstr "PODPORA JEZIKOM"
 
 #: pyanaconda/ui/gui/spokes/language_support.glade:78
 msgid "Select additional language support to be installed:"
-msgstr "Izberite dodatno podporo jezikom za namestitev:"
+msgstr "Izberite dodatno podporo jezikom za nameščanje:"
 
 #: pyanaconda/ui/gui/spokes/installation_progress.glade:8
 #: pyanaconda/ui/gui/spokes/installation_progress.glade:164
@@ -6199,7 +6294,7 @@ msgstr "NAPREDOVANJE NAMESTITVE"
 
 #: pyanaconda/ui/gui/spokes/installation_progress.glade:75
 msgid "Preparing to install"
-msgstr "Priprave na namestitev"
+msgstr "Priprave na nameščanje"
 
 #: pyanaconda/ui/gui/spokes/blivet_gui.glade:8
 msgid "BLIVET GUI PARTITIONING"
@@ -6911,15 +7006,16 @@ msgstr "_Zapusti"
 #: pyanaconda/ui/gui/hubs/summary.glade:97
 msgctxt "GUI|Summary"
 msgid "_Begin Installation"
-msgstr "_Začni namestitev"
+msgstr "_Začni nameščanje"
 
 #: pyanaconda/ui/gui/hubs/summary.glade:128
 msgid "We won't touch your disks until you click 'Begin Installation'."
-msgstr "Ne bomo se dotikali vaših diskov, dokler ne kliknete 'Začni namestitev'"
+msgstr ""
+"Ne bomo se dotikali vaših diskov, dokler ne kliknete 'Začni nameščanje'."
 
 #: data/liveinst/liveinst.desktop:3
 msgid "Install to Hard Drive"
-msgstr "Namesti v trdi disk"
+msgstr "Namesti na trdi disk"
 
 #: data/liveinst/liveinst.desktop:4
 msgid "Install"
@@ -6927,11 +7023,11 @@ msgstr "Namesti"
 
 #: data/liveinst/liveinst.desktop:5
 msgid "Install the live CD to your hard disk"
-msgstr "Namesti z živega CDja na disk"
+msgstr "Namesti živi CD na vaš trdi disk"
 
 #: data/liveinst/liveinst-setup.desktop:4
 msgid "Liveinst Setup"
-msgstr ""
+msgstr "Nastavite živega nameščanja"
 
 #: data/liveinst/gnome/rhel-welcome.desktop:3
 #: data/liveinst/gnome/rhel-welcome.js:62
@@ -6954,11 +7050,13 @@ msgid ""
 "You can choose \"Install to Hard Drive\"\n"
 "in the Activities Overview at any later time."
 msgstr ""
+"Lahko izberete \"Namesti na trdi disk\"\n"
+"v pregledu dejavnosti kadarkoli kasneje."
 
 #: data/liveinst/gnome/rhel-welcome.js:130
 msgid "Close"
-msgstr ""
+msgstr "Zapri"
 
 #: ../data/liveinst/console.apps/liveinst.h:1
 msgid "Starting Install to Hard Drive"
-msgstr ""
+msgstr "Zagon nameščanja na trdi disk"
