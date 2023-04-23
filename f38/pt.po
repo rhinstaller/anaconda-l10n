@@ -33,13 +33,14 @@
 # Daimar Stein <daimarstein@pm.me>, 2021.
 # yangyangdaji <1504305527@qq.com>, 2022, 2023.
 # Jiří Konečný <jkonecny@redhat.com>, 2023.
+# Ian Meyer <ianscuba1465@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
 "POT-Creation-Date: 2023-03-09 01:25+0000\n"
-"PO-Revision-Date: 2023-03-03 13:01+0000\n"
-"Last-Translator: Jiří Konečný <jkonecny@redhat.com>\n"
+"PO-Revision-Date: 2023-04-28 05:21+0000\n"
+"Last-Translator: Ian Meyer <ianscuba1465@gmail.com>\n"
 "Language-Team: Portuguese <https://translate.fedoraproject.org/projects/"
 "anaconda/f38/pt/>\n"
 "Language: pt\n"
@@ -107,8 +108,6 @@ msgid "Running pre-installation tasks"
 msgstr "A correr os guiães pré-instalação"
 
 #: pyanaconda/installation.py:394
-#, fuzzy
-#| msgid "Installing software"
 msgid "Installing the software"
 msgstr "A instalar software"
 
@@ -134,11 +133,12 @@ msgstr "Concluído!"
 msgid ""
 "The '{repository_name}' repository has no mirror, baseurl or metalink set."
 msgstr ""
+"O repositório '{repository_name}' não possui um espelho, baseurl ou metalink."
 
 #: pyanaconda/payload/dnf/payload.py:411
 #, python-brace-format
 msgid "The '{repository_name}' repository uses an unsupported protocol."
-msgstr ""
+msgstr "O repositório '{repository_name}' usa um protocolo não suportado."
 
 #: pyanaconda/payload/dnf/payload.py:438
 msgid "Starting package installation process"
@@ -154,7 +154,7 @@ msgstr "A transferir os metadados do grupo ..."
 
 #: pyanaconda/payload/dnf/payload.py:520
 msgid "No base repository is configured."
-msgstr ""
+msgstr "Nenhum repositório base está configurado."
 
 #: pyanaconda/kickstart.py:370
 msgid ""
@@ -267,22 +267,12 @@ msgstr ""
 "Quer ignorar e continuar a instalação?"
 
 #: pyanaconda/errors.py:189
-#, fuzzy
-#| msgid ""
-#| "The following error occurred during the installation:\n"
-#| "\n"
-#| "{details}\n"
-#| "\n"
-#| "Would you like to ignore this and continue with installation?"
 msgid ""
 "An error occurred during Red Hat Insights configuration. Would you like to "
 "ignore this and continue with installation?"
 msgstr ""
-"Houve um erro durante a instalação:\n"
-"\n"
-"{details}\n"
-"\n"
-"Quer ignorar e continuar a instalação?"
+"Houve um erro durante a configuração de Red Hat Insights. Gostaria de "
+"ignorar isso e continuar a instalação?"
 
 #: pyanaconda/errors.py:200
 msgid ""
@@ -291,10 +281,14 @@ msgid ""
 "arguments or subscription infrastructure issues. Would you like to ignore "
 "this and continue with installation?"
 msgstr ""
+"Um erro ocorreu durante a tentativa de registro pelo comando rhsm kickstart. "
+"Isso pode ter ocorrido por conta de argumentos incorretos ou erros na "
+"infraestrutura de inscrição. Gostaria de ignorar isso e continuar para a "
+"instalação?"
 
 #: pyanaconda/errors.py:206
 msgid "Error detail: "
-msgstr ""
+msgstr "Detalhe de erro: "
 
 #: pyanaconda/product.py:59
 #, python-format
@@ -1110,16 +1104,15 @@ msgid "_Installation Source"
 msgstr "_Fonte de instalação"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:246
-#, fuzzy
-#| msgid "Failed to set up installation source; check the repo url"
 msgid "Failed to set up installation source; check the NFS configuration."
-msgstr "Falha ao configurar a fonte de instalação; verifique a url do repo"
+msgstr ""
+"Falha ao configurar a fonte de instalação; verifique a configuração de NFS."
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:442
-#, fuzzy
-#| msgid "Failed to set up installation source; check the repo url"
 msgid "Failed to set up installation sources; check their configurations."
-msgstr "Falha ao configurar a fonte de instalação; verifique a url do repo"
+msgstr ""
+"Falha ao configurar a fonte de instalação; verifique as respectivas "
+"configurações."
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:535
 #, python-format
@@ -1157,6 +1150,8 @@ msgid ""
 "Invalid NFS server, exactly one colon ':' must be present between host and "
 "directory"
 msgstr ""
+"Servidor NFS inválido, exatamente um cólon ':' precisa estar presente entre "
+"o host e diretório"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:786
 msgid "Invalid host name"
@@ -1214,12 +1209,9 @@ msgid "WELCOME TO %(name)s %(version)s."
 msgstr "BEM-VINDO A %(name)s %(version)s."
 
 #: pyanaconda/ui/gui/spokes/root_password.py:52
-#, fuzzy
-#| msgctxt "GUI|Subscription|Authentication|Account"
-#| msgid "_Account"
 msgctxt "GUI|Spoke"
 msgid "_Root Account"
-msgstr "Cont_a"
+msgstr "_Conta Root"
 
 #: pyanaconda/ui/gui/spokes/root_password.py:134
 msgid "Root password has been set."
@@ -1589,10 +1581,8 @@ msgstr "Preservar _tudo"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.py:666
 #: pyanaconda/ui/gui/spokes/lib/installation_source_helpers.py:261
-#, fuzzy
-#| msgid "Invalid proxy protocol: %s"
 msgid "Invalid protocol"
-msgstr "Protocolo de proxy inválido: %s"
+msgstr "Protocolo inválido"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:58
 #, python-format
@@ -1712,18 +1702,19 @@ msgid "Are you sure you want to delete all of the data on {}?"
 msgstr "Tem a certeza que deseja eliminar todos os dados em {}?"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:433
-#, fuzzy
-#| msgctxt "GUI|Network|Add Device Dialog"
-#| msgid "_Select the type of device you wish to add"
 msgid ""
 "Select all of the drives you would like the mount point to be created on."
-msgstr "_Selecionar o tipo de dispositivo que deseja adicionar"
+msgstr ""
+"Selecione todos os dispositivos nos quais você gostaria que o ponto de "
+"montagem fosse criado."
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:436
 msgid ""
 "Select a drive for the mount point to be created on. If you select multiple, "
 "only 1 drive will be used."
 msgstr ""
+"Selecione um dispositivo para que o ponto de montagem seja criado. Se você "
+"selecionar vários, somente 1 dispositivo será usado."
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:631
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:329
@@ -1794,10 +1785,8 @@ msgid " <a href=\"\">Click for details.</a>"
 msgstr " <a href=\"\">Clique para detalhes</a>"
 
 #: pyanaconda/ui/gui/spokes/lib/installation_source_helpers.py:180
-#, fuzzy
-#| msgid "Repository %s has invalid url"
 msgid "The '{}' repository is invalid: {}"
-msgstr "O repositório %s tem a url inválido"
+msgstr "O repositório '{}' é inválido: {}"
 
 #: pyanaconda/ui/gui/spokes/lib/installation_source_helpers.py:206
 msgid "Empty repository name"
@@ -1808,10 +1797,8 @@ msgid "Invalid repository name"
 msgstr "Nome de repositório inválido"
 
 #: pyanaconda/ui/gui/spokes/lib/installation_source_helpers.py:212
-#, fuzzy
-#| msgid "Duplicate repository names."
 msgid "Duplicate repository names"
-msgstr "Nomes de repositório duplicados."
+msgstr "Nomes de repositório duplicados"
 
 #: pyanaconda/ui/gui/spokes/lib/installation_source_helpers.py:215
 msgid "Repository name conflicts with internal repository name"
@@ -1819,28 +1806,20 @@ msgstr ""
 "O nome do repositório está em conflito com o nome do repositório interno"
 
 #: pyanaconda/ui/gui/spokes/lib/installation_source_helpers.py:228
-#, fuzzy
-#| msgid "Empty"
 msgid "Empty URL"
-msgstr "Vazio"
+msgstr "URL Vazia"
 
 #: pyanaconda/ui/gui/spokes/lib/installation_source_helpers.py:243
-#, fuzzy
-#| msgid "NTP servers:"
 msgid "Empty server"
-msgstr "Servidores NTP:"
+msgstr "Servidor vazio"
 
 #: pyanaconda/ui/gui/spokes/lib/installation_source_helpers.py:246
-#, fuzzy
-#| msgid "Invalid timezone"
 msgid "Invalid server"
-msgstr "Zona Horária inválida"
+msgstr "Servidor inválido"
 
 #: pyanaconda/ui/gui/spokes/lib/installation_source_helpers.py:249
-#, fuzzy
-#| msgid "Empty"
 msgid "Empty path"
-msgstr "Vazio"
+msgstr "Caminho vazio"
 
 #: pyanaconda/ui/gui/spokes/lib/installation_source_helpers.py:277
 msgid "Invalid proxy URL"
@@ -1878,11 +1857,9 @@ msgstr "Aceitar"
 
 #: pyanaconda/ui/gui/spokes/lib/installation_source_helpers.py:508
 #: pyanaconda/ui/gui/spokes/lib/installation_source_helpers.py:524
-#, fuzzy
-#| msgid "Rescanning disks finished."
 msgctxt "GUI|Software Source|Media Check Dialog"
 msgid "Verification finished."
-msgstr "A reanálise dos discos terminou."
+msgstr "A análise terminou."
 
 #: pyanaconda/ui/gui/spokes/lib/installation_source_helpers.py:512
 msgctxt "GUI|Software Source|Media Check Dialog"
@@ -2451,10 +2428,8 @@ msgstr[0] "{} _dispositivo de armazenamento selecionado"
 msgstr[1] "{} _dispositivos de armazenamento selecionado"
 
 #: pyanaconda/ui/lib/users.py:35
-#, fuzzy
-#| msgid "Root account is disabled."
 msgid "Root account is disabled"
-msgstr "A conta de \"root\" está desativada."
+msgstr "A conta \"root\" está desativada"
 
 #: pyanaconda/ui/lib/users.py:37
 msgid "Root password is set"
@@ -2826,18 +2801,14 @@ msgid "You have not created a bootable partition."
 msgstr "Não criou uma partição capaz de arranque."
 
 #: pyanaconda/modules/storage/checker/utils.py:225
-#, fuzzy
-#| msgid ""
-#| "Your BIOS-based system needs a special partition to boot from a GPT disk "
-#| "label. To continue, please create a 1MiB 'biosboot' type partition."
 msgid ""
 "Your BIOS-based system needs a special partition to boot from a GPT disk "
 "label. To continue, please create a 1MiB 'biosboot' type partition on the {} "
 "disk."
 msgstr ""
 "Seu sistema baseado em BIOS precisa de uma partição especial para "
-"inicializar dum rótulo de disco GPT. Para continuar, criar uma partição de "
-"1MiB do tipo 'biosboot'."
+"inicializar de um rótulo de disco GPT. Para continuar, crie uma partição de "
+"1MiB do tipo 'biosboot' no disco {}."
 
 #: pyanaconda/modules/storage/checker/utils.py:250
 msgid ""
@@ -2845,6 +2816,9 @@ msgid ""
 "system features on the boot file system. Upgrade the firmware or change the "
 "file system type."
 msgstr ""
+"O sistema não será inicializável. O firmware não suporta sistema de arquivos "
+"XFS no sistema de arquivos de inicialização. Atualize o firmware ou mude o "
+"tipo de sistema de arquivos."
 
 #: pyanaconda/modules/storage/checker/utils.py:308
 #, python-format
@@ -2874,6 +2848,8 @@ msgid ""
 "performance for most installations, it is recommended to specify a swap "
 "partition."
 msgstr ""
+"Uma partição swap não foi especificada. Para melhorar a performance para a "
+"maioria das instalações, é recomendável especificar uma partição swap."
 
 #: pyanaconda/modules/storage/checker/utils.py:340
 msgid ""
@@ -3307,18 +3283,12 @@ msgstr ""
 "volumes físicos ou usar --useexisting."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:747
-#, fuzzy
-#| msgid ""
-#| "Volume group given physical extent size of \"%(extentSize)s\", but must "
-#| "be one of:\n"
-#| "%(validExtentSizes)s."
 msgid ""
 "Volume group given physical extent size of \"{}\", but must be one of:\n"
 "{}."
 msgstr ""
-"Grupo de volume dado tem uma extensão física \"%(extentSize)s\", mas deve "
-"ser um dos:\n"
-"%(validExtentSizes)s."
+"Grupo de volume dado tem uma extensão física \"{}\", mas deve ser um dos:\n"
+"{}."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:755
 msgid ""
@@ -3338,7 +3308,7 @@ msgstr "O nome do grupo de volumes \"{}\" já está em uso."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:821
 msgid "/boot cannot be of type \"lvmlv\" on s390x"
-msgstr ""
+msgstr "/boot não pode ser do tipo \"lvmlv\" em s390x"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:851
 msgid "Size cannot be decided on from kickstart nor obtained from device."
