@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2023-03-09 01:27+0000\n"
-"PO-Revision-Date: 2023-05-01 03:21+0000\n"
+"PO-Revision-Date: 2023-05-02 13:21+0000\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://translate.fedoraproject.org/projects/"
 "anaconda/rhel-9/ka/>\n"
@@ -3464,6 +3464,8 @@ msgid ""
 "Logical volume name \"%(logvol)s\" is already in use in volume group "
 "\"%(volgroup)s\"."
 msgstr ""
+"ლოგიკური ტომის სახელი \"%(logvol)s\" უკვე გამოიყენება ტომების ჯგუფში \""
+"%(volgroup)s\"."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1016
 #, python-format
@@ -3471,6 +3473,8 @@ msgid ""
 "Logical volume size \"%(logvolSize)s\" must be larger than the volume group "
 "extent size of \"%(extentSize)s\"."
 msgstr ""
+"ლოგიკური ტომის ზომა \"%(logvolSize)s\" ლოგიკური ჯგუფის ექსტენტის ზომაზე "
+"(%(extentSize)s) დიდი უნდა იყოს."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1239
 #, python-format
@@ -3478,22 +3482,26 @@ msgid ""
 "Btrfs partition \"%(device)s\" has a format of \"%(format)s\", but should "
 "have a format of \"btrfs\"."
 msgstr ""
+"Btrfs დანაყოფს \"%(device)s\" აქვს ფორმატი \"%(format)s\", როცა \"btrfs\" "
+"უნდა იყოს."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1247
 #, python-format
 msgid "Tried to use undefined partition \"%s\" in Btrfs volume specification."
-msgstr ""
+msgstr "Btrfs-ის ტომის აღწერაში გამოყენებული დანაყოფი \"%s\" აღწერილი არაა."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1262
 msgid ""
 "Btrfs volume defined without any member devices.  Either specify member "
 "devices or use --useexisting."
 msgstr ""
+"Btrfs-ის ტომი წევრი ოწყობილობების გარეშეა აღწერილი. მიუთითეთ წევრი "
+"მოწყობილობები, ან --useexisting გამოიყენეთ."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1290
 #, python-format
 msgid "Btrfs volume \"%s\" specified with --useexisting does not exist."
-msgstr ""
+msgstr "Btrfs-ის ტომი \"%s\", რომელიც --useexisting-ითაა აღწერილი, არ არსებობს."
 
 #: pyanaconda/modules/storage/partitioning/base_partitioning.py:57
 msgid "Failed to proceed with the installation."
@@ -3599,13 +3607,15 @@ msgstr "მოწყობილობის დამატების შე�
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:64
 #, python-format
 msgid "Unknown or invalid device '%s' specified"
-msgstr ""
+msgstr "მითითებული მოწყობილობა '%s' უცნობი ან არასწორია"
 
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:72
 #, python-format
 msgid ""
 "Unknown or invalid format '%(format)s' specified for device '%(device)s'"
 msgstr ""
+"ფორმატი '%(format)s', მითითებული მოწყობილობისტვის '%(device)s', უცნობი ან "
+"არასწორია"
 
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:79
 #, python-format
@@ -3645,6 +3655,23 @@ msgid ""
 "* Some drives support re-configuration of sector sizes, for example by "
 "running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 msgstr ""
+"რჩევები ხელით დაყენებისთვის:\n"
+"* გრაფიკული და ტექსტური რეჟიმით დაყენებისას მხოლოდ იგივე სექტორის ზომის "
+"დისკები აირჩიეთ.\n"
+"* როცა დასაყენებლად არჩეული დისკების სექტორის ზომა ტოლი არაა, თითოეული LVM-"
+"ის ჯგუფი შეზღუდეთ, რომ ფიზიკური ტომები მხოლოდ იგივე სექტორის მქონე დისკებით "
+"შეიქმნას. ამისი გაკეთება მხოლოდ გრაფიკული ინტერფეისიდან შეგიძლიათ.\n"
+"\n"
+"რჩევები kickstart-ით დაყენებისას:\n"
+"* შეზღუდეთ, რომელი დისკები გამოიყენება დაყოფისას პარამეტრით 'ignoredisk --"
+"drives=...' ან 'ignordisk --only-use=...'\n"
+"* მიუთითეთ, როელი დისკები გამოიყენება თითოეული LVM ფიზიკური ტომის შექმნისას "
+"პარამეტრით: 'partition pv.1 --ondisk=...'\n"
+"\n"
+"ზოგადი რჩევები:\n"
+"* LVM-ის გარდა დაყოფის უბრალო სქემაც შეგიძლიათ, გამოიყენოთ.\n"
+"* ზოგიერთ დისკს სექტორის ზომის შეცვლაც შეიძლიათ, მაგალითად, ბრძანებით "
+"'hdparm --set-sector-size=<ზომა> <მოწყობილობა>'.\n"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:418
 msgid "Deployment starting: {}"
@@ -3679,11 +3706,11 @@ msgstr "%(flatpak_name)s-ის დაყენება"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:40
 msgid "Starting Flatpak installation"
-msgstr ""
+msgstr "Flatpak-ის დაყენების დასაწყისი"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:52
 msgid "Post-installation flatpak tasks"
-msgstr ""
+msgstr "Flatpak-ის დაყენების შემდგომი ამოცანები"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:58
 msgid "Flatpak installation has finished"
@@ -3692,10 +3719,11 @@ msgstr "Flatpak -ის დაყენება დასრულდა"
 #: pyanaconda/modules/payloads/kickstart.py:43
 msgid "The %packages --ignorebroken feature is not supported on your product!"
 msgstr ""
+"თქვენი პროდუქტისთვის ფუნქცია %packages --ignorebroken ხელმისაწვდომი არაა!"
 
 #: pyanaconda/modules/payloads/source/live_os/live_os.py:59
 msgid "Live OS"
-msgstr "Live ოს-ი"
+msgstr "Live OS"
 
 #: pyanaconda/modules/payloads/source/cdrom/cdrom.py:62
 msgid "Local media"
@@ -3723,7 +3751,7 @@ msgstr "Live გამოსახულება"
 
 #: pyanaconda/modules/payloads/source/rpm_ostree/rpm_ostree.py:51
 msgid "RPM OSTree"
-msgstr "RPM OSTree-ი"
+msgstr "RPM OSTree"
 
 #: pyanaconda/core/payload.py:131
 msgid "No host url"
@@ -3886,6 +3914,9 @@ msgid ""
 "Support for this hardware has been removed in this major OS release. Please "
 "check the removed functionality section of the release notes."
 msgstr ""
+"ამ აპარატურის მხარდაჭერა ოპერაციული სისტემის ამ მთვარ ვერსიაში უკვე აღარ "
+"არსებობს. მოცილებული ფუნქციონალის შესახებ ინფორმაცია შეგიძლიათ რელიზის "
+"შენიშვნებში იპოვოთ."
 
 #: pyanaconda/core/constants.py:159
 msgid ""
@@ -3893,6 +3924,9 @@ msgid ""
 "more information on supported hardware, please refer to http://www.redhat."
 "com/hardware."
 msgstr ""
+"ეს აპარატურა ( და მისი კომბინაცია) Red Hat-ის მიერ მხარდაჭერილი არაა. "
+"მხარდაჭერილი აპარატურის შესახებ მეტი ინფორმაციისთვის იხილეთ http://www.redhat"
+".com/hardware."
 
 #: pyanaconda/core/constants.py:165
 msgid ""
@@ -4553,12 +4587,12 @@ msgstr ""
 #: pyanaconda/pwpolicy.py:195
 #, python-format
 msgid "policy name required for %s"
-msgstr ""
+msgstr "%s-ისთვის წესის სახელი აუცილებელია"
 
 #: pyanaconda/pwpolicy.py:204
 #, python-format
 msgid "A %(command)s with the name %(policyName)s has already been defined."
-msgstr ""
+msgstr "%(command)s სახელით %(policyName)s უკვე აღწერილია."
 
 #: pyanaconda/pwpolicy.py:238
 msgid ""
@@ -4566,6 +4600,9 @@ msgid ""
 "releases, which will result in a fatal error when it is encountered. Please "
 "modify your kickstart file to remove this command."
 msgstr ""
+"ბრძანება pwpolicy მოძველებულია და მომავალ ვერსიებში ხელმისაწვდომი აღარ "
+"იქნება, რაც, როცა მას გამოიყენებთ, ფატალური შედეგის გამომწვვი იქნება. "
+"შეცვალეთ kickstart-ის ფაილი და მოაშორეთ ეს ბრძანება."
 
 #: anaconda.py:315
 msgid "Unable to create PID file"
@@ -5026,11 +5063,11 @@ msgstr "_OK"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:151
 msgid "Add and mark for usage NTP servers"
-msgstr ""
+msgstr "NTP სერვერების არჩევანი"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:173
 msgid "New NTP Server"
-msgstr ""
+msgstr "ახალი NTP სერვერი"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:192
 msgid "Add NTP Server"
@@ -5038,11 +5075,11 @@ msgstr "NTP სერვერის დამატება"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:212
 msgid "This URL refers to a pool of NTP servers"
-msgstr ""
+msgstr "ეს ბმული NTP სერვერების პულზე მიუთითებს"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:227
 msgid "Server supports Network Time Security (NTS) authentication"
-msgstr ""
+msgstr "სერვერს გააჩნია ქსელური დროის უსაფრთხოების (NTS) მხარდაჭერა"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:275
 msgid "Pool"
@@ -5286,7 +5323,7 @@ msgstr "ტრანსპორტის მისამართი"
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1623
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1958
 msgid "Subsystem NQN"
-msgstr ""
+msgstr "ქვესისტემის NQN"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:610
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1624
@@ -5401,7 +5438,7 @@ msgstr "კონტროლერი"
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1658
 msgctxt "GUI|Installation Destination|Filter|NVMe Fabrics Devices|Controller"
 msgid "_Controller ID:"
-msgstr ""
+msgstr "_კონტროლერის ID:"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1697
 msgctxt "GUI|Installation Destination|Filter|NVMe Fabrics Devices|Transport"
@@ -5417,12 +5454,12 @@ msgstr "_მისამართი:"
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1762
 msgctxt "GUI|Installation Destination|Filter|NVMe Fabrics Devices|Namespace"
 msgid "_Subsystem NQN:"
-msgstr ""
+msgstr "_ქვესისტემის NQN:"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1801
 msgctxt "GUI|Installation Destination|Filter|NVMe Fabrics Devices|Namespace"
 msgid "_EUI-64 / NGUID / UUID:"
-msgstr ""
+msgstr "_EUI-64 / NGUID / UUID:"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:2002
 msgctxt "GUI|Installation Destination|Filter"
@@ -6112,6 +6149,8 @@ msgid ""
 "make software\n"
 "updates available for you."
 msgstr ""
+"თქვენი მდებარეობის დასადგენად და პროგრამების განახლებების მისაღებად\n"
+"ქსელთან წვდომა აუცილებელია."
 
 #: pyanaconda/ui/gui/spokes/network.glade:450
 #: pyanaconda/ui/gui/spokes/network.glade:2593
@@ -6363,10 +6402,12 @@ msgid ""
 "The root account is used for administering the system.  Enter a password for "
 "the root user."
 msgstr ""
+"ანგარიში root სისტემის ადმინისტრატორის ანგარიშია.    შეიყვანეთ პაროლი root "
+"მომხმარებლისთვის."
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:184
 msgid "Lock root account"
-msgstr ""
+msgstr "'root' ანგარიშის დაბლოკვა"
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:200
 msgid "Allow root SSH login with password"
@@ -6491,7 +6532,7 @@ msgstr "დაყოფის მორგება (_Blivet-GUI)"
 #: pyanaconda/ui/gui/spokes/storage.glade:433
 msgctxt "GUI|Storage"
 msgid "I would like to _make additional space available."
-msgstr ""
+msgstr "_დამატებითი ადგილის გამოყოფა."
 
 #: pyanaconda/ui/gui/spokes/storage.glade:465
 msgid "Encryption"
@@ -7161,7 +7202,7 @@ msgstr "_ამ ანგარიშისთვის პაროლის �
 #: pyanaconda/ui/gui/spokes/user.glade:264
 msgctxt "GUI|User"
 msgid "_Make this user administrator"
-msgstr ""
+msgstr "ამ მომხმარებლის _ადმინისტრატორად დანიშვნა"
 
 #: pyanaconda/ui/gui/spokes/user.glade:268
 msgctxt "GUI|User"
