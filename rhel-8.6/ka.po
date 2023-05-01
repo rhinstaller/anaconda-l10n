@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2022-02-23 19:45+0100\n"
-"PO-Revision-Date: 2023-05-01 03:21+0000\n"
+"PO-Revision-Date: 2023-05-02 13:21+0000\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://translate.fedoraproject.org/projects/"
 "anaconda/rhel-86/ka/>\n"
@@ -332,12 +332,12 @@ msgstr "თქვენს სისტემაში აღმოჩენი�
 #: pyanaconda/pwpolicy.py:146
 #, python-format
 msgid "policy name required for %s"
-msgstr ""
+msgstr "%s-ისთვის წესის სახელი აუცილებელია"
 
 #: pyanaconda/pwpolicy.py:155
 #, python-format
 msgid "A %(command)s with the name %(policyName)s has already been defined."
-msgstr ""
+msgstr "%(command)s სახელით %(policyName)s უკვე აღწერილია."
 
 #: pyanaconda/product.py:69
 #, python-format
@@ -550,7 +550,7 @@ msgstr ""
 
 #: pyanaconda/exception.py:113
 msgid "Hardware error occurred"
-msgstr ""
+msgstr "აპარატურული შეცდომა"
 
 #: pyanaconda/exception.py:174
 #, python-format
@@ -3035,16 +3035,12 @@ msgid "Deployment complete: %s"
 msgstr ""
 
 #: pyanaconda/payload/rpmostreepayload.py:525
-#, fuzzy
-#| msgid "Starting package installation process"
 msgid "Starting Flatpak installation"
-msgstr "პაკეტების ჩადგმის დაწყება"
+msgstr "Flatpak-ის დაყენების დასაწყისი"
 
 #: pyanaconda/payload/rpmostreepayload.py:542
-#, fuzzy
-#| msgid "Running post-installation scripts"
 msgid "Post-installation flatpak tasks"
-msgstr "ინსტალაციისშემდგომი სცენარების გაშვება"
+msgstr "Flatpak-ის დაყენების შემდგომი ამოცანები"
 
 #: pyanaconda/payload/rpmostreepayload.py:548
 #, fuzzy
@@ -3345,6 +3341,23 @@ msgid ""
 "* Some drives support re-configuration of sector sizes, for example by "
 "running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 msgstr ""
+"რჩევები ხელით დაყენებისთვის:\n"
+"* გრაფიკული და ტექსტური რეჟიმით დაყენებისას მხოლოდ იგივე სექტორის ზომის "
+"დისკები აირჩიეთ.\n"
+"* როცა დასაყენებლად არჩეული დისკების სექტორის ზომა ტოლი არაა, თითოეული LVM-"
+"ის ჯგუფი შეზღუდეთ, რომ ფიზიკური ტომები მხოლოდ იგივე სექტორის მქონე დისკებით "
+"შეიქმნას. ამისი გაკეთება მხოლოდ გრაფიკული ინტერფეისიდან შეგიძლიათ.\n"
+"\n"
+"რჩევები kickstart-ით დაყენებისას:\n"
+"* შეზღუდეთ, რომელი დისკები გამოიყენება დაყოფისას პარამეტრით 'ignoredisk --"
+"drives=...' ან 'ignordisk --only-use=...'\n"
+"* მიუთითეთ, როელი დისკები გამოიყენება თითოეული LVM ფიზიკური ტომის შექმნისას "
+"პარამეტრით: 'partition pv.1 --ondisk=...'\n"
+"\n"
+"ზოგადი რჩევები:\n"
+"* LVM-ის გარდა დაყოფის უბრალო სქემაც შეგიძლიათ, გამოიყენოთ.\n"
+"* ზოგიერთ დისკს სექტორის ზომის შეცვლაც შეიძლიათ, მაგალითად, ბრძანებით "
+"'hdparm --set-sector-size=<ზომა> <მოწყობილობა>'.\n"
 
 #: pyanaconda/modules/storage/snapshot/device.py:43
 #, python-format
@@ -3372,13 +3385,15 @@ msgstr ""
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:64
 #, python-format
 msgid "Unknown or invalid device '%s' specified"
-msgstr ""
+msgstr "მითითებული მოწყობილობა '%s' უცნობი ან არასწორია"
 
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:72
 #, python-format
 msgid ""
 "Unknown or invalid format '%(format)s' specified for device '%(device)s'"
 msgstr ""
+"ფორმატი '%(format)s', მითითებული მოწყობილობისტვის '%(device)s', უცნობი ან "
+"არასწორია"
 
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:79
 #, python-format
@@ -3711,6 +3726,8 @@ msgid ""
 "Logical volume name \"%(logvol)s\" is already in use in volume group "
 "\"%(volgroup)s\"."
 msgstr ""
+"ლოგიკური ტომის სახელი \"%(logvol)s\" უკვე გამოიყენება ტომების ჯგუფში \""
+"%(volgroup)s\"."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1015
 #, python-format
@@ -3718,6 +3735,8 @@ msgid ""
 "Logical volume size \"%(logvolSize)s\" must be larger than the volume group "
 "extent size of \"%(extentSize)s\"."
 msgstr ""
+"ლოგიკური ტომის ზომა \"%(logvolSize)s\" ლოგიკური ჯგუფის ექსტენტის ზომაზე "
+"(%(extentSize)s) დიდი უნდა იყოს."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1238
 #, python-format
@@ -3725,22 +3744,26 @@ msgid ""
 "Btrfs partition \"%(device)s\" has a format of \"%(format)s\", but should "
 "have a format of \"btrfs\"."
 msgstr ""
+"Btrfs დანაყოფს \"%(device)s\" აქვს ფორმატი \"%(format)s\", როცა \"btrfs\" "
+"უნდა იყოს."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1246
 #, python-format
 msgid "Tried to use undefined partition \"%s\" in Btrfs volume specification."
-msgstr ""
+msgstr "Btrfs-ის ტომის აღწერაში გამოყენებული დანაყოფი \"%s\" აღწერილი არაა."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1261
 msgid ""
 "Btrfs volume defined without any member devices.  Either specify member "
 "devices or use --useexisting."
 msgstr ""
+"Btrfs-ის ტომი წევრი ოწყობილობების გარეშეა აღწერილი. მიუთითეთ წევრი "
+"მოწყობილობები, ან --useexisting გამოიყენეთ."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1289
 #, python-format
 msgid "Btrfs volume \"%s\" specified with --useexisting does not exist."
-msgstr ""
+msgstr "Btrfs-ის ტომი \"%s\", რომელიც --useexisting-ითაა აღწერილი, არ არსებობს."
 
 #: pyanaconda/modules/storage/partitioning/automatic/utils.py:165
 msgid "No usable disks selected."
@@ -4182,7 +4205,6 @@ msgid "NFS server {}"
 msgstr "NFS სერვერი {}"
 
 #: pyanaconda/modules/payloads/source/live_os/live_os.py:59
-#, fuzzy
 msgid "Live OS"
 msgstr "Live OS"
 
@@ -4363,6 +4385,9 @@ msgid ""
 "more information on supported hardware, please refer to http://www.redhat."
 "com/hardware."
 msgstr ""
+"ეს აპარატურა ( და მისი კომბინაცია) Red Hat-ის მიერ მხარდაჭერილი არაა. "
+"მხარდაჭერილი აპარატურის შესახებ მეტი ინფორმაციისთვის იხილეთ http://www.redhat"
+".com/hardware."
 
 #: pyanaconda/core/constants.py:170
 msgid ""
@@ -4709,7 +4734,7 @@ msgstr "ცარიელი პაროლი"
 #: pyanaconda/ui/gui/spokes/user.glade:262
 msgctxt "GUI|User"
 msgid "_Make this user administrator"
-msgstr ""
+msgstr "ამ მომხმარებლის _ადმინისტრატორად დანიშვნა"
 
 #: pyanaconda/ui/gui/spokes/user.glade:282
 msgctxt "GUI|User"
@@ -4846,7 +4871,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/storage.glade:869
 msgctxt "GUI|Storage"
 msgid "I would like to _make additional space available."
-msgstr ""
+msgstr "_დამატებითი ადგილის გამოყოფა."
 
 #: pyanaconda/ui/gui/spokes/storage.glade:901
 msgid "Encryption"
@@ -4911,6 +4936,8 @@ msgid ""
 "The root account is used for administering the system.  Enter a password for "
 "the root user."
 msgstr ""
+"ანგარიში root სისტემის ადმინისტრატორის ანგარიშია.    შეიყვანეთ პაროლი root "
+"მომხმარებლისთვის."
 
 #: pyanaconda/ui/gui/spokes/network.glade:35
 msgid "Add device"
@@ -4976,6 +5003,8 @@ msgid ""
 "make software\n"
 "updates available for you."
 msgstr ""
+"თქვენი მდებარეობის დასადგენად და პროგრამების განახლებების მისაღებად\n"
+"ქსელთან წვდომა აუცილებელია."
 
 #: pyanaconda/ui/gui/spokes/network.glade:450
 #: pyanaconda/ui/gui/spokes/network.glade:2583
@@ -5562,11 +5591,11 @@ msgstr "_OK"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:147
 msgid "Add and mark for usage NTP servers"
-msgstr ""
+msgstr "NTP სერვერების არჩევანი"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:169
 msgid "New NTP Server"
-msgstr ""
+msgstr "ახალი NTP სერვერი"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:188
 msgid "Add NTP Server"
@@ -5574,7 +5603,7 @@ msgstr "NTP სერვერის დამატება"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:208
 msgid "This URL refers to a pool of NTP servers"
-msgstr ""
+msgstr "ეს ბმული NTP სერვერების პულზე მიუთითებს"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:254
 msgid "Pool"
