@@ -39,7 +39,7 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
 "POT-Creation-Date: 2023-03-09 01:21+0000\n"
-"PO-Revision-Date: 2023-04-28 05:20+0000\n"
+"PO-Revision-Date: 2023-05-20 18:20+0000\n"
 "Last-Translator: Ian Meyer <ianscuba1465@gmail.com>\n"
 "Language-Team: Portuguese <https://translate.fedoraproject.org/projects/"
 "anaconda/master/pt/>\n"
@@ -48,7 +48,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 4.15.2\n"
+"X-Generator: Weblate 4.17\n"
 
 #: pyanaconda/vnc.py:270
 msgid ""
@@ -59,7 +59,7 @@ msgid ""
 msgstr ""
 "\n"
 "\n"
-"Erro Desconhecido.  A interromper. \n"
+"Erro Desconhecido. A interromper. \n"
 "\n"
 
 #: pyanaconda/vnc.py:264
@@ -1337,7 +1337,7 @@ msgstr "A criar capturas ISO"
 
 #: pyanaconda/installation.py:174
 msgid "Creating users"
-msgstr "A criar utilizadores"
+msgstr "A criar usuários"
 
 #: pyanaconda/ui/gui/spokes/network.glade:2541
 msgid "Current host name:"
@@ -1659,16 +1659,12 @@ msgstr ""
 "({total_percent}%) completado."
 
 #: pyanaconda/modules/payloads/payload/live_image/installation.py:131
-#, fuzzy
-#| msgid "Downloading packages"
 msgid "Downloading {}"
-msgstr "A transferir pacotes"
+msgstr "A transferir {}"
 
 #: pyanaconda/modules/payloads/payload/live_image/download_progress.py:54
-#, fuzzy
-#| msgid "Downloading %(url)s (%(pct)d%%)"
 msgid "Downloading {} ({}%)"
-msgstr "A transferir %(url)s (%(pct)d%%)"
+msgstr "A transferir {} ({}%)"
 
 #: pyanaconda/ui/gui/spokes/lib/installation_source_helpers.py:212
 msgid "Duplicate repository names"
@@ -1836,10 +1832,8 @@ msgid "Error detail: "
 msgstr "Detalhe de erro: "
 
 #: pyanaconda/core/constants.py:270
-#, fuzzy
-#| msgid "Error setting up base repository"
 msgid "Error setting up repositories"
-msgstr "Erro ao configurar o repositório base"
+msgstr "Erro ao configurar repositórios"
 
 #: pyanaconda/modules/storage/devicetree/utils.py:77
 msgid "Escrow certificate {} requires the network."
@@ -2652,7 +2646,7 @@ msgstr "Imagem Live"
 
 #: pyanaconda/modules/payloads/source/live_tar/live_tar.py:43
 msgid "Live tarball"
-msgstr ""
+msgstr "Live tarball"
 
 #: data/liveinst/liveinst-setup.desktop:4
 msgid "Liveinst Setup"
@@ -3079,10 +3073,8 @@ msgid "No usable disks selected."
 msgstr "Sem discos utilizáveis selecionados."
 
 #: pyanaconda/modules/storage/partitioning/automatic/noninteractive_partitioning.py:111
-#, fuzzy
-#| msgid "Selected disks"
 msgid "No usable disks."
-msgstr "Discos selecionados"
+msgstr "Nenhum disco utilizável."
 
 #: pyanaconda/ui/tui/spokes/user.py:245 pyanaconda/ui/gui/spokes/user.py:456
 msgid "No user will be created"
@@ -3787,6 +3779,10 @@ msgid ""
 "vulnerabilities, and compliance, and analyzing costs. For more information, "
 "visit the Red Hat Insights information page."
 msgstr ""
+"O Red Hat Insights tem como objetivo aumentar a eficiência e a velocidade de "
+"sua TI em infraestruturas híbridas, identificando e priorizando riscos, "
+"gerenciando vulnerabilidades e conformidade e analisando custos. Para obter "
+"mais informações, visite a página de informações do Red Hat Insights."
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:179
 msgctxt "GUI|Software Source"
@@ -4326,7 +4322,7 @@ msgstr "Único"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:851
 msgid "Size cannot be decided on from kickstart nor obtained from device."
-msgstr ""
+msgstr "Tamanho não pôde ser decidido nem obtido do dispositivo"
 
 #: pyanaconda/rescue.py:310
 msgid "Skip to shell"
@@ -4498,7 +4494,7 @@ msgstr "Formatos suportados: %s"
 
 #: pyanaconda/modules/payloads/payload/live_image/installation_progress.py:74
 msgid "Synchronizing writes to disk"
-msgstr ""
+msgstr "Sincronizando gravações para o disco"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:799
 msgid "System Purpose"
@@ -5846,6 +5842,24 @@ msgid ""
 "* Some drives support re-configuration of sector sizes, for example by "
 "running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 msgstr ""
+"Soluções Alternativas para instalações manuais:\n"
+"* Selecionar somente os discos com mesmo tamanho de setor durante instalação "
+"manual em modo gráfico ou de texto.\n"
+"* Quando discos com tamanhos de setor inconsistentes são selecionados para "
+"instalação, restringir cada Grupo de Volume LVM para utilizar Volumes "
+"Físicos com mesmo tamanho de setor. Isso pode somente ser feito em modo "
+"gráfico ou no particionamento manual.\n"
+"\n"
+"Soluções Alternativas para instalações kickstart:\n"
+"* Restringir quais discos são utilizados para o particionamento, "
+"especificando 'ignoredisk --drives=..' ou 'ignoredisk --only-use=..'.\n"
+"* Especificar quais discos devem ser utilizados para cada Volume LVM Físico: "
+"'partition pv.1 --ondisk=..'.\n"
+"\n"
+"Soluções Alternativas Gerais:\n"
+"* Esquema de particionamento simples pode ser utilizado em vez de LVM.\n"
+"* Algumas unidades suportam a reconfiguração de tamanhos de setor, por "
+"exemplo ao executar 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 
 #: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:159
 msgid "Working"
@@ -7450,7 +7464,7 @@ msgstr "{} subscrições anexadas ao sistema"
 #. TRANSLATORS: Password error message from libreport library needs to be joined with "You will have to press <b>Done</b> twice to confirm it." add a missing '.'
 #: pyanaconda/core/constants.py:212
 msgid "{}. {}"
-msgstr ""
+msgstr "{}. {}"
 
 #: ui/webui/src/components/storage/HelpStorageOptions.jsx:33
 msgid ""
