@@ -52,7 +52,8 @@ jobs:
           git config user.email github-actions@github.com
           git add .
 
-          git diff --cached
+          # store the diff for better debugging of the workflow
+          git diff --cached > ../pot-changes.log
 
           # test if the potfile needs update
           # If there is any change except line with POT-Creation-Date we should push new version
@@ -79,3 +80,9 @@ jobs:
 
           # retries were not successful
           exit 1
+
+      - name: Upload diff output
+        uses: actions/upload-artifact@v3
+        with:
+          name: 'diff-output-${{ matrix.branch }}.log'
+          path: ./pot-changes.log
