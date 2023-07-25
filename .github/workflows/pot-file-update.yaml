@@ -45,19 +45,20 @@ jobs:
           ref: master
       - name: Push new potfile
         run: |
+          set -x
           cp -v anaconda/po/anaconda.pot anaconda-l10n/${{ matrix.branch }}
           cd anaconda-l10n
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
 
+          git diff --cached
+
           # test if the potfile needs update
           # If there is any change except line with POT-Creation-Date we should push new version
-          if ! git diff -I 'POT-Creation-Date:' --cached --quiet; then
+          if git diff -I 'POT-Creation-Date:' --cached --quiet; then
               echo "The pot file did not change."
               exit 0
-          else
-              git diff --cached
           fi
           git commit -m "update ${{ matrix.branch }} pot-file"
 
