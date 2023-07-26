@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2023-07-26 01:14+0000\n"
+"POT-Creation-Date: 2023-07-26 15:53+0000\n"
 "PO-Revision-Date: 2023-07-26 15:53+0000\n"
 "Last-Translator: yangyangdaji <1504305527@qq.com>\n"
 "Language-Team: Norwegian Bokmål <https://translate.fedoraproject.org/"
@@ -1399,6 +1399,7 @@ msgid "Desired _Capacity:"
 msgstr "Ønsket _kapasitet"
 
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:151
+#: ui/webui/src/components/storage/MountPointMapping.jsx:321
 msgid "Device"
 msgstr ""
 
@@ -2758,6 +2759,7 @@ msgstr "Monterings_punkt"
 
 #: pyanaconda/ui/tui/spokes/storage.py:798
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:162
+#: ui/webui/src/components/storage/MountPointMapping.jsx:320
 msgid "Mount point"
 msgstr ""
 
@@ -2992,7 +2994,7 @@ msgstr ""
 msgid "No disks selected; please select at least one disk to install to."
 msgstr "Ingen disker valgt. Vennligst velg minst en disk å installere til."
 
-#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:81
+#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:84
 msgid "No format on device '{}'"
 msgstr ""
 
@@ -3250,7 +3252,7 @@ msgid "Pass_word:"
 msgstr "Pa_ssord:"
 
 #: pyanaconda/ui/tui/spokes/storage.py:355
-#: ui/webui/src/components/storage/DiskEncryption.jsx:248
+#: ui/webui/src/components/storage/DiskEncryption.jsx:255
 msgid "Passphrase"
 msgstr "Passordfrase"
 
@@ -3266,8 +3268,8 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/subscription.glade:181
 #: pyanaconda/ui/gui/spokes/subscription.glade:571
 #: pyanaconda/ui/gui/spokes/user.glade:176
-#: ui/webui/src/components/storage/UnlockDialog.jsx:101
-#: ui/webui/src/components/storage/UnlockDialog.jsx:107
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:153
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:159
 msgid "Password"
 msgstr "Passord"
 
@@ -3749,6 +3751,8 @@ msgid "Ref_ormat"
 msgstr "_Omformater"
 
 #: pyanaconda/ui/tui/spokes/storage.py:870
+#: ui/webui/src/components/storage/MountPointMapping.jsx:223
+#: ui/webui/src/components/storage/MountPointMapping.jsx:322
 msgid "Reformat"
 msgstr ""
 
@@ -3807,6 +3811,7 @@ msgid "Remote directory is required"
 msgstr "Ekstern mappe kreves"
 
 #: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:266
+#: ui/webui/src/components/storage/MountPointMapping.jsx:243
 #, fuzzy
 #| msgctxt "GUI|Software Source"
 #| msgid "_Remove"
@@ -4414,7 +4419,7 @@ msgid "Storing configuration files and kickstarts"
 msgstr ""
 
 #: pyanaconda/core/constants.py:226
-#: ui/webui/src/components/storage/DiskEncryption.jsx:71
+#: ui/webui/src/components/storage/DiskEncryption.jsx:72
 msgid "Strong"
 msgstr "Sterkt"
 
@@ -5291,11 +5296,11 @@ msgstr ""
 msgid "Unknown name of the %addon section."
 msgstr ""
 
-#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:65
+#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:68
 msgid "Unknown or invalid device '{}' specified"
 msgstr ""
 
-#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:74
+#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:77
 msgid "Unknown or invalid format '{}' specified for device '{}'"
 msgstr ""
 
@@ -5649,7 +5654,7 @@ msgstr ""
 
 #: pyanaconda/core/constants.py:223
 #: pyanaconda/ui/gui/spokes/lib/passphrase.glade:182
-#: ui/webui/src/components/storage/DiskEncryption.jsx:55
+#: ui/webui/src/components/storage/DiskEncryption.jsx:56
 msgid "Weak"
 msgstr "Svakt"
 
@@ -7339,6 +7344,17 @@ msgstr "{}. {}"
 msgid "About"
 msgstr ""
 
+#: ui/webui/src/components/storage/MountPointMapping.jsx:457
+#, fuzzy
+#| msgctxt "GUI|Custom Partitioning|Add Dialog"
+#| msgid "_Add mount point"
+msgid "Add mount"
+msgstr "_Legg til monteringspunkt"
+
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:136
+msgid "All devices using this passphrase will be unlocked."
+msgstr ""
+
 #: ui/webui/src/components/HeaderKebab.jsx:103
 #, fuzzy
 #| msgctxt "GUI|Summary"
@@ -7360,11 +7376,11 @@ msgid ""
 "issues in order to enhance this work."
 msgstr ""
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:91
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:143
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:211
+#: ui/webui/src/components/storage/DiskEncryption.jsx:218
 #, fuzzy
 #| msgid "Checking storage configuration..."
 msgid "Checking storage configuration"
@@ -7391,7 +7407,7 @@ msgstr ""
 msgid "Completed"
 msgstr "Fullført!"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:251
+#: ui/webui/src/components/storage/DiskEncryption.jsx:258
 #, fuzzy
 #| msgctxt "GUI|User"
 #| msgid "_Confirm password"
@@ -7400,6 +7416,17 @@ msgstr "Bekreft pass_ord"
 
 #: ui/webui/src/components/Error.jsx:41
 msgid "Critical error"
+msgstr ""
+
+#: ui/webui/src/components/storage/MountPointMapping.jsx:124
+#, fuzzy
+#| msgctxt "GUI|Storage"
+#| msgid "_Custom"
+msgid "Custom"
+msgstr "_Egendefinert"
+
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:59
+msgid "Devices should be unlocked before assigning mount points."
 msgstr ""
 
 #: ui/webui/src/components/AnacondaWizard.jsx:90
@@ -7414,18 +7441,34 @@ msgstr "Enhetskonfigurasjon"
 msgid "Disk encryption"
 msgstr "Beskrivelse"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:237
+#: ui/webui/src/components/storage/MountPointMapping.jsx:202
+#, fuzzy
+msgid "Duplicate device."
+msgstr "_Multipath-enheter"
+
+#: ui/webui/src/components/storage/MountPointMapping.jsx:130
+#, fuzzy
+#| msgctxt "GUI|Custom Partitioning|Add Dialog"
+#| msgid "_Add mount point"
+msgid "Duplicate mount point."
+msgstr "_Legg til monteringspunkt"
+
+#: ui/webui/src/components/storage/DiskEncryption.jsx:244
 #, fuzzy
 #| msgctxt "GUI|Storage"
 #| msgid "_Encrypt my data."
 msgid "Encrypt my data"
 msgstr "_Krypter mine data"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:287
+#: ui/webui/src/components/storage/DiskEncryption.jsx:294
 msgid "Encrypt the selected devices?"
 msgstr ""
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:290
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:56
+msgid "Encrypted devices are locked"
+msgstr ""
+
+#: ui/webui/src/components/storage/DiskEncryption.jsx:297
 msgid "Encryption helps secure your data, to prevent others from accessing it."
 msgstr ""
 
@@ -7448,10 +7491,6 @@ msgstr "_Begynn installasjon"
 msgid "Erasing the data cannot be undone."
 msgstr ""
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:100
-msgid "Failed to unlock LUKS partition"
-msgstr ""
-
 #: ui/webui/src/components/installation/InstallationProgress.jsx:120
 #, fuzzy
 #| msgid "Action"
@@ -7471,15 +7510,15 @@ msgstr ""
 msgid "Find a language"
 msgstr "På nettve_rket:"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:160
+#: ui/webui/src/components/storage/DiskEncryption.jsx:167
 #, fuzzy
 #| msgctxt "GUI|User"
 #| msgid "_Confirm password"
 msgid "Hide confirmed password"
 msgstr "Bekreft pass_ord"
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:114
-#: ui/webui/src/components/storage/DiskEncryption.jsx:129
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:166
+#: ui/webui/src/components/storage/DiskEncryption.jsx:136
 #, fuzzy
 #| msgid "empty password"
 msgid "Hide password"
@@ -7500,7 +7539,7 @@ msgstr ""
 msgid "In progress"
 msgstr "Fremdrift"
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:65
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:119
 #, fuzzy
 #| msgctxt "GUI|Passphrase Dialog"
 #| msgid "_Save Passphrase"
@@ -7551,19 +7590,32 @@ msgstr ""
 msgid "Manual disk configuration"
 msgstr "Enhetskonfigurasjon"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:63
+#: ui/webui/src/components/storage/MountPointMapping.jsx:494
+#, fuzzy
+#| msgid "Device configuration"
+msgid "Manual disk configuration: Mount point mapping"
+msgstr "Enhetskonfigurasjon"
+
+#: ui/webui/src/components/storage/DiskEncryption.jsx:64
 msgid "Medium"
 msgstr ""
 
 #: ui/webui/src/components/storage/StorageConfiguration.jsx:120
+#: ui/webui/src/components/storage/MountPointMapping.jsx:318
 msgid "Mount point assignment"
 msgstr ""
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:142
+#: ui/webui/src/components/storage/DiskEncryption.jsx:149
 #, fuzzy
 #| msgid "The password must be at least six characters long."
 msgid "Must be at least 8 characters"
 msgstr "Passordet må være minst seks tegn langt."
+
+#: ui/webui/src/components/storage/MountPointMapping.jsx:325
+#, fuzzy
+#| msgid "Add device"
+msgid "No devices"
+msgstr "Legg til enhet"
 
 #: ui/webui/src/components/storage/StorageConfiguration.jsx:85
 #, fuzzy
@@ -7598,13 +7650,13 @@ msgid ""
 "production environments."
 msgstr ""
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:293
+#: ui/webui/src/components/storage/DiskEncryption.jsx:300
 msgid ""
 "Only new partitions will be encrypted. Existing partitions will remain "
 "untouched."
 msgstr ""
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:173
+#: ui/webui/src/components/storage/DiskEncryption.jsx:180
 #, fuzzy
 #| msgid "Passphrase"
 msgid "Passphrases must match"
@@ -7637,6 +7689,12 @@ msgid ""
 "systems. Make sure you have backed up your data."
 msgstr ""
 
+#: ui/webui/src/components/storage/MountPointMapping.jsx:123
+#, fuzzy
+#| msgid "Not resizeable"
+msgid "Required"
+msgstr "Kan ikke endre størrelse"
+
 #: ui/webui/src/components/storage/InstallationMethod.jsx:152
 #, fuzzy
 #| msgid "Rescue"
@@ -7650,26 +7708,29 @@ msgstr "Feilretting"
 msgid "Review and install"
 msgstr "_Begynn installasjon"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:79
+#: ui/webui/src/components/storage/MountPointMapping.jsx:166
 #, fuzzy
-#| msgctxt "GUI|Custom Partitioning|Add Dialog"
-#| msgid "_Add mount point"
-msgid "Select a mount point"
-msgstr "_Legg til monteringspunkt"
+#| msgid "Selected Device"
+msgid "Select a device"
+msgstr "Valgt enhet"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:160
+#: ui/webui/src/components/storage/DiskEncryption.jsx:167
 #, fuzzy
 #| msgctxt "GUI|User"
 #| msgid "_Confirm password"
 msgid "Show confirmed password"
 msgstr "Bekreft pass_ord"
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:114
-#: ui/webui/src/components/storage/DiskEncryption.jsx:129
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:166
+#: ui/webui/src/components/storage/DiskEncryption.jsx:136
 #, fuzzy
 #| msgid "Root password"
 msgid "Show password"
 msgstr "Passord for root"
+
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:81
+msgid "Skip"
+msgstr ""
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:110
 #, fuzzy
@@ -7681,6 +7742,10 @@ msgstr "for å starte installasjon"
 msgid ""
 "Software installation: Storage configuration complete. The software is now "
 "being installed onto your device."
+msgstr ""
+
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:152
+msgid "Some LUKS devices were not unlocked"
 msgstr ""
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:105
@@ -7723,6 +7788,10 @@ msgstr ""
 msgid "The installer cannot continue due to a critical error."
 msgstr ""
 
+#: ui/webui/src/components/storage/MountPointMapping.jsx:228
+msgid "The root partition is always re-formatted by the installer."
+msgstr ""
+
 #: ui/webui/src/components/storage/StorageConfiguration.jsx:103
 msgid ""
 "The selected disks will be erased, this cannot be undone. Are you sure you "
@@ -7754,7 +7823,7 @@ msgid ""
 "Installation can be started at any time using the install icon in Activities."
 msgstr ""
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:215
+#: ui/webui/src/components/storage/DiskEncryption.jsx:222
 msgid "This may take a moment"
 msgstr ""
 
@@ -7774,16 +7843,24 @@ msgstr ""
 msgid "To enable select bigger disks"
 msgstr ""
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:88
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:140
 #, fuzzy
 #| msgctxt "GUI|Custom Partitioning|Encrypted"
 #| msgid "_Unlock"
 msgid "Unlock"
 msgstr "_Lås opp"
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:79
-msgid "Unlock encrypted partition $0"
-msgstr ""
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:76
+#, fuzzy
+#| msgid "Configure device %s"
+msgid "Unlock devices"
+msgstr "Konfigurer enhet %s"
+
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:135
+#, fuzzy
+#| msgid "Selected Device"
+msgid "Unlock encrypted devices"
+msgstr "Valgt enhet"
 
 #: ui/webui/src/components/storage/StorageConfiguration.jsx:106
 #, fuzzy
@@ -7800,10 +7877,6 @@ msgstr ""
 #| msgid "Welcome to Fedora"
 msgid "Welcome to Fedora!"
 msgstr "Velkommen til Fedora"
-
-#: ui/webui/src/components/storage/UnlockDialog.jsx:82
-msgid "You need to unlock encrypted partitions before you can continue."
-msgstr ""
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:167
 #, fuzzy

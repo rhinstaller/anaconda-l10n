@@ -24,7 +24,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2023-07-26 01:14+0000\n"
+"POT-Creation-Date: 2023-07-26 15:53+0000\n"
 "PO-Revision-Date: 2023-07-26 15:53+0000\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <https://translate.fedoraproject.org/projects/"
@@ -1468,6 +1468,7 @@ msgid "Desired _Capacity:"
 msgstr "Бажана _місткість:"
 
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:151
+#: ui/webui/src/components/storage/MountPointMapping.jsx:321
 msgid "Device"
 msgstr "Пристрій"
 
@@ -2824,6 +2825,7 @@ msgstr "_Точка монтування:"
 
 #: pyanaconda/ui/tui/spokes/storage.py:798
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:162
+#: ui/webui/src/components/storage/MountPointMapping.jsx:320
 msgid "Mount point"
 msgstr "Точка монтування"
 
@@ -3054,7 +3056,7 @@ msgstr ""
 "Не позначено жодного диска, будь ласка, позначте принаймні один диск, на "
 "який слід встановити систему."
 
-#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:81
+#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:84
 msgid "No format on device '{}'"
 msgstr "Пристрій «{}» не форматовано"
 
@@ -3322,7 +3324,7 @@ msgid "Pass_word:"
 msgstr "_Пароль:"
 
 #: pyanaconda/ui/tui/spokes/storage.py:355
-#: ui/webui/src/components/storage/DiskEncryption.jsx:248
+#: ui/webui/src/components/storage/DiskEncryption.jsx:255
 msgid "Passphrase"
 msgstr "Пароль"
 
@@ -3340,8 +3342,8 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/subscription.glade:181
 #: pyanaconda/ui/gui/spokes/subscription.glade:571
 #: pyanaconda/ui/gui/spokes/user.glade:176
-#: ui/webui/src/components/storage/UnlockDialog.jsx:101
-#: ui/webui/src/components/storage/UnlockDialog.jsx:107
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:153
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:159
 msgid "Password"
 msgstr "Пароль"
 
@@ -3847,6 +3849,8 @@ msgid "Ref_ormat"
 msgstr "П_ереформатувати"
 
 #: pyanaconda/ui/tui/spokes/storage.py:870
+#: ui/webui/src/components/storage/MountPointMapping.jsx:223
+#: ui/webui/src/components/storage/MountPointMapping.jsx:322
 msgid "Reformat"
 msgstr "Повторно форматувати"
 
@@ -3899,6 +3903,7 @@ msgid "Remote directory is required"
 msgstr "Слід вказати віддалений каталог"
 
 #: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:266
+#: ui/webui/src/components/storage/MountPointMapping.jsx:243
 msgid "Remove"
 msgstr "Вилучити"
 
@@ -4529,7 +4534,7 @@ msgid "Storing configuration files and kickstarts"
 msgstr "Зберігаємо файли налаштувань і kickstart"
 
 #: pyanaconda/core/constants.py:226
-#: ui/webui/src/components/storage/DiskEncryption.jsx:71
+#: ui/webui/src/components/storage/DiskEncryption.jsx:72
 msgid "Strong"
 msgstr "Складний"
 
@@ -5460,11 +5465,11 @@ msgstr "Невідомий Linux"
 msgid "Unknown name of the %addon section."
 msgstr "Невідома назва розділу %addon."
 
-#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:65
+#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:68
 msgid "Unknown or invalid device '{}' specified"
 msgstr "Вказано невідомий або некоректний пристрій «{}»"
 
-#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:74
+#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:77
 msgid "Unknown or invalid format '{}' specified for device '{}'"
 msgstr "Вказано невідомий або некоректний формат «{}» для пристрою «{}»"
 
@@ -5827,7 +5832,7 @@ msgstr ""
 
 #: pyanaconda/core/constants.py:223
 #: pyanaconda/ui/gui/spokes/lib/passphrase.glade:182
-#: ui/webui/src/components/storage/DiskEncryption.jsx:55
+#: ui/webui/src/components/storage/DiskEncryption.jsx:56
 msgid "Weak"
 msgstr "Простий"
 
@@ -7569,6 +7574,16 @@ msgstr "{}. {}"
 msgid "About"
 msgstr "Відомості"
 
+#: ui/webui/src/components/storage/MountPointMapping.jsx:457
+#, fuzzy
+#| msgid "Add Layout"
+msgid "Add mount"
+msgstr "Додавання розкладки"
+
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:136
+msgid "All devices using this passphrase will be unlocked."
+msgstr ""
+
 #: ui/webui/src/components/HeaderKebab.jsx:103
 msgid "Anaconda project page"
 msgstr "Сторінка проєкту Anaconda"
@@ -7590,11 +7605,11 @@ msgstr ""
 "тестування або подальшої розробки і що ви маєте намір повідомляти про всі "
 "вади і проблеми з метою покращення його роботи."
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:91
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:143
 msgid "Cancel"
 msgstr "Скасувати"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:211
+#: ui/webui/src/components/storage/DiskEncryption.jsx:218
 msgid "Checking storage configuration"
 msgstr "Перевіряємо налаштування носія"
 
@@ -7614,13 +7629,24 @@ msgstr "Поширені мови"
 msgid "Completed"
 msgstr "Завершено"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:251
+#: ui/webui/src/components/storage/DiskEncryption.jsx:258
 msgid "Confirm passphrase"
 msgstr "Підтвердіть пароль"
 
 #: ui/webui/src/components/Error.jsx:41
 msgid "Critical error"
 msgstr "Критична помилка"
+
+#: ui/webui/src/components/storage/MountPointMapping.jsx:124
+#, fuzzy
+#| msgctxt "GUI|Storage"
+#| msgid "_Custom"
+msgid "Custom"
+msgstr "_Нетипове"
+
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:59
+msgid "Devices should be unlocked before assigning mount points."
+msgstr ""
 
 #: ui/webui/src/components/AnacondaWizard.jsx:90
 msgid "Disk configuration"
@@ -7630,15 +7656,32 @@ msgstr "Налаштування дисків"
 msgid "Disk encryption"
 msgstr "Шифрування диска"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:237
+#: ui/webui/src/components/storage/MountPointMapping.jsx:202
+#, fuzzy
+#| msgctxt "GUI|Installation Destination|Filter"
+#| msgid "_Multipath Devices"
+msgid "Duplicate device."
+msgstr "Пристрої за _багатьма шляхами"
+
+#: ui/webui/src/components/storage/MountPointMapping.jsx:130
+#, fuzzy
+#| msgid "Select a mount point"
+msgid "Duplicate mount point."
+msgstr "Виберіть точку монтування"
+
+#: ui/webui/src/components/storage/DiskEncryption.jsx:244
 msgid "Encrypt my data"
 msgstr "Зашифрувати дані"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:287
+#: ui/webui/src/components/storage/DiskEncryption.jsx:294
 msgid "Encrypt the selected devices?"
 msgstr "Зашифрувати позначені пристрої?"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:290
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:56
+msgid "Encrypted devices are locked"
+msgstr ""
+
+#: ui/webui/src/components/storage/DiskEncryption.jsx:297
 msgid "Encryption helps secure your data, to prevent others from accessing it."
 msgstr ""
 "Шифрування допомагає захистити ваші дані для запобігання доступу до цих "
@@ -7657,10 +7700,6 @@ msgstr "Витерти дані і встановити?"
 msgid "Erasing the data cannot be undone."
 msgstr "Наслідки дії з витирання даних є незворотними."
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:100
-msgid "Failed to unlock LUKS partition"
-msgstr "Не вдалося розблокувати розділ LUKS"
-
 #: ui/webui/src/components/installation/InstallationProgress.jsx:120
 msgid "Finalization"
 msgstr "Завершення"
@@ -7677,12 +7716,12 @@ msgstr ""
 msgid "Find a language"
 msgstr "Знайти мову"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:160
+#: ui/webui/src/components/storage/DiskEncryption.jsx:167
 msgid "Hide confirmed password"
 msgstr "Приховати підтверджений пароль"
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:114
-#: ui/webui/src/components/storage/DiskEncryption.jsx:129
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:166
+#: ui/webui/src/components/storage/DiskEncryption.jsx:136
 msgid "Hide password"
 msgstr "Приховати пароль"
 
@@ -7701,7 +7740,7 @@ msgstr ""
 msgid "In progress"
 msgstr "Виконуємо"
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:65
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:119
 msgid "Incorrect passphrase"
 msgstr "Помилковий пароль"
 
@@ -7738,17 +7777,30 @@ msgstr ""
 msgid "Manual disk configuration"
 msgstr "Налаштування дисків вручну"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:63
+#: ui/webui/src/components/storage/MountPointMapping.jsx:494
+#, fuzzy
+#| msgid "Manual disk configuration"
+msgid "Manual disk configuration: Mount point mapping"
+msgstr "Налаштування дисків вручну"
+
+#: ui/webui/src/components/storage/DiskEncryption.jsx:64
 msgid "Medium"
 msgstr "Носій"
 
 #: ui/webui/src/components/storage/StorageConfiguration.jsx:120
+#: ui/webui/src/components/storage/MountPointMapping.jsx:318
 msgid "Mount point assignment"
 msgstr "Прив'язка до точки монтування"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:142
+#: ui/webui/src/components/storage/DiskEncryption.jsx:149
 msgid "Must be at least 8 characters"
 msgstr "Має складатися із принаймні 8 символів"
+
+#: ui/webui/src/components/storage/MountPointMapping.jsx:325
+#, fuzzy
+#| msgid "Add device"
+msgid "No devices"
+msgstr "Додавання пристрою"
 
 #: ui/webui/src/components/storage/StorageConfiguration.jsx:85
 msgid "No existing partitions on the selected disks."
@@ -7780,14 +7832,14 @@ msgstr ""
 "розробників і тестувальників. НЕ використовуйте це програмне забезпечення "
 "для виконання критично важливих завдань або у промислових середовищах."
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:293
+#: ui/webui/src/components/storage/DiskEncryption.jsx:300
 msgid ""
 "Only new partitions will be encrypted. Existing partitions will remain "
 "untouched."
 msgstr ""
 "Зашифрувати можна лише нові розділи. Наявні розділи лишаться незмінними."
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:173
+#: ui/webui/src/components/storage/DiskEncryption.jsx:180
 msgid "Passphrases must match"
 msgstr "Паролі мають збігатися"
 
@@ -7821,6 +7873,12 @@ msgstr ""
 "операційними системами. Переконайтеся, що створили резервні копії ваших "
 "даних."
 
+#: ui/webui/src/components/storage/MountPointMapping.jsx:123
+#, fuzzy
+#| msgid "Not required"
+msgid "Required"
+msgstr "Необов'язковий"
+
 #: ui/webui/src/components/storage/InstallationMethod.jsx:152
 msgid "Rescan"
 msgstr "Повторно сканувати"
@@ -7829,18 +7887,24 @@ msgstr "Повторно сканувати"
 msgid "Review and install"
 msgstr "Переглянути і встановити"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:79
-msgid "Select a mount point"
-msgstr "Виберіть точку монтування"
+#: ui/webui/src/components/storage/MountPointMapping.jsx:166
+#, fuzzy
+#| msgid "Selected Device"
+msgid "Select a device"
+msgstr "Позначений пристрій"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:160
+#: ui/webui/src/components/storage/DiskEncryption.jsx:167
 msgid "Show confirmed password"
 msgstr "Показати підтверджений пароль"
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:114
-#: ui/webui/src/components/storage/DiskEncryption.jsx:129
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:166
+#: ui/webui/src/components/storage/DiskEncryption.jsx:136
 msgid "Show password"
 msgstr "Показати пароль"
+
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:81
+msgid "Skip"
+msgstr ""
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:110
 msgid "Software installation"
@@ -7853,6 +7917,10 @@ msgid ""
 msgstr ""
 "Встановлення програмного забезпечення: завершено налаштовування сховища "
 "даних. Тепер встановлюємо програмне забезпечення на ваш пристрій."
+
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:152
+msgid "Some LUKS devices were not unlocked"
+msgstr ""
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:105
 msgid "Storage configuration"
@@ -7896,6 +7964,10 @@ msgstr ""
 msgid "The installer cannot continue due to a critical error."
 msgstr "Продовження встановлення неможливе через критичну помилку."
 
+#: ui/webui/src/components/storage/MountPointMapping.jsx:228
+msgid "The root partition is always re-formatted by the installer."
+msgstr ""
+
 #: ui/webui/src/components/storage/StorageConfiguration.jsx:103
 msgid ""
 "The selected disks will be erased, this cannot be undone. Are you sure you "
@@ -7935,7 +8007,7 @@ msgstr ""
 "тимчасовою системою. Встановлення можна розпочати будь-коли натисканням "
 "піктограми встановлення у розділі «Діяльність»."
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:215
+#: ui/webui/src/components/storage/DiskEncryption.jsx:222
 msgid "This may take a moment"
 msgstr "Зачекайте, будь ласка"
 
@@ -7957,13 +8029,21 @@ msgstr "Щоб уможливити вивільнення місця на ди�
 msgid "To enable select bigger disks"
 msgstr "Щоб уможливити вибір більших дисків,"
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:88
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:140
 msgid "Unlock"
 msgstr "Розблокувати"
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:79
-msgid "Unlock encrypted partition $0"
-msgstr "Розблокувати зашифрований розділ $0"
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:76
+#, fuzzy
+#| msgid "to rescan devices"
+msgid "Unlock devices"
+msgstr "для повторного сканування пристроїв"
+
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:135
+#, fuzzy
+#| msgid "Failed to unlock encrypted block device."
+msgid "Unlock encrypted devices"
+msgstr "Не вдалося розблокувати зашифрований блоковий пристрій."
 
 #: ui/webui/src/components/storage/StorageConfiguration.jsx:106
 msgid "Use free space for the installation"
@@ -7976,10 +8056,6 @@ msgstr "Вітаємо"
 #: data/liveinst/gnome/fedora-welcome.js:49
 msgid "Welcome to Fedora!"
 msgstr "Вітаємо у Fedora!"
-
-#: ui/webui/src/components/storage/UnlockDialog.jsx:82
-msgid "You need to unlock encrypted partitions before you can continue."
-msgstr "Перш ніж продовжувати, вам слід розблокувати зашифровані розділи."
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:167
 msgid "completed step"
@@ -7996,6 +8072,15 @@ msgstr "крок у черзі"
 #: ../data/liveinst/console.apps/liveinst.h:1
 msgid "Starting Install to Hard Drive"
 msgstr "Початок встановлення на жорсткий диск"
+
+#~ msgid "Failed to unlock LUKS partition"
+#~ msgstr "Не вдалося розблокувати розділ LUKS"
+
+#~ msgid "Unlock encrypted partition $0"
+#~ msgstr "Розблокувати зашифрований розділ $0"
+
+#~ msgid "You need to unlock encrypted partitions before you can continue."
+#~ msgstr "Перш ніж продовжувати, вам слід розблокувати зашифровані розділи."
 
 #~ msgid "Custom mount point"
 #~ msgstr "Нетипова точка монтування"

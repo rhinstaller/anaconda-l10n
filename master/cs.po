@@ -46,7 +46,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2023-07-26 01:14+0000\n"
+"POT-Creation-Date: 2023-07-26 15:53+0000\n"
 "PO-Revision-Date: 2023-07-26 15:53+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://translate.fedoraproject.org/projects/anaconda/"
@@ -1485,6 +1485,7 @@ msgid "Desired _Capacity:"
 msgstr "Požadovaná kapa_cita:"
 
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:151
+#: ui/webui/src/components/storage/MountPointMapping.jsx:321
 msgid "Device"
 msgstr "Zařízení"
 
@@ -2830,6 +2831,7 @@ msgstr "_Přípojný bod:"
 
 #: pyanaconda/ui/tui/spokes/storage.py:798
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:162
+#: ui/webui/src/components/storage/MountPointMapping.jsx:320
 msgid "Mount point"
 msgstr "Přípojný bod"
 
@@ -3059,7 +3061,7 @@ msgid "No disks selected; please select at least one disk to install to."
 msgstr ""
 "Nevybrána žádná jednotka. Vyberte alespoň jednu, na kterou nainstalovat."
 
-#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:81
+#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:84
 msgid "No format on device '{}'"
 msgstr "Na zařízení „{}“ není žádný (rozpoznaný) formát"
 
@@ -3320,7 +3322,7 @@ msgid "Pass_word:"
 msgstr "He_slo:"
 
 #: pyanaconda/ui/tui/spokes/storage.py:355
-#: ui/webui/src/components/storage/DiskEncryption.jsx:248
+#: ui/webui/src/components/storage/DiskEncryption.jsx:255
 msgid "Passphrase"
 msgstr "Heslová fráze"
 
@@ -3338,8 +3340,8 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/subscription.glade:181
 #: pyanaconda/ui/gui/spokes/subscription.glade:571
 #: pyanaconda/ui/gui/spokes/user.glade:176
-#: ui/webui/src/components/storage/UnlockDialog.jsx:101
-#: ui/webui/src/components/storage/UnlockDialog.jsx:107
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:153
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:159
 msgid "Password"
 msgstr "Heslo"
 
@@ -3836,6 +3838,8 @@ msgid "Ref_ormat"
 msgstr "Znovu vytvořit souborový systém"
 
 #: pyanaconda/ui/tui/spokes/storage.py:870
+#: ui/webui/src/components/storage/MountPointMapping.jsx:223
+#: ui/webui/src/components/storage/MountPointMapping.jsx:322
 msgid "Reformat"
 msgstr "Znovu vytvořit souborový systém"
 
@@ -3888,6 +3892,7 @@ msgid "Remote directory is required"
 msgstr "Je vyžadován adresář na protějšku"
 
 #: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:266
+#: ui/webui/src/components/storage/MountPointMapping.jsx:243
 msgid "Remove"
 msgstr "Odstranit"
 
@@ -4513,7 +4518,7 @@ msgid "Storing configuration files and kickstarts"
 msgstr "Ukládání souborů s nastaveními a souborů kickstart"
 
 #: pyanaconda/core/constants.py:226
-#: ui/webui/src/components/storage/DiskEncryption.jsx:71
+#: ui/webui/src/components/storage/DiskEncryption.jsx:72
 msgid "Strong"
 msgstr "Odolné"
 
@@ -5436,11 +5441,11 @@ msgstr "Neznámý Linux"
 msgid "Unknown name of the %addon section."
 msgstr "Neznámý název sekce %addon."
 
-#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:65
+#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:68
 msgid "Unknown or invalid device '{}' specified"
 msgstr "Bylo uvedeno neznámé nebo neplatné zařízení „{}“"
 
-#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:74
+#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:77
 msgid "Unknown or invalid format '{}' specified for device '{}'"
 msgstr "Byl zadán neznámý nebo neplatný formát „{}“ pro zařízení „{}“"
 
@@ -5799,7 +5804,7 @@ msgstr ""
 
 #: pyanaconda/core/constants.py:223
 #: pyanaconda/ui/gui/spokes/lib/passphrase.glade:182
-#: ui/webui/src/components/storage/DiskEncryption.jsx:55
+#: ui/webui/src/components/storage/DiskEncryption.jsx:56
 msgid "Weak"
 msgstr "Snadno prolomitelné"
 
@@ -7533,6 +7538,16 @@ msgstr "{}. {}"
 msgid "About"
 msgstr "O aplikaci"
 
+#: ui/webui/src/components/storage/MountPointMapping.jsx:457
+#, fuzzy
+#| msgid "Add Layout"
+msgid "Add mount"
+msgstr "Přidat rozložení"
+
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:136
+msgid "All devices using this passphrase will be unlocked."
+msgstr ""
+
 #: ui/webui/src/components/HeaderKebab.jsx:103
 msgid "Anaconda project page"
 msgstr "Stránka projektu Anaconda"
@@ -7553,11 +7568,11 @@ msgstr ""
 "pouze pro testovací a vývojové účely a jste ochotni hlásit jakékoli chyby "
 "nebo problémy za účelem zlepšení tohoto díla."
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:91
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:143
 msgid "Cancel"
 msgstr "Zrušit"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:211
+#: ui/webui/src/components/storage/DiskEncryption.jsx:218
 msgid "Checking storage configuration"
 msgstr "Zjišťuje se uspořádání úložiště"
 
@@ -7577,13 +7592,24 @@ msgstr "Běžné jazyky"
 msgid "Completed"
 msgstr "Dokončeno"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:251
+#: ui/webui/src/components/storage/DiskEncryption.jsx:258
 msgid "Confirm passphrase"
 msgstr "Zopakování heslové fráze"
 
 #: ui/webui/src/components/Error.jsx:41
 msgid "Critical error"
 msgstr "Kritická chyba"
+
+#: ui/webui/src/components/storage/MountPointMapping.jsx:124
+#, fuzzy
+#| msgctxt "GUI|Storage"
+#| msgid "_Custom"
+msgid "Custom"
+msgstr "_Uživatelsky určené"
+
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:59
+msgid "Devices should be unlocked before assigning mount points."
+msgstr ""
 
 #: ui/webui/src/components/AnacondaWizard.jsx:90
 msgid "Disk configuration"
@@ -7593,15 +7619,32 @@ msgstr "Konfigurace jednotky"
 msgid "Disk encryption"
 msgstr "Šifrování disku"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:237
+#: ui/webui/src/components/storage/MountPointMapping.jsx:202
+#, fuzzy
+#| msgctxt "GUI|Installation Destination|Filter"
+#| msgid "_Multipath Devices"
+msgid "Duplicate device."
+msgstr "Vícecestná (_multipath) zařízení"
+
+#: ui/webui/src/components/storage/MountPointMapping.jsx:130
+#, fuzzy
+#| msgid "Select a mount point"
+msgid "Duplicate mount point."
+msgstr "Vybrat přípojný bod"
+
+#: ui/webui/src/components/storage/DiskEncryption.jsx:244
 msgid "Encrypt my data"
 msgstr "Šifrovat má data"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:287
+#: ui/webui/src/components/storage/DiskEncryption.jsx:294
 msgid "Encrypt the selected devices?"
 msgstr "Šifrovat vybraná zařízení?"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:290
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:56
+msgid "Encrypted devices are locked"
+msgstr ""
+
+#: ui/webui/src/components/storage/DiskEncryption.jsx:297
 msgid "Encryption helps secure your data, to prevent others from accessing it."
 msgstr ""
 "Šifrování pomáhá zabezpečit vaše data, bránit ostatním v přístupu k nim."
@@ -7619,10 +7662,6 @@ msgstr "Vymazat data a nainstalovat?"
 msgid "Erasing the data cannot be undone."
 msgstr "Vymazání dat nelze vrátit zpět."
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:100
-msgid "Failed to unlock LUKS partition"
-msgstr "Nepodařilo se odemknout LUKS oddíl"
-
 #: ui/webui/src/components/installation/InstallationProgress.jsx:120
 msgid "Finalization"
 msgstr "Dokončování"
@@ -7639,12 +7678,12 @@ msgstr ""
 msgid "Find a language"
 msgstr "Hledání jazyka"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:160
+#: ui/webui/src/components/storage/DiskEncryption.jsx:167
 msgid "Hide confirmed password"
 msgstr "Skrýt potvrzené heslo"
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:114
-#: ui/webui/src/components/storage/DiskEncryption.jsx:129
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:166
+#: ui/webui/src/components/storage/DiskEncryption.jsx:136
 msgid "Hide password"
 msgstr "Skrýt heslo"
 
@@ -7663,7 +7702,7 @@ msgstr ""
 msgid "In progress"
 msgstr "Probíhá"
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:65
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:119
 msgid "Incorrect passphrase"
 msgstr "Nesprávná heslová fráze"
 
@@ -7699,17 +7738,30 @@ msgstr "Ponechá stávající rozvržení jednotky a použije pouze dostupný pr
 msgid "Manual disk configuration"
 msgstr "Ruční nastavení jednotky"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:63
+#: ui/webui/src/components/storage/MountPointMapping.jsx:494
+#, fuzzy
+#| msgid "Manual disk configuration"
+msgid "Manual disk configuration: Mount point mapping"
+msgstr "Ruční nastavení jednotky"
+
+#: ui/webui/src/components/storage/DiskEncryption.jsx:64
 msgid "Medium"
 msgstr "Střední"
 
 #: ui/webui/src/components/storage/StorageConfiguration.jsx:120
+#: ui/webui/src/components/storage/MountPointMapping.jsx:318
 msgid "Mount point assignment"
 msgstr "Přiřazení přípojného bodu"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:142
+#: ui/webui/src/components/storage/DiskEncryption.jsx:149
 msgid "Must be at least 8 characters"
 msgstr "Je třeba, by bylo alespoň 8 znaků"
+
+#: ui/webui/src/components/storage/MountPointMapping.jsx:325
+#, fuzzy
+#| msgid "Add device"
+msgid "No devices"
+msgstr "Přidat zařízení"
 
 #: ui/webui/src/components/storage/StorageConfiguration.jsx:85
 msgid "No existing partitions on the selected disks."
@@ -7741,7 +7793,7 @@ msgstr ""
 "vývoje a testování. Tento software NEpoužívejte pro jakoukoli kritickou "
 "práci nebo pro produkční prostředí."
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:293
+#: ui/webui/src/components/storage/DiskEncryption.jsx:300
 msgid ""
 "Only new partitions will be encrypted. Existing partitions will remain "
 "untouched."
@@ -7749,7 +7801,7 @@ msgstr ""
 "Šifrovány budou pouze nově vytvořené oddíly. Ty stávající budou ponechány "
 "beze změn."
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:173
+#: ui/webui/src/components/storage/DiskEncryption.jsx:180
 msgid "Passphrases must match"
 msgstr "Je třeba, aby se zadání heslové fráze shodovaly"
 
@@ -7782,6 +7834,12 @@ msgstr ""
 "Odebrat veškeré oddíly na zvolených zařízeních, včetně stávajících "
 "operačních systémů. Zajistěte, že jsou data z nich zazálohována."
 
+#: ui/webui/src/components/storage/MountPointMapping.jsx:123
+#, fuzzy
+#| msgid "Not required"
+msgid "Required"
+msgstr "Není požadováno"
+
 #: ui/webui/src/components/storage/InstallationMethod.jsx:152
 msgid "Rescan"
 msgstr "Znovu prohledat"
@@ -7790,18 +7848,24 @@ msgstr "Znovu prohledat"
 msgid "Review and install"
 msgstr "Zkontrolovat a nainstalovat"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:79
-msgid "Select a mount point"
-msgstr "Vybrat přípojný bod"
+#: ui/webui/src/components/storage/MountPointMapping.jsx:166
+#, fuzzy
+#| msgid "Selected Device"
+msgid "Select a device"
+msgstr "Vybrané zařízení"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:160
+#: ui/webui/src/components/storage/DiskEncryption.jsx:167
 msgid "Show confirmed password"
 msgstr "Zobrazit potvrzené heslo"
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:114
-#: ui/webui/src/components/storage/DiskEncryption.jsx:129
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:166
+#: ui/webui/src/components/storage/DiskEncryption.jsx:136
 msgid "Show password"
 msgstr "Zobrazit heslo"
+
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:81
+msgid "Skip"
+msgstr ""
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:110
 msgid "Software installation"
@@ -7814,6 +7878,10 @@ msgid ""
 msgstr ""
 "Instalace softwaru: Nastavování úložiště dokončeno. Software se nyní "
 "instaluje do vašeho zařízení."
+
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:152
+msgid "Some LUKS devices were not unlocked"
+msgstr ""
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:105
 msgid "Storage configuration"
@@ -7854,6 +7922,10 @@ msgstr "Instalace využije nastavené rozvržení oddílů."
 msgid "The installer cannot continue due to a critical error."
 msgstr "Instalátor nemůže kvůli kritické chybě pokračovat."
 
+#: ui/webui/src/components/storage/MountPointMapping.jsx:228
+msgid "The root partition is always re-formatted by the installer."
+msgstr ""
+
 #: ui/webui/src/components/storage/StorageConfiguration.jsx:103
 msgid ""
 "The selected disks will be erased, this cannot be undone. Are you sure you "
@@ -7893,7 +7965,7 @@ msgstr ""
 "z něho. Instalaci je pak v takovém případě možné kdykoli zahájit pomocí "
 "ikony instalace v Aktivitách."
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:215
+#: ui/webui/src/components/storage/DiskEncryption.jsx:222
 msgid "This may take a moment"
 msgstr "Může to chvíli trvat"
 
@@ -7916,13 +7988,21 @@ msgstr "Aby bylo možné zapnout, uvolněte prostor na jednotce"
 msgid "To enable select bigger disks"
 msgstr "Aby bylo možné zapnout, vyberte kapacitnější jednotky"
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:88
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:140
 msgid "Unlock"
 msgstr "Odemknout"
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:79
-msgid "Unlock encrypted partition $0"
-msgstr "Odemknout šifrovaný oddíl $0"
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:76
+#, fuzzy
+#| msgid "to rescan devices"
+msgid "Unlock devices"
+msgstr "znovu proskenovat zařízení"
+
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:135
+#, fuzzy
+#| msgid "Failed to unlock encrypted block device."
+msgid "Unlock encrypted devices"
+msgstr "Odemčení šifrovaného blokového zařízení se nezdařilo."
 
 #: ui/webui/src/components/storage/StorageConfiguration.jsx:106
 msgid "Use free space for the installation"
@@ -7935,11 +8015,6 @@ msgstr "Vítejte"
 #: data/liveinst/gnome/fedora-welcome.js:49
 msgid "Welcome to Fedora!"
 msgstr "Vítejte u Fedory!"
-
-#: ui/webui/src/components/storage/UnlockDialog.jsx:82
-msgid "You need to unlock encrypted partitions before you can continue."
-msgstr ""
-"Aby bylo možné pokračovat, je třeba šifrované oddíly nejprve odemknout."
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:167
 msgid "completed step"
@@ -7956,6 +8031,16 @@ msgstr "čekající krok"
 #: ../data/liveinst/console.apps/liveinst.h:1
 msgid "Starting Install to Hard Drive"
 msgstr "Zahajuje se instalace do počítače"
+
+#~ msgid "Failed to unlock LUKS partition"
+#~ msgstr "Nepodařilo se odemknout LUKS oddíl"
+
+#~ msgid "Unlock encrypted partition $0"
+#~ msgstr "Odemknout šifrovaný oddíl $0"
+
+#~ msgid "You need to unlock encrypted partitions before you can continue."
+#~ msgstr ""
+#~ "Aby bylo možné pokračovat, je třeba šifrované oddíly nejprve odemknout."
 
 #~ msgid "Custom mount point"
 #~ msgstr "Uživatelsky určený přípojný bod"

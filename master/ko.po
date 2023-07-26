@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2023-07-26 01:14+0000\n"
+"POT-Creation-Date: 2023-07-26 15:53+0000\n"
 "PO-Revision-Date: 2023-07-26 15:53+0000\n"
 "Last-Translator: yangyangdaji <1504305527@qq.com>\n"
 "Language-Team: Korean <https://translate.fedoraproject.org/projects/anaconda/"
@@ -1452,6 +1452,7 @@ msgid "Desired _Capacity:"
 msgstr "희망 용량(_C):"
 
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:151
+#: ui/webui/src/components/storage/MountPointMapping.jsx:321
 msgid "Device"
 msgstr "장치"
 
@@ -2790,6 +2791,7 @@ msgstr "적재 지점(_P):"
 
 #: pyanaconda/ui/tui/spokes/storage.py:798
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:162
+#: ui/webui/src/components/storage/MountPointMapping.jsx:320
 msgid "Mount point"
 msgstr "적재 지점"
 
@@ -3020,7 +3022,7 @@ msgstr ""
 "디스크가 선택되어 있지 않습니다; 설치할 최소 하나의 디스크를 선택해 주셔야 합"
 "니다."
 
-#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:81
+#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:84
 msgid "No format on device '{}'"
 msgstr "장치 '{}'에서 초기화(format) 할 수 없습니다"
 
@@ -3282,7 +3284,7 @@ msgid "Pass_word:"
 msgstr "비밀번호(_w):"
 
 #: pyanaconda/ui/tui/spokes/storage.py:355
-#: ui/webui/src/components/storage/DiskEncryption.jsx:248
+#: ui/webui/src/components/storage/DiskEncryption.jsx:255
 msgid "Passphrase"
 msgstr "암호문"
 
@@ -3298,8 +3300,8 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/subscription.glade:181
 #: pyanaconda/ui/gui/spokes/subscription.glade:571
 #: pyanaconda/ui/gui/spokes/user.glade:176
-#: ui/webui/src/components/storage/UnlockDialog.jsx:101
-#: ui/webui/src/components/storage/UnlockDialog.jsx:107
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:153
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:159
 msgid "Password"
 msgstr "비밀번호"
 
@@ -3793,6 +3795,8 @@ msgid "Ref_ormat"
 msgstr "재포맷(_o)"
 
 #: pyanaconda/ui/tui/spokes/storage.py:870
+#: ui/webui/src/components/storage/MountPointMapping.jsx:223
+#: ui/webui/src/components/storage/MountPointMapping.jsx:322
 msgid "Reformat"
 msgstr "다시초기화함"
 
@@ -3845,6 +3849,7 @@ msgid "Remote directory is required"
 msgstr "원격 디렉토리가 필요합니다"
 
 #: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:266
+#: ui/webui/src/components/storage/MountPointMapping.jsx:243
 msgid "Remove"
 msgstr "제거"
 
@@ -4461,7 +4466,7 @@ msgid "Storing configuration files and kickstarts"
 msgstr "구성 파일 및 킥 스타트 저장"
 
 #: pyanaconda/core/constants.py:226
-#: ui/webui/src/components/storage/DiskEncryption.jsx:71
+#: ui/webui/src/components/storage/DiskEncryption.jsx:72
 msgid "Strong"
 msgstr "강함"
 
@@ -4611,7 +4616,8 @@ msgstr ""
 #| msgid ""
 #| "The '{repository_name}' repository has no mirror, baseurl or metalink set."
 msgid "The '{name}' repository has no mirror, baseurl or metalink set."
-msgstr "'{name}' 저장소는 미러, baseurl 또는 메타링크 구성을 가지고 있지 않습니다."
+msgstr ""
+"'{name}' 저장소는 미러, baseurl 또는 메타링크 구성을 가지고 있지 않습니다."
 
 #: pyanaconda/modules/payloads/payload/dnf/repositories.py:164
 #, fuzzy, python-brace-format
@@ -5369,11 +5375,11 @@ msgstr "알 수 없는 리눅스"
 msgid "Unknown name of the %addon section."
 msgstr "%addon 항목의 이름을 알 수 없습니다."
 
-#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:65
+#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:68
 msgid "Unknown or invalid device '{}' specified"
 msgstr "알 수 없거나 잘못된 장치 '{}'가 지정됨"
 
-#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:74
+#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:77
 msgid "Unknown or invalid format '{}' specified for device '{}'"
 msgstr "장치 '{}'에 대해 알 수 없거나 잘못된 형식 '{}'으로 지정되었습니다"
 
@@ -5722,7 +5728,7 @@ msgstr ""
 
 #: pyanaconda/core/constants.py:223
 #: pyanaconda/ui/gui/spokes/lib/passphrase.glade:182
-#: ui/webui/src/components/storage/DiskEncryption.jsx:55
+#: ui/webui/src/components/storage/DiskEncryption.jsx:56
 msgid "Weak"
 msgstr "취약"
 
@@ -7420,6 +7426,16 @@ msgstr "{}. {}"
 msgid "About"
 msgstr ""
 
+#: ui/webui/src/components/storage/MountPointMapping.jsx:457
+#, fuzzy
+#| msgid "Add Layout"
+msgid "Add mount"
+msgstr "레이아웃 추가"
+
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:136
+msgid "All devices using this passphrase will be unlocked."
+msgstr ""
+
 #: ui/webui/src/components/HeaderKebab.jsx:103
 #, fuzzy
 #| msgid "Anaconda Installer"
@@ -7443,11 +7459,11 @@ msgstr ""
 "업을 향상 시키기 위해 결점 또는 문제점을 기꺼이 보고하고자 하는 사전-출시된 "
 "소프트웨어와 관련된 위험을 이해하고 수용합니다."
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:91
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:143
 msgid "Cancel"
 msgstr "취소"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:211
+#: ui/webui/src/components/storage/DiskEncryption.jsx:218
 #, fuzzy
 #| msgid "Checking storage configuration..."
 msgid "Checking storage configuration"
@@ -7469,7 +7485,7 @@ msgstr "공통 지원"
 msgid "Completed"
 msgstr "완료되었습니다"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:251
+#: ui/webui/src/components/storage/DiskEncryption.jsx:258
 #, fuzzy
 #| msgctxt "GUI|User"
 #| msgid "_Confirm password"
@@ -7478,6 +7494,17 @@ msgstr "비밀번호 확인(_C)"
 
 #: ui/webui/src/components/Error.jsx:41
 msgid "Critical error"
+msgstr ""
+
+#: ui/webui/src/components/storage/MountPointMapping.jsx:124
+#, fuzzy
+#| msgctxt "GUI|Storage"
+#| msgid "_Custom"
+msgid "Custom"
+msgstr "사용자 정의(_C)"
+
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:59
+msgid "Devices should be unlocked before assigning mount points."
 msgstr ""
 
 #: ui/webui/src/components/AnacondaWizard.jsx:90
@@ -7492,18 +7519,35 @@ msgstr "장치 구성"
 msgid "Disk encryption"
 msgstr "암호화"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:237
+#: ui/webui/src/components/storage/MountPointMapping.jsx:202
+#, fuzzy
+#| msgctxt "GUI|Installation Destination|Filter"
+#| msgid "_Multipath Devices"
+msgid "Duplicate device."
+msgstr "다중 경로 장치 (_M)"
+
+#: ui/webui/src/components/storage/MountPointMapping.jsx:130
+#, fuzzy
+#| msgid "Please enter a mount point."
+msgid "Duplicate mount point."
+msgstr "적재 지점을 입력해주세요."
+
+#: ui/webui/src/components/storage/DiskEncryption.jsx:244
 #, fuzzy
 #| msgctxt "GUI|Custom Partitioning|Autopart Page"
 #| msgid "Encrypt my data."
 msgid "Encrypt my data"
 msgstr "자료를 암호화합니다."
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:287
+#: ui/webui/src/components/storage/DiskEncryption.jsx:294
 msgid "Encrypt the selected devices?"
 msgstr ""
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:290
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:56
+msgid "Encrypted devices are locked"
+msgstr ""
+
+#: ui/webui/src/components/storage/DiskEncryption.jsx:297
 msgid "Encryption helps secure your data, to prevent others from accessing it."
 msgstr ""
 
@@ -7526,10 +7570,6 @@ msgstr "디스크를 지우고 설치합니까?"
 msgid "Erasing the data cannot be undone."
 msgstr "디스크를 지우는 중에는 취소 할 수 없습니다."
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:100
-msgid "Failed to unlock LUKS partition"
-msgstr ""
-
 #: ui/webui/src/components/installation/InstallationProgress.jsx:120
 msgid "Finalization"
 msgstr "마무리"
@@ -7545,15 +7585,15 @@ msgstr ""
 msgid "Find a language"
 msgstr "언어 찾기"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:160
+#: ui/webui/src/components/storage/DiskEncryption.jsx:167
 #, fuzzy
 #| msgctxt "GUI|User"
 #| msgid "_Confirm password"
 msgid "Hide confirmed password"
 msgstr "비밀번호 확인(_C)"
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:114
-#: ui/webui/src/components/storage/DiskEncryption.jsx:129
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:166
+#: ui/webui/src/components/storage/DiskEncryption.jsx:136
 #, fuzzy
 #| msgid "Hide password."
 msgid "Hide password"
@@ -7579,7 +7619,7 @@ msgstr ""
 msgid "In progress"
 msgstr "진행 중"
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:65
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:119
 #, fuzzy
 #| msgctxt "GUI|Passphrase Dialog"
 #| msgid "_Save Passphrase"
@@ -7628,21 +7668,34 @@ msgstr ""
 msgid "Manual disk configuration"
 msgstr "장치 구성"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:63
+#: ui/webui/src/components/storage/MountPointMapping.jsx:494
+#, fuzzy
+#| msgid "Device configuration"
+msgid "Manual disk configuration: Mount point mapping"
+msgstr "장치 구성"
+
+#: ui/webui/src/components/storage/DiskEncryption.jsx:64
 msgid "Medium"
 msgstr ""
 
 #: ui/webui/src/components/storage/StorageConfiguration.jsx:120
+#: ui/webui/src/components/storage/MountPointMapping.jsx:318
 #, fuzzy
 #| msgid "Mount point"
 msgid "Mount point assignment"
 msgstr "적재 지점"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:142
+#: ui/webui/src/components/storage/DiskEncryption.jsx:149
 #, fuzzy
 #| msgid "The password must be at least six characters long."
 msgid "Must be at least 8 characters"
 msgstr "비밀번호는 적어도 6 문자 길이 이상이어야 합니다."
+
+#: ui/webui/src/components/storage/MountPointMapping.jsx:325
+#, fuzzy
+#| msgid "Add device"
+msgid "No devices"
+msgstr "장치 추가"
 
 #: ui/webui/src/components/storage/StorageConfiguration.jsx:85
 #, fuzzy
@@ -7679,13 +7732,13 @@ msgstr ""
 "주의: 이 배포판은 개발과 시험 목적을 위해서만 의도된 사전-출시된 것입니다. 심"
 "각한 작업 또는 생산환경에서 이 소프트웨를 사용하지 않도록 합니다."
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:293
+#: ui/webui/src/components/storage/DiskEncryption.jsx:300
 msgid ""
 "Only new partitions will be encrypted. Existing partitions will remain "
 "untouched."
 msgstr ""
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:173
+#: ui/webui/src/components/storage/DiskEncryption.jsx:180
 #, fuzzy
 #| msgid "The passphrases do not match."
 msgid "Passphrases must match"
@@ -7718,6 +7771,12 @@ msgid ""
 "systems. Make sure you have backed up your data."
 msgstr ""
 
+#: ui/webui/src/components/storage/MountPointMapping.jsx:123
+#, fuzzy
+#| msgid "Not required"
+msgid "Required"
+msgstr "필요하지 않음"
+
 #: ui/webui/src/components/storage/InstallationMethod.jsx:152
 #, fuzzy
 #| msgid "Rescue"
@@ -7728,25 +7787,29 @@ msgstr "복구"
 msgid "Review and install"
 msgstr "검토하고 설치"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:79
+#: ui/webui/src/components/storage/MountPointMapping.jsx:166
 #, fuzzy
-#| msgid "Please enter a mount point."
-msgid "Select a mount point"
-msgstr "적재 지점을 입력해주세요."
+#| msgid "Selected Device"
+msgid "Select a device"
+msgstr "선택한 장치"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:160
+#: ui/webui/src/components/storage/DiskEncryption.jsx:167
 #, fuzzy
 #| msgctxt "GUI|User"
 #| msgid "_Confirm password"
 msgid "Show confirmed password"
 msgstr "비밀번호 확인(_C)"
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:114
-#: ui/webui/src/components/storage/DiskEncryption.jsx:129
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:166
+#: ui/webui/src/components/storage/DiskEncryption.jsx:136
 #, fuzzy
 #| msgid "Show password."
 msgid "Show password"
 msgstr "비밀번호 표시."
+
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:81
+msgid "Skip"
+msgstr ""
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:110
 msgid "Software installation"
@@ -7759,6 +7822,10 @@ msgid ""
 msgstr ""
 "소프트웨어 설치: 저장소 구성 완료. 소프트웨어는 이제 자신의 장치에 설치되어 "
 "있습니다."
+
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:152
+msgid "Some LUKS devices were not unlocked"
+msgstr ""
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:105
 msgid "Storage configuration"
@@ -7798,6 +7865,10 @@ msgstr ""
 msgid "The installer cannot continue due to a critical error."
 msgstr "설치는 진행 할 수 없으며, 시스템은 재시작됩니다"
 
+#: ui/webui/src/components/storage/MountPointMapping.jsx:228
+msgid "The root partition is always re-formatted by the installer."
+msgstr ""
+
 #: ui/webui/src/components/storage/StorageConfiguration.jsx:103
 msgid ""
 "The selected disks will be erased, this cannot be undone. Are you sure you "
@@ -7829,7 +7900,7 @@ msgid ""
 "Installation can be started at any time using the install icon in Activities."
 msgstr ""
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:215
+#: ui/webui/src/components/storage/DiskEncryption.jsx:222
 msgid "This may take a moment"
 msgstr "시간이 좀 걸릴 수 있습니다"
 
@@ -7849,16 +7920,24 @@ msgstr ""
 msgid "To enable select bigger disks"
 msgstr ""
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:88
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:140
 #, fuzzy
 #| msgctxt "GUI|Custom Partitioning|Encrypted"
 #| msgid "_Unlock"
 msgid "Unlock"
 msgstr "잠금 해제(_U)"
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:79
-msgid "Unlock encrypted partition $0"
-msgstr ""
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:76
+#, fuzzy
+#| msgid "to rescan devices"
+msgid "Unlock devices"
+msgstr "장치를 재검색 하려면"
+
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:135
+#, fuzzy
+#| msgid "Failed to unlock encrypted block device."
+msgid "Unlock encrypted devices"
+msgstr "암호화된 블록 장치를 해제하지 못했습니다."
 
 #: ui/webui/src/components/storage/StorageConfiguration.jsx:106
 #, fuzzy
@@ -7875,10 +7954,6 @@ msgstr "환영합니다"
 #| msgid "Welcome to Fedora"
 msgid "Welcome to Fedora!"
 msgstr "페도라에 오신 것을 환영합니다"
-
-#: ui/webui/src/components/storage/UnlockDialog.jsx:82
-msgid "You need to unlock encrypted partitions before you can continue."
-msgstr ""
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:167
 msgid "completed step"

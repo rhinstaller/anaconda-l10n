@@ -45,7 +45,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2023-07-26 01:14+0000\n"
+"POT-Creation-Date: 2023-07-26 15:53+0000\n"
 "PO-Revision-Date: 2023-07-26 15:53+0000\n"
 "Last-Translator: yangyangdaji <1504305527@qq.com>\n"
 "Language-Team: Chinese (Simplified) <https://translate.fedoraproject.org/"
@@ -1432,6 +1432,7 @@ msgid "Desired _Capacity:"
 msgstr "期望容量(_C)："
 
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:151
+#: ui/webui/src/components/storage/MountPointMapping.jsx:321
 msgid "Device"
 msgstr "设备"
 
@@ -2742,6 +2743,7 @@ msgstr "挂载点(_P)："
 
 #: pyanaconda/ui/tui/spokes/storage.py:798
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:162
+#: ui/webui/src/components/storage/MountPointMapping.jsx:320
 msgid "Mount point"
 msgstr "挂载点"
 
@@ -2966,7 +2968,7 @@ msgstr "未选择磁盘。保留之前的磁盘选择。"
 msgid "No disks selected; please select at least one disk to install to."
 msgstr "尚未选择磁盘，要安装系统请至少选择一个磁盘。"
 
-#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:81
+#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:84
 msgid "No format on device '{}'"
 msgstr "设备 '{}' 上没有格式"
 
@@ -3215,7 +3217,7 @@ msgid "Pass_word:"
 msgstr "密码(W)："
 
 #: pyanaconda/ui/tui/spokes/storage.py:355
-#: ui/webui/src/components/storage/DiskEncryption.jsx:248
+#: ui/webui/src/components/storage/DiskEncryption.jsx:255
 msgid "Passphrase"
 msgstr "密码"
 
@@ -3231,8 +3233,8 @@ msgstr "在 FIPS 模式下，{} 命令中给出的密码太短。 请至少使�
 #: pyanaconda/ui/gui/spokes/subscription.glade:181
 #: pyanaconda/ui/gui/spokes/subscription.glade:571
 #: pyanaconda/ui/gui/spokes/user.glade:176
-#: ui/webui/src/components/storage/UnlockDialog.jsx:101
-#: ui/webui/src/components/storage/UnlockDialog.jsx:107
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:153
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:159
 msgid "Password"
 msgstr "密码"
 
@@ -3707,6 +3709,8 @@ msgid "Ref_ormat"
 msgstr "重新格式化(_O)"
 
 #: pyanaconda/ui/tui/spokes/storage.py:870
+#: ui/webui/src/components/storage/MountPointMapping.jsx:223
+#: ui/webui/src/components/storage/MountPointMapping.jsx:322
 msgid "Reformat"
 msgstr "重新格式化"
 
@@ -3759,6 +3763,7 @@ msgid "Remote directory is required"
 msgstr "必须要有远程目录"
 
 #: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:266
+#: ui/webui/src/components/storage/MountPointMapping.jsx:243
 msgid "Remove"
 msgstr "删除"
 
@@ -4369,7 +4374,7 @@ msgid "Storing configuration files and kickstarts"
 msgstr "正在存储配置文件和 kickstarts"
 
 #: pyanaconda/core/constants.py:226
-#: ui/webui/src/components/storage/DiskEncryption.jsx:71
+#: ui/webui/src/components/storage/DiskEncryption.jsx:72
 msgid "Strong"
 msgstr "强"
 
@@ -5219,11 +5224,11 @@ msgstr "未知 Linux 系统"
 msgid "Unknown name of the %addon section."
 msgstr "%addon 小节的名称未知。"
 
-#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:65
+#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:68
 msgid "Unknown or invalid device '{}' specified"
 msgstr "指定了未知或无效的设备 '{}'"
 
-#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:74
+#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:77
 msgid "Unknown or invalid format '{}' specified for device '{}'"
 msgstr "为设备 \"{}\" 指定的格式 \"{}\" 未知或者无效"
 
@@ -5560,7 +5565,7 @@ msgstr "我们需要访问网络来获取有关您位置的信息，并向您提
 
 #: pyanaconda/core/constants.py:223
 #: pyanaconda/ui/gui/spokes/lib/passphrase.glade:182
-#: ui/webui/src/components/storage/DiskEncryption.jsx:55
+#: ui/webui/src/components/storage/DiskEncryption.jsx:56
 msgid "Weak"
 msgstr "弱"
 
@@ -6986,8 +6991,9 @@ msgstr ""
 msgid ""
 "bootctl failed to install UEFI boot loader. More information may be found in "
 "the log files stored in /tmp"
-msgstr "bootctl 无法安装 UEFI 引导加载程序。 更多信息可以在 /tmp "
-"中存储的日志文件中找到"
+msgstr ""
+"bootctl 无法安装 UEFI 引导加载程序。 更多信息可以在 /tmp 中存储的日志文件中找"
+"到"
 
 #: pyanaconda/ntp.py:51
 msgid "checking status"
@@ -7231,6 +7237,16 @@ msgstr "{}。{}"
 msgid "About"
 msgstr "关于"
 
+#: ui/webui/src/components/storage/MountPointMapping.jsx:457
+#, fuzzy
+#| msgid "Add Layout"
+msgid "Add mount"
+msgstr "增加布局"
+
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:136
+msgid "All devices using this passphrase will be unlocked."
+msgstr ""
+
 #: ui/webui/src/components/HeaderKebab.jsx:103
 msgid "Anaconda project page"
 msgstr "Anaconda 项目页面"
@@ -7249,11 +7265,11 @@ msgstr ""
 "点击 \"继续\" ，则说明您了解并接受预发行版的风险，只将该软件用于测试和开发，"
 "并且愿意报告所有程序错误或问题，以便改进本软件。"
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:91
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:143
 msgid "Cancel"
 msgstr "取消"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:211
+#: ui/webui/src/components/storage/DiskEncryption.jsx:218
 msgid "Checking storage configuration"
 msgstr "正在检查存储配置"
 
@@ -7273,13 +7289,24 @@ msgstr "通用语言"
 msgid "Completed"
 msgstr "完全的"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:251
+#: ui/webui/src/components/storage/DiskEncryption.jsx:258
 msgid "Confirm passphrase"
 msgstr "确认密码"
 
 #: ui/webui/src/components/Error.jsx:41
 msgid "Critical error"
 msgstr "关键错误"
+
+#: ui/webui/src/components/storage/MountPointMapping.jsx:124
+#, fuzzy
+#| msgctxt "GUI|Storage"
+#| msgid "_Custom"
+msgid "Custom"
+msgstr "自定义(_C)"
+
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:59
+msgid "Devices should be unlocked before assigning mount points."
+msgstr ""
 
 #: ui/webui/src/components/AnacondaWizard.jsx:90
 msgid "Disk configuration"
@@ -7289,15 +7316,32 @@ msgstr "磁盘配置"
 msgid "Disk encryption"
 msgstr "磁盘加密"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:237
+#: ui/webui/src/components/storage/MountPointMapping.jsx:202
+#, fuzzy
+#| msgctxt "GUI|Installation Destination|Filter"
+#| msgid "_Multipath Devices"
+msgid "Duplicate device."
+msgstr "多路径设备(_M)"
+
+#: ui/webui/src/components/storage/MountPointMapping.jsx:130
+#, fuzzy
+#| msgid "Select a mount point"
+msgid "Duplicate mount point."
+msgstr "选择一个挂载点"
+
+#: ui/webui/src/components/storage/DiskEncryption.jsx:244
 msgid "Encrypt my data"
 msgstr "加密我的数据"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:287
+#: ui/webui/src/components/storage/DiskEncryption.jsx:294
 msgid "Encrypt the selected devices?"
 msgstr "加密所选设备？"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:290
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:56
+msgid "Encrypted devices are locked"
+msgstr ""
+
+#: ui/webui/src/components/storage/DiskEncryption.jsx:297
 msgid "Encryption helps secure your data, to prevent others from accessing it."
 msgstr "加密有助于保护您的数据，防止其他人访问它。"
 
@@ -7314,10 +7358,6 @@ msgstr "确认删除磁盘数据并安装吗？"
 msgid "Erasing the data cannot be undone."
 msgstr "擦除数据是不能撤销的。"
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:100
-msgid "Failed to unlock LUKS partition"
-msgstr "解锁 LUKS 分区失败"
-
 #: ui/webui/src/components/installation/InstallationProgress.jsx:120
 msgid "Finalization"
 msgstr "最后确定"
@@ -7332,12 +7372,12 @@ msgstr "最终确定：系统配置已经完成。最终完成安装可能需要
 msgid "Find a language"
 msgstr "查找语言"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:160
+#: ui/webui/src/components/storage/DiskEncryption.jsx:167
 msgid "Hide confirmed password"
 msgstr "隐藏确认密码"
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:114
-#: ui/webui/src/components/storage/DiskEncryption.jsx:129
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:166
+#: ui/webui/src/components/storage/DiskEncryption.jsx:136
 msgid "Hide password"
 msgstr "隐藏密码"
 
@@ -7354,7 +7394,7 @@ msgstr "如果您不了解或不接受此风险，请点击 \"退出\" 按钮退
 msgid "In progress"
 msgstr "进行中"
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:65
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:119
 msgid "Incorrect passphrase"
 msgstr "密码不正确"
 
@@ -7390,17 +7430,30 @@ msgstr "保持当前磁盘布局并仅使用可用空间。"
 msgid "Manual disk configuration"
 msgstr "手动配置磁盘"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:63
+#: ui/webui/src/components/storage/MountPointMapping.jsx:494
+#, fuzzy
+#| msgid "Manual disk configuration"
+msgid "Manual disk configuration: Mount point mapping"
+msgstr "手动配置磁盘"
+
+#: ui/webui/src/components/storage/DiskEncryption.jsx:64
 msgid "Medium"
 msgstr "媒介"
 
 #: ui/webui/src/components/storage/StorageConfiguration.jsx:120
+#: ui/webui/src/components/storage/MountPointMapping.jsx:318
 msgid "Mount point assignment"
 msgstr "挂载点配置"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:142
+#: ui/webui/src/components/storage/DiskEncryption.jsx:149
 msgid "Must be at least 8 characters"
 msgstr "必须至少包含八个字符"
+
+#: ui/webui/src/components/storage/MountPointMapping.jsx:325
+#, fuzzy
+#| msgid "Add device"
+msgid "No devices"
+msgstr "添加设备"
 
 #: ui/webui/src/components/storage/StorageConfiguration.jsx:85
 msgid "No existing partitions on the selected disks."
@@ -7431,13 +7484,13 @@ msgstr ""
 "注意：该预发行软件仅用于开发和测试。绝不要在任何关键工作及生产环境中使用此软"
 "件。"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:293
+#: ui/webui/src/components/storage/DiskEncryption.jsx:300
 msgid ""
 "Only new partitions will be encrypted. Existing partitions will remain "
 "untouched."
 msgstr "仅新分区才会被加密。 现有分区将保持原样。"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:173
+#: ui/webui/src/components/storage/DiskEncryption.jsx:180
 msgid "Passphrases must match"
 msgstr "密码必须匹配"
 
@@ -7468,6 +7521,12 @@ msgid ""
 "systems. Make sure you have backed up your data."
 msgstr "删除所选设备上的所有分区，包括现有操作系统。 确保您已备份数据。"
 
+#: ui/webui/src/components/storage/MountPointMapping.jsx:123
+#, fuzzy
+#| msgid "Not required"
+msgid "Required"
+msgstr "不需要"
+
 #: ui/webui/src/components/storage/InstallationMethod.jsx:152
 msgid "Rescan"
 msgstr "重新扫描"
@@ -7476,18 +7535,24 @@ msgstr "重新扫描"
 msgid "Review and install"
 msgstr "检查并安装"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:79
-msgid "Select a mount point"
-msgstr "选择一个挂载点"
+#: ui/webui/src/components/storage/MountPointMapping.jsx:166
+#, fuzzy
+#| msgid "Selected Device"
+msgid "Select a device"
+msgstr "所选设备"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:160
+#: ui/webui/src/components/storage/DiskEncryption.jsx:167
 msgid "Show confirmed password"
 msgstr "显示确认密码"
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:114
-#: ui/webui/src/components/storage/DiskEncryption.jsx:129
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:166
+#: ui/webui/src/components/storage/DiskEncryption.jsx:136
 msgid "Show password"
 msgstr "显示密码"
+
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:81
+msgid "Skip"
+msgstr ""
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:110
 msgid "Software installation"
@@ -7498,6 +7563,10 @@ msgid ""
 "Software installation: Storage configuration complete. The software is now "
 "being installed onto your device."
 msgstr "软件安装：存储配置完成。该软件现在正在安装到您的设备上。"
+
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:152
+msgid "Some LUKS devices were not unlocked"
+msgstr ""
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:105
 msgid "Storage configuration"
@@ -7535,6 +7604,10 @@ msgstr "安装将使用您配置的分区布局。"
 msgid "The installer cannot continue due to a critical error."
 msgstr "安装程序由于严重错误而无法继续。"
 
+#: ui/webui/src/components/storage/MountPointMapping.jsx:228
+msgid "The root partition is always re-formatted by the installer."
+msgstr ""
+
 #: ui/webui/src/components/storage/StorageConfiguration.jsx:103
 msgid ""
 "The selected disks will be erased, this cannot be undone. Are you sure you "
@@ -7546,14 +7619,16 @@ msgid ""
 "There is not enough available free space to install. The installation needs "
 "$1 of available disk space; however, only $0 is currently available on the "
 "selected disks."
-msgstr "没有足够的可用空间来安装。 安装需要 $1 的可用磁盘空间； 但是，"
-"当前所选磁盘上只有 $0 可用。"
+msgstr ""
+"没有足够的可用空间来安装。 安装需要 $1 的可用磁盘空间； 但是，当前所选磁盘上"
+"只有 $0 可用。"
 
 #: ui/webui/src/components/storage/StorageConfiguration.jsx:56
 msgid ""
 "There is not enough space on the disks to install. The installation needs $1 "
 "of disk space; however, the capacity of the selected disks is only $0."
-msgstr "磁盘上没有足够的空间来安装。 安装需要 $1 的磁盘空间； 但是所选磁盘的容量仅为 "
+msgstr ""
+"磁盘上没有足够的空间来安装。 安装需要 $1 的磁盘空间； 但是所选磁盘的容量仅为 "
 "$0。"
 
 #: ui/webui/src/components/AnacondaHeader.jsx:39
@@ -7564,10 +7639,11 @@ msgstr "这是不稳定的预发行软件"
 msgid ""
 "This live media can be used to install Fedora or as a temporary system. "
 "Installation can be started at any time using the install icon in Activities."
-msgstr "该实时媒体可用于安装 Fedora 或作为临时系统。 "
-"可以随时使用“活动”中的安装图标开始安装。"
+msgstr ""
+"该实时媒体可用于安装 Fedora 或作为临时系统。 可以随时使用“活动”中的安装图标开"
+"始安装。"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:215
+#: ui/webui/src/components/storage/DiskEncryption.jsx:222
 msgid "This may take a moment"
 msgstr "这可能需要些时间"
 
@@ -7587,13 +7663,21 @@ msgstr "启用释放磁盘空间"
 msgid "To enable select bigger disks"
 msgstr "启用选择更大的磁盘"
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:88
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:140
 msgid "Unlock"
 msgstr "解锁"
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:79
-msgid "Unlock encrypted partition $0"
-msgstr "解锁加密分区 $0"
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:76
+#, fuzzy
+#| msgid "to rescan devices"
+msgid "Unlock devices"
+msgstr "重新扫描设备"
+
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:135
+#, fuzzy
+#| msgid "Failed to unlock encrypted block device."
+msgid "Unlock encrypted devices"
+msgstr "解锁加密块设备失败。"
 
 #: ui/webui/src/components/storage/StorageConfiguration.jsx:106
 msgid "Use free space for the installation"
@@ -7606,10 +7690,6 @@ msgstr "欢迎"
 #: data/liveinst/gnome/fedora-welcome.js:49
 msgid "Welcome to Fedora!"
 msgstr "欢迎使用 Fedora！"
-
-#: ui/webui/src/components/storage/UnlockDialog.jsx:82
-msgid "You need to unlock encrypted partitions before you can continue."
-msgstr "您需要先解锁加密分区，然后才能继续。"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:167
 msgid "completed step"
@@ -7626,6 +7706,15 @@ msgstr "待执行操作"
 #: ../data/liveinst/console.apps/liveinst.h:1
 msgid "Starting Install to Hard Drive"
 msgstr "开始安装到硬盘"
+
+#~ msgid "Failed to unlock LUKS partition"
+#~ msgstr "解锁 LUKS 分区失败"
+
+#~ msgid "Unlock encrypted partition $0"
+#~ msgstr "解锁加密分区 $0"
+
+#~ msgid "You need to unlock encrypted partitions before you can continue."
+#~ msgstr "您需要先解锁加密分区，然后才能继续。"
 
 #, fuzzy
 #~| msgctxt "GUI|Custom Partitioning|Add Dialog"

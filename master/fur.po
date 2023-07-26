@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2023-07-26 01:14+0000\n"
+"POT-Creation-Date: 2023-07-26 15:53+0000\n"
 "PO-Revision-Date: 2023-07-26 15:53+0000\n"
 "Last-Translator: yangyangdaji <1504305527@qq.com>\n"
 "Language-Team: Friulian <https://translate.fedoraproject.org/projects/"
@@ -1450,6 +1450,7 @@ msgid "Desired _Capacity:"
 msgstr "_Capacitât desiderade:"
 
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:151
+#: ui/webui/src/components/storage/MountPointMapping.jsx:321
 msgid "Device"
 msgstr "Dispositîf"
 
@@ -2807,6 +2808,7 @@ msgstr "_Pont di montaç:"
 
 #: pyanaconda/ui/tui/spokes/storage.py:798
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:162
+#: ui/webui/src/components/storage/MountPointMapping.jsx:320
 msgid "Mount point"
 msgstr "Pont di montaç"
 
@@ -3035,7 +3037,7 @@ msgstr "Nissun disc selezionât. Si ten la cumbinazion di discs precedente."
 msgid "No disks selected; please select at least one disk to install to."
 msgstr "Nissun disc selezionât; Selezionâ almancul un disc pe instalazion."
 
-#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:81
+#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:84
 msgid "No format on device '{}'"
 msgstr "Nissun formât sul dispositîf '{}'"
 
@@ -3305,7 +3307,7 @@ msgid "Pass_word:"
 msgstr "Pass_word:"
 
 #: pyanaconda/ui/tui/spokes/storage.py:355
-#: ui/webui/src/components/storage/DiskEncryption.jsx:248
+#: ui/webui/src/components/storage/DiskEncryption.jsx:255
 msgid "Passphrase"
 msgstr "Passphrase"
 
@@ -3321,8 +3323,8 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/subscription.glade:181
 #: pyanaconda/ui/gui/spokes/subscription.glade:571
 #: pyanaconda/ui/gui/spokes/user.glade:176
-#: ui/webui/src/components/storage/UnlockDialog.jsx:101
-#: ui/webui/src/components/storage/UnlockDialog.jsx:107
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:153
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:159
 msgid "Password"
 msgstr "Password"
 
@@ -3821,6 +3823,8 @@ msgid "Ref_ormat"
 msgstr "Torne f_ormate"
 
 #: pyanaconda/ui/tui/spokes/storage.py:870
+#: ui/webui/src/components/storage/MountPointMapping.jsx:223
+#: ui/webui/src/components/storage/MountPointMapping.jsx:322
 msgid "Reformat"
 msgstr "Torne formate"
 
@@ -3873,6 +3877,7 @@ msgid "Remote directory is required"
 msgstr "La cartele rimote e je necessarie"
 
 #: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:266
+#: ui/webui/src/components/storage/MountPointMapping.jsx:243
 msgid "Remove"
 msgstr "Gjave"
 
@@ -4503,7 +4508,7 @@ msgid "Storing configuration files and kickstarts"
 msgstr "Archiviazion dai file di configurazion e kickstart"
 
 #: pyanaconda/core/constants.py:226
-#: ui/webui/src/components/storage/DiskEncryption.jsx:71
+#: ui/webui/src/components/storage/DiskEncryption.jsx:72
 msgid "Strong"
 msgstr "Fuarte"
 
@@ -5439,11 +5444,11 @@ msgstr "Linux no cognossût"
 msgid "Unknown name of the %addon section."
 msgstr "Non no cognossût de sezion %addon."
 
-#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:65
+#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:68
 msgid "Unknown or invalid device '{}' specified"
 msgstr "Specificât dispositîf '{}' no valit o no cognossût"
 
-#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:74
+#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:77
 msgid "Unknown or invalid format '{}' specified for device '{}'"
 msgstr "Specificât formât '{}'no valit o no cognossût pal dispositîf '{}'"
 
@@ -5796,7 +5801,7 @@ msgstr ""
 
 #: pyanaconda/core/constants.py:223
 #: pyanaconda/ui/gui/spokes/lib/passphrase.glade:182
-#: ui/webui/src/components/storage/DiskEncryption.jsx:55
+#: ui/webui/src/components/storage/DiskEncryption.jsx:56
 msgid "Weak"
 msgstr "Debile"
 
@@ -7525,6 +7530,16 @@ msgstr "{}. {}"
 msgid "About"
 msgstr ""
 
+#: ui/webui/src/components/storage/MountPointMapping.jsx:457
+#, fuzzy
+#| msgid "Add Layout"
+msgid "Add mount"
+msgstr "Zonte disposizion"
+
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:136
+msgid "All devices using this passphrase will be unlocked."
+msgstr ""
+
 #: ui/webui/src/components/HeaderKebab.jsx:103
 #, fuzzy
 #| msgid "Anaconda Installer"
@@ -7549,14 +7564,14 @@ msgstr ""
 "finalitâts di prove e di disvilup e che tu desideris segnalâ cualsisei erôr "
 "o probleme par podê miorâ chest lavôr."
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:91
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:143
 #, fuzzy
 #| msgctxt "GUI|Software Source|Media Check Dialog"
 #| msgid "Cancel"
 msgid "Cancel"
 msgstr "Anule"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:211
+#: ui/webui/src/components/storage/DiskEncryption.jsx:218
 #, fuzzy
 #| msgid "Checking storage configuration..."
 msgid "Checking storage configuration"
@@ -7578,7 +7593,7 @@ msgstr "Lenghis comunis"
 msgid "Completed"
 msgstr "Completât"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:251
+#: ui/webui/src/components/storage/DiskEncryption.jsx:258
 #, fuzzy
 #| msgctxt "GUI|User"
 #| msgid "_Confirm password"
@@ -7587,6 +7602,17 @@ msgstr "_Conferme password"
 
 #: ui/webui/src/components/Error.jsx:41
 msgid "Critical error"
+msgstr ""
+
+#: ui/webui/src/components/storage/MountPointMapping.jsx:124
+#, fuzzy
+#| msgctxt "GUI|Storage"
+#| msgid "_Custom"
+msgid "Custom"
+msgstr "_Personalizade"
+
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:59
+msgid "Devices should be unlocked before assigning mount points."
 msgstr ""
 
 #: ui/webui/src/components/AnacondaWizard.jsx:90
@@ -7601,18 +7627,35 @@ msgstr "Configurazion dispositîf"
 msgid "Disk encryption"
 msgstr "Cifradure"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:237
+#: ui/webui/src/components/storage/MountPointMapping.jsx:202
+#, fuzzy
+#| msgctxt "GUI|Installation Destination|Filter"
+#| msgid "_Multipath Devices"
+msgid "Duplicate device."
+msgstr "Dispositîfs _multi-percors"
+
+#: ui/webui/src/components/storage/MountPointMapping.jsx:130
+#, fuzzy
+#| msgid "Please enter a mount point."
+msgid "Duplicate mount point."
+msgstr "Inserìs un pont di montaç."
+
+#: ui/webui/src/components/storage/DiskEncryption.jsx:244
 #, fuzzy
 #| msgctxt "GUI|Custom Partitioning|Autopart Page"
 #| msgid "Encrypt my data."
 msgid "Encrypt my data"
 msgstr "Cifrâ i miei dâts."
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:287
+#: ui/webui/src/components/storage/DiskEncryption.jsx:294
 msgid "Encrypt the selected devices?"
 msgstr ""
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:290
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:56
+msgid "Encrypted devices are locked"
+msgstr ""
+
+#: ui/webui/src/components/storage/DiskEncryption.jsx:297
 msgid "Encryption helps secure your data, to prevent others from accessing it."
 msgstr ""
 
@@ -7637,10 +7680,6 @@ msgstr ""
 "Nol è pussibil tornâ indaûr e ripristinâ i discs une volte che a son stâts "
 "scancelâts."
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:100
-msgid "Failed to unlock LUKS partition"
-msgstr ""
-
 #: ui/webui/src/components/installation/InstallationProgress.jsx:120
 msgid "Finalization"
 msgstr "Completament"
@@ -7657,15 +7696,15 @@ msgstr ""
 msgid "Find a language"
 msgstr "Cjate une lenghe"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:160
+#: ui/webui/src/components/storage/DiskEncryption.jsx:167
 #, fuzzy
 #| msgctxt "GUI|User"
 #| msgid "_Confirm password"
 msgid "Hide confirmed password"
 msgstr "_Conferme password"
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:114
-#: ui/webui/src/components/storage/DiskEncryption.jsx:129
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:166
+#: ui/webui/src/components/storage/DiskEncryption.jsx:136
 #, fuzzy
 #| msgid "Hide password."
 msgid "Hide password"
@@ -7692,7 +7731,7 @@ msgstr ""
 msgid "In progress"
 msgstr "In cors"
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:65
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:119
 #, fuzzy
 #| msgctxt "GUI|Passphrase Dialog"
 #| msgid "_Save Passphrase"
@@ -7741,21 +7780,34 @@ msgstr ""
 msgid "Manual disk configuration"
 msgstr "Configurazion dispositîf"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:63
+#: ui/webui/src/components/storage/MountPointMapping.jsx:494
+#, fuzzy
+#| msgid "Device configuration"
+msgid "Manual disk configuration: Mount point mapping"
+msgstr "Configurazion dispositîf"
+
+#: ui/webui/src/components/storage/DiskEncryption.jsx:64
 msgid "Medium"
 msgstr ""
 
 #: ui/webui/src/components/storage/StorageConfiguration.jsx:120
+#: ui/webui/src/components/storage/MountPointMapping.jsx:318
 #, fuzzy
 #| msgid "Mount point"
 msgid "Mount point assignment"
 msgstr "Pont di montaç"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:142
+#: ui/webui/src/components/storage/DiskEncryption.jsx:149
 #, fuzzy
 #| msgid "The password must be at least six characters long."
 msgid "Must be at least 8 characters"
 msgstr "La password e scugne vê almancul sîs caratars."
+
+#: ui/webui/src/components/storage/MountPointMapping.jsx:325
+#, fuzzy
+#| msgid "Add device"
+msgid "No devices"
+msgstr "Zonte dispositîf"
 
 #: ui/webui/src/components/storage/StorageConfiguration.jsx:85
 #, fuzzy
@@ -7793,13 +7845,13 @@ msgstr ""
 "finalitâts di disvilup e prove. NO stait a doprâ chest software par un "
 "cualsisei lavôr critic o par ambients di produzion."
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:293
+#: ui/webui/src/components/storage/DiskEncryption.jsx:300
 msgid ""
 "Only new partitions will be encrypted. Existing partitions will remain "
 "untouched."
 msgstr ""
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:173
+#: ui/webui/src/components/storage/DiskEncryption.jsx:180
 #, fuzzy
 #| msgid "The passphrases do not match."
 msgid "Passphrases must match"
@@ -7832,6 +7884,12 @@ msgid ""
 "systems. Make sure you have backed up your data."
 msgstr ""
 
+#: ui/webui/src/components/storage/MountPointMapping.jsx:123
+#, fuzzy
+#| msgid "Not required"
+msgid "Required"
+msgstr "No necessari"
+
 #: ui/webui/src/components/storage/InstallationMethod.jsx:152
 #, fuzzy
 #| msgid "Rescue"
@@ -7842,25 +7900,29 @@ msgstr "Ripristinament"
 msgid "Review and install"
 msgstr "Revisione e instale"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:79
+#: ui/webui/src/components/storage/MountPointMapping.jsx:166
 #, fuzzy
-#| msgid "Please enter a mount point."
-msgid "Select a mount point"
-msgstr "Inserìs un pont di montaç."
+#| msgid "Selected Device"
+msgid "Select a device"
+msgstr "Dispositîf selezionât"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:160
+#: ui/webui/src/components/storage/DiskEncryption.jsx:167
 #, fuzzy
 #| msgctxt "GUI|User"
 #| msgid "_Confirm password"
 msgid "Show confirmed password"
 msgstr "_Conferme password"
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:114
-#: ui/webui/src/components/storage/DiskEncryption.jsx:129
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:166
+#: ui/webui/src/components/storage/DiskEncryption.jsx:136
 #, fuzzy
 #| msgid "Show password."
 msgid "Show password"
 msgstr "Mostre password."
+
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:81
+msgid "Skip"
+msgstr ""
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:110
 msgid "Software installation"
@@ -7873,6 +7935,10 @@ msgid ""
 msgstr ""
 "Instalazion dal software: configurazion de memorie di archiviazion "
 "completade. Cumò il software al ven instalât sul dispositîf."
+
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:152
+msgid "Some LUKS devices were not unlocked"
+msgstr ""
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:105
 msgid "Storage configuration"
@@ -7916,6 +7982,10 @@ msgstr ""
 msgid "The installer cannot continue due to a critical error."
 msgstr "La instalazion no pues continuâ e il sisteme al tornarà a inviâsi"
 
+#: ui/webui/src/components/storage/MountPointMapping.jsx:228
+msgid "The root partition is always re-formatted by the installer."
+msgstr ""
+
 #: ui/webui/src/components/storage/StorageConfiguration.jsx:103
 msgid ""
 "The selected disks will be erased, this cannot be undone. Are you sure you "
@@ -7947,7 +8017,7 @@ msgid ""
 "Installation can be started at any time using the install icon in Activities."
 msgstr ""
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:215
+#: ui/webui/src/components/storage/DiskEncryption.jsx:222
 msgid "This may take a moment"
 msgstr "Chest al podarès tirâle a dilunc"
 
@@ -7967,16 +8037,24 @@ msgstr ""
 msgid "To enable select bigger disks"
 msgstr ""
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:88
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:140
 #, fuzzy
 #| msgctxt "GUI|Custom Partitioning|Encrypted"
 #| msgid "_Unlock"
 msgid "Unlock"
 msgstr "_Sbloche"
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:79
-msgid "Unlock encrypted partition $0"
-msgstr ""
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:76
+#, fuzzy
+#| msgid "to rescan devices"
+msgid "Unlock devices"
+msgstr "par tornâ a analizâ i dispositîfs"
+
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:135
+#, fuzzy
+#| msgid "Failed to unlock encrypted block device."
+msgid "Unlock encrypted devices"
+msgstr "No si è rivâts a sblocâ il dispositîf a blocs cifrât."
 
 #: ui/webui/src/components/storage/StorageConfiguration.jsx:106
 #, fuzzy
@@ -7993,10 +8071,6 @@ msgstr "Benvignûts"
 #| msgid "Welcome to Fedora"
 msgid "Welcome to Fedora!"
 msgstr "Benvignûts su Fedora"
-
-#: ui/webui/src/components/storage/UnlockDialog.jsx:82
-msgid "You need to unlock encrypted partitions before you can continue."
-msgstr ""
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:167
 msgid "completed step"

@@ -24,7 +24,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2023-07-26 01:14+0000\n"
+"POT-Creation-Date: 2023-07-26 15:53+0000\n"
 "PO-Revision-Date: 2023-07-26 15:53+0000\n"
 "Last-Translator: yangyangdaji <1504305527@qq.com>\n"
 "Language-Team: Bengali (India) <https://translate.fedoraproject.org/projects/"
@@ -1476,6 +1476,7 @@ msgid "Desired _Capacity:"
 msgstr ""
 
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:151
+#: ui/webui/src/components/storage/MountPointMapping.jsx:321
 msgid "Device"
 msgstr "ডিভাইস"
 
@@ -2858,6 +2859,7 @@ msgstr ""
 
 #: pyanaconda/ui/tui/spokes/storage.py:798
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:162
+#: ui/webui/src/components/storage/MountPointMapping.jsx:320
 msgid "Mount point"
 msgstr "মাউন্ট পয়েন্ট"
 
@@ -3098,7 +3100,7 @@ msgstr ""
 "কোনো ডিস্ক নির্বাচন করা হয়নি; দয়া করে ডিস্কে ইনস্টল করতে অন্ততপক্ষে একটি ডিস্ক "
 "নির্বাচন করুন।"
 
-#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:81
+#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:84
 msgid "No format on device '{}'"
 msgstr ""
 
@@ -3375,7 +3377,7 @@ msgid "Pass_word:"
 msgstr "পাসওয়ার্ড (_w):"
 
 #: pyanaconda/ui/tui/spokes/storage.py:355
-#: ui/webui/src/components/storage/DiskEncryption.jsx:248
+#: ui/webui/src/components/storage/DiskEncryption.jsx:255
 msgid "Passphrase"
 msgstr "পরিচয়-পংক্তি"
 
@@ -3391,8 +3393,8 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/subscription.glade:181
 #: pyanaconda/ui/gui/spokes/subscription.glade:571
 #: pyanaconda/ui/gui/spokes/user.glade:176
-#: ui/webui/src/components/storage/UnlockDialog.jsx:101
-#: ui/webui/src/components/storage/UnlockDialog.jsx:107
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:153
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:159
 msgid "Password"
 msgstr "পাসওয়ার্ড"
 
@@ -3904,6 +3906,8 @@ msgid "Ref_ormat"
 msgstr "পুনঃফর্ম্যাট করুন (_o)"
 
 #: pyanaconda/ui/tui/spokes/storage.py:870
+#: ui/webui/src/components/storage/MountPointMapping.jsx:223
+#: ui/webui/src/components/storage/MountPointMapping.jsx:322
 msgid "Reformat"
 msgstr ""
 
@@ -3962,6 +3966,7 @@ msgid "Remote directory is required"
 msgstr "রিমোট ডিরেক্টরি প্রয়োজনীয়"
 
 #: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:266
+#: ui/webui/src/components/storage/MountPointMapping.jsx:243
 #, fuzzy
 #| msgctxt "GUI|Custom Partitioning"
 #| msgid "Remove"
@@ -4596,7 +4601,7 @@ msgid "Storing configuration files and kickstarts"
 msgstr ""
 
 #: pyanaconda/core/constants.py:226
-#: ui/webui/src/components/storage/DiskEncryption.jsx:71
+#: ui/webui/src/components/storage/DiskEncryption.jsx:72
 msgid "Strong"
 msgstr "শক্তিশালী"
 
@@ -5502,11 +5507,11 @@ msgstr ""
 msgid "Unknown name of the %addon section."
 msgstr "%addon বিভাগের অজানা নাম।"
 
-#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:65
+#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:68
 msgid "Unknown or invalid device '{}' specified"
 msgstr ""
 
-#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:74
+#: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:77
 msgid "Unknown or invalid format '{}' specified for device '{}'"
 msgstr ""
 
@@ -5885,7 +5890,7 @@ msgstr ""
 
 #: pyanaconda/core/constants.py:223
 #: pyanaconda/ui/gui/spokes/lib/passphrase.glade:182
-#: ui/webui/src/components/storage/DiskEncryption.jsx:55
+#: ui/webui/src/components/storage/DiskEncryption.jsx:56
 msgid "Weak"
 msgstr "দুর্বল"
 
@@ -7603,6 +7608,16 @@ msgstr "{}. {}"
 msgid "About"
 msgstr ""
 
+#: ui/webui/src/components/storage/MountPointMapping.jsx:457
+#, fuzzy
+#| msgid "Add Layout"
+msgid "Add mount"
+msgstr "সজ্জা যোগ করুন"
+
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:136
+msgid "All devices using this passphrase will be unlocked."
+msgstr ""
+
 #: ui/webui/src/components/HeaderKebab.jsx:103
 #, fuzzy
 #| msgctxt "GUI|Summary"
@@ -7624,14 +7639,14 @@ msgid ""
 "issues in order to enhance this work."
 msgstr ""
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:91
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:143
 #, fuzzy
 #| msgctxt "GUI|Detailed Error Dialog"
 #| msgid "_Cancel"
 msgid "Cancel"
 msgstr "বাতিল(_C)"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:211
+#: ui/webui/src/components/storage/DiskEncryption.jsx:218
 #, fuzzy
 #| msgid "Checking storage configuration..."
 msgid "Checking storage configuration"
@@ -7661,7 +7676,7 @@ msgstr "ভাষা"
 msgid "Completed"
 msgstr "সম্পন্ন!"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:251
+#: ui/webui/src/components/storage/DiskEncryption.jsx:258
 #, fuzzy
 #| msgctxt "GUI|User"
 #| msgid "_Confirm password"
@@ -7670,6 +7685,14 @@ msgstr "পাসওয়ার্ড নিশ্চিত করুন (_C)"
 
 #: ui/webui/src/components/Error.jsx:41
 msgid "Critical error"
+msgstr ""
+
+#: ui/webui/src/components/storage/MountPointMapping.jsx:124
+msgid "Custom"
+msgstr ""
+
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:59
+msgid "Devices should be unlocked before assigning mount points."
 msgstr ""
 
 #: ui/webui/src/components/AnacondaWizard.jsx:90
@@ -7684,17 +7707,34 @@ msgstr "ডিভাইস কনফিগারেশন"
 msgid "Disk encryption"
 msgstr "এনক্রিপশন"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:237
+#: ui/webui/src/components/storage/MountPointMapping.jsx:202
+#, fuzzy
+#| msgctxt "GUI|Installation Destination|Filter"
+#| msgid "_Multipath Devices"
+msgid "Duplicate device."
+msgstr "মাল্টি-পাথ ডিভাইস (_M)"
+
+#: ui/webui/src/components/storage/MountPointMapping.jsx:130
+#, fuzzy
+#| msgid "Add a new mount point."
+msgid "Duplicate mount point."
+msgstr "নতুন মাউন্ট-পয়েন্ট যোগ করুন।"
+
+#: ui/webui/src/components/storage/DiskEncryption.jsx:244
 #, fuzzy
 #| msgid "Encrypt"
 msgid "Encrypt my data"
 msgstr "এনক্রিপ্ট করুন"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:287
+#: ui/webui/src/components/storage/DiskEncryption.jsx:294
 msgid "Encrypt the selected devices?"
 msgstr ""
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:290
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:56
+msgid "Encrypted devices are locked"
+msgstr ""
+
+#: ui/webui/src/components/storage/DiskEncryption.jsx:297
 msgid "Encryption helps secure your data, to prevent others from accessing it."
 msgstr ""
 
@@ -7717,10 +7757,6 @@ msgstr "ইনস্টলেশান শুরু করুন (_B)"
 msgid "Erasing the data cannot be undone."
 msgstr ""
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:100
-msgid "Failed to unlock LUKS partition"
-msgstr ""
-
 #: ui/webui/src/components/installation/InstallationProgress.jsx:120
 #, fuzzy
 #| msgid "Action"
@@ -7739,15 +7775,15 @@ msgstr ""
 msgid "Find a language"
 msgstr "সব নির্বাচন করুন"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:160
+#: ui/webui/src/components/storage/DiskEncryption.jsx:167
 #, fuzzy
 #| msgctxt "GUI|User"
 #| msgid "_Confirm password"
 msgid "Hide confirmed password"
 msgstr "পাসওয়ার্ড নিশ্চিত করুন (_C)"
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:114
-#: ui/webui/src/components/storage/DiskEncryption.jsx:129
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:166
+#: ui/webui/src/components/storage/DiskEncryption.jsx:136
 #, fuzzy
 #| msgid "empty password"
 msgid "Hide password"
@@ -7768,7 +7804,7 @@ msgstr ""
 msgid "In progress"
 msgstr "প্রগতি"
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:65
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:119
 #, fuzzy
 #| msgctxt "GUI|Passphrase Dialog"
 #| msgid "_Save Passphrase"
@@ -7821,21 +7857,34 @@ msgstr ""
 msgid "Manual disk configuration"
 msgstr "ডিভাইস কনফিগারেশন"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:63
+#: ui/webui/src/components/storage/MountPointMapping.jsx:494
+#, fuzzy
+#| msgid "Device configuration"
+msgid "Manual disk configuration: Mount point mapping"
+msgstr "ডিভাইস কনফিগারেশন"
+
+#: ui/webui/src/components/storage/DiskEncryption.jsx:64
 msgid "Medium"
 msgstr ""
 
 #: ui/webui/src/components/storage/StorageConfiguration.jsx:120
+#: ui/webui/src/components/storage/MountPointMapping.jsx:318
 #, fuzzy
 #| msgid "Mount point"
 msgid "Mount point assignment"
 msgstr "মাউন্ট পয়েন্ট"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:142
+#: ui/webui/src/components/storage/DiskEncryption.jsx:149
 #, fuzzy
 #| msgid "The password must be at least six characters long."
 msgid "Must be at least 8 characters"
 msgstr "পাসওয়ার্ডে অন্তত ৬ অক্ষর বিশিষ্ট হওয়া আবশ্যক।"
+
+#: ui/webui/src/components/storage/MountPointMapping.jsx:325
+#, fuzzy
+#| msgid "Add device"
+msgid "No devices"
+msgstr "ডিভাইস যোগ করুন"
 
 #: ui/webui/src/components/storage/StorageConfiguration.jsx:85
 #, fuzzy
@@ -7870,13 +7919,13 @@ msgid ""
 "production environments."
 msgstr ""
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:293
+#: ui/webui/src/components/storage/DiskEncryption.jsx:300
 msgid ""
 "Only new partitions will be encrypted. Existing partitions will remain "
 "untouched."
 msgstr ""
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:173
+#: ui/webui/src/components/storage/DiskEncryption.jsx:180
 #, fuzzy
 #| msgid "The passphrases do not match."
 msgid "Passphrases must match"
@@ -7909,6 +7958,12 @@ msgid ""
 "systems. Make sure you have backed up your data."
 msgstr ""
 
+#: ui/webui/src/components/storage/MountPointMapping.jsx:123
+#, fuzzy
+#| msgid "Not resizeable"
+msgid "Required"
+msgstr "পুনঃমাপযোগ্য নয়"
+
 #: ui/webui/src/components/storage/InstallationMethod.jsx:152
 #, fuzzy
 #| msgid "Rescue"
@@ -7922,25 +7977,29 @@ msgstr "Rescue"
 msgid "Review and install"
 msgstr "ইনস্টলেশান শুরু করুন (_B)"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:79
+#: ui/webui/src/components/storage/MountPointMapping.jsx:166
 #, fuzzy
-#| msgid "Add a new mount point."
-msgid "Select a mount point"
-msgstr "নতুন মাউন্ট-পয়েন্ট যোগ করুন।"
+#| msgid "Selected Device"
+msgid "Select a device"
+msgstr "নির্বাচিত ডিভাইস"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:160
+#: ui/webui/src/components/storage/DiskEncryption.jsx:167
 #, fuzzy
 #| msgctxt "GUI|User"
 #| msgid "_Confirm password"
 msgid "Show confirmed password"
 msgstr "পাসওয়ার্ড নিশ্চিত করুন (_C)"
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:114
-#: ui/webui/src/components/storage/DiskEncryption.jsx:129
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:166
+#: ui/webui/src/components/storage/DiskEncryption.jsx:136
 #, fuzzy
 #| msgid "Root password"
 msgid "Show password"
 msgstr "Root পাসওয়ার্ড"
+
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:81
+msgid "Skip"
+msgstr ""
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:110
 #, fuzzy
@@ -7952,6 +8011,10 @@ msgstr "সফ্টওয়্যার নির্বাচন"
 msgid ""
 "Software installation: Storage configuration complete. The software is now "
 "being installed onto your device."
+msgstr ""
+
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:152
+msgid "Some LUKS devices were not unlocked"
 msgstr ""
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:105
@@ -7996,6 +8059,10 @@ msgstr ""
 msgid "The installer cannot continue due to a critical error."
 msgstr "ইনস্টলেশন চলতে পারে না এবং সিস্টেম রিবুট করা হবে"
 
+#: ui/webui/src/components/storage/MountPointMapping.jsx:228
+msgid "The root partition is always re-formatted by the installer."
+msgstr ""
+
 #: ui/webui/src/components/storage/StorageConfiguration.jsx:103
 msgid ""
 "The selected disks will be erased, this cannot be undone. Are you sure you "
@@ -8027,7 +8094,7 @@ msgid ""
 "Installation can be started at any time using the install icon in Activities."
 msgstr ""
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:215
+#: ui/webui/src/components/storage/DiskEncryption.jsx:222
 #, fuzzy
 #| msgid "Scanning disks.  This may take a moment..."
 msgid "This may take a moment"
@@ -8049,16 +8116,24 @@ msgstr ""
 msgid "To enable select bigger disks"
 msgstr ""
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:88
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:140
 #, fuzzy
 #| msgctxt "GUI|Custom Partitioning|Encrypted"
 #| msgid "_Unlock"
 msgid "Unlock"
 msgstr "তালামুক্ত করুন (_U)"
 
-#: ui/webui/src/components/storage/UnlockDialog.jsx:79
-msgid "Unlock encrypted partition $0"
-msgstr ""
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:76
+#, fuzzy
+#| msgid "Configure device %s"
+msgid "Unlock devices"
+msgstr "%s ডিভাইস কনফিগার করুন"
+
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:135
+#, fuzzy
+#| msgid "Selected Device"
+msgid "Unlock encrypted devices"
+msgstr "নির্বাচিত ডিভাইস"
 
 #: ui/webui/src/components/storage/StorageConfiguration.jsx:106
 #, fuzzy
@@ -8075,10 +8150,6 @@ msgstr ""
 #| msgid "Welcome to Fedora"
 msgid "Welcome to Fedora!"
 msgstr "Fedora তে স্বাগতম"
-
-#: ui/webui/src/components/storage/UnlockDialog.jsx:82
-msgid "You need to unlock encrypted partitions before you can continue."
-msgstr ""
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:167
 #, fuzzy
