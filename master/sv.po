@@ -29,7 +29,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2023-07-26 15:53+0000\n"
+"POT-Creation-Date: 2023-07-28 01:07+0000\n"
 "PO-Revision-Date: 2023-07-28 01:08+0000\n"
 "Last-Translator: Luna Jernberg <bittin@reimu.nl>\n"
 "Language-Team: Swedish <https://translate.fedoraproject.org/projects/"
@@ -2062,11 +2062,11 @@ msgstr "Det fullständiga namnet får inte innehålla kolontecken"
 msgid "Fully numeric name is not allowed."
 msgstr "Helt numeriska namn är inte tillåtna."
 
-#: pyanaconda/modules/storage/bootloader/bootloader.py:175
+#: pyanaconda/modules/storage/bootloader/bootloader.py:158
 msgid "GRUB2 does not support installation to a partition."
 msgstr "GRUB2 stöder inte installation till en partition."
 
-#: pyanaconda/modules/storage/bootloader/bootloader.py:182
+#: pyanaconda/modules/storage/bootloader/bootloader.py:165
 msgid "GRUB2 encrypted password must be in grub.pbkdf2 format."
 msgstr "GRUB2 krypterat lösenord måste vara i formatet grub.pbkdf2."
 
@@ -2339,7 +2339,7 @@ msgid "Insights"
 msgstr "Insights"
 
 #: data/liveinst/liveinst.desktop:4
-#: ui/webui/src/components/storage/StorageConfiguration.jsx:112
+#: ui/webui/src/components/storage/InstallationScenario.jsx:111
 msgid "Install"
 msgstr "Installera"
 
@@ -3302,7 +3302,7 @@ msgid "Pass_word:"
 msgstr "Lösen_ord:"
 
 #: pyanaconda/ui/tui/spokes/storage.py:355
-#: ui/webui/src/components/storage/DiskEncryption.jsx:255
+#: ui/webui/src/components/storage/DiskEncryption.jsx:260
 msgid "Passphrase"
 msgstr "Lösenfras"
 
@@ -7479,6 +7479,19 @@ msgstr "{} prenumerationer är kopplade till systemet"
 msgid "{}. {}"
 msgstr "{}. {}"
 
+#: ui/webui/src/components/app.jsx:115
+#, fuzzy
+#| msgid "Installation"
+msgid "$0 installation"
+msgstr "Installation"
+
+#: ui/webui/src/components/HeaderKebab.jsx:74
+#, fuzzy
+#| msgctxt "GUI|Storage|No Space Dialog"
+#| msgid "_Quit installer"
+msgid "$0 installer"
+msgstr "_Avsluta installationsprogrammet"
+
 #: ui/webui/src/components/HeaderKebab.jsx:132
 msgid "About"
 msgstr "Om"
@@ -7495,7 +7508,7 @@ msgstr "Alla enheter som använder denna lösenfras kommer att låsas upp."
 msgid "Anaconda project page"
 msgstr "Anaconda projekt sida"
 
-#: ui/webui/src/components/storage/StorageConfiguration.jsx:126
+#: ui/webui/src/components/storage/InstallationScenario.jsx:125
 msgid "Apply mount point assignment and install"
 msgstr "Tillämpa monteringspunktstilldelningar och installera"
 
@@ -7515,7 +7528,7 @@ msgstr ""
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:218
+#: ui/webui/src/components/storage/DiskEncryption.jsx:223
 msgid "Checking storage configuration"
 msgstr "Kontrollerar lagringskonfiguration"
 
@@ -7535,7 +7548,7 @@ msgstr "Vanliga språk"
 msgid "Completed"
 msgstr "Färdig"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:258
+#: ui/webui/src/components/storage/DiskEncryption.jsx:263
 msgid "Confirm passphrase"
 msgstr "Bekräfta lösenfras"
 
@@ -7551,11 +7564,11 @@ msgstr "Anpassad"
 msgid "Devices should be unlocked before assigning mount points."
 msgstr "Enheter bör låsas upp innan monteringspunkter tilldelas."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:90
+#: ui/webui/src/components/AnacondaWizard.jsx:91
 msgid "Disk configuration"
 msgstr "Diskkonfiguration"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:101
+#: ui/webui/src/components/AnacondaWizard.jsx:102
 msgid "Disk encryption"
 msgstr "Diskkryptering"
 
@@ -7567,11 +7580,11 @@ msgstr "Duplicera enhet."
 msgid "Duplicate mount point."
 msgstr "Duplicera monteringspunkt."
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:244
+#: ui/webui/src/components/storage/DiskEncryption.jsx:249
 msgid "Encrypt my data"
 msgstr "Kryptera min data"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:294
+#: ui/webui/src/components/storage/DiskEncryption.jsx:299
 msgid "Encrypt the selected devices?"
 msgstr "Kryptera de valda enheterna?"
 
@@ -7579,23 +7592,25 @@ msgstr "Kryptera de valda enheterna?"
 msgid "Encrypted devices are locked"
 msgstr "Krypterade enheter är låsta"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:297
+#: ui/webui/src/components/storage/DiskEncryption.jsx:302
 msgid "Encryption helps secure your data, to prevent others from accessing it."
 msgstr ""
 "Kryptering hjälper till att säkra din data, och att förhindra att andra "
 "kommer åt den."
 
-#: ui/webui/src/components/storage/StorageConfiguration.jsx:92
-#: ui/webui/src/components/storage/StorageConfiguration.jsx:98
+#: ui/webui/src/components/storage/InstallationScenario.jsx:91
+#: ui/webui/src/components/storage/InstallationScenario.jsx:97
 msgid "Erase data and install"
 msgstr "Radera data och installera"
 
-#: ui/webui/src/components/storage/StorageConfiguration.jsx:102
+#: ui/webui/src/components/storage/InstallationScenario.jsx:101
 msgid "Erase data and install?"
 msgstr "Radera data och installera?"
 
-#: ui/webui/src/components/storage/StorageConfiguration.jsx:100
-msgid "Erasing the data cannot be undone."
+#: ui/webui/src/components/storage/InstallationScenario.jsx:99
+#, fuzzy
+#| msgid "Erasing the data cannot be undone."
+msgid "Erasing the data cannot be undone. Be sure to have backups."
 msgstr "Att radera data kan inte göras ogjort."
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:120
@@ -7614,16 +7629,16 @@ msgstr ""
 msgid "Find a language"
 msgstr "Hitta ett språk"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:167
+#: ui/webui/src/components/storage/DiskEncryption.jsx:172
 msgid "Hide confirmed password"
 msgstr "Dölj bekräftat lösenord"
 
 #: ui/webui/src/components/storage/EncryptedDevices.jsx:166
-#: ui/webui/src/components/storage/DiskEncryption.jsx:136
+#: ui/webui/src/components/storage/DiskEncryption.jsx:141
 msgid "Hide password"
 msgstr "Dölj lösenord"
 
-#: ui/webui/src/components/storage/StorageConfiguration.jsx:261
+#: ui/webui/src/components/storage/InstallationScenario.jsx:260
 msgid "How would you like to install?"
 msgstr "Hur vill du installera?"
 
@@ -7645,11 +7660,11 @@ msgstr "Felaktig lösenfras"
 msgid "Install Fedora…"
 msgstr "Installera Fedora…"
 
-#: ui/webui/src/components/storage/StorageConfiguration.jsx:130
+#: ui/webui/src/components/storage/InstallationScenario.jsx:129
 msgid "Install on the custom mount points?"
 msgstr "Installera på de anpassade monteringspunkterna?"
 
-#: ui/webui/src/components/storage/StorageConfiguration.jsx:116
+#: ui/webui/src/components/storage/InstallationScenario.jsx:115
 msgid "Install on the free space?"
 msgstr "Installera på ledigt utrymme?"
 
@@ -7657,7 +7672,7 @@ msgstr "Installera på ledigt utrymme?"
 msgid "Installation failed"
 msgstr "installationen misslyckades"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:86
+#: ui/webui/src/components/AnacondaWizard.jsx:87
 msgid "Installation method"
 msgstr "Installationsmetod"
 
@@ -7670,7 +7685,7 @@ msgid "Keeps current disk layout and uses only available space."
 msgstr ""
 "Behåller nuvarande disklayout och använder endast tillgängligt utrymme."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:95
+#: ui/webui/src/components/AnacondaWizard.jsx:96
 msgid "Manual disk configuration"
 msgstr "Manuell diskkonfiguration"
 
@@ -7682,12 +7697,12 @@ msgstr "Manuell diskkonfiguration: Mappning av monteringspunkter"
 msgid "Medium"
 msgstr "Medium"
 
-#: ui/webui/src/components/storage/StorageConfiguration.jsx:120
+#: ui/webui/src/components/storage/InstallationScenario.jsx:119
 #: ui/webui/src/components/storage/MountPointMapping.jsx:318
 msgid "Mount point assignment"
 msgstr "Monteringspunkt tilldelning"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:149
+#: ui/webui/src/components/storage/DiskEncryption.jsx:154
 msgid "Must be at least 8 characters"
 msgstr "Måste vara minst 8 tecken"
 
@@ -7695,7 +7710,7 @@ msgstr "Måste vara minst 8 tecken"
 msgid "No devices"
 msgstr "Inga enheter"
 
-#: ui/webui/src/components/storage/StorageConfiguration.jsx:85
+#: ui/webui/src/components/storage/InstallationScenario.jsx:84
 msgid "No existing partitions on the selected disks."
 msgstr "Inga existerande partitioner på de valda diskarna."
 
@@ -7707,11 +7722,11 @@ msgstr "Inga resultat funna"
 msgid "Not Now"
 msgstr "Inte nu"
 
-#: ui/webui/src/components/storage/StorageConfiguration.jsx:69
+#: ui/webui/src/components/storage/InstallationScenario.jsx:68
 msgid "Not enough free space."
 msgstr "Inte tillräckligt med fritt utrymme."
 
-#: ui/webui/src/components/storage/StorageConfiguration.jsx:54
+#: ui/webui/src/components/storage/InstallationScenario.jsx:53
 msgid "Not enough space on selected disks."
 msgstr "Inte tillräckligt med utrymme på de valda diskarna."
 
@@ -7725,7 +7740,7 @@ msgstr ""
 "utvecklings- och testsyften. Använd INTE denna programvara för kritiskt "
 "arbete eller för produktionsmiljöer."
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:300
+#: ui/webui/src/components/storage/DiskEncryption.jsx:305
 msgid ""
 "Only new partitions will be encrypted. Existing partitions will remain "
 "untouched."
@@ -7733,7 +7748,7 @@ msgstr ""
 "Endast nya partitioner kommer att krypteras. Befintliga partitioner kommer "
 "att förbli orörda."
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:180
+#: ui/webui/src/components/storage/DiskEncryption.jsx:185
 msgid "Passphrases must match"
 msgstr "Lösenfraserna måste matcha med varandra."
 
@@ -7770,11 +7785,11 @@ msgstr ""
 msgid "Required"
 msgstr "Krävs"
 
-#: ui/webui/src/components/storage/InstallationMethod.jsx:152
+#: ui/webui/src/components/storage/InstallationMethod.jsx:154
 msgid "Rescan"
 msgstr "Skanna om"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:114
+#: ui/webui/src/components/AnacondaWizard.jsx:115
 msgid "Review and install"
 msgstr "Granska och installera"
 
@@ -7782,12 +7797,12 @@ msgstr "Granska och installera"
 msgid "Select a device"
 msgstr "Välj en enhet"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:167
+#: ui/webui/src/components/storage/DiskEncryption.jsx:172
 msgid "Show confirmed password"
 msgstr "Visa bekräftat lösenord"
 
 #: ui/webui/src/components/storage/EncryptedDevices.jsx:166
-#: ui/webui/src/components/storage/DiskEncryption.jsx:136
+#: ui/webui/src/components/storage/DiskEncryption.jsx:141
 msgid "Show password"
 msgstr "Visa lösenord"
 
@@ -7835,7 +7850,7 @@ msgstr ""
 "Systemkonfiguration: Programvaruinstallationen är klar. Systemet håller nu "
 "på att konfigureras."
 
-#: ui/webui/src/components/storage/StorageConfiguration.jsx:117
+#: ui/webui/src/components/storage/InstallationScenario.jsx:116
 msgid ""
 "The installation will use the available space on your devices and will not "
 "erase any device data."
@@ -7843,7 +7858,7 @@ msgstr ""
 "Installationen kommer att använda det tillgängliga utrymmet på dina enheter "
 "och kommer inte att radera någon enhetsdata."
 
-#: ui/webui/src/components/storage/StorageConfiguration.jsx:131
+#: ui/webui/src/components/storage/InstallationScenario.jsx:130
 msgid "The installation will use your configured partitioning layout."
 msgstr ""
 "Installationen kommer att använda din konfigurerade partitioneringslayout."
@@ -7857,7 +7872,7 @@ msgstr ""
 msgid "The root partition is always re-formatted by the installer."
 msgstr "Rootpartitionen omformateras alltid av installationsprogrammet."
 
-#: ui/webui/src/components/storage/StorageConfiguration.jsx:103
+#: ui/webui/src/components/storage/InstallationScenario.jsx:102
 msgid ""
 "The selected disks will be erased, this cannot be undone. Are you sure you "
 "want to continue with the installation?"
@@ -7865,7 +7880,7 @@ msgstr ""
 "De valda diskarna kommer att raderas, detta kan inte ångras. Är du säker på "
 "att du vill fortsätta med installationen?"
 
-#: ui/webui/src/components/storage/StorageConfiguration.jsx:71
+#: ui/webui/src/components/storage/InstallationScenario.jsx:70
 msgid ""
 "There is not enough available free space to install. The installation needs "
 "$1 of available disk space; however, only $0 is currently available on the "
@@ -7875,7 +7890,7 @@ msgstr ""
 "Installationen behöver $1 tillgängligt diskutrymme; dock är för närvarande "
 "endast $0 tillgängligt på de valda diskarna."
 
-#: ui/webui/src/components/storage/StorageConfiguration.jsx:56
+#: ui/webui/src/components/storage/InstallationScenario.jsx:55
 msgid ""
 "There is not enough space on the disks to install. The installation needs $1 "
 "of disk space; however, the capacity of the selected disks is only $0."
@@ -7897,7 +7912,7 @@ msgstr ""
 "ett tillfälligt system. Installationen kan startas när som helst med hjälp "
 "av installationsikonen under Aktiviteter."
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:222
+#: ui/webui/src/components/storage/DiskEncryption.jsx:227
 msgid "This may take a moment"
 msgstr "Detta kan ta en stund"
 
@@ -7911,13 +7926,20 @@ msgid "To begin using Fedora 39 (Workstation Edition), reboot your system."
 msgstr ""
 "För att börja använda Fedora 39 (Workstation Edition), starta om ditt system."
 
-#: ui/webui/src/components/storage/StorageConfiguration.jsx:75
+#: ui/webui/src/components/storage/InstallationScenario.jsx:74
 msgid "To enable free up disk space"
 msgstr "För att frigöra diskutrymme"
 
-#: ui/webui/src/components/storage/StorageConfiguration.jsx:60
+#: ui/webui/src/components/storage/InstallationScenario.jsx:59
 msgid "To enable select bigger disks"
 msgstr "För att aktivera välj större diskar"
+
+#: ui/webui/src/components/storage/InstallationScenario.jsx:113
+#: ui/webui/src/components/storage/InstallationScenario.jsx:127
+#, fuzzy
+#| msgid "To prevent loss, make sure to backup your data. "
+msgid "To prevent loss, make sure to backup your data."
+msgstr "För att förhindra förlust, se till att säkerhetskopier dina data. "
 
 #: ui/webui/src/components/storage/EncryptedDevices.jsx:140
 msgid "Unlock"
@@ -7931,13 +7953,19 @@ msgstr "Lås upp enheter"
 msgid "Unlock encrypted devices"
 msgstr "Lås upp krypterade enheter"
 
-#: ui/webui/src/components/storage/StorageConfiguration.jsx:106
+#: ui/webui/src/components/storage/InstallationScenario.jsx:105
 msgid "Use free space for the installation"
 msgstr "Använd ledigt utrymme för installationen"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:79
+#: ui/webui/src/components/AnacondaWizard.jsx:80
 msgid "Welcome"
 msgstr "Välkommen"
+
+#: ui/webui/src/components/localization/InstallationLanguage.jsx:295
+#, fuzzy
+#| msgid "Welcome to Fedora"
+msgid "Welcome to $0"
+msgstr "Välkommen till Fedora"
 
 #: data/liveinst/gnome/fedora-welcome.js:49
 msgid "Welcome to Fedora!"
@@ -8081,9 +8109,6 @@ msgstr "Påbörjar installation på hårddisk"
 #~ "hos denna layout beror på huruvida systemet använder BIOS eller UEFI som "
 #~ "fast programvara och det totala fria utrymmet på diskarna. En ZRAM-"
 #~ "baserad växling används istället för en diskbaserad växlingspartition."
-
-#~ msgid "To prevent loss, make sure to backup your data. "
-#~ msgstr "För att förhindra förlust, se till att säkerhetskopier dina data. "
 
 #~ msgid "Total"
 #~ msgstr "Totalt"
