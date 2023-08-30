@@ -16,24 +16,38 @@ jobs:
           - branch: master
             anaconda-branch: master
             container-tag: master
-          - branch: f38
-            anaconda-branch: fedora-38
-            container-tag: fedora-38
+          - branch: fedora
+            anaconda-branch: fedora
+            container-tag: fedora
           - branch: rhel-9
             anaconda-branch: rhel-9
             container-tag: master
 
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout anaconda ${{ matrix.anaconda-branch }}
+      - name: Set variables
+        id: variables
+        run: |
+          if [ "fedora" != ${{ matrix.branch }} ]; then
+              echo "branch=${{ matrix.branch }}" >> $GITHUB_OUTPUT
+              echo "anaconda-branch=${{ matrix.anaconda-branch }}" >> $GITHUB_OUTPUT
+              echo "container-tag=${{ matrix.container-tag }}" >> $GITHUB_OUTPUT
+          else:
+              VERSION=$(curl -sL https://raw.githubusercontent.com/rhinstaller/anaconda/master/.branch-variables.yml | \
+              awk -F "[:#]" '/branched_fedora_version/ {print $2}' | tr -d '\ ')
+              echo "branch=fedora-$VERSION" >> $GITHUB_OUTPUT
+              echo "anaconda-branch=fedora-$VERSION" >> $GITHUB_OUTPUT
+              echo "container-tag=fedora-$VERSION" >> $GITHUB_OUTPUT
+          fi
+      - name: Checkout anaconda ${{ steps.variables.outputs.anaconda-branch }}
         uses: actions/checkout@v3
         with:
           path: anaconda
           repository: rhinstaller/anaconda
-          ref: ${{ matrix.anaconda-branch }}
+          ref: ${{ steps.variables.outputs.anaconda-branch }}
       - name: Create pot file
         run: |
-          podman run --rm -v ./anaconda:/anaconda:Z --workdir /anaconda quay.io/rhinstaller/anaconda-ci:${{ matrix.container-tag }} sh -c " \
+          podman run --rm -v ./anaconda:/anaconda:Z --workdir /anaconda quay.io/rhinstaller/anaconda-ci:${{ steps.variables.outputs.container-tag }} sh -c " \
           ./autogen.sh; \
           ./configure; \
           make; \
@@ -46,7 +60,7 @@ jobs:
       - name: Push new potfile
         run: |
           set -x
-          cp -v anaconda/po/anaconda.pot anaconda-l10n/${{ matrix.branch }}
+          cp -v anaconda/po/anaconda.pot anaconda-l10n/${{ steps.variables.outputs.branch }}
           cd anaconda-l10n
           git config user.name github-actions
           git config user.email github-actions@github.com
@@ -61,7 +75,7 @@ jobs:
               echo "The pot file did not change."
               exit 0
           fi
-          git commit -m "update ${{ matrix.branch }} pot-file"
+          git commit -m "update ${{ steps.variables.outputs.branch }} pot-file"
 
           # do a 5 push retries in case weblate just pushed to the repository
           # push from weblate could happen easily because webhook updates the translations
@@ -84,5 +98,5 @@ jobs:
       - name: Upload diff output
         uses: actions/upload-artifact@v3
         with:
-          name: 'diff-output-${{ matrix.branch }}.log'
+          name: 'diff-output-${{ steps.variables.outputs.branch }}.log'
           path: ./pot-changes.log
