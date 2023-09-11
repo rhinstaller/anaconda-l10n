@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2022-09-06 02:11+0000\n"
-"PO-Revision-Date: 2023-02-27 01:18+0000\n"
+"PO-Revision-Date: 2023-09-12 00:58+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://translate.fedoraproject.org/projects/anaconda/"
 "rhel-90/he/>\n"
@@ -28,7 +28,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 4.15.2\n"
+"X-Generator: Weblate 5.0.1\n"
 
 #: pyanaconda/exception.py:109
 #, python-format
@@ -326,10 +326,8 @@ msgid "%(desc)s cannot be of type %(type)s"
 msgstr "%(desc)s אינו יכול להיות מסוג %(type)s"
 
 #: pyanaconda/modules/storage/partitioning/base_partitioning.py:57
-#, fuzzy
-#| msgid "Failed to set up installation source"
 msgid "Failed to proceed with the installation."
-msgstr "נכשל בהכנת מקור ההתקנה"
+msgstr "המשך ההתקנה נכשל."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:162
 #, python-format
@@ -970,6 +968,8 @@ msgid ""
 "system. The system will not be bootable. Please, upgrade the firmware or "
 "change the file system type."
 msgstr ""
+"הקושחה שלך לא תומכת ביכולות מערכת קבצים מסוג XFS במערכת הקבצים ‎/boot. "
+"המערכת לא תעלה. נא לשדרג את הקושחה או לשנות את סוג מערכת הקבצים."
 
 #: pyanaconda/modules/storage/checker/utils.py:305
 #, python-format
@@ -1172,6 +1172,23 @@ msgid ""
 "* Some drives support re-configuration of sector sizes, for example by "
 "running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 msgstr ""
+"מעקפים להתקנה ידנית:\n"
+"* יש לבחור רק את הכוננים עם אותו גודל הסקטורים במהלך התקנה ידנית במצבים גרפי "
+"או ידני.\n"
+"* כאשר נבחרים כוננים עם גודל סקטורים לא עקבי להתקנה, יש להגביל כל קבוצת "
+"כרכים ב־LVM להשתמש בכרכים פיזיים (PV) עם אותו גודל הסקטורים. אפשר לעשות זאת "
+"רק במצב גרפי באזור חלוקה מותאמת אישית של מחיצות.\n"
+"\n"
+"מעקפים להתקנות kickstart (אוטומטיות):\n"
+"* להגביל אילו כוננים ישמשו למחיצות על ידי ציון ‚ignoredisk --drives=..‎’ או ‚"
+"ignoredisk --only-use=..‎’\n"
+"* לציין באילו כוננים להשתמש לכל כרך פיזי (PV) ב־LVM: ‏‚partition pv.1 "
+"--ondisk=..‎’\n"
+"\n"
+"מעקפים כלליים:\n"
+"* אפשר להשתמש בסכמה פשוטה לחלוקת מחיצות במקום ב־LVM.\n"
+"* חלק מהכוננים תומכים בהגדרה מחדש של גודלי סקטורים, למשל על ידי הרצת הפקודה: "
+"‚hdparm --set-sector-size=<SIZE> <DEVICE>‎’.\n"
 
 #: pyanaconda/modules/timezone/timezone.py:100
 msgid "Invalid time source."
@@ -1179,7 +1196,7 @@ msgstr "מקור זמן שגוי."
 
 #: pyanaconda/modules/subscription/runtime.py:280
 msgid "Please select an organization for your account and try again."
-msgstr ""
+msgstr "נא לבחור ארגון לחשבון שלך ולנסות שוב."
 
 #: pyanaconda/modules/subscription/runtime.py:305
 #: pyanaconda/modules/subscription/runtime.py:356
@@ -1400,10 +1417,10 @@ msgid ""
 "ways to mitigate these risks."
 msgstr ""
 "טכנולוגיית ריבוי תהליכים בו־זמנית (SMT) יכולה לספק שיפורי ביצועים לעומסי "
-"עבודה מסוימים אך חושפת מספר פרצות אבטחה מוכרות לציבור. באפשרותך להשבית את "
-"SMT מה שעשוי להשפיע על הביצועים. אם בחרת להשאיר את SMT זמין, נא לקרוא את "
-"https://red.ht/rhel-smt כדי להבין את הסכנות האפשרויתו וללמוד על דרכים נוספות "
-"לאפחת את הסכנות האלו."
+"עבודה מסוימים אך חושפת מספר פרצות אבטחה מוכרות לציבור. אפשר להשבית את SMT, "
+"מה שעשוי להשפיע על הביצועים. אם בחרת להשאיר את SMT זמין, נא לקרוא את "
+"https://red.ht/rhel-smt כדי להבין את הסכנות האפשריות וללמוד על דרכים נוספות "
+"לצמצם את הסכנות האלו."
 
 #: pyanaconda/core/constants.py:185
 msgid ""
@@ -1702,7 +1719,7 @@ msgstr ""
 
 #: pyanaconda/errors.py:221
 msgid "Failed to provision the target system for Satellite."
-msgstr ""
+msgstr "הקמת מערכת היעד ל־Satellite נכשלה."
 
 #: pyanaconda/errors.py:228
 #, python-brace-format
@@ -2651,7 +2668,7 @@ msgid ""
 "can modify your selection or quit the installer."
 msgstr ""
 "המערכת נתקלה בשגיאות הבאות בעת בדיקת בחירת הכוננים. ניתן לשנות את הבחירה או "
-"לצאת מתכנית ההתקנה."
+"לצאת מתוכנית ההתקנה."
 
 #: pyanaconda/ui/gui/spokes/storage.py:853
 #: pyanaconda/ui/gui/spokes/storage.py:874
@@ -3077,7 +3094,7 @@ msgstr "הכנת מקור ההתקנה נכשלה; יש לבדוק את כתוב
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:697
 msgid "Satellite"
-msgstr ""
+msgstr "Satellite"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:702
 #: pyanaconda/ui/gui/spokes/software_selection.py:211
@@ -3122,7 +3139,7 @@ msgstr "יש להגדיר את תצורת הרשת על מנת להשתמש במ
 #: pyanaconda/ui/gui/spokes/installation_source.py:1127
 msgctxt "GUI|Software Source"
 msgid "_Satellite"
-msgstr ""
+msgstr "_Satellite"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:1129
 #: pyanaconda/ui/gui/spokes/installation_source.glade:635
@@ -3401,10 +3418,8 @@ msgid "Subscription attached."
 msgstr "המינוי הוצמד."
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1048
-#, fuzzy
-#| msgid "Registration failed."
 msgid "Registered to Satellite."
-msgstr "הרישום נכשל."
+msgstr "רשום ל־Satellite."
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1050
 msgid "Registered."
@@ -3416,13 +3431,11 @@ msgstr "לא רשום."
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1083
 msgid "The system is registered to a Satellite instance."
-msgstr ""
+msgstr "המערכת רשומה לעותק של Satellite."
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1087
-#, fuzzy
-#| msgid "The system is currently not registered."
 msgid "The system is registered."
-msgstr "המערכת לא רשומה עדיין."
+msgstr "המערכת רשומה."
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1092
 msgid "Registered with account {}"
@@ -3454,7 +3467,7 @@ msgstr "אין חיבור לתובנות של Red Hat"
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1134
 msgid "Subscribed in Simple Content Access mode."
-msgstr ""
+msgstr "רשום במצב גישה לתוכן פשוט."
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1136
 msgid "No subscriptions are attached to the system"
@@ -3543,10 +3556,8 @@ msgid "Checking storage configuration..."
 msgstr "בודק את הגדרות תצורת האחסון..."
 
 #: pyanaconda/ui/lib/users.py:35
-#, fuzzy
-#| msgid "Root account is disabled."
 msgid "Root account is disabled"
-msgstr "חשבון העל (root) מושבת."
+msgstr "חשבון העל (root) מושבת"
 
 #: pyanaconda/ui/lib/users.py:37
 msgid "Root password is set"
@@ -3554,7 +3565,7 @@ msgstr "סיסמת מנהל המערכת נקבעה"
 
 #: pyanaconda/ui/lib/users.py:39
 msgid "Root password is not set"
-msgstr "לא נקבעה סיסמת מנהל המערכת"
+msgstr "לא נקבעה סיסמת הנהלת המערכת"
 
 #: pyanaconda/ui/lib/space.py:103
 msgid ""
@@ -6012,7 +6023,7 @@ msgstr "פריסות זמינות"
 
 #: pyanaconda/ui/gui/spokes/keyboard.glade:575
 msgid "Add Layout"
-msgstr "הוספת פריסת מקלדת"
+msgstr "הוספת פריסה"
 
 #: pyanaconda/ui/gui/spokes/keyboard.glade:607
 msgctxt "GUI|Keyboard Layout|Switching Options"
@@ -6115,7 +6126,7 @@ msgstr "כתובת בסיס לבחירתך"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:594
 msgid "Satellite URL"
-msgstr ""
+msgstr "כתובת Satellite"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:608
 msgid "Use HTTP proxy"
@@ -6319,7 +6330,7 @@ msgstr "התחלת _גילוי"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:502
 msgid "Discovering iSCSI targets.  This may take a moment..."
-msgstr "יעדי iSCSI בגילוי. זה עלול להימשך זמן מה..."
+msgstr "מתבצע איתור יעדי iSCSI. זה עלול להימשך זמן מה…"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:541
 msgid "Discovery login rejected."
@@ -7056,7 +7067,7 @@ msgstr "הוספת EC_KD DASD..."
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1914
 msgctxt "GUI|Installation Destination|Filter"
 msgid "Add _iSCSI Target..."
-msgstr "הוספת מטרת _iSCSI..."
+msgstr "הוספת יעד _iSCSI..."
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1929
 msgctxt "GUI|Installation Destination|Filter"
