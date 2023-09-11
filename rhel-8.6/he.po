@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2022-02-23 19:45+0100\n"
-"PO-Revision-Date: 2023-02-27 01:18+0000\n"
+"PO-Revision-Date: 2023-09-12 00:58+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://translate.fedoraproject.org/projects/anaconda/"
 "rhel-86/he/>\n"
@@ -27,7 +27,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 4.15.2\n"
+"X-Generator: Weblate 5.0.1\n"
 
 #: anaconda.py:378
 msgid "Unable to create PID file"
@@ -1808,7 +1808,7 @@ msgstr "אין חיבור לתובנות של Red Hat"
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1085
 msgid "Subscribed in Simple Content Access mode."
-msgstr ""
+msgstr "רשום במצב גישה לתוכן פשוט."
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1087
 msgid "No subscriptions are attached to the system"
@@ -1948,7 +1948,7 @@ msgid ""
 "can modify your selection or quit the installer."
 msgstr ""
 "המערכת נתקלה בשגיאות הבאות בעת בדיקת בחירת הכוננים. ניתן לשנות את הבחירה או "
-"לצאת מתכנית ההתקנה."
+"לצאת מתוכנית ההתקנה."
 
 #: pyanaconda/ui/gui/spokes/storage.py:1003
 #: pyanaconda/ui/gui/spokes/storage.py:1024
@@ -2064,7 +2064,7 @@ msgstr "סיסמת מנהל המערכת נקבעה"
 
 #: pyanaconda/ui/gui/spokes/root_password.py:159
 msgid "Root password is not set"
-msgstr "לא נקבעה סיסמת מנהל המערכת"
+msgstr "לא נקבעה סיסמת הנהלת המערכת"
 
 #: pyanaconda/ui/gui/spokes/network.py:80
 msgid "Status unknown (missing)"
@@ -3303,6 +3303,23 @@ msgid ""
 "* Some drives support re-configuration of sector sizes, for example by "
 "running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 msgstr ""
+"מעקפים להתקנה ידנית:\n"
+"* יש לבחור רק את הכוננים עם אותו גודל הסקטורים במהלך התקנה ידנית במצבים גרפי "
+"או ידני.\n"
+"* כאשר נבחרים כוננים עם גודל סקטורים לא עקבי להתקנה, יש להגביל כל קבוצת "
+"כרכים ב־LVM להשתמש בכרכים פיזיים (PV) עם אותו גודל הסקטורים. אפשר לעשות זאת "
+"רק במצב גרפי באזור חלוקה מותאמת אישית של מחיצות.\n"
+"\n"
+"מעקפים להתקנות kickstart (אוטומטיות):\n"
+"* להגביל אילו כוננים ישמשו למחיצות על ידי ציון ‚ignoredisk --drives=..‎’ או ‚"
+"ignoredisk --only-use=..‎’\n"
+"* לציין באילו כוננים להשתמש לכל כרך פיזי (PV) ב־LVM: ‏‚partition pv.1 "
+"--ondisk=..‎’\n"
+"\n"
+"מעקפים כלליים:\n"
+"* אפשר להשתמש בסכמה פשוטה לחלוקת מחיצות במקום ב־LVM.\n"
+"* חלק מהכוננים תומכים בהגדרה מחדש של גודלי סקטורים, למשל על ידי הרצת הפקודה: "
+"‚hdparm --set-sector-size=<SIZE> <DEVICE>‎’.\n"
 
 #: pyanaconda/modules/storage/snapshot/device.py:43
 #, python-format
@@ -3324,10 +3341,8 @@ msgid "Snapshot %s already exists."
 msgstr "Snapshot %s already exists."
 
 #: pyanaconda/modules/storage/partitioning/base_partitioning.py:57
-#, fuzzy
-#| msgid "Failed to set up installation source"
 msgid "Failed to proceed with the installation."
-msgstr "נכשל בהכנת מקור ההתקנה"
+msgstr "המשך ההתקנה נכשל."
 
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:64
 #, python-format
@@ -4285,6 +4300,8 @@ msgid ""
 "Support for this hardware has been removed in this major OS release. Please "
 "check theremoved functionality section of the release notes."
 msgstr ""
+"התמיכה בחומרה זו הוסרה בגרסה עיקרית זו של מערכת ההפעלה. נא לעיין בסעיף "
+"התכונות שהוסרו בהערות ההוצאה לאור."
 
 #: pyanaconda/core/constants.py:164
 msgid ""
@@ -4292,6 +4309,8 @@ msgid ""
 "more information on supported hardware, please refer to http://www.redhat."
 "com/hardware."
 msgstr ""
+"חומרה זו (או שילוב שלה) אינה נתמכת על ידי Red Hat. למידע נוסף על חומרה "
+"נתמכת, נא לגשת אל http://www.redhat.com/hardware."
 
 #: pyanaconda/core/constants.py:170
 msgid ""
@@ -4314,6 +4333,11 @@ msgid ""
 "red.ht/rhel-smt to understand your potential risks and learn about other "
 "ways to mitigate these risks."
 msgstr ""
+"טכנולוגיית ריבוי תהליכים בו־זמנית (SMT) יכולה לספק שיפורי ביצועים לעומסי "
+"עבודה מסוימים אך חושפת מספר פרצות אבטחה מוכרות לציבור. אפשר להשבית את SMT, "
+"מה שעשוי להשפיע על הביצועים. אם בחרת להשאיר את SMT זמין, נא לקרוא את "
+"https://red.ht/rhel-smt כדי להבין את הסכנות האפשריות וללמוד על דרכים נוספות "
+"לצמצם את הסכנות האלו."
 
 #: pyanaconda/core/constants.py:190
 msgid ""
@@ -5179,7 +5203,7 @@ msgstr "פריסות זמינות"
 
 #: pyanaconda/ui/gui/spokes/keyboard.glade:573
 msgid "Add Layout"
-msgstr "הוספת פריסת מקלדת"
+msgstr "הוספת פריסה"
 
 #: pyanaconda/ui/gui/spokes/keyboard.glade:605
 msgctxt "GUI|Keyboard Layout|Switching Options"
@@ -6625,7 +6649,7 @@ msgstr "התחלת _גילוי"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:502
 msgid "Discovering iSCSI targets.  This may take a moment..."
-msgstr "יעדי iSCSI בגילוי. זה עלול להימשך זמן מה..."
+msgstr "מתבצע איתור יעדי iSCSI. זה עלול להימשך זמן מה…"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:541
 msgid "Discovery login rejected."
@@ -7114,7 +7138,7 @@ msgstr "הוספת EC_KD DASD..."
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1914
 msgctxt "GUI|Installation Destination|Filter"
 msgid "Add _iSCSI Target..."
-msgstr "הוספת מטרת _iSCSI..."
+msgstr "הוספת יעד _iSCSI..."
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1929
 msgctxt "GUI|Installation Destination|Filter"
