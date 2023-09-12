@@ -14,7 +14,7 @@
 # Valentin Laskov <laskov@festa.bg>, 2015. #zanata
 # Valentin Laskov <laskov@festa.bg>, 2016. #zanata
 # Valentin Laskov <laskov@festa.bg>, 2019. #zanata
-# Valentin Laskov <v_laskov@mail.bg>, 2020.
+# Valentin Laskov <v_laskov@mail.bg>, 2020, 2023.
 # Anonymous <noreply@weblate.org>, 2020.
 # stefan stoilov <stefan@null.net>, 2021.
 # Bogomil Shopov <bogomil.fedora@gmail.com>, 2023.
@@ -24,8 +24,8 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2022-09-06 02:11+0000\n"
-"PO-Revision-Date: 2023-03-17 15:20+0000\n"
-"Last-Translator: Velislav Ivanov <velislav.bg@gmail.com>\n"
+"PO-Revision-Date: 2023-09-13 01:01+0000\n"
+"Last-Translator: Valentin Laskov <v_laskov@mail.bg>\n"
 "Language-Team: Bulgarian <https://translate.fedoraproject.org/projects/"
 "anaconda/rhel-90/bg/>\n"
 "Language: bg\n"
@@ -33,7 +33,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.15.2\n"
+"X-Generator: Weblate 5.0.1\n"
 
 #: pyanaconda/exception.py:109
 #, python-format
@@ -69,6 +69,16 @@ msgid ""
 "\n"
 "The installer will now terminate."
 msgstr ""
+"\n"
+"Инсталирането спря поради грешка, възникнала по време на неинтерактивна "
+"работа в команден режим. Тъй като в команден режим не може да има каквито и "
+"да са въпроси, редактирайте Вашия kikstart файл и започнете инсталирането "
+"отначало. \n"
+"Съобщението за грешка е: \n"
+"\n"
+"%s. \n"
+"\n"
+"Инсталаторът ще прекрати работа сега."
 
 #: pyanaconda/exception.py:185
 #, python-format
@@ -328,6 +338,8 @@ msgid ""
 "%(bootloader_stage2_description)s cannot be on an iSCSI disk which is not "
 "configured in iBFT."
 msgstr ""
+"%(bootloader_stage2_description)s не може да е на iSCSI диск, който не е "
+"конфигуриран в iBFT."
 
 #: pyanaconda/modules/storage/bootloader/base.py:648
 #, python-format
@@ -668,7 +680,7 @@ msgstr ""
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:423
 #, python-brace-format
 msgid "/boot/efi must be on a device of type {type} or {another}"
-msgstr ""
+msgstr "/boot/efi трябва да е на устройство от типа {type} или {another}"
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:430
 #, python-brace-format
@@ -800,10 +812,8 @@ msgid "Snapshot %s already exists."
 msgstr ""
 
 #: pyanaconda/modules/storage/installation.py:92
-#, fuzzy
-#| msgid "An error occurred while resizing the device %s."
 msgid "An error occurred while resizing the device {}: {}"
-msgstr "Възникна грешка при преоразмеряването на устройство %s."
+msgstr "Възникна грешка при преоразмеряването на устройството {}: {}"
 
 #: pyanaconda/modules/storage/installation.py:143
 msgid "Gathering entropy 100%"
@@ -840,11 +850,11 @@ msgstr ""
 
 #: pyanaconda/modules/storage/platform.py:46
 msgid "Apple EFI Boot Partition"
-msgstr ""
+msgstr "Apple EFI Boot дял"
 
 #: pyanaconda/modules/storage/platform.py:47
 msgid "Apple Bootstrap Partition"
-msgstr ""
+msgstr "Apple Bootstrap дял"
 
 #: pyanaconda/modules/storage/platform.py:48
 msgid "DASD"
@@ -1068,6 +1078,8 @@ msgid ""
 "%s is currently mounted and cannot be used for the installation. Please "
 "unmount it and retry."
 msgstr ""
+"%s в момента е монтиран и не може да бъде използван за инсталацията. "
+"Демонтирайте го и опитайте отново."
 
 #: pyanaconda/modules/storage/checker/utils.py:532
 #, fuzzy
@@ -1637,11 +1649,10 @@ msgid ""
 msgstr ""
 
 #: pyanaconda/errors.py:130
-#, fuzzy
-#| msgid "Error checking storage configuration"
 msgid "An error occurred while activating your storage configuration."
 msgstr ""
-"Грешка при проверка конфигурацията на устройствата за съхранение на данни"
+"Възникна грешка при активирането конфигурацията на устройствата за "
+"съхранение на данни."
 
 #: pyanaconda/errors.py:137
 msgid ""
@@ -1760,18 +1771,12 @@ msgstr ""
 "продължа инсталирането?"
 
 #: pyanaconda/errors.py:238
-#, fuzzy
-#| msgid ""
-#| "The following error occurred while installing the boot loader. The system "
-#| "will not be bootable. Would you like to ignore this and continue with "
-#| "installation?"
 msgid ""
 "An error occurred during Red Hat Insights configuration. Would you like to "
 "ignore this and continue with installation?"
 msgstr ""
-"Следната грешка възникна при инсталирането на зареждащата програма. "
-"Системата няма да може да се стартира. Желаете ли да игнорирам това и да "
-"продължа инсталирането?"
+"Възникна грешка при конфигурирането на Red Hat Insights. Желаете ли да "
+"игнорираме това и инсталирането да продължи?"
 
 #: pyanaconda/installation.py:87
 #, fuzzy
@@ -3493,7 +3498,7 @@ msgstr "Свързан"
 
 #: pyanaconda/ui/gui/spokes/subscription.py:249
 msgid "Activation key set."
-msgstr ""
+msgstr "Активиращият ключ е зададен."
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1037
 #, fuzzy
@@ -3508,10 +3513,8 @@ msgid "Registering..."
 msgstr "Прекратявам връзката..."
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1041
-#, fuzzy
-#| msgid "Failed to save storage configuration"
 msgid "Attaching subscription..."
-msgstr "Записването на конфигурацията на сториджа се провали"
+msgstr "Присъединяване на абонамент..."
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1043
 msgid "Subscription attached."
@@ -3587,7 +3590,7 @@ msgstr ""
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1138
 msgid "1 subscription attached to the system"
-msgstr ""
+msgstr "1 абонамент е прикачен към системата"
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1140
 msgid "{} subscriptions attached to the system"
@@ -3963,7 +3966,7 @@ msgstr "Изберете конфигурация на схемата на дя�
 
 #: pyanaconda/ui/tui/spokes/storage.py:641
 msgid "Assign mount points"
-msgstr ""
+msgstr "Задайте точки на монтиране"
 
 #: pyanaconda/ui/tui/spokes/storage.py:661
 msgid ""
@@ -4512,19 +4515,16 @@ msgid ""
 msgstr ""
 
 #: pyanaconda/rescue.py:442
-#, fuzzy, python-brace-format
-#| msgid ""
-#| "An error occurred trying to mount some or all of your system.  Some of it "
-#| "may be mounted under %s\n"
-#| "\n"
+#, python-brace-format
 msgid ""
 "An error occurred trying to mount some or all of your system: {message}\n"
 "\n"
 "Some of it may be mounted under {path}."
 msgstr ""
-"Възникна грешка при монтирането на няколко или всички системи.  Някоя от тях "
-"може да е монтирана в %s.\n"
+"Възникна грешка при опита за монтиране на няколко или всички системи: "
+"{message}\n"
 "\n"
+"Някоя от тях може да е монтирана в {path}."
 
 #: pyanaconda/rescue.py:454
 #, fuzzy
@@ -5075,7 +5075,7 @@ msgstr ""
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:200
 msgid "Allow root SSH login with password"
-msgstr ""
+msgstr "Разрешаване влизането на root през SSH с парола"
 
 #: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:8
 msgid "UNFORMATTED DASDS"
@@ -5705,7 +5705,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/storage.glade:365
 msgctxt "GUI|Storage"
 msgid "A_utomatic"
-msgstr ""
+msgstr "Автоматично"
 
 #: pyanaconda/ui/gui/spokes/storage.glade:383
 msgctxt "GUI|Storage"
@@ -6076,7 +6076,7 @@ msgstr "Направи този потребител ад_министратор
 #: pyanaconda/ui/gui/spokes/user.glade:268
 msgctxt "GUI|User"
 msgid "Allow this user to run the 'sudo' command."
-msgstr ""
+msgstr "Позволяване на този потребител изпълнение на командата 'sudo'."
 
 #: pyanaconda/ui/gui/spokes/user.glade:286
 msgctxt "GUI|User"
@@ -6224,7 +6224,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/subscription.glade:119
 msgctxt "GUI|Subscription|Authetication|Activation Key"
 msgid "Activation _Key"
-msgstr ""
+msgstr "Активиращ _Ключ"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:213
 #: pyanaconda/ui/gui/spokes/subscription.glade:274
@@ -6232,10 +6232,8 @@ msgid "Organization"
 msgstr ""
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:286
-#, fuzzy
-#| msgid "Action"
 msgid "Activation Key"
-msgstr "Действие"
+msgstr "Активиращ Ключ"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:310
 msgid "key1,key2,..."
@@ -6644,7 +6642,7 @@ msgstr ""
 
 #: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:82
 msgid "ADD zFCP STORAGE TARGET"
-msgstr ""
+msgstr "ДОБАВЯНЕ НА zFCP УСТРОЙСТВО ЗА СЪХРАНЕНИЕ"
 
 #: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:105
 msgid ""
@@ -6737,10 +6735,8 @@ msgid "Base Environment"
 msgstr "Основна среда"
 
 #: pyanaconda/ui/gui/spokes/software_selection.glade:86
-#, fuzzy
-#| msgid "Add-Ons for Selected Environment"
 msgid "Additional software for Selected Environment"
-msgstr "Добавки за избраната среда"
+msgstr "Допълнителен софтуер за избраната среда"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:29
 msgctxt "GUI|Software Source|ISO Chooser Dialog"
