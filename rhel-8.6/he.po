@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2022-02-23 19:45+0100\n"
-"PO-Revision-Date: 2023-09-12 00:58+0000\n"
+"PO-Revision-Date: 2023-09-12 09:07+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://translate.fedoraproject.org/projects/anaconda/"
 "rhel-86/he/>\n"
@@ -572,6 +572,15 @@ msgid ""
 "\n"
 "The installer will now terminate."
 msgstr ""
+"\n"
+"ההתקנה נעצרה עקב שגיאה שהתרחשה במצב שורת פקודה בלתי אינטראקטיבית. מאחר שאין "
+"אפשרות לענות על שאלות במצב שורת פקודה, יש לערוך את קובץ ה־kickstart שלך "
+"ולנסות להתקין מחדש. \n"
+"הודעת השגיאה המדויקת היא: \n"
+"\n"
+"%s. \n"
+"\n"
+"תוכנית ההתקנה תצא כעת."
 
 #: pyanaconda/exception.py:182
 #, python-format
@@ -597,15 +606,6 @@ msgid "An error occurred while activating your storage configuration."
 msgstr "אירעה שגיאה בעת הפעלת תצורת האחסון שלך."
 
 #: pyanaconda/errors.py:119
-#, fuzzy
-#| msgid ""
-#| "There is a problem with your existing storage configuration. You must "
-#| "resolve this matter before the installation can proceed. There is a shell "
-#| "available for use which you can access by pressing ctrl-alt-f1 and then "
-#| "ctrl-b 2.\n"
-#| "\n"
-#| "Once you have resolved the issue you can retry the storage scan. If you "
-#| "do not fix it you will have to exit the installer."
 msgid ""
 "There is a problem with your existing storage configuration or your initial "
 "settings, for example a kickstart file. You must resolve this matter before "
@@ -615,8 +615,9 @@ msgid ""
 "Once you have resolved the issue you can retry the storage scan. If you do "
 "not fix it you will have to exit the installer."
 msgstr ""
-"קיימת בעיה בתצורת האחסון הקיימת. יש לפתור את העניין בטרם יתאפשר לך להמשיך "
-"בהתקנה. ניתן לגשת למעטפת על ידי לחיצה על ctrl-alt-f1 ולאחר מכן ctrl-b‏ 2.\n"
+"קיימת בעיה בתצורת האחסון הקיימת או ההגדרות הראשוניות שלך, למשל עם קובץ "
+"התנעה. יש לפתור את העניין בטרם יתאפשר לך להמשיך בהתקנה. ניתן לגשת למעטפת על "
+"ידי לחיצה על ctrl-alt-f1 ולאחר מכן ctrl-b‏ 2.\n"
 "\n"
 "ברגע שהעניין נפתר ניתן לחדש את סריקת האחסון. אחרת יש לצאת מתכנית ההתקנה."
 
@@ -2415,7 +2416,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/datetime_spoke.py:426
 msgctxt "GUI|Spoke"
 msgid "_Time & Date"
-msgstr ""
+msgstr "_שעה ותאריך"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.py:571
 msgid "Restoring hardware time..."
@@ -2980,11 +2981,11 @@ msgstr "כותרת ברירת מחדל"
 #: pyanaconda/payload/rpmostreepayload.py:133
 #, python-format
 msgid "Receiving objects: %(percent)d%% (%(fetched)d/%(requested)d) %(bytes)s"
-msgstr ""
+msgstr "מתקבלים פריטים: %(percent)d%% (%(fetched)d/%(requested)d) %(bytes)s"
 
 #: pyanaconda/payload/rpmostreepayload.py:139
 msgid "Writing objects"
-msgstr ""
+msgstr "מתבצעת כתיבת עצמים"
 
 #: pyanaconda/payload/rpmostreepayload.py:238
 #, python-format
@@ -3007,22 +3008,16 @@ msgid "Deployment complete: %s"
 msgstr "פריסה הושלמה: %s"
 
 #: pyanaconda/payload/rpmostreepayload.py:525
-#, fuzzy
-#| msgid "Starting package installation process"
 msgid "Starting Flatpak installation"
-msgstr "מתחיל תהליך התקנת חבילות"
+msgstr "ההתקנה של Flatpak מתחילה"
 
 #: pyanaconda/payload/rpmostreepayload.py:542
-#, fuzzy
-#| msgid "Performing post-installation setup tasks"
 msgid "Post-installation flatpak tasks"
-msgstr "מבצע משימות הכנה לאחר התקנה"
+msgstr "משימות לאחר התקנת Flatpak"
 
 #: pyanaconda/payload/rpmostreepayload.py:548
-#, fuzzy
-#| msgid "Starting package installation process"
 msgid "Flatpak installation has finished"
-msgstr "מתחיל תהליך התקנת חבילות"
+msgstr "ההתקנה של ה־Flatpak הסתיימה"
 
 #: pyanaconda/payload/manager.py:76
 msgid "Failed to set up installation source"
@@ -4162,7 +4157,7 @@ msgstr "שם המשתמש שמור עבור המערכת: %s"
 msgid ""
 "Either a group name in the group list is invalid or groups are not separated "
 "by a comma."
-msgstr ""
+msgstr "או ששם קבוצה ברשימת הקבוצות שגוי או שהקבוצות אינן מופרדות בפסיקים."
 
 #: pyanaconda/core/users.py:122
 msgid "Name cannot start with '-' character."
@@ -4347,6 +4342,10 @@ msgid ""
 "rhel-smt to understand potential risks and learn about ways to mitigate "
 "these risks."
 msgstr ""
+"ריבוי תהליכים בו־זמנית (SMT) יכול לספק שיפורי ביצועים לעומסי עבודה מסוימים "
+"אך חושף מספר פרצות אבטחה מוכרות לציבור. באפשרותך להשבית את SMT מה שעשוי "
+"להשפיע על הביצועים. נא לקרוא את https://red.ht/rhel-smt כדי להבין את הסכנות "
+"האפשרויתו וללמוד על דרכים נוספות לאפחת את הסכנות האלו."
 
 #: pyanaconda/core/constants.py:206
 msgid "The password is empty."
@@ -4459,7 +4458,7 @@ msgstr "בוחן אחסון..."
 
 #: pyanaconda/core/constants.py:299
 msgid "Testing availability..."
-msgstr ""
+msgstr "הזמינות נבדקת…"
 
 #: pyanaconda/core/constants.py:300
 msgid "Downloading package metadata..."
@@ -4538,12 +4537,12 @@ msgstr "קדם־שחרור / בדיקה"
 #: pyanaconda/ui/gui/spokes/welcome.glade:23
 msgctxt "GUI|Welcome|Beta Warn Dialog"
 msgid "I want to _exit."
-msgstr ""
+msgstr "ארצה ל_צאת."
 
 #: pyanaconda/ui/gui/spokes/welcome.glade:37
 msgctxt "GUI|Welcome|Beta Warn Dialog"
 msgid "I want to _proceed."
-msgstr ""
+msgstr "ארצה להמ_שיך."
 
 #: pyanaconda/ui/gui/spokes/welcome.glade:68
 msgid "This is unstable, pre-release software."
@@ -4563,6 +4562,15 @@ msgid ""
 "If you do not understand or accept the risks, then please exit this program "
 "by selecting \"I want to exit\" which will reboot your system."
 msgstr ""
+"לתשומת לבך: זו מהדורה שטרם יצאה לאור ומיועדת לפיתוח ובדיקות בלבד. *אין* "
+"להשתמש בתכנה הזאת למשימות משמעותיות או בסביבות פעילות מלאות.\n"
+"\n"
+"בלחיצה על „I want to proceed”, ברורות לך ומקובלות עליך הסכנות שכרוכות בתוכנה "
+"שטרם יצאה לאור, אותה ייעדת לשימוש למטרות בדיקות ופיתוח ולקחת על עצמך אחריות "
+"לדווח על תקלות או בעיות שצצות כדי לשפר את המערכת הזאת.\n"
+"\n"
+"אם הסיכונים האלו אינם ברורים לך או מקובלים עליך, נא לצאת מהתכנית הזאת על ידי "
+"לחיצה על „ארצה לצאת” שיפעיל את המערכת שלך מחדש."
 
 #: pyanaconda/ui/gui/spokes/welcome.glade:130
 msgid "Beta Warn"
