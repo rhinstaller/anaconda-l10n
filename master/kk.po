@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2023-09-20 00:59+0000\n"
+"POT-Creation-Date: 2023-09-26 00:59+0000\n"
 "PO-Revision-Date: 2023-09-22 16:35+0000\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <https://translate.fedoraproject.org/projects/anaconda/"
@@ -1438,7 +1438,7 @@ msgid "Desired _Capacity:"
 msgstr "Керек ө_лшемі:"
 
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:151
-#: ui/webui/src/components/storage/MountPointMapping.jsx:441
+#: ui/webui/src/components/storage/MountPointMapping.jsx:525
 msgid "Device"
 msgstr "Құрылғы"
 
@@ -2767,7 +2767,7 @@ msgstr "Тіркелу _нүктесі:"
 
 #: pyanaconda/ui/tui/spokes/storage.py:798
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:162
-#: ui/webui/src/components/storage/MountPointMapping.jsx:440
+#: ui/webui/src/components/storage/MountPointMapping.jsx:524
 msgid "Mount point"
 msgstr "Тіркеу нүктесі"
 
@@ -3260,6 +3260,8 @@ msgid "Pass_word:"
 msgstr "Па_роль:"
 
 #: pyanaconda/ui/tui/spokes/storage.py:355
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:177
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:184
 #: ui/webui/src/components/storage/DiskEncryption.jsx:284
 msgid "Passphrase"
 msgstr "Кілттік фраза"
@@ -3278,8 +3280,6 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/subscription.glade:181
 #: pyanaconda/ui/gui/spokes/subscription.glade:571
 #: pyanaconda/ui/gui/spokes/user.glade:176
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:149
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:156
 msgid "Password"
 msgstr "Пароль"
 
@@ -3592,8 +3592,8 @@ msgid "Purpose"
 msgstr "Мақсаты"
 
 #: pyanaconda/ui/gui/main.glade:176
-#: ui/webui/src/components/AnacondaWizard.jsx:416
-#: ui/webui/src/components/AnacondaWizard.jsx:440
+#: ui/webui/src/components/AnacondaWizard.jsx:427
+#: ui/webui/src/components/AnacondaWizard.jsx:451
 #: ui/webui/src/components/installation/InstallationProgress.jsx:215
 #: ui/webui/src/components/Error.jsx:206
 msgid "Quit"
@@ -3785,8 +3785,8 @@ msgid "Ref_ormat"
 msgstr "Қа_йта пішімдеу"
 
 #: pyanaconda/ui/tui/spokes/storage.py:870
-#: ui/webui/src/components/storage/MountPointMapping.jsx:322
-#: ui/webui/src/components/storage/MountPointMapping.jsx:442
+#: ui/webui/src/components/storage/MountPointMapping.jsx:278
+#: ui/webui/src/components/storage/MountPointMapping.jsx:526
 msgid "Reformat"
 msgstr "Қайта пішімдеу"
 
@@ -3847,7 +3847,7 @@ msgid "Remote directory is required"
 msgstr "Қашықтағы бума аты керек"
 
 #: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:266
-#: ui/webui/src/components/storage/MountPointMapping.jsx:360
+#: ui/webui/src/components/storage/MountPointMapping.jsx:311
 msgid "Remove"
 msgstr "Өшіру"
 
@@ -7387,12 +7387,12 @@ msgid "{count} disk selected; {capacity} capacity; {free} free"
 msgid_plural "{count} disks selected; {capacity} capacity; {free} free"
 msgstr[0] "{count} диск таңдалды; көлемі {capacity}; {free} бос"
 
-#: pyanaconda/modules/storage/devicetree/viewer.py:328
+#: pyanaconda/modules/storage/devicetree/viewer.py:330
 #, python-brace-format
 msgid "{device_description} ({device_name})"
 msgstr "{device_description} ({device_name})"
 
-#: pyanaconda/modules/storage/devicetree/viewer.py:334
+#: pyanaconda/modules/storage/devicetree/viewer.py:336
 #, python-brace-format
 msgid "{device_name} on {container_name}"
 msgstr "{device_name}, орны {container_name}"
@@ -7460,20 +7460,24 @@ msgstr "$0 орнатуы"
 msgid "$0 installer"
 msgstr "$0 орнатқышы"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:143
-msgid "/boot/efi must be on a EFI System Partition device"
-msgstr "/boot/efi бөлімі EFI Жүйелік Бөлім құрылғысында орналасуы тиіс"
+#: ui/webui/src/components/storage/MountPointMapping.jsx:139
+#, fuzzy
+#| msgid "{fs} must be on a device of type {type}"
+msgid "'$0' must be on a device formatted to '$1'"
+msgstr "{fs} {type} түріндегі бөлімде болуы тиіс"
 
 #: ui/webui/src/components/HeaderKebab.jsx:140
 msgid "About"
 msgstr "Осы туралы"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:585
+#: ui/webui/src/components/storage/MountPointMapping.jsx:549
 msgid "Add mount"
 msgstr "Тіркелу нүктесін қосу"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:132
-msgid "All devices using this passphrase will be unlocked."
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:154
+#, fuzzy
+#| msgid "All devices using this passphrase will be unlocked."
+msgid "All devices using this passphrase will be unlocked"
 msgstr ""
 "Бұл кілттік фразаны қолданатын барлық құрылғылар блоктаудан босатылады."
 
@@ -7489,7 +7493,7 @@ msgstr "Тіркеу нүктелерді тағайындауды іске ас
 msgid "Applying new disk selection..."
 msgstr "Жаңа диск таңдауын іске асыру..."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:396
+#: ui/webui/src/components/AnacondaWizard.jsx:407
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:213
 msgid "Back"
 msgstr "Артқа"
@@ -7517,7 +7521,6 @@ msgstr ""
 "туралы хабарлауға дайын боласыз."
 
 #: ui/webui/src/components/storage/InstallationMethod.jsx:557
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:139
 #: ui/webui/src/components/Error.jsx:238
 msgid "Cancel"
 msgstr "Бас тарту"
@@ -7543,6 +7546,10 @@ msgstr "Таңдалған тіл: "
 msgid "Clear input value"
 msgstr "Енгізу мәнін тазарту"
 
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:164
+msgid "Close"
+msgstr "Жабу"
+
 #: ui/webui/src/components/localization/InstallationLanguage.jsx:151
 msgid "Common languages"
 msgstr "Қалыпты тілдер"
@@ -7555,7 +7562,7 @@ msgstr "Аяқталды"
 msgid "Confirm passphrase"
 msgstr "Кілттік фразаны растау"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:447
+#: ui/webui/src/components/AnacondaWizard.jsx:458
 msgid "Continue installation"
 msgstr "Орнату жалғастыру"
 
@@ -7567,7 +7574,7 @@ msgstr "Қатаң қате"
 msgid "Current selections"
 msgstr "Ағымдағы таңдаулар"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:224
+#: ui/webui/src/components/storage/MountPointMapping.jsx:179
 msgid "Custom"
 msgstr "Таңдауыңызша"
 
@@ -7575,25 +7582,25 @@ msgstr "Таңдауыңызша"
 msgid "Destination"
 msgstr "Мақсаты"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:58
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:72
 msgid "Devices should be unlocked before assigning mount points."
 msgstr ""
 "Тіркеу нүктелерін тағайындау алдында құрылғылар блоктаудан босатылуы керек."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:102
+#: ui/webui/src/components/AnacondaWizard.jsx:113
 msgid "Disk configuration"
 msgstr "Диск баптаулары"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:113
+#: ui/webui/src/components/AnacondaWizard.jsx:124
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:168
 msgid "Disk encryption"
 msgstr "Диск шифрлеуі"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:299
+#: ui/webui/src/components/storage/MountPointMapping.jsx:255
 msgid "Duplicate device."
 msgstr "Қайталанатын құрылғы."
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:230
+#: ui/webui/src/components/storage/MountPointMapping.jsx:185
 msgid "Duplicate mount point."
 msgstr "Қайталанатын тіркеу нүктесі."
 
@@ -7605,7 +7612,7 @@ msgstr "Менің деректерімді шифрлеу"
 msgid "Encrypt the selected devices?"
 msgstr "Таңдалған құрылғыларды шифрлеу керек пе?"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:55
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:69
 msgid "Encrypted devices are locked"
 msgstr "Шифрленген құрылғылар құлыпталған"
 
@@ -7634,8 +7641,8 @@ msgstr ""
 msgid "Error details"
 msgstr "Қате ақпараты"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:223
-#: ui/webui/src/components/AnacondaWizard.jsx:394
+#: ui/webui/src/components/AnacondaWizard.jsx:234
+#: ui/webui/src/components/AnacondaWizard.jsx:405
 msgid "Error was hit when going back from $0."
 msgstr "$0-ден қайтару кезінде қате пайда болды."
 
@@ -7662,7 +7669,12 @@ msgstr "Тілді табу"
 msgid "Hide confirmed password"
 msgstr "Расталған парольді жасыру"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:165
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:193
+#, fuzzy
+#| msgid "Confirm passphrase"
+msgid "Hide passphrase"
+msgstr "Кілттік фразаны растау"
+
 #: ui/webui/src/components/storage/DiskEncryption.jsx:142
 msgid "Hide password"
 msgstr "Парольді жасыру"
@@ -7692,10 +7704,6 @@ msgstr "Елемеу"
 msgid "In progress"
 msgstr "Орындалу үстінде"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:115
-msgid "Incorrect passphrase"
-msgstr "Кілттік фраза қате"
-
 #: ui/webui/src/components/storage/InstallationScenario.jsx:141
 msgid "Install on the custom mount points?"
 msgstr "Таңдауыңызша тіркеу нүктелеріне орнату керек пе?"
@@ -7708,7 +7716,7 @@ msgstr "Бос орынға орнату керек пе?"
 msgid "Installation failed"
 msgstr "Орнату сәтсіз аяқталды"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:98
+#: ui/webui/src/components/AnacondaWizard.jsx:109
 msgid "Installation method"
 msgstr "Орнату тәсілі"
 
@@ -7740,15 +7748,21 @@ msgstr "Тіл"
 msgid "Launch Blivet-gui storage editor"
 msgstr "Blivet-gui сақтау құрылғыларын түзеткішін жөнелту"
 
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:174
+#, fuzzy
+#| msgid "Unlock devices"
+msgid "Locked devices"
+msgstr "Құрылғыларды босату"
+
 #: ui/webui/src/components/Error.jsx:162
 msgid "Log"
 msgstr "Журнал"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:107
+#: ui/webui/src/components/AnacondaWizard.jsx:118
 msgid "Manual disk configuration"
 msgstr "Дисктерді қолмен баптау"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:652
+#: ui/webui/src/components/storage/MountPointMapping.jsx:616
 msgid "Manual disk configuration: Mount point mapping"
 msgstr "Дисктерді қолмен баптау: Тіркеу нүктелерін сәйкестендіру"
 
@@ -7760,7 +7774,7 @@ msgstr "Орнату үшін сақтау орындарын қолмен та�
 msgid "Medium"
 msgstr "Орташа"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:127
+#: ui/webui/src/components/storage/MountPointMapping.jsx:121
 msgid "Mismatch between parent device and child device reformat selection."
 msgstr ""
 "Аталық құрылғы мен еншілес құрылғыны қайта пішімдеу таңдауы арасындағы "
@@ -7779,7 +7793,7 @@ msgstr "Сақтау құрылғыларды өзгерту"
 msgid "Modifying the storage failed."
 msgstr "Сақтау құрылғысын өзгерту сәтсіз аяқталды."
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:438
+#: ui/webui/src/components/storage/MountPointMapping.jsx:522
 #: ui/webui/src/components/storage/InstallationScenario.jsx:131
 msgid "Mount point assignment"
 msgstr "Тіркеу нүктелерін тағайындау"
@@ -7796,7 +7810,7 @@ msgstr ""
 "Желі қолжетімді емес. Мәселені хабарлау үшін жоғарыдағы панель мәзірінде "
 "желіні баптаңыз."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:345
+#: ui/webui/src/components/AnacondaWizard.jsx:356
 msgid "Next"
 msgstr "Келесі"
 
@@ -7804,7 +7818,7 @@ msgstr "Келесі"
 msgid "No additional disks detected"
 msgstr "Қосымша дисктер табылмады"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:445
+#: ui/webui/src/components/storage/MountPointMapping.jsx:529
 msgid "No devices"
 msgstr "Құрылғылар жоқ"
 
@@ -7849,6 +7863,10 @@ msgstr "Тек жаңа бөлімдер шифрленеді. Бар болып
 msgid "Operating system"
 msgstr "Операциялық жүйе"
 
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:135
+msgid "Passphrase did not match any locked device"
+msgstr ""
+
 #: ui/webui/src/components/storage/DiskEncryption.jsx:199
 msgid "Passphrases must match"
 msgstr "Кілттік фразалар өзара сәйкес келуі тиіс"
@@ -7873,7 +7891,7 @@ msgstr "Алдын ала шығарылымы"
 msgid "Preparing report"
 msgstr "Есептемені дайындау"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:452
+#: ui/webui/src/components/AnacondaWizard.jsx:463
 msgid "Quit installer?"
 msgstr "Орнатқыштан шығу керек пе?"
 
@@ -7893,14 +7911,14 @@ msgstr "Орнатқыш баптауларын оқу сәтсіз аяқтал
 msgid "Reading installer version information failed."
 msgstr "Орнатқыш нұсқасы ақпаратын оқу сәтсіз аяқталды."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:416
-#: ui/webui/src/components/AnacondaWizard.jsx:440
+#: ui/webui/src/components/AnacondaWizard.jsx:427
+#: ui/webui/src/components/AnacondaWizard.jsx:451
 #: ui/webui/src/components/installation/InstallationProgress.jsx:215
 #: ui/webui/src/components/Error.jsx:206
 msgid "Reboot"
 msgstr "Қайта жүктеу"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:452
+#: ui/webui/src/components/AnacondaWizard.jsx:463
 msgid "Reboot system?"
 msgstr "Жүйені қайта іске қосу керек пе?"
 
@@ -7929,7 +7947,7 @@ msgstr ""
 "Мәселе туралы хабарлау желі арқылы ақпаратты жібереді. Кез келген құпия "
 "ақпаратты өшіру үшін тіркелген журналды қарап шығыңыз және өңдеңіз."
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:223
+#: ui/webui/src/components/storage/MountPointMapping.jsx:178
 msgid "Required"
 msgstr "Міндетті"
 
@@ -7945,12 +7963,12 @@ msgstr "Сақтау құрылғысын қайта сканерлеу"
 msgid "Rescanning of the disks failed."
 msgstr "Дисктерді қайта сканерлеу сәтсіз аяқталды."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:127
+#: ui/webui/src/components/AnacondaWizard.jsx:138
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:133
 msgid "Review and install"
 msgstr "Қарап шығу және орнату"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:262
+#: ui/webui/src/components/storage/MountPointMapping.jsx:217
 msgid "Select a device"
 msgstr "Құрылғыны таңдау"
 
@@ -7958,7 +7976,7 @@ msgstr "Құрылғыны таңдау"
 msgid "Select a disk"
 msgstr "Дискті таңдау"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:110
+#: ui/webui/src/components/storage/MountPointMapping.jsx:104
 msgid "Selected device's format '$0' cannot be reformatted."
 msgstr "Таңдалған құрылғының \"$0\" пішімін қайта пішімдеу мүмкін емес."
 
@@ -7966,12 +7984,17 @@ msgstr "Таңдалған құрылғының \"$0\" пішімін қайта
 msgid "Show confirmed password"
 msgstr "Расталған парольді көрсету"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:165
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:193
+#, fuzzy
+#| msgid "Confirm passphrase"
+msgid "Show passphrase"
+msgstr "Кілттік фразаны растау"
+
 #: ui/webui/src/components/storage/DiskEncryption.jsx:142
 msgid "Show password"
 msgstr "Парольді көрсету"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:80
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:87
 msgid "Skip"
 msgstr "Аттап кету"
 
@@ -7986,10 +8009,6 @@ msgid ""
 msgstr ""
 "Бағд. қамтаманы орнату: Сақтауышты баптау аяқталды. Енді бағдарламалық "
 "қамтама құрылғыңызға орнатылып жатыр."
-
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:148
-msgid "Some LUKS devices were not unlocked"
-msgstr "Кейбір LUKS құрылғыларының құлыптауы ашылмады"
 
 #: ui/webui/src/components/storage/InstallationScenario.jsx:93
 msgid "Some devices use the same name: $0."
@@ -8009,6 +8028,12 @@ msgstr "Сақтауыш баптаулары: Ағымдағы уақытта �
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:139
 msgid "Successfully installed"
+msgstr "Сәтті орнатылды"
+
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:130
+#, fuzzy
+#| msgid "Successfully installed"
+msgid "Successfully unlocked $0."
 msgstr "Сәтті орнатылды"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:120
@@ -8061,7 +8086,7 @@ msgstr "Орнатқыш өз жұмысын қатаң қате салдары�
 msgid "The installer cannot continue due to a critical error: $0"
 msgstr "Орнатқыш өз жұмысын қатаң қате салдарынан жалғастыра алмайды: $0"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:334
+#: ui/webui/src/components/storage/MountPointMapping.jsx:290
 msgid "The root partition is always re-formatted by the installer."
 msgstr "Түбірлік (root) бөлімі әрқашан орнатқыш арқылы қайта пішімделеді."
 
@@ -8085,7 +8110,7 @@ msgstr "Бұл біраз уақытты алуы мүмкін"
 msgid "To begin using $0, reboot your system."
 msgstr "$0 пайдалануды бастау үшін жүйені қайта жүктеңіз."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:375
+#: ui/webui/src/components/AnacondaWizard.jsx:386
 msgid "To continue, select the devices to install to."
 msgstr "Жалғастыру үшін, жүйе орнатылатын құрылғыларды таңдаңыз."
 
@@ -8108,15 +8133,15 @@ msgstr ""
 "Бұл опцияны қолдану үшін, кем дегенде $0 босату үшін бар болып тұрған "
 "бөлімдер өлшемдерін өзгертіңіз немесе оларды өшіріңіз."
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:136
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:161
 msgid "Unlock"
 msgstr "Босату"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:75
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:82
 msgid "Unlock devices"
 msgstr "Құрылғыларды босату"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:131
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:157
 msgid "Unlock encrypted devices"
 msgstr "Шифрленген құрылғыларды босату"
 
@@ -8124,7 +8149,7 @@ msgstr "Шифрленген құрылғыларды босату"
 msgid "Use free space for the installation"
 msgstr "Орнату үшін бос орынды қолдану"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:91
+#: ui/webui/src/components/AnacondaWizard.jsx:102
 msgid "Welcome"
 msgstr "Қош келдіңіз"
 
@@ -8136,7 +8161,7 @@ msgstr "$0 ішіне қош келдіңіз"
 msgid "Welcome. Let's install $0 now."
 msgstr "Қош келдіңіз. Енді $0 орнатайық."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:456
+#: ui/webui/src/components/AnacondaWizard.jsx:467
 msgid "Your progress will not be saved."
 msgstr "Сіздің үрдісіңіз сақталмайды."
 
@@ -8159,6 +8184,15 @@ msgstr "тіркеу"
 #: ui/webui/src/components/installation/InstallationProgress.jsx:165
 msgid "pending step"
 msgstr "күту қадамы"
+
+#~ msgid "/boot/efi must be on a EFI System Partition device"
+#~ msgstr "/boot/efi бөлімі EFI Жүйелік Бөлім құрылғысында орналасуы тиіс"
+
+#~ msgid "Incorrect passphrase"
+#~ msgstr "Кілттік фраза қате"
+
+#~ msgid "Some LUKS devices were not unlocked"
+#~ msgstr "Кейбір LUKS құрылғыларының құлыптауы ашылмады"
 
 #~ msgid "Not enough free space."
 #~ msgstr "Бос орын жеткіліксіз."
@@ -8254,9 +8288,6 @@ msgstr "күту қадамы"
 
 #~ msgid "Checking disks"
 #~ msgstr "Дисктерді тексеру"
-
-#~ msgid "Close"
-#~ msgstr "Жабу"
 
 #~ msgid "Detect disks"
 #~ msgstr "Дисктерді анықтау"

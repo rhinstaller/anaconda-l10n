@@ -46,7 +46,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2023-09-20 00:59+0000\n"
+"POT-Creation-Date: 2023-09-26 00:59+0000\n"
 "PO-Revision-Date: 2023-09-19 01:03+0000\n"
 "Last-Translator: Daniel Rusek <mail@asciiwolf.com>\n"
 "Language-Team: Czech <https://translate.fedoraproject.org/projects/anaconda/"
@@ -1484,7 +1484,7 @@ msgid "Desired _Capacity:"
 msgstr "Požadovaná kapa_cita:"
 
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:151
-#: ui/webui/src/components/storage/MountPointMapping.jsx:441
+#: ui/webui/src/components/storage/MountPointMapping.jsx:525
 msgid "Device"
 msgstr "Zařízení"
 
@@ -2820,7 +2820,7 @@ msgstr "_Přípojný bod:"
 
 #: pyanaconda/ui/tui/spokes/storage.py:798
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:162
-#: ui/webui/src/components/storage/MountPointMapping.jsx:440
+#: ui/webui/src/components/storage/MountPointMapping.jsx:524
 msgid "Mount point"
 msgstr "Přípojný bod"
 
@@ -3307,6 +3307,8 @@ msgid "Pass_word:"
 msgstr "He_slo:"
 
 #: pyanaconda/ui/tui/spokes/storage.py:355
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:177
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:184
 #: ui/webui/src/components/storage/DiskEncryption.jsx:284
 msgid "Passphrase"
 msgstr "Heslová fráze"
@@ -3325,8 +3327,6 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/subscription.glade:181
 #: pyanaconda/ui/gui/spokes/subscription.glade:571
 #: pyanaconda/ui/gui/spokes/user.glade:176
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:149
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:156
 msgid "Password"
 msgstr "Heslo"
 
@@ -3639,8 +3639,8 @@ msgid "Purpose"
 msgstr "Účel"
 
 #: pyanaconda/ui/gui/main.glade:176
-#: ui/webui/src/components/AnacondaWizard.jsx:416
-#: ui/webui/src/components/AnacondaWizard.jsx:440
+#: ui/webui/src/components/AnacondaWizard.jsx:427
+#: ui/webui/src/components/AnacondaWizard.jsx:451
 #: ui/webui/src/components/installation/InstallationProgress.jsx:215
 #: ui/webui/src/components/Error.jsx:206
 msgid "Quit"
@@ -3828,8 +3828,8 @@ msgid "Ref_ormat"
 msgstr "Zn_ovu vytvořit souborový systém"
 
 #: pyanaconda/ui/tui/spokes/storage.py:870
-#: ui/webui/src/components/storage/MountPointMapping.jsx:322
-#: ui/webui/src/components/storage/MountPointMapping.jsx:442
+#: ui/webui/src/components/storage/MountPointMapping.jsx:278
+#: ui/webui/src/components/storage/MountPointMapping.jsx:526
 msgid "Reformat"
 msgstr "Znovu vytvořit souborový systém"
 
@@ -3890,7 +3890,7 @@ msgid "Remote directory is required"
 msgstr "Je vyžadován adresář na protějšku"
 
 #: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:266
-#: ui/webui/src/components/storage/MountPointMapping.jsx:360
+#: ui/webui/src/components/storage/MountPointMapping.jsx:311
 msgid "Remove"
 msgstr "Odstranit"
 
@@ -7464,12 +7464,12 @@ msgstr[1] "{count} vybrané jednotky; kapacita {capacity}; {free} volného míst
 msgstr[2] ""
 "{count} vybraných jednotek; kapacita {capacity}; {free} volného místa"
 
-#: pyanaconda/modules/storage/devicetree/viewer.py:328
+#: pyanaconda/modules/storage/devicetree/viewer.py:330
 #, python-brace-format
 msgid "{device_description} ({device_name})"
 msgstr "{device_description} ({device_name})"
 
-#: pyanaconda/modules/storage/devicetree/viewer.py:334
+#: pyanaconda/modules/storage/devicetree/viewer.py:336
 #, python-brace-format
 msgid "{device_name} on {container_name}"
 msgstr "{device_name} na {container_name}"
@@ -7539,21 +7539,24 @@ msgstr "Instalace $0"
 msgid "$0 installer"
 msgstr "Instalátor $0"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:143
-msgid "/boot/efi must be on a EFI System Partition device"
-msgstr ""
-"Je třeba, aby se /boot/efi nacházelo na zařízení s EFI System Partition"
+#: ui/webui/src/components/storage/MountPointMapping.jsx:139
+#, fuzzy
+#| msgid "{fs} must be on a device of type {type}"
+msgid "'$0' must be on a device formatted to '$1'"
+msgstr "Je třeba, aby {fs} bylo na zařízení typu {type}"
 
 #: ui/webui/src/components/HeaderKebab.jsx:140
 msgid "About"
 msgstr "O aplikaci"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:585
+#: ui/webui/src/components/storage/MountPointMapping.jsx:549
 msgid "Add mount"
 msgstr "Přidat přípojný"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:132
-msgid "All devices using this passphrase will be unlocked."
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:154
+#, fuzzy
+#| msgid "All devices using this passphrase will be unlocked."
+msgid "All devices using this passphrase will be unlocked"
 msgstr "Budou odemknuta veškerá zařízení používající tuto heslovou frázi."
 
 #: ui/webui/src/components/HeaderKebab.jsx:106
@@ -7568,7 +7571,7 @@ msgstr "Uplatnit přiřazení přípojného bodu a nainstalovat"
 msgid "Applying new disk selection..."
 msgstr "Uplatňování výběru nového disku…"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:396
+#: ui/webui/src/components/AnacondaWizard.jsx:407
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:213
 msgid "Back"
 msgstr "Zpět"
@@ -7595,7 +7598,6 @@ msgstr ""
 "nebo problémy za účelem zlepšení tohoto díla."
 
 #: ui/webui/src/components/storage/InstallationMethod.jsx:557
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:139
 #: ui/webui/src/components/Error.jsx:238
 msgid "Cancel"
 msgstr "Zrušit"
@@ -7620,6 +7622,10 @@ msgstr "Zvolený jazyk: "
 msgid "Clear input value"
 msgstr "Vymazat vstupní hodnotu"
 
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:164
+msgid "Close"
+msgstr "Zavřít"
+
 #: ui/webui/src/components/localization/InstallationLanguage.jsx:151
 msgid "Common languages"
 msgstr "Běžné jazyky"
@@ -7632,7 +7638,7 @@ msgstr "Dokončeno"
 msgid "Confirm passphrase"
 msgstr "Zopakování heslové fráze"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:447
+#: ui/webui/src/components/AnacondaWizard.jsx:458
 msgid "Continue installation"
 msgstr "Pokračovat v instalaci"
 
@@ -7644,7 +7650,7 @@ msgstr "Kritická chyba"
 msgid "Current selections"
 msgstr "Stávající výběr"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:224
+#: ui/webui/src/components/storage/MountPointMapping.jsx:179
 msgid "Custom"
 msgstr "Uživatelsky určené"
 
@@ -7652,25 +7658,25 @@ msgstr "Uživatelsky určené"
 msgid "Destination"
 msgstr "Cíl"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:58
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:72
 msgid "Devices should be unlocked before assigning mount points."
 msgstr ""
 "Zařízení by neměla být odemykána dříve, než budou přiřazeny přípojné body."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:102
+#: ui/webui/src/components/AnacondaWizard.jsx:113
 msgid "Disk configuration"
 msgstr "Nastavení jednotky"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:113
+#: ui/webui/src/components/AnacondaWizard.jsx:124
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:168
 msgid "Disk encryption"
 msgstr "Šifrování disku"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:299
+#: ui/webui/src/components/storage/MountPointMapping.jsx:255
 msgid "Duplicate device."
 msgstr "Zduplikovat zařízení."
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:230
+#: ui/webui/src/components/storage/MountPointMapping.jsx:185
 msgid "Duplicate mount point."
 msgstr "Zduplikovat přípojný bod."
 
@@ -7682,7 +7688,7 @@ msgstr "Šifrovat má data"
 msgid "Encrypt the selected devices?"
 msgstr "Šifrovat vybraná zařízení?"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:55
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:69
 msgid "Encrypted devices are locked"
 msgstr "Šifrovaná zařízení jsou uzamčená"
 
@@ -7708,8 +7714,8 @@ msgstr "Vymazání dat nelze vrátit zpět. Ověřte, že máte zálohy."
 msgid "Error details"
 msgstr "Podrobnosti o chybě"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:223
-#: ui/webui/src/components/AnacondaWizard.jsx:394
+#: ui/webui/src/components/AnacondaWizard.jsx:234
+#: ui/webui/src/components/AnacondaWizard.jsx:405
 msgid "Error was hit when going back from $0."
 msgstr "Při přechodu zpět z $0 se narazilo na chybu."
 
@@ -7739,7 +7745,12 @@ msgstr "Najít jazyk"
 msgid "Hide confirmed password"
 msgstr "Skrýt potvrzené heslo"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:165
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:193
+#, fuzzy
+#| msgid "Confirm passphrase"
+msgid "Hide passphrase"
+msgstr "Zopakování heslové fráze"
+
 #: ui/webui/src/components/storage/DiskEncryption.jsx:142
 msgid "Hide password"
 msgstr "Skrýt heslo"
@@ -7768,10 +7779,6 @@ msgstr "Ignorovat"
 msgid "In progress"
 msgstr "Probíhá"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:115
-msgid "Incorrect passphrase"
-msgstr "Nesprávná heslová fráze"
-
 #: ui/webui/src/components/storage/InstallationScenario.jsx:141
 msgid "Install on the custom mount points?"
 msgstr "Nainstalovat na uživatelsky určené přípojné body?"
@@ -7784,7 +7791,7 @@ msgstr "Nainstalovat do volného prostoru?"
 msgid "Installation failed"
 msgstr "Instalace se nezdařila"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:98
+#: ui/webui/src/components/AnacondaWizard.jsx:109
 msgid "Installation method"
 msgstr "Metoda instalace"
 
@@ -7818,15 +7825,21 @@ msgstr "Jazyk"
 msgid "Launch Blivet-gui storage editor"
 msgstr "Spustit editor úložiště Blivet-gui"
 
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:174
+#, fuzzy
+#| msgid "Unlock devices"
+msgid "Locked devices"
+msgstr "Odemknout zařízení"
+
 #: ui/webui/src/components/Error.jsx:162
 msgid "Log"
 msgstr "Záznam událostí"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:107
+#: ui/webui/src/components/AnacondaWizard.jsx:118
 msgid "Manual disk configuration"
 msgstr "Ruční nastavení jednotky"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:652
+#: ui/webui/src/components/storage/MountPointMapping.jsx:616
 msgid "Manual disk configuration: Mount point mapping"
 msgstr "Ruční nastavení pro jednotku: mapování přípojného bodu"
 
@@ -7838,7 +7851,7 @@ msgstr ""
 msgid "Medium"
 msgstr "Střední"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:127
+#: ui/webui/src/components/storage/MountPointMapping.jsx:121
 msgid "Mismatch between parent device and child device reformat selection."
 msgstr ""
 "Neshoda mezi výběrem přeformátování u nadřazeného a podřízeného zařízení."
@@ -7856,7 +7869,7 @@ msgstr "Upravit úložiště"
 msgid "Modifying the storage failed."
 msgstr "Změny úložiště se nezdařily."
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:438
+#: ui/webui/src/components/storage/MountPointMapping.jsx:522
 #: ui/webui/src/components/storage/InstallationScenario.jsx:131
 msgid "Mount point assignment"
 msgstr "Přiřazení přípojného bodu"
@@ -7873,7 +7886,7 @@ msgstr ""
 "Síť není k dispozici. Aby bylo možné chybu nahlásit, nastavte síť (v nabídce "
 "vpravo na horní liště)."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:345
+#: ui/webui/src/components/AnacondaWizard.jsx:356
 msgid "Next"
 msgstr "Další"
 
@@ -7881,7 +7894,7 @@ msgstr "Další"
 msgid "No additional disks detected"
 msgstr "Nezjištěny žádné další jednotky"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:445
+#: ui/webui/src/components/storage/MountPointMapping.jsx:529
 msgid "No devices"
 msgstr "Žádná zařízení"
 
@@ -7930,6 +7943,10 @@ msgstr ""
 msgid "Operating system"
 msgstr "Operační systém"
 
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:135
+msgid "Passphrase did not match any locked device"
+msgstr ""
+
 #: ui/webui/src/components/storage/DiskEncryption.jsx:199
 msgid "Passphrases must match"
 msgstr "Je třeba, aby se zadání heslové fráze shodovaly"
@@ -7954,7 +7971,7 @@ msgstr "Předprodukční verze"
 msgid "Preparing report"
 msgstr "Připravuje se hlášení"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:452
+#: ui/webui/src/components/AnacondaWizard.jsx:463
 msgid "Quit installer?"
 msgstr "Ukončit instalátor?"
 
@@ -7974,14 +7991,14 @@ msgstr "Nepodařilo se načíst nastavení instalátoru."
 msgid "Reading installer version information failed."
 msgstr "Nepodařilo se načíst verzi instalátoru."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:416
-#: ui/webui/src/components/AnacondaWizard.jsx:440
+#: ui/webui/src/components/AnacondaWizard.jsx:427
+#: ui/webui/src/components/AnacondaWizard.jsx:451
 #: ui/webui/src/components/installation/InstallationProgress.jsx:215
 #: ui/webui/src/components/Error.jsx:206
 msgid "Reboot"
 msgstr "Restartovat"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:452
+#: ui/webui/src/components/AnacondaWizard.jsx:463
 msgid "Reboot system?"
 msgstr "Restartovat systém?"
 
@@ -8010,7 +8027,7 @@ msgstr ""
 "připojený záznam událostí (log) a odeberte z něj jakékoli pro vás citlivé "
 "informace."
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:223
+#: ui/webui/src/components/storage/MountPointMapping.jsx:178
 msgid "Required"
 msgstr "Vyžadováno"
 
@@ -8026,12 +8043,12 @@ msgstr "Znovu naskenovat úložiště"
 msgid "Rescanning of the disks failed."
 msgstr "Opětovné naskenování jednotek datového úložiště se nezdařilo."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:127
+#: ui/webui/src/components/AnacondaWizard.jsx:138
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:133
 msgid "Review and install"
 msgstr "Zkontrolovat a nainstalovat"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:262
+#: ui/webui/src/components/storage/MountPointMapping.jsx:217
 msgid "Select a device"
 msgstr "Vybrat zařízení"
 
@@ -8039,7 +8056,7 @@ msgstr "Vybrat zařízení"
 msgid "Select a disk"
 msgstr "Vyberte jednotku"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:110
+#: ui/webui/src/components/storage/MountPointMapping.jsx:104
 msgid "Selected device's format '$0' cannot be reformatted."
 msgstr "Formát „$0“ vybraného zařízení není možné přeformátovat."
 
@@ -8047,12 +8064,17 @@ msgstr "Formát „$0“ vybraného zařízení není možné přeformátovat."
 msgid "Show confirmed password"
 msgstr "Zobrazit potvrzené heslo"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:165
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:193
+#, fuzzy
+#| msgid "Confirm passphrase"
+msgid "Show passphrase"
+msgstr "Zopakování heslové fráze"
+
 #: ui/webui/src/components/storage/DiskEncryption.jsx:142
 msgid "Show password"
 msgstr "Zobrazit heslo"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:80
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:87
 msgid "Skip"
 msgstr "Přeskočit"
 
@@ -8067,10 +8089,6 @@ msgid ""
 msgstr ""
 "Instalace softwaru: Nastavování úložiště dokončeno. Software se nyní "
 "instaluje do vašeho zařízení."
-
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:148
-msgid "Some LUKS devices were not unlocked"
-msgstr "Některá LUKS zařízení nebyla odemčena"
 
 #: ui/webui/src/components/storage/InstallationScenario.jsx:93
 msgid "Some devices use the same name: $0."
@@ -8090,6 +8108,12 @@ msgstr "Nastavování úložiště: Úložiště je právě nastavováno."
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:139
 msgid "Successfully installed"
+msgstr "Úspěšně nainstalováno"
+
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:130
+#, fuzzy
+#| msgid "Successfully installed"
+msgid "Successfully unlocked $0."
 msgstr "Úspěšně nainstalováno"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:120
@@ -8141,7 +8165,7 @@ msgstr "Instalátor nemůže kvůli kritické chybě pokračovat."
 msgid "The installer cannot continue due to a critical error: $0"
 msgstr "Instalátor nemůže pokračovat kvůli kritické chybě: $0"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:334
+#: ui/webui/src/components/storage/MountPointMapping.jsx:290
 msgid "The root partition is always re-formatted by the installer."
 msgstr ""
 "Na kořenovém oddílu je souborový systém instalátorem vždy vytvořen odznovu."
@@ -8166,7 +8190,7 @@ msgstr "Může to chvíli trvat"
 msgid "To begin using $0, reboot your system."
 msgstr "Aby bylo možné začít $0 používat, počítač restartujte."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:375
+#: ui/webui/src/components/AnacondaWizard.jsx:386
 msgid "To continue, select the devices to install to."
 msgstr "Aby bylo možné pokračovat, vyberte zařízení, na která instalovat."
 
@@ -8185,15 +8209,15 @@ msgid ""
 "$0."
 msgstr ""
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:136
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:161
 msgid "Unlock"
 msgstr "Odemknout"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:75
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:82
 msgid "Unlock devices"
 msgstr "Odemknout zařízení"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:131
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:157
 msgid "Unlock encrypted devices"
 msgstr "Odemknout šifrovaná zařízení"
 
@@ -8201,7 +8225,7 @@ msgstr "Odemknout šifrovaná zařízení"
 msgid "Use free space for the installation"
 msgstr "Pro instalaci použít volné místo"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:91
+#: ui/webui/src/components/AnacondaWizard.jsx:102
 msgid "Welcome"
 msgstr "Vítejte"
 
@@ -8213,7 +8237,7 @@ msgstr "Vítejte v $0"
 msgid "Welcome. Let's install $0 now."
 msgstr "Vítejte. Pojďme nyní $0 nainstalovat."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:456
+#: ui/webui/src/components/AnacondaWizard.jsx:467
 msgid "Your progress will not be saved."
 msgstr "To, co jste doposud udělali, nebude uloženo."
 
@@ -8236,6 +8260,16 @@ msgstr "připojení"
 #: ui/webui/src/components/installation/InstallationProgress.jsx:165
 msgid "pending step"
 msgstr "čekající krok"
+
+#~ msgid "/boot/efi must be on a EFI System Partition device"
+#~ msgstr ""
+#~ "Je třeba, aby se /boot/efi nacházelo na zařízení s EFI System Partition"
+
+#~ msgid "Incorrect passphrase"
+#~ msgstr "Nesprávná heslová fráze"
+
+#~ msgid "Some LUKS devices were not unlocked"
+#~ msgstr "Některá LUKS zařízení nebyla odemčena"
 
 #~ msgid "Not enough free space."
 #~ msgstr "Nedostatek volného místa."
@@ -8376,9 +8410,6 @@ msgstr "čekající krok"
 
 #~ msgid "Checking disks"
 #~ msgstr "Ověřování jednotek"
-
-#~ msgid "Close"
-#~ msgstr "Zavřít"
 
 #~ msgid "Detect disks"
 #~ msgstr "Nalézt jednotky"

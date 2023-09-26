@@ -63,7 +63,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2023-09-20 00:59+0000\n"
+"POT-Creation-Date: 2023-09-26 00:59+0000\n"
 "PO-Revision-Date: 2023-09-16 00:59+0000\n"
 "Last-Translator: yangyangdaji <1504305527@qq.com>\n"
 "Language-Team: Japanese <https://translate.fedoraproject.org/projects/"
@@ -1491,7 +1491,7 @@ msgid "Desired _Capacity:"
 msgstr "要求される容量(_C):"
 
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:151
-#: ui/webui/src/components/storage/MountPointMapping.jsx:441
+#: ui/webui/src/components/storage/MountPointMapping.jsx:525
 msgid "Device"
 msgstr "デバイス"
 
@@ -2828,7 +2828,7 @@ msgstr "マウントポイント(_P):"
 
 #: pyanaconda/ui/tui/spokes/storage.py:798
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:162
-#: ui/webui/src/components/storage/MountPointMapping.jsx:440
+#: ui/webui/src/components/storage/MountPointMapping.jsx:524
 msgid "Mount point"
 msgstr "マウントポイント"
 
@@ -3319,6 +3319,8 @@ msgid "Pass_word:"
 msgstr "パスワード(_W):"
 
 #: pyanaconda/ui/tui/spokes/storage.py:355
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:177
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:184
 #: ui/webui/src/components/storage/DiskEncryption.jsx:284
 msgid "Passphrase"
 msgstr "パスフレーズ"
@@ -3337,8 +3339,6 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/subscription.glade:181
 #: pyanaconda/ui/gui/spokes/subscription.glade:571
 #: pyanaconda/ui/gui/spokes/user.glade:176
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:149
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:156
 msgid "Password"
 msgstr "パスワード"
 
@@ -3650,8 +3650,8 @@ msgid "Purpose"
 msgstr "用途"
 
 #: pyanaconda/ui/gui/main.glade:176
-#: ui/webui/src/components/AnacondaWizard.jsx:416
-#: ui/webui/src/components/AnacondaWizard.jsx:440
+#: ui/webui/src/components/AnacondaWizard.jsx:427
+#: ui/webui/src/components/AnacondaWizard.jsx:451
 #: ui/webui/src/components/installation/InstallationProgress.jsx:215
 #: ui/webui/src/components/Error.jsx:206
 msgid "Quit"
@@ -3841,8 +3841,8 @@ msgid "Ref_ormat"
 msgstr "再フォーマット(_O)"
 
 #: pyanaconda/ui/tui/spokes/storage.py:870
-#: ui/webui/src/components/storage/MountPointMapping.jsx:322
-#: ui/webui/src/components/storage/MountPointMapping.jsx:442
+#: ui/webui/src/components/storage/MountPointMapping.jsx:278
+#: ui/webui/src/components/storage/MountPointMapping.jsx:526
 msgid "Reformat"
 msgstr "再フォーマット"
 
@@ -3903,7 +3903,7 @@ msgid "Remote directory is required"
 msgstr "リモートディレクトリーは必須です"
 
 #: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:266
-#: ui/webui/src/components/storage/MountPointMapping.jsx:360
+#: ui/webui/src/components/storage/MountPointMapping.jsx:311
 msgid "Remove"
 msgstr "削除"
 
@@ -7444,12 +7444,12 @@ msgid "{count} disk selected; {capacity} capacity; {free} free"
 msgid_plural "{count} disks selected; {capacity} capacity; {free} free"
 msgstr[0] "選択されたディスク数 {count}、容量 {capacity}、空き領域 {free}"
 
-#: pyanaconda/modules/storage/devicetree/viewer.py:328
+#: pyanaconda/modules/storage/devicetree/viewer.py:330
 #, python-brace-format
 msgid "{device_description} ({device_name})"
 msgstr "{device_description} ({device_name})"
 
-#: pyanaconda/modules/storage/devicetree/viewer.py:334
+#: pyanaconda/modules/storage/devicetree/viewer.py:336
 #, python-brace-format
 msgid "{device_name} on {container_name}"
 msgstr "{container_name} 上の {device_name}"
@@ -7518,20 +7518,24 @@ msgstr "$0 のインストール"
 msgid "$0 installer"
 msgstr "$0 のインストーラー"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:143
-msgid "/boot/efi must be on a EFI System Partition device"
-msgstr "/boot/efi は必ず EFI System Partition のデバイスします"
+#: ui/webui/src/components/storage/MountPointMapping.jsx:139
+#, fuzzy
+#| msgid "{fs} must be on a device of type {type}"
+msgid "'$0' must be on a device formatted to '$1'"
+msgstr "{fs} は、タイプ {type} のデバイス上でなければなりません"
 
 #: ui/webui/src/components/HeaderKebab.jsx:140
 msgid "About"
 msgstr "About"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:585
+#: ui/webui/src/components/storage/MountPointMapping.jsx:549
 msgid "Add mount"
 msgstr "マウントの追加"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:132
-msgid "All devices using this passphrase will be unlocked."
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:154
+#, fuzzy
+#| msgid "All devices using this passphrase will be unlocked."
+msgid "All devices using this passphrase will be unlocked"
 msgstr "すべてのデバイスは、このパスフレーズにてロック解除されています。"
 
 #: ui/webui/src/components/HeaderKebab.jsx:106
@@ -7546,7 +7550,7 @@ msgstr "マウントポイントの割り当てを適用してインストール
 msgid "Applying new disk selection..."
 msgstr "新しいディスク選択を適用しています..."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:396
+#: ui/webui/src/components/AnacondaWizard.jsx:407
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:213
 msgid "Back"
 msgstr "戻る"
@@ -7572,7 +7576,6 @@ msgstr ""
 "ます。"
 
 #: ui/webui/src/components/storage/InstallationMethod.jsx:557
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:139
 #: ui/webui/src/components/Error.jsx:238
 msgid "Cancel"
 msgstr "取り消し"
@@ -7597,6 +7600,10 @@ msgstr "選択された言語: "
 msgid "Clear input value"
 msgstr "入力した値をクリアします"
 
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:164
+msgid "Close"
+msgstr "閉じる"
+
 #: ui/webui/src/components/localization/InstallationLanguage.jsx:151
 msgid "Common languages"
 msgstr "共通言語"
@@ -7609,7 +7616,7 @@ msgstr "完了しました"
 msgid "Confirm passphrase"
 msgstr "パスフレーズの確認"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:447
+#: ui/webui/src/components/AnacondaWizard.jsx:458
 msgid "Continue installation"
 msgstr "インストールを続行する"
 
@@ -7621,7 +7628,7 @@ msgstr "重大なエラー"
 msgid "Current selections"
 msgstr "現在の選択内容"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:224
+#: ui/webui/src/components/storage/MountPointMapping.jsx:179
 msgid "Custom"
 msgstr "カスタム"
 
@@ -7629,25 +7636,25 @@ msgstr "カスタム"
 msgid "Destination"
 msgstr "インストール先"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:58
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:72
 msgid "Devices should be unlocked before assigning mount points."
 msgstr ""
 "マウントポイントを割り当てる前に、デバイスのロック解除する必要があります。"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:102
+#: ui/webui/src/components/AnacondaWizard.jsx:113
 msgid "Disk configuration"
 msgstr "ディスクの設定"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:113
+#: ui/webui/src/components/AnacondaWizard.jsx:124
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:168
 msgid "Disk encryption"
 msgstr "ディスク暗号化"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:299
+#: ui/webui/src/components/storage/MountPointMapping.jsx:255
 msgid "Duplicate device."
 msgstr "重複されたデバイスです。"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:230
+#: ui/webui/src/components/storage/MountPointMapping.jsx:185
 msgid "Duplicate mount point."
 msgstr "重複されたマウントポイントです。"
 
@@ -7659,7 +7666,7 @@ msgstr "データを暗号化する"
 msgid "Encrypt the selected devices?"
 msgstr "選択されたデバイスを暗号化しますか？"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:55
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:69
 msgid "Encrypted devices are locked"
 msgstr "暗号化されたデバイスはロックされました"
 
@@ -7686,8 +7693,8 @@ msgstr ""
 msgid "Error details"
 msgstr "エラーの詳細"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:223
-#: ui/webui/src/components/AnacondaWizard.jsx:394
+#: ui/webui/src/components/AnacondaWizard.jsx:234
+#: ui/webui/src/components/AnacondaWizard.jsx:405
 msgid "Error was hit when going back from $0."
 msgstr "$0 から戻るときにエラーが発生しました。"
 
@@ -7717,7 +7724,12 @@ msgstr "言語を探す"
 msgid "Hide confirmed password"
 msgstr "確認済みパスワードを非表示にする"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:165
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:193
+#, fuzzy
+#| msgid "Confirm passphrase"
+msgid "Hide passphrase"
+msgstr "パスフレーズの確認"
+
 #: ui/webui/src/components/storage/DiskEncryption.jsx:142
 msgid "Hide password"
 msgstr "パスワードを非表示にする"
@@ -7745,10 +7757,6 @@ msgstr "無視する"
 msgid "In progress"
 msgstr "進行中"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:115
-msgid "Incorrect passphrase"
-msgstr "間違ったパスフレーズ"
-
 #: ui/webui/src/components/storage/InstallationScenario.jsx:141
 msgid "Install on the custom mount points?"
 msgstr "カスタムマウントポイント上にインストールしますか？"
@@ -7761,7 +7769,7 @@ msgstr "空き領域にインストールしますか？"
 msgid "Installation failed"
 msgstr "インストールに失敗しました"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:98
+#: ui/webui/src/components/AnacondaWizard.jsx:109
 msgid "Installation method"
 msgstr "インストール方法"
 
@@ -7795,15 +7803,21 @@ msgstr "言語"
 msgid "Launch Blivet-gui storage editor"
 msgstr "Blivet-guiストレージエディターを起動します"
 
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:174
+#, fuzzy
+#| msgid "Unlock devices"
+msgid "Locked devices"
+msgstr "デバイスをロック解除する"
+
 #: ui/webui/src/components/Error.jsx:162
 msgid "Log"
 msgstr "ログ"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:107
+#: ui/webui/src/components/AnacondaWizard.jsx:118
 msgid "Manual disk configuration"
 msgstr "手動のディスク構成"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:652
+#: ui/webui/src/components/storage/MountPointMapping.jsx:616
 msgid "Manual disk configuration: Mount point mapping"
 msgstr "手動のディスク構成: マウントポイントの割り当て"
 
@@ -7815,7 +7829,7 @@ msgstr ""
 msgid "Medium"
 msgstr "Medium"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:127
+#: ui/webui/src/components/storage/MountPointMapping.jsx:121
 msgid "Mismatch between parent device and child device reformat selection."
 msgstr "親デバイスと子デバイスの再フォーマットの選択が一致していません。"
 
@@ -7832,7 +7846,7 @@ msgstr "ストレージの変更"
 msgid "Modifying the storage failed."
 msgstr "ストレージの変更中に失敗しました。"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:438
+#: ui/webui/src/components/storage/MountPointMapping.jsx:522
 #: ui/webui/src/components/storage/InstallationScenario.jsx:131
 msgid "Mount point assignment"
 msgstr "マウントポイントの割り当て"
@@ -7849,7 +7863,7 @@ msgstr ""
 "ネットワークが利用できません。 問題を報告するには、上のバーのメニューでネット"
 "ワークを構成します。"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:345
+#: ui/webui/src/components/AnacondaWizard.jsx:356
 msgid "Next"
 msgstr "次へ"
 
@@ -7857,7 +7871,7 @@ msgstr "次へ"
 msgid "No additional disks detected"
 msgstr "検出された追加のディスクがありません"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:445
+#: ui/webui/src/components/storage/MountPointMapping.jsx:529
 msgid "No devices"
 msgstr "デバイスがありません"
 
@@ -7905,6 +7919,10 @@ msgstr ""
 msgid "Operating system"
 msgstr "オペレーティングシステム"
 
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:135
+msgid "Passphrase did not match any locked device"
+msgstr ""
+
 #: ui/webui/src/components/storage/DiskEncryption.jsx:199
 msgid "Passphrases must match"
 msgstr "パスフレーズが一致しません"
@@ -7929,7 +7947,7 @@ msgstr "プレリリース"
 msgid "Preparing report"
 msgstr "報告の準備中..."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:452
+#: ui/webui/src/components/AnacondaWizard.jsx:463
 msgid "Quit installer?"
 msgstr "インストーラーを終了しますか？"
 
@@ -7949,14 +7967,14 @@ msgstr "インストーラーの設定の読み込みに失敗しました。"
 msgid "Reading installer version information failed."
 msgstr "インストーラーのバージョン情報の読み取りに失敗しました。"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:416
-#: ui/webui/src/components/AnacondaWizard.jsx:440
+#: ui/webui/src/components/AnacondaWizard.jsx:427
+#: ui/webui/src/components/AnacondaWizard.jsx:451
 #: ui/webui/src/components/installation/InstallationProgress.jsx:215
 #: ui/webui/src/components/Error.jsx:206
 msgid "Reboot"
 msgstr "再起動"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:452
+#: ui/webui/src/components/AnacondaWizard.jsx:463
 msgid "Reboot system?"
 msgstr "システムを再起動しますか？"
 
@@ -7984,7 +8002,7 @@ msgstr ""
 "Issueを報告するとネットワーク経由で情報が送信されます。 添付されたログを確認"
 "して編集し、機密情報を削除してください。"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:223
+#: ui/webui/src/components/storage/MountPointMapping.jsx:178
 msgid "Required"
 msgstr "必要です"
 
@@ -8000,12 +8018,12 @@ msgstr "ストレージの再スキャン"
 msgid "Rescanning of the disks failed."
 msgstr "ディスクの再スキャンに失敗しました。"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:127
+#: ui/webui/src/components/AnacondaWizard.jsx:138
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:133
 msgid "Review and install"
 msgstr "確認とインストール"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:262
+#: ui/webui/src/components/storage/MountPointMapping.jsx:217
 msgid "Select a device"
 msgstr "デバイスを選択する"
 
@@ -8013,7 +8031,7 @@ msgstr "デバイスを選択する"
 msgid "Select a disk"
 msgstr "ディスクを選択する"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:110
+#: ui/webui/src/components/storage/MountPointMapping.jsx:104
 msgid "Selected device's format '$0' cannot be reformatted."
 msgstr "選択したデバイスのフォーマット '$0' は再フォーマットできません。"
 
@@ -8021,12 +8039,17 @@ msgstr "選択したデバイスのフォーマット '$0' は再フォーマッ
 msgid "Show confirmed password"
 msgstr "パスワードの確認を表示する"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:165
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:193
+#, fuzzy
+#| msgid "Confirm passphrase"
+msgid "Show passphrase"
+msgstr "パスフレーズの確認"
+
 #: ui/webui/src/components/storage/DiskEncryption.jsx:142
 msgid "Show password"
 msgstr "パスワードを表示する"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:80
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:87
 msgid "Skip"
 msgstr "スキップ"
 
@@ -8041,10 +8064,6 @@ msgid ""
 msgstr ""
 "ソフトウェアのインストール: ストレージの構成が完了しました。 ソフトウェアがデ"
 "バイスにインストールされています。"
-
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:148
-msgid "Some LUKS devices were not unlocked"
-msgstr "いくつかのLUKSデバイスがロック解除されていません"
 
 #: ui/webui/src/components/storage/InstallationScenario.jsx:93
 msgid "Some devices use the same name: $0."
@@ -8064,6 +8083,12 @@ msgstr "ストレージの構成: ストレージは現在構成中です。"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:139
 msgid "Successfully installed"
+msgstr "インストールが成功しました"
+
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:130
+#, fuzzy
+#| msgid "Successfully installed"
+msgid "Successfully unlocked $0."
 msgstr "インストールが成功しました"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:120
@@ -8116,7 +8141,7 @@ msgstr "重大なエラーが発生したため、インストーラーは続行
 msgid "The installer cannot continue due to a critical error: $0"
 msgstr "重大なエラーが発生したため、インストーラーは続行できません: $0"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:334
+#: ui/webui/src/components/storage/MountPointMapping.jsx:290
 msgid "The root partition is always re-formatted by the installer."
 msgstr ""
 "ルート パーティションは、インストーラーによって常に再フォーマットされます。"
@@ -8141,7 +8166,7 @@ msgstr "これには少し時間がかかる場合があります"
 msgid "To begin using $0, reboot your system."
 msgstr "$0の使用を開始するには、システムを再起動します。"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:375
+#: ui/webui/src/components/AnacondaWizard.jsx:386
 msgid "To continue, select the devices to install to."
 msgstr "続行するには、インストール先のデバイスを選択します。"
 
@@ -8160,15 +8185,15 @@ msgid ""
 "$0."
 msgstr ""
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:136
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:161
 msgid "Unlock"
 msgstr "ロック解除"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:75
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:82
 msgid "Unlock devices"
 msgstr "デバイスをロック解除する"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:131
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:157
 msgid "Unlock encrypted devices"
 msgstr "暗号化されたデバイスのロック解除を行います"
 
@@ -8176,7 +8201,7 @@ msgstr "暗号化されたデバイスのロック解除を行います"
 msgid "Use free space for the installation"
 msgstr "空き領域をインストールに使用します"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:91
+#: ui/webui/src/components/AnacondaWizard.jsx:102
 msgid "Welcome"
 msgstr "ようこそ"
 
@@ -8188,7 +8213,7 @@ msgstr "$0 へようこそ"
 msgid "Welcome. Let's install $0 now."
 msgstr "ようこそ。今すぐ $0 をインストールしましょう。"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:456
+#: ui/webui/src/components/AnacondaWizard.jsx:467
 msgid "Your progress will not be saved."
 msgstr "進行状況は保存されません。"
 
@@ -8211,6 +8236,15 @@ msgstr "マウント"
 #: ui/webui/src/components/installation/InstallationProgress.jsx:165
 msgid "pending step"
 msgstr "保留中の手順"
+
+#~ msgid "/boot/efi must be on a EFI System Partition device"
+#~ msgstr "/boot/efi は必ず EFI System Partition のデバイスします"
+
+#~ msgid "Incorrect passphrase"
+#~ msgstr "間違ったパスフレーズ"
+
+#~ msgid "Some LUKS devices were not unlocked"
+#~ msgstr "いくつかのLUKSデバイスがロック解除されていません"
 
 #~ msgid "Not enough free space."
 #~ msgstr "十分な空き領域がありません。"
@@ -8315,9 +8349,6 @@ msgstr "保留中の手順"
 
 #~ msgid "Checking disks"
 #~ msgstr "ディスクの確認"
-
-#~ msgid "Close"
-#~ msgstr "閉じる"
 
 #, fuzzy
 #~| msgid "Selected disks"

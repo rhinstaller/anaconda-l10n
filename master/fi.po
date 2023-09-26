@@ -28,7 +28,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2023-09-20 00:59+0000\n"
+"POT-Creation-Date: 2023-09-26 00:59+0000\n"
 "PO-Revision-Date: 2023-09-15 01:01+0000\n"
 "Last-Translator: Jan Kuparinen <copper_fin@hotmail.com>\n"
 "Language-Team: Finnish <https://translate.fedoraproject.org/projects/"
@@ -1454,7 +1454,7 @@ msgid "Desired _Capacity:"
 msgstr "Toivottu _kapasiteetti:"
 
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:151
-#: ui/webui/src/components/storage/MountPointMapping.jsx:441
+#: ui/webui/src/components/storage/MountPointMapping.jsx:525
 msgid "Device"
 msgstr "Laite"
 
@@ -2788,7 +2788,7 @@ msgstr "Liitos_piste:"
 
 #: pyanaconda/ui/tui/spokes/storage.py:798
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:162
-#: ui/webui/src/components/storage/MountPointMapping.jsx:440
+#: ui/webui/src/components/storage/MountPointMapping.jsx:524
 msgid "Mount point"
 msgstr "Liitospiste"
 
@@ -3282,6 +3282,8 @@ msgid "Pass_word:"
 msgstr "_Salasana:"
 
 #: pyanaconda/ui/tui/spokes/storage.py:355
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:177
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:184
 #: ui/webui/src/components/storage/DiskEncryption.jsx:284
 msgid "Passphrase"
 msgstr "Tunnuslause"
@@ -3300,8 +3302,6 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/subscription.glade:181
 #: pyanaconda/ui/gui/spokes/subscription.glade:571
 #: pyanaconda/ui/gui/spokes/user.glade:176
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:149
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:156
 msgid "Password"
 msgstr "Salasana"
 
@@ -3608,8 +3608,8 @@ msgid "Purpose"
 msgstr "Tarkoitus"
 
 #: pyanaconda/ui/gui/main.glade:176
-#: ui/webui/src/components/AnacondaWizard.jsx:416
-#: ui/webui/src/components/AnacondaWizard.jsx:440
+#: ui/webui/src/components/AnacondaWizard.jsx:427
+#: ui/webui/src/components/AnacondaWizard.jsx:451
 #: ui/webui/src/components/installation/InstallationProgress.jsx:215
 #: ui/webui/src/components/Error.jsx:206
 msgid "Quit"
@@ -3799,8 +3799,8 @@ msgid "Ref_ormat"
 msgstr "Alusta _uudelleen"
 
 #: pyanaconda/ui/tui/spokes/storage.py:870
-#: ui/webui/src/components/storage/MountPointMapping.jsx:322
-#: ui/webui/src/components/storage/MountPointMapping.jsx:442
+#: ui/webui/src/components/storage/MountPointMapping.jsx:278
+#: ui/webui/src/components/storage/MountPointMapping.jsx:526
 msgid "Reformat"
 msgstr "Alusta uudelleen"
 
@@ -3861,7 +3861,7 @@ msgid "Remote directory is required"
 msgstr "Etähakemisto vaaditaan"
 
 #: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:266
-#: ui/webui/src/components/storage/MountPointMapping.jsx:360
+#: ui/webui/src/components/storage/MountPointMapping.jsx:311
 msgid "Remove"
 msgstr "Poista"
 
@@ -7416,12 +7416,12 @@ msgid_plural "{count} disks selected; {capacity} capacity; {free} free"
 msgstr[0] "{count} levy valittu; {capacity} kapasiteetti; {free} vapaana"
 msgstr[1] "{count} levyä valittu; {capacity} kapasiteetti; {free} vapaana"
 
-#: pyanaconda/modules/storage/devicetree/viewer.py:328
+#: pyanaconda/modules/storage/devicetree/viewer.py:330
 #, python-brace-format
 msgid "{device_description} ({device_name})"
 msgstr "{device_description} ({device_name})"
 
-#: pyanaconda/modules/storage/devicetree/viewer.py:334
+#: pyanaconda/modules/storage/devicetree/viewer.py:336
 #, python-brace-format
 msgid "{device_name} on {container_name}"
 msgstr "{device_name} {container_name}:lla"
@@ -7490,20 +7490,24 @@ msgstr "$0 -asennus"
 msgid "$0 installer"
 msgstr "$0 -asennusohjelmas"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:143
-msgid "/boot/efi must be on a EFI System Partition device"
-msgstr "/boot/efi on oltava EFI System Partition -laitteella"
+#: ui/webui/src/components/storage/MountPointMapping.jsx:139
+#, fuzzy
+#| msgid "{fs} must be on a device of type {type}"
+msgid "'$0' must be on a device formatted to '$1'"
+msgstr "{fs}:n on oltava laitteella tyyppiä {type}"
 
 #: ui/webui/src/components/HeaderKebab.jsx:140
 msgid "About"
 msgstr "Aiheesta"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:585
+#: ui/webui/src/components/storage/MountPointMapping.jsx:549
 msgid "Add mount"
 msgstr "Lisää liitos"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:132
-msgid "All devices using this passphrase will be unlocked."
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:154
+#, fuzzy
+#| msgid "All devices using this passphrase will be unlocked."
+msgid "All devices using this passphrase will be unlocked"
 msgstr "Kaikki tätä tunnuslausetta käyttävät laitteet avataan."
 
 #: ui/webui/src/components/HeaderKebab.jsx:106
@@ -7518,7 +7522,7 @@ msgstr "Käytä kiinnityspisteiden määritystä ja asenna"
 msgid "Applying new disk selection..."
 msgstr "Otetaan uutta levyvalintaa käyttöön..."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:396
+#: ui/webui/src/components/AnacondaWizard.jsx:407
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:213
 msgid "Back"
 msgstr "Takaisin"
@@ -7544,7 +7548,6 @@ msgstr ""
 "parantaaksesi tätä ohjelmistoa."
 
 #: ui/webui/src/components/storage/InstallationMethod.jsx:557
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:139
 #: ui/webui/src/components/Error.jsx:238
 msgid "Cancel"
 msgstr "Peru"
@@ -7569,6 +7572,10 @@ msgstr "Valittu kieli: "
 msgid "Clear input value"
 msgstr "Tyhjennä syöttöarvo"
 
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:164
+msgid "Close"
+msgstr "Sulje"
+
 #: ui/webui/src/components/localization/InstallationLanguage.jsx:151
 msgid "Common languages"
 msgstr "Yleiset kielet"
@@ -7581,7 +7588,7 @@ msgstr "Valmis"
 msgid "Confirm passphrase"
 msgstr "Vahvista salalause"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:447
+#: ui/webui/src/components/AnacondaWizard.jsx:458
 msgid "Continue installation"
 msgstr "Jatka asennusta"
 
@@ -7593,7 +7600,7 @@ msgstr "Kriittinen virhe"
 msgid "Current selections"
 msgstr "Nykyiset valinnat"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:224
+#: ui/webui/src/components/storage/MountPointMapping.jsx:179
 msgid "Custom"
 msgstr "Mukautettu"
 
@@ -7601,24 +7608,24 @@ msgstr "Mukautettu"
 msgid "Destination"
 msgstr "Kohde"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:58
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:72
 msgid "Devices should be unlocked before assigning mount points."
 msgstr "Laitteiden lukitus tulee avata ennen liitospisteiden määrittämistä."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:102
+#: ui/webui/src/components/AnacondaWizard.jsx:113
 msgid "Disk configuration"
 msgstr "Laitteen asetukset"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:113
+#: ui/webui/src/components/AnacondaWizard.jsx:124
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:168
 msgid "Disk encryption"
 msgstr "Levyn salaus"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:299
+#: ui/webui/src/components/storage/MountPointMapping.jsx:255
 msgid "Duplicate device."
 msgstr "Laitteen kaksoiskappale."
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:230
+#: ui/webui/src/components/storage/MountPointMapping.jsx:185
 msgid "Duplicate mount point."
 msgstr "Liitospisteen kaksoiskappale."
 
@@ -7630,7 +7637,7 @@ msgstr "Salaa tietoni"
 msgid "Encrypt the selected devices?"
 msgstr "Salataanko valitut laitteet?"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:55
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:69
 msgid "Encrypted devices are locked"
 msgstr "Salatut laitteet on lukittu"
 
@@ -7658,8 +7665,8 @@ msgstr ""
 msgid "Error details"
 msgstr "Virheen tiedot"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:223
-#: ui/webui/src/components/AnacondaWizard.jsx:394
+#: ui/webui/src/components/AnacondaWizard.jsx:234
+#: ui/webui/src/components/AnacondaWizard.jsx:405
 msgid "Error was hit when going back from $0."
 msgstr "Virhe palatessa takaisin kohteesta $0."
 
@@ -7689,7 +7696,12 @@ msgstr "Etsi kieli"
 msgid "Hide confirmed password"
 msgstr "Piilota vahvistettu salasana"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:165
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:193
+#, fuzzy
+#| msgid "Confirm passphrase"
+msgid "Hide passphrase"
+msgstr "Vahvista salalause"
+
 #: ui/webui/src/components/storage/DiskEncryption.jsx:142
 msgid "Hide password"
 msgstr "Piilota salasana"
@@ -7717,10 +7729,6 @@ msgstr "Ohita"
 msgid "In progress"
 msgstr "Meneillään"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:115
-msgid "Incorrect passphrase"
-msgstr "Väärä tunnuslause"
-
 #: ui/webui/src/components/storage/InstallationScenario.jsx:141
 msgid "Install on the custom mount points?"
 msgstr "Asennetaanko mukautettuihin liitospisteisiin?"
@@ -7733,7 +7741,7 @@ msgstr "Asennetaanko vapaaseen tilaan?"
 msgid "Installation failed"
 msgstr "Asennus epäonnistui"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:98
+#: ui/webui/src/components/AnacondaWizard.jsx:109
 msgid "Installation method"
 msgstr "Asennustapa"
 
@@ -7767,15 +7775,21 @@ msgstr "Kieli"
 msgid "Launch Blivet-gui storage editor"
 msgstr "Käynnistä Blivet-gui-tallennuseditori"
 
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:174
+#, fuzzy
+#| msgid "Unlock devices"
+msgid "Locked devices"
+msgstr "Avaa laite"
+
 #: ui/webui/src/components/Error.jsx:162
 msgid "Log"
 msgstr "Loki"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:107
+#: ui/webui/src/components/AnacondaWizard.jsx:118
 msgid "Manual disk configuration"
 msgstr "Manuaalinen levyn konfigurointi"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:652
+#: ui/webui/src/components/storage/MountPointMapping.jsx:616
 msgid "Manual disk configuration: Mount point mapping"
 msgstr "Manuaalinen levykonfigurointi: Liitospisteiden kartoitus"
 
@@ -7787,7 +7801,7 @@ msgstr ""
 msgid "Medium"
 msgstr "Väline"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:127
+#: ui/webui/src/components/storage/MountPointMapping.jsx:121
 msgid "Mismatch between parent device and child device reformat selection."
 msgstr ""
 "Isäntälaitteen ja alalaitteen uudelleenmuotoilun valinta ei vastaa toisiaan."
@@ -7805,7 +7819,7 @@ msgstr "Muokkaa tallennustilaa"
 msgid "Modifying the storage failed."
 msgstr "Tallennustilan muutokset epäonnistuivat."
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:438
+#: ui/webui/src/components/storage/MountPointMapping.jsx:522
 #: ui/webui/src/components/storage/InstallationScenario.jsx:131
 msgid "Mount point assignment"
 msgstr "Liitospisteen määrittely"
@@ -7822,7 +7836,7 @@ msgstr ""
 "Verkko ei ole käytettävissä. Määritä verkko yläpalkin valikossa "
 "ilmoittaaksesi ongelmasta."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:345
+#: ui/webui/src/components/AnacondaWizard.jsx:356
 msgid "Next"
 msgstr "Seuraava"
 
@@ -7830,7 +7844,7 @@ msgstr "Seuraava"
 msgid "No additional disks detected"
 msgstr "Ylimääräisiä levyjä ei havaittu"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:445
+#: ui/webui/src/components/storage/MountPointMapping.jsx:529
 msgid "No devices"
 msgstr "Ei laiteita"
 
@@ -7877,6 +7891,10 @@ msgstr "Vain uudet osiot salataan. Olemassa olevat osiot säilyvät ennallaan."
 msgid "Operating system"
 msgstr "Käyttöjärjestelmä"
 
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:135
+msgid "Passphrase did not match any locked device"
+msgstr ""
+
 #: ui/webui/src/components/storage/DiskEncryption.jsx:199
 msgid "Passphrases must match"
 msgstr "Tunnuslauseiden on oltava samat"
@@ -7901,7 +7919,7 @@ msgstr "Esijulkaisu"
 msgid "Preparing report"
 msgstr "Raporttia valmistellaan"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:452
+#: ui/webui/src/components/AnacondaWizard.jsx:463
 msgid "Quit installer?"
 msgstr "_Poistu asennusohjelmasta?"
 
@@ -7921,14 +7939,14 @@ msgstr "Asennusohjelman asetusten lukeminen epäonnistui."
 msgid "Reading installer version information failed."
 msgstr "Asennusohjelman versiotietojen lukeminen epäonnistui."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:416
-#: ui/webui/src/components/AnacondaWizard.jsx:440
+#: ui/webui/src/components/AnacondaWizard.jsx:427
+#: ui/webui/src/components/AnacondaWizard.jsx:451
 #: ui/webui/src/components/installation/InstallationProgress.jsx:215
 #: ui/webui/src/components/Error.jsx:206
 msgid "Reboot"
 msgstr "Käynnistä uudelleen"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:452
+#: ui/webui/src/components/AnacondaWizard.jsx:463
 msgid "Reboot system?"
 msgstr "Käynnistä järjestelmä uudelleen?"
 
@@ -7956,7 +7974,7 @@ msgstr ""
 "Ongelmasta ilmoittaminen lähettää tiedot verkon kautta. Tarkista ja muokkaa "
 "liitteenä olevaa lokia poistaaksesi kaikki arkaluontoiset tiedot."
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:223
+#: ui/webui/src/components/storage/MountPointMapping.jsx:178
 msgid "Required"
 msgstr "Vaaditaan"
 
@@ -7972,12 +7990,12 @@ msgstr "Tarkista tallennustila uudelleen"
 msgid "Rescanning of the disks failed."
 msgstr "Levyjen uudelleenskannaus epäonnistui."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:127
+#: ui/webui/src/components/AnacondaWizard.jsx:138
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:133
 msgid "Review and install"
 msgstr "Arvioi ja asenna"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:262
+#: ui/webui/src/components/storage/MountPointMapping.jsx:217
 msgid "Select a device"
 msgstr "Valitse laite"
 
@@ -7985,7 +8003,7 @@ msgstr "Valitse laite"
 msgid "Select a disk"
 msgstr "Valitse levy"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:110
+#: ui/webui/src/components/storage/MountPointMapping.jsx:104
 msgid "Selected device's format '$0' cannot be reformatted."
 msgstr "Valitun laitteen muotoa '$0' ei voi alustaa uudelleen."
 
@@ -7993,12 +8011,17 @@ msgstr "Valitun laitteen muotoa '$0' ei voi alustaa uudelleen."
 msgid "Show confirmed password"
 msgstr "Näytä vahvistettu salasana"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:165
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:193
+#, fuzzy
+#| msgid "Confirm passphrase"
+msgid "Show passphrase"
+msgstr "Vahvista salalause"
+
 #: ui/webui/src/components/storage/DiskEncryption.jsx:142
 msgid "Show password"
 msgstr "Näytä salasana"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:80
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:87
 msgid "Skip"
 msgstr "Ohitetaan"
 
@@ -8013,10 +8036,6 @@ msgid ""
 msgstr ""
 "Ohjelmiston asennus: Tallennuskokoonpano on valmis. Ohjelmistoa asennetaan "
 "nyt laitteellesi."
-
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:148
-msgid "Some LUKS devices were not unlocked"
-msgstr "Joitakin LUKS-laitteita ei avattu"
 
 #: ui/webui/src/components/storage/InstallationScenario.jsx:93
 msgid "Some devices use the same name: $0."
@@ -8036,6 +8055,12 @@ msgstr "Tallennustilan määritys: Tallennustilaa konfiguroidaan parhaillaan."
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:139
 msgid "Successfully installed"
+msgstr "Asennus onnistui"
+
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:130
+#, fuzzy
+#| msgid "Successfully installed"
+msgid "Successfully unlocked $0."
 msgstr "Asennus onnistui"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:120
@@ -8087,7 +8112,7 @@ msgstr "Asennuksen jatkaminen ei onnistu kriittisen virheen vuoksi."
 msgid "The installer cannot continue due to a critical error: $0"
 msgstr "Asennuksen jatkaminen ei onnistu kriittisen virheen vuoksi: $0"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:334
+#: ui/webui/src/components/storage/MountPointMapping.jsx:290
 msgid "The root partition is always re-formatted by the installer."
 msgstr "Asennusohjelma alustaa aina root-osion uudelleen."
 
@@ -8111,7 +8136,7 @@ msgstr "Tämä saattaa kestää hetken"
 msgid "To begin using $0, reboot your system."
 msgstr "Aloita $0 käyttö käynnistämällä järjestelmä uudelleen."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:375
+#: ui/webui/src/components/AnacondaWizard.jsx:386
 msgid "To continue, select the devices to install to."
 msgstr "Jatka valitsemalla laitteet, joihin haluat asentaa."
 
@@ -8130,15 +8155,15 @@ msgid ""
 "$0."
 msgstr ""
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:136
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:161
 msgid "Unlock"
 msgstr "Avaa"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:75
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:82
 msgid "Unlock devices"
 msgstr "Avaa laite"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:131
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:157
 msgid "Unlock encrypted devices"
 msgstr "Avaa salatut laitteet"
 
@@ -8146,7 +8171,7 @@ msgstr "Avaa salatut laitteet"
 msgid "Use free space for the installation"
 msgstr "Käytä vapaata tilaa asennukseen"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:91
+#: ui/webui/src/components/AnacondaWizard.jsx:102
 msgid "Welcome"
 msgstr "Tervetuloa"
 
@@ -8158,7 +8183,7 @@ msgstr "Tervetuloa $0an"
 msgid "Welcome. Let's install $0 now."
 msgstr "Tervetuloa. Asennataan nyt $0."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:456
+#: ui/webui/src/components/AnacondaWizard.jsx:467
 msgid "Your progress will not be saved."
 msgstr "Edistymistäsi ei tallenneta."
 
@@ -8181,6 +8206,15 @@ msgstr "liitä"
 #: ui/webui/src/components/installation/InstallationProgress.jsx:165
 msgid "pending step"
 msgstr "käsittelyä odottava vaihe"
+
+#~ msgid "/boot/efi must be on a EFI System Partition device"
+#~ msgstr "/boot/efi on oltava EFI System Partition -laitteella"
+
+#~ msgid "Incorrect passphrase"
+#~ msgstr "Väärä tunnuslause"
+
+#~ msgid "Some LUKS devices were not unlocked"
+#~ msgstr "Joitakin LUKS-laitteita ei avattu"
 
 #~ msgid "Not enough free space."
 #~ msgstr "Ei tarpeeksi levytilaa vapaana."
@@ -8281,9 +8315,6 @@ msgstr "käsittelyä odottava vaihe"
 
 #~ msgid "Checking disks"
 #~ msgstr "Tarkistetaan levyjä"
-
-#~ msgid "Close"
-#~ msgstr "Sulje"
 
 #~ msgid "Detect disks"
 #~ msgstr "Tunnista levyt"

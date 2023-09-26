@@ -28,7 +28,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2023-09-20 00:59+0000\n"
+"POT-Creation-Date: 2023-09-26 00:59+0000\n"
 "PO-Revision-Date: 2023-08-16 00:58+0000\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Turkish <https://translate.fedoraproject.org/projects/"
@@ -1453,7 +1453,7 @@ msgid "Desired _Capacity:"
 msgstr "İstenen _Kapasite:"
 
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:151
-#: ui/webui/src/components/storage/MountPointMapping.jsx:441
+#: ui/webui/src/components/storage/MountPointMapping.jsx:525
 msgid "Device"
 msgstr "Aygıt"
 
@@ -2811,7 +2811,7 @@ msgstr "Bağlama _Noktası:"
 
 #: pyanaconda/ui/tui/spokes/storage.py:798
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:162
-#: ui/webui/src/components/storage/MountPointMapping.jsx:440
+#: ui/webui/src/components/storage/MountPointMapping.jsx:524
 msgid "Mount point"
 msgstr "Bağlama noktası"
 
@@ -3301,6 +3301,8 @@ msgid "Pass_word:"
 msgstr "Par_ola:"
 
 #: pyanaconda/ui/tui/spokes/storage.py:355
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:177
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:184
 #: ui/webui/src/components/storage/DiskEncryption.jsx:284
 msgid "Passphrase"
 msgstr "Parola"
@@ -3317,8 +3319,6 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/subscription.glade:181
 #: pyanaconda/ui/gui/spokes/subscription.glade:571
 #: pyanaconda/ui/gui/spokes/user.glade:176
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:149
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:156
 msgid "Password"
 msgstr "Parola"
 
@@ -3633,8 +3633,8 @@ msgid "Purpose"
 msgstr "Amaç"
 
 #: pyanaconda/ui/gui/main.glade:176
-#: ui/webui/src/components/AnacondaWizard.jsx:416
-#: ui/webui/src/components/AnacondaWizard.jsx:440
+#: ui/webui/src/components/AnacondaWizard.jsx:427
+#: ui/webui/src/components/AnacondaWizard.jsx:451
 #: ui/webui/src/components/installation/InstallationProgress.jsx:215
 #: ui/webui/src/components/Error.jsx:206
 msgid "Quit"
@@ -3827,8 +3827,8 @@ msgid "Ref_ormat"
 msgstr "Yeniden B_içimlendir"
 
 #: pyanaconda/ui/tui/spokes/storage.py:870
-#: ui/webui/src/components/storage/MountPointMapping.jsx:322
-#: ui/webui/src/components/storage/MountPointMapping.jsx:442
+#: ui/webui/src/components/storage/MountPointMapping.jsx:278
+#: ui/webui/src/components/storage/MountPointMapping.jsx:526
 msgid "Reformat"
 msgstr "Yeniden biçimlendir"
 
@@ -3887,7 +3887,7 @@ msgid "Remote directory is required"
 msgstr "Uzak dizin gerekli"
 
 #: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:266
-#: ui/webui/src/components/storage/MountPointMapping.jsx:360
+#: ui/webui/src/components/storage/MountPointMapping.jsx:311
 msgid "Remove"
 msgstr "Kaldır"
 
@@ -7463,12 +7463,12 @@ msgid_plural "{count} disks selected; {capacity} capacity; {free} free"
 msgstr[0] "{count} disk seçildi; {capacity} kapasite; {free} boş"
 msgstr[1] "{count} disk seçildi; {capacity} kapasite; {free} boş"
 
-#: pyanaconda/modules/storage/devicetree/viewer.py:328
+#: pyanaconda/modules/storage/devicetree/viewer.py:330
 #, python-brace-format
 msgid "{device_description} ({device_name})"
 msgstr "{device_description} ({device_name})"
 
-#: pyanaconda/modules/storage/devicetree/viewer.py:334
+#: pyanaconda/modules/storage/devicetree/viewer.py:336
 #, python-brace-format
 msgid "{device_name} on {container_name}"
 msgstr "{container_name} üzerinde {device_name}"
@@ -7542,22 +7542,24 @@ msgstr "Kurulum"
 msgid "$0 installer"
 msgstr "Kurucudan _çık"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:143
-msgid "/boot/efi must be on a EFI System Partition device"
-msgstr ""
+#: ui/webui/src/components/storage/MountPointMapping.jsx:139
+#, fuzzy
+#| msgid "{fs} must be on a device of type {type}"
+msgid "'$0' must be on a device formatted to '$1'"
+msgstr "{fs}, {type} türünde bir aygıt üzerinde olmalıdır"
 
 #: ui/webui/src/components/HeaderKebab.jsx:140
 msgid "About"
 msgstr ""
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:585
+#: ui/webui/src/components/storage/MountPointMapping.jsx:549
 #, fuzzy
 #| msgid "Add Layout"
 msgid "Add mount"
 msgstr "Düzen Ekle"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:132
-msgid "All devices using this passphrase will be unlocked."
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:154
+msgid "All devices using this passphrase will be unlocked"
 msgstr ""
 
 #: ui/webui/src/components/HeaderKebab.jsx:106
@@ -7576,7 +7578,7 @@ msgstr "Yapılandırmayı kurucuda uygula"
 msgid "Applying new disk selection..."
 msgstr ""
 
-#: ui/webui/src/components/AnacondaWizard.jsx:396
+#: ui/webui/src/components/AnacondaWizard.jsx:407
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:213
 msgid "Back"
 msgstr "Geri"
@@ -7600,7 +7602,6 @@ msgstr ""
 "bildirmeye hazır olduğunuzu kabul edersiniz."
 
 #: ui/webui/src/components/storage/InstallationMethod.jsx:557
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:139
 #: ui/webui/src/components/Error.jsx:238
 #, fuzzy
 #| msgctxt "GUI|Software Source|Media Check Dialog"
@@ -7630,6 +7631,10 @@ msgstr "Seçilen dil: "
 msgid "Clear input value"
 msgstr ""
 
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:164
+msgid "Close"
+msgstr "Kapat"
+
 #: ui/webui/src/components/localization/InstallationLanguage.jsx:151
 msgid "Common languages"
 msgstr "Yaygın diller"
@@ -7645,7 +7650,7 @@ msgstr "Tamamlandı"
 msgid "Confirm passphrase"
 msgstr "Parolayı _onayla"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:447
+#: ui/webui/src/components/AnacondaWizard.jsx:458
 #, fuzzy
 #| msgid "Running installation"
 msgid "Continue installation"
@@ -7662,7 +7667,7 @@ msgstr ""
 msgid "Current selections"
 msgstr "Seçimleri _sıfırla"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:224
+#: ui/webui/src/components/storage/MountPointMapping.jsx:179
 #, fuzzy
 #| msgctxt "GUI|Storage"
 #| msgid "_Custom"
@@ -7675,31 +7680,31 @@ msgstr "_Özel"
 msgid "Destination"
 msgstr "Açıklama"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:58
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:72
 msgid "Devices should be unlocked before assigning mount points."
 msgstr ""
 
-#: ui/webui/src/components/AnacondaWizard.jsx:102
+#: ui/webui/src/components/AnacondaWizard.jsx:113
 #, fuzzy
 #| msgid "Device configuration"
 msgid "Disk configuration"
 msgstr "Aygıt yapılandırması"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:113
+#: ui/webui/src/components/AnacondaWizard.jsx:124
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:168
 #, fuzzy
 #| msgid "Encryption"
 msgid "Disk encryption"
 msgstr "Şifreleme"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:299
+#: ui/webui/src/components/storage/MountPointMapping.jsx:255
 #, fuzzy
 #| msgctxt "GUI|Installation Destination|Filter"
 #| msgid "_Multipath Devices"
 msgid "Duplicate device."
 msgstr "_Çok Yollu Aygıtlar"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:230
+#: ui/webui/src/components/storage/MountPointMapping.jsx:185
 #, fuzzy
 #| msgid "Please enter a mount point."
 msgid "Duplicate mount point."
@@ -7716,7 +7721,7 @@ msgstr "Verilerimi şifrele."
 msgid "Encrypt the selected devices?"
 msgstr ""
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:55
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:69
 msgid "Encrypted devices are locked"
 msgstr ""
 
@@ -7749,8 +7754,8 @@ msgstr "Disklerin silinmesi geri alınamaz."
 msgid "Error details"
 msgstr "Hata ayrıntısı: "
 
-#: ui/webui/src/components/AnacondaWizard.jsx:223
-#: ui/webui/src/components/AnacondaWizard.jsx:394
+#: ui/webui/src/components/AnacondaWizard.jsx:234
+#: ui/webui/src/components/AnacondaWizard.jsx:405
 msgid "Error was hit when going back from $0."
 msgstr ""
 
@@ -7783,7 +7788,13 @@ msgstr "Dil bul"
 msgid "Hide confirmed password"
 msgstr "Parolayı _onayla"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:165
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:193
+#, fuzzy
+#| msgctxt "GUI|User"
+#| msgid "_Confirm password"
+msgid "Hide passphrase"
+msgstr "Parolayı _onayla"
+
 #: ui/webui/src/components/storage/DiskEncryption.jsx:142
 #, fuzzy
 #| msgid "Hide password."
@@ -7818,13 +7829,6 @@ msgstr ""
 msgid "In progress"
 msgstr "Sürüyor"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:115
-#, fuzzy
-#| msgctxt "GUI|Passphrase Dialog"
-#| msgid "_Save Passphrase"
-msgid "Incorrect passphrase"
-msgstr "Parolayı _Kaydet"
-
 #: ui/webui/src/components/storage/InstallationScenario.jsx:141
 #, fuzzy
 #| msgid "Manually assign mount points"
@@ -7841,7 +7845,7 @@ msgstr "Yazılım kuruluyor"
 msgid "Installation failed"
 msgstr "Kurulum başarısız"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:98
+#: ui/webui/src/components/AnacondaWizard.jsx:109
 #, fuzzy
 #| msgid "Installation complete"
 msgid "Installation method"
@@ -7881,17 +7885,23 @@ msgstr "Dil"
 msgid "Launch Blivet-gui storage editor"
 msgstr ""
 
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:174
+#, fuzzy
+#| msgid "to rescan devices"
+msgid "Locked devices"
+msgstr "aygıtları yeniden tara"
+
 #: ui/webui/src/components/Error.jsx:162
 msgid "Log"
 msgstr ""
 
-#: ui/webui/src/components/AnacondaWizard.jsx:107
+#: ui/webui/src/components/AnacondaWizard.jsx:118
 #, fuzzy
 #| msgid "Device configuration"
 msgid "Manual disk configuration"
 msgstr "Aygıt yapılandırması"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:652
+#: ui/webui/src/components/storage/MountPointMapping.jsx:616
 #, fuzzy
 #| msgid "Device configuration"
 msgid "Manual disk configuration: Mount point mapping"
@@ -7905,7 +7915,7 @@ msgstr ""
 msgid "Medium"
 msgstr ""
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:127
+#: ui/webui/src/components/storage/MountPointMapping.jsx:121
 msgid "Mismatch between parent device and child device reformat selection."
 msgstr ""
 
@@ -7931,7 +7941,7 @@ msgstr "Depolama Düzenini _Değiştir"
 msgid "Modifying the storage failed."
 msgstr "Depolama Düzenini _Değiştir"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:438
+#: ui/webui/src/components/storage/MountPointMapping.jsx:522
 #: ui/webui/src/components/storage/InstallationScenario.jsx:131
 #, fuzzy
 #| msgid "Mount point"
@@ -7950,7 +7960,7 @@ msgid ""
 "the issue."
 msgstr ""
 
-#: ui/webui/src/components/AnacondaWizard.jsx:345
+#: ui/webui/src/components/AnacondaWizard.jsx:356
 msgid "Next"
 msgstr ""
 
@@ -7958,7 +7968,7 @@ msgstr ""
 msgid "No additional disks detected"
 msgstr "Ek disk algılanmadı"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:445
+#: ui/webui/src/components/storage/MountPointMapping.jsx:529
 #, fuzzy
 #| msgid "Add device"
 msgid "No devices"
@@ -8015,6 +8025,10 @@ msgstr ""
 msgid "Operating system"
 msgstr "bekleyen adım"
 
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:135
+msgid "Passphrase did not match any locked device"
+msgstr ""
+
 #: ui/webui/src/components/storage/DiskEncryption.jsx:199
 #, fuzzy
 #| msgid "The passphrases do not match."
@@ -8043,7 +8057,7 @@ msgstr "Ön sürüm"
 msgid "Preparing report"
 msgstr "{} dağıtımı hazırlanıyor"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:452
+#: ui/webui/src/components/AnacondaWizard.jsx:463
 #, fuzzy
 #| msgctxt "GUI|Storage|No Space Dialog"
 #| msgid "_Quit installer"
@@ -8070,14 +8084,14 @@ msgstr "Aygıt yeniden yapılandırması başarısız."
 msgid "Reading installer version information failed."
 msgstr "Kayıt başarısız."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:416
-#: ui/webui/src/components/AnacondaWizard.jsx:440
+#: ui/webui/src/components/AnacondaWizard.jsx:427
+#: ui/webui/src/components/AnacondaWizard.jsx:451
 #: ui/webui/src/components/installation/InstallationProgress.jsx:215
 #: ui/webui/src/components/Error.jsx:206
 msgid "Reboot"
 msgstr "Yeniden başlat"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:452
+#: ui/webui/src/components/AnacondaWizard.jsx:463
 #, fuzzy
 #| msgctxt "GUI|Progress"
 #| msgid "_Reboot System"
@@ -8104,7 +8118,7 @@ msgid ""
 "edit the attached log to remove any sensitive information."
 msgstr ""
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:223
+#: ui/webui/src/components/storage/MountPointMapping.jsx:178
 #, fuzzy
 #| msgid "Not registered."
 msgid "Required"
@@ -8128,12 +8142,12 @@ msgstr "Depolama inceleniyor"
 msgid "Rescanning of the disks failed."
 msgstr "Disklerin yeniden taranması bitti."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:127
+#: ui/webui/src/components/AnacondaWizard.jsx:138
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:133
 msgid "Review and install"
 msgstr "Gözden geçir ve kur"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:262
+#: ui/webui/src/components/storage/MountPointMapping.jsx:217
 #, fuzzy
 #| msgid "Selected Device"
 msgid "Select a device"
@@ -8145,7 +8159,7 @@ msgstr "Seçilen Aygıt"
 msgid "Select a disk"
 msgstr "Tüm diskleri seç"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:110
+#: ui/webui/src/components/storage/MountPointMapping.jsx:104
 msgid "Selected device's format '$0' cannot be reformatted."
 msgstr ""
 
@@ -8156,14 +8170,20 @@ msgstr ""
 msgid "Show confirmed password"
 msgstr "Parolayı _onayla"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:165
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:193
+#, fuzzy
+#| msgctxt "GUI|User"
+#| msgid "_Confirm password"
+msgid "Show passphrase"
+msgstr "Parolayı _onayla"
+
 #: ui/webui/src/components/storage/DiskEncryption.jsx:142
 #, fuzzy
 #| msgid "Show password."
 msgid "Show password"
 msgstr "Parolayı göster."
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:80
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:87
 msgid "Skip"
 msgstr ""
 
@@ -8178,10 +8198,6 @@ msgid ""
 msgstr ""
 "Yazılım kurulumu: Depolama yapılandırması tamamlandı. Yazılım şimdi "
 "aygıtınıza kuruluyor."
-
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:148
-msgid "Some LUKS devices were not unlocked"
-msgstr ""
 
 #: ui/webui/src/components/storage/InstallationScenario.jsx:93
 msgid "Some devices use the same name: $0."
@@ -8203,6 +8219,10 @@ msgstr "Depolama yapılandırması: Depolama alanı şu anda yapılandırılıyo
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:139
 msgid "Successfully installed"
+msgstr ""
+
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:130
+msgid "Successfully unlocked $0."
 msgstr ""
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:120
@@ -8259,7 +8279,7 @@ msgstr "Kurulum süremiyor ve sistem yeniden başlatılacak"
 msgid "The installer cannot continue due to a critical error: $0"
 msgstr "Kurulum süremiyor ve sistem yeniden başlatılacak"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:334
+#: ui/webui/src/components/storage/MountPointMapping.jsx:290
 msgid "The root partition is always re-formatted by the installer."
 msgstr ""
 
@@ -8288,7 +8308,7 @@ msgstr ""
 "Fedora başarıyla kuruldu. Kullanmaya başlamak için sisteminizi yeniden "
 "başlatın."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:375
+#: ui/webui/src/components/AnacondaWizard.jsx:386
 #, fuzzy
 #| msgid "No disks selected; please select at least one disk to install to."
 msgid "To continue, select the devices to install to."
@@ -8309,20 +8329,20 @@ msgid ""
 "$0."
 msgstr ""
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:136
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:161
 #, fuzzy
 #| msgctxt "GUI|Custom Partitioning|Encrypted"
 #| msgid "_Unlock"
 msgid "Unlock"
 msgstr "Kilidi _aç"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:75
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:82
 #, fuzzy
 #| msgid "to rescan devices"
 msgid "Unlock devices"
 msgstr "aygıtları yeniden tara"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:131
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:157
 #, fuzzy
 #| msgid "Failed to unlock encrypted block device."
 msgid "Unlock encrypted devices"
@@ -8334,7 +8354,7 @@ msgstr "Şifrelenmiş blok aygıtının kilidi açılamadı."
 msgid "Use free space for the installation"
 msgstr "Kurulum sürdürülemedi."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:91
+#: ui/webui/src/components/AnacondaWizard.jsx:102
 msgid "Welcome"
 msgstr "Hoş Geldiniz"
 
@@ -8348,7 +8368,7 @@ msgstr "$0'ya Hoş Geldiniz"
 msgid "Welcome. Let's install $0 now."
 msgstr ""
 
-#: ui/webui/src/components/AnacondaWizard.jsx:456
+#: ui/webui/src/components/AnacondaWizard.jsx:467
 msgid "Your progress will not be saved."
 msgstr ""
 
@@ -8375,6 +8395,12 @@ msgstr "Düzen Ekle"
 #: ui/webui/src/components/installation/InstallationProgress.jsx:165
 msgid "pending step"
 msgstr "bekleyen adım"
+
+#, fuzzy
+#~| msgctxt "GUI|Passphrase Dialog"
+#~| msgid "_Save Passphrase"
+#~ msgid "Incorrect passphrase"
+#~ msgstr "Parolayı _Kaydet"
 
 #, fuzzy
 #~| msgid "Not enough free space on selected disks."
@@ -8460,9 +8486,6 @@ msgstr "bekleyen adım"
 
 #~ msgid "Checking disks"
 #~ msgstr "Diskler denetleniyor"
-
-#~ msgid "Close"
-#~ msgstr "Kapat"
 
 #~ msgid "Detect disks"
 #~ msgstr "Diskleri algıla"

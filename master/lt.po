@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2023-09-20 00:59+0000\n"
+"POT-Creation-Date: 2023-09-26 00:59+0000\n"
 "PO-Revision-Date: 2023-09-15 01:08+0000\n"
 "Last-Translator: yangyangdaji <1504305527@qq.com>\n"
 "Language-Team: Lithuanian <https://translate.fedoraproject.org/projects/"
@@ -1444,7 +1444,7 @@ msgid "Desired _Capacity:"
 msgstr "Pageidaujamas _talpa:"
 
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:151
-#: ui/webui/src/components/storage/MountPointMapping.jsx:441
+#: ui/webui/src/components/storage/MountPointMapping.jsx:525
 msgid "Device"
 msgstr "Įrenginys"
 
@@ -2772,7 +2772,7 @@ msgstr "Prijungimo _taškas:"
 
 #: pyanaconda/ui/tui/spokes/storage.py:798
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:162
-#: ui/webui/src/components/storage/MountPointMapping.jsx:440
+#: ui/webui/src/components/storage/MountPointMapping.jsx:524
 msgid "Mount point"
 msgstr "Prijungimo taškas"
 
@@ -3263,6 +3263,8 @@ msgid "Pass_word:"
 msgstr "_Slaptažodis:"
 
 #: pyanaconda/ui/tui/spokes/storage.py:355
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:177
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:184
 #: ui/webui/src/components/storage/DiskEncryption.jsx:284
 msgid "Passphrase"
 msgstr "Slaptafrazė"
@@ -3280,8 +3282,6 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/subscription.glade:181
 #: pyanaconda/ui/gui/spokes/subscription.glade:571
 #: pyanaconda/ui/gui/spokes/user.glade:176
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:149
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:156
 msgid "Password"
 msgstr "Slaptažodis"
 
@@ -3590,8 +3590,8 @@ msgid "Purpose"
 msgstr "Paskirtis"
 
 #: pyanaconda/ui/gui/main.glade:176
-#: ui/webui/src/components/AnacondaWizard.jsx:416
-#: ui/webui/src/components/AnacondaWizard.jsx:440
+#: ui/webui/src/components/AnacondaWizard.jsx:427
+#: ui/webui/src/components/AnacondaWizard.jsx:451
 #: ui/webui/src/components/installation/InstallationProgress.jsx:215
 #: ui/webui/src/components/Error.jsx:206
 msgid "Quit"
@@ -3780,8 +3780,8 @@ msgid "Ref_ormat"
 msgstr "Perf_ormatuoti"
 
 #: pyanaconda/ui/tui/spokes/storage.py:870
-#: ui/webui/src/components/storage/MountPointMapping.jsx:322
-#: ui/webui/src/components/storage/MountPointMapping.jsx:442
+#: ui/webui/src/components/storage/MountPointMapping.jsx:278
+#: ui/webui/src/components/storage/MountPointMapping.jsx:526
 msgid "Reformat"
 msgstr "Performatuoti"
 
@@ -3842,7 +3842,7 @@ msgid "Remote directory is required"
 msgstr "Būtinas nutolęs katalogas"
 
 #: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:266
-#: ui/webui/src/components/storage/MountPointMapping.jsx:360
+#: ui/webui/src/components/storage/MountPointMapping.jsx:311
 msgid "Remove"
 msgstr "Pašalinti"
 
@@ -7374,12 +7374,12 @@ msgstr[0] "Pasirinktas {count} diskas; talpa {capacity}; laisvos vietos {free}"
 msgstr[1] "Pasirinkti {count} diskai; talpa {capacity}; laisvos vietos {free}"
 msgstr[2] "Pasirinkta {count} diskų; talpa {capacity}; laisvos vietos {free}"
 
-#: pyanaconda/modules/storage/devicetree/viewer.py:328
+#: pyanaconda/modules/storage/devicetree/viewer.py:330
 #, python-brace-format
 msgid "{device_description} ({device_name})"
 msgstr "{device_description} ({device_name})"
 
-#: pyanaconda/modules/storage/devicetree/viewer.py:334
+#: pyanaconda/modules/storage/devicetree/viewer.py:336
 #, python-brace-format
 msgid "{device_name} on {container_name}"
 msgstr "{device_name} konteineryje {container_name}"
@@ -7449,20 +7449,24 @@ msgstr "$0 diegimas"
 msgid "$0 installer"
 msgstr "$0 diegyklė"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:143
-msgid "/boot/efi must be on a EFI System Partition device"
-msgstr "/boot/efi turi būti EFI sisteminio skaidinio įrenginyje"
+#: ui/webui/src/components/storage/MountPointMapping.jsx:139
+#, fuzzy
+#| msgid "{fs} must be on a device of type {type}"
+msgid "'$0' must be on a device formatted to '$1'"
+msgstr "{fs} turi būti {type} tipo įrenginyje"
 
 #: ui/webui/src/components/HeaderKebab.jsx:140
 msgid "About"
 msgstr "Apie"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:585
+#: ui/webui/src/components/storage/MountPointMapping.jsx:549
 msgid "Add mount"
 msgstr "Apie prijungimą"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:132
-msgid "All devices using this passphrase will be unlocked."
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:154
+#, fuzzy
+#| msgid "All devices using this passphrase will be unlocked."
+msgid "All devices using this passphrase will be unlocked"
 msgstr "Visi įrenginiai, naudojantys šią slaptafrazę, bus atrakinti."
 
 #: ui/webui/src/components/HeaderKebab.jsx:106
@@ -7477,7 +7481,7 @@ msgstr "Pritaikyti prijungimo taško priskyrimą ir įdiegti"
 msgid "Applying new disk selection..."
 msgstr "Pritaikomas naujas disko pasirinkimas..."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:396
+#: ui/webui/src/components/AnacondaWizard.jsx:407
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:213
 msgid "Back"
 msgstr "Grįžti"
@@ -7503,7 +7507,6 @@ msgstr ""
 "pagerinant šį darbą."
 
 #: ui/webui/src/components/storage/InstallationMethod.jsx:557
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:139
 #: ui/webui/src/components/Error.jsx:238
 msgid "Cancel"
 msgstr "Atsisakyti"
@@ -7528,6 +7531,10 @@ msgstr "Pasirinkta kalba: "
 msgid "Clear input value"
 msgstr "Išvalyti įvestą reikšmę"
 
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:164
+msgid "Close"
+msgstr "Užverti"
+
 #: ui/webui/src/components/localization/InstallationLanguage.jsx:151
 msgid "Common languages"
 msgstr "Dažnos kalbos"
@@ -7540,7 +7547,7 @@ msgstr "Užbaigta"
 msgid "Confirm passphrase"
 msgstr "Patvirtinti slaptafrazę"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:447
+#: ui/webui/src/components/AnacondaWizard.jsx:458
 msgid "Continue installation"
 msgstr "Tęsti diegimą"
 
@@ -7552,7 +7559,7 @@ msgstr "Kritinė klaida"
 msgid "Current selections"
 msgstr "Dabartiniai pasirinkimai"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:224
+#: ui/webui/src/components/storage/MountPointMapping.jsx:179
 msgid "Custom"
 msgstr "Pasirinktinis"
 
@@ -7560,24 +7567,24 @@ msgstr "Pasirinktinis"
 msgid "Destination"
 msgstr "Paskirtis"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:58
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:72
 msgid "Devices should be unlocked before assigning mount points."
 msgstr "Įrenginiai turi būti atrakinti prie priskiriant prijungimo taškus."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:102
+#: ui/webui/src/components/AnacondaWizard.jsx:113
 msgid "Disk configuration"
 msgstr "Disko konfigūracija"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:113
+#: ui/webui/src/components/AnacondaWizard.jsx:124
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:168
 msgid "Disk encryption"
 msgstr "Disko šifravimas"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:299
+#: ui/webui/src/components/storage/MountPointMapping.jsx:255
 msgid "Duplicate device."
 msgstr "Dubliuotas įrenginys."
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:230
+#: ui/webui/src/components/storage/MountPointMapping.jsx:185
 msgid "Duplicate mount point."
 msgstr "Dubliuotas prijungimo taškas."
 
@@ -7589,7 +7596,7 @@ msgstr "Šifruoti mano duomenis"
 msgid "Encrypt the selected devices?"
 msgstr "Šifruoti pasirinktus įrenginius?"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:55
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:69
 msgid "Encrypted devices are locked"
 msgstr "Šifruoti įrenginiai yra užrakinti"
 
@@ -7617,8 +7624,8 @@ msgstr ""
 msgid "Error details"
 msgstr "Detali klaida"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:223
-#: ui/webui/src/components/AnacondaWizard.jsx:394
+#: ui/webui/src/components/AnacondaWizard.jsx:234
+#: ui/webui/src/components/AnacondaWizard.jsx:405
 msgid "Error was hit when going back from $0."
 msgstr "Kilo klaida grįžtant iš $0."
 
@@ -7648,7 +7655,12 @@ msgstr "Rasti kalbą"
 msgid "Hide confirmed password"
 msgstr "Slėpti patvirtintą slaptažodį"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:165
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:193
+#, fuzzy
+#| msgid "Confirm passphrase"
+msgid "Hide passphrase"
+msgstr "Patvirtinti slaptafrazę"
+
 #: ui/webui/src/components/storage/DiskEncryption.jsx:142
 msgid "Hide password"
 msgstr "Slėpti slaptažodį"
@@ -7676,10 +7688,6 @@ msgstr "Nepaisyti"
 msgid "In progress"
 msgstr "Vyksta"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:115
-msgid "Incorrect passphrase"
-msgstr "Neteisinga slaptafrazė"
-
 #: ui/webui/src/components/storage/InstallationScenario.jsx:141
 msgid "Install on the custom mount points?"
 msgstr "Įdiegti pasirinktiniuose prijungimo taškuose?"
@@ -7692,7 +7700,7 @@ msgstr "Įdiegti laisvoje vietoje?"
 msgid "Installation failed"
 msgstr "Diegimas nepavyko"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:98
+#: ui/webui/src/components/AnacondaWizard.jsx:109
 msgid "Installation method"
 msgstr "Diegimo metodas"
 
@@ -7726,15 +7734,21 @@ msgstr "Kalbos"
 msgid "Launch Blivet-gui storage editor"
 msgstr "Paleisti Bliver-gui saugyklos redaktorių"
 
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:174
+#, fuzzy
+#| msgid "Unlock devices"
+msgid "Locked devices"
+msgstr "Atrakinti įrenginius"
+
 #: ui/webui/src/components/Error.jsx:162
 msgid "Log"
 msgstr "Žurnalas"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:107
+#: ui/webui/src/components/AnacondaWizard.jsx:118
 msgid "Manual disk configuration"
 msgstr "Rankinė disko konfigūracija"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:652
+#: ui/webui/src/components/storage/MountPointMapping.jsx:616
 msgid "Manual disk configuration: Mount point mapping"
 msgstr "Rankinė disko konfigūracija: prijungimo taškų susiejimas"
 
@@ -7746,7 +7760,7 @@ msgstr ""
 msgid "Medium"
 msgstr "Laikmena"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:127
+#: ui/webui/src/components/storage/MountPointMapping.jsx:121
 msgid "Mismatch between parent device and child device reformat selection."
 msgstr ""
 "Neatitikimas tarp tėvinio įrenginio ir vaikinio įrenginio performatavimo "
@@ -7765,7 +7779,7 @@ msgstr "Keisti saugyklą"
 msgid "Modifying the storage failed."
 msgstr "Nepavyko pakeisti saugyklos."
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:438
+#: ui/webui/src/components/storage/MountPointMapping.jsx:522
 #: ui/webui/src/components/storage/InstallationScenario.jsx:131
 msgid "Mount point assignment"
 msgstr "Prijungimo taškų priskyrimas"
@@ -7782,7 +7796,7 @@ msgstr ""
 "Tinklas neprieinamas. Norėdami pranešti apie klaidą, sukonfigūruokite tinklą "
 "viršutinės juostos meniu."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:345
+#: ui/webui/src/components/AnacondaWizard.jsx:356
 msgid "Next"
 msgstr "Kitas"
 
@@ -7790,7 +7804,7 @@ msgstr "Kitas"
 msgid "No additional disks detected"
 msgstr "Neaptikta papildomų diskų"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:445
+#: ui/webui/src/components/storage/MountPointMapping.jsx:529
 msgid "No devices"
 msgstr "Nėra įrenginių"
 
@@ -7837,6 +7851,10 @@ msgstr "Bus šifruoti tik nauji skaidiniai. Esami skaidiniai liks nepaliesti."
 msgid "Operating system"
 msgstr "Operacinė sistema"
 
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:135
+msgid "Passphrase did not match any locked device"
+msgstr ""
+
 #: ui/webui/src/components/storage/DiskEncryption.jsx:199
 msgid "Passphrases must match"
 msgstr "Slaptafrazės turi sutapti"
@@ -7861,7 +7879,7 @@ msgstr "Išankstinis leidimas"
 msgid "Preparing report"
 msgstr "Ruošiama ataskaita"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:452
+#: ui/webui/src/components/AnacondaWizard.jsx:463
 msgid "Quit installer?"
 msgstr "Išeiti iš diegyklės?"
 
@@ -7881,14 +7899,14 @@ msgstr "Nepavyko perskaityti diegyklės konfigūracijos."
 msgid "Reading installer version information failed."
 msgstr "Nepavyko perskaityti diegyklės versijos informacijos."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:416
-#: ui/webui/src/components/AnacondaWizard.jsx:440
+#: ui/webui/src/components/AnacondaWizard.jsx:427
+#: ui/webui/src/components/AnacondaWizard.jsx:451
 #: ui/webui/src/components/installation/InstallationProgress.jsx:215
 #: ui/webui/src/components/Error.jsx:206
 msgid "Reboot"
 msgstr "Perleisti"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:452
+#: ui/webui/src/components/AnacondaWizard.jsx:463
 msgid "Reboot system?"
 msgstr "Perleisti sistemą?"
 
@@ -7916,7 +7934,7 @@ msgstr ""
 "Pranešant apie problemą bus siunčiama informacija tinklu. Peržiūrėkite ir "
 "pašalinkite jautrius duomenis redaguodami prisegtą žurnalą."
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:223
+#: ui/webui/src/components/storage/MountPointMapping.jsx:178
 msgid "Required"
 msgstr "Būtina"
 
@@ -7932,12 +7950,12 @@ msgstr "Perskaityti saugyklą"
 msgid "Rescanning of the disks failed."
 msgstr "Nepavyko perskaityti diskų."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:127
+#: ui/webui/src/components/AnacondaWizard.jsx:138
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:133
 msgid "Review and install"
 msgstr "Peržiūrėti ir įdiegti"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:262
+#: ui/webui/src/components/storage/MountPointMapping.jsx:217
 msgid "Select a device"
 msgstr "Pasirinkite įrenginį"
 
@@ -7945,7 +7963,7 @@ msgstr "Pasirinkite įrenginį"
 msgid "Select a disk"
 msgstr "Pasirinkite diską"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:110
+#: ui/webui/src/components/storage/MountPointMapping.jsx:104
 msgid "Selected device's format '$0' cannot be reformatted."
 msgstr ""
 
@@ -7953,12 +7971,17 @@ msgstr ""
 msgid "Show confirmed password"
 msgstr "Rodyti patvirtintą slaptažodį"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:165
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:193
+#, fuzzy
+#| msgid "Confirm passphrase"
+msgid "Show passphrase"
+msgstr "Patvirtinti slaptafrazę"
+
 #: ui/webui/src/components/storage/DiskEncryption.jsx:142
 msgid "Show password"
 msgstr "Rodyti slaptažodį"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:80
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:87
 msgid "Skip"
 msgstr "Praleisti"
 
@@ -7973,10 +7996,6 @@ msgid ""
 msgstr ""
 "Programinės įrangos diegimas: saugyklos konfigūracija baigta. Programinė "
 "įranga dabar yra diegiama jūsų įrenginyje."
-
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:148
-msgid "Some LUKS devices were not unlocked"
-msgstr "Kai kurie LUKS įrenginiai nebuvo atrakinti"
 
 #: ui/webui/src/components/storage/InstallationScenario.jsx:93
 msgid "Some devices use the same name: $0."
@@ -7996,6 +8015,12 @@ msgstr "Saugyklos konfigūracija: saugykla šiuo metu yra konfigūruojama."
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:139
 msgid "Successfully installed"
+msgstr "Sėkmingai įdiegta"
+
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:130
+#, fuzzy
+#| msgid "Successfully installed"
+msgid "Successfully unlocked $0."
 msgstr "Sėkmingai įdiegta"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:120
@@ -8049,7 +8074,7 @@ msgstr "Diegyklė negali tęsti dėl kritinės klaidos."
 msgid "The installer cannot continue due to a critical error: $0"
 msgstr "Diegyklė negali tęsti dėl kritinės klaidos: $0"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:334
+#: ui/webui/src/components/storage/MountPointMapping.jsx:290
 msgid "The root partition is always re-formatted by the installer."
 msgstr "Diegyklė visada performatuoja root skaidinį."
 
@@ -8076,7 +8101,7 @@ msgid "To begin using $0, reboot your system."
 msgstr ""
 "Norėdami pradėti naudoti Fedora 39 (darbalaukio leidimą) perleiskite sistemą."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:375
+#: ui/webui/src/components/AnacondaWizard.jsx:386
 msgid "To continue, select the devices to install to."
 msgstr "Norėdami tęsti, pasirinkite įrenginius diegimui."
 
@@ -8097,15 +8122,15 @@ msgid ""
 "$0."
 msgstr ""
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:136
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:161
 msgid "Unlock"
 msgstr "Atrakinti"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:75
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:82
 msgid "Unlock devices"
 msgstr "Atrakinti įrenginius"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:131
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:157
 msgid "Unlock encrypted devices"
 msgstr "Atrakinti šifruotus įrenginius"
 
@@ -8113,7 +8138,7 @@ msgstr "Atrakinti šifruotus įrenginius"
 msgid "Use free space for the installation"
 msgstr "Naudoti laisvą vietą diegimui"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:91
+#: ui/webui/src/components/AnacondaWizard.jsx:102
 msgid "Welcome"
 msgstr "Sveiki"
 
@@ -8125,7 +8150,7 @@ msgstr "Sveiki pradėję naudoti $0"
 msgid "Welcome. Let's install $0 now."
 msgstr "Sveiki. Įdiekime $0."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:456
+#: ui/webui/src/components/AnacondaWizard.jsx:467
 msgid "Your progress will not be saved."
 msgstr "Jūsų progresas nebus įrašytas."
 
@@ -8148,6 +8173,15 @@ msgstr "prijungti"
 #: ui/webui/src/components/installation/InstallationProgress.jsx:165
 msgid "pending step"
 msgstr "laukiantis žingsnis"
+
+#~ msgid "/boot/efi must be on a EFI System Partition device"
+#~ msgstr "/boot/efi turi būti EFI sisteminio skaidinio įrenginyje"
+
+#~ msgid "Incorrect passphrase"
+#~ msgstr "Neteisinga slaptafrazė"
+
+#~ msgid "Some LUKS devices were not unlocked"
+#~ msgstr "Kai kurie LUKS įrenginiai nebuvo atrakinti"
 
 #~ msgid "Not enough free space."
 #~ msgstr "Nepakanka laisvos vietos."
@@ -8255,9 +8289,6 @@ msgstr "laukiantis žingsnis"
 
 #~ msgid "Checking disks"
 #~ msgstr "Tikrinami diskai"
-
-#~ msgid "Close"
-#~ msgstr "Užverti"
 
 #~ msgid "Detect disks"
 #~ msgstr "Aptikti diskus"

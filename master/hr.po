@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2023-09-20 00:59+0000\n"
+"POT-Creation-Date: 2023-09-26 00:59+0000\n"
 "PO-Revision-Date: 2023-07-30 21:21+0000\n"
 "Last-Translator: yangyangdaji <1504305527@qq.com>\n"
 "Language-Team: Croatian <https://translate.fedoraproject.org/projects/"
@@ -1459,7 +1459,7 @@ msgid "Desired _Capacity:"
 msgstr "Željeni _kapacitet:"
 
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:151
-#: ui/webui/src/components/storage/MountPointMapping.jsx:441
+#: ui/webui/src/components/storage/MountPointMapping.jsx:525
 msgid "Device"
 msgstr "Uređaj"
 
@@ -2815,7 +2815,7 @@ msgstr "Točka _montiranja:"
 
 #: pyanaconda/ui/tui/spokes/storage.py:798
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:162
-#: ui/webui/src/components/storage/MountPointMapping.jsx:440
+#: ui/webui/src/components/storage/MountPointMapping.jsx:524
 msgid "Mount point"
 msgstr "Točka montiranja"
 
@@ -3307,6 +3307,8 @@ msgid "Pass_word:"
 msgstr "Loz_inka:"
 
 #: pyanaconda/ui/tui/spokes/storage.py:355
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:177
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:184
 #: ui/webui/src/components/storage/DiskEncryption.jsx:284
 msgid "Passphrase"
 msgstr "Lozinka"
@@ -3323,8 +3325,6 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/subscription.glade:181
 #: pyanaconda/ui/gui/spokes/subscription.glade:571
 #: pyanaconda/ui/gui/spokes/user.glade:176
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:149
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:156
 msgid "Password"
 msgstr "Lozinka"
 
@@ -3633,8 +3633,8 @@ msgid "Purpose"
 msgstr "Namjena"
 
 #: pyanaconda/ui/gui/main.glade:176
-#: ui/webui/src/components/AnacondaWizard.jsx:416
-#: ui/webui/src/components/AnacondaWizard.jsx:440
+#: ui/webui/src/components/AnacondaWizard.jsx:427
+#: ui/webui/src/components/AnacondaWizard.jsx:451
 #: ui/webui/src/components/installation/InstallationProgress.jsx:215
 #: ui/webui/src/components/Error.jsx:206
 msgid "Quit"
@@ -3828,8 +3828,8 @@ msgid "Ref_ormat"
 msgstr "Ponovno _fromatiraj"
 
 #: pyanaconda/ui/tui/spokes/storage.py:870
-#: ui/webui/src/components/storage/MountPointMapping.jsx:322
-#: ui/webui/src/components/storage/MountPointMapping.jsx:442
+#: ui/webui/src/components/storage/MountPointMapping.jsx:278
+#: ui/webui/src/components/storage/MountPointMapping.jsx:526
 msgid "Reformat"
 msgstr "Ponovno formatiraj"
 
@@ -3888,7 +3888,7 @@ msgid "Remote directory is required"
 msgstr "Potreban je udaljeni direktorij"
 
 #: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:266
-#: ui/webui/src/components/storage/MountPointMapping.jsx:360
+#: ui/webui/src/components/storage/MountPointMapping.jsx:311
 msgid "Remove"
 msgstr "Ukloni"
 
@@ -7462,12 +7462,12 @@ msgstr[0] "{count} disk je odabran, ukupno {capacity}, slobodno {free}"
 msgstr[1] "{count} diska su odabrana, ukupno {capacity}, slobodno {free}"
 msgstr[2] "{count} diskova je odabrano, ukupno {capacity}, slobodno {free}"
 
-#: pyanaconda/modules/storage/devicetree/viewer.py:328
+#: pyanaconda/modules/storage/devicetree/viewer.py:330
 #, python-brace-format
 msgid "{device_description} ({device_name})"
 msgstr "{device_description} ({device_name})"
 
-#: pyanaconda/modules/storage/devicetree/viewer.py:334
+#: pyanaconda/modules/storage/devicetree/viewer.py:336
 #, python-brace-format
 msgid "{device_name} on {container_name}"
 msgstr "{device_name} na {container_name}"
@@ -7542,22 +7542,24 @@ msgstr "Instalacija"
 msgid "$0 installer"
 msgstr "_Zatvori program instalacije"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:143
-msgid "/boot/efi must be on a EFI System Partition device"
-msgstr ""
+#: ui/webui/src/components/storage/MountPointMapping.jsx:139
+#, fuzzy
+#| msgid "{fs} must be on a device of type {type}"
+msgid "'$0' must be on a device formatted to '$1'"
+msgstr "{fs} mora biti na uređaju vrste {type}"
 
 #: ui/webui/src/components/HeaderKebab.jsx:140
 msgid "About"
 msgstr ""
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:585
+#: ui/webui/src/components/storage/MountPointMapping.jsx:549
 #, fuzzy
 #| msgid "Add Layout"
 msgid "Add mount"
 msgstr "Dodaj raspored"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:132
-msgid "All devices using this passphrase will be unlocked."
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:154
+msgid "All devices using this passphrase will be unlocked"
 msgstr ""
 
 #: ui/webui/src/components/HeaderKebab.jsx:106
@@ -7576,7 +7578,7 @@ msgstr "Primijeni podešavanje u instalacijskom programu"
 msgid "Applying new disk selection..."
 msgstr ""
 
-#: ui/webui/src/components/AnacondaWizard.jsx:396
+#: ui/webui/src/components/AnacondaWizard.jsx:407
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:213
 msgid "Back"
 msgstr "Natrag"
@@ -7600,7 +7602,6 @@ msgstr ""
 "nam olakšali poboljšanje ovog uratka."
 
 #: ui/webui/src/components/storage/InstallationMethod.jsx:557
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:139
 #: ui/webui/src/components/Error.jsx:238
 #, fuzzy
 #| msgctxt "GUI|Software Source|Media Check Dialog"
@@ -7630,6 +7631,10 @@ msgstr "Odabrani jezik: "
 msgid "Clear input value"
 msgstr ""
 
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:164
+msgid "Close"
+msgstr "Zatvori"
+
 #: ui/webui/src/components/localization/InstallationLanguage.jsx:151
 msgid "Common languages"
 msgstr "Uobičajeni jezici"
@@ -7645,7 +7650,7 @@ msgstr "Završeno"
 msgid "Confirm passphrase"
 msgstr "_Potvrdi lozinku"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:447
+#: ui/webui/src/components/AnacondaWizard.jsx:458
 #, fuzzy
 #| msgid "Running pre-installation tasks"
 msgid "Continue installation"
@@ -7662,7 +7667,7 @@ msgstr ""
 msgid "Current selections"
 msgstr "_Poništi odabir"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:224
+#: ui/webui/src/components/storage/MountPointMapping.jsx:179
 #, fuzzy
 #| msgctxt "GUI|Storage"
 #| msgid "_Custom"
@@ -7675,31 +7680,31 @@ msgstr "_Prilagođeno"
 msgid "Destination"
 msgstr "Opis"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:58
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:72
 msgid "Devices should be unlocked before assigning mount points."
 msgstr ""
 
-#: ui/webui/src/components/AnacondaWizard.jsx:102
+#: ui/webui/src/components/AnacondaWizard.jsx:113
 #, fuzzy
 #| msgid "Device configuration"
 msgid "Disk configuration"
 msgstr "Podešavanje uređaja"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:113
+#: ui/webui/src/components/AnacondaWizard.jsx:124
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:168
 #, fuzzy
 #| msgid "Encryption"
 msgid "Disk encryption"
 msgstr "Šifriranje"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:299
+#: ui/webui/src/components/storage/MountPointMapping.jsx:255
 #, fuzzy
 #| msgctxt "GUI|Installation Destination|Filter"
 #| msgid "_Multipath Devices"
 msgid "Duplicate device."
 msgstr "_Uređaji s više putanja"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:230
+#: ui/webui/src/components/storage/MountPointMapping.jsx:185
 #, fuzzy
 #| msgid "Please enter a mount point."
 msgid "Duplicate mount point."
@@ -7716,7 +7721,7 @@ msgstr "Šifriraj moje podatke."
 msgid "Encrypt the selected devices?"
 msgstr ""
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:55
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:69
 msgid "Encrypted devices are locked"
 msgstr ""
 
@@ -7749,8 +7754,8 @@ msgstr "Brisanje diskova se ne može poništiti."
 msgid "Error details"
 msgstr "Pojedinosti greške: "
 
-#: ui/webui/src/components/AnacondaWizard.jsx:223
-#: ui/webui/src/components/AnacondaWizard.jsx:394
+#: ui/webui/src/components/AnacondaWizard.jsx:234
+#: ui/webui/src/components/AnacondaWizard.jsx:405
 msgid "Error was hit when going back from $0."
 msgstr ""
 
@@ -7783,7 +7788,13 @@ msgstr "Potraži jezik"
 msgid "Hide confirmed password"
 msgstr "_Potvrdi lozinku"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:165
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:193
+#, fuzzy
+#| msgctxt "GUI|User"
+#| msgid "_Confirm password"
+msgid "Hide passphrase"
+msgstr "_Potvrdi lozinku"
+
 #: ui/webui/src/components/storage/DiskEncryption.jsx:142
 #, fuzzy
 #| msgid "Hide password."
@@ -7817,13 +7828,6 @@ msgstr ""
 msgid "In progress"
 msgstr "U tijeku"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:115
-#, fuzzy
-#| msgctxt "GUI|Passphrase Dialog"
-#| msgid "_Save Passphrase"
-msgid "Incorrect passphrase"
-msgstr "_Spremi lozinku"
-
 #: ui/webui/src/components/storage/InstallationScenario.jsx:141
 #, fuzzy
 #| msgid "Manually assign mount points"
@@ -7840,7 +7844,7 @@ msgstr "Instaliranje softvera"
 msgid "Installation failed"
 msgstr "Instalacija neuspjela"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:98
+#: ui/webui/src/components/AnacondaWizard.jsx:109
 #, fuzzy
 #| msgid "Installation complete"
 msgid "Installation method"
@@ -7880,17 +7884,23 @@ msgstr "Jezik"
 msgid "Launch Blivet-gui storage editor"
 msgstr ""
 
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:174
+#, fuzzy
+#| msgid "to rescan devices"
+msgid "Locked devices"
+msgstr "za ponovno pretraživanje uređaja"
+
 #: ui/webui/src/components/Error.jsx:162
 msgid "Log"
 msgstr ""
 
-#: ui/webui/src/components/AnacondaWizard.jsx:107
+#: ui/webui/src/components/AnacondaWizard.jsx:118
 #, fuzzy
 #| msgid "Device configuration"
 msgid "Manual disk configuration"
 msgstr "Podešavanje uređaja"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:652
+#: ui/webui/src/components/storage/MountPointMapping.jsx:616
 #, fuzzy
 #| msgid "Device configuration"
 msgid "Manual disk configuration: Mount point mapping"
@@ -7904,7 +7914,7 @@ msgstr ""
 msgid "Medium"
 msgstr ""
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:127
+#: ui/webui/src/components/storage/MountPointMapping.jsx:121
 msgid "Mismatch between parent device and child device reformat selection."
 msgstr ""
 
@@ -7930,7 +7940,7 @@ msgstr "_Promijeni raspored uređaja pohrane"
 msgid "Modifying the storage failed."
 msgstr "_Promijeni raspored uređaja pohrane"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:438
+#: ui/webui/src/components/storage/MountPointMapping.jsx:522
 #: ui/webui/src/components/storage/InstallationScenario.jsx:131
 #, fuzzy
 #| msgid "Mount point"
@@ -7949,7 +7959,7 @@ msgid ""
 "the issue."
 msgstr ""
 
-#: ui/webui/src/components/AnacondaWizard.jsx:345
+#: ui/webui/src/components/AnacondaWizard.jsx:356
 msgid "Next"
 msgstr ""
 
@@ -7957,7 +7967,7 @@ msgstr ""
 msgid "No additional disks detected"
 msgstr "Nema otkrivenih dodatnih diskova"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:445
+#: ui/webui/src/components/storage/MountPointMapping.jsx:529
 #, fuzzy
 #| msgid "Add device"
 msgid "No devices"
@@ -8014,6 +8024,10 @@ msgstr ""
 msgid "Operating system"
 msgstr "korak na čekanju"
 
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:135
+msgid "Passphrase did not match any locked device"
+msgstr ""
+
 #: ui/webui/src/components/storage/DiskEncryption.jsx:199
 #, fuzzy
 #| msgid "The passphrases do not match."
@@ -8042,7 +8056,7 @@ msgstr "Predizdanje"
 msgid "Preparing report"
 msgstr "Priprema implementacije {}"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:452
+#: ui/webui/src/components/AnacondaWizard.jsx:463
 #, fuzzy
 #| msgctxt "GUI|Storage|No Space Dialog"
 #| msgid "_Quit installer"
@@ -8069,14 +8083,14 @@ msgstr "Ponovno podešavanje uređaja neuspjelo."
 msgid "Reading installer version information failed."
 msgstr "Registracija neuspjela."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:416
-#: ui/webui/src/components/AnacondaWizard.jsx:440
+#: ui/webui/src/components/AnacondaWizard.jsx:427
+#: ui/webui/src/components/AnacondaWizard.jsx:451
 #: ui/webui/src/components/installation/InstallationProgress.jsx:215
 #: ui/webui/src/components/Error.jsx:206
 msgid "Reboot"
 msgstr "Ponovno pokreni"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:452
+#: ui/webui/src/components/AnacondaWizard.jsx:463
 #, fuzzy
 #| msgctxt "GUI|Progress"
 #| msgid "_Reboot System"
@@ -8103,7 +8117,7 @@ msgid ""
 "edit the attached log to remove any sensitive information."
 msgstr ""
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:223
+#: ui/webui/src/components/storage/MountPointMapping.jsx:178
 #, fuzzy
 #| msgid "Not registered."
 msgid "Required"
@@ -8127,12 +8141,12 @@ msgstr "Ispitivanje uređaja pohrane"
 msgid "Rescanning of the disks failed."
 msgstr "Ponovno pretraživanje diskova završeno."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:127
+#: ui/webui/src/components/AnacondaWizard.jsx:138
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:133
 msgid "Review and install"
 msgstr "Pregledajte i instalirajte"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:262
+#: ui/webui/src/components/storage/MountPointMapping.jsx:217
 #, fuzzy
 #| msgid "Selected Device"
 msgid "Select a device"
@@ -8144,7 +8158,7 @@ msgstr "Odabrani uređaj"
 msgid "Select a disk"
 msgstr "Odaberi sve diskove"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:110
+#: ui/webui/src/components/storage/MountPointMapping.jsx:104
 msgid "Selected device's format '$0' cannot be reformatted."
 msgstr ""
 
@@ -8155,14 +8169,20 @@ msgstr ""
 msgid "Show confirmed password"
 msgstr "_Potvrdi lozinku"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:165
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:193
+#, fuzzy
+#| msgctxt "GUI|User"
+#| msgid "_Confirm password"
+msgid "Show passphrase"
+msgstr "_Potvrdi lozinku"
+
 #: ui/webui/src/components/storage/DiskEncryption.jsx:142
 #, fuzzy
 #| msgid "Show password."
 msgid "Show password"
 msgstr "Prikaži lozinku."
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:80
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:87
 msgid "Skip"
 msgstr ""
 
@@ -8177,10 +8197,6 @@ msgid ""
 msgstr ""
 "Instalacija softvera: Podešavanje uređaja pohrane je završena. Softver se "
 "trenutno instalira na vaš uređaj."
-
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:148
-msgid "Some LUKS devices were not unlocked"
-msgstr ""
 
 #: ui/webui/src/components/storage/InstallationScenario.jsx:93
 msgid "Some devices use the same name: $0."
@@ -8202,6 +8218,10 @@ msgstr "Podešavanje uređaja pohrane. Uređaj pohrane se trenutno podešava."
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:139
 msgid "Successfully installed"
+msgstr ""
+
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:130
+msgid "Successfully unlocked $0."
 msgstr ""
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:120
@@ -8259,7 +8279,7 @@ msgstr "Ova instalacija se ne može nastaviti i sustav će biti ponovno pokrenut
 msgid "The installer cannot continue due to a critical error: $0"
 msgstr "Ova instalacija se ne može nastaviti i sustav će biti ponovno pokrenut"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:334
+#: ui/webui/src/components/storage/MountPointMapping.jsx:290
 msgid "The root partition is always re-formatted by the installer."
 msgstr ""
 
@@ -8289,7 +8309,7 @@ msgstr ""
 "\n"
 "Pritisnite [Enter] za ponovno pokretanje sustava.\n"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:375
+#: ui/webui/src/components/AnacondaWizard.jsx:386
 #, fuzzy
 #| msgid "No disks selected; please select at least one disk to install to."
 msgid "To continue, select the devices to install to."
@@ -8310,20 +8330,20 @@ msgid ""
 "$0."
 msgstr ""
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:136
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:161
 #, fuzzy
 #| msgctxt "GUI|Custom Partitioning|Encrypted"
 #| msgid "_Unlock"
 msgid "Unlock"
 msgstr "_Otključaj"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:75
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:82
 #, fuzzy
 #| msgid "to rescan devices"
 msgid "Unlock devices"
 msgstr "za ponovno pretraživanje uređaja"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:131
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:157
 #, fuzzy
 #| msgid "Failed to unlock encrypted block device."
 msgid "Unlock encrypted devices"
@@ -8335,7 +8355,7 @@ msgstr "Neuspjelo otključavanje šifriranog blok uređaja."
 msgid "Use free space for the installation"
 msgstr "Neuspjeli nastavak instalacije."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:91
+#: ui/webui/src/components/AnacondaWizard.jsx:102
 msgid "Welcome"
 msgstr "Dobrodošli"
 
@@ -8349,7 +8369,7 @@ msgstr "Dobrodošli u Fedoru"
 msgid "Welcome. Let's install $0 now."
 msgstr ""
 
-#: ui/webui/src/components/AnacondaWizard.jsx:456
+#: ui/webui/src/components/AnacondaWizard.jsx:467
 msgid "Your progress will not be saved."
 msgstr ""
 
@@ -8376,6 +8396,12 @@ msgstr "Dodaj raspored"
 #: ui/webui/src/components/installation/InstallationProgress.jsx:165
 msgid "pending step"
 msgstr "korak na čekanju"
+
+#, fuzzy
+#~| msgctxt "GUI|Passphrase Dialog"
+#~| msgid "_Save Passphrase"
+#~ msgid "Incorrect passphrase"
+#~ msgstr "_Spremi lozinku"
 
 #, fuzzy
 #~| msgid "Not enough free space on selected disks."
@@ -8462,9 +8488,6 @@ msgstr "korak na čekanju"
 
 #~ msgid "Checking disks"
 #~ msgstr "Provjera diskova"
-
-#~ msgid "Close"
-#~ msgstr "Zatvori"
 
 #~ msgid "Detect disks"
 #~ msgstr "Otkrij diskove"

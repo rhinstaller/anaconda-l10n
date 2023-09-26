@@ -46,7 +46,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2023-09-20 00:59+0000\n"
+"POT-Creation-Date: 2023-09-26 00:59+0000\n"
 "PO-Revision-Date: 2023-09-17 11:35+0000\n"
 "Last-Translator: yangyangdaji <1504305527@qq.com>\n"
 "Language-Team: Chinese (Simplified) <https://translate.fedoraproject.org/"
@@ -1429,7 +1429,7 @@ msgid "Desired _Capacity:"
 msgstr "期望容量(_C)："
 
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:151
-#: ui/webui/src/components/storage/MountPointMapping.jsx:441
+#: ui/webui/src/components/storage/MountPointMapping.jsx:525
 msgid "Device"
 msgstr "设备"
 
@@ -2729,7 +2729,7 @@ msgstr "挂载点(_P)："
 
 #: pyanaconda/ui/tui/spokes/storage.py:798
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:162
-#: ui/webui/src/components/storage/MountPointMapping.jsx:440
+#: ui/webui/src/components/storage/MountPointMapping.jsx:524
 msgid "Mount point"
 msgstr "挂载点"
 
@@ -3199,6 +3199,8 @@ msgid "Pass_word:"
 msgstr "密码(W)："
 
 #: pyanaconda/ui/tui/spokes/storage.py:355
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:177
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:184
 #: ui/webui/src/components/storage/DiskEncryption.jsx:284
 msgid "Passphrase"
 msgstr "密码"
@@ -3215,8 +3217,6 @@ msgstr "在 FIPS 模式下，{} 命令中给出的密码太短。 请至少使�
 #: pyanaconda/ui/gui/spokes/subscription.glade:181
 #: pyanaconda/ui/gui/spokes/subscription.glade:571
 #: pyanaconda/ui/gui/spokes/user.glade:176
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:149
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:156
 msgid "Password"
 msgstr "密码"
 
@@ -3510,8 +3510,8 @@ msgid "Purpose"
 msgstr "目的"
 
 #: pyanaconda/ui/gui/main.glade:176
-#: ui/webui/src/components/AnacondaWizard.jsx:416
-#: ui/webui/src/components/AnacondaWizard.jsx:440
+#: ui/webui/src/components/AnacondaWizard.jsx:427
+#: ui/webui/src/components/AnacondaWizard.jsx:451
 #: ui/webui/src/components/installation/InstallationProgress.jsx:215
 #: ui/webui/src/components/Error.jsx:206
 msgid "Quit"
@@ -3694,8 +3694,8 @@ msgid "Ref_ormat"
 msgstr "重新格式化(_O)"
 
 #: pyanaconda/ui/tui/spokes/storage.py:870
-#: ui/webui/src/components/storage/MountPointMapping.jsx:322
-#: ui/webui/src/components/storage/MountPointMapping.jsx:442
+#: ui/webui/src/components/storage/MountPointMapping.jsx:278
+#: ui/webui/src/components/storage/MountPointMapping.jsx:526
 msgid "Reformat"
 msgstr "重新格式化"
 
@@ -3754,7 +3754,7 @@ msgid "Remote directory is required"
 msgstr "必须要有远程目录"
 
 #: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:266
-#: ui/webui/src/components/storage/MountPointMapping.jsx:360
+#: ui/webui/src/components/storage/MountPointMapping.jsx:311
 msgid "Remove"
 msgstr "删除"
 
@@ -7162,12 +7162,12 @@ msgid "{count} disk selected; {capacity} capacity; {free} free"
 msgid_plural "{count} disks selected; {capacity} capacity; {free} free"
 msgstr[0] "已选择 {count} 个磁盘；容量 {capacity}；{free} 空闲"
 
-#: pyanaconda/modules/storage/devicetree/viewer.py:328
+#: pyanaconda/modules/storage/devicetree/viewer.py:330
 #, python-brace-format
 msgid "{device_description} ({device_name})"
 msgstr "{device_description} ({device_name})"
 
-#: pyanaconda/modules/storage/devicetree/viewer.py:334
+#: pyanaconda/modules/storage/devicetree/viewer.py:336
 #, python-brace-format
 msgid "{device_name} on {container_name}"
 msgstr "{container_name} 中的 {device_name}"
@@ -7233,20 +7233,24 @@ msgstr "$0 安装"
 msgid "$0 installer"
 msgstr "$0 安装程序"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:143
-msgid "/boot/efi must be on a EFI System Partition device"
-msgstr "/boot/efi 必须在 EFI 系统分区设备上"
+#: ui/webui/src/components/storage/MountPointMapping.jsx:139
+#, fuzzy
+#| msgid "{fs} must be on a device of type {type}"
+msgid "'$0' must be on a device formatted to '$1'"
+msgstr "{fs} 必须位于 {type} 类型的设备上"
 
 #: ui/webui/src/components/HeaderKebab.jsx:140
 msgid "About"
 msgstr "关于"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:585
+#: ui/webui/src/components/storage/MountPointMapping.jsx:549
 msgid "Add mount"
 msgstr "添加挂载"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:132
-msgid "All devices using this passphrase will be unlocked."
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:154
+#, fuzzy
+#| msgid "All devices using this passphrase will be unlocked."
+msgid "All devices using this passphrase will be unlocked"
 msgstr "所有使用此密码的设备都将被解锁。"
 
 #: ui/webui/src/components/HeaderKebab.jsx:106
@@ -7261,7 +7265,7 @@ msgstr "应用挂载点分配并安装"
 msgid "Applying new disk selection..."
 msgstr "正在应用新的磁盘选择..."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:396
+#: ui/webui/src/components/AnacondaWizard.jsx:407
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:213
 msgid "Back"
 msgstr "返回"
@@ -7285,7 +7289,6 @@ msgstr ""
 "并且愿意报告所有程序错误或问题，以便改进本软件。"
 
 #: ui/webui/src/components/storage/InstallationMethod.jsx:557
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:139
 #: ui/webui/src/components/Error.jsx:238
 msgid "Cancel"
 msgstr "取消"
@@ -7310,6 +7313,10 @@ msgstr "所选语言: "
 msgid "Clear input value"
 msgstr "清空输入值"
 
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:164
+msgid "Close"
+msgstr "关闭"
+
 #: ui/webui/src/components/localization/InstallationLanguage.jsx:151
 msgid "Common languages"
 msgstr "通用语言"
@@ -7322,7 +7329,7 @@ msgstr "完全的"
 msgid "Confirm passphrase"
 msgstr "确认密码"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:447
+#: ui/webui/src/components/AnacondaWizard.jsx:458
 msgid "Continue installation"
 msgstr "继续安装"
 
@@ -7334,7 +7341,7 @@ msgstr "关键错误"
 msgid "Current selections"
 msgstr "当前选择"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:224
+#: ui/webui/src/components/storage/MountPointMapping.jsx:179
 msgid "Custom"
 msgstr "自定义"
 
@@ -7342,24 +7349,24 @@ msgstr "自定义"
 msgid "Destination"
 msgstr "目标位置"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:58
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:72
 msgid "Devices should be unlocked before assigning mount points."
 msgstr "在分配挂载点之前应解锁设备。"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:102
+#: ui/webui/src/components/AnacondaWizard.jsx:113
 msgid "Disk configuration"
 msgstr "磁盘配置"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:113
+#: ui/webui/src/components/AnacondaWizard.jsx:124
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:168
 msgid "Disk encryption"
 msgstr "磁盘加密"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:299
+#: ui/webui/src/components/storage/MountPointMapping.jsx:255
 msgid "Duplicate device."
 msgstr "重复的设备。"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:230
+#: ui/webui/src/components/storage/MountPointMapping.jsx:185
 msgid "Duplicate mount point."
 msgstr "重复的挂载点。"
 
@@ -7371,7 +7378,7 @@ msgstr "加密我的数据"
 msgid "Encrypt the selected devices?"
 msgstr "加密所选设备？"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:55
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:69
 msgid "Encrypted devices are locked"
 msgstr "加密设备已锁定"
 
@@ -7396,8 +7403,8 @@ msgstr "擦除数据是不能撤销的。请务必有备份。"
 msgid "Error details"
 msgstr "错误详情"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:223
-#: ui/webui/src/components/AnacondaWizard.jsx:394
+#: ui/webui/src/components/AnacondaWizard.jsx:234
+#: ui/webui/src/components/AnacondaWizard.jsx:405
 msgid "Error was hit when going back from $0."
 msgstr "从 $0 返回时出错。"
 
@@ -7423,7 +7430,12 @@ msgstr "查找语言"
 msgid "Hide confirmed password"
 msgstr "隐藏确认密码"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:165
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:193
+#, fuzzy
+#| msgid "Confirm passphrase"
+msgid "Hide passphrase"
+msgstr "确认密码"
+
 #: ui/webui/src/components/storage/DiskEncryption.jsx:142
 msgid "Hide password"
 msgstr "隐藏密码"
@@ -7449,10 +7461,6 @@ msgstr "忽略"
 msgid "In progress"
 msgstr "进行中"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:115
-msgid "Incorrect passphrase"
-msgstr "密码不正确"
-
 #: ui/webui/src/components/storage/InstallationScenario.jsx:141
 msgid "Install on the custom mount points?"
 msgstr "安装在自定义的挂载点上？"
@@ -7465,7 +7473,7 @@ msgstr "安装在可用空间上？"
 msgid "Installation failed"
 msgstr "安装失败"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:98
+#: ui/webui/src/components/AnacondaWizard.jsx:109
 msgid "Installation method"
 msgstr "安装方案"
 
@@ -7497,15 +7505,21 @@ msgstr "语言"
 msgid "Launch Blivet-gui storage editor"
 msgstr "启动 Blivet-gui 存储编辑器"
 
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:174
+#, fuzzy
+#| msgid "Unlock devices"
+msgid "Locked devices"
+msgstr "解锁设备"
+
 #: ui/webui/src/components/Error.jsx:162
 msgid "Log"
 msgstr "日志"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:107
+#: ui/webui/src/components/AnacondaWizard.jsx:118
 msgid "Manual disk configuration"
 msgstr "手动配置磁盘"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:652
+#: ui/webui/src/components/storage/MountPointMapping.jsx:616
 msgid "Manual disk configuration: Mount point mapping"
 msgstr "手动磁盘配置：挂载点映射"
 
@@ -7517,7 +7531,7 @@ msgstr "手动选择安装的存储位置。"
 msgid "Medium"
 msgstr "媒介"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:127
+#: ui/webui/src/components/storage/MountPointMapping.jsx:121
 msgid "Mismatch between parent device and child device reformat selection."
 msgstr "父设备和子设备重新格式化选择不匹配。"
 
@@ -7534,7 +7548,7 @@ msgstr "修改存储"
 msgid "Modifying the storage failed."
 msgstr "修改存储失败。"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:438
+#: ui/webui/src/components/storage/MountPointMapping.jsx:522
 #: ui/webui/src/components/storage/InstallationScenario.jsx:131
 msgid "Mount point assignment"
 msgstr "挂载点配置"
@@ -7549,7 +7563,7 @@ msgid ""
 "the issue."
 msgstr "网络不可用。在顶部栏菜单中配置网络以报告问题。"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:345
+#: ui/webui/src/components/AnacondaWizard.jsx:356
 msgid "Next"
 msgstr "下一个"
 
@@ -7557,7 +7571,7 @@ msgstr "下一个"
 msgid "No additional disks detected"
 msgstr "没有检测到额外的磁盘"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:445
+#: ui/webui/src/components/storage/MountPointMapping.jsx:529
 msgid "No devices"
 msgstr "无设备"
 
@@ -7601,6 +7615,10 @@ msgstr "仅新分区才会被加密。 现有分区将保持原样。"
 msgid "Operating system"
 msgstr "操作系统"
 
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:135
+msgid "Passphrase did not match any locked device"
+msgstr ""
+
 #: ui/webui/src/components/storage/DiskEncryption.jsx:199
 msgid "Passphrases must match"
 msgstr "密码必须匹配"
@@ -7625,7 +7643,7 @@ msgstr "预发布"
 msgid "Preparing report"
 msgstr "准备报告"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:452
+#: ui/webui/src/components/AnacondaWizard.jsx:463
 msgid "Quit installer?"
 msgstr "退出安装程序？"
 
@@ -7645,14 +7663,14 @@ msgstr "读取安装程序配置失败。"
 msgid "Reading installer version information failed."
 msgstr "读取安装程序版本信息失败。"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:416
-#: ui/webui/src/components/AnacondaWizard.jsx:440
+#: ui/webui/src/components/AnacondaWizard.jsx:427
+#: ui/webui/src/components/AnacondaWizard.jsx:451
 #: ui/webui/src/components/installation/InstallationProgress.jsx:215
 #: ui/webui/src/components/Error.jsx:206
 msgid "Reboot"
 msgstr "重启"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:452
+#: ui/webui/src/components/AnacondaWizard.jsx:463
 msgid "Reboot system?"
 msgstr "重启系统？"
 
@@ -7677,7 +7695,7 @@ msgid ""
 msgstr ""
 "报告问题将通过网络发送信息。 请查看并编辑随附的日志以删除任何敏感信息。"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:223
+#: ui/webui/src/components/storage/MountPointMapping.jsx:178
 msgid "Required"
 msgstr "必需的"
 
@@ -7693,12 +7711,12 @@ msgstr "重新扫描存储"
 msgid "Rescanning of the disks failed."
 msgstr "重新扫描磁盘失败。"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:127
+#: ui/webui/src/components/AnacondaWizard.jsx:138
 #: ui/webui/src/components/review/ReviewConfiguration.jsx:133
 msgid "Review and install"
 msgstr "检查并安装"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:262
+#: ui/webui/src/components/storage/MountPointMapping.jsx:217
 msgid "Select a device"
 msgstr "所选一个设备"
 
@@ -7706,7 +7724,7 @@ msgstr "所选一个设备"
 msgid "Select a disk"
 msgstr "选择磁盘"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:110
+#: ui/webui/src/components/storage/MountPointMapping.jsx:104
 msgid "Selected device's format '$0' cannot be reformatted."
 msgstr "无法重新格式化所选设备的格式 '$0'。"
 
@@ -7714,12 +7732,17 @@ msgstr "无法重新格式化所选设备的格式 '$0'。"
 msgid "Show confirmed password"
 msgstr "显示确认密码"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:165
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:193
+#, fuzzy
+#| msgid "Confirm passphrase"
+msgid "Show passphrase"
+msgstr "确认密码"
+
 #: ui/webui/src/components/storage/DiskEncryption.jsx:142
 msgid "Show password"
 msgstr "显示密码"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:80
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:87
 msgid "Skip"
 msgstr "跳过"
 
@@ -7732,10 +7755,6 @@ msgid ""
 "Software installation: Storage configuration complete. The software is now "
 "being installed onto your device."
 msgstr "软件安装：存储配置完成。该软件现在正在安装到您的设备上。"
-
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:148
-msgid "Some LUKS devices were not unlocked"
-msgstr "部分 LUKS 设备未解锁"
 
 #: ui/webui/src/components/storage/InstallationScenario.jsx:93
 msgid "Some devices use the same name: $0."
@@ -7755,6 +7774,12 @@ msgstr "存储配置：当前正在配置存储。"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:139
 msgid "Successfully installed"
+msgstr "安装成功"
+
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:130
+#, fuzzy
+#| msgid "Successfully installed"
+msgid "Successfully unlocked $0."
 msgstr "安装成功"
 
 #: ui/webui/src/components/installation/InstallationProgress.jsx:120
@@ -7801,7 +7826,7 @@ msgstr "安装程序由于严重错误而无法继续。"
 msgid "The installer cannot continue due to a critical error: $0"
 msgstr "安装程序由于严重错误而无法继续：$0"
 
-#: ui/webui/src/components/storage/MountPointMapping.jsx:334
+#: ui/webui/src/components/storage/MountPointMapping.jsx:290
 msgid "The root partition is always re-formatted by the installer."
 msgstr "根分区始终由安装程序重新格式化。"
 
@@ -7823,7 +7848,7 @@ msgstr "这可能需要些时间"
 msgid "To begin using $0, reboot your system."
 msgstr "要使用 $0，请重新启动系统。"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:375
+#: ui/webui/src/components/AnacondaWizard.jsx:386
 msgid "To continue, select the devices to install to."
 msgstr "要想继续，请选择要安装的设备。"
 
@@ -7842,15 +7867,15 @@ msgid ""
 "$0."
 msgstr "要使用此选项，请调整大小或删除现有分区以释放至少 $0。"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:136
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:161
 msgid "Unlock"
 msgstr "解锁"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:75
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:82
 msgid "Unlock devices"
 msgstr "解锁设备"
 
-#: ui/webui/src/components/storage/EncryptedDevices.jsx:131
+#: ui/webui/src/components/storage/EncryptedDevices.jsx:157
 msgid "Unlock encrypted devices"
 msgstr "解锁加密设备"
 
@@ -7858,7 +7883,7 @@ msgstr "解锁加密设备"
 msgid "Use free space for the installation"
 msgstr "使用可用空间进行安装"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:91
+#: ui/webui/src/components/AnacondaWizard.jsx:102
 msgid "Welcome"
 msgstr "欢迎"
 
@@ -7870,7 +7895,7 @@ msgstr "欢迎使用 $0"
 msgid "Welcome. Let's install $0 now."
 msgstr "欢迎。现在就来安装 $0 吧。"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:456
+#: ui/webui/src/components/AnacondaWizard.jsx:467
 msgid "Your progress will not be saved."
 msgstr "您的进度将不会被保存。"
 
@@ -7893,6 +7918,15 @@ msgstr "挂载"
 #: ui/webui/src/components/installation/InstallationProgress.jsx:165
 msgid "pending step"
 msgstr "待执行操作"
+
+#~ msgid "/boot/efi must be on a EFI System Partition device"
+#~ msgstr "/boot/efi 必须在 EFI 系统分区设备上"
+
+#~ msgid "Incorrect passphrase"
+#~ msgstr "密码不正确"
+
+#~ msgid "Some LUKS devices were not unlocked"
+#~ msgstr "部分 LUKS 设备未解锁"
 
 #~ msgid "Not enough free space."
 #~ msgstr "没有足够剩余空间。"
@@ -8026,9 +8060,6 @@ msgstr "待执行操作"
 
 #~ msgid "Checking disks"
 #~ msgstr "检查磁盘"
-
-#~ msgid "Close"
-#~ msgstr "关闭"
 
 #~ msgid "Detect disks"
 #~ msgstr "检测磁盘"
