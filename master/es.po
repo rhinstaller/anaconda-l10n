@@ -66,7 +66,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2023-11-02 01:00+0000\n"
+"POT-Creation-Date: 2023-11-10 01:01+0000\n"
 "PO-Revision-Date: 2023-07-30 21:21+0000\n"
 "Last-Translator: yangyangdaji <1504305527@qq.com>\n"
 "Language-Team: Spanish <https://translate.fedoraproject.org/projects/"
@@ -1598,7 +1598,7 @@ msgid "Devices reconfiguration succeeded."
 msgstr "Ha finalizado con éxito la reconfiguración de los dispositivos."
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:285
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:158
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:168
 msgid "Disabled"
 msgstr "Deshabilitado"
 
@@ -1765,7 +1765,7 @@ msgid "Empty server"
 msgstr "Servidor vacío"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:79
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:158
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:168
 msgid "Enabled"
 msgstr "Activado"
 
@@ -2115,6 +2115,7 @@ msgid "Full Name"
 msgstr "Nombre completo"
 
 #: pyanaconda/ui/tui/spokes/user.py:137
+#: ui/webui/src/components/users/Accounts.jsx:107
 msgid "Full name"
 msgstr "Nombre completo"
 
@@ -3382,9 +3383,10 @@ msgid "Pass_word:"
 msgstr "Contraseña:"
 
 #: pyanaconda/ui/tui/spokes/storage.py:355
-#: ui/webui/src/components/storage/DiskEncryption.jsx:309
+#: ui/webui/src/components/storage/DiskEncryption.jsx:92
 #: ui/webui/src/components/storage/EncryptedDevices.jsx:178
 #: ui/webui/src/components/storage/EncryptedDevices.jsx:185
+#: ui/webui/src/components/users/Accounts.jsx:80
 msgid "Passphrase"
 msgstr "Palabra de paso"
 
@@ -3719,8 +3721,8 @@ msgid "Purpose"
 msgstr "Propósito"
 
 #: pyanaconda/ui/gui/main.glade:176 ui/webui/src/components/Error.jsx:216
-#: ui/webui/src/components/AnacondaWizard.jsx:410
 #: ui/webui/src/components/AnacondaWizard.jsx:436
+#: ui/webui/src/components/AnacondaWizard.jsx:462
 #: ui/webui/src/components/installation/InstallationProgress.jsx:222
 msgid "Quit"
 msgstr "Salir"
@@ -4598,8 +4600,7 @@ msgstr "Opciones de almacenamiento"
 msgid "Storing configuration files and kickstarts"
 msgstr "Guardando los archivos de configuración y kickstart"
 
-#: pyanaconda/core/constants.py:222
-#: ui/webui/src/components/storage/DiskEncryption.jsx:83
+#: pyanaconda/core/constants.py:222 ui/webui/src/components/Password.jsx:83
 msgid "Strong"
 msgstr "Robusta"
 
@@ -5065,7 +5066,7 @@ msgid "The passphrase is too short"
 msgstr "La frase de acceso es demasiado corta"
 
 #: pyanaconda/core/constants.py:208
-#: ui/webui/src/components/storage/DiskEncryption.jsx:182
+#: ui/webui/src/components/storage/DiskEncryption.jsx:42
 msgid ""
 "The passphrase you have provided contains non-ASCII characters. You may not "
 "be able to switch between keyboard layouts when typing it."
@@ -5896,7 +5897,7 @@ msgstr ""
 
 #: pyanaconda/core/constants.py:219
 #: pyanaconda/ui/gui/spokes/lib/passphrase.glade:182
-#: ui/webui/src/components/storage/DiskEncryption.jsx:61
+#: ui/webui/src/components/Password.jsx:61
 msgid "Weak"
 msgstr "Débil"
 
@@ -7622,7 +7623,7 @@ msgstr "{} suscripciones asociadas al sistema"
 msgid "{}. {}"
 msgstr "{}. {}"
 
-#: ui/webui/src/components/app.jsx:117
+#: ui/webui/src/components/app.jsx:119
 #, fuzzy
 #| msgid "Installation"
 msgid "$0 installation"
@@ -7644,6 +7645,13 @@ msgstr "{fs} debe ser un dispositivo de tipo {type}"
 #: ui/webui/src/components/HeaderKebab.jsx:128
 msgid "About"
 msgstr ""
+
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:144
+#, fuzzy
+#| msgctxt "GUI|Subscription|Authentication|Account"
+#| msgid "_Account"
+msgid "Account"
+msgstr "_Cuenta"
 
 #: ui/webui/src/components/storage/MountPointMapping.jsx:573
 #, fuzzy
@@ -7671,8 +7679,8 @@ msgstr "Aplicar configuración en el instalador"
 msgid "Applying new disk selection..."
 msgstr ""
 
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:200
-#: ui/webui/src/components/AnacondaWizard.jsx:388
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:210
+#: ui/webui/src/components/AnacondaWizard.jsx:414
 msgid "Back"
 msgstr "Atrás"
 
@@ -7703,7 +7711,7 @@ msgstr "Cancelar"
 msgid "Changes made in Blivet-gui will directly affect your storage."
 msgstr ""
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:253
+#: ui/webui/src/components/storage/DiskEncryption.jsx:53
 #, fuzzy
 #| msgid "Checking storage configuration..."
 msgid "Checking storage configuration"
@@ -7733,18 +7741,33 @@ msgstr "Idiomas comunes"
 msgid "Completed"
 msgstr "Completado"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:312
+#: ui/webui/src/components/storage/DiskEncryption.jsx:94
+#: ui/webui/src/components/users/Accounts.jsx:82
 #, fuzzy
 #| msgctxt "GUI|User"
 #| msgid "_Confirm password"
 msgid "Confirm passphrase"
 msgstr "_Confirmar la contraseña"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:443
+#: ui/webui/src/components/AnacondaWizard.jsx:469
 #, fuzzy
 #| msgid "Running pre-installation tasks"
 msgid "Continue installation"
 msgstr "Ejecutando tareas de preinstalación"
+
+#: ui/webui/src/components/users/Accounts.jsx:159
+#, fuzzy
+#| msgctxt "GUI|Spoke"
+#| msgid "_Root Account"
+msgid "Create Account"
+msgstr "_Cuenta de root"
+
+#: ui/webui/src/components/users/Accounts.jsx:103
+#, fuzzy
+#| msgctxt "GUI|Password"
+#| msgid "_Enable root account"
+msgid "Create account"
+msgstr "_Activar la cuenta de root"
 
 #: ui/webui/src/components/Error.jsx:234
 msgid "Critical error"
@@ -7774,14 +7797,14 @@ msgstr "Descripción"
 msgid "Devices should be unlocked before assigning mount points."
 msgstr ""
 
-#: ui/webui/src/components/AnacondaWizard.jsx:123
+#: ui/webui/src/components/AnacondaWizard.jsx:128
 #, fuzzy
 #| msgid "Device configuration"
 msgid "Disk configuration"
 msgstr "Configuración del dispositivo"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:379
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:155
+#: ui/webui/src/components/storage/DiskEncryption.jsx:138
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:165
 #, fuzzy
 #| msgid "Encryption"
 msgid "Disk encryption"
@@ -7800,14 +7823,14 @@ msgstr "Dispositivos _multiruta"
 msgid "Duplicate mount point."
 msgstr "Por favor introduzca un punto de montaje."
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:297
+#: ui/webui/src/components/storage/DiskEncryption.jsx:80
 #, fuzzy
 #| msgctxt "GUI|Custom Partitioning|Autopart Page"
 #| msgid "Encrypt my data."
 msgid "Encrypt my data"
 msgstr "Cifrar mis datos."
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:381
+#: ui/webui/src/components/storage/DiskEncryption.jsx:140
 msgid "Encrypt the selected devices?"
 msgstr ""
 
@@ -7815,7 +7838,7 @@ msgstr ""
 msgid "Encrypted devices are locked"
 msgstr ""
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:363
+#: ui/webui/src/components/storage/DiskEncryption.jsx:122
 msgid "Encryption helps secure your data, to prevent others from accessing it."
 msgstr ""
 
@@ -7844,8 +7867,8 @@ msgstr "El borrado de discos no se puede deshacer."
 msgid "Error details"
 msgstr "Detalle del error: "
 
-#: ui/webui/src/components/AnacondaWizard.jsx:233
-#: ui/webui/src/components/AnacondaWizard.jsx:386
+#: ui/webui/src/components/AnacondaWizard.jsx:254
+#: ui/webui/src/components/AnacondaWizard.jsx:412
 msgid "Error was hit when going back from $0."
 msgstr ""
 
@@ -7871,7 +7894,7 @@ msgstr ""
 msgid "Find a language"
 msgstr "Buscar un idioma"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:202
+#: ui/webui/src/components/Password.jsx:245
 #, fuzzy
 #| msgctxt "GUI|User"
 #| msgid "_Confirm password"
@@ -7885,7 +7908,7 @@ msgstr "_Confirmar la contraseña"
 msgid "Hide passphrase"
 msgstr "_Confirmar la contraseña"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:159
+#: ui/webui/src/components/Password.jsx:218
 #, fuzzy
 #| msgid "Hide password."
 msgid "Hide password"
@@ -7947,7 +7970,7 @@ msgstr "Instalación finalizada"
 msgid "Installation of the system failed: $0"
 msgstr "Instalación fallida"
 
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:144
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:154
 #, fuzzy
 #| msgid "Installation"
 msgid "Installation type"
@@ -8001,7 +8024,7 @@ msgstr "Configuración del dispositivo"
 msgid "Manually select storage locations for installation."
 msgstr ""
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:72
+#: ui/webui/src/components/Password.jsx:72
 msgid "Medium"
 msgstr ""
 
@@ -8038,7 +8061,7 @@ msgstr "_Modificar la Disposición de Almacenamiento"
 msgid "Mount point assignment"
 msgstr "Punto de Montaje"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:173
+#: ui/webui/src/components/Password.jsx:47
 #, fuzzy
 #| msgid "The password must be at least six characters long."
 msgid "Must be at least $0 characters"
@@ -8054,7 +8077,7 @@ msgstr ""
 msgid "Network not available. Configure the network to report the issue."
 msgstr ""
 
-#: ui/webui/src/components/AnacondaWizard.jsx:359
+#: ui/webui/src/components/AnacondaWizard.jsx:385
 msgid "Next"
 msgstr ""
 
@@ -8107,7 +8130,7 @@ msgstr ""
 "prueba únicamente. NO lo utilice para ningún trabajo importante ni en "
 "entornos de producción."
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:366
+#: ui/webui/src/components/storage/DiskEncryption.jsx:125
 msgid ""
 "Only new partitions will be encrypted. Existing partitions will remain "
 "untouched."
@@ -8123,7 +8146,7 @@ msgstr "paso pendiente"
 msgid "Passphrase did not match any locked device"
 msgstr ""
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:216
+#: ui/webui/src/components/Password.jsx:259
 #, fuzzy
 #| msgid "The passphrases do not match."
 msgid "Passphrases must match"
@@ -8151,7 +8174,7 @@ msgstr "Previo al lanzamiento"
 msgid "Preparing report"
 msgstr "Preparando la instalación de {}"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:448
+#: ui/webui/src/components/AnacondaWizard.jsx:474
 #, fuzzy
 #| msgctxt "GUI|Storage|No Space Dialog"
 #| msgid "_Quit installer"
@@ -8162,11 +8185,11 @@ msgstr "_Salir del instalador"
 msgid "Re-scan"
 msgstr ""
 
-#: ui/webui/src/components/app.jsx:98
+#: ui/webui/src/components/app.jsx:100
 msgid "Reading information about the computer failed."
 msgstr ""
 
-#: ui/webui/src/components/app.jsx:103
+#: ui/webui/src/components/app.jsx:105
 #, fuzzy
 #| msgid "Device reconfiguration failed."
 msgid "Reading installer configuration failed."
@@ -8179,13 +8202,13 @@ msgid "Reading installer version information failed."
 msgstr "Falló el registro."
 
 #: ui/webui/src/components/Error.jsx:216
-#: ui/webui/src/components/AnacondaWizard.jsx:410
 #: ui/webui/src/components/AnacondaWizard.jsx:436
+#: ui/webui/src/components/AnacondaWizard.jsx:462
 #: ui/webui/src/components/installation/InstallationProgress.jsx:222
 msgid "Reboot"
 msgstr "Reiniciar"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:448
+#: ui/webui/src/components/AnacondaWizard.jsx:474
 #, fuzzy
 #| msgctxt "GUI|Progress"
 #| msgid "_Reboot System"
@@ -8236,8 +8259,8 @@ msgstr "Buscando dispositivos de almacenamiento"
 msgid "Rescanning of the disks failed."
 msgstr "Finalizó el análisis de discos."
 
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:231
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:232
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:241
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:242
 msgid "Review and install"
 msgstr "Revisar e instalar"
 
@@ -8257,7 +8280,7 @@ msgstr "Seleccionar todos los discos"
 msgid "Selected device's format '$0' cannot be reformatted."
 msgstr ""
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:202
+#: ui/webui/src/components/Password.jsx:245
 #, fuzzy
 #| msgctxt "GUI|User"
 #| msgid "_Confirm password"
@@ -8271,7 +8294,7 @@ msgstr "_Confirmar la contraseña"
 msgid "Show passphrase"
 msgstr "_Confirmar la contraseña"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:159
+#: ui/webui/src/components/Password.jsx:218
 #, fuzzy
 #| msgid "Show password."
 msgid "Show password"
@@ -8297,7 +8320,7 @@ msgstr ""
 msgid "Some devices use the same name: $0."
 msgstr ""
 
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:165
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:175
 #, fuzzy
 #| msgid "Storage Options"
 msgid "Storage"
@@ -8382,11 +8405,15 @@ msgstr ""
 "Los discos seleccionados serán borrados, esto no puede ser deshecho. ¿Estás "
 "seguro de que quieres continuar con la instalación?"
 
+#: ui/webui/src/components/users/Accounts.jsx:105
+msgid "This account will have administration priviledge with sudo."
+msgstr ""
+
 #: ui/webui/src/components/AnacondaHeader.jsx:68
 msgid "This is unstable, pre-release software"
 msgstr "Este software es previo al lanzamiento e inestable"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:257
+#: ui/webui/src/components/storage/DiskEncryption.jsx:57
 msgid "This may take a moment"
 msgstr "Esto puede tardar un rato"
 
@@ -8447,6 +8474,13 @@ msgstr "Fallo el desbloqueo del dispositivo de bloque encriptado."
 msgid "Use free space for the installation"
 msgstr "Fallo al llevar adelante la instalación."
 
+#: ui/webui/src/components/users/Accounts.jsx:117
+#, fuzzy
+#| msgctxt "GUI|Password"
+#| msgid "D_isable root account"
+msgid "User account"
+msgstr "Desact_ivar la cuenta de root"
+
 #: ui/webui/src/components/localization/InstallationLanguage.jsx:335
 msgid "Welcome"
 msgstr "Bienvenido"
@@ -8461,7 +8495,7 @@ msgstr "Le damos la bienvenida a $0"
 msgid "Welcome. Let's install $0 now."
 msgstr ""
 
-#: ui/webui/src/components/AnacondaWizard.jsx:452
+#: ui/webui/src/components/AnacondaWizard.jsx:478
 msgid "Your progress will not be saved."
 msgstr ""
 
@@ -8965,12 +8999,6 @@ msgstr "paso pendiente"
 #~| msgid "_Confirm password"
 #~ msgid "Confirm root password"
 #~ msgstr "_Confirmar la contraseña"
-
-#, fuzzy
-#~| msgctxt "GUI|Password"
-#~| msgid "_Enable root account"
-#~ msgid "Lock root account"
-#~ msgstr "_Activar la cuenta de root"
 
 #, fuzzy
 #~| msgctxt "GUI|Spoke"

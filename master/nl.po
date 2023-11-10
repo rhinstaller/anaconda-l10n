@@ -35,7 +35,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2023-11-02 01:00+0000\n"
+"POT-Creation-Date: 2023-11-10 01:01+0000\n"
 "PO-Revision-Date: 2023-11-02 01:01+0000\n"
 "Last-Translator: Geert Warrink <geert.warrink@onsnet.nu>\n"
 "Language-Team: Dutch <https://translate.fedoraproject.org/projects/anaconda/"
@@ -1550,7 +1550,7 @@ msgid "Devices reconfiguration succeeded."
 msgstr "Opnieuw configureren van apparaten is gelukt."
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:285
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:158
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:168
 msgid "Disabled"
 msgstr "Uitgeschakeld"
 
@@ -1718,7 +1718,7 @@ msgid "Empty server"
 msgstr "Lege server"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:79
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:158
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:168
 msgid "Enabled"
 msgstr "Aangezet"
 
@@ -2065,6 +2065,7 @@ msgid "Full Name"
 msgstr "Volledige Naam"
 
 #: pyanaconda/ui/tui/spokes/user.py:137
+#: ui/webui/src/components/users/Accounts.jsx:107
 msgid "Full name"
 msgstr "Volledige naam"
 
@@ -3320,9 +3321,10 @@ msgid "Pass_word:"
 msgstr "_Wachtwoord:"
 
 #: pyanaconda/ui/tui/spokes/storage.py:355
-#: ui/webui/src/components/storage/DiskEncryption.jsx:309
+#: ui/webui/src/components/storage/DiskEncryption.jsx:92
 #: ui/webui/src/components/storage/EncryptedDevices.jsx:178
 #: ui/webui/src/components/storage/EncryptedDevices.jsx:185
+#: ui/webui/src/components/users/Accounts.jsx:80
 msgid "Passphrase"
 msgstr "Wachtzin"
 
@@ -3649,8 +3651,8 @@ msgid "Purpose"
 msgstr "Doel"
 
 #: pyanaconda/ui/gui/main.glade:176 ui/webui/src/components/Error.jsx:216
-#: ui/webui/src/components/AnacondaWizard.jsx:410
 #: ui/webui/src/components/AnacondaWizard.jsx:436
+#: ui/webui/src/components/AnacondaWizard.jsx:462
 #: ui/webui/src/components/installation/InstallationProgress.jsx:222
 msgid "Quit"
 msgstr "Afsluiten"
@@ -4530,8 +4532,7 @@ msgstr "Opslagopties"
 msgid "Storing configuration files and kickstarts"
 msgstr "Configuratiebestanden en kickstarts opslaan"
 
-#: pyanaconda/core/constants.py:222
-#: ui/webui/src/components/storage/DiskEncryption.jsx:83
+#: pyanaconda/core/constants.py:222 ui/webui/src/components/Password.jsx:83
 msgid "Strong"
 msgstr "Sterk"
 
@@ -4990,7 +4991,7 @@ msgid "The passphrase is too short"
 msgstr "De wachtzin is te kort"
 
 #: pyanaconda/core/constants.py:208
-#: ui/webui/src/components/storage/DiskEncryption.jsx:182
+#: ui/webui/src/components/storage/DiskEncryption.jsx:42
 msgid ""
 "The passphrase you have provided contains non-ASCII characters. You may not "
 "be able to switch between keyboard layouts when typing it."
@@ -5819,7 +5820,7 @@ msgstr ""
 
 #: pyanaconda/core/constants.py:219
 #: pyanaconda/ui/gui/spokes/lib/passphrase.glade:182
-#: ui/webui/src/components/storage/DiskEncryption.jsx:61
+#: ui/webui/src/components/Password.jsx:61
 msgid "Weak"
 msgstr "Zwak"
 
@@ -7551,7 +7552,7 @@ msgstr "{} abonnementen aangesloten op het systeem"
 msgid "{}. {}"
 msgstr "{}. {}"
 
-#: ui/webui/src/components/app.jsx:117
+#: ui/webui/src/components/app.jsx:119
 msgid "$0 installation"
 msgstr "$0 installatie"
 
@@ -7566,6 +7567,13 @@ msgstr "'$0' moet zich bevinden op een apparaat geformatteerd naar '$1'"
 #: ui/webui/src/components/HeaderKebab.jsx:128
 msgid "About"
 msgstr "Over Fedora"
+
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:144
+#, fuzzy
+#| msgctxt "GUI|Subscription|Authentication|Account"
+#| msgid "_Account"
+msgid "Account"
+msgstr "_Account"
 
 #: ui/webui/src/components/storage/MountPointMapping.jsx:573
 msgid "Add mount"
@@ -7587,8 +7595,8 @@ msgstr "Aankoppelpunttoewijzing toepassen en installeren"
 msgid "Applying new disk selection..."
 msgstr "Nieuwe schijfselectie toepassen..."
 
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:200
-#: ui/webui/src/components/AnacondaWizard.jsx:388
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:210
+#: ui/webui/src/components/AnacondaWizard.jsx:414
 msgid "Back"
 msgstr "Terug"
 
@@ -7622,7 +7630,7 @@ msgstr "Annuleren"
 msgid "Changes made in Blivet-gui will directly affect your storage."
 msgstr "Wijzigingen in Blivet-gui hebben rechtstreeks invloed op je opslag."
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:253
+#: ui/webui/src/components/storage/DiskEncryption.jsx:53
 msgid "Checking storage configuration"
 msgstr "Bezig met controleren van opslagconfiguratie"
 
@@ -7650,13 +7658,27 @@ msgstr "Gewone talen"
 msgid "Completed"
 msgstr "Voltooid"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:312
+#: ui/webui/src/components/storage/DiskEncryption.jsx:94
+#: ui/webui/src/components/users/Accounts.jsx:82
 msgid "Confirm passphrase"
 msgstr "Bevestig wachtwoordzin"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:443
+#: ui/webui/src/components/AnacondaWizard.jsx:469
 msgid "Continue installation"
 msgstr "Installatie vervolgen"
+
+#: ui/webui/src/components/users/Accounts.jsx:159
+#, fuzzy
+#| msgctxt "GUI|Spoke"
+#| msgid "_Root Account"
+msgid "Create Account"
+msgstr "_Rootaccount"
+
+#: ui/webui/src/components/users/Accounts.jsx:103
+#, fuzzy
+#| msgid "Lock root account"
+msgid "Create account"
+msgstr "Root-account vergrendelen"
 
 #: ui/webui/src/components/Error.jsx:234
 msgid "Critical error"
@@ -7680,12 +7702,12 @@ msgstr ""
 "Apparaten moeten worden ontgrendeld voordat aankoppelpunten worden "
 "toegewezen."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:123
+#: ui/webui/src/components/AnacondaWizard.jsx:128
 msgid "Disk configuration"
 msgstr "Schijfconfiguratie"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:379
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:155
+#: ui/webui/src/components/storage/DiskEncryption.jsx:138
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:165
 msgid "Disk encryption"
 msgstr "Schijfversleuteling"
 
@@ -7697,11 +7719,11 @@ msgstr "Dupliceer apparaat."
 msgid "Duplicate mount point."
 msgstr "Dupliceer aankoppelpunt."
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:297
+#: ui/webui/src/components/storage/DiskEncryption.jsx:80
 msgid "Encrypt my data"
 msgstr "Versleutel mijn data"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:381
+#: ui/webui/src/components/storage/DiskEncryption.jsx:140
 msgid "Encrypt the selected devices?"
 msgstr "De geselecteerde apparaten versleutelen?"
 
@@ -7709,7 +7731,7 @@ msgstr "De geselecteerde apparaten versleutelen?"
 msgid "Encrypted devices are locked"
 msgstr "Versleutelde apparaten zijn vergrendeld"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:363
+#: ui/webui/src/components/storage/DiskEncryption.jsx:122
 msgid "Encryption helps secure your data, to prevent others from accessing it."
 msgstr ""
 "Versleuteling helpt bij het beveiligen van je gegevens, om te voorkomen dat "
@@ -7734,8 +7756,8 @@ msgstr ""
 msgid "Error details"
 msgstr "Foutdetails"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:233
-#: ui/webui/src/components/AnacondaWizard.jsx:386
+#: ui/webui/src/components/AnacondaWizard.jsx:254
+#: ui/webui/src/components/AnacondaWizard.jsx:412
 msgid "Error was hit when going back from $0."
 msgstr "Er is een fout opgetreden bij het teruggaan van $0."
 
@@ -7759,7 +7781,7 @@ msgstr ""
 msgid "Find a language"
 msgstr "Zoek een taal"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:202
+#: ui/webui/src/components/Password.jsx:245
 msgid "Hide confirmed password"
 msgstr "Bevestigd wachtwoord verbergen"
 
@@ -7767,7 +7789,7 @@ msgstr "Bevestigd wachtwoord verbergen"
 msgid "Hide passphrase"
 msgstr "Verberg wachtzin"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:159
+#: ui/webui/src/components/Password.jsx:218
 msgid "Hide password"
 msgstr "Verberg wachtwoord"
 
@@ -7815,7 +7837,7 @@ msgstr "Installatiemethode"
 msgid "Installation of the system failed: $0"
 msgstr "Installatie van het systeem mislukte: $0"
 
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:144
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:154
 msgid "Installation type"
 msgstr "Installatietype"
 
@@ -7860,7 +7882,7 @@ msgstr "Handmatige schijfconfiguratie: aankoppelpunttoewijzing"
 msgid "Manually select storage locations for installation."
 msgstr "Selecteer handmatig opslaglocaties voor installatie."
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:72
+#: ui/webui/src/components/Password.jsx:72
 msgid "Medium"
 msgstr "Medium"
 
@@ -7888,7 +7910,7 @@ msgstr "Het wijzigen van de opslag is mislukt."
 msgid "Mount point assignment"
 msgstr "Aankoppelpunttoewijzing"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:173
+#: ui/webui/src/components/Password.jsx:47
 msgid "Must be at least $0 characters"
 msgstr "Moet minimaal $0 tekens lang zijn"
 
@@ -7905,7 +7927,7 @@ msgid "Network not available. Configure the network to report the issue."
 msgstr ""
 "Netwerk niet beschikbaar. Configureer het netwerk om het probleem te melden."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:359
+#: ui/webui/src/components/AnacondaWizard.jsx:385
 msgid "Next"
 msgstr "Volgende"
 
@@ -7948,7 +7970,7 @@ msgstr ""
 "ontwikkelings- en testdoeleinden. Gebruik deze software NIET voor belangrijk "
 "werk of voor productieomgevingen."
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:366
+#: ui/webui/src/components/storage/DiskEncryption.jsx:125
 msgid ""
 "Only new partitions will be encrypted. Existing partitions will remain "
 "untouched."
@@ -7964,7 +7986,7 @@ msgstr "Besturingssysteem"
 msgid "Passphrase did not match any locked device"
 msgstr "Wachtzin komt met geen enkel vergrendeld apparaat overeen"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:216
+#: ui/webui/src/components/Password.jsx:259
 msgid "Passphrases must match"
 msgstr "Wachtwoordzinnen moeten overeenkomen"
 
@@ -7988,7 +8010,7 @@ msgstr "Pre-release"
 msgid "Preparing report"
 msgstr "Rapport voorbereiden"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:448
+#: ui/webui/src/components/AnacondaWizard.jsx:474
 msgid "Quit installer?"
 msgstr "Installatieprogramma afsluiten?"
 
@@ -7996,11 +8018,11 @@ msgstr "Installatieprogramma afsluiten?"
 msgid "Re-scan"
 msgstr "Opnieuw scannen"
 
-#: ui/webui/src/components/app.jsx:98
+#: ui/webui/src/components/app.jsx:100
 msgid "Reading information about the computer failed."
 msgstr "Informatie over de computer lezen mislukte."
 
-#: ui/webui/src/components/app.jsx:103
+#: ui/webui/src/components/app.jsx:105
 msgid "Reading installer configuration failed."
 msgstr "De configuratie van het installatieprogramma lezen mislukte."
 
@@ -8009,13 +8031,13 @@ msgid "Reading installer version information failed."
 msgstr "Versie-informatie van het installatieprogramma lezen is mislukt."
 
 #: ui/webui/src/components/Error.jsx:216
-#: ui/webui/src/components/AnacondaWizard.jsx:410
 #: ui/webui/src/components/AnacondaWizard.jsx:436
+#: ui/webui/src/components/AnacondaWizard.jsx:462
 #: ui/webui/src/components/installation/InstallationProgress.jsx:222
 msgid "Reboot"
 msgstr "Herstarten"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:448
+#: ui/webui/src/components/AnacondaWizard.jsx:474
 msgid "Reboot system?"
 msgstr "Systeem herstarten?"
 
@@ -8060,8 +8082,8 @@ msgstr "Opslag opnieuw scannen"
 msgid "Rescanning of the disks failed."
 msgstr "Het opnieuw scannen van de schijven mislukte."
 
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:231
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:232
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:241
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:242
 msgid "Review and install"
 msgstr "Bekijk en installeer"
 
@@ -8078,7 +8100,7 @@ msgid "Selected device's format '$0' cannot be reformatted."
 msgstr ""
 "Het geselecteerde apparaatformaat '$0' kan niet opnieuw worden geformatteerd."
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:202
+#: ui/webui/src/components/Password.jsx:245
 msgid "Show confirmed password"
 msgstr "Toon bevestigd wachtwoord"
 
@@ -8086,7 +8108,7 @@ msgstr "Toon bevestigd wachtwoord"
 msgid "Show passphrase"
 msgstr "Toon wachtzin"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:159
+#: ui/webui/src/components/Password.jsx:218
 msgid "Show password"
 msgstr "Toon wachtwoord"
 
@@ -8110,7 +8132,7 @@ msgstr ""
 msgid "Some devices use the same name: $0."
 msgstr "Sommige apparaten gebruiken dezelfde naam: $0."
 
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:165
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:175
 msgid "Storage"
 msgstr "Opslag"
 
@@ -8197,11 +8219,15 @@ msgstr ""
 "De geselecteerde schijven worden gewist, dit kan niet ongedaan worden "
 "gemaakt. Weet je zeker dat je door wilt gaan met de installatie?"
 
+#: ui/webui/src/components/users/Accounts.jsx:105
+msgid "This account will have administration priviledge with sudo."
+msgstr ""
+
 #: ui/webui/src/components/AnacondaHeader.jsx:68
 msgid "This is unstable, pre-release software"
 msgstr "Dit is onstabiele, pre-release software"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:257
+#: ui/webui/src/components/storage/DiskEncryption.jsx:57
 msgid "This may take a moment"
 msgstr "Dit kan even duren"
 
@@ -8249,6 +8275,13 @@ msgstr "Ontgrendel versleutelde apparaten"
 msgid "Use free space for the installation"
 msgstr "Gebruik vrije ruimte voor de installatie"
 
+#: ui/webui/src/components/users/Accounts.jsx:117
+#, fuzzy
+#| msgctxt "GUI|Password"
+#| msgid "D_isable root account"
+msgid "User account"
+msgstr "Rootaccount uitschakelen"
+
 #: ui/webui/src/components/localization/InstallationLanguage.jsx:335
 msgid "Welcome"
 msgstr "Welkom"
@@ -8261,7 +8294,7 @@ msgstr "Welkom bij $0"
 msgid "Welcome. Let's install $0 now."
 msgstr "Welkom. Laten we nu $0 installeren."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:452
+#: ui/webui/src/components/AnacondaWizard.jsx:478
 msgid "Your progress will not be saved."
 msgstr "Je voortgang wordt niet opgeslagen."
 
@@ -8759,9 +8792,6 @@ msgstr "stap in afwachting"
 
 #~ msgid "Confirm root password"
 #~ msgstr "Bevestig rootwachtwoord"
-
-#~ msgid "Lock root account"
-#~ msgstr "Root-account vergrendelen"
 
 #~ msgid "Network & Host Name"
 #~ msgstr "Netwerk & hostnaam"

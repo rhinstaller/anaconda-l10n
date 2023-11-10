@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2023-11-02 01:00+0000\n"
+"POT-Creation-Date: 2023-11-10 01:01+0000\n"
 "PO-Revision-Date: 2023-11-02 01:01+0000\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://translate.fedoraproject.org/projects/"
@@ -1522,7 +1522,7 @@ msgid "Devices reconfiguration succeeded."
 msgstr "მოწყობილობების თავიდან მორგება წარმატებულად დასრულდა."
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:285
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:158
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:168
 msgid "Disabled"
 msgstr "გამორთულია"
 
@@ -1691,7 +1691,7 @@ msgid "Empty server"
 msgstr "ცარიელი სერვერი"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:79
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:158
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:168
 msgid "Enabled"
 msgstr "ჩართულია"
 
@@ -2038,6 +2038,7 @@ msgid "Full Name"
 msgstr "სრული სახელი"
 
 #: pyanaconda/ui/tui/spokes/user.py:137
+#: ui/webui/src/components/users/Accounts.jsx:107
 msgid "Full name"
 msgstr "სრული სახელი"
 
@@ -3282,9 +3283,10 @@ msgid "Pass_word:"
 msgstr "პა_როლი:"
 
 #: pyanaconda/ui/tui/spokes/storage.py:355
-#: ui/webui/src/components/storage/DiskEncryption.jsx:309
+#: ui/webui/src/components/storage/DiskEncryption.jsx:92
 #: ui/webui/src/components/storage/EncryptedDevices.jsx:178
 #: ui/webui/src/components/storage/EncryptedDevices.jsx:185
+#: ui/webui/src/components/users/Accounts.jsx:80
 msgid "Passphrase"
 msgstr "საკვანძო ფრაზა"
 
@@ -3609,8 +3611,8 @@ msgid "Purpose"
 msgstr "მიზანი"
 
 #: pyanaconda/ui/gui/main.glade:176 ui/webui/src/components/Error.jsx:216
-#: ui/webui/src/components/AnacondaWizard.jsx:410
 #: ui/webui/src/components/AnacondaWizard.jsx:436
+#: ui/webui/src/components/AnacondaWizard.jsx:462
 #: ui/webui/src/components/installation/InstallationProgress.jsx:222
 msgid "Quit"
 msgstr "გასვლა"
@@ -4489,8 +4491,7 @@ msgstr "საცავის მორგება"
 msgid "Storing configuration files and kickstarts"
 msgstr "კონფიგურაციის ფაილებისა და kickstart-ების ჩაწერა"
 
-#: pyanaconda/core/constants.py:222
-#: ui/webui/src/components/storage/DiskEncryption.jsx:83
+#: pyanaconda/core/constants.py:222 ui/webui/src/components/Password.jsx:83
 msgid "Strong"
 msgstr "ძლიერი"
 
@@ -4935,7 +4936,7 @@ msgid "The passphrase is too short"
 msgstr "პაროლი მეტისმეტად მოკლეა"
 
 #: pyanaconda/core/constants.py:208
-#: ui/webui/src/components/storage/DiskEncryption.jsx:182
+#: ui/webui/src/components/storage/DiskEncryption.jsx:42
 msgid ""
 "The passphrase you have provided contains non-ASCII characters. You may not "
 "be able to switch between keyboard layouts when typing it."
@@ -5752,7 +5753,7 @@ msgstr ""
 
 #: pyanaconda/core/constants.py:219
 #: pyanaconda/ui/gui/spokes/lib/passphrase.glade:182
-#: ui/webui/src/components/storage/DiskEncryption.jsx:61
+#: ui/webui/src/components/Password.jsx:61
 msgid "Weak"
 msgstr "სუსტი"
 
@@ -7467,7 +7468,7 @@ msgstr "სერვერზე მიმაგრებულია {} გა�
 msgid "{}. {}"
 msgstr "{}. {}"
 
-#: ui/webui/src/components/app.jsx:117
+#: ui/webui/src/components/app.jsx:119
 msgid "$0 installation"
 msgstr "$0-ის დაყენება"
 
@@ -7482,6 +7483,13 @@ msgstr "'$0' '$1'-ით დაფორმატებულ მოწყობ
 #: ui/webui/src/components/HeaderKebab.jsx:128
 msgid "About"
 msgstr "შესახებ"
+
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:144
+#, fuzzy
+#| msgctxt "GUI|Subscription|Authentication|Account"
+#| msgid "_Account"
+msgid "Account"
+msgstr "_ანგარიში"
 
 #: ui/webui/src/components/storage/MountPointMapping.jsx:573
 msgid "Add mount"
@@ -7503,8 +7511,8 @@ msgstr "მიმაგრების წერტილების გად�
 msgid "Applying new disk selection..."
 msgstr "ახალი დისკის არჩევანის გადატარება..."
 
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:200
-#: ui/webui/src/components/AnacondaWizard.jsx:388
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:210
+#: ui/webui/src/components/AnacondaWizard.jsx:414
 msgid "Back"
 msgstr "უკან"
 
@@ -7537,7 +7545,7 @@ msgstr "გაუქმება"
 msgid "Changes made in Blivet-gui will directly affect your storage."
 msgstr "Blivet-gui-ში შეტანილი ცვლილებები თქვენს საცავს პირდაპირ შეეხება."
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:253
+#: ui/webui/src/components/storage/DiskEncryption.jsx:53
 msgid "Checking storage configuration"
 msgstr "საცავის კონფიგურაციის შემოწმება"
 
@@ -7565,13 +7573,27 @@ msgstr "გავრცელებული ენები"
 msgid "Completed"
 msgstr "დასრულებულია"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:312
+#: ui/webui/src/components/storage/DiskEncryption.jsx:94
+#: ui/webui/src/components/users/Accounts.jsx:82
 msgid "Confirm passphrase"
 msgstr "დაადასტურეთ საკვანძო ფრაზა"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:443
+#: ui/webui/src/components/AnacondaWizard.jsx:469
 msgid "Continue installation"
 msgstr "დაყენებს გაგრძელება"
+
+#: ui/webui/src/components/users/Accounts.jsx:159
+#, fuzzy
+#| msgctxt "GUI|Spoke"
+#| msgid "_Root Account"
+msgid "Create Account"
+msgstr "_Root მომხმარებელი"
+
+#: ui/webui/src/components/users/Accounts.jsx:103
+#, fuzzy
+#| msgid "Create user"
+msgid "Create account"
+msgstr "მომხმარებლის შექმნა"
 
 #: ui/webui/src/components/Error.jsx:234
 msgid "Critical error"
@@ -7593,12 +7615,12 @@ msgstr "სამიზნე"
 msgid "Devices should be unlocked before assigning mount points."
 msgstr "მიმაგრების წერტილის მინიჭებამდე აუცილებელია მოწყობილობების განბლოკვა."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:123
+#: ui/webui/src/components/AnacondaWizard.jsx:128
 msgid "Disk configuration"
 msgstr "დისკის მორგება"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:379
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:155
+#: ui/webui/src/components/storage/DiskEncryption.jsx:138
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:165
 msgid "Disk encryption"
 msgstr "დისკის დაშიფვრა"
 
@@ -7610,11 +7632,11 @@ msgstr "დუბლირებული მოწყობილობა."
 msgid "Duplicate mount point."
 msgstr "მიმაგრების წერტილი დუბლირებულია."
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:297
+#: ui/webui/src/components/storage/DiskEncryption.jsx:80
 msgid "Encrypt my data"
 msgstr "ჩემი მონაცემების დაშიფვრა"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:381
+#: ui/webui/src/components/storage/DiskEncryption.jsx:140
 msgid "Encrypt the selected devices?"
 msgstr "დავშიფრო მონიშნული მოწყობილობა?"
 
@@ -7622,7 +7644,7 @@ msgstr "დავშიფრო მონიშნული მოწყობ�
 msgid "Encrypted devices are locked"
 msgstr "დაშიფრული მოწყობილობები დაბლოკილია"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:363
+#: ui/webui/src/components/storage/DiskEncryption.jsx:122
 msgid "Encryption helps secure your data, to prevent others from accessing it."
 msgstr ""
 "დაშიფვრა დაგეხმარებათ დაიცვათ თქვენი მონაცემები, რათა სხვებს მასზე წვდომა არ "
@@ -7646,8 +7668,8 @@ msgstr ""
 msgid "Error details"
 msgstr "შეცდომის დეტალები"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:233
-#: ui/webui/src/components/AnacondaWizard.jsx:386
+#: ui/webui/src/components/AnacondaWizard.jsx:254
+#: ui/webui/src/components/AnacondaWizard.jsx:412
 msgid "Error was hit when going back from $0."
 msgstr "შეცდომას წამოვედეთ, როცა $0-დან ვბრუნდებოდით."
 
@@ -7671,7 +7693,7 @@ msgstr ""
 msgid "Find a language"
 msgstr "ენის მოძებნა"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:202
+#: ui/webui/src/components/Password.jsx:245
 msgid "Hide confirmed password"
 msgstr "დადასტურებული პაროლის დამალვა"
 
@@ -7679,7 +7701,7 @@ msgstr "დადასტურებული პაროლის დამ�
 msgid "Hide passphrase"
 msgstr "საკვანძო ფრაზის დამალვა"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:159
+#: ui/webui/src/components/Password.jsx:218
 msgid "Hide password"
 msgstr "პაროლის დამალვა"
 
@@ -7729,7 +7751,7 @@ msgstr "დაყენების მეთოდი"
 msgid "Installation of the system failed: $0"
 msgstr "სისტემის დაყენება ჩავარდა: $0"
 
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:144
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:154
 msgid "Installation type"
 msgstr "დაყენების ტიპი"
 
@@ -7775,7 +7797,7 @@ msgstr "დისკის ხელით მორგება: მიმა�
 msgid "Manually select storage locations for installation."
 msgstr "დაყენებისთვის საცავის მდებარეობების ხელით მითითება."
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:72
+#: ui/webui/src/components/Password.jsx:72
 msgid "Medium"
 msgstr "მატარებელი"
 
@@ -7803,7 +7825,7 @@ msgstr "საცავის შეცვლა ჩავარდა."
 msgid "Mount point assignment"
 msgstr "მიმაგრების წერტილის მინიჭება"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:173
+#: ui/webui/src/components/Password.jsx:47
 msgid "Must be at least $0 characters"
 msgstr "უნდა შეიცავდეს $0 სიმბოლოს მაინც"
 
@@ -7819,7 +7841,7 @@ msgstr ""
 msgid "Network not available. Configure the network to report the issue."
 msgstr "ქსელი ხელმისაწვდომი არაა. ანგარიშის გადასაცემად, ჯერ ქსელი მოირგეთ."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:359
+#: ui/webui/src/components/AnacondaWizard.jsx:385
 msgid "Next"
 msgstr "შემდეგი"
 
@@ -7861,7 +7883,7 @@ msgstr ""
 "შენიშვნა: ეს სატესტო პროგრამაა, რომელიც მხოლოდ ტესტირებისთვისაა განკუთვნილი. "
 "*არ* გამოიყენოთ ეს პროგრამა კრიტიკულ ან საწარმოო გარემოში."
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:366
+#: ui/webui/src/components/storage/DiskEncryption.jsx:125
 msgid ""
 "Only new partitions will be encrypted. Existing partitions will remain "
 "untouched."
@@ -7875,7 +7897,7 @@ msgstr "ოპერაციული სისტემა"
 msgid "Passphrase did not match any locked device"
 msgstr "საკვანძო ფრაზა არც ერთ დაბლოკილ მოწყობილობას არ ემთხვევა"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:216
+#: ui/webui/src/components/Password.jsx:259
 msgid "Passphrases must match"
 msgstr "საკვანძო ფრაზები არ ემთხვევა"
 
@@ -7899,7 +7921,7 @@ msgstr "პრე-რელიზი"
 msgid "Preparing report"
 msgstr "ანგარიშის მომზადება"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:448
+#: ui/webui/src/components/AnacondaWizard.jsx:474
 msgid "Quit installer?"
 msgstr "შევწყვიტო დაყენება?"
 
@@ -7907,11 +7929,11 @@ msgstr "შევწყვიტო დაყენება?"
 msgid "Re-scan"
 msgstr "თავიდან-სკანირება"
 
-#: ui/webui/src/components/app.jsx:98
+#: ui/webui/src/components/app.jsx:100
 msgid "Reading information about the computer failed."
 msgstr "კომპიუტერის შესახებ ინფორმაციის წაკითხვის შეცდომა."
 
-#: ui/webui/src/components/app.jsx:103
+#: ui/webui/src/components/app.jsx:105
 msgid "Reading installer configuration failed."
 msgstr "დაყენების პროგრამის კონფგიგურაციის წაკითხვის შეცდომა."
 
@@ -7920,13 +7942,13 @@ msgid "Reading installer version information failed."
 msgstr "დაყენების პროგრამის ვერსიის წაკითხვის შეცდომა."
 
 #: ui/webui/src/components/Error.jsx:216
-#: ui/webui/src/components/AnacondaWizard.jsx:410
 #: ui/webui/src/components/AnacondaWizard.jsx:436
+#: ui/webui/src/components/AnacondaWizard.jsx:462
 #: ui/webui/src/components/installation/InstallationProgress.jsx:222
 msgid "Reboot"
 msgstr "გადატვირთვა"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:448
+#: ui/webui/src/components/AnacondaWizard.jsx:474
 msgid "Reboot system?"
 msgstr "გადავტვირთო სისტემა?"
 
@@ -7970,8 +7992,8 @@ msgstr "საცავის თავიდან სკანირება"
 msgid "Rescanning of the disks failed."
 msgstr "დისკების თავიდან სკანირების შეცდომა."
 
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:231
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:232
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:241
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:242
 msgid "Review and install"
 msgstr "გადახედვა და დაყენება"
 
@@ -7987,7 +8009,7 @@ msgstr "აირჩიეთ დისკი"
 msgid "Selected device's format '$0' cannot be reformatted."
 msgstr "მონიშნული მოწყობილობის ფორმატი '$0' არ შეიძლება, თავიდან დაფორმატდეს."
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:202
+#: ui/webui/src/components/Password.jsx:245
 msgid "Show confirmed password"
 msgstr "დადასტურებული პაროლის ჩვენება"
 
@@ -7995,7 +8017,7 @@ msgstr "დადასტურებული პაროლის ჩვე�
 msgid "Show passphrase"
 msgstr "საკვანძო ფრაზის ჩვენება"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:159
+#: ui/webui/src/components/Password.jsx:218
 msgid "Show password"
 msgstr "პაროლის ჩვენება"
 
@@ -8019,7 +8041,7 @@ msgstr ""
 msgid "Some devices use the same name: $0."
 msgstr "ზოგიერთი მოწყობილობა იგივე სახელს იყენებს: $0."
 
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:165
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:175
 msgid "Storage"
 msgstr "საცავი"
 
@@ -8102,11 +8124,15 @@ msgstr ""
 "მონიშნული დისკები წაიშლება და ამას ვერ დააბრუნებთ. დარწმუნებული ბრძანდებით, "
 "რომ გნებავთ, გააგრძელოთ დაყენება?"
 
+#: ui/webui/src/components/users/Accounts.jsx:105
+msgid "This account will have administration priviledge with sudo."
+msgstr ""
+
 #: ui/webui/src/components/AnacondaHeader.jsx:68
 msgid "This is unstable, pre-release software"
 msgstr "ეს არასტაბილური, სატესტო პროგრამული უზრუნველყოფაა"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:257
+#: ui/webui/src/components/storage/DiskEncryption.jsx:57
 msgid "This may take a moment"
 msgstr "ამას შეიძლება რაღაც დრო დასჭირდეს"
 
@@ -8154,6 +8180,13 @@ msgstr "დაშიფრული მოწყობილობების �
 msgid "Use free space for the installation"
 msgstr "დასაყენებლად თავისუფალი ადგილის გამოყენება"
 
+#: ui/webui/src/components/users/Accounts.jsx:117
+#, fuzzy
+#| msgctxt "GUI|Password"
+#| msgid "D_isable root account"
+msgid "User account"
+msgstr "_root-ის ანგარიშის გამორთვა"
+
 #: ui/webui/src/components/localization/InstallationLanguage.jsx:335
 msgid "Welcome"
 msgstr "კეთილი იყოს თქვენი მობრძანება"
@@ -8166,7 +8199,7 @@ msgstr "მოგესალმებათ $0"
 msgid "Welcome. Let's install $0 now."
 msgstr "მოგესალმებით. მოდით, $0 დავაყენოთ."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:452
+#: ui/webui/src/components/AnacondaWizard.jsx:478
 msgid "Your progress will not be saved."
 msgstr "თქვენი მიმდინარეობა შენახული არ იქნება."
 

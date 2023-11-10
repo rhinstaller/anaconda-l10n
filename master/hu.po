@@ -35,7 +35,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2023-11-02 01:00+0000\n"
+"POT-Creation-Date: 2023-11-10 01:01+0000\n"
 "PO-Revision-Date: 2023-10-08 11:35+0000\n"
 "Last-Translator: Hoppár Zoltán <hopparz@gmail.com>\n"
 "Language-Team: Hungarian <https://translate.fedoraproject.org/projects/"
@@ -1545,7 +1545,7 @@ msgid "Devices reconfiguration succeeded."
 msgstr "Az eszköz újrakonfigurálása sikeres."
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:285
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:158
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:168
 msgid "Disabled"
 msgstr "Letiltott"
 
@@ -1714,7 +1714,7 @@ msgid "Empty server"
 msgstr "Üres szerver"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:79
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:158
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:168
 msgid "Enabled"
 msgstr "Engedélyezve"
 
@@ -2066,6 +2066,7 @@ msgid "Full Name"
 msgstr "Teljes név"
 
 #: pyanaconda/ui/tui/spokes/user.py:137
+#: ui/webui/src/components/users/Accounts.jsx:107
 msgid "Full name"
 msgstr "Teljes név"
 
@@ -3317,9 +3318,10 @@ msgid "Pass_word:"
 msgstr "_Jelszó:"
 
 #: pyanaconda/ui/tui/spokes/storage.py:355
-#: ui/webui/src/components/storage/DiskEncryption.jsx:309
+#: ui/webui/src/components/storage/DiskEncryption.jsx:92
 #: ui/webui/src/components/storage/EncryptedDevices.jsx:178
 #: ui/webui/src/components/storage/EncryptedDevices.jsx:185
+#: ui/webui/src/components/users/Accounts.jsx:80
 msgid "Passphrase"
 msgstr "Jelszó"
 
@@ -3648,8 +3650,8 @@ msgid "Purpose"
 msgstr "Cél"
 
 #: pyanaconda/ui/gui/main.glade:176 ui/webui/src/components/Error.jsx:216
-#: ui/webui/src/components/AnacondaWizard.jsx:410
 #: ui/webui/src/components/AnacondaWizard.jsx:436
+#: ui/webui/src/components/AnacondaWizard.jsx:462
 #: ui/webui/src/components/installation/InstallationProgress.jsx:222
 msgid "Quit"
 msgstr "Kilépés"
@@ -4529,8 +4531,7 @@ msgstr "Tárhelybeállítások"
 msgid "Storing configuration files and kickstarts"
 msgstr "Konfigurációs és kickstart fájlok tárolása"
 
-#: pyanaconda/core/constants.py:222
-#: ui/webui/src/components/storage/DiskEncryption.jsx:83
+#: pyanaconda/core/constants.py:222 ui/webui/src/components/Password.jsx:83
 msgid "Strong"
 msgstr "Erős"
 
@@ -4982,7 +4983,7 @@ msgid "The passphrase is too short"
 msgstr "A jelszó túl rövid"
 
 #: pyanaconda/core/constants.py:208
-#: ui/webui/src/components/storage/DiskEncryption.jsx:182
+#: ui/webui/src/components/storage/DiskEncryption.jsx:42
 msgid ""
 "The passphrase you have provided contains non-ASCII characters. You may not "
 "be able to switch between keyboard layouts when typing it."
@@ -5803,7 +5804,7 @@ msgstr ""
 
 #: pyanaconda/core/constants.py:219
 #: pyanaconda/ui/gui/spokes/lib/passphrase.glade:182
-#: ui/webui/src/components/storage/DiskEncryption.jsx:61
+#: ui/webui/src/components/Password.jsx:61
 msgid "Weak"
 msgstr "Gyenge"
 
@@ -7527,7 +7528,7 @@ msgstr "{} előfizetés van a rendszerhez rendelve"
 msgid "{}. {}"
 msgstr "{}. {}"
 
-#: ui/webui/src/components/app.jsx:117
+#: ui/webui/src/components/app.jsx:119
 msgid "$0 installation"
 msgstr "$0 telepítés"
 
@@ -7542,6 +7543,13 @@ msgstr "A „$0”-nak „$1”-re formázott eszközön kell lennie"
 #: ui/webui/src/components/HeaderKebab.jsx:128
 msgid "About"
 msgstr "Névjegy"
+
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:144
+#, fuzzy
+#| msgctxt "GUI|Subscription|Authentication|Account"
+#| msgid "_Account"
+msgid "Account"
+msgstr "_Fiók"
 
 #: ui/webui/src/components/storage/MountPointMapping.jsx:573
 msgid "Add mount"
@@ -7564,8 +7572,8 @@ msgstr "Alkalmazza a csatlakozási pont hozzárendelését és telepítse"
 msgid "Applying new disk selection..."
 msgstr "Új lemezkijelölés alkalmazása..."
 
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:200
-#: ui/webui/src/components/AnacondaWizard.jsx:388
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:210
+#: ui/webui/src/components/AnacondaWizard.jsx:414
 msgid "Back"
 msgstr "Vissza"
 
@@ -7600,7 +7608,7 @@ msgid "Changes made in Blivet-gui will directly affect your storage."
 msgstr ""
 "A Blivet-gui-ban végrehajtott változtatások közvetlenül érintik a tárhelyet."
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:253
+#: ui/webui/src/components/storage/DiskEncryption.jsx:53
 msgid "Checking storage configuration"
 msgstr "Tároló-összeállítás ellenőrzése"
 
@@ -7628,13 +7636,28 @@ msgstr "Általános nyelvek"
 msgid "Completed"
 msgstr "Kész"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:312
+#: ui/webui/src/components/storage/DiskEncryption.jsx:94
+#: ui/webui/src/components/users/Accounts.jsx:82
 msgid "Confirm passphrase"
 msgstr "Erősítse meg a jelszavát"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:443
+#: ui/webui/src/components/AnacondaWizard.jsx:469
 msgid "Continue installation"
 msgstr "Telepítés folytatása"
+
+#: ui/webui/src/components/users/Accounts.jsx:159
+#, fuzzy
+#| msgctxt "GUI|Spoke"
+#| msgid "_Root Account"
+msgid "Create Account"
+msgstr "_Rendszergazdai fiók"
+
+#: ui/webui/src/components/users/Accounts.jsx:103
+#, fuzzy
+#| msgctxt "GUI|Password"
+#| msgid "_Enable root account"
+msgid "Create account"
+msgstr "Rendszergazdai fiók _engedélyezése"
 
 #: ui/webui/src/components/Error.jsx:234
 msgid "Critical error"
@@ -7656,12 +7679,12 @@ msgstr "Cél"
 msgid "Devices should be unlocked before assigning mount points."
 msgstr "Az eszközöket fel kell oldani a rögzítési pontok hozzárendelése előtt."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:123
+#: ui/webui/src/components/AnacondaWizard.jsx:128
 msgid "Disk configuration"
 msgstr "Lemez beállítások"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:379
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:155
+#: ui/webui/src/components/storage/DiskEncryption.jsx:138
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:165
 msgid "Disk encryption"
 msgstr "Lemez titkosítás"
 
@@ -7673,11 +7696,11 @@ msgstr "Duplikált eszközök."
 msgid "Duplicate mount point."
 msgstr "Duplikált csatolási pont."
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:297
+#: ui/webui/src/components/storage/DiskEncryption.jsx:80
 msgid "Encrypt my data"
 msgstr "Saját adatok titkosítása"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:381
+#: ui/webui/src/components/storage/DiskEncryption.jsx:140
 msgid "Encrypt the selected devices?"
 msgstr "Titkosítsuk a kiválasztott eszközöket?"
 
@@ -7685,7 +7708,7 @@ msgstr "Titkosítsuk a kiválasztott eszközöket?"
 msgid "Encrypted devices are locked"
 msgstr "Titkosított eszközök zárolva"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:363
+#: ui/webui/src/components/storage/DiskEncryption.jsx:122
 msgid "Encryption helps secure your data, to prevent others from accessing it."
 msgstr "A titkosítás segít megvédeni adatait, hogy mások ne férjenek hozzá."
 
@@ -7708,8 +7731,8 @@ msgstr ""
 msgid "Error details"
 msgstr "Hiba részletei"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:233
-#: ui/webui/src/components/AnacondaWizard.jsx:386
+#: ui/webui/src/components/AnacondaWizard.jsx:254
+#: ui/webui/src/components/AnacondaWizard.jsx:412
 msgid "Error was hit when going back from $0."
 msgstr "Hiba történt a $0 való visszatéréskor."
 
@@ -7733,7 +7756,7 @@ msgstr ""
 msgid "Find a language"
 msgstr "Válasszon egy nyelvet"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:202
+#: ui/webui/src/components/Password.jsx:245
 msgid "Hide confirmed password"
 msgstr "Megerősített jelszó elrejtése"
 
@@ -7741,7 +7764,7 @@ msgstr "Megerősített jelszó elrejtése"
 msgid "Hide passphrase"
 msgstr "Jelszó elrejtése"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:159
+#: ui/webui/src/components/Password.jsx:218
 msgid "Hide password"
 msgstr "Jelszó elrejtése"
 
@@ -7790,7 +7813,7 @@ msgstr "Telepítési mód"
 msgid "Installation of the system failed: $0"
 msgstr "A rendszer telepítése sikertelen: $0"
 
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:144
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:154
 msgid "Installation type"
 msgstr "Telepítés típusa"
 
@@ -7836,7 +7859,7 @@ msgstr "Kézi lemezkonfiguráció: Csatlakozási pont leképezés"
 msgid "Manually select storage locations for installation."
 msgstr "Manuálisan válassza ki a tárolási helyeket a telepítéshez."
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:72
+#: ui/webui/src/components/Password.jsx:72
 msgid "Medium"
 msgstr "Médium"
 
@@ -7863,7 +7886,7 @@ msgstr "A tárhely módosítása nem sikerült."
 msgid "Mount point assignment"
 msgstr "Csatlakozási pont hozzárendelése"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:173
+#: ui/webui/src/components/Password.jsx:47
 #, fuzzy
 #| msgid "Must be at least 8 characters"
 msgid "Must be at least $0 characters"
@@ -7887,7 +7910,7 @@ msgstr ""
 "A hálózat nem elérhető. A probléma bejelentéséhez konfigurálja a hálózatot a "
 "felső sáv menüjében."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:359
+#: ui/webui/src/components/AnacondaWizard.jsx:385
 msgid "Next"
 msgstr "Következő"
 
@@ -7930,7 +7953,7 @@ msgstr ""
 "tesztelési célokra készült. NE használja kritikus munkára vagy éles "
 "rendszerekhez."
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:366
+#: ui/webui/src/components/storage/DiskEncryption.jsx:125
 msgid ""
 "Only new partitions will be encrypted. Existing partitions will remain "
 "untouched."
@@ -7946,7 +7969,7 @@ msgstr "Operációs rendszer"
 msgid "Passphrase did not match any locked device"
 msgstr "A jelszó nem egyezik egyetlen zárolt eszközzel sem"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:216
+#: ui/webui/src/components/Password.jsx:259
 msgid "Passphrases must match"
 msgstr "A jelszavaknak egyezniük kell"
 
@@ -7970,7 +7993,7 @@ msgstr "Kiadás előtti verziók"
 msgid "Preparing report"
 msgstr "Jelentés előkészítése"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:448
+#: ui/webui/src/components/AnacondaWizard.jsx:474
 msgid "Quit installer?"
 msgstr "Kilépés a telepítőből?"
 
@@ -7978,11 +8001,11 @@ msgstr "Kilépés a telepítőből?"
 msgid "Re-scan"
 msgstr "Újraszkennelés"
 
-#: ui/webui/src/components/app.jsx:98
+#: ui/webui/src/components/app.jsx:100
 msgid "Reading information about the computer failed."
 msgstr "Nem sikerült beolvasni a számítógépre vonatkozó információkat."
 
-#: ui/webui/src/components/app.jsx:103
+#: ui/webui/src/components/app.jsx:105
 msgid "Reading installer configuration failed."
 msgstr "Nem sikerült beolvasni a telepítő konfigurációját."
 
@@ -7991,13 +8014,13 @@ msgid "Reading installer version information failed."
 msgstr "Nem sikerült beolvasni a telepítő verzió információit."
 
 #: ui/webui/src/components/Error.jsx:216
-#: ui/webui/src/components/AnacondaWizard.jsx:410
 #: ui/webui/src/components/AnacondaWizard.jsx:436
+#: ui/webui/src/components/AnacondaWizard.jsx:462
 #: ui/webui/src/components/installation/InstallationProgress.jsx:222
 msgid "Reboot"
 msgstr "Újraindítás"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:448
+#: ui/webui/src/components/AnacondaWizard.jsx:474
 msgid "Reboot system?"
 msgstr "Rendszer újraindítása?"
 
@@ -8043,8 +8066,8 @@ msgstr "Tároló újravizsgálása"
 msgid "Rescanning of the disks failed."
 msgstr "A lemezek újraellenőrzése nem sikerült."
 
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:231
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:232
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:241
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:242
 msgid "Review and install"
 msgstr "Áttekintés és telepítés"
 
@@ -8060,7 +8083,7 @@ msgstr "Válasszon ki egy lemezt"
 msgid "Selected device's format '$0' cannot be reformatted."
 msgstr "A kiválasztott eszköz '$0' formátuma nem formázható újra."
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:202
+#: ui/webui/src/components/Password.jsx:245
 msgid "Show confirmed password"
 msgstr "Jelenítse meg megerősített jelszavát"
 
@@ -8068,7 +8091,7 @@ msgstr "Jelenítse meg megerősített jelszavát"
 msgid "Show passphrase"
 msgstr "Jelszó megjelenítése"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:159
+#: ui/webui/src/components/Password.jsx:218
 msgid "Show password"
 msgstr "Jelszó megjelenítése"
 
@@ -8092,7 +8115,7 @@ msgstr ""
 msgid "Some devices use the same name: $0."
 msgstr "Egyes eszközök ugyanazt a nevet használják: $0."
 
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:165
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:175
 msgid "Storage"
 msgstr "Tárhely"
 
@@ -8177,11 +8200,15 @@ msgstr ""
 "A kiválasztott lemezek törölve lesznek, ez nem vonható vissza. Biztos, hogy "
 "folytatja a telepítést?"
 
+#: ui/webui/src/components/users/Accounts.jsx:105
+msgid "This account will have administration priviledge with sudo."
+msgstr ""
+
 #: ui/webui/src/components/AnacondaHeader.jsx:68
 msgid "This is unstable, pre-release software"
 msgstr "Ez egy instabil, előzetes kiadású szoftver"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:257
+#: ui/webui/src/components/storage/DiskEncryption.jsx:57
 msgid "This may take a moment"
 msgstr "Ez eltarthat egy ideig"
 
@@ -8229,6 +8256,13 @@ msgstr "A titkosított eszközök feloldása"
 msgid "Use free space for the installation"
 msgstr "Használjon szabad helyet a telepítéshez"
 
+#: ui/webui/src/components/users/Accounts.jsx:117
+#, fuzzy
+#| msgctxt "GUI|Password"
+#| msgid "D_isable root account"
+msgid "User account"
+msgstr "Rendszergazda_i fiók letiltása"
+
 #: ui/webui/src/components/localization/InstallationLanguage.jsx:335
 msgid "Welcome"
 msgstr "Üdvözöljük"
@@ -8241,7 +8275,7 @@ msgstr "Üdvözli a $0"
 msgid "Welcome. Let's install $0 now."
 msgstr "Üdvözöljük. Most telepítsük a $0-t."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:452
+#: ui/webui/src/components/AnacondaWizard.jsx:478
 msgid "Your progress will not be saved."
 msgstr "A folyamat pillanatnyi állapota nem kerül mentésre."
 
@@ -8732,12 +8766,6 @@ msgstr "függőben lévő lépés"
 #~| msgid "_Confirm password"
 #~ msgid "Confirm root password"
 #~ msgstr "_Erősítse meg a jelszavát"
-
-#, fuzzy
-#~| msgctxt "GUI|Password"
-#~| msgid "_Enable root account"
-#~ msgid "Lock root account"
-#~ msgstr "Rendszergazdai fiók _engedélyezése"
 
 #, fuzzy
 #~| msgctxt "GUI|Spoke"

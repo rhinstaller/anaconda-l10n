@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2023-11-02 01:00+0000\n"
+"POT-Creation-Date: 2023-11-10 01:01+0000\n"
 "PO-Revision-Date: 2023-11-02 01:01+0000\n"
 "Last-Translator: 김인수 <simmon@nplob.com>\n"
 "Language-Team: Korean <https://translate.fedoraproject.org/projects/anaconda/"
@@ -1517,7 +1517,7 @@ msgid "Devices reconfiguration succeeded."
 msgstr "장치 재구성이 성공했습니다."
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:285
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:158
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:168
 msgid "Disabled"
 msgstr "사용불가"
 
@@ -1685,7 +1685,7 @@ msgid "Empty server"
 msgstr "빈 서버"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:79
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:158
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:168
 msgid "Enabled"
 msgstr "활성화됨"
 
@@ -2025,6 +2025,7 @@ msgid "Full Name"
 msgstr "성명"
 
 #: pyanaconda/ui/tui/spokes/user.py:137
+#: ui/webui/src/components/users/Accounts.jsx:107
 msgid "Full name"
 msgstr "성명"
 
@@ -3255,9 +3256,10 @@ msgid "Pass_word:"
 msgstr "비밀번호(_w):"
 
 #: pyanaconda/ui/tui/spokes/storage.py:355
-#: ui/webui/src/components/storage/DiskEncryption.jsx:309
+#: ui/webui/src/components/storage/DiskEncryption.jsx:92
 #: ui/webui/src/components/storage/EncryptedDevices.jsx:178
 #: ui/webui/src/components/storage/EncryptedDevices.jsx:185
+#: ui/webui/src/components/users/Accounts.jsx:80
 msgid "Passphrase"
 msgstr "암호문"
 
@@ -3578,8 +3580,8 @@ msgid "Purpose"
 msgstr "목적"
 
 #: pyanaconda/ui/gui/main.glade:176 ui/webui/src/components/Error.jsx:216
-#: ui/webui/src/components/AnacondaWizard.jsx:410
 #: ui/webui/src/components/AnacondaWizard.jsx:436
+#: ui/webui/src/components/AnacondaWizard.jsx:462
 #: ui/webui/src/components/installation/InstallationProgress.jsx:222
 msgid "Quit"
 msgstr "종료"
@@ -4445,8 +4447,7 @@ msgstr "저장소 선택"
 msgid "Storing configuration files and kickstarts"
 msgstr "구성 파일 및 킥 스타트 저장"
 
-#: pyanaconda/core/constants.py:222
-#: ui/webui/src/components/storage/DiskEncryption.jsx:83
+#: pyanaconda/core/constants.py:222 ui/webui/src/components/Password.jsx:83
 msgid "Strong"
 msgstr "강함"
 
@@ -4892,7 +4893,7 @@ msgid "The passphrase is too short"
 msgstr "암호문이 너무 짧습니다"
 
 #: pyanaconda/core/constants.py:208
-#: ui/webui/src/components/storage/DiskEncryption.jsx:182
+#: ui/webui/src/components/storage/DiskEncryption.jsx:42
 msgid ""
 "The passphrase you have provided contains non-ASCII characters. You may not "
 "be able to switch between keyboard layouts when typing it."
@@ -5693,7 +5694,7 @@ msgstr ""
 
 #: pyanaconda/core/constants.py:219
 #: pyanaconda/ui/gui/spokes/lib/passphrase.glade:182
-#: ui/webui/src/components/storage/DiskEncryption.jsx:61
+#: ui/webui/src/components/Password.jsx:61
 msgid "Weak"
 msgstr "취약"
 
@@ -7393,7 +7394,7 @@ msgstr "시스템에 {} 서브스크립션이 연결 되었습니다"
 msgid "{}. {}"
 msgstr "{}. {}"
 
-#: ui/webui/src/components/app.jsx:117
+#: ui/webui/src/components/app.jsx:119
 msgid "$0 installation"
 msgstr "$0 설치"
 
@@ -7408,6 +7409,13 @@ msgstr "'$0' 는 '$1'으로 초기화된 장치에 있어야 합니다"
 #: ui/webui/src/components/HeaderKebab.jsx:128
 msgid "About"
 msgstr "정보"
+
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:144
+#, fuzzy
+#| msgctxt "GUI|Subscription|Authentication|Account"
+#| msgid "_Account"
+msgid "Account"
+msgstr "계정(_A)"
 
 #: ui/webui/src/components/storage/MountPointMapping.jsx:573
 msgid "Add mount"
@@ -7429,8 +7437,8 @@ msgstr "적재 지점 할당을 적용하고 설치합니다"
 msgid "Applying new disk selection..."
 msgstr "신규 디스크 선택을 적용 중..."
 
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:200
-#: ui/webui/src/components/AnacondaWizard.jsx:388
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:210
+#: ui/webui/src/components/AnacondaWizard.jsx:414
 msgid "Back"
 msgstr "뒤로"
 
@@ -7462,7 +7470,7 @@ msgstr "취소"
 msgid "Changes made in Blivet-gui will directly affect your storage."
 msgstr "Blivet-gui에서 변경은 자신의 저장 공간에 직접적인 영향을 미칩니다."
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:253
+#: ui/webui/src/components/storage/DiskEncryption.jsx:53
 msgid "Checking storage configuration"
 msgstr "저장소 구성 확인 중"
 
@@ -7490,13 +7498,27 @@ msgstr "공통 지원"
 msgid "Completed"
 msgstr "완료되었습니다"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:312
+#: ui/webui/src/components/storage/DiskEncryption.jsx:94
+#: ui/webui/src/components/users/Accounts.jsx:82
 msgid "Confirm passphrase"
 msgstr "암호문을 확인합니다"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:443
+#: ui/webui/src/components/AnacondaWizard.jsx:469
 msgid "Continue installation"
 msgstr "설치를 계속합니다"
+
+#: ui/webui/src/components/users/Accounts.jsx:159
+#, fuzzy
+#| msgctxt "GUI|Spoke"
+#| msgid "_Root Account"
+msgid "Create Account"
+msgstr "root 계정(_R)"
+
+#: ui/webui/src/components/users/Accounts.jsx:103
+#, fuzzy
+#| msgid "Lock root account"
+msgid "Create account"
+msgstr "root 계정을 잠금"
 
 #: ui/webui/src/components/Error.jsx:234
 msgid "Critical error"
@@ -7518,12 +7540,12 @@ msgstr "대상"
 msgid "Devices should be unlocked before assigning mount points."
 msgstr "장치는 적재 지점에 할당하기 전에 잠금해제 되어야 합니다."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:123
+#: ui/webui/src/components/AnacondaWizard.jsx:128
 msgid "Disk configuration"
 msgstr "장치 구성"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:379
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:155
+#: ui/webui/src/components/storage/DiskEncryption.jsx:138
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:165
 msgid "Disk encryption"
 msgstr "디스크 암호화"
 
@@ -7535,11 +7557,11 @@ msgstr "중복 장치."
 msgid "Duplicate mount point."
 msgstr "중복 적재 지점."
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:297
+#: ui/webui/src/components/storage/DiskEncryption.jsx:80
 msgid "Encrypt my data"
 msgstr "자료를 암호화합니다"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:381
+#: ui/webui/src/components/storage/DiskEncryption.jsx:140
 msgid "Encrypt the selected devices?"
 msgstr "선택한 장치를 암호화할까요?"
 
@@ -7547,7 +7569,7 @@ msgstr "선택한 장치를 암호화할까요?"
 msgid "Encrypted devices are locked"
 msgstr "암호화된 장치가 잠금 되었습니다"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:363
+#: ui/webui/src/components/storage/DiskEncryption.jsx:122
 msgid "Encryption helps secure your data, to prevent others from accessing it."
 msgstr ""
 "암호화는 다른 사람이 접근하지 못하도록 자신의 자료를 보호하는 데 도움이 됩니"
@@ -7570,8 +7592,8 @@ msgstr "자료 제거 중에는 취소 할 수 없습니다. 백업을 있는지
 msgid "Error details"
 msgstr "오류 상세"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:233
-#: ui/webui/src/components/AnacondaWizard.jsx:386
+#: ui/webui/src/components/AnacondaWizard.jsx:254
+#: ui/webui/src/components/AnacondaWizard.jsx:412
 msgid "Error was hit when going back from $0."
 msgstr "오류가 $0에서 돌아갈 때 발생했습니다."
 
@@ -7594,7 +7616,7 @@ msgstr ""
 msgid "Find a language"
 msgstr "언어 찾기"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:202
+#: ui/webui/src/components/Password.jsx:245
 msgid "Hide confirmed password"
 msgstr "확인된 비밀번호 감추기"
 
@@ -7602,7 +7624,7 @@ msgstr "확인된 비밀번호 감추기"
 msgid "Hide passphrase"
 msgstr "암호문을 숨깁니다"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:159
+#: ui/webui/src/components/Password.jsx:218
 msgid "Hide password"
 msgstr "비밀번호 숨기기"
 
@@ -7649,7 +7671,7 @@ msgstr "설치 방법"
 msgid "Installation of the system failed: $0"
 msgstr "시스템 설치에 실패했습니다: $0"
 
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:144
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:154
 msgid "Installation type"
 msgstr "설치 유형"
 
@@ -7693,7 +7715,7 @@ msgstr "사용자 정의 디스크 구성: 적재 지점 대응"
 msgid "Manually select storage locations for installation."
 msgstr "설치를 위해 수동으로 저장소 위치를 선택합니다."
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:72
+#: ui/webui/src/components/Password.jsx:72
 msgid "Medium"
 msgstr "중간"
 
@@ -7719,7 +7741,7 @@ msgstr "저장소 수정하기가 실패하였습니다."
 msgid "Mount point assignment"
 msgstr "적재 지점 지정"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:173
+#: ui/webui/src/components/Password.jsx:47
 msgid "Must be at least $0 characters"
 msgstr "적어도 $0 문자이어야 합니다"
 
@@ -7735,7 +7757,7 @@ msgstr ""
 msgid "Network not available. Configure the network to report the issue."
 msgstr "네트워크를 사용 할 수 없습니다. 네트워크를 구성하고 문제를 보고하세요."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:359
+#: ui/webui/src/components/AnacondaWizard.jsx:385
 msgid "Next"
 msgstr "다음"
 
@@ -7777,7 +7799,7 @@ msgstr ""
 "주의: 이 배포판은 개발과 시험 목적을 위해서만 의도된 사전-출시된 것입니다. 심"
 "각한 작업 또는 생산환경에서 이 소프트웨를 사용하지 않도록 합니다."
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:366
+#: ui/webui/src/components/storage/DiskEncryption.jsx:125
 msgid ""
 "Only new partitions will be encrypted. Existing partitions will remain "
 "untouched."
@@ -7791,7 +7813,7 @@ msgstr "운영 체제"
 msgid "Passphrase did not match any locked device"
 msgstr "암호문은 잠금된 장치와 일치하지 않습니다"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:216
+#: ui/webui/src/components/Password.jsx:259
 msgid "Passphrases must match"
 msgstr "암호문은 일치해야 합니다"
 
@@ -7815,7 +7837,7 @@ msgstr "사전-출시"
 msgid "Preparing report"
 msgstr "보고 준비 중"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:448
+#: ui/webui/src/components/AnacondaWizard.jsx:474
 msgid "Quit installer?"
 msgstr "설치자 종료?"
 
@@ -7823,11 +7845,11 @@ msgstr "설치자 종료?"
 msgid "Re-scan"
 msgstr "다시-스캔"
 
-#: ui/webui/src/components/app.jsx:98
+#: ui/webui/src/components/app.jsx:100
 msgid "Reading information about the computer failed."
 msgstr "컴퓨터에 대한 정보 읽기를 실패함."
 
-#: ui/webui/src/components/app.jsx:103
+#: ui/webui/src/components/app.jsx:105
 msgid "Reading installer configuration failed."
 msgstr "설치자 구성 읽기가 실패함."
 
@@ -7836,13 +7858,13 @@ msgid "Reading installer version information failed."
 msgstr "설치자 버전 정보 읽기가 실패함."
 
 #: ui/webui/src/components/Error.jsx:216
-#: ui/webui/src/components/AnacondaWizard.jsx:410
 #: ui/webui/src/components/AnacondaWizard.jsx:436
+#: ui/webui/src/components/AnacondaWizard.jsx:462
 #: ui/webui/src/components/installation/InstallationProgress.jsx:222
 msgid "Reboot"
 msgstr "재시작"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:448
+#: ui/webui/src/components/AnacondaWizard.jsx:474
 msgid "Reboot system?"
 msgstr "시스템 재시작?"
 
@@ -7886,8 +7908,8 @@ msgstr "저장소 탐색"
 msgid "Rescanning of the disks failed."
 msgstr "디스크 재검색이 실패함."
 
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:231
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:232
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:241
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:242
 msgid "Review and install"
 msgstr "검토하고 설치"
 
@@ -7903,7 +7925,7 @@ msgstr "디스크 선택"
 msgid "Selected device's format '$0' cannot be reformatted."
 msgstr "선택한 장치의 형식 '$0'은 다시 초기화 될 수 없습니다."
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:202
+#: ui/webui/src/components/Password.jsx:245
 msgid "Show confirmed password"
 msgstr "확인된 비밀번호 표시"
 
@@ -7911,7 +7933,7 @@ msgstr "확인된 비밀번호 표시"
 msgid "Show passphrase"
 msgstr "암호문을 표시합니다"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:159
+#: ui/webui/src/components/Password.jsx:218
 msgid "Show password"
 msgstr "비밀번호 표시"
 
@@ -7935,7 +7957,7 @@ msgstr ""
 msgid "Some devices use the same name: $0."
 msgstr "몇몇 장치는 동일한 이름을 사용합니다: $0."
 
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:165
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:175
 msgid "Storage"
 msgstr "저장소"
 
@@ -8015,11 +8037,15 @@ msgstr ""
 "선택된 디스크를 제거 될 것이며, 이는 돌이 킬 수 없습니다. 설치를 위해 계속 진"
 "행 할까요?"
 
+#: ui/webui/src/components/users/Accounts.jsx:105
+msgid "This account will have administration priviledge with sudo."
+msgstr ""
+
 #: ui/webui/src/components/AnacondaHeader.jsx:68
 msgid "This is unstable, pre-release software"
 msgstr "이 배포판은 불안정 할 수 있으며, 사전-출시된 소프트웨어입니다"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:257
+#: ui/webui/src/components/storage/DiskEncryption.jsx:57
 msgid "This may take a moment"
 msgstr "시간이 좀 걸릴 수 있습니다"
 
@@ -8065,6 +8091,13 @@ msgstr "암호화된 장치를 해제합니다"
 msgid "Use free space for the installation"
 msgstr "설치를 위해 여유 공간을 사용합니다"
 
+#: ui/webui/src/components/users/Accounts.jsx:117
+#, fuzzy
+#| msgctxt "GUI|Password"
+#| msgid "D_isable root account"
+msgid "User account"
+msgstr "root 계정 비활성화(_D)"
+
 #: ui/webui/src/components/localization/InstallationLanguage.jsx:335
 msgid "Welcome"
 msgstr "환영합니다"
@@ -8077,7 +8110,7 @@ msgstr "$0 오신 것을 환영합니다"
 msgid "Welcome. Let's install $0 now."
 msgstr "환영합니다. 이제 $0를 설치해요."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:452
+#: ui/webui/src/components/AnacondaWizard.jsx:478
 msgid "Your progress will not be saved."
 msgstr "당신의 진행 상황은 저장되지 않습니다."
 
@@ -8565,9 +8598,6 @@ msgstr "보류 단계"
 
 #~ msgid "Confirm root password"
 #~ msgstr "root 비밀번호 확인(_C)"
-
-#~ msgid "Lock root account"
-#~ msgstr "root 계정을 잠금"
 
 #~ msgid "Network & Host Name"
 #~ msgstr "네트워크와 호스트 이름"

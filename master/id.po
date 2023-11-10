@@ -34,7 +34,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2023-11-02 01:00+0000\n"
+"POT-Creation-Date: 2023-11-10 01:01+0000\n"
 "PO-Revision-Date: 2023-10-13 01:00+0000\n"
 "Last-Translator: yangyangdaji <1504305527@qq.com>\n"
 "Language-Team: Indonesian <https://translate.fedoraproject.org/projects/"
@@ -1537,7 +1537,7 @@ msgid "Devices reconfiguration succeeded."
 msgstr "Rekonfigurasi peranti sukses."
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:285
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:158
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:168
 msgid "Disabled"
 msgstr "Dinonaktifkan"
 
@@ -1705,7 +1705,7 @@ msgid "Empty server"
 msgstr "Server kosong"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:79
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:158
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:168
 msgid "Enabled"
 msgstr "Difungsikan"
 
@@ -2050,6 +2050,7 @@ msgid "Full Name"
 msgstr "Nama Lengkap"
 
 #: pyanaconda/ui/tui/spokes/user.py:137
+#: ui/webui/src/components/users/Accounts.jsx:107
 msgid "Full name"
 msgstr "Nama lengkap"
 
@@ -3296,9 +3297,10 @@ msgid "Pass_word:"
 msgstr "_Sandi:"
 
 #: pyanaconda/ui/tui/spokes/storage.py:355
-#: ui/webui/src/components/storage/DiskEncryption.jsx:309
+#: ui/webui/src/components/storage/DiskEncryption.jsx:92
 #: ui/webui/src/components/storage/EncryptedDevices.jsx:178
 #: ui/webui/src/components/storage/EncryptedDevices.jsx:185
+#: ui/webui/src/components/users/Accounts.jsx:80
 msgid "Passphrase"
 msgstr "Frasa sandi"
 
@@ -3624,8 +3626,8 @@ msgid "Purpose"
 msgstr "Tujuan"
 
 #: pyanaconda/ui/gui/main.glade:176 ui/webui/src/components/Error.jsx:216
-#: ui/webui/src/components/AnacondaWizard.jsx:410
 #: ui/webui/src/components/AnacondaWizard.jsx:436
+#: ui/webui/src/components/AnacondaWizard.jsx:462
 #: ui/webui/src/components/installation/InstallationProgress.jsx:222
 msgid "Quit"
 msgstr "Keluar"
@@ -4502,8 +4504,7 @@ msgstr "Opsi Penyimpanan"
 msgid "Storing configuration files and kickstarts"
 msgstr "Menyimpan berkas konfigurasi dan kickstart"
 
-#: pyanaconda/core/constants.py:222
-#: ui/webui/src/components/storage/DiskEncryption.jsx:83
+#: pyanaconda/core/constants.py:222 ui/webui/src/components/Password.jsx:83
 msgid "Strong"
 msgstr "Kuat"
 
@@ -4955,7 +4956,7 @@ msgid "The passphrase is too short"
 msgstr "Frasa sandi terlalu pendek"
 
 #: pyanaconda/core/constants.py:208
-#: ui/webui/src/components/storage/DiskEncryption.jsx:182
+#: ui/webui/src/components/storage/DiskEncryption.jsx:42
 msgid ""
 "The passphrase you have provided contains non-ASCII characters. You may not "
 "be able to switch between keyboard layouts when typing it."
@@ -5780,7 +5781,7 @@ msgstr ""
 
 #: pyanaconda/core/constants.py:219
 #: pyanaconda/ui/gui/spokes/lib/passphrase.glade:182
-#: ui/webui/src/components/storage/DiskEncryption.jsx:61
+#: ui/webui/src/components/Password.jsx:61
 msgid "Weak"
 msgstr "Lemah"
 
@@ -7504,7 +7505,7 @@ msgstr "{} langganan dicantolkan ke sistem"
 msgid "{}. {}"
 msgstr "{}. {}"
 
-#: ui/webui/src/components/app.jsx:117
+#: ui/webui/src/components/app.jsx:119
 msgid "$0 installation"
 msgstr "Instalasi $0"
 
@@ -7519,6 +7520,13 @@ msgstr "'$0' harus berada pada peranti yang diformat ke '$1'"
 #: ui/webui/src/components/HeaderKebab.jsx:128
 msgid "About"
 msgstr "Ihwal"
+
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:144
+#, fuzzy
+#| msgctxt "GUI|Subscription|Authentication|Account"
+#| msgid "_Account"
+msgid "Account"
+msgstr "_Akun"
 
 #: ui/webui/src/components/storage/MountPointMapping.jsx:573
 msgid "Add mount"
@@ -7540,8 +7548,8 @@ msgstr "Terapkan penugasan titik kait dan pasang"
 msgid "Applying new disk selection..."
 msgstr "Menerapkan pilihan disk baru..."
 
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:200
-#: ui/webui/src/components/AnacondaWizard.jsx:388
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:210
+#: ui/webui/src/components/AnacondaWizard.jsx:414
 msgid "Back"
 msgstr "Mundur"
 
@@ -7577,7 +7585,7 @@ msgstr ""
 "Perubahan yang dibuat dalam Blivet-gui akan secara langsung memengaruhi "
 "penyimpanan Anda."
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:253
+#: ui/webui/src/components/storage/DiskEncryption.jsx:53
 msgid "Checking storage configuration"
 msgstr "Memeriksa konfigurasi penyimpanan"
 
@@ -7605,13 +7613,27 @@ msgstr "Bahasa umum"
 msgid "Completed"
 msgstr "Lengkap"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:312
+#: ui/webui/src/components/storage/DiskEncryption.jsx:94
+#: ui/webui/src/components/users/Accounts.jsx:82
 msgid "Confirm passphrase"
 msgstr "Konfirmasi frasa sandi"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:443
+#: ui/webui/src/components/AnacondaWizard.jsx:469
 msgid "Continue installation"
 msgstr "Lanjutkan instalasi"
+
+#: ui/webui/src/components/users/Accounts.jsx:159
+#, fuzzy
+#| msgctxt "GUI|Spoke"
+#| msgid "_Root Account"
+msgid "Create Account"
+msgstr "Akun _Root"
+
+#: ui/webui/src/components/users/Accounts.jsx:103
+#, fuzzy
+#| msgid "Lock root account"
+msgid "Create account"
+msgstr "Kunci akun root"
 
 #: ui/webui/src/components/Error.jsx:234
 msgid "Critical error"
@@ -7633,12 +7655,12 @@ msgstr "Tujuan"
 msgid "Devices should be unlocked before assigning mount points."
 msgstr "Perangkat harus dibuka kuncinya sebelum menugaskan titik kait."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:123
+#: ui/webui/src/components/AnacondaWizard.jsx:128
 msgid "Disk configuration"
 msgstr "Konfigurasi disk"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:379
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:155
+#: ui/webui/src/components/storage/DiskEncryption.jsx:138
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:165
 msgid "Disk encryption"
 msgstr "Enkripsi disk"
 
@@ -7650,11 +7672,11 @@ msgstr "Peranti duplikat."
 msgid "Duplicate mount point."
 msgstr "Titik kait duplikat."
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:297
+#: ui/webui/src/components/storage/DiskEncryption.jsx:80
 msgid "Encrypt my data"
 msgstr "Enkripsikan data saya"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:381
+#: ui/webui/src/components/storage/DiskEncryption.jsx:140
 msgid "Encrypt the selected devices?"
 msgstr "Enkripsikan perangkat yang dipilih?"
 
@@ -7662,7 +7684,7 @@ msgstr "Enkripsikan perangkat yang dipilih?"
 msgid "Encrypted devices are locked"
 msgstr "Perangkat terenkripsi itu terkunci"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:363
+#: ui/webui/src/components/storage/DiskEncryption.jsx:122
 msgid "Encryption helps secure your data, to prevent others from accessing it."
 msgstr ""
 "Enkripsi membantu mengamankan data Anda, untuk mencegah orang lain "
@@ -7685,8 +7707,8 @@ msgstr "Menghapus data tidak dapat dibatalkan. Pastikan memiliki cadangan."
 msgid "Error details"
 msgstr "Rincian kesalahan"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:233
-#: ui/webui/src/components/AnacondaWizard.jsx:386
+#: ui/webui/src/components/AnacondaWizard.jsx:254
+#: ui/webui/src/components/AnacondaWizard.jsx:412
 msgid "Error was hit when going back from $0."
 msgstr "Kesalahan dijumpai saat kembali dari $0."
 
@@ -7710,7 +7732,7 @@ msgstr ""
 msgid "Find a language"
 msgstr "Cari suatu bahasa"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:202
+#: ui/webui/src/components/Password.jsx:245
 msgid "Hide confirmed password"
 msgstr "Sembunyikan kata sandi terkonfirmasi"
 
@@ -7718,7 +7740,7 @@ msgstr "Sembunyikan kata sandi terkonfirmasi"
 msgid "Hide passphrase"
 msgstr "Sembunyikan frasa sandi"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:159
+#: ui/webui/src/components/Password.jsx:218
 msgid "Hide password"
 msgstr "Sembunyikan kata sandi"
 
@@ -7767,7 +7789,7 @@ msgstr "Metode instalasi"
 msgid "Installation of the system failed: $0"
 msgstr "Instalasi sistem gagal: $0"
 
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:144
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:154
 msgid "Installation type"
 msgstr "Tipe instalasi"
 
@@ -7813,7 +7835,7 @@ msgstr "Konfigurasi disk manual: Pemetaan titik kait"
 msgid "Manually select storage locations for installation."
 msgstr "Pilih lokasi penyimpanan secara manual untuk instalasi."
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:72
+#: ui/webui/src/components/Password.jsx:72
 msgid "Medium"
 msgstr "Medium"
 
@@ -7840,7 +7862,7 @@ msgstr "Gagal mengubah penyimpanan."
 msgid "Mount point assignment"
 msgstr "Penugasan titik kait"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:173
+#: ui/webui/src/components/Password.jsx:47
 msgid "Must be at least $0 characters"
 msgstr "Mesti paling tidak $0 karakter"
 
@@ -7862,7 +7884,7 @@ msgstr ""
 "Jaringan tidak tersedia. Konfigurasikan jaringan di menu bilah puncak untuk "
 "melaporkan masalah."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:359
+#: ui/webui/src/components/AnacondaWizard.jsx:385
 msgid "Next"
 msgstr "Selanjutnya"
 
@@ -7905,7 +7927,7 @@ msgstr ""
 "untuk tujuan pengembangan dan pengujian. JANGAN gunakan perangkat lunak ini "
 "untuk pekerjaan penting apa pun atau untuk lingkungan produksi."
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:366
+#: ui/webui/src/components/storage/DiskEncryption.jsx:125
 msgid ""
 "Only new partitions will be encrypted. Existing partitions will remain "
 "untouched."
@@ -7921,7 +7943,7 @@ msgstr "Sistem operasi"
 msgid "Passphrase did not match any locked device"
 msgstr "Frasa sandi tidak cocok dengan perangkat yang terkunci"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:216
+#: ui/webui/src/components/Password.jsx:259
 msgid "Passphrases must match"
 msgstr "Frasa sandi tidak cocok"
 
@@ -7945,7 +7967,7 @@ msgstr "Prarilis"
 msgid "Preparing report"
 msgstr "Mempersiapkan laporan"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:448
+#: ui/webui/src/components/AnacondaWizard.jsx:474
 msgid "Quit installer?"
 msgstr "Keluar pemasang?"
 
@@ -7953,11 +7975,11 @@ msgstr "Keluar pemasang?"
 msgid "Re-scan"
 msgstr "Pindai ulang"
 
-#: ui/webui/src/components/app.jsx:98
+#: ui/webui/src/components/app.jsx:100
 msgid "Reading information about the computer failed."
 msgstr "Gagal membaca informasi tentang komputer."
 
-#: ui/webui/src/components/app.jsx:103
+#: ui/webui/src/components/app.jsx:105
 msgid "Reading installer configuration failed."
 msgstr "Gagal membaca konfigurasi pemasang."
 
@@ -7966,13 +7988,13 @@ msgid "Reading installer version information failed."
 msgstr "Gagal membaca informasi versi pemasang."
 
 #: ui/webui/src/components/Error.jsx:216
-#: ui/webui/src/components/AnacondaWizard.jsx:410
 #: ui/webui/src/components/AnacondaWizard.jsx:436
+#: ui/webui/src/components/AnacondaWizard.jsx:462
 #: ui/webui/src/components/installation/InstallationProgress.jsx:222
 msgid "Reboot"
 msgstr "Boot ulang"
 
-#: ui/webui/src/components/AnacondaWizard.jsx:448
+#: ui/webui/src/components/AnacondaWizard.jsx:474
 msgid "Reboot system?"
 msgstr "Boot ulang sistem?"
 
@@ -8016,8 +8038,8 @@ msgstr "Pindai ulang penyimpanan"
 msgid "Rescanning of the disks failed."
 msgstr "Pemindaian ulang disk gagal."
 
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:231
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:232
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:241
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:242
 msgid "Review and install"
 msgstr "Tinjau dan pasang"
 
@@ -8033,7 +8055,7 @@ msgstr "Pilih suatu disk"
 msgid "Selected device's format '$0' cannot be reformatted."
 msgstr "Format '$0' dari perangkat yang dipilih tidak bisa diformat ulang."
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:202
+#: ui/webui/src/components/Password.jsx:245
 msgid "Show confirmed password"
 msgstr "Tampilkan kata sandi terkonfirmasi"
 
@@ -8041,7 +8063,7 @@ msgstr "Tampilkan kata sandi terkonfirmasi"
 msgid "Show passphrase"
 msgstr "Tampilkan frasa sandi"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:159
+#: ui/webui/src/components/Password.jsx:218
 msgid "Show password"
 msgstr "Tampilkan kata sandi"
 
@@ -8065,7 +8087,7 @@ msgstr ""
 msgid "Some devices use the same name: $0."
 msgstr "Beberapa perangkat menggunakan nama yang sama: $0."
 
-#: ui/webui/src/components/review/ReviewConfiguration.jsx:165
+#: ui/webui/src/components/review/ReviewConfiguration.jsx:175
 msgid "Storage"
 msgstr "Penyimpanan"
 
@@ -8150,11 +8172,15 @@ msgstr ""
 "Disk yang dipilih akan dihapus, ini tidak dapat dibatalkan. Anda yakin "
 "hendak melanjutkan instalasi?"
 
+#: ui/webui/src/components/users/Accounts.jsx:105
+msgid "This account will have administration priviledge with sudo."
+msgstr ""
+
 #: ui/webui/src/components/AnacondaHeader.jsx:68
 msgid "This is unstable, pre-release software"
 msgstr "Ini perangkat lunak pra-rilis yang tidak stabil"
 
-#: ui/webui/src/components/storage/DiskEncryption.jsx:257
+#: ui/webui/src/components/storage/DiskEncryption.jsx:57
 msgid "This may take a moment"
 msgstr "Ini mungkin perlu waktu"
 
@@ -8201,6 +8227,13 @@ msgstr "Buka kunci perangkat terenkripsi"
 msgid "Use free space for the installation"
 msgstr "Gunakan ruang bebas untuk instalasi"
 
+#: ui/webui/src/components/users/Accounts.jsx:117
+#, fuzzy
+#| msgctxt "GUI|Password"
+#| msgid "D_isable root account"
+msgid "User account"
+msgstr "Nonakt_ifkan akun root"
+
 #: ui/webui/src/components/localization/InstallationLanguage.jsx:335
 msgid "Welcome"
 msgstr "Selamat Datang"
@@ -8213,7 +8246,7 @@ msgstr "Selamat datang di $0"
 msgid "Welcome. Let's install $0 now."
 msgstr "Selamat datang! Mari memasang $0 sekarang."
 
-#: ui/webui/src/components/AnacondaWizard.jsx:452
+#: ui/webui/src/components/AnacondaWizard.jsx:478
 msgid "Your progress will not be saved."
 msgstr "Kemajuan Anda tidak akan disimpan."
 
@@ -8670,9 +8703,6 @@ msgstr "langkah tertunda"
 
 #~ msgid "Confirm root password"
 #~ msgstr "Konfirmasi kata sandi root"
-
-#~ msgid "Lock root account"
-#~ msgstr "Kunci akun root"
 
 #~ msgid "Network & Host Name"
 #~ msgstr "Jaringan & Nama Host"
