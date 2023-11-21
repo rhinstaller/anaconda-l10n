@@ -26,7 +26,7 @@ msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2023-08-09 17:46+0200\n"
-"PO-Revision-Date: 2023-11-21 19:01+0000\n"
+"PO-Revision-Date: 2023-11-22 01:03+0000\n"
 "Last-Translator: Julen Sansó <julensanso@gmail.com>\n"
 "Language-Team: Catalan <https://translate.fedoraproject.org/projects/"
 "anaconda/rhel-8/ca/>\n"
@@ -253,7 +253,7 @@ msgstr "L'URL no té el component de l'amfitrió"
 
 #: pyanaconda/core/storage.py:84
 msgid "Unsupported"
-msgstr ""
+msgstr "No admès"
 
 #: pyanaconda/core/storage.py:85 pyanaconda/core/storage.py:96
 msgid "LVM"
@@ -594,12 +594,15 @@ msgid ""
 "The LDL DASD disk {name} ({busid}) cannot be used for the installation. "
 "Please format it."
 msgstr ""
+"El disc DASD LDL {name}({busid}) so s'ha pogut utilitzar per a la instal·"
+"lació. Si us plau, fuetegeu-lo."
 
 #: pyanaconda/modules/storage/checker/utils.py:106
 #, python-format
 msgid ""
 "It is recommended to create a new file system on your %(mount)s partition."
 msgstr ""
+"Està recomanat crear un nou sistema d'arxius en la seva partició %(mount)s."
 
 #: pyanaconda/modules/storage/checker/utils.py:122
 #, python-format
@@ -720,6 +723,9 @@ msgid ""
 "without an encryption key specified for this device. Please, rescan the "
 "storage."
 msgstr ""
+"El dispositiu LUKS era desbloquejat {} no pot ser utilitzat per la instal·"
+"lació sense una clau d'encriptació específica per aquest dispositiu. Si us "
+"plau, torni a escanejar l'emmagatzematge."
 
 #: pyanaconda/modules/storage/checker/utils.py:375
 #, python-format
@@ -736,6 +742,8 @@ msgid ""
 "The available memory is less than %(size)s which can be too small for LUKS2 "
 "format. It may fail."
 msgstr ""
+"La memòria disponible és menor de %(size)s, que pot ser molt poc pe format "
+"LUKS2. Pot fallar."
 
 #: pyanaconda/modules/storage/checker/utils.py:424
 #, python-format
@@ -1536,7 +1544,7 @@ msgstr ""
 #: pyanaconda/modules/subscription/runtime.py:313
 #: pyanaconda/ui/gui/spokes/subscription.py:1009
 msgid "Registration failed."
-msgstr ""
+msgstr "El registre ha fallat."
 
 #: pyanaconda/modules/subscription/runtime.py:344
 msgid "Unregistration failed."
@@ -1737,20 +1745,15 @@ msgid "Rescanning disks finished."
 msgstr ""
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.py:158
-#, fuzzy, python-format
-#| msgid ""
-#| "The following nodes were discovered using the iSCSI initiator "
-#| "<b>%(initiatorName)s</b> using the target IP address "
-#| "<b>%(targetAddress)s</b>.  Please select which nodes you wish to log into:"
+#, python-format
 msgid ""
 "The following nodes were discovered using the iSCSI initiator "
 "<b>%(initiatorName)s</b> using the portal IP address <b>%(portalAddress)s</"
 "b>.  Please select which nodes you wish to log into:"
 msgstr ""
-"Els següents nodes van ser descoberts amb l'iniciador iSCSI "
-"<b>%(initiatorName)s</b> mitjançant l'adreça IP de destinació "
-"<b>%(targetAddress)s</b>.  Seleccioneu en quins nodes voleu iniciar la "
-"sessió:"
+"Els nodes següents han sigut descoberts usant l'indicador ISCSI "
+"%(initiatorName)s usant el portal amb l'adreça IP %(portalAddress)s. · · Si "
+"us plau seleccioni a quins nodes vols accedir:"
 
 #: pyanaconda/ui/gui/spokes/lib/detailederror.py:48
 msgctxt "GUI|Detailed Error Dialog"
@@ -1805,8 +1808,9 @@ msgid "Private key password: "
 msgstr "Contrasenya de la clau privada:"
 
 #: pyanaconda/ui/gui/spokes/lib/subscription.py:66
+#, fuzzy
 msgid "Other ({})"
-msgstr ""
+msgstr "Altre ({})"
 
 #: pyanaconda/ui/gui/spokes/lib/subscription.py:100
 msgid "Not Specified"
@@ -1814,31 +1818,31 @@ msgstr ""
 
 #: pyanaconda/ui/gui/spokes/lib/subscription.py:152
 msgid "Service level"
-msgstr ""
+msgstr "Dispositius de servei"
 
 #: pyanaconda/ui/gui/spokes/lib/subscription.py:155
 msgid "SKU"
-msgstr ""
+msgstr "SKU"
 
 #: pyanaconda/ui/gui/spokes/lib/subscription.py:158
 msgid "Contract"
-msgstr ""
+msgstr "Contracte"
 
 #: pyanaconda/ui/gui/spokes/lib/subscription.py:171
 msgid "Start date"
-msgstr ""
+msgstr "Inicia la data"
 
 #: pyanaconda/ui/gui/spokes/lib/subscription.py:174
 msgid "End date"
-msgstr ""
+msgstr "Data de finalització"
 
 #: pyanaconda/ui/gui/spokes/lib/subscription.py:177
 msgid "Entitlements"
-msgstr ""
+msgstr "Drets"
 
 #: pyanaconda/ui/gui/spokes/lib/subscription.py:179
 msgid "{} consumed"
-msgstr ""
+msgstr "{} consumit"
 
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:444
 msgid "DATA"
@@ -1879,7 +1883,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:559
 msgctxt "GUI|Custom Partitioning|Autopart Page"
 msgid "_Encrypt automatically created mount points by default:"
-msgstr ""
+msgstr "_Xifrar els punts de muntatge creats automàticament per defecte:"
 
 #: pyanaconda/ui/gui/spokes/lib/cart.py:193
 msgctxt "GUI|Selected Disks Dialog"
@@ -2004,12 +2008,15 @@ msgstr "Esteu segur que voleu eliminar totes les dades de %s?"
 msgid ""
 "Select all of the drives you would like the mount point to be created on."
 msgstr ""
+"Seleccioneu tots els dispositius que vulgueu afegir en el punt de muntatge."
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:408
 msgid ""
 "Select a drive for the mount point to be created on. If you select multiple, "
 "only 1 drive will be used."
 msgstr ""
+"Seleccioneu un disc per a assignar el punt de muntatge. Si selecciona "
+"varies, solament 1 disc serà utilitzat."
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:709
 msgid "No disks selected."
@@ -2242,29 +2249,21 @@ msgid "This file system may not be resized."
 msgstr "Aquest sistema de fitxers no s'hauria de redimensionar."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:940
-#, fuzzy
-#| msgid ""
-#| "Error checking storage configuration.  <a href=\"\">Click for details</a> "
-#| "or press Done again to continue."
 msgid ""
 "Error checking storage configuration. <a href=\"\">Click for details</a> or "
 "press Done again to continue."
 msgstr ""
 "S'ha produït un error en la comprovació de la configuració de "
-"l'emmagatzematge.  <a href=\"\">Feu clic per als detalls</a> o torneu a "
+"l'emmagatzematge. <a href=\"\">Feu clic per als detalls</a> o torneu a "
 "prémer fet per continuar."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:944
-#, fuzzy
-#| msgid ""
-#| "Warning checking storage configuration.  <a href=\"\">Click for details</"
-#| "a> or press Done again to continue."
 msgid ""
 "Warning checking storage configuration. <a href=\"\">Click for details</a> "
 "or press Done again to continue."
 msgstr ""
 "S'ha produït una advertència en la comprovació de la configuració de "
-"l'emmagatzematge.  <a href=\"\">Feu clic per als detalls</a> o torneu a "
+"l'emmagatzematge. <a href=\"\">Feu clic per als detalls</a> o torneu a "
 "prémer fet per continuar."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1026
@@ -2795,10 +2794,8 @@ msgstr "Hi ha especificat un entorn no vàlid al kickstart"
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:330
 #: pyanaconda/ui/gui/spokes/software_selection.py:335
-#, fuzzy
-#| msgid "Error checking software selection"
 msgid "Please confirm software selection"
-msgstr "S'ha produït un error en la selecció del programari"
+msgstr "Confirmi la selecció del programari"
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:340
 msgid "Selected environment is not valid"
@@ -3062,55 +3059,55 @@ msgstr "D'ac_ord"
 #: pyanaconda/ui/gui/spokes/subscription.py:73
 msgctxt "GUI|Spoke"
 msgid "_Connect to Red Hat"
-msgstr ""
+msgstr "Connectat a Red Hat"
 
 #: pyanaconda/ui/gui/spokes/subscription.py:251
 msgid "Activation key set."
-msgstr ""
+msgstr "Clau d'activació establés."
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1001
 msgid "Unregistering..."
-msgstr ""
+msgstr "Anulant el registre..."
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1003
 msgid "Registering..."
-msgstr ""
+msgstr "Registrant..."
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1005
 msgid "Attaching subscription..."
-msgstr ""
+msgstr "Adjuntant la subscripció..."
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1007
 msgid "Subscription attached."
-msgstr ""
+msgstr "Subscripció adjuntada."
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1011
 msgid "Registered."
-msgstr ""
+msgstr "Registrat."
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1013
 msgid "Not registered."
-msgstr ""
+msgstr "No registrat."
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1044
 msgid "Registered with account {}"
-msgstr ""
+msgstr "Registrada amb compte {}"
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1048
 msgid "Registered with organization {}"
-msgstr ""
+msgstr "Registrat amb l'organització {}"
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1056
 msgid "Role: {}"
-msgstr ""
+msgstr "Rol: {}"
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1060
 msgid "SLA: {}"
-msgstr ""
+msgstr "SLA: {}"
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1064
 msgid "Usage: {}"
-msgstr ""
+msgstr "Utilització {}"
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1072
 msgid "Connected to Red Hat Insights"
@@ -3254,7 +3251,7 @@ msgstr "S'està comprovant la configuració de l'emmagatzematge..."
 
 #: pyanaconda/ui/lib/subscription.py:301
 msgid "Registration failed due to insufficient credentials."
-msgstr ""
+msgstr "Hi ha hagut un error a causa de les credencials insuficients."
 
 #: pyanaconda/ui/tui/hubs/__init__.py:52
 msgid "Default HUB title"
@@ -3765,7 +3762,7 @@ msgstr ""
 #: pyanaconda/ui/tui/spokes/storage.py:660
 msgctxt "TUI|Spoke Navigation|Partitioning"
 msgid "s"
-msgstr ""
+msgstr "a"
 
 #: pyanaconda/ui/tui/spokes/storage.py:650
 msgid "rescan devices"
@@ -4159,6 +4156,10 @@ msgid ""
 "\n"
 "%(exception)s"
 msgstr ""
+"No s'ha pogut indicar cap flux per un mòdul de flux predeterminat. La instal·"
+"lació es detindrà. Els detalls de l'error són:\n"
+"\n"
+"%(exception)s"
 
 #: pyanaconda/errors.py:214
 #, python-format
@@ -4168,6 +4169,10 @@ msgid ""
 "\n"
 "%(exception)s"
 msgstr ""
+"S'han indicat múltiples fluxos per un mòdul. La instal·lació es detindrà. "
+"Els detalls de l'error són:\n"
+"\n"
+"%(exception)s"
 
 #: pyanaconda/errors.py:222
 #, python-format
