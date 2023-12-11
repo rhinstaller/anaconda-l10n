@@ -36,7 +36,7 @@ msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2023-08-09 17:46+0200\n"
-"PO-Revision-Date: 2023-12-09 00:22+0000\n"
+"PO-Revision-Date: 2023-12-12 01:03+0000\n"
 "Last-Translator: Cibele Bumbel Baginski <cbbaginski@gmail.com>\n"
 "Language-Team: Portuguese <https://translate.fedoraproject.org/projects/"
 "anaconda/rhel-8/pt/>\n"
@@ -420,7 +420,7 @@ msgstr "Mirror mais próximo"
 
 #: pyanaconda/modules/payloads/source/harddrive/harddrive.py:95
 msgid "The --biospart parameter of harddrive command is not supported!"
-msgstr ""
+msgstr "O --biospart como parâmetro do disco rígido não é um comando suportado!"
 
 #: pyanaconda/modules/payloads/source/hmc/hmc.py:53
 msgid "Local media via SE/HMC"
@@ -1257,7 +1257,7 @@ msgstr "Falha ao prosseguir com a instalação."
 #: pyanaconda/modules/storage/snapshot/device.py:43
 #, python-format
 msgid "Snapshot: origin \"%s\" doesn't exists!"
-msgstr ""
+msgstr "Impressão de tela: origem \"%s\" não existe!"
 
 #: pyanaconda/modules/storage/snapshot/device.py:47
 #, python-format
@@ -1294,6 +1294,24 @@ msgid ""
 "* Some drives support re-configuration of sector sizes, for example by "
 "running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 msgstr ""
+"Instruções para instalação manual:\n"
+"*Selecione apenas os discos com um mesmo tamanho de setor durante a "
+"instalação manual em gráficos ou modo de texto.\n"
+"* Quando os discos são inconsistentes em tamanho de setor e são selecionados "
+"para a instalação, restrinja cada Volume de Grupo LVM criado para usar "
+"Volumes Físicos com mesmo tamanho de setor. Isso pode ser feito apenas em "
+"modo gráfico na Customização de partições.\n"
+"\n"
+"Instruções para instalações kickstart:\n"
+"*Restringir quais discos serão usados para o particionamento especificando "
+"'ignoredisk --drives=...' ou 'ignoredisk --only-use=...\"\n"
+"*Especifique quais discos devem ser usados para cada Volume Físico LVM "
+"criado: 'partition pv.1 --ondisk=...'\n"
+"\n"
+"Instruções Gerais:\n"
+"*Esquema de particionamento plano pode ser usado ao invés de LVM.\n"
+"*Alguns drives suportam reconfiguração de tamanho dos setores, por exemplo, "
+"rodando 'hdparm --set-sector-size=<SIZE><DEVICE>'.\n"
 
 #: pyanaconda/modules/storage/installation.py:88
 msgid "An error occurred while resizing the device {}: {}"
@@ -2996,7 +3014,7 @@ msgstr "Desligado de Red Hat Insights"
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1086
 msgid "Subscribed in Simple Content Access mode."
-msgstr ""
+msgstr "Subscrito em modo de Acesso de Conteúdo Simples."
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1088
 msgid "No subscriptions are attached to the system"
@@ -3757,7 +3775,7 @@ msgstr "Configuração NTP"
 
 #: pyanaconda/ui/tui/spokes/time_spoke.py:404
 msgid "no NTP servers have been configured"
-msgstr ""
+msgstr "Nenhum servidor NTP foi configurado"
 
 #: pyanaconda/ui/tui/spokes/time_spoke.py:415
 msgid "Add NTP server"
@@ -3885,6 +3903,7 @@ msgstr ""
 "Ocorreu um erro durante a ativação da sua configuração do armazenamento."
 
 #: pyanaconda/errors.py:119
+#, fuzzy
 msgid ""
 "There is a problem with your existing storage configuration or your initial "
 "settings, for example a kickstart file. You must resolve this matter before "
@@ -3894,6 +3913,15 @@ msgid ""
 "Once you have resolved the issue you can retry the storage scan. If you do "
 "not fix it you will have to exit the installer."
 msgstr ""
+"Foi verificado um problema com as configurações existentes do seu "
+"armazenamento, ou com suas seleções de configuração inicial, por exemplo um "
+"arquivo de início rápido (kickstart) Você precisa resolver isso antes da "
+"instação para prosseguir. Para isso existe uma shell disponível pressionando "
+"Ctrl+Alt+F1 e depois Ctrl-b 2.\n"
+"\n"
+"Assim que você tiver resolvido o problema, pode tentar de novo o "
+"escaneamento de armazenamento. Se você não consertar isso, terá que sair do "
+"instalador."
 
 #: pyanaconda/errors.py:128
 msgctxt "GUI|Storage Detailed Error Dialog"
@@ -5003,44 +5031,44 @@ msgstr "Atualizar _Lista"
 #: pyanaconda/ui/gui/spokes/advanced_user.glade:36
 msgctxt "GUI|Advanced User"
 msgid "_Cancel"
-msgstr ""
+msgstr "_Cancelar"
 
 #: pyanaconda/ui/gui/spokes/advanced_user.glade:50
 msgctxt "GUI|Advanced User"
 msgid "_Save Changes"
-msgstr ""
+msgstr "Salvar alterações"
 
 #: pyanaconda/ui/gui/spokes/advanced_user.glade:82
 msgid "ADVANCED USER CONFIGURATION"
-msgstr ""
+msgstr "CONFIGURAÇÃO AVANÇADA DO UTILIZADOR"
 
 #: pyanaconda/ui/gui/spokes/advanced_user.glade:105
 msgctxt "GUI|Advanced User"
 msgid "Home _directory:"
-msgstr ""
+msgstr "Diretório inicial:"
 
 #: pyanaconda/ui/gui/spokes/advanced_user.glade:140
 msgid "User and Group IDs"
-msgstr ""
+msgstr "IDs de usuário e grupo"
 
 #: pyanaconda/ui/gui/spokes/advanced_user.glade:160
 msgctxt "GUI|Advanced User"
 msgid "Specify a _user ID manually:"
-msgstr ""
+msgstr "Especifique manualmente uma Id. de _utilizador:"
 
 #: pyanaconda/ui/gui/spokes/advanced_user.glade:177
 msgctxt "GUI|Advanced User"
 msgid "Specify a _group ID manually:"
-msgstr ""
+msgstr "Especifique manualmente uma Id. de _grupo:"
 
 #: pyanaconda/ui/gui/spokes/advanced_user.glade:237
 msgid "Group Membership"
-msgstr ""
+msgstr "Membro de Grupo"
 
 #: pyanaconda/ui/gui/spokes/advanced_user.glade:265
 msgctxt "GUI|Advanced User"
 msgid "_Add user to the following groups:"
-msgstr ""
+msgstr "_Adicionar utilizador aos seguintes grupos:"
 
 #: pyanaconda/ui/gui/spokes/advanced_user.glade:298
 msgid "Example:"
@@ -5460,17 +5488,17 @@ msgstr "LUN:"
 
 #: pyanaconda/ui/gui/spokes/blivet_gui.glade:8
 msgid "BLIVET GUI PARTITIONING"
-msgstr ""
+msgstr "BLIVET GUI PARTICIONANDO"
 
 #: pyanaconda/ui/gui/spokes/blivet_gui.glade:131
 msgctxt "GUI|Blivet Gui Partitioning"
 msgid "_Undo last action"
-msgstr ""
+msgstr "Desfazer a última ação"
 
 #: pyanaconda/ui/gui/spokes/blivet_gui.glade:150
 msgctxt "GUI|Blivet Gui Partitioning"
 msgid "_Reset All"
-msgstr ""
+msgstr "Resetar tudo"
 
 #: pyanaconda/ui/gui/spokes/installation_progress.glade:8
 #: pyanaconda/ui/gui/spokes/installation_progress.glade:164
@@ -6932,12 +6960,12 @@ msgstr "SENHA de 'ROOT'"
 #: pyanaconda/ui/gui/spokes/root_password.glade:53
 msgctxt "GUI|Password"
 msgid "_Root Password:"
-msgstr ""
+msgstr "Senha para root:"
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:67
 msgctxt "GUI|Password"
 msgid "_Confirm:"
-msgstr ""
+msgstr "Confirma:"
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:107
 #: pyanaconda/ui/gui/spokes/user.glade:192
@@ -6954,6 +6982,8 @@ msgid ""
 "The root account is used for administering the system.  Enter a password for "
 "the root user."
 msgstr ""
+"A conta root é usada para administrar o sistema. Inserir a senha para "
+"usuário root."
 
 #: pyanaconda/ui/gui/spokes/software_selection.glade:10
 msgid "SOFTWARE SELECTION"
@@ -7296,16 +7326,16 @@ msgstr "_Avançado..."
 #: pyanaconda/ui/gui/spokes/welcome.glade:23
 msgctxt "GUI|Welcome|Beta Warn Dialog"
 msgid "I want to _exit."
-msgstr ""
+msgstr "Eu quero sair."
 
 #: pyanaconda/ui/gui/spokes/welcome.glade:37
 msgctxt "GUI|Welcome|Beta Warn Dialog"
 msgid "I want to _proceed."
-msgstr ""
+msgstr "Eu quero continuar."
 
 #: pyanaconda/ui/gui/spokes/welcome.glade:68
 msgid "This is unstable, pre-release software."
-msgstr ""
+msgstr "Isso é um programa pré-lançamento instável."
 
 #: pyanaconda/ui/gui/spokes/welcome.glade:97
 msgid ""
@@ -7343,7 +7373,7 @@ msgstr "Que língua gostaria de utilizar durante o processo de instalação?"
 
 #: pyanaconda/ui/gui/spokes/welcome.glade:313
 msgid "Languages"
-msgstr ""
+msgstr "Línguas"
 
 #: pyanaconda/ui/gui/spokes/welcome.glade:385
 msgid "Locales"
@@ -7351,7 +7381,7 @@ msgstr "Idiomas"
 
 #: pyanaconda/ui/gui/spokes/welcome.glade:419
 msgid "WELCOME"
-msgstr ""
+msgstr "BEM VINDO"
 
 #: pyanaconda/ui/gui/main.glade:24
 msgctxt "GUI|Error Dialog"
@@ -7387,7 +7417,7 @@ msgstr "Sair"
 #: data/liveinst/gnome/rhel-welcome.desktop:3
 #: data/liveinst/gnome/rhel-welcome.js:62
 msgid "Welcome to Red Hat Enterprise Linux"
-msgstr ""
+msgstr "Bem vindo ao Red Hat Linux Empresarial"
 
 #: data/liveinst/liveinst-setup.desktop:4
 msgid "Liveinst Setup"
@@ -7407,7 +7437,7 @@ msgstr "Instalar o CD Live no seu disco rígido"
 
 #: data/liveinst/gnome/rhel-welcome.js:91
 msgid "Try RHEL"
-msgstr ""
+msgstr "Experimente RHEL"
 
 #: data/liveinst/gnome/rhel-welcome.js:107
 msgid ""
