@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2024-01-25 01:04+0000\n"
+"POT-Creation-Date: 2024-01-31 00:59+0000\n"
 "PO-Revision-Date: 2024-01-05 12:13+0000\n"
 "Last-Translator: Jiří Konečný <jkonecny@redhat.com>\n"
 "Language-Team: Chinese (Traditional) <https://translate.fedoraproject.org/"
@@ -435,6 +435,14 @@ msgctxt "GUI|Date and Time"
 msgid "24-_hour"
 msgstr "24 時制(_H)"
 
+#: pyanaconda/ui/lib/software.py:118
+msgid "4k"
+msgstr "4k"
+
+#: pyanaconda/ui/lib/software.py:119
+msgid "64k"
+msgstr "64k"
+
 #. TRANSLATORS: This is the separator between hours and minutes, like in HH:MM
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:396
 msgctxt "GUI|Date and Time"
@@ -650,11 +658,11 @@ msgstr "加入裝置"
 msgid "Additional repositories"
 msgstr "其它軟體庫"
 
-#: pyanaconda/ui/gui/spokes/software_selection.glade:86
+#: pyanaconda/ui/gui/spokes/software_selection.glade:68
 msgid "Additional software for Selected Environment"
 msgstr "所選環境的額外軟體"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:332
+#: pyanaconda/ui/tui/spokes/software_selection.py:355
 msgid "Additional software for selected environment"
 msgstr "所選環境的額外軟體"
 
@@ -879,11 +887,11 @@ msgstr "IP 位址格式錯誤"
 msgid "Bad format of the netmask"
 msgstr "網路遮罩的格式不良"
 
-#: pyanaconda/ui/gui/spokes/software_selection.glade:66
+#: pyanaconda/ui/gui/spokes/software_selection.glade:117
 msgid "Base Environment"
 msgstr "基礎環境"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:230
+#: pyanaconda/ui/tui/spokes/software_selection.py:238
 msgid "Base environment"
 msgstr "基礎環境"
 
@@ -1330,7 +1338,7 @@ msgstr "已選擇自訂磁碟分割"
 msgid "Custom server URL"
 msgstr "自訂伺服器 URL"
 
-#: pyanaconda/ui/lib/software.py:77
+#: pyanaconda/ui/lib/software.py:82
 msgid "Custom software selected"
 msgstr "已選擇自訂軟體"
 
@@ -1735,13 +1743,13 @@ msgstr "錯誤"
 msgid "Error adding FCoE SAN."
 msgstr "加入 FCoE SAN 時發生錯誤。"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:227
+#: pyanaconda/ui/gui/spokes/software_selection.py:250
 msgid ""
 "Error checking software dependencies.  <a href=\"\">Click for details.</a>"
 msgstr "檢查軟體依賴關係時發生錯誤。<a href=\"\">請點按瞭解詳細資訊。</a>"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:188
-#: pyanaconda/ui/tui/spokes/software_selection.py:162
+#: pyanaconda/ui/gui/spokes/software_selection.py:209
+#: pyanaconda/ui/tui/spokes/software_selection.py:170
 msgid "Error checking software selection"
 msgstr "檢查軟體選項時發生錯誤"
 
@@ -2346,12 +2354,12 @@ msgstr "安裝需要您的磁碟已分過區。選擇想用於安裝的空間、
 msgid "Installation source"
 msgstr "安裝來源"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:204
+#: pyanaconda/ui/tui/spokes/software_selection.py:212
 msgid "Installation source needs to be set up first."
 msgstr "需先設定安裝來源。"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:184
-#: pyanaconda/ui/tui/spokes/software_selection.py:158
+#: pyanaconda/ui/gui/spokes/software_selection.py:205
+#: pyanaconda/ui/tui/spokes/software_selection.py:166
 msgid "Installation source not set up"
 msgstr "尚未設定安裝來源"
 
@@ -2417,7 +2425,7 @@ msgstr "無效的 URL"
 msgid "Invalid container name."
 msgstr "容器名稱無效。"
 
-#: pyanaconda/ui/lib/software.py:80
+#: pyanaconda/ui/lib/software.py:85
 msgid "Invalid environment specified in kickstart"
 msgstr "在 kickstart 中指定了錯誤的環境"
 
@@ -2496,6 +2504,19 @@ msgstr "建議在 %(mount)s 分割區上建立新的檔案系統。"
 #: pyanaconda/ui/gui/spokes/keyboard.glade:388
 msgid "KEYBOARD LAYOUT"
 msgstr "鍵盤配置"
+
+#: pyanaconda/ui/tui/spokes/software_selection.py:404
+#: pyanaconda/ui/gui/spokes/software_selection.glade:179
+#, fuzzy
+#| msgid "Storage Options"
+msgid "Kernel Options"
+msgstr "儲存裝置選項"
+
+#: pyanaconda/ui/tui/spokes/software_selection.py:428
+#, fuzzy
+#| msgid "Storage options"
+msgid "Kernel options"
+msgstr "儲存裝置選項"
 
 #: pyanaconda/ui/gui/spokes/keyboard.py:489
 msgid ""
@@ -2685,7 +2706,7 @@ msgstr "模式"
 msgid "Model"
 msgstr "型號"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:371
+#: pyanaconda/ui/gui/spokes/software_selection.py:431
 msgctxt "GUI|Software Selection|Error Dialog"
 msgid "Modify _Selections"
 msgstr "修改選取項目(_S)"
@@ -2701,6 +2722,10 @@ msgid ""
 msgstr ""
 "在建立下列掛載點之後，\n"
 "將有更多自訂選項可供使用。"
+
+#: pyanaconda/ui/lib/software.py:118
+msgid "More efficient memory usage in smaller environments"
+msgstr ""
 
 #: pyanaconda/modules/storage/bootloader/execution.py:150
 msgid "More than one match found for given boot drive \"{}\"."
@@ -2884,7 +2909,7 @@ msgstr ""
 msgid "No Space"
 msgstr "無空間"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:334
+#: pyanaconda/ui/tui/spokes/software_selection.py:357
 msgid "No additional software to select."
 msgstr "未選取額外軟體。"
 
@@ -3146,6 +3171,13 @@ msgstr "PReP 開機分割區"
 msgid "PV partition \"{}\" is defined multiple times."
 msgstr "PV 分割區 \"{}\" 被定義數次"
 
+#: pyanaconda/ui/gui/spokes/software_selection.glade:206
+#, fuzzy
+#| msgctxt "GUI|Advanced Storage|NVDIMM|Reconfigure"
+#| msgid "_Sector size:"
+msgid "Page size:"
+msgstr "扇區大小(_S)："
+
 #: pyanaconda/ui/gui/spokes/network.glade:887
 msgid "Parent"
 msgstr "父層"
@@ -3267,7 +3299,7 @@ msgid ""
 "step."
 msgstr "在繼續下個步驟之前，請先完成有標記此圖示的項目。"
 
-#: pyanaconda/ui/lib/software.py:84
+#: pyanaconda/ui/lib/software.py:89
 msgid "Please confirm software selection"
 msgstr "請確認軟體選擇"
 
@@ -3459,9 +3491,9 @@ msgstr "探測儲存裝置中"
 msgid "Probing storage..."
 msgstr "正在探測儲存裝置..."
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:180
+#: pyanaconda/ui/gui/spokes/software_selection.py:201
 #: pyanaconda/ui/gui/spokes/storage.py:292
-#: pyanaconda/ui/tui/spokes/software_selection.py:156
+#: pyanaconda/ui/tui/spokes/software_selection.py:164
 #: pyanaconda/ui/tui/spokes/storage.py:139
 msgid "Processing..."
 msgstr "處理中..."
@@ -3637,7 +3669,7 @@ msgstr "Red Hat CDN"
 msgid "Red Hat CDN is unavailable for this installation."
 msgstr "Red Hat CDN 需要註冊。"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:182
+#: pyanaconda/ui/gui/spokes/software_selection.py:203
 msgid "Red Hat CDN requires registration."
 msgstr "Red Hat CDN 需要註冊。"
 
@@ -4038,7 +4070,7 @@ msgstr ""
 "選擇的 {} 磁碟包含也使用更多未選擇磁碟的「{}」儲存區群組。您必須選擇或取消選"
 "擇一組這些所有磁碟。"
 
-#: pyanaconda/ui/lib/software.py:89
+#: pyanaconda/ui/lib/software.py:94
 msgid "Selected environment is not valid"
 msgstr "所選環境錯誤"
 
@@ -4176,8 +4208,8 @@ msgid ""
 "Snapshot: origin \"{}\" of snapshot \"{}\" is not a valid thin LV device."
 msgstr "快照： \"{}\" 快照的 \"{}\" 來源在限縮 LV 裝置中無效。"
 
-#: pyanaconda/ui/tui/spokes/software_selection.py:65
-#: pyanaconda/ui/tui/spokes/software_selection.py:302
+#: pyanaconda/ui/tui/spokes/software_selection.py:68
+#: pyanaconda/ui/tui/spokes/software_selection.py:324
 msgid "Software selection"
 msgstr "軟體選擇"
 
@@ -4193,8 +4225,8 @@ msgstr "有些軟體包、群組、模組可能損壞。"
 msgid "Some packages, groups or modules are missing."
 msgstr "缺少某些包、組或模塊。"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:186
-#: pyanaconda/ui/tui/spokes/software_selection.py:160
+#: pyanaconda/ui/gui/spokes/software_selection.py:207
+#: pyanaconda/ui/tui/spokes/software_selection.py:168
 msgid "Source changed - please verify"
 msgstr "來源已變更 - 請驗證"
 
@@ -4321,6 +4353,10 @@ msgstr "同步寫入磁盤"
 #: pyanaconda/ui/gui/spokes/subscription.glade:803
 msgid "System Purpose"
 msgstr "系統用途"
+
+#: pyanaconda/ui/lib/software.py:119
+msgid "System performance gains for memory-intensive workloads"
+msgstr ""
 
 #: pyanaconda/modules/storage/bootloader/efi.py:217
 #, fuzzy
@@ -4805,7 +4841,7 @@ msgstr "未識別出選擇的 {} 磁碟。"
 msgid "The size \"{}\" is invalid."
 msgstr "大小 \"{}\" 無效。"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:362
+#: pyanaconda/ui/gui/spokes/software_selection.py:422
 msgid ""
 "The software marked for installation has the following errors.  This is "
 "likely caused by an error with your installation source.  You can quit the "
@@ -4814,7 +4850,7 @@ msgstr ""
 "下列標記要安裝的軟體含有下列錯誤。這很可能是由於您的安裝來源有錯誤而引發。您"
 "可以退出安裝程式、更換安裝來源，或者變更您的軟體選取項目。"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:394
+#: pyanaconda/ui/gui/spokes/software_selection.py:454
 msgid ""
 "The software marked for installation has the following warnings. These are "
 "not fatal, but you may wish to make changes to your software selections."
@@ -5397,13 +5433,13 @@ msgstr "WWPN："
 msgid "Waiting for %s threads to finish"
 msgstr "正在等候 %s 執行緒完成"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:232
+#: pyanaconda/ui/gui/spokes/software_selection.py:255
 msgid ""
 "Warning checking software dependencies.  <a href=\"\">Click for details.</a>"
 msgstr "檢查軟體依賴關係時發生警告。<a href=\"\">請點按瞭解詳細資訊。</a>"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:190
-#: pyanaconda/ui/tui/spokes/software_selection.py:164
+#: pyanaconda/ui/gui/spokes/software_selection.py:211
+#: pyanaconda/ui/tui/spokes/software_selection.py:172
 msgid "Warning checking software selection"
 msgstr "檢查軟體選項時發生警告"
 
@@ -6352,7 +6388,7 @@ msgctxt "GUI|Storage|Error Dialog"
 msgid "_Modify Disk Selection"
 msgstr "修改磁碟選取(_M)"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:370
+#: pyanaconda/ui/gui/spokes/software_selection.py:430
 msgctxt "GUI|Software Selection|Error Dialog"
 msgid "_Modify Software Source"
 msgstr "修改軟體來源(_M)"
@@ -6461,7 +6497,7 @@ msgctxt "GUI|Refresh Dialog|Rescan"
 msgid "_OK"
 msgstr "確定(_O)"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:400
+#: pyanaconda/ui/gui/spokes/software_selection.py:460
 msgctxt "GUI|Software Selection|Warning Dialog"
 msgid "_OK"
 msgstr "確定(_O)"
@@ -6565,7 +6601,7 @@ msgctxt "GUI|Detailed Error Dialog"
 msgid "_Quit"
 msgstr "退出(_Q)"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:369
+#: pyanaconda/ui/gui/spokes/software_selection.py:429
 msgctxt "GUI|Software Selection|Error Dialog"
 msgid "_Quit"
 msgstr "退出(_Q)"
@@ -6745,7 +6781,7 @@ msgctxt "GUI|Network|Proxy"
 msgid "_Socks Host"
 msgstr "_Socks 主機"
 
-#: pyanaconda/ui/gui/spokes/software_selection.py:58
+#: pyanaconda/ui/gui/spokes/software_selection.py:62
 msgctxt "GUI|Spoke"
 msgid "_Software Selection"
 msgstr "選擇軟體(_S)"
@@ -7808,28 +7844,6 @@ msgstr "{}。{}"
 
 #~ msgid "reformat"
 #~ msgstr "重新格式化"
-
-#~ msgid "4k"
-#~ msgstr "4k"
-
-#~ msgid "64k"
-#~ msgstr "64k"
-
-#, fuzzy
-#~| msgid "Storage Options"
-#~ msgid "Kernel Options"
-#~ msgstr "儲存裝置選項"
-
-#, fuzzy
-#~| msgid "Storage options"
-#~ msgid "Kernel options"
-#~ msgstr "儲存裝置選項"
-
-#, fuzzy
-#~| msgctxt "GUI|Advanced Storage|NVDIMM|Reconfigure"
-#~| msgid "_Sector size:"
-#~ msgid "Page size:"
-#~ msgstr "扇區大小(_S)："
 
 #, fuzzy
 #~| msgctxt "GUI|Custom Partitioning|Add Dialog"
