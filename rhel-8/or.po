@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2024-02-07 15:14+0100\n"
+"POT-Creation-Date: 2024-02-16 18:27+0100\n"
 "PO-Revision-Date: 2023-07-26 15:53+0000\n"
 "Last-Translator: yangyangdaji <1504305527@qq.com>\n"
 "Language-Team: Odia <https://translate.fedoraproject.org/projects/anaconda/"
@@ -29,6 +29,18 @@ msgstr ""
 
 #: pyanaconda/core/kickstart/addon.py:138
 msgid "Unknown name of the %addon section."
+msgstr ""
+
+#: pyanaconda/core/payload.py:131
+msgid "No host url"
+msgstr ""
+
+#: pyanaconda/core/payload.py:152
+msgid "malformed URL, cannot parse it."
+msgstr ""
+
+#: pyanaconda/core/payload.py:168
+msgid "URL has no host component"
 msgstr ""
 
 #: pyanaconda/core/constants.py:89
@@ -217,18 +229,6 @@ msgstr "ଶ୍ରେଣୀ ଅଦିତଥ୍ୟ ଆହରଣ କରୁଅଛି
 
 #: pyanaconda/core/constants.py:306
 msgid "Anaconda Installer"
-msgstr ""
-
-#: pyanaconda/core/payload.py:131
-msgid "No host url"
-msgstr ""
-
-#: pyanaconda/core/payload.py:152
-msgid "malformed URL, cannot parse it."
-msgstr ""
-
-#: pyanaconda/core/payload.py:168
-msgid "URL has no host component"
 msgstr ""
 
 #: pyanaconda/core/storage.py:84
@@ -678,14 +678,6 @@ msgid ""
 "unselected disks. You must select or de-select all these disks as a set."
 msgstr ""
 
-#: pyanaconda/modules/storage/devicetree/fsset.py:390
-#, python-brace-format
-msgid ""
-"There is an entry in your /etc/fstab file that contains an invalid or "
-"incorrect file system type. The file says that {detected_type} at "
-"{mount_point} is {fstab_type}."
-msgstr ""
-
 #: pyanaconda/modules/storage/devicetree/root.py:342
 msgid "Unknown Linux"
 msgstr ""
@@ -698,6 +690,14 @@ msgstr ""
 #: pyanaconda/modules/storage/devicetree/root.py:347
 #, python-brace-format
 msgid "{product} Linux {version} for {arch}"
+msgstr ""
+
+#: pyanaconda/modules/storage/devicetree/fsset.py:390
+#, python-brace-format
+msgid ""
+"There is an entry in your /etc/fstab file that contains an invalid or "
+"incorrect file system type. The file says that {detected_type} at "
+"{mount_point} is {fstab_type}."
 msgstr ""
 
 #: pyanaconda/modules/storage/devicetree/utils.py:68
@@ -1637,6 +1637,17 @@ msgstr ""
 msgid "{} consumed"
 msgstr ""
 
+#: pyanaconda/ui/gui/spokes/lib/cart.py:193
+msgctxt "GUI|Selected Disks Dialog"
+msgid "_Do not install boot loader"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/lib/cart.py:198
+#: pyanaconda/ui/gui/spokes/lib/cart.glade:200
+msgctxt "GUI|Selected Disks Dialog"
+msgid "_Set as Boot Device"
+msgstr ""
+
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:444
 msgid "DATA"
 msgstr "ତଥ୍ଯ"
@@ -1673,17 +1684,6 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:559
 msgctxt "GUI|Custom Partitioning|Autopart Page"
 msgid "_Encrypt automatically created mount points by default:"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/lib/cart.py:193
-msgctxt "GUI|Selected Disks Dialog"
-msgid "_Do not install boot loader"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/lib/cart.py:198
-#: pyanaconda/ui/gui/spokes/lib/cart.glade:200
-msgctxt "GUI|Selected Disks Dialog"
-msgid "_Set as Boot Device"
 msgstr ""
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:47
@@ -3622,6 +3622,98 @@ msgid ""
 "Would you like to use it anyway?"
 msgstr ""
 
+#: pyanaconda/rescue.py:277
+msgid "Unable to find /bin/bash to execute!  Not starting shell."
+msgstr ""
+
+#: pyanaconda/rescue.py:294
+msgid "Rescue"
+msgstr "ଉଦ୍ଧାର କରନ୍ତୁ"
+
+#: pyanaconda/rescue.py:301
+#, python-format
+msgid ""
+"The rescue environment will now attempt to find your Linux installation and "
+"mount it under the directory : %s.  You can then make any changes required "
+"to your system.  Choose '1' to proceed with this step.\n"
+"You can choose to mount your file systems read-only instead of read-write by "
+"choosing '2'.\n"
+"If for some reason this process does not work choose '3' to skip directly to "
+"a shell.\n"
+"\n"
+msgstr ""
+
+#: pyanaconda/rescue.py:313
+msgid "Continue"
+msgstr "ଆଗକୁ ବଢନ୍ତୁ"
+
+#: pyanaconda/rescue.py:314
+msgid "Read-only mount"
+msgstr ""
+
+#: pyanaconda/rescue.py:315
+msgid "Skip to shell"
+msgstr ""
+
+#: pyanaconda/rescue.py:316
+msgid "Quit (Reboot)"
+msgstr ""
+
+#: pyanaconda/rescue.py:413
+msgid "Rescue Shell"
+msgstr ""
+
+#: pyanaconda/rescue.py:423
+#, python-format
+msgid "Run %s to unmount the system when you are finished."
+msgstr "ତନ୍ତ୍ରକୁ ବିସ୍ଥାପିତ କରିବା ପାଇଁ %s କୁ ଚଲାନ୍ତୁ ଯେତେବେଳେ ଆପଣଙ୍କ କାର୍ଯ୍ୟ ସମାପ୍ତ ହେବ।"
+
+#: pyanaconda/rescue.py:424
+msgid ""
+"When finished, please exit from the shell and your system will reboot.\n"
+msgstr ""
+
+#: pyanaconda/rescue.py:435
+#, python-format
+msgid ""
+"Your system has been mounted under %(mountpoint)s.\n"
+"\n"
+"If you would like to make the root of your system the root of the active "
+"system, run the command:\n"
+"\n"
+"\tchroot %(mountpoint)s\n"
+"\n"
+msgstr ""
+
+#: pyanaconda/rescue.py:447
+#, python-brace-format
+msgid ""
+"An error occurred trying to mount some or all of your system: {message}\n"
+"\n"
+"Some of it may be mounted under {path}."
+msgstr ""
+
+#: pyanaconda/rescue.py:459
+msgid "You don't have any Linux partitions.\n"
+msgstr ""
+
+#: pyanaconda/rescue.py:465
+msgid "Not mounting the system.\n"
+msgstr ""
+
+#: pyanaconda/rescue.py:479
+#, python-format
+msgid "Please press %s to get a shell"
+msgstr ""
+
+#: pyanaconda/rescue.py:496
+msgid "Root Selection"
+msgstr ""
+
+#: pyanaconda/rescue.py:522
+msgid "The following installations were discovered on your system."
+msgstr ""
+
 #: pyanaconda/addons.py:97
 #, python-format
 msgid "Executing %s addon"
@@ -3932,22 +4024,6 @@ msgstr ""
 msgid "Creating snapshots"
 msgstr ""
 
-#: pyanaconda/kickstart.py:540
-msgid ""
-"\n"
-"Some warnings occurred during reading the kickstart file:"
-msgstr ""
-
-#: pyanaconda/kickstart.py:553
-#, python-format
-msgid ""
-"\n"
-"An error occurred during reading the kickstart file:\n"
-"%s\n"
-"\n"
-"The installer will now terminate."
-msgstr ""
-
 #: pyanaconda/network.py:111
 msgid "Host name cannot be None or an empty string."
 msgstr ""
@@ -4037,98 +4113,6 @@ msgstr ""
 #: pyanaconda/pwpolicy.py:155
 #, python-format
 msgid "A %(command)s with the name %(policyName)s has already been defined."
-msgstr ""
-
-#: pyanaconda/rescue.py:277
-msgid "Unable to find /bin/bash to execute!  Not starting shell."
-msgstr ""
-
-#: pyanaconda/rescue.py:294
-msgid "Rescue"
-msgstr "ଉଦ୍ଧାର କରନ୍ତୁ"
-
-#: pyanaconda/rescue.py:301
-#, python-format
-msgid ""
-"The rescue environment will now attempt to find your Linux installation and "
-"mount it under the directory : %s.  You can then make any changes required "
-"to your system.  Choose '1' to proceed with this step.\n"
-"You can choose to mount your file systems read-only instead of read-write by "
-"choosing '2'.\n"
-"If for some reason this process does not work choose '3' to skip directly to "
-"a shell.\n"
-"\n"
-msgstr ""
-
-#: pyanaconda/rescue.py:313
-msgid "Continue"
-msgstr "ଆଗକୁ ବଢନ୍ତୁ"
-
-#: pyanaconda/rescue.py:314
-msgid "Read-only mount"
-msgstr ""
-
-#: pyanaconda/rescue.py:315
-msgid "Skip to shell"
-msgstr ""
-
-#: pyanaconda/rescue.py:316
-msgid "Quit (Reboot)"
-msgstr ""
-
-#: pyanaconda/rescue.py:413
-msgid "Rescue Shell"
-msgstr ""
-
-#: pyanaconda/rescue.py:423
-#, python-format
-msgid "Run %s to unmount the system when you are finished."
-msgstr "ତନ୍ତ୍ରକୁ ବିସ୍ଥାପିତ କରିବା ପାଇଁ %s କୁ ଚଲାନ୍ତୁ ଯେତେବେଳେ ଆପଣଙ୍କ କାର୍ଯ୍ୟ ସମାପ୍ତ ହେବ।"
-
-#: pyanaconda/rescue.py:424
-msgid ""
-"When finished, please exit from the shell and your system will reboot.\n"
-msgstr ""
-
-#: pyanaconda/rescue.py:435
-#, python-format
-msgid ""
-"Your system has been mounted under %(mountpoint)s.\n"
-"\n"
-"If you would like to make the root of your system the root of the active "
-"system, run the command:\n"
-"\n"
-"\tchroot %(mountpoint)s\n"
-"\n"
-msgstr ""
-
-#: pyanaconda/rescue.py:447
-#, python-brace-format
-msgid ""
-"An error occurred trying to mount some or all of your system: {message}\n"
-"\n"
-"Some of it may be mounted under {path}."
-msgstr ""
-
-#: pyanaconda/rescue.py:459
-msgid "You don't have any Linux partitions.\n"
-msgstr ""
-
-#: pyanaconda/rescue.py:465
-msgid "Not mounting the system.\n"
-msgstr ""
-
-#: pyanaconda/rescue.py:479
-#, python-format
-msgid "Please press %s to get a shell"
-msgstr ""
-
-#: pyanaconda/rescue.py:496
-msgid "Root Selection"
-msgstr ""
-
-#: pyanaconda/rescue.py:522
-msgid "The following installations were discovered on your system."
 msgstr ""
 
 #: pyanaconda/startup_utils.py:83
@@ -4312,6 +4296,22 @@ msgid ""
 msgstr ""
 "VNC ପ୍ରବେଶ ସଂକେତ ନିଶ୍ଚିତ ଭାବରେ ଛଅ କିମ୍ବା ଆଠ ଅକ୍ଷର ବିଶିଷ୍ଟ ହେବା ଉଚିତ।\n"
 "ଦୟାକରି ନୂତନ ଏକ ଭରଣ କରନ୍ତୁ, ଅଥବା ପ୍ରବେଶ ସଂକେତ ନଥିଲେ ଖାଲି ଛାଡ଼ନ୍ତୁ।"
+
+#: pyanaconda/kickstart.py:540
+msgid ""
+"\n"
+"Some warnings occurred during reading the kickstart file:"
+msgstr ""
+
+#: pyanaconda/kickstart.py:553
+#, python-format
+msgid ""
+"\n"
+"An error occurred during reading the kickstart file:\n"
+"%s\n"
+"\n"
+"The installer will now terminate."
+msgstr ""
 
 #: anaconda.py:378
 msgid "Unable to create PID file"
@@ -4992,6 +4992,61 @@ msgstr ""
 "ବେତାର ନେଟୱର୍କକୁ ଅଭିଗମ୍ୟ କରିବା ପାଇଁ ପ୍ରବେଶ ସଂକେତ\n"
 "କିମ୍ବା ସଂଗୁପ୍ତ କିଗୁଡ଼ିକ ଆବଶ୍ୟକ"
 
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:23
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Cancel"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:38
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Save Passphrase"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:65
+msgid "DISK ENCRYPTION PASSPHRASE"
+msgstr "ଡିସ୍କ ସଂଗୁପ୍ତକରଣ ପ୍ରବେଶ ସଂକେତ ବାକ୍ୟାଂଶ"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:81
+msgid ""
+"You have chosen to encrypt some of your data. You will need to create a "
+"passphrase that you will use to access your data when you start your "
+"computer."
+msgstr ""
+"ଆପଣ କିଛି ତଥ୍ୟ ସଂଗୁପ୍ତକରଣ କରିବା ପାଇଁ ବାଛିଛନ୍ତି। ଆପଣଙ୍କୁ ଏକ ପ୍ରବେଶ ସଂକେତ ବାକ୍ୟାଂଶ ସୃଷ୍ଟି କରିବାକୁ "
+"ହେବ ଯାହାକି ଆପଣଙ୍କୁ ତଥ୍ୟ ଅଭିଗମ୍ୟ କରିବାରେ ବ୍ୟବହାର ହୋଇଥାଏ ଯେତେବେଳେ ଆପଣ କମ୍ପୁଟର ଆରମ୍ଭ କରିବେ।"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:102
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Passphrase:"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:133
+msgctxt "GUI|Passphrase Dialog"
+msgid "Con_firm:"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:275
+msgid ""
+"Warning: You won't be able to switch between keyboard layouts (from the "
+"default one) when you decrypt your disks after install."
+msgstr ""
+"ଚେତାବନୀ: ଆପଣ କି-ବୋର୍ଡ ଗୁଡ଼ିକ ମଧ୍ଯରେ ସ୍ଥାନାନ୍ତରିତ ହୋଇପାରିବେ ନାହିଁ (ପୂର୍ବନିର୍ଦ୍ଧାରିତ ଠାରୁ) "
+"ଯେତେବେଳେ ଆପଣ ସ୍ଥାପନ ପରେ ଡିସ୍କକୁ ଖୋଲିବେ।"
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:23
+msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
+msgid "_Quit"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:37
+msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
+msgid "_Continue"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:122
+msgid "Unsupported Hardware"
+msgstr ""
+
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:21
 msgctxt "GUI|Custom Partitioning|Confirm Delete Dialog"
 msgid "_Cancel"
@@ -5197,47 +5252,6 @@ msgstr ""
 msgid "Disk formatting complete."
 msgstr ""
 
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:23
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Cancel"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:38
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Save Passphrase"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:65
-msgid "DISK ENCRYPTION PASSPHRASE"
-msgstr "ଡିସ୍କ ସଂଗୁପ୍ତକରଣ ପ୍ରବେଶ ସଂକେତ ବାକ୍ୟାଂଶ"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:81
-msgid ""
-"You have chosen to encrypt some of your data. You will need to create a "
-"passphrase that you will use to access your data when you start your "
-"computer."
-msgstr ""
-"ଆପଣ କିଛି ତଥ୍ୟ ସଂଗୁପ୍ତକରଣ କରିବା ପାଇଁ ବାଛିଛନ୍ତି। ଆପଣଙ୍କୁ ଏକ ପ୍ରବେଶ ସଂକେତ ବାକ୍ୟାଂଶ ସୃଷ୍ଟି କରିବାକୁ "
-"ହେବ ଯାହାକି ଆପଣଙ୍କୁ ତଥ୍ୟ ଅଭିଗମ୍ୟ କରିବାରେ ବ୍ୟବହାର ହୋଇଥାଏ ଯେତେବେଳେ ଆପଣ କମ୍ପୁଟର ଆରମ୍ଭ କରିବେ।"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:102
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Passphrase:"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:133
-msgctxt "GUI|Passphrase Dialog"
-msgid "Con_firm:"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:275
-msgid ""
-"Warning: You won't be able to switch between keyboard layouts (from the "
-"default one) when you decrypt your disks after install."
-msgstr ""
-"ଚେତାବନୀ: ଆପଣ କି-ବୋର୍ଡ ଗୁଡ଼ିକ ମଧ୍ଯରେ ସ୍ଥାନାନ୍ତରିତ ହୋଇପାରିବେ ନାହିଁ (ପୂର୍ବନିର୍ଦ୍ଧାରିତ ଠାରୁ) "
-"ଯେତେବେଳେ ଆପଣ ସ୍ଥାପନ ପରେ ଡିସ୍କକୁ ଖୋଲିବେ।"
-
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:8
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:71
 msgid "RESCAN DISKS"
@@ -5383,20 +5397,6 @@ msgstr "ପ୍ରକାର"
 
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:166
 msgid "Device"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:23
-msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
-msgid "_Quit"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:37
-msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
-msgid "_Continue"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:122
-msgid "Unsupported Hardware"
 msgstr ""
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:67

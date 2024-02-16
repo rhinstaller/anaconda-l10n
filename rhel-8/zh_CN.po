@@ -49,7 +49,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2024-02-07 15:14+0100\n"
+"POT-Creation-Date: 2024-02-16 18:27+0100\n"
 "PO-Revision-Date: 2024-02-14 00:54+0000\n"
 "Last-Translator: Funda Wang <fundawang@yeah.net>\n"
 "Language-Team: Chinese (Simplified) <https://translate.fedoraproject.org/"
@@ -68,6 +68,18 @@ msgstr "缺少 %addon 小节的名称。"
 #: pyanaconda/core/kickstart/addon.py:138
 msgid "Unknown name of the %addon section."
 msgstr "%addon 小节的名称未知。"
+
+#: pyanaconda/core/payload.py:131
+msgid "No host url"
+msgstr "无主机 URL"
+
+#: pyanaconda/core/payload.py:152
+msgid "malformed URL, cannot parse it."
+msgstr "异常 URL，无法解析。"
+
+#: pyanaconda/core/payload.py:168
+msgid "URL has no host component"
+msgstr "URL 中没有主机部分"
 
 #: pyanaconda/core/constants.py:89
 msgid "Start VNC"
@@ -265,18 +277,6 @@ msgstr "正在下载组元数据......"
 #: pyanaconda/core/constants.py:306
 msgid "Anaconda Installer"
 msgstr "Anaconda 安装程序"
-
-#: pyanaconda/core/payload.py:131
-msgid "No host url"
-msgstr "无主机 URL"
-
-#: pyanaconda/core/payload.py:152
-msgid "malformed URL, cannot parse it."
-msgstr "异常 URL，无法解析。"
-
-#: pyanaconda/core/payload.py:168
-msgid "URL has no host component"
-msgstr "URL 中没有主机部分"
 
 #: pyanaconda/core/storage.py:84
 msgid "Unsupported"
@@ -748,16 +748,6 @@ msgstr ""
 "所选择的磁盘 {} 中包括了卷组“{}”，而该卷组使用了您尚未选择的磁盘。您必须将这"
 "些磁盘作为一个集合进行选择或者取消选择。"
 
-#: pyanaconda/modules/storage/devicetree/fsset.py:390
-#, python-brace-format
-msgid ""
-"There is an entry in your /etc/fstab file that contains an invalid or "
-"incorrect file system type. The file says that {detected_type} at "
-"{mount_point} is {fstab_type}."
-msgstr ""
-"您的 /etc/fstab 文件中有一行的文件系统类型无效或不正确。文件中声称位于 "
-"{mount_point} 的 {detected_type} 为 {fstab_type}。"
-
 #: pyanaconda/modules/storage/devicetree/root.py:342
 msgid "Unknown Linux"
 msgstr "未知 Linux 系统"
@@ -771,6 +761,16 @@ msgstr "面向 {arch} 架构的 {product} {version}"
 #, python-brace-format
 msgid "{product} Linux {version} for {arch}"
 msgstr "面向 {arch} 架构的 {product} Linux {version}"
+
+#: pyanaconda/modules/storage/devicetree/fsset.py:390
+#, python-brace-format
+msgid ""
+"There is an entry in your /etc/fstab file that contains an invalid or "
+"incorrect file system type. The file says that {detected_type} at "
+"{mount_point} is {fstab_type}."
+msgstr ""
+"您的 /etc/fstab 文件中有一行的文件系统类型无效或不正确。文件中声称位于 "
+"{mount_point} 的 {detected_type} 为 {fstab_type}。"
 
 #: pyanaconda/modules/storage/devicetree/utils.py:68
 #, python-format
@@ -1700,6 +1700,17 @@ msgstr "权利"
 msgid "{} consumed"
 msgstr "{} 已使用"
 
+#: pyanaconda/ui/gui/spokes/lib/cart.py:193
+msgctxt "GUI|Selected Disks Dialog"
+msgid "_Do not install boot loader"
+msgstr "不安装引导程序(_D)"
+
+#: pyanaconda/ui/gui/spokes/lib/cart.py:198
+#: pyanaconda/ui/gui/spokes/lib/cart.glade:200
+msgctxt "GUI|Selected Disks Dialog"
+msgid "_Set as Boot Device"
+msgstr "设为 Boot 设备(_S)"
+
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:444
 msgid "DATA"
 msgstr "数据"
@@ -1735,17 +1746,6 @@ msgstr "新挂载点将使用以下分区方案(_N)："
 msgctxt "GUI|Custom Partitioning|Autopart Page"
 msgid "_Encrypt automatically created mount points by default:"
 msgstr "默认情况下自动加密创建的挂载点(_E)："
-
-#: pyanaconda/ui/gui/spokes/lib/cart.py:193
-msgctxt "GUI|Selected Disks Dialog"
-msgid "_Do not install boot loader"
-msgstr "不安装引导程序(_D)"
-
-#: pyanaconda/ui/gui/spokes/lib/cart.py:198
-#: pyanaconda/ui/gui/spokes/lib/cart.glade:200
-msgctxt "GUI|Selected Disks Dialog"
-msgid "_Set as Boot Device"
-msgstr "设为 Boot 设备(_S)"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:47
 #, python-format
@@ -3678,6 +3678,112 @@ msgstr ""
 "\n"
 "您仍然想要使用吗？"
 
+#: pyanaconda/rescue.py:277
+msgid "Unable to find /bin/bash to execute!  Not starting shell."
+msgstr "未找到 /bin/bash 来运行！不会启动 shell。"
+
+#: pyanaconda/rescue.py:294
+msgid "Rescue"
+msgstr "救援"
+
+#: pyanaconda/rescue.py:301
+#, python-format
+msgid ""
+"The rescue environment will now attempt to find your Linux installation and "
+"mount it under the directory : %s.  You can then make any changes required "
+"to your system.  Choose '1' to proceed with this step.\n"
+"You can choose to mount your file systems read-only instead of read-write by "
+"choosing '2'.\n"
+"If for some reason this process does not work choose '3' to skip directly to "
+"a shell.\n"
+"\n"
+msgstr ""
+"救援环境现在将开始寻找您所安装的 Linux，并将它挂载到 %s 目录下。然后您便可以"
+"对系统进行必要的更改。如果您想开始执行这一步骤，请选择“1”。\n"
+"还可以选择“2”将文件系统挂载成“只读”模式而不是“读写”模式。\n"
+"如果因某种原因导致此过程失败，可以选择“3”直接进入 shell。\n"
+"\n"
+
+#: pyanaconda/rescue.py:313
+msgid "Continue"
+msgstr "继续"
+
+#: pyanaconda/rescue.py:314
+msgid "Read-only mount"
+msgstr "只读挂载"
+
+#: pyanaconda/rescue.py:315
+msgid "Skip to shell"
+msgstr "跳至 shell"
+
+#: pyanaconda/rescue.py:316
+msgid "Quit (Reboot)"
+msgstr "退出 (重启)"
+
+#: pyanaconda/rescue.py:413
+msgid "Rescue Shell"
+msgstr "救援 Shell"
+
+#: pyanaconda/rescue.py:423
+#, python-format
+msgid "Run %s to unmount the system when you are finished."
+msgstr "完成后运行 %s 命令卸载该文件系统。"
+
+#: pyanaconda/rescue.py:424
+msgid ""
+"When finished, please exit from the shell and your system will reboot.\n"
+msgstr "完成后，请退出 shell，系统将会重新启动。\n"
+
+#: pyanaconda/rescue.py:435
+#, python-format
+msgid ""
+"Your system has been mounted under %(mountpoint)s.\n"
+"\n"
+"If you would like to make the root of your system the root of the active "
+"system, run the command:\n"
+"\n"
+"\tchroot %(mountpoint)s\n"
+"\n"
+msgstr ""
+"您的系统已挂载到 %(mountpoint)s。\n"
+"\n"
+"如果希望将该系统的根目录设置为当前活动系统的根目录，运行以下命令：\n"
+"\n"
+"\tchroot %(mountpoint)s\n"
+"\n"
+
+#: pyanaconda/rescue.py:447
+#, python-brace-format
+msgid ""
+"An error occurred trying to mount some or all of your system: {message}\n"
+"\n"
+"Some of it may be mounted under {path}."
+msgstr ""
+"尝试挂载系统中的某些或全部文件系统时出错：{message}\n"
+"\n"
+"某些文件系统可能已经被挂载到 {path}。"
+
+#: pyanaconda/rescue.py:459
+msgid "You don't have any Linux partitions.\n"
+msgstr "没有任何 Linux 分区。\n"
+
+#: pyanaconda/rescue.py:465
+msgid "Not mounting the system.\n"
+msgstr "没有挂载系统。\n"
+
+#: pyanaconda/rescue.py:479
+#, python-format
+msgid "Please press %s to get a shell"
+msgstr "请按 %s 键进入 shell"
+
+#: pyanaconda/rescue.py:496
+msgid "Root Selection"
+msgstr "选择 root 分区"
+
+#: pyanaconda/rescue.py:522
+msgid "The following installations were discovered on your system."
+msgstr "在机器上中找到以下已安装的系统。"
+
 #: pyanaconda/addons.py:97
 #, python-format
 msgid "Executing %s addon"
@@ -4042,29 +4148,6 @@ msgstr "正在安装引导装载程序"
 msgid "Creating snapshots"
 msgstr "正在创建快照"
 
-#: pyanaconda/kickstart.py:540
-msgid ""
-"\n"
-"Some warnings occurred during reading the kickstart file:"
-msgstr ""
-"\n"
-"读取 kickstart 文件时出现警告："
-
-#: pyanaconda/kickstart.py:553
-#, python-format
-msgid ""
-"\n"
-"An error occurred during reading the kickstart file:\n"
-"%s\n"
-"\n"
-"The installer will now terminate."
-msgstr ""
-"\n"
-"读取 kickstart 文件时发生了下列错误：\n"
-"%s\n"
-"\n"
-"安装程序将终止。"
-
 #: pyanaconda/network.py:111
 msgid "Host name cannot be None or an empty string."
 msgstr "主机名不能为无或使用空白字符串。"
@@ -4155,112 +4238,6 @@ msgstr "%s 需要策略名称"
 #, python-format
 msgid "A %(command)s with the name %(policyName)s has already been defined."
 msgstr "已定义过名为 %(policyName)s 的命令 %(command)s 。"
-
-#: pyanaconda/rescue.py:277
-msgid "Unable to find /bin/bash to execute!  Not starting shell."
-msgstr "未找到 /bin/bash 来运行！不会启动 shell。"
-
-#: pyanaconda/rescue.py:294
-msgid "Rescue"
-msgstr "救援"
-
-#: pyanaconda/rescue.py:301
-#, python-format
-msgid ""
-"The rescue environment will now attempt to find your Linux installation and "
-"mount it under the directory : %s.  You can then make any changes required "
-"to your system.  Choose '1' to proceed with this step.\n"
-"You can choose to mount your file systems read-only instead of read-write by "
-"choosing '2'.\n"
-"If for some reason this process does not work choose '3' to skip directly to "
-"a shell.\n"
-"\n"
-msgstr ""
-"救援环境现在将开始寻找您所安装的 Linux，并将它挂载到 %s 目录下。然后您便可以"
-"对系统进行必要的更改。如果您想开始执行这一步骤，请选择“1”。\n"
-"还可以选择“2”将文件系统挂载成“只读”模式而不是“读写”模式。\n"
-"如果因某种原因导致此过程失败，可以选择“3”直接进入 shell。\n"
-"\n"
-
-#: pyanaconda/rescue.py:313
-msgid "Continue"
-msgstr "继续"
-
-#: pyanaconda/rescue.py:314
-msgid "Read-only mount"
-msgstr "只读挂载"
-
-#: pyanaconda/rescue.py:315
-msgid "Skip to shell"
-msgstr "跳至 shell"
-
-#: pyanaconda/rescue.py:316
-msgid "Quit (Reboot)"
-msgstr "退出 (重启)"
-
-#: pyanaconda/rescue.py:413
-msgid "Rescue Shell"
-msgstr "救援 Shell"
-
-#: pyanaconda/rescue.py:423
-#, python-format
-msgid "Run %s to unmount the system when you are finished."
-msgstr "完成后运行 %s 命令卸载该文件系统。"
-
-#: pyanaconda/rescue.py:424
-msgid ""
-"When finished, please exit from the shell and your system will reboot.\n"
-msgstr "完成后，请退出 shell，系统将会重新启动。\n"
-
-#: pyanaconda/rescue.py:435
-#, python-format
-msgid ""
-"Your system has been mounted under %(mountpoint)s.\n"
-"\n"
-"If you would like to make the root of your system the root of the active "
-"system, run the command:\n"
-"\n"
-"\tchroot %(mountpoint)s\n"
-"\n"
-msgstr ""
-"您的系统已挂载到 %(mountpoint)s。\n"
-"\n"
-"如果希望将该系统的根目录设置为当前活动系统的根目录，运行以下命令：\n"
-"\n"
-"\tchroot %(mountpoint)s\n"
-"\n"
-
-#: pyanaconda/rescue.py:447
-#, python-brace-format
-msgid ""
-"An error occurred trying to mount some or all of your system: {message}\n"
-"\n"
-"Some of it may be mounted under {path}."
-msgstr ""
-"尝试挂载系统中的某些或全部文件系统时出错：{message}\n"
-"\n"
-"某些文件系统可能已经被挂载到 {path}。"
-
-#: pyanaconda/rescue.py:459
-msgid "You don't have any Linux partitions.\n"
-msgstr "没有任何 Linux 分区。\n"
-
-#: pyanaconda/rescue.py:465
-msgid "Not mounting the system.\n"
-msgstr "没有挂载系统。\n"
-
-#: pyanaconda/rescue.py:479
-#, python-format
-msgid "Please press %s to get a shell"
-msgstr "请按 %s 键进入 shell"
-
-#: pyanaconda/rescue.py:496
-msgid "Root Selection"
-msgstr "选择 root 分区"
-
-#: pyanaconda/rescue.py:522
-msgid "The following installations were discovered on your system."
-msgstr "在机器上中找到以下已安装的系统。"
 
 #: pyanaconda/startup_utils.py:83
 #, python-format
@@ -4448,6 +4425,29 @@ msgid ""
 msgstr ""
 "VNC 密码长度必须是 6 到 8 个字符。\n"
 "请输入新密码，或留空保持无密码。"
+
+#: pyanaconda/kickstart.py:540
+msgid ""
+"\n"
+"Some warnings occurred during reading the kickstart file:"
+msgstr ""
+"\n"
+"读取 kickstart 文件时出现警告："
+
+#: pyanaconda/kickstart.py:553
+#, python-format
+msgid ""
+"\n"
+"An error occurred during reading the kickstart file:\n"
+"%s\n"
+"\n"
+"The installer will now terminate."
+msgstr ""
+"\n"
+"读取 kickstart 文件时发生了下列错误：\n"
+"%s\n"
+"\n"
+"安装程序将终止。"
 
 #: anaconda.py:378
 msgid "Unable to create PID file"
@@ -5127,6 +5127,61 @@ msgstr ""
 "访问无线网络需要\n"
 "密码或密钥"
 
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:23
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Cancel"
+msgstr "取消(_C)"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:38
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Save Passphrase"
+msgstr "保存密码(_S)"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:65
+msgid "DISK ENCRYPTION PASSPHRASE"
+msgstr "磁盘加密密码"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:81
+msgid ""
+"You have chosen to encrypt some of your data. You will need to create a "
+"passphrase that you will use to access your data when you start your "
+"computer."
+msgstr ""
+"您已选择加密您的部分数据。您将需要创建一个密码，用于在计算机启动后访问您的数"
+"据。"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:102
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Passphrase:"
+msgstr "密码(_P)："
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:133
+msgctxt "GUI|Passphrase Dialog"
+msgid "Con_firm:"
+msgstr "确认(_F)："
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:275
+msgid ""
+"Warning: You won't be able to switch between keyboard layouts (from the "
+"default one) when you decrypt your disks after install."
+msgstr ""
+"警告：安装完成后，当您对磁盘进行解密时，您将无法在不同的键盘布局之间切换（从"
+"默认键盘布局切换到其他键盘布局）。"
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:23
+msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
+msgid "_Quit"
+msgstr "退出(_Q)"
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:37
+msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
+msgid "_Continue"
+msgstr "继续(_C)"
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:122
+msgid "Unsupported Hardware"
+msgstr "不受支持的硬件"
+
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:21
 msgctxt "GUI|Custom Partitioning|Confirm Delete Dialog"
 msgid "_Cancel"
@@ -5336,47 +5391,6 @@ msgstr ""
 msgid "Disk formatting complete."
 msgstr "磁盘格式化完成。"
 
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:23
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Cancel"
-msgstr "取消(_C)"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:38
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Save Passphrase"
-msgstr "保存密码(_S)"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:65
-msgid "DISK ENCRYPTION PASSPHRASE"
-msgstr "磁盘加密密码"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:81
-msgid ""
-"You have chosen to encrypt some of your data. You will need to create a "
-"passphrase that you will use to access your data when you start your "
-"computer."
-msgstr ""
-"您已选择加密您的部分数据。您将需要创建一个密码，用于在计算机启动后访问您的数"
-"据。"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:102
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Passphrase:"
-msgstr "密码(_P)："
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:133
-msgctxt "GUI|Passphrase Dialog"
-msgid "Con_firm:"
-msgstr "确认(_F)："
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:275
-msgid ""
-"Warning: You won't be able to switch between keyboard layouts (from the "
-"default one) when you decrypt your disks after install."
-msgstr ""
-"警告：安装完成后，当您对磁盘进行解密时，您将无法在不同的键盘布局之间切换（从"
-"默认键盘布局切换到其他键盘布局）。"
-
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:8
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:71
 msgid "RESCAN DISKS"
@@ -5518,20 +5532,6 @@ msgstr "类型"
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:166
 msgid "Device"
 msgstr "设备"
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:23
-msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
-msgid "_Quit"
-msgstr "退出(_Q)"
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:37
-msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
-msgid "_Continue"
-msgstr "继续(_C)"
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:122
-msgid "Unsupported Hardware"
-msgstr "不受支持的硬件"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:67
 #: pyanaconda/ui/gui/spokes/storage.glade:450

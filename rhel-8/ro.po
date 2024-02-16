@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2024-02-07 15:14+0100\n"
+"POT-Creation-Date: 2024-02-16 18:27+0100\n"
 "PO-Revision-Date: 2023-07-02 03:21+0000\n"
 "Last-Translator: yangyangdaji <1504305527@qq.com>\n"
 "Language-Team: Romanian <https://translate.fedoraproject.org/projects/"
@@ -36,6 +36,18 @@ msgstr ""
 #: pyanaconda/core/kickstart/addon.py:138
 msgid "Unknown name of the %addon section."
 msgstr ""
+
+#: pyanaconda/core/payload.py:131
+msgid "No host url"
+msgstr "Nu e setat url „host”"
+
+#: pyanaconda/core/payload.py:152
+msgid "malformed URL, cannot parse it."
+msgstr "URL formatat greșit, nu poate fi parsat."
+
+#: pyanaconda/core/payload.py:168
+msgid "URL has no host component"
+msgstr "URL nu are componentă „host”"
 
 #: pyanaconda/core/constants.py:89
 msgid "Start VNC"
@@ -226,18 +238,6 @@ msgstr "Se descarcă metadatele pentru grup..."
 #: pyanaconda/core/constants.py:306
 msgid "Anaconda Installer"
 msgstr "Programul de instalare Anaconda"
-
-#: pyanaconda/core/payload.py:131
-msgid "No host url"
-msgstr "Nu e setat url „host”"
-
-#: pyanaconda/core/payload.py:152
-msgid "malformed URL, cannot parse it."
-msgstr "URL formatat greșit, nu poate fi parsat."
-
-#: pyanaconda/core/payload.py:168
-msgid "URL has no host component"
-msgstr "URL nu are componentă „host”"
 
 #: pyanaconda/core/storage.py:84
 msgid "Unsupported"
@@ -746,6 +746,20 @@ msgstr ""
 "discul neselectat %(unselected)s. Trebuie să selectați sau să deselectați "
 "aceste discuri împreună."
 
+#: pyanaconda/modules/storage/devicetree/root.py:342
+msgid "Unknown Linux"
+msgstr ""
+
+#: pyanaconda/modules/storage/devicetree/root.py:345
+#, python-brace-format
+msgid "{product} {version} for {arch}"
+msgstr ""
+
+#: pyanaconda/modules/storage/devicetree/root.py:347
+#, python-brace-format
+msgid "{product} Linux {version} for {arch}"
+msgstr ""
+
 #: pyanaconda/modules/storage/devicetree/fsset.py:390
 #, fuzzy, python-brace-format
 #| msgid ""
@@ -760,20 +774,6 @@ msgstr ""
 "O intrare din fișierul /etc/fstab conține un tip invalid sau greșit de "
 "sistem de fișiere:\n"
 "\n"
-
-#: pyanaconda/modules/storage/devicetree/root.py:342
-msgid "Unknown Linux"
-msgstr ""
-
-#: pyanaconda/modules/storage/devicetree/root.py:345
-#, python-brace-format
-msgid "{product} {version} for {arch}"
-msgstr ""
-
-#: pyanaconda/modules/storage/devicetree/root.py:347
-#, python-brace-format
-msgid "{product} Linux {version} for {arch}"
-msgstr ""
 
 #: pyanaconda/modules/storage/devicetree/utils.py:68
 #, python-format
@@ -1809,6 +1809,17 @@ msgstr ""
 msgid "{} consumed"
 msgstr ""
 
+#: pyanaconda/ui/gui/spokes/lib/cart.py:193
+msgctxt "GUI|Selected Disks Dialog"
+msgid "_Do not install boot loader"
+msgstr "_Nu instala încărcătorul (bootloader)"
+
+#: pyanaconda/ui/gui/spokes/lib/cart.py:198
+#: pyanaconda/ui/gui/spokes/lib/cart.glade:200
+msgctxt "GUI|Selected Disks Dialog"
+msgid "_Set as Boot Device"
+msgstr "_Setează ca dispozitiv de încărcare (boot)"
+
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:444
 msgid "DATA"
 msgstr "DATE"
@@ -1848,17 +1859,6 @@ msgstr "_Noile puncte de montare vor folosi următoarea schemă de partiționare
 msgctxt "GUI|Custom Partitioning|Autopart Page"
 msgid "_Encrypt automatically created mount points by default:"
 msgstr ""
-
-#: pyanaconda/ui/gui/spokes/lib/cart.py:193
-msgctxt "GUI|Selected Disks Dialog"
-msgid "_Do not install boot loader"
-msgstr "_Nu instala încărcătorul (bootloader)"
-
-#: pyanaconda/ui/gui/spokes/lib/cart.py:198
-#: pyanaconda/ui/gui/spokes/lib/cart.glade:200
-msgctxt "GUI|Selected Disks Dialog"
-msgid "_Set as Boot Device"
-msgstr "_Setează ca dispozitiv de încărcare (boot)"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:47
 #, python-format
@@ -3931,6 +3931,118 @@ msgstr ""
 "\n"
 "Doriți să o folosiți chiar și în acest caz?"
 
+#: pyanaconda/rescue.py:277
+msgid "Unable to find /bin/bash to execute!  Not starting shell."
+msgstr ""
+"Nu se poate găsi /bin/bash pentru execuție! Nu se pornește linia de comandă."
+
+#: pyanaconda/rescue.py:294
+msgid "Rescue"
+msgstr "Recuperează"
+
+#: pyanaconda/rescue.py:301
+#, python-format
+msgid ""
+"The rescue environment will now attempt to find your Linux installation and "
+"mount it under the directory : %s.  You can then make any changes required "
+"to your system.  Choose '1' to proceed with this step.\n"
+"You can choose to mount your file systems read-only instead of read-write by "
+"choosing '2'.\n"
+"If for some reason this process does not work choose '3' to skip directly to "
+"a shell.\n"
+"\n"
+msgstr ""
+"Mediul de salvare va încerca să găsească instalarea de Linux și să o monteze "
+"sub directorul: %s.  Puteți apoi realiza orice modificări necesare pentru "
+"sistem. Alegeți „1” pentru a continua cu acest pas.\n"
+"Puteți alege montarea sistemului în mod „numai citire” în loc de „citire/"
+"scriere” prin opțiunea „2”.\n"
+"Dacă această procedură nu funcționează, puteți alege opțiunea „3” pentru a "
+"intra direct la linia de comandă.\n"
+"\n"
+
+#: pyanaconda/rescue.py:313
+msgid "Continue"
+msgstr "Continuă"
+
+#: pyanaconda/rescue.py:314
+msgid "Read-only mount"
+msgstr "Montare „numai citire”"
+
+#: pyanaconda/rescue.py:315
+msgid "Skip to shell"
+msgstr "Mergi direct la linia de comandă"
+
+#: pyanaconda/rescue.py:316
+msgid "Quit (Reboot)"
+msgstr "Ieșire (Reboot)"
+
+#: pyanaconda/rescue.py:413
+msgid "Rescue Shell"
+msgstr "Linia de comandă de recuperare"
+
+#: pyanaconda/rescue.py:423
+#, python-format
+msgid "Run %s to unmount the system when you are finished."
+msgstr "Rulați %s pentru a demonta sistemul când ați terminat."
+
+#: pyanaconda/rescue.py:424
+msgid ""
+"When finished, please exit from the shell and your system will reboot.\n"
+msgstr ""
+"După ce terminați, vă rugăm ieșiți din linia de comandă și sistemul "
+"dumneavoastră va fi repornit.\n"
+
+#: pyanaconda/rescue.py:435
+#, python-format
+msgid ""
+"Your system has been mounted under %(mountpoint)s.\n"
+"\n"
+"If you would like to make the root of your system the root of the active "
+"system, run the command:\n"
+"\n"
+"\tchroot %(mountpoint)s\n"
+"\n"
+msgstr ""
+
+#: pyanaconda/rescue.py:447
+#, fuzzy, python-brace-format
+#| msgid ""
+#| "An error occurred trying to mount some or all of your system.  Some of it "
+#| "may be mounted under %s\n"
+#| "\n"
+msgid ""
+"An error occurred trying to mount some or all of your system: {message}\n"
+"\n"
+"Some of it may be mounted under {path}."
+msgstr ""
+"S-a întâmpinat o eroare la încercarea de a monta parțial sau total sistemul. "
+"Unele dintre acestea pot fi montate sub %s\n"
+"\n"
+
+#: pyanaconda/rescue.py:459
+#, fuzzy
+#| msgid "You don't have any Linux partitions. %s\n"
+msgid "You don't have any Linux partitions.\n"
+msgstr "Nu aveți nicio partiție Linux. %s\n"
+
+#: pyanaconda/rescue.py:465
+msgid "Not mounting the system.\n"
+msgstr "Sistemul nu se montează.\n"
+
+#: pyanaconda/rescue.py:479
+#, python-format
+msgid "Please press %s to get a shell"
+msgstr "Apăsați %s pentru o linie de comandă."
+
+#: pyanaconda/rescue.py:496
+msgid "Root Selection"
+msgstr "Selecție rădăcină (root)"
+
+#: pyanaconda/rescue.py:522
+msgid "The following installations were discovered on your system."
+msgstr ""
+
 #: pyanaconda/addons.py:97
 #, python-format
 msgid "Executing %s addon"
@@ -4323,22 +4435,6 @@ msgstr "Se instalează încărcătorul de sistem"
 msgid "Creating snapshots"
 msgstr "Se creează snapshot-uri"
 
-#: pyanaconda/kickstart.py:540
-msgid ""
-"\n"
-"Some warnings occurred during reading the kickstart file:"
-msgstr ""
-
-#: pyanaconda/kickstart.py:553
-#, python-format
-msgid ""
-"\n"
-"An error occurred during reading the kickstart file:\n"
-"%s\n"
-"\n"
-"The installer will now terminate."
-msgstr ""
-
 #: pyanaconda/network.py:111
 msgid "Host name cannot be None or an empty string."
 msgstr "Host name nu poate fi „niciuna” sau un șir nul."
@@ -4432,118 +4528,6 @@ msgstr "este necesară politică (policy) pentru %s"
 #, python-format
 msgid "A %(command)s with the name %(policyName)s has already been defined."
 msgstr "%(command)s cu același nume %(policyName)s a fost deja definită."
-
-#: pyanaconda/rescue.py:277
-msgid "Unable to find /bin/bash to execute!  Not starting shell."
-msgstr ""
-"Nu se poate găsi /bin/bash pentru execuție! Nu se pornește linia de comandă."
-
-#: pyanaconda/rescue.py:294
-msgid "Rescue"
-msgstr "Recuperează"
-
-#: pyanaconda/rescue.py:301
-#, python-format
-msgid ""
-"The rescue environment will now attempt to find your Linux installation and "
-"mount it under the directory : %s.  You can then make any changes required "
-"to your system.  Choose '1' to proceed with this step.\n"
-"You can choose to mount your file systems read-only instead of read-write by "
-"choosing '2'.\n"
-"If for some reason this process does not work choose '3' to skip directly to "
-"a shell.\n"
-"\n"
-msgstr ""
-"Mediul de salvare va încerca să găsească instalarea de Linux și să o monteze "
-"sub directorul: %s.  Puteți apoi realiza orice modificări necesare pentru "
-"sistem. Alegeți „1” pentru a continua cu acest pas.\n"
-"Puteți alege montarea sistemului în mod „numai citire” în loc de „citire/"
-"scriere” prin opțiunea „2”.\n"
-"Dacă această procedură nu funcționează, puteți alege opțiunea „3” pentru a "
-"intra direct la linia de comandă.\n"
-"\n"
-
-#: pyanaconda/rescue.py:313
-msgid "Continue"
-msgstr "Continuă"
-
-#: pyanaconda/rescue.py:314
-msgid "Read-only mount"
-msgstr "Montare „numai citire”"
-
-#: pyanaconda/rescue.py:315
-msgid "Skip to shell"
-msgstr "Mergi direct la linia de comandă"
-
-#: pyanaconda/rescue.py:316
-msgid "Quit (Reboot)"
-msgstr "Ieșire (Reboot)"
-
-#: pyanaconda/rescue.py:413
-msgid "Rescue Shell"
-msgstr "Linia de comandă de recuperare"
-
-#: pyanaconda/rescue.py:423
-#, python-format
-msgid "Run %s to unmount the system when you are finished."
-msgstr "Rulați %s pentru a demonta sistemul când ați terminat."
-
-#: pyanaconda/rescue.py:424
-msgid ""
-"When finished, please exit from the shell and your system will reboot.\n"
-msgstr ""
-"După ce terminați, vă rugăm ieșiți din linia de comandă și sistemul "
-"dumneavoastră va fi repornit.\n"
-
-#: pyanaconda/rescue.py:435
-#, python-format
-msgid ""
-"Your system has been mounted under %(mountpoint)s.\n"
-"\n"
-"If you would like to make the root of your system the root of the active "
-"system, run the command:\n"
-"\n"
-"\tchroot %(mountpoint)s\n"
-"\n"
-msgstr ""
-
-#: pyanaconda/rescue.py:447
-#, fuzzy, python-brace-format
-#| msgid ""
-#| "An error occurred trying to mount some or all of your system.  Some of it "
-#| "may be mounted under %s\n"
-#| "\n"
-msgid ""
-"An error occurred trying to mount some or all of your system: {message}\n"
-"\n"
-"Some of it may be mounted under {path}."
-msgstr ""
-"S-a întâmpinat o eroare la încercarea de a monta parțial sau total sistemul. "
-"Unele dintre acestea pot fi montate sub %s\n"
-"\n"
-
-#: pyanaconda/rescue.py:459
-#, fuzzy
-#| msgid "You don't have any Linux partitions. %s\n"
-msgid "You don't have any Linux partitions.\n"
-msgstr "Nu aveți nicio partiție Linux. %s\n"
-
-#: pyanaconda/rescue.py:465
-msgid "Not mounting the system.\n"
-msgstr "Sistemul nu se montează.\n"
-
-#: pyanaconda/rescue.py:479
-#, python-format
-msgid "Please press %s to get a shell"
-msgstr "Apăsați %s pentru o linie de comandă."
-
-#: pyanaconda/rescue.py:496
-msgid "Root Selection"
-msgstr "Selecție rădăcină (root)"
-
-#: pyanaconda/rescue.py:522
-msgid "The following installations were discovered on your system."
-msgstr ""
 
 #: pyanaconda/startup_utils.py:83
 #, python-format
@@ -4732,6 +4716,22 @@ msgid ""
 msgstr ""
 "Parola VNC trebuie să fie între șase și opt caractere lungime.\n"
 "Introduceți una nouă, sau lăsați gol pentru a nu stabili o parolă."
+
+#: pyanaconda/kickstart.py:540
+msgid ""
+"\n"
+"Some warnings occurred during reading the kickstart file:"
+msgstr ""
+
+#: pyanaconda/kickstart.py:553
+#, python-format
+msgid ""
+"\n"
+"An error occurred during reading the kickstart file:\n"
+"%s\n"
+"\n"
+"The installer will now terminate."
+msgstr ""
 
 #: anaconda.py:378
 msgid "Unable to create PID file"
@@ -5428,6 +5428,61 @@ msgstr ""
 "Parolele sau cheile de criptare sunt necesare pentru a accesa\n"
 "rețeaua fără fir (wireless)"
 
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:23
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Cancel"
+msgstr "_Renunță"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:38
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Save Passphrase"
+msgstr "_Salvează frază secretă"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:65
+msgid "DISK ENCRYPTION PASSPHRASE"
+msgstr "FAZĂ CRIPTARE DISCURI"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:81
+msgid ""
+"You have chosen to encrypt some of your data. You will need to create a "
+"passphrase that you will use to access your data when you start your "
+"computer."
+msgstr ""
+"Ați ales să criptați o parte din datele dumneavoastră. Vă trebuie o frază "
+"secretă necesară pentru a accesa datele atunci când porniți calculatorul."
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:102
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Passphrase:"
+msgstr "Frază se_cretă"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:133
+msgctxt "GUI|Passphrase Dialog"
+msgid "Con_firm:"
+msgstr "Con_firmare:"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:275
+msgid ""
+"Warning: You won't be able to switch between keyboard layouts (from the "
+"default one) when you decrypt your disks after install."
+msgstr ""
+"Atenție: Nu veți putea comuta între aranjamente de tastatură (de la cel "
+"implicit) atunci când se decriptează discurile după instalare."
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:23
+msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
+msgid "_Quit"
+msgstr "_Renunță"
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:37
+msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
+msgid "_Continue"
+msgstr "_Continuă"
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:122
+msgid "Unsupported Hardware"
+msgstr "Hardware nesuportat"
+
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:21
 msgctxt "GUI|Custom Partitioning|Confirm Delete Dialog"
 msgid "_Cancel"
@@ -5637,47 +5692,6 @@ msgstr ""
 msgid "Disk formatting complete."
 msgstr "Formatare completă."
 
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:23
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Cancel"
-msgstr "_Renunță"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:38
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Save Passphrase"
-msgstr "_Salvează frază secretă"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:65
-msgid "DISK ENCRYPTION PASSPHRASE"
-msgstr "FAZĂ CRIPTARE DISCURI"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:81
-msgid ""
-"You have chosen to encrypt some of your data. You will need to create a "
-"passphrase that you will use to access your data when you start your "
-"computer."
-msgstr ""
-"Ați ales să criptați o parte din datele dumneavoastră. Vă trebuie o frază "
-"secretă necesară pentru a accesa datele atunci când porniți calculatorul."
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:102
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Passphrase:"
-msgstr "Frază se_cretă"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:133
-msgctxt "GUI|Passphrase Dialog"
-msgid "Con_firm:"
-msgstr "Con_firmare:"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:275
-msgid ""
-"Warning: You won't be able to switch between keyboard layouts (from the "
-"default one) when you decrypt your disks after install."
-msgstr ""
-"Atenție: Nu veți putea comuta între aranjamente de tastatură (de la cel "
-"implicit) atunci când se decriptează discurile după instalare."
-
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:8
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:71
 msgid "RESCAN DISKS"
@@ -5824,20 +5838,6 @@ msgstr "Tip"
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:166
 msgid "Device"
 msgstr "Dispozitiv"
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:23
-msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
-msgid "_Quit"
-msgstr "_Renunță"
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:37
-msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
-msgid "_Continue"
-msgstr "_Continuă"
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:122
-msgid "Unsupported Hardware"
-msgstr "Hardware nesuportat"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:67
 #: pyanaconda/ui/gui/spokes/storage.glade:450

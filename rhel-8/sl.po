@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2024-02-07 15:14+0100\n"
+"POT-Creation-Date: 2024-02-16 18:27+0100\n"
 "PO-Revision-Date: 2023-12-27 23:08+0000\n"
 "Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
 "Language-Team: Slovenian <https://translate.fedoraproject.org/projects/"
@@ -38,6 +38,18 @@ msgstr "Manjka ime razdelka %addon."
 #: pyanaconda/core/kickstart/addon.py:138
 msgid "Unknown name of the %addon section."
 msgstr "Neznano ime razdelka %addon."
+
+#: pyanaconda/core/payload.py:131
+msgid "No host url"
+msgstr "Ni gostiteljevega url"
+
+#: pyanaconda/core/payload.py:152
+msgid "malformed URL, cannot parse it."
+msgstr "pomečkan URL, ni ga mogoče razčleniti."
+
+#: pyanaconda/core/payload.py:168
+msgid "URL has no host component"
+msgstr "URL nima komponente gostitelja"
 
 #: pyanaconda/core/constants.py:89
 msgid "Start VNC"
@@ -231,18 +243,6 @@ msgstr "Prenos metapodatkov skupine ..."
 #: pyanaconda/core/constants.py:306
 msgid "Anaconda Installer"
 msgstr "Namestilnik Anaconda"
-
-#: pyanaconda/core/payload.py:131
-msgid "No host url"
-msgstr "Ni gostiteljevega url"
-
-#: pyanaconda/core/payload.py:152
-msgid "malformed URL, cannot parse it."
-msgstr "pomečkan URL, ni ga mogoče razčleniti."
-
-#: pyanaconda/core/payload.py:168
-msgid "URL has no host component"
-msgstr "URL nima komponente gostitelja"
 
 #: pyanaconda/core/storage.py:84
 msgid "Unsupported"
@@ -729,17 +729,6 @@ msgstr ""
 "neizbrane diske. Izbrati ali preklicati morate izbor vseh teh diskov kot "
 "celote."
 
-#: pyanaconda/modules/storage/devicetree/fsset.py:390
-#, python-brace-format
-msgid ""
-"There is an entry in your /etc/fstab file that contains an invalid or "
-"incorrect file system type. The file says that {detected_type} at "
-"{mount_point} is {fstab_type}."
-msgstr ""
-"V vaši datoteki /etc/fstab je vnos, ki vsebuje neveljavno ali nepravilno "
-"vrsto datotečnega sistema. Datoteka pravi, da je {detected_type} "
-"pri{mount_point} vrste {fstab_type}."
-
 #: pyanaconda/modules/storage/devicetree/root.py:342
 msgid "Unknown Linux"
 msgstr "Neznani Linux"
@@ -753,6 +742,17 @@ msgstr "{product} {version} za {arch}"
 #, python-brace-format
 msgid "{product} Linux {version} for {arch}"
 msgstr "{product} Linux {version} za {arch}"
+
+#: pyanaconda/modules/storage/devicetree/fsset.py:390
+#, python-brace-format
+msgid ""
+"There is an entry in your /etc/fstab file that contains an invalid or "
+"incorrect file system type. The file says that {detected_type} at "
+"{mount_point} is {fstab_type}."
+msgstr ""
+"V vaši datoteki /etc/fstab je vnos, ki vsebuje neveljavno ali nepravilno "
+"vrsto datotečnega sistema. Datoteka pravi, da je {detected_type} "
+"pri{mount_point} vrste {fstab_type}."
 
 #: pyanaconda/modules/storage/devicetree/utils.py:68
 #, python-format
@@ -1665,6 +1665,17 @@ msgstr "Pravice"
 msgid "{} consumed"
 msgstr "{} porabljeno"
 
+#: pyanaconda/ui/gui/spokes/lib/cart.py:193
+msgctxt "GUI|Selected Disks Dialog"
+msgid "_Do not install boot loader"
+msgstr "_Ne namesti zagonskega nalagalnika"
+
+#: pyanaconda/ui/gui/spokes/lib/cart.py:198
+#: pyanaconda/ui/gui/spokes/lib/cart.glade:200
+msgctxt "GUI|Selected Disks Dialog"
+msgid "_Set as Boot Device"
+msgstr "_Nastavi kot zagonsko napravo"
+
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:444
 msgid "DATA"
 msgstr "PODATKI"
@@ -1704,17 +1715,6 @@ msgstr "_Nove točke priklopa bodo uporabljale naslednjo shemo particioniranja:"
 msgctxt "GUI|Custom Partitioning|Autopart Page"
 msgid "_Encrypt automatically created mount points by default:"
 msgstr "_Privzeto šifriraj samodejno ustvarjene priklopne točke:"
-
-#: pyanaconda/ui/gui/spokes/lib/cart.py:193
-msgctxt "GUI|Selected Disks Dialog"
-msgid "_Do not install boot loader"
-msgstr "_Ne namesti zagonskega nalagalnika"
-
-#: pyanaconda/ui/gui/spokes/lib/cart.py:198
-#: pyanaconda/ui/gui/spokes/lib/cart.glade:200
-msgctxt "GUI|Selected Disks Dialog"
-msgid "_Set as Boot Device"
-msgstr "_Nastavi kot zagonsko napravo"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:47
 #, python-format
@@ -3709,6 +3709,110 @@ msgstr ""
 "\n"
 "Ali bi radi to kljub temu uporabili?"
 
+#: pyanaconda/rescue.py:277
+msgid "Unable to find /bin/bash to execute!  Not starting shell."
+msgstr "Ni mogoče najti /bin/bash za izvajanje!  Ni zagona shella."
+
+#: pyanaconda/rescue.py:294
+msgid "Rescue"
+msgstr "Reševanje"
+
+#: pyanaconda/rescue.py:301
+#, python-format
+msgid ""
+"The rescue environment will now attempt to find your Linux installation and "
+"mount it under the directory : %s.  You can then make any changes required "
+"to your system.  Choose '1' to proceed with this step.\n"
+"You can choose to mount your file systems read-only instead of read-write by "
+"choosing '2'.\n"
+"If for some reason this process does not work choose '3' to skip directly to "
+"a shell.\n"
+"\n"
+msgstr ""
+"Reševalno okolje bo zdaj poskušalo najti vašo namestitev Linuxa in ga "
+"priklopiti v imenik: %s. Nato lahko naredite vse potrebne spremembe vašega "
+"sistema. Za nadaljevanje tega koraka izberite '1'.\n"
+"Izberete lahko, da svoje datotečne sisteme priklopite samo za branje namesto "
+"za branje in pisanje z izbiro '2'.\n"
+"Če ta postopek iz nekega razloga ne deluje, izberite '3', da preskočite "
+"neposredno v shell.\n"
+"\n"
+
+#: pyanaconda/rescue.py:313
+msgid "Continue"
+msgstr "Nadaljuj"
+
+#: pyanaconda/rescue.py:314
+msgid "Read-only mount"
+msgstr "Priklop samo za branje"
+
+#: pyanaconda/rescue.py:315
+msgid "Skip to shell"
+msgstr "Preskoči na shell"
+
+#: pyanaconda/rescue.py:316
+msgid "Quit (Reboot)"
+msgstr "Zapusti (Ponovni zagon)"
+
+#: pyanaconda/rescue.py:413
+msgid "Rescue Shell"
+msgstr "Reševalni shell"
+
+#: pyanaconda/rescue.py:423
+#, python-format
+msgid "Run %s to unmount the system when you are finished."
+msgstr "Poženi %s za odklop sistema, ko ste končali."
+
+#: pyanaconda/rescue.py:424
+msgid ""
+"When finished, please exit from the shell and your system will reboot.\n"
+msgstr "Ko ste končali, zapustite shell in vaš sistem se po ponovno zagnal.\n"
+
+#: pyanaconda/rescue.py:435
+#, python-format
+msgid ""
+"Your system has been mounted under %(mountpoint)s.\n"
+"\n"
+"If you would like to make the root of your system the root of the active "
+"system, run the command:\n"
+"\n"
+"\tchroot %(mountpoint)s\n"
+"\n"
+msgstr ""
+
+#: pyanaconda/rescue.py:447
+#, python-brace-format
+msgid ""
+"An error occurred trying to mount some or all of your system: {message}\n"
+"\n"
+"Some of it may be mounted under {path}."
+msgstr ""
+"Prišlo je do napake pri priklopu dela ali celotnega vašega sistema: "
+"{message}\n"
+"\n"
+"Nekateri od njih so morda priklopljeni pod {path}."
+
+#: pyanaconda/rescue.py:459
+msgid "You don't have any Linux partitions.\n"
+msgstr "Nimate nobene Linuxove particije.\n"
+
+#: pyanaconda/rescue.py:465
+msgid "Not mounting the system.\n"
+msgstr "Brez priklopa sistema.\n"
+
+#: pyanaconda/rescue.py:479
+#, python-format
+msgid "Please press %s to get a shell"
+msgstr "Pritisnite %s, da bi dobili shell"
+
+#: pyanaconda/rescue.py:496
+msgid "Root Selection"
+msgstr "Izbira korena"
+
+#: pyanaconda/rescue.py:522
+msgid "The following installations were discovered on your system."
+msgstr "Naslednje namestitve so bile odkrite na vašem sistemu."
+
 #: pyanaconda/addons.py:97
 #, python-format
 msgid "Executing %s addon"
@@ -4060,29 +4164,6 @@ msgstr "Nameščanje zagonskega nalagalnika"
 msgid "Creating snapshots"
 msgstr "Kreiranje posnetkov"
 
-#: pyanaconda/kickstart.py:540
-msgid ""
-"\n"
-"Some warnings occurred during reading the kickstart file:"
-msgstr ""
-"\n"
-"Pojavilo se je nekaj opozoril med branjem datoteke kickstart:"
-
-#: pyanaconda/kickstart.py:553
-#, python-format
-msgid ""
-"\n"
-"An error occurred during reading the kickstart file:\n"
-"%s\n"
-"\n"
-"The installer will now terminate."
-msgstr ""
-"\n"
-"Prišlo je do napake ob branju datoteke kickstart:\n"
-"%s\n"
-"\n"
-"Namestilnik bo zdaj končal."
-
 #: pyanaconda/network.py:111
 msgid "Host name cannot be None or an empty string."
 msgstr "Ime gostitelja ne sme biti None ali prazen niz."
@@ -4174,110 +4255,6 @@ msgstr ""
 #, python-format
 msgid "A %(command)s with the name %(policyName)s has already been defined."
 msgstr ""
-
-#: pyanaconda/rescue.py:277
-msgid "Unable to find /bin/bash to execute!  Not starting shell."
-msgstr "Ni mogoče najti /bin/bash za izvajanje!  Ni zagona shella."
-
-#: pyanaconda/rescue.py:294
-msgid "Rescue"
-msgstr "Reševanje"
-
-#: pyanaconda/rescue.py:301
-#, python-format
-msgid ""
-"The rescue environment will now attempt to find your Linux installation and "
-"mount it under the directory : %s.  You can then make any changes required "
-"to your system.  Choose '1' to proceed with this step.\n"
-"You can choose to mount your file systems read-only instead of read-write by "
-"choosing '2'.\n"
-"If for some reason this process does not work choose '3' to skip directly to "
-"a shell.\n"
-"\n"
-msgstr ""
-"Reševalno okolje bo zdaj poskušalo najti vašo namestitev Linuxa in ga "
-"priklopiti v imenik: %s. Nato lahko naredite vse potrebne spremembe vašega "
-"sistema. Za nadaljevanje tega koraka izberite '1'.\n"
-"Izberete lahko, da svoje datotečne sisteme priklopite samo za branje namesto "
-"za branje in pisanje z izbiro '2'.\n"
-"Če ta postopek iz nekega razloga ne deluje, izberite '3', da preskočite "
-"neposredno v shell.\n"
-"\n"
-
-#: pyanaconda/rescue.py:313
-msgid "Continue"
-msgstr "Nadaljuj"
-
-#: pyanaconda/rescue.py:314
-msgid "Read-only mount"
-msgstr "Priklop samo za branje"
-
-#: pyanaconda/rescue.py:315
-msgid "Skip to shell"
-msgstr "Preskoči na shell"
-
-#: pyanaconda/rescue.py:316
-msgid "Quit (Reboot)"
-msgstr "Zapusti (Ponovni zagon)"
-
-#: pyanaconda/rescue.py:413
-msgid "Rescue Shell"
-msgstr "Reševalni shell"
-
-#: pyanaconda/rescue.py:423
-#, python-format
-msgid "Run %s to unmount the system when you are finished."
-msgstr "Poženi %s za odklop sistema, ko ste končali."
-
-#: pyanaconda/rescue.py:424
-msgid ""
-"When finished, please exit from the shell and your system will reboot.\n"
-msgstr "Ko ste končali, zapustite shell in vaš sistem se po ponovno zagnal.\n"
-
-#: pyanaconda/rescue.py:435
-#, python-format
-msgid ""
-"Your system has been mounted under %(mountpoint)s.\n"
-"\n"
-"If you would like to make the root of your system the root of the active "
-"system, run the command:\n"
-"\n"
-"\tchroot %(mountpoint)s\n"
-"\n"
-msgstr ""
-
-#: pyanaconda/rescue.py:447
-#, python-brace-format
-msgid ""
-"An error occurred trying to mount some or all of your system: {message}\n"
-"\n"
-"Some of it may be mounted under {path}."
-msgstr ""
-"Prišlo je do napake pri priklopu dela ali celotnega vašega sistema: "
-"{message}\n"
-"\n"
-"Nekateri od njih so morda priklopljeni pod {path}."
-
-#: pyanaconda/rescue.py:459
-msgid "You don't have any Linux partitions.\n"
-msgstr "Nimate nobene Linuxove particije.\n"
-
-#: pyanaconda/rescue.py:465
-msgid "Not mounting the system.\n"
-msgstr "Brez priklopa sistema.\n"
-
-#: pyanaconda/rescue.py:479
-#, python-format
-msgid "Please press %s to get a shell"
-msgstr "Pritisnite %s, da bi dobili shell"
-
-#: pyanaconda/rescue.py:496
-msgid "Root Selection"
-msgstr "Izbira korena"
-
-#: pyanaconda/rescue.py:522
-msgid "The following installations were discovered on your system."
-msgstr "Naslednje namestitve so bile odkrite na vašem sistemu."
 
 #: pyanaconda/startup_utils.py:83
 #, python-format
@@ -4469,6 +4446,29 @@ msgid ""
 msgstr ""
 "Geslo VNC mora biti dolgo od šest do osem znakov.\n"
 "Vnesite novega ali pustite prazno za brez gesla."
+
+#: pyanaconda/kickstart.py:540
+msgid ""
+"\n"
+"Some warnings occurred during reading the kickstart file:"
+msgstr ""
+"\n"
+"Pojavilo se je nekaj opozoril med branjem datoteke kickstart:"
+
+#: pyanaconda/kickstart.py:553
+#, python-format
+msgid ""
+"\n"
+"An error occurred during reading the kickstart file:\n"
+"%s\n"
+"\n"
+"The installer will now terminate."
+msgstr ""
+"\n"
+"Prišlo je do napake ob branju datoteke kickstart:\n"
+"%s\n"
+"\n"
+"Namestilnik bo zdaj končal."
 
 #: anaconda.py:378
 msgid "Unable to create PID file"
@@ -5156,6 +5156,62 @@ msgstr ""
 "Zahtevana so gesla ali ključi šifriranja za dostop\n"
 "do brezžičnega omrežja"
 
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:23
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Cancel"
+msgstr "_Prekliči"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:38
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Save Passphrase"
+msgstr "_Shrani geselno frazo"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:65
+msgid "DISK ENCRYPTION PASSPHRASE"
+msgstr "GESELNA FRAZA ŠIFRIRANJA DISKA"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:81
+msgid ""
+"You have chosen to encrypt some of your data. You will need to create a "
+"passphrase that you will use to access your data when you start your "
+"computer."
+msgstr ""
+"Odločili ste se za šifriranje nekaterih vaših podatkov. Ustvariti boste "
+"morali geselno frazo, ki jo boste uporabili za dostop do svojih podatkov, ko "
+"zaženete svojračunalnik."
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:102
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Passphrase:"
+msgstr "_Geselna fraza:"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:133
+msgctxt "GUI|Passphrase Dialog"
+msgid "Con_firm:"
+msgstr "Po_trdi:"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:275
+msgid ""
+"Warning: You won't be able to switch between keyboard layouts (from the "
+"default one) when you decrypt your disks after install."
+msgstr ""
+"Opozorilo: ne boste mogli preklapljati med razporeditvami tipkovnice (iz "
+"privzete), ko dešifrirate svoje diske po namestitvi."
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:23
+msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
+msgid "_Quit"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:37
+msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
+msgid "_Continue"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:122
+msgid "Unsupported Hardware"
+msgstr ""
+
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:21
 msgctxt "GUI|Custom Partitioning|Confirm Delete Dialog"
 msgid "_Cancel"
@@ -5365,48 +5421,6 @@ msgstr ""
 msgid "Disk formatting complete."
 msgstr "Formatiranje diska končano."
 
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:23
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Cancel"
-msgstr "_Prekliči"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:38
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Save Passphrase"
-msgstr "_Shrani geselno frazo"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:65
-msgid "DISK ENCRYPTION PASSPHRASE"
-msgstr "GESELNA FRAZA ŠIFRIRANJA DISKA"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:81
-msgid ""
-"You have chosen to encrypt some of your data. You will need to create a "
-"passphrase that you will use to access your data when you start your "
-"computer."
-msgstr ""
-"Odločili ste se za šifriranje nekaterih vaših podatkov. Ustvariti boste "
-"morali geselno frazo, ki jo boste uporabili za dostop do svojih podatkov, ko "
-"zaženete svojračunalnik."
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:102
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Passphrase:"
-msgstr "_Geselna fraza:"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:133
-msgctxt "GUI|Passphrase Dialog"
-msgid "Con_firm:"
-msgstr "Po_trdi:"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:275
-msgid ""
-"Warning: You won't be able to switch between keyboard layouts (from the "
-"default one) when you decrypt your disks after install."
-msgstr ""
-"Opozorilo: ne boste mogli preklapljati med razporeditvami tipkovnice (iz "
-"privzete), ko dešifrirate svoje diske po namestitvi."
-
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:8
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:71
 msgid "RESCAN DISKS"
@@ -5551,20 +5565,6 @@ msgstr "Vrsta"
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:166
 msgid "Device"
 msgstr "Naprava"
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:23
-msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
-msgid "_Quit"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:37
-msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
-msgid "_Continue"
-msgstr ""
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:122
-msgid "Unsupported Hardware"
-msgstr ""
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:67
 #: pyanaconda/ui/gui/spokes/storage.glade:450

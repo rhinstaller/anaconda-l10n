@@ -25,7 +25,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2024-02-07 15:14+0100\n"
+"POT-Creation-Date: 2024-02-16 18:27+0100\n"
 "PO-Revision-Date: 2023-02-17 01:21+0000\n"
 "Last-Translator: Oğuz Ersen <oguz@ersen.moe>\n"
 "Language-Team: Turkish <https://translate.fedoraproject.org/projects/"
@@ -44,6 +44,18 @@ msgstr "%addon bölümünün adı eksik."
 #: pyanaconda/core/kickstart/addon.py:138
 msgid "Unknown name of the %addon section."
 msgstr "%addon bölümünün adı bilinmiyor."
+
+#: pyanaconda/core/payload.py:131
+msgid "No host url"
+msgstr "Sunucu adresi yok"
+
+#: pyanaconda/core/payload.py:152
+msgid "malformed URL, cannot parse it."
+msgstr "Hatalı adres, çözümlenemiyor."
+
+#: pyanaconda/core/payload.py:168
+msgid "URL has no host component"
+msgstr "Adres sunucu bileşeni içermiyor"
 
 #: pyanaconda/core/constants.py:89
 msgid "Start VNC"
@@ -254,18 +266,6 @@ msgstr "Grup üst verileri indiriliyor..."
 #: pyanaconda/core/constants.py:306
 msgid "Anaconda Installer"
 msgstr "Anaconda Kurucu"
-
-#: pyanaconda/core/payload.py:131
-msgid "No host url"
-msgstr "Sunucu adresi yok"
-
-#: pyanaconda/core/payload.py:152
-msgid "malformed URL, cannot parse it."
-msgstr "Hatalı adres, çözümlenemiyor."
-
-#: pyanaconda/core/payload.py:168
-msgid "URL has no host component"
-msgstr "Adres sunucu bileşeni içermiyor"
 
 #: pyanaconda/core/storage.py:84
 msgid "Unsupported"
@@ -762,17 +762,6 @@ msgstr ""
 "içermektedir. Tüm bu diskleri bir takım olarak seçmeli veya seçimini "
 "kaldırmalısınız."
 
-#: pyanaconda/modules/storage/devicetree/fsset.py:390
-#, python-brace-format
-msgid ""
-"There is an entry in your /etc/fstab file that contains an invalid or "
-"incorrect file system type. The file says that {detected_type} at "
-"{mount_point} is {fstab_type}."
-msgstr ""
-"/etc/fstab dosyanızda geçersiz veya doğru olmayan dosya sistemi içeren bir "
-"girdi bulunmaktadır. Dosyaya göre {mount_point} konumundaki {detected_type} "
-"{fstab_type}'dir."
-
 #: pyanaconda/modules/storage/devicetree/root.py:342
 msgid "Unknown Linux"
 msgstr "Bilinmeyen Linux"
@@ -786,6 +775,17 @@ msgstr "{arch} için {product} {version}"
 #, python-brace-format
 msgid "{product} Linux {version} for {arch}"
 msgstr "{arch} için {product} Linux {version}"
+
+#: pyanaconda/modules/storage/devicetree/fsset.py:390
+#, python-brace-format
+msgid ""
+"There is an entry in your /etc/fstab file that contains an invalid or "
+"incorrect file system type. The file says that {detected_type} at "
+"{mount_point} is {fstab_type}."
+msgstr ""
+"/etc/fstab dosyanızda geçersiz veya doğru olmayan dosya sistemi içeren bir "
+"girdi bulunmaktadır. Dosyaya göre {mount_point} konumundaki {detected_type} "
+"{fstab_type}'dir."
 
 #: pyanaconda/modules/storage/devicetree/utils.py:68
 #, python-format
@@ -1775,6 +1775,17 @@ msgstr "Haklar"
 msgid "{} consumed"
 msgstr "{} tüketildi"
 
+#: pyanaconda/ui/gui/spokes/lib/cart.py:193
+msgctxt "GUI|Selected Disks Dialog"
+msgid "_Do not install boot loader"
+msgstr "Önyükleyici kur_ma"
+
+#: pyanaconda/ui/gui/spokes/lib/cart.py:198
+#: pyanaconda/ui/gui/spokes/lib/cart.glade:200
+msgctxt "GUI|Selected Disks Dialog"
+msgid "_Set as Boot Device"
+msgstr "Önyükleme Aygıtı Olarak _Belirle"
+
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:444
 msgid "DATA"
 msgstr "VERİ"
@@ -1815,17 +1826,6 @@ msgctxt "GUI|Custom Partitioning|Autopart Page"
 msgid "_Encrypt automatically created mount points by default:"
 msgstr ""
 "Kendiliğinden oluşturulan bağlama noktalarını öntanımlı olarak şifrel_e:"
-
-#: pyanaconda/ui/gui/spokes/lib/cart.py:193
-msgctxt "GUI|Selected Disks Dialog"
-msgid "_Do not install boot loader"
-msgstr "Önyükleyici kur_ma"
-
-#: pyanaconda/ui/gui/spokes/lib/cart.py:198
-#: pyanaconda/ui/gui/spokes/lib/cart.glade:200
-msgctxt "GUI|Selected Disks Dialog"
-msgid "_Set as Boot Device"
-msgstr "Önyükleme Aygıtı Olarak _Belirle"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:47
 #, python-format
@@ -3823,6 +3823,120 @@ msgstr ""
 "\n"
 "Yine de kullanmak ister misiniz?"
 
+#: pyanaconda/rescue.py:277
+msgid "Unable to find /bin/bash to execute!  Not starting shell."
+msgstr "Çalıştırılacak /bin/bash bulunamıyor!  Kabuk başlatılamıyor."
+
+#: pyanaconda/rescue.py:294
+msgid "Rescue"
+msgstr "Kurtar"
+
+#: pyanaconda/rescue.py:301
+#, python-format
+msgid ""
+"The rescue environment will now attempt to find your Linux installation and "
+"mount it under the directory : %s.  You can then make any changes required "
+"to your system.  Choose '1' to proceed with this step.\n"
+"You can choose to mount your file systems read-only instead of read-write by "
+"choosing '2'.\n"
+"If for some reason this process does not work choose '3' to skip directly to "
+"a shell.\n"
+"\n"
+msgstr ""
+"Kurtarma ortamı şimdi Linux kurulumunuzu bulmaya ve onu %s dizininin altına "
+"yerleştirmeye çalışacak.  Daha sonra sisteminiz için gereken değişiklikleri "
+"yapabilirsiniz.  Bu adım ile sürdürmek için '1'i seçin.\n"
+"'2'yi seçerek dosya sistemlerinizi okunur-yazılır yerine salt okunur olarak "
+"bağlamayı seçebilirsiniz.\n"
+"Herhangi bir nedenle bu işlem işe yaramazsa, doğrudan kabuğa geçmek için "
+"'3'ü seçin.\n"
+"\n"
+
+#: pyanaconda/rescue.py:313
+msgid "Continue"
+msgstr "Sürdür"
+
+#: pyanaconda/rescue.py:314
+msgid "Read-only mount"
+msgstr "Salt okunur bağlama"
+
+#: pyanaconda/rescue.py:315
+msgid "Skip to shell"
+msgstr "Kabuğa geç"
+
+#: pyanaconda/rescue.py:316
+msgid "Quit (Reboot)"
+msgstr "Çık (Yeniden Başlat)"
+
+#: pyanaconda/rescue.py:413
+msgid "Rescue Shell"
+msgstr "Kurtarma Kabuğu"
+
+#: pyanaconda/rescue.py:423
+#, python-format
+msgid "Run %s to unmount the system when you are finished."
+msgstr ""
+"İşiniz bittiğinde sistemin bağlantısını kaldırmak için %s komutunu "
+"çalıştırın."
+
+#: pyanaconda/rescue.py:424
+msgid ""
+"When finished, please exit from the shell and your system will reboot.\n"
+msgstr ""
+"Bittiğinde lütfen kabuktan çıkın, böylece sisteminiz yeniden başlayacak.\n"
+
+#: pyanaconda/rescue.py:435
+#, python-format
+msgid ""
+"Your system has been mounted under %(mountpoint)s.\n"
+"\n"
+"If you would like to make the root of your system the root of the active "
+"system, run the command:\n"
+"\n"
+"\tchroot %(mountpoint)s\n"
+"\n"
+msgstr ""
+"Sisteminiz %(mountpoint)s konumuna bağlanmıştır.\n"
+"\n"
+"Sisteminizin kökünü etkin sistemin kökü yapmak istiyorsanız, aşağıdaki "
+"komutu çalıştırın:\n"
+"\n"
+"\tchroot %(mountpoint)s\n"
+"\n"
+
+#: pyanaconda/rescue.py:447
+#, python-brace-format
+msgid ""
+"An error occurred trying to mount some or all of your system: {message}\n"
+"\n"
+"Some of it may be mounted under {path}."
+msgstr ""
+"Sisteminizin bir kısmını veya tamamını bağlamaya çalışırken bir hata oluştu: "
+"{message}\n"
+"\n"
+"Bazıları {path} konumu altında bağlanmış olabilir."
+
+#: pyanaconda/rescue.py:459
+msgid "You don't have any Linux partitions.\n"
+msgstr "Herhangi bir Linux bölümünüz yok.\n"
+
+#: pyanaconda/rescue.py:465
+msgid "Not mounting the system.\n"
+msgstr "Sistem bağlanmıyor.\n"
+
+#: pyanaconda/rescue.py:479
+#, python-format
+msgid "Please press %s to get a shell"
+msgstr "Kabuğa geçmek için %s tuşuna basın"
+
+#: pyanaconda/rescue.py:496
+msgid "Root Selection"
+msgstr "Kök Seçimi"
+
+#: pyanaconda/rescue.py:522
+msgid "The following installations were discovered on your system."
+msgstr "Sisteminizde aşağıdaki kurulumlar keşfedildi."
+
 #: pyanaconda/addons.py:97
 #, python-format
 msgid "Executing %s addon"
@@ -4204,29 +4318,6 @@ msgstr "Önyükleyici kuruluyor"
 msgid "Creating snapshots"
 msgstr "Anlık görüntüler oluşturuluyor"
 
-#: pyanaconda/kickstart.py:540
-msgid ""
-"\n"
-"Some warnings occurred during reading the kickstart file:"
-msgstr ""
-"\n"
-"kickstart dosyası okunurken bazı uyarılar alındı:"
-
-#: pyanaconda/kickstart.py:553
-#, python-format
-msgid ""
-"\n"
-"An error occurred during reading the kickstart file:\n"
-"%s\n"
-"\n"
-"The installer will now terminate."
-msgstr ""
-"\n"
-"kickstart dosyası okunurken hata oluştu:\n"
-"%s\n"
-"\n"
-"Kurucu şimdi sonlandırılacak."
-
 #: pyanaconda/network.py:111
 msgid "Host name cannot be None or an empty string."
 msgstr "Ana makine adı boş bırakılamaz veya boş bir dizge olamaz."
@@ -4318,120 +4409,6 @@ msgstr "%s için politika adı gerekiyor"
 #, python-format
 msgid "A %(command)s with the name %(policyName)s has already been defined."
 msgstr "%(policyName)s adında bir %(command)s zaten tanımlanmış."
-
-#: pyanaconda/rescue.py:277
-msgid "Unable to find /bin/bash to execute!  Not starting shell."
-msgstr "Çalıştırılacak /bin/bash bulunamıyor!  Kabuk başlatılamıyor."
-
-#: pyanaconda/rescue.py:294
-msgid "Rescue"
-msgstr "Kurtar"
-
-#: pyanaconda/rescue.py:301
-#, python-format
-msgid ""
-"The rescue environment will now attempt to find your Linux installation and "
-"mount it under the directory : %s.  You can then make any changes required "
-"to your system.  Choose '1' to proceed with this step.\n"
-"You can choose to mount your file systems read-only instead of read-write by "
-"choosing '2'.\n"
-"If for some reason this process does not work choose '3' to skip directly to "
-"a shell.\n"
-"\n"
-msgstr ""
-"Kurtarma ortamı şimdi Linux kurulumunuzu bulmaya ve onu %s dizininin altına "
-"yerleştirmeye çalışacak.  Daha sonra sisteminiz için gereken değişiklikleri "
-"yapabilirsiniz.  Bu adım ile sürdürmek için '1'i seçin.\n"
-"'2'yi seçerek dosya sistemlerinizi okunur-yazılır yerine salt okunur olarak "
-"bağlamayı seçebilirsiniz.\n"
-"Herhangi bir nedenle bu işlem işe yaramazsa, doğrudan kabuğa geçmek için "
-"'3'ü seçin.\n"
-"\n"
-
-#: pyanaconda/rescue.py:313
-msgid "Continue"
-msgstr "Sürdür"
-
-#: pyanaconda/rescue.py:314
-msgid "Read-only mount"
-msgstr "Salt okunur bağlama"
-
-#: pyanaconda/rescue.py:315
-msgid "Skip to shell"
-msgstr "Kabuğa geç"
-
-#: pyanaconda/rescue.py:316
-msgid "Quit (Reboot)"
-msgstr "Çık (Yeniden Başlat)"
-
-#: pyanaconda/rescue.py:413
-msgid "Rescue Shell"
-msgstr "Kurtarma Kabuğu"
-
-#: pyanaconda/rescue.py:423
-#, python-format
-msgid "Run %s to unmount the system when you are finished."
-msgstr ""
-"İşiniz bittiğinde sistemin bağlantısını kaldırmak için %s komutunu "
-"çalıştırın."
-
-#: pyanaconda/rescue.py:424
-msgid ""
-"When finished, please exit from the shell and your system will reboot.\n"
-msgstr ""
-"Bittiğinde lütfen kabuktan çıkın, böylece sisteminiz yeniden başlayacak.\n"
-
-#: pyanaconda/rescue.py:435
-#, python-format
-msgid ""
-"Your system has been mounted under %(mountpoint)s.\n"
-"\n"
-"If you would like to make the root of your system the root of the active "
-"system, run the command:\n"
-"\n"
-"\tchroot %(mountpoint)s\n"
-"\n"
-msgstr ""
-"Sisteminiz %(mountpoint)s konumuna bağlanmıştır.\n"
-"\n"
-"Sisteminizin kökünü etkin sistemin kökü yapmak istiyorsanız, aşağıdaki "
-"komutu çalıştırın:\n"
-"\n"
-"\tchroot %(mountpoint)s\n"
-"\n"
-
-#: pyanaconda/rescue.py:447
-#, python-brace-format
-msgid ""
-"An error occurred trying to mount some or all of your system: {message}\n"
-"\n"
-"Some of it may be mounted under {path}."
-msgstr ""
-"Sisteminizin bir kısmını veya tamamını bağlamaya çalışırken bir hata oluştu: "
-"{message}\n"
-"\n"
-"Bazıları {path} konumu altında bağlanmış olabilir."
-
-#: pyanaconda/rescue.py:459
-msgid "You don't have any Linux partitions.\n"
-msgstr "Herhangi bir Linux bölümünüz yok.\n"
-
-#: pyanaconda/rescue.py:465
-msgid "Not mounting the system.\n"
-msgstr "Sistem bağlanmıyor.\n"
-
-#: pyanaconda/rescue.py:479
-#, python-format
-msgid "Please press %s to get a shell"
-msgstr "Kabuğa geçmek için %s tuşuna basın"
-
-#: pyanaconda/rescue.py:496
-msgid "Root Selection"
-msgstr "Kök Seçimi"
-
-#: pyanaconda/rescue.py:522
-msgid "The following installations were discovered on your system."
-msgstr "Sisteminizde aşağıdaki kurulumlar keşfedildi."
 
 #: pyanaconda/startup_utils.py:83
 #, python-format
@@ -4623,6 +4600,29 @@ msgid ""
 msgstr ""
 "VNC parolası en az altı en çok sekiz karakter uzunluğunda olmalıdır.\n"
 "Lütfen yeni bir tane girin, ya da parola olmaması için boş bırakın."
+
+#: pyanaconda/kickstart.py:540
+msgid ""
+"\n"
+"Some warnings occurred during reading the kickstart file:"
+msgstr ""
+"\n"
+"kickstart dosyası okunurken bazı uyarılar alındı:"
+
+#: pyanaconda/kickstart.py:553
+#, python-format
+msgid ""
+"\n"
+"An error occurred during reading the kickstart file:\n"
+"%s\n"
+"\n"
+"The installer will now terminate."
+msgstr ""
+"\n"
+"kickstart dosyası okunurken hata oluştu:\n"
+"%s\n"
+"\n"
+"Kurucu şimdi sonlandırılacak."
 
 #: anaconda.py:378
 msgid "Unable to create PID file"
@@ -5321,6 +5321,61 @@ msgstr ""
 "Kablosuz ağa erişmek için parolalar ya da şifreleme\n"
 "anahtarları gerekiyor"
 
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:23
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Cancel"
+msgstr "_İptal"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:38
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Save Passphrase"
+msgstr "Parolayı _Kaydet"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:65
+msgid "DISK ENCRYPTION PASSPHRASE"
+msgstr "DİSK ŞİFRELEME PAROLASI"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:81
+msgid ""
+"You have chosen to encrypt some of your data. You will need to create a "
+"passphrase that you will use to access your data when you start your "
+"computer."
+msgstr ""
+"Verilerinizin bir kısmını şifrelemeyi seçtiniz. Bilgisayarı başlattığınızda "
+"verilerinize erişmekte kullanacağınız bir parola oluşturmanız gerekecektir."
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:102
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Passphrase:"
+msgstr "_Parola:"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:133
+msgctxt "GUI|Passphrase Dialog"
+msgid "Con_firm:"
+msgstr "Onay_la:"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:275
+msgid ""
+"Warning: You won't be able to switch between keyboard layouts (from the "
+"default one) when you decrypt your disks after install."
+msgstr ""
+"Uyarı: Kurulumdan sonra disklerinizin kilidini açarken (öntanımlıdan başka) "
+"klavye düzenleri arasında geçiş yapamayacaksınız."
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:23
+msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
+msgid "_Quit"
+msgstr "_Çık"
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:37
+msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
+msgid "_Continue"
+msgstr "_Devam et"
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:122
+msgid "Unsupported Hardware"
+msgstr "Desteklenmeyen Donanım"
+
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:21
 msgctxt "GUI|Custom Partitioning|Confirm Delete Dialog"
 msgid "_Cancel"
@@ -5536,47 +5591,6 @@ msgstr ""
 msgid "Disk formatting complete."
 msgstr "Disk biçimlendirme tamamlandı."
 
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:23
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Cancel"
-msgstr "_İptal"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:38
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Save Passphrase"
-msgstr "Parolayı _Kaydet"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:65
-msgid "DISK ENCRYPTION PASSPHRASE"
-msgstr "DİSK ŞİFRELEME PAROLASI"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:81
-msgid ""
-"You have chosen to encrypt some of your data. You will need to create a "
-"passphrase that you will use to access your data when you start your "
-"computer."
-msgstr ""
-"Verilerinizin bir kısmını şifrelemeyi seçtiniz. Bilgisayarı başlattığınızda "
-"verilerinize erişmekte kullanacağınız bir parola oluşturmanız gerekecektir."
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:102
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Passphrase:"
-msgstr "_Parola:"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:133
-msgctxt "GUI|Passphrase Dialog"
-msgid "Con_firm:"
-msgstr "Onay_la:"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:275
-msgid ""
-"Warning: You won't be able to switch between keyboard layouts (from the "
-"default one) when you decrypt your disks after install."
-msgstr ""
-"Uyarı: Kurulumdan sonra disklerinizin kilidini açarken (öntanımlıdan başka) "
-"klavye düzenleri arasında geçiş yapamayacaksınız."
-
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:8
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:71
 msgid "RESCAN DISKS"
@@ -5724,20 +5738,6 @@ msgstr "Tür"
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:166
 msgid "Device"
 msgstr "Aygıt"
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:23
-msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
-msgid "_Quit"
-msgstr "_Çık"
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:37
-msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
-msgid "_Continue"
-msgstr "_Devam et"
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:122
-msgid "Unsupported Hardware"
-msgstr "Desteklenmeyen Donanım"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:67
 #: pyanaconda/ui/gui/spokes/storage.glade:450

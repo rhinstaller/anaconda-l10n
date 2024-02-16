@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2024-02-07 15:14+0100\n"
+"POT-Creation-Date: 2024-02-16 18:27+0100\n"
 "PO-Revision-Date: 2023-07-02 03:21+0000\n"
 "Last-Translator: yangyangdaji <1504305527@qq.com>\n"
 "Language-Team: Albanian <https://translate.fedoraproject.org/projects/"
@@ -32,6 +32,18 @@ msgstr ""
 #: pyanaconda/core/kickstart/addon.py:138
 msgid "Unknown name of the %addon section."
 msgstr ""
+
+#: pyanaconda/core/payload.py:131
+msgid "No host url"
+msgstr "Ska url host-i"
+
+#: pyanaconda/core/payload.py:152
+msgid "malformed URL, cannot parse it."
+msgstr "URL e keqformuar, nuk mund të deshifrohet."
+
+#: pyanaconda/core/payload.py:168
+msgid "URL has no host component"
+msgstr "URL nuk ka komponent host"
 
 #: pyanaconda/core/constants.py:89
 msgid "Start VNC"
@@ -222,18 +234,6 @@ msgstr "Duke shkarkuar të dhënat meta të grupeve..."
 #: pyanaconda/core/constants.py:306
 msgid "Anaconda Installer"
 msgstr "Instaluesi Anaconda"
-
-#: pyanaconda/core/payload.py:131
-msgid "No host url"
-msgstr "Ska url host-i"
-
-#: pyanaconda/core/payload.py:152
-msgid "malformed URL, cannot parse it."
-msgstr "URL e keqformuar, nuk mund të deshifrohet."
-
-#: pyanaconda/core/payload.py:168
-msgid "URL has no host component"
-msgstr "URL nuk ka komponent host"
 
 #: pyanaconda/core/storage.py:84
 msgid "Unsupported"
@@ -728,6 +728,20 @@ msgstr ""
 "përdorin disqet e paselektuar %(unselected)s. Ju duhet ti selektoni ose "
 "ç'selektoni këto disqe si një set i plotë."
 
+#: pyanaconda/modules/storage/devicetree/root.py:342
+msgid "Unknown Linux"
+msgstr ""
+
+#: pyanaconda/modules/storage/devicetree/root.py:345
+#, python-brace-format
+msgid "{product} {version} for {arch}"
+msgstr ""
+
+#: pyanaconda/modules/storage/devicetree/root.py:347
+#, python-brace-format
+msgid "{product} Linux {version} for {arch}"
+msgstr ""
+
 #: pyanaconda/modules/storage/devicetree/fsset.py:390
 #, fuzzy, python-brace-format
 #| msgid ""
@@ -742,20 +756,6 @@ msgstr ""
 "Ka një hyrje në skedarin tuaj /etc/fstab që përmban një tip të pavlefshëm "
 "ose jokorrekt sistem skedarësh:\n"
 "\n"
-
-#: pyanaconda/modules/storage/devicetree/root.py:342
-msgid "Unknown Linux"
-msgstr ""
-
-#: pyanaconda/modules/storage/devicetree/root.py:345
-#, python-brace-format
-msgid "{product} {version} for {arch}"
-msgstr ""
-
-#: pyanaconda/modules/storage/devicetree/root.py:347
-#, python-brace-format
-msgid "{product} Linux {version} for {arch}"
-msgstr ""
 
 #: pyanaconda/modules/storage/devicetree/utils.py:68
 #, python-format
@@ -1773,6 +1773,17 @@ msgstr ""
 msgid "{} consumed"
 msgstr ""
 
+#: pyanaconda/ui/gui/spokes/lib/cart.py:193
+msgctxt "GUI|Selected Disks Dialog"
+msgid "_Do not install boot loader"
+msgstr "_Mos instaloni mundësuesin e ndezjes"
+
+#: pyanaconda/ui/gui/spokes/lib/cart.py:198
+#: pyanaconda/ui/gui/spokes/lib/cart.glade:200
+msgctxt "GUI|Selected Disks Dialog"
+msgid "_Set as Boot Device"
+msgstr "_Vendosni si pajisje ndezjeje"
+
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:444
 msgid "DATA"
 msgstr "TË DHËNA"
@@ -1813,17 +1824,6 @@ msgstr ""
 msgctxt "GUI|Custom Partitioning|Autopart Page"
 msgid "_Encrypt automatically created mount points by default:"
 msgstr ""
-
-#: pyanaconda/ui/gui/spokes/lib/cart.py:193
-msgctxt "GUI|Selected Disks Dialog"
-msgid "_Do not install boot loader"
-msgstr "_Mos instaloni mundësuesin e ndezjes"
-
-#: pyanaconda/ui/gui/spokes/lib/cart.py:198
-#: pyanaconda/ui/gui/spokes/lib/cart.glade:200
-msgctxt "GUI|Selected Disks Dialog"
-msgid "_Set as Boot Device"
-msgstr "_Vendosni si pajisje ndezjeje"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:47
 #, python-format
@@ -3888,6 +3888,113 @@ msgstr ""
 "\n"
 "Dëshironi  ta përdorni gjithsesi?"
 
+#: pyanaconda/rescue.py:277
+msgid "Unable to find /bin/bash to execute!  Not starting shell."
+msgstr "E pamundur të gjendet /bin/bash për ekzekutim! Nuk do të niset shell."
+
+#: pyanaconda/rescue.py:294
+msgid "Rescue"
+msgstr "Shpëtim"
+
+#: pyanaconda/rescue.py:301
+#, python-format
+msgid ""
+"The rescue environment will now attempt to find your Linux installation and "
+"mount it under the directory : %s.  You can then make any changes required "
+"to your system.  Choose '1' to proceed with this step.\n"
+"You can choose to mount your file systems read-only instead of read-write by "
+"choosing '2'.\n"
+"If for some reason this process does not work choose '3' to skip directly to "
+"a shell.\n"
+"\n"
+msgstr ""
+"Mjedisi i shpëtimit do të tentojë të gjejë instalimin tuaj Linux dhe ta "
+"montojë atë nën direktorinë: %s. Ju më pas mund të bëni ndryshimet e "
+"kërkuara në sistemin tuaj. Zgjidhni '1' për të vazhduar më tej me këtë hap.\n"
+"Ju mund të zgjidhni të montoni skedarët e sistemit si vetëm të lexueshëm "
+"përkundrejt të lexueshëm-të shkrueshëm duke zgjedhur '2'.\n"
+"Nëse për ndonjë arsye ky proçes nuk funksionon zgjidhni '3' për të kapërcyer "
+"direkt në shell.\n"
+
+#: pyanaconda/rescue.py:313
+msgid "Continue"
+msgstr "Vazhdo"
+
+#: pyanaconda/rescue.py:314
+msgid "Read-only mount"
+msgstr "Bazament vetëm i lexueshëm."
+
+#: pyanaconda/rescue.py:315
+msgid "Skip to shell"
+msgstr "Kaloni në shell."
+
+#: pyanaconda/rescue.py:316
+msgid "Quit (Reboot)"
+msgstr ""
+
+#: pyanaconda/rescue.py:413
+msgid "Rescue Shell"
+msgstr ""
+
+#: pyanaconda/rescue.py:423
+#, python-format
+msgid "Run %s to unmount the system when you are finished."
+msgstr "Ekzekutoni %s për të ç'montuar sistemin kur të keni përfunduar."
+
+#: pyanaconda/rescue.py:424
+msgid ""
+"When finished, please exit from the shell and your system will reboot.\n"
+msgstr ""
+
+#: pyanaconda/rescue.py:435
+#, python-format
+msgid ""
+"Your system has been mounted under %(mountpoint)s.\n"
+"\n"
+"If you would like to make the root of your system the root of the active "
+"system, run the command:\n"
+"\n"
+"\tchroot %(mountpoint)s\n"
+"\n"
+msgstr ""
+
+#: pyanaconda/rescue.py:447
+#, fuzzy, python-brace-format
+#| msgid ""
+#| "An error occurred trying to mount some or all of your system.  Some of it "
+#| "may be mounted under %s\n"
+#| "\n"
+msgid ""
+"An error occurred trying to mount some or all of your system: {message}\n"
+"\n"
+"Some of it may be mounted under {path}."
+msgstr ""
+"Një gabim ndodhi gjatë përpjekjes së montimit të një pjese ose gjithë "
+"sistemit tuaj. Një pjesë e saj mund të jetë montuar nën %s\n"
+
+#: pyanaconda/rescue.py:459
+#, fuzzy
+#| msgid "You don't have any Linux partitions. %s\n"
+msgid "You don't have any Linux partitions.\n"
+msgstr "Ju nuk keni asnjë ndarje Linux.%s\n"
+
+#: pyanaconda/rescue.py:465
+msgid "Not mounting the system.\n"
+msgstr ""
+
+#: pyanaconda/rescue.py:479
+#, python-format
+msgid "Please press %s to get a shell"
+msgstr ""
+
+#: pyanaconda/rescue.py:496
+msgid "Root Selection"
+msgstr "Pëzgjedhja e rrënjës"
+
+#: pyanaconda/rescue.py:522
+msgid "The following installations were discovered on your system."
+msgstr ""
+
 #: pyanaconda/addons.py:97
 #, python-format
 msgid "Executing %s addon"
@@ -4273,22 +4380,6 @@ msgstr "Duke instaluar ngarkuesin e ndezjes"
 msgid "Creating snapshots"
 msgstr ""
 
-#: pyanaconda/kickstart.py:540
-msgid ""
-"\n"
-"Some warnings occurred during reading the kickstart file:"
-msgstr ""
-
-#: pyanaconda/kickstart.py:553
-#, python-format
-msgid ""
-"\n"
-"An error occurred during reading the kickstart file:\n"
-"%s\n"
-"\n"
-"The installer will now terminate."
-msgstr ""
-
 #: pyanaconda/network.py:111
 msgid "Host name cannot be None or an empty string."
 msgstr "Emri i host-it nuk mund të jetë Asnjë ose bosh."
@@ -4382,113 +4473,6 @@ msgstr "kërkohet emri policisë për %s"
 #, python-format
 msgid "A %(command)s with the name %(policyName)s has already been defined."
 msgstr "Një %(command)s me emrin %(policyName)s janë përcaktuar tashmë"
-
-#: pyanaconda/rescue.py:277
-msgid "Unable to find /bin/bash to execute!  Not starting shell."
-msgstr "E pamundur të gjendet /bin/bash për ekzekutim! Nuk do të niset shell."
-
-#: pyanaconda/rescue.py:294
-msgid "Rescue"
-msgstr "Shpëtim"
-
-#: pyanaconda/rescue.py:301
-#, python-format
-msgid ""
-"The rescue environment will now attempt to find your Linux installation and "
-"mount it under the directory : %s.  You can then make any changes required "
-"to your system.  Choose '1' to proceed with this step.\n"
-"You can choose to mount your file systems read-only instead of read-write by "
-"choosing '2'.\n"
-"If for some reason this process does not work choose '3' to skip directly to "
-"a shell.\n"
-"\n"
-msgstr ""
-"Mjedisi i shpëtimit do të tentojë të gjejë instalimin tuaj Linux dhe ta "
-"montojë atë nën direktorinë: %s. Ju më pas mund të bëni ndryshimet e "
-"kërkuara në sistemin tuaj. Zgjidhni '1' për të vazhduar më tej me këtë hap.\n"
-"Ju mund të zgjidhni të montoni skedarët e sistemit si vetëm të lexueshëm "
-"përkundrejt të lexueshëm-të shkrueshëm duke zgjedhur '2'.\n"
-"Nëse për ndonjë arsye ky proçes nuk funksionon zgjidhni '3' për të kapërcyer "
-"direkt në shell.\n"
-
-#: pyanaconda/rescue.py:313
-msgid "Continue"
-msgstr "Vazhdo"
-
-#: pyanaconda/rescue.py:314
-msgid "Read-only mount"
-msgstr "Bazament vetëm i lexueshëm."
-
-#: pyanaconda/rescue.py:315
-msgid "Skip to shell"
-msgstr "Kaloni në shell."
-
-#: pyanaconda/rescue.py:316
-msgid "Quit (Reboot)"
-msgstr ""
-
-#: pyanaconda/rescue.py:413
-msgid "Rescue Shell"
-msgstr ""
-
-#: pyanaconda/rescue.py:423
-#, python-format
-msgid "Run %s to unmount the system when you are finished."
-msgstr "Ekzekutoni %s për të ç'montuar sistemin kur të keni përfunduar."
-
-#: pyanaconda/rescue.py:424
-msgid ""
-"When finished, please exit from the shell and your system will reboot.\n"
-msgstr ""
-
-#: pyanaconda/rescue.py:435
-#, python-format
-msgid ""
-"Your system has been mounted under %(mountpoint)s.\n"
-"\n"
-"If you would like to make the root of your system the root of the active "
-"system, run the command:\n"
-"\n"
-"\tchroot %(mountpoint)s\n"
-"\n"
-msgstr ""
-
-#: pyanaconda/rescue.py:447
-#, fuzzy, python-brace-format
-#| msgid ""
-#| "An error occurred trying to mount some or all of your system.  Some of it "
-#| "may be mounted under %s\n"
-#| "\n"
-msgid ""
-"An error occurred trying to mount some or all of your system: {message}\n"
-"\n"
-"Some of it may be mounted under {path}."
-msgstr ""
-"Një gabim ndodhi gjatë përpjekjes së montimit të një pjese ose gjithë "
-"sistemit tuaj. Një pjesë e saj mund të jetë montuar nën %s\n"
-
-#: pyanaconda/rescue.py:459
-#, fuzzy
-#| msgid "You don't have any Linux partitions. %s\n"
-msgid "You don't have any Linux partitions.\n"
-msgstr "Ju nuk keni asnjë ndarje Linux.%s\n"
-
-#: pyanaconda/rescue.py:465
-msgid "Not mounting the system.\n"
-msgstr ""
-
-#: pyanaconda/rescue.py:479
-#, python-format
-msgid "Please press %s to get a shell"
-msgstr ""
-
-#: pyanaconda/rescue.py:496
-msgid "Root Selection"
-msgstr "Pëzgjedhja e rrënjës"
-
-#: pyanaconda/rescue.py:522
-msgid "The following installations were discovered on your system."
-msgstr ""
 
 #: pyanaconda/startup_utils.py:83
 #, python-format
@@ -4674,6 +4658,22 @@ msgid ""
 msgstr ""
 "Fjalëkalimi VNC duhet të jete gjashtë deri në tetë karaktere i gjatë.\n"
 "Ju lutem fusni një fjalëkalim të ri, ose lëre të bardhë pa fjalekalim."
+
+#: pyanaconda/kickstart.py:540
+msgid ""
+"\n"
+"Some warnings occurred during reading the kickstart file:"
+msgstr ""
+
+#: pyanaconda/kickstart.py:553
+#, python-format
+msgid ""
+"\n"
+"An error occurred during reading the kickstart file:\n"
+"%s\n"
+"\n"
+"The installer will now terminate."
+msgstr ""
 
 #: anaconda.py:378
 msgid "Unable to create PID file"
@@ -5369,6 +5369,62 @@ msgstr ""
 "Fjalëkalimet ose çelësat e inkriptimit janë të nevojshme për hyrjen në "
 "rrjetin pa tel"
 
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:23
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Cancel"
+msgstr "_Anullo"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:38
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Save Passphrase"
+msgstr "_Ruaj Frazën e Kalimit"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:65
+msgid "DISK ENCRYPTION PASSPHRASE"
+msgstr "KODIMI I FJALËKALIMIT TË DISKUT"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:81
+msgid ""
+"You have chosen to encrypt some of your data. You will need to create a "
+"passphrase that you will use to access your data when you start your "
+"computer."
+msgstr ""
+"Ju keni zgjdhur për te koduar një pjesë të të dhënave tuaja. Ju duhet të "
+"krijoni një frazë kalimi të cilën ju do ta përdorni për të arritur të dhënat "
+"tuaja kur të ndizni kompjuterin tuaj."
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:102
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Passphrase:"
+msgstr "_Fraza e kalimit:"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:133
+msgctxt "GUI|Passphrase Dialog"
+msgid "Con_firm:"
+msgstr "Ri_pohojeni:"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:275
+msgid ""
+"Warning: You won't be able to switch between keyboard layouts (from the "
+"default one) when you decrypt your disks after install."
+msgstr ""
+"Paralajmërim: Ju nuk do të jeni në gjendje të ndërroni midis faqosjeve të "
+"tastierës (nga e paravendosura) kur ju zhbllokoni disqet tuaj pas instalimit."
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:23
+msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
+msgid "_Quit"
+msgstr "_Dil"
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:37
+msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
+msgid "_Continue"
+msgstr "_Vazhdoni"
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:122
+msgid "Unsupported Hardware"
+msgstr "Pajisje fizike e Pambështetur"
+
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:21
 msgctxt "GUI|Custom Partitioning|Confirm Delete Dialog"
 msgid "_Cancel"
@@ -5578,48 +5634,6 @@ msgstr ""
 msgid "Disk formatting complete."
 msgstr "Formatimi i diskut mbaroi."
 
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:23
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Cancel"
-msgstr "_Anullo"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:38
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Save Passphrase"
-msgstr "_Ruaj Frazën e Kalimit"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:65
-msgid "DISK ENCRYPTION PASSPHRASE"
-msgstr "KODIMI I FJALËKALIMIT TË DISKUT"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:81
-msgid ""
-"You have chosen to encrypt some of your data. You will need to create a "
-"passphrase that you will use to access your data when you start your "
-"computer."
-msgstr ""
-"Ju keni zgjdhur për te koduar një pjesë të të dhënave tuaja. Ju duhet të "
-"krijoni një frazë kalimi të cilën ju do ta përdorni për të arritur të dhënat "
-"tuaja kur të ndizni kompjuterin tuaj."
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:102
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Passphrase:"
-msgstr "_Fraza e kalimit:"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:133
-msgctxt "GUI|Passphrase Dialog"
-msgid "Con_firm:"
-msgstr "Ri_pohojeni:"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:275
-msgid ""
-"Warning: You won't be able to switch between keyboard layouts (from the "
-"default one) when you decrypt your disks after install."
-msgstr ""
-"Paralajmërim: Ju nuk do të jeni në gjendje të ndërroni midis faqosjeve të "
-"tastierës (nga e paravendosura) kur ju zhbllokoni disqet tuaj pas instalimit."
-
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:8
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:71
 msgid "RESCAN DISKS"
@@ -5767,20 +5781,6 @@ msgstr "Tipi"
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:166
 msgid "Device"
 msgstr "Pajisje"
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:23
-msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
-msgid "_Quit"
-msgstr "_Dil"
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:37
-msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
-msgid "_Continue"
-msgstr "_Vazhdoni"
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:122
-msgid "Unsupported Hardware"
-msgstr "Pajisje fizike e Pambështetur"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:67
 #: pyanaconda/ui/gui/spokes/storage.glade:450

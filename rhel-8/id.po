@@ -29,7 +29,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
-"POT-Creation-Date: 2024-02-07 15:14+0100\n"
+"POT-Creation-Date: 2024-02-16 18:27+0100\n"
 "PO-Revision-Date: 2024-02-12 17:12+0000\n"
 "Last-Translator: Andika Triwidada <andika@gmail.com>\n"
 "Language-Team: Indonesian <https://translate.fedoraproject.org/projects/"
@@ -48,6 +48,18 @@ msgstr "Nama bagian %addon tidak ada."
 #: pyanaconda/core/kickstart/addon.py:138
 msgid "Unknown name of the %addon section."
 msgstr "Nama bagian %addon tidak diketahui."
+
+#: pyanaconda/core/payload.py:131
+msgid "No host url"
+msgstr "Tidak ada url host"
+
+#: pyanaconda/core/payload.py:152
+msgid "malformed URL, cannot parse it."
+msgstr "URL cacat, tidak dapat mengurainya."
+
+#: pyanaconda/core/payload.py:168
+msgid "URL has no host component"
+msgstr "URL tidak memiliki komponen host"
 
 #: pyanaconda/core/constants.py:89
 msgid "Start VNC"
@@ -259,18 +271,6 @@ msgstr "Mengunduh metadata grup..."
 #: pyanaconda/core/constants.py:306
 msgid "Anaconda Installer"
 msgstr "Pemasang Anaconda"
-
-#: pyanaconda/core/payload.py:131
-msgid "No host url"
-msgstr "Tidak ada url host"
-
-#: pyanaconda/core/payload.py:152
-msgid "malformed URL, cannot parse it."
-msgstr "URL cacat, tidak dapat mengurainya."
-
-#: pyanaconda/core/payload.py:168
-msgid "URL has no host component"
-msgstr "URL tidak memiliki komponen host"
 
 #: pyanaconda/core/storage.py:84
 msgid "Unsupported"
@@ -775,17 +775,6 @@ msgstr ""
 "yang tidak dipilih. Anda mesti memilih atau menghapus semua disk ini sebagai "
 "suatu set."
 
-#: pyanaconda/modules/storage/devicetree/fsset.py:390
-#, python-brace-format
-msgid ""
-"There is an entry in your /etc/fstab file that contains an invalid or "
-"incorrect file system type. The file says that {detected_type} at "
-"{mount_point} is {fstab_type}."
-msgstr ""
-"Ada satu entri dalam berkas /etc/fstab Anda yang memuat tipe sistem berkas "
-"yang tidak valid atau salah. Berkas menyatakan bahwa {detected_type} pada "
-"{mount_point} adalah {fstab_type}."
-
 #: pyanaconda/modules/storage/devicetree/root.py:342
 msgid "Unknown Linux"
 msgstr "Linux tidak dikenal"
@@ -799,6 +788,17 @@ msgstr "{product} {version} untuk {arch}"
 #, python-brace-format
 msgid "{product} Linux {version} for {arch}"
 msgstr "Linux {product} {version} untuk {arch}"
+
+#: pyanaconda/modules/storage/devicetree/fsset.py:390
+#, python-brace-format
+msgid ""
+"There is an entry in your /etc/fstab file that contains an invalid or "
+"incorrect file system type. The file says that {detected_type} at "
+"{mount_point} is {fstab_type}."
+msgstr ""
+"Ada satu entri dalam berkas /etc/fstab Anda yang memuat tipe sistem berkas "
+"yang tidak valid atau salah. Berkas menyatakan bahwa {detected_type} pada "
+"{mount_point} adalah {fstab_type}."
 
 #: pyanaconda/modules/storage/devicetree/utils.py:68
 #, python-format
@@ -1790,6 +1790,17 @@ msgstr "Hak"
 msgid "{} consumed"
 msgstr "{} dikonsumsi"
 
+#: pyanaconda/ui/gui/spokes/lib/cart.py:193
+msgctxt "GUI|Selected Disks Dialog"
+msgid "_Do not install boot loader"
+msgstr "Jangan pasang boot loa_der"
+
+#: pyanaconda/ui/gui/spokes/lib/cart.py:198
+#: pyanaconda/ui/gui/spokes/lib/cart.glade:200
+msgctxt "GUI|Selected Disks Dialog"
+msgid "_Set as Boot Device"
+msgstr "Atur _sebagai Peranti Boot"
+
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:444
 msgid "DATA"
 msgstr "DATA"
@@ -1829,17 +1840,6 @@ msgstr "Titik kait baru aka_n memakai skema pemartisian berikut:"
 msgctxt "GUI|Custom Partitioning|Autopart Page"
 msgid "_Encrypt automatically created mount points by default:"
 msgstr "_Encrypt titik pemasangan yang dibuat secara otomatis secara default:"
-
-#: pyanaconda/ui/gui/spokes/lib/cart.py:193
-msgctxt "GUI|Selected Disks Dialog"
-msgid "_Do not install boot loader"
-msgstr "Jangan pasang boot loa_der"
-
-#: pyanaconda/ui/gui/spokes/lib/cart.py:198
-#: pyanaconda/ui/gui/spokes/lib/cart.glade:200
-msgctxt "GUI|Selected Disks Dialog"
-msgid "_Set as Boot Device"
-msgstr "Atur _sebagai Peranti Boot"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:47
 #, python-format
@@ -3837,6 +3837,119 @@ msgstr ""
 "\n"
 "Anda tetap mau pakai?"
 
+#: pyanaconda/rescue.py:277
+msgid "Unable to find /bin/bash to execute!  Not starting shell."
+msgstr "Tidak bisa temukan /bin/bash untuk dijalankan! Tidak memulai shell."
+
+#: pyanaconda/rescue.py:294
+msgid "Rescue"
+msgstr "Penyelamatan"
+
+#: pyanaconda/rescue.py:301
+#, python-format
+msgid ""
+"The rescue environment will now attempt to find your Linux installation and "
+"mount it under the directory : %s.  You can then make any changes required "
+"to your system.  Choose '1' to proceed with this step.\n"
+"You can choose to mount your file systems read-only instead of read-write by "
+"choosing '2'.\n"
+"If for some reason this process does not work choose '3' to skip directly to "
+"a shell.\n"
+"\n"
+msgstr ""
+"Lingkungan penyelamatan sekarang akan mencoba menemukan instalasi Linux Anda "
+"dan mengaitnya di bawah direktori %s. Anda kemudian dapat membuat perubahan "
+"yang diperlukan untuk sistem Anda. Pilih '1' untuk melanjutkan dengan "
+"langkah ini.\n"
+"Anda dapat memilih untuk mengait sistem berkas Anda hanya-baca alih-alih "
+"baca-tulis dengan memilih '2'. \n"
+"Jika karena alasan tertentu proses ini gagal Anda bisa memilih '3' untuk "
+"langsung ke shell.\n"
+"\n"
+
+#: pyanaconda/rescue.py:313
+msgid "Continue"
+msgstr "Lanjutkan"
+
+#: pyanaconda/rescue.py:314
+msgid "Read-only mount"
+msgstr "Kait hanya-baca"
+
+#: pyanaconda/rescue.py:315
+msgid "Skip to shell"
+msgstr "Lewati ke shell"
+
+#: pyanaconda/rescue.py:316
+msgid "Quit (Reboot)"
+msgstr "Keluar (Boot ulang)"
+
+#: pyanaconda/rescue.py:413
+msgid "Rescue Shell"
+msgstr "Shell Pertolongan"
+
+#: pyanaconda/rescue.py:423
+#, python-format
+msgid "Run %s to unmount the system when you are finished."
+msgstr "Jalankan %s untuk membuka kaitan sistem ketika Anda sudah selesai."
+
+#: pyanaconda/rescue.py:424
+msgid ""
+"When finished, please exit from the shell and your system will reboot.\n"
+msgstr ""
+"Ketika selesai, harap keluar dari shell dan sistem Anda akan boot ulang.\n"
+
+#: pyanaconda/rescue.py:435
+#, python-format
+msgid ""
+"Your system has been mounted under %(mountpoint)s.\n"
+"\n"
+"If you would like to make the root of your system the root of the active "
+"system, run the command:\n"
+"\n"
+"\tchroot %(mountpoint)s\n"
+"\n"
+msgstr ""
+"Sistem Anda telah dipasang di bawah %(mountpoint)s.\n"
+"\n"
+"Jika Anda ingin menjadikan root sistem Anda sebagai root dari sistem aktif, "
+"jalankan perintah:\n"
+"\n"
+"\tchroot %(mountpoint)s\n"
+"\n"
+
+#: pyanaconda/rescue.py:447
+#, python-brace-format
+msgid ""
+"An error occurred trying to mount some or all of your system: {message}\n"
+"\n"
+"Some of it may be mounted under {path}."
+msgstr ""
+"Terjadi kesalahan saat mencoba untuk mengait sebagian atau semua sistem "
+"Anda: {message}\n"
+"\n"
+"Sebagian mungkin dikait di bawah {path}."
+
+#: pyanaconda/rescue.py:459
+msgid "You don't have any Linux partitions.\n"
+msgstr "Anda tidak punya partisi Linux apapun.\n"
+
+#: pyanaconda/rescue.py:465
+msgid "Not mounting the system.\n"
+msgstr "Tidak mengait sistem.\n"
+
+#: pyanaconda/rescue.py:479
+#, python-format
+msgid "Please press %s to get a shell"
+msgstr "Harap tekan %s untuk mendapatkan shell"
+
+#: pyanaconda/rescue.py:496
+msgid "Root Selection"
+msgstr "Pemilihan Root"
+
+#: pyanaconda/rescue.py:522
+msgid "The following installations were discovered on your system."
+msgstr "Instalasi berikut ditemukan pada sistem Anda."
+
 #: pyanaconda/addons.py:97
 #, python-format
 msgid "Executing %s addon"
@@ -4224,29 +4337,6 @@ msgstr "Memasang boot loader"
 msgid "Creating snapshots"
 msgstr "Membuat snapshot"
 
-#: pyanaconda/kickstart.py:540
-msgid ""
-"\n"
-"Some warnings occurred during reading the kickstart file:"
-msgstr ""
-"\n"
-"Beberapa peringatan terjadi selama membaca berkas kickstart:"
-
-#: pyanaconda/kickstart.py:553
-#, python-format
-msgid ""
-"\n"
-"An error occurred during reading the kickstart file:\n"
-"%s\n"
-"\n"
-"The installer will now terminate."
-msgstr ""
-"\n"
-"Suatu kesalahan terjari saat membaca berkas kickstart:\n"
-"%s\n"
-"\n"
-"Installer akan diakhiri."
-
 #: pyanaconda/network.py:111
 msgid "Host name cannot be None or an empty string."
 msgstr "Nama host tidak boleh None atau string kosong."
@@ -4338,119 +4428,6 @@ msgstr "nama kebijakan diperlukan untuk %s"
 #, python-format
 msgid "A %(command)s with the name %(policyName)s has already been defined."
 msgstr "Suatu %(command)s dengan nama %(policyName)s telah didefinisikan."
-
-#: pyanaconda/rescue.py:277
-msgid "Unable to find /bin/bash to execute!  Not starting shell."
-msgstr "Tidak bisa temukan /bin/bash untuk dijalankan! Tidak memulai shell."
-
-#: pyanaconda/rescue.py:294
-msgid "Rescue"
-msgstr "Penyelamatan"
-
-#: pyanaconda/rescue.py:301
-#, python-format
-msgid ""
-"The rescue environment will now attempt to find your Linux installation and "
-"mount it under the directory : %s.  You can then make any changes required "
-"to your system.  Choose '1' to proceed with this step.\n"
-"You can choose to mount your file systems read-only instead of read-write by "
-"choosing '2'.\n"
-"If for some reason this process does not work choose '3' to skip directly to "
-"a shell.\n"
-"\n"
-msgstr ""
-"Lingkungan penyelamatan sekarang akan mencoba menemukan instalasi Linux Anda "
-"dan mengaitnya di bawah direktori %s. Anda kemudian dapat membuat perubahan "
-"yang diperlukan untuk sistem Anda. Pilih '1' untuk melanjutkan dengan "
-"langkah ini.\n"
-"Anda dapat memilih untuk mengait sistem berkas Anda hanya-baca alih-alih "
-"baca-tulis dengan memilih '2'. \n"
-"Jika karena alasan tertentu proses ini gagal Anda bisa memilih '3' untuk "
-"langsung ke shell.\n"
-"\n"
-
-#: pyanaconda/rescue.py:313
-msgid "Continue"
-msgstr "Lanjutkan"
-
-#: pyanaconda/rescue.py:314
-msgid "Read-only mount"
-msgstr "Kait hanya-baca"
-
-#: pyanaconda/rescue.py:315
-msgid "Skip to shell"
-msgstr "Lewati ke shell"
-
-#: pyanaconda/rescue.py:316
-msgid "Quit (Reboot)"
-msgstr "Keluar (Boot ulang)"
-
-#: pyanaconda/rescue.py:413
-msgid "Rescue Shell"
-msgstr "Shell Pertolongan"
-
-#: pyanaconda/rescue.py:423
-#, python-format
-msgid "Run %s to unmount the system when you are finished."
-msgstr "Jalankan %s untuk membuka kaitan sistem ketika Anda sudah selesai."
-
-#: pyanaconda/rescue.py:424
-msgid ""
-"When finished, please exit from the shell and your system will reboot.\n"
-msgstr ""
-"Ketika selesai, harap keluar dari shell dan sistem Anda akan boot ulang.\n"
-
-#: pyanaconda/rescue.py:435
-#, python-format
-msgid ""
-"Your system has been mounted under %(mountpoint)s.\n"
-"\n"
-"If you would like to make the root of your system the root of the active "
-"system, run the command:\n"
-"\n"
-"\tchroot %(mountpoint)s\n"
-"\n"
-msgstr ""
-"Sistem Anda telah dipasang di bawah %(mountpoint)s.\n"
-"\n"
-"Jika Anda ingin menjadikan root sistem Anda sebagai root dari sistem aktif, "
-"jalankan perintah:\n"
-"\n"
-"\tchroot %(mountpoint)s\n"
-"\n"
-
-#: pyanaconda/rescue.py:447
-#, python-brace-format
-msgid ""
-"An error occurred trying to mount some or all of your system: {message}\n"
-"\n"
-"Some of it may be mounted under {path}."
-msgstr ""
-"Terjadi kesalahan saat mencoba untuk mengait sebagian atau semua sistem "
-"Anda: {message}\n"
-"\n"
-"Sebagian mungkin dikait di bawah {path}."
-
-#: pyanaconda/rescue.py:459
-msgid "You don't have any Linux partitions.\n"
-msgstr "Anda tidak punya partisi Linux apapun.\n"
-
-#: pyanaconda/rescue.py:465
-msgid "Not mounting the system.\n"
-msgstr "Tidak mengait sistem.\n"
-
-#: pyanaconda/rescue.py:479
-#, python-format
-msgid "Please press %s to get a shell"
-msgstr "Harap tekan %s untuk mendapatkan shell"
-
-#: pyanaconda/rescue.py:496
-msgid "Root Selection"
-msgstr "Pemilihan Root"
-
-#: pyanaconda/rescue.py:522
-msgid "The following installations were discovered on your system."
-msgstr "Instalasi berikut ditemukan pada sistem Anda."
 
 #: pyanaconda/startup_utils.py:83
 #, python-format
@@ -4639,6 +4616,29 @@ msgid ""
 msgstr ""
 "Panjang sandi VNC harus 6 sampai 8 karakter.\n"
 "Silakan masukkan yang baru, atau kosongkan jika tanpa sandi."
+
+#: pyanaconda/kickstart.py:540
+msgid ""
+"\n"
+"Some warnings occurred during reading the kickstart file:"
+msgstr ""
+"\n"
+"Beberapa peringatan terjadi selama membaca berkas kickstart:"
+
+#: pyanaconda/kickstart.py:553
+#, python-format
+msgid ""
+"\n"
+"An error occurred during reading the kickstart file:\n"
+"%s\n"
+"\n"
+"The installer will now terminate."
+msgstr ""
+"\n"
+"Suatu kesalahan terjari saat membaca berkas kickstart:\n"
+"%s\n"
+"\n"
+"Installer akan diakhiri."
 
 #: anaconda.py:378
 msgid "Unable to create PID file"
@@ -5339,6 +5339,62 @@ msgstr ""
 "Sandi atau kunci enkripsi diperlukan untuk mengakses\n"
 "jaringan nirkabel"
 
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:23
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Cancel"
+msgstr "_Batal"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:38
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Save Passphrase"
+msgstr "_Simpan Passphrase"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:65
+msgid "DISK ENCRYPTION PASSPHRASE"
+msgstr "PASSPHRASE DISK TERENKRIPSI"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:81
+msgid ""
+"You have chosen to encrypt some of your data. You will need to create a "
+"passphrase that you will use to access your data when you start your "
+"computer."
+msgstr ""
+"Anda telah memilih untuk mengenkripsi sebagian data. Anda akan perlu untuk "
+"membuat frasa sandi yang akan digunakan untuk mengakses data ketika Anda "
+"menyalakan komputer."
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:102
+msgctxt "GUI|Passphrase Dialog"
+msgid "_Passphrase:"
+msgstr "_Frasa Sandi:"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:133
+msgctxt "GUI|Passphrase Dialog"
+msgid "Con_firm:"
+msgstr "Kon_firmasi:"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:275
+msgid ""
+"Warning: You won't be able to switch between keyboard layouts (from the "
+"default one) when you decrypt your disks after install."
+msgstr ""
+"Peringatan: Anda tidak akan dapat beralih di antara tata letak keyboard "
+"(dari default) ketika Anda mendekripsi disk Anda setelah instalasi."
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:23
+msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
+msgid "_Quit"
+msgstr "_Keluar"
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:37
+msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
+msgid "_Continue"
+msgstr "_Lanjutkan"
+
+#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:122
+msgid "Unsupported Hardware"
+msgstr "Perangkat Keras yang Tidak Didukung"
+
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:21
 msgctxt "GUI|Custom Partitioning|Confirm Delete Dialog"
 msgid "_Cancel"
@@ -5554,48 +5610,6 @@ msgstr ""
 msgid "Disk formatting complete."
 msgstr "Format disk telah lengkap."
 
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:23
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Cancel"
-msgstr "_Batal"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:38
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Save Passphrase"
-msgstr "_Simpan Passphrase"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:65
-msgid "DISK ENCRYPTION PASSPHRASE"
-msgstr "PASSPHRASE DISK TERENKRIPSI"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:81
-msgid ""
-"You have chosen to encrypt some of your data. You will need to create a "
-"passphrase that you will use to access your data when you start your "
-"computer."
-msgstr ""
-"Anda telah memilih untuk mengenkripsi sebagian data. Anda akan perlu untuk "
-"membuat frasa sandi yang akan digunakan untuk mengakses data ketika Anda "
-"menyalakan komputer."
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:102
-msgctxt "GUI|Passphrase Dialog"
-msgid "_Passphrase:"
-msgstr "_Frasa Sandi:"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:133
-msgctxt "GUI|Passphrase Dialog"
-msgid "Con_firm:"
-msgstr "Kon_firmasi:"
-
-#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:275
-msgid ""
-"Warning: You won't be able to switch between keyboard layouts (from the "
-"default one) when you decrypt your disks after install."
-msgstr ""
-"Peringatan: Anda tidak akan dapat beralih di antara tata letak keyboard "
-"(dari default) ketika Anda mendekripsi disk Anda setelah instalasi."
-
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:8
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:71
 msgid "RESCAN DISKS"
@@ -5742,20 +5756,6 @@ msgstr "Tipe"
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:166
 msgid "Device"
 msgstr "Peranti"
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:23
-msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
-msgid "_Quit"
-msgstr "_Keluar"
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:37
-msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
-msgid "_Continue"
-msgstr "_Lanjutkan"
-
-#: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:122
-msgid "Unsupported Hardware"
-msgstr "Perangkat Keras yang Tidak Didukung"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:67
 #: pyanaconda/ui/gui/spokes/storage.glade:450
