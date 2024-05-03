@@ -9,6 +9,8 @@ jobs:
     strategy:
       # only one job at once otherwise one job will push and second job will get conflict on remote
       max-parallel: 1
+      # do not stop on the first failed branch
+      fail-fast: false
       # update this matrix to support new Anaconda branches
       matrix:
         branch: [ master, f40, rhel-9 ]
