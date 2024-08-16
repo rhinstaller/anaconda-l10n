@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: anaconda 34.25.0.29\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2022-09-06 02:11+0000\n"
-"PO-Revision-Date: 2024-08-05 11:39+0000\n"
+"PO-Revision-Date: 2024-08-17 09:25+0000\n"
 "Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
 "Language-Team: Slovenian <https://translate.fedoraproject.org/projects/"
 "anaconda/rhel-90/sl/>\n"
@@ -180,6 +180,9 @@ msgid ""
 "loader stage1 device %(stage1dev)s is not. A drive failure in %(stage2dev)s "
 "could render the system unbootable."
 msgstr ""
+"Naprava %(stage2dev)s zagonskega nalagalnika stage2 je na večdiskovnem "
+"polju, naprava %(stage1dev)s zagonskega nalagalnika stage1 pa ne. Okvara "
+"pogona v %(stage2dev)s bi lahko povzročila, da sistema ne bi mogli zagnati."
 
 #: pyanaconda/modules/storage/bootloader/grub2.py:532
 #, python-format
@@ -188,6 +191,9 @@ msgid ""
 "loader stage1 device %(stage1dev)s is not part of this array. The stage1 "
 "boot loader will only be installed to a single drive."
 msgstr ""
+"Naprava %(stage2dev)s zagonskega nalagalnika stage2 je na večdiskovnem "
+"polju, vendar naprava %(stage1dev)s zagonskega nalagalnika stage1 ni del "
+"tega polja. Zagonski nalagalnik stage1 bo nameščen le kot posamezen pogon."
 
 #: pyanaconda/modules/storage/bootloader/base.py:183
 msgid "/boot file system"
@@ -621,6 +627,8 @@ msgid ""
 "This LVM Volume Group is missing %(missingPVs)d of %(totalPVs)d physical "
 "volumes. You can remove it or select a different device."
 msgstr ""
+"Tej skupini pogonov LVM manjka %(missingPVs)d od %(totalPVs)d fizičnih "
+"pogonov. Lahko jih odstranite ali izberete drugo napravo."
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:1255
 #, python-format
@@ -789,12 +797,16 @@ msgid ""
 "You must include a PReP Boot Partition within the first 4GiB of an MBR- or "
 "GPT-formatted disk."
 msgstr ""
+"Vključiti morate zagonski razdelek PReP v okviru prvih 4GiB diska, ki je "
+"formatiran z MBR ali GPT."
 
 #: pyanaconda/modules/storage/platform.py:354
 msgid ""
 "You must include an Apple Bootstrap Partition on an Apple Partition Map-"
 "formatted disk."
 msgstr ""
+"Na disk, formatiran z Apple Partition Map, morate vključiti razdelek Apple "
+"Bootstrap."
 
 #: pyanaconda/modules/storage/platform.py:404
 msgid ""
@@ -936,6 +948,8 @@ msgid ""
 "without an encryption key specified for this device. Please, rescan the "
 "storage."
 msgstr ""
+"Obstoječe odklenjene naprave LUKS {} ni mogoče uporabiti za namestitev brez "
+"šifrirnega ključa, določenega za to napravo. Ponovno prečešite hrambo."
 
 #: pyanaconda/modules/storage/checker/utils.py:434
 #, python-format
@@ -1033,7 +1047,21 @@ msgid_plural ""
 "unselected disks %(unselected)s. You must select or de-select these disks as "
 "a set."
 msgstr[0] ""
+"Izbrali ste disk %(selected)s, ki vsebuje naprave, ki uporabljajo tudi "
+"neizbrani disk %(unselected)s. Izbrati ali preklicati morate izbor teh "
+"diskov kot kompleta."
 msgstr[1] ""
+"Izbrali ste disk %(selected)s, ki vsebuje naprave, ki uporabljajo tudi "
+"neizbrana diska %(unselected)s. Izbrati ali preklicati morate izbor teh "
+"diskov kot kompleta."
+msgstr[2] ""
+"Izbrali ste disk %(selected)s, ki vsebuje naprave, ki uporabljajo tudi "
+"neizbrane diske %(unselected)s. Izbrati ali preklicati morate izbor teh "
+"diskov kot kompleta."
+msgstr[3] ""
+"Izbrali ste disk %(selected)s, ki vsebuje naprave, ki uporabljajo tudi "
+"neizbrane diske %(unselected)s. Izbrati ali preklicati morate izbor teh "
+"diskov kot kompleta."
 
 #: pyanaconda/modules/storage/constants.py:30
 msgid ""
@@ -1125,7 +1153,7 @@ msgstr ""
 
 #: pyanaconda/core/storage.py:89 pyanaconda/core/storage.py:97
 msgid "LVM Thin Provisioning"
-msgstr ""
+msgstr "Varčno oskrbovanje LVM"
 
 #: pyanaconda/core/storage.py:90 pyanaconda/ui/gui/spokes/lib/resize.glade:150
 msgid "Disk"
@@ -2060,6 +2088,9 @@ msgid ""
 "of available space, including <b>%(software)s</b> for software and "
 "<b>%(swap)s</b> for swap space."
 msgstr ""
+"Vaš trenutni <b>%(product)s</b>izbor programja zahteva <b>%(total)s</b> "
+"prostora, vključno s <b>%(software)s</b> za programje in <b>%(swap)s</b> za "
+"ostranjevalni prostor."
 
 #: pyanaconda/ui/gui/spokes/lib/storage_dialogs.py:81
 #, python-format
@@ -2068,6 +2099,9 @@ msgid ""
 "selection</a> requires <b>%(total)s</b> of available space, including "
 "<b>%(software)s</b> for software and <b>%(swap)s</b> for swap space."
 msgstr ""
+"Vaš trenutni <a href=\"\" title=\"%(tooltip)s\"><b>%(product)s</b>izbor "
+"programja</a> zahteva <b>%(total)s</b> prostora, vključno s <b>%(software)s</"
+"b> za programje in <b>%(swap)s</b> za ostranjevalni prostor."
 
 #: pyanaconda/ui/gui/spokes/lib/storage_dialogs.py:132
 #, python-format
@@ -2422,6 +2456,8 @@ msgid ""
 "The following errors were encountered when checking your disk selection. You "
 "can modify your selection or quit the installer."
 msgstr ""
+"Naslednje napake so se pojavile med preverjanjem vaše izbire diskov. Lahko "
+"spremenite vašo izbiro ali zapustite namestilnik."
 
 #: pyanaconda/ui/gui/spokes/storage.py:853
 #: pyanaconda/ui/gui/spokes/storage.py:874
@@ -2451,6 +2487,8 @@ msgid ""
 "configuration.  These are not fatal, but you may wish to make changes to "
 "your storage layout."
 msgstr ""
+"Naslednja opozorila so se pojavila med preverjanjem nastavitev vaše hrambe.  "
+"Niso usodna, a morda bi želeli spremeniti svojo postavitev hrambe."
 
 #: pyanaconda/ui/gui/spokes/storage.py:894
 msgctxt "GUI|Storage|Warning Dialog"
@@ -2639,7 +2677,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/blivet_gui.py:103
 msgctxt "GUI|Spoke"
 msgid "_Blivet-GUI Partitioning"
-msgstr ""
+msgstr "Razdeljevanje z _Blivet_GUI"
 
 #: pyanaconda/ui/gui/spokes/blivet_gui.py:256
 msgid ""
@@ -3031,6 +3069,9 @@ msgid ""
 "<b>%(initiatorName)s</b> using the portal IP address <b>%(portalAddress)s</"
 "b>.  Please select which nodes you wish to log into:"
 msgstr ""
+"Naslednja vozlišča so bila odkrita z rabo iniciatorja iSCSI "
+"<b>%(initiatorName)s</b> z naslovom IP portala <b>%(portalAddress)s</b>.  "
+"Izberite, v katera vozlišča se želite prijaviti:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.py:82
 msgctxt "GUI|Advanced Storage|NVDIM"
@@ -3333,7 +3374,7 @@ msgstr ""
 #: pyanaconda/ui/tui/hubs/__init__.py:168
 #, python-format
 msgid "to enter the %(spoke_title)s spoke"
-msgstr ""
+msgstr "za vnos napere %(spoke_title)s"
 
 #: pyanaconda/ui/tui/spokes/user.py:40
 msgid "Full name can't contain the ':' character"
@@ -3497,6 +3538,11 @@ msgid ""
 "unformatted. Unformatted DASDs cannot be used during installation.\n"
 "\n"
 msgstr ""
+"Naslednji neformatirani ali LDL DASD-ji so bili zaznani na vašem sistemu. "
+"Lahko izberete njihovo formatiranje z dasdfmt ali preklic, da jih pustite "
+"neformatirane. Neformatiranih DASD-jev ne morete uporabiti med namestitvijo."
+"\n"
+"\n"
 
 #: pyanaconda/ui/tui/spokes/storage.py:332
 msgid ""
@@ -4636,6 +4682,9 @@ msgid ""
 "You can choose to format them now with dasdfmt or cancel to leave them "
 "unformatted. Unformatted DASDs cannot be used during installation."
 msgstr ""
+"Naslednji neformatirani ali LDL DASD-ji so bili zaznani na vašem sistemu. "
+"Lahko izberete njihovo formatiranje z dasdfmt ali preklic, da jih pustite "
+"neformatirane. Neformatiranih DASD-jev ne morete uporabiti med namestitvijo."
 
 #: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:86
 msgid "Unformatted DASDs Detected"
@@ -4761,7 +4810,7 @@ msgstr ""
 
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:254
 msgid "Disk rescan complete."
-msgstr ""
+msgstr "Ponovno prečesavanje diska končano."
 
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:269
 msgid ""
@@ -5251,7 +5300,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/storage.glade:625
 msgctxt "GUI|Storage"
 msgid "_Full disk summary and boot loader..."
-msgstr ""
+msgstr "_Poln povzetek diska in zagonskega nalagalnika ..."
 
 #: pyanaconda/ui/gui/spokes/storage.glade:664
 msgctxt "GUI|Storage"
@@ -5476,7 +5525,7 @@ msgstr "Posredni strežnik _FTP"
 #: pyanaconda/ui/gui/spokes/network.glade:2220
 msgctxt "GUI|Network|Proxy"
 msgid "_Socks Host"
-msgstr ""
+msgstr "_Gostitelj vtičnic"
 
 #: pyanaconda/ui/gui/spokes/network.glade:2410
 msgid "Network Config Box"
@@ -5912,6 +5961,8 @@ msgid ""
 "<span size=\"small\"><b>Example:</b> iqn.2012-09.com.example:diskarrays-sn-"
 "a8675309</span>"
 msgstr ""
+"<span size=\"small\"><b>Primer:</b> iqn.2012-09.com.example:diskarrays-"
+"sn-a8675309</span>"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:263
 msgctxt "GUI|Advanced Storage|iSCSI|Configure|CHAP"
@@ -5931,7 +5982,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:403
 msgctxt "GUI|Advanced Storage|iSCSI|Configure|Reverse CHAP"
 msgid "CHAP _Password:"
-msgstr ""
+msgstr "_Geslo CHAP:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:417
 msgctxt "GUI|Advanced Storage|iSCSI|Configure|Reverse CHAP"
@@ -6001,7 +6052,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:811
 msgctxt "GUI|Advanced Storage|iSCSI|Login|CHAP"
 msgid "CHAP _Password:"
-msgstr ""
+msgstr "_Geslo CHAP:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:923
 msgctxt "GUI|Advanced Storage|iSCSI|Login|Reverse CHAP"
@@ -6011,7 +6062,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:937
 msgctxt "GUI|Advanced Storage|iSCSI|Login|Reverse CHAP"
 msgid "CHAP _Password:"
-msgstr ""
+msgstr "_Geslo CHAP:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:951
 msgctxt "GUI|Advanced Storage|iSCSI|Login|Reverse CHAP"
@@ -6216,7 +6267,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/installation_source.glade:238
 msgctxt "GUI|Software Source|Proxy Dialog"
 msgid "_OK"
-msgstr ""
+msgstr "V _redu"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:267
 msgctxt "GUI|Software Source|Proxy Dialog"
@@ -6651,7 +6702,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1578
 msgctxt "GUI|Installation Destination|Filter|zSeries|CCW"
 msgid "_CCW:"
-msgstr ""
+msgstr "_NSUK:"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1621
 msgctxt "GUI|Installation Destination|Filter|zSeries|WWPN"
