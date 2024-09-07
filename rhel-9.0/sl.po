@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: anaconda 34.25.0.29\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2022-09-06 02:11+0000\n"
-"PO-Revision-Date: 2024-09-07 11:29+0000\n"
+"PO-Revision-Date: 2024-09-07 13:52+0000\n"
 "Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
 "Language-Team: Slovenian <https://translate.fedoraproject.org/projects/"
 "anaconda/rhel-90/sl/>\n"
@@ -153,14 +153,13 @@ msgid "Writing objects"
 msgstr "Zapisovanje predmetov"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_manager.py:205
-#, fuzzy, python-format
+#, python-format
 msgid "Installing %(flatpak_name)s"
-msgstr "Nameščanje programov Flatpak"
+msgstr "Nameščanje %(flatpak_name)s"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:40
-#, fuzzy
 msgid "Starting Flatpak installation"
-msgstr "Začetek samodejnega nameščanja"
+msgstr "Začetek nameščanja Flatpak"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:52
 #, fuzzy
@@ -565,7 +564,7 @@ msgid ""
 "Btrfs volume defined without any member devices.  Either specify member "
 "devices or use --useexisting."
 msgstr ""
-"Btrfs volumen določen brez kakršnihkoli članskih naprav. Ali določite "
+"Nosilec Btrfs je določen brez kakršnihkoli članskih naprav. Ali določite "
 "članske naprave ali uporabite --useexisting."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1290
@@ -1720,18 +1719,15 @@ msgid "_Retry"
 msgstr "_Ponovni poskus"
 
 #: pyanaconda/errors.py:164
-#, fuzzy
 msgid ""
 "Some packages, groups or modules are broken, the installation will be "
 "aborted."
-msgstr "Nekaj paketov, skupin ali modulov je pokvarjenih."
+msgstr ""
+"Nekateri paketi, skupine ali moduli so okvarjeni, namestitev bo prekinjena."
 
 #: pyanaconda/errors.py:170
-#, fuzzy
 msgid "Would you like to ignore this and continue with installation?"
-msgstr ""
-"Pojavila se je napaka med konfiguriranjem Red Hat Insights. Ali želite to "
-"prezreti in nadaljevati z namestitvijo?"
+msgstr "Ali želite to prezreti in nadaljevati z namestitvijo?"
 
 #: pyanaconda/errors.py:177
 #, python-format
@@ -1782,8 +1778,9 @@ msgstr ""
 "nameščanjem?"
 
 #: pyanaconda/errors.py:221
+#, fuzzy
 msgid "Failed to provision the target system for Satellite."
-msgstr ""
+msgstr "Ciljni sistem za satelit ni uspel zagotoviti."
 
 #: pyanaconda/errors.py:228
 #, python-brace-format
@@ -1862,9 +1859,8 @@ msgid "Running pre-installation tasks"
 msgstr "Poganjanje prednamestitvenih opravil"
 
 #: pyanaconda/installation.py:309
-#, fuzzy
 msgid "Installing."
-msgstr "Poteka nameščanje …"
+msgstr "Poteka nameščanje."
 
 #: pyanaconda/installation.py:322
 msgid "Installing boot loader"
@@ -2041,7 +2037,6 @@ msgstr ""
 "\n"
 
 #: pyanaconda/vnc.py:265
-#, fuzzy
 msgid ""
 "\n"
 "\n"
@@ -2052,8 +2047,8 @@ msgid ""
 msgstr ""
 "\n"
 "\n"
-"OPOZORILO!!! Strežnik VNC deluje brez GESLA!\n"
-"Uporabite lahko zagonsko možnost inst.vncpassword=PASSWORD\n"
+"OPOZORILO!!! Strežnik VNC deluje BREZ GESLA!\n"
+"Uporabite lahko zagonsko možnost vncpassword=GESLO\n"
 "če želite zavarovati strežnik.\n"
 "\n"
 
@@ -2096,9 +2091,8 @@ msgstr "%(productName)s %(productVersion)s NAMEŠČANJE"
 
 #: pyanaconda/payload/live/payload_base.py:73
 #: pyanaconda/payload/live/payload_liveos.py:93
-#, fuzzy
 msgid "Installing software"
-msgstr "Nameščanje programja {}"
+msgstr "Nameščanje programja"
 
 #: pyanaconda/payload/live/payload_liveimg.py:208
 msgid "Checking image checksum"
@@ -2106,23 +2100,22 @@ msgstr "Preverjanje kontrolne vsote slike"
 
 #: pyanaconda/payload/live/download_progress.py:57
 #: pyanaconda/payload/live/download_progress.py:66
-#, fuzzy, python-format
+#, python-format
 msgid "Downloading %(url)s (%(pct)d%%)"
-msgstr "Prenašanje {} ({}%)"
+msgstr "Prenašanje %(url)s (%(pct)d%%)"
 
 #: pyanaconda/payload/dnf/download_progress.py:55
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "Downloading %(total_files)s RPMs, %(downloaded)s / %(total_size)s "
 "(%(percent)d%%) done."
 msgstr ""
-"Prenašanje sem {total_files} RPM-jev, {downloaded_size} / {total_size} "
-"({total_percent}%) preneseno."
+"Prenašanje %(total_files)s RPM-jev, %(downloaded)s / %(total_size)s "
+"(%(percent)d %%) dokončano."
 
 #: pyanaconda/payload/dnf/payload.py:852
-#, fuzzy
 msgid "Starting package installation process"
-msgstr "Nastavljanje vira namestitve ..."
+msgstr "Začetek postopka namestitve paketa"
 
 #: pyanaconda/payload/dnf/payload.py:870
 msgid "Downloading packages"
@@ -2133,21 +2126,19 @@ msgid "Preparing transaction from installation source"
 msgstr "Priprava transakcije iz vira namestitve"
 
 #: pyanaconda/payload/dnf/payload.py:893
-#, fuzzy, python-format
+#, python-format
 msgid "Installing %s"
-msgstr ""
-"Nameščanje:\n"
-"  %s"
+msgstr "Nameščanje %s"
 
 #: pyanaconda/payload/dnf/payload.py:896
-#, fuzzy, python-format
+#, python-format
 msgid "Configuring %s"
-msgstr "Poteka nastavljanje igralne plošče %s"
+msgstr "Poteka prilagajanje %s"
 
 #: pyanaconda/payload/dnf/payload.py:899
-#, fuzzy, python-format
+#, python-format
 msgid "Verifying %s"
-msgstr "Verificiranje {}"
+msgstr "Preverjanje %s"
 
 #: pyanaconda/payload/manager.py:76
 #, fuzzy
@@ -3213,7 +3204,9 @@ msgstr "_Vir namestitve"
 #: pyanaconda/ui/gui/spokes/installation_source.py:579
 #, fuzzy
 msgid "Failed to set up installation source; check the repo url"
-msgstr "Neuspela nastavitev vira namestitve; preverite konfiguracijo NFS."
+msgstr ""
+"Neuspela nastavitev vira namestitve; preverite url skladišča in nastavitve "
+"posrednikov."
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:697
 #, fuzzy
@@ -3244,10 +3237,11 @@ msgid "Nothing selected"
 msgstr "Nič ni izbrano"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:863
-#, fuzzy
 msgid ""
 "Failed to set up installation source; check the repo url and proxy settings."
-msgstr "Neuspela nastavitev virov namestitve; preverite njihove konfiguracije."
+msgstr ""
+"Neuspela nastavitev vira namestitve; preverite url skladišča in nastavitve "
+"posrednikov."
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:945
 #, python-format
@@ -3279,25 +3273,25 @@ msgstr "_CDN Red Hat"
 #: pyanaconda/ui/gui/spokes/installation_source.py:1200
 #, python-format
 msgid "Repository %s has empty url"
-msgstr ""
+msgstr "Skladišče %s ima prazen url"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:1202
 msgid "URL is empty"
 msgstr "URL je prazen"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:1207
-#, fuzzy, python-format
+#, python-format
 msgid "Repository %s has invalid url"
-msgstr "Hramba '{}' je neveljavna: {}"
+msgstr "Skladišče %s ima neveljaven URL"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:1209
 msgid "Invalid URL"
 msgstr "Neveljaven URL"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:1216
-#, fuzzy, python-format
+#, python-format
 msgid "Repository %s does not match selected protocol"
-msgstr "Protokol v URL se ne ujema z izbranem protokolu"
+msgstr "Skladišče %s se ne ujema z izbranim protokolom"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:1218
 msgid "Protocol in URL does not match selected protocol"
@@ -3306,16 +3300,16 @@ msgstr "Protokol v URL se ne ujema z izbranem protokolu"
 #: pyanaconda/ui/gui/spokes/installation_source.py:1222
 #, python-format
 msgid "Repository %s has empty NFS server"
-msgstr ""
+msgstr "Skladišče %s ima prazen strežnik NFS"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:1224
 msgid "NFS server is empty"
 msgstr "Strežnik NFS je prazen"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:1232
-#, fuzzy, python-format
+#, python-format
 msgid "Repository %s has invalid host name"
-msgstr "Ime skladišča je v sporu z internim imenom skladišča"
+msgstr "Skladišče %s ima neveljavno ime gostitelja"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:1234
 msgid "Invalid host name"
@@ -3324,16 +3318,15 @@ msgstr "Neveljavno ime gostitelja"
 #: pyanaconda/ui/gui/spokes/installation_source.py:1238
 #, python-format
 msgid "Repository %s required remote directory"
-msgstr ""
+msgstr "Skladišče %s zahteva oddaljeno mapo"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:1240
 msgid "Remote directory is required"
 msgstr "Zahtevan je oddaljeni imenik"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:1261
-#, fuzzy
 msgid "Duplicate repository names."
-msgstr "Podvoji imena skladišč"
+msgstr "Podvojena imena skladišč."
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:1269
 msgid "Empty repository name"
@@ -3344,9 +3337,8 @@ msgid "Invalid repository name"
 msgstr "Neveljavno ime skladišča"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:1277
-#, fuzzy
 msgid "Repository name conflicts with internal repository name."
-msgstr "Ime skladišča je v sporu z internim imenom skladišča"
+msgstr "Ime skladišča je v sporu z internim imenom skladišča."
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.py:396
 msgctxt "GUI|Spoke"
@@ -3453,9 +3445,8 @@ msgid "_Software Selection"
 msgstr "_Izbira programja"
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:216
-#, fuzzy
 msgid "Error checking software dependencies"
-msgstr "Preverjanje odvisnosti programja ..."
+msgstr "Napaka pri preverjanju odvisnosti programja"
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:269
 #: pyanaconda/ui/tui/spokes/software_selection.py:164
@@ -3554,7 +3545,7 @@ msgstr "Naročnina priložena."
 #: pyanaconda/ui/gui/spokes/subscription.py:1048
 #, fuzzy
 msgid "Registered to Satellite."
-msgstr "Registracija ni uspela."
+msgstr "Registriran na Satellite."
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1050
 msgid "Registered."
@@ -3565,13 +3556,13 @@ msgid "Not registered."
 msgstr "Ni registrirano."
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1083
+#, fuzzy
 msgid "The system is registered to a Satellite instance."
-msgstr ""
+msgstr "Sistem je registriran v satelitskem primerku."
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1087
-#, fuzzy
 msgid "The system is registered."
-msgstr "Sistem trenutno ni registriran."
+msgstr "Sistem je registriran."
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1092
 msgid "Registered with account {}"
@@ -3602,8 +3593,9 @@ msgid "Not connected to Red Hat Insights"
 msgstr "Ni priklopljeno na Red Hat Insights"
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1134
+#, fuzzy
 msgid "Subscribed in Simple Content Access mode."
-msgstr ""
+msgstr "Naročeni v načinu preprostega dostopa do vsebine."
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1136
 msgid "No subscriptions are attached to the system"
@@ -3622,10 +3614,9 @@ msgid "Please enable network access before connecting to Red Hat."
 msgstr "Omogoči mrežni dostop pred povezovanjem na Red Hat."
 
 #: pyanaconda/ui/gui/spokes/root_password.py:52
-#, fuzzy
 msgctxt "GUI|Spoke"
 msgid "_Root Password"
-msgstr "_Korensko geslo:"
+msgstr "_Korensko geslo"
 
 #: pyanaconda/ui/gui/spokes/root_password.py:136
 msgid "Root password has been set."
@@ -4357,9 +4348,8 @@ msgstr "Izberite novo korensko geslo. Morali ga boste vtipkati dvakrat."
 
 #: pyanaconda/ui/tui/spokes/unsupported_hardware.py:43
 #: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:68
-#, fuzzy
 msgid "Unsupported Hardware Detected"
-msgstr "Zaznani neformatirani DASDs"
+msgstr "Zaznana je nepodprta strojna oprema"
 
 #: pyanaconda/ui/tui/tuiobject.py:136
 #, python-format
@@ -4379,14 +4369,14 @@ msgid "Full name cannot contain colon characters"
 msgstr "Polno ime ne sme vsebovati dvopičij"
 
 #: pyanaconda/pwpolicy.py:195
-#, python-format
+#, fuzzy, python-format
 msgid "policy name required for %s"
-msgstr ""
+msgstr "Ime pravilnika, ki je potrebno za %s"
 
 #: pyanaconda/pwpolicy.py:204
 #, python-format
 msgid "A %(command)s with the name %(policyName)s has already been defined."
-msgstr ""
+msgstr "Ukaz %(command)s z imenom %(policyName)s je že določen."
 
 #: pyanaconda/pwpolicy.py:238
 msgid ""
@@ -4394,6 +4384,9 @@ msgid ""
 "releases, which will result in a fatal error when it is encountered. Please "
 "modify your kickstart file to remove this command."
 msgstr ""
+"Ukaz pwpolicy je zastarel. Morda bo odstranjen iz prihodnjih izdaj in bo "
+"povzročilo usodno napako, ko ga boste uporabili. Spremenite datoteko "
+"kickstart, da odstranite ta ukaz."
 
 #: pyanaconda/startup_utils.py:81
 #, python-format
@@ -4808,10 +4801,9 @@ msgid "RA_ID Level:"
 msgstr "Raven RA_ID-a:"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:938
-#, fuzzy
 msgctxt "GUI|Custom Partitioning|Configure"
 msgid "LUKS Version:"
-msgstr "LUKS Različica:"
+msgstr "Različica LUKS:"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:1009
 msgctxt "GUI|Custom Partitioning|Configure|Devices"
@@ -4886,25 +4878,23 @@ msgstr "_V redu"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:151
 msgid "Add and mark for usage NTP servers"
-msgstr ""
+msgstr "Dodaj in označi strežnike NTP za uporabo"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:173
-#, fuzzy
 msgid "New NTP Server"
-msgstr "Dodaj strežnik NTP"
+msgstr "Nov strežnik NTP"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:192
-#, fuzzy
 msgid "Add NTP Server"
 msgstr "Dodaj strežnik NTP"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:212
 msgid "This URL refers to a pool of NTP servers"
-msgstr ""
+msgstr "Ta URL se nanaša na skupino strežnikov NTP"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:227
 msgid "Server supports Network Time Security (NTS) authentication"
-msgstr ""
+msgstr "Strežnik podpira preverjanje pristnosti NTS (Network Time Security)"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:275
 msgid "Pool"
@@ -5009,16 +4999,14 @@ msgid "Set Date & Time"
 msgstr "Nastavi datum in čas"
 
 #: pyanaconda/ui/gui/spokes/welcome.glade:23
-#, fuzzy
 msgctxt "GUI|Welcome|Beta Warn Dialog"
 msgid "I want to _exit."
-msgstr "Želim zapustiti"
+msgstr "Želim _zapustiti."
 
 #: pyanaconda/ui/gui/spokes/welcome.glade:37
-#, fuzzy
 msgctxt "GUI|Welcome|Beta Warn Dialog"
 msgid "I want to _proceed."
-msgstr "Želim nadaljevati"
+msgstr "Želim _nadaljevati"
 
 #: pyanaconda/ui/gui/spokes/welcome.glade:68
 msgid "This is unstable, pre-release software."
@@ -5101,15 +5089,17 @@ msgid "empty password"
 msgstr "prazno geslo"
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:163
+#, fuzzy
 msgid ""
 "The root account is used for administering the system.  Enter a password for "
 "the root user."
 msgstr ""
+"Korenski račun se uporablja za upravljanje sistema.  Vnesite geslo za "
+"korenskega uporabnika."
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:184
-#, fuzzy
 msgid "Lock root account"
-msgstr "_Omogoči račun root"
+msgstr "_Zakleni korenski račun"
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:200
 msgid "Allow root SSH login with password"
@@ -5169,21 +5159,18 @@ msgid "Disk formatting complete."
 msgstr "Formatiranje diska končano."
 
 #: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:23
-#, fuzzy
 msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
 msgid "_Quit"
 msgstr "_Izhod"
 
 #: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:37
-#, fuzzy
 msgctxt "GUI|Welcome|Unsupported Hardware Dialog"
 msgid "_Continue"
 msgstr "_Nadaljuj"
 
 #: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:122
-#, fuzzy
 msgid "Unsupported Hardware"
-msgstr "Nepodprto"
+msgstr "Nepodprta strojna oprema"
 
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:25
 msgid "SUMMARY OF CHANGES"
@@ -5851,14 +5838,14 @@ msgid "NETWORK CONFIGURATION"
 msgstr "KONFIGURACIJA OMREŽJA"
 
 #: pyanaconda/ui/gui/spokes/network.glade:421
-#, fuzzy
 msgid ""
 "We'll need network access to fetch information about your location and to "
 "make software\n"
 "updates available for you."
 msgstr ""
 "Mrežni dostop potrebujemo za pridobivanje informacij o vaši lokaciji in za "
-"omogočanje posodobitev programske opreme za vas."
+"omogočanje\n"
+"posodobitev programske opreme za vas."
 
 #: pyanaconda/ui/gui/spokes/network.glade:450
 #: pyanaconda/ui/gui/spokes/network.glade:2593
@@ -5874,8 +5861,9 @@ msgstr ""
 "okolja. Tukaj lahko nastavite ime gostitelja."
 
 #: pyanaconda/ui/gui/spokes/network.glade:702
+#, fuzzy
 msgid "Slaves"
-msgstr ""
+msgstr "Sužnji"
 
 #: pyanaconda/ui/gui/spokes/network.glade:726
 #: pyanaconda/ui/gui/spokes/network.glade:1127
@@ -6297,8 +6285,9 @@ msgid "Custom base URL"
 msgstr "Osnovni URL po meri"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:594
+#, fuzzy
 msgid "Satellite URL"
-msgstr ""
+msgstr "Satelitski URL"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:608
 msgid "Use HTTP proxy"
@@ -6646,11 +6635,12 @@ msgid "ADD zFCP STORAGE TARGET"
 msgstr "DODAJ zFCP CILJ SHRANJEVANJA"
 
 #: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:105
-#, fuzzy
 msgid ""
 "To use zFCP disks, you must provide the device number, WWPN, and LUN "
 "configured for the device."
-msgstr "Za uporabo diskov DASD morate navesti številko naprave."
+msgstr ""
+"Če želite uporabljati diske zFCP, morate navesti številko naprave, WWPN in "
+"LUN, ki sta nastavljena za napravo."
 
 #: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:132
 msgctxt "GUI|Advanced Storage|zFCP|Device Number"
@@ -6768,9 +6758,8 @@ msgid "MEDIA VERIFICATION"
 msgstr "VERIFIKACIJA MEDIJA"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:155
-#, fuzzy
 msgid "Verifying media, please wait..."
-msgstr "Verifikacija medija, prosim počakajte..."
+msgstr "Preverjanje medija, počakajte ..."
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:224
 msgctxt "GUI|Software Source|Proxy Dialog"
@@ -6844,16 +6833,14 @@ msgid "Installation media via SE/_HMC"
 msgstr "Medij namestitve prek SE/_HMC"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:654
-#, fuzzy
 msgctxt "GUI|Software Source"
 msgid "_ISO file:"
-msgstr "Izberite napravo, ki vsebuje datoteko ISO"
+msgstr "Datoteka _ISO:"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:682
-#, fuzzy
 msgctxt "GUI|Software Source"
 msgid "D_evice:"
-msgstr "Naprava:"
+msgstr "N_aprava:"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:713
 msgctxt "GUI|Software Source"
@@ -6957,24 +6944,22 @@ msgstr "Ponas_tavi"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:1142
 #: pyanaconda/ui/gui/spokes/installation_source.glade:1143
-#, fuzzy
 msgid "URL for the repository, without protocol."
-msgstr "URL skladišča"
+msgstr "URL za skladišče, brez protokola."
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:1155
 #: pyanaconda/ui/gui/spokes/installation_source.glade:1156
 msgid "URL of proxy in the form of protocol://host:[port]"
-msgstr ""
+msgstr "URL posrednega strežnika v obliki protokol://gostitelj:[vrata]"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:1168
 #: pyanaconda/ui/gui/spokes/installation_source.glade:1169
 msgid "Optional proxy user name."
-msgstr ""
+msgstr "Neobvezno uporabniško ime za posredni strežnik."
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:1181
-#, fuzzy
 msgid "Optional proxy password."
-msgstr "prazno geslo"
+msgstr "Neobvezno geslo posredniškega strežnika."
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:1195
 msgctxt "GUI|Software Source"
@@ -6983,33 +6968,28 @@ msgstr "_Ime:"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:1212
 #: pyanaconda/ui/gui/spokes/installation_source.glade:1213
-#, fuzzy
 msgid "Protocol for the repository URL."
-msgstr "URL skladišča"
+msgstr "Protokol za URL skladišča."
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:1232
-#, fuzzy
 msgctxt "GUI|Software Source"
 msgid "Pro_xy URL:"
-msgstr "Posrednik:"
+msgstr "URL posre_dnika:"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:1249
-#, fuzzy
 msgctxt "GUI|Software Source"
 msgid "U_ser name:"
-msgstr "Uporabniško ime:"
+msgstr "Uporabni_ško ime:"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:1266
-#, fuzzy
 msgctxt "GUI|Software Source"
 msgid "Pass_word:"
 msgstr "Ge_slo:"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:1283
 #: pyanaconda/ui/gui/spokes/installation_source.glade:1284
-#, fuzzy
 msgid "Name of the repository."
-msgstr "%(name)s (neveljavno skladišče)"
+msgstr "Ime skladišča."
 
 #: pyanaconda/ui/gui/spokes/installation_progress.glade:8
 #: pyanaconda/ui/gui/spokes/installation_progress.glade:164
@@ -7389,7 +7369,7 @@ msgstr "Nastavitev živega nameščanja"
 
 #: data/liveinst/gnome/fedora-welcome.js:94
 msgid "Try Fedora"
-msgstr ""
+msgstr "Preizkusi Fedoro"
 
 #: data/liveinst/gnome/fedora-welcome.js:110
 msgid ""
@@ -7397,19 +7377,22 @@ msgid ""
 "You can install Fedora now, or choose \"Install to Hard Drive\" in the "
 "Activities Overview at any later time."
 msgstr ""
+"Trenutno uporabljate Fedoro iz medijev v živo.\n"
+"Fedoro lahko namestite zdaj ali kadarkoli pozneje izberite »Namesti na trdi "
+"disk« v Pregledu dejavnosti."
 
 #: data/liveinst/gnome/fedora-welcome.js:130
 msgid ""
 "You can choose \"Install to Hard Drive\"\n"
 "in the Activities Overview at any later time."
 msgstr ""
+"»Namesti na trdi disk« lahko izberete\n"
+"v pregledu dejavnosti kadar koli pozneje."
 
 #: data/liveinst/gnome/fedora-welcome.js:133
-#, fuzzy
 msgid "Close"
 msgstr "Zapri"
 
 #: ../data/liveinst/console.apps/liveinst.h:1
-#, fuzzy
 msgid "Starting Install to Hard Drive"
-msgstr "Namesti na trdi disk"
+msgstr "Zagon namestitve na trdi disk"
