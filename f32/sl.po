@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2020-03-17 14:21+0100\n"
-"PO-Revision-Date: 2024-09-08 14:38+0000\n"
+"PO-Revision-Date: 2024-09-12 21:50+0000\n"
 "Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
 "Language-Team: Slovenian <https://translate.fedoraproject.org/projects/"
 "anaconda/f32/sl/>\n"
@@ -44,7 +44,6 @@ msgid "CUSTOMIZATION"
 msgstr "PRILAGODITEV PO MERI"
 
 #: pyanaconda/ui/categories/__init__.py:41
-#, fuzzy
 msgid "DEFAULT TITLE"
 msgstr "PRIVZETI NASLOV"
 
@@ -345,7 +344,10 @@ msgstr "_Nove točke priklopa bodo uporabljale naslednjo shemo particioniranja:"
 #: pyanaconda/ui/lib/entropy.py:95
 msgid "minute"
 msgid_plural "minutes"
-msgstr[0] ""
+msgstr[0] "minut"
+msgstr[1] "minuta"
+msgstr[2] "minuti"
+msgstr[3] "minute"
 
 #: pyanaconda/ui/gui/spokes/root_password.py:55
 msgctxt "GUI|Spoke"
@@ -358,13 +360,12 @@ msgstr "Korensko geslo je bilo nastavljeno."
 
 #: pyanaconda/ui/gui/spokes/root_password.py:167
 msgid "Disabled, set password to enable."
-msgstr ""
+msgstr "Onemogočeno, določite geslo, da omogočite."
 
 #: pyanaconda/ui/gui/spokes/root_password.py:169
 #: pyanaconda/ui/tui/spokes/root_password.py:77
-#, fuzzy
 msgid "Root account is disabled."
-msgstr "Korenski račun je onemogočen"
+msgstr "Korenski račun je onemogočen."
 
 #: pyanaconda/ui/gui/spokes/root_password.py:172
 msgid "Root password is set"
@@ -1139,11 +1140,8 @@ msgid "_Installation Source"
 msgstr "_Vir namestitve"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:556
-#, fuzzy
 msgid "Failed to set up installation source; check the repo url"
-msgstr ""
-"Neuspela nastavitev vira namestitve; preverite url skladišča in nastavitve "
-"posrednikov."
+msgstr "Neuspela nastavitev vira namestitve; preverite url skladišča"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:657
 #: pyanaconda/ui/gui/spokes/software_selection.py:223
@@ -1151,9 +1149,8 @@ msgid "Checking software dependencies..."
 msgstr "Preverjanje odvisnosti programja ..."
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:661
-#, fuzzy
 msgid "Error setting up base repository"
-msgstr "Napaka pri nastavljanju skladišč"
+msgstr "Napaka pri nastavljanju osnovnega skladišča"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:663
 #: pyanaconda/ui/tui/spokes/installation_source.py:120
@@ -1165,7 +1162,7 @@ msgstr "Napaka pri nastavljanju vira programske opreme"
 #: pyanaconda/ui/tui/spokes/installation_source.py:113
 #, python-format
 msgid "NFS server %s"
-msgstr ""
+msgstr "Strežnik NFS %s"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:669
 #: pyanaconda/ui/tui/spokes/installation_source.py:115
@@ -1179,7 +1176,7 @@ msgstr "Krajevni medij prek SE/HMC"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:677
 msgid "Error setting up installation from HDD"
-msgstr ""
+msgstr "Napaka pri nastavljanju namestitve s trdega diska"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:680
 #: pyanaconda/ui/tui/spokes/installation_source.py:123
@@ -1190,7 +1187,7 @@ msgstr "Najbližji zrcalni strežnik"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:829
 msgid "Failed to set up installation source; check the repo url."
-msgstr ""
+msgstr "Neuspela nastavitev vira namestitve; preverite url skladišča."
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:831
 msgid ""
@@ -1213,7 +1210,7 @@ msgstr "Oznaka: %s"
 #: pyanaconda/ui/tui/spokes/installation_source.py:159
 msgid ""
 "The installation source is in use by the installer and cannot be changed."
-msgstr ""
+msgstr "Namestilnik uporablja vir namestitve in ga ni možno spreminjati."
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:1054
 msgid "You need to configure the network to use a network installation source."
@@ -1415,11 +1412,11 @@ msgstr "Ni dovolj prostora v datotečnih sistemih za trenutno izbiro programja."
 
 #: pyanaconda/ui/lib/entropy.py:57
 msgid "The system needs more random data entropy"
-msgstr ""
+msgstr "Sistem potrebuje več entropije naključnih podatkov"
 
 #: pyanaconda/ui/lib/entropy.py:67
 msgid "Entropy can be increased by typing randomly on keyboard"
-msgstr ""
+msgstr "Entropijo lahko povišate z naključnim tipkanjem po tipkovnici"
 
 #: pyanaconda/ui/lib/entropy.py:68
 #, python-format
@@ -1427,6 +1424,8 @@ msgid ""
 "After %d minutes, the installation will continue regardless of the amount of "
 "available entropy"
 msgstr ""
+"Po %d minutah se bo namestitev nadaljevala, ne glede na količino "
+"razpoložljive entropije"
 
 #: pyanaconda/ui/lib/entropy.py:92
 #, python-format
@@ -1434,21 +1433,25 @@ msgid ""
 "Available entropy: %(av_entr)s, Required entropy: %(req_entr)s [%(pct)d %%] "
 "(%(rem)d %(min)s remaining)"
 msgstr ""
+"Razpoložljiva entropija: %(av_entr)s, zahtevana entropija: %(req_entr)s "
+"[%(pct)d %%] (preostane %(rem)d %(min)s)"
 
 #: pyanaconda/ui/lib/entropy.py:102
 #, python-format
 msgid ""
 "Available entropy: %(av_entr)s, Required entropy: %(req_entr)s [%(pct)d %%]"
 msgstr ""
+"Razpoložljiva entropija: %(av_entr)s, zahtevana entropija: %(req_entr)s "
+"[%(pct)d %%]"
 
 #: pyanaconda/ui/lib/entropy.py:107
 msgid "Enough entropy gathered, please stop typing."
-msgstr ""
+msgstr "Dovolj nabrane entropije, prenehajte tipkati."
 
 #: pyanaconda/ui/lib/entropy.py:110
 #, python-format
 msgid "Giving up, time (%d minutes) ran out."
-msgstr ""
+msgstr "Prenehanje, čas (%d minut) je potekel."
 
 #: pyanaconda/ui/tui/hubs/__init__.py:54
 msgid "Default HUB title"
@@ -1481,7 +1484,6 @@ msgstr ""
 #. TRANSLATORS: 'b' to begin installation
 #: pyanaconda/ui/tui/hubs/summary.py:108 pyanaconda/ui/tui/hubs/summary.py:135
 #: pyanaconda/ui/tui/hubs/summary.py:147
-#, fuzzy
 msgctxt "TUI|Spoke Navigation"
 msgid "b"
 msgstr "b"
@@ -1503,10 +1505,9 @@ msgstr "na začetek nameščanja"
 #: pyanaconda/ui/tui/spokes/storage.py:584
 #: pyanaconda/ui/tui/spokes/storage.py:653
 #: pyanaconda/ui/tui/spokes/software_selection.py:252
-#, fuzzy
 msgctxt "TUI|Spoke Navigation"
 msgid "c"
-msgstr "C++"
+msgstr "c"
 
 #: pyanaconda/ui/tui/spokes/unsupported_hardware.py:38
 #: pyanaconda/ui/gui/spokes/lib/unsupported_hardware.glade:68
@@ -1588,10 +1589,9 @@ msgstr "VNC"
 
 #. TRANSLATORS: 'q' to quit
 #: pyanaconda/ui/tui/spokes/askvnc.py:102
-#, fuzzy
 msgctxt "TUI|Spoke Navigation"
 msgid "q"
-msgstr "q"
+msgstr "z"
 
 #: pyanaconda/ui/tui/spokes/askvnc.py:126
 msgid "VNC Password"
@@ -1640,10 +1640,9 @@ msgstr "Razpoložljivi jeziki"
 #. TRANSLATORS: 'b' to go back
 #: pyanaconda/ui/tui/spokes/language_support.py:126
 #: pyanaconda/ui/tui/spokes/language_support.py:137
-#, fuzzy
 msgctxt "TUI|Spoke Navigation|Language Support"
 msgid "b"
-msgstr "b"
+msgstr "n"
 
 #: pyanaconda/ui/tui/spokes/language_support.py:135
 msgid "Please select language support to install"
@@ -1659,17 +1658,15 @@ msgstr "Korensko geslo"
 
 #: pyanaconda/ui/tui/spokes/root_password.py:75
 msgid "Disabled. Set password to enable root account."
-msgstr ""
+msgstr "Onemogočeno. Določite geslo, da omogočite korenski račun."
 
 #: pyanaconda/ui/tui/spokes/root_password.py:80
-#, fuzzy
 msgid "Password is set."
-msgstr "Korensko geslo je nastavljeno"
+msgstr "Geslo je nastavljeno."
 
 #: pyanaconda/ui/tui/spokes/root_password.py:82
-#, fuzzy
 msgid "Password is not set."
-msgstr "Korensko geslo ni nastavljeno"
+msgstr "Geslo ni nastavljeno."
 
 #: pyanaconda/ui/tui/spokes/root_password.py:87
 msgid "Please select new root password. You will have to type it twice."
@@ -1864,28 +1861,25 @@ msgstr "Razpoložljive regije"
 #. TRANSLATORS: 'b' to go back
 #: pyanaconda/ui/tui/spokes/time_spoke.py:356
 #: pyanaconda/ui/tui/spokes/time_spoke.py:367
-#, fuzzy
 msgctxt "TUI|Spoke Navigation|Time Settings"
 msgid "b"
-msgstr "b"
+msgstr "n"
 
 #: pyanaconda/ui/tui/spokes/time_spoke.py:365
 msgid "Please select the timezone. Use numbers or type names directly"
 msgstr "Izberite časovni pas. Uporabite številke ali neposredno vtipkajte imena"
 
 #: pyanaconda/ui/tui/spokes/time_spoke.py:367
-#, fuzzy
 msgid "back to region list"
-msgstr "pojdi nazaj na seznam regij"
+msgstr "nazaj na seznam regij"
 
 #: pyanaconda/ui/tui/spokes/time_spoke.py:380
 msgid "NTP configuration"
 msgstr "Konfiguracija NTP"
 
 #: pyanaconda/ui/tui/spokes/time_spoke.py:395
-#, fuzzy
 msgid "no NTP servers have been configured"
-msgstr "noben strežnik NTP ni bil konfiguriran"
+msgstr "noben strežnik NTP ni bil nastavljen"
 
 #: pyanaconda/ui/tui/spokes/time_spoke.py:406
 msgid "Add NTP server"
@@ -2014,15 +2008,13 @@ msgstr ""
 #. TRANSLATORS: 's' to rescan devices
 #: pyanaconda/ui/tui/spokes/storage.py:638
 #: pyanaconda/ui/tui/spokes/storage.py:648
-#, fuzzy
 msgctxt "TUI|Spoke Navigation|Partitioning"
 msgid "s"
-msgstr "J"
+msgstr "p"
 
 #: pyanaconda/ui/tui/spokes/storage.py:638
-#, fuzzy
 msgid "rescan devices"
-msgstr "na ponovno prečesavanje naprav"
+msgstr "ponovno prečesaj naprave"
 
 #: pyanaconda/ui/tui/spokes/storage.py:710
 msgid ""
@@ -2148,11 +2140,11 @@ msgstr "Osnovno okolje"
 
 #: pyanaconda/ui/tui/spokes/software_selection.py:232
 msgid "Add-ons for selected environment"
-msgstr ""
+msgstr "Dodatki za izbrano okolje"
 
 #: pyanaconda/ui/tui/spokes/software_selection.py:234
 msgid "No add-ons to select."
-msgstr ""
+msgstr "Ni dodatkov za izbiranje."
 
 #: pyanaconda/ui/tui/spokes/installation_progress.py:51
 msgid "Progress"
@@ -2375,19 +2367,19 @@ msgid "Wireless connected to %(access_point)s"
 msgstr "Brezžično povezan na %(access_point)s"
 
 #: pyanaconda/network.py:509
-#, fuzzy, python-format
+#, python-format
 msgid "Bond %(interface_name)s (%(list_of_slaves)s) connected"
-msgstr "Spoj %(interface_name)s (%(list_of_ports)s) je povezan"
+msgstr "Spoj %(interface_name)s (%(list_of_slaves)s) je povezan"
 
 #: pyanaconda/network.py:513
-#, fuzzy, python-format
+#, python-format
 msgid "Team %(interface_name)s (%(list_of_slaves)s) connected"
-msgstr "Ekipa %(interface_name)s (%(list_of_ports)s) je povezana"
+msgstr "Ekipa %(interface_name)s (%(list_of_slaves)s) je povezana"
 
 #: pyanaconda/network.py:517
-#, fuzzy, python-format
+#, python-format
 msgid "Bridge %(interface_name)s (%(list_of_slaves)s) connected"
-msgstr "Most %(interface_name)s (%(list_of_ports)s) povezan"
+msgstr "Most %(interface_name)s (%(list_of_slaves)s) povezan"
 
 #: pyanaconda/network.py:523
 #, python-format
@@ -2421,7 +2413,7 @@ msgstr ""
 #: pyanaconda/storage/root.py:130
 #, python-format
 msgid "Linux on %s"
-msgstr ""
+msgstr "Linux na %s"
 
 #: pyanaconda/storage/root.py:135
 msgid "Unknown Linux"
@@ -2430,12 +2422,12 @@ msgstr "Neznani Linux"
 #: pyanaconda/storage/root.py:137
 #, python-format
 msgid "%(product)s %(version)s for %(arch)s"
-msgstr ""
+msgstr "%(product)s %(version)s za %(arch)s"
 
 #: pyanaconda/storage/root.py:140
 #, python-format
 msgid "%(product)s Linux %(version)s for %(arch)s"
-msgstr ""
+msgstr "%(product)s Linux %(version)s za %(arch)s"
 
 #: pyanaconda/storage/utils.py:63
 msgid "Unsupported"
@@ -2514,12 +2506,12 @@ msgstr ""
 "zagonskega nalagalnika na nekaterih platformah PPC."
 
 #: pyanaconda/storage/utils.py:398
-#, fuzzy, python-format
+#, python-format
 msgid "Escrow certificate %s requires the network."
-msgstr "Potrdilo o hrambi računalniške kode {} zahteva dostop do omrežja."
+msgstr "Potrdilo o hrambi računalniške kode %s zahteva dostop do omrežja."
 
 #: pyanaconda/storage/utils.py:406
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "SSL error while downloading the escrow certificate:\n"
 "\n"
@@ -2527,10 +2519,10 @@ msgid ""
 msgstr ""
 "Napaka SSL pri prenosu potrdila o hrambi računalniške kode:\n"
 "\n"
-"{}"
+"%s"
 
 #: pyanaconda/storage/utils.py:408
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "The following error was encountered while downloading the escrow "
 "certificate:\n"
@@ -2540,7 +2532,7 @@ msgstr ""
 "Pri prenosu potrdila o hrambi računalniške kode je prišlo do naslednje "
 "napake:\n"
 "\n"
-"{}"
+"%s"
 
 #: pyanaconda/storage/utils.py:495
 #, python-format
@@ -2575,6 +2567,8 @@ msgid ""
 "Your root partition is less than %(size)s which is usually too small to "
 "install %(product)s."
 msgstr ""
+"Vaš korenski razdelek je manjši od %(size)s, kar je običajno premalo za "
+"namestitev %(product)s."
 
 #: pyanaconda/storage/checker.py:57
 #, python-format
@@ -2776,6 +2770,8 @@ msgid ""
 "memory, but you only have %(total_ram)s MB\n"
 "."
 msgstr ""
+"Grafični namestitveni program za %(product_name)s zahteva %(needed_ram)s MB "
+"pomnilnika, vi imate samo %(total_ram)s MB."
 
 #: pyanaconda/startup_utils.py:84
 msgid ""
@@ -2825,9 +2821,8 @@ msgid "Please ssh install@HOSTNAME to continue installation."
 msgstr "Za nadaljevanje namestitve prosimo ssh install@HOSTNAME ."
 
 #: pyanaconda/payload/manager.py:75
-#, fuzzy
 msgid "Failed to set up installation source"
-msgstr "Nastavljanje vira namestitve ..."
+msgstr "Nastavljanje vira namestitve je spodletelo"
 
 #: pyanaconda/payload/manager.py:76
 msgid "Error downloading package metadata"
@@ -2839,34 +2834,34 @@ msgid "Installing %(flatpak_name)s"
 msgstr "Nameščanje %(flatpak_name)s"
 
 #: pyanaconda/payload/rpmostreepayload.py:127
-#, fuzzy, python-format
+#, python-format
 msgid "Receiving objects: %(percent)d%% (%(fetched)d/%(requested)d) %(bytes)s"
 msgstr ""
-"Sprejemni predmeti: %(odstotek)d%% (%(pridobljeno)d/%(zahtevano)d) %(bajtov)s"
+"Prejemanje predmetov: %(percent)d %% (%(fetched)d/%(requested)d) %(bytes)s"
 
 #: pyanaconda/payload/rpmostreepayload.py:133
 msgid "Writing objects"
 msgstr "Zapisovanje predmetov"
 
 #: pyanaconda/payload/rpmostreepayload.py:232
-#, fuzzy, python-format
+#, python-format
 msgid "Starting pull of %(branchName)s from %(source)s"
 msgstr "Začetno vlečenje %(branchName)s iz %(source)s"
 
 #: pyanaconda/payload/rpmostreepayload.py:262
-#, fuzzy, python-format
+#, python-format
 msgid "Preparing deployment of %s"
-msgstr "Priprava napotitve %s"
+msgstr "Priprava postavitve %s"
 
 #: pyanaconda/payload/rpmostreepayload.py:282
-#, fuzzy, python-format
+#, python-format
 msgid "Deployment starting: %s"
-msgstr "Začetek uvajanja: %s"
+msgstr "Začetek postavitve: %s"
 
 #: pyanaconda/payload/rpmostreepayload.py:285
-#, fuzzy, python-format
+#, python-format
 msgid "Deployment complete: %s"
-msgstr "Uvajanje končano: %s"
+msgstr "Postavitev dokončana: %s"
 
 #: pyanaconda/payload/rpmostreepayload.py:504
 msgid "Starting Flatpak installation"
@@ -3214,9 +3209,8 @@ msgid "Creating snapshots"
 msgstr "Kreiranje posnetkov"
 
 #: pyanaconda/platform.py:52
-#, fuzzy
 msgid "boot loader device"
-msgstr "Naprava za nalaganje zagonov"
+msgstr "naprava zagonskega nalagalnika"
 
 #: pyanaconda/platform.py:54
 msgid "RAID Device"
@@ -3416,12 +3410,12 @@ msgstr ""
 
 #: pyanaconda/rescue.py:451
 msgid "Rebooting."
-msgstr ""
+msgstr "Sledi ponovni zagon."
 
 #: pyanaconda/rescue.py:454
 #, python-format
 msgid "You don't have any Linux partitions. %s\n"
-msgstr ""
+msgstr "Nimate nobenega razdelka Linux. %s\n"
 
 #: pyanaconda/rescue.py:460
 msgid "Not mounting the system.\n"
@@ -3453,6 +3447,13 @@ msgid ""
 "Once you have resolved the issue you can retry the storage scan. If you do "
 "not fix it you will have to exit the installer."
 msgstr ""
+"Obstaja težava z vašo obstoječo konfiguracijo hrambe ali vašimi začetnimi "
+"nastavitvami, npr. z začetno datoteko. Ta problem morate razrešiti pred "
+"nadaljevanje namestitve. Na voljo je lupina, do katere lahko dostopite s "
+"pritiskom najprej krmilka-izmenjalka-f1 in potem krmilka-b 2.\n"
+"\n"
+"Ko boste rešili težavo, lahko ponovno prečešete hrambo. Če ne razrešite "
+"tega, boste morali zapustiti namestilnik."
 
 #: pyanaconda/errors.py:128
 msgctxt "GUI|Storage Detailed Error Dialog"
@@ -3465,7 +3466,7 @@ msgid "_Retry"
 msgstr "_Ponovni poskus"
 
 #: pyanaconda/errors.py:136
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "The ISO image %s has a size which is not a multiple of 2048 bytes.  This may "
 "mean it was corrupted on transfer to this computer.\n"
@@ -3481,7 +3482,6 @@ msgstr ""
 "če menite, da je to napaka. Želite še naprej uporabljati to sliko?"
 
 #: pyanaconda/errors.py:150
-#, fuzzy
 msgid ""
 "The installer has tried to mount the installation image, but cannot find it "
 "on the hard drive.\n"
@@ -3491,37 +3491,36 @@ msgstr ""
 "Namestitveni program je poskušal namestiti namestitveno sliko, vendar je ne "
 "more najti na trdem disku.\n"
 "\n"
-"Ali naj poskusim znova poiskati sliko?"
+"Ali želite znova poiskati sliko?"
 
 #: pyanaconda/errors.py:161
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "The group '%s' is required for this installation. This group does not exist. "
 "This is a fatal error and installation will be aborted."
 msgstr ""
-"Za to namestitev je potrebna skupina \"%s\". Ta skupina ne obstaja. To je "
+"Za to namestitev je potrebna skupina »%s«. Ta skupina ne obstaja. To je "
 "usodna napaka in namestitev bo prekinjena."
 
 #: pyanaconda/errors.py:167
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "You have specified that the group '%s' should be installed.  This group does "
 "not exist.  Would you like to ignore this group and continue with "
 "installation?"
 msgstr ""
-"Določili ste, da je treba namestiti skupino \"%s\".  Ta skupina ne obstaja.  "
+"Določili ste, da je treba namestiti skupino »%s«.  Ta skupina ne obstaja.  "
 "Želite prezreti to skupino in nadaljevati z namestitvijo?"
 
 #: pyanaconda/errors.py:172
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "You have specified that the group '%s' should be excluded from "
 "installation.  This group does not exist.  Would you like to ignore this "
 "group and continue with installation?"
 msgstr ""
-"Določili ste, da je treba skupino \"%s\" izključiti iz namestitve.  Ta "
-"skupina ne obstaja.  Želite prezreti to skupino in nadaljevati z "
-"namestitvijo?"
+"Določili ste, da je treba skupino »%s« izključiti iz namestitve.  Ta skupina "
+"ne obstaja.  Želite prezreti to skupino in nadaljevati z namestitvijo?"
 
 #: pyanaconda/errors.py:193
 msgid ""
@@ -3535,7 +3534,7 @@ msgid "Would you like to ignore this and continue with installation?"
 msgstr "Ali želite to prezreti in nadaljevati z namestitvijo?"
 
 #: pyanaconda/errors.py:206
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "Stream was not specified for a module without a default stream. This is a "
 "fatal error and installation will be aborted. The details of this error "
@@ -3546,10 +3545,10 @@ msgstr ""
 "Tok ni bil določen za modul brez privzetega toka. To je usodna napaka in "
 "namestitev bo prekinjena. Podrobnosti o tej napaki so:\n"
 "\n"
-"%(izjema)s"
+"%(exception)s"
 
 #: pyanaconda/errors.py:214
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "Multiple streams have been specified for a single module. This is a fatal "
 "error and installation will be aborted. The details of this error are:\n"
@@ -3559,7 +3558,7 @@ msgstr ""
 "Za en modul je bilo določenih več tokov. To je usodna napaka in namestitev "
 "bo prekinjena. Podrobnosti o tej napaki so:\n"
 "\n"
-"%(izjema)s"
+"%(exception)s"
 
 #: pyanaconda/errors.py:222
 #, python-format
@@ -3576,7 +3575,6 @@ msgstr ""
 "%(details)s"
 
 #: pyanaconda/errors.py:230
-#, fuzzy
 msgid ""
 "The following error occurred while installing.  This is a fatal error and "
 "installation will be aborted."
@@ -3603,7 +3601,7 @@ msgstr ""
 "nameščanjem?"
 
 #: pyanaconda/errors.py:258
-#, fuzzy, python-format
+#, python-format
 msgid "Unable to encrypt password: unsupported algorithm %s"
 msgstr "Gesla ni mogoče šifrirati: nepodprt algoritem %s"
 
@@ -3842,12 +3840,12 @@ msgid "Name '%s' is invalid."
 msgstr "Ime '%s' je neveljavno."
 
 #: pyanaconda/addons.py:97
-#, fuzzy, python-format
+#, python-format
 msgid "Executing %s addon"
 msgstr "Izvajanje dodatka %s"
 
 #: pyanaconda/addons.py:113
-#, fuzzy, python-format
+#, python-format
 msgid "Setting up %s addon"
 msgstr "Nastavitev dodatka %s"
 
@@ -3947,15 +3945,16 @@ msgid "Unknown or invalid device '%s' specified"
 msgstr "Določena je neznana ali neveljavna naprava »%s«"
 
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:72
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "Unknown or invalid format '%(format)s' specified for device '%(device)s'"
-msgstr "Neznan ali neveljaven format '{}' določen za napravo '{}'"
+msgstr ""
+"Neznan ali neveljaven format »%(format)s«, določen za napravo »%(device)s«"
 
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:79
-#, fuzzy, python-format
+#, python-format
 msgid "No format on device '%s'"
-msgstr "Ni formata na napravi '{}'"
+msgstr "Ni formata na napravi »%s«"
 
 #: pyanaconda/modules/storage/partitioning/automatic/utils.py:128
 msgid "No usable disks selected."
@@ -4026,19 +4025,19 @@ msgstr "Vrsta datotečnega sistema »%s« ni podprta."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:329
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:348
-#, fuzzy, python-format
+#, python-format
 msgid "Disk \"%s\" given in part command does not exist."
 msgstr "Disk \"{}\", podan v ukazu part, ne obstaja."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:334
-#, fuzzy, python-format
+#, python-format
 msgid "Cannot install to unpartitionable device \"%s\"."
-msgstr "Ni mogoče namestiti v nerazdelljivo napravo \"{}\"."
+msgstr "Ni mogoče namestiti v nerazdeljivo napravo »%s«."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:342
-#, fuzzy, python-format
+#, python-format
 msgid "Disk \"%s\" in part command is not partitioned."
-msgstr "Disk \"{}\" v ukazu part nima particij."
+msgstr "Disk »%s« v ukazu part nima razdelkov."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:359
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1091
@@ -4058,70 +4057,69 @@ msgid "raid --noformat must also use the --device option."
 msgstr "Tudi raid --noformat mora uporabiti možnost --device."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:565
-#, fuzzy, python-format
+#, python-format
 msgid "RAID device  \"%s\" given in raid command does not exist."
-msgstr "Naprava RAID \"{}\", navedena v ukazu raid, ne obstaja."
+msgstr "Naprava RAID »%s«, navedena v ukazu raid, ne obstaja."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:590
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "RAID device \"%(device)s\" has a format of \"%(format)s\", but should have a "
 "format of \"mdmember\"."
 msgstr ""
-"Naprava RAID \"{}\" ima format \"{}\", vendar bi morala imeti format "
-"\"mdmember\"."
+"Naprava RAID »%(device)s« ima obliko »%(format)s«, vendar bi morala imeti "
+"obliko »mdmember«."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:597
-#, fuzzy, python-format
+#, python-format
 msgid "Tried to use undefined partition \"%s\" in RAID specification."
-msgstr ""
-"Poskusili ste uporabiti nedefinirano particijo \"{}\" v specifikaciji RAID."
+msgstr "Poskusili ste uporabiti nedefiniran razdelek »%s« v specifikaciji RAID."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:638
-#, fuzzy, python-format
+#, python-format
 msgid "RAID volume \"%s\" specified with --useexisting does not exist."
-msgstr "Pogon RAID \"{}\", naveden z --useexisting, ne obstaja."
+msgstr "Pogon RAID »%s«, naveden z --useexisting, ne obstaja."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:649
-#, fuzzy, python-format
+#, python-format
 msgid "The RAID volume name \"%s\" is already in use."
-msgstr "Pogon RAID z imenom \"{}\" je že v rabi."
+msgstr "Pogon RAID z imenom »%s« je že v rabi."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:767
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "Physical volume \"%(device)s\" has a format of \"%(format)s\", but should "
 "have a format of \"lvmpv\"."
 msgstr ""
-"Fizični pogon \"{}\" ima format \"{}\", vendar bi moral imeti format \"lvmpv"
-"\"."
+"Fizični pogon »%(device)s« ima format »%(format)s«, vendar bi moral imeti "
+"obliko zapisa »lvmpv«."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:773
-#, fuzzy, python-format
+#, python-format
 msgid "Tried to use undefined partition \"%s\" in Volume Group specification"
 msgstr ""
-"Poskusili ste uporabiti nedefiniran razdelek \"{}\" v specifikaciji skupine "
+"Poskusili ste uporabiti nedefiniran razdelek »%s« v specifikaciji skupine "
 "nosilcev"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:781
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "Volume group \"%s\" defined without any physical volumes.  Either specify "
 "physical volumes or use --useexisting."
 msgstr ""
-"Skupina pogonov \"{}\" je definirana brez fizičnih pogonov. Določite fizične "
+"Skupina pogonov »%s« je definirana brez fizičnih pogonov. Določite fizične "
 "pogone ali uporabite --useexisting."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:794
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "Volume group given physical extent size of \"%(extentSize)s\", but must be "
 "one of:\n"
 "%(validExtentSizes)s."
 msgstr ""
-"Skupina pogonov ima fizično dosežno velikost \"{}\", vendar mora biti ena "
-"izmed:\n"
-"{}."
+"Skupina pogonov ima fizično dosežno velikost »%(extentSize)s«, vendar mora "
+"biti ena izmed:\n"
+"%(validExtentSizes)s."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:807
 msgid ""
@@ -4132,9 +4130,9 @@ msgstr ""
 "--name=."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:814
-#, fuzzy, python-format
+#, python-format
 msgid "Volume group \"%s\" given in volgroup command does not exist."
-msgstr "Skupina pogonov \"{}\", podana z ukazom volgroup, ne obstaja."
+msgstr "Skupina pogonov »%s«, podana z ukazom volgroup, ne obstaja."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:819
 #, python-format
@@ -4155,13 +4153,13 @@ msgid "Cache PVs must belong to the same VG as the cached LV"
 msgstr "Predpomnilnik PV mora pripadati isti VG kot predpomnjeni LV"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:941
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "No thin pool exists with the name \"%s\". Specify thin pools before thin "
 "volumes."
 msgstr ""
-"Zaloga za varčno oskrbovanje z imenom \"{}\" ne obstaja. Navedite zaloge "
-"pred pogoni za varčno oskrbovanje."
+"Zaloga za varčno oskrbovanje z imenom »%s« ne obstaja. Navedite zaloge pred "
+"pogoni za varčno oskrbovanje."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:950
 msgid "logvol --noformat must also use the --name= option."
@@ -4169,43 +4167,44 @@ msgstr "Tudi logvol --noformat mora uporabiti možnost --name=."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:957
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1034
-#, fuzzy, python-format
+#, python-format
 msgid "Logical volume \"%s\" given in logvol command does not exist."
-msgstr "Logični nosilec \"{}\", podan v ukazu logvol, ne obstaja."
+msgstr "Logični nosilec »%s«, podan v ukazu logvol, ne obstaja."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:997
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "Logical volume name \"%(logvol)s\" is already in use in volume group "
 "\"%(volgroup)s\"."
-msgstr "Ime logičnega volumna \"{}\" je že v uporabi v skupini volumnov \"{}\"."
+msgstr ""
+"Ime logičnega pogona »%(logvol)s« je že v uporabi v skupini pogonov "
+"»%(volgroup)s«."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1004
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "Logical volume size \"%(logvolSize)s\" must be larger than the volume group "
 "extent size of \"%(extentSize)s\"."
 msgstr ""
-"Velikost logičnega pogona \"{}\" mora biti večja od velikosti razsežnosti "
-"skupine pogona \"{}\"."
+"Velikost logičnega pogona »%(logvolSize)s« mora biti večja od velikosti "
+"razsežnosti skupine pogona »%(extentSize)s«."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1223
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "Btrfs partition \"%(device)s\" has a format of \"%(format)s\", but should "
 "have a format of \"btrfs\"."
 msgstr ""
-"Particija Btrfs \"{}\" ima zapis \"{}\", vendar bi morala imeti zapis \"btrfs"
-"\"."
+"Razdelek Btrfs »%(device)s« ima zapis »%(format)s«, vendar bi morala imeti "
+"zapis »btrfs«."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1231
-#, fuzzy, python-format
+#, python-format
 msgid "Tried to use undefined partition \"%s\" in Btrfs volume specification."
 msgstr ""
-"Poskus uporabe nedefinirane particije \"{}\" v specifikaciji pogona Btrfs."
+"Poskus uporabe nedefiniranega razdelka »%s« v specifikaciji pogona Btrfs."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1246
-#, fuzzy
 msgid ""
 "Btrfs volume defined without any member devices.  Either specify member "
 "devices or use --useexisting."
@@ -4214,9 +4213,9 @@ msgstr ""
 "članske naprave ali uporabite --useexisting."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1274
-#, fuzzy, python-format
+#, python-format
 msgid "Btrfs volume \"%s\" specified with --useexisting does not exist."
-msgstr "Pogon Btrfs »{}«, določen z --useexisting ne obstaja."
+msgstr "Pogon Btrfs »%s«, določen z --useexisting, ne obstaja."
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:205
 #, python-brace-format
@@ -4312,23 +4311,23 @@ msgstr ""
 "izberete drugo napravo."
 
 #: pyanaconda/modules/storage/snapshot/device.py:43
-#, fuzzy, python-format
+#, python-format
 msgid "Snapshot: origin \"%s\" doesn't exists!"
-msgstr "Posnetek: izvor \"%s\" ne obstaja!"
+msgstr "Posnetek: origin \"{}\" ne obstaja!"
 
 #: pyanaconda/modules/storage/snapshot/device.py:47
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "Snapshot: origin \"%(origin)s\" of snapshot \"%(name)s\" is not a valid thin "
 "LV device."
 msgstr ""
-"Odtis: izvor \"{}\" odtisa \"{}\" ni veljavna naprava z varčnim oskrbovanjem "
-"LV."
+"Odtis: izvor »%(origin)s« odtisa »%(name)s« ni veljavna naprava z varčnim "
+"oskrbovanjem LV."
 
 #: pyanaconda/modules/storage/snapshot/device.py:53
-#, fuzzy, python-format
+#, python-format
 msgid "Snapshot %s already exists."
-msgstr "Posnetek {} že obstaja."
+msgstr "Posnetek %s že obstaja."
 
 #: pyanaconda/modules/storage/devicetree/viewer.py:302
 #, python-brace-format
@@ -4789,6 +4788,8 @@ msgid ""
 "The following error occurred logging into the selected iSCSI node.  Please "
 "double check your authorization information and try again"
 msgstr ""
+"Ob prijavi v izbrano vozlišče iSCSI je prišlo do naslednje napake.  Dobro "
+"preverite svoje podatke za overjanje in poskusite znova"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:1107
 msgctxt "GUI|Advanced Storage|iSCSI|Login|Retry"
@@ -5061,7 +5062,7 @@ msgstr "Zahtevaj nazaj"
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:24
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:76
 msgid "SELECTED DISKS"
-msgstr ""
+msgstr "IZBRANI DISKI"
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:41
 msgctxt "GUI|Selected Disks Dialog"
@@ -5113,7 +5114,7 @@ msgstr ""
 
 #: pyanaconda/ui/gui/spokes/lib/entropy_dialog.glade:53
 msgid "Random data quality:"
-msgstr ""
+msgstr "Kakovost naključnih podatkov:"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:21
 msgctxt "GUI|Custom Partitioning|Confirm Delete Dialog"
@@ -5366,7 +5367,6 @@ msgid "Working"
 msgstr "Delujoče"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:275
-#, fuzzy
 msgid "Use"
 msgstr "Uporabi"
 
@@ -5598,7 +5598,7 @@ msgstr "Osnovno okolje"
 
 #: pyanaconda/ui/gui/spokes/software_selection.glade:84
 msgid "Add-Ons for Selected Environment"
-msgstr ""
+msgstr "Dodatki za izbrano okolje"
 
 #: pyanaconda/ui/gui/spokes/network.glade:35
 msgid "Add device"
@@ -5633,9 +5633,8 @@ msgstr ""
 "okolja. Tukaj lahko nastavite ime gostitelja."
 
 #: pyanaconda/ui/gui/spokes/network.glade:417
-#, fuzzy
 msgid "Slaves"
-msgstr "Sužnji"
+msgstr "Podrejeni"
 
 #: pyanaconda/ui/gui/spokes/network.glade:441
 #: pyanaconda/ui/gui/spokes/network.glade:840
@@ -5680,7 +5679,7 @@ msgstr "Varnost"
 #: pyanaconda/ui/gui/spokes/network.glade:965
 msgctxt "GUI|Network|Wireless"
 msgid "_Network Name"
-msgstr ""
+msgstr "I_me omrežja"
 
 #: pyanaconda/ui/gui/spokes/network.glade:979
 msgid "Network Name"
@@ -6966,7 +6965,7 @@ msgstr "Namesti živi CD na vaš trdi disk"
 #. TRANSLATORS: Icon name, probably should not be translated
 #: data/liveinst/liveinst.desktop:11
 msgid "org.fedoraproject.AnacondaInstaller"
-msgstr ""
+msgstr "org.fedoraproject.AnacondaInstaller"
 
 #: data/liveinst/liveinst-setup.desktop:4
 msgid "Liveinst Setup"
