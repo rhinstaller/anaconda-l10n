@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: anaconda 38.23.1\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
 "POT-Creation-Date: 2023-08-22 01:02+0000\n"
-"PO-Revision-Date: 2024-09-07 13:52+0000\n"
+"PO-Revision-Date: 2024-09-12 21:50+0000\n"
 "Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
 "Language-Team: Slovenian <https://translate.fedoraproject.org/projects/"
 "anaconda/f38/sl/>\n"
@@ -3195,6 +3195,12 @@ msgid ""
 "if you would like to secure the server.\n"
 "\n"
 msgstr ""
+"\n"
+"\n"
+"OPOZORILO!!! Strežnik VNC deluje brez GESLA!\n"
+"Uporabite lahko zagonsko možnost inst.vncpassword=GESLO\n"
+"če želite zavarovati strežnik.\n"
+"\n"
 
 #: pyanaconda/vnc.py:268
 msgid ""
@@ -3283,7 +3289,7 @@ msgstr "Krajevni medij prek SE/HMC"
 
 #: pyanaconda/modules/payloads/source/rpm_ostree_container/rpm_ostree_container.py:49
 msgid "RPM OSTree Container"
-msgstr ""
+msgstr "Vsebnik OSTree RPM"
 
 #: pyanaconda/modules/payloads/source/cdrom/cdrom.py:62
 msgid "Local media"
@@ -3340,6 +3346,8 @@ msgid ""
 "Downloading {total_files} RPMs, {downloaded_size} / {total_size} "
 "({total_percent}%) done."
 msgstr ""
+"Prenašanje {total_files} RPM-jev, {downloaded_size} / {total_size} "
+"({total_percent} %) preneseno."
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:564
 msgid "Deployment starting: {}"
@@ -3401,7 +3409,7 @@ msgstr "Prenašanje {} ({}%)"
 
 #: pyanaconda/modules/storage/snapshot/device.py:45
 msgid "Snapshot: origin \"{}\" doesn't exist!"
-msgstr ""
+msgstr "Posnetek: izvor »{}« ne obstaja!"
 
 #: pyanaconda/modules/storage/snapshot/device.py:50
 msgid ""
@@ -3412,7 +3420,7 @@ msgstr ""
 
 #: pyanaconda/modules/storage/snapshot/device.py:56
 msgid "Snapshot {} already exists."
-msgstr ""
+msgstr "Posnetek {} že obstaja."
 
 #: pyanaconda/modules/storage/partitioning/interactive/change_device.py:87
 msgid "Failed to change a device."
@@ -3522,21 +3530,21 @@ msgstr "Ni mogoče nadaljevati z namestitvijo."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:161
 msgid "No disk found for specified BIOS disk \"{}\"."
-msgstr ""
+msgstr "Za navedeni disk BIOS-a \"{}\" ni bilo mogoče najti diska."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:202
 msgid "RAID partition \"{}\" is defined multiple times."
-msgstr ""
+msgstr "Razdelek RAID \"{}\" je definiran večkrat."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:214
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:484
 msgid "PV partition \"{}\" is defined multiple times."
-msgstr ""
+msgstr "Razdelek PV \"{}\" je definiran večkrat."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:226
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:496
 msgid "Btrfs partition \"{}\" is defined multiple times."
-msgstr ""
+msgstr "Razdelek Btrfs \"{}\" je definiran večkrat."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:252
 msgid "part --noformat must also use the --onpart option."
@@ -3545,7 +3553,7 @@ msgstr "Tudi part --noformat mora uporabiti možnost --onpart."
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:257
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:352
 msgid "Partition \"{}\" given in part command does not exist."
-msgstr ""
+msgstr "Razdelek \"{}\", podan z ukazom, ne obstaja."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:294
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:573
@@ -3560,7 +3568,7 @@ msgstr "Disk \"{}\", podan v ukazu part, ne obstaja."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:314
 msgid "Cannot install to unpartitionable device \"{}\"."
-msgstr ""
+msgstr "Ni mogoče namestiti v nerazdeljivo napravo \"{}\"."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:322
 msgid "Disk \"{}\" in part command is not partitioned."
@@ -3572,17 +3580,20 @@ msgstr "Tudi raid --noformat mora uporabiti možnost --device."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:524
 msgid "RAID device  \"{}\" given in raid command does not exist."
-msgstr ""
+msgstr "Naprava RAID \"{}\", navedena v ukazu raid, ne obstaja."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:549
 msgid ""
 "RAID device \"{}\" has a format of \"{}\", but should have a format of "
 "\"mdmember\"."
 msgstr ""
+"Naprava RAID \"{}\" ima format \"{}\", vendar bi morala imeti format "
+"\"mdmember\"."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:555
 msgid "Tried to use undefined partition \"{}\" in RAID specification."
 msgstr ""
+"Poskusili ste uporabiti nedefiniran razdelek \"{}\" v specifikaciji RAID."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:596
 msgid "RAID volume \"{}\" specified with --useexisting does not exist."
@@ -3590,13 +3601,15 @@ msgstr "Pogon RAID »{}«, naveden z --useexisting, ne obstaja."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:607
 msgid "The RAID volume name \"{}\" is already in use."
-msgstr ""
+msgstr "Pogon RAID z imenom \"{}\" je že v rabi."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:721
 msgid ""
 "Physical volume \"{}\" has a format of \"{}\", but should have a format of "
 "\"lvmpv\"."
 msgstr ""
+"Fizični pogon \"{}\" ima format \"{}\", vendar bi moral imeti format \"lvmpv"
+"\"."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:727
 msgid "Tried to use undefined partition \"{}\" in Volume Group specification"
@@ -3639,7 +3652,7 @@ msgstr "Skupina pogonov \"{}\" je že v rabi."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:821
 msgid "/boot cannot be of type \"lvmlv\" on s390x"
-msgstr ""
+msgstr "/boot ne more biti tipa \"lvmlv\" na s390x"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:851
 msgid "Size cannot be decided on from kickstart nor obtained from device."
@@ -3676,13 +3689,15 @@ msgstr "Logični nosilec \"{}\", podan v ukazu logvol, ne obstaja."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:931
 msgid "Logical volume name \"{}\" is already in use in volume group \"{}\"."
-msgstr ""
+msgstr "Ime logičnega pogona \"{}\" je že v uporabi v skupini pogonov \"{}\"."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:937
 msgid ""
 "Logical volume size \"{}\" must be larger than the volume group extent size "
 "of \"{}\"."
 msgstr ""
+"Velikost logičnega pogona \"{}\" mora biti večja od velikosti razsežnosti "
+"skupine pogonov \"{}\"."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1144
 msgid ""
@@ -4327,6 +4342,8 @@ msgid ""
 "performance for most installations, it is recommended to specify a swap "
 "partition."
 msgstr ""
+"Izmenjalni razdelek ni podan. Za znatno izboljšanje zmogljivosti večine "
+"namestitev je priporočljivo določiti izmenjalni razdelek."
 
 #: pyanaconda/modules/storage/checker/utils.py:340
 msgid ""
@@ -5049,7 +5066,7 @@ msgstr "Napredno po meri (_Blivet-GUI)"
 #: pyanaconda/ui/gui/spokes/storage.glade:446
 msgctxt "GUI|Storage"
 msgid "Free up space by re_moving or shrinking existing partitions"
-msgstr ""
+msgstr "Sprostite prostor tako, da odstranite ali skrčite obstoječe razdelke"
 
 #: pyanaconda/ui/gui/spokes/storage.glade:474
 msgid "Encryption"
@@ -5151,6 +5168,10 @@ msgid ""
 "vulnerabilities, and compliance, and analyzing costs. For more information, "
 "visit the Red Hat Insights information page."
 msgstr ""
+"Red Hat Insights želi povečati vašo IT učinkovitost in hitrost prek "
+"hibridnih infrastruktur z ugotavljanjem in prednostnim razvrščanjem tveganj, "
+"upravljanjem ranljivosti, skladnostjo in analiziranjem stroškov. Za več "
+"informacij obiščite stran z informacijami Red Hat Insights."
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:456
 msgid "Custom base URL"
@@ -5158,7 +5179,7 @@ msgstr "Osnovni URL po meri"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:504
 msgid "Custom server URL"
-msgstr ""
+msgstr "URL strežnika po meri"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:518
 msgid "Use HTTP proxy"
@@ -5187,7 +5208,7 @@ msgstr "_Registriraj"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:732
 msgid "The system has been properly subscribed"
-msgstr ""
+msgstr "Sistem je pravilno naročen"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:746
 msgctxt "GUI|Subscription|Unregister"
@@ -5395,6 +5416,8 @@ msgid ""
 "We'll need network access to fetch information about your location and to "
 "make software updates available for you."
 msgstr ""
+"Mrežni dostop potrebujemo za pridobivanje informacij o vaši lokaciji in za "
+"omogočanje posodobitev programske opreme za vas."
 
 #: pyanaconda/ui/gui/spokes/network.glade:449
 #: pyanaconda/ui/gui/spokes/network.glade:2587
@@ -5411,7 +5434,7 @@ msgstr ""
 
 #: pyanaconda/ui/gui/spokes/network.glade:700
 msgid "Ports"
-msgstr ""
+msgstr "Vrata"
 
 #: pyanaconda/ui/gui/spokes/network.glade:724
 #: pyanaconda/ui/gui/spokes/network.glade:1124
@@ -5603,11 +5626,16 @@ msgid ""
 "system. For this reason, logging into this system as the root user is best "
 "done only to perform system maintenance or administration."
 msgstr ""
+"Korenski račun se uporablja za upravljanje sistema.\n"
+"\n"
+"Uporabnik root (znan tudi kot super uporabnik) ima popoln dostop do "
+"celotnega sistema. Zato je najboljša prijava v ta sistem kot uporabnik root "
+"samo za izvajanje vzdrževanja ali upravljanja sistema."
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:101
 msgctxt "GUI|Password"
 msgid "D_isable root account"
-msgstr ""
+msgstr "O_nemogoči račun root"
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:130
 msgctxt "GUI|Password"
@@ -5620,6 +5648,9 @@ msgid ""
 "with root account. This will prevent unintended administrative access to the "
 "system."
 msgstr ""
+"Onemogočanje korenskega računa bo zaklenilo račun in onemogočilo oddaljeni "
+"dostop s korenskim računom. To bo preprečilo nenameren skrbniški dostop do "
+"sistema."
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:167
 msgctxt "GUI|Password"
@@ -5627,6 +5658,8 @@ msgid ""
 "Enabling the root account will allow you to set a root password and "
 "optionally enable remote access to root account on this system."
 msgstr ""
+"Če omogočite korenski račun, boste lahko nastavili korensko geslo in po "
+"želji omogočite oddaljeni dostop do korenskega računa v tem sistemu."
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:203
 msgctxt "GUI|Password"
@@ -6147,7 +6180,7 @@ msgstr "http:// ali https:// ali ftp://"
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:313
 msgctxt "GUI|Software Source"
 msgid "URL _type:"
-msgstr ""
+msgstr "Vrs_ta URL:"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:330
 msgid "Repository URL"
@@ -6164,7 +6197,7 @@ msgstr "Metapovezava"
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:346
 msgctxt "GUI|Software Source"
 msgid "Pro_xy:"
-msgstr ""
+msgstr "Posredni_k:"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:358
 msgctxt "GUI|Software Source"
@@ -6192,11 +6225,11 @@ msgstr "Ime gostitelja ali naslov IP strežnika NFS"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:445
 msgid "Path on the NFS server to the additional repository"
-msgstr ""
+msgstr "Pot na strežniku NFS do dodatnega skladišča"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:457
 msgid "Optional comma-separated list of mount options for the NFS mount"
-msgstr ""
+msgstr "Neobvezen seznam možnosti priklopa za priklop na NFS, ločen z vejicami"
 
 #: pyanaconda/ui/gui/spokes/lib/additional_repositories.glade:459
 msgid "Not required"
@@ -7108,6 +7141,8 @@ msgctxt "GUI|User"
 msgid ""
 "Add ad_ministrative privileges to this user account (wheel group membership)"
 msgstr ""
+"Dodaj ad_administrative pravice temu uporabniškemu računu (članstvo v "
+"skupini wheel)"
 
 #: pyanaconda/ui/gui/spokes/user.glade:269
 msgctxt "GUI|User"
@@ -7228,7 +7263,7 @@ msgstr "Raven RA_ID-a:"
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:938
 msgctxt "GUI|Custom Partitioning|Configure"
 msgid "LUK_S Version:"
-msgstr ""
+msgstr "Različica LUK_S:"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:1009
 msgctxt "GUI|Custom Partitioning|Configure|Devices"
@@ -7681,10 +7716,8 @@ msgstr ""
 "da želite nadaljevati z nameščanjem?"
 
 #: data/liveinst/gnome/fedora-welcome.js:49
-#, fuzzy
-#| msgid "Welcome to Fedora"
 msgid "Welcome to Fedora!"
-msgstr "Dobrodošli v Fedori"
+msgstr "Dobrodošli v Fedori!"
 
 #: data/liveinst/gnome/fedora-welcome.js:61
 msgid ""
@@ -7693,14 +7726,12 @@ msgid ""
 msgstr ""
 
 #: data/liveinst/gnome/fedora-welcome.js:74
-#, fuzzy
-#| msgid "Installed"
 msgid "Install Fedora…"
-msgstr "Nameščeno"
+msgstr "Namesti Fedoro …"
 
 #: data/liveinst/gnome/fedora-welcome.js:82
 msgid "Not Now"
-msgstr ""
+msgstr "Ne zdaj"
 
 #: ../data/liveinst/console.apps/liveinst.h:1
 msgid "Starting Install to Hard Drive"
