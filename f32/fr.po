@@ -58,7 +58,7 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2020-03-17 14:21+0100\n"
-"PO-Revision-Date: 2024-10-11 01:07+0000\n"
+"PO-Revision-Date: 2024-11-06 12:50+0000\n"
 "Last-Translator: Léane GRASSER <leane.grasser@proton.me>\n"
 "Language-Team: French <https://translate.fedoraproject.org/projects/anaconda/"
 "f32/fr/>\n"
@@ -67,7 +67,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.7.2\n"
+"X-Generator: Weblate 5.8.2\n"
 
 #: pyanaconda/ui/categories/system.py:28
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:458
@@ -213,9 +213,9 @@ msgid ""
 "{} may be a system boot partition! Deleting it may break other operating "
 "systems. Are you sure you want to delete it?"
 msgstr ""
-"{} pourrait être une partition d'amorçage du système ! La supprimer pourrait "
-"casser les autres systèmes d'exploitation. Êtes-vous sûr de vouloir la "
-"supprimer ?"
+"{} pourrait être une partition système de démarrage ! Supprimer cette "
+"partition pourrait casser les autres systèmes d'exploitation. Voulez-vous "
+"vraiment la supprimer ?"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:368
 msgid ""
@@ -252,7 +252,7 @@ msgstr "_Annuler"
 #: pyanaconda/ui/gui/spokes/lib/cart.py:177
 msgctxt "GUI|Selected Disks Dialog"
 msgid "_Do not install boot loader"
-msgstr "_Ne pas installer le chargeur d'amorçage"
+msgstr "_Ne pas installer le bootloader"
 
 #: pyanaconda/ui/gui/spokes/lib/cart.py:182
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:181
@@ -1040,8 +1040,8 @@ msgid ""
 "You have chosen to skip boot loader installation. Your system may not be "
 "bootable."
 msgstr ""
-"Vous avez choisi d'ignorer l'installation du chargeur d'amorçage. Votre "
-"système ne sera peut-être pas amorçable."
+"Vous avez choisi d'ignorer l'installation du bootloader. Votre système sera "
+"peut-être impossible à démarrer."
 
 #: pyanaconda/ui/gui/spokes/storage.py:885
 msgid "There was a problem with your disk selection. Click here for details."
@@ -1440,7 +1440,7 @@ msgstr "Échec de l'enregistrement de la configuration du stockage"
 
 #: pyanaconda/ui/lib/storage.py:281
 msgid "Failed to save boot loader configuration"
-msgstr "Échec de l'enregistrement de la configuration du chargeur d'amorçage"
+msgstr "Échec de l'enregistrement de la configuration du bootloader"
 
 #: pyanaconda/ui/lib/storage.py:285
 msgid "Checking storage configuration..."
@@ -2278,10 +2278,9 @@ msgid ""
 "loader stage1 device %(stage1dev)s is not. A drive failure in %(stage2dev)s "
 "could render the system unbootable."
 msgstr ""
-"Le périphérique du chargeur de démarrage stage2 %(stage2dev)s est sur une "
-"matrice multi-disques, mais pas celui de stage1 %(stage1dev)s. Une "
-"défaillance d'un périphérique dans %(stage2dev)s peut rendre le système non "
-"amorçable."
+"Le périphérique du bootloader stage2 %(stage2dev)s est sur une matrice multi-"
+"disques, mais pas celui de stage1 %(stage1dev)s. La défaillance d'un lecteur "
+"parmi %(stage2dev)s peut rendre le système impossible à démarrer."
 
 #: pyanaconda/bootloader/grub2.py:533
 #, python-format
@@ -2290,10 +2289,10 @@ msgid ""
 "loader stage1 device %(stage1dev)s is not part of this array. The stage1 "
 "boot loader will only be installed to a single drive."
 msgstr ""
-"Le périphérique du chargeur d'amorçage stage2 %(stage2dev)s est sur un "
-"périphérique multi-disques, mais le périphérique du chargeur d'amorçage "
-"stage1 %(stage1dev)s n'en fait pas partie. Le chargeur d'amorçage stage1 ne "
-"sera installé que sur un seul disque."
+"Le périphérique du bootloader stage2 %(stage2dev)s est sur un périphérique "
+"multi-disques, mais le périphérique du bootloader stage1 %(stage1dev)s n'en "
+"fait pas partie. Le bootloader stage1 ne sera installé que sur un seul "
+"disque."
 
 #: pyanaconda/bootloader/base.py:149
 msgid "/boot file system"
@@ -2374,8 +2373,8 @@ msgid ""
 "Boot loader stage1 device cannot be on an iSCSI disk which is not configured "
 "in iBFT."
 msgstr ""
-"Le périphérique du chargeur d'amorçage stage1 ne peut pas être un disque "
-"iSCSI qui n'est pas configuré en iBFT."
+"Le périphérique du bootloader stage1 ne peut pas être un disque iSCSI qui "
+"n'est pas configuré en iBFT."
 
 #: pyanaconda/bootloader/base.py:545 pyanaconda/bootloader/base.py:659
 #, python-format
@@ -2597,7 +2596,7 @@ msgid ""
 "boot loader configuration on some PPC platforms."
 msgstr ""
 "La partition de démarrage PReP est requise dans le cadre \n"
-"de la configuration du chargeur d'amorçage sur certaines plateformes PPC."
+"de la configuration du bootloader sur certaines plateformes PPC."
 
 #: pyanaconda/storage/utils.py:398
 #, python-format
@@ -2729,12 +2728,12 @@ msgstr ""
 #: pyanaconda/storage/checker.py:179
 msgid "No valid boot loader target device found. See below for details."
 msgstr ""
-"Aucun périphérique cible trouvé pour le chargeur d'amorçage. Voir ci-dessous "
-"pour les détails."
+"Aucun périphérique cible trouvé pour le bootloader. Voir ci-dessous pour les "
+"détails."
 
 #: pyanaconda/storage/checker.py:194
 msgid "You have not created a bootable partition."
-msgstr "Vous n'avez pas créé de partition amorçable."
+msgstr "Vous n'avez pas créé de partition de démarrage."
 
 #: pyanaconda/storage/checker.py:229
 msgid ""
@@ -3301,7 +3300,7 @@ msgstr "Installation en cours."
 
 #: pyanaconda/installation.py:324
 msgid "Installing boot loader"
-msgstr "Installation du chargeur d'amorçage"
+msgstr "Installation du bootloader"
 
 #: pyanaconda/installation.py:345
 msgid "Creating snapshots"
@@ -3309,7 +3308,7 @@ msgstr "Création des instantanés"
 
 #: pyanaconda/platform.py:52
 msgid "boot loader device"
-msgstr "périphérique du chargeur de démarrage"
+msgstr "périphérique du bootloader"
 
 #: pyanaconda/platform.py:54
 msgid "RAID Device"
@@ -3346,7 +3345,7 @@ msgstr ""
 
 #: pyanaconda/platform.py:166
 msgid "Apple EFI Boot Partition"
-msgstr "Partition d’amorçage Apple EFI"
+msgstr "Partition de démarrage EFI Apple"
 
 #: pyanaconda/platform.py:169
 msgid ""
@@ -3713,9 +3712,9 @@ msgid ""
 "will not be bootable. Would you like to ignore this and continue with "
 "installation?"
 msgstr ""
-"L'erreur suivante s'est produite lors de l'installation du chargeur "
-"d'amorçage. Le système ne sera pas amorçable. Voulez-vous ignorer cette "
-"erreur et continuer l'installation ?"
+"L'erreur suivante s'est produite lors de l'installation du bootloader. Le "
+"système sera impossible à démarrer. Voulez-vous ignorer cette erreur et "
+"continuer l'installation ?"
 
 #: pyanaconda/errors.py:258
 #, python-format
@@ -5239,7 +5238,7 @@ msgstr "_Fermer"
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:104
 msgid "Boot"
-msgstr "Amorçage"
+msgstr "Démarrage"
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:118
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:220
@@ -6185,7 +6184,7 @@ msgstr "sommaire"
 #: pyanaconda/ui/gui/spokes/storage.glade:1061
 msgctxt "GUI|Storage"
 msgid "_Full disk summary and boot loader..."
-msgstr "_Résumé complet des disques et chargeur d'amorçage..."
+msgstr "_Résumé complet des disques et bootloader..."
 
 #: pyanaconda/ui/gui/spokes/storage.glade:1100
 msgctxt "GUI|Storage"
