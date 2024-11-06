@@ -42,7 +42,7 @@ msgstr ""
 "Project-Id-Version: anaconda 21.48.22.158\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2020-04-15 15:07+0200\n"
-"PO-Revision-Date: 2024-10-11 01:07+0000\n"
+"PO-Revision-Date: 2024-11-06 12:50+0000\n"
 "Last-Translator: Léane GRASSER <leane.grasser@proton.me>\n"
 "Language-Team: French <https://translate.fedoraproject.org/projects/anaconda/"
 "rhel-7/fr/>\n"
@@ -51,7 +51,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.7.2\n"
+"X-Generator: Weblate 5.8.2\n"
 
 #: pyanaconda/bootloader.py:253
 msgid "/boot file system"
@@ -132,8 +132,8 @@ msgid ""
 "Boot loader stage1 device cannot be on an iSCSI disk which is not configured "
 "in iBFT."
 msgstr ""
-"Le périphérique du chargeur d'amorçage stage1 ne peut pas être un disque "
-"iSCSI qui n'est pas configuré en iBFT."
+"Le périphérique du bootloader stage1 ne peut pas être un disque iSCSI qui "
+"n'est pas configuré en iBFT."
 
 #: pyanaconda/bootloader.py:656 pyanaconda/bootloader.py:767
 #, python-format
@@ -161,10 +161,9 @@ msgid ""
 "loader stage1 device %(stage1dev)s is not. A drive failure in %(stage2dev)s "
 "could render the system unbootable."
 msgstr ""
-"Le périphérique du chargeur de démarrage stage2 %(stage2dev)s est sur une "
-"matrice multi-disques, mais pas celui de stage1 %(stage1dev)s. Une "
-"défaillance d'un périphérique dans %(stage2dev)s peut rendre le système non "
-"amorçable."
+"Le périphérique du bootloader stage2 %(stage2dev)s est sur une matrice multi-"
+"disques, mais pas celui de stage1 %(stage1dev)s. La défaillance d'un lecteur "
+"parmi %(stage2dev)s peut rendre le système impossible à démarrer."
 
 #: pyanaconda/bootloader.py:1383
 #, python-format
@@ -173,10 +172,10 @@ msgid ""
 "loader stage1 device %(stage1dev)s is not part of this array. The stage1 "
 "boot loader will only be installed to a single drive."
 msgstr ""
-"Le périphérique du chargeur d'amorçage stage2 %(stage2dev)s est sur un "
-"périphérique multi-disques, mais le périphérique du chargeur d'amorçage "
-"stage1 %(stage1dev)s n'en fait pas partie. Le chargeur d'amorçage stage1 ne "
-"sera installé que sur un seul disque."
+"Le périphérique du bootloader stage2 %(stage2dev)s est sur un périphérique "
+"multi-disques, mais le périphérique du bootloader stage1 %(stage1dev)s n'en "
+"fait pas partie. Le bootloader stage1 ne sera installé que sur un seul "
+"disque."
 
 #: pyanaconda/bootloader.py:1676
 #, python-format
@@ -534,9 +533,9 @@ msgid ""
 "will not be bootable. Would you like to ignore this and continue with "
 "installation?"
 msgstr ""
-"L'erreur suivante s'est produite lors de l'installation du chargeur "
-"d'amorçage. Le système ne sera pas amorçable. Voulez-vous ignorer cette "
-"erreur et continuer l'installation ?"
+"L'erreur suivante s'est produite lors de l'installation du bootloader. Le "
+"système sera impossible à démarrer. Voulez-vous ignorer cette erreur et "
+"continuer l'installation ?"
 
 #: pyanaconda/errors.py:282
 #, python-format
@@ -549,7 +548,7 @@ msgid ""
 "The installer will now terminate."
 msgstr ""
 "L'installation s'est arrêtée en raison d'une erreur lors de l'installation "
-"du chargeur de démarrage. Le message d'erreur exact est :\n"
+"du bootloader. Le message d'erreur exact est :\n"
 "\n"
 "%s\n"
 "\n"
@@ -678,7 +677,7 @@ msgstr "Découverte du domaine à rejoindre"
 
 #: pyanaconda/install.py:265
 msgid "Installing boot loader"
-msgstr "Installation du chargeur d'amorçage"
+msgstr "Installation du bootloader"
 
 #: pyanaconda/install.py:268 pyanaconda/packaging/livepayload.py:170
 #: pyanaconda/packaging/yumpayload.py:1555
@@ -1451,7 +1450,7 @@ msgid ""
 "boot loader configuration on some PPC platforms."
 msgstr ""
 "La partition de démarrage PReP est requise dans le cadre \n"
-"de la configuration du chargeur d'amorçage sur certaines plateformes PPC."
+"de la configuration du bootloader sur certaines plateformes PPC."
 
 #: pyanaconda/storage_utils.py:159
 #, python-format
@@ -1515,12 +1514,12 @@ msgstr ""
 #: pyanaconda/storage_utils.py:245
 msgid "No valid boot loader target device found. See below for details."
 msgstr ""
-"Aucun périphérique cible trouvé pour le chargeur d'amorçage. Voir ci-dessous "
-"pour les détails."
+"Aucun périphérique cible trouvé pour le bootloader. Voir ci-dessous pour les "
+"détails."
 
 #: pyanaconda/storage_utils.py:260
 msgid "You have not created a bootable partition."
-msgstr "Vous n'avez pas créé de partition amorçable."
+msgstr "Vous n'avez pas créé de partition de démarrage."
 
 #: pyanaconda/storage_utils.py:295
 msgid ""
@@ -3765,8 +3764,8 @@ msgid ""
 "You have chosen to skip boot loader installation.  Your system may not be "
 "bootable."
 msgstr ""
-"Vous avez choisi d'ignorer l'installation du chargeur de démarrage. Votre "
-"système ne pourra peut-être pas démarrer."
+"Vous avez choisi d'ignorer l'installation du bootloader. Votre système ne "
+"pourra peut-être pas démarrer."
 
 #: pyanaconda/ui/gui/spokes/storage.py:914
 msgid "There was a problem with your disk selection. Click here for details."
@@ -3930,7 +3929,7 @@ msgstr[1] ""
 #: pyanaconda/ui/gui/spokes/lib/cart.py:193
 msgctxt "GUI|Selected Disks Dialog"
 msgid "_Do not install boot loader"
-msgstr "_Ne pas installer le chargeur d'amorçage"
+msgstr "_Ne pas installer le bootloader"
 
 #: pyanaconda/ui/gui/spokes/lib/cart.py:196
 #: pyanaconda/ui/gui/spokes/lib/cart.glade.h:8
@@ -4997,7 +4996,7 @@ msgstr "sommaire"
 #: pyanaconda/ui/gui/spokes/storage.glade.h:32
 msgctxt "GUI|Storage"
 msgid "_Full disk summary and boot loader..."
-msgstr "_Résumé complet des disques et chargeur d'amorçage..."
+msgstr "_Résumé complet des disques et bootloader..."
 
 #: pyanaconda/ui/gui/spokes/storage.glade.h:33
 msgctxt "GUI|Storage"
@@ -6149,7 +6148,7 @@ msgstr "_Fermer"
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade.h:3
 msgid "Boot"
-msgstr "Amorçage"
+msgstr "Démarrage"
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade.h:4
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade.h:7
