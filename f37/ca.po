@@ -32,7 +32,7 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
 "POT-Creation-Date: 2023-03-08 01:26+0000\n"
-"PO-Revision-Date: 2024-11-28 19:28+0000\n"
+"PO-Revision-Date: 2024-11-29 01:21+0000\n"
 "Last-Translator: naly zzwd <xeanhort007@gmail.com>\n"
 "Language-Team: Catalan <https://translate.fedoraproject.org/projects/"
 "anaconda/f37/ca/>\n"
@@ -242,11 +242,7 @@ msgstr ""
 "instal·lació?"
 
 #: pyanaconda/errors.py:178
-#, fuzzy, python-brace-format
-#| msgid ""
-#| "The following error occurred while installing the boot loader. The system "
-#| "will not be bootable. Would you like to ignore this and continue with "
-#| "installation?"
+#, python-brace-format
 msgid ""
 "The following error occurred during the installation:\n"
 "\n"
@@ -254,9 +250,11 @@ msgid ""
 "\n"
 "Would you like to ignore this and continue with installation?"
 msgstr ""
-"S'ha produït el següent error mentre s'instal·lava el gestor d'arrencada. No "
-"es podrà arrencar el sistema. Voleu ignorar-ho i continuar amb la "
-"instal·lació?"
+"S'ha produït el següent error durant la instal·lació:\n"
+"\n"
+" {details}\n"
+"\n"
+" Voleu ignorar-ho i continuar amb la instal·lació?"
 
 #: pyanaconda/errors.py:188
 #, fuzzy
@@ -2551,22 +2549,16 @@ msgid "CUSTOMIZATION"
 msgstr "PERSONALITZACIÓ"
 
 #: pyanaconda/modules/timezone/timezone.py:105
-#, fuzzy
-#| msgid "Invalid timezone"
 msgid "Invalid time source."
-msgstr "Zona horària no vàlida"
+msgstr "Font d'hora no vàlida."
 
 #: pyanaconda/modules/subscription/runtime.py:337
-#, fuzzy
-#| msgid "Connection failed"
 msgid "Unregistration failed."
-msgstr "La connexió ha fallat"
+msgstr "No s'ha pogut cancel·lar el registre."
 
 #: pyanaconda/modules/subscription/runtime.py:377
-#, fuzzy
-#| msgid "Failed to save storage configuration"
 msgid "Failed to attach subscription."
-msgstr "No s'ha pogut desar la configuració de l'emmagatzematge"
+msgstr "No s'ha pogut adjuntar la subscripció."
 
 #: pyanaconda/modules/subscription/runtime.py:451
 msgid "product name unknown"
@@ -2576,16 +2568,12 @@ msgstr ""
 #: pyanaconda/modules/subscription/runtime.py:465
 #: pyanaconda/modules/subscription/runtime.py:478
 #: pyanaconda/modules/subscription/runtime.py:486
-#, fuzzy
-#| msgid "Unknown"
 msgid "unknown"
-msgstr "Desconegut"
+msgstr "desconegut"
 
 #: pyanaconda/modules/subscription/runtime.py:471
-#, fuzzy
-#| msgid "Unavailable"
 msgid "not available"
-msgstr "No disponible"
+msgstr "no disponible"
 
 #: pyanaconda/modules/network/firewall/installation.py:102
 #, python-format
@@ -2658,16 +2646,14 @@ msgid "Unknown Linux"
 msgstr "Linux desconegut"
 
 #: pyanaconda/modules/storage/devicetree/root.py:343
-#, fuzzy, python-brace-format
-#| msgid "%(product)s %(version)s for %(arch)s"
+#, python-brace-format
 msgid "{product} {version} for {arch}"
-msgstr "%(product)s %(version)s per %(arch)s"
+msgstr "{product} {version} per a {arch}"
 
 #: pyanaconda/modules/storage/devicetree/root.py:345
-#, fuzzy, python-brace-format
-#| msgid "%(product)s Linux %(version)s for %(arch)s"
+#, python-brace-format
 msgid "{product} Linux {version} for {arch}"
-msgstr "Linux %(product)s %(version)s per %(arch)s"
+msgstr "{product} Linux {version} per a {arch}"
 
 #: pyanaconda/modules/storage/devicetree/utils.py:77
 #, fuzzy
@@ -2809,14 +2795,9 @@ msgstr ""
 "recomana per una instal·lació normal de %(productName)s."
 
 #: pyanaconda/modules/storage/checker/utils.py:131
-#, fuzzy, python-format
-#| msgid ""
-#| "Your %(mount)s partition is less than %(size)s which is lower than "
-#| "recommended for a normal %(productName)s install."
+#, python-format
 msgid "Your %(mount)s partition size is lower than required %(size)s."
-msgstr ""
-"La vostra partició %(mount)s és inferior de %(size)s que és menys del que es "
-"recomana per una instal·lació normal de %(productName)s."
+msgstr "La mida de la partició %(mount)s és inferior a la necessària %(size)s."
 
 #: pyanaconda/modules/storage/checker/utils.py:151
 #, python-format
@@ -3201,7 +3182,7 @@ msgstr ""
 #: pyanaconda/modules/storage/bootloader/base.py:699
 #, python-format
 msgid "%s cannot be on an encrypted block device."
-msgstr "%s no pot estar en un dispositiu de de blocs xifrat."
+msgstr "%s no pot estar en un dispositiu de blocs xifrat."
 
 #: pyanaconda/modules/storage/bootloader/base.py:651
 #, python-format
@@ -3522,10 +3503,8 @@ msgstr ""
 "La mida objectiu \"{size}\" per al dispositiu \"{device}\" no és vàlida."
 
 #: pyanaconda/modules/storage/partitioning/base_partitioning.py:56
-#, fuzzy
-#| msgid "Failed to set up installation source"
 msgid "Failed to proceed with the installation."
-msgstr "Ha fallat la configuració de l'origen de la instal·lació"
+msgstr "No s'ha pogut continuar amb la instal·lació."
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:213
 #, python-brace-format
@@ -3659,10 +3638,8 @@ msgstr ""
 "L'espai lliure no és prou gran en els discs per al particionatge automàtic"
 
 #: pyanaconda/modules/storage/partitioning/automatic/noninteractive_partitioning.py:111
-#, fuzzy
-#| msgid "Selected Device"
 msgid "No usable disks."
-msgstr "Dispositiu seleccionat"
+msgstr "No hi ha discs utilitzables."
 
 #: pyanaconda/modules/storage/constants.py:30
 msgid ""
@@ -3695,16 +3672,13 @@ msgid "Preparing transaction from installation source"
 msgstr "S'està preparant la transacció des de l'origen de la instal·lació"
 
 #: pyanaconda/modules/payloads/payload/dnf/download_progress.py:68
-#, fuzzy, python-brace-format
-#| msgid ""
-#| "Downloading %(total_files)s RPMs, %(downloaded)s / %(total_size)s "
-#| "(%(percent)d%%) done."
+#, python-brace-format
 msgid ""
 "Downloading {total_files} RPMs, {downloaded_size} / {total_size} "
 "({total_percent}%) done."
 msgstr ""
-"S'estan baixant %(total_files)s RPM, %(downloaded)s / %(total_size)s "
-"(%(percent)d%%) fet."
+"S'estan baixant {total_files} RPMs, {downloaded_size} / {total_size} "
+"({total_percent}%) fet."
 
 #: pyanaconda/modules/payloads/payload/dnf/dnf_manager.py:602
 #, fuzzy
@@ -3729,8 +3703,9 @@ msgid ""
 "The following software marked for installation has errors.\n"
 "This is likely caused by an error with your installation source."
 msgstr ""
-"El programari següent marcat per a la instal·lació té errors.\n"
-"És probable que això sigui causat per un error amb la font d'instal·lació."
+"El següent programari marcat per instal·lar conté errors. Això probablement "
+"es deu a un error amb\n"
+"el vostre origen de la instal·lació."
 
 #: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:45
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_manager.py:203
@@ -3788,10 +3763,9 @@ msgid "Deployment complete: {}"
 msgstr "Finalització del desplegament: %s"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:572
-#, fuzzy, python-brace-format
-#| msgid "Starting pull of %(branchName)s from %(source)s"
+#, python-brace-format
 msgid "Starting pull of {branch_name} from {source}"
-msgstr "S'està iniciant l'extracció de %(branchName)s des de %(source)s"
+msgstr "S'està iniciant l'extracció de {branch_name} des de {source}"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:607
 #, fuzzy
@@ -3800,12 +3774,9 @@ msgid "Preparing deployment of {}"
 msgstr "S'està preparant el desplegament de %s"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:635
-#, fuzzy, python-brace-format
-#| msgid ""
-#| "Receiving objects: %(percent)d%% (%(fetched)d/%(requested)d) %(bytes)s"
+#, python-brace-format
 msgid "Receiving objects: {percent}% ({fetched}/{requested}) {bytes}"
-msgstr ""
-"S'estan rebent objectes: %(percent)d%% (%(fetched)d/%(requested)d) %(bytes)s"
+msgstr "S'estan rebent objectes: {percent}% ({fetched}/{requested}) {bytes}"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:641
 msgid "Writing objects"
@@ -5645,7 +5616,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/subscription.glade:746
 msgctxt "GUI|Subscription|Unregister"
 msgid "_Unregister"
-msgstr "Desregistra"
+msgstr "Desregistra't"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:782
 msgid "Method"
@@ -6061,7 +6032,7 @@ msgstr "To_rna a intentar el descobriment"
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:324
 msgid "The added DASD can be found under \"Local Standard Disks.\""
-msgstr "El DASD afegit es pot trobar sota els \"Discs estàndards locals\"."
+msgstr "El DASD afegit es pot trobar sota \"Discs estàndards locals\"."
 
 #: pyanaconda/ui/gui/spokes/installation_progress.glade:8
 #: pyanaconda/ui/gui/spokes/installation_progress.glade:164
@@ -6228,12 +6199,9 @@ msgid "_Configure..."
 msgstr "_Configura..."
 
 #: pyanaconda/ui/gui/spokes/network.glade:1412
-#, fuzzy
-#| msgctxt "GUI|Software Source"
-#| msgid "_On the network:"
 msgctxt "GUI|Network|Wireless"
 msgid "_Select network"
-msgstr "_A la xarxa:"
+msgstr "_Selecciona la xarxa"
 
 #: pyanaconda/ui/gui/spokes/network.glade:1529
 msgid "IMEI"
@@ -6551,12 +6519,9 @@ msgid "Advanced Custom (_Blivet-GUI)"
 msgstr "Personalització avançada (_Blivet-GUI)"
 
 #: pyanaconda/ui/gui/spokes/storage.glade:446
-#, fuzzy
-#| msgid "Free space unavailable but reclaimable from existing partitions."
 msgctxt "GUI|Storage"
 msgid "Free up space by re_moving or shrinking existing partitions"
-msgstr ""
-"Espai lliure no disponible però reclamable de les particions existents."
+msgstr "Allibera espai eli_minant o reduint les particions existents"
 
 #: pyanaconda/ui/gui/spokes/storage.glade:474
 msgid "Encryption"
