@@ -13,11 +13,11 @@ jobs:
       fail-fast: false
       # update this matrix to support new Anaconda branches
       matrix:
-        branch: [ master, f41, rhel-9, rhel-10 ]
+        branch: [ main, f41, rhel-9, rhel-10 ]
         include:
-          - branch: master
-            anaconda-branch: master
-            container-tag: master
+          - branch: main
+            anaconda-branch: main
+            container-tag: main
           - branch: f41
             anaconda-branch: fedora-41
             container-tag: fedora-41
@@ -47,7 +47,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           path: anaconda-l10n
-          ref: master
+          ref: main
       - name: Push new potfile
         run: |
           set -x
