@@ -26,13 +26,14 @@
 # Jiří Konečný <jkonecny@redhat.com>, 2023.
 # David Surroca <davidsurrocaestrada@gmail.com>, 2024.
 # naly zzwd <xeanhort007@gmail.com>, 2024.
+# David Medina <dmedinacpnl@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2022-03-04 01:10+0000\n"
-"PO-Revision-Date: 2024-11-29 01:21+0000\n"
-"Last-Translator: naly zzwd <xeanhort007@gmail.com>\n"
+"PO-Revision-Date: 2025-02-15 08:46+0000\n"
+"Last-Translator: David Medina <dmedinacpnl@gmail.com>\n"
 "Language-Team: Catalan <https://translate.fedoraproject.org/projects/"
 "anaconda/f35/ca/>\n"
 "Language: ca\n"
@@ -40,7 +41,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8.2\n"
+"X-Generator: Weblate 5.9.2\n"
 
 #: tests/unit_tests/pyanaconda_tests/ui/test_common_code.py:31
 msgid "FOO"
@@ -1154,6 +1155,8 @@ msgid ""
 "Repository %s has invalid NFS server, exactly one colon ':' must be present "
 "between host and directory"
 msgstr ""
+"El repositori %s té un servidor NFS no vàlid, hi ha d'haver exactament dos "
+"punts ':' entre l'amfitrió i el directori"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:1185
 msgid ""
@@ -3055,10 +3058,8 @@ msgid "Configuring {}"
 msgstr "S'està configurant %s"
 
 #: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:49
-#, fuzzy
-#| msgid "Verifying %s"
 msgid "Verifying {}"
-msgstr "S'està verificant %s"
+msgstr "Es verifica {}"
 
 #: pyanaconda/modules/payloads/payload/dnf/download_progress.py:68
 #, python-brace-format
@@ -4194,6 +4195,24 @@ msgid ""
 "* Some drives support re-configuration of sector sizes, for example by "
 "running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 msgstr ""
+"Solucions alternatives per a instal·lacions manuals:\n"
+"* Seleccioneu només els discs amb la mateixa mida de sector durant la instal·"
+"lació manual en mode gràfic o text.\n"
+"* Quan se seleccionen discs amb una mida de sector inconsistent per a la "
+"instal·lació, restringiu cada grup de volums LVM creat perquè utilitzi "
+"volums físics amb la mateixa mida de sector. Això només es pot fer en mode "
+"gràfic a la partició personalitzada.\n"
+"\n"
+"Solucions alternatives per a les instal·lacions de Kickstart:\n"
+"* Restringeix quins discs s'utilitzen per a la partició especificant "
+"'ignoredisk --drives=..' o 'ignoredisk --only-use=..'.\n"
+"* Especifiqueu quins discs s'han d'utilitzar per a cada volum físic LVM "
+"creat: partició pv.1 --ondisk=...'.\n"
+"\n"
+"Solucions generals:\n"
+"* Es pot utilitzar un esquema de partició simple en lloc de LVM.\n"
+"* Algunes unitats admeten la reconfiguració de les mides del sector, per "
+"exemple executant 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 
 #: pyanaconda/modules/storage/kickstart.py:65
 msgid "File system type \"{}\" given in autopart command is invalid."
@@ -4664,6 +4683,9 @@ msgid ""
 "which will result in a fatal error when it is encountered. Please modify "
 "your kickstart file to remove this section."
 msgstr ""
+"La secció {} ha quedat obsoleta. Es pot suprimir de futures versions, cosa "
+"que provocarà un error fatal quan es trobi. Modifiqueu el fitxer Kickstart "
+"per eliminar aquesta secció."
 
 #: pyanaconda/kickstart.py:450
 msgid ""
@@ -5723,11 +5745,9 @@ msgid ""
 msgstr ""
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:97
-#, fuzzy
-#| msgid "Lock root account"
 msgctxt "GUI|Password"
 msgid "_Disable root account"
-msgstr "Bloqueja el compte root"
+msgstr "_Inhabilita el compte root"
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:125
 msgctxt "GUI|Password"
