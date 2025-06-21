@@ -39,7 +39,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2025-06-20 01:40+0000\n"
+"POT-Creation-Date: 2025-06-21 01:38+0000\n"
 "PO-Revision-Date: 2025-06-05 07:45+0000\n"
 "Last-Translator: joo es <jonnyse@users.noreply.translate.fedoraproject.org>\n"
 "Language-Team: Arabic <https://translate.fedoraproject.org/projects/anaconda/"
@@ -744,11 +744,17 @@ msgid "Assign mount points"
 msgstr "عيّن نقاط وصل"
 
 #: pyanaconda/modules/storage/checker/utils.py:346
+#, fuzzy
+#| msgid ""
+#| "At least one of your swap devices does not have a UUID, which is common "
+#| "in swap space created using older versions of mkswap. These devices will "
+#| "be referred to by device path in /etc/fstab, which is not ideal since "
+#| "device paths can change under a variety of circumstances. "
 msgid ""
 "At least one of your swap devices does not have a UUID, which is common in "
 "swap space created using older versions of mkswap. These devices will be "
 "referred to by device path in /etc/fstab, which is not ideal since device "
-"paths can change under a variety of circumstances. "
+"paths can change under a variety of circumstances."
 msgstr ""
 "ثمّةَ جهاز تبديل (swap) واحد على الأقل بدون معرف UUID، وهذا شائع في مساحات "
 "التبديل التي أُنشأت باستخدام إصدارات قديمة من mkswap. سيُشار لهذه الأجهزة "
@@ -1104,7 +1110,7 @@ msgstr "المدينة"
 msgid "Closest mirror"
 msgstr "أقرب نظير"
 
-#: pyanaconda/installation.py:601
+#: pyanaconda/modules/boss/installation.py:784
 msgid "Complete!"
 msgstr "تم!"
 
@@ -1145,11 +1151,11 @@ msgstr "تكوين الجهاز %s"
 msgid "Configure device: %s"
 msgstr "تكوين الجهاز: %s"
 
-#: pyanaconda/installation.py:160
+#: pyanaconda/modules/boss/installation.py:369
 msgid "Configuring Red Hat subscription"
 msgstr "قيد تكوين اشتراك Red Hat"
 
-#: pyanaconda/installation.py:238
+#: pyanaconda/modules/boss/installation.py:447
 msgid "Configuring addons"
 msgstr "قيد تكوين الإضافات"
 
@@ -1158,11 +1164,12 @@ msgstr "قيد تكوين الإضافات"
 msgid "Configuring device %s."
 msgstr "قيد تكوين الجهاز %s."
 
-#: pyanaconda/installation.py:171
+#: pyanaconda/modules/boss/installation.py:380
 msgid "Configuring installed system"
 msgstr "قيد تكوين النظام المثبت"
 
-#: pyanaconda/installation.py:403 pyanaconda/installation.py:485
+#: pyanaconda/modules/boss/installation.py:606
+#: pyanaconda/modules/boss/installation.py:681
 msgid "Configuring storage"
 msgstr "قيد تكوين التخزين"
 
@@ -1249,11 +1256,11 @@ msgstr "إنشاء أو تحديد %(container_type)s"
 msgid "Create user"
 msgstr "أنشئ مستخدما"
 
-#: pyanaconda/installation.py:545
+#: pyanaconda/modules/boss/installation.py:737
 msgid "Creating snapshots"
 msgstr "ينشئ نقاط توقف"
 
-#: pyanaconda/installation.py:227
+#: pyanaconda/modules/boss/installation.py:436
 msgid "Creating users"
 msgstr "ينشئ المستخدمين"
 
@@ -1998,7 +2005,7 @@ msgstr "يجمع الإعتلاج 100%"
 msgid "Gathering entropy {percents}% (remaining time {time})"
 msgstr "يجمع الإعتلاج {percents}% (الوقت المتبقي {time})"
 
-#: pyanaconda/installation.py:252
+#: pyanaconda/modules/boss/installation.py:460
 msgid "Generating initramfs"
 msgstr "يجري توليد نظام الملفّات المؤقّت الإقلاعي"
 
@@ -2212,7 +2219,7 @@ msgstr "معرّف"
 msgid "Identity: "
 msgstr "الهوية: "
 
-#: pyanaconda/installation.py:146
+#: pyanaconda/modules/boss/installation.py:355
 msgid "Importing certificates"
 msgstr "جارِ استيراد الشهادات"
 
@@ -2267,11 +2274,11 @@ msgctxt "GUI|Spoke"
 msgid "Installation _Destination"
 msgstr "_وجهة التثبيت"
 
-#: pyanaconda/ui/tui/spokes/installation_progress.py:132
+#: pyanaconda/ui/tui/spokes/installation_progress.py:136
 msgid "Installation complete"
 msgstr "انتهى التثبيت"
 
-#: pyanaconda/ui/tui/spokes/installation_progress.py:142
+#: pyanaconda/ui/tui/spokes/installation_progress.py:146
 #, python-format
 msgid "Installation complete. Press %s to quit"
 msgstr "انتهى التثبيت. اضغط %s للإنهاء"
@@ -2311,7 +2318,7 @@ msgstr "لم يعدّ مصدر التثبيت"
 msgid "Installing Flatpak applications"
 msgstr "يثبّت تطبيقات فلاتباك"
 
-#: pyanaconda/installation.py:496
+#: pyanaconda/modules/boss/installation.py:692
 msgid "Installing boot loader"
 msgstr "يثبّت محمّل الإقلاع"
 
@@ -2327,7 +2334,7 @@ msgstr "يثبّت البرمجيات {}%"
 msgid "Installing software..."
 msgstr "يثبّت البرمجيات..."
 
-#: pyanaconda/installation.py:472
+#: pyanaconda/modules/boss/installation.py:668
 msgid "Installing the software"
 msgstr "يثبّت البرمجيات"
 
@@ -2676,8 +2683,9 @@ msgid "Move selected layout _up"
 msgstr "انقل المخطط المُنتقى لأعل_ى"
 
 #: pyanaconda/modules/storage/partitioning/automatic/automatic_partitioning.py:138
-#, python-format
-msgid "Multiple boot loader partitions required: %s"
+#, fuzzy, python-format
+#| msgid "Multiple boot loader partitions required: %s"
+msgid "Multiple boot loader partitions required: %(bootparts)s"
 msgstr "مطلوب أقسام محمّلة الإقلاع متعددة: %s"
 
 #: pyanaconda/modules/storage/partitioning/automatic/automatic_partitioning.py:152
@@ -3215,8 +3223,8 @@ msgstr "مسارات"
 msgid "Performing post-installation Flatpak tasks"
 msgstr "يجري تهيئة مهمات Flatpak ما بعد التثبيت"
 
+#: pyanaconda/modules/boss/installation.py:724
 #: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:49
-#: pyanaconda/installation.py:530
 msgid "Performing post-installation setup tasks"
 msgstr "يجري تهيئة مهمات بعد التثبيت"
 
@@ -3816,15 +3824,15 @@ msgstr "كلمة سر الجذر مضبوطة"
 msgid "Run %s to unmount the system when you are finished."
 msgstr "شغل %s لفصل النظام عند الانتهاء."
 
-#: pyanaconda/installation.py:328
+#: pyanaconda/modules/boss/installation.py:536
 msgid "Running post-installation scripts"
 msgstr "ينفذ مخطوطات ما بعد التثبيت"
 
-#: pyanaconda/installation.py:417 pyanaconda/kickstart.py:360
+#: pyanaconda/modules/boss/installation.py:620 pyanaconda/kickstart.py:360
 msgid "Running pre-installation scripts"
 msgstr "ينفّذ مخطوطات ما قبل التثبيت"
 
-#: pyanaconda/installation.py:431
+#: pyanaconda/modules/boss/installation.py:634
 msgid "Running pre-installation tasks"
 msgstr "ينفّذ مهام ما قبل التثبيت"
 
@@ -3999,8 +4007,12 @@ msgid "Selected disks"
 msgstr "الأقراص المُنتقاة"
 
 #: pyanaconda/modules/storage/checker/utils.py:541
+#, fuzzy, python-brace-format
+#| msgid ""
+#| "Selected disks {} contain volume group '{}' that also uses further "
+#| "unselected disks. You must select or de-select all these disks as a set."
 msgid ""
-"Selected disks {} contain volume group '{}' that also uses further "
+"Selected disks {disks} contain volume group '{vg}' that also uses further "
 "unselected disks. You must select or de-select all these disks as a set."
 msgstr ""
 "الأقراص المحددة {} تحتوي مجموعة أحجام '{}' والتي تستخدم هي الأخرى أيضا "
@@ -4035,11 +4047,11 @@ msgstr "عيّن منطقة زمنية"
 msgid "Setting up installation source..."
 msgstr "جارِ إعداد مصدر التثبيت..."
 
-#: pyanaconda/installation.py:295
+#: pyanaconda/modules/boss/installation.py:503
 msgid "Setting up kexec"
 msgstr "يعدّ kexec"
 
-#: pyanaconda/installation.py:376
+#: pyanaconda/modules/boss/installation.py:580
 msgid "Setting up the installation environment"
 msgstr "جارِ إعداد بيئة التثبيت"
 
@@ -4256,7 +4268,7 @@ msgstr "تكوين الضبط"
 msgid "Storage Options"
 msgstr "خيارات الخزن"
 
-#: pyanaconda/installation.py:307
+#: pyanaconda/modules/boss/installation.py:515
 msgid "Storing configuration files and kickstarts"
 msgstr "يخزن ملفات التكوين وملفات البدأ السريع kickstarts"
 
@@ -5249,7 +5261,7 @@ msgstr "‏استخدام الوضع الرسومي عبر بروتوكول سط
 msgid "Use of this product is subject to the license agreement found at %s"
 msgstr "استخدام هذا المنتَج يخضع لاتفاقية الرخصة الموجودة في %s"
 
-#: pyanaconda/ui/tui/spokes/installation_progress.py:134
+#: pyanaconda/ui/tui/spokes/installation_progress.py:138
 msgid "Use of this product is subject to the license agreement found at:"
 msgstr "استخدام هذا المنتَج يخضع لاتفاقية الرخصة الموجودة في:"
 
@@ -5411,9 +5423,10 @@ msgstr "اسم منفذ WWPN"
 msgid "WWPN:"
 msgstr "اسم منفذ WWPN:"
 
-#: pyanaconda/installation.py:355
-#, python-format
-msgid "Waiting for %s threads to finish"
+#: pyanaconda/ui/tui/spokes/installation_progress.py:97
+#, fuzzy, python-format
+#| msgid "Waiting for %s threads to finish"
+msgid "Waiting for %s threads to finish..."
 msgstr "ينتظر خيوط %s حتى تنتهي"
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:272
@@ -5641,7 +5654,7 @@ msgstr ""
 msgid "Working"
 msgstr "يجري العمل"
 
-#: pyanaconda/installation.py:213
+#: pyanaconda/modules/boss/installation.py:422
 msgid "Writing network configuration"
 msgstr "يكتب إعدادات الشبكة"
 
@@ -5690,10 +5703,13 @@ msgid "You have not created a bootable partition."
 msgstr "لم تُنشئ قسما قابلا للإقلاع."
 
 #: pyanaconda/modules/storage/checker/utils.py:60
-#, python-format
+#, fuzzy, python-format
+#| msgid ""
+#| "You have not defined a root partition (/), which is required for "
+#| "installation of %s to continue."
 msgid ""
 "You have not defined a root partition (/), which is required for "
-"installation of %s to continue."
+"installation of %(prod_name)s to continue."
 msgstr "لم تعرّف قسم جذر (/) الضروري ليستمر تثبيت %s."
 
 #: pyanaconda/modules/storage/checker/utils.py:314

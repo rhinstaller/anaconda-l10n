@@ -49,7 +49,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2025-06-20 01:40+0000\n"
+"POT-Creation-Date: 2025-06-21 01:38+0000\n"
 "PO-Revision-Date: 2025-06-07 17:12+0000\n"
 "Last-Translator: Jan Kalabza <jan.kalabza@gmail.com>\n"
 "Language-Team: Czech <https://translate.fedoraproject.org/projects/anaconda/"
@@ -763,11 +763,17 @@ msgid "Assign mount points"
 msgstr "Přiřaďte přípojné body"
 
 #: pyanaconda/modules/storage/checker/utils.py:346
+#, fuzzy
+#| msgid ""
+#| "At least one of your swap devices does not have a UUID, which is common "
+#| "in swap space created using older versions of mkswap. These devices will "
+#| "be referred to by device path in /etc/fstab, which is not ideal since "
+#| "device paths can change under a variety of circumstances. "
 msgid ""
 "At least one of your swap devices does not have a UUID, which is common in "
 "swap space created using older versions of mkswap. These devices will be "
 "referred to by device path in /etc/fstab, which is not ideal since device "
-"paths can change under a variety of circumstances. "
+"paths can change under a variety of circumstances."
 msgstr ""
 "Přinejmenším jedno z odkládacích zařízení (swap) postrádá nikde se "
 "neopakující identifikátor (UUID). To bývá obvyklé u těch, vytvořených "
@@ -1130,7 +1136,7 @@ msgstr "Město"
 msgid "Closest mirror"
 msgstr "Nejbližší zrcadlo"
 
-#: pyanaconda/installation.py:601
+#: pyanaconda/modules/boss/installation.py:784
 msgid "Complete!"
 msgstr "Dokončeno!"
 
@@ -1171,11 +1177,11 @@ msgstr "Nastavit zařízení %s"
 msgid "Configure device: %s"
 msgstr "Nastavit zařízení: %s"
 
-#: pyanaconda/installation.py:160
+#: pyanaconda/modules/boss/installation.py:369
 msgid "Configuring Red Hat subscription"
 msgstr "Nastavování předplatného u Red Hat"
 
-#: pyanaconda/installation.py:238
+#: pyanaconda/modules/boss/installation.py:447
 msgid "Configuring addons"
 msgstr "Nastavování doplňků"
 
@@ -1184,11 +1190,12 @@ msgstr "Nastavování doplňků"
 msgid "Configuring device %s."
 msgstr "Nastavuje se zařízení %s."
 
-#: pyanaconda/installation.py:171
+#: pyanaconda/modules/boss/installation.py:380
 msgid "Configuring installed system"
 msgstr "Nastavování nainstalovaného systému"
 
-#: pyanaconda/installation.py:403 pyanaconda/installation.py:485
+#: pyanaconda/modules/boss/installation.py:606
+#: pyanaconda/modules/boss/installation.py:681
 msgid "Configuring storage"
 msgstr "Nastavování úložiště"
 
@@ -1275,11 +1282,11 @@ msgstr "Vytvořte nebo vyberte %(container_type)s"
 msgid "Create user"
 msgstr "Vytvořit uživatele"
 
-#: pyanaconda/installation.py:545
+#: pyanaconda/modules/boss/installation.py:737
 msgid "Creating snapshots"
 msgstr "Pořizování zachycených stavů"
 
-#: pyanaconda/installation.py:227
+#: pyanaconda/modules/boss/installation.py:436
 msgid "Creating users"
 msgstr "Vytváření uživatelů"
 
@@ -2036,7 +2043,7 @@ msgstr "Shromažďování entropie 100%"
 msgid "Gathering entropy {percents}% (remaining time {time})"
 msgstr "Shromažďování entropie {percents}% (zbývající čas {time})"
 
-#: pyanaconda/installation.py:252
+#: pyanaconda/modules/boss/installation.py:460
 msgid "Generating initramfs"
 msgstr "Vytváření initramfs"
 
@@ -2252,7 +2259,7 @@ msgstr "Identifikátor"
 msgid "Identity: "
 msgstr "Totožnost: "
 
-#: pyanaconda/installation.py:146
+#: pyanaconda/modules/boss/installation.py:355
 msgid "Importing certificates"
 msgstr "Importování certifikátů"
 
@@ -2312,11 +2319,11 @@ msgctxt "GUI|Spoke"
 msgid "Installation _Destination"
 msgstr "_Cíl instalace"
 
-#: pyanaconda/ui/tui/spokes/installation_progress.py:132
+#: pyanaconda/ui/tui/spokes/installation_progress.py:136
 msgid "Installation complete"
 msgstr "Instalace dokončena"
 
-#: pyanaconda/ui/tui/spokes/installation_progress.py:142
+#: pyanaconda/ui/tui/spokes/installation_progress.py:146
 #, python-format
 msgid "Installation complete. Press %s to quit"
 msgstr "Instalace dokončena. Stiskem klávesy %s ji opusťte"
@@ -2356,7 +2363,7 @@ msgstr "Instalační zdroj není nastaven"
 msgid "Installing Flatpak applications"
 msgstr "Instalují se Flatpak balíčky"
 
-#: pyanaconda/installation.py:496
+#: pyanaconda/modules/boss/installation.py:692
 msgid "Installing boot loader"
 msgstr "Instalace zavaděče systému"
 
@@ -2372,7 +2379,7 @@ msgstr "Instalace softwaru {}%"
 msgid "Installing software..."
 msgstr "Instalace softwaru…"
 
-#: pyanaconda/installation.py:472
+#: pyanaconda/modules/boss/installation.py:668
 msgid "Installing the software"
 msgstr "Instaluje se software"
 
@@ -2723,8 +2730,9 @@ msgid "Move selected layout _up"
 msgstr "Posunout označené rozložení _výš"
 
 #: pyanaconda/modules/storage/partitioning/automatic/automatic_partitioning.py:138
-#, python-format
-msgid "Multiple boot loader partitions required: %s"
+#, fuzzy, python-format
+#| msgid "Multiple boot loader partitions required: %s"
+msgid "Multiple boot loader partitions required: %(bootparts)s"
 msgstr "Je zapotřebí vícero oddílů pro zavaděč systému: %s"
 
 #: pyanaconda/modules/storage/partitioning/automatic/automatic_partitioning.py:152
@@ -3272,8 +3280,8 @@ msgstr "Popisy umístění"
 msgid "Performing post-installation Flatpak tasks"
 msgstr "Provádění poinstalačních úkonů ohledně Flatpak"
 
+#: pyanaconda/modules/boss/installation.py:724
 #: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:49
-#: pyanaconda/installation.py:530
 msgid "Performing post-installation setup tasks"
 msgstr "Provádění poinstalačních úkonů nastavení"
 
@@ -3886,15 +3894,15 @@ msgstr "Heslo správce (root) je nastaveno"
 msgid "Run %s to unmount the system when you are finished."
 msgstr "Až budete mít hotovo, spusťte %s a odpojte tak souborový systém."
 
-#: pyanaconda/installation.py:328
+#: pyanaconda/modules/boss/installation.py:536
 msgid "Running post-installation scripts"
 msgstr "Spouštění poinstalačních skriptů"
 
-#: pyanaconda/installation.py:417 pyanaconda/kickstart.py:360
+#: pyanaconda/modules/boss/installation.py:620 pyanaconda/kickstart.py:360
 msgid "Running pre-installation scripts"
 msgstr "Spouštění předinstalačních skriptů"
 
-#: pyanaconda/installation.py:431
+#: pyanaconda/modules/boss/installation.py:634
 msgid "Running pre-installation tasks"
 msgstr "Spouštění předinstalačních úloh"
 
@@ -4071,8 +4079,12 @@ msgid "Selected disks"
 msgstr "Vybrané jednotky"
 
 #: pyanaconda/modules/storage/checker/utils.py:541
+#, fuzzy, python-brace-format
+#| msgid ""
+#| "Selected disks {} contain volume group '{}' that also uses further "
+#| "unselected disks. You must select or de-select all these disks as a set."
 msgid ""
-"Selected disks {} contain volume group '{}' that also uses further "
+"Selected disks {disks} contain volume group '{vg}' that also uses further "
 "unselected disks. You must select or de-select all these disks as a set."
 msgstr ""
 "Vybrané jednotky {} obsahují skupinu svazků „{}“, která využívá také další "
@@ -4108,11 +4120,11 @@ msgstr "Nastavit časové pásmo"
 msgid "Setting up installation source..."
 msgstr "Nastavování instalačního zdroje…"
 
-#: pyanaconda/installation.py:295
+#: pyanaconda/modules/boss/installation.py:503
 msgid "Setting up kexec"
 msgstr "Nastavování kexec"
 
-#: pyanaconda/installation.py:376
+#: pyanaconda/modules/boss/installation.py:580
 msgid "Setting up the installation environment"
 msgstr "Nastavování instalačního prostředí"
 
@@ -4337,7 +4349,7 @@ msgstr "Uspořádání úložiště"
 msgid "Storage Options"
 msgstr "Volby úložiště"
 
-#: pyanaconda/installation.py:307
+#: pyanaconda/modules/boss/installation.py:515
 msgid "Storing configuration files and kickstarts"
 msgstr "Ukládání souborů s nastaveními a souborů kickstart"
 
@@ -5367,7 +5379,7 @@ msgstr ""
 "Používání tohoto produktu je podmíněno licenčním ujednáním, které je k "
 "dispozici na %s"
 
-#: pyanaconda/ui/tui/spokes/installation_progress.py:134
+#: pyanaconda/ui/tui/spokes/installation_progress.py:138
 msgid "Use of this product is subject to the license agreement found at:"
 msgstr ""
 "Používání tohoto produktu je podmíněno licenčním ujednáním, které je k "
@@ -5532,9 +5544,10 @@ msgstr "WWPN"
 msgid "WWPN:"
 msgstr "WWPN:"
 
-#: pyanaconda/installation.py:355
-#, python-format
-msgid "Waiting for %s threads to finish"
+#: pyanaconda/ui/tui/spokes/installation_progress.py:97
+#, fuzzy, python-format
+#| msgid "Waiting for %s threads to finish"
+msgid "Waiting for %s threads to finish..."
 msgstr "Čekání na dokončení %s vláken"
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:272
@@ -5773,7 +5786,7 @@ msgstr ""
 msgid "Working"
 msgstr "Pracuje"
 
-#: pyanaconda/installation.py:213
+#: pyanaconda/modules/boss/installation.py:422
 msgid "Writing network configuration"
 msgstr "Zapisuje se nastavení sítě"
 
@@ -5826,10 +5839,13 @@ msgid "You have not created a bootable partition."
 msgstr "Nemáte vytvořený oddíl, ze kterého zavádět systém."
 
 #: pyanaconda/modules/storage/checker/utils.py:60
-#, python-format
+#, fuzzy, python-format
+#| msgid ""
+#| "You have not defined a root partition (/), which is required for "
+#| "installation of %s to continue."
 msgid ""
 "You have not defined a root partition (/), which is required for "
-"installation of %s to continue."
+"installation of %(prod_name)s to continue."
 msgstr ""
 "Není definován kořenový oddíl (/), který je nutný pro pokračování instalace "
 "systému %s."

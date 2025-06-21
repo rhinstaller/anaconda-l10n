@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 42.5\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2025-06-20 01:40+0000\n"
+"POT-Creation-Date: 2025-06-21 01:38+0000\n"
 "PO-Revision-Date: 2025-06-08 11:55+0000\n"
 "Last-Translator: ButterflyOfFire <butterflyoffire@users.noreply.translate."
 "fedoraproject.org>\n"
@@ -713,11 +713,17 @@ msgid "Assign mount points"
 msgstr "Asdukel n yirden n userkeb"
 
 #: pyanaconda/modules/storage/checker/utils.py:346
+#, fuzzy
+#| msgid ""
+#| "At least one of your swap devices does not have a UUID, which is common "
+#| "in swap space created using older versions of mkswap. These devices will "
+#| "be referred to by device path in /etc/fstab, which is not ideal since "
+#| "device paths can change under a variety of circumstances. "
 msgid ""
 "At least one of your swap devices does not have a UUID, which is common in "
 "swap space created using older versions of mkswap. These devices will be "
 "referred to by device path in /etc/fstab, which is not ideal since device "
-"paths can change under a variety of circumstances. "
+"paths can change under a variety of circumstances."
 msgstr ""
 "Xerṣum yiwen seg yibenkan-ik swap ur yesɛi ara UUID, d ayen i yettilin ɣef "
 "tallunt swap yettwarnan s useqdec n yileqman iqburen n mkswap. Iberdan-a ad "
@@ -1074,7 +1080,7 @@ msgstr "Tiɣremt"
 msgid "Closest mirror"
 msgstr "Lemri akk iqerben"
 
-#: pyanaconda/installation.py:601
+#: pyanaconda/modules/boss/installation.py:784
 msgid "Complete!"
 msgstr "Immed!"
 
@@ -1116,11 +1122,11 @@ msgstr "Sesteb ibenk %s"
 msgid "Configure device: %s"
 msgstr "Sesteb ibenk: %s"
 
-#: pyanaconda/installation.py:160
+#: pyanaconda/modules/boss/installation.py:369
 msgid "Configuring Red Hat subscription"
 msgstr "Asesteb n umultaɣ n Red Hat"
 
-#: pyanaconda/installation.py:238
+#: pyanaconda/modules/boss/installation.py:447
 msgid "Configuring addons"
 msgstr "Asesteb n yizegrar"
 
@@ -1129,11 +1135,12 @@ msgstr "Asesteb n yizegrar"
 msgid "Configuring device %s."
 msgstr "Asesteb n yibenk %s."
 
-#: pyanaconda/installation.py:171
+#: pyanaconda/modules/boss/installation.py:380
 msgid "Configuring installed system"
 msgstr "Asesteb n unagraw yettwasbedden"
 
-#: pyanaconda/installation.py:403 pyanaconda/installation.py:485
+#: pyanaconda/modules/boss/installation.py:606
+#: pyanaconda/modules/boss/installation.py:681
 msgid "Configuring storage"
 msgstr "Asesteb n uḥraz"
 
@@ -1220,11 +1227,11 @@ msgstr "Snulfu-d neɣ fren %(container_type)s"
 msgid "Create user"
 msgstr "Rnu aseqdac"
 
-#: pyanaconda/installation.py:545
+#: pyanaconda/modules/boss/installation.py:737
 msgid "Creating snapshots"
 msgstr "Timerna n snapshots"
 
-#: pyanaconda/installation.py:227
+#: pyanaconda/modules/boss/installation.py:436
 msgid "Creating users"
 msgstr "Timerna n yiseqdacen"
 
@@ -1972,7 +1979,7 @@ msgstr "Alqaḍ n tnetṛupit 100%"
 msgid "Gathering entropy {percents}% (remaining time {time})"
 msgstr "Alqaḍ n tnetṛupit {percents}% (akud i d-yeqqimen {time})"
 
-#: pyanaconda/installation.py:252
+#: pyanaconda/modules/boss/installation.py:460
 msgid "Generating initramfs"
 msgstr "Asirew n initramfs"
 
@@ -2186,7 +2193,7 @@ msgstr "Asulay"
 msgid "Identity: "
 msgstr "Tamagit: "
 
-#: pyanaconda/installation.py:146
+#: pyanaconda/modules/boss/installation.py:355
 msgid "Importing certificates"
 msgstr "Akter n iselkinen"
 
@@ -2243,11 +2250,11 @@ msgctxt "GUI|Spoke"
 msgid "Installation _Destination"
 msgstr "Taɣerwaḍt n usbe_ddi"
 
-#: pyanaconda/ui/tui/spokes/installation_progress.py:132
+#: pyanaconda/ui/tui/spokes/installation_progress.py:136
 msgid "Installation complete"
 msgstr "Yemmed usbeddi"
 
-#: pyanaconda/ui/tui/spokes/installation_progress.py:142
+#: pyanaconda/ui/tui/spokes/installation_progress.py:146
 #, python-format
 msgid "Installation complete. Press %s to quit"
 msgstr "Asbeddi yemmed. Sit ɣef %s ad teffɣeḍ"
@@ -2287,7 +2294,7 @@ msgstr "Aɣbalu n usbeddi ur yettusbadu ara"
 msgid "Installing Flatpak applications"
 msgstr "Asbeddi n yiseɣẓanen n Flatpak"
 
-#: pyanaconda/installation.py:496
+#: pyanaconda/modules/boss/installation.py:692
 msgid "Installing boot loader"
 msgstr "Asbeddi n usalay n usenker"
 
@@ -2303,7 +2310,7 @@ msgstr "Asbeddi n yiseɣẓanen {}%"
 msgid "Installing software..."
 msgstr "Asbeddi n yiseɣẓanen…"
 
-#: pyanaconda/installation.py:472
+#: pyanaconda/modules/boss/installation.py:668
 msgid "Installing the software"
 msgstr "Asbeddi n yiseɣẓanen"
 
@@ -2656,8 +2663,9 @@ msgid "Move selected layout _up"
 msgstr "Senkez taneɣruft i yettwafernen _d asawen"
 
 #: pyanaconda/modules/storage/partitioning/automatic/automatic_partitioning.py:138
-#, python-format
-msgid "Multiple boot loader partitions required: %s"
+#, fuzzy, python-format
+#| msgid "Multiple boot loader partitions required: %s"
+msgid "Multiple boot loader partitions required: %(bootparts)s"
 msgstr "Aṭas n yiḥricen n usalay n usenker ttwasran: %s"
 
 #: pyanaconda/modules/storage/partitioning/automatic/automatic_partitioning.py:152
@@ -3197,8 +3205,8 @@ msgstr "Iberdan"
 msgid "Performing post-installation Flatpak tasks"
 msgstr "Tiwuriwin n Flatpak teddun seld asbeddi"
 
+#: pyanaconda/modules/boss/installation.py:724
 #: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:49
-#: pyanaconda/installation.py:530
 msgid "Performing post-installation setup tasks"
 msgstr "Tiwuriwin n usesteb teddunt seld asbeddi"
 
@@ -3800,15 +3808,15 @@ msgstr "Awal n uɛeddi aẓar yettusbadu"
 msgid "Run %s to unmount the system when you are finished."
 msgstr "Selkem %s i tukksa n userkeb n unagraw mi ara tfakkeḍ."
 
-#: pyanaconda/installation.py:328
+#: pyanaconda/modules/boss/installation.py:536
 msgid "Running post-installation scripts"
 msgstr "Aselkem n isekripten n seld asbeddi"
 
-#: pyanaconda/installation.py:417 pyanaconda/kickstart.py:360
+#: pyanaconda/modules/boss/installation.py:620 pyanaconda/kickstart.py:360
 msgid "Running pre-installation scripts"
 msgstr "Aselkem n yisekripten n usbeddi uzwir"
 
-#: pyanaconda/installation.py:431
+#: pyanaconda/modules/boss/installation.py:634
 msgid "Running pre-installation tasks"
 msgstr "Aselkem n twuriwin n usbeddi uzwir"
 
@@ -3985,8 +3993,12 @@ msgid "Selected disks"
 msgstr "Iḍebsiyyen yettwafranen"
 
 #: pyanaconda/modules/storage/checker/utils.py:541
+#, fuzzy, python-brace-format
+#| msgid ""
+#| "Selected disks {} contain volume group '{}' that also uses further "
+#| "unselected disks. You must select or de-select all these disks as a set."
 msgid ""
-"Selected disks {} contain volume group '{}' that also uses further "
+"Selected disks {disks} contain volume group '{vg}' that also uses further "
 "unselected disks. You must select or de-select all these disks as a set."
 msgstr ""
 "Fren iḍebsiyen {} ideg yella ugraw n ubleɣ '{}' i yesseqdacen daɣen "
@@ -4022,11 +4034,11 @@ msgstr "Sbadu izḍi usrig"
 msgid "Setting up installation source..."
 msgstr "Asesteb n uɣbalu n usebded..."
 
-#: pyanaconda/installation.py:295
+#: pyanaconda/modules/boss/installation.py:503
 msgid "Setting up kexec"
 msgstr "Asesteb n kexec"
 
-#: pyanaconda/installation.py:376
+#: pyanaconda/modules/boss/installation.py:580
 msgid "Setting up the installation environment"
 msgstr "Asesteb n twennaḍt n usebded"
 
@@ -4224,7 +4236,7 @@ msgstr "Tawila n uḥrz"
 msgid "Storage Options"
 msgstr "Tixtiṛiyin n uḥraz"
 
-#: pyanaconda/installation.py:307
+#: pyanaconda/modules/boss/installation.py:515
 msgid "Storing configuration files and kickstarts"
 msgstr "Tiririt n yifuyla n twila akked kickstarts"
 
@@ -5145,7 +5157,7 @@ msgstr "Seqdec askar udlif s uneggaf n tnarit anmeggag"
 msgid "Use of this product is subject to the license agreement found at %s"
 msgstr "Aseqdec n ufaris-a yella ddaw umtawa n turagt i yettwafen deg %s"
 
-#: pyanaconda/ui/tui/spokes/installation_progress.py:134
+#: pyanaconda/ui/tui/spokes/installation_progress.py:138
 msgid "Use of this product is subject to the license agreement found at:"
 msgstr "Aseqdec n ufaris-a yella ddaw umtawa n turagt i yettwafen deg:"
 
@@ -5306,9 +5318,10 @@ msgstr "WWPN"
 msgid "WWPN:"
 msgstr "WWPN:"
 
-#: pyanaconda/installation.py:355
-#, python-format
-msgid "Waiting for %s threads to finish"
+#: pyanaconda/ui/tui/spokes/installation_progress.py:97
+#, fuzzy, python-format
+#| msgid "Waiting for %s threads to finish"
+msgid "Waiting for %s threads to finish..."
 msgstr "Aṛaǧu n %s uselkem ad fakken"
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:272
@@ -5505,7 +5518,7 @@ msgstr ""
 msgid "Working"
 msgstr "Iteddu"
 
-#: pyanaconda/installation.py:213
+#: pyanaconda/modules/boss/installation.py:422
 msgid "Writing network configuration"
 msgstr "Tira n twila n uzeṭṭa"
 
@@ -5548,10 +5561,13 @@ msgid "You have not created a bootable partition."
 msgstr "Ur d-tesnulfaḍ ara yiwen n weḥric n wawel."
 
 #: pyanaconda/modules/storage/checker/utils.py:60
-#, python-format
+#, fuzzy, python-format
+#| msgid ""
+#| "You have not defined a root partition (/), which is required for "
+#| "installation of %s to continue."
 msgid ""
 "You have not defined a root partition (/), which is required for "
-"installation of %s to continue."
+"installation of %(prod_name)s to continue."
 msgstr ""
 "Ur tebniḍ ara aḥric n uẓar (/), i ilaqen i usbeddi n %s akken ad ikemmel."
 

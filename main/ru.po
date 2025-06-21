@@ -53,7 +53,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2025-06-20 01:40+0000\n"
+"POT-Creation-Date: 2025-06-21 01:38+0000\n"
 "PO-Revision-Date: 2025-05-10 13:15+0000\n"
 "Last-Translator: Aleksey Fedorov <aleksejfedorov963@gmail.com>\n"
 "Language-Team: Russian <https://translate.fedoraproject.org/projects/"
@@ -763,11 +763,17 @@ msgid "Assign mount points"
 msgstr "Назначьте точки монтирования"
 
 #: pyanaconda/modules/storage/checker/utils.py:346
+#, fuzzy
+#| msgid ""
+#| "At least one of your swap devices does not have a UUID, which is common "
+#| "in swap space created using older versions of mkswap. These devices will "
+#| "be referred to by device path in /etc/fstab, which is not ideal since "
+#| "device paths can change under a variety of circumstances. "
 msgid ""
 "At least one of your swap devices does not have a UUID, which is common in "
 "swap space created using older versions of mkswap. These devices will be "
 "referred to by device path in /etc/fstab, which is not ideal since device "
-"paths can change under a variety of circumstances. "
+"paths can change under a variety of circumstances."
 msgstr ""
 "По крайней мере одно из устройств подкачки не имеет UUID, что характерно для "
 "пространства подкачки, созданного с помощью старых версий mkswap. Обращение "
@@ -1134,7 +1140,7 @@ msgstr "Город"
 msgid "Closest mirror"
 msgstr "Ближайшее зеркало"
 
-#: pyanaconda/installation.py:601
+#: pyanaconda/modules/boss/installation.py:784
 msgid "Complete!"
 msgstr "Готово!"
 
@@ -1176,11 +1182,11 @@ msgstr "Настройка устройства %s"
 msgid "Configure device: %s"
 msgstr "Настройка устройства: %s"
 
-#: pyanaconda/installation.py:160
+#: pyanaconda/modules/boss/installation.py:369
 msgid "Configuring Red Hat subscription"
 msgstr "Настройка подписки Red Hat"
 
-#: pyanaconda/installation.py:238
+#: pyanaconda/modules/boss/installation.py:447
 msgid "Configuring addons"
 msgstr "Настройка дополнений"
 
@@ -1189,11 +1195,12 @@ msgstr "Настройка дополнений"
 msgid "Configuring device %s."
 msgstr "Настройка устройства %s."
 
-#: pyanaconda/installation.py:171
+#: pyanaconda/modules/boss/installation.py:380
 msgid "Configuring installed system"
 msgstr "Настройка установленной системы"
 
-#: pyanaconda/installation.py:403 pyanaconda/installation.py:485
+#: pyanaconda/modules/boss/installation.py:606
+#: pyanaconda/modules/boss/installation.py:681
 msgid "Configuring storage"
 msgstr "Настройка устройств хранения"
 
@@ -1280,11 +1287,11 @@ msgstr "Создать или выбрать %(container_type)s"
 msgid "Create user"
 msgstr "Создание пользователя"
 
-#: pyanaconda/installation.py:545
+#: pyanaconda/modules/boss/installation.py:737
 msgid "Creating snapshots"
 msgstr "Создание снимков"
 
-#: pyanaconda/installation.py:227
+#: pyanaconda/modules/boss/installation.py:436
 msgid "Creating users"
 msgstr "Создание пользователей"
 
@@ -2043,7 +2050,7 @@ msgstr "Накопление энтропии 100%"
 msgid "Gathering entropy {percents}% (remaining time {time})"
 msgstr "Накопление энтропии {percents}% (осталось времени {time})"
 
-#: pyanaconda/installation.py:252
+#: pyanaconda/modules/boss/installation.py:460
 msgid "Generating initramfs"
 msgstr "Создание initramfs"
 
@@ -2259,7 +2266,7 @@ msgstr "Идентификатор"
 msgid "Identity: "
 msgstr "Идентификация: "
 
-#: pyanaconda/installation.py:146
+#: pyanaconda/modules/boss/installation.py:355
 msgid "Importing certificates"
 msgstr "Импорт сертификатов"
 
@@ -2318,11 +2325,11 @@ msgctxt "GUI|Spoke"
 msgid "Installation _Destination"
 msgstr "Место _установки"
 
-#: pyanaconda/ui/tui/spokes/installation_progress.py:132
+#: pyanaconda/ui/tui/spokes/installation_progress.py:136
 msgid "Installation complete"
 msgstr "Установка завершена"
 
-#: pyanaconda/ui/tui/spokes/installation_progress.py:142
+#: pyanaconda/ui/tui/spokes/installation_progress.py:146
 #, python-format
 msgid "Installation complete. Press %s to quit"
 msgstr "Установка завершена. Нажмите %s для выхода"
@@ -2362,7 +2369,7 @@ msgstr "Источник установки не настроен"
 msgid "Installing Flatpak applications"
 msgstr "Установка приложений Flatpak"
 
-#: pyanaconda/installation.py:496
+#: pyanaconda/modules/boss/installation.py:692
 msgid "Installing boot loader"
 msgstr "Установка загрузчика"
 
@@ -2378,7 +2385,7 @@ msgstr "Устанавливается программное обеспечен
 msgid "Installing software..."
 msgstr "Устанавливается программное обеспечение…"
 
-#: pyanaconda/installation.py:472
+#: pyanaconda/modules/boss/installation.py:668
 msgid "Installing the software"
 msgstr "Установка программного обеспечения"
 
@@ -2728,8 +2735,9 @@ msgid "Move selected layout _up"
 msgstr "Сместить раскладку _вверх"
 
 #: pyanaconda/modules/storage/partitioning/automatic/automatic_partitioning.py:138
-#, python-format
-msgid "Multiple boot loader partitions required: %s"
+#, fuzzy, python-format
+#| msgid "Multiple boot loader partitions required: %s"
+msgid "Multiple boot loader partitions required: %(bootparts)s"
 msgstr "Необходимо несколько разделов загрузчика: %s"
 
 #: pyanaconda/modules/storage/partitioning/automatic/automatic_partitioning.py:152
@@ -3278,8 +3286,8 @@ msgstr "Пути"
 msgid "Performing post-installation Flatpak tasks"
 msgstr "Выполняется настройка Flatpak после установки"
 
+#: pyanaconda/modules/boss/installation.py:724
 #: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:49
-#: pyanaconda/installation.py:530
 msgid "Performing post-installation setup tasks"
 msgstr "Выполняется настройка после установки"
 
@@ -3883,15 +3891,15 @@ msgstr "Пароль root задан"
 msgid "Run %s to unmount the system when you are finished."
 msgstr "Завершив, выполните %s, чтобы отключить систему."
 
-#: pyanaconda/installation.py:328
+#: pyanaconda/modules/boss/installation.py:536
 msgid "Running post-installation scripts"
 msgstr "Выполняются послеустановочные скрипты"
 
-#: pyanaconda/installation.py:417 pyanaconda/kickstart.py:360
+#: pyanaconda/modules/boss/installation.py:620 pyanaconda/kickstart.py:360
 msgid "Running pre-installation scripts"
 msgstr "Выполняются предустановочные сценарии"
 
-#: pyanaconda/installation.py:431
+#: pyanaconda/modules/boss/installation.py:634
 msgid "Running pre-installation tasks"
 msgstr "Выполняются предустановочные задачи"
 
@@ -4069,8 +4077,12 @@ msgid "Selected disks"
 msgstr "Выбранные диски"
 
 #: pyanaconda/modules/storage/checker/utils.py:541
+#, fuzzy, python-brace-format
+#| msgid ""
+#| "Selected disks {} contain volume group '{}' that also uses further "
+#| "unselected disks. You must select or de-select all these disks as a set."
 msgid ""
-"Selected disks {} contain volume group '{}' that also uses further "
+"Selected disks {disks} contain volume group '{vg}' that also uses further "
 "unselected disks. You must select or de-select all these disks as a set."
 msgstr ""
 "Выбранные диски {} содержaт группу устройств {}, использующих невыбранные "
@@ -4105,11 +4117,11 @@ msgstr "Установить часовой пояс"
 msgid "Setting up installation source..."
 msgstr "Настройка источника установки..."
 
-#: pyanaconda/installation.py:295
+#: pyanaconda/modules/boss/installation.py:503
 msgid "Setting up kexec"
 msgstr "Настройка kexec"
 
-#: pyanaconda/installation.py:376
+#: pyanaconda/modules/boss/installation.py:580
 msgid "Setting up the installation environment"
 msgstr "Настройка среды установки"
 
@@ -4333,7 +4345,7 @@ msgstr "Конфигурация устройств хранения"
 msgid "Storage Options"
 msgstr "Параметры хранения данных"
 
-#: pyanaconda/installation.py:307
+#: pyanaconda/modules/boss/installation.py:515
 msgid "Storing configuration files and kickstarts"
 msgstr "Сохранение файлов конфигурации и кикстарта"
 
@@ -5364,7 +5376,7 @@ msgstr ""
 "Использование этого продукта подпадает под действие лицензионного соглашения "
 "%s"
 
-#: pyanaconda/ui/tui/spokes/installation_progress.py:134
+#: pyanaconda/ui/tui/spokes/installation_progress.py:138
 msgid "Use of this product is subject to the license agreement found at:"
 msgstr ""
 "Использование этого продукта подпадает под действие лицензионного "
@@ -5529,9 +5541,10 @@ msgstr "WWPN"
 msgid "WWPN:"
 msgstr "WWPN:"
 
-#: pyanaconda/installation.py:355
-#, python-format
-msgid "Waiting for %s threads to finish"
+#: pyanaconda/ui/tui/spokes/installation_progress.py:97
+#, fuzzy, python-format
+#| msgid "Waiting for %s threads to finish"
+msgid "Waiting for %s threads to finish..."
 msgstr "Ожидание завершения %s потоков"
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:272
@@ -5767,7 +5780,7 @@ msgstr ""
 msgid "Working"
 msgstr "Работает"
 
-#: pyanaconda/installation.py:213
+#: pyanaconda/modules/boss/installation.py:422
 msgid "Writing network configuration"
 msgstr "Запись конфигурации сети"
 
@@ -5818,10 +5831,13 @@ msgid "You have not created a bootable partition."
 msgstr "Не создан загрузочный раздел."
 
 #: pyanaconda/modules/storage/checker/utils.py:60
-#, python-format
+#, fuzzy, python-format
+#| msgid ""
+#| "You have not defined a root partition (/), which is required for "
+#| "installation of %s to continue."
 msgid ""
 "You have not defined a root partition (/), which is required for "
-"installation of %s to continue."
+"installation of %(prod_name)s to continue."
 msgstr "Не определен корневой раздел (/), обязательный для установки %s."
 
 #: pyanaconda/modules/storage/checker/utils.py:314

@@ -30,7 +30,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2025-06-20 01:40+0000\n"
+"POT-Creation-Date: 2025-06-21 01:38+0000\n"
 "PO-Revision-Date: 2025-05-19 05:31+0000\n"
 "Last-Translator: Luna Jernberg <bittin@reimu.nl>\n"
 "Language-Team: Swedish <https://translate.fedoraproject.org/projects/"
@@ -736,11 +736,17 @@ msgid "Assign mount points"
 msgstr "Ange monteringspunkter"
 
 #: pyanaconda/modules/storage/checker/utils.py:346
+#, fuzzy
+#| msgid ""
+#| "At least one of your swap devices does not have a UUID, which is common "
+#| "in swap space created using older versions of mkswap. These devices will "
+#| "be referred to by device path in /etc/fstab, which is not ideal since "
+#| "device paths can change under a variety of circumstances. "
 msgid ""
 "At least one of your swap devices does not have a UUID, which is common in "
 "swap space created using older versions of mkswap. These devices will be "
 "referred to by device path in /etc/fstab, which is not ideal since device "
-"paths can change under a variety of circumstances. "
+"paths can change under a variety of circumstances."
 msgstr ""
 "Åtminstone en av dina växlingsenheter har inte någon UUID, vilket är vanligt "
 "för växlingsutrymme skapat med äldre versioner av mkswap. Dessa enheter "
@@ -1100,7 +1106,7 @@ msgstr "Stad"
 msgid "Closest mirror"
 msgstr "Närmaste spegel"
 
-#: pyanaconda/installation.py:601
+#: pyanaconda/modules/boss/installation.py:784
 msgid "Complete!"
 msgstr "Färdig!"
 
@@ -1141,11 +1147,11 @@ msgstr "Konfigurera enheten %s"
 msgid "Configure device: %s"
 msgstr "Konfigurera enheten: %s"
 
-#: pyanaconda/installation.py:160
+#: pyanaconda/modules/boss/installation.py:369
 msgid "Configuring Red Hat subscription"
 msgstr "Konfigurerar Red Hat-prenumerationer"
 
-#: pyanaconda/installation.py:238
+#: pyanaconda/modules/boss/installation.py:447
 msgid "Configuring addons"
 msgstr "Konfigurationstillägg"
 
@@ -1154,11 +1160,12 @@ msgstr "Konfigurationstillägg"
 msgid "Configuring device %s."
 msgstr "Konfigurerar enheten %s."
 
-#: pyanaconda/installation.py:171
+#: pyanaconda/modules/boss/installation.py:380
 msgid "Configuring installed system"
 msgstr "Konfigurerar installerat system"
 
-#: pyanaconda/installation.py:403 pyanaconda/installation.py:485
+#: pyanaconda/modules/boss/installation.py:606
+#: pyanaconda/modules/boss/installation.py:681
 msgid "Configuring storage"
 msgstr "Konfigurerar lagring"
 
@@ -1245,11 +1252,11 @@ msgstr "Skapa eller välj %(container_type)s"
 msgid "Create user"
 msgstr "Skapa användare"
 
-#: pyanaconda/installation.py:545
+#: pyanaconda/modules/boss/installation.py:737
 msgid "Creating snapshots"
 msgstr "Skapar ögonblicksbilder"
 
-#: pyanaconda/installation.py:227
+#: pyanaconda/modules/boss/installation.py:436
 msgid "Creating users"
 msgstr "Skapar användare"
 
@@ -2011,7 +2018,7 @@ msgstr "Samlar entropi 100 %"
 msgid "Gathering entropy {percents}% (remaining time {time})"
 msgstr "Samlar entropi {percents}% (tid kvar {time})"
 
-#: pyanaconda/installation.py:252
+#: pyanaconda/modules/boss/installation.py:460
 msgid "Generating initramfs"
 msgstr "Genererar initramfs"
 
@@ -2227,7 +2234,7 @@ msgstr "Identifierare"
 msgid "Identity: "
 msgstr "Identitet: "
 
-#: pyanaconda/installation.py:146
+#: pyanaconda/modules/boss/installation.py:355
 msgid "Importing certificates"
 msgstr "Importerar certifikat"
 
@@ -2286,11 +2293,11 @@ msgctxt "GUI|Spoke"
 msgid "Installation _Destination"
 msgstr "Installations_mål"
 
-#: pyanaconda/ui/tui/spokes/installation_progress.py:132
+#: pyanaconda/ui/tui/spokes/installation_progress.py:136
 msgid "Installation complete"
 msgstr "Installationen är klar"
 
-#: pyanaconda/ui/tui/spokes/installation_progress.py:142
+#: pyanaconda/ui/tui/spokes/installation_progress.py:146
 #, python-format
 msgid "Installation complete. Press %s to quit"
 msgstr "Installationen är klar. Tryck %s för att avsluta"
@@ -2330,7 +2337,7 @@ msgstr "Installationskällan är inte uppsatt"
 msgid "Installing Flatpak applications"
 msgstr "Installerar Flatpak-program"
 
-#: pyanaconda/installation.py:496
+#: pyanaconda/modules/boss/installation.py:692
 msgid "Installing boot loader"
 msgstr "Installerar startprogrammet"
 
@@ -2346,7 +2353,7 @@ msgstr "Installerar programvara {}%"
 msgid "Installing software..."
 msgstr "Installerar programvara..."
 
-#: pyanaconda/installation.py:472
+#: pyanaconda/modules/boss/installation.py:668
 msgid "Installing the software"
 msgstr "Installerar programvaran"
 
@@ -2698,8 +2705,9 @@ msgid "Move selected layout _up"
 msgstr "Flytta den valda layouten _uppåt"
 
 #: pyanaconda/modules/storage/partitioning/automatic/automatic_partitioning.py:138
-#, python-format
-msgid "Multiple boot loader partitions required: %s"
+#, fuzzy, python-format
+#| msgid "Multiple boot loader partitions required: %s"
+msgid "Multiple boot loader partitions required: %(bootparts)s"
 msgstr "Flera starthanterare partitioner krävs: %s"
 
 #: pyanaconda/modules/storage/partitioning/automatic/automatic_partitioning.py:152
@@ -3250,8 +3258,8 @@ msgstr "Sökvägar"
 msgid "Performing post-installation Flatpak tasks"
 msgstr "Utför Flatpak-åtgärder efter installationen"
 
+#: pyanaconda/modules/boss/installation.py:724
 #: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:49
-#: pyanaconda/installation.py:530
 msgid "Performing post-installation setup tasks"
 msgstr "Utför inställningsåtgärder efter installationen"
 
@@ -3858,15 +3866,15 @@ msgstr "Root-lösenordet är satt"
 msgid "Run %s to unmount the system when you are finished."
 msgstr "Kör %s för att avmontera systemet när du är klar."
 
-#: pyanaconda/installation.py:328
+#: pyanaconda/modules/boss/installation.py:536
 msgid "Running post-installation scripts"
 msgstr "Kör efterinstallationsskript"
 
-#: pyanaconda/installation.py:417 pyanaconda/kickstart.py:360
+#: pyanaconda/modules/boss/installation.py:620 pyanaconda/kickstart.py:360
 msgid "Running pre-installation scripts"
 msgstr "Kör förinstallationsskript"
 
-#: pyanaconda/installation.py:431
+#: pyanaconda/modules/boss/installation.py:634
 msgid "Running pre-installation tasks"
 msgstr "Kör förinstallationsuppgifter"
 
@@ -4043,8 +4051,12 @@ msgid "Selected disks"
 msgstr "Valda diskar"
 
 #: pyanaconda/modules/storage/checker/utils.py:541
+#, fuzzy, python-brace-format
+#| msgid ""
+#| "Selected disks {} contain volume group '{}' that also uses further "
+#| "unselected disks. You must select or de-select all these disks as a set."
 msgid ""
-"Selected disks {} contain volume group '{}' that also uses further "
+"Selected disks {disks} contain volume group '{vg}' that also uses further "
 "unselected disks. You must select or de-select all these disks as a set."
 msgstr ""
 "Den vada disken {} innehåller volymgruppen ”{}” som även använder "
@@ -4080,11 +4092,11 @@ msgstr "Välj tidszon"
 msgid "Setting up installation source..."
 msgstr "Sätter upp installationskällor …"
 
-#: pyanaconda/installation.py:295
+#: pyanaconda/modules/boss/installation.py:503
 msgid "Setting up kexec"
 msgstr "Sätter upp kexec"
 
-#: pyanaconda/installation.py:376
+#: pyanaconda/modules/boss/installation.py:580
 msgid "Setting up the installation environment"
 msgstr "Sätter upp installationsmiljön"
 
@@ -4307,7 +4319,7 @@ msgstr "Lagringskonfiguration"
 msgid "Storage Options"
 msgstr "Lagringsalternativ"
 
-#: pyanaconda/installation.py:307
+#: pyanaconda/modules/boss/installation.py:515
 msgid "Storing configuration files and kickstarts"
 msgstr "Lagrar konfigurationsfiler och kickstart:er"
 
@@ -5324,7 +5336,7 @@ msgid "Use of this product is subject to the license agreement found at %s"
 msgstr ""
 "Nyttjandet av denna produkt är knutet till licensavtalet som hittas här %s"
 
-#: pyanaconda/ui/tui/spokes/installation_progress.py:134
+#: pyanaconda/ui/tui/spokes/installation_progress.py:138
 msgid "Use of this product is subject to the license agreement found at:"
 msgstr ""
 "Nyttjandet av denna produkt är knutet till licensavtalet som hittas här:"
@@ -5488,9 +5500,10 @@ msgstr "WWPN"
 msgid "WWPN:"
 msgstr "WWPN:"
 
-#: pyanaconda/installation.py:355
-#, python-format
-msgid "Waiting for %s threads to finish"
+#: pyanaconda/ui/tui/spokes/installation_progress.py:97
+#, fuzzy, python-format
+#| msgid "Waiting for %s threads to finish"
+msgid "Waiting for %s threads to finish..."
 msgstr "Vänta på %s trådar att avsluta"
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:272
@@ -5725,7 +5738,7 @@ msgstr ""
 msgid "Working"
 msgstr "Fungerar"
 
-#: pyanaconda/installation.py:213
+#: pyanaconda/modules/boss/installation.py:422
 msgid "Writing network configuration"
 msgstr "Skriver nätverkskonfiguration"
 
@@ -5778,10 +5791,13 @@ msgid "You have not created a bootable partition."
 msgstr "Du har inte skapat en startbar partition."
 
 #: pyanaconda/modules/storage/checker/utils.py:60
-#, python-format
+#, fuzzy, python-format
+#| msgid ""
+#| "You have not defined a root partition (/), which is required for "
+#| "installation of %s to continue."
 msgid ""
 "You have not defined a root partition (/), which is required for "
-"installation of %s to continue."
+"installation of %(prod_name)s to continue."
 msgstr ""
 "Du har inte definierat någon rotpartition (/), vilket behövs för att "
 "installationen av %s skall kunna fortsätta."

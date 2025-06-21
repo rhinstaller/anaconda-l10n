@@ -29,7 +29,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2025-06-20 01:40+0000\n"
+"POT-Creation-Date: 2025-06-21 01:38+0000\n"
 "PO-Revision-Date: 2025-04-15 16:55+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://translate.fedoraproject.org/projects/"
@@ -732,11 +732,17 @@ msgid "Assign mount points"
 msgstr "Määritä liitoskohdat"
 
 #: pyanaconda/modules/storage/checker/utils.py:346
+#, fuzzy
+#| msgid ""
+#| "At least one of your swap devices does not have a UUID, which is common "
+#| "in swap space created using older versions of mkswap. These devices will "
+#| "be referred to by device path in /etc/fstab, which is not ideal since "
+#| "device paths can change under a variety of circumstances. "
 msgid ""
 "At least one of your swap devices does not have a UUID, which is common in "
 "swap space created using older versions of mkswap. These devices will be "
 "referred to by device path in /etc/fstab, which is not ideal since device "
-"paths can change under a variety of circumstances. "
+"paths can change under a variety of circumstances."
 msgstr ""
 "Ainakin yhdellä sivutus-laitteella ei ole UUID:tä, mikä on tyypillistä "
 "vanhemmilla mkswapin versioilla tehdyille sivutus-laitteille. Näihin "
@@ -1097,7 +1103,7 @@ msgstr "Kaupunki"
 msgid "Closest mirror"
 msgstr "Lähin peilipalvelin"
 
-#: pyanaconda/installation.py:601
+#: pyanaconda/modules/boss/installation.py:784
 msgid "Complete!"
 msgstr "Valmis!"
 
@@ -1138,11 +1144,11 @@ msgstr "Määritä asetukset laitteelle %s"
 msgid "Configure device: %s"
 msgstr "Määritä laite: %s"
 
-#: pyanaconda/installation.py:160
+#: pyanaconda/modules/boss/installation.py:369
 msgid "Configuring Red Hat subscription"
 msgstr "Red Hat -tilauksen määrittäminen"
 
-#: pyanaconda/installation.py:238
+#: pyanaconda/modules/boss/installation.py:447
 msgid "Configuring addons"
 msgstr "Tehdään lisäosien asetuksia"
 
@@ -1151,11 +1157,12 @@ msgstr "Tehdään lisäosien asetuksia"
 msgid "Configuring device %s."
 msgstr "Määritetään laitetta %s."
 
-#: pyanaconda/installation.py:171
+#: pyanaconda/modules/boss/installation.py:380
 msgid "Configuring installed system"
 msgstr "Tehdään asennetun järjestelmän asetuksia"
 
-#: pyanaconda/installation.py:403 pyanaconda/installation.py:485
+#: pyanaconda/modules/boss/installation.py:606
+#: pyanaconda/modules/boss/installation.py:681
 msgid "Configuring storage"
 msgstr "Määritetään tallennustilaa"
 
@@ -1242,11 +1249,11 @@ msgstr "Luo tai valitse %(container_type)s"
 msgid "Create user"
 msgstr "Luo käyttäjä"
 
-#: pyanaconda/installation.py:545
+#: pyanaconda/modules/boss/installation.py:737
 msgid "Creating snapshots"
 msgstr "Luodaan tilannevedoksia"
 
-#: pyanaconda/installation.py:227
+#: pyanaconda/modules/boss/installation.py:436
 msgid "Creating users"
 msgstr "Tehdään käyttäjiä"
 
@@ -2008,7 +2015,7 @@ msgstr "Kerätään entropiaa 100 %"
 msgid "Gathering entropy {percents}% (remaining time {time})"
 msgstr "Kerätään entropiaa {percents} % (aikaa jäljellä {time})"
 
-#: pyanaconda/installation.py:252
+#: pyanaconda/modules/boss/installation.py:460
 msgid "Generating initramfs"
 msgstr "Luodaan initramfs:ää"
 
@@ -2224,7 +2231,7 @@ msgstr "Tunniste"
 msgid "Identity: "
 msgstr "Identiteetti: "
 
-#: pyanaconda/installation.py:146
+#: pyanaconda/modules/boss/installation.py:355
 msgid "Importing certificates"
 msgstr "Tuodaan varmenteita"
 
@@ -2281,11 +2288,11 @@ msgctxt "GUI|Spoke"
 msgid "Installation _Destination"
 msgstr "_Asennuskohde"
 
-#: pyanaconda/ui/tui/spokes/installation_progress.py:132
+#: pyanaconda/ui/tui/spokes/installation_progress.py:136
 msgid "Installation complete"
 msgstr "Asennus valmistui"
 
-#: pyanaconda/ui/tui/spokes/installation_progress.py:142
+#: pyanaconda/ui/tui/spokes/installation_progress.py:146
 #, python-format
 msgid "Installation complete. Press %s to quit"
 msgstr "Asennus valmistui. Paina %s lopettaaksesi"
@@ -2325,7 +2332,7 @@ msgstr "Asennuslähdettä ei ole määritetty"
 msgid "Installing Flatpak applications"
 msgstr "Asennetaan Flatpak sovelluksia"
 
-#: pyanaconda/installation.py:496
+#: pyanaconda/modules/boss/installation.py:692
 msgid "Installing boot loader"
 msgstr "Asennetaan käynnistyslatain"
 
@@ -2341,7 +2348,7 @@ msgstr "Asennetaan ohjelmistoja {}%"
 msgid "Installing software..."
 msgstr "Asennetaan ohjelmistoja..."
 
-#: pyanaconda/installation.py:472
+#: pyanaconda/modules/boss/installation.py:668
 msgid "Installing the software"
 msgstr "Asennetaan ohjelmistoa"
 
@@ -2691,8 +2698,9 @@ msgid "Move selected layout _up"
 msgstr "Siirrä valittu asettelu _ylöspäin"
 
 #: pyanaconda/modules/storage/partitioning/automatic/automatic_partitioning.py:138
-#, python-format
-msgid "Multiple boot loader partitions required: %s"
+#, fuzzy, python-format
+#| msgid "Multiple boot loader partitions required: %s"
+msgid "Multiple boot loader partitions required: %(bootparts)s"
 msgstr "Tarvitaan useita käynnistyslataimen osioita: %s"
 
 #: pyanaconda/modules/storage/partitioning/automatic/automatic_partitioning.py:152
@@ -3246,8 +3254,8 @@ msgstr "Polut"
 msgid "Performing post-installation Flatpak tasks"
 msgstr "Suoritetaan asennuksen jälkeiset Flatpak-tehtävät"
 
+#: pyanaconda/modules/boss/installation.py:724
 #: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:49
-#: pyanaconda/installation.py:530
 msgid "Performing post-installation setup tasks"
 msgstr "Suoritetaan asennuksen jälkeiset asennustehtävät"
 
@@ -3859,15 +3867,15 @@ msgstr "Pääkäyttäjän salasana on asetettu"
 msgid "Run %s to unmount the system when you are finished."
 msgstr "Kun olet valmis, irrota järjestelmä suorittamalla komento %s."
 
-#: pyanaconda/installation.py:328
+#: pyanaconda/modules/boss/installation.py:536
 msgid "Running post-installation scripts"
 msgstr "Suoritetaan asennuksen jälkeisiä skriptejä"
 
-#: pyanaconda/installation.py:417 pyanaconda/kickstart.py:360
+#: pyanaconda/modules/boss/installation.py:620 pyanaconda/kickstart.py:360
 msgid "Running pre-installation scripts"
 msgstr "Suoritetaan asennusta edeltäviä skriptejä"
 
-#: pyanaconda/installation.py:431
+#: pyanaconda/modules/boss/installation.py:634
 msgid "Running pre-installation tasks"
 msgstr "Suoritetaan esiasennustehtäviä"
 
@@ -4044,8 +4052,12 @@ msgid "Selected disks"
 msgstr "Valitut levyt"
 
 #: pyanaconda/modules/storage/checker/utils.py:541
+#, fuzzy, python-brace-format
+#| msgid ""
+#| "Selected disks {} contain volume group '{}' that also uses further "
+#| "unselected disks. You must select or de-select all these disks as a set."
 msgid ""
-"Selected disks {} contain volume group '{}' that also uses further "
+"Selected disks {disks} contain volume group '{vg}' that also uses further "
 "unselected disks. You must select or de-select all these disks as a set."
 msgstr ""
 "Valitut levyt {} sisältävät taltioryhmän '{}' , joka käyttää myös muita "
@@ -4081,11 +4093,11 @@ msgstr "Aseta aikavyöhyke"
 msgid "Setting up installation source..."
 msgstr "Tehdään asennuslähteen asetuksia…"
 
-#: pyanaconda/installation.py:295
+#: pyanaconda/modules/boss/installation.py:503
 msgid "Setting up kexec"
 msgstr "Asetetaan kexec"
 
-#: pyanaconda/installation.py:376
+#: pyanaconda/modules/boss/installation.py:580
 msgid "Setting up the installation environment"
 msgstr "Valmistellaan asennusta"
 
@@ -4309,7 +4321,7 @@ msgstr "Tallennustilan määritykset"
 msgid "Storage Options"
 msgstr "Tallennustilavaihtoehdot"
 
-#: pyanaconda/installation.py:307
+#: pyanaconda/modules/boss/installation.py:515
 msgid "Storing configuration files and kickstarts"
 msgstr "Talletetaan määritystiedostoja ja kickstarteja"
 
@@ -5332,7 +5344,7 @@ msgid "Use of this product is subject to the license agreement found at %s"
 msgstr ""
 "Tämän tuotteen käyttö on osoitteessa %s mainittujen lisenssiehtojen alaista"
 
-#: pyanaconda/ui/tui/spokes/installation_progress.py:134
+#: pyanaconda/ui/tui/spokes/installation_progress.py:138
 msgid "Use of this product is subject to the license agreement found at:"
 msgstr "Tämän tuotteen käyttö on seuraavien lisenssiehtojen alaista:"
 
@@ -5496,9 +5508,10 @@ msgstr "WWPN"
 msgid "WWPN:"
 msgstr "WWPN:"
 
-#: pyanaconda/installation.py:355
-#, python-format
-msgid "Waiting for %s threads to finish"
+#: pyanaconda/ui/tui/spokes/installation_progress.py:97
+#, fuzzy, python-format
+#| msgid "Waiting for %s threads to finish"
+msgid "Waiting for %s threads to finish..."
 msgstr "Odotetaan %s-säikeiden valmistumista"
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:272
@@ -5737,7 +5750,7 @@ msgstr ""
 msgid "Working"
 msgstr "Toimii"
 
-#: pyanaconda/installation.py:213
+#: pyanaconda/modules/boss/installation.py:422
 msgid "Writing network configuration"
 msgstr "Kirjoitetaan verkkoasetuksia"
 
@@ -5789,10 +5802,13 @@ msgid "You have not created a bootable partition."
 msgstr "Eti ole luonut käynnistysosiota."
 
 #: pyanaconda/modules/storage/checker/utils.py:60
-#, python-format
+#, fuzzy, python-format
+#| msgid ""
+#| "You have not defined a root partition (/), which is required for "
+#| "installation of %s to continue."
 msgid ""
 "You have not defined a root partition (/), which is required for "
-"installation of %s to continue."
+"installation of %(prod_name)s to continue."
 msgstr ""
 "Et ole valinnut juuriosiota (/), jota tarvitaan, jotta %s-asennusta voidaan "
 "jatkaa."

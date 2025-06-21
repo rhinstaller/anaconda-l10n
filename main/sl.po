@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 40.1\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2025-06-20 01:40+0000\n"
+"POT-Creation-Date: 2025-06-21 01:38+0000\n"
 "PO-Revision-Date: 2025-06-08 14:21+0000\n"
 "Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
 "Language-Team: Slovenian <https://translate.fedoraproject.org/projects/"
@@ -731,11 +731,17 @@ msgid "Assign mount points"
 msgstr "Dodeli točke priklopa"
 
 #: pyanaconda/modules/storage/checker/utils.py:346
+#, fuzzy
+#| msgid ""
+#| "At least one of your swap devices does not have a UUID, which is common "
+#| "in swap space created using older versions of mkswap. These devices will "
+#| "be referred to by device path in /etc/fstab, which is not ideal since "
+#| "device paths can change under a variety of circumstances. "
 msgid ""
 "At least one of your swap devices does not have a UUID, which is common in "
 "swap space created using older versions of mkswap. These devices will be "
 "referred to by device path in /etc/fstab, which is not ideal since device "
-"paths can change under a variety of circumstances. "
+"paths can change under a variety of circumstances."
 msgstr ""
 "Vsaj ena od vaših naprav swap nima UUID-ja, kar je običajno za swap prostore "
 "ustvarjen s starejšimi različicami programa mkswap. Na te naprave se bodo "
@@ -1094,7 +1100,7 @@ msgstr "Mesto"
 msgid "Closest mirror"
 msgstr "Najbližji zrcalni strežnik"
 
-#: pyanaconda/installation.py:601
+#: pyanaconda/modules/boss/installation.py:784
 msgid "Complete!"
 msgstr "Končano!"
 
@@ -1135,11 +1141,11 @@ msgstr "Prilagodi napravo %s"
 msgid "Configure device: %s"
 msgstr "Prilagodi napravo: %s"
 
-#: pyanaconda/installation.py:160
+#: pyanaconda/modules/boss/installation.py:369
 msgid "Configuring Red Hat subscription"
 msgstr "Prilagajanje naročnine Red Hat"
 
-#: pyanaconda/installation.py:238
+#: pyanaconda/modules/boss/installation.py:447
 msgid "Configuring addons"
 msgstr "Prilagajanje dodatkov"
 
@@ -1148,11 +1154,12 @@ msgstr "Prilagajanje dodatkov"
 msgid "Configuring device %s."
 msgstr "Prilagajanje naprave %s."
 
-#: pyanaconda/installation.py:171
+#: pyanaconda/modules/boss/installation.py:380
 msgid "Configuring installed system"
 msgstr "Prilagajanje nameščenega sistema"
 
-#: pyanaconda/installation.py:403 pyanaconda/installation.py:485
+#: pyanaconda/modules/boss/installation.py:606
+#: pyanaconda/modules/boss/installation.py:681
 msgid "Configuring storage"
 msgstr "Prilagajanje hrambe"
 
@@ -1239,11 +1246,11 @@ msgstr "Ustvari ali izberi %(container_type)s"
 msgid "Create user"
 msgstr "Ustvari uporabnika"
 
-#: pyanaconda/installation.py:545
+#: pyanaconda/modules/boss/installation.py:737
 msgid "Creating snapshots"
 msgstr "Kreiranje posnetkov"
 
-#: pyanaconda/installation.py:227
+#: pyanaconda/modules/boss/installation.py:436
 msgid "Creating users"
 msgstr "Kreiranje uporabnikov"
 
@@ -2002,7 +2009,7 @@ msgstr "Nabiranje entropije 100%"
 msgid "Gathering entropy {percents}% (remaining time {time})"
 msgstr "Nabiranje entropije {percents}% (preostali čas {time})"
 
-#: pyanaconda/installation.py:252
+#: pyanaconda/modules/boss/installation.py:460
 msgid "Generating initramfs"
 msgstr "Generiranje initramfs"
 
@@ -2218,7 +2225,7 @@ msgstr "Določilnik"
 msgid "Identity: "
 msgstr "Identiteta: "
 
-#: pyanaconda/installation.py:146
+#: pyanaconda/modules/boss/installation.py:355
 msgid "Importing certificates"
 msgstr "Uvažanje potrdil"
 
@@ -2274,11 +2281,11 @@ msgctxt "GUI|Spoke"
 msgid "Installation _Destination"
 msgstr "_Cilj namestitve"
 
-#: pyanaconda/ui/tui/spokes/installation_progress.py:132
+#: pyanaconda/ui/tui/spokes/installation_progress.py:136
 msgid "Installation complete"
 msgstr "Nameščanje končano"
 
-#: pyanaconda/ui/tui/spokes/installation_progress.py:142
+#: pyanaconda/ui/tui/spokes/installation_progress.py:146
 #, python-format
 msgid "Installation complete. Press %s to quit"
 msgstr "Nameščanje je končano. Pritisnite %s za izhod"
@@ -2318,7 +2325,7 @@ msgstr "Vir namestitve ni nastavljen"
 msgid "Installing Flatpak applications"
 msgstr "Nameščanje programov Flatpak"
 
-#: pyanaconda/installation.py:496
+#: pyanaconda/modules/boss/installation.py:692
 msgid "Installing boot loader"
 msgstr "Nameščanje zagonskega nalagalnika"
 
@@ -2334,7 +2341,7 @@ msgstr "Nameščanje programja {}%"
 msgid "Installing software..."
 msgstr "Nameščanje programja ..."
 
-#: pyanaconda/installation.py:472
+#: pyanaconda/modules/boss/installation.py:668
 msgid "Installing the software"
 msgstr "Nameščanje programja"
 
@@ -2686,8 +2693,9 @@ msgid "Move selected layout _up"
 msgstr "Premakni izbrano postavitev _gor"
 
 #: pyanaconda/modules/storage/partitioning/automatic/automatic_partitioning.py:138
-#, python-format
-msgid "Multiple boot loader partitions required: %s"
+#, fuzzy, python-format
+#| msgid "Multiple boot loader partitions required: %s"
+msgid "Multiple boot loader partitions required: %(bootparts)s"
 msgstr "Zahtevanih je več razdelkov zagonskega nalagalnika: %s"
 
 #: pyanaconda/modules/storage/partitioning/automatic/automatic_partitioning.py:152
@@ -3237,8 +3245,8 @@ msgstr "Poti"
 msgid "Performing post-installation Flatpak tasks"
 msgstr "Izvajanje ponamestilnih Flatpak nalog"
 
+#: pyanaconda/modules/boss/installation.py:724
 #: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:49
-#: pyanaconda/installation.py:530
 msgid "Performing post-installation setup tasks"
 msgstr "Izvajanje ponamestilnih opravil nastavljanja"
 
@@ -3847,15 +3855,15 @@ msgstr "Korensko geslo je nastavljeno"
 msgid "Run %s to unmount the system when you are finished."
 msgstr "Poženi %s za odklop sistema, ko ste končali."
 
-#: pyanaconda/installation.py:328
+#: pyanaconda/modules/boss/installation.py:536
 msgid "Running post-installation scripts"
 msgstr "Poganjanje ponamestitvenih skriptov"
 
-#: pyanaconda/installation.py:417 pyanaconda/kickstart.py:360
+#: pyanaconda/modules/boss/installation.py:620 pyanaconda/kickstart.py:360
 msgid "Running pre-installation scripts"
 msgstr "Poganjanje prednamestitvenih skriptov"
 
-#: pyanaconda/installation.py:431
+#: pyanaconda/modules/boss/installation.py:634
 msgid "Running pre-installation tasks"
 msgstr "Poganjanje prednamestitvenih opravil"
 
@@ -4032,8 +4040,12 @@ msgid "Selected disks"
 msgstr "Izbrani diski"
 
 #: pyanaconda/modules/storage/checker/utils.py:541
+#, fuzzy, python-brace-format
+#| msgid ""
+#| "Selected disks {} contain volume group '{}' that also uses further "
+#| "unselected disks. You must select or de-select all these disks as a set."
 msgid ""
-"Selected disks {} contain volume group '{}' that also uses further "
+"Selected disks {disks} contain volume group '{vg}' that also uses further "
 "unselected disks. You must select or de-select all these disks as a set."
 msgstr ""
 "Izbrani diski {} vsebujejo skupino nosilcev '{}', ki uporablja tudi nadalje "
@@ -4069,11 +4081,11 @@ msgstr "Nastavi časovni pas"
 msgid "Setting up installation source..."
 msgstr "Nastavljanje vira namestitve ..."
 
-#: pyanaconda/installation.py:295
+#: pyanaconda/modules/boss/installation.py:503
 msgid "Setting up kexec"
 msgstr "Nastavljanje kexec"
 
-#: pyanaconda/installation.py:376
+#: pyanaconda/modules/boss/installation.py:580
 msgid "Setting up the installation environment"
 msgstr "Nastavljanje okolja za nameščanje"
 
@@ -4296,7 +4308,7 @@ msgstr "Konfiguracija hrambe"
 msgid "Storage Options"
 msgstr "Možnosti hrambe"
 
-#: pyanaconda/installation.py:307
+#: pyanaconda/modules/boss/installation.py:515
 msgid "Storing configuration files and kickstarts"
 msgstr "Shranjevanje konfiguracijskih datotek in datotek kickstart"
 
@@ -5318,7 +5330,7 @@ msgstr "Uporabi grafični način prek protokola RDP (Remote Desktop Protocol)"
 msgid "Use of this product is subject to the license agreement found at %s"
 msgstr "Uporaba tega proizvoda je predmet licenčnega dogovora najdenega na %s"
 
-#: pyanaconda/ui/tui/spokes/installation_progress.py:134
+#: pyanaconda/ui/tui/spokes/installation_progress.py:138
 msgid "Use of this product is subject to the license agreement found at:"
 msgstr ""
 "Uporaba tega proizvoda je predmet licenčnega sporazuma, ki ga najdete na:"
@@ -5482,9 +5494,10 @@ msgstr "WWPN"
 msgid "WWPN:"
 msgstr "WWPN:"
 
-#: pyanaconda/installation.py:355
-#, python-format
-msgid "Waiting for %s threads to finish"
+#: pyanaconda/ui/tui/spokes/installation_progress.py:97
+#, fuzzy, python-format
+#| msgid "Waiting for %s threads to finish"
+msgid "Waiting for %s threads to finish..."
 msgstr "Čakanje na %s niti, da končajo"
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:272
@@ -5721,7 +5734,7 @@ msgstr ""
 msgid "Working"
 msgstr "Delujoče"
 
-#: pyanaconda/installation.py:213
+#: pyanaconda/modules/boss/installation.py:422
 msgid "Writing network configuration"
 msgstr "Zapisovanje konfiguracije omrežja"
 
@@ -5774,10 +5787,13 @@ msgid "You have not created a bootable partition."
 msgstr "Niste ustvarili zagonske particije."
 
 #: pyanaconda/modules/storage/checker/utils.py:60
-#, python-format
+#, fuzzy, python-format
+#| msgid ""
+#| "You have not defined a root partition (/), which is required for "
+#| "installation of %s to continue."
 msgid ""
 "You have not defined a root partition (/), which is required for "
-"installation of %s to continue."
+"installation of %(prod_name)s to continue."
 msgstr ""
 "Niste določili korenske particije (/), ki je obvezna, da se nameščanje %s "
 "nadaljuje."

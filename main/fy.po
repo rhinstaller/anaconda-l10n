@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 35.18\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2025-06-20 01:40+0000\n"
+"POT-Creation-Date: 2025-06-21 01:38+0000\n"
 "PO-Revision-Date: 2023-07-30 21:21+0000\n"
 "Last-Translator: yangyangdaji <1504305527@qq.com>\n"
 "Language-Team: Frisian <https://translate.fedoraproject.org/projects/"
@@ -653,7 +653,7 @@ msgid ""
 "At least one of your swap devices does not have a UUID, which is common in "
 "swap space created using older versions of mkswap. These devices will be "
 "referred to by device path in /etc/fstab, which is not ideal since device "
-"paths can change under a variety of circumstances. "
+"paths can change under a variety of circumstances."
 msgstr ""
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1075
@@ -1000,7 +1000,7 @@ msgstr ""
 msgid "Closest mirror"
 msgstr "Mirror it tichtste by"
 
-#: pyanaconda/installation.py:601
+#: pyanaconda/modules/boss/installation.py:784
 msgid "Complete!"
 msgstr ""
 
@@ -1043,11 +1043,11 @@ msgstr "Konfigurearje apparaat %s"
 msgid "Configure device: %s"
 msgstr ""
 
-#: pyanaconda/installation.py:160
+#: pyanaconda/modules/boss/installation.py:369
 msgid "Configuring Red Hat subscription"
 msgstr ""
 
-#: pyanaconda/installation.py:238
+#: pyanaconda/modules/boss/installation.py:447
 msgid "Configuring addons"
 msgstr "Addons konfigurearje"
 
@@ -1056,11 +1056,12 @@ msgstr "Addons konfigurearje"
 msgid "Configuring device %s."
 msgstr "Apparaat %s oan it ynstellen."
 
-#: pyanaconda/installation.py:171
+#: pyanaconda/modules/boss/installation.py:380
 msgid "Configuring installed system"
 msgstr "Ynstallearre systeem ynstelle"
 
-#: pyanaconda/installation.py:403 pyanaconda/installation.py:485
+#: pyanaconda/modules/boss/installation.py:606
+#: pyanaconda/modules/boss/installation.py:681
 msgid "Configuring storage"
 msgstr "Opslach oan it ynstellen"
 
@@ -1145,11 +1146,11 @@ msgstr ""
 msgid "Create user"
 msgstr "Brûker oanmeitsje"
 
-#: pyanaconda/installation.py:545
+#: pyanaconda/modules/boss/installation.py:737
 msgid "Creating snapshots"
 msgstr "Momintopnamen oan it meitsjen"
 
-#: pyanaconda/installation.py:227
+#: pyanaconda/modules/boss/installation.py:436
 msgid "Creating users"
 msgstr "Brûkers oanmeitsje"
 
@@ -1890,7 +1891,7 @@ msgstr ""
 msgid "Gathering entropy {percents}% (remaining time {time})"
 msgstr ""
 
-#: pyanaconda/installation.py:252
+#: pyanaconda/modules/boss/installation.py:460
 msgid "Generating initramfs"
 msgstr "Initramfs oan it oanmeitsjen"
 
@@ -2105,7 +2106,7 @@ msgstr ""
 msgid "Identity: "
 msgstr ""
 
-#: pyanaconda/installation.py:146
+#: pyanaconda/modules/boss/installation.py:355
 msgid "Importing certificates"
 msgstr ""
 
@@ -2162,11 +2163,11 @@ msgctxt "GUI|Spoke"
 msgid "Installation _Destination"
 msgstr "Ynstallaasje _Bestimming"
 
-#: pyanaconda/ui/tui/spokes/installation_progress.py:132
+#: pyanaconda/ui/tui/spokes/installation_progress.py:136
 msgid "Installation complete"
 msgstr "Ynstallaasje ôfrûn"
 
-#: pyanaconda/ui/tui/spokes/installation_progress.py:142
+#: pyanaconda/ui/tui/spokes/installation_progress.py:146
 #, python-format
 msgid "Installation complete. Press %s to quit"
 msgstr "Ynstallaasje ôfrûn. Druk op %s om ôf te sluten"
@@ -2204,7 +2205,7 @@ msgstr ""
 msgid "Installing Flatpak applications"
 msgstr "Flatpak applikaasjes oan it ynstallearren"
 
-#: pyanaconda/installation.py:496
+#: pyanaconda/modules/boss/installation.py:692
 msgid "Installing boot loader"
 msgstr "Startprogram oan it ynstallearren"
 
@@ -2226,7 +2227,7 @@ msgstr "Software oan it ynstallearren"
 msgid "Installing software..."
 msgstr "Software oan it ynstallearren"
 
-#: pyanaconda/installation.py:472
+#: pyanaconda/modules/boss/installation.py:668
 #, fuzzy
 #| msgid "Installing software"
 msgid "Installing the software"
@@ -2580,7 +2581,7 @@ msgstr "Selektearre yndieling nei _boppe helje"
 
 #: pyanaconda/modules/storage/partitioning/automatic/automatic_partitioning.py:138
 #, python-format
-msgid "Multiple boot loader partitions required: %s"
+msgid "Multiple boot loader partitions required: %(bootparts)s"
 msgstr ""
 
 #: pyanaconda/modules/storage/partitioning/automatic/automatic_partitioning.py:152
@@ -3115,8 +3116,8 @@ msgstr ""
 msgid "Performing post-installation Flatpak tasks"
 msgstr "Post-ynstallaasje Flatpak taken oan it útfieren"
 
+#: pyanaconda/modules/boss/installation.py:724
 #: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:49
-#: pyanaconda/installation.py:530
 msgid "Performing post-installation setup tasks"
 msgstr "Post-ynstallaasje opstart taken útfiere"
 
@@ -3701,15 +3702,15 @@ msgstr ""
 msgid "Run %s to unmount the system when you are finished."
 msgstr "Fier %s út om it systeem los te keppeljen wannear as jo klear binne."
 
-#: pyanaconda/installation.py:328
+#: pyanaconda/modules/boss/installation.py:536
 msgid "Running post-installation scripts"
 msgstr "Post-ynstallaasje skripts oan it útfieren"
 
-#: pyanaconda/installation.py:417 pyanaconda/kickstart.py:360
+#: pyanaconda/modules/boss/installation.py:620 pyanaconda/kickstart.py:360
 msgid "Running pre-installation scripts"
 msgstr "Pre-ynstallaasje skripts wurde útfiert"
 
-#: pyanaconda/installation.py:431
+#: pyanaconda/modules/boss/installation.py:634
 msgid "Running pre-installation tasks"
 msgstr "Pre-ynstallaasje taken oan it útfieren"
 
@@ -3881,8 +3882,9 @@ msgid "Selected disks"
 msgstr ""
 
 #: pyanaconda/modules/storage/checker/utils.py:541
+#, python-brace-format
 msgid ""
-"Selected disks {} contain volume group '{}' that also uses further "
+"Selected disks {disks} contain volume group '{vg}' that also uses further "
 "unselected disks. You must select or de-select all these disks as a set."
 msgstr ""
 
@@ -3915,11 +3917,11 @@ msgstr "Tiidsône ynstelle"
 msgid "Setting up installation source..."
 msgstr ""
 
-#: pyanaconda/installation.py:295
+#: pyanaconda/modules/boss/installation.py:503
 msgid "Setting up kexec"
 msgstr "Kexec oan it opsetten"
 
-#: pyanaconda/installation.py:376
+#: pyanaconda/modules/boss/installation.py:580
 msgid "Setting up the installation environment"
 msgstr "Ynstallaasje omjouwing oan it opsetten"
 
@@ -4129,7 +4131,7 @@ msgstr ""
 msgid "Storage Options"
 msgstr ""
 
-#: pyanaconda/installation.py:307
+#: pyanaconda/modules/boss/installation.py:515
 msgid "Storing configuration files and kickstarts"
 msgstr "Konfiguraasje bestannen en kickstarts oan it opslaan"
 
@@ -5055,7 +5057,7 @@ msgstr ""
 msgid "Use of this product is subject to the license agreement found at %s"
 msgstr ""
 
-#: pyanaconda/ui/tui/spokes/installation_progress.py:134
+#: pyanaconda/ui/tui/spokes/installation_progress.py:138
 msgid "Use of this product is subject to the license agreement found at:"
 msgstr ""
 "It gebrûk fan dit produkt is ûnderhevich oan de lisinsje oerienkomst lykas "
@@ -5219,9 +5221,10 @@ msgstr ""
 msgid "WWPN:"
 msgstr ""
 
-#: pyanaconda/installation.py:355
-#, python-format
-msgid "Waiting for %s threads to finish"
+#: pyanaconda/ui/tui/spokes/installation_progress.py:97
+#, fuzzy, python-format
+#| msgid "Waiting for %s threads to finish"
+msgid "Waiting for %s threads to finish..."
 msgstr "Oan it wachtsjen tot %s programmadielen klear binne"
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:272
@@ -5423,7 +5426,7 @@ msgstr ""
 msgid "Working"
 msgstr ""
 
-#: pyanaconda/installation.py:213
+#: pyanaconda/modules/boss/installation.py:422
 msgid "Writing network configuration"
 msgstr "Netwurk konfiguraasje fuort skriuwe"
 
@@ -5468,10 +5471,13 @@ msgid "You have not created a bootable partition."
 msgstr "Jo hawwe gjin opstart partysje oanmakke."
 
 #: pyanaconda/modules/storage/checker/utils.py:60
-#, python-format
+#, fuzzy, python-format
+#| msgid ""
+#| "You have not defined a root partition (/), which is required for "
+#| "installation of %s to continue."
 msgid ""
 "You have not defined a root partition (/), which is required for "
-"installation of %s to continue."
+"installation of %(prod_name)s to continue."
 msgstr ""
 "Jo hawwe gjin root partysje definiearre (/), mar dizze is nedich foar "
 "ynstallaasje fan %s om troch te gean."

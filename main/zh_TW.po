@@ -39,7 +39,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2025-06-20 01:40+0000\n"
+"POT-Creation-Date: 2025-06-21 01:38+0000\n"
 "PO-Revision-Date: 2025-04-06 23:06+0000\n"
 "Last-Translator: hsu zangmen <chzang55@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://translate.fedoraproject.org/"
@@ -714,11 +714,17 @@ msgid "Assign mount points"
 msgstr "指定掛載點"
 
 #: pyanaconda/modules/storage/checker/utils.py:346
+#, fuzzy
+#| msgid ""
+#| "At least one of your swap devices does not have a UUID, which is common "
+#| "in swap space created using older versions of mkswap. These devices will "
+#| "be referred to by device path in /etc/fstab, which is not ideal since "
+#| "device paths can change under a variety of circumstances. "
 msgid ""
 "At least one of your swap devices does not have a UUID, which is common in "
 "swap space created using older versions of mkswap. These devices will be "
 "referred to by device path in /etc/fstab, which is not ideal since device "
-"paths can change under a variety of circumstances. "
+"paths can change under a variety of circumstances."
 msgstr ""
 "您的置換空間裝置沒有 UUID，它對於使用舊版 mkswap 建立的置換空間來說很常見。這"
 "些裝置會透過 /etc/fstab 內的裝置路徑做參照，但由於裝置路徑在許多情況下都可能"
@@ -1066,7 +1072,7 @@ msgstr "城市"
 msgid "Closest mirror"
 msgstr "最近的鏡像站"
 
-#: pyanaconda/installation.py:601
+#: pyanaconda/modules/boss/installation.py:784
 msgid "Complete!"
 msgstr "已完成！"
 
@@ -1107,11 +1113,11 @@ msgstr "配置裝置 %s"
 msgid "Configure device: %s"
 msgstr "設定裝置：%s"
 
-#: pyanaconda/installation.py:160
+#: pyanaconda/modules/boss/installation.py:369
 msgid "Configuring Red Hat subscription"
 msgstr "正在設定 Red Hat 訂閱"
 
-#: pyanaconda/installation.py:238
+#: pyanaconda/modules/boss/installation.py:447
 msgid "Configuring addons"
 msgstr "正在設定附加元件"
 
@@ -1120,11 +1126,12 @@ msgstr "正在設定附加元件"
 msgid "Configuring device %s."
 msgstr "正在設定裝置 %s。"
 
-#: pyanaconda/installation.py:171
+#: pyanaconda/modules/boss/installation.py:380
 msgid "Configuring installed system"
 msgstr "正在設定已安裝的系統"
 
-#: pyanaconda/installation.py:403 pyanaconda/installation.py:485
+#: pyanaconda/modules/boss/installation.py:606
+#: pyanaconda/modules/boss/installation.py:681
 msgid "Configuring storage"
 msgstr "正在設定儲存裝置"
 
@@ -1209,11 +1216,11 @@ msgstr "建立或選取 %(container_type)s"
 msgid "Create user"
 msgstr "建立使用者"
 
-#: pyanaconda/installation.py:545
+#: pyanaconda/modules/boss/installation.py:737
 msgid "Creating snapshots"
 msgstr "建立快照中"
 
-#: pyanaconda/installation.py:227
+#: pyanaconda/modules/boss/installation.py:436
 msgid "Creating users"
 msgstr "正在建立使用者"
 
@@ -1952,7 +1959,7 @@ msgstr "正在收集熵 100%"
 msgid "Gathering entropy {percents}% (remaining time {time})"
 msgstr "正在收集熵 {percents}% (剩餘時間：{time})"
 
-#: pyanaconda/installation.py:252
+#: pyanaconda/modules/boss/installation.py:460
 msgid "Generating initramfs"
 msgstr "正在產生 initramfs"
 
@@ -2164,7 +2171,7 @@ msgstr "辨識碼"
 msgid "Identity: "
 msgstr "身分識別： "
 
-#: pyanaconda/installation.py:146
+#: pyanaconda/modules/boss/installation.py:355
 msgid "Importing certificates"
 msgstr "匯入憑證"
 
@@ -2219,11 +2226,11 @@ msgctxt "GUI|Spoke"
 msgid "Installation _Destination"
 msgstr "安裝目標位置(_D)"
 
-#: pyanaconda/ui/tui/spokes/installation_progress.py:132
+#: pyanaconda/ui/tui/spokes/installation_progress.py:136
 msgid "Installation complete"
 msgstr "安裝完成"
 
-#: pyanaconda/ui/tui/spokes/installation_progress.py:142
+#: pyanaconda/ui/tui/spokes/installation_progress.py:146
 #, python-format
 msgid "Installation complete. Press %s to quit"
 msgstr "安裝完成。請按 %s 退出"
@@ -2261,7 +2268,7 @@ msgstr "尚未設定安裝來源"
 msgid "Installing Flatpak applications"
 msgstr "安裝 Flatpak 應用程序"
 
-#: pyanaconda/installation.py:496
+#: pyanaconda/modules/boss/installation.py:692
 msgid "Installing boot loader"
 msgstr "正在安裝開機載入器"
 
@@ -2277,7 +2284,7 @@ msgstr "正在安裝軟體 {}%"
 msgid "Installing software..."
 msgstr "正在安裝軟體..."
 
-#: pyanaconda/installation.py:472
+#: pyanaconda/modules/boss/installation.py:668
 msgid "Installing the software"
 msgstr "正在安裝軟體"
 
@@ -2621,8 +2628,9 @@ msgid "Move selected layout _up"
 msgstr "將配置往上移(_U)"
 
 #: pyanaconda/modules/storage/partitioning/automatic/automatic_partitioning.py:138
-#, python-format
-msgid "Multiple boot loader partitions required: %s"
+#, fuzzy, python-format
+#| msgid "Multiple boot loader partitions required: %s"
+msgid "Multiple boot loader partitions required: %(bootparts)s"
 msgstr "需要多個開機引導分割區：%s"
 
 #: pyanaconda/modules/storage/partitioning/automatic/automatic_partitioning.py:152
@@ -3150,8 +3158,8 @@ msgstr "路徑"
 msgid "Performing post-installation Flatpak tasks"
 msgstr "正在執行安裝後的Flatpak工作"
 
+#: pyanaconda/modules/boss/installation.py:724
 #: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:49
-#: pyanaconda/installation.py:530
 msgid "Performing post-installation setup tasks"
 msgstr "正在執行安裝後的設定工作"
 
@@ -3737,15 +3745,15 @@ msgstr "Root 密碼已設定"
 msgid "Run %s to unmount the system when you are finished."
 msgstr "當您完成後，請執行 %s 以卸載系統。"
 
-#: pyanaconda/installation.py:328
+#: pyanaconda/modules/boss/installation.py:536
 msgid "Running post-installation scripts"
 msgstr "正在執行安裝後的指令稿"
 
-#: pyanaconda/installation.py:417 pyanaconda/kickstart.py:360
+#: pyanaconda/modules/boss/installation.py:620 pyanaconda/kickstart.py:360
 msgid "Running pre-installation scripts"
 msgstr "正在執行安裝前的指令稿"
 
-#: pyanaconda/installation.py:431
+#: pyanaconda/modules/boss/installation.py:634
 msgid "Running pre-installation tasks"
 msgstr "正在執行安裝前置事項"
 
@@ -3920,8 +3928,12 @@ msgid "Selected disks"
 msgstr "選取的磁碟"
 
 #: pyanaconda/modules/storage/checker/utils.py:541
+#, fuzzy, python-brace-format
+#| msgid ""
+#| "Selected disks {} contain volume group '{}' that also uses further "
+#| "unselected disks. You must select or de-select all these disks as a set."
 msgid ""
-"Selected disks {} contain volume group '{}' that also uses further "
+"Selected disks {disks} contain volume group '{vg}' that also uses further "
 "unselected disks. You must select or de-select all these disks as a set."
 msgstr ""
 "選擇的 {} 磁碟包含也使用更多未選擇磁碟的「{}」儲存區群組。您必須選擇或取消選"
@@ -3956,11 +3968,11 @@ msgstr "設定時區"
 msgid "Setting up installation source..."
 msgstr "正在設定安裝來源..."
 
-#: pyanaconda/installation.py:295
+#: pyanaconda/modules/boss/installation.py:503
 msgid "Setting up kexec"
 msgstr "正在設定 kexec"
 
-#: pyanaconda/installation.py:376
+#: pyanaconda/modules/boss/installation.py:580
 msgid "Setting up the installation environment"
 msgstr "正在設定安裝環境"
 
@@ -4173,7 +4185,7 @@ msgstr "儲存裝置組態"
 msgid "Storage Options"
 msgstr "儲存裝置選項"
 
-#: pyanaconda/installation.py:307
+#: pyanaconda/modules/boss/installation.py:515
 msgid "Storing configuration files and kickstarts"
 msgstr "正在儲存組態檔與 kickstart"
 
@@ -5130,7 +5142,7 @@ msgstr "透過遠端桌面通訊協定使用圖形模式"
 msgid "Use of this product is subject to the license agreement found at %s"
 msgstr "使用此產品需要遵守 %s 中的授權條款"
 
-#: pyanaconda/ui/tui/spokes/installation_progress.py:134
+#: pyanaconda/ui/tui/spokes/installation_progress.py:138
 msgid "Use of this product is subject to the license agreement found at:"
 msgstr "使用此產品需要遵守在此找到的授權條款："
 
@@ -5292,9 +5304,10 @@ msgstr "WWPN"
 msgid "WWPN:"
 msgstr "WWPN："
 
-#: pyanaconda/installation.py:355
-#, python-format
-msgid "Waiting for %s threads to finish"
+#: pyanaconda/ui/tui/spokes/installation_progress.py:97
+#, fuzzy, python-format
+#| msgid "Waiting for %s threads to finish"
+msgid "Waiting for %s threads to finish..."
 msgstr "正在等候 %s 執行緒完成"
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:272
@@ -5526,7 +5539,7 @@ msgstr ""
 msgid "Working"
 msgstr "運作中"
 
-#: pyanaconda/installation.py:213
+#: pyanaconda/modules/boss/installation.py:422
 msgid "Writing network configuration"
 msgstr "正在寫入網路組態"
 
@@ -5574,10 +5587,13 @@ msgid "You have not created a bootable partition."
 msgstr "您還未建立一個可用來開機的分割區。"
 
 #: pyanaconda/modules/storage/checker/utils.py:60
-#, python-format
+#, fuzzy, python-format
+#| msgid ""
+#| "You have not defined a root partition (/), which is required for "
+#| "installation of %s to continue."
 msgid ""
 "You have not defined a root partition (/), which is required for "
-"installation of %s to continue."
+"installation of %(prod_name)s to continue."
 msgstr "您還沒指定根基分割區 (/)，為了讓 %s 安裝程式繼續，您必須先指定。"
 
 #: pyanaconda/modules/storage/checker/utils.py:314
