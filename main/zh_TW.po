@@ -4,7 +4,7 @@
 #
 # Translators:
 # Ben Wu <hpwu@redhat.com>, 2002-2004
-# Cheng-Chia Tseng <pswo10680@gmail.com>, 2011-2013, 2023.
+# Cheng-Chia Tseng <pswo10680@gmail.com>, 2011-2013, 2023, 2025.
 # Chester Cheng <ccheng@redhat.com>, 2004-2008,2012,2014
 # Chester Cheng <ccheng@redhat.com>, 2004
 # Chester Cheng <ccheng@紅帽子>, 2010
@@ -16,13 +16,13 @@
 # Waika Liu <wliu@redhat.com>, 2005
 # Walter Cheuk <wwycheuk@gmail.com>, 2006,2013
 # Walter Cheuk <wwycheuk@netvigator.com>, 2005
-# Cheng-Chia Tseng <pswo10680@gmail.com>, 2015. #zanata, 2023.
+# Cheng-Chia Tseng <pswo10680@gmail.com>, 2015. #zanata, 2023, 2025.
 # Chester Cheng <snowlet.cheng@gmail.com>, 2015. #zanata
 # Terry Chuang <tchuang@redhat.com>, 2015. #zanata
-# Cheng-Chia Tseng <pswo10680@gmail.com>, 2016. #zanata, 2023.
+# Cheng-Chia Tseng <pswo10680@gmail.com>, 2016. #zanata, 2023, 2025.
 # David Shea <dshea@redhat.com>, 2016. #zanata
-# Cheng-Chia Tseng <pswo10680@gmail.com>, 2017. #zanata, 2023.
-# Cheng-Chia Tseng <pswo10680@gmail.com>, 2018. #zanata, 2023.
+# Cheng-Chia Tseng <pswo10680@gmail.com>, 2017. #zanata, 2023, 2025.
+# Cheng-Chia Tseng <pswo10680@gmail.com>, 2018. #zanata, 2023, 2025.
 # Peter Pan <pan93412@gmail.com>, 2018. #zanata
 # Peter Pan <pan93412@gmail.com>, 2019. #zanata
 # Yi-Jyun Pan <pan93412@gmail.com>, 2020.
@@ -40,8 +40,8 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
 "POT-Creation-Date: 2025-07-02 01:41+0000\n"
-"PO-Revision-Date: 2025-04-06 23:06+0000\n"
-"Last-Translator: hsu zangmen <chzang55@gmail.com>\n"
+"PO-Revision-Date: 2025-07-02 18:56+0000\n"
+"Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://translate.fedoraproject.org/"
 "projects/anaconda/master/zh_TW/>\n"
 "Language: zh_TW\n"
@@ -49,7 +49,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.10.4\n"
+"X-Generator: Weblate 5.12.2\n"
 
 #: pyanaconda/startup_utils.py:664
 #, python-format
@@ -58,6 +58,9 @@ msgid ""
 "An error occurred during certificate import from kickstart:\n"
 "%s\n"
 msgstr ""
+"\n"
+"從 kickstart 匯入憑證時遭遇錯誤：\n"
+"%s\n"
 
 #: pyanaconda/kickstart.py:329
 #, python-format
@@ -714,21 +717,16 @@ msgid "Assign mount points"
 msgstr "指定掛載點"
 
 #: pyanaconda/modules/storage/checker/utils.py:346
-#, fuzzy
-#| msgid ""
-#| "At least one of your swap devices does not have a UUID, which is common "
-#| "in swap space created using older versions of mkswap. These devices will "
-#| "be referred to by device path in /etc/fstab, which is not ideal since "
-#| "device paths can change under a variety of circumstances. "
 msgid ""
 "At least one of your swap devices does not have a UUID, which is common in "
 "swap space created using older versions of mkswap. These devices will be "
 "referred to by device path in /etc/fstab, which is not ideal since device "
 "paths can change under a variety of circumstances."
 msgstr ""
-"您的置換空間裝置沒有 UUID，它對於使用舊版 mkswap 建立的置換空間來說很常見。這"
-"些裝置會透過 /etc/fstab 內的裝置路徑做參照，但由於裝置路徑在許多情況下都可能"
-"會變動，因而不是理想作法。 "
+"您至少有一個置換空間裝置沒有 UUID，這對於使用舊版 mkswap "
+"建立的置換空間來說很常見。這些裝置會透過 /etc/fstab "
+"中的裝置路徑做參照，但由於裝置路徑在許多情況下都可能會變動，因而不是理想作法"
+"。"
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1075
 msgid "Attaching subscription..."
@@ -845,7 +843,7 @@ msgstr "開機載入器的 stage1 裝置不能放在 iBFT 中未設定的 iSCSI 
 
 #: pyanaconda/modules/storage/partitioning/automatic/automatic_partitioning.py:157
 msgid "Both boot loader partition '{}' and MBR partitioned disk found"
-msgstr ""
+msgstr "同時找到開機載入器分割區「{}」和 MBR 分割式磁碟"
 
 #: pyanaconda/ui/gui/spokes/network.py:295
 #: pyanaconda/ui/gui/spokes/network.glade:19
@@ -2628,10 +2626,9 @@ msgid "Move selected layout _up"
 msgstr "將配置往上移(_U)"
 
 #: pyanaconda/modules/storage/partitioning/automatic/automatic_partitioning.py:138
-#, fuzzy, python-format
-#| msgid "Multiple boot loader partitions required: %s"
+#, python-format
 msgid "Multiple boot loader partitions required: %(bootparts)s"
-msgstr "需要多個開機引導分割區：%s"
+msgstr "需要多個開機引導分割區：%(bootparts)s"
 
 #: pyanaconda/modules/storage/partitioning/automatic/automatic_partitioning.py:152
 msgid "Multiple devices found for boot loader partition '{}': {}"
@@ -3928,16 +3925,13 @@ msgid "Selected disks"
 msgstr "選取的磁碟"
 
 #: pyanaconda/modules/storage/checker/utils.py:541
-#, fuzzy, python-brace-format
-#| msgid ""
-#| "Selected disks {} contain volume group '{}' that also uses further "
-#| "unselected disks. You must select or de-select all these disks as a set."
+#, python-brace-format
 msgid ""
 "Selected disks {disks} contain volume group '{vg}' that also uses further "
 "unselected disks. You must select or de-select all these disks as a set."
-msgstr ""
-"選擇的 {} 磁碟包含也使用更多未選擇磁碟的「{}」儲存區群組。您必須選擇或取消選"
-"擇一組這些所有磁碟。"
+msgstr "選取的磁碟 {disks} "
+"包含也使用更多未選取磁碟的「{vg}」儲存區群組。您必須選取，或取消選取這些所有"
+"同組磁碟。"
 
 #: pyanaconda/ui/lib/software.py:98
 msgid "Selected environment is not valid"
@@ -4585,10 +4579,8 @@ msgstr ""
 "檢查您的儲存組態時遭遇以下警告。這些雖不嚴重，但您可能會想修改儲存布局。"
 
 #: pyanaconda/startup_utils.py:667
-#, fuzzy
-#| msgid "The installation cannot continue and the system will be rebooted"
 msgid "The installation cannot continue"
-msgstr "安裝過程無法繼續，系統將重新啟動"
+msgstr "安裝過程無法繼續"
 
 #: pyanaconda/startup_utils.py:165
 msgid "The installation cannot continue and the system will be rebooted"
@@ -5305,10 +5297,9 @@ msgid "WWPN:"
 msgstr "WWPN："
 
 #: pyanaconda/ui/tui/spokes/installation_progress.py:97
-#, fuzzy, python-format
-#| msgid "Waiting for %s threads to finish"
+#, python-format
 msgid "Waiting for %s threads to finish..."
-msgstr "正在等候 %s 執行緒完成"
+msgstr "正在等候 %s 執行緒完成..."
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:272
 msgid ""
@@ -5587,14 +5578,11 @@ msgid "You have not created a bootable partition."
 msgstr "您還未建立一個可用來開機的分割區。"
 
 #: pyanaconda/modules/storage/checker/utils.py:60
-#, fuzzy, python-format
-#| msgid ""
-#| "You have not defined a root partition (/), which is required for "
-#| "installation of %s to continue."
+#, python-format
 msgid ""
 "You have not defined a root partition (/), which is required for "
 "installation of %(prod_name)s to continue."
-msgstr "您還沒指定根基分割區 (/)，為了讓 %s 安裝程式繼續，您必須先指定。"
+msgstr "您還沒指定根基分割區 (/)，為了讓 %(prod_name)s 的安裝繼續，您必須先指定。"
 
 #: pyanaconda/modules/storage/checker/utils.py:314
 #, python-format
