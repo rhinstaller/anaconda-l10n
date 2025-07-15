@@ -30,7 +30,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2025-07-12 01:45+0000\n"
+"POT-Creation-Date: 2025-07-15 01:49+0000\n"
 "PO-Revision-Date: 2025-06-21 10:26+0000\n"
 "Last-Translator: Luna Jernberg <bittin@reimu.nl>\n"
 "Language-Team: Swedish <https://translate.fedoraproject.org/projects/"
@@ -1163,7 +1163,7 @@ msgstr "Konfigurerar installerat system"
 msgid "Configuring storage"
 msgstr "Konfigurerar lagring"
 
-#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:45
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:44
 msgid "Configuring {}"
 msgstr "Konfigurerar {}"
 
@@ -1543,15 +1543,11 @@ msgstr "Visa i_nte denna dialog för andra valda filsystem."
 msgid "Do you really want to quit?"
 msgstr "Vill du verkligen avsluta?"
 
-#: pyanaconda/modules/payloads/payload/dnf/initialization.py:138
-msgid "Downloading group metadata..."
-msgstr "Hämtar gruppmetadata …"
-
 #: pyanaconda/modules/payloads/payload/dnf/installation.py:256
 msgid "Downloading packages"
 msgstr "Hämtar paket"
 
-#: pyanaconda/modules/payloads/payload/dnf/download_progress.py:67
+#: pyanaconda/modules/payloads/payload/dnf/download_progress.py:116
 #, python-brace-format
 msgid ""
 "Downloading {total_files} RPMs, {downloaded_size} / {total_size} "
@@ -1769,11 +1765,6 @@ msgstr "Misslyckades att lägga till en enhet."
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1035
 msgid "Failed to add new device."
 msgstr "Misslyckades att lägga till en ny enhet."
-
-#: pyanaconda/modules/payloads/payload/dnf/repositories.py:226
-#, python-brace-format
-msgid "Failed to add the '{name}' repository: {details}"
-msgstr "Misslyckades att lägga till '{name}' förråd: {details}"
 
 #: pyanaconda/modules/storage/partitioning/interactive/change_device.py:93
 msgid "Failed to change a device."
@@ -2352,7 +2343,7 @@ msgid "Installing the software"
 msgstr "Installerar programvaran"
 
 #: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:344
-#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:43
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:42
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_manager.py:208
 msgid "Installing {}"
 msgstr "Installerar {}"
@@ -2556,6 +2547,12 @@ msgstr "Live tarboll"
 #: data/liveinst/liveinst-setup.desktop:3
 msgid "Liveinst Setup"
 msgstr "Liveinst-inställning"
+
+#: pyanaconda/modules/payloads/payload/dnf/initialization.py:117
+#, fuzzy
+#| msgid "Local repositories"
+msgid "Loading repositories..."
+msgstr "Lokala förråd"
 
 #: pyanaconda/ui/gui/spokes/storage.glade:115
 msgid "Local Standard Disks"
@@ -2949,7 +2946,7 @@ msgstr "Inga monterbara enheter funna"
 msgid "No network devices available"
 msgstr "Inga nätverksenheter tillgängliga"
 
-#: pyanaconda/modules/payloads/payload/dnf/initialization.py:268
+#: pyanaconda/modules/payloads/payload/dnf/initialization.py:244
 msgid "No repository is configured."
 msgstr "Inget förråd är konfigurerat."
 
@@ -3251,7 +3248,7 @@ msgstr "Sökvägar"
 msgid "Performing post-installation Flatpak tasks"
 msgstr "Utför Flatpak-åtgärder efter installationen"
 
-#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:49
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:48
 #: pyanaconda/modules/boss/installation.py:724
 msgid "Performing post-installation setup tasks"
 msgstr "Utför inställningsåtgärder efter installationen"
@@ -4199,17 +4196,9 @@ msgstr ""
 msgid "Software selection"
 msgstr "Programval"
 
-#: pyanaconda/modules/payloads/payload/dnf/validation.py:63
+#: pyanaconda/modules/payloads/payload/dnf/validation.py:56
 msgid "Some of the repomd.xml files have changed or are unreachable."
 msgstr "En del av repomd.xml-filerna har ändrats eller kan inte nås."
-
-#: pyanaconda/modules/payloads/payload/dnf/dnf_manager.py:558
-msgid "Some packages, groups or modules are broken."
-msgstr "Några paket, grupper eller moduler är trasiga."
-
-#: pyanaconda/modules/payloads/payload/dnf/dnf_manager.py:554
-msgid "Some packages, groups or modules are missing."
-msgstr "Några paket, grupper eller moduler saknas."
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:224
 #: pyanaconda/ui/tui/spokes/software_selection.py:180
@@ -4365,7 +4354,7 @@ msgstr ""
 "Systemd-boot kan inte användas med nuvarande typ av nyttolast. Välj ett "
 "installationsmedium som stöder paketinstallation."
 
-#: pyanaconda/modules/storage/bootloader/efi.py:230
+#: pyanaconda/modules/storage/bootloader/efi.py:217
 msgid "Systemd-boot is not supported on this platform"
 msgstr "Systemd-boot stöds inte på den här plattformen"
 
@@ -4479,12 +4468,12 @@ msgstr ""
 "Växlingsarean på din dator används av operativsystemet\n"
 "när det får ont om minne."
 
-#: pyanaconda/modules/payloads/payload/dnf/repositories.py:148
+#: pyanaconda/modules/payloads/payload/dnf/repositories.py:147
 #, python-brace-format
 msgid "The '{name}' repository has no mirror, baseurl or metalink set."
 msgstr "'{name}' förrådet har ingen spegel, bas-url eller metalänk angiven."
 
-#: pyanaconda/modules/payloads/payload/dnf/repositories.py:167
+#: pyanaconda/modules/payloads/payload/dnf/repositories.py:166
 #, python-brace-format
 msgid "The '{name}' repository uses an unsupported protocol."
 msgstr "{name} förrådet använder ett protokoll som inte stöds."
@@ -4493,7 +4482,7 @@ msgstr "{name} förrådet använder ett protokoll som inte stöds."
 msgid "The '{}' repository is invalid: {}"
 msgstr "'{}' förrådet är ogiltigt: {}"
 
-#: pyanaconda/modules/payloads/payload/dnf/repositories.py:243
+#: pyanaconda/modules/payloads/payload/dnf/repositories.py:237
 msgid "The '{}' repository is not one of the pre-defined repositories."
 msgstr "'{}'-förrådet är inte ett av de fördefinierade förråden."
 
@@ -4687,10 +4676,15 @@ msgstr ""
 "<b>%(initiatorName)s</b> när portal-IP-adressen <b>%(portalAddress)s</b> "
 "användes. Välj vilka noder du vill logga in på:"
 
-#: pyanaconda/modules/payloads/payload/dnf/dnf_manager.py:585
+#: pyanaconda/modules/payloads/payload/dnf/dnf_manager.py:673
+#, fuzzy
+#| msgid ""
+#| "The following software marked for installation has errors.\n"
+#| "This is likely caused by an error with your installation source."
 msgid ""
 "The following software marked for installation has errors.\n"
-"This is likely caused by an error with your installation source."
+"This is likely caused by an error with your installation source.\n"
+"\n"
 msgstr ""
 "Följande programvara markerad att installeras har fel.\n"
 "Detta beror förmodligen på fel hos din installationskälla."
@@ -7270,6 +7264,19 @@ msgstr "{} monterad som {}"
 #: pyanaconda/core/constants.py:221
 msgid "{}. {}"
 msgstr "{}. {}"
+
+#~ msgid "Downloading group metadata..."
+#~ msgstr "Hämtar gruppmetadata …"
+
+#, python-brace-format
+#~ msgid "Failed to add the '{name}' repository: {details}"
+#~ msgstr "Misslyckades att lägga till '{name}' förråd: {details}"
+
+#~ msgid "Some packages, groups or modules are broken."
+#~ msgstr "Några paket, grupper eller moduler är trasiga."
+
+#~ msgid "Some packages, groups or modules are missing."
+#~ msgstr "Några paket, grupper eller moduler saknas."
 
 #, python-brace-format
 #~ msgid ""

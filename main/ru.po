@@ -53,7 +53,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2025-07-12 01:45+0000\n"
+"POT-Creation-Date: 2025-07-15 01:49+0000\n"
 "PO-Revision-Date: 2025-06-24 17:53+0000\n"
 "Last-Translator: Igor Gorbounov <igor.gorbounov@gmail.com>\n"
 "Language-Team: Russian <https://translate.fedoraproject.org/projects/"
@@ -1198,7 +1198,7 @@ msgstr "Настройка установленной системы"
 msgid "Configuring storage"
 msgstr "Настройка устройств хранения"
 
-#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:45
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:44
 msgid "Configuring {}"
 msgstr "Настройка {}"
 
@@ -1580,15 +1580,11 @@ msgstr "_Не показывать этот диалог для других в�
 msgid "Do you really want to quit?"
 msgstr "Действительно хотите выйти?"
 
-#: pyanaconda/modules/payloads/payload/dnf/initialization.py:138
-msgid "Downloading group metadata..."
-msgstr "Загрузка метаданных группы..."
-
 #: pyanaconda/modules/payloads/payload/dnf/installation.py:256
 msgid "Downloading packages"
 msgstr "Загрузка пакетов"
 
-#: pyanaconda/modules/payloads/payload/dnf/download_progress.py:67
+#: pyanaconda/modules/payloads/payload/dnf/download_progress.py:116
 #, python-brace-format
 msgid ""
 "Downloading {total_files} RPMs, {downloaded_size} / {total_size} "
@@ -1806,11 +1802,6 @@ msgstr "Не удалось добавить устройство."
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1035
 msgid "Failed to add new device."
 msgstr "Не удалось добавить новое устройство."
-
-#: pyanaconda/modules/payloads/payload/dnf/repositories.py:226
-#, python-brace-format
-msgid "Failed to add the '{name}' repository: {details}"
-msgstr "Не удалось добавить репозиторий «{name}»: {details}"
 
 #: pyanaconda/modules/storage/partitioning/interactive/change_device.py:93
 msgid "Failed to change a device."
@@ -2384,7 +2375,7 @@ msgid "Installing the software"
 msgstr "Установка программного обеспечения"
 
 #: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:344
-#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:43
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:42
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_manager.py:208
 msgid "Installing {}"
 msgstr "Установка {}"
@@ -2587,6 +2578,12 @@ msgstr "tar-архив вживую"
 #: data/liveinst/liveinst-setup.desktop:3
 msgid "Liveinst Setup"
 msgstr "Настройка Liveinst"
+
+#: pyanaconda/modules/payloads/payload/dnf/initialization.py:117
+#, fuzzy
+#| msgid "Local repositories"
+msgid "Loading repositories..."
+msgstr "Локальные репозитории"
 
 #: pyanaconda/ui/gui/spokes/storage.glade:115
 msgid "Local Standard Disks"
@@ -2978,7 +2975,7 @@ msgstr "Нет подключаемых устройств"
 msgid "No network devices available"
 msgstr "Сетевые устройства недоступны"
 
-#: pyanaconda/modules/payloads/payload/dnf/initialization.py:268
+#: pyanaconda/modules/payloads/payload/dnf/initialization.py:244
 msgid "No repository is configured."
 msgstr "Репозиторий не настроен."
 
@@ -3280,7 +3277,7 @@ msgstr "Пути"
 msgid "Performing post-installation Flatpak tasks"
 msgstr "Выполняется настройка Flatpak после установки"
 
-#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:49
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:48
 #: pyanaconda/modules/boss/installation.py:724
 msgid "Performing post-installation setup tasks"
 msgstr "Выполняется настройка после установки"
@@ -4229,17 +4226,9 @@ msgstr ""
 msgid "Software selection"
 msgstr "Выбор программ"
 
-#: pyanaconda/modules/payloads/payload/dnf/validation.py:63
+#: pyanaconda/modules/payloads/payload/dnf/validation.py:56
 msgid "Some of the repomd.xml files have changed or are unreachable."
 msgstr "Некоторые файлы repomd.xml изменились или недоступны."
-
-#: pyanaconda/modules/payloads/payload/dnf/dnf_manager.py:558
-msgid "Some packages, groups or modules are broken."
-msgstr "Некоторые пакеты, группы или модули повреждены."
-
-#: pyanaconda/modules/payloads/payload/dnf/dnf_manager.py:554
-msgid "Some packages, groups or modules are missing."
-msgstr "Некоторые пакеты, группы или модули отсутствуют."
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:224
 #: pyanaconda/ui/tui/spokes/software_selection.py:180
@@ -4397,7 +4386,7 @@ msgstr ""
 "Systemd-boot не может быть использован с текущим типом полезной нагрузки. "
 "Выберите установочный носитель, поддерживающий установку пакетов."
 
-#: pyanaconda/modules/storage/bootloader/efi.py:230
+#: pyanaconda/modules/storage/bootloader/efi.py:217
 msgid "Systemd-boot is not supported on this platform"
 msgstr "Systemd-boot на этой платформе не поддерживается"
 
@@ -4512,13 +4501,13 @@ msgstr ""
 "Раздел «swap» используется операционной системой \n"
 "при нехватке памяти."
 
-#: pyanaconda/modules/payloads/payload/dnf/repositories.py:148
+#: pyanaconda/modules/payloads/payload/dnf/repositories.py:147
 #, python-brace-format
 msgid "The '{name}' repository has no mirror, baseurl or metalink set."
 msgstr ""
 "У репозитория «{name}» нет зеркала, базового адреса или набора металинков."
 
-#: pyanaconda/modules/payloads/payload/dnf/repositories.py:167
+#: pyanaconda/modules/payloads/payload/dnf/repositories.py:166
 #, python-brace-format
 msgid "The '{name}' repository uses an unsupported protocol."
 msgstr "Репозиторий «{name}» использует неподдерживаемый протокол."
@@ -4527,7 +4516,7 @@ msgstr "Репозиторий «{name}» использует неподдер�
 msgid "The '{}' repository is invalid: {}"
 msgstr "Репозиторий '{}' недействителен: {}"
 
-#: pyanaconda/modules/payloads/payload/dnf/repositories.py:243
+#: pyanaconda/modules/payloads/payload/dnf/repositories.py:237
 msgid "The '{}' repository is not one of the pre-defined repositories."
 msgstr "Репозиторий «{}» не входит в число ранее определенных репозиториев."
 
@@ -4721,10 +4710,15 @@ msgstr ""
 "<b>%(initiatorName)s</b> с использованием портала с IP-адресом "
 "<b>%(portalAddress)s</b>.  Выберите узлы для входа:"
 
-#: pyanaconda/modules/payloads/payload/dnf/dnf_manager.py:585
+#: pyanaconda/modules/payloads/payload/dnf/dnf_manager.py:673
+#, fuzzy
+#| msgid ""
+#| "The following software marked for installation has errors.\n"
+#| "This is likely caused by an error with your installation source."
 msgid ""
 "The following software marked for installation has errors.\n"
-"This is likely caused by an error with your installation source."
+"This is likely caused by an error with your installation source.\n"
+"\n"
 msgstr ""
 "Следующее программное обеспечение, помеченное для установки, содержит "
 "ошибки.\n"
@@ -7318,6 +7312,19 @@ msgstr "{} смонтирован как {}"
 #: pyanaconda/core/constants.py:221
 msgid "{}. {}"
 msgstr "{}. {}"
+
+#~ msgid "Downloading group metadata..."
+#~ msgstr "Загрузка метаданных группы..."
+
+#, python-brace-format
+#~ msgid "Failed to add the '{name}' repository: {details}"
+#~ msgstr "Не удалось добавить репозиторий «{name}»: {details}"
+
+#~ msgid "Some packages, groups or modules are broken."
+#~ msgstr "Некоторые пакеты, группы или модули повреждены."
+
+#~ msgid "Some packages, groups or modules are missing."
+#~ msgstr "Некоторые пакеты, группы или модули отсутствуют."
 
 #, python-brace-format
 #~ msgid ""

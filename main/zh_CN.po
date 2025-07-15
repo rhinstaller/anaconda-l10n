@@ -50,7 +50,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2025-07-12 01:45+0000\n"
+"POT-Creation-Date: 2025-07-15 01:49+0000\n"
 "PO-Revision-Date: 2025-04-17 09:26+0000\n"
 "Last-Translator: Shijun Sun <sunshijun12138@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://translate.fedoraproject.org/"
@@ -1150,7 +1150,7 @@ msgstr "正在配置已安装系统"
 msgid "Configuring storage"
 msgstr "设置存储设备"
 
-#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:45
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:44
 msgid "Configuring {}"
 msgstr "正在配置 {}"
 
@@ -1524,15 +1524,11 @@ msgstr "对其他选择的文件系统不显示此对话框 _(N)。"
 msgid "Do you really want to quit?"
 msgstr "您真的想要退出吗？"
 
-#: pyanaconda/modules/payloads/payload/dnf/initialization.py:138
-msgid "Downloading group metadata..."
-msgstr "正在下载组元数据......"
-
 #: pyanaconda/modules/payloads/payload/dnf/installation.py:256
 msgid "Downloading packages"
 msgstr "正在下载软件包"
 
-#: pyanaconda/modules/payloads/payload/dnf/download_progress.py:67
+#: pyanaconda/modules/payloads/payload/dnf/download_progress.py:116
 #, python-brace-format
 msgid ""
 "Downloading {total_files} RPMs, {downloaded_size} / {total_size} "
@@ -1741,11 +1737,6 @@ msgstr "添加设备失败。"
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1035
 msgid "Failed to add new device."
 msgstr "添加新设备失败。"
-
-#: pyanaconda/modules/payloads/payload/dnf/repositories.py:226
-#, python-brace-format
-msgid "Failed to add the '{name}' repository: {details}"
-msgstr "无法添加“{name}”软件仓库：{details}"
 
 #: pyanaconda/modules/storage/partitioning/interactive/change_device.py:93
 msgid "Failed to change a device."
@@ -2305,7 +2296,7 @@ msgid "Installing the software"
 msgstr "正在安装软件"
 
 #: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:344
-#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:43
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:42
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_manager.py:208
 msgid "Installing {}"
 msgstr "正在安装 {}"
@@ -2504,6 +2495,12 @@ msgstr "Live tar包"
 #: data/liveinst/liveinst-setup.desktop:3
 msgid "Liveinst Setup"
 msgstr "Liveinst 设置"
+
+#: pyanaconda/modules/payloads/payload/dnf/initialization.py:117
+#, fuzzy
+#| msgid "Local repositories"
+msgid "Loading repositories..."
+msgstr "本地软件仓库"
 
 #: pyanaconda/ui/gui/spokes/storage.glade:115
 msgid "Local Standard Disks"
@@ -2889,7 +2886,7 @@ msgstr "未找到可挂载设备"
 msgid "No network devices available"
 msgstr "没有可用的网络设备"
 
-#: pyanaconda/modules/payloads/payload/dnf/initialization.py:268
+#: pyanaconda/modules/payloads/payload/dnf/initialization.py:244
 msgid "No repository is configured."
 msgstr "没有配置软件仓库。"
 
@@ -3175,7 +3172,7 @@ msgstr "路径"
 msgid "Performing post-installation Flatpak tasks"
 msgstr "正在执行安装后的 Flatpak 任务"
 
-#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:49
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:48
 #: pyanaconda/modules/boss/installation.py:724
 msgid "Performing post-installation setup tasks"
 msgstr "正在执行安装后设置"
@@ -4095,17 +4092,9 @@ msgstr "快照：快照 \"{}\" 的源 \"{}\" 不是一个有效的瘦 LV 设备�
 msgid "Software selection"
 msgstr "软件选择"
 
-#: pyanaconda/modules/payloads/payload/dnf/validation.py:63
+#: pyanaconda/modules/payloads/payload/dnf/validation.py:56
 msgid "Some of the repomd.xml files have changed or are unreachable."
 msgstr "某些 repomd.xml 文件已更改或无法访问。"
-
-#: pyanaconda/modules/payloads/payload/dnf/dnf_manager.py:558
-msgid "Some packages, groups or modules are broken."
-msgstr "某些软件包、组或模块已损坏。"
-
-#: pyanaconda/modules/payloads/payload/dnf/dnf_manager.py:554
-msgid "Some packages, groups or modules are missing."
-msgstr "某些软件包、组或模块缺失。"
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:224
 #: pyanaconda/ui/tui/spokes/software_selection.py:180
@@ -4256,7 +4245,7 @@ msgid ""
 msgstr ""
 "Systemd-boot 无法与当前类型的有效负载一起使用。 选择支持包安装的安装介质。"
 
-#: pyanaconda/modules/storage/bootloader/efi.py:230
+#: pyanaconda/modules/storage/bootloader/efi.py:217
 msgid "Systemd-boot is not supported on this platform"
 msgstr "Systemd-boot 在这个平台上不被支持"
 
@@ -4369,12 +4358,12 @@ msgstr ""
 "计算机中的交换分区是供\n"
 "操作系统在内存不足时使用的区域。"
 
-#: pyanaconda/modules/payloads/payload/dnf/repositories.py:148
+#: pyanaconda/modules/payloads/payload/dnf/repositories.py:147
 #, python-brace-format
 msgid "The '{name}' repository has no mirror, baseurl or metalink set."
 msgstr "'{name}' 软件仓库中没有镜像，baseurl 或元链接集。"
 
-#: pyanaconda/modules/payloads/payload/dnf/repositories.py:167
+#: pyanaconda/modules/payloads/payload/dnf/repositories.py:166
 #, python-brace-format
 msgid "The '{name}' repository uses an unsupported protocol."
 msgstr "'{name}' 软件仓库使用不支持的协议。"
@@ -4383,7 +4372,7 @@ msgstr "'{name}' 软件仓库使用不支持的协议。"
 msgid "The '{}' repository is invalid: {}"
 msgstr "'{}' 软件仓库无效：{}"
 
-#: pyanaconda/modules/payloads/payload/dnf/repositories.py:243
+#: pyanaconda/modules/payloads/payload/dnf/repositories.py:237
 msgid "The '{}' repository is not one of the pre-defined repositories."
 msgstr "“{}” 软件仓库不是预定义存储库之一。"
 
@@ -4553,10 +4542,15 @@ msgstr ""
 "iSCSI 初始程序 <b>%(initiatorName)s</b> 使用门户 IP 地址 "
 "<b>%(portalAddress)s</b> 时发现了以下节点。请选择您要登录的节点："
 
-#: pyanaconda/modules/payloads/payload/dnf/dnf_manager.py:585
+#: pyanaconda/modules/payloads/payload/dnf/dnf_manager.py:673
+#, fuzzy
+#| msgid ""
+#| "The following software marked for installation has errors.\n"
+#| "This is likely caused by an error with your installation source."
 msgid ""
 "The following software marked for installation has errors.\n"
-"This is likely caused by an error with your installation source."
+"This is likely caused by an error with your installation source.\n"
+"\n"
 msgstr ""
 "以下被标记为待安装的软件存在错误。\n"
 "这很可能是安装源存在错误造成的。"
@@ -7040,6 +7034,19 @@ msgstr "{} 挂载为 {}"
 #: pyanaconda/core/constants.py:221
 msgid "{}. {}"
 msgstr "{}。{}"
+
+#~ msgid "Downloading group metadata..."
+#~ msgstr "正在下载组元数据......"
+
+#, python-brace-format
+#~ msgid "Failed to add the '{name}' repository: {details}"
+#~ msgstr "无法添加“{name}”软件仓库：{details}"
+
+#~ msgid "Some packages, groups or modules are broken."
+#~ msgstr "某些软件包、组或模块已损坏。"
+
+#~ msgid "Some packages, groups or modules are missing."
+#~ msgstr "某些软件包、组或模块缺失。"
 
 #, python-brace-format
 #~ msgid ""

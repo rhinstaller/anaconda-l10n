@@ -66,7 +66,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2025-07-12 01:45+0000\n"
+"POT-Creation-Date: 2025-07-15 01:49+0000\n"
 "PO-Revision-Date: 2024-10-16 01:07+0000\n"
 "Last-Translator: Koichiro Iwao <meta@vmeta.jp>\n"
 "Language-Team: Japanese <https://translate.fedoraproject.org/projects/"
@@ -1206,7 +1206,7 @@ msgstr "インストール済みシステムを設定中"
 msgid "Configuring storage"
 msgstr "ストレージの設定中"
 
-#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:45
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:44
 msgid "Configuring {}"
 msgstr "{} の設定中"
 
@@ -1586,15 +1586,11 @@ msgstr ""
 msgid "Do you really want to quit?"
 msgstr "終了してもよろしいですか?"
 
-#: pyanaconda/modules/payloads/payload/dnf/initialization.py:138
-msgid "Downloading group metadata..."
-msgstr "グループメタデータをダウンロード中..."
-
 #: pyanaconda/modules/payloads/payload/dnf/installation.py:256
 msgid "Downloading packages"
 msgstr "パッケージのダウンロード中"
 
-#: pyanaconda/modules/payloads/payload/dnf/download_progress.py:67
+#: pyanaconda/modules/payloads/payload/dnf/download_progress.py:116
 #, python-brace-format
 msgid ""
 "Downloading {total_files} RPMs, {downloaded_size} / {total_size} "
@@ -1813,11 +1809,6 @@ msgstr "デバイスの追加に失敗しました。"
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1035
 msgid "Failed to add new device."
 msgstr "新しいデバイスの追加に失敗しました。"
-
-#: pyanaconda/modules/payloads/payload/dnf/repositories.py:226
-#, python-brace-format
-msgid "Failed to add the '{name}' repository: {details}"
-msgstr "'{name}' リポジトリーの追加に失敗しました: {details}"
 
 #: pyanaconda/modules/storage/partitioning/interactive/change_device.py:93
 msgid "Failed to change a device."
@@ -2388,7 +2379,7 @@ msgid "Installing the software"
 msgstr "ソフトウェアをインストール中…"
 
 #: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:344
-#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:43
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:42
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_manager.py:208
 msgid "Installing {}"
 msgstr "{} のインストール中"
@@ -2597,6 +2588,12 @@ msgstr "ライブtarball"
 #: data/liveinst/liveinst-setup.desktop:3
 msgid "Liveinst Setup"
 msgstr "Liveinst のセットアップ"
+
+#: pyanaconda/modules/payloads/payload/dnf/initialization.py:117
+#, fuzzy
+#| msgid "Local repositories"
+msgid "Loading repositories..."
+msgstr "ローカルリポジトリー"
 
 #: pyanaconda/ui/gui/spokes/storage.glade:115
 msgid "Local Standard Disks"
@@ -2996,7 +2993,7 @@ msgstr "マウント可能なデバイスが見つかりません"
 msgid "No network devices available"
 msgstr "ネットワークデバイスは利用できません"
 
-#: pyanaconda/modules/payloads/payload/dnf/initialization.py:268
+#: pyanaconda/modules/payloads/payload/dnf/initialization.py:244
 msgid "No repository is configured."
 msgstr "構成されたリポジトリーがありません"
 
@@ -3301,7 +3298,7 @@ msgstr "パス"
 msgid "Performing post-installation Flatpak tasks"
 msgstr "インストール後にFlatpakのタスクを実行中"
 
-#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:49
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:48
 #: pyanaconda/modules/boss/installation.py:724
 msgid "Performing post-installation setup tasks"
 msgstr "インストール後セットアップ作業を実行中"
@@ -4263,17 +4260,9 @@ msgstr ""
 msgid "Software selection"
 msgstr "ソフトウェアの選択"
 
-#: pyanaconda/modules/payloads/payload/dnf/validation.py:63
+#: pyanaconda/modules/payloads/payload/dnf/validation.py:56
 msgid "Some of the repomd.xml files have changed or are unreachable."
 msgstr "repomd.xmlファイルの一部が変更されているか、アクセスできません。"
-
-#: pyanaconda/modules/payloads/payload/dnf/dnf_manager.py:558
-msgid "Some packages, groups or modules are broken."
-msgstr "一部のパッケージ、グループ、またはモジュールが壊れています。"
-
-#: pyanaconda/modules/payloads/payload/dnf/dnf_manager.py:554
-msgid "Some packages, groups or modules are missing."
-msgstr "一部のパッケージ、グループ、またはモジュールが見つかりません。"
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:224
 #: pyanaconda/ui/tui/spokes/software_selection.py:180
@@ -4425,7 +4414,7 @@ msgstr ""
 "Systemd-boot は現在のペイロードタイプでは利用できません。パッケージのインス"
 "トールをサポートするインストールメディアを選択してください。"
 
-#: pyanaconda/modules/storage/bootloader/efi.py:230
+#: pyanaconda/modules/storage/bootloader/efi.py:217
 msgid "Systemd-boot is not supported on this platform"
 msgstr "Systemd-bootは、このプラットフォームでは対応していません。"
 
@@ -4544,13 +4533,13 @@ msgstr ""
 "ご使用の コンピューターの 'swap' 領域は、メモリー不足の状態になると\n"
 "オペレーティングシステムで使用されます。"
 
-#: pyanaconda/modules/payloads/payload/dnf/repositories.py:148
+#: pyanaconda/modules/payloads/payload/dnf/repositories.py:147
 #, python-brace-format
 msgid "The '{name}' repository has no mirror, baseurl or metalink set."
 msgstr ""
 "'{name}'リポジトリーはmirrorとbaseurlもしくはmetalinkのセットがありません。"
 
-#: pyanaconda/modules/payloads/payload/dnf/repositories.py:167
+#: pyanaconda/modules/payloads/payload/dnf/repositories.py:166
 #, python-brace-format
 msgid "The '{name}' repository uses an unsupported protocol."
 msgstr "'{name}' リポジトリーは未サポートのプロトコルが使用されています。"
@@ -4559,7 +4548,7 @@ msgstr "'{name}' リポジトリーは未サポートのプロトコルが使用
 msgid "The '{}' repository is invalid: {}"
 msgstr "'{}' リポジトリーは無効です: {}"
 
-#: pyanaconda/modules/payloads/payload/dnf/repositories.py:243
+#: pyanaconda/modules/payloads/payload/dnf/repositories.py:237
 msgid "The '{}' repository is not one of the pre-defined repositories."
 msgstr "'{}' リポジトリーは、事前定義されたリポジトリーの1つではありません。"
 
@@ -4755,10 +4744,15 @@ msgstr ""
 "ター <b>%(initiatorName)s</b> を使用して、次のノードが検出されました。ログイ"
 "ンしたいノードを選択してください:"
 
-#: pyanaconda/modules/payloads/payload/dnf/dnf_manager.py:585
+#: pyanaconda/modules/payloads/payload/dnf/dnf_manager.py:673
+#, fuzzy
+#| msgid ""
+#| "The following software marked for installation has errors.\n"
+#| "This is likely caused by an error with your installation source."
 msgid ""
 "The following software marked for installation has errors.\n"
-"This is likely caused by an error with your installation source."
+"This is likely caused by an error with your installation source.\n"
+"\n"
 msgstr ""
 "インストール対象の以下のソフトウェアにエラーがあります。\n"
 "インストールソースでのエラーが原因となっている可能性が高いと思われます。"
@@ -7356,6 +7350,19 @@ msgstr "{} は {} としてマウント済み"
 #: pyanaconda/core/constants.py:221
 msgid "{}. {}"
 msgstr "{}。{}"
+
+#~ msgid "Downloading group metadata..."
+#~ msgstr "グループメタデータをダウンロード中..."
+
+#, python-brace-format
+#~ msgid "Failed to add the '{name}' repository: {details}"
+#~ msgstr "'{name}' リポジトリーの追加に失敗しました: {details}"
+
+#~ msgid "Some packages, groups or modules are broken."
+#~ msgstr "一部のパッケージ、グループ、またはモジュールが壊れています。"
+
+#~ msgid "Some packages, groups or modules are missing."
+#~ msgstr "一部のパッケージ、グループ、またはモジュールが見つかりません。"
 
 #, python-brace-format
 #~ msgid ""

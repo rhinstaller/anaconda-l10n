@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 40.1\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2025-07-12 01:45+0000\n"
+"POT-Creation-Date: 2025-07-15 01:49+0000\n"
 "PO-Revision-Date: 2025-06-08 14:21+0000\n"
 "Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
 "Language-Team: Slovenian <https://translate.fedoraproject.org/projects/"
@@ -1163,7 +1163,7 @@ msgstr "Prilagajanje nameščenega sistema"
 msgid "Configuring storage"
 msgstr "Prilagajanje hrambe"
 
-#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:45
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:44
 msgid "Configuring {}"
 msgstr "Prilagajanje {}"
 
@@ -1544,15 +1544,11 @@ msgstr "Ne kaži tega pogovornega okna drugim izbranim datotečnim sistemom."
 msgid "Do you really want to quit?"
 msgstr "Ali zares želite zapustiti?"
 
-#: pyanaconda/modules/payloads/payload/dnf/initialization.py:138
-msgid "Downloading group metadata..."
-msgstr "Prenos metapodatkov skupine ..."
-
 #: pyanaconda/modules/payloads/payload/dnf/installation.py:256
 msgid "Downloading packages"
 msgstr "Prenašanje paketov"
 
-#: pyanaconda/modules/payloads/payload/dnf/download_progress.py:67
+#: pyanaconda/modules/payloads/payload/dnf/download_progress.py:116
 #, python-brace-format
 msgid ""
 "Downloading {total_files} RPMs, {downloaded_size} / {total_size} "
@@ -1772,11 +1768,6 @@ msgstr "Dodajanje naprave ni uspelo."
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1035
 msgid "Failed to add new device."
 msgstr "Neuspelo dodajanje nove naprave."
-
-#: pyanaconda/modules/payloads/payload/dnf/repositories.py:226
-#, python-brace-format
-msgid "Failed to add the '{name}' repository: {details}"
-msgstr "Ni bilo mogoče dodati repozitorija '{name}': {details}"
 
 #: pyanaconda/modules/storage/partitioning/interactive/change_device.py:93
 msgid "Failed to change a device."
@@ -2346,7 +2337,7 @@ msgid "Installing the software"
 msgstr "Nameščanje programja"
 
 #: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:344
-#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:43
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:42
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_manager.py:208
 msgid "Installing {}"
 msgstr "Nameščanje {}"
@@ -2551,6 +2542,12 @@ msgstr "Živi tarball"
 #: data/liveinst/liveinst-setup.desktop:3
 msgid "Liveinst Setup"
 msgstr "Nastavitev živega nameščanja"
+
+#: pyanaconda/modules/payloads/payload/dnf/initialization.py:117
+#, fuzzy
+#| msgid "Local repositories"
+msgid "Loading repositories..."
+msgstr "Krajevna skladišča"
 
 #: pyanaconda/ui/gui/spokes/storage.glade:115
 msgid "Local Standard Disks"
@@ -2943,7 +2940,7 @@ msgstr "Ni najdenih naprav za priključitev"
 msgid "No network devices available"
 msgstr "Omrežne naprave niso na voljo"
 
-#: pyanaconda/modules/payloads/payload/dnf/initialization.py:268
+#: pyanaconda/modules/payloads/payload/dnf/initialization.py:244
 msgid "No repository is configured."
 msgstr "Nobeno skladišče ni nastavljeno."
 
@@ -3245,7 +3242,7 @@ msgstr "Poti"
 msgid "Performing post-installation Flatpak tasks"
 msgstr "Izvajanje ponamestilnih Flatpak nalog"
 
-#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:49
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:48
 #: pyanaconda/modules/boss/installation.py:724
 msgid "Performing post-installation setup tasks"
 msgstr "Izvajanje ponamestilnih opravil nastavljanja"
@@ -4198,17 +4195,9 @@ msgstr ""
 msgid "Software selection"
 msgstr "Izbira programja"
 
-#: pyanaconda/modules/payloads/payload/dnf/validation.py:63
+#: pyanaconda/modules/payloads/payload/dnf/validation.py:56
 msgid "Some of the repomd.xml files have changed or are unreachable."
 msgstr "Nekatere datoteke repomd.xml so bile spremenjene ali so nedosegljive."
-
-#: pyanaconda/modules/payloads/payload/dnf/dnf_manager.py:558
-msgid "Some packages, groups or modules are broken."
-msgstr "Nekaj paketov, skupin ali modulov je pokvarjenih."
-
-#: pyanaconda/modules/payloads/payload/dnf/dnf_manager.py:554
-msgid "Some packages, groups or modules are missing."
-msgstr "Nekaj paketov, skupin ali modulov manjka."
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:224
 #: pyanaconda/ui/tui/spokes/software_selection.py:180
@@ -4365,7 +4354,7 @@ msgstr ""
 "Systemd-boot ni mogoče uporabiti s trenutno vrsto koristne obremenitve. "
 "Izberite namestitveni medij, ki podpira namestitev paketa."
 
-#: pyanaconda/modules/storage/bootloader/efi.py:230
+#: pyanaconda/modules/storage/bootloader/efi.py:217
 msgid "Systemd-boot is not supported on this platform"
 msgstr "Systemd-boot na tej platformi ni podprt"
 
@@ -4480,14 +4469,14 @@ msgstr ""
 "Območje 'swap' na vašem računalniku uporablja operacijski\n"
 "sistem, ko mu zmanjkuje hitrega pomnilnika."
 
-#: pyanaconda/modules/payloads/payload/dnf/repositories.py:148
+#: pyanaconda/modules/payloads/payload/dnf/repositories.py:147
 #, python-brace-format
 msgid "The '{name}' repository has no mirror, baseurl or metalink set."
 msgstr ""
 "Skladišče '{name}' nima nastavljenega zrcalnega strežnika, naslova baseurl "
 "ali metapovezave."
 
-#: pyanaconda/modules/payloads/payload/dnf/repositories.py:167
+#: pyanaconda/modules/payloads/payload/dnf/repositories.py:166
 #, python-brace-format
 msgid "The '{name}' repository uses an unsupported protocol."
 msgstr "Skladišče '{name}' uporablja nepodprt protokol."
@@ -4496,7 +4485,7 @@ msgstr "Skladišče '{name}' uporablja nepodprt protokol."
 msgid "The '{}' repository is invalid: {}"
 msgstr "Hramba '{}' je neveljavna: {}"
 
-#: pyanaconda/modules/payloads/payload/dnf/repositories.py:243
+#: pyanaconda/modules/payloads/payload/dnf/repositories.py:237
 msgid "The '{}' repository is not one of the pre-defined repositories."
 msgstr "Repozitorij '{}' ni en od vnaprej določenih repozitorijev."
 
@@ -4692,10 +4681,15 @@ msgstr ""
 "<b>%(initiatorName)s</b> z naslovom IP portala <b>%(portalAddress)s</b>.  "
 "Izberite, v katera vozlišča se želite prijaviti:"
 
-#: pyanaconda/modules/payloads/payload/dnf/dnf_manager.py:585
+#: pyanaconda/modules/payloads/payload/dnf/dnf_manager.py:673
+#, fuzzy
+#| msgid ""
+#| "The following software marked for installation has errors.\n"
+#| "This is likely caused by an error with your installation source."
 msgid ""
 "The following software marked for installation has errors.\n"
-"This is likely caused by an error with your installation source."
+"This is likely caused by an error with your installation source.\n"
+"\n"
 msgstr ""
 "Naslednje programje označeno za nameščanje ima napake.\n"
 "To je verjetno povzročeno zaradi napake na viru nameščanja."
@@ -7288,6 +7282,19 @@ msgstr "{}, priklopljen kot {}"
 #: pyanaconda/core/constants.py:221
 msgid "{}. {}"
 msgstr "{}. {}"
+
+#~ msgid "Downloading group metadata..."
+#~ msgstr "Prenos metapodatkov skupine ..."
+
+#, python-brace-format
+#~ msgid "Failed to add the '{name}' repository: {details}"
+#~ msgstr "Ni bilo mogoče dodati repozitorija '{name}': {details}"
+
+#~ msgid "Some packages, groups or modules are broken."
+#~ msgstr "Nekaj paketov, skupin ali modulov je pokvarjenih."
+
+#~ msgid "Some packages, groups or modules are missing."
+#~ msgstr "Nekaj paketov, skupin ali modulov manjka."
 
 #, python-brace-format
 #~ msgid ""

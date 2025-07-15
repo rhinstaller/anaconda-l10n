@@ -38,7 +38,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2025-07-12 01:45+0000\n"
+"POT-Creation-Date: 2025-07-15 01:49+0000\n"
 "PO-Revision-Date: 2025-06-23 09:53+0000\n"
 "Last-Translator: 김인수 <simmon@nplob.com>\n"
 "Language-Team: Korean <https://translate.fedoraproject.org/projects/anaconda/"
@@ -1152,7 +1152,7 @@ msgstr "설치된 시스템 설정 중"
 msgid "Configuring storage"
 msgstr "저장소 구성"
 
-#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:45
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:44
 msgid "Configuring {}"
 msgstr "{} 구성 중"
 
@@ -1532,15 +1532,11 @@ msgstr "다른 선택된 파일 시스템에 대해 이 대화 상자를 표시�
 msgid "Do you really want to quit?"
 msgstr "정말로 종료하시겠습니까?"
 
-#: pyanaconda/modules/payloads/payload/dnf/initialization.py:138
-msgid "Downloading group metadata..."
-msgstr "그룹 메타자료 내려받기 중..."
-
 #: pyanaconda/modules/payloads/payload/dnf/installation.py:256
 msgid "Downloading packages"
 msgstr "꾸러미 내려 받는 중"
 
-#: pyanaconda/modules/payloads/payload/dnf/download_progress.py:67
+#: pyanaconda/modules/payloads/payload/dnf/download_progress.py:116
 #, python-brace-format
 msgid ""
 "Downloading {total_files} RPMs, {downloaded_size} / {total_size} "
@@ -1757,11 +1753,6 @@ msgstr "장치를 추가하지 못했습니다."
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1035
 msgid "Failed to add new device."
 msgstr "새 장치를 추가하지 못했습니다."
-
-#: pyanaconda/modules/payloads/payload/dnf/repositories.py:226
-#, python-brace-format
-msgid "Failed to add the '{name}' repository: {details}"
-msgstr "'{name}' 저장소를 추가하는데 실패함: {details}"
 
 #: pyanaconda/modules/storage/partitioning/interactive/change_device.py:93
 msgid "Failed to change a device."
@@ -2326,7 +2317,7 @@ msgid "Installing the software"
 msgstr "소프트웨어 설치 중"
 
 #: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:344
-#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:43
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:42
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_manager.py:208
 msgid "Installing {}"
 msgstr "{} 설치 중"
@@ -2529,6 +2520,12 @@ msgstr "라이브 타볼(Live tarball)"
 #: data/liveinst/liveinst-setup.desktop:3
 msgid "Liveinst Setup"
 msgstr "라이브설치 설정"
+
+#: pyanaconda/modules/payloads/payload/dnf/initialization.py:117
+#, fuzzy
+#| msgid "Local repositories"
+msgid "Loading repositories..."
+msgstr "로컬 저장소"
 
 #: pyanaconda/ui/gui/spokes/storage.glade:115
 msgid "Local Standard Disks"
@@ -2920,7 +2917,7 @@ msgstr "적재 할 수 있는 장치를 찾을 수 없음"
 msgid "No network devices available"
 msgstr "사용 가능한 네트워크 장치가 없음"
 
-#: pyanaconda/modules/payloads/payload/dnf/initialization.py:268
+#: pyanaconda/modules/payloads/payload/dnf/initialization.py:244
 msgid "No repository is configured."
 msgstr "저장소가 구성되지 않았습니다."
 
@@ -3216,7 +3213,7 @@ msgstr "경로"
 msgid "Performing post-installation Flatpak tasks"
 msgstr "Flatpak tasks 설치 후 수행 중"
 
-#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:49
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:48
 #: pyanaconda/modules/boss/installation.py:724
 msgid "Performing post-installation setup tasks"
 msgstr "설치 후 설정 작업 수행 중"
@@ -4159,17 +4156,9 @@ msgstr "순간찍기: 원점(순간찍기 \"{}\"의)은 유효한 씬 LV 장치�
 msgid "Software selection"
 msgstr "소프트웨어 선택"
 
-#: pyanaconda/modules/payloads/payload/dnf/validation.py:63
+#: pyanaconda/modules/payloads/payload/dnf/validation.py:56
 msgid "Some of the repomd.xml files have changed or are unreachable."
 msgstr "repomd.xml 파일의 일부는 변경되었거나 연결 할 수 없습니다."
-
-#: pyanaconda/modules/payloads/payload/dnf/dnf_manager.py:558
-msgid "Some packages, groups or modules are broken."
-msgstr "일부 꾸러미, 그룹 또는 모듈이 손상되었습니다."
-
-#: pyanaconda/modules/payloads/payload/dnf/dnf_manager.py:554
-msgid "Some packages, groups or modules are missing."
-msgstr "일부 꾸러미, 그룹 또는 모듈이 누락되었습니다."
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:224
 #: pyanaconda/ui/tui/spokes/software_selection.py:180
@@ -4323,7 +4312,7 @@ msgstr ""
 "Systemd-boot는 현재 전송 자료를 사용 할 수 없습니다. 꾸러미 설치를 지원하는 "
 "설치 미디어를 선택하세요."
 
-#: pyanaconda/modules/storage/bootloader/efi.py:230
+#: pyanaconda/modules/storage/bootloader/efi.py:217
 msgid "Systemd-boot is not supported on this platform"
 msgstr "System-boot는 이와 같은 기술환경에서 지원되지 않습니다"
 
@@ -4437,13 +4426,13 @@ msgstr ""
 "사용중인 컴퓨터가 메모리 부족 상태에서 실행되고 있을 경우\n"
 "운영 체제는 'swap'영역을 사용합니다."
 
-#: pyanaconda/modules/payloads/payload/dnf/repositories.py:148
+#: pyanaconda/modules/payloads/payload/dnf/repositories.py:147
 #, python-brace-format
 msgid "The '{name}' repository has no mirror, baseurl or metalink set."
 msgstr ""
 "'{name}' 저장소는 미러, baseurl 또는 메타링크 구성을 가지고 있지 않습니다."
 
-#: pyanaconda/modules/payloads/payload/dnf/repositories.py:167
+#: pyanaconda/modules/payloads/payload/dnf/repositories.py:166
 #, python-brace-format
 msgid "The '{name}' repository uses an unsupported protocol."
 msgstr "'{name}' 저장소는 지원되지 않는 통신규약을 사용합니다."
@@ -4452,7 +4441,7 @@ msgstr "'{name}' 저장소는 지원되지 않는 통신규약을 사용합니�
 msgid "The '{}' repository is invalid: {}"
 msgstr "'{}' 저장소는 유효하지 않습니다: {}"
 
-#: pyanaconda/modules/payloads/payload/dnf/repositories.py:243
+#: pyanaconda/modules/payloads/payload/dnf/repositories.py:237
 msgid "The '{}' repository is not one of the pre-defined repositories."
 msgstr "'{}' 저장소는 사전-정의된 저장소 중의 하나가 아닙니다."
 
@@ -4646,10 +4635,15 @@ msgstr ""
 "<b>%(initiatorName)s</b>인 노드를 발견했습니다.  로그인할 노드를 선택해주세"
 "요.:"
 
-#: pyanaconda/modules/payloads/payload/dnf/dnf_manager.py:585
+#: pyanaconda/modules/payloads/payload/dnf/dnf_manager.py:673
+#, fuzzy
+#| msgid ""
+#| "The following software marked for installation has errors.\n"
+#| "This is likely caused by an error with your installation source."
 msgid ""
 "The following software marked for installation has errors.\n"
-"This is likely caused by an error with your installation source."
+"This is likely caused by an error with your installation source.\n"
+"\n"
 msgstr ""
 "다음과 같은 선택된 소프트웨어들을 설치하는 중에 오류가 있습니다.\n"
 "설치 원본에 오류가 있을 수도 있습니다."
@@ -7194,6 +7188,19 @@ msgstr "{}로 적재된 {}"
 #: pyanaconda/core/constants.py:221
 msgid "{}. {}"
 msgstr "{}. {}"
+
+#~ msgid "Downloading group metadata..."
+#~ msgstr "그룹 메타자료 내려받기 중..."
+
+#, python-brace-format
+#~ msgid "Failed to add the '{name}' repository: {details}"
+#~ msgstr "'{name}' 저장소를 추가하는데 실패함: {details}"
+
+#~ msgid "Some packages, groups or modules are broken."
+#~ msgstr "일부 꾸러미, 그룹 또는 모듈이 손상되었습니다."
+
+#~ msgid "Some packages, groups or modules are missing."
+#~ msgstr "일부 꾸러미, 그룹 또는 모듈이 누락되었습니다."
 
 #, python-brace-format
 #~ msgid ""

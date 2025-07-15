@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2025-07-12 01:45+0000\n"
+"POT-Creation-Date: 2025-07-15 01:49+0000\n"
 "PO-Revision-Date: 2024-11-17 22:25+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://translate.fedoraproject.org/projects/anaconda/"
@@ -1138,7 +1138,7 @@ msgstr "כעת בהגדרת המערכת שהותקנה"
 msgid "Configuring storage"
 msgstr "מוגדר אחסון"
 
-#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:45
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:44
 msgid "Configuring {}"
 msgstr "{} מוגדר"
 
@@ -1513,15 +1513,11 @@ msgstr "_אין להציג תיבת דו־שיח זו עבור מערכות קב
 msgid "Do you really want to quit?"
 msgstr "האם אכן ברצונך לצאת?"
 
-#: pyanaconda/modules/payloads/payload/dnf/initialization.py:138
-msgid "Downloading group metadata..."
-msgstr "מוריד מידע קבוצה..."
-
 #: pyanaconda/modules/payloads/payload/dnf/installation.py:256
 msgid "Downloading packages"
 msgstr "מוריד חבילות"
 
-#: pyanaconda/modules/payloads/payload/dnf/download_progress.py:67
+#: pyanaconda/modules/payloads/payload/dnf/download_progress.py:116
 #, python-brace-format
 msgid ""
 "Downloading {total_files} RPMs, {downloaded_size} / {total_size} "
@@ -1732,11 +1728,6 @@ msgstr "הוספת התקן נכשלה."
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1035
 msgid "Failed to add new device."
 msgstr "הוספת התקן חדש נכשלה."
-
-#: pyanaconda/modules/payloads/payload/dnf/repositories.py:226
-#, python-brace-format
-msgid "Failed to add the '{name}' repository: {details}"
-msgstr "הוספת המאגר ‚{name}’ נכשלה: {details}"
 
 #: pyanaconda/modules/storage/partitioning/interactive/change_device.py:93
 msgid "Failed to change a device."
@@ -2293,7 +2284,7 @@ msgid "Installing the software"
 msgstr "התוכנה מותקנת"
 
 #: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:344
-#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:43
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:42
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_manager.py:208
 msgid "Installing {}"
 msgstr "{} בהליכי התקנה"
@@ -2495,6 +2486,12 @@ msgstr "Tarball (ארכיון זפת) חי"
 #: data/liveinst/liveinst-setup.desktop:3
 msgid "Liveinst Setup"
 msgstr "הכנת Liveinst"
+
+#: pyanaconda/modules/payloads/payload/dnf/initialization.py:117
+#, fuzzy
+#| msgid "Local repositories"
+msgid "Loading repositories..."
+msgstr "מאגרים מקומיים"
 
 #: pyanaconda/ui/gui/spokes/storage.glade:115
 msgid "Local Standard Disks"
@@ -2884,7 +2881,7 @@ msgstr "לא נמצאו התקנים שניתן לעגן"
 msgid "No network devices available"
 msgstr "אין התקני רשת זמינים"
 
-#: pyanaconda/modules/payloads/payload/dnf/initialization.py:268
+#: pyanaconda/modules/payloads/payload/dnf/initialization.py:244
 msgid "No repository is configured."
 msgstr "לא מוגדר מאגר."
 
@@ -3175,7 +3172,7 @@ msgstr "נתיבים"
 msgid "Performing post-installation Flatpak tasks"
 msgstr "מתבצעות משימות שלאחר התקנת Flatpak"
 
-#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:49
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:48
 #: pyanaconda/modules/boss/installation.py:724
 msgid "Performing post-installation setup tasks"
 msgstr "כעת בביצוע משימות ההכנה שלאחר התקנה"
@@ -4116,17 +4113,9 @@ msgstr "תמונת מצב: המקור „{}” של תמונת המצב „{}”
 msgid "Software selection"
 msgstr "בחירת תכנה"
 
-#: pyanaconda/modules/payloads/payload/dnf/validation.py:63
+#: pyanaconda/modules/payloads/payload/dnf/validation.py:56
 msgid "Some of the repomd.xml files have changed or are unreachable."
 msgstr "כמה מקובצי ה־repomod.xml השתנו או שאינם נגישים."
-
-#: pyanaconda/modules/payloads/payload/dnf/dnf_manager.py:558
-msgid "Some packages, groups or modules are broken."
-msgstr "חלק מהחבילות, הקבוצות או המודולים פגומים."
-
-#: pyanaconda/modules/payloads/payload/dnf/dnf_manager.py:554
-msgid "Some packages, groups or modules are missing."
-msgstr "חלק מהחבילות, הקבוצות או המודולים חסרים."
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:224
 #: pyanaconda/ui/tui/spokes/software_selection.py:180
@@ -4278,7 +4267,7 @@ msgstr ""
 "אי אפשר להשתמש ב־systemd-boot עם סוג המטען הנוכחי. יש לבחור אמצעי התקנה "
 "שתומך בהתקנת חבילות."
 
-#: pyanaconda/modules/storage/bootloader/efi.py:230
+#: pyanaconda/modules/storage/bootloader/efi.py:217
 msgid "Systemd-boot is not supported on this platform"
 msgstr "אין תמיכה ב־Systemd-boot בפלטפורמה הזאת"
 
@@ -4392,12 +4381,12 @@ msgstr ""
 "שטח ה־‚swap’ (החלפה) הוא התחום במחשב בו מערכת ההפעלה\n"
 "משתמשת בעת מחסור בזיכרון."
 
-#: pyanaconda/modules/payloads/payload/dnf/repositories.py:148
+#: pyanaconda/modules/payloads/payload/dnf/repositories.py:147
 #, python-brace-format
 msgid "The '{name}' repository has no mirror, baseurl or metalink set."
 msgstr "למאגר ‚{name}’ לא הוגדרו mirror,‏ baseurl או metalink."
 
-#: pyanaconda/modules/payloads/payload/dnf/repositories.py:167
+#: pyanaconda/modules/payloads/payload/dnf/repositories.py:166
 #, python-brace-format
 msgid "The '{name}' repository uses an unsupported protocol."
 msgstr "המאגר ‚{name}’ משתמש בפרוטוקול בלתי נתמך."
@@ -4406,7 +4395,7 @@ msgstr "המאגר ‚{name}’ משתמש בפרוטוקול בלתי נתמך.
 msgid "The '{}' repository is invalid: {}"
 msgstr "המאגר ‚%s’ שגוי: {}"
 
-#: pyanaconda/modules/payloads/payload/dnf/repositories.py:243
+#: pyanaconda/modules/payloads/payload/dnf/repositories.py:237
 msgid "The '{}' repository is not one of the pre-defined repositories."
 msgstr "המאגר ‚{}’ אינו אחד מהמאגרים המוגדרים מראש."
 
@@ -4596,10 +4585,15 @@ msgstr ""
 "ה־IP של שער הגישה <b>%(portalAddress)s</b>. נא לבחור לאילו מפרקים מעניין "
 "אותך להתחבר:"
 
-#: pyanaconda/modules/payloads/payload/dnf/dnf_manager.py:585
+#: pyanaconda/modules/payloads/payload/dnf/dnf_manager.py:673
+#, fuzzy
+#| msgid ""
+#| "The following software marked for installation has errors.\n"
+#| "This is likely caused by an error with your installation source."
 msgid ""
 "The following software marked for installation has errors.\n"
-"This is likely caused by an error with your installation source."
+"This is likely caused by an error with your installation source.\n"
+"\n"
 msgstr ""
 "בתכניות הבאות שסומנו להתקנה יש שגיאות.\n"
 "כנראה שזה קרה עקב שגיאה במקור ההתקנה שלך."
@@ -7126,6 +7120,19 @@ msgstr "{} מעוגן בתור {}"
 #: pyanaconda/core/constants.py:221
 msgid "{}. {}"
 msgstr "{}. {}"
+
+#~ msgid "Downloading group metadata..."
+#~ msgstr "מוריד מידע קבוצה..."
+
+#, python-brace-format
+#~ msgid "Failed to add the '{name}' repository: {details}"
+#~ msgstr "הוספת המאגר ‚{name}’ נכשלה: {details}"
+
+#~ msgid "Some packages, groups or modules are broken."
+#~ msgstr "חלק מהחבילות, הקבוצות או המודולים פגומים."
+
+#~ msgid "Some packages, groups or modules are missing."
+#~ msgstr "חלק מהחבילות, הקבוצות או המודולים חסרים."
 
 #, python-brace-format
 #~ msgid ""

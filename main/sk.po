@@ -25,7 +25,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2025-07-12 01:45+0000\n"
+"POT-Creation-Date: 2025-07-15 01:49+0000\n"
 "PO-Revision-Date: 2025-04-24 19:19+0000\n"
 "Last-Translator: Ondrej Sulek <feonsu@gmail.com>\n"
 "Language-Team: Slovak <https://translate.fedoraproject.org/projects/anaconda/"
@@ -1165,7 +1165,7 @@ msgstr "Konfiguruje sa nainštalovaný systém"
 msgid "Configuring storage"
 msgstr "Konfiguruje sa úložisko"
 
-#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:45
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:44
 msgid "Configuring {}"
 msgstr "Konfiguruje sa {}"
 
@@ -1546,15 +1546,11 @@ msgstr "_Nezobrazovať tento dialóg pre ostatné vybrané súborové systémy."
 msgid "Do you really want to quit?"
 msgstr "Naozaj chcete skončiť?"
 
-#: pyanaconda/modules/payloads/payload/dnf/initialization.py:138
-msgid "Downloading group metadata..."
-msgstr "Preberajú sa metaúdaje skupín..."
-
 #: pyanaconda/modules/payloads/payload/dnf/installation.py:256
 msgid "Downloading packages"
 msgstr "Preberajú sa balíky"
 
-#: pyanaconda/modules/payloads/payload/dnf/download_progress.py:67
+#: pyanaconda/modules/payloads/payload/dnf/download_progress.py:116
 #, python-brace-format
 msgid ""
 "Downloading {total_files} RPMs, {downloaded_size} / {total_size} "
@@ -1774,11 +1770,6 @@ msgstr "Nepodarilo sa pridať zariadenie."
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1035
 msgid "Failed to add new device."
 msgstr "Nepodarilo sa pridať nové zariadenie."
-
-#: pyanaconda/modules/payloads/payload/dnf/repositories.py:226
-#, python-brace-format
-msgid "Failed to add the '{name}' repository: {details}"
-msgstr "Nepodarilo sa pridať repozitár '{name}': {details}"
 
 #: pyanaconda/modules/storage/partitioning/interactive/change_device.py:93
 msgid "Failed to change a device."
@@ -2347,7 +2338,7 @@ msgid "Installing the software"
 msgstr "Inštaluje sa softvér"
 
 #: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:344
-#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:43
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:42
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_manager.py:208
 msgid "Installing {}"
 msgstr "Inštaluje sa {}"
@@ -2552,6 +2543,12 @@ msgstr "Živý tarball"
 #: data/liveinst/liveinst-setup.desktop:3
 msgid "Liveinst Setup"
 msgstr "Nastavenie Liveinst"
+
+#: pyanaconda/modules/payloads/payload/dnf/initialization.py:117
+#, fuzzy
+#| msgid "Local repositories"
+msgid "Loading repositories..."
+msgstr "Lokálne repozitáre"
 
 #: pyanaconda/ui/gui/spokes/storage.glade:115
 msgid "Local Standard Disks"
@@ -2946,7 +2943,7 @@ msgstr "Nenašli sa žiadne pripojiteľné zariadenia"
 msgid "No network devices available"
 msgstr "Nie sú dostupné žiadne sieťové zariadenia"
 
-#: pyanaconda/modules/payloads/payload/dnf/initialization.py:268
+#: pyanaconda/modules/payloads/payload/dnf/initialization.py:244
 msgid "No repository is configured."
 msgstr "Nie je nastavený žiadny repozitár."
 
@@ -3246,7 +3243,7 @@ msgstr "Cesty"
 msgid "Performing post-installation Flatpak tasks"
 msgstr "Vykonávajú sa poinštalačné úlohy Flatpaku"
 
-#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:49
+#: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:48
 #: pyanaconda/modules/boss/installation.py:724
 msgid "Performing post-installation setup tasks"
 msgstr "Vykonávajú sa poinštalačné úlohy inštalátora"
@@ -4199,17 +4196,9 @@ msgstr "Snímka: pôvod \"{}\" snímku \"{}\" nie je platné zariadenie thin LV.
 msgid "Software selection"
 msgstr "Výber softvéru"
 
-#: pyanaconda/modules/payloads/payload/dnf/validation.py:63
+#: pyanaconda/modules/payloads/payload/dnf/validation.py:56
 msgid "Some of the repomd.xml files have changed or are unreachable."
 msgstr "Niektoré súbory repomd.xml sa zmenili alebo sú nedostupné."
-
-#: pyanaconda/modules/payloads/payload/dnf/dnf_manager.py:558
-msgid "Some packages, groups or modules are broken."
-msgstr "Niektoré balíčky, skupiny alebo moduly sú poškodené."
-
-#: pyanaconda/modules/payloads/payload/dnf/dnf_manager.py:554
-msgid "Some packages, groups or modules are missing."
-msgstr "Niektoré balíčky, skupiny alebo moduly chýbajú."
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:224
 #: pyanaconda/ui/tui/spokes/software_selection.py:180
@@ -4365,7 +4354,7 @@ msgstr ""
 "Systemd-boot nemožno použiť s aktuálnym typom údajovej časti. Vyberte "
 "inštalačné médium, ktoré podporuje inštaláciu balíčkov."
 
-#: pyanaconda/modules/storage/bootloader/efi.py:230
+#: pyanaconda/modules/storage/bootloader/efi.py:217
 msgid "Systemd-boot is not supported on this platform"
 msgstr "Systemd-boot nie je podporovaný na tejto platforme."
 
@@ -4480,13 +4469,13 @@ msgstr ""
 "Oblasť „swap“ je miestom vo vašom počítači, ktoré\n"
 "je použité pri nedostatku pamäte."
 
-#: pyanaconda/modules/payloads/payload/dnf/repositories.py:148
+#: pyanaconda/modules/payloads/payload/dnf/repositories.py:147
 #, python-brace-format
 msgid "The '{name}' repository has no mirror, baseurl or metalink set."
 msgstr ""
 "Repozitár '{name}' nemá nastavené zrkadlo, základnú URL ani meta odkaz."
 
-#: pyanaconda/modules/payloads/payload/dnf/repositories.py:167
+#: pyanaconda/modules/payloads/payload/dnf/repositories.py:166
 #, python-brace-format
 msgid "The '{name}' repository uses an unsupported protocol."
 msgstr "Repozitár '{name}' používa nepodporovaný protokol."
@@ -4495,7 +4484,7 @@ msgstr "Repozitár '{name}' používa nepodporovaný protokol."
 msgid "The '{}' repository is invalid: {}"
 msgstr "Repozitár '{}' je neplatný: {}"
 
-#: pyanaconda/modules/payloads/payload/dnf/repositories.py:243
+#: pyanaconda/modules/payloads/payload/dnf/repositories.py:237
 msgid "The '{}' repository is not one of the pre-defined repositories."
 msgstr "Repozitár '{}' nie je jedným z preddefinovaných repozitárov."
 
@@ -4690,10 +4679,15 @@ msgstr ""
 "<b>%(initiatorName)s</b> pomocou IP adresy portálu  <b>%(portalAddress)s</"
 "b>. Vyberte uzly na ktoré sa chcete prihlásiť:"
 
-#: pyanaconda/modules/payloads/payload/dnf/dnf_manager.py:585
+#: pyanaconda/modules/payloads/payload/dnf/dnf_manager.py:673
+#, fuzzy
+#| msgid ""
+#| "The following software marked for installation has errors.\n"
+#| "This is likely caused by an error with your installation source."
 msgid ""
 "The following software marked for installation has errors.\n"
-"This is likely caused by an error with your installation source."
+"This is likely caused by an error with your installation source.\n"
+"\n"
 msgstr ""
 "Nasledovný softvér označený na inštaláciu obsahuje chyby. \n"
 "To je najčastejšie spôsobené chybou s vaším zdrojom inštalácie."
@@ -7289,6 +7283,19 @@ msgstr "{} pripojené ako {}"
 #: pyanaconda/core/constants.py:221
 msgid "{}. {}"
 msgstr "{}. {}"
+
+#~ msgid "Downloading group metadata..."
+#~ msgstr "Preberajú sa metaúdaje skupín..."
+
+#, python-brace-format
+#~ msgid "Failed to add the '{name}' repository: {details}"
+#~ msgstr "Nepodarilo sa pridať repozitár '{name}': {details}"
+
+#~ msgid "Some packages, groups or modules are broken."
+#~ msgstr "Niektoré balíčky, skupiny alebo moduly sú poškodené."
+
+#~ msgid "Some packages, groups or modules are missing."
+#~ msgstr "Niektoré balíčky, skupiny alebo moduly chýbajú."
 
 #, python-brace-format
 #~ msgid ""
