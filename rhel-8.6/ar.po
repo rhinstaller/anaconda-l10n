@@ -33,13 +33,14 @@
 # Katerina Koukiou <k.koukiou@gmail.com>, 2024.
 # joo es <johndevand@tutanota.com>, 2025.
 # joo es <jonnyse@users.noreply.translate.fedoraproject.org>, 2025.
+# عمّار عبدالله <ammar-dmour19@proton.me>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 29.19.2.17\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2022-02-23 19:45+0100\n"
-"PO-Revision-Date: 2025-06-05 07:45+0000\n"
-"Last-Translator: joo es <jonnyse@users.noreply.translate.fedoraproject.org>\n"
+"PO-Revision-Date: 2025-07-20 21:10+0000\n"
+"Last-Translator: عمّار عبدالله <ammar-dmour19@proton.me>\n"
 "Language-Team: Arabic <https://translate.fedoraproject.org/projects/anaconda/"
 "rhel-86/ar/>\n"
 "Language: ar\n"
@@ -48,7 +49,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Weblate 5.11.4\n"
+"X-Generator: Weblate 5.12.2\n"
 
 #: anaconda.py:378
 msgid "Unable to create PID file"
@@ -151,6 +152,12 @@ msgid ""
 "if you would like to secure the server.\n"
 "\n"
 msgstr ""
+"\n"
+"\n"
+"تحذير!!! خادم VNC يعمل دون كلمة مرور!\n"
+"يمكنك استخدام خيار الإقلاع password=<password>\n"
+"إن كنت ترغب بتأمين الخادم.\n"
+"\n"
 
 #: pyanaconda/vnc.py:269
 msgid ""
@@ -374,7 +381,7 @@ msgstr "عملية تثبيت %(productName)s %(productVersion)s"
 
 #: pyanaconda/network.py:111
 msgid "Host name cannot be None or an empty string."
-msgstr ""
+msgstr "لا يمكن أن يكون اسم المضيف لا شيء أو فارغا."
 
 #: pyanaconda/network.py:114
 msgid "Host name must be 255 or fewer characters in length."
@@ -382,7 +389,7 @@ msgstr ""
 
 #: pyanaconda/network.py:117
 msgid "Local host name must not end with period '.'."
-msgstr ""
+msgstr "ينبغي ألا ينتهي اسم المضيف المحلّي بنقطة '.'."
 
 #: pyanaconda/network.py:120
 msgid ""
@@ -567,10 +574,15 @@ msgid ""
 "\n"
 " The installer will now terminate."
 msgstr ""
+"توقف التثبيت بسبب مشكلة في العتاد. رسالة الخطأ هي:\n"
+"\n"
+"%s.\n"
+"\n"
+" سينتهي المُثبّت الآن."
 
 #: pyanaconda/exception.py:113
 msgid "Hardware error occurred"
-msgstr ""
+msgstr "حدث خطأ في العتاد"
 
 #: pyanaconda/exception.py:174
 #, python-format
@@ -1472,7 +1484,7 @@ msgstr "خطأ أثناء إعداد مصدر البرمجيات"
 #: pyanaconda/modules/payloads/source/closest_mirror/closest_mirror.py:45
 #: pyanaconda/ui/gui/spokes/installation_source.glade:794
 msgid "Closest mirror"
-msgstr "أقرب نظير"
+msgstr "أقرب مرآة"
 
 #: pyanaconda/ui/tui/spokes/installation_source.py:147
 msgid "Choose an installation source type."
@@ -2932,11 +2944,11 @@ msgstr "ا_ضبطه كجهاز إقلاع"
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.py:82
 msgctxt "GUI|Advanced Storage|NVDIM"
 msgid "No device to be reconfigured selected."
-msgstr ""
+msgstr "لم يتم تحديد أي جهاز مطلوب إعادة تكوينه."
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.py:174
 msgid "Rescanning disks finished."
-msgstr ""
+msgstr "تم الانتهاء من إعادة مسح الأقراص."
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.py:158
 #, python-format
@@ -3002,7 +3014,7 @@ msgstr ""
 
 #: pyanaconda/payload/rpmostreepayload.py:139
 msgid "Writing objects"
-msgstr "يكتب الكوائن"
+msgstr "كتابة الكائنات"
 
 #: pyanaconda/payload/rpmostreepayload.py:238
 #, python-format
@@ -3025,16 +3037,12 @@ msgid "Deployment complete: %s"
 msgstr ""
 
 #: pyanaconda/payload/rpmostreepayload.py:525
-#, fuzzy
-#| msgid "Starting package installation process"
 msgid "Starting Flatpak installation"
-msgstr "يجري بدء عملية تثبيت الحزمة"
+msgstr "بدء تثبيت Flatpak"
 
 #: pyanaconda/payload/rpmostreepayload.py:542
-#, fuzzy
-#| msgid "Performing post-installation setup tasks"
 msgid "Post-installation flatpak tasks"
-msgstr "يجري تهيئة مهمات بعد التثبيت"
+msgstr "مهام ما بعد التثبيت Flatpak"
 
 #: pyanaconda/payload/rpmostreepayload.py:548
 msgid "Flatpak installation has finished"
@@ -3051,7 +3059,7 @@ msgstr "خطأ في تنزيل معلومات الحزم"
 #: pyanaconda/payload/flatpak.py:205
 #, python-format
 msgid "Installing %(flatpak_name)s"
-msgstr "يثبّت %(flatpak_name)s"
+msgstr "تثبيت %(flatpak_name)s"
 
 #: pyanaconda/payload/live/payload_liveos.py:96
 #: pyanaconda/payload/live/payload_base.py:80
@@ -3101,6 +3109,8 @@ msgid ""
 "Downloading %(total_files)s RPMs, %(downloaded)s / %(total_size)s "
 "(%(percent)d%%) done."
 msgstr ""
+"جاري تنزيل %(total_files)s حزمة RPM، %(downloaded)s / %(total_size)s "
+"(%(percent)d%%) مكتمل."
 
 #: pyanaconda/modules/subscription/runtime.py:344
 msgid "Unregistration failed."
@@ -3238,7 +3248,7 @@ msgstr "الجهاز \"{}\" المعطى في قائمة أجهزة clearpart غ
 #: pyanaconda/modules/storage/kickstart.py:134
 #: pyanaconda/modules/storage/kickstart.py:139
 msgid "Disk \"{}\" given in ignoredisk command does not exist."
-msgstr "القرص \"{}\" المُعطى في أمر ignoredisk غير موجود."
+msgstr "القرص \"{}\" المُعطى في أمر كليربارت clearpart غير موجود."
 
 #: pyanaconda/modules/storage/kickstart.py:149
 msgid "NIC \"{}\" given in fcoe command does not exist."
@@ -3263,11 +3273,11 @@ msgstr ""
 #: pyanaconda/modules/storage/kickstart.py:228
 #: pyanaconda/modules/storage/kickstart.py:240
 msgid "Namespace \"{}\" given in nvdimm command was not found."
-msgstr ""
+msgstr "لم يتم العثور على مساحة الاسم \"{}\" الواردة في أمر nvdimm."
 
 #: pyanaconda/modules/storage/kickstart.py:245
 msgid "Disk \"{}\" given in nvdimm command does not exist."
-msgstr "القرص \"{}\" المُعطى في أمر nvdimm غير موجود."
+msgstr "القرص \"{}\" المُعطى في أمر كليربارت clearpart غير موجود."
 
 #: pyanaconda/modules/storage/kickstart.py:258
 msgid ""
@@ -4100,7 +4110,7 @@ msgstr "مستودعات محلية"
 
 #: pyanaconda/modules/payloads/source/nfs/nfs.py:73
 msgid "NFS server {}"
-msgstr "خادوم NFS ‏{}"
+msgstr "خادم NFS ‏{}"
 
 #: pyanaconda/modules/payloads/source/live_os/live_os.py:59
 msgid "Live OS"
@@ -4274,6 +4284,8 @@ msgid ""
 "Support for this hardware has been removed in this major OS release. Please "
 "check theremoved functionality section of the release notes."
 msgstr ""
+"توقف دعم هذا العتاد في هذه الإصدارة العظمى من نظام التشغيل. رجاءً راجع قسم "
+"الوظائف التي أزيلت من ملاحظات الإصدار."
 
 #: pyanaconda/core/constants.py:164
 msgid ""
@@ -4303,6 +4315,10 @@ msgid ""
 "red.ht/rhel-smt to understand your potential risks and learn about other "
 "ways to mitigate these risks."
 msgstr ""
+"تقنية خيوط التنفيذ المتعددة الآنية (SMT) يمكن أن تحسن الأداء لعدد من الأحمال "
+"التنفيذية، إلا أنها تجعلك عرضة لعدد من المشاكل الأمنية المعلنة. بإمكانك "
+"إيقاف هذه التقنية مما سيؤثر على الأداء. إذا اخترت ترك التقنية مفعّلة، رجاءً "
+"اقرأ https://red.ht/rhel-smt لتفهم المخاطر المحتملة وطرق تفاديها."
 
 #: pyanaconda/core/constants.py:190
 msgid ""
@@ -4312,6 +4328,10 @@ msgid ""
 "rhel-smt to understand potential risks and learn about ways to mitigate "
 "these risks."
 msgstr ""
+"تقنية خيوط التنفيذ المتعددة الآنية (SMT) يمكن أن تحسن الأداء لعدد من الأحمال "
+"التنفيذية، إلا أنها تجعلك عرضة لعدد من المشاكل الأمنية المعلنة. بإمكانك "
+"إيقاف هذه التقنية مما سيؤثر على الأداء. رجاءً اقرأ https://red.ht/rhel-smt "
+"لتفهم المخاطر المحتملة وطرق تفاديها."
 
 #: pyanaconda/core/constants.py:206
 msgid "The password is empty."
