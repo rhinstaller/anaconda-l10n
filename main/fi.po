@@ -30,8 +30,8 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
 "POT-Creation-Date: 2025-07-16 01:46+0000\n"
-"PO-Revision-Date: 2025-04-15 16:55+0000\n"
-"Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
+"PO-Revision-Date: 2025-07-21 09:48+0000\n"
+"Last-Translator: Ricky Tigg <ricky.tigg@gmail.com>\n"
 "Language-Team: Finnish <https://translate.fedoraproject.org/projects/"
 "anaconda/master/fi/>\n"
 "Language: fi\n"
@@ -39,7 +39,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10.4\n"
+"X-Generator: Weblate 5.12.2\n"
 
 #: pyanaconda/startup_utils.py:664
 #, python-format
@@ -48,6 +48,9 @@ msgid ""
 "An error occurred during certificate import from kickstart:\n"
 "%s\n"
 msgstr ""
+"\n"
+"Tapahtui virhe varmenteen tuonnissa Kickstartista:\n"
+"%s\n"
 
 #: pyanaconda/kickstart.py:329
 #, python-format
@@ -732,12 +735,6 @@ msgid "Assign mount points"
 msgstr "Määritä liitoskohdat"
 
 #: pyanaconda/modules/storage/checker/utils.py:346
-#, fuzzy
-#| msgid ""
-#| "At least one of your swap devices does not have a UUID, which is common "
-#| "in swap space created using older versions of mkswap. These devices will "
-#| "be referred to by device path in /etc/fstab, which is not ideal since "
-#| "device paths can change under a variety of circumstances. "
 msgid ""
 "At least one of your swap devices does not have a UUID, which is common in "
 "swap space created using older versions of mkswap. These devices will be "
@@ -747,7 +744,7 @@ msgstr ""
 "Ainakin yhdellä sivutus-laitteella ei ole UUID:tä, mikä on tyypillistä "
 "vanhemmilla mkswapin versioilla tehdyille sivutus-laitteille. Näihin "
 "laitteisiin viitataan /etc/fstab-tiedostossa laitepolulla, joka ei ole paras "
-"tapa, koska laitepolut voivat muuttua eri syistä. "
+"tapa, koska laitepolut voivat muuttua eri syistä."
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1075
 msgid "Attaching subscription..."
@@ -866,7 +863,7 @@ msgstr ""
 
 #: pyanaconda/modules/storage/partitioning/automatic/automatic_partitioning.py:157
 msgid "Both boot loader partition '{}' and MBR partitioned disk found"
-msgstr ""
+msgstr "Sekä käynnistyslataimen osio '{}' että MBR-osioitu levy löytyivät"
 
 #: pyanaconda/ui/gui/spokes/network.py:295
 #: pyanaconda/ui/gui/spokes/network.glade:19
@@ -2549,10 +2546,8 @@ msgid "Liveinst Setup"
 msgstr "Liveinst:n asettaminen"
 
 #: pyanaconda/modules/payloads/payload/dnf/initialization.py:117
-#, fuzzy
-#| msgid "Local repositories"
 msgid "Loading repositories..."
-msgstr "Paikalliset tietovarastot"
+msgstr "Ladataan tietovarastot..."
 
 #: pyanaconda/ui/gui/spokes/storage.glade:115
 msgid "Local Standard Disks"
@@ -2695,10 +2690,9 @@ msgid "Move selected layout _up"
 msgstr "Siirrä valittu asettelu _ylöspäin"
 
 #: pyanaconda/modules/storage/partitioning/automatic/automatic_partitioning.py:138
-#, fuzzy, python-format
-#| msgid "Multiple boot loader partitions required: %s"
+#, python-format
 msgid "Multiple boot loader partitions required: %(bootparts)s"
-msgstr "Tarvitaan useita käynnistyslataimen osioita: %s"
+msgstr "Tarvitaan useita käynnistyslataimen osioita: %(bootparts)s"
 
 #: pyanaconda/modules/storage/partitioning/automatic/automatic_partitioning.py:152
 msgid "Multiple devices found for boot loader partition '{}': {}"
@@ -4049,17 +4043,14 @@ msgid "Selected disks"
 msgstr "Valitut levyt"
 
 #: pyanaconda/modules/storage/checker/utils.py:541
-#, fuzzy, python-brace-format
-#| msgid ""
-#| "Selected disks {} contain volume group '{}' that also uses further "
-#| "unselected disks. You must select or de-select all these disks as a set."
+#, python-brace-format
 msgid ""
 "Selected disks {disks} contain volume group '{vg}' that also uses further "
 "unselected disks. You must select or de-select all these disks as a set."
 msgstr ""
-"Valitut levyt {} sisältävät taltioryhmän '{}' , joka käyttää myös muita "
-"valitsemattomia levyjä. Sinun on valittava kaikki nämä levyt joukosta tai "
-"poistettava niiden valinta."
+"Valitut levyt {disks} sisältävät taltioryhmän '{vg}' , joka käyttää myös "
+"muita valitsemattomia levyjä. Sinun on valittava tai poistettava kaikkien "
+"näiden levyjen valinta yhtenä joukkona."
 
 #: pyanaconda/ui/lib/software.py:98
 msgid "Selected environment is not valid"
@@ -4691,17 +4682,14 @@ msgstr ""
 "<b>%(portalAddress)s</b>. Valitse solmut, joihin haluat kirjautua:"
 
 #: pyanaconda/modules/payloads/payload/dnf/dnf_manager.py:673
-#, fuzzy
-#| msgid ""
-#| "The following software marked for installation has errors.\n"
-#| "This is likely caused by an error with your installation source."
 msgid ""
 "The following software marked for installation has errors.\n"
 "This is likely caused by an error with your installation source.\n"
 "\n"
 msgstr ""
 "Seuraavassa asennettavaksi merkityssä ohjelmistossa on virheitä.\n"
-"Tämä johtuu todennäköisesti asennuslähteen virheestä."
+"Tämä johtuu todennäköisesti asennuslähteen virheestä.\n"
+"\n"
 
 #: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:73
 msgid ""
@@ -5503,10 +5491,9 @@ msgid "WWPN:"
 msgstr "WWPN:"
 
 #: pyanaconda/ui/tui/spokes/installation_progress.py:97
-#, fuzzy, python-format
-#| msgid "Waiting for %s threads to finish"
+#, python-format
 msgid "Waiting for %s threads to finish..."
-msgstr "Odotetaan %s-säikeiden valmistumista"
+msgstr "Odotetaan %s-säikeiden valmistumista..."
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:272
 msgid ""
