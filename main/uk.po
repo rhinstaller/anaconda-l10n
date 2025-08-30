@@ -26,7 +26,7 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
 "POT-Creation-Date: 2025-08-29 01:25+0000\n"
-"PO-Revision-Date: 2025-04-10 15:43+0000\n"
+"PO-Revision-Date: 2025-08-30 08:48+0000\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <https://translate.fedoraproject.org/projects/"
 "anaconda/master/uk/>\n"
@@ -36,7 +36,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.10.4\n"
+"X-Generator: Weblate 5.13\n"
 
 #: pyanaconda/startup_utils.py:664
 #, python-format
@@ -741,12 +741,6 @@ msgid "Assign mount points"
 msgstr "Призначити точки монтування"
 
 #: pyanaconda/modules/storage/checker/utils.py:346
-#, fuzzy
-#| msgid ""
-#| "At least one of your swap devices does not have a UUID, which is common "
-#| "in swap space created using older versions of mkswap. These devices will "
-#| "be referred to by device path in /etc/fstab, which is not ideal since "
-#| "device paths can change under a variety of circumstances. "
 msgid ""
 "At least one of your swap devices does not have a UUID, which is common in "
 "swap space created using older versions of mkswap. These devices will be "
@@ -757,7 +751,7 @@ msgstr ""
 "(свопінґу) не має UUID. Причиною цього може бути створення області за "
 "допомогою застарілої версії mkswap. Тані пристрої визначатимуться за шляхом "
 "до пристрою у /etc/fstab, що не є ідеальним, оскільки шлях до такого "
-"пристрою може змінитися через певні обставини. "
+"пристрою може змінитися через певні обставини."
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1075
 msgid "Attaching subscription..."
@@ -877,6 +871,7 @@ msgstr ""
 #: pyanaconda/modules/storage/partitioning/automatic/automatic_partitioning.py:157
 msgid "Both boot loader partition '{}' and MBR partitioned disk found"
 msgstr ""
+"Виявлено одразу і розділ завантажувача «{}», і поділений на розділи диск MBR"
 
 #: pyanaconda/ui/gui/spokes/network.py:295
 #: pyanaconda/ui/gui/spokes/network.glade:19
@@ -2571,10 +2566,8 @@ msgid "Liveinst Setup"
 msgstr "Налаштовування Liveinst"
 
 #: pyanaconda/modules/payloads/payload/dnf/initialization.py:117
-#, fuzzy
-#| msgid "Local repositories"
 msgid "Loading repositories..."
-msgstr "Локальні сховища"
+msgstr "Завантаження сховищ…"
 
 #: pyanaconda/ui/gui/spokes/storage.glade:115
 msgid "Local Standard Disks"
@@ -2718,10 +2711,9 @@ msgid "Move selected layout _up"
 msgstr "Пересунути позначену розкладку _вище"
 
 #: pyanaconda/modules/storage/partitioning/automatic/automatic_partitioning.py:138
-#, fuzzy, python-format
-#| msgid "Multiple boot loader partitions required: %s"
+#, python-format
 msgid "Multiple boot loader partitions required: %(bootparts)s"
-msgstr "Потрібно декілька розділів завантажувача: %s"
+msgstr "Потрібно декілька розділів завантажувача: %(bootparts)s"
 
 #: pyanaconda/modules/storage/partitioning/automatic/automatic_partitioning.py:152
 msgid "Multiple devices found for boot loader partition '{}': {}"
@@ -4083,17 +4075,14 @@ msgid "Selected disks"
 msgstr "Вибрані диски"
 
 #: pyanaconda/modules/storage/checker/utils.py:541
-#, fuzzy, python-brace-format
-#| msgid ""
-#| "Selected disks {} contain volume group '{}' that also uses further "
-#| "unselected disks. You must select or de-select all these disks as a set."
+#, python-brace-format
 msgid ""
 "Selected disks {disks} contain volume group '{vg}' that also uses further "
 "unselected disks. You must select or de-select all these disks as a set."
 msgstr ""
-"Вами вибрано диски {}, на яких міститься група томів «{}», до якої входять "
-"інші непозначені диски. Вам слід вибрати усі ці диски або не вибирати "
-"жодного."
+"Вами вибрано диски {disks}, на яких міститься група томів «{vg}», до якої "
+"входять інші непозначені диски. Вам слід вибрати усі ці диски або не "
+"вибирати жодного."
 
 #: pyanaconda/ui/lib/software.py:98
 msgid "Selected environment is not valid"
@@ -4180,13 +4169,7 @@ msgid "Si_ze policy:"
 msgstr "П_равила щодо розмірів:"
 
 #: pyanaconda/core/constants.py:173
-#, fuzzy, python-format
-#| msgid ""
-#| "Simultaneous Multithreading (SMT) may improve performance for certain "
-#| "workloads, but introduces several publicly disclosed security issues. You "
-#| "can disable SMT, which may impact performance. Please read https://red.ht/"
-#| "rhel-smt to understand potential risks and learn about ways to mitigate "
-#| "these risks."
+#, python-format
 msgid ""
 "Simultaneous Multithreading (SMT) may improve performance for certain "
 "workloads, but introduces several publicly disclosed security issues. You "
@@ -4196,19 +4179,12 @@ msgstr ""
 "Технологія паралельної багатопотокової обробки даних (SMT) може пришвидшити "
 "роботу комп'ютера під час виконання деяких завдань, однак її реалізовано із "
 "декількома загальновідомими вадами у захисті даних. Ви можете вимкнути SMT, "
-"що може призвести до зниження швидкодії. Будь ласка, ознайомтеся із https://"
-"red.ht/rhel-smt , щоб краще розуміти потенційні проблеми та дізнатися про "
-"інші способи зменшення загрози від цих проблем."
+"що може призвести до зниження швидкодії. Будь ласка, ознайомтеся із %s, щоб "
+"краще розуміти потенційні проблеми та дізнатися про інші способи зменшення "
+"загрози від цих проблем."
 
 #: pyanaconda/core/constants.py:163
-#, fuzzy, python-format
-#| msgid ""
-#| "Simultaneous Multithreading (SMT) technology can provide performance "
-#| "improvements for certain workloads, but introduces several publicly "
-#| "disclosed security issues. You have the option of disabling SMT, which "
-#| "may impact performance. If you choose to leave SMT enabled, please read "
-#| "https://red.ht/rhel-smt to understand your potential risks and learn "
-#| "about other ways to mitigate these risks."
+#, python-format
 msgid ""
 "Simultaneous Multithreading (SMT) technology can provide performance "
 "improvements for certain workloads, but introduces several publicly "
@@ -4221,9 +4197,8 @@ msgstr ""
 "роботу комп'ютера під час виконання деяких завдань, однак її реалізовано із "
 "декількома загальновідомими вадами у захисті даних. Ви можете вимкнути SMT, "
 "що може призвести до зниження швидкодії. Якщо ви не вимикатимете SMT, будь "
-"ласка, ознайомтеся із https://red.ht/rhel-smt , щоб краще розуміти "
-"потенційні проблеми та дізнатися про інші способи зменшення загрози від цих "
-"проблем."
+"ласка, ознайомтеся із %s , щоб краще розуміти потенційні проблеми та "
+"дізнатися про інші способи зменшення загрози від цих проблем."
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:568
 msgid "Single"
@@ -4749,10 +4724,6 @@ msgstr ""
 "виберіть вузли, до систем яких слід здійснити вхід:"
 
 #: pyanaconda/modules/payloads/payload/dnf/dnf_manager.py:675
-#, fuzzy
-#| msgid ""
-#| "The following software marked for installation has errors.\n"
-#| "This is likely caused by an error with your installation source."
 msgid ""
 "The following software marked for installation has errors.\n"
 "This is likely caused by an error with your installation source.\n"
@@ -4760,7 +4731,8 @@ msgid ""
 msgstr ""
 "У вказаному нижче позначеному для встановлення програмному забезпеченні "
 "виявлено помилки.\n"
-"Ймовірно, причиною цього є помилка на носії для встановлення."
+"Ймовірно, причиною цього є помилка на носії для встановлення.\n"
+"\n"
 
 #: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:73
 msgid ""
@@ -5574,10 +5546,9 @@ msgid "WWPN:"
 msgstr "WWPN:"
 
 #: pyanaconda/ui/tui/spokes/installation_progress.py:97
-#, fuzzy, python-format
-#| msgid "Waiting for %s threads to finish"
+#, python-format
 msgid "Waiting for %s threads to finish..."
-msgstr "Очікуємо на завершення потоків виконання %s"
+msgstr "Очікуємо на завершення потоків виконання %s…"
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:272
 msgid ""
@@ -5878,16 +5849,13 @@ msgid "You have not created a bootable partition."
 msgstr "Вами не створено завантажувального розділу."
 
 #: pyanaconda/modules/storage/checker/utils.py:60
-#, fuzzy, python-format
-#| msgid ""
-#| "You have not defined a root partition (/), which is required for "
-#| "installation of %s to continue."
+#, python-format
 msgid ""
 "You have not defined a root partition (/), which is required for "
 "installation of %(prod_name)s to continue."
 msgstr ""
 "Ви не вказали кореневий розділ (/), який вимагається для продовження "
-"встановлення %s."
+"встановлення %(prod_name)s."
 
 #: pyanaconda/modules/storage/checker/utils.py:314
 #, python-format
