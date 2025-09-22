@@ -26,7 +26,7 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
 "POT-Creation-Date: 2025-09-20 01:20+0000\n"
-"PO-Revision-Date: 2025-04-24 19:19+0000\n"
+"PO-Revision-Date: 2025-09-23 09:39+0000\n"
 "Last-Translator: Ondrej Sulek <feonsu@gmail.com>\n"
 "Language-Team: Slovak <https://translate.fedoraproject.org/projects/anaconda/"
 "master/sk/>\n"
@@ -35,7 +35,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 5.11\n"
+"X-Generator: Weblate 5.13.3\n"
 
 #: pyanaconda/startup_utils.py:664
 #, python-format
@@ -44,6 +44,9 @@ msgid ""
 "An error occurred during certificate import from kickstart:\n"
 "%s\n"
 msgstr ""
+"\n"
+"Pri importe certifikátu z kickstartu došlo k chybe:\n"
+"%s\n"
 
 #: pyanaconda/kickstart.py:329
 #, python-format
@@ -731,12 +734,6 @@ msgid "Assign mount points"
 msgstr "Priradiť body pripojenia"
 
 #: pyanaconda/modules/storage/checker/utils.py:346
-#, fuzzy
-#| msgid ""
-#| "At least one of your swap devices does not have a UUID, which is common "
-#| "in swap space created using older versions of mkswap. These devices will "
-#| "be referred to by device path in /etc/fstab, which is not ideal since "
-#| "device paths can change under a variety of circumstances. "
 msgid ""
 "At least one of your swap devices does not have a UUID, which is common in "
 "swap space created using older versions of mkswap. These devices will be "
@@ -746,7 +743,7 @@ msgstr ""
 "Najmenej jedno odkladacie zariadenie swap neobsahuje UUID, čo je bežné, ak "
 "bolo vytvorené pomocou staršej verzie mkswap. Na tieto zariadenia bude preto "
 "v súbore /etc/fstab odkazované pomocou cesty zariadenia, čo nie je ideálne, "
-"pretože sa môže zmeniť za rôznych okolností. "
+"pretože sa môže zmeniť za rôznych okolností."
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1075
 msgid "Attaching subscription..."
@@ -865,7 +862,7 @@ msgstr ""
 
 #: pyanaconda/modules/storage/partitioning/automatic/automatic_partitioning.py:157
 msgid "Both boot loader partition '{}' and MBR partitioned disk found"
-msgstr ""
+msgstr "Bol nájdený oddiel zavádzača systému „{}“ aj disk s rozdelením MBR"
 
 #: pyanaconda/ui/gui/spokes/network.py:295
 #: pyanaconda/ui/gui/spokes/network.glade:19
@@ -2545,10 +2542,8 @@ msgid "Liveinst Setup"
 msgstr "Nastavenie Liveinst"
 
 #: pyanaconda/modules/payloads/payload/dnf/initialization.py:117
-#, fuzzy
-#| msgid "Local repositories"
 msgid "Loading repositories..."
-msgstr "Lokálne repozitáre"
+msgstr "Načítavanie repozitárov..."
 
 #: pyanaconda/ui/gui/spokes/storage.glade:115
 msgid "Local Standard Disks"
@@ -2691,10 +2686,9 @@ msgid "Move selected layout _up"
 msgstr "Presunúť vybraté rozloženie _hore"
 
 #: pyanaconda/modules/storage/partitioning/automatic/automatic_partitioning.py:138
-#, fuzzy, python-format
-#| msgid "Multiple boot loader partitions required: %s"
+#, python-format
 msgid "Multiple boot loader partitions required: %(bootparts)s"
-msgstr "Vyžaduje sa viacero oddielov pre zavádzač: %s"
+msgstr "Vyžaduje sa viacero oddielov pre zavádzač: %(bootparts)s"
 
 #: pyanaconda/modules/storage/partitioning/automatic/automatic_partitioning.py:152
 msgid "Multiple devices found for boot loader partition '{}': {}"
@@ -4039,17 +4033,14 @@ msgid "Selected disks"
 msgstr "Vybrané disky"
 
 #: pyanaconda/modules/storage/checker/utils.py:541
-#, fuzzy, python-brace-format
-#| msgid ""
-#| "Selected disks {} contain volume group '{}' that also uses further "
-#| "unselected disks. You must select or de-select all these disks as a set."
+#, python-brace-format
 msgid ""
 "Selected disks {disks} contain volume group '{vg}' that also uses further "
 "unselected disks. You must select or de-select all these disks as a set."
 msgstr ""
-"Vybrané disky {} obsahujú skupinu zväzkov (VG) '{}', ktoré používajú tiež "
-"ďalšie nevybrané disky. Musíte vybrať, alebo zrušiť výber všetkých týchto "
-"diskov ako skupinu."
+"Vybrané disky {disks} obsahujú skupinu zväzkov (VG) '{vg}', ktoré používajú "
+"tiež ďalšie nevybrané disky. Musíte vybrať, alebo zrušiť výber všetkých "
+"týchto diskov ako skupinu."
 
 #: pyanaconda/ui/lib/software.py:98
 msgid "Selected environment is not valid"
@@ -4136,13 +4127,7 @@ msgid "Si_ze policy:"
 msgstr "Politika _veľkosti:"
 
 #: pyanaconda/core/constants.py:173
-#, fuzzy, python-format
-#| msgid ""
-#| "Simultaneous Multithreading (SMT) may improve performance for certain "
-#| "workloads, but introduces several publicly disclosed security issues. You "
-#| "can disable SMT, which may impact performance. Please read https://red.ht/"
-#| "rhel-smt to understand potential risks and learn about ways to mitigate "
-#| "these risks."
+#, python-format
 msgid ""
 "Simultaneous Multithreading (SMT) may improve performance for certain "
 "workloads, but introduces several publicly disclosed security issues. You "
@@ -4152,18 +4137,11 @@ msgstr ""
 "Simultaneous Multithreading (SMT) môže zlepšiť výkon pre určité pracovné "
 "úlohy, ale zavádza niekoľko verejne dostupných bezpečnostných chýb. Máte "
 "možnosť SMT zakázať, čo však môže mať dopad na výkon. Prečítajte si prosím "
-"https://red.ht/rhel-smt pre pochopenie potenciálnych rizík a zoznámenie sa s "
-"ďalšími spôsobmi, ako znížiť tieto riziká."
+"%s pre pochopenie potenciálnych rizík a zoznámenie sa s ďalšími spôsobmi, "
+"ako znížiť tieto riziká."
 
 #: pyanaconda/core/constants.py:163
-#, fuzzy, python-format
-#| msgid ""
-#| "Simultaneous Multithreading (SMT) technology can provide performance "
-#| "improvements for certain workloads, but introduces several publicly "
-#| "disclosed security issues. You have the option of disabling SMT, which "
-#| "may impact performance. If you choose to leave SMT enabled, please read "
-#| "https://red.ht/rhel-smt to understand your potential risks and learn "
-#| "about other ways to mitigate these risks."
+#, python-format
 msgid ""
 "Simultaneous Multithreading (SMT) technology can provide performance "
 "improvements for certain workloads, but introduces several publicly "
@@ -4175,9 +4153,9 @@ msgstr ""
 "Technológia Simultaneous Multithreading (SMT) môže poskytnúť zlepšenie "
 "výkonu pre určité pracovné úlohy, ale zavádza niekoľko verejne dostupných "
 "bezpečnostných chýb. Máte možnosť SMT zakázať, čo však môže mať dopad na "
-"výkon. Ak ponecháte SMT povolené, prečítajte si prosím https://red.ht/rhel-"
-"smt pre pochopenie potenciálnych rizík a zoznámenie sa s ďalšími spôsobmi, "
-"ako znížiť tieto riziká."
+"výkon. Ak ponecháte SMT povolené, prečítajte si prosím %s pre pochopenie "
+"potenciálnych rizík a zoznámenie sa s ďalšími spôsobmi, ako znížiť tieto "
+"riziká."
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:568
 msgid "Single"
@@ -4694,17 +4672,14 @@ msgstr ""
 "b>. Vyberte uzly na ktoré sa chcete prihlásiť:"
 
 #: pyanaconda/modules/payloads/payload/dnf/dnf_manager.py:675
-#, fuzzy
-#| msgid ""
-#| "The following software marked for installation has errors.\n"
-#| "This is likely caused by an error with your installation source."
 msgid ""
 "The following software marked for installation has errors.\n"
 "This is likely caused by an error with your installation source.\n"
 "\n"
 msgstr ""
-"Nasledovný softvér označený na inštaláciu obsahuje chyby. \n"
-"To je najčastejšie spôsobené chybou s vaším zdrojom inštalácie."
+"Nasledovný softvér označený na inštaláciu obsahuje chyby.\n"
+"To je najčastejšie spôsobené chybou s vaším zdrojom inštalácie.\n"
+"\n"
 
 #: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:73
 msgid ""
@@ -4750,10 +4725,8 @@ msgstr ""
 "rozložení úložísk."
 
 #: pyanaconda/startup_utils.py:667
-#, fuzzy
-#| msgid "The installation cannot continue and the system will be rebooted"
 msgid "The installation cannot continue"
-msgstr "Inštalácia nemôže pokračovať a systém sa reštartuje."
+msgstr "Inštalácia nemôže pokračovať"
 
 #: pyanaconda/startup_utils.py:165
 msgid "The installation cannot continue and the system will be rebooted"
@@ -5509,10 +5482,9 @@ msgid "WWPN:"
 msgstr "WWPN:"
 
 #: pyanaconda/ui/tui/spokes/installation_progress.py:97
-#, fuzzy, python-format
-#| msgid "Waiting for %s threads to finish"
+#, python-format
 msgid "Waiting for %s threads to finish..."
-msgstr "Čaká sa na dokončenie %s vlákien"
+msgstr "Čaká sa na dokončenie %s vlákien..."
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:272
 msgid ""
@@ -5799,16 +5771,13 @@ msgid "You have not created a bootable partition."
 msgstr "Nevytvorili ste zavádzací oddiel (boot)."
 
 #: pyanaconda/modules/storage/checker/utils.py:60
-#, fuzzy, python-format
-#| msgid ""
-#| "You have not defined a root partition (/), which is required for "
-#| "installation of %s to continue."
+#, python-format
 msgid ""
 "You have not defined a root partition (/), which is required for "
 "installation of %(prod_name)s to continue."
 msgstr ""
-"Nestanovili ste žiaden koreňový oddiel (/), ktorý je vyžadovaný pre "
-"pokračovanie v inštalácii %s."
+"Nedefinovali ste koreňový oddiel (/), ktorý je vyžadovaný pre pokračovanie v "
+"inštalácii %(prod_name)s."
 
 #: pyanaconda/modules/storage/checker/utils.py:314
 #, python-format
