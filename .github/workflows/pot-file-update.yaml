@@ -31,7 +31,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout anaconda ${{ matrix.anaconda-branch }}
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           path: anaconda
           repository: rhinstaller/anaconda
@@ -44,7 +44,7 @@ jobs:
           make; \
           make pot-update-check"
       - name: Checkout anaconda-l10n
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           path: anaconda-l10n
           ref: main
