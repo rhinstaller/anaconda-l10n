@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
 "POT-Creation-Date: 2025-10-21 01:29+0000\n"
-"PO-Revision-Date: 2025-12-18 08:58+0000\n"
+"PO-Revision-Date: 2025-12-19 09:58+0000\n"
 "Last-Translator: Priit Jõerüüt "
 "<jrtkbfdr@users.noreply.translate.fedoraproject.org>\n"
 "Language-Team: Estonian <https://translate.fedoraproject.org/projects/"
@@ -31,7 +31,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15\n"
+"X-Generator: Weblate 5.15.1\n"
 
 #: pyanaconda/kickstart.py:329
 #, python-format
@@ -67,12 +67,22 @@ msgid ""
 "\n"
 "The installer will now terminate."
 msgstr ""
+"\n"
+"Hetkel töötame käsurea režiimis ja interaktiivne silumine/debugimine pole "
+"lubatud.\n"
+"Täpne veateade on: \n"
+"\n"
+"%s.\n"
+"\n"
+"Paigaldusrakendus lõpetab nüüd töö."
 
 #: pyanaconda/kickstart.py:316
 msgid ""
 "\n"
 "Some warnings occurred during reading the kickstart file:"
 msgstr ""
+"\n"
+"kickstart'i faili lugemisel tekkisid mõned hoiatused:"
 
 #: pyanaconda/exception.py:182
 #, python-format
@@ -87,6 +97,16 @@ msgid ""
 "\n"
 "The installer will now terminate."
 msgstr ""
+"\n"
+"Paigaldamine peatus vea tõttu, mis tekkis paigaldaja käivitamisel "
+"vahelesegamiseta käsurea režiimis. Kuna käsurea režiimis ei saa küsida "
+"täiendavaid küsimusi, siis muuda oma kickstart'i faili ja proovi "
+"paigaldamist uuesti. \n"
+"Täpne veateade on: \n"
+"\n"
+"%s. \n"
+"\n"
+"Paigaldusrakendus lõpetab nüüd töö."
 
 #: pyanaconda/ui/tui/tuiobject.py:289
 msgid ""
@@ -102,6 +122,9 @@ msgid ""
 "  You don't have enough space available to install <b>%(product)s</b>, even "
 "if you used all of the free space available on the selected disks."
 msgstr ""
+"  <b>%(product)s</b> toote paigaldamiseks pole selle seadmes piisavalt vaba "
+"andmeruumi, seda isegi siis, kui kasutad valitud ketaste kogu vaba "
+"andmeruumi."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1777
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1781
@@ -155,6 +178,8 @@ msgid ""
 "%(bootloader_stage2_description)s cannot be on an iSCSI disk which is not "
 "configured in iBFT."
 msgstr ""
+"„%(bootloader_stage2_description)s“ ei saa asuda iSCSI-kettal, mis pole iBFT-"
+"s seadistatud."
 
 #: pyanaconda/modules/storage/bootloader/base.py:682
 #, python-format
@@ -197,26 +222,32 @@ msgid ""
 "%(deviceName)s may not have enough space for grub2 to embed core.img when "
 "using the %(fsType)s file system on %(deviceType)s"
 msgstr ""
+"Seadmes „%(deviceName)s“ ei pruugi GRUB2 jaoks olla piisavalt ruumi „core.img"
+"“ lõimimiseks, kui „%(deviceType)s“ tüüpi seadmes on kasutusel „%(fsType)s“ "
+"failisüsteem"
 
 #: pyanaconda/ui/gui/spokes/lib/resize.py:247
 #, python-format
 msgid "%(freeSize)s of %(devSize)s"
-msgstr ""
+msgstr "%(freeSize)s / %(devSize)s"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:395
 #, python-format
 msgid "%(items_selected)s of %(items_total)s mount points in %(page_name)s"
 msgstr ""
+"%(items_selected)s / %(items_total)s haakepunktidest asukohas „%(page_name)s“"
 
 #: pyanaconda/modules/storage/bootloader/base.py:377
 #, python-format
 msgid "%(name)s must have one of the following disklabel types: %(types)s."
 msgstr ""
+"Objektil „%(name)s“ peab olema üks järgmistest kettasildi tüüpidest: %(types)"
+"s."
 
 #: pyanaconda/ui/helpers.py:70
 #, python-format
 msgid "%(productName)s %(productVersion)s INSTALLATION"
-msgstr ""
+msgstr "PAIGALDAMINE: %(productName)s %(productVersion)s"
 
 #: pyanaconda/startup_utils.py:122
 #, python-format
@@ -224,6 +255,8 @@ msgid ""
 "%(product_name)s requires %(needed_ram)s MB of memory to install, but you "
 "only have %(total_ram)s MB on this machine.\n"
 msgstr ""
+"„%(product_name)s“ toode vajab paigaldamiseks %(needed_ram)s MB mälu, kuid "
+"sinu masinas/seadmes on seda vaid %(total_ram)s MB.\n"
 
 #: pyanaconda/ui/gui/spokes/network.py:990
 #, python-format
@@ -241,7 +274,7 @@ msgstr[1] "%d _salvestusseadet on valitud"
 #: pyanaconda/ui/gui/spokes/lib/storage_dialogs.py:141
 #, python-format
 msgid "%s The disks you've selected have the following amounts of free space:"
-msgstr ""
+msgstr "%s Sinu valitud ketastel on järgnevas mahus vaba andmeruumi:"
 
 #: pyanaconda/modules/storage/bootloader/base.py:594
 #: pyanaconda/modules/storage/bootloader/base.py:723
@@ -255,6 +288,8 @@ msgid ""
 "%s is currently mounted and cannot be used for the installation. Please "
 "unmount it and retry."
 msgstr ""
+"„%s“ on hetkel haagitud ja seda ei saa paigaldamiseks kasutada. Palun haagi "
+"ta lahti ja proovi uuesti."
 
 #: pyanaconda/modules/network/firewall/installation.py:102
 #, python-format
@@ -357,18 +392,27 @@ msgid ""
 "<b>NTS</b> - If checked, indicates support for Network Time Security "
 "authentication."
 msgstr ""
+"<b>Kogum</b > - Kui ta on märgitud, siis see tähendab, et hostinimi viitab "
+"serverite kogumile.\n"
+"\n"
+"<b>NTS</b> - Kui ta on märgitud, siis see tähendab, et NTS-i põhine (Network "
+"Time Security) autentimise tugi on olemas."
 
 #: pyanaconda/ui/gui/spokes/lib/refresh.glade:121
 msgid ""
 "<b>Warning:</b> All storage changes made using the installer will be lost "
 "when you press 'Rescan Disks'."
 msgstr ""
+"<b>Hoiatus:</b> Kõik paigaldajas tehtud andmeruumi muudatused lähevad kaotsi "
+"„Skaneeri kettad uuesti“ klõpsimisel."
 
 #: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:139
 msgid ""
 "<b>Warning</b>: All storage changes made using the installer will be lost "
 "when you choose to format."
 msgstr ""
+"<b>Hoiatus:</b> Kui peaksid otsustama vormindada, siis kõik paigaldajas "
+"tehtud andmeruumi muudatused lähevad kaotsi."
 
 #: pyanaconda/ui/gui/spokes/lib/storage_dialogs.py:187
 #, python-format
@@ -403,6 +447,8 @@ msgid ""
 "performance for most installations, it is recommended to specify a swap "
 "partition."
 msgstr ""
+"Sul on saaleala ehk „swap“ partitsioon määratlemata. Et märgatavalt "
+"parandada arvuti jõudlust on meie soovitus, et teed seda."
 
 #: pyanaconda/ui/gui/spokes/keyboard.glade:469
 msgid "ADD A KEYBOARD LAYOUT"
@@ -744,11 +790,11 @@ msgstr "Võrgumaski vigane vorming"
 
 #: pyanaconda/ui/gui/spokes/software_selection.glade:117
 msgid "Base Environment"
-msgstr ""
+msgstr "Aluskeskkond"
 
 #: pyanaconda/ui/tui/spokes/software_selection.py:250
 msgid "Base environment"
-msgstr ""
+msgstr "Aluskeskkond"
 
 #: pyanaconda/ui/gui/spokes/lib/beta_warning_dialog.glade:133
 msgid "Beta Warn"
@@ -1367,15 +1413,15 @@ msgstr "Ühendus on katkestamisel..."
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:176
 msgid "Discovering DASD devices.  This may take a moment..."
-msgstr ""
+msgstr "Tuvastan DASD-seadmeid. Selleks võib kuluda mõni hetk..."
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:505
 msgid "Discovering iSCSI targets.  This may take a moment..."
-msgstr ""
+msgstr "Tuvastan iSCSI-seadmeid. Selleks võib kuluda mõni hetk..."
 
 #: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade:218
 msgid "Discovering zFCP devices.  This may take a moment..."
-msgstr ""
+msgstr "Tuvastan zFCP-seadmeid. Selleks võib kuluda mõni hetk..."
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:544
 msgid "Discovery login rejected."
@@ -1425,12 +1471,12 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/storage.glade:179
 #: pyanaconda/ui/gui/spokes/storage.glade:319
 msgid "Disks left unselected here will not be touched."
-msgstr ""
+msgstr "Siinkohal valimata jäänud ketastel ei tehta ühtegi muudatust."
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:370
 msgctxt "GUI|Custom Partitioning|Confirm Delete Dialog"
 msgid "Do _not show this dialog for other selected file systems."
-msgstr ""
+msgstr "Ära _näita seda vaadet muude valitud failisüsteemide kohta."
 
 #: pyanaconda/core/constants.py:90
 msgid "Do you really want to quit?"
@@ -1461,7 +1507,7 @@ msgstr "Laadin alla {} ({}%)"
 
 #: pyanaconda/ui/gui/spokes/lib/installation_source_helpers.py:216
 msgid "Duplicate repository names"
-msgstr ""
+msgstr "Tarkvarahoidla nimi on topelt"
 
 #: pyanaconda/modules/storage/platform.py:44
 msgid "EFI System Partition"
@@ -1489,7 +1535,7 @@ msgstr "Tühi võrguaadress"
 
 #: pyanaconda/ui/gui/spokes/lib/installation_source_helpers.py:253
 msgid "Empty path"
-msgstr ""
+msgstr "Tühi asukoht"
 
 #: pyanaconda/ui/gui/spokes/lib/installation_source_helpers.py:210
 msgid "Empty repository name"
@@ -1501,11 +1547,11 @@ msgstr "Tühi server"
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:286
 msgid "Enabled if supported by the installing machine"
-msgstr ""
+msgstr "Toetatud, kui paigaldav seade/masin seda toetab"
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:287
 msgid "Enabled unconditionally"
-msgstr ""
+msgstr "Kasutusel ilma tingimusteta"
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:167
 msgctxt "GUI|Password"
@@ -1552,7 +1598,7 @@ msgstr ""
 #: pyanaconda/ui/tui/spokes/time_spoke.py:398
 #, python-format
 msgid "Enter an NTP server address and press %s"
-msgstr ""
+msgstr "Sisesta NTP-serveri aadress ja vajuta „%s“"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:497
 msgid "Enter size and unit."
@@ -1597,16 +1643,20 @@ msgid ""
 "Error checking storage configuration.  <a href=\"\">Click for details</a> or "
 "press Done again to continue."
 msgstr ""
+"Viga andmeruumi seadistuse kontrollimisel. <a href=\"\">Üksikasjad leiad "
+"siit.</a> või klõpsa jätkamiseks uuesti nuppu „Valmis“."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:951
 msgid ""
 "Error checking storage configuration. <a href=\"\">Click for details</a> or "
 "press Done again to continue."
 msgstr ""
+"Viga andmeruumi seadistuse kontrollimisel. <a href=\"\">Üksikasjad leiad "
+"siit.</a> või klõpsa jätkamiseks uuesti nuppu „Valmis“."
 
 #: pyanaconda/errors.py:224
 msgid "Error detail: "
-msgstr ""
+msgstr "Vea üksikasjad: "
 
 #: pyanaconda/core/constants.py:281
 msgid "Error setting up repositories"
@@ -1622,7 +1672,7 @@ msgstr "Ethernet"
 
 #: pyanaconda/ui/gui/spokes/advanced_user.glade:301
 msgid "Example:"
-msgstr ""
+msgstr "Näide:"
 
 #: pyanaconda/ui/tui/spokes/shell_spoke.py:69
 msgid "Exit the shell to continue"
@@ -1649,7 +1699,7 @@ msgstr ""
 
 #: pyanaconda/modules/storage/partitioning/interactive/add_device.py:76
 msgid "Failed to add a device."
-msgstr ""
+msgstr "Seadme lisamine ei õnnestunud."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1037
 msgid "Failed to add new device."
@@ -1662,7 +1712,7 @@ msgstr ""
 
 #: pyanaconda/modules/storage/partitioning/interactive/change_device.py:93
 msgid "Failed to change a device."
-msgstr ""
+msgstr "Seadme muutmine ei õnnestunud."
 
 #: pyanaconda/errors.py:232
 msgid ""
@@ -1676,7 +1726,7 @@ msgstr ""
 
 #: pyanaconda/modules/storage/partitioning/base_partitioning.py:59
 msgid "Failed to proceed with the installation."
-msgstr "Installimisega jätkamine ebaõnnestus."
+msgstr "Ei õnnestunud jätkata paigaldamist."
 
 #: pyanaconda/errors.py:190
 msgid "Failed to provision the target system for Satellite."
@@ -1767,11 +1817,11 @@ msgstr ""
 
 #: pyanaconda/modules/payloads/source/flatpak/flatpak.py:55
 msgid "Flatpak"
-msgstr ""
+msgstr "Flatpak"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:61
 msgid "Flatpak installation has finished"
-msgstr ""
+msgstr "Flatpaki paigaldus on lõppenud"
 
 #: pyanaconda/modules/storage/platform.py:197
 msgid ""
@@ -2547,11 +2597,11 @@ msgstr ""
 
 #: pyanaconda/modules/storage/partitioning/automatic/automatic_partitioning.py:149
 msgid "Multiple devices found for boot loader partition '{}': {}"
-msgstr ""
+msgstr "„{}“ buutlaaduri partitsiooni jaoks leidus mitu seadet: {}"
 
 #: pyanaconda/modules/storage/partitioning/automatic/automatic_partitioning.py:86
 msgid "Multiple devices found for mount point '{}': {}"
-msgstr ""
+msgstr "„{}“ haakepunkti jaoks leidus mitu seadet: {}"
 
 #: pyanaconda/ui/gui/spokes/network.glade:1307
 msgid "My ssid"
@@ -2576,7 +2626,7 @@ msgstr "NFS-server on tühi"
 
 #: pyanaconda/modules/payloads/source/nfs/nfs.py:76
 msgid "NFS server {}"
-msgstr "NFS-i server {}"
+msgstr "NFS-server {}"
 
 #: pyanaconda/modules/storage/kickstart.py:182
 msgid "NIC \"{}\" given in fcoe command does not exist."
@@ -2699,7 +2749,7 @@ msgstr ""
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:225
 #, python-brace-format
 msgid "New {name} {version} Installation"
-msgstr ""
+msgstr "Uus paigaldus: {name} {version}"
 
 #: pyanaconda/ui/tui/spokes/installation_source.py:501
 msgid "No *.iso files found in device root folder"
@@ -2719,7 +2769,7 @@ msgstr "Pole täiendavat tarkvara, mida saaks valida."
 
 #: pyanaconda/modules/storage/partitioning/automatic/utils.py:400
 msgid "No big enough free space on disks for automatic partitioning"
-msgstr ""
+msgstr "Automaatse partitsioneerimise jaoks pole piisavalt vaba andmeruumi"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:190
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:763
@@ -2732,21 +2782,23 @@ msgstr ""
 
 #: pyanaconda/modules/storage/partitioning/automatic/automatic_partitioning.py:91
 msgid "No devices found for mount point '{}'"
-msgstr ""
+msgstr "„{}“ haakepunkti jaoks ei leidu seadmeid"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:170
 msgid "No disk found for specified BIOS disk \"{}\"."
-msgstr "Ketast ei leitud antud BIOS ketta \"{}\" puhul."
+msgstr "Määratletud BIOS-i ketta „{}“ jaoks ei leidunud ketast."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:787
 msgid "No disks assigned"
-msgstr ""
+msgstr "Ühtegi ketast pole määratud"
 
 #: pyanaconda/core/constants.py:151
 msgid ""
 "No disks detected.  Please shut down the computer, connect at least one "
 "disk, and restart to complete installation."
 msgstr ""
+"Ei õnnestunud tuvastada ühtegi ketast. Palun seiska arvuti, ühenda vähemalt "
+"üks ketas ja paigaldamisega jätkamiseks käivita arvuti uuesti."
 
 #: pyanaconda/ui/tui/spokes/storage.py:168
 #: pyanaconda/ui/gui/spokes/storage.py:327
@@ -2776,7 +2828,7 @@ msgstr "Hosti võrguaadressi pole"
 
 #: pyanaconda/modules/storage/bootloader/execution.py:151
 msgid "No match found for given boot drive \"{}\"."
-msgstr ""
+msgstr "Sisestatud „{}“ buutkettale ei leidu vastet."
 
 #: pyanaconda/ui/tui/spokes/installation_source.py:456
 msgid "No mountable devices found"
@@ -2799,6 +2851,8 @@ msgid ""
 "No thin pool exists with the name \"{}\". Specify thin pools before thin "
 "volumes."
 msgstr ""
+"„{}“ nimega ei leidu ühtegi õhukest kogumit („thin pool“). Enne õhukeste "
+"köidete („thin volume“) määratlemist määratle õhukesed kogumid."
 
 #: pyanaconda/modules/storage/partitioning/automatic/utils.py:167
 msgid "No usable disks selected."
@@ -2866,16 +2920,20 @@ msgstr "Valitud kettal pole piisavalt ruumi."
 #: pyanaconda/ui/lib/space.py:108
 msgid "Not enough space in file systems for the current software selection."
 msgstr ""
+"Praeguse tarkvaravaliku jaoks pole failisüsteemides piisavalt vaba "
+"andmeruumi."
 
 #: pyanaconda/ui/lib/space.py:105
 msgid ""
 "Not enough space in file systems for the current software selection. An "
 "additional {} is needed."
 msgstr ""
+"Praeguse tarkvaravaliku jaoks pole failisüsteemides piisavalt vaba "
+"andmeruumi. Täiendavalt oleks vaja vähemalt {}."
 
 #: pyanaconda/rescue.py:499
 msgid "Not mounting the system.\n"
-msgstr ""
+msgstr "Süsteem jääb haakimata.\n"
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1086
 msgid "Not registered."
@@ -3199,7 +3257,7 @@ msgstr "Palun oota... tarkvara metaandmeid ikka laaditakse."
 
 #: pyanaconda/ui/gui/spokes/lib/ntp_dialog.glade:135
 msgid "Pool"
-msgstr ""
+msgstr "Kogum"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:518
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:2080
@@ -3820,6 +3878,9 @@ msgid ""
 "Select the device(s) you'd like to install to.  They will be left untouched "
 "until you click on the main menu's \"Begin Installation\" button."
 msgstr ""
+"Palun vali seade või seadmed, kuhu tahad operatsioonisüsteemi paigaldada. "
+"Neis ei tehta ühtegi muudatust enne, kui oled põhimenüüst klõpsanud „Alusta "
+"paigaldamist“ nuppu."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:268
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:1007
@@ -4040,11 +4101,11 @@ msgstr "Standardne partitsioon"
 
 #: pyanaconda/ui/tui/spokes/shell_spoke.py:61
 msgid "Start shell"
-msgstr ""
+msgstr "Käivita kest/käsurida"
 
 #: pyanaconda/gnome_remote_desktop.py:218
 msgid "Starting GNOME remote desktop in RDP mode..."
-msgstr ""
+msgstr "Käivitan GNOME'i kaugtöölauda RDP-režiimis..."
 
 #: pyanaconda/ui/tui/hubs/summary.py:69
 msgid "Starting automated install"
@@ -4069,11 +4130,11 @@ msgstr "Staatus teadmata (puudub)"
 
 #: pyanaconda/ui/gui/spokes/storage.glade:347
 msgid "Storage Configuration"
-msgstr ""
+msgstr "Andmeruumi seadistused"
 
 #: pyanaconda/ui/gui/spokes/storage.glade:570
 msgid "Storage Options"
-msgstr ""
+msgstr "Andmeruumi valikud"
 
 #: pyanaconda/installation.py:307
 msgid "Storing configuration files and kickstarts"
@@ -4121,7 +4182,7 @@ msgstr "Süsteemi eesmärk"
 
 #: pyanaconda/ui/lib/software.py:123
 msgid "System performance gains for memory-intensive workloads"
-msgstr ""
+msgstr "Parem süsteemijõudlus mälumahuka töökoormuse jaoks"
 
 #: pyanaconda/modules/storage/bootloader/systemd.py:83
 msgid ""
@@ -4205,40 +4266,54 @@ msgid ""
 "The %(product_name)s graphical installer requires %(needed_ram)s MB of "
 "memory, but you only have %(total_ram)s MB.\n"
 msgstr ""
+"Graafiline paigaldusrakendus „%(product_name)s“ vajab paigaldamiseks %"
+"(needed_ram)s MB mälu, kuid sinu masinas/seadmes on seda vaid %(total_ram)s "
+"MB.\n"
 
 #: pyanaconda/core/storage.py:113
 msgid ""
 "The 'boot' area on your computer is where files needed\n"
 "to start the operating system are stored."
 msgstr ""
+"Partitsioonil või kaustas „boot“ paiknevad sinu arvuti need failid,\n"
+"mis on vajalikud operatsioonisüsteemi käivitamiseks."
 
 #: pyanaconda/core/storage.py:117
 msgid ""
 "The 'home' area on your computer is where all your personal\n"
 "data is stored."
 msgstr ""
+"Partitsioonil või kaustas „home“ paiknevad sinu arvuti need failid,\n"
+"mis on mõeldud sinu isiklikuks kasutamiseks."
 
 #: pyanaconda/core/storage.py:115
 msgid ""
 "The 'root' area on your computer is where core system\n"
 "files and applications are stored."
 msgstr ""
+"Partitsioonil või kaustas „root“ paiknevad sinu arvuti need failid ja\n"
+"rakendused, mis on vajalikud operatsioonisüsteemi tööks."
 
 #: pyanaconda/core/storage.py:111
 msgid ""
 "The 'swap' area on your computer is used by the operating\n"
 "system when running low on memory."
 msgstr ""
+"Partitsioonil või kaustas „swap“ ehk saalealal paiknevad sinu arvuti need "
+"failid,\n"
+"mida operatsioonisüsteem kasutab olukorras, kui muutmälu napib."
 
 #: pyanaconda/modules/payloads/payload/dnf/repositories.py:148
 #, python-brace-format
 msgid "The '{name}' repository has no mirror, baseurl or metalink set."
 msgstr ""
+"Tarkvaraahoidlal „{name}“ pole seadistatud ei võrgupeegel, põhiline "
+"võrguaadress ega metalink."
 
 #: pyanaconda/modules/payloads/payload/dnf/repositories.py:167
 #, python-brace-format
 msgid "The '{name}' repository uses an unsupported protocol."
-msgstr ""
+msgstr "Tarkvaraahoidla „{name}“ kasutab mittetoetatud protokolli."
 
 #: pyanaconda/ui/gui/spokes/lib/installation_source_helpers.py:184
 msgid "The '{}' repository is invalid: {}"
@@ -4273,6 +4348,8 @@ msgid ""
 "The RAID level you have selected ({level}) requires more disks ({min}) than "
 "you currently have selected ({count})."
 msgstr ""
+"Sinu valitud RAID-i tase ({level}) vajab vähemalt {min} ketast, aga sul on "
+"neid hetkel valitud vaid {count}."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:615
 msgid "The RAID volume name \"{}\" is already in use."
@@ -4383,7 +4460,7 @@ msgstr ""
 
 #: pyanaconda/rescue.py:556
 msgid "The following installations were discovered on your system."
-msgstr ""
+msgstr "Sinu süsteemis leidub selliseid paigaldusi."
 
 #: pyanaconda/ui/tui/hubs/summary.py:121
 msgid "The following mandatory spokes are not completed:"
@@ -5212,12 +5289,16 @@ msgid ""
 "Warning: This will revert all changes done so far.\n"
 "Do you want to proceed?\n"
 msgstr ""
+"Hoiatus: Järgnevaga pöörad tagasi kõik senised muudatused.\n"
+"Kas sa soovid jätkata?\n"
 
 #: pyanaconda/ui/gui/spokes/lib/passphrase.glade:278
 msgid ""
 "Warning: You won't be able to switch between keyboard layouts (from the "
 "default one) when you decrypt your disks after install."
 msgstr ""
+"Hoiatus: Kui sa peale paigaldamist dekrüptid oma arvuti kettaid, siis sa ei "
+"saa vahetada klahvistiku paigutusi (vaikimisi paigutusest erinevaks)."
 
 #: pyanaconda/display.py:366
 msgid ""
@@ -5254,6 +5335,8 @@ msgstr "Millist keelt sooviksid sa paigaldamisel kasutada?"
 msgid ""
 "When finished, please exit from the shell and your system will reboot.\n"
 msgstr ""
+"Lõpetamise järel palun välju käsuga „exit“ käsurealt ja sinu süsteem "
+"käivitub uuesti.\n"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:427
 #, python-format
@@ -5261,6 +5344,8 @@ msgid ""
 "When you create mount points for your %(name)s %(version)s installation, "
 "you'll be able to view their details here."
 msgstr ""
+"Kui sa lisad „%(name)s %(version)s“ jaoks haakepunkte, siis saad nende "
+"üksikasju näha siin."
 
 #: pyanaconda/ui/gui/spokes/keyboard.glade:676
 msgid ""
@@ -5269,7 +5354,7 @@ msgstr ""
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:74
 msgid "Which installation source would you like to use?"
-msgstr ""
+msgstr "Missugust paigalduse allikat sa sooviksid kasutada?"
 
 #: pyanaconda/ui/gui/spokes/keyboard.glade:56
 msgid ""
@@ -5280,22 +5365,22 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/network.glade:153
 #: pyanaconda/ui/gui/spokes/network.glade:286
 msgid "Wi-Fi Networks"
-msgstr ""
+msgstr "WiFi võrgud"
 
 #: pyanaconda/network.py:515
 #, python-format
 msgid "Wired (%(interface_name)s) connected"
-msgstr ""
+msgstr "Traadiga võrguühendus (%(interface_name)s) on ühendatud"
 
 #: pyanaconda/ui/tui/spokes/network.py:290
 #, python-format
 msgid "Wired (%(interface_name)s) connected\n"
-msgstr ""
+msgstr "Traadiga võrguühendus (%(interface_name)s) on ühendatud\n"
 
 #: pyanaconda/ui/tui/spokes/network.py:285
 #, python-format
 msgid "Wired (%(interface_name)s) disconnected\n"
-msgstr ""
+msgstr "Traadiga võrguühendus (%(interface_name)s) on katkestatud\n"
 
 #: pyanaconda/ui/gui/spokes/network.py:291
 msgid "Wireless"
@@ -5304,7 +5389,7 @@ msgstr "Traadita"
 #: pyanaconda/network.py:518
 #, python-format
 msgid "Wireless connected to %(access_point)s"
-msgstr ""
+msgstr "Traadita võrguühendus pääsupunktiga %(access_point)s on ühendatud"
 
 #: pyanaconda/modules/storage/constants.py:38
 msgid ""
@@ -5372,7 +5457,7 @@ msgstr "Sul pole töötavat NTP serverit seadistatud"
 
 #: pyanaconda/modules/storage/checker/utils.py:194
 msgid "You have not created a bootable partition."
-msgstr ""
+msgstr "Sa pole loonud ühtegi alglaaditavaks märgitud partitsiooni."
 
 #: pyanaconda/modules/storage/checker/utils.py:60
 #, python-format
@@ -5388,6 +5473,9 @@ msgid ""
 "recommended to continue installation without a swap partition, but you only "
 "have %(installedMem)s."
 msgstr ""
+"Sul on saaleala ehk „swap“ partitsioon määratlemata. Ilma saalealata "
+"paigaldamiseks peaks arvutis soovituslikult olema %(requiredMem)s mälu, kuid "
+"selles masinas on vaid %(installedMem)s."
 
 #: pyanaconda/modules/storage/checker/utils.py:321
 #, python-format
@@ -5396,6 +5484,9 @@ msgid ""
 "required to continue installation without a swap partition, but you only "
 "have %(installedMem)s."
 msgstr ""
+"Sul on saaleala ehk „swap“ partitsioon määratlemata. Ilma saalealata "
+"paigaldamiseks peaks arvutis kohustuslikult olema %(requiredMem)s mälu, kuid "
+"selles masinas on vaid %(installedMem)s."
 
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:471
 #, python-format
@@ -5451,16 +5542,18 @@ msgid ""
 "You must include at least one MBR- or GPT-formatted disk as an install "
 "target."
 msgstr ""
+"Sa pead paigalduse sihtmärgiks lisama vähemalt ühe MBR- või GPT-vormingus "
+"ketta."
 
 #: pyanaconda/modules/storage/platform.py:394
 #: pyanaconda/modules/storage/platform.py:421
 msgid "You must include at least one MBR-formatted disk as an install target."
-msgstr ""
+msgstr "Sa pead paigalduse sihtmärgiks lisama vähemalt ühe MBR-vormingus ketta."
 
 #: pyanaconda/modules/storage/platform.py:79
 #: pyanaconda/modules/storage/platform.py:338
 msgid "You must include at least one disk as an install target."
-msgstr ""
+msgstr "Palun vali paigaldamiseks vähemalt üks ketas."
 
 #: pyanaconda/ui/tui/spokes/user.py:256
 msgid "You must set a password"
@@ -6671,11 +6764,14 @@ msgstr ""
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:258
 msgid "part --noformat must also use the --onpart option."
-msgstr "part --noformat nõuab lisaks --onpart suvandit."
+msgstr ""
+"„part“ käsu „--noformat“ argument eeldab, et on olemas ka „--onpart“ "
+"argument."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:526
 msgid "raid --noformat must also use the --device option."
-msgstr "raid --noformat nõuab lisaks --device suvandit."
+msgstr ""
+"„raid“ käsu „--noformat“ argument eeldab ka „--device“ argumendi kasutamist."
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:411
 msgid "repository URL"
