@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: anaconda 21.48.22.158\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2020-04-15 15:07+0200\n"
-"PO-Revision-Date: 2025-12-19 09:58+0000\n"
+"PO-Revision-Date: 2025-12-19 12:36+0000\n"
 "Last-Translator: Priit Jõerüüt "
 "<jrtkbfdr@users.noreply.translate.fedoraproject.org>\n"
 "Language-Team: Estonian <https://translate.fedoraproject.org/projects/"
@@ -459,7 +459,7 @@ msgstr ""
 
 #: pyanaconda/exception.py:108
 msgid "Hardware error occurred"
-msgstr ""
+msgstr "Tekkis riistvaraga seotud viga"
 
 #: pyanaconda/exception.py:143
 #, python-format
@@ -668,7 +668,7 @@ msgstr ""
 #: pyanaconda/kickstart.py:752
 #, python-format
 msgid "%s is missing. Cannot setup firewall."
-msgstr "%s puudub. Tulemüüri ülesseadmine nurjus."
+msgstr "%s puudub. Tulemüüri seadistamine ei õnnestunud."
 
 #: pyanaconda/kickstart.py:807 pyanaconda/kickstart.py:818
 #, python-format
@@ -946,7 +946,7 @@ msgstr ""
 
 #: pyanaconda/network.py:110
 msgid "Host name cannot be None or an empty string."
-msgstr ""
+msgstr "Hostinimeks ei sobi puuduv väärtus ega tühi string."
 
 #: pyanaconda/network.py:113
 msgid "Host name must be 255 or fewer characters in length."
@@ -958,6 +958,9 @@ msgid ""
 "parts between periods must contain something and cannot start or end with "
 "'-'."
 msgstr ""
+"Hostinimes võib leiduda vaid järgnevaid märke ja numbreid: „a-z“, „A-Z“, „0-9"
+"“, „-“, „.“. Punktid ei tohi olla järjest ning kriips „-“ ei tohi olla "
+"alguses ega lõpus."
 
 #: pyanaconda/network.py:1632 pyanaconda/ui/gui/spokes/custom.py:566
 #: pyanaconda/ui/gui/spokes/network.py:326
@@ -1257,7 +1260,8 @@ msgid ""
 "You have not defined a root partition (/), which is required for "
 "installation of %s to continue."
 msgstr ""
-"%s installeerimiseks hädavajalik juurpartitsioon (/) on jäetud määramata."
+"Sul on juurpartitsioon (/) määratlemata, kuid „%s“ paigalduseks on see "
+"nõutav."
 
 #: pyanaconda/storage_utils.py:178
 #, python-format
@@ -1934,7 +1938,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/network.py:1702
 #, python-format
 msgid "Host name is not valid: %s"
-msgstr ""
+msgstr "Hostinimi pole korrektne: %s"
 
 #: pyanaconda/ui/tui/spokes/network.py:321
 msgid "Device configuration"
@@ -1959,6 +1963,8 @@ msgid ""
 "IPv6 address[/prefix] or %(auto)s for automatic, %(dhcp)s for DHCP, "
 "%(ignore)s to turn off"
 msgstr ""
+"IPv6 aadress[/prefiks] või automaatse jaoks „%(auto)s“, DHCP jaoks „%(dhcp)s"
+"“ ning väljalülitamiseks „%(ignore)s“"
 
 #: pyanaconda/ui/tui/spokes/network.py:332
 msgid "IPv6 default gateway"
@@ -2837,7 +2843,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/datetime_spoke.py:910
 #: pyanaconda/ui/gui/spokes/datetime_spoke.py:913
 msgid "AM"
-msgstr ""
+msgstr "EL"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.py:1065
 msgid "You need to set up networking first if you want to use NTP"
@@ -3058,7 +3064,7 @@ msgstr "Kasutajanimi: "
 
 #: pyanaconda/ui/gui/spokes/network.py:1432
 msgid "Identity: "
-msgstr ""
+msgstr "Identiteet: "
 
 #: pyanaconda/ui/gui/spokes/network.py:1437
 msgid "Private key password: "
@@ -3288,6 +3294,10 @@ msgid ""
 "or remove existing partitions via our guided reclaim space tool, or you can "
 "adjust your partitions on your own in the custom partitioning interface."
 msgstr ""
+"<b>%s paigaldamiseks pole sul piisavalt vaba andmeruumi</b>. Meie juhendava "
+"kettaruumihalduriga saad vaba andmeruumi  lisamiseks vähendada või kustutada "
+"olemasolevaid partitsioone. Lisaks võid teha sama sinu poolt hallatud "
+"partitsioneerimisvaatest."
 
 #: pyanaconda/ui/gui/spokes/storage.py:204
 #, python-format
@@ -3307,6 +3317,11 @@ msgid ""
 "could add more disks for additional space, modify your software selection to "
 "install a smaller version of <b>%(productName)s</b>, or quit the installer."
 msgstr ""
+"Kui sa ka peaksid kasutama ketaste kogu vaba andmeruumi, siis <b>sul pole "
+"piisavalt vaba ruumi %(productName)s paigaldamiseks</b>. Täiendava "
+"andmeruumi jaoks võiksid lisada kettaid, aga saaksid ka vähendada <b>%"
+"(productName)s</b> paigaldamiseks valitud tarkvara loendit. Lisaks saad ka "
+"väljuda paigaldajast."
 
 #: pyanaconda/ui/gui/spokes/storage.py:235
 msgctxt "GUI|Spoke"
@@ -3758,12 +3773,12 @@ msgstr "_Salvesta muudatused"
 
 #: pyanaconda/ui/gui/spokes/advanced_user.glade.h:3
 msgid "ADVANCED USER CONFIGURATION"
-msgstr ""
+msgstr "KASUTAJATE DETAILNE SEADISTUS"
 
 #: pyanaconda/ui/gui/spokes/advanced_user.glade.h:4
 msgctxt "GUI|Advanced User"
 msgid "Home _directory:"
-msgstr ""
+msgstr "Kodu_kaust:"
 
 #: pyanaconda/ui/gui/spokes/advanced_user.glade.h:5
 msgid "User and Group IDs"
@@ -3878,7 +3893,7 @@ msgstr ""
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade.h:17
 msgid "Hours"
-msgstr ""
+msgstr "Tunnid"
 
 #. TRANSLATORS: This is the separator between hours and minutes, like in HH:MM
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade.h:19
@@ -3891,15 +3906,15 @@ msgstr ""
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade.h:21
 msgid "Hour Up"
-msgstr ""
+msgstr "Tund ülespoole"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade.h:22
 msgid "Hour Down"
-msgstr ""
+msgstr "Tund allapoole"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade.h:23
 msgid "AM/PM Up"
-msgstr ""
+msgstr "EL/PL ülespoole"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade.h:24
 msgid "Minutes Up"
@@ -3907,7 +3922,7 @@ msgstr ""
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade.h:25
 msgid "AM/PM Down"
-msgstr ""
+msgstr "EL/PL allapoole"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade.h:26
 msgid "Minutes Down"
@@ -4083,7 +4098,7 @@ msgstr "Näida vaid seadmei_d, milles leidub:"
 
 #: pyanaconda/ui/gui/spokes/filter.glade.h:34
 msgid "Identifier"
-msgstr ""
+msgstr "Tunnus"
 
 #: pyanaconda/ui/gui/spokes/filter.glade.h:35
 msgctxt "GUI|Installation Destination|Filter"
@@ -4476,6 +4491,8 @@ msgid ""
 "Here we'll describe how much space is needed for the current software "
 "selection."
 msgstr ""
+"Siin me kirjeldame praeguse tarkvaravaliku paigaldamiseks vajalikku "
+"andmeruumi mahtu."
 
 #: pyanaconda/ui/gui/spokes/storage.glade.h:5
 msgid "disk free"
@@ -4612,6 +4629,9 @@ msgid ""
 "Which keyboard layouts would you like to use on this system?  You may move "
 "any layout to the top of the list to select it as the default."
 msgstr ""
+"Missugusi klahvistikupaigutusi tahakaid oma süsteemis kasutada? Kui tõstad "
+"ükspuha missuguse neist loendi algusesse, siis saab sellest vaikimisi "
+"paigutus."
 
 #: pyanaconda/ui/gui/spokes/keyboard.glade.h:3
 msgid ""
@@ -4902,7 +4922,7 @@ msgstr "_Kontrolli"
 #: pyanaconda/ui/gui/spokes/source.glade.h:20
 msgctxt "GUI|Software Source"
 msgid "Installation media via SE/_HMC"
-msgstr ""
+msgstr "Paigaldusmeedium SE/_HMC abil"
 
 # translation auto-copied from project anaconda, version rhel7-branch,
 # document anaconda
@@ -5281,7 +5301,7 @@ msgstr "_Krüpti"
 #: pyanaconda/ui/gui/spokes/custom.glade.h:29
 msgctxt "GUI|Custom Partitioning|Configure"
 msgid "File S_ystem:"
-msgstr ""
+msgstr "Faili_süsteem:"
 
 #: pyanaconda/ui/gui/spokes/custom.glade.h:30
 msgctxt "GUI|Custom Partitioning|Configure"
@@ -5366,7 +5386,7 @@ msgstr "S_obib"
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade.h:3
 msgid "ADD DASD STORAGE TARGET"
-msgstr ""
+msgstr "LISA DASD ANDMERUUMI SIHTOBJEKT"
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade.h:4
 msgid "To use DASD disks, you must provide the device number."
@@ -5468,7 +5488,7 @@ msgstr "S_obib"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade.h:3
 msgid "ADD iSCSI STORAGE TARGET"
-msgstr ""
+msgstr "LISA iSCSI ANDMERUUMI SIHTOBJEKT"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade.h:4
 msgid ""
@@ -5508,6 +5528,8 @@ msgid ""
 "<span size=\"small\"><b>Example:</b> iqn.2012-09.com.example:diskarrays-sn-"
 "a8675309</span>"
 msgstr ""
+"<span size=\"small\"><b>Näide:</b> iqn.2012-09.com.example:diskarrays-sn-"
+"a8675309</span>"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade.h:12
 msgctxt "GUI|Advanced Storage|iSCSI|Configure|CHAP"
@@ -5690,7 +5712,7 @@ msgstr ""
 
 #: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade.h:1
 msgid "ADD zFCP STORAGE TARGET"
-msgstr ""
+msgstr "LISA zFCP ANDMERUUMI SIHTOBJEKT"
 
 #: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade.h:2
 msgid ""
@@ -6098,7 +6120,7 @@ msgstr "Palun sisesta kirjeldus siia."
 
 #: pyanaconda/ui/gui/spokes/lib/resize.glade.h:7
 msgid "File System"
-msgstr ""
+msgstr "Failisüsteem"
 
 #: pyanaconda/ui/gui/spokes/lib/resize.glade.h:8
 msgid "Reclaimable Space"
@@ -6205,6 +6227,8 @@ msgstr ""
 #: pyanaconda/ui/gui/hubs/summary.glade.h:4
 msgid "We won't touch your disks until you click 'Begin Installation'."
 msgstr ""
+"Me ei muuda arvuti/seadme ketastel mitte midagi enne, kui oled klõpsanud "
+"nuppu „Alusta paigaldust“."
 
 #: pyanaconda/ui/gui/hubs/progress.glade.h:1
 msgid "CONFIGURATION"
