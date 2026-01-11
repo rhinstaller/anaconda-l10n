@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
 "POT-Creation-Date: 2022-09-06 02:08+0000\n"
-"PO-Revision-Date: 2026-01-06 13:31+0000\n"
+"PO-Revision-Date: 2026-01-11 16:58+0000\n"
 "Last-Translator: Priit Jõerüüt "
 "<jrtkbfdr@users.noreply.translate.fedoraproject.org>\n"
 "Language-Team: Estonian <https://translate.fedoraproject.org/projects/"
@@ -144,7 +144,7 @@ msgstr ""
 
 #: pyanaconda/modules/payloads/kickstart.py:120
 msgid "The %packages --ignorebroken feature is not supported on your product!"
-msgstr ""
+msgstr "„%packages --ignorebroken“ funktsionaalsus pole sinu tootes toetatud!"
 
 #: pyanaconda/modules/payloads/payload/live_image/installation.py:131
 msgid "Downloading {}"
@@ -665,7 +665,7 @@ msgstr "Failisüsteemile sobimatu sildivorming."
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:307
 msgid "That mount point is already in use. Try something else?"
-msgstr "Haakepunkt on juba kasutuses. Proovi midagi muud?"
+msgstr "Haakepunkt on juba kasutuses. Kas proovid midagi muud?"
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:310
 msgid "Please enter a valid mount point."
@@ -919,12 +919,16 @@ msgid ""
 "You must include a PReP Boot Partition within the first 4GiB of an MBR- or "
 "GPT-formatted disk."
 msgstr ""
+"Sa pead MBR- või GPT-vormingus ketta esimese 4GiB sisse kaasama „PReP Boot "
+"Partition“ tüüpi partitsiooni."
 
 #: pyanaconda/modules/storage/platform.py:354
 msgid ""
 "You must include an Apple Bootstrap Partition on an Apple Partition Map-"
 "formatted disk."
 msgstr ""
+"Sa pead „Apple Partition Map“ vormingus kettale lisama „Apple Bootstrap "
+"Partition“ vormingus partitsiooni."
 
 #: pyanaconda/modules/storage/platform.py:404
 msgid ""
@@ -1051,6 +1055,9 @@ msgid ""
 "You have not specified a swap partition. Although not strictly required in "
 "all cases, it will significantly improve performance for most installations."
 msgstr ""
+"Sul on saaleala ehk swap-partitsioon määratlemata. See tõesti pole kõikidel "
+"juhtudel rangelt nõutav, kuid enamuste paigalduste puhul siiski parandab "
+"märgatavalt jõudlust."
 
 #: pyanaconda/modules/storage/checker/utils.py:336
 msgid ""
@@ -1069,7 +1076,7 @@ msgstr ""
 #, python-format
 msgid ""
 "This mount point is invalid. The %s directory must be on the / file system."
-msgstr "See haakepunkt poel korrektne. %s kaust peab asuma / failisüsteemis."
+msgstr "See haakepunkt pole korrektne. %s kaust peab asuma / failisüsteemis."
 
 #: pyanaconda/modules/storage/checker/utils.py:371
 #, python-format
@@ -1087,6 +1094,8 @@ msgid ""
 "without an encryption key specified for this device. Please, rescan the "
 "storage."
 msgstr ""
+"Olemasolevat avamata LUKS-seadet „{}“ ei saa paigalduseks kasutada ilma "
+"selle seadme jaoks vajaliku krüptovõtmeta. Palun skaneeri andmeruumi uuesti."
 
 #: pyanaconda/modules/storage/checker/utils.py:434
 #, python-format
@@ -1452,6 +1461,12 @@ msgid ""
 "red.ht/rhel-smt to understand your potential risks and learn about other "
 "ways to mitigate these risks."
 msgstr ""
+"Rööpne mitmelõimelisus (Simultaneous Multithreading - SMT) võib paljude "
+"töökoormuste puhul parandada jõudlust, aga sellega kaasnevad ka mitmed "
+"avalikult teadaolevad turvavead. Sul on võimalus SMT välja lülitada, aga see "
+"võib mõjutada jõudlust. Seega kui otsustad SMT kasutusele jätta, siis palun "
+"loe siit https://red.ht/rhel-smt teavet võimalike riskide ja nende "
+"maandamise võimaluste kohta."
 
 #: pyanaconda/core/constants.py:182
 msgid ""
@@ -1461,6 +1476,12 @@ msgid ""
 "rhel-smt to understand potential risks and learn about ways to mitigate "
 "these risks."
 msgstr ""
+"Rööpne mitmelõimelisus (Simultaneous Multithreading - SMT) võib paljude "
+"töökoormuste puhul parandada jõudlust, aga sellega kaasnevad ka mitmed "
+"avalikult teadaolevad turvavead. Sul on võimalus SMT välja lülitada, aga see "
+"võib mõjutada jõudlust. Kui otsustad SMT kasutusele jätta, siis palun loe "
+"siit https://red.ht/rhel-smt teavet võimalike riskide ja nende maandamise "
+"võimaluste kohta."
 
 #: pyanaconda/core/constants.py:198
 msgid "The password is empty."
@@ -1858,6 +1879,7 @@ msgstr "Traadita võrguühendus pääsupunktiga %(access_point)s on ühendatud"
 #, python-format
 msgid "Bond %(interface_name)s (%(list_of_ports)s) connected"
 msgstr ""
+"Agregeeritud võrguliides %(interface_name)s (%(list_of_ports)s) on ühendatud"
 
 #: pyanaconda/network.py:505
 #, python-format
@@ -1990,7 +2012,7 @@ msgid ""
 msgstr ""
 "\n"
 "\n"
-"Sa võid käivitada vnc ilma paroolita.\n"
+"Sa võid käivitada vnc ilma salasõnata. \n"
 "\n"
 
 #: pyanaconda/vnc.py:271
@@ -2085,6 +2107,9 @@ msgid ""
 "configuration. These are not fatal, but you may wish to make changes to your "
 "kernel config."
 msgstr ""
+"Tuvastasime kasutuselolevates kerneli seadistustes järgnevad hoiatused. Need "
+"pole kriitilised, kuid võib-olla siiski tahaksid oma kerneli seadistusi "
+"muuta."
 
 #: pyanaconda/ui/gui/hubs/summary.py:111
 msgctxt "GUI|Summary|Warning Dialog"
@@ -2220,6 +2245,9 @@ msgid ""
 "of available space, including <b>%(software)s</b> for software and <b>"
 "%(swap)s</b> for swap space."
 msgstr ""
+"Sinu praegune tarkvaravalik (<b>%(product)s</b>) vajab <b>%(total)s</b> vaba "
+"andmeruumi, sealhulgas <b>%(software)s</b> tarkvara jaoks ja <b>%(swap)s</b> "
+"saaleala jaoks."
 
 #: pyanaconda/ui/gui/spokes/lib/storage_dialogs.py:81
 #, python-format
@@ -2228,6 +2256,9 @@ msgid ""
 "selection</a> requires <b>%(total)s</b> of available space, including <b>"
 "%(software)s</b> for software and <b>%(swap)s</b> for swap space."
 msgstr ""
+"Sinu praegune tarkvaravalik (<a href=\"\" title=\"%(tooltip)s\"><b>%(product)"
+"s</b></a>) vajab <b>%(total)s</b> vaba andmeruumi, sealhulgas <b>%(software)"
+"s</b> tarkvara jaoks ja <b>%(swap)s</b> saaleala jaoks."
 
 #: pyanaconda/ui/gui/spokes/lib/storage_dialogs.py:132
 #, python-format
@@ -2436,6 +2467,16 @@ msgid ""
 "'512m' = 512 megabytes\n"
 "'123456789' = 123 terabytes and a bit less than a half\n"
 msgstr ""
+"Sisesta andmeruumi soovitud maht täis- või kümnendarvudes.\n"
+"\n"
+"Numbrigruppide vahele palun ära lisa tühikuid. Ühikud võivad sisaldada nii "
+"kümnend-, kui kahendsüsteemi eesliidet ja soovi korral tähte B. Tähed on "
+"tõstutundetud. Kui ühik jääb märkimata, siis selleks on vaikimisi MiB.\n"
+"\n"
+"Korrektse sisestuse näited:\n"
+"'100 GiB' = 100 gibibaiti\n"
+"'512m' = 512 megabaiti\n"
+"'123456789' = 123 terabaiti ja natuke alla poole\n"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:80
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:83
@@ -2759,7 +2800,7 @@ msgstr "Traadita"
 #: pyanaconda/ui/gui/spokes/network.py:287
 #: pyanaconda/ui/gui/spokes/network.glade:15
 msgid "Bond"
-msgstr ""
+msgstr "Agregeeritud võrguliides"
 
 #: pyanaconda/ui/gui/spokes/network.py:288
 #: pyanaconda/ui/gui/spokes/network.glade:27
@@ -4093,7 +4134,7 @@ msgstr "VNC"
 
 #: pyanaconda/ui/tui/spokes/askvnc.py:125
 msgid "VNC Password"
-msgstr "VNC parool"
+msgstr "VNC salasõna"
 
 #: pyanaconda/ui/tui/spokes/askvnc.py:130
 msgid ""
@@ -5492,6 +5533,10 @@ msgid ""
 "supported on IBM z14 and earlier models, therefore choose to disable it if "
 "you intend to boot the installed system on such models."
 msgstr ""
+"Kui Secure Boot on kasutusel ja seadistatud, siis püsivara kontrollib Linuxi "
+"kerneli terviklust. Secure Boot pole toetatud IBM z14 ja varasemate mudelite "
+"puhul, seega alglaaditava süsteemi tagamiseks palun lülita ta nendel "
+"juhtudel välja."
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:283
 msgid "Enabled if supported by the installing machine"
@@ -5580,7 +5625,7 @@ msgstr "Lahendus asjatundjatele (_Blivet-GUI)"
 #: pyanaconda/ui/gui/spokes/storage.glade:433
 msgctxt "GUI|Storage"
 msgid "I would like to _make additional space available."
-msgstr ""
+msgstr "Ma sooviksin teha täiendavat and_meruumi saadavaks."
 
 #: pyanaconda/ui/gui/spokes/storage.glade:465
 msgid "Encryption"
@@ -6143,7 +6188,7 @@ msgstr "_Registreeri"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:731
 msgid "The system has been properly subscribed"
-msgstr ""
+msgstr "Süsteemile on lisatud korrektne tellimus"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:745
 msgctxt "GUI|Subscription|Unregister"
@@ -6996,7 +7041,7 @@ msgstr "_Filtreerimise alus:"
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1288
 msgctxt "GUI|Installation Destination|Filter|NVDIMM Devices|Mode"
 msgid "Show Only Devices in _Mode:"
-msgstr ""
+msgstr "Näita vaid seadmeid, _mille olek on:"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1305
 msgid "Sector"
