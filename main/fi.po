@@ -21,7 +21,7 @@
 # Juhani Numminen <juhaninumminen0@gmail.com>, 2017. #zanata
 # Jiri Grönroos <jiri.gronroos@iki.fi>, 2018. #zanata, 2020, 2022, 2024, 2025.
 # Juhani Numminen <juhaninumminen0@gmail.com>, 2018. #zanata
-# Jan Kuparinen <copper_fin@hotmail.com>, 2020, 2021, 2022, 2023, 2024, 2025.
+# Jan Kuparinen <copper_fin@hotmail.com>, 2020, 2021, 2022, 2023, 2024, 2025, 2026.
 # Ricky Tigg <ricky.tigg@gmail.com>, 2020, 2021, 2022, 2024, 2025.
 # yangyangdaji <1504305527@qq.com>, 2022, 2023.
 # Weblate Translation Memory <noreply-mt-weblate-translation-memory@weblate.org>, 2024, 2025.
@@ -30,7 +30,7 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
 "POT-Creation-Date: 2026-01-21 01:50+0000\n"
-"PO-Revision-Date: 2025-12-30 19:58+0000\n"
+"PO-Revision-Date: 2026-01-22 02:01+0000\n"
 "Last-Translator: Jan Kuparinen <copper_fin@hotmail.com>\n"
 "Language-Team: Finnish <https://translate.fedoraproject.org/projects/"
 "anaconda/master/fi/>\n"
@@ -39,7 +39,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15.1\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #: pyanaconda/startup_utils.py:664
 #, python-format
@@ -867,7 +867,7 @@ msgstr "Käynnistys"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:890
 msgid "Bootc deployment complete: {}"
-msgstr "Käyttöönotto on valmis: {}"
+msgstr "Bootc käyttöönotto on valmis: {}"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:817
 msgid "Bootc deployment in progress: {}"
@@ -5592,6 +5592,11 @@ msgid ""
 "needed.\n"
 "\n"
 msgstr ""
+"Varoitus: Järjestelmä on havaittu muuttumattomaksi. "
+"Käyttöönottohakemistoihin ei suositella manuaalisia muutoksia, koska se voi "
+"rikkoa järjestelmän eheyden. Muokkaa /etc-, /var- tai käynnistyslataimen "
+"määritystiedostoja vain tarvittaessa.\n"
+"\n"
 
 #: pyanaconda/ui/tui/spokes/kernel_warning.py:40
 msgid "Warning: Processor has Simultaneous Multithreading (SMT) enabled"
@@ -6065,15 +6070,7 @@ msgid "Your root partition must be on a device of type: %s."
 msgstr "Juuriosiosi on oltava laitteessa tyyppiä: %s."
 
 #: pyanaconda/rescue.py:494
-#, fuzzy, python-format
-#| msgid ""
-#| "Your system has been mounted under %(mountpoint)s.\n"
-#| "\n"
-#| "If you would like to make the root of your system the root of the active "
-#| "system, run the command:\n"
-#| "\n"
-#| "\tchroot %(mountpoint)s\n"
-#| "\n"
+#, python-format
 msgid ""
 "Your system has been mounted under %(mountpoint)s.\n"
 "\n"
@@ -6088,7 +6085,7 @@ msgstr ""
 "Jos haluat tehdä järjestelmän juuresta aktiivisen järjestelmän juuren, "
 "suorita komento:\n"
 "\n"
-"'chroot %(mountpoint)s'\n"
+"chroot %(chroot_path)s\n"
 "\n"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:636
