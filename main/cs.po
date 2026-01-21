@@ -33,7 +33,7 @@
 # Daniel Rusek <mail@asciiwolf.com>, 2019. #zanata, 2020, 2021, 2022, 2023, 2024, 2025.
 # Josef Hruška <hrusjos@gmail.com>, 2019. #zanata
 # Michal Konečný <michalkonec666@gmail.com>, 2019. #zanata
-# Pavel Borecki <pavel.borecki@gmail.com>, 2019. #zanata, 2020, 2021, 2022, 2023, 2024, 2025.
+# Pavel Borecki <pavel.borecki@gmail.com>, 2019. #zanata, 2020, 2021, 2022, 2023, 2024, 2025, 2026.
 # Zdenek <chmelarz@gmail.com>, 2019. #zanata
 # Vladimír Slávik <vslavik@redhat.com>, 2020, 2022.
 # Jiří Konečný <jkonecny@redhat.com>, 2020, 2023.
@@ -52,7 +52,7 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
 "POT-Creation-Date: 2026-01-21 01:50+0000\n"
-"PO-Revision-Date: 2025-11-17 10:59+0000\n"
+"PO-Revision-Date: 2026-01-22 02:01+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://translate.fedoraproject.org/projects/anaconda/"
 "master/cs/>\n"
@@ -61,7 +61,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 5.14.3\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #: pyanaconda/startup_utils.py:664
 #, python-format
@@ -5626,6 +5626,10 @@ msgid ""
 "needed.\n"
 "\n"
 msgstr ""
+"Varování: zjištěn neměnný systém. Není doporučováno dělat ruční změny ve "
+"složkách nasazení protože by toto mohlo poškodit systém. V případě potřeby "
+"měňte pouze /etc, /var nebo soubory s nastaveními zavaděče systému.\n"
+"\n"
 
 #: pyanaconda/ui/tui/spokes/kernel_warning.py:40
 msgid "Warning: Processor has Simultaneous Multithreading (SMT) enabled"
@@ -6107,15 +6111,7 @@ msgid "Your root partition must be on a device of type: %s."
 msgstr "Je třeba, aby kořenový oddíl byl na zařízení typu: %s."
 
 #: pyanaconda/rescue.py:494
-#, fuzzy, python-format
-#| msgid ""
-#| "Your system has been mounted under %(mountpoint)s.\n"
-#| "\n"
-#| "If you would like to make the root of your system the root of the active "
-#| "system, run the command:\n"
-#| "\n"
-#| "\tchroot %(mountpoint)s\n"
-#| "\n"
+#, python-format
 msgid ""
 "Your system has been mounted under %(mountpoint)s.\n"
 "\n"
@@ -6130,7 +6126,7 @@ msgstr ""
 "Pokud byste chtěli, aby se kořen vašeho systému stal kořenem aktivního "
 "systémového prostředí, zadejte příkaz:\n"
 "\n"
-"\tchroot %(mountpoint)s\n"
+"\tchroot %(chroot_path)s\n"
 "\n"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:636
