@@ -25,7 +25,7 @@
 # yangyangdaji <1504305527@qq.com>, 2022, 2023.
 # Jiří Konečný <jkonecny@redhat.com>, 2023.
 # Julen Sansó <julensanso@gmail.com>, 2023.
-# naly zzwd <xeanhort007@gmail.com>, 2024, 2025.
+# naly zzwd <xeanhort007@gmail.com>, 2024, 2025, 2026.
 # David Medina <dmedinacpnl@gmail.com>, 2025.
 # Weblate Translation Memory <noreply-mt-weblate-translation-memory@weblate.org>, 2025.
 msgid ""
@@ -33,9 +33,8 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
 "POT-Creation-Date: 2026-01-22 01:58+0000\n"
-"PO-Revision-Date: 2025-12-08 22:14+0000\n"
-"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
-"memory@weblate.org>\n"
+"PO-Revision-Date: 2026-01-27 08:59+0000\n"
+"Last-Translator: naly zzwd <xeanhort007@gmail.com>\n"
 "Language-Team: Catalan <https://translate.fedoraproject.org/projects/"
 "anaconda/rhel-10/ca/>\n"
 "Language: ca\n"
@@ -43,7 +42,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.14.3\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #: pyanaconda/kickstart.py:329
 #, python-format
@@ -181,8 +180,8 @@ msgstr ""
 msgctxt "GUI|Custom Partitioning|Devices"
 msgid " and {} other"
 msgid_plural " and {} others"
-msgstr[0] " i {} altre"
-msgstr[1] " i {} altres"
+msgstr[0] " i %d altre"
+msgstr[1] " i %d altres"
 
 #: pyanaconda/modules/storage/bootloader/base.py:667
 #, python-format
@@ -190,8 +189,8 @@ msgid ""
 "%(bootloader_stage2_description)s cannot be on an iSCSI disk which is not "
 "configured in iBFT."
 msgstr ""
-"%(bootloader_stage2_description)s no pot estar en un disc iSCSI que no està "
-"configurat en iBFT."
+"%(bootloader_stage2_description)s no pot estar en un disc iSCSI que no "
+"estigui configurat a iBFT."
 
 #: pyanaconda/modules/storage/bootloader/base.py:674
 #, python-format
@@ -344,7 +343,7 @@ msgstr "%s per commutar entre disposicions."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1305
 msgid "({} free)"
-msgstr "({} lliures)"
+msgstr "(%s lliures)"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:827
 msgid "/boot cannot be of type \"lvmlv\" on s390x"
@@ -357,7 +356,7 @@ msgstr "sistema de fitxers /boot"
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:423
 #, python-brace-format
 msgid "/boot/efi must be on a device of type {type} or {another}"
-msgstr "/boot/efi ha d'estar en tipus de dispositiu {type} o {another}"
+msgstr "/boot/efi ha d'estar en un dispositiu del tipus {type} o {another}"
 
 #: widgets/src/MountpointSelector.c:84
 msgid "0 GB"
@@ -599,7 +598,7 @@ msgstr "Afegeix dispositiu"
 
 #: pyanaconda/ui/gui/spokes/software_selection.glade:68
 msgid "Additional software for Selected Environment"
-msgstr "Programari addicional per a l'entorn seleccionat"
+msgstr "Programari addicional per a l'Entorn Seleccionat"
 
 #: pyanaconda/ui/tui/spokes/software_selection.py:373
 msgid "Additional software for selected environment"
@@ -667,16 +666,15 @@ msgstr ""
 "S'ha produït un error en intentar muntar alguns o tots del vostre sistema: "
 "{message}\n"
 "\n"
-"Alguns d'ells poden estar muntats sota {path}."
+" Alguns d'ells poden estar muntats sota {path}."
 
 #: pyanaconda/errors.py:129
 msgid "An error occurred while activating your storage configuration."
-msgstr ""
-"S'ha produït un error mentre s'activava la configuració de l'emmagatzematge."
+msgstr "S'ha produït un error revisant la configuració de l'emmagatzematge."
 
 #: pyanaconda/modules/storage/installation.py:90
 msgid "An error occurred while resizing the device {}: {}"
-msgstr "S'ha produït un error en canviar la mida al dispositiu {}: {}"
+msgstr "S'ha produït un error en canviar la mida del dispositiu {}: {}"
 
 #: pyanaconda/ui/gui/spokes/lib/detailederror.glade:28
 msgid "An unknown error occurred during installation.  Details are below."
@@ -714,12 +712,12 @@ msgstr ""
 msgid ""
 "Are you sure you want to delete all of the data on {}, including subvolumes?"
 msgstr ""
-"Esteu segur que voleu eliminar totes les dades de {}, incloent-hi els "
-"subvolums?"
+"Esteu segur que voleu eliminar totes les dades de %s, que inclouen les "
+"captures i/o els subvolums?"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:408
 msgid "Are you sure you want to delete all of the data on {}?"
-msgstr "Esteu segur que voleu eliminar totes les dades de {}?"
+msgstr "Esteu segur que voleu eliminar totes les dades de %s?"
 
 #: pyanaconda/ui/gui/main.glade:158
 msgid ""
@@ -746,8 +744,8 @@ msgid ""
 msgstr ""
 "Almenys un dels vostres dispositius d'intercanvi no té un UUID, que és comú "
 "en els espais d'intercanvi creats amb versions anteriors de mkswap. Aquests "
-"dispositius es referencien amb el camí al dispositiu a /etc/fstab, que no és "
-"el més idoni, ja que els camins als dispositius poden canviar sota una "
+"dispositius es referencien amb el camí al dispositiu en /etc/fstab, que no "
+"és el més idoni, ja que els camins als dispositius poden canviar sota una "
 "varietat de circumstàncies. "
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1075
@@ -783,7 +781,7 @@ msgstr "Automàtic"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1487
 msgid "Automatic partitioning failed."
-msgstr "El particionatge automàtic ha fallat."
+msgstr "El particionament automàtic ha fallat."
 
 #: pyanaconda/ui/tui/spokes/storage.py:174
 #: pyanaconda/ui/gui/spokes/storage.py:333
@@ -862,8 +860,8 @@ msgid ""
 "Boot loader stage1 device cannot be on an iSCSI disk which is not configured "
 "in iBFT."
 msgstr ""
-"El dispositiu del gestor d'arrencada stage1 no pot estar en un disc iSCSI "
-"que no està configurat en iBFT."
+"El dispositiu stage1 del carregador d'arrencada no pot estar en un disc "
+"iSCSI que no estigui configurat a iBFT."
 
 #: pyanaconda/modules/payloads/source/bootc/bootc.py:53
 msgid "Bootc"
@@ -1266,7 +1264,7 @@ msgstr "Crea un usuari"
 
 #: pyanaconda/installation.py:541
 msgid "Creating snapshots"
-msgstr "Creació d'instantànies"
+msgstr "Creant instantànies"
 
 #: pyanaconda/installation.py:223
 msgid "Creating users"
@@ -1366,7 +1364,7 @@ msgstr "Elimina-ho _tot"
 msgctxt "GUI|Custom Partitioning|Confirm Delete Dialog"
 msgid "Delete _all file systems which are only used by {}."
 msgstr ""
-"Suprimeix _tots els sistemes de fitxers que siguin utilitzats només amb {}."
+"Suprimeix tots els sistemes de fitxers que siguin utilitzats només amb %s."
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:878
 msgid "Deploying image..."
@@ -1446,15 +1444,15 @@ msgstr "La detecció de dispositius ha tingut èxit."
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:446
 msgid "Device does not support RAID level selection {}."
-msgstr "El dispositiu no és compatible amb la selecció de nivell RAID {}."
+msgstr "El dispositiu no és compatible amb la selecció de nivell RAID %s."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:656
 msgid "Device reconfiguration failed."
-msgstr "La reconfiguració del dispositiu ha fallat."
+msgstr "Ha fallat la reconfiguració del dispositiu."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1090
 msgid "Device removal request failed."
-msgstr "La sol·licitud d'eliminació del dispositiu ha fallat."
+msgstr "El descobriment de dispositius DASD ha fallat."
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:220
 msgctxt "GUI|Software Source"
@@ -1780,7 +1778,7 @@ msgstr "Surt del shell i continua"
 
 #: pyanaconda/ui/gui/spokes/lib/installation_source_helpers.py:292
 msgid "Extra characters in proxy URL"
-msgstr "Hi ha caràcters addicionals a l'URL del servidor intermediari"
+msgstr "Hi ha caràcters addicionals en l'URL del servidor intermediari"
 
 #: pyanaconda/ui/gui/spokes/storage.py:493
 #, python-brace-format
@@ -1803,7 +1801,7 @@ msgstr "Ha fallat afegir un dispositiu."
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1032
 msgid "Failed to add new device."
-msgstr "Ha fallat l'afegiment del nou dispositiu."
+msgstr "No s'ha pogut afegir un dispositiu nou."
 
 #: pyanaconda/modules/payloads/payload/dnf/repositories.py:226
 #, python-brace-format
@@ -1840,7 +1838,7 @@ msgstr "No s'ha pogut subministrar el sistema de destinació per a Satellite."
 
 #: pyanaconda/ui/lib/storage.py:302
 msgid "Failed to save boot loader configuration"
-msgstr "No s'ha pogut desar la configuració del gestor d'arrencada"
+msgstr "No s'ha pogut desar la configuració del boot loader"
 
 #: pyanaconda/ui/lib/storage.py:297
 msgid "Failed to save storage configuration"
@@ -1859,7 +1857,7 @@ msgstr ""
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1894
 msgid "Failed to unlock encrypted block device."
-msgstr "Ha fallat el desblocatge del dispositiu de blocs xifrat."
+msgstr "%s no pot estar en un dispositiu de bloc encriptat."
 
 #: pyanaconda/modules/storage/bootloader/systemd.py:144
 msgid ""
@@ -1885,8 +1883,8 @@ msgstr "Sistema de fitxers"
 #: pyanaconda/modules/storage/kickstart.py:95
 msgid "File system type \"{}\" given in autopart command is invalid."
 msgstr ""
-"El tipus de sistema de fitxers «{}» que heu proporcionat en l'ordre autopart "
-"no és vàlid."
+"El tipus de sistema de fitxers \"{}\" proporcionat a la comanda autopart no "
+"és vàlid."
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1311
 msgctxt "GUI|Installation Destination|Filter|NVMe Fabrics Devices"
@@ -2037,16 +2035,16 @@ msgstr "Passarel·la"
 
 #: pyanaconda/modules/storage/installation.py:145
 msgid "Gathering entropy (time ran out)"
-msgstr "Recollida d’entropia (es va acabar el temps)"
+msgstr "Recollint entropia (el temps s'ha esgotat)"
 
 #: pyanaconda/modules/storage/installation.py:141
 msgid "Gathering entropy 100%"
-msgstr "Recollida d’entropia 100%"
+msgstr "Recollint entropia 100%"
 
 #: pyanaconda/modules/storage/installation.py:148
 #, python-brace-format
 msgid "Gathering entropy {percents}% (remaining time {time})"
-msgstr "Recollida d’entropia {percents}% (temps restant {time})"
+msgstr "Recollint entropia {percents}% (temps restant {time})"
 
 #: pyanaconda/installation.py:248
 msgid "Generating initramfs"
@@ -2200,7 +2198,7 @@ msgstr "OPCIONS DE LA INSTAL·LACIÓ"
 #: pyanaconda/ui/gui/spokes/installation_progress.glade:8
 #: pyanaconda/ui/gui/spokes/installation_progress.glade:164
 msgid "INSTALLATION PROGRESS"
-msgstr "PROGRÉS DE LA INSTAL·LACIÓ"
+msgstr "ORIGEN DE LA INSTAL·LACIÓ"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:16
 msgid "INSTALLATION SOURCE"
@@ -2295,13 +2293,13 @@ msgid ""
 "Install the _default versions provided by the installation source (above) "
 "only"
 msgstr ""
-"Instal·la només les versions proporcionades per _defecte per l'origen de la "
-"instal·lació (anterior)"
+"Instal·leu només les versions per _defecte proporcionades pel codi "
+"d'instal·lació (anterior)"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:502
 msgctxt "GUI|Software Source"
 msgid "Install the _latest available software updates"
-msgstr "Instal·la les ú_ltimes actualitzacions de programari disponibles"
+msgstr "Instal·la les _últimes actualitzacions de programari disponibles"
 
 #: data/liveinst/liveinst.desktop:5
 msgid "Install the live CD to your hard disk"
@@ -2336,7 +2334,7 @@ msgstr "S'ha completat la instal·lació. Premeu %s per sortir"
 #: pyanaconda/ui/gui/spokes/installation_source.glade:179
 msgctxt "GUI|Software Source"
 msgid "Installation media via SE/_HMC"
-msgstr "Mitjà d'instal·lació a través de SE/_HMC"
+msgstr "Mitjans d'instal·lació via SE/_HMC"
 
 #: pyanaconda/ui/gui/spokes/lib/resize.py:103
 #, python-format
@@ -2605,7 +2603,7 @@ msgstr "Discs Estàndards Locals"
 
 #: pyanaconda/network.py:119
 msgid "Local host name must not end with period '.'."
-msgstr "El nom d'amfitrió local no ha d'acabar amb punt «.»."
+msgstr "El nom d'amfitrió local no ha d'acabar amb un punt '.'."
 
 #: pyanaconda/modules/payloads/source/cdrom/cdrom.py:67
 msgid "Local media"
@@ -2613,7 +2611,7 @@ msgstr "Mitjà local"
 
 #: pyanaconda/modules/payloads/source/hmc/hmc.py:56
 msgid "Local media via SE/HMC"
-msgstr "Mitjà local a través de SE/HMC"
+msgstr "Mitjans locals via SE/HMC"
 
 #: pyanaconda/modules/payloads/source/repo_files/repo_files.py:55
 msgid "Local repositories"
@@ -2768,7 +2766,7 @@ msgstr "Servidor NFS {}"
 
 #: pyanaconda/modules/storage/kickstart.py:165
 msgid "NIC \"{}\" given in fcoe command does not exist."
-msgstr "La NIC «{}» que heu indicat en l'ordre fcoe no existeix."
+msgstr "La NIC «%s» que heu proporcionat en l'ordre fcoe no existeix."
 
 #: pyanaconda/ui/tui/spokes/time_spoke.py:317
 msgid "NTP configuration"
@@ -2823,7 +2821,7 @@ msgstr "El nom no pot començar amb el caràcter «-»."
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:632
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:343
 msgid "Name is already in use."
-msgstr "El nom ja està en ús."
+msgstr "El nom indicat %s ja s'està utilitzant."
 
 #: pyanaconda/core/users.py:184
 msgid "Name must be shorter than 33 characters."
@@ -2867,7 +2865,7 @@ msgstr "Configuració de la xarxa"
 
 #: pyanaconda/ui/tui/spokes/network.py:328
 msgid "Network configuration is not available."
-msgstr "La configuració de la xarxa no està disponible."
+msgstr "No estan disponibles els tests de configuració de les disposicions."
 
 #: pyanaconda/modules/storage/kickstart.py:190
 #, python-brace-format
@@ -2889,7 +2887,7 @@ msgstr "Nou selector"
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:227
 #, python-brace-format
 msgid "New {name} {version} Installation"
-msgstr "Instal·lació nova de {name} {version}"
+msgstr "Nova instal·lació de {name} {version}"
 
 #: pyanaconda/ui/tui/spokes/installation_source.py:507
 msgid "No *.iso files found in device root folder"
@@ -2906,7 +2904,7 @@ msgstr "Sense espai"
 
 #: pyanaconda/ui/tui/spokes/software_selection.py:375
 msgid "No additional software to select."
-msgstr "No hi ha cap programari addicional per seleccionar."
+msgstr "No hi ha programari addicional per seleccionar."
 
 #: pyanaconda/modules/storage/partitioning/automatic/utils.py:400
 msgid "No big enough free space on disks for automatic partitioning"
@@ -3059,7 +3057,7 @@ msgstr "No hi ha prou espai lliure als discs seleccionats."
 msgid "Not enough space in file systems for the current software selection."
 msgstr ""
 "No hi ha prou espai als sistemes de fitxers per a l'actual selecció de "
-"programari."
+"programari. Es necessiten %s addicionals."
 
 #: pyanaconda/ui/lib/space.py:105
 msgid ""
@@ -3067,7 +3065,7 @@ msgid ""
 "additional {} is needed."
 msgstr ""
 "No hi ha prou espai als sistemes de fitxers per a l'actual selecció de "
-"programari. Es necessiten {} addicionals."
+"programari. Es necessiten %s addicionals."
 
 #: pyanaconda/rescue.py:487
 msgid "Not mounting the system.\n"
@@ -3329,7 +3327,7 @@ msgstr ""
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:410
 msgid "Please enter a mount point."
-msgstr "Introduïu un punt de muntatge."
+msgstr "Introduïu un punt de muntatge vàlid."
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:310
 msgid "Please enter a valid mount point."
@@ -3876,7 +3874,7 @@ msgstr "Contrasenya de root"
 
 #: pyanaconda/ui/gui/spokes/root_password.py:137
 msgid "Root password has been set."
-msgstr "La contrasenya de root ha estat establerta."
+msgstr "S'ha establert la contrasenya de root."
 
 #: pyanaconda/ui/lib/users.py:39
 msgid "Root password is not set"
@@ -4082,9 +4080,9 @@ msgid ""
 "Selected disks {} contain volume group '{}' that also uses further "
 "unselected disks. You must select or de-select all these disks as a set."
 msgstr ""
-"Els discs seleccionats {} contenen el grup de volums '{}' que utilitza també "
-"altres discs no seleccionats. Heu de seleccionar o deseleccionar tots "
-"aquests discs del conjunt."
+"Vàreu seleccionar el disc %(selected)s, el qual conté dispositius que també "
+"utilitzen el disc sense seleccionar %(unselected)s. Heu de seleccionar o de-"
+"seleccionar aquests discs com un conjunt."
 
 #: pyanaconda/ui/lib/software.py:98
 msgid "Selected environment is not valid"
@@ -4326,7 +4324,7 @@ msgstr "S'està iniciant l'extracció de {branch_name} des de {source}"
 
 #: pyanaconda/network.py:465
 msgid "Status not available"
-msgstr "Estat no disponible"
+msgstr "No disponible"
 
 #: pyanaconda/ui/gui/spokes/network.py:91
 msgid "Status unknown"
@@ -4342,7 +4340,7 @@ msgstr "Configuració de l'emmagatzematge"
 
 #: pyanaconda/ui/gui/spokes/storage.glade:570
 msgid "Storage Options"
-msgstr "Opcions d'emmagatzematge"
+msgstr "Opcions d'Emmagatzematge"
 
 #: pyanaconda/installation.py:303
 msgid "Storing configuration files and kickstarts"
@@ -4646,7 +4644,7 @@ msgid ""
 "double check your authorization information and try again."
 msgstr ""
 "S'ha produït el següent error en iniciar la sessió en el node iSCSI "
-"seleccionat. Torneu a comprovar la informació de l'autentificació i torneu-"
+"seleccionat.  Torneu a comprovar la informació de l'autentificació i torneu-"
 "ho a intentar."
 
 #: pyanaconda/ui/gui/spokes/advstorage/fcoe.glade:218
@@ -4714,7 +4712,7 @@ msgstr ""
 
 #: pyanaconda/rescue.py:544
 msgid "The following installations were discovered on your system."
-msgstr "Es van trobar les següents instal·lacions en el vostre sistema."
+msgstr "S'han descobert les següents instal·lacions al vostre sistema."
 
 #: pyanaconda/ui/tui/hubs/summary.py:121
 msgid "The following mandatory spokes are not completed:"
@@ -4747,10 +4745,10 @@ msgid ""
 "You can choose to format them now with dasdfmt or cancel to leave them "
 "unformatted. Unformatted DASDs cannot be used during installation."
 msgstr ""
-"S'han detectat els següents LDL DASD o estan sense formatar al vostre "
-"sistema. Podeu escollir entre formatar-los ara amb dasdfmt o cancel·lar per "
-"deixar-los sense format. Els DASD sense format no poden utilitzar-se durant "
-"la instal·lació."
+"S'ha trobat els següents DASD sense formatar o LDL al vostre sistema. Podeu "
+"escollir entre formatar-los ara amb dasdfmt o cancel·lar per deixar-los "
+"sense format. Els DASD sense format no poden utilitzar-se durant la "
+"instal·lació."
 
 #: pyanaconda/ui/tui/spokes/storage.py:348
 msgid ""
@@ -4759,10 +4757,10 @@ msgid ""
 "unformatted. Unformatted DASDs cannot be used during installation.\n"
 "\n"
 msgstr ""
-"S'han detectat els següents LDL DASD o estan sense formatar al vostre "
-"sistema. Podeu escollir entre formatar-los ara amb dasdfmt o cancel·lar per "
-"deixar-los sense format. Els DASD sense format no poden utilitzar-se durant "
-"la instal·lació.\n"
+"S'ha trobat els següents DASD sense formatar o LDL al vostre sistema. Podeu "
+"escollir entre formatar-los ara amb dasdfmt o cancel·lar per deixar-los "
+"sense format. Els DASD sense format no poden utilitzar-se durant la "
+"instal·lació.\n"
 "\n"
 
 #: pyanaconda/ui/gui/hubs/summary.py:103
@@ -4771,9 +4769,9 @@ msgid ""
 "configuration. These are not fatal, but you may wish to make changes to your "
 "kernel config."
 msgstr ""
-"S'han trobat els següents errors en comprovar la configuració del kernel. "
-"Aquests no són fatals, però potser us agradaria fer canvis a la configuració "
-"del kernel."
+"S'han trobat els següents avisos en comprovar la vostra configuració del "
+"nucli. No són fatals, però potser voldreu fer canvis a la configuració del "
+"vostre nucli."
 
 #: pyanaconda/ui/gui/spokes/storage.py:960
 msgid ""
@@ -4877,7 +4875,7 @@ msgstr ""
 
 #: pyanaconda/core/constants.py:205
 msgid "The password you have provided is weak."
-msgstr "La contrasenya que heu proporcionat és feble."
+msgstr "La contrasenya que has proporcionat és feble."
 
 #: pyanaconda/core/constants.py:209
 msgid "The password you have provided is weak:"
@@ -5000,14 +4998,14 @@ msgid ""
 "Once you have resolved the issue you can retry the storage scan. If you do "
 "not fix it you will have to exit the installer."
 msgstr ""
-"Hi ha un problema amb la vostra configuració existent de l'emmagatzematge o "
-"amb els teus ajustos inicials, per exemple un fitxer kickstart. Ho heu de "
-"resoldre abans que es pugui continuar amb la instal·lació. Hi ha disponible "
-"un shell que podeu utilitzar, per accedir-hi premeu ctrl-alt-f1 i després "
-"ctrl-b 2.\n"
+"Hi ha un problema amb la configuració d'emmagatzematge existent o amb la "
+"configuració inicial, per exemple, un fitxer kickstart. Heu de resoldre "
+"aquest problema abans que la instal·lació pugui continuar. Hi ha un shell "
+"disponible per al seu ús al qual podeu accedir prement Ctrl-Alt-F1 i després "
+"Ctrl-B 2.\n"
 "\n"
-"Una vegada hàgiu resolt aquesta incidència, podreu reintentar l'escaneig de "
-"l'emmagatzematge. Si no ho resoleu, haureu de sortir de l'instal·lador."
+"Un cop hàgiu resolt el problema, podeu tornar a intentar l'escaneig "
+"d'emmagatzematge. Si no el solucioneu, haureu de sortir de l'instal·lador."
 
 #: pyanaconda/ui/gui/spokes/lib/resize.py:161
 msgid ""
@@ -5028,7 +5026,7 @@ msgid ""
 "{mount_point} is {fstab_type}."
 msgstr ""
 "Hi ha una entrada al fitxer /etc/fstab que conté un tipus de sistema de "
-"fitxers no vàlid o incorrecte. El fitxer diu que {detected_type} a "
+"fitxers no vàlid o incorrecte. El fitxer indica que {detected_type} a "
 "{mount_point} és {fstab_type}."
 
 #: pyanaconda/ui/gui/spokes/storage.py:815
@@ -5620,16 +5618,15 @@ msgstr ""
 
 #: pyanaconda/ui/tui/spokes/kernel_warning.py:40
 msgid "Warning: Processor has Simultaneous Multithreading (SMT) enabled"
-msgstr ""
-"Atenció: El processador té habilitat l'SMT (Simultaneous Multithreading)"
+msgstr "Avís: el processador té habilitat Simultaneous Multithreading (SMT)"
 
 #: pyanaconda/ui/gui/hubs/summary.py:93
 msgid ""
 "Warning: Processor has Simultaneous Multithreading (SMT) enabled.  <a "
 "href=\"\">Click for details.</a>"
 msgstr ""
-"Atenció: El processador té habilitat l'SMT (Simultaneous Multithreading). <a "
-"href=\"\">Feu clic per als detalls.</a>"
+"Avís: El processador té activat el Simultaneous Multithreading (SMT).  <a "
+"href=\"\">Feu clic per a més informació.</a>"
 
 #: pyanaconda/rescue.py:451
 msgid ""
@@ -5805,7 +5802,7 @@ msgstr "S'està escrivint la configuració de la xarxa"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1079
 msgid "Writing objects"
-msgstr "S'estan escrivint els objectes"
+msgstr "Escrivint objectes"
 
 #: pyanaconda/ui/gui/spokes/lib/resize.py:154
 msgid ""
@@ -5959,7 +5956,9 @@ msgstr ""
 #: pyanaconda/modules/storage/platform.py:79
 #: pyanaconda/modules/storage/platform.py:336
 msgid "You must include at least one disk as an install target."
-msgstr "Heu d’incloure almenys un disc com a destí d’instal·lació."
+msgstr ""
+"Heu d'incloure almenys un disc formatat amb MBR com a destinació de la "
+"instal·lació."
 
 #: pyanaconda/ui/tui/spokes/user.py:256
 msgid "You must set a password"
@@ -6702,7 +6701,7 @@ msgstr "D'ac_ord"
 #: pyanaconda/ui/gui/hubs/summary.py:111
 msgctxt "GUI|Summary|Warning Dialog"
 msgid "_OK"
-msgstr "D'ac_ord"
+msgstr "_D'acord"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:314
 msgctxt "GUI|Software Source"
@@ -6810,7 +6809,7 @@ msgstr "_Surt del programa d'instal·lació"
 #: pyanaconda/ui/gui/spokes/installation_progress.py:106
 msgctxt "GUI|Progress"
 msgid "_Reboot System"
-msgstr "_Reinicia el sistema"
+msgstr "_Reinicia"
 
 #: pyanaconda/ui/gui/spokes/lib/resize.glade:71
 msgctxt "GUI|Reclaim Dialog"
@@ -6952,7 +6951,7 @@ msgstr "Encon_geix"
 #: pyanaconda/ui/gui/spokes/network.glade:2214
 msgctxt "GUI|Network|Proxy"
 msgid "_Socks Host"
-msgstr "Amfitrió _SOCKS"
+msgstr "Amfitrió _Socks"
 
 #: pyanaconda/ui/gui/spokes/software_selection.py:79
 msgctxt "GUI|Spoke"
@@ -7299,12 +7298,12 @@ msgstr "{device_description} ({device_name})"
 #: pyanaconda/modules/storage/devicetree/viewer.py:379
 #, python-brace-format
 msgid "{device_name} on {container_name}"
-msgstr "{device_name} en {container_name}"
+msgstr "{device_name} a {container_name}"
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:430
 #, python-brace-format
 msgid "{fs} must be on a device of type {type}"
-msgstr "{fs} ha d'estar en un tipus de dispositiu {type}"
+msgstr "{fs} ha d'estar en un dispositiu del tipus {type}"
 
 #: pyanaconda/modules/storage/devicetree/root.py:350
 #, python-brace-format
@@ -7320,24 +7319,24 @@ msgstr "{product} {version} per a {arch}"
 msgctxt "GUI|Installation Destination|Filter"
 msgid "{} _storage device selected"
 msgid_plural "{} _storage devices selected"
-msgstr[0] "{} _dispositiu d'emmagatzematge seleccionat"
-msgstr[1] "{} _dispositius d'emmagatzematge seleccionats"
+msgstr[0] "%d dispositiu d'emmagatzemament seleccionat"
+msgstr[1] "%d dispositius d'emmagatzemament seleccionats"
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:436
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:439
 msgid "{} cannot be encrypted"
-msgstr "No s'ha pogut xifrar {}"
+msgstr "No s'ha pogut xifrar %s"
 
 #: pyanaconda/ui/gui/spokes/storage.py:509
 msgid "{} free"
-msgstr "{} lliures"
+msgstr "%s lliures"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:394
 msgid ""
 "{} may be a system boot partition! Deleting it may break other operating "
 "systems. Are you sure you want to delete it?"
 msgstr ""
-"{} pot ser una partició d'arrencada del sistema! Si s'esborra pot trencar "
+"%s pot ser una partició d'arrencada del sistema! Si s'esborra pot trencar "
 "altres sistemes operatius. Esteu segur que voleu suprimir-ho?"
 
 #: pyanaconda/modules/storage/partitioning/manual/manual_partitioning.py:112
