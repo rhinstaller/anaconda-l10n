@@ -16,8 +16,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2020-04-15 15:07+0200\n"
 "PO-Revision-Date: 2026-01-28 01:53+0000\n"
-"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
-"memory@weblate.org>\n"
+"Last-Translator: Priit Jõerüüt "
+"<jrtkbfdr@users.noreply.translate.fedoraproject.org>\n"
 "Language-Team: Estonian <https://translate.fedoraproject.org/projects/"
 "anaconda/rhel-7/et/>\n"
 "Language: et\n"
@@ -134,6 +134,9 @@ msgid ""
 "loader stage1 device %(stage1dev)s is not. A drive failure in %(stage2dev)s "
 "could render the system unbootable."
 msgstr ""
+"Alglaaduri stage2-seade „%(stage2dev)s“ asub mitme kettaga massiivis, aga "
+"alglaaduri stage1-seade „%(stage1dev)s“ ei asu seal mitte. Kui „%(stage2dev)s"
+"“ ketas peaks katki minema, siis kogu süsteem võib muutuda käivitamatuks."
 
 #: pyanaconda/bootloader.py:1383
 #, python-format
@@ -142,6 +145,9 @@ msgid ""
 "loader stage1 device %(stage1dev)s is not part of this array. The stage1 "
 "boot loader will only be installed to a single drive."
 msgstr ""
+"Alglaaduri stage2-seade „%(stage2dev)s“ asub mitme kettaga massiivis, aga "
+"alglaaduri stage1-seade „%(stage1dev)s“ pole selle massiivi osa. Seega "
+"stage1-alglaadur paigaldatakse vaid ühele kettale."
 
 #: pyanaconda/bootloader.py:1676
 #, python-format
@@ -398,6 +404,9 @@ msgid ""
 "not exist.  Would you like to ignore this group and continue with "
 "installation?"
 msgstr ""
+"Sa oled määratlenud, et „%s“ grupp peaks olema paigaldatud. Sellist gruppi "
+"aga  pole olemas. Kas sa sooviksid seda gruppi eritata ja jätkata "
+"paigaldamisega?"
 
 #: pyanaconda/errors.py:215
 #, python-format
@@ -406,6 +415,9 @@ msgid ""
 "installation.  This group does not exist.  Would you like to ignore this "
 "group and continue with installation?"
 msgstr ""
+"Sa oled määratlenud, et „%s“ grupp peaks olema paigaldusest välistatud. "
+"Sellist gruppi aga  pole olemas. Kas sa sooviksid seda gruppi eritata ja "
+"jätkata paigaldamisega?"
 
 #: pyanaconda/errors.py:227
 #, python-format
@@ -470,7 +482,7 @@ msgid ""
 "\n"
 "The installer will now terminate."
 msgstr ""
-"Paigaldamine lõppes ilmse riistvaravea tõttu. Täpne veateade on:\n"
+"Paigaldamine lõppes alglaaduri paigaldamise vea tõttu. Täpne veateade on:\n"
 "\n"
 "%s.\n"
 "\n"
@@ -731,13 +743,13 @@ msgid "Disk \"%s\" given in ignoredisk command does not exist."
 msgstr "Käsus „ignoredisk“ näidatud ketast „%s“ pole olemas."
 
 #: pyanaconda/kickstart.py:831
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "Network interface \"%(nic)s\" required by iSCSI \"%(iscsiTarget)s\" target "
 "is not up."
 msgstr ""
-"Võrguliides „{nic}“, mida vajab iSCSI sihtobjekt „{iscsi_target}“, pole veel "
-"töös."
+"Võrguliides „%(nic)s“, mida vajab iSCSI sihtobjekt „%(iscsiTarget)s“, pole "
+"veel töös."
 
 #: pyanaconda/kickstart.py:841
 msgid ""
@@ -1007,7 +1019,7 @@ msgid ""
 "Incorrectly specified origin of the snapshot. Use format \"VolGroup/LV_name\""
 msgstr ""
 "Hetktõmmise algallikas pole määratletud korrektselt. Kasuta vormingut „"
-"Köitegrupp/Loogilise-köite-nimi“ („“)"
+"Köitegrupp/Loogilise-köite-nimi“ („VolGroup/LV_name“)"
 
 #: pyanaconda/kickstart.py:2135
 #, python-format
@@ -1237,15 +1249,14 @@ msgid "Run %s to unmount the system when you are finished.\n"
 msgstr "Kui oled lõpetanud, käivita %s süsteemi lahtihaakimiseks .\n"
 
 #: pyanaconda/rescue.py:399
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "An error occurred trying to mount some or all of your system.  Some of it "
 "may be mounted under %s\n"
 "\n"
 msgstr ""
-"Kogu või osa sinu süsteemi haakimisel tekkis viga: {message}\n"
-"\n"
-"Mõni osa sellest võib olla haagitud siin: {path}.\n"
+"Kogu või osa sinu süsteemi haakimisel tekkis viga. Mõni osa sellest võib "
+"olla haagitud siin: %s\n"
 "\n"
 
 #: pyanaconda/rescue.py:406
@@ -1257,13 +1268,13 @@ msgid "The system will reboot automatically when you exit from the shell.\n"
 msgstr ""
 
 #: pyanaconda/rescue.py:417
-#, fuzzy, python-format
+#, python-format
 msgid "You don't have any Linux partitions. %s\n"
-msgstr "Sul ei ole ühtegi Linuxi partitsiooni. Taaskäivitan.\n"
+msgstr "Sul ei ole ühtegi Linuxi partitsiooni. %s\n"
 
 #: pyanaconda/rescue.py:446
 msgid "Please press <return> to get a shell. "
-msgstr "Kesta avamiseks palun vajuta %s "
+msgstr "Kesta avamiseks palun vajuta <sisestusklahvi>. "
 
 #: pyanaconda/storage_utils.py:56 pyanaconda/storage_utils.py:88
 #: pyanaconda/ui/gui/spokes/custom.glade.h:3
@@ -1412,6 +1423,9 @@ msgid ""
 "Your BIOS-based system needs a special partition to boot from a GPT disk "
 "label. To continue, please create a 1MiB 'biosboot' type partition."
 msgstr ""
+"Et GPT-sildiga kettalt alglaadimine toimiks, vajab sinu BIOS-i põhine "
+"süsteem eraldi partitsiooni. Jätkamiseks palun loo „biosboot“ tüüpi "
+"partistioon suurusega 1MiB."
 
 #: pyanaconda/storage_utils.py:316
 #, python-format
@@ -1474,16 +1488,16 @@ msgstr "See kasutajanimi on reserveeritud vaid süsteemi jaoks: %s"
 
 #: pyanaconda/users.py:237
 msgid "User name cannot start with '-' character"
-msgstr "Nime alguses ei tohi olla „-“ tähemärki."
+msgstr "Kasutajanime alguses ei tohi olla „-“ tähemärki"
 
 #: pyanaconda/users.py:246
 #, python-format
 msgid "User name cannot contain character: '%s'"
-msgstr "Nimi ei tohi sisaldada tähemärki: „%s“"
+msgstr "Kasutajanimi ei tohi sisaldada tähemärki: „%s“"
 
 #: pyanaconda/users.py:249
 msgid "User name must be shorter than 33 characters"
-msgstr "Nimi peab olema lühem, kui 32 tähemärki."
+msgstr "Kasutajanimi peab olema lühem, kui 32 tähemärki"
 
 #: pyanaconda/vnc.py:76
 #, python-format
@@ -1575,7 +1589,7 @@ msgstr ""
 "\n"
 "HOIATUS!!! VNC-server töötab ILMA SALASÕNATA!\n"
 "Kui sa peaksid tahtma muuta lahendust turvalisemaks, siis\n"
-"võid kasutada „inst.vncpassword=SALASÕNA“ alglaadimise valikut.\n"
+"võid kasutada „vncpassword=<salasõna>“ alglaadimise valikut.\n"
 "\n"
 
 #: pyanaconda/vnc.py:260
@@ -3361,6 +3375,8 @@ msgstr "PA_IGALDAMISE ALLIKAS"
 #: pyanaconda/ui/gui/spokes/source.py:716
 msgid "Failed to set up installation source; check the repo url"
 msgstr ""
+"Paigaldusallika seadistamine ei õnnestunud - palun kontrolli tarkvarahoidla "
+"võrguaadressi"
 
 #: pyanaconda/ui/gui/spokes/source.py:565
 msgid "Error setting up base repository"
@@ -3867,6 +3883,10 @@ msgid ""
 "risky and we recommend you back up your data first, you can recover that "
 "free disk space and make it available for this installation below."
 msgstr ""
+"Olemasolevates failisüsteemides tegelikult leidub vaba andmeruumi. Kuigi see "
+"on riskantne ja me esmalt soovitame, et tee varukoopia, siis sul on "
+"siinkohal võimalik seda andmeruumi eraldada ja selle paigalduse jaoks "
+"kasutusele võtta."
 
 #: pyanaconda/ui/gui/spokes/lib/resize.py:235
 #, python-format
@@ -5885,6 +5905,8 @@ msgid ""
 "The following NVDIMM devices selected from the list will be reconfigured to "
 "sector mode:"
 msgstr ""
+"Loendist valitud järgnevad NVDIMM-seadmed seadistatakse uuesti sektoripõhise "
+"režiimi jaoks:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade.h:3
 msgctxt "GUI|Advanced Storage|NVDIMM|Reconfigure"
@@ -5935,6 +5957,9 @@ msgid ""
 "To use zFCP disks, you must provide the device number, WWPN, and LUN "
 "configured for the device."
 msgstr ""
+"Kui tahad kasutada zFCP-kettaid, siis pead sisestama selle seadme jaoks "
+"seadistatud seadme numbri, üleüldise porditunnuse (WWPN - World Wide Port "
+"Name) ja loogilise üksuse numbri (LUN - Logical Unit Number)."
 
 #: pyanaconda/ui/gui/spokes/advstorage/zfcp.glade.h:3
 msgctxt "GUI|Advanced Storage|zFCP|Device Number"
