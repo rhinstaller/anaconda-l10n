@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2022-03-04 01:10+0000\n"
-"PO-Revision-Date: 2026-04-17 07:00+0000\n"
+"PO-Revision-Date: 2026-04-18 10:59+0000\n"
 "Last-Translator: \"Марко Костић (Marko Kostić)\" <marko.m.kostic@gmail.com>\n"
 "Language-Team: Serbian <https://translate.fedoraproject.org/projects/"
 "anaconda/f35/sr/>\n"
@@ -73,6 +73,9 @@ msgid ""
 "connect to this computer from another computer and perform a graphical "
 "installation or continue with a text mode installation?"
 msgstr ""
+"X није могао да се покрене на вашој машини. Да ли желите да покренете VNC "
+"како бисте се повезали на овај рачунар са другог рачунара и извршили "
+"графичку инсталацију или да наставите са текстуалном инсталацијом?"
 
 #: pyanaconda/network.py:109
 msgid "Host name cannot be None or an empty string."
@@ -489,10 +492,9 @@ msgstr ""
 "LUN {lun}"
 
 #: pyanaconda/ui/gui/spokes/storage.py:452
-#, fuzzy, python-brace-format
-#| msgid "NVDIMM device %(namespace)s"
+#, python-brace-format
 msgid "NVDIMM device {namespace}"
-msgstr "NVDIMM уређај %(namespace)s"
+msgstr "NVDIMM уређај {namespace}"
 
 #: pyanaconda/ui/gui/spokes/storage.py:466
 msgid "{} free"
@@ -764,9 +766,7 @@ msgstr "Завршено!"
 #: pyanaconda/ui/gui/spokes/installation_progress.py:119
 #, python-format
 msgid "Use of this product is subject to the license agreement found at %s"
-msgstr ""
-"Коришћење овог производа подлеже условима наведеним у лиценцном уговору који "
-"се налази на %s"
+msgstr "Коришћење овог производа подлеже уговору о лиценци који се налази на %s"
 
 #: pyanaconda/ui/gui/spokes/installation_progress.py:144
 msgctxt "GUI|Progress"
@@ -982,15 +982,15 @@ msgstr "Није повезано на Red Hat Insights"
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1060
 msgid "No subscriptions are attached to the system"
-msgstr ""
+msgstr "Нема претплата прикачених на систем"
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1062
 msgid "1 subscription attached to the system"
-msgstr ""
+msgstr "1 претплата је прикачена на систем"
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1064
 msgid "{} subscriptions attached to the system"
-msgstr ""
+msgstr "{} претплата је прикачено на систем"
 
 #: pyanaconda/ui/gui/spokes/subscription.py:1105
 msgid "Please enable network access before connecting to Red Hat."
@@ -1032,7 +1032,7 @@ msgstr "_Извор инсталације"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:571
 msgid "Failed to set up installation source; check the repo url"
-msgstr "Неуспешно успостављање извора инсталације; проверите URL ризнице"
+msgstr "Неуспешно успостављање извора инсталације; проверите урл ризнице"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:679
 msgid "Error setting up base repository"
@@ -1047,8 +1047,8 @@ msgstr "Грешка при постављању програмског изво
 msgid ""
 "Failed to set up installation source; check the repo url and proxy settings."
 msgstr ""
-"Неуспешно успостављање извора инсталације; проверите URL ризнице и proxy "
-"подешавања."
+"Неуспешно успостављање извора инсталације; проверите урл ризнице и "
+"подешавања посредника."
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:918
 #, python-format
@@ -1068,7 +1068,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/installation_source.py:1153
 #, python-format
 msgid "Repository %s has empty url"
-msgstr "Ризница %s има празан URL"
+msgstr "Ризница %s има празан урл"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:1155
 msgid "URL is empty"
@@ -1077,7 +1077,7 @@ msgstr "URL је празан"
 #: pyanaconda/ui/gui/spokes/installation_source.py:1160
 #, python-format
 msgid "Repository %s has invalid url"
-msgstr "Ризница %s има неисправан URL"
+msgstr "Ризница %s има неисправан урл"
 
 #: pyanaconda/ui/gui/spokes/installation_source.py:1162
 msgid "Invalid URL"
@@ -1208,7 +1208,7 @@ msgid ""
 "Or, assign new mount points to existing partitions after selecting them "
 "below."
 msgstr ""
-"Или доделите нову тачку качења на постојећим партицијама након што их "
+"Или, доделите нову тачку качења на постојећим партицијама након што их "
 "одаберете испод."
 
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:518
@@ -1263,7 +1263,7 @@ msgstr ""
 "јединицом.\n"
 "\n"
 "Размаци који раздвајају групе цифара нису дозвољени. Јединице се састоје од "
-"децималног или бинарног префикса, и опционо слова B. Величина слова није "
+"децималног или бинарног префикса, и необавезна слова B. Величина слова није "
 "битна за јединице. Подразумевана јединица која се користи када се јединице "
 "изоставе је MiB.\n"
 "\n"
@@ -1485,37 +1485,32 @@ msgid "Not Specified"
 msgstr "Није наведено"
 
 #: pyanaconda/ui/gui/spokes/lib/subscription.py:152
-#, fuzzy
-#| msgctxt "GUI|Installation Destination|Filter"
-#| msgid "_zSeries Devices"
 msgid "Service level"
-msgstr "_zSeries уређаји"
+msgstr "Ниво услуге"
 
 #: pyanaconda/ui/gui/spokes/lib/subscription.py:155
 msgid "SKU"
-msgstr ""
+msgstr "SKU"
 
 #: pyanaconda/ui/gui/spokes/lib/subscription.py:158
 msgid "Contract"
-msgstr ""
+msgstr "Уговор"
 
 #: pyanaconda/ui/gui/spokes/lib/subscription.py:171
-#, fuzzy
-#| msgid "Start shell"
 msgid "Start date"
-msgstr "Покрени љуску"
+msgstr "Датум почетка"
 
 #: pyanaconda/ui/gui/spokes/lib/subscription.py:174
 msgid "End date"
-msgstr ""
+msgstr "Датум завршетка"
 
 #: pyanaconda/ui/gui/spokes/lib/subscription.py:177
 msgid "Entitlements"
-msgstr ""
+msgstr "Права"
 
 #: pyanaconda/ui/gui/spokes/lib/subscription.py:179
 msgid "{} consumed"
-msgstr ""
+msgstr "{} искоришћено"
 
 #: pyanaconda/ui/gui/spokes/lib/resize.py:54
 msgid "Preserve"
@@ -1532,7 +1527,7 @@ msgstr "Обриши"
 #: pyanaconda/ui/gui/spokes/lib/resize.py:99
 #, python-format
 msgid "Installation requires a total of <b>%s</b> for system data."
-msgstr "Инсталацији је потребно <b>%s</b> за системске податке."
+msgstr "Инсталација захтева укупно <b>%s</b> за системске податке."
 
 #: pyanaconda/ui/gui/spokes/lib/resize.py:131
 msgid "This device contains the installation source."
@@ -1676,7 +1671,7 @@ msgstr "Направи корисника"
 
 #: pyanaconda/ui/tui/spokes/user.py:133
 msgid "Full name"
-msgstr "Име и презиме"
+msgstr "Пуно име"
 
 #: pyanaconda/ui/tui/spokes/user.py:136
 #: pyanaconda/ui/gui/spokes/subscription.glade:156
@@ -1869,10 +1864,10 @@ msgid ""
 "unformatted. Unformatted DASDs cannot be used during installation.\n"
 "\n"
 msgstr ""
-"Следећи неформатирани или LDL DASD-ови су уочени на вашем систему. Можете их "
-"форматирати сада са алатком dasdfmt или отказати да бисте их оставили "
-"неформатираном. Неформатирани DASD-ови се не могу користити током "
-"инсталирања.\n"
+"Следећи неформатирани или LDL DASD-ови су откривени на вашем систему. Можете "
+"изабрати да их форматирате сада помоћу dasdfmt или да откажете како бисте их "
+"оставили неформатиране. Неформатирани DASD-ови се не могу користити током "
+"инсталације.\n"
 "\n"
 
 #: pyanaconda/ui/tui/spokes/storage.py:327
@@ -2136,7 +2131,7 @@ msgstr "Напредовање"
 
 #: pyanaconda/ui/tui/spokes/installation_progress.py:133
 msgid "Installation complete"
-msgstr "Инсталирање је завршено"
+msgstr "Инсталација је завршена"
 
 #: pyanaconda/ui/tui/spokes/installation_progress.py:135
 msgid "Use of this product is subject to the license agreement found at:"
@@ -2331,9 +2326,9 @@ msgstr "за улазак у %(spoke_title)s одељак"
 #, python-brace-format
 msgid "{count} disk selected; {capacity} capacity; {free} free"
 msgid_plural "{count} disks selected; {capacity} capacity; {free} free"
-msgstr[0] "{count} диск изабран; {capacity} капацитет; {free} слободно"
-msgstr[1] "{count} диска изабрана; {capacity} капацитет; {free} слободно"
-msgstr[2] "{count} диска изабрана; {capacity} капацитет; {free} слободно"
+msgstr[0] "{count} изабрани диск; {capacity} капацитет; {free} слободно"
+msgstr[1] "{count} изабрана диска; {capacity} капацитет; {free} слободно"
+msgstr[2] "{count} изабраних дискова; {capacity} капацитет; {free} слободно"
 
 #: pyanaconda/ui/lib/storage.py:285
 msgid "Saving storage configuration..."
@@ -2522,7 +2517,7 @@ msgstr ""
 
 #: pyanaconda/core/constants.py:85
 msgid "Start VNC"
-msgstr "Покрени VNC"
+msgstr "Покрени ВНЦ"
 
 #: pyanaconda/core/constants.py:86
 msgid "Use text mode"
@@ -2544,8 +2539,8 @@ msgid ""
 "more information on supported hardware, please refer to http://www.redhat."
 "com/hardware."
 msgstr ""
-"Овај хардвер (или комбинација хардвера) не подржава Red Hat. За више "
-"података о подржаном хардверу, погледајте страницу http://www.redhat.com/"
+"Овај хардвер (или њихова комбинација) није подржан од стране Red Hat-а. За "
+"више података о подржаном хардверу, погледајте http://www.redhat.com/"
 "hardware."
 
 #: pyanaconda/core/constants.py:165
@@ -2571,6 +2566,12 @@ msgid ""
 "red.ht/rhel-smt to understand your potential risks and learn about other "
 "ways to mitigate these risks."
 msgstr ""
+"Технологија симултаног мултитрединга (SMT) може обезбедити побољшања учинка "
+"за одређена оптерећења, али уводи неколико јавно објављених безбедносних "
+"проблема. Имате опцију да онемогућите SMT, што може утицати на учинак. Ако "
+"одлучите да оставите SMT омогућеним, прочитајте https://red.ht/rhel-smt да "
+"бисте разумели потенцијалне ризике и сазнали о другим начинима за ублажавање "
+"ових ризика."
 
 #: pyanaconda/core/constants.py:185
 msgid ""
@@ -2580,6 +2581,11 @@ msgid ""
 "rhel-smt to understand potential risks and learn about ways to mitigate "
 "these risks."
 msgstr ""
+"Симултани мултитрединг (SMT) може побољшати учинак за одређена оптерећења, "
+"али уводи неколико јавно објављених безбедносних проблема. Можете "
+"онемогућити SMT, што може утицати на учинак. Прочитајте https://red.ht/rhel-"
+"smt да бисте разумели потенцијалне ризике и сазнали о начинима за ублажавање "
+"ових ризика."
 
 #: pyanaconda/core/constants.py:201
 msgid "The password is empty."
@@ -2774,6 +2780,9 @@ msgid ""
 "install. Switch to the shell (Ctrl-B 2) and run 'ip addr' to find the IP-"
 "ADDRESS."
 msgstr ""
+"Молимо вас да ручно повежете ваш VNC клијент на IP-ADDRESS:%s да бисте "
+"започели инсталацију. Пребаците се на шкољку (Ctrl-B 2) и покрените „ip addr"
+"“ да бисте пронашли IP-ADDRESS."
 
 #: pyanaconda/vnc.py:219
 msgid "Starting VNC..."
@@ -2810,6 +2819,12 @@ msgid ""
 "if you would like to secure the server.\n"
 "\n"
 msgstr ""
+"\n"
+"\n"
+"УПОЗОРЕЊЕ!!! VNC сервер је покренут БЕЗ ЛОЗИНКЕ!\n"
+"Можете користити опцију покретања vncpassword=PASSWORD\n"
+"ако желите да обезбедите сервер.\n"
+"\n"
 
 #: pyanaconda/vnc.py:269
 msgid ""
@@ -2979,10 +2994,8 @@ msgid "Configuring {}"
 msgstr "Подешавам {}"
 
 #: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:49
-#, fuzzy
-#| msgid "Verifying %s"
 msgid "Verifying {}"
-msgstr "Потврђујем %s"
+msgstr "Потврђујем {}"
 
 #: pyanaconda/modules/payloads/payload/dnf/download_progress.py:68
 #, python-brace-format
@@ -2995,17 +3008,19 @@ msgstr ""
 
 #: pyanaconda/modules/payloads/payload/dnf/dnf_manager.py:569
 msgid "Some packages, groups or modules are missing."
-msgstr ""
+msgstr "Неки пакети, групе или модули недостају."
 
 #: pyanaconda/modules/payloads/payload/dnf/dnf_manager.py:573
 msgid "Some packages, groups or modules are broken."
-msgstr ""
+msgstr "Неки пакети, групе или модули су неисправни."
 
 #: pyanaconda/modules/payloads/payload/dnf/dnf_manager.py:600
 msgid ""
 "The following software marked for installation has errors.\n"
 "This is likely caused by an error with your installation source."
 msgstr ""
+"Следећи софтвер означен за инсталацију има грешке.\n"
+"Ово је вероватно узроковано грешком у вашем извору инсталације."
 
 #: pyanaconda/modules/payloads/payload/live_image/installation.py:52
 msgid "Checking image checksum"
@@ -3048,7 +3063,7 @@ msgstr "Уписујем објекте"
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_manager.py:205
 #, python-format
 msgid "Installing %(flatpak_name)s"
-msgstr ""
+msgstr "Инсталирам %(flatpak_name)s"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_installation.py:41
 msgid "Installing Flatpak applications"
@@ -3071,29 +3086,23 @@ msgid "Unregistration failed."
 msgstr "Опозив регистрације није успео."
 
 #: pyanaconda/modules/subscription/runtime.py:374
-#, fuzzy
-#| msgid "Failed to save storage configuration..."
 msgid "Failed to attach subscription."
-msgstr "Неуспешно чување подешавање складишта..."
+msgstr "Није успело прикључивање претплате."
 
 #: pyanaconda/modules/subscription/runtime.py:448
 msgid "product name unknown"
-msgstr ""
+msgstr "назив производа је непознат"
 
 #: pyanaconda/modules/subscription/runtime.py:455
 #: pyanaconda/modules/subscription/runtime.py:462
 #: pyanaconda/modules/subscription/runtime.py:475
 #: pyanaconda/modules/subscription/runtime.py:483
-#, fuzzy
-#| msgid "Unknown"
 msgid "unknown"
-msgstr "Непознато"
+msgstr "непознато"
 
 #: pyanaconda/modules/subscription/runtime.py:468
-#, fuzzy
-#| msgid "Unavailable"
 msgid "not available"
-msgstr "Недоступно"
+msgstr "није доступан"
 
 #: pyanaconda/modules/network/firewall/installation.py:102
 #, python-format
@@ -3176,6 +3185,8 @@ msgid ""
 "For a UEFI installation, you must include a Linux HFS+ ESP on a GPT-"
 "formatted disk, mounted at /boot/efi."
 msgstr ""
+"За UEFI инсталацију, морате укључити Linux HFS+ ESP на GPT форматираном "
+"диску, монтираном на /boot/efi."
 
 #: pyanaconda/modules/storage/platform.py:315
 msgid ""
@@ -3245,19 +3256,15 @@ msgid "{product} Linux {version} for {arch}"
 msgstr "{product} Линукс {version} за {arch}"
 
 #: pyanaconda/modules/storage/devicetree/fsset.py:423
-#, fuzzy, python-brace-format
-#| msgid ""
-#| "There is an entry in your /etc/fstab file that contains an invalid or "
-#| "incorrect file system type:\n"
-#| "\n"
+#, python-brace-format
 msgid ""
 "There is an entry in your /etc/fstab file that contains an invalid or "
 "incorrect file system type. The file says that {detected_type} at "
 "{mount_point} is {fstab_type}."
 msgstr ""
-"Постоји унос у вашој /etc/fstab датотеци који садржи нетачан или неисправан "
-"систем датотека:\n"
-"\n"
+"Постоји унос у вашој /etc/fstab датотеци који садржи неисправну или нетачну "
+"врсту система датотека. Датотека каже да је {detected_type} на {mount_point} "
+"заправо {fstab_type}."
 
 #: pyanaconda/modules/storage/devicetree/viewer.py:326
 #, python-brace-format
@@ -3577,6 +3584,8 @@ msgid ""
 "You have not specified a swap partition. Although not strictly required in "
 "all cases, it will significantly improve performance for most installations."
 msgstr ""
+"Нисте навели партицију за размену (swap). Иако није строго неопходна у свим "
+"случајевима, значајно ће побољшати учинак за већину инсталација."
 
 #: pyanaconda/modules/storage/checker/utils.py:275
 msgid ""
@@ -3588,7 +3597,7 @@ msgstr ""
 "Најмање један од ваших swap уређаја нема UUID, што је уобичајено за swap "
 "простор направљен старијим верзијама mkswap-а. Ови уређаји ће бити означени "
 "са путањом уређаја у /etc/fstab датотеци, што није идеално због тога што "
-"путање могу бити промењене у разним околностима."
+"путање могу бити промењене у разним околностима. "
 
 #: pyanaconda/modules/storage/checker/utils.py:294
 #, python-format
@@ -3646,22 +3655,13 @@ msgstr ""
 "покушајте поново."
 
 #: pyanaconda/modules/storage/checker/utils.py:471
-#, fuzzy
-#| msgid ""
-#| "You selected disk %(selected)s, which contains devices that also use "
-#| "unselected disk %(unselected)s. You must select or de-select these disks "
-#| "as a set."
-#| msgid_plural ""
-#| "You selected disk %(selected)s, which contains devices that also use "
-#| "unselected disks %(unselected)s. You must select or de-select these disks "
-#| "as a set."
 msgid ""
 "Selected disks {} contain volume group '{}' that also uses further "
 "unselected disks. You must select or de-select all these disks as a set."
 msgstr ""
-"Означили сте диск %(selected)s, који садржи уређаје који такође користе "
-"неозначени диск %(unselected)s. Морате означити или поништити означавање "
-"ових дискова као заједницу."
+"Изабрани дискови {} садрже групу томова „{}“ која такође користи даље "
+"неизабране дискове. Морате изабрати или поништити избор свих ових дискова "
+"као скупа."
 
 #: pyanaconda/modules/storage/partitioning/interactive/change_device.py:87
 msgid "Failed to change a device."
@@ -3859,7 +3859,7 @@ msgstr "RAID том „{}“ наведен са --useexisting не постој
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:607
 msgid "The RAID volume name \"{}\" is already in use."
-msgstr "Назив RAID волумена „{}“ је већ у употреби."
+msgstr "Назив РАИД тома „{}“ је већ у употреби."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:721
 msgid ""
@@ -4016,6 +4016,24 @@ msgid ""
 "* Some drives support re-configuration of sector sizes, for example by "
 "running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 msgstr ""
+"Алтернативна решења за ручне инсталације:\n"
+"* Изаберите само дискове са истом величином сектора током ручне инсталације "
+"у графичком или текстуалном режиму.\n"
+"* Када су за инсталацију изабрани дискови са недоследном величином сектора, "
+"ограничите сваку направљену LVM групу томова да користи физичке томове са "
+"истом величином сектора. Ово се може урадити само у графичком режиму у "
+"одељку за произвољну поделу диска.\n"
+"\n"
+"Алтернативна решења за kickstart инсталације:\n"
+"* Ограничите који дискови се користе за поделу диска навођењем „ignoredisk --"
+"drives=..“ или „ignoredisk --only-use=..“.\n"
+"* Наведите који дискови треба да се користе за сваки направљени LVM физички "
+"том: partition pv.1 --ondisk=..“.\n"
+"\n"
+"Општа алтернативна решења:\n"
+"* Обична шема поделе диска се може користити уместо LVM-а.\n"
+"* Неки дискови подржавају поновно подешавање величине сектора, на пример "
+"покретањем „hdparm --set-sector-size=<ВЕЛИЧИНА> <УРЕЂАЈ>“.\n"
 
 #: pyanaconda/modules/storage/kickstart.py:65
 msgid "File system type \"{}\" given in autopart command is invalid."
@@ -4071,11 +4089,11 @@ msgstr ""
 #: pyanaconda/modules/storage/kickstart.py:228
 #: pyanaconda/modules/storage/kickstart.py:240
 msgid "Namespace \"{}\" given in nvdimm command was not found."
-msgstr ""
+msgstr "Именски простор „{}“ наведен у nvdimm наредби није пронађен."
 
 #: pyanaconda/modules/storage/kickstart.py:245
 msgid "Disk \"{}\" given in nvdimm command does not exist."
-msgstr ""
+msgstr "Диск „{}“ наведен у nvdimm наредби не постоји."
 
 #: pyanaconda/modules/storage/kickstart.py:258
 msgid ""
@@ -4154,6 +4172,13 @@ msgid ""
 "\tchroot %(mountpoint)s\n"
 "\n"
 msgstr ""
+"Ваш систем је монтиран под %(mountpoint)s.\n"
+"\n"
+"Ако желите да корен вашег система постане корен активног система, покрените "
+"наредбу:\n"
+"\n"
+"\tchroot %(mountpoint)s\n"
+"\n"
 
 #: pyanaconda/rescue.py:442
 #, python-brace-format
@@ -4168,10 +4193,8 @@ msgstr ""
 "Неки делови могу бити закачени под {path}."
 
 #: pyanaconda/rescue.py:454
-#, fuzzy
-#| msgid "You don't have any Linux partitions. %s\n"
 msgid "You don't have any Linux partitions.\n"
-msgstr "Немате ниједну Linux партицију.  %s\n"
+msgstr "Немате ниједну Линукс партицију.\n"
 
 #: pyanaconda/rescue.py:460
 msgid "Not mounting the system.\n"
@@ -5148,7 +5171,7 @@ msgstr "URL врста:"
 #: pyanaconda/ui/gui/spokes/installation_source.glade:849
 #: pyanaconda/ui/gui/spokes/installation_source.glade:1299
 msgid "repository URL"
-msgstr "URL ризнице"
+msgstr "УРЛ ризнице"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:850
 #: pyanaconda/ui/gui/spokes/installation_source.glade:1300
@@ -5245,7 +5268,7 @@ msgstr "URL ризнице, без протокола."
 #: pyanaconda/ui/gui/spokes/installation_source.glade:1155
 #: pyanaconda/ui/gui/spokes/installation_source.glade:1156
 msgid "URL of proxy in the form of protocol://host:[port]"
-msgstr " URL проксија у форми протокол://host:[порт]"
+msgstr "URL посредника у форми протокол://домаћин:[порт]"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:1168
 #: pyanaconda/ui/gui/spokes/installation_source.glade:1169
@@ -5307,7 +5330,7 @@ msgstr "_Кључ за активирање"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:227
 msgid "Organization"
-msgstr ""
+msgstr "Организација"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:239
 msgid "Activation Key"
@@ -5354,7 +5377,7 @@ msgstr "Произвољна основна адреса"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:503
 msgid "Custom server URL"
-msgstr ""
+msgstr "Произвољна адреса сервера"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:517
 msgid "Use HTTP proxy"
@@ -5383,7 +5406,7 @@ msgstr "_Региструј се"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:731
 msgid "The system has been properly subscribed"
-msgstr ""
+msgstr "Систем је успешно претплаћен"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:745
 msgctxt "GUI|Subscription|Unregister"
@@ -5541,7 +5564,7 @@ msgid ""
 "optionally enable remote access to root account on this system."
 msgstr ""
 "Омогућавање администраторског налога ће вам омогућити да поставите "
-"администраторску лозинку и опционално омогућите удаљени приступ "
+"администраторску лозинку и по избору омогућите удаљени приступ "
 "администраторском налогу на овом систему."
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:196
@@ -5868,13 +5891,15 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade:23
 msgctxt "GUI|Advanced Storage|NVDIMM|Reconfigure"
 msgid "_Cancel"
-msgstr "От_кажи"
+msgstr "_Откажи"
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade:70
 msgid ""
 "The following NVDIMM devices selected from the list will be reconfigured to "
 "sector mode:"
 msgstr ""
+"Следећи NVDIMM уређаји изабрани са списка биће поново подешени на секторски "
+"режим:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade:85
 msgctxt "GUI|Advanced Storage|NVDIMM|Reconfigure"
@@ -5888,15 +5913,15 @@ msgstr "Пок_рени поновно подешавање"
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade:139
 msgid "Reconfiguring NVDIMM devices. This may take a moment..."
-msgstr ""
+msgstr "Поновно подешавање NVDIMM уређаја. Ово може потрајати..."
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade:205
 msgid "The following error occurred reconfiguring NVDIMM devices:"
-msgstr ""
+msgstr "Дошло је до следеће грешке приликом поновног подешавања NVDIMM уређаја:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade:252
 msgid "Devices reconfiguration succeeded."
-msgstr ""
+msgstr "Поновно подешавање уређаја је успело."
 
 #: pyanaconda/ui/gui/spokes/advstorage/nvdimm.glade:278
 msgid ""
@@ -6012,12 +6037,12 @@ msgstr "_Напредно..."
 #: pyanaconda/ui/gui/spokes/welcome.glade:23
 msgctxt "GUI|Welcome|Beta Warn Dialog"
 msgid "I want to _exit."
-msgstr "Ж_елим да изађем."
+msgstr "Желим да _изађем."
 
 #: pyanaconda/ui/gui/spokes/welcome.glade:37
 msgctxt "GUI|Welcome|Beta Warn Dialog"
 msgid "I want to _proceed."
-msgstr "Желим да нас_тавим."
+msgstr "Желим да _наставим."
 
 #: pyanaconda/ui/gui/spokes/welcome.glade:68
 msgid "This is unstable, pre-release software."
@@ -6458,15 +6483,12 @@ msgid "_Name:"
 msgstr "_Име:"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:795
-#, fuzzy
-#| msgctxt "GUI|Custom Partitioning|Configure"
-#| msgid "LUKS Version:"
 msgid "LUKS Version:"
 msgstr "Издање LUKS-а:"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:826
 msgid "Encrypt"
-msgstr "Шифровање"
+msgstr "Енкрипција"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:857
 msgid "RAID Level:"
@@ -6876,7 +6898,7 @@ msgstr "Опозови претходн_у радњу"
 #: pyanaconda/ui/gui/spokes/blivet_gui.glade:150
 msgctxt "GUI|Blivet Gui Partitioning"
 msgid "_Reset All"
-msgstr "Поново пос_тави све"
+msgstr "_Поништи све"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:136
 msgctxt "GUI|Installation Destination|Filter|Search"
@@ -7039,7 +7061,7 @@ msgstr "_Други SAN уређаји"
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1232
 msgctxt "GUI|Installation Destination|Filter|NVDIMM Devices"
 msgid "Filter B_y:"
-msgstr "Филтрира_ј по:"
+msgstr "Филтрирај _по:"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1288
 msgctxt "GUI|Installation Destination|Filter|NVDIMM Devices|Mode"
