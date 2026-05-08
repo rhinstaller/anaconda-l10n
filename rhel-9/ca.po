@@ -5901,6 +5901,9 @@ msgid ""
 "boot. Add \"enforcing=0\" on the kernel command line for autorelabel to work "
 "properly.\n"
 msgstr ""
+"Avís: el shell de rescat activarà l'etiqueta automàtica de SELinux a "
+"l'arrencada posterior. Afegiu 'enforcing=0' a la línia d'ordres del nucli "
+"perquè l'etiqueta automàtica funcioni correctament.\n"
 
 #: pyanaconda/ui/tui/spokes/storage.py:753
 msgid ""
@@ -5981,10 +5984,8 @@ msgstr ""
 
 #: pyanaconda/ui/gui/spokes/network.glade:153
 #: pyanaconda/ui/gui/spokes/network.glade:286
-#, fuzzy
-#| msgid "Network"
 msgid "Wi-Fi Networks"
-msgstr "Xarxa"
+msgstr "Xarxes Wi-Fi"
 
 #: pyanaconda/vnc.py:186
 msgid "Will try to connect again in 15 seconds..."
@@ -6035,6 +6036,24 @@ msgid ""
 "* Some drives support re-configuration of sector sizes, for example by "
 "running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 msgstr ""
+"Solucions alternatives per a instal·lacions manuals:\n"
+"* Seleccioneu només els discs amb la mateixa mida de sector durant la "
+"instal·lació manual en mode gràfic o text.\n"
+"* Quan se seleccionen discs amb una mida de sector inconsistent per a la "
+"instal·lació, restringiu cada grup de volums LVM creat perquè usi volums "
+"físics amb la mateixa mida de sector. Això només es pot fer en mode gràfic a "
+"la partició personalitzada.\n"
+"\n"
+"Solucions alternatives per a les instal·lacions de Kickstart:\n"
+"* Restringiu quins discs s'usen per a la partició especificant 'ignoredisk --"
+"drives=..' o 'ignoredisk --only-use=..'.\n"
+"* Especifiqueu quins discs s'han d'usar per a cada volum físic LVM creat: "
+"'partition pv.1 --ondisk=...'.\n"
+"\n"
+"Solucions generals:\n"
+"* Es pot usar un esquema de particions simple en lloc de LVM.\n"
+"* Algunes unitats admeten la reconfiguració de la mida del sector, per "
+"exemple executant 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:301
 msgid "Working"
@@ -6696,7 +6715,7 @@ msgstr "_Continua"
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1658
 msgctxt "GUI|Installation Destination|Filter|NVMe Fabrics Devices|Controller"
 msgid "_Controller ID:"
-msgstr ""
+msgstr "_Identificador del controlador:"
 
 #: pyanaconda/ui/gui/spokes/storage.glade:383
 msgctxt "GUI|Storage"
@@ -6724,12 +6743,9 @@ msgid "_Device number:"
 msgstr "Número de _dispositiu:"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.glade:1517
-#, fuzzy
-#| msgctxt "GUI|Advanced User"
-#| msgid "_Save Changes"
 msgctxt "GUI|Custom Partitioning"
 msgid "_Discard All Changes"
-msgstr "De_sa els canvis"
+msgstr "_Descarta tots els canvis"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:203
 msgctxt "GUI|Advanced Storage|iSCSI|Configure"
@@ -6749,7 +6765,7 @@ msgstr "_Fet"
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1801
 msgctxt "GUI|Installation Destination|Filter|NVMe Fabrics Devices|Namespace"
 msgid "_EUI-64 / NGUID / UUID:"
-msgstr ""
+msgstr "_EUI-64 / NGUID / UUID:"
 
 #: pyanaconda/ui/gui/spokes/installation_source.glade:295
 msgctxt "GUI|Software Source|Proxy Dialog"
@@ -7215,7 +7231,7 @@ msgstr "Contrasenya de _root:"
 #: pyanaconda/ui/gui/spokes/installation_source.py:1233
 msgctxt "GUI|Software Source"
 msgid "_Satellite"
-msgstr ""
+msgstr "_Satellite"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.glade:609
 msgctxt "GUI|Custom Partitioning|Container Dialog"
@@ -7296,7 +7312,7 @@ msgstr "Atura el punt d'accé_s..."
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:1762
 msgctxt "GUI|Installation Destination|Filter|NVMe Fabrics Devices|Namespace"
 msgid "_Subsystem NQN:"
-msgstr ""
+msgstr "_Subsistema NQN:"
 
 #: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:142
 msgctxt "GUI|Advanced Storage|iSCSI|Configure"
@@ -7489,7 +7505,7 @@ msgstr "kernel-redhat"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:312
 msgid "key1,key2,..."
-msgstr ""
+msgstr "clau1,clau2..."
 
 #: pyanaconda/ui/tui/spokes/installation_source.py:172
 msgid "local ISO file"
