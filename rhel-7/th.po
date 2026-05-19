@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: anaconda 21.48.22.158\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2020-04-15 15:07+0200\n"
-"PO-Revision-Date: 2026-05-18 10:01+0000\n"
+"PO-Revision-Date: 2026-05-19 20:01+0000\n"
 "Last-Translator: Tinnaphat Somsang <tinvv@outlook.co.th>\n"
 "Language-Team: Thai <https://translate.fedoraproject.org/projects/anaconda/"
 "rhel-7/th/>\n"
@@ -38,6 +38,7 @@ msgid ""
 "RAID sets that contain '%(desc)s' must have one of the following raid "
 "levels: %(raid_level)s."
 msgstr ""
+"ชุด RAID ที่มี '%(desc)s' ต้องมีหนึ่งในระดับ raid ต่อไปนี้: %(raid_level)s."
 
 #: pyanaconda/bootloader.py:418
 #, python-format
@@ -45,6 +46,7 @@ msgid ""
 "RAID sets that contain '%(desc)s' must have one of the following metadata "
 "versions: %(metadata_versions)s."
 msgstr ""
+"ชุด RAID ที่มี '%(desc)s' ต้องมีหนึ่งในเวอร์ชั่น metadata นี้: %(metadata_versions)s."
 
 #: pyanaconda/bootloader.py:426
 #, python-format
@@ -52,21 +54,22 @@ msgid ""
 "RAID sets that contain '%(desc)s' must have one of the following device "
 "types: %(types)s."
 msgstr ""
+"ชุด RAID ที่มี '%(desc)s' ต้องมีหนึ่งในชนิดของอุปกรณ์ต่อไปนี้: %(types)s."
 
 #: pyanaconda/bootloader.py:442
 #, python-format
 msgid "%(name)s must have one of the following disklabel types: %(types)s."
-msgstr ""
+msgstr "%(name)s ต้องมีหนึ่งในชนิดของ disklabel ต่อไปนี้: %(types)s."
 
 #: pyanaconda/bootloader.py:454
 #, python-format
 msgid "%(desc)s cannot be of type %(type)s."
-msgstr ""
+msgstr "%(desc)s ไม่สามารถเป็นชนิด %(type)s."
 
 #: pyanaconda/bootloader.py:460
 #, python-format
 msgid "%(desc)s must be mounted on one of %(mountpoints)s."
-msgstr ""
+msgstr "%(desc)s ต้องถูกเมานต์ที่หนึ่งใน %(mountpoints)s."
 
 #: pyanaconda/bootloader.py:472
 #, python-format
@@ -76,17 +79,17 @@ msgstr "%(desc)s ต้องอยู่ระหว่างขนาด %(min
 #: pyanaconda/bootloader.py:478
 #, python-format
 msgid "%(desc)s must not be smaller than %(min)dMB."
-msgstr ""
+msgstr "%(desc)s ต้องไม่มีขนาดเล็กกว่า %(min)dMB."
 
 #: pyanaconda/bootloader.py:487
 #, python-format
 msgid "%(desc)s must not be larger than %(max)dMB."
-msgstr ""
+msgstr "%(desc)s ต้องไม่มีขนาดใหญ่กว่า %(max)dMB."
 
 #: pyanaconda/bootloader.py:505
 #, python-format
 msgid "%(desc)s must be within the first %(max_end)s of the disk."
-msgstr ""
+msgstr "%(desc)s ต้องอยู่ภายในช่วง %(max_end)s แรกของดิสก์."
 
 #: pyanaconda/bootloader.py:515
 #, python-format
@@ -250,7 +253,7 @@ msgstr ""
 
 #: pyanaconda/constants.py:185
 msgid "passphrase"
-msgstr ""
+msgstr "พาสเฟรส"
 
 #: pyanaconda/constants.py:186
 msgid "passphrases"
@@ -470,10 +473,15 @@ msgid ""
 "\n"
 " The installer will now terminate."
 msgstr ""
+"การติดตั้งถูกหยุดเนื่องจากอาจมีปัญหาเกี่ยวกับฮาร์ดแวร์ของคุณ ข้อความผิดพลาดคือ:\n"
+"\n"
+"%s.\n"
+"\n"
+" ตัวติดตั้งจะสิ้นสุดตอนนี้"
 
 #: pyanaconda/exception.py:108
 msgid "Hardware error occurred"
-msgstr ""
+msgstr "เกิดข้อผิดพลาดของฮาร์ดแวร์"
 
 #: pyanaconda/exception.py:143
 #, python-format
@@ -488,6 +496,15 @@ msgid ""
 "\n"
 "The installer will now terminate."
 msgstr ""
+"\n"
+"การติดตั้งถูกหยุดเนื่องจากเกิดข้อผิดพลาดระหว่างการทำงานในโหมด cmdline แบบ non-"
+"interactive เนื่องจากไม่สามารถมีคำถามในโหมด cmdline ได้ โปรดแก้ไขไฟล์ kickstart ของคุ"
+"ณและลองติดตั้งอีกครั้ง. \n"
+"ข้อความแสดงข้อผิดพลาดคือ: \n"
+"\n"
+"%s. \n"
+"\n"
+"การติดตั้งจะสิ้นสุดการทำงานตอนนี้"
 
 #: pyanaconda/exception.py:151
 #, python-format
@@ -500,14 +517,21 @@ msgid ""
 "\n"
 "The installer will now terminate."
 msgstr ""
+"\n"
+"กำลังทำงานในโหมด cmdline ไม่อนุญาตการดีบั๊กแบบ interactive\n"
+"ข้อความแสดงข้อผิดพลาดคือ: \n"
+"\n"
+"%s.\n"
+"\n"
+"ตัวติดตั้งจะสิ้นสุดการทำงานตอนนี้"
 
 #: pyanaconda/install.py:83
 msgid "Configuring installed system"
-msgstr ""
+msgstr "กำลังตั้งค่าระบบที่ติดตั้งแล้ว"
 
 #: pyanaconda/install.py:96
 msgid "Writing network configuration"
-msgstr ""
+msgstr "กำลังเขียนการกำหนดค่าของเครือข่าย"
 
 # translation auto-copied from project Anaconda, version master, document
 # anaconda
@@ -517,7 +541,7 @@ msgstr "กำลังสร้างผู้ใช้"
 
 #: pyanaconda/install.py:108
 msgid "Configuring addons"
-msgstr ""
+msgstr "กำลังตั้งค่า addons"
 
 # translation auto-copied from project Anaconda, version master, document
 # anaconda
@@ -532,7 +556,7 @@ msgstr ""
 
 #: pyanaconda/install.py:118
 msgid "Running post-installation scripts"
-msgstr ""
+msgstr "กำลังเรียกใช้สคริปต์ก่อนติดตั้ง..."
 
 #: pyanaconda/install.py:139
 msgid "Creating snapshots"
@@ -570,15 +594,15 @@ msgstr ""
 
 #: pyanaconda/iutil.py:789
 msgid "No host url"
-msgstr ""
+msgstr "ไม่มี url โอสต์"
 
 #: pyanaconda/iutil.py:810
 msgid "malformed URL, cannot parse it."
-msgstr ""
+msgstr "URL ผิดรูปแบบ ไม่สามารถแปลงค่าได้"
 
 #: pyanaconda/iutil.py:826
 msgid "URL has no host component"
-msgstr ""
+msgstr "URL ไม่มีส่วนประกอบของโฮสต์"
 
 #: pyanaconda/kickstart.py:191
 #, python-format
@@ -672,7 +696,7 @@ msgstr ""
 #: pyanaconda/kickstart.py:752
 #, python-format
 msgid "%s is missing. Cannot setup firewall."
-msgstr ""
+msgstr "ไม่พบ %s ไม่สามารถติดตั้ง firewall ได้"
 
 #: pyanaconda/kickstart.py:807 pyanaconda/kickstart.py:818
 #, python-format
@@ -945,7 +969,7 @@ msgstr ""
 
 #: pyanaconda/network.py:110
 msgid "Host name cannot be None or an empty string."
-msgstr ""
+msgstr "ชื่อโฮสต์ไม่สามารถเป็น None หรือช่องว่าง"
 
 #: pyanaconda/network.py:113
 msgid "Host name must be 255 or fewer characters in length."
@@ -1355,12 +1379,12 @@ msgstr ""
 #: pyanaconda/vnc.py:76
 #, python-format
 msgid "%(productName)s %(productVersion)s installation"
-msgstr ""
+msgstr "การติดตั้ง %(productName)s %(productVersion)s"
 
 #: pyanaconda/vnc.py:139
 #, python-format
 msgid "%(productName)s %(productVersion)s installation on host %(name)s"
-msgstr ""
+msgstr "การติดตั้ง %(productName)s %(productVersion)s บนโอสต์ %(name)s"
 
 #: pyanaconda/vnc.py:158
 #, python-format
@@ -1379,11 +1403,11 @@ msgstr "จะพยายามเชื่อมต่ออีกครั้
 #, python-format
 msgid "Giving up attempting to connect after %d try!\n"
 msgid_plural "Giving up attempting to connect after %d tries!\n"
-msgstr[0] ""
+msgstr[0] "ยกเลิกการพยายามเชื่อมต่อหลังจากลองเชื่อมต่อแล้ว %d ครั้ง\n"
 
 #: pyanaconda/vnc.py:190
 msgid "Attempting to start vncconfig"
-msgstr ""
+msgstr "กำลังพยายามเริ่มต้นการทำงานของ vncconfig"
 
 #: pyanaconda/vnc.py:203
 #, python-format
@@ -1543,24 +1567,24 @@ msgstr ""
 
 #: pyanaconda/ui/categories/__init__.py:48
 msgid "DEFAULT TITLE"
-msgstr ""
+msgstr "หัวข้อเริ่มต้น"
 
 #: pyanaconda/ui/categories/customization.py:32
 msgid "CUSTOMIZATION"
-msgstr ""
+msgstr "การปรับแต่ง"
 
 #: pyanaconda/ui/categories/localization.py:31
 msgid "LOCALIZATION"
-msgstr ""
+msgstr "การตั้งค่าท้องถิ่น"
 
 #: pyanaconda/ui/categories/software.py:31
 msgid "SOFTWARE"
-msgstr ""
+msgstr "ซอฟต์แวร์"
 
 #: pyanaconda/ui/categories/system.py:32
 #: pyanaconda/ui/gui/spokes/lib/accordion.py:180
 msgid "SYSTEM"
-msgstr ""
+msgstr "ระบบ"
 
 # translation auto-copied from project Anaconda, version master, document
 # anaconda
@@ -1688,7 +1712,7 @@ msgstr ""
 
 #: pyanaconda/ui/tui/hubs/__init__.py:45
 msgid "Default HUB title"
-msgstr ""
+msgstr "ชื่อ HUB เริ่มต้น"
 
 #: pyanaconda/ui/tui/hubs/__init__.py:143
 #, python-format
@@ -1865,7 +1889,7 @@ msgstr ""
 #: pyanaconda/ui/tui/spokes/network.py:140
 #, python-format
 msgid " IPv4 Address: %(addr)s Netmask: %(netmask)s Gateway: %(gateway)s\n"
-msgstr ""
+msgstr " ที่อยู่ IPv4: %(addr)s เน็ตมาสก์: %(netmask)s เกตเวย์: %(gateway)s\n"
 
 #: pyanaconda/ui/tui/spokes/network.py:142
 #, python-format
@@ -2039,6 +2063,7 @@ msgid ""
 "No disks detected.  Please shut down the computer, connect at least one "
 "disk, and restart to complete installation."
 msgstr ""
+"ไม่พบดิสก์  โปรดปิดคอมพิวเตอร์ เชื่อมต่ออย่างน้อยหนึ่งดิสก์ และรีสตาร์ทเพื่อให้การติดตั้งเสร็จสมบูรณ์"
 
 #: pyanaconda/ui/tui/spokes/storage.py:183
 #: pyanaconda/ui/gui/spokes/storage.py:721
@@ -2272,7 +2297,7 @@ msgstr ""
 #: pyanaconda/ui/tui/spokes/source.py:120
 #: pyanaconda/ui/gui/spokes/source.py:573
 msgid "Local media"
-msgstr ""
+msgstr "มีเดียในเครื่อง"
 
 #: pyanaconda/ui/tui/spokes/source.py:122
 #: pyanaconda/ui/gui/spokes/source.py:575
@@ -3579,7 +3604,7 @@ msgstr ""
 #: pyanaconda/ui/gui/spokes/lib/detailederror.py:59
 msgctxt "GUI|Detailed Error Dialog"
 msgid "_Quit"
-msgstr ""
+msgstr "_ออก"
 
 #: pyanaconda/ui/gui/spokes/lib/resize.py:58
 msgid "Preserve"
@@ -6063,6 +6088,8 @@ msgid ""
 "%(product_name)s requires %(needed_ram)s MB of memory to install, but you "
 "only have %(total_ram)s MB on this machine.\n"
 msgstr ""
+"%(product_name)s ต้องใช้พื้นที่ %(needed_ram)s MB ในการติดตั้ง แต่คุณมีพื้นที่เหลือเพียง %"
+"(total_ram)s MB ในเครื่องนี้\n"
 
 #: anaconda:492
 #, python-format
@@ -6090,7 +6117,7 @@ msgid ""
 "\n"
 " from a root terminal."
 msgstr ""
-"ลองใช้ตัวติดตั้งในโหมดข้อความโดยเรียกใช้คำสั่ง:\n"
+" ลองใช้ตัวติดตั้งในโหมดข้อความโดยเรียกใช้คำสั่ง:\n"
 "\n"
 "'/usr/bin/liveinst -T'\n"
 "\n"
@@ -6098,7 +6125,7 @@ msgstr ""
 
 #: anaconda:501
 msgid " Starting text mode."
-msgstr "กำลังเริ่มทำงานในโหมดข้อความ"
+msgstr " กำลังเริ่มทำงานในโหมดข้อความ"
 
 #: anaconda:537
 msgid "The installation cannot continue and the system will be rebooted"
