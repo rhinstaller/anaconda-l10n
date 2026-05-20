@@ -56,7 +56,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2026-05-15 03:31+0000\n"
+"POT-Creation-Date: 2026-05-20 03:34+0000\n"
 "PO-Revision-Date: 2026-01-28 01:53+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
 "memory@weblate.org>\n"
@@ -1449,7 +1449,7 @@ msgstr "_Требуемый объем:"
 msgid "Device"
 msgstr "Устройство"
 
-#: pyanaconda/modules/storage/kickstart.py:159
+#: pyanaconda/modules/storage/disk_initialization/initialization.py:88
 msgid "Device \"{}\" given in clearpart device list does not exist."
 msgstr ""
 "Устройство «{}», указанное в списке устройств команды clearpart, не "
@@ -1562,12 +1562,12 @@ msgstr "Отказ в доступе при поиске."
 msgid "Disk"
 msgstr "Диск"
 
-#: pyanaconda/modules/storage/kickstart.py:154
+#: pyanaconda/modules/storage/disk_initialization/initialization.py:94
 msgid "Disk \"{}\" given in clearpart command does not exist."
 msgstr "Диск «{}», указанный в команде clearpart, не существует."
 
-#: pyanaconda/modules/storage/kickstart.py:186
-#: pyanaconda/modules/storage/kickstart.py:191
+#: pyanaconda/modules/storage/disk_selection/selection.py:72
+#: pyanaconda/modules/storage/disk_selection/selection.py:78
 msgid "Disk \"{}\" given in ignoredisk command does not exist."
 msgstr "Диск «{}», указанный в команде ignoredisk, не существует."
 
@@ -1592,7 +1592,7 @@ msgstr "Повторное сканирование дисков заверше�
 msgid "Disk summary goes here"
 msgstr "Сводная информация по диску"
 
-#: pyanaconda/modules/storage/kickstart.py:148
+#: pyanaconda/modules/storage/kickstart.py:143
 msgid ""
 "Disklabel \"{}\" given in clearpart command is not supported on this "
 "platform."
@@ -2293,7 +2293,7 @@ msgstr "Импорт сертификатов"
 msgid "In FIPS mode, the passphrase must be at least {} letters long."
 msgstr "В режиме FIPS парольная фраза должна содержать не менее {} букв."
 
-#: pyanaconda/modules/storage/kickstart.py:306
+#: pyanaconda/modules/storage/kickstart.py:271
 msgid ""
 "Incorrectly specified origin of the snapshot. Use format \"VolGroup/LV-name\""
 msgstr ""
@@ -2398,11 +2398,8 @@ msgstr "Установка приложений Flatpak"
 msgid "Installing boot loader"
 msgstr "Установка загрузчика"
 
-#: pyanaconda/modules/payloads/payload/live_image/installation.py:540
-msgid "Installing software {}"
-msgstr "Устанавливается программное обеспечение {}"
-
 #: pyanaconda/modules/payloads/payload/live_image/installation_progress.py:96
+#: pyanaconda/modules/payloads/payload/live_image/installation.py:547
 msgid "Installing software {}%"
 msgstr "Устанавливается программное обеспечение {}%"
 
@@ -2801,7 +2798,7 @@ msgstr "Сервер NFS не указан"
 msgid "NFS server {}"
 msgstr "Сервер NFS {}"
 
-#: pyanaconda/modules/storage/kickstart.py:201
+#: pyanaconda/modules/storage/kickstart.py:166
 msgid "NIC \"{}\" given in fcoe command does not exist."
 msgstr "Сетевой контроллер «{}», указанный в команде fcoe, не существует."
 
@@ -2904,7 +2901,7 @@ msgstr "Настройка сети"
 msgid "Network configuration is not available."
 msgstr "Конфигурация сети недоступна."
 
-#: pyanaconda/modules/storage/kickstart.py:226
+#: pyanaconda/modules/storage/kickstart.py:191
 #, python-brace-format
 msgid ""
 "Network interface \"{nic}\" required by iSCSI \"{iscsi_target}\" target is "
@@ -7211,7 +7208,7 @@ msgctxt "GUI|Advanced Storage|iSCSI|Configure"
 msgid "iSCSI _Initiator Name:"
 msgstr "_Инициатор iSCSI:"
 
-#: pyanaconda/modules/storage/kickstart.py:242
+#: pyanaconda/modules/storage/kickstart.py:207
 msgid ""
 "iscsi --iface must be specified (binding used) either for all targets or for "
 "none"
@@ -7398,6 +7395,9 @@ msgstr "{} смонтирован как {}"
 #: pyanaconda/core/constants.py:222
 msgid "{}. {}"
 msgstr "{}. {}"
+
+#~ msgid "Installing software {}"
+#~ msgstr "Устанавливается программное обеспечение {}"
 
 #~ msgid "No big enough free space on disks for automatic partitioning"
 #~ msgstr "Недостаточно свободного места для автоматического создания разделов"

@@ -77,7 +77,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2026-05-15 03:31+0000\n"
+"POT-Creation-Date: 2026-05-20 03:34+0000\n"
 "PO-Revision-Date: 2026-02-17 02:11+0000\n"
 "Last-Translator: Léane GRASSER <leane.grasser@proton.me>\n"
 "Language-Team: French <https://translate.fedoraproject.org/projects/anaconda/"
@@ -1487,7 +1487,7 @@ msgstr "_Capacité souhaitée :"
 msgid "Device"
 msgstr "Périphérique"
 
-#: pyanaconda/modules/storage/kickstart.py:159
+#: pyanaconda/modules/storage/disk_initialization/initialization.py:88
 msgid "Device \"{}\" given in clearpart device list does not exist."
 msgstr ""
 "Le périphérique « {} » donné dans la liste de périphériques clearpart "
@@ -1602,12 +1602,12 @@ msgstr "Détection de la connexion rejetée."
 msgid "Disk"
 msgstr "Disque"
 
-#: pyanaconda/modules/storage/kickstart.py:154
+#: pyanaconda/modules/storage/disk_initialization/initialization.py:94
 msgid "Disk \"{}\" given in clearpart command does not exist."
 msgstr "Le disque « {} » donné par la commande clearpart n'existe pas."
 
-#: pyanaconda/modules/storage/kickstart.py:186
-#: pyanaconda/modules/storage/kickstart.py:191
+#: pyanaconda/modules/storage/disk_selection/selection.py:72
+#: pyanaconda/modules/storage/disk_selection/selection.py:78
 msgid "Disk \"{}\" given in ignoredisk command does not exist."
 msgstr "Le disque « {} » donné par la commande ignoredisk n'existe pas."
 
@@ -1632,7 +1632,7 @@ msgstr "Analyse des disques terminée."
 msgid "Disk summary goes here"
 msgstr "Le résumé du disque est ici"
 
-#: pyanaconda/modules/storage/kickstart.py:148
+#: pyanaconda/modules/storage/kickstart.py:143
 msgid ""
 "Disklabel \"{}\" given in clearpart command is not supported on this "
 "platform."
@@ -2352,7 +2352,7 @@ msgstr "Importation des certificats"
 msgid "In FIPS mode, the passphrase must be at least {} letters long."
 msgstr "En mode FIPS, la phrase secrète doit compter au moins {} lettres."
 
-#: pyanaconda/modules/storage/kickstart.py:306
+#: pyanaconda/modules/storage/kickstart.py:271
 msgid ""
 "Incorrectly specified origin of the snapshot. Use format \"VolGroup/LV-name\""
 msgstr ""
@@ -2457,11 +2457,8 @@ msgstr "Installation des applications Flatpak"
 msgid "Installing boot loader"
 msgstr "Installation du bootloader"
 
-#: pyanaconda/modules/payloads/payload/live_image/installation.py:540
-msgid "Installing software {}"
-msgstr "Installation des logiciels {}"
-
 #: pyanaconda/modules/payloads/payload/live_image/installation_progress.py:96
+#: pyanaconda/modules/payloads/payload/live_image/installation.py:547
 msgid "Installing software {}%"
 msgstr "Installation des logiciels {} %"
 
@@ -2867,7 +2864,7 @@ msgstr "Le serveur NFS est vide"
 msgid "NFS server {}"
 msgstr "Serveur NFS {}"
 
-#: pyanaconda/modules/storage/kickstart.py:201
+#: pyanaconda/modules/storage/kickstart.py:166
 msgid "NIC \"{}\" given in fcoe command does not exist."
 msgstr "L'interface réseau « {} » indiquée dans la commande fcoe n'existe pas."
 
@@ -2970,7 +2967,7 @@ msgstr "Configuration de réseau"
 msgid "Network configuration is not available."
 msgstr "La configuration réseau est indisponible."
 
-#: pyanaconda/modules/storage/kickstart.py:226
+#: pyanaconda/modules/storage/kickstart.py:191
 #, python-brace-format
 msgid ""
 "Network interface \"{nic}\" required by iSCSI \"{iscsi_target}\" target is "
@@ -7370,7 +7367,7 @@ msgctxt "GUI|Advanced Storage|iSCSI|Configure"
 msgid "iSCSI _Initiator Name:"
 msgstr "Nom de l'_initiateur iSCSI :"
 
-#: pyanaconda/modules/storage/kickstart.py:242
+#: pyanaconda/modules/storage/kickstart.py:207
 msgid ""
 "iscsi --iface must be specified (binding used) either for all targets or for "
 "none"
@@ -7559,6 +7556,9 @@ msgstr "{} monté en tant que {}"
 #: pyanaconda/core/constants.py:222
 msgid "{}. {}"
 msgstr "{}. {}"
+
+#~ msgid "Installing software {}"
+#~ msgstr "Installation des logiciels {}"
 
 #~ msgid "No big enough free space on disks for automatic partitioning"
 #~ msgstr ""

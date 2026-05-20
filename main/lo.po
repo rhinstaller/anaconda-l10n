@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 45.1\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2026-05-15 03:31+0000\n"
+"POT-Creation-Date: 2026-05-20 03:34+0000\n"
 "PO-Revision-Date: 2026-05-06 02:57+0000\n"
 "Last-Translator: Bone NI <bounkirdni@gmail.com>\n"
 "Language-Team: Lao <https://translate.fedoraproject.org/projects/anaconda/"
@@ -1350,7 +1350,7 @@ msgstr "ຄວາມຈຸທີ່ຕ້ອ_ງການ:"
 msgid "Device"
 msgstr "ອຸປະກອນ"
 
-#: pyanaconda/modules/storage/kickstart.py:159
+#: pyanaconda/modules/storage/disk_initialization/initialization.py:88
 msgid "Device \"{}\" given in clearpart device list does not exist."
 msgstr "ອຸປະກອນ \"{}\" ທີ່ກຳນົດໃນລາຍຊື່ອຸປະກອນ clearpart ບໍ່ມີຢູ່ຈິງ."
 
@@ -1460,12 +1460,12 @@ msgstr "ການເຂົ້າສູ່ລະບົບການຄົ້ນຫ
 msgid "Disk"
 msgstr "ດິສກ໌"
 
-#: pyanaconda/modules/storage/kickstart.py:154
+#: pyanaconda/modules/storage/disk_initialization/initialization.py:94
 msgid "Disk \"{}\" given in clearpart command does not exist."
 msgstr "ດິດ \"{}\" ທີ່ກຳນົດໃນຄຳສັ່ງ clearpart ບໍ່ມີຢູ່ຈິງ."
 
-#: pyanaconda/modules/storage/kickstart.py:186
-#: pyanaconda/modules/storage/kickstart.py:191
+#: pyanaconda/modules/storage/disk_selection/selection.py:72
+#: pyanaconda/modules/storage/disk_selection/selection.py:78
 msgid "Disk \"{}\" given in ignoredisk command does not exist."
 msgstr "ດິດ \"{}\" ທີ່ກຳນົດໃນຄຳສັ່ງ ignoredisk ບໍ່ມີຢູ່ຈິງ."
 
@@ -1490,7 +1490,7 @@ msgstr "ການສະແກນດິດໃໝ່ສຳເລັດແລ້ວ
 msgid "Disk summary goes here"
 msgstr "ສະຫຼຸບດິດໃສ່ບ່ອນນີ້"
 
-#: pyanaconda/modules/storage/kickstart.py:148
+#: pyanaconda/modules/storage/kickstart.py:143
 msgid ""
 "Disklabel \"{}\" given in clearpart command is not supported on this "
 "platform."
@@ -2178,7 +2178,7 @@ msgstr "ກຳລັງນຳເຂົ້າໃບຢັ້ງຢືນ"
 msgid "In FIPS mode, the passphrase must be at least {} letters long."
 msgstr "ໃນໂໝດ FIPS, ລະຫັດຜ່ານ (passphrase) ຕ້ອງມີຄວາມຍາວຢ່າງໜ້ອຍ {} ຕົວອັກສອນ."
 
-#: pyanaconda/modules/storage/kickstart.py:306
+#: pyanaconda/modules/storage/kickstart.py:271
 msgid ""
 "Incorrectly specified origin of the snapshot. Use format \"VolGroup/LV-name\""
 msgstr "ລະບຸຕົ້ນທາງຂອງສະແນບຊັອດບໍ່ຖືກຕ້ອງ. ໃຫ້ໃຊ້ຮູບແບບ \"VolGroup/LV-name\""
@@ -2278,11 +2278,8 @@ msgstr "ກຳລັງຕິດຕັ້ງແອັບພລິເຄຊັນ
 msgid "Installing boot loader"
 msgstr "ກຳລັງຕິດຕັ້ງບູດໂຫຼດເດີ (boot loader)"
 
-#: pyanaconda/modules/payloads/payload/live_image/installation.py:540
-msgid "Installing software {}"
-msgstr "ກຳລັງຕິດຕັ້ງຊອບແວ {}"
-
 #: pyanaconda/modules/payloads/payload/live_image/installation_progress.py:96
+#: pyanaconda/modules/payloads/payload/live_image/installation.py:547
 msgid "Installing software {}%"
 msgstr "ກຳລັງຕິດຕັ້ງຊອບແວ {}%"
 
@@ -2676,7 +2673,7 @@ msgstr "ເຊີບເວີ NFS ວ່າງເປົ່າ"
 msgid "NFS server {}"
 msgstr "ເຊີບເວີ NFS {}"
 
-#: pyanaconda/modules/storage/kickstart.py:201
+#: pyanaconda/modules/storage/kickstart.py:166
 msgid "NIC \"{}\" given in fcoe command does not exist."
 msgstr "NIC \"{}\" ທີ່ກຳນົດໃນຄຳສັ່ງ fcoe ບໍ່ມີຢູ່ຈິງ."
 
@@ -2779,7 +2776,7 @@ msgstr "ການຕັ້ງຄ່າເຄືອຂ່າຍ"
 msgid "Network configuration is not available."
 msgstr "ການຕັ້ງຄ່າເຄືອຂ່າຍບໍ່ສາມາດໃຊ້ໄດ້."
 
-#: pyanaconda/modules/storage/kickstart.py:226
+#: pyanaconda/modules/storage/kickstart.py:191
 #, python-brace-format
 msgid ""
 "Network interface \"{nic}\" required by iSCSI \"{iscsi_target}\" target is "
@@ -6944,7 +6941,7 @@ msgctxt "GUI|Advanced Storage|iSCSI|Configure"
 msgid "iSCSI _Initiator Name:"
 msgstr "ຊື່ຕົວເລີ່ມ iSCS_I:"
 
-#: pyanaconda/modules/storage/kickstart.py:242
+#: pyanaconda/modules/storage/kickstart.py:207
 msgid ""
 "iscsi --iface must be specified (binding used) either for all targets or for "
 "none"
@@ -7122,3 +7119,6 @@ msgstr "{} ເຊື່ອມຕໍ່ (mount) ເປັນ {}"
 #: pyanaconda/core/constants.py:222
 msgid "{}. {}"
 msgstr "{}. {}"
+
+#~ msgid "Installing software {}"
+#~ msgstr "ກຳລັງຕິດຕັ້ງຊອບແວ {}"
