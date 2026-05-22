@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2026-05-15 03:41+0000\n"
+"POT-Creation-Date: 2026-05-22 03:45+0000\n"
 "PO-Revision-Date: 2026-05-19 20:01+0000\n"
 "Last-Translator: Tinnaphat Somsang <tinvv@outlook.co.th>\n"
 "Language-Team: Thai <https://translate.fedoraproject.org/projects/anaconda/"
@@ -152,8 +152,8 @@ msgid ""
 msgstr ""
 "\n"
 "การติดตั้งถูกหยุดเนื่องจากเกิดข้อผิดพลาดระหว่างการทำงานในโหมด cmdline แบบ non-"
-"interactive เนื่องจากไม่สามารถมีคำถามในโหมด cmdline ได้ โปรดแก้ไขไฟล์ kickstart ของคุ"
-"ณและลองติดตั้งอีกครั้ง. \n"
+"interactive เนื่องจากไม่สามารถมีคำถามในโหมด cmdline ได้ โปรดแก้ไขไฟล์ kickstart "
+"ของคุณและลองติดตั้งอีกครั้ง. \n"
 "ข้อความแสดงข้อผิดพลาดคือ: \n"
 "\n"
 "%s. \n"
@@ -174,8 +174,8 @@ msgid ""
 "  You don't have enough space available to install <b>%(product)s</b>, even "
 "if you used all of the free space available on the selected disks."
 msgstr ""
-"  คุณมีที่ว่างไม่พอในการติดตั้ง <b>%(product)s</b>, แม้ว่าคุณจะใช้ที่ว่างที่เหลือทั้งหมดในดิสก์ที่เลือก"
-"ก็ตาม"
+"  คุณมีที่ว่างไม่พอในการติดตั้ง <b>%(product)s</b>, "
+"แม้ว่าคุณจะใช้ที่ว่างที่เหลือทั้งหมดในดิสก์ที่เลือกก็ตาม"
 
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1844
 #: pyanaconda/ui/gui/spokes/custom_storage.py:1848
@@ -307,8 +307,8 @@ msgid ""
 "%(product_name)s requires %(needed_ram)s MB of memory to install, but you "
 "only have %(total_ram)s MB on this machine.\n"
 msgstr ""
-"%(product_name)s ต้องใช้พื้นที่ %(needed_ram)s MB ในการติดตั้ง แต่คุณมีพื้นที่เหลือเพียง %"
-"(total_ram)s MB ในเครื่องนี้\n"
+"%(product_name)s ต้องใช้พื้นที่ %(needed_ram)s MB ในการติดตั้ง แต่คุณมีพื้นที่เหลือเพียง "
+"%(total_ram)s MB ในเครื่องนี้\n"
 
 #: pyanaconda/ui/gui/spokes/network.py:977
 #, python-format
@@ -1374,7 +1374,7 @@ msgstr ""
 msgid "Device"
 msgstr ""
 
-#: pyanaconda/modules/storage/kickstart.py:154
+#: pyanaconda/modules/storage/disk_initialization/initialization.py:105
 msgid "Device \"{}\" given in clearpart device list does not exist."
 msgstr "อุปกรณ์ \"{}\" ที่ถูกระบุในรายการอุปกรณ์ clearpart นั้นไม่มีอยู่"
 
@@ -1485,16 +1485,16 @@ msgstr ""
 msgid "Disk \"%s\" in part command is not partitioned."
 msgstr ""
 
-#: pyanaconda/modules/storage/kickstart.py:149
+#: pyanaconda/modules/storage/disk_initialization/initialization.py:111
 msgid "Disk \"{}\" given in clearpart command does not exist."
 msgstr "ดิสก์ \"{}\" ที่ถูกระบุในคำสั่ง clearpart นั้นไม่มีอยู่"
 
-#: pyanaconda/modules/storage/kickstart.py:173
-#: pyanaconda/modules/storage/kickstart.py:178
+#: pyanaconda/modules/storage/disk_selection/selection.py:89
+#: pyanaconda/modules/storage/disk_selection/selection.py:95
 msgid "Disk \"{}\" given in ignoredisk command does not exist."
 msgstr "ดิสก์ \"{}\" ที่ถูกระบุในคำสั่ง ignoredisk ไม่มีอยู่"
 
-#: pyanaconda/modules/storage/kickstart.py:292
+#: pyanaconda/modules/storage/kickstart.py:276
 msgid "Disk \"{}\" given in nvdimm command does not exist."
 msgstr ""
 
@@ -1510,12 +1510,11 @@ msgstr ""
 msgid "Disk summary goes here"
 msgstr ""
 
-#: pyanaconda/modules/storage/kickstart.py:143
+#: pyanaconda/modules/storage/kickstart.py:149
 msgid ""
 "Disklabel \"{}\" given in clearpart command is not supported on this "
 "platform."
-msgstr ""
-"Disklabel \"{}\" ที่ถูกระบุในคำสั่ง clearpart นั้นไม่ถูกรองรับในแพลต์ฟอร์มนี้"
+msgstr "Disklabel \"{}\" ที่ถูกระบุในคำสั่ง clearpart นั้นไม่ถูกรองรับในแพลต์ฟอร์มนี้"
 
 #: pyanaconda/ui/gui/spokes/storage.glade:178
 #: pyanaconda/ui/gui/spokes/storage.glade:318
@@ -2181,7 +2180,7 @@ msgstr ""
 msgid "In FIPS mode, the passphrase must be at least {} letters long."
 msgstr "รหัสผ่านต้องยาวอย่างน้อย 6 ตัวอักษร"
 
-#: pyanaconda/modules/storage/kickstart.py:323
+#: pyanaconda/modules/storage/kickstart.py:307
 msgid ""
 "Incorrectly specified origin of the snapshot. Use format \"VolGroup/LV-name\""
 msgstr ""
@@ -2654,7 +2653,7 @@ msgstr ""
 msgid "NFS server {}"
 msgstr "NFS เซิร์ฟเวอร์ %s"
 
-#: pyanaconda/modules/storage/kickstart.py:188
+#: pyanaconda/modules/storage/kickstart.py:172
 msgid "NIC \"{}\" given in fcoe command does not exist."
 msgstr "NIC \"{}\" ที่ถูกระบุในคำสั่ง fcoe ไม่มีอยู่"
 
@@ -2740,8 +2739,8 @@ msgstr ""
 msgid "Namespace"
 msgstr ""
 
-#: pyanaconda/modules/storage/kickstart.py:275
-#: pyanaconda/modules/storage/kickstart.py:287
+#: pyanaconda/modules/storage/kickstart.py:259
+#: pyanaconda/modules/storage/kickstart.py:271
 msgid "Namespace \"{}\" given in nvdimm command was not found."
 msgstr ""
 
@@ -2776,7 +2775,7 @@ msgstr ""
 msgid "Network configuration is not available."
 msgstr ""
 
-#: pyanaconda/modules/storage/kickstart.py:213
+#: pyanaconda/modules/storage/kickstart.py:197
 #, python-brace-format
 msgid ""
 "Network interface \"{nic}\" required by iSCSI \"{iscsi_target}\" target is "
@@ -3451,8 +3450,7 @@ msgstr ""
 msgid ""
 "RAID sets that contain '%(desc)s' must have one of the following device "
 "types: %(types)s."
-msgstr ""
-"ชุด RAID ที่มี '%(desc)s' ต้องมีหนึ่งในชนิดของอุปกรณ์ต่อไปนี้: %(types)s."
+msgstr "ชุด RAID ที่มี '%(desc)s' ต้องมีหนึ่งในชนิดของอุปกรณ์ต่อไปนี้: %(types)s."
 
 #: pyanaconda/modules/storage/bootloader/base.py:344
 #, python-format
@@ -3467,8 +3465,7 @@ msgstr ""
 msgid ""
 "RAID sets that contain '%(desc)s' must have one of the following raid "
 "levels: %(raid_level)s."
-msgstr ""
-"ชุด RAID ที่มี '%(desc)s' ต้องมีหนึ่งในระดับ raid ต่อไปนี้: %(raid_level)s."
+msgstr "ชุด RAID ที่มี '%(desc)s' ต้องมีหนึ่งในระดับ raid ต่อไปนี้: %(raid_level)s."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:649
 #, python-format
@@ -4393,8 +4390,8 @@ msgid ""
 "The %(product_name)s graphical installer requires %(needed_ram)s MB of "
 "memory, but you only have %(total_ram)s MB.\n"
 msgstr ""
-"ตัวติดตั้งแบบกราฟิก %(product_name)s ต้องใช้แรม %(needed_ram)s MB แต่คุณมีเพียง %"
-"(total_ram)s MB.\n"
+"ตัวติดตั้งแบบกราฟิก %(product_name)s ต้องใช้แรม %(needed_ram)s MB แต่คุณมีเพียง "
+"%(total_ram)s MB.\n"
 
 #: pyanaconda/modules/payloads/kickstart.py:44
 msgid "The %packages --ignorebroken feature is not supported on your product!"
@@ -4923,8 +4920,8 @@ msgid ""
 "more information on supported hardware, please refer to http://"
 "www.redhat.com/hardware."
 msgstr ""
-"ฮาร์ดแวร์นี้ (หรือชุดของส่วนประกอบดังกล่าว) นั้นไม่ถูกรองรับโดย Red Hat สำหรับข้อมูลเพิ่มเติมเกี่ยว"
-"กับฮาร์ดแวร์ที่รองรับ โปรดดูที่ http://www.redhat.com/hardware"
+"ฮาร์ดแวร์นี้ (หรือชุดของส่วนประกอบดังกล่าว) นั้นไม่ถูกรองรับโดย Red Hat "
+"สำหรับข้อมูลเพิ่มเติมเกี่ยวกับฮาร์ดแวร์ที่รองรับ โปรดดูที่ http://www.redhat.com/hardware"
 
 #: pyanaconda/ui/gui/spokes/lib/beta_warning_dialog.glade:68
 msgid "This is unstable, pre-release software."
@@ -5586,9 +5583,9 @@ msgid ""
 "connect to this computer from another computer and perform a graphical "
 "installation or continue with a text mode installation?"
 msgstr ""
-"X นั้นไม่สามารถเริ่มต้นการทำงานบนเครื่องของคุณได้ คุณต้องการที่จะเริ่มต้นการทำงาน VNC เพื่อเชื่อมต่"
-"อคอมพิวเตอร์นี้จากคอมพิวเตอร์อื่น และดำเนินการติดตั้งแบบกราฟิก หรือดำเนินการต่อด้วยการติดตั้งแบบโ"
-"หมดข้อความ?"
+"X นั้นไม่สามารถเริ่มต้นการทำงานบนเครื่องของคุณได้ คุณต้องการที่จะเริ่มต้นการทำงาน VNC "
+"เพื่อเชื่อมต่อคอมพิวเตอร์นี้จากคอมพิวเตอร์อื่น และดำเนินการติดตั้งแบบกราฟิก "
+"หรือดำเนินการต่อด้วยการติดตั้งแบบโหมดข้อความ?"
 
 #: pyanaconda/ui/gui/spokes/lib/resize.py:154
 msgid ""
@@ -6915,7 +6912,7 @@ msgctxt "GUI|Advanced Storage|iSCSI|Configure"
 msgid "iSCSI _Initiator Name:"
 msgstr ""
 
-#: pyanaconda/modules/storage/kickstart.py:229
+#: pyanaconda/modules/storage/kickstart.py:213
 msgid ""
 "iscsi --iface must be specified (binding used) either for all targets or for "
 "none"
