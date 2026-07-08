@@ -67,7 +67,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2026-07-07 03:22+0000\n"
+"POT-Creation-Date: 2026-07-08 02:40+0000\n"
 "PO-Revision-Date: 2025-10-28 12:43+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
 "memory@weblate.org>\n"
@@ -903,13 +903,13 @@ msgstr ""
 msgid "Bootc"
 msgstr "ブート"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:890
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:903
 #, fuzzy
 #| msgid "Deployment complete: {}"
 msgid "Bootc deployment complete: {}"
 msgstr "デプロイ完了: {}"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:817
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:824
 #, fuzzy
 #| msgid "Deployment starting: {}"
 msgid "Bootc deployment in progress: {}"
@@ -1083,11 +1083,23 @@ msgctxt "GUI|Software Source|Media Check Dialog"
 msgid "Cancel"
 msgstr "取り消し"
 
+#: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:290
+#, python-brace-format
+msgid "Cannot download Flatpaks because the source is not available: {refs}"
+msgstr ""
+
 #: pyanaconda/modules/services/installation.py:192
 #, python-brace-format
 msgid ""
 "Cannot enable the following services because they are not installed on the "
 "target system: {names}."
+msgstr ""
+
+#: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:243
+#, python-brace-format
+msgid ""
+"Cannot install the following Flatpaks because the source is not available: "
+"{refs}"
 msgstr ""
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:320
@@ -1417,23 +1429,23 @@ msgctxt "GUI|Custom Partitioning|Confirm Delete Dialog"
 msgid "Delete _all file systems which are only used by {}."
 msgstr "{} のみによって使用されているファイルシステムをすべて削除する。(_A)"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:881
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:890
 #, fuzzy
 #| msgid "Probing storage..."
 msgid "Deploying image..."
 msgstr "ストレージを検出中..."
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:809
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:816
 #, fuzzy
 #| msgid "Deployment complete: {}"
 msgid "Deploying image: {}"
 msgstr "デプロイ完了: {}"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:983
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:996
 msgid "Deployment complete: {}"
 msgstr "デプロイ完了: {}"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:914
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:927
 msgid "Deployment starting: {}"
 msgstr "デプロイ開始: {}"
 
@@ -1869,6 +1881,12 @@ msgstr ""
 "などの理由で無効である可能性があります。\n"
 "\n"
 "これを省略してインストールを続行しますか?"
+
+#: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:347
+#, fuzzy
+#| msgid "Failed to set up installation source"
+msgid "Failed to install Flatpaks: {}"
+msgstr "インストールソースの設定に失敗しました"
 
 #: pyanaconda/modules/storage/partitioning/base_partitioning.py:59
 msgid "Failed to proceed with the installation."
@@ -2431,7 +2449,7 @@ msgid "Installing the software"
 msgstr "ソフトウェアをインストール中…"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_manager.py:208
-#: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:390
+#: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:423
 #: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:42
 msgid "Installing {}"
 msgstr "{} のインストール中"
@@ -3523,7 +3541,7 @@ msgstr "ポータル"
 msgid "Ports"
 msgstr "ポート"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1056
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1069
 msgid "Preparing deployment of {}"
 msgstr "デプロイ準備 {}"
 
@@ -3740,7 +3758,7 @@ msgstr "RPM OSTree Container"
 msgid "Read-only mount"
 msgstr "読み取り専用でマウント"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1084
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1097
 #, python-brace-format
 msgid "Receiving objects: {percent}% ({fetched}/{requested}) {bytes}"
 msgstr "オブジェクトの受信: {percent}% ({fetched}/{requested}) {bytes}"
@@ -4408,7 +4426,7 @@ msgstr ""
 msgid "Starting automated install"
 msgstr "自動インストールの開始"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1018
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1031
 #, python-brace-format
 msgid "Starting pull of {branch_name} from {source}"
 msgstr "{branch_name} を {source} から引くのを開始"
@@ -5902,7 +5920,7 @@ msgstr "稼働中"
 msgid "Writing network configuration"
 msgstr "ネットワーク設定を書き込み中"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1090
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1103
 msgid "Writing objects"
 msgstr "オブジェクトの書き込み"
 
@@ -8784,9 +8802,6 @@ msgstr "{}。{}"
 #~ msgid "$0 (of $1) disk selected"
 #~ msgid_plural "$0 (of $1) disks selected"
 #~ msgstr[0] "ディスクが選択されていません"
-
-#~ msgid "Failed to set up installation source"
-#~ msgstr "インストールソースの設定に失敗しました"
 
 #~ msgid "Error downloading package metadata"
 #~ msgstr "パッケージメタデータをダウンロード中にエラー"

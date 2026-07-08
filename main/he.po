@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2026-07-07 03:22+0000\n"
+"POT-Creation-Date: 2026-07-08 02:40+0000\n"
 "PO-Revision-Date: 2026-03-12 19:58+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://translate.fedoraproject.org/projects/anaconda/"
@@ -841,11 +841,11 @@ msgstr ""
 msgid "Bootc"
 msgstr "Bootc"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:890
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:903
 msgid "Bootc deployment complete: {}"
 msgstr "הטמעת Bootc הושלמה: {}"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:817
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:824
 msgid "Bootc deployment in progress: {}"
 msgstr "הטמעת Bootc בתהליך: {}"
 
@@ -1018,11 +1018,23 @@ msgctxt "GUI|Software Source|Media Check Dialog"
 msgid "Cancel"
 msgstr "ביטול"
 
+#: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:290
+#, python-brace-format
+msgid "Cannot download Flatpaks because the source is not available: {refs}"
+msgstr ""
+
 #: pyanaconda/modules/services/installation.py:192
 #, python-brace-format
 msgid ""
 "Cannot enable the following services because they are not installed on the "
 "target system: {names}."
+msgstr ""
+
+#: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:243
+#, python-brace-format
+msgid ""
+"Cannot install the following Flatpaks because the source is not available: "
+"{refs}"
 msgstr ""
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:320
@@ -1346,19 +1358,19 @@ msgctxt "GUI|Custom Partitioning|Confirm Delete Dialog"
 msgid "Delete _all file systems which are only used by {}."
 msgstr "למחוק את _כל מערכות הקבצים שבשימוש רק על ידי {}."
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:881
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:890
 msgid "Deploying image..."
 msgstr "דמות מוטמעת…"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:809
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:816
 msgid "Deploying image: {}"
 msgstr "דמות מוטמעת: {}"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:983
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:996
 msgid "Deployment complete: {}"
 msgstr "ההטמעה הושלמה: {}"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:914
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:927
 msgid "Deployment starting: {}"
 msgstr "ההטמעה מתחילה: {}"
 
@@ -1780,6 +1792,12 @@ msgstr ""
 "ייתכן שמינוי Red Hat שלך אינו תקני (למשל בשל מינוי מפתחים שפג תוקפו). \n"
 " \n"
 "האם ברצונך להתעלם מכך ולהמשיך בהתקנה?"
+
+#: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:347
+#, fuzzy
+#| msgid "Failed to set up installation source"
+msgid "Failed to install Flatpaks: {}"
+msgstr "נכשל בהכנת מקור ההתקנה"
 
 #: pyanaconda/modules/storage/partitioning/base_partitioning.py:59
 msgid "Failed to proceed with the installation."
@@ -2327,7 +2345,7 @@ msgid "Installing the software"
 msgstr "התוכנה מותקנת"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_manager.py:208
-#: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:390
+#: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:423
 #: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:42
 msgid "Installing {}"
 msgstr "{} בהליכי התקנה"
@@ -3373,7 +3391,7 @@ msgstr "פורטל"
 msgid "Ports"
 msgstr "פתחות"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1056
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1069
 msgid "Preparing deployment of {}"
 msgstr "ההטמעה של {} בהכנות"
 
@@ -3586,7 +3604,7 @@ msgstr "מכולה של RPM OSTree‎"
 msgid "Read-only mount"
 msgstr "עיגון לקריאה בלבד"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1084
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1097
 #, python-brace-format
 msgid "Receiving objects: {percent}% ({fetched}/{requested}) {bytes}"
 msgstr "מתקבלים פריטים: {percent}% ({fetched}/{requested}) {bytes}"
@@ -4230,7 +4248,7 @@ msgstr "שולחן העבודה GNOME עולה במצב RDP…"
 msgid "Starting automated install"
 msgstr "התקנה אוטומטית מתחילה"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1018
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1031
 #, python-brace-format
 msgid "Starting pull of {branch_name} from {source}"
 msgstr "משיכת {branch_name} מתוך {source} מתחילה"
@@ -5669,7 +5687,7 @@ msgstr "בעבודה"
 msgid "Writing network configuration"
 msgstr "כותב הגדרות תצורת רשת"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1090
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1103
 msgid "Writing objects"
 msgstr "מתבצעת כתיבת עצמים"
 
@@ -8448,9 +8466,6 @@ msgstr "{}. {}"
 #~ msgid_plural "$0 (of $1) disks selected"
 #~ msgstr[0] "לא נבחרו כוננים"
 #~ msgstr[1] "לא נבחרו כוננים"
-
-#~ msgid "Failed to set up installation source"
-#~ msgstr "נכשל בהכנת מקור ההתקנה"
 
 #~ msgid "Error downloading package metadata"
 #~ msgstr "שגיאה בהורדת נתוני־העל של החבילה"

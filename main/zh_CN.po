@@ -52,7 +52,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2026-07-07 03:22+0000\n"
+"POT-Creation-Date: 2026-07-08 02:40+0000\n"
 "PO-Revision-Date: 2026-07-03 03:09+0000\n"
 "Last-Translator: Jesse Guo <jesseguotech@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://translate.fedoraproject.org/"
@@ -857,11 +857,11 @@ msgstr "引导加载程序阶段1设备不能在一个没有在 iBFT 中配置�
 msgid "Bootc"
 msgstr "Bootc"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:890
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:903
 msgid "Bootc deployment complete: {}"
 msgstr "Bootc 部署完成：{}"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:817
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:824
 msgid "Bootc deployment in progress: {}"
 msgstr "Bootc 部署进行中：{}"
 
@@ -1028,11 +1028,26 @@ msgctxt "GUI|Software Source|Media Check Dialog"
 msgid "Cancel"
 msgstr "取消"
 
+#: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:290
+#, python-brace-format
+msgid "Cannot download Flatpaks because the source is not available: {refs}"
+msgstr ""
+
 #: pyanaconda/modules/services/installation.py:192
 #, python-brace-format
 msgid ""
 "Cannot enable the following services because they are not installed on the "
 "target system: {names}."
+msgstr "无法启用以下服务，因为目标系统上未安装这些服务：{names}。"
+
+#: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:243
+#, fuzzy, python-brace-format
+#| msgid ""
+#| "Cannot enable the following services because they are not installed on "
+#| "the target system: {names}."
+msgid ""
+"Cannot install the following Flatpaks because the source is not available: "
+"{refs}"
 msgstr "无法启用以下服务，因为目标系统上未安装这些服务：{names}。"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:320
@@ -1353,19 +1368,19 @@ msgctxt "GUI|Custom Partitioning|Confirm Delete Dialog"
 msgid "Delete _all file systems which are only used by {}."
 msgstr "删除仅由 {} 使用的所有文件系统(_A)。"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:881
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:890
 msgid "Deploying image..."
 msgstr "部署映像中......"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:809
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:816
 msgid "Deploying image: {}"
 msgstr "部署映像中：{}"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:983
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:996
 msgid "Deployment complete: {}"
 msgstr "部署完成：{}"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:914
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:927
 msgid "Deployment starting: {}"
 msgstr "部署正在开始：{}"
 
@@ -1785,6 +1800,12 @@ msgstr ""
 "您的 Red Hat 订阅可能无效（例如开发者订阅已过期）。\n"
 "\n"
 "您是否要忽略此问题并继续安装？"
+
+#: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:347
+#, fuzzy
+#| msgid "Failed to set up installation source"
+msgid "Failed to install Flatpaks: {}"
+msgstr "设置安装源失败"
 
 #: pyanaconda/modules/storage/partitioning/base_partitioning.py:59
 msgid "Failed to proceed with the installation."
@@ -2330,7 +2351,7 @@ msgid "Installing the software"
 msgstr "正在安装软件"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_manager.py:208
-#: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:390
+#: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:423
 #: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:42
 msgid "Installing {}"
 msgstr "正在安装 {}"
@@ -3362,7 +3383,7 @@ msgstr "门户"
 msgid "Ports"
 msgstr "端口"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1056
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1069
 msgid "Preparing deployment of {}"
 msgstr "准备部署 {}"
 
@@ -3569,7 +3590,7 @@ msgstr "RPM 系统树容器"
 msgid "Read-only mount"
 msgstr "只读挂载"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1084
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1097
 #, python-brace-format
 msgid "Receiving objects: {percent}% ({fetched}/{requested}) {bytes}"
 msgstr "接收项：{percent}% ({fetched}/{requested}) {bytes}"
@@ -4203,7 +4224,7 @@ msgstr "在 RDP 模式下启动 GNOME 远程桌面……"
 msgid "Starting automated install"
 msgstr "正在开始自动安装"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1018
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1031
 #, python-brace-format
 msgid "Starting pull of {branch_name} from {source}"
 msgstr "开始从 {source} 提取 {branch_name}"
@@ -5594,7 +5615,7 @@ msgstr "可以工作"
 msgid "Writing network configuration"
 msgstr "正写入网络配置"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1090
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1103
 msgid "Writing objects"
 msgstr "写入对象"
 
@@ -8363,9 +8384,6 @@ msgstr "{}。{}"
 #~ msgid "$0 (of $1) disk selected"
 #~ msgid_plural "$0 (of $1) disks selected"
 #~ msgstr[0] "选择了 $0(共 $1个) 个磁盘"
-
-#~ msgid "Failed to set up installation source"
-#~ msgstr "设置安装源失败"
 
 #~ msgid "Error downloading package metadata"
 #~ msgstr "下载软件包元数据时出错"

@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2026-07-07 03:22+0000\n"
+"POT-Creation-Date: 2026-07-08 02:40+0000\n"
 "PO-Revision-Date: 2026-07-07 23:56+0000\n"
 "Last-Translator: Petru Rebeja <petru@rebeja.eu>\n"
 "Language-Team: Romanian <https://translate.fedoraproject.org/projects/"
@@ -902,13 +902,13 @@ msgstr ""
 msgid "Bootc"
 msgstr "Boot"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:890
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:903
 #, fuzzy
 #| msgid "Deployment complete: %s"
 msgid "Bootc deployment complete: {}"
 msgstr "Implementare completă: %s"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:817
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:824
 #, fuzzy
 #| msgid "Deployment starting: %s"
 msgid "Bootc deployment in progress: {}"
@@ -1103,11 +1103,28 @@ msgctxt "GUI|Software Source|Media Check Dialog"
 msgid "Cancel"
 msgstr "_Renunță"
 
+#: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:290
+#, python-brace-format
+msgid "Cannot download Flatpaks because the source is not available: {refs}"
+msgstr ""
+
 #: pyanaconda/modules/services/installation.py:192
 #, python-brace-format
 msgid ""
 "Cannot enable the following services because they are not installed on the "
 "target system: {names}."
+msgstr ""
+"Următoarele servicii nu pot fi activate pentru că acestea nu sunt instalate "
+"pe sistemul-țintă: {names}."
+
+#: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:243
+#, fuzzy, python-brace-format
+#| msgid ""
+#| "Cannot enable the following services because they are not installed on "
+#| "the target system: {names}."
+msgid ""
+"Cannot install the following Flatpaks because the source is not available: "
+"{refs}"
 msgstr ""
 "Următoarele servicii nu pot fi activate pentru că acestea nu sunt instalate "
 "pe sistemul-țintă: {names}."
@@ -1450,25 +1467,25 @@ msgctxt "GUI|Custom Partitioning|Confirm Delete Dialog"
 msgid "Delete _all file systems which are only used by {}."
 msgstr "Șterge to_ate sistemele de fișiere, care sunt folosite numai de %s."
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:881
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:890
 #, fuzzy
 #| msgid "Probing storage..."
 msgid "Deploying image..."
 msgstr "Se verifică stocarea..."
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:809
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:816
 #, fuzzy
 #| msgid "Deployment complete: %s"
 msgid "Deploying image: {}"
 msgstr "Implementare completă: %s"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:983
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:996
 #, fuzzy
 #| msgid "Deployment complete: %s"
 msgid "Deployment complete: {}"
 msgstr "Implementare completă: %s"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:914
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:927
 #, fuzzy
 #| msgid "Deployment starting: %s"
 msgid "Deployment starting: {}"
@@ -1924,6 +1941,12 @@ msgid ""
 "\n"
 "Would you like to ignore this and continue with installation?"
 msgstr ""
+
+#: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:347
+#, fuzzy
+#| msgid "Failed to set up installation source"
+msgid "Failed to install Flatpaks: {}"
+msgstr "Nu s-a putut stabili sursa de instalare."
 
 #: pyanaconda/modules/storage/partitioning/base_partitioning.py:59
 #, fuzzy
@@ -2502,7 +2525,7 @@ msgid "Installing the software"
 msgstr "Se instalează software"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_manager.py:208
-#: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:390
+#: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:423
 #: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:42
 #, fuzzy
 #| msgid "Installing %s"
@@ -3648,7 +3671,7 @@ msgstr "Portal"
 msgid "Ports"
 msgstr "Port"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1056
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1069
 #, fuzzy
 #| msgid "Preparing deployment of %s"
 msgid "Preparing deployment of {}"
@@ -3878,7 +3901,7 @@ msgstr ""
 msgid "Read-only mount"
 msgstr "Montare „numai citire”"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1084
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1097
 #, python-brace-format
 msgid "Receiving objects: {percent}% ({fetched}/{requested}) {bytes}"
 msgstr ""
@@ -4536,7 +4559,7 @@ msgstr ""
 msgid "Starting automated install"
 msgstr "Se pornește instalarea automată"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1018
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1031
 #, fuzzy, python-brace-format
 #| msgid "Starting pull of %(branchName)s from %(source)s"
 msgid "Starting pull of {branch_name} from {source}"
@@ -6116,7 +6139,7 @@ msgstr "Funcționează"
 msgid "Writing network configuration"
 msgstr "Se scrie configurația de rețea"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1090
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1103
 msgid "Writing objects"
 msgstr ""
 
@@ -8731,9 +8754,6 @@ msgstr "{}. {}"
 #~ msgstr[0] "Nu au fost selectate discuri"
 #~ msgstr[1] "Nu au fost selectate discuri"
 #~ msgstr[2] "Nu au fost selectate discuri"
-
-#~ msgid "Failed to set up installation source"
-#~ msgstr "Nu s-a putut stabili sursa de instalare."
 
 #~ msgid "Error downloading package metadata"
 #~ msgstr "Eroare la descărcarea metadatelor pentru pachete."
