@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
 "POT-Creation-Date: 2026-07-08 02:40+0000\n"
-"PO-Revision-Date: 2026-04-23 02:51+0000\n"
+"PO-Revision-Date: 2026-07-10 03:30+0000\n"
 "Last-Translator: \"Марко Костић (Marko Kostić)\" <marko.m.kostic@gmail.com>\n"
 "Language-Team: Serbian <https://translate.fedoraproject.org/projects/"
 "anaconda/master/sr/>\n"
@@ -28,7 +28,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.7.1.dev0\n"
 
 #: pyanaconda/startup_utils.py:664
 #, python-format
@@ -1045,7 +1045,7 @@ msgstr "Одустани"
 #: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:290
 #, python-brace-format
 msgid "Cannot download Flatpaks because the source is not available: {refs}"
-msgstr ""
+msgstr "Не могу преузети флетпекове јер је извор недоступан: {refs}"
 
 #: pyanaconda/modules/services/installation.py:192
 #, python-brace-format
@@ -1053,13 +1053,15 @@ msgid ""
 "Cannot enable the following services because they are not installed on the "
 "target system: {names}."
 msgstr ""
+"Не могу омогућити следеће услуге јер нису инсталиране на одредишном систему: "
+"{names}."
 
 #: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:243
 #, python-brace-format
 msgid ""
 "Cannot install the following Flatpaks because the source is not available: "
 "{refs}"
-msgstr ""
+msgstr "Не могу инсталирати следеће флетпекове јер извор није доступан: {refs}"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:320
 msgid "Cannot install to unpartitionable device \"{}\"."
@@ -1836,10 +1838,8 @@ msgstr ""
 "Желите ли да занемарите ово и наставите са инсталацијом?"
 
 #: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:347
-#, fuzzy
-#| msgid "Failed to set up installation source"
 msgid "Failed to install Flatpaks: {}"
-msgstr "Неуспешно успостављање извора инсталације"
+msgstr "Неуспех при инсталирању флетпекова: {}"
 
 #: pyanaconda/modules/storage/partitioning/base_partitioning.py:59
 msgid "Failed to proceed with the installation."
@@ -6118,15 +6118,7 @@ msgid "Your root partition must be on a device of type: %s."
 msgstr "Ваша корена партиција мора бити на уређају врсте: %s."
 
 #: pyanaconda/rescue.py:493
-#, fuzzy, python-format
-#| msgid ""
-#| "Your system has been mounted under %(mountpoint)s.\n"
-#| "\n"
-#| "If you would like to make the root of your system the root of the active "
-#| "system, run the command:\n"
-#| "\n"
-#| "\tchroot %(chroot_path)s\n"
-#| "\n"
+#, python-format
 msgid ""
 "Your system has been mounted under %(mountpoint)s.\n"
 "\n"
@@ -6141,7 +6133,7 @@ msgstr ""
 "Ако желите да корен вашег система постане корен активног система, покрените "
 "наредбу:\n"
 "\n"
-"\tchroot %(chroot_path)s\n"
+"\tchroot %(mountpoint)s\n"
 "\n"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:636
