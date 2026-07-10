@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2026-07-04 03:03+0000\n"
+"POT-Creation-Date: 2026-07-10 03:27+0000\n"
 "PO-Revision-Date: 2026-02-12 02:15+0000\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <https://translate.fedoraproject.org/projects/anaconda/"
@@ -833,11 +833,11 @@ msgstr ""
 msgid "Bootc"
 msgstr "Bootc"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:890
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:903
 msgid "Bootc deployment complete: {}"
 msgstr "Bootc орналастыруы аяқталды: {}"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:817
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:824
 msgid "Bootc deployment in progress: {}"
 msgstr "Bootc орналастыруы орындалуда: {}"
 
@@ -1004,11 +1004,23 @@ msgctxt "GUI|Software Source|Media Check Dialog"
 msgid "Cancel"
 msgstr "Бас тарту"
 
+#: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:287
+#, python-brace-format
+msgid "Cannot download Flatpaks because the source is not available: {refs}"
+msgstr ""
+
 #: pyanaconda/modules/services/installation.py:188
 #, python-brace-format
 msgid ""
 "Cannot enable the following services because they are not installed on the "
 "target system: {names}."
+msgstr ""
+
+#: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:241
+#, python-brace-format
+msgid ""
+"Cannot install the following Flatpaks because the source is not available: "
+"{refs}"
 msgstr ""
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:320
@@ -1338,19 +1350,19 @@ msgctxt "GUI|Custom Partitioning|Confirm Delete Dialog"
 msgid "Delete _all file systems which are only used by {}."
 msgstr "Тек {} қолданатын б_арлық файлдық жүйелерді өшіру."
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:881
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:890
 msgid "Deploying image..."
 msgstr "Бейнені орналастыру..."
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:809
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:816
 msgid "Deploying image: {}"
 msgstr "Бейнені орналастыру: {}"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:975
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:988
 msgid "Deployment complete: {}"
 msgstr "Тарқату аяқталды: {}"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:914
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:927
 msgid "Deployment starting: {}"
 msgstr "Тарқату басталды: {}"
 
@@ -1794,6 +1806,12 @@ msgstr ""
 "жазылымының мерзімі өтіп кеткен).\n"
 "\n"
 "Бұны елемей, орнатуды жалғастырғыңыз келе ме?"
+
+#: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:344
+#, fuzzy
+#| msgid "Failed to set up installation source"
+msgid "Failed to install Flatpaks: {}"
+msgstr "Орнатудың қайнар көзін баптау сәтсіз"
 
 #: pyanaconda/modules/storage/partitioning/base_partitioning.py:59
 msgid "Failed to proceed with the installation."
@@ -2343,7 +2361,7 @@ msgid "Installing the software"
 msgstr "Бағд. қамтаманы орнату"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_manager.py:208
-#: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:387
+#: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:420
 #: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:43
 msgid "Installing {}"
 msgstr "Орнату {}"
@@ -3389,7 +3407,7 @@ msgstr "Портал"
 msgid "Ports"
 msgstr "Порттар"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1048
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1061
 msgid "Preparing deployment of {}"
 msgstr "{} тарқатуын дайындау"
 
@@ -3606,7 +3624,7 @@ msgstr "RPM OSTree контейнері"
 msgid "Read-only mount"
 msgstr "Тек оқу үшін тіркеу"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1076
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1089
 #, python-brace-format
 msgid "Receiving objects: {percent}% ({fetched}/{requested}) {bytes}"
 msgstr "Объекттерді алу: {percent}% ({fetched}/{requested}) {bytes}"
@@ -4258,7 +4276,7 @@ msgstr "RDP режиміндегі қашықтағы GNOME жұмыс үсте�
 msgid "Starting automated install"
 msgstr "Автоматты орнатуды бастау"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1010
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1023
 #, python-brace-format
 msgid "Starting pull of {branch_name} from {source}"
 msgstr "{source} жерінен {branch_name} алуды бастау"
@@ -5731,7 +5749,7 @@ msgstr "Жұмыс істеуде"
 msgid "Writing network configuration"
 msgstr "Желі баптауларын жазу"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1082
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1095
 msgid "Writing objects"
 msgstr "Объекттерді жазу"
 
@@ -8569,9 +8587,6 @@ msgstr "{}. {}"
 #~ msgid "$0 (of $1) disk selected"
 #~ msgid_plural "$0 (of $1) disks selected"
 #~ msgstr[0] "Дисктер таңдалмады"
-
-#~ msgid "Failed to set up installation source"
-#~ msgstr "Орнатудың қайнар көзін баптау сәтсіз"
 
 #~ msgid "Error downloading package metadata"
 #~ msgstr "Десте метаақпаратын жүктеп алу сәтсіз"

@@ -25,7 +25,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2026-07-04 03:03+0000\n"
+"POT-Creation-Date: 2026-07-10 03:27+0000\n"
 "PO-Revision-Date: 2025-04-24 19:19+0000\n"
 "Last-Translator: Ondrej Sulek <feonsu@gmail.com>\n"
 "Language-Team: Slovak <https://translate.fedoraproject.org/projects/anaconda/"
@@ -855,13 +855,13 @@ msgstr ""
 msgid "Bootc"
 msgstr "Zavádzanie"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:890
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:903
 #, fuzzy
 #| msgid "Deployment complete: {}"
 msgid "Bootc deployment complete: {}"
 msgstr "Nasadenie dokončené: {}"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:817
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:824
 #, fuzzy
 #| msgid "Deployment starting: {}"
 msgid "Bootc deployment in progress: {}"
@@ -1025,11 +1025,23 @@ msgctxt "GUI|Software Source|Media Check Dialog"
 msgid "Cancel"
 msgstr "Zrušiť"
 
+#: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:287
+#, python-brace-format
+msgid "Cannot download Flatpaks because the source is not available: {refs}"
+msgstr ""
+
 #: pyanaconda/modules/services/installation.py:188
 #, python-brace-format
 msgid ""
 "Cannot enable the following services because they are not installed on the "
 "target system: {names}."
+msgstr ""
+
+#: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:241
+#, python-brace-format
+msgid ""
+"Cannot install the following Flatpaks because the source is not available: "
+"{refs}"
 msgstr ""
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:320
@@ -1358,23 +1370,23 @@ msgctxt "GUI|Custom Partitioning|Confirm Delete Dialog"
 msgid "Delete _all file systems which are only used by {}."
 msgstr "Odstrániť _všetky súborové systémy, ktoré používa iba {}."
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:881
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:890
 #, fuzzy
 #| msgid "Probing storage..."
 msgid "Deploying image..."
 msgstr "Preskúšava sa úložisko..."
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:809
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:816
 #, fuzzy
 #| msgid "Deployment complete: {}"
 msgid "Deploying image: {}"
 msgstr "Nasadenie dokončené: {}"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:975
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:988
 msgid "Deployment complete: {}"
 msgstr "Nasadenie dokončené: {}"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:914
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:927
 msgid "Deployment starting: {}"
 msgstr "Nasadenie spustené: {}"
 
@@ -1819,6 +1831,12 @@ msgstr ""
 "vývojárskeho predplatnému).\n"
 "\n"
 "Chcete toto ignorovať a pokračovať v inštalácii?"
+
+#: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:344
+#, fuzzy
+#| msgid "Failed to set up installation source"
+msgid "Failed to install Flatpaks: {}"
+msgstr "Zlyhalo nastavenie zdroja inštalácie"
 
 #: pyanaconda/modules/storage/partitioning/base_partitioning.py:59
 msgid "Failed to proceed with the installation."
@@ -2367,7 +2385,7 @@ msgid "Installing the software"
 msgstr "Inštaluje sa softvér"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_manager.py:208
-#: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:387
+#: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:420
 #: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:43
 msgid "Installing {}"
 msgstr "Inštaluje sa {}"
@@ -3410,7 +3428,7 @@ msgstr "Portál"
 msgid "Ports"
 msgstr "Porty"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1048
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1061
 msgid "Preparing deployment of {}"
 msgstr "Pripravuje sa nasadenie {}"
 
@@ -3624,7 +3642,7 @@ msgstr "RPM OSTree kontajner"
 msgid "Read-only mount"
 msgstr "Pripojiť iba na čítanie"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1076
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1089
 #, python-brace-format
 msgid "Receiving objects: {percent}% ({fetched}/{requested}) {bytes}"
 msgstr "Prijímajú sa objekty: {percent}% ({fetched}/{requested}) {bytes}"
@@ -4274,7 +4292,7 @@ msgstr "Spúšťa sa vzdialená plocha GNOME v režime RDP..."
 msgid "Starting automated install"
 msgstr "Spúšťa sa automatizovaná inštalácia"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1010
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1023
 #, python-brace-format
 msgid "Starting pull of {branch_name} from {source}"
 msgstr "Spúšťa sa sťahovanie {branch_name} z {source}"
@@ -5745,7 +5763,7 @@ msgstr "Pracuje"
 msgid "Writing network configuration"
 msgstr "Zapisuje sa konfigurácia siete"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1082
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1095
 msgid "Writing objects"
 msgstr "Zapisujú sa objekty"
 
@@ -8579,9 +8597,6 @@ msgstr "{}. {}"
 #~ msgstr[0] "Nie sú vybrané žiadne disky"
 #~ msgstr[1] "Nie sú vybrané žiadne disky"
 #~ msgstr[2] "Nie sú vybrané žiadne disky"
-
-#~ msgid "Failed to set up installation source"
-#~ msgstr "Zlyhalo nastavenie zdroja inštalácie"
 
 #~ msgid "Error downloading package metadata"
 #~ msgstr "Chyba pri preberaní metaúdajov balíku"

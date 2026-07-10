@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2026-07-04 03:03+0000\n"
+"POT-Creation-Date: 2026-07-10 03:27+0000\n"
 "PO-Revision-Date: 2025-02-19 04:10+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Hindi <https://translate.fedoraproject.org/projects/anaconda/"
@@ -798,11 +798,11 @@ msgstr ""
 msgid "Bootc"
 msgstr "बूट"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:890
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:903
 msgid "Bootc deployment complete: {}"
 msgstr ""
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:817
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:824
 msgid "Bootc deployment in progress: {}"
 msgstr ""
 
@@ -965,11 +965,23 @@ msgctxt "GUI|Software Source|Media Check Dialog"
 msgid "Cancel"
 msgstr ""
 
+#: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:287
+#, python-brace-format
+msgid "Cannot download Flatpaks because the source is not available: {refs}"
+msgstr ""
+
 #: pyanaconda/modules/services/installation.py:188
 #, python-brace-format
 msgid ""
 "Cannot enable the following services because they are not installed on the "
 "target system: {names}."
+msgstr ""
+
+#: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:241
+#, python-brace-format
+msgid ""
+"Cannot install the following Flatpaks because the source is not available: "
+"{refs}"
 msgstr ""
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:320
@@ -1298,21 +1310,21 @@ msgctxt "GUI|Custom Partitioning|Confirm Delete Dialog"
 msgid "Delete _all file systems which are only used by {}."
 msgstr ""
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:881
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:890
 #, fuzzy
 #| msgid "Probing storage..."
 msgid "Deploying image..."
 msgstr "भंडारण की जाँच कर रहा है..."
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:809
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:816
 msgid "Deploying image: {}"
 msgstr ""
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:975
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:988
 msgid "Deployment complete: {}"
 msgstr ""
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:914
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:927
 msgid "Deployment starting: {}"
 msgstr ""
 
@@ -1745,6 +1757,12 @@ msgid ""
 "\n"
 "Would you like to ignore this and continue with installation?"
 msgstr ""
+
+#: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:344
+#, fuzzy
+#| msgid "Failed to set up installation source"
+msgid "Failed to install Flatpaks: {}"
+msgstr "संस्थापन स्रोत सेटअप में विफल"
 
 #: pyanaconda/modules/storage/partitioning/base_partitioning.py:59
 #, fuzzy
@@ -2296,7 +2314,7 @@ msgid "Installing the software"
 msgstr "सॉफ्टवेयर संस्थापित कर रहा है"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_manager.py:208
-#: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:387
+#: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:420
 #: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:43
 #, fuzzy
 #| msgid "Installation"
@@ -3330,7 +3348,7 @@ msgstr ""
 msgid "Ports"
 msgstr "पोर्ट"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1048
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1061
 msgid "Preparing deployment of {}"
 msgstr ""
 
@@ -3537,7 +3555,7 @@ msgstr ""
 msgid "Read-only mount"
 msgstr ""
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1076
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1089
 #, python-brace-format
 msgid "Receiving objects: {percent}% ({fetched}/{requested}) {bytes}"
 msgstr ""
@@ -4174,7 +4192,7 @@ msgstr ""
 msgid "Starting automated install"
 msgstr "स्वचालित संस्थापित कर रहा है"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1010
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1023
 #, python-brace-format
 msgid "Starting pull of {branch_name} from {source}"
 msgstr ""
@@ -5545,7 +5563,7 @@ msgstr "कार्यशील"
 msgid "Writing network configuration"
 msgstr "संजाल विन्यास का लेखन"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1082
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1095
 msgid "Writing objects"
 msgstr ""
 
@@ -7761,9 +7779,6 @@ msgstr "{}. {}"
 #~ msgid_plural "$0 (of $1) disks selected"
 #~ msgstr[0] "कोई डिस्क चुना नहीं गया"
 #~ msgstr[1] "कोई डिस्क चुना नहीं गया"
-
-#~ msgid "Failed to set up installation source"
-#~ msgstr "संस्थापन स्रोत सेटअप में विफल"
 
 #~ msgid "Error downloading package metadata"
 #~ msgstr "संकुल मेटाडेटा डाउनलोड करने में त्रुटि"

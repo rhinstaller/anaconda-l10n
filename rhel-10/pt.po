@@ -42,7 +42,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2026-07-04 03:03+0000\n"
+"POT-Creation-Date: 2026-07-10 03:27+0000\n"
 "PO-Revision-Date: 2025-12-30 19:58+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://translate.fedoraproject.org/projects/"
@@ -877,13 +877,13 @@ msgstr ""
 msgid "Bootc"
 msgstr "Arranque"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:890
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:903
 #, fuzzy
 #| msgid "Deployment complete: {}"
 msgid "Bootc deployment complete: {}"
 msgstr "Implementação concluída: {}"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:817
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:824
 #, fuzzy
 #| msgid "Deployment starting: {}"
 msgid "Bootc deployment in progress: {}"
@@ -1047,11 +1047,23 @@ msgctxt "GUI|Software Source|Media Check Dialog"
 msgid "Cancel"
 msgstr "Cancelar"
 
+#: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:287
+#, python-brace-format
+msgid "Cannot download Flatpaks because the source is not available: {refs}"
+msgstr ""
+
 #: pyanaconda/modules/services/installation.py:188
 #, python-brace-format
 msgid ""
 "Cannot enable the following services because they are not installed on the "
 "target system: {names}."
+msgstr ""
+
+#: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:241
+#, python-brace-format
+msgid ""
+"Cannot install the following Flatpaks because the source is not available: "
+"{refs}"
 msgstr ""
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:320
@@ -1376,23 +1388,23 @@ msgctxt "GUI|Custom Partitioning|Confirm Delete Dialog"
 msgid "Delete _all file systems which are only used by {}."
 msgstr "Eliminar todos os sistemas de ficheiros usados apenas por {}."
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:881
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:890
 #, fuzzy
 #| msgid "Probing storage..."
 msgid "Deploying image..."
 msgstr "A detectar armazenamento..."
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:809
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:816
 #, fuzzy
 #| msgid "Deployment complete: {}"
 msgid "Deploying image: {}"
 msgstr "Implementação concluída: {}"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:975
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:988
 msgid "Deployment complete: {}"
 msgstr "Implementação concluída: {}"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:914
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:927
 msgid "Deployment starting: {}"
 msgstr "A iniciar a implementação: {}"
 
@@ -1837,6 +1849,12 @@ msgstr ""
 "subscrição de programador expirada).\n"
 "\n"
 "Deseja ignorar isto e continuar com a instalação?"
+
+#: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:344
+#, fuzzy
+#| msgid "Failed to set up installation source"
+msgid "Failed to install Flatpaks: {}"
+msgstr "Falha ao configurar a fonte de instalação"
 
 #: pyanaconda/modules/storage/partitioning/base_partitioning.py:59
 msgid "Failed to proceed with the installation."
@@ -2394,7 +2412,7 @@ msgid "Installing the software"
 msgstr "A instalar software"
 
 #: pyanaconda/modules/payloads/payload/rpm_ostree/flatpak_manager.py:208
-#: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:387
+#: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:420
 #: pyanaconda/modules/payloads/payload/dnf/transaction_progress.py:43
 msgid "Installing {}"
 msgstr "A instalar {}"
@@ -3448,7 +3466,7 @@ msgstr "Portal"
 msgid "Ports"
 msgstr "Portas"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1048
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1061
 msgid "Preparing deployment of {}"
 msgstr "A preparar a implementação de {}"
 
@@ -3664,7 +3682,7 @@ msgstr "Contentor OSTree RPM"
 msgid "Read-only mount"
 msgstr "Montado como apenas leitura"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1076
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1089
 #, python-brace-format
 msgid "Receiving objects: {percent}% ({fetched}/{requested}) {bytes}"
 msgstr "A receber objetos: {percent}% ({fetched}/{requested}) {bytes}"
@@ -4320,7 +4338,7 @@ msgstr "A iniciar o ambiente de área de trabalho remota GNOME em modo RDP..."
 msgid "Starting automated install"
 msgstr "A iniciar a auto-instalação"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1010
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1023
 #, python-brace-format
 msgid "Starting pull of {branch_name} from {source}"
 msgstr "A iniciar a extração de {branch_name} do {source}"
@@ -5792,7 +5810,7 @@ msgstr "A Trabalhar"
 msgid "Writing network configuration"
 msgstr "A escrever configuração de rede"
 
-#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1082
+#: pyanaconda/modules/payloads/payload/rpm_ostree/installation.py:1095
 msgid "Writing objects"
 msgstr "A escrever objetos"
 
@@ -8516,9 +8534,6 @@ msgstr "{}. {}"
 #~ msgid_plural "$0 (of $1) disks selected"
 #~ msgstr[0] "Nenhum disco selecionado"
 #~ msgstr[1] "Nenhum disco selecionado"
-
-#~ msgid "Failed to set up installation source"
-#~ msgstr "Falha ao configurar a fonte de instalação"
 
 #~ msgid "Error downloading package metadata"
 #~ msgstr "Erro ao transferir metadados do pacote"
