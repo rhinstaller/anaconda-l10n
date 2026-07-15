@@ -52,14 +52,14 @@
 # mikhail m <poshta82@mail.ru>, 2025.
 # Albert Meyer <albertmangasarov@gmail.com>, 2025.
 # Weblate Translation Memory <noreply-mt-weblate-translation-memory@weblate.org>, 2026.
+# Andrei Stepanov <adem4ik@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
 "POT-Creation-Date: 2026-07-10 03:27+0000\n"
-"PO-Revision-Date: 2026-01-28 01:53+0000\n"
-"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
-"memory@weblate.org>\n"
+"PO-Revision-Date: 2026-07-16 02:38+0000\n"
+"Last-Translator: Andrei Stepanov <adem4ik@gmail.com>\n"
 "Language-Team: Russian <https://translate.fedoraproject.org/projects/"
 "anaconda/rhel-10/ru/>\n"
 "Language: ru\n"
@@ -68,7 +68,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.15.2\n"
+"X-Generator: Weblate 2026.7.1\n"
 
 #: pyanaconda/kickstart.py:329
 #, python-format
@@ -886,8 +886,6 @@ msgstr ""
 "настроенном в iBFT."
 
 #: pyanaconda/modules/payloads/source/bootc/bootc.py:53
-#, fuzzy
-#| msgid "Boot"
 msgid "Bootc"
 msgstr "Bootc"
 
@@ -1064,6 +1062,7 @@ msgstr "Отмена"
 #, python-brace-format
 msgid "Cannot download Flatpaks because the source is not available: {refs}"
 msgstr ""
+"Невозможно загрузить Flatpak-пакеты, поскольку источник недоступен: {refs}"
 
 #: pyanaconda/modules/services/installation.py:188
 #, python-brace-format
@@ -1071,6 +1070,8 @@ msgid ""
 "Cannot enable the following services because they are not installed on the "
 "target system: {names}."
 msgstr ""
+"Невозможно включить следующие службы, поскольку они не установлены в целевой "
+"системе: {names}."
 
 #: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:241
 #, python-brace-format
@@ -1078,6 +1079,8 @@ msgid ""
 "Cannot install the following Flatpaks because the source is not available: "
 "{refs}"
 msgstr ""
+"Невозможно установить следующие Flatpak-пакеты, поскольку источник "
+"недоступен: {refs}"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:320
 msgid "Cannot install to unpartitionable device \"{}\"."
@@ -1866,10 +1869,8 @@ msgstr ""
 "Хотите проигнорировать это и продолжить установку?"
 
 #: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:344
-#, fuzzy
-#| msgid "Failed to set up installation source"
 msgid "Failed to install Flatpaks: {}"
-msgstr "Не удалось настроить источник установки"
+msgstr "Не удалось установить Flatpak-пакеты: {}"
 
 #: pyanaconda/modules/storage/partitioning/base_partitioning.py:59
 msgid "Failed to proceed with the installation."
@@ -5612,6 +5613,11 @@ msgid ""
 "needed.\n"
 "\n"
 msgstr ""
+"Предупреждение: обнаружена неизменяемая система. Не рекомендуется вносить "
+"изменения в каталоги развёртывания вручную, так как это может нарушить "
+"целостность системы. Изменяйте /etc, /var или файлы конфигурации загрузчика "
+"только при необходимости.\n"
+"\n"
 
 #: pyanaconda/ui/tui/spokes/kernel_warning.py:40
 msgid "Warning: Processor has Simultaneous Multithreading (SMT) enabled"
@@ -6077,15 +6083,7 @@ msgid "Your root partition must be on a device of type: %s."
 msgstr "Корневой раздел должен быть на устройстве типа: %s."
 
 #: pyanaconda/rescue.py:481
-#, fuzzy, python-format
-#| msgid ""
-#| "Your system has been mounted under %(mountpoint)s.\n"
-#| "\n"
-#| "If you would like to make the root of your system the root of the active "
-#| "system, run the command:\n"
-#| "\n"
-#| "\tchroot %(mountpoint)s\n"
-#| "\n"
+#, python-format
 msgid ""
 "Your system has been mounted under %(mountpoint)s.\n"
 "\n"
@@ -6100,7 +6098,7 @@ msgstr ""
 "Чтобы сделать корневой каталог вашей системы корневым каталогом активной "
 "системы, выполните команду:\n"
 "\n"
-"\tchroot %(mountpoint)s\n"
+"\tchroot %(chroot_path)s\n"
 "\n"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:636
