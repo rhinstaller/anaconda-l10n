@@ -30,7 +30,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2026-08-15 01:23+0000\n"
+"POT-Creation-Date: 2026-08-21 01:21+0000\n"
 "PO-Revision-Date: 2026-07-11 06:17+0000\n"
 "Last-Translator: Oğuz Ersen <oguz@ersen.moe>\n"
 "Language-Team: Turkish <https://translate.fedoraproject.org/projects/"
@@ -1222,7 +1222,7 @@ msgstr "Bağlanıyor…"
 msgid "Connection failed"
 msgstr "Bağlantı başarısız"
 
-#: pyanaconda/rescue.py:342
+#: pyanaconda/rescue.py:347
 msgid "Continue"
 msgstr "Sürdür"
 
@@ -3494,7 +3494,7 @@ msgstr "Amaç"
 msgid "Quit"
 msgstr "Çık"
 
-#: pyanaconda/rescue.py:345
+#: pyanaconda/rescue.py:350
 msgid "Quit (Reboot)"
 msgstr "Çık (Yeniden Başlat)"
 
@@ -3625,7 +3625,7 @@ msgstr "RPM OSTree"
 msgid "RPM OSTree Container"
 msgstr "RPM OSTree Konteyneri"
 
-#: pyanaconda/rescue.py:343
+#: pyanaconda/rescue.py:348
 msgid "Read-only mount"
 msgstr "Salt okunur bağla"
 
@@ -3774,11 +3774,11 @@ msgstr "Depo adı iç depo adıyla çakışıyor"
 msgid "Requested boot drive \"{}\" doesn't exist or cannot be used."
 msgstr "İstenen önyükleme diski “{}” yok veya kullanılamaz."
 
-#: pyanaconda/rescue.py:323
+#: pyanaconda/rescue.py:328
 msgid "Rescue"
 msgstr "Kurtar"
 
-#: pyanaconda/rescue.py:442
+#: pyanaconda/rescue.py:447
 msgid "Rescue Shell"
 msgstr "Kurtarma Kabuğu"
 
@@ -3851,7 +3851,7 @@ msgstr "Kök parolası belirlenmedi"
 msgid "Root password is set"
 msgstr "Kök parolası belirlendi"
 
-#: pyanaconda/rescue.py:452
+#: pyanaconda/rescue.py:457
 #, python-format
 msgid "Run %s to unmount the system when you are finished."
 msgstr ""
@@ -4175,7 +4175,7 @@ msgstr "Tek"
 msgid "Size cannot be decided on from kickstart nor obtained from device."
 msgstr "Boyuta kickstart ile karar verilemez veya aygıttan alınamaz."
 
-#: pyanaconda/rescue.py:344
+#: pyanaconda/rescue.py:349
 msgid "Skip to shell"
 msgstr "Kabuğa geç"
 
@@ -4846,7 +4846,7 @@ msgstr "Parolalar eşleşmiyor."
 msgid "The passwords you entered were different. Please try again."
 msgstr "Girdiğiniz parolalar başkaydı. Lütfen yeniden deneyin."
 
-#: pyanaconda/rescue.py:330
+#: pyanaconda/rescue.py:335
 #, python-format
 msgid ""
 "The rescue environment will now attempt to find your Linux installation and "
@@ -5229,7 +5229,7 @@ msgstr "PID dosyası oluşturulamıyor"
 msgid "Unable to encrypt password: unsupported algorithm {}"
 msgstr "Parola şifrelenemiyor: desteklenmeyen algoritma {}"
 
-#: pyanaconda/rescue.py:306
+#: pyanaconda/rescue.py:311
 msgid "Unable to find /bin/bash to execute!  Not starting shell."
 msgstr "Çalıştırılacak /bin/bash bulunamıyor!  Kabuk başlatılamıyor."
 
@@ -5557,9 +5557,16 @@ msgstr ""
 "dasdfmt çalıştırılıp sürdürülsün mü?\n"
 
 #: pyanaconda/rescue.py:475
+#, fuzzy
+#| msgid ""
+#| "Warning: An immutable system has been detected. It is not recommended to "
+#| "make manual changes to the deployment directories as this may break "
+#| "system integrity. Only modify /etc, /var, or boot loader configuration "
+#| "files as needed.\n"
+#| "\n"
 msgid ""
-"Warning: An immutable system has been detected. It is not recommended to "
-"make manual changes to the deployment directories as this may break system "
+"Warning: An atomic system has been detected. It is not recommended to make "
+"manual changes to the deployment directories as this may break system "
 "integrity. Only modify /etc, /var, or boot loader configuration files as "
 "needed.\n"
 "\n"
@@ -5584,7 +5591,7 @@ msgstr ""
 "Uyarı: İşlemcinin Eş Zamanlı Çoklu Kullanım (Simultaneous Multithreading — "
 "SMT) özelliği etkin.  <a href=\"\">Ayrıntılar için tıklayın.</a>"
 
-#: pyanaconda/rescue.py:465
+#: pyanaconda/rescue.py:470
 msgid ""
 "Warning: The rescue shell will trigger SELinux autorelabel on the subsequent "
 "boot. Add \"enforcing=0\" on the kernel command line for autorelabel to work "
@@ -5647,7 +5654,7 @@ msgstr "Fedora’ya hoş geldiniz"
 msgid "What language would you like to use during the installation process?"
 msgstr "Kurulum sırasında hangi dili kullanmak istiyorsunuz?"
 
-#: pyanaconda/rescue.py:453
+#: pyanaconda/rescue.py:458
 msgid ""
 "When finished, please exit from the shell and your system will reboot.\n"
 msgstr ""
@@ -6034,14 +6041,22 @@ msgid "Your root partition must be on a device of type: %s."
 msgstr "Kök bölümünüz, %s türünde bir aygıt üzerinde olmalıdır."
 
 #: pyanaconda/rescue.py:481
-#, python-format
+#, fuzzy, python-format
+#| msgid ""
+#| "Your system has been mounted under %(mountpoint)s.\n"
+#| "\n"
+#| "If you would like to make the root of your system the root of the active "
+#| "system, run the command:\n"
+#| "\n"
+#| "\tchroot %(chroot_path)s\n"
+#| "\n"
 msgid ""
 "Your system has been mounted under %(mountpoint)s.\n"
 "\n"
 "If you would like to make the root of your system the root of the active "
 "system, run the command:\n"
 "\n"
-"\tchroot %(chroot_path)s\n"
+"\tchroot %(mountpoint)s\n"
 "\n"
 msgstr ""
 "Sisteminiz %(mountpoint)s konumuna bağlanmıştır.\n"

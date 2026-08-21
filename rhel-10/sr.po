@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2026-08-15 01:23+0000\n"
+"POT-Creation-Date: 2026-08-21 01:21+0000\n"
 "PO-Revision-Date: 2026-07-10 03:30+0000\n"
 "Last-Translator: \"Марко Костић (Marko Kostić)\" <marko.m.kostic@gmail.com>\n"
 "Language-Team: Serbian <https://translate.fedoraproject.org/projects/"
@@ -1222,7 +1222,7 @@ msgstr "Повезивање..."
 msgid "Connection failed"
 msgstr "Повезивање неуспешно"
 
-#: pyanaconda/rescue.py:342
+#: pyanaconda/rescue.py:347
 msgid "Continue"
 msgstr "Настави"
 
@@ -3510,7 +3510,7 @@ msgstr "Сврха"
 msgid "Quit"
 msgstr "Излаз"
 
-#: pyanaconda/rescue.py:345
+#: pyanaconda/rescue.py:350
 msgid "Quit (Reboot)"
 msgstr "Брзо (поновно покретање)"
 
@@ -3641,7 +3641,7 @@ msgstr "РПМ ОС-стабло"
 msgid "RPM OSTree Container"
 msgstr "РПМ ОС-три садржалац"
 
-#: pyanaconda/rescue.py:343
+#: pyanaconda/rescue.py:348
 msgid "Read-only mount"
 msgstr "Закачено само за читање"
 
@@ -3791,11 +3791,11 @@ msgstr "Сукоб имена ризнице са унутрашњим имен�
 msgid "Requested boot drive \"{}\" doesn't exist or cannot be used."
 msgstr "Затражени подизни уређај „{}“ не постоји или није употребљив."
 
-#: pyanaconda/rescue.py:323
+#: pyanaconda/rescue.py:328
 msgid "Rescue"
 msgstr "Спаси"
 
-#: pyanaconda/rescue.py:442
+#: pyanaconda/rescue.py:447
 msgid "Rescue Shell"
 msgstr "Шкољка за опоравак"
 
@@ -3868,7 +3868,7 @@ msgstr "Админ лозинка није постављена"
 msgid "Root password is set"
 msgstr "Админ лозинка је постављена"
 
-#: pyanaconda/rescue.py:452
+#: pyanaconda/rescue.py:457
 #, python-format
 msgid "Run %s to unmount the system when you are finished."
 msgstr "Покрените %s да одвежете систем када завршите."
@@ -4188,7 +4188,7 @@ msgstr "Једини"
 msgid "Size cannot be decided on from kickstart nor obtained from device."
 msgstr "Величина се не може одредити из кикстарта нити добити са уређаја."
 
-#: pyanaconda/rescue.py:344
+#: pyanaconda/rescue.py:349
 msgid "Skip to shell"
 msgstr "Прескочи у љуску"
 
@@ -4862,7 +4862,7 @@ msgstr "Лозинке се не подударају."
 msgid "The passwords you entered were different. Please try again."
 msgstr "Унели сте другачије лозинке. Покушајте поново."
 
-#: pyanaconda/rescue.py:330
+#: pyanaconda/rescue.py:335
 #, python-format
 msgid ""
 "The rescue environment will now attempt to find your Linux installation and "
@@ -5240,7 +5240,7 @@ msgstr "Не могу да направим PID датотеку"
 msgid "Unable to encrypt password: unsupported algorithm {}"
 msgstr "Не могу да шифрујем лозинку: неподржани алгоритам {}"
 
-#: pyanaconda/rescue.py:306
+#: pyanaconda/rescue.py:311
 msgid "Unable to find /bin/bash to execute!  Not starting shell."
 msgstr "Не могу да нађем /bin/bash ради извршавања!  Не покрећем љуску."
 
@@ -5571,9 +5571,16 @@ msgstr ""
 "Настављате са извршавањем dasdfmt?\n"
 
 #: pyanaconda/rescue.py:475
+#, fuzzy
+#| msgid ""
+#| "Warning: An immutable system has been detected. It is not recommended to "
+#| "make manual changes to the deployment directories as this may break "
+#| "system integrity. Only modify /etc, /var, or boot loader configuration "
+#| "files as needed.\n"
+#| "\n"
 msgid ""
-"Warning: An immutable system has been detected. It is not recommended to "
-"make manual changes to the deployment directories as this may break system "
+"Warning: An atomic system has been detected. It is not recommended to make "
+"manual changes to the deployment directories as this may break system "
 "integrity. Only modify /etc, /var, or boot loader configuration files as "
 "needed.\n"
 "\n"
@@ -5596,7 +5603,7 @@ msgstr ""
 "Упозорење: Процесор има омогућено истовремено вишенитно обрађивање (SMT). <a "
 "href=\"\">Кликните за детаље.</a>"
 
-#: pyanaconda/rescue.py:465
+#: pyanaconda/rescue.py:470
 msgid ""
 "Warning: The rescue shell will trigger SELinux autorelabel on the subsequent "
 "boot. Add \"enforcing=0\" on the kernel command line for autorelabel to work "
@@ -5659,7 +5666,7 @@ msgstr "Добродошли у Fedoru"
 msgid "What language would you like to use during the installation process?"
 msgstr "Који језик бисте желели да користите током процеса инсталације?"
 
-#: pyanaconda/rescue.py:453
+#: pyanaconda/rescue.py:458
 msgid ""
 "When finished, please exit from the shell and your system will reboot.\n"
 msgstr ""
@@ -6054,14 +6061,22 @@ msgid "Your root partition must be on a device of type: %s."
 msgstr "Ваша корена партиција мора бити на уређају врсте: %s."
 
 #: pyanaconda/rescue.py:481
-#, python-format
+#, fuzzy, python-format
+#| msgid ""
+#| "Your system has been mounted under %(mountpoint)s.\n"
+#| "\n"
+#| "If you would like to make the root of your system the root of the active "
+#| "system, run the command:\n"
+#| "\n"
+#| "\tchroot %(chroot_path)s\n"
+#| "\n"
 msgid ""
 "Your system has been mounted under %(mountpoint)s.\n"
 "\n"
 "If you would like to make the root of your system the root of the active "
 "system, run the command:\n"
 "\n"
-"\tchroot %(chroot_path)s\n"
+"\tchroot %(mountpoint)s\n"
 "\n"
 msgstr ""
 "Ваш систем је закачен под %(mountpoint)s.\n"

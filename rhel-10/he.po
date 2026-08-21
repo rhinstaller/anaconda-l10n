@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2026-08-15 01:23+0000\n"
+"POT-Creation-Date: 2026-08-21 01:21+0000\n"
 "PO-Revision-Date: 2026-03-12 19:58+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://translate.fedoraproject.org/projects/anaconda/"
@@ -1189,7 +1189,7 @@ msgstr "כעת בהתחברות..."
 msgid "Connection failed"
 msgstr "החיבור נכשל"
 
-#: pyanaconda/rescue.py:342
+#: pyanaconda/rescue.py:347
 msgid "Continue"
 msgstr "המשך"
 
@@ -3416,7 +3416,7 @@ msgstr "תכלית"
 msgid "Quit"
 msgstr "י_ציאה"
 
-#: pyanaconda/rescue.py:345
+#: pyanaconda/rescue.py:350
 msgid "Quit (Reboot)"
 msgstr "יציאה (הפעלה מחדש)"
 
@@ -3545,7 +3545,7 @@ msgstr "RPM OSTree‎"
 msgid "RPM OSTree Container"
 msgstr "מכולה של RPM OSTree‎"
 
-#: pyanaconda/rescue.py:343
+#: pyanaconda/rescue.py:348
 msgid "Read-only mount"
 msgstr "עיגון לקריאה בלבד"
 
@@ -3693,11 +3693,11 @@ msgstr "שם המאגר מתנגש עם שם מאגר פנימי"
 msgid "Requested boot drive \"{}\" doesn't exist or cannot be used."
 msgstr "כונן האתחול המבוקש „{}” לא קיים או שלא ניתן להשתמש בו."
 
-#: pyanaconda/rescue.py:323
+#: pyanaconda/rescue.py:328
 msgid "Rescue"
 msgstr "הצלה"
 
-#: pyanaconda/rescue.py:442
+#: pyanaconda/rescue.py:447
 msgid "Rescue Shell"
 msgstr "מעטפת חילוץ"
 
@@ -3770,7 +3770,7 @@ msgstr "לא נקבעה סיסמת הנהלת המערכת"
 msgid "Root password is set"
 msgstr "סיסמת מנהל המערכת נקבעה"
 
-#: pyanaconda/rescue.py:452
+#: pyanaconda/rescue.py:457
 #, python-format
 msgid "Run %s to unmount the system when you are finished."
 msgstr "יש להריץ את %s כדי לבטל את עיגון המערכת בעת הסיום."
@@ -4087,7 +4087,7 @@ msgstr "יחיד"
 msgid "Size cannot be decided on from kickstart nor obtained from device."
 msgstr "אי אפשר להחליט על הגודל מתוך kickstart או למשוך אותו מהכונן."
 
-#: pyanaconda/rescue.py:344
+#: pyanaconda/rescue.py:349
 msgid "Skip to shell"
 msgstr "דילוג אל המעטפת"
 
@@ -4744,7 +4744,7 @@ msgstr "הסיסמאות אינן תואמות."
 msgid "The passwords you entered were different. Please try again."
 msgstr "הסיסמאות שהקלדת שונות. נא לנסות שוב."
 
-#: pyanaconda/rescue.py:330
+#: pyanaconda/rescue.py:335
 #, python-format
 msgid ""
 "The rescue environment will now attempt to find your Linux installation and "
@@ -5104,7 +5104,7 @@ msgstr "לא ניתן ליצור קובץ PID"
 msgid "Unable to encrypt password: unsupported algorithm {}"
 msgstr "אין אפשרות להצפין את הסיסמה: אלגוריתם לא נתמך {}"
 
-#: pyanaconda/rescue.py:306
+#: pyanaconda/rescue.py:311
 msgid "Unable to find /bin/bash to execute!  Not starting shell."
 msgstr "לא ניתן למצוא ‎/bin/bash להפעלה!  המעטפת לא מופעלת."
 
@@ -5426,9 +5426,16 @@ msgstr ""
 "להמשיך בהרצת dasdfmt?\n"
 
 #: pyanaconda/rescue.py:475
+#, fuzzy
+#| msgid ""
+#| "Warning: An immutable system has been detected. It is not recommended to "
+#| "make manual changes to the deployment directories as this may break "
+#| "system integrity. Only modify /etc, /var, or boot loader configuration "
+#| "files as needed.\n"
+#| "\n"
 msgid ""
-"Warning: An immutable system has been detected. It is not recommended to "
-"make manual changes to the deployment directories as this may break system "
+"Warning: An atomic system has been detected. It is not recommended to make "
+"manual changes to the deployment directories as this may break system "
 "integrity. Only modify /etc, /var, or boot loader configuration files as "
 "needed.\n"
 "\n"
@@ -5450,7 +5457,7 @@ msgstr ""
 "אזהרה: ריבוי תהליכים בו־זמנית (SMT) מופעל במעבד.  <a href=\"\">ללחוץ כאן "
 "לפרטים נוספים.</a>"
 
-#: pyanaconda/rescue.py:465
+#: pyanaconda/rescue.py:470
 msgid ""
 "Warning: The rescue shell will trigger SELinux autorelabel on the subsequent "
 "boot. Add \"enforcing=0\" on the kernel command line for autorelabel to work "
@@ -5510,7 +5517,7 @@ msgstr "ברוך בואך לפדורה"
 msgid "What language would you like to use during the installation process?"
 msgstr "באיזו שפה יש להשתמש בתהליך ההתקנה?"
 
-#: pyanaconda/rescue.py:453
+#: pyanaconda/rescue.py:458
 msgid ""
 "When finished, please exit from the shell and your system will reboot.\n"
 msgstr "עם סיום התהליך, נא לצאת מסביבת המעטפת והמערכת שלך תופעל מחדש.\n"
@@ -5880,14 +5887,22 @@ msgid "Your root partition must be on a device of type: %s."
 msgstr "מחיצת העל (root) שלך חייבת להיות על התקן מסוג: %s."
 
 #: pyanaconda/rescue.py:481
-#, python-format
+#, fuzzy, python-format
+#| msgid ""
+#| "Your system has been mounted under %(mountpoint)s.\n"
+#| "\n"
+#| "If you would like to make the root of your system the root of the active "
+#| "system, run the command:\n"
+#| "\n"
+#| "\tchroot %(chroot_path)s\n"
+#| "\n"
 msgid ""
 "Your system has been mounted under %(mountpoint)s.\n"
 "\n"
 "If you would like to make the root of your system the root of the active "
 "system, run the command:\n"
 "\n"
-"\tchroot %(chroot_path)s\n"
+"\tchroot %(mountpoint)s\n"
 "\n"
 msgstr ""
 "המערכת שלך עוגנה תחת %(mountpoint)s.\n"

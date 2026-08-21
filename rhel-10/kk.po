@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2026-08-15 01:23+0000\n"
+"POT-Creation-Date: 2026-08-21 01:21+0000\n"
 "PO-Revision-Date: 2026-02-12 02:15+0000\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <https://translate.fedoraproject.org/projects/anaconda/"
@@ -1199,7 +1199,7 @@ msgstr "Байланыс орнату..."
 msgid "Connection failed"
 msgstr "Байланысу сәтсіз"
 
-#: pyanaconda/rescue.py:342
+#: pyanaconda/rescue.py:347
 msgid "Continue"
 msgstr "Жалғастыру"
 
@@ -3479,7 +3479,7 @@ msgstr "Мақсаты"
 msgid "Quit"
 msgstr "Шығу"
 
-#: pyanaconda/rescue.py:345
+#: pyanaconda/rescue.py:350
 msgid "Quit (Reboot)"
 msgstr "Шығу (Қайта іске қосу)"
 
@@ -3612,7 +3612,7 @@ msgstr "RPM OSTree"
 msgid "RPM OSTree Container"
 msgstr "RPM OSTree контейнері"
 
-#: pyanaconda/rescue.py:343
+#: pyanaconda/rescue.py:348
 msgid "Read-only mount"
 msgstr "Тек оқу үшін тіркеу"
 
@@ -3762,11 +3762,11 @@ msgid "Requested boot drive \"{}\" doesn't exist or cannot be used."
 msgstr ""
 "Сұралған \"{}\" жүктелу дискі жоқ болып тұр немесе оны қолдануға болмайды."
 
-#: pyanaconda/rescue.py:323
+#: pyanaconda/rescue.py:328
 msgid "Rescue"
 msgstr "Қалпына келтіру"
 
-#: pyanaconda/rescue.py:442
+#: pyanaconda/rescue.py:447
 msgid "Rescue Shell"
 msgstr "Қалпына келтіру қоршамы"
 
@@ -3839,7 +3839,7 @@ msgstr "Әкімші (root) паролі орнатылмаған"
 msgid "Root password is set"
 msgstr "Root паролі орнатылды"
 
-#: pyanaconda/rescue.py:452
+#: pyanaconda/rescue.py:457
 #, python-format
 msgid "Run %s to unmount the system when you are finished."
 msgstr "Аяқтағаннан кейін жүйені тіркеуден босату үшін %s орындаңыз."
@@ -4159,7 +4159,7 @@ msgid "Size cannot be decided on from kickstart nor obtained from device."
 msgstr ""
 "Өлшемді kickstart-файлынан анықтау және құрылғыдан алу да сәтсіз аяқталды."
 
-#: pyanaconda/rescue.py:344
+#: pyanaconda/rescue.py:349
 msgid "Skip to shell"
 msgstr "Қоршамға аттап кету"
 
@@ -4829,7 +4829,7 @@ msgstr "Парольдер өзара сәйкес келмейді."
 msgid "The passwords you entered were different. Please try again."
 msgstr "Сіз енгізген парольдер өзара сәйкес келмейді. Әрекетті қайталаңыз."
 
-#: pyanaconda/rescue.py:330
+#: pyanaconda/rescue.py:335
 #, python-format
 msgid ""
 "The rescue environment will now attempt to find your Linux installation and "
@@ -5208,7 +5208,7 @@ msgstr "PID файлын жасау мүмкін емес"
 msgid "Unable to encrypt password: unsupported algorithm {}"
 msgstr "Парольді шифрлеу мүмкін емес: {} алгоритміне қолдау жоқ"
 
-#: pyanaconda/rescue.py:306
+#: pyanaconda/rescue.py:311
 msgid "Unable to find /bin/bash to execute!  Not starting shell."
 msgstr "Орындау үшін /bin/bash табу мүмкін емес! Қорша іске қосылмайды."
 
@@ -5542,9 +5542,16 @@ msgstr ""
 "dasdfmt жөнелтуді қалайсыз ба?\n"
 
 #: pyanaconda/rescue.py:475
+#, fuzzy
+#| msgid ""
+#| "Warning: An immutable system has been detected. It is not recommended to "
+#| "make manual changes to the deployment directories as this may break "
+#| "system integrity. Only modify /etc, /var, or boot loader configuration "
+#| "files as needed.\n"
+#| "\n"
 msgid ""
-"Warning: An immutable system has been detected. It is not recommended to "
-"make manual changes to the deployment directories as this may break system "
+"Warning: An atomic system has been detected. It is not recommended to make "
+"manual changes to the deployment directories as this may break system "
 "integrity. Only modify /etc, /var, or boot loader configuration files as "
 "needed.\n"
 "\n"
@@ -5567,7 +5574,7 @@ msgstr ""
 "Ескерту: процессорда бір уақыттағы көпағындық (SMT) іске қосылған. <a "
 "href=\"\">Көбірек білу үшін шертіңіз.</a>"
 
-#: pyanaconda/rescue.py:465
+#: pyanaconda/rescue.py:470
 msgid ""
 "Warning: The rescue shell will trigger SELinux autorelabel on the subsequent "
 "boot. Add \"enforcing=0\" on the kernel command line for autorelabel to work "
@@ -5629,7 +5636,7 @@ msgstr "Fedora-ға қош келдіңіз"
 msgid "What language would you like to use during the installation process?"
 msgstr "Орнату кезінде қай тілді қолданғыңыз келеді?"
 
-#: pyanaconda/rescue.py:453
+#: pyanaconda/rescue.py:458
 msgid ""
 "When finished, please exit from the shell and your system will reboot.\n"
 msgstr ""
@@ -6016,14 +6023,22 @@ msgid "Your root partition must be on a device of type: %s."
 msgstr "Сіздің түбірлік бумаңыз келесі түріндегі құрылғыда болуы тиіс: %s."
 
 #: pyanaconda/rescue.py:481
-#, python-format
+#, fuzzy, python-format
+#| msgid ""
+#| "Your system has been mounted under %(mountpoint)s.\n"
+#| "\n"
+#| "If you would like to make the root of your system the root of the active "
+#| "system, run the command:\n"
+#| "\n"
+#| "\tchroot %(chroot_path)s\n"
+#| "\n"
 msgid ""
 "Your system has been mounted under %(mountpoint)s.\n"
 "\n"
 "If you would like to make the root of your system the root of the active "
 "system, run the command:\n"
 "\n"
-"\tchroot %(chroot_path)s\n"
+"\tchroot %(mountpoint)s\n"
 "\n"
 msgstr ""
 "Жүйеңіз %(mountpoint)s жеріне тіркелген.\n"

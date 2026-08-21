@@ -57,7 +57,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2026-08-15 01:23+0000\n"
+"POT-Creation-Date: 2026-08-21 01:21+0000\n"
 "PO-Revision-Date: 2026-07-16 02:38+0000\n"
 "Last-Translator: Andrei Stepanov <adem4ik@gmail.com>\n"
 "Language-Team: Russian <https://translate.fedoraproject.org/projects/"
@@ -1261,7 +1261,7 @@ msgstr "Подключение..."
 msgid "Connection failed"
 msgstr "Ошибка подключения"
 
-#: pyanaconda/rescue.py:342
+#: pyanaconda/rescue.py:347
 msgid "Continue"
 msgstr "Продолжить"
 
@@ -3530,7 +3530,7 @@ msgstr "Цель"
 msgid "Quit"
 msgstr "Выход"
 
-#: pyanaconda/rescue.py:345
+#: pyanaconda/rescue.py:350
 msgid "Quit (Reboot)"
 msgstr "Выйти (Перезагрузить)"
 
@@ -3659,7 +3659,7 @@ msgstr "OSTree RPM"
 msgid "RPM OSTree Container"
 msgstr "Контейнер OSTree RPM"
 
-#: pyanaconda/rescue.py:343
+#: pyanaconda/rescue.py:348
 msgid "Read-only mount"
 msgstr "Монтирование для чтения"
 
@@ -3809,11 +3809,11 @@ msgstr "Конфликт имени с именем внутреннего ре�
 msgid "Requested boot drive \"{}\" doesn't exist or cannot be used."
 msgstr "Загрузочный диск «{}» не существует или его нельзя использовать."
 
-#: pyanaconda/rescue.py:323
+#: pyanaconda/rescue.py:328
 msgid "Rescue"
 msgstr "Восстановить"
 
-#: pyanaconda/rescue.py:442
+#: pyanaconda/rescue.py:447
 msgid "Rescue Shell"
 msgstr "Оболочка восстановления"
 
@@ -3886,7 +3886,7 @@ msgstr "Пароль root не задан"
 msgid "Root password is set"
 msgstr "Пароль root задан"
 
-#: pyanaconda/rescue.py:452
+#: pyanaconda/rescue.py:457
 #, python-format
 msgid "Run %s to unmount the system when you are finished."
 msgstr "Завершив, выполните %s, чтобы отключить систему."
@@ -4207,7 +4207,7 @@ msgid "Size cannot be decided on from kickstart nor obtained from device."
 msgstr ""
 "Размер не удалось ни определить с kickstart-файла, ни получить с устройства."
 
-#: pyanaconda/rescue.py:344
+#: pyanaconda/rescue.py:349
 msgid "Skip to shell"
 msgstr "Перейти к оболочке"
 
@@ -4880,7 +4880,7 @@ msgstr "Пароли не совпадают."
 msgid "The passwords you entered were different. Please try again."
 msgstr "Введенные пароли не совпадают. Повторите ввод."
 
-#: pyanaconda/rescue.py:330
+#: pyanaconda/rescue.py:335
 #, python-format
 msgid ""
 "The rescue environment will now attempt to find your Linux installation and "
@@ -5267,7 +5267,7 @@ msgstr "Не удалось создать PID-файл"
 msgid "Unable to encrypt password: unsupported algorithm {}"
 msgstr "Не удается зашифровать пароль: неподдерживаемый алгоритм {}"
 
-#: pyanaconda/rescue.py:306
+#: pyanaconda/rescue.py:311
 msgid "Unable to find /bin/bash to execute!  Not starting shell."
 msgstr "/bin/bash не найден. Оболочка не будет запущена."
 
@@ -5598,9 +5598,16 @@ msgstr ""
 "Запустить dasdfmt?\n"
 
 #: pyanaconda/rescue.py:475
+#, fuzzy
+#| msgid ""
+#| "Warning: An immutable system has been detected. It is not recommended to "
+#| "make manual changes to the deployment directories as this may break "
+#| "system integrity. Only modify /etc, /var, or boot loader configuration "
+#| "files as needed.\n"
+#| "\n"
 msgid ""
-"Warning: An immutable system has been detected. It is not recommended to "
-"make manual changes to the deployment directories as this may break system "
+"Warning: An atomic system has been detected. It is not recommended to make "
+"manual changes to the deployment directories as this may break system "
 "integrity. Only modify /etc, /var, or boot loader configuration files as "
 "needed.\n"
 "\n"
@@ -5625,7 +5632,7 @@ msgstr ""
 "Предупреждение: в процессоре включена одновременная многопоточность (SMT). "
 "<a href=\"\">Нажмите для получения дополнительной информации.</a>"
 
-#: pyanaconda/rescue.py:465
+#: pyanaconda/rescue.py:470
 msgid ""
 "Warning: The rescue shell will trigger SELinux autorelabel on the subsequent "
 "boot. Add \"enforcing=0\" on the kernel command line for autorelabel to work "
@@ -5690,7 +5697,7 @@ msgstr "Добро пожаловать в Fedora"
 msgid "What language would you like to use during the installation process?"
 msgstr "Какой язык вы хотите использовать в процессе установки?"
 
-#: pyanaconda/rescue.py:453
+#: pyanaconda/rescue.py:458
 msgid ""
 "When finished, please exit from the shell and your system will reboot.\n"
 msgstr "После завершения выйдите из оболочки и система перезагрузится.\n"
@@ -6075,14 +6082,22 @@ msgid "Your root partition must be on a device of type: %s."
 msgstr "Корневой раздел должен быть на устройстве типа: %s."
 
 #: pyanaconda/rescue.py:481
-#, python-format
+#, fuzzy, python-format
+#| msgid ""
+#| "Your system has been mounted under %(mountpoint)s.\n"
+#| "\n"
+#| "If you would like to make the root of your system the root of the active "
+#| "system, run the command:\n"
+#| "\n"
+#| "\tchroot %(chroot_path)s\n"
+#| "\n"
 msgid ""
 "Your system has been mounted under %(mountpoint)s.\n"
 "\n"
 "If you would like to make the root of your system the root of the active "
 "system, run the command:\n"
 "\n"
-"\tchroot %(chroot_path)s\n"
+"\tchroot %(mountpoint)s\n"
 "\n"
 msgstr ""
 "Ваша система смонтирована в %(mountpoint)s.\n"

@@ -32,7 +32,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2026-08-15 01:23+0000\n"
+"POT-Creation-Date: 2026-08-21 01:21+0000\n"
 "PO-Revision-Date: 2026-05-09 08:59+0000\n"
 "Last-Translator: David Medina <dmedinacpnl@gmail.com>\n"
 "Language-Team: Catalan <https://translate.fedoraproject.org/projects/"
@@ -1233,7 +1233,7 @@ msgstr "S'està connectant..."
 msgid "Connection failed"
 msgstr "La connexió ha fallat"
 
-#: pyanaconda/rescue.py:342
+#: pyanaconda/rescue.py:347
 msgid "Continue"
 msgstr "Continua"
 
@@ -3542,7 +3542,7 @@ msgstr "Propòsit"
 msgid "Quit"
 msgstr "Surt"
 
-#: pyanaconda/rescue.py:345
+#: pyanaconda/rescue.py:350
 msgid "Quit (Reboot)"
 msgstr "Surt (reinicia)"
 
@@ -3673,7 +3673,7 @@ msgstr "RPM OSTree"
 msgid "RPM OSTree Container"
 msgstr "Contenidor RPM OSTree"
 
-#: pyanaconda/rescue.py:343
+#: pyanaconda/rescue.py:348
 msgid "Read-only mount"
 msgstr "Muntatge de tan sols lectura"
 
@@ -3825,11 +3825,11 @@ msgstr ""
 "La unitat d'arrencada sol·licitada \"{}\" no existeix o bé no es pot "
 "utilitzar."
 
-#: pyanaconda/rescue.py:323
+#: pyanaconda/rescue.py:328
 msgid "Rescue"
 msgstr "Rescat"
 
-#: pyanaconda/rescue.py:442
+#: pyanaconda/rescue.py:447
 msgid "Rescue Shell"
 msgstr "Shell de rescat"
 
@@ -3902,7 +3902,7 @@ msgstr "La contrasenya d'arrel no està definida"
 msgid "Root password is set"
 msgstr "La contrasenya de root està definida"
 
-#: pyanaconda/rescue.py:452
+#: pyanaconda/rescue.py:457
 #, python-format
 msgid "Run %s to unmount the system when you are finished."
 msgstr "Executeu %s per a desmuntar el sistema quan hàgiu acabat."
@@ -4226,7 +4226,7 @@ msgstr ""
 "La mida no es pot decidir des de l'inici ni es pot obtenir des del "
 "dispositiu."
 
-#: pyanaconda/rescue.py:344
+#: pyanaconda/rescue.py:349
 msgid "Skip to shell"
 msgstr "Vés al shell"
 
@@ -4907,7 +4907,7 @@ msgstr "Les contrasenyes no coincideixen."
 msgid "The passwords you entered were different. Please try again."
 msgstr "Les contrasenyes que heu introduït són diferents. Torneu-ho a provar."
 
-#: pyanaconda/rescue.py:330
+#: pyanaconda/rescue.py:335
 #, python-format
 msgid ""
 "The rescue environment will now attempt to find your Linux installation and "
@@ -5301,7 +5301,7 @@ msgstr "No s'ha pogut crear el fitxer del PID"
 msgid "Unable to encrypt password: unsupported algorithm {}"
 msgstr "No es pot encriptar la contrasenya: algorisme no compatible {}"
 
-#: pyanaconda/rescue.py:306
+#: pyanaconda/rescue.py:311
 msgid "Unable to find /bin/bash to execute!  Not starting shell."
 msgstr "No s'ha pogut executar /bin/bash!  No s'iniciarà el shell."
 
@@ -5635,9 +5635,16 @@ msgstr ""
 "Continua amb l'execució de dasdfmt?\n"
 
 #: pyanaconda/rescue.py:475
+#, fuzzy
+#| msgid ""
+#| "Warning: An immutable system has been detected. It is not recommended to "
+#| "make manual changes to the deployment directories as this may break "
+#| "system integrity. Only modify /etc, /var, or boot loader configuration "
+#| "files as needed.\n"
+#| "\n"
 msgid ""
-"Warning: An immutable system has been detected. It is not recommended to "
-"make manual changes to the deployment directories as this may break system "
+"Warning: An atomic system has been detected. It is not recommended to make "
+"manual changes to the deployment directories as this may break system "
 "integrity. Only modify /etc, /var, or boot loader configuration files as "
 "needed.\n"
 "\n"
@@ -5660,7 +5667,7 @@ msgstr ""
 "Avís: El processador té activat el Simultaneous Multithreading (SMT).  <a "
 "href=\"\">Feu clic per a més informació.</a>"
 
-#: pyanaconda/rescue.py:465
+#: pyanaconda/rescue.py:470
 msgid ""
 "Warning: The rescue shell will trigger SELinux autorelabel on the subsequent "
 "boot. Add \"enforcing=0\" on the kernel command line for autorelabel to work "
@@ -5723,7 +5730,7 @@ msgstr "Benvingut a Fedora"
 msgid "What language would you like to use during the installation process?"
 msgstr "Quin idioma voleu utilitzar durant el procés d'instal·lació?"
 
-#: pyanaconda/rescue.py:453
+#: pyanaconda/rescue.py:458
 msgid ""
 "When finished, please exit from the shell and your system will reboot.\n"
 msgstr ""
@@ -6122,14 +6129,22 @@ msgid "Your root partition must be on a device of type: %s."
 msgstr "La vostra partició arrel ha d'estar en un dispositiu de tipus: %s."
 
 #: pyanaconda/rescue.py:481
-#, python-format
+#, fuzzy, python-format
+#| msgid ""
+#| "Your system has been mounted under %(mountpoint)s.\n"
+#| "\n"
+#| "If you would like to make the root of your system the root of the active "
+#| "system, run the command:\n"
+#| "\n"
+#| "\tchroot %(chroot_path)s\n"
+#| "\n"
 msgid ""
 "Your system has been mounted under %(mountpoint)s.\n"
 "\n"
 "If you would like to make the root of your system the root of the active "
 "system, run the command:\n"
 "\n"
-"\tchroot %(chroot_path)s\n"
+"\tchroot %(mountpoint)s\n"
 "\n"
 msgstr ""
 "El vostre sistema s'ha muntat a %(mountpoint)s.\n"

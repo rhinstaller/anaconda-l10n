@@ -39,7 +39,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
-"POT-Creation-Date: 2026-08-15 01:23+0000\n"
+"POT-Creation-Date: 2026-08-21 01:21+0000\n"
 "PO-Revision-Date: 2026-07-11 06:17+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
 "memory@weblate.org>\n"
@@ -1212,7 +1212,7 @@ msgstr "연결 중..."
 msgid "Connection failed"
 msgstr "연결 실패"
 
-#: pyanaconda/rescue.py:342
+#: pyanaconda/rescue.py:347
 msgid "Continue"
 msgstr "진행"
 
@@ -3466,7 +3466,7 @@ msgstr "목적"
 msgid "Quit"
 msgstr "종료"
 
-#: pyanaconda/rescue.py:345
+#: pyanaconda/rescue.py:350
 msgid "Quit (Reboot)"
 msgstr "종료 (재시작)"
 
@@ -3597,7 +3597,7 @@ msgstr "RPM OSTree"
 msgid "RPM OSTree Container"
 msgstr "RPM OSTree 컨테이너"
 
-#: pyanaconda/rescue.py:343
+#: pyanaconda/rescue.py:348
 msgid "Read-only mount"
 msgstr "읽기-전용 적재"
 
@@ -3745,11 +3745,11 @@ msgstr "저장소 이름이 내부 저장소 이름과 충돌합니다"
 msgid "Requested boot drive \"{}\" doesn't exist or cannot be used."
 msgstr "요청된 부팅 드라이브 \"{}\"가 없거나 사용 할 수 없습니다."
 
-#: pyanaconda/rescue.py:323
+#: pyanaconda/rescue.py:328
 msgid "Rescue"
 msgstr "복구"
 
-#: pyanaconda/rescue.py:442
+#: pyanaconda/rescue.py:447
 msgid "Rescue Shell"
 msgstr "복구 쉘"
 
@@ -3822,7 +3822,7 @@ msgstr "root 비밀번호가 설정되어 있지 않습니다"
 msgid "Root password is set"
 msgstr "root 비밀번호가 설정 되어 있음"
 
-#: pyanaconda/rescue.py:452
+#: pyanaconda/rescue.py:457
 #, python-format
 msgid "Run %s to unmount the system when you are finished."
 msgstr "완료시 시스템을 내려 놓기 위해 %s를 실행합니다."
@@ -4139,7 +4139,7 @@ msgstr "단일"
 msgid "Size cannot be decided on from kickstart nor obtained from device."
 msgstr "크기는 킥스타트에서 결정하거나 또는장치에서 획득 할 수 없습니다."
 
-#: pyanaconda/rescue.py:344
+#: pyanaconda/rescue.py:349
 msgid "Skip to shell"
 msgstr "쉘로 건너뛰기"
 
@@ -4802,7 +4802,7 @@ msgstr "비밀번호가 일치하지 않습니다."
 msgid "The passwords you entered were different. Please try again."
 msgstr "입력 한 비밀번호가 다릅니다. 다시 시도하십시오."
 
-#: pyanaconda/rescue.py:330
+#: pyanaconda/rescue.py:335
 #, python-format
 msgid ""
 "The rescue environment will now attempt to find your Linux installation and "
@@ -5174,7 +5174,7 @@ msgstr "PID 파일을 생성 할 수 없습니다"
 msgid "Unable to encrypt password: unsupported algorithm {}"
 msgstr "비밀번호를 암호화 할 수 없습니다 : 지원되지 않는 알고리즘 {}"
 
-#: pyanaconda/rescue.py:306
+#: pyanaconda/rescue.py:311
 msgid "Unable to find /bin/bash to execute!  Not starting shell."
 msgstr "실행할 /bin/bash 를 찾을 수 없습니다! 쉘을 시작 할 수 없습니다."
 
@@ -5502,9 +5502,16 @@ msgstr ""
 "dasdfmt 실행하시겠습니까?\n"
 
 #: pyanaconda/rescue.py:475
+#, fuzzy
+#| msgid ""
+#| "Warning: An immutable system has been detected. It is not recommended to "
+#| "make manual changes to the deployment directories as this may break "
+#| "system integrity. Only modify /etc, /var, or boot loader configuration "
+#| "files as needed.\n"
+#| "\n"
 msgid ""
-"Warning: An immutable system has been detected. It is not recommended to "
-"make manual changes to the deployment directories as this may break system "
+"Warning: An atomic system has been detected. It is not recommended to make "
+"manual changes to the deployment directories as this may break system "
 "integrity. Only modify /etc, /var, or boot loader configuration files as "
 "needed.\n"
 "\n"
@@ -5526,7 +5533,7 @@ msgstr ""
 "경고: 프로세서는 동시 멀티쓰레딩(SMT)이 활성화 되었습니다.  <a href=\"\">자세"
 "한 내용을 보려면 눌러주세요.</a>"
 
-#: pyanaconda/rescue.py:465
+#: pyanaconda/rescue.py:470
 msgid ""
 "Warning: The rescue shell will trigger SELinux autorelabel on the subsequent "
 "boot. Add \"enforcing=0\" on the kernel command line for autorelabel to work "
@@ -5587,7 +5594,7 @@ msgstr "페도라에 오신 것을 환영합니다"
 msgid "What language would you like to use during the installation process?"
 msgstr "설치 과정에서 어떤 언어를 사용하길 원하십니까?"
 
-#: pyanaconda/rescue.py:453
+#: pyanaconda/rescue.py:458
 msgid ""
 "When finished, please exit from the shell and your system will reboot.\n"
 msgstr "작업 완료 후, 쉘을 종료하면 시스템이 재시작됩니다.\n"
@@ -5963,14 +5970,22 @@ msgid "Your root partition must be on a device of type: %s."
 msgstr "루트 파티션에는 유형의 장치가 존재해야 합니다: %s."
 
 #: pyanaconda/rescue.py:481
-#, python-format
+#, fuzzy, python-format
+#| msgid ""
+#| "Your system has been mounted under %(mountpoint)s.\n"
+#| "\n"
+#| "If you would like to make the root of your system the root of the active "
+#| "system, run the command:\n"
+#| "\n"
+#| "\tchroot %(chroot_path)s\n"
+#| "\n"
 msgid ""
 "Your system has been mounted under %(mountpoint)s.\n"
 "\n"
 "If you would like to make the root of your system the root of the active "
 "system, run the command:\n"
 "\n"
-"\tchroot %(chroot_path)s\n"
+"\tchroot %(mountpoint)s\n"
 "\n"
 msgstr ""
 "시스템이 %(mountpoint)s에 적재 되었습니다.\n"
