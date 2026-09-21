@@ -27,7 +27,7 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
 "POT-Creation-Date: 2026-09-03 03:17+0000\n"
-"PO-Revision-Date: 2026-02-15 07:58+0000\n"
+"PO-Revision-Date: 2026-09-22 03:37+0000\n"
 "Last-Translator: Marija Grineviciute <marijagrine@protonmail.com>\n"
 "Language-Team: Lithuanian <https://translate.fedoraproject.org/projects/"
 "anaconda/rhel-10/lt/>\n"
@@ -38,7 +38,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > "
 "19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? "
 "1 : 2);\n"
-"X-Generator: Weblate 5.15.2\n"
+"X-Generator: Weblate 2026.9.1\n"
 
 #: pyanaconda/kickstart.py:329
 #, python-format
@@ -1011,7 +1011,7 @@ msgstr "Atsisakyti"
 #: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:287
 #, python-brace-format
 msgid "Cannot download Flatpaks because the source is not available: {refs}"
-msgstr ""
+msgstr "Negalima atsisiųsti Flatpaks, nes šaltinis neprieinamas: {refs}"
 
 #: pyanaconda/modules/services/installation.py:188
 #, python-brace-format
@@ -1019,13 +1019,15 @@ msgid ""
 "Cannot enable the following services because they are not installed on the "
 "target system: {names}."
 msgstr ""
+"Negalima įgalinti sekančių paslaugų, nes jos neįdiegtos paskirties "
+"sistemoje: {names}."
 
 #: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:241
 #, python-brace-format
 msgid ""
 "Cannot install the following Flatpaks because the source is not available: "
 "{refs}"
-msgstr ""
+msgstr "Negalima įdiegti sekančių Flatpaks, nes šaltinis neprieinamas: {refs}"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:320
 msgid "Cannot install to unpartitionable device \"{}\"."
@@ -1809,10 +1811,8 @@ msgstr ""
 "Ar norėtumėte to nepaisyti ir tęsti diegimą?"
 
 #: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:344
-#, fuzzy
-#| msgid "Failed to set up installation source"
 msgid "Failed to install Flatpaks: {}"
-msgstr "Nepavyko nustatyti diegimo šaltinio"
+msgstr "Nepavyko įdiegti Flatpaks: {}"
 
 #: pyanaconda/modules/storage/partitioning/base_partitioning.py:59
 msgid "Failed to proceed with the installation."
@@ -6001,15 +6001,7 @@ msgid "Your root partition must be on a device of type: %s."
 msgstr "Jūsų šakninis skirsnis turi būti šio tipo įrenginyje: %s."
 
 #: pyanaconda/rescue.py:469
-#, fuzzy, python-format
-#| msgid ""
-#| "Your system has been mounted under %(mountpoint)s.\n"
-#| "\n"
-#| "If you would like to make the root of your system the root of the active "
-#| "system, run the command:\n"
-#| "\n"
-#| "\tchroot %(chroot_path)s\n"
-#| "\n"
+#, python-format
 msgid ""
 "Your system has been mounted under %(mountpoint)s.\n"
 "\n"
@@ -6024,7 +6016,7 @@ msgstr ""
 "Jei norite jos šaknį padaryti aktyvios sistemos šaknimi, įvykdykite "
 "komandą:\n"
 "\n"
-"\tchroot %(chroot_path)s\n"
+"\tchroot %(mountpoint)s\n"
 "\n"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:636
