@@ -68,21 +68,22 @@
 # Javier Francisco <fserrador@gmail.com>, 2025.
 # "Fco. Javier F. Serrador" <fserrador@gmail.com>, 2025, 2026.
 # Guillermo Themsel <themselg@tuta.io>, 2026.
+# Luis Flores <luisfno21@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
 "POT-Creation-Date: 2026-09-30 04:14+0000\n"
-"PO-Revision-Date: 2026-08-05 03:36+0000\n"
-"Last-Translator: Guillermo Themsel <themselg@tuta.io>\n"
+"PO-Revision-Date: 2026-10-18 03:24+0000\n"
+"Last-Translator: Luis Flores <luisfno21@gmail.com>\n"
 "Language-Team: Spanish <https://translate.fedoraproject.org/projects/"
-"anaconda/master/es/>\n"
+"anaconda/f45/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.8\n"
+"X-Generator: Weblate 2026.10.1\n"
 
 #: pyanaconda/startup_utils.py:712
 #, python-format
@@ -1102,6 +1103,8 @@ msgstr "Cancelar"
 #, python-brace-format
 msgid "Cannot download Flatpaks because the source is not available: {refs}"
 msgstr ""
+"No se pueden descargar los paquetes Flatpak porque el origen no está "
+"disponible:{refs}"
 
 #: pyanaconda/modules/services/installation.py:192
 #, python-brace-format
@@ -1113,16 +1116,13 @@ msgstr ""
 "en el sistema destino: {names}."
 
 #: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:243
-#, fuzzy, python-brace-format
-#| msgid ""
-#| "Cannot enable the following services because they are not installed on "
-#| "the target system: {names}."
+#, python-brace-format
 msgid ""
 "Cannot install the following Flatpaks because the source is not available: "
 "{refs}"
 msgstr ""
-"Los servicios siguientes no se pueden habilitar porque no están instalados "
-"en el sistema destino: {names}."
+"No se pueden instalar los siguientes paquetes Flatpak porque el origen no "
+"está disponible:{refs}"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:336
 msgid "Cannot install to unpartitionable device \"{}\"."
@@ -1904,10 +1904,8 @@ msgstr ""
 "¿Le gustaría ignorar esto y continuar con la instalación?"
 
 #: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:347
-#, fuzzy
-#| msgid "Failed to set up installation source"
 msgid "Failed to install Flatpaks: {}"
-msgstr "No se pudo configurar el origen de instalación"
+msgstr "Error al instalar los paquetes Flatpaks:{}"
 
 #: pyanaconda/modules/payloads/payload/live_image/installation.py:452
 msgid ""
@@ -1916,6 +1914,10 @@ msgid ""
 "installation media. Please try a different USB drive or optical disc, or re-"
 "download and re-flash the ISO image."
 msgstr ""
+"No se pudo instalar la imagen live: rsync no pudo leer algunos archivos del "
+"medio de instalación (código de salida 23). Esto suele deberse a que el "
+"medio de instalación está dañado. Pruebe con otra unidad USB o disco óptico, "
+"o vuelva a descargar la imagen ISO y grabarla en el medio de instalación."
 
 #: pyanaconda/modules/storage/partitioning/base_partitioning.py:59
 msgid "Failed to proceed with the installation."
@@ -1997,11 +1999,8 @@ msgid "Filter _By:"
 msgstr "Filtrar _por:"
 
 #: pyanaconda/modules/boss/installation.py:635
-#, fuzzy
-#| msgctxt "GUI|Progress"
-#| msgid "_Finish Installation"
 msgid "Finalizing installation"
-msgstr "_Finalizar instalación"
+msgstr "Finalizando la instalación"
 
 #: pyanaconda/ui/gui/spokes/network.py:98
 msgid "Firmware missing"
@@ -5853,10 +5852,10 @@ msgid ""
 "needed.\n"
 "\n"
 msgstr ""
-"Aviso: se ha detectado in sistema atómico. Esto no está recomendado para "
-"tomar cambios manuales a los directorios de despliegue ya que esto puede "
-"romper la integridad del sistema. Solo modifique /etc, /var, o cargue la "
-"configuración del cargador como se necesiten.\n"
+"Advertencia: Se ha detectado un sistema atómico. No se recomienda realizar "
+"cambios manuales en los directorios de despliegue, ya que esto podría "
+"comprometer la integridad del sistema. Modifique únicamente los archivos de "
+"configuración de /etc, /var, o del gestor de arranque, según sea necesario.\n"
 "\n"
 
 #: pyanaconda/ui/tui/spokes/kernel_warning.py:40
@@ -6346,10 +6345,10 @@ msgid ""
 "\tchroot %(mountpoint)s\n"
 "\n"
 msgstr ""
-"Su sistema se ha montado bajo el %(mountpoint)s.\n"
+"Su sistema se ha montado en %(mountpoint)s.\n"
 "\n"
-"Si quisiera que la raíz de su sistema pase a ser la del sistema activo, "
-"ejecute el comando:\n"
+"Si desea establecer la raíz de su sistema como raíz del sistema activo, "
+"ejecute el siguiente comando:\n"
 "\n"
 "\tchroot %(mountpoint)s\n"
 "\n"
