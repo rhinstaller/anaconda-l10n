@@ -25,7 +25,7 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
 "POT-Creation-Date: 2022-09-06 02:11+0000\n"
-"PO-Revision-Date: 2026-10-28 14:05+0000\n"
+"PO-Revision-Date: 2026-10-28 18:59+0000\n"
 "Last-Translator: Jim Spentzos <jimspentzos2000@gmail.com>\n"
 "Language-Team: Greek <https://translate.fedoraproject.org/projects/anaconda/"
 "rhel-90/el/>\n"
@@ -374,7 +374,7 @@ msgstr "Το part --noformat πρέπει επίσης να χρησιμοποι
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:380
 #, python-format
 msgid "Partition \"%s\" given in part command does not exist."
-msgstr ""
+msgstr "Το διαμέρισμα «%s», που δόθηκε στην εντολή part, δεν υπάρχει."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:283
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:294
@@ -808,7 +808,7 @@ msgstr "Διαμέρισμα εκκίνησης PReP"
 
 #: pyanaconda/modules/storage/platform.py:46
 msgid "Apple EFI Boot Partition"
-msgstr ""
+msgstr "Διαμέρισμα εκκίνησης EFI της Apple"
 
 #: pyanaconda/modules/storage/platform.py:47
 msgid "Apple Bootstrap Partition"
@@ -1137,6 +1137,27 @@ msgid ""
 "* Some drives support re-configuration of sector sizes, for example by "
 "running 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 msgstr ""
+"Εναλλακτικές λύσεις για χειροκίνητες εγκαταστάσεις:\n"
+"* Κατά τη χειροκίνητη εγκατάσταση, σε λειτουργία γραφικού περιβάλλοντος ή "
+"κειμένου, επιλέξτε μόνο τους δίσκους που έχουν το ίδιο μέγεθος τομέα.\n"
+"* Όταν έχουν επιλεχθεί δίσκοι με διαφορετικά μεγέθη τομέα για την "
+"εγκατάσταση, περιορίστε κάθε ομάδα τόμων LVM που δημιουργείται, ώστε να "
+"χρησιμοποιεί φυσικούς τόμους με το ίδιο μέγεθος τομέα. Αυτό είναι εφικτό "
+"μόνο στη λειτουργία γραφικού περιβάλλοντος, από την ενότητα προσαρμοσμένης "
+"διαμέρισης δίσκων.\n"
+"\n"
+"Εναλλακτικές λύσεις για εγκαταστάσεις με αρχείο kickstart:\n"
+"* Περιορίστε τους δίσκους που χρησιμοποιούνται για τη διαμέριση, "
+"καθορίζοντας την παράμετρο «ignoredisk --drives=..» ή «ignoredisk --only-"
+"use=..».\n"
+"* Καθορίστε τους δίσκους που θα χρησιμοποιηθούν για κάθε φυσικό τόμο LVM που "
+"δημιουργείται: «partition pv.1 --ondisk=...»\n"
+"\n"
+"Γενικές εναλλακτικές λύσεις:\n"
+"* Μπορείτε να χρησιμοποιήσετε απλή διαμέριση δίσκων αντί για LVM.\n"
+"* Ορισμένοι δίσκοι υποστηρίζουν την αναδιαμόρφωση του μεγέθους των τομέων "
+"τους, εκτελώντας για παράδειγμα την εντολή «hdparm --set-sector-"
+"size=<ΜΕΓΕΘΟΣ> <ΣΥΣΚΕΥΗ>».\n"
 
 #: pyanaconda/modules/timezone/timezone.py:100
 msgid "Invalid time source."
@@ -1583,6 +1604,15 @@ msgid ""
 "Once you have resolved the issue you can retry the storage scan. If you do "
 "not fix it you will have to exit the installer."
 msgstr ""
+"Υπάρχει ένα πρόβλημα με την υπάρχουσα διαμόρφωση του αποθηκευτικού χώρου ή "
+"τις αρχικές ρυθμίσεις σας, π.χ. ένα αρχείο kickstart. Πρέπει να επιλύσετε "
+"αυτό το ζήτημα πριν μπορέσει να προχωρήσει η εγκατάσταση. Διατίθεται ένα "
+"κέλυφος προς χρήση, στο οποίο μπορείτε να αποκτήσετε πρόσβαση πατώντας Ctrl-"
+"Alt-F1 και, έπειτα, Ctrl-b 2.\n"
+"\n"
+"Μόλις επιλύσετε το ζήτημα, μπορείτε να επαναλάβετε τη σάρωση του "
+"αποθηκευτικού χώρου. Εάν δεν το διορθώσετε, θα πρέπει να κάνετε έξοδο από το "
+"πρόγραμμα εγκατάστασης."
 
 #: pyanaconda/errors.py:146
 msgctxt "GUI|Storage Detailed Error Dialog"
@@ -1790,7 +1820,7 @@ msgstr ""
 #: pyanaconda/network.py:504
 #, python-format
 msgid "Team %(interface_name)s (%(list_of_slaves)s) connected"
-msgstr ""
+msgstr "Η ομάδα «%(interface_name)s» (%(list_of_slaves)s) συνδέθηκε"
 
 #: pyanaconda/network.py:508
 #, python-format
@@ -2403,6 +2433,18 @@ msgid ""
 "'512m' = 512 megabytes\n"
 "'123456789' = 123 terabytes and a bit less than a half\n"
 msgstr ""
+"Καθορίστε την επιθυμητή χωρητικότητα με ακέραιους ή δεκαδικούς αριθμούς και "
+"μια κατάλληλη μονάδα.\n"
+"\n"
+"Δεν επιτρέπονται κενά για τον διαχωρισμό των ομάδων ψηφίων. Οι μονάδες "
+"αποτελούνται από ένα δεκαδικό ή δυαδικό πρόθεμα και, προαιρετικά, το γράμμα "
+"B. Δεν γίνεται διάκριση μεταξύ πεζών και κεφαλαίων στις μονάδες. Εάν δεν "
+"καθορίσετε κάποια μονάδα, χρησιμοποιείται η προεπιλεγμένη (MiB).\n"
+"\n"
+"Παραδείγματα έγκυρης εισόδου:\n"
+"«100 GiB» = 100 gibibytes\n"
+"«512m» = 512 megabytes\n"
+"«123456789» = 123 terabytes και κάτι λιγότερο από μισό terabyte\n"
 
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:69
 #: pyanaconda/ui/gui/spokes/lib/custom_storage_helpers.py:72
@@ -2605,6 +2647,9 @@ msgid ""
 "The following errors were encountered when checking your storage "
 "configuration.  You can modify your storage layout or quit the installer."
 msgstr ""
+"Προέκυψαν τα παρακάτω σφάλματα κατά τον έλεγχο της διαμόρφωσης του "
+"αποθηκευτικού χώρου σας. Μπορείτε να τροποποιήσετε τη διάταξη του "
+"αποθηκευτικού χώρου ή να τερματίσετε το πρόγραμμα εγκατάστασης."
 
 #: pyanaconda/ui/gui/spokes/storage.py:875
 msgctxt "GUI|Storage|Error Dialog"
@@ -2656,7 +2701,7 @@ msgstr ""
 
 #: pyanaconda/ui/gui/spokes/keyboard.py:472
 msgid "Layout switching not configured."
-msgstr ""
+msgstr "Δεν έχει ρυθμιστεί η εναλλαγή διατάξεων."
 
 #: pyanaconda/ui/gui/spokes/network.py:83
 msgid "Status unknown (missing)"
@@ -2733,7 +2778,7 @@ msgstr "Team"
 #: pyanaconda/ui/gui/spokes/network.py:290
 #: pyanaconda/ui/gui/spokes/network.glade:19
 msgid "Bridge"
-msgstr "Bridge"
+msgstr "Γέφυρα"
 
 #. TRANSLATORS: ethernet cable is unplugged
 #: pyanaconda/ui/gui/spokes/network.py:806
@@ -3713,6 +3758,8 @@ msgid ""
 "Please provide a default LUKS passphrase for all devices you want to "
 "encrypt. You will have to type it twice."
 msgstr ""
+"Εισαγάγετε μια προεπιλεγμένη φράση πρόσβασης LUKS για όλες τις συσκευές που "
+"θέλετε να κρυπτογραφήσετε. Θα πρέπει να την πληκτρολογήσετε δύο φορές."
 
 #: pyanaconda/ui/tui/spokes/storage.py:447
 msgid "Partitioning Options"
@@ -4787,6 +4834,18 @@ msgid ""
 "If you do not understand or accept the risks, then please exit this program "
 "by selecting \"I want to exit\" which will reboot your system."
 msgstr ""
+"Σημείωση: Το παρόν λογισμικό βρίσκεται σε πρώιμο στάδιο και προορίζεται "
+"αποκλειστικά για σκοπούς ανάπτυξης και δοκιμής. *Μην* το χρησιμοποιείτε για "
+"σημαντικές εργασίες ή σε περιβάλλοντα παραγωγής.\n"
+"\n"
+"Επιλέγοντας «Θέλω να συνεχίσω», δηλώνετε ότι κατανοείτε και αποδέχεστε τους "
+"κινδύνους που σχετίζονται με τη χρήση πρώιμου λογισμικού, ότι προτίθεστε να "
+"το χρησιμοποιήσετε αποκλειστικά για σκοπούς ανάπτυξης και δοκιμής, καθώς και "
+"ότι είστε διατεθειμένοι να αναφέρετε τυχόν σφάλματα ή προβλήματα με στόχο τη "
+"βελτίωσή του.\n"
+"\n"
+"Εάν δεν κατανοείτε ή δεν αποδέχεστε τους κινδύνους, τερματίστε το πρόγραμμα "
+"επιλέγοντας «Θέλω να κάνω έξοδο». Το σύστημά σας θα επανεκκινηθεί."
 
 #: pyanaconda/ui/gui/spokes/welcome.glade:133
 msgid "Beta Warn"
@@ -5404,6 +5463,11 @@ msgid ""
 "supported on IBM z14 and earlier models, therefore choose to disable it if "
 "you intend to boot the installed system on such models."
 msgstr ""
+"Το υλικολογισμικό θα επαληθεύει την ακεραιότητα του πυρήνα Linux κατά την "
+"εκκίνηση, εφόσον το Secure Boot είναι ενεργοποιημένο και ρυθμισμένο στη "
+"συσκευή. Το Secure Boot δεν υποστηρίζεται στο IBM z14 και παλαιότερα "
+"μοντέλα, επομένως απενεργοποιήστε το αν σκοπεύετε να εκκινήσετε το "
+"εγκατεστημένο σύστημα σε τέτοια μοντέλα."
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:283
 msgid "Enabled if supported by the installing machine"
@@ -6029,7 +6093,7 @@ msgstr "Προσαρμοσμένο URL βάσης"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:594
 msgid "Satellite URL"
-msgstr "Satellite URL"
+msgstr "URL Satellite"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:608
 msgid "Use HTTP proxy"
@@ -6847,7 +6911,7 @@ msgstr "Διαδρομές"
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:886
 msgctxt "GUI|Installation Destination|Filter"
 msgid "_Multipath Devices"
-msgstr ""
+msgstr "Συσκευές _πολλαπλών διαδρομών"
 
 #: pyanaconda/ui/gui/spokes/advanced_storage.glade:912
 msgctxt "GUI|Installation Destination|Filter|Other"
