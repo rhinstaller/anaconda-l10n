@@ -34,7 +34,7 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
 "POT-Creation-Date: 2026-10-31 04:20+0000\n"
-"PO-Revision-Date: 2026-05-09 09:00+0000\n"
+"PO-Revision-Date: 2026-11-02 22:18+0000\n"
 "Last-Translator: David Medina <dmedinacpnl@gmail.com>\n"
 "Language-Team: Catalan <https://translate.fedoraproject.org/projects/"
 "anaconda/master/ca/>\n"
@@ -43,7 +43,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17.1\n"
+"X-Generator: Weblate 2026.11\n"
 
 #: pyanaconda/startup_utils.py:713
 #, python-format
@@ -1055,6 +1055,7 @@ msgstr "Cancel·la"
 #, python-brace-format
 msgid "Cannot download Flatpaks because the source is not available: {refs}"
 msgstr ""
+"No es poden baixar els Flatpaks perquè la font no està disponible: {refs}"
 
 #: pyanaconda/modules/services/installation.py:192
 #, python-brace-format
@@ -1062,6 +1063,8 @@ msgid ""
 "Cannot enable the following services because they are not installed on the "
 "target system: {names}."
 msgstr ""
+"No es poden activar els serveis següents perquè no estan instal·lats al "
+"sistema de destinació: {names}."
 
 #: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:243
 #, python-brace-format
@@ -1069,6 +1072,8 @@ msgid ""
 "Cannot install the following Flatpaks because the source is not available: "
 "{refs}"
 msgstr ""
+"No es poden instal·lar els Flatpaks següents perquè la font no està "
+"disponible: {refs}"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:336
 msgid "Cannot install to unpartitionable device \"{}\"."
@@ -1854,10 +1859,8 @@ msgstr ""
 "Voleu ignorar-ho i continuar la instal·lació?"
 
 #: pyanaconda/modules/payloads/payload/flatpak/flatpak_manager.py:347
-#, fuzzy
-#| msgid "Failed to set up installation source"
 msgid "Failed to install Flatpaks: {}"
-msgstr "Ha fallat la configuració de l'origen de la instal·lació"
+msgstr "No s'han pogut instal·lar els Flatpaks: {}"
 
 #: pyanaconda/modules/payloads/payload/live_image/installation.py:452
 msgid ""
@@ -1866,6 +1869,10 @@ msgid ""
 "installation media. Please try a different USB drive or optical disc, or re-"
 "download and re-flash the ISO image."
 msgstr ""
+"No s'ha pogut instal·lar la imatge en viu: rsync no ha pogut llegir alguns "
+"fitxers del suport d'instal·lació (codi de sortida 23). Això sol ser degut "
+"al fet que el suport d'instal·lació està malmès. Proveu amb una altra unitat "
+"USB o un altre disc òptic, o bé torneu a descarregar i gravar la imatge ISO."
 
 #: pyanaconda/modules/storage/partitioning/base_partitioning.py:59
 msgid "Failed to proceed with the installation."
@@ -1946,11 +1953,8 @@ msgid "Filter _By:"
 msgstr "Filtra _per:"
 
 #: pyanaconda/modules/boss/installation.py:703
-#, fuzzy
-#| msgctxt "GUI|Progress"
-#| msgid "_Finish Installation"
 msgid "Finalizing installation"
-msgstr "_Acaba la instal·lació"
+msgstr "S'acaba la instal·lació"
 
 #: pyanaconda/ui/gui/spokes/network.py:98
 msgid "Firmware missing"
@@ -2829,7 +2833,7 @@ msgstr "El servidor NFS està buit"
 
 #: pyanaconda/modules/payloads/source/nfs/nfs.py:76
 msgid "NFS server {}"
-msgstr "Servidor NFS %s"
+msgstr "Servidor NFS {}"
 
 #: pyanaconda/modules/storage/kickstart.py:166
 msgid "NIC \"{}\" given in fcoe command does not exist."
@@ -2970,16 +2974,12 @@ msgid "No Space"
 msgstr "Sense espai"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1348
-#, fuzzy
-#| msgid ""
-#| "No thin pool exists with the name \"{}\". Specify thin pools before thin "
-#| "volumes."
 msgid ""
 "No Stratis pool exists with the name \"{}\". Specify pools before "
 "filesystems."
 msgstr ""
-"No existeix cap agrupament de disgregats anomenat \"{}\". Especifiqueu els "
-"agrupaments de disgregats abans dels volums de disgregats."
+"No existeix cap agrupació de Stratis amb el nom «{}». Especifiqueu els pools "
+"abans dels sistemes de fitxers."
 
 #: pyanaconda/ui/tui/spokes/software_selection.py:375
 msgid "No additional software to select."
@@ -4446,56 +4446,43 @@ msgstr "S'estan emmagatzemant els fitxers de configuració i kickstarts"
 
 #: pyanaconda/core/storage.py:116
 msgid "Stratis"
-msgstr ""
+msgstr "Stratis"
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1372
-#, fuzzy
-#| msgid "Partition \"{}\" given in part command does not exist."
 msgid "Stratis filesystem \"{}\" given in stratisfs command does not exist."
-msgstr "La partició {} proporcionada a l'ordre part no existeix."
+msgstr ""
+"El sistema de fitxers Stratis «{}» especificat a l'ordre stratisfs no "
+"existeix."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1381
-#, fuzzy
-#| msgid "Logical volume name \"{}\" is already in use in volume group \"{}\"."
 msgid "Stratis filesystem name \"{}\" is already in use in pool \"{}\"."
-msgstr "El nom de volum lògic {} ja s'usa al grup de volums {}."
+msgstr ""
+"El nom del sistema de fitxers Stratis \"{}\" ja s'usa a l'agrupació \"{}\"."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:251
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:532
-#, fuzzy
-#| msgid "Btrfs partition \"{}\" is defined multiple times."
 msgid "Stratis partition \"{}\" is defined multiple times."
-msgstr "La partició de Btrfs \"{}\" s'ha definit diverses vegades."
+msgstr "La partició Stratis «{}» està definida diverses vegades."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1301
-#, fuzzy
-#| msgid ""
-#| "Btrfs volume defined without any member devices. Either specify member "
-#| "devices or use --useexisting."
 msgid ""
 "Stratis pool \"{}\" defined without any member devices. Either specify "
 "member devices or use --useexisting."
 msgstr ""
-"El volum BTRFS està definit sense cap dispositiu membre. Especifiqueu els "
-"dispositius membre o utilitzeu --useexisting."
+"S'ha definit l'agrupació de Stratis «{}» sense cap dispositiu membre. O bé "
+"especifiqueu els dispositius membres, o bé useu --useexisting."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1268
-#, fuzzy
-#| msgid "Btrfs volume \"{}\" specified with --useexisting does not exist."
 msgid "Stratis pool \"{}\" specified with --useexisting does not exist."
-msgstr "El volum BTRFS \"{}\" especificat amb --useexisting no existeix."
+msgstr "L'agrupació de Stratis «{}» especificada amb --useexisting no existeix."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1287
-#, fuzzy
-#| msgid ""
-#| "Btrfs partition \"{}\" has a format of \"{}\", but should have a format "
-#| "of \"btrfs\"."
 msgid ""
 "Stratis pool member \"{}\" has a format of \"{}\", but should have a format "
 "of \"stratis\"."
 msgstr ""
-"La partició Btrfs {} té un format de {}, però hauria de tenir un format de "
-"btrfs."
+"El membre de l'agrupació de Stratis «{}» té un format «{}», però hauria de "
+"tenir un format «stratis»."
 
 #: pyanaconda/core/constants.py:235
 msgid "Strong"
@@ -4699,6 +4686,10 @@ msgid ""
 "disable UEFI runtime services. Enable \"Execute Disable Bit\", \"NX\" or "
 "\"XD\" in the firmware setup and start the installation again."
 msgstr ""
+"La CPU no informa de compatibilitat amb NX («Execute Disable»), fet que "
+"provoca que el nucli desactivi els serveis d'execució UEFI. Activeu l'opció «"
+"Execute Disable Bit», «NX» o «XD» a la configuració del microprogramari i "
+"reinicieu la instal·lació."
 
 #: pyanaconda/modules/storage/checker/utils.py:112
 #, python-brace-format
@@ -4731,10 +4722,8 @@ msgid "The RAID volume name \"{}\" is already in use."
 msgstr "El nom del volum RAID '{}' ja s'usa."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1307
-#, fuzzy
-#| msgid "The RAID volume name \"{}\" is already in use."
 msgid "The Stratis pool name \"{}\" is already in use."
-msgstr "El nom del volum RAID '{}' ja s'usa."
+msgstr "El nom d'agrupació de Stratis «{}» ja s'usa."
 
 #: pyanaconda/ui/gui/spokes/advstorage/dasd.glade:327
 msgid "The added DASD can be found under \"Local Standard Disks.\""
@@ -5026,6 +5015,8 @@ msgid ""
 "The password for %s is using the MD5 hash function, which is no longer "
 "supported. Please use a different hash function, such as SHA512."
 msgstr ""
+"La contrasenya per a %s usa la funció de resum MD5, que ja no és compatible. "
+"Si us plau, useu una funció de resum diferent, com ara SHA512."
 
 #: pyanaconda/core/constants.py:192
 msgid "The password is empty."
@@ -5419,13 +5410,10 @@ msgstr ""
 "RAID."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1293
-#, fuzzy
-#| msgid ""
-#| "Tried to use undefined partition \"{}\" in Btrfs volume specification."
 msgid "Tried to use undefined partition \"{}\" in Stratis pool specification."
 msgstr ""
-"S'ha intentat utilitzar la partició no definida \"{}\" en l'especificació "
-"del volum Btrfs."
+"S'ha intentat usar la partició no definida «{}» a l'especificació de "
+"l'agrupació de Stratis."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:766
 msgid "Tried to use undefined partition \"{}\" in Volume Group specification"
@@ -5449,6 +5437,8 @@ msgid ""
 "UEFI variables are not accessible. The boot entry for the installed system "
 "cannot be created and the system will not boot."
 msgstr ""
+"Les variables UEFI no són accessibles. No es pot crear l'entrada d'arrencada "
+"per al sistema instal·lat i el sistema no arrencarà."
 
 #: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:8
 msgid "UNFORMATTED DASDS"
@@ -5820,10 +5810,10 @@ msgid ""
 "needed.\n"
 "\n"
 msgstr ""
-"Advertència: S'ha detectat un sistema atòmic. No es recomana fer canvis "
-"manuals als directori de desplegament, ja que això podria trencar la "
-"integritat del sistema. Només modifica els fitxers de configuració de /etc, /"
-"var, o del bootloader segons necessitis.\n"
+"Avís: s'ha detectat un sistema atòmic. No es recomana fer canvis manuals als "
+"directoris de desplegament, ja que això podria comprometre la integritat del "
+"sistema. Modifiqueu només /etc, /var o els fitxers de configuració del "
+"carregador d'arrencada, segons calgui.\n"
 "\n"
 
 #: pyanaconda/ui/tui/spokes/kernel_warning.py:40
@@ -6306,15 +6296,7 @@ msgid "Your root partition must be on a device of type: %s."
 msgstr "La vostra partició arrel ha d'estar en un dispositiu de tipus: %s."
 
 #: pyanaconda/rescue.py:482
-#, fuzzy, python-format
-#| msgid ""
-#| "Your system has been mounted under %(mountpoint)s.\n"
-#| "\n"
-#| "If you would like to make the root of your system the root of the active "
-#| "system, run the command:\n"
-#| "\n"
-#| "\tchroot %(chroot_path)s\n"
-#| "\n"
+#, python-format
 msgid ""
 "Your system has been mounted under %(mountpoint)s.\n"
 "\n"
@@ -6324,12 +6306,12 @@ msgid ""
 "\tchroot %(mountpoint)s\n"
 "\n"
 msgstr ""
-"El vostre sistema s'ha muntat a %(mountpoint)s.\n"
+"El sistema s'ha muntat a %(mountpoint)s.\n"
 "\n"
-"Si voleu que l'arrel del vostre sistema sigui l'arrel del sistema actiu, "
-"executeu l'ordre següent:\n"
+"Si voleu establir l'arrel del sistema com a arrel del sistema actiu, "
+"executeu l'ordre:\n"
 "\n"
-"\tchroot %(chroot_path)s\n"
+"\tchroot %(mountpoint)s\n"
 "\n"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.glade:636
