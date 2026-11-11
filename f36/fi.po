@@ -29,9 +29,8 @@ msgstr ""
 "Project-Id-Version: anaconda 32.22\n"
 "Report-Msgid-Bugs-To: anaconda-devel@lists.fedoraproject.org\n"
 "POT-Creation-Date: 2022-09-06 02:08+0000\n"
-"PO-Revision-Date: 2026-09-24 10:18+0000\n"
-"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
-"memory@weblate.org>\n"
+"PO-Revision-Date: 2026-11-11 17:53+0000\n"
+"Last-Translator: Jan Kuparinen <copper_fin@hotmail.com>\n"
 "Language-Team: Finnish <https://translate.fedoraproject.org/projects/"
 "anaconda/f36/fi/>\n"
 "Language: fi\n"
@@ -39,7 +38,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.9.1\n"
+"X-Generator: Weblate 2026.11.1\n"
 
 #: pyanaconda/exception.py:109
 #, python-format
@@ -306,8 +305,8 @@ msgid ""
 "could render the system unbootable."
 msgstr ""
 "käynnistyslataimen stage2-laite %(stage2dev)s on monilevyryhmässä, mutta "
-"käynnistyslataimen stage1 laite %(stage1dev)s s ei ole. Aseman vika "
-"%(stage2dev)s:ssa voi tehdä järjestelmästä käynnistämättömän."
+"käynnistyslataimen stage1-laite %(stage1dev)s ei ole. Laitteen %(stage2dev)s "
+"vika voi tehdä järjestelmästä käynnistyskelvottoman."
 
 #: pyanaconda/modules/storage/bootloader/grub2.py:542
 #, python-format
@@ -317,8 +316,8 @@ msgid ""
 "boot loader will only be installed to a single drive."
 msgstr ""
 "käynnistyslataimen stage2-laite %(stage2dev)s on monilevyryhmässä, mutta "
-"käynnistyslataimen stage1-laite %(stage1dev)s ei ole osa tätä taulukkoa. "
-"Käynnistyslatain stage1 asennetaan vain yhteen asemaan."
+"käynnistyslataimen stage1-laite %(stage1dev)s ei ole osa tätä ryhmää. Stage1-"
+"käynnistyslatain asennetaan vain yhdelle asemalle."
 
 #: pyanaconda/modules/storage/bootloader/base.py:185
 msgid "/boot file system"
@@ -461,7 +460,7 @@ msgstr "\"{}\"-tiedostojärjestelmä ei ole tuettu."
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:309
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:328
 msgid "Disk \"{}\" given in part command does not exist."
-msgstr "Komennossa 'part' määritettyä levyä \"{}\"\" ei ole olemassa."
+msgstr "Komennossa 'part' määritettyä levyä \"{}\" ei ole olemassa."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:314
 msgid "Cannot install to unpartitionable device \"{}\"."
@@ -593,8 +592,8 @@ msgid ""
 "Logical volume size \"{}\" must be larger than the volume group extent size "
 "of \"{}\"."
 msgstr ""
-"Loogisen taltion koon \"{}\" on oltava suurempi kuin taltioiryhmän "
-"laajuuskokoa \"{}\"."
+"Loogisen taltion koon \"{}\" on oltava suurempi kuin taltioryhmän "
+"laajuuskoko \"{}\"."
 
 #: pyanaconda/modules/storage/partitioning/custom/custom_partitioning.py:1144
 msgid ""
@@ -751,8 +750,8 @@ msgid ""
 "This LVM Volume Group is missing %(missingPVs)d of %(totalPVs)d physical "
 "volumes. You can remove it or select a different device."
 msgstr ""
-"Tästä LVM-taltioyhmästä puuttuu %(missingPVs)d fyysisistä taltioista "
-"%(totalPVs)d. Voit poistaa sen tai valita toisen laitteen."
+"Tästä LVM-taltioryhmästä puuttuu %(missingPVs)d fyysisistä taltioista %"
+"(totalPVs)d. Voit poistaa sen tai valita toisen laitteen."
 
 #: pyanaconda/modules/storage/partitioning/interactive/utils.py:1253
 #, python-format
@@ -1236,7 +1235,7 @@ msgstr[0] ""
 "poistettava niiden valinta sarjana."
 msgstr[1] ""
 "Valitsit levyn %(selected)s, joka sisältää laitteita, jotka käyttävät myös "
-"valitsematomia levyjä %(unselected)s. Sinun on valittava nämä levyt tai "
+"valitsemattomia levyjä %(unselected)s. Sinun on valittava nämä levyt tai "
 "poistettava niiden valinta sarjana."
 
 #: pyanaconda/modules/storage/constants.py:30
@@ -1264,20 +1263,20 @@ msgstr ""
 "* Valitse vain saman sektorikokoiset levyt manuaalisen asennuksen aikana "
 "graafisessa tai tekstitilassa.\n"
 "* Kun asennukseen valitaan levyt, joiden sektorikoko on epäjohdonmukainen, "
-"rajoita jokaista luotua LVM-volyymiryhmää käyttämään fyysisiä volyymeja "
+"rajoita jokaista luotua LVM-taltioryhmää käyttämään fyysisiä taltioita "
 "samalla sektorikoolla. Tämä voidaan tehdä vain graafisessa tilassa "
-"mukautetussa osiointi osassa.\n"
+"Mukautettu osiointi -osiossa.\n"
 "\n"
 "Kiertotavat kickstart-asennuksiin:\n"
-"* Rajoita osioinnissa käytettäviä levyjä määrittämällä 'ignoredisk --drives "
-"= ..' tai 'ignoredisk --only-use = ..'.\n"
-"* Määritä, mitä levyjä tulisi käyttää jokaiselle luotulle fyysiselle LVM-"
-"levylle: partition pv.1 --ondisk = .. '.\n"
+"* Rajoita osioinnissa käytettäviä levyjä määrittämällä 'ignoredisk --"
+"drives=..' tai 'ignoredisk --only-use=..'.\n"
+"* Määritä, mitä levyjä tulisi käyttää jokaiselle luodulle fyysiselle LVM-"
+"taltiolle: 'partition pv.1 --ondisk=..'.\n"
 "\n"
 "Yleiset kiertotavat:\n"
-"* Tavallista osiointijärjestelmää voidaan käyttää LVM: n sijaan.\n"
+"* Tavallista osiointijärjestelmää voidaan käyttää LVM:n sijaan.\n"
 "* Jotkut asemat tukevat sektorikokojen uudelleenmääritystä, esimerkiksi "
-"suorittamalla 'hdparm --set-sector-size=<SIZE> <DEVICE>.\n"
+"suorittamalla 'hdparm --set-sector-size=<SIZE> <DEVICE>'.\n"
 
 #: pyanaconda/modules/timezone/timezone.py:100
 msgid "Invalid time source."
@@ -2247,7 +2246,7 @@ msgid ""
 "risky and we recommend you back up your data first, you can recover that "
 "free disk space and make it available for this installation below."
 msgstr ""
-"Olemassa olevilla tiedostojärjestelmilä on myös saatavilla vapaata tilaa. "
+"Olemassa olevissa tiedostojärjestelmissä on myös saatavilla vapaata tilaa. "
 "Vaikka se on riskialtista ja suosittelemme, että otat datastasi "
 "varmuuskopion, voit vapauttaa mainitun vapaan tilan ja ottaa sen tämän "
 "asennuksen käyttöön."
@@ -2423,7 +2422,7 @@ msgstr "_Avain:"
 
 #: pyanaconda/ui/gui/spokes/lib/network_secret_agent.py:218
 msgid "User name: "
-msgstr "Käyttäjänimi "
+msgstr "Käyttäjänimi: "
 
 #: pyanaconda/ui/gui/spokes/lib/network_secret_agent.py:225
 #: pyanaconda/ui/tui/spokes/askvnc.py:147
@@ -3461,7 +3460,7 @@ msgstr "_OK"
 #: pyanaconda/ui/gui/spokes/subscription.py:72
 msgctxt "GUI|Spoke"
 msgid "_Connect to Red Hat"
-msgstr "_ Yhdistä Red Hatiin"
+msgstr "_Yhdistä Red Hatiin"
 
 #: pyanaconda/ui/gui/spokes/subscription.py:255
 msgid "Activation key set."
@@ -3867,7 +3866,7 @@ msgstr ""
 "Varoitus: Kaikki asennusohjelmalla tehdyt tallennustilan muutokset "
 "menetetään, kun päätät alustaa.\n"
 "\n"
-"Jatketaanko dasdfmt: n suorittamista?\n"
+"Jatketaanko dasdfmt:n suorittamista?\n"
 
 #: pyanaconda/ui/tui/spokes/storage.py:340
 msgid "This may take a moment."
@@ -3923,7 +3922,7 @@ msgid ""
 "Formats marked with * are new formats meaning ALL DATA on the original "
 "format WILL BE LOST!"
 msgstr ""
-"Valitse laite ylhäältä, jotta voit määrittää liitospkohdan ja asettaa "
+"Valitse laite ylhäältä, jotta voit määrittää liitoskohdan ja asettaa "
 "muodon.\n"
 "'*':lla merkityt muodot ovat uusia muotoja, mikä tarkoittaa, että KAIKKI "
 "TIEDOT alkuperäisessä muodossa MENETETÄÄN!"
@@ -3948,7 +3947,7 @@ msgstr "Määritä laite: %s"
 #: pyanaconda/ui/tui/spokes/storage.py:795
 msgid "Choose from above to assign mount point and/or set format."
 msgstr ""
-"Valitse ylhäältä, jos haluat määrittää liitospisteen ja/tai asettaa muodon."
+"Valitse ylhäältä määrittääksesi liitoskohdan ja/tai asettaaksesi muodon."
 
 #: pyanaconda/ui/tui/spokes/storage.py:811
 #: pyanaconda/ui/gui/spokes/lib/summary.glade:162
@@ -4318,7 +4317,7 @@ msgid ""
 "only have %(total_ram)s MB on this machine.\n"
 msgstr ""
 "%(product_name)s vaatii %(needed_ram)s Mt:a muistia asennusta varten, mutta "
-"tällä tietokoneella on vain %(total_ram)s Mt\n"
+"tällä tietokoneella on vain %(total_ram)s Mt.\n"
 
 #: pyanaconda/startup_utils.py:84
 #, python-format
@@ -4969,7 +4968,7 @@ msgstr "Poista root-tili käytöstä"
 #: pyanaconda/ui/gui/spokes/root_password.glade:125
 msgctxt "GUI|Password"
 msgid "_Enable root account"
-msgstr "Ota root-tili käyttöön"
+msgstr "_Ota root-tili käyttöön"
 
 #: pyanaconda/ui/gui/spokes/root_password.glade:146
 msgid ""
@@ -5061,11 +5060,11 @@ msgid ""
 "<b>NTS</b> - If checked, indicates support for Network Time Security "
 "authentication."
 msgstr ""
-"<b> Pool </b> - Jos valittuna, osoittaa, että konenimi viittaa "
+"<b>Pool</b> - Jos valittuna, osoittaa, että konenimi viittaa "
 "palvelinjoukkoon.\n"
 "\n"
-"<b> NTS </b> - Jos valittuna, osoittaa, että se tukee Network Time Security "
-"-todennusta."
+"<b>NTS</b> - Jos valittuna, osoittaa, että se tukee Network Time Security -"
+"todennusta."
 
 #: pyanaconda/ui/gui/spokes/lib/dasdfmt.glade:8
 msgid "UNFORMATTED DASDS"
@@ -5621,7 +5620,7 @@ msgid ""
 msgstr ""
 "Laiteohjelmisto tarkistaa Linux-ytimen eheyden käynnistyksen aikana, jos "
 "turvallinen käynnistys on käytössä ja määritetty koneessa. Turvallista "
-"käynnistystä ei tueta IBM z14: ssä ja aiemmissa malleissa, joten poista se "
+"käynnistystä ei tueta IBM z14:ssä ja aiemmissa malleissa, joten poista se "
 "käytöstä, jos aiot käynnistää asennetun järjestelmän tällaisissa malleissa."
 
 #: pyanaconda/ui/gui/spokes/lib/cart.glade:283
@@ -6041,7 +6040,7 @@ msgctxt "GUI|User"
 msgid ""
 "Add ad_ministrative privileges to this user account (wheel group membership)"
 msgstr ""
-"Lisää järjestelmänvalvojan oikeudet tälle käyttäjätilille (wheel-ryhmän "
+"Lisää _järjestelmänvalvojan oikeudet tälle käyttäjätilille (wheel-ryhmän "
 "jäsenyys)"
 
 #: pyanaconda/ui/gui/spokes/user.glade:269
@@ -6195,7 +6194,7 @@ msgstr "_Tili"
 #: pyanaconda/ui/gui/spokes/subscription.glade:117
 msgctxt "GUI|Subscription|Authetication|Activation Key"
 msgid "Activation _Key"
-msgstr "Aktivointiavain"
+msgstr "Aktivointi_avain"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:227
 msgid "Organization"
@@ -6238,7 +6237,7 @@ msgstr "Oivalluksia"
 #: pyanaconda/ui/gui/spokes/subscription.glade:414
 msgctxt "GUI|Subscription|Red Hat Insights"
 msgid "Connect to Red Hat _Insights"
-msgstr "Yhdistä Red Hat Insights:een"
+msgstr "Yhdistä Red Hat _Insightsiin"
 
 #: pyanaconda/ui/gui/spokes/subscription.glade:455
 msgid "Custom base URL"
@@ -6574,7 +6573,7 @@ msgstr "Käytä _DCB:ta"
 #: pyanaconda/ui/gui/spokes/advstorage/fcoe.glade:108
 msgctxt "GUI|Advanced Storage|FCoE"
 msgid "Use auto _VLAN"
-msgstr "Käytä auto_VLAN:ta"
+msgstr "Käytä automaattista _VLANia"
 
 #: pyanaconda/ui/gui/spokes/advstorage/fcoe.glade:144
 msgctxt "GUI|Advanced Storage|FCoE"
